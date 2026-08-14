@@ -50,7 +50,16 @@ export default (locale: Locales) =>
       oauth2_token_url: 'https://{{shop}}.myshopify.com/admin/oauth/access_token',
       oauth2_scopes: SHOPIFY_SCOPES,
       // the ping must ride the same version as the actions; hardcoding it left the connection test
-      // calling a version sunset since 2024 while every action used the pinned one
+      // calling a version sunset since 2024 while every action used the pinned one.
+      //
+      // This is the application's only remaining REST call — everything else is GraphQL — and it
+      // stays REST deliberately. The REST Admin API has been legacy since 2024-10-01 and Shopify
+      // removes resources in waves (the first, `products/count.json`, in October 2025), but `shop`
+      // is in no announced wave and the version pinned here is supported to 2027-07-16. Moving the
+      // ping to `graphql.json` would cost more than it buys: GraphQL answers an unauthorised or
+      // under-scoped request with `200 OK` and an ACCESS_DENIED body, so a status-code ping would
+      // report healthy for exactly the credential failures it exists to catch. Revisit if `shop`
+      // is named in a wave, and then assert the body rather than the status.
       ping_path: `/admin/api/${SHOPIFY_API_VERSION}/shop.json`,
       ping_method: 'GET',
     },
