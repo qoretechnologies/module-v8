@@ -1,3 +1,4 @@
+import DocusignESignature from './apps/DocusignESignature';
 import type { BaseTranslation } from '../i18n-types';
 import ActiveCampaign from './apps/ActiveCampaign';
 import AzureActiveDirectory from './apps/ActiveDirectory';
@@ -6,7 +7,6 @@ import AmazonCloudFront from './apps/AmazonCloudFront';
 import AmazonCloudWatch from './apps/AmazonCloudWatch';
 import AmazonEC2 from './apps/AmazonEc2';
 import AmazonLambda from './apps/AmazonLambda';
-import AmazonS3 from './apps/AmazonS3';
 import AmazonSES from './apps/AmazonSES';
 import AmazonSNS from './apps/AmazonSNS';
 import AmazonSQS from './apps/AmazonSQS';
@@ -16,7 +16,6 @@ import AzureDevOps from './apps/AzureDevOps';
 import BambooHR from './apps/BambooHR';
 import Baserow from './apps/Baserow';
 import BigMl from './apps/BigMl';
-import Bitbucket from './apps/Bitbucket';
 import Brevo from './apps/Brevo';
 import BrowseAi from './apps/BrowseAi';
 import BusinessCentral from './apps/BusinessCentral';
@@ -24,22 +23,15 @@ import Calendly from './apps/Calendly';
 import Canva from './apps/Canva';
 import Claude from './apps/Claude';
 import ClickUp from './apps/ClickUp';
-import Confluence from './apps/Confluence';
 import Contentful from './apps/Contentful';
 import CopperCrm from './apps/CopperCrm';
 import Craft from './apps/Craft';
-import DocusignESignature from './apps/DocusignESignature';
-import Dropbox from './apps/Dropbox';
-import Dynamics from './apps/Dynamics';
 import FacebookPages from './apps/FacebookPages';
 import Figma from './apps/Figma';
 import Firebase from './apps/Firebase';
 import Firestore from './apps/Firestore';
 import Freshdesk from './apps/Freshdesk';
 import Front from './apps/Front';
-import Gemini from './apps/Gemini';
-import Github from './apps/Github';
-import Gitlab from './apps/Gitlab';
 import GoogleAnalytics from './apps/GoogleAnalytics';
 import GoogleChat from './apps/GoogleChat';
 import GoogleContacts from './apps/GoogleContacts';
@@ -52,12 +44,7 @@ import GoogleSheets from './apps/GoogleSheets';
 import GoogleTasks from './apps/GoogleTasks';
 import HelpScout from './apps/HelpScout';
 import Hubspot from './apps/Hubspot';
-import HuggingFace from './apps/HuggingFace';
-import Intercom from './apps/Intercom';
 import Jira from './apps/Jira';
-import Klaviyo from './apps/Klaviyo';
-import LinkedIn from './apps/LinkedIn';
-import LinkedInOrganizations from './apps/LinkedInOrganizations';
 import Magento from './apps/Magento';
 import Mailchimp from './apps/Mailchimp';
 import Mautic from './apps/Mautic';
@@ -70,21 +57,17 @@ import Odoo from './apps/Odoo';
 import OpenRouter from './apps/Openrouter';
 import OpenWeatherMap from './apps/OpenWeatherMap';
 import Outlook from './apps/Outlook';
-import Paddle from './apps/Paddle';
 import Patreon from './apps/Patreon';
 import PayPal from './apps/PayPal';
 import Pipedrive from './apps/Pipedrive';
 import Pushover from './apps/Pushover';
 import Quickbooks from './apps/Quickbooks';
-import Salesforce from './apps/Salesforce';
 import SeaTable from './apps/SeaTable';
 import SendGrid from './apps/SendGrid';
 import Sentry from './apps/Sentry';
 import Serenity from './apps/Serenity';
-import SharePoint from './apps/SharePoint';
 import Shopify from './apps/Shopify';
 import Slack from './apps/Slack';
-import Stripe from './apps/Stripe';
 import Supabase from './apps/Supabase';
 import SurveyMonkey from './apps/SurveyMonkey';
 import Teams from './apps/Teams';
@@ -94,7 +77,6 @@ import Trello from './apps/Trello';
 import Twilio from './apps/Twilio';
 import Typeform from './apps/Typeform';
 import Webflow from './apps/Webflow';
-import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import ZohoCRM from './apps/ZohoCRM';
@@ -103,6 +85,7 @@ import Zoom from './apps/Zoom';
 const en = {
   common: {},
   apps: {
+    DocusignESignature,
     CopperCrm,
     SeaTable,
     Craft,
@@ -120,7 +103,6 @@ const en = {
     AzureDevOps,
     AzureActiveDirectory,
     AmazonEC2,
-    AmazonS3,
     AmazonLambda,
     AmazonCloudFront,
     AmazonCloudWatch,
@@ -128,13 +110,10 @@ const en = {
     AmazonSES,
     Claude,
     AmazonSQS,
-    LinkedIn,
     BrowseAi,
     BigMl,
     Calendly,
     ClickUp,
-    Gemini,
-    Gitlab,
     OpenRouter,
     OpenWeatherMap,
     GoogleAnalytics,
@@ -151,28 +130,18 @@ const en = {
     Attio,
     Airtable,
     Odoo,
-    Intercom,
-    Xero,
-    Dynamics,
     Mailchimp,
     Mautic,
     Notion,
     Jira,
-    Stripe,
-    Github,
     Typeform,
-    DocusignESignature,
     Zendesk,
     HelpScout,
     Hubspot,
-    Dropbox,
     NetSuite,
     NocoDB,
-    Salesforce,
     Freshdesk,
     Front,
-    SharePoint,
-    Klaviyo,
     Outlook,
     Trello,
     Teams,
@@ -181,19 +150,14 @@ const en = {
     Magento,
     Shopify,
     Zoom,
-    Confluence,
     Contentful,
-    Bitbucket,
     FacebookPages,
-    Paddle,
     Messenger360,
     Webflow,
     ActiveCampaign,
-    HuggingFace,
     YouTube,
     Canva,
     Figma,
-    LinkedInOrganizations,
     Telegram,
     Twilio,
     SendGrid,
