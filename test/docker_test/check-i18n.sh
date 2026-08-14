@@ -18,4 +18,4 @@ fi
 # source-tree check validates current roots and translations and rejects missing, duplicate, or
 # orphaned domains without relying on an English app list or a directory-count heuristic.
 export QORE_MODULE_DIR="${src_dir}/qlib${QORE_MODULE_DIR:+:${QORE_MODULE_DIR}}"
-qore-data-provider-i18n --no-color --check-source-tree --output "${i18n_dir}"
+qore-data-provider-i18n --no-color --check-source-tree --require-standard-locales --output "${i18n_dir}"
