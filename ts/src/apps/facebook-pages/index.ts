@@ -2,6 +2,7 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
+  FACEBOOK_PAGES_API_VERSION,
   FACEBOOK_PAGES_APP_API_URL,
   FACEBOOK_PAGES_APP_LOGO,
   FACEBOOK_PAGES_APP_NAME,
@@ -28,8 +29,11 @@ export default (locale: Locales) =>
       url: FACEBOOK_PAGES_APP_API_URL,
       data: 'json',
       oauth2_grant_type: 'authorization_code',
-      oauth2_auth_url: 'https://www.facebook.com/v23.0/dialog/oauth',
-      oauth2_token_url: 'https://graph.facebook.com/v23.0/oauth/access_token',
+      // the OAuth endpoints are versioned like every other Graph route, so they must ride the same
+      // pin the REST calls and the SDK do; these were left on a literal `v23.0` when the rest of
+      // the application moved to v24, which is the same split the pin exists to prevent
+      oauth2_auth_url: `https://www.facebook.com/${FACEBOOK_PAGES_API_VERSION}/dialog/oauth`,
+      oauth2_token_url: `https://graph.facebook.com/${FACEBOOK_PAGES_API_VERSION}/oauth/access_token`,
       oauth2_scopes: [
         'business_management',
         'pages_read_engagement',

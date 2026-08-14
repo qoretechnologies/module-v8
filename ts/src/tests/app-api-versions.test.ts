@@ -8,6 +8,8 @@ import { GOOGLE_ADS_API_VERSION } from '../apps/google-ads/constants';
 import { ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/conn-options';
 import facebookPagesApp from '../apps/facebook-pages';
 import { FACEBOOK_PAGES_API_VERSION } from '../apps/facebook-pages/constants';
+import mondayApp from '../apps/monday';
+import { MONDAY_API_VERSION } from '../apps/monday/constants';
 import notionApp from '../apps/notion';
 import { NOTION_API_VERSION } from '../apps/notion/helpers/constants';
 import shopifyApp from '../apps/shopify';
@@ -41,6 +43,13 @@ describe('connection pings ride the same API version as the actions', () => {
     expect(app.rest.ping_headers['Notion-Version']).toBe(NOTION_API_VERSION);
   });
 
+  it('pings monday with the version its client sends', () => {
+    const app = mondayApp('en' as any);
+
+    // monday serves a request that announces no version from whatever it has promoted to Current,
+    // so an absent header is not "the same version as the actions" — it is a moving one
+    expect(app.rest.ping_headers['API-Version']).toBe(MONDAY_API_VERSION);
+  });
 });
 
 describe('Facebook Pages Graph API version', () => {
@@ -51,6 +60,47 @@ describe('Facebook Pages Graph API version', () => {
 
     expect(FACEBOOK_PAGES_API_VERSION).toBe(`v${sdkMajor}.0`);
     expect(app.rest.url).toBe(`https://graph.facebook.com/${FACEBOOK_PAGES_API_VERSION}`);
+  });
+
+  it('authorises on the same Graph API version it calls', () => {
+    const app = facebookPagesApp('en' as any);
+
+    // Meta versions the OAuth routes too, and these kept a `v23.0` literal while the REST half and
+    // the SDK moved to v24 — the same split, in the one place the earlier fix did not reach
+    expect(app.rest.oauth2_auth_url).toBe(
+      `https://www.facebook.com/${FACEBOOK_PAGES_API_VERSION}/dialog/oauth`
+    );
+    expect(app.rest.oauth2_token_url).toBe(
+      `https://graph.facebook.com/${FACEBOOK_PAGES_API_VERSION}/oauth/access_token`
+    );
+  });
+
+  it('carries no Graph API version literal anywhere in the application', () => {
+    const APP_DIR = join(__dirname, '..', 'apps', 'facebook-pages');
+
+    const sourceFiles = (dir: string): string[] =>
+      readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+        const path = join(dir, entry.name);
+
+        if (entry.isDirectory()) {
+          return sourceFiles(path);
+        }
+
+        return entry.isFile() &&
+          entry.name.endsWith('.ts') &&
+          path !== join(APP_DIR, 'constants.ts')
+          ? [path]
+          : [];
+      });
+
+    // constants.ts owns the pin; a Graph URL that spells its own version anywhere else is a half of
+    // the application free to drift away from it, which is how the OAuth routes were left behind.
+    // Anchoring to the host keeps this about code — prose is free to name the version it replaced
+    const offenders = sourceFiles(APP_DIR).filter((path) =>
+      /facebook\.com\/v\d+\.\d+/.test(readFileSync(path, 'utf8'))
+    );
+
+    expect(offenders).toEqual([]);
   });
 });
 

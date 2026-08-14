@@ -1,7 +1,7 @@
 import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { MONDAY_APP_LOGO, MONDAY_APP_NAME } from './constants';
+import { MONDAY_API_VERSION, MONDAY_APP_LOGO, MONDAY_APP_NAME } from './constants';
 
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import * as MONDAY_ACTIONS from './actions';
@@ -37,6 +37,12 @@ export default (locale: Locales) =>
       ping_method: 'POST',
       ping_path: 'v2',
       ping_body: { query: 'query{me{id}}' },
+      ping_headers: {
+        // a request that sends no `API-Version` rides whatever monday has promoted to Current, so
+        // omitting it here left the connection test on a version the actions never use — and moved
+        // it, silently, every time monday rolled a new Current
+        'API-Version': MONDAY_API_VERSION,
+      },
       oauth2_scopes: [
         'me:read',
         'boards:read',
