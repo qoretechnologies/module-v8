@@ -319,10 +319,6 @@
           "source": "X Net Suite Idempotency Key",
           "message": "X Net Suite Idempotency Key"
         },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
-          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once",
-          "message": "リクエストが一度だけ実行されるようにするためにすべての非同期リクエストに適用されるユーザー定義の一意のべき等キー"
-        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
           "source": "Sets the strictness of property name validation.",
           "message": "プロパティ名検証の厳密性を設定します。"
@@ -407,10 +403,6 @@
           "source": "Exchange Rate",
           "message": "為替レート"
         },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
-          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency",
-          "message": "このフィールドには、子会社の通貨に対する相手先子会社の通貨のデフォルト為替レートが表示されます"
-        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
           "source": "Exclude From GL Numbering",
           "message": "総勘定元帳ナンバリングから除外"
@@ -471,10 +463,6 @@
           "source": "Reversal Date",
           "message": "反対仕訳日"
         },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
-          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted",
-          "message": "この仕訳帳エントリを反対仕訳する場合は、反対仕訳エントリを転記する日付を入力します"
-        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
           "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
           "message": "必須の「反対仕訳日」フィールドに入力された日付に自動的に発生する定型取引として反対仕訳を処理するには、このチェックボックスをオンにします。「反対仕訳日」フィールドの日付で即時入力取引として反対仕訳を処理するには、このチェックボックスをオフにします。"
@@ -482,10 +470,6 @@
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
           "source": "Reversal Defer",
           "message": "反対仕訳の繰延"
-        },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
-          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field",
-          "message": "必須の「反対仕訳日」フィールドに入力された日付に自動的に発生する定型取引として反対仕訳を処理するには、このチェックボックスをオンにします"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
           "source": "Ref Name",
@@ -978,10 +962,6 @@
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "URIパス"
-        },
-        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
-          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
-          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

@@ -319,10 +319,6 @@
           "source": "X Net Suite Idempotency Key",
           "message": "Klucz idempotencji X Net Suite"
         },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
-          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once",
-          "message": "Zdefiniowany przez użytkownika unikalny klucz idempotencji stosowany do każdego żądania asynchronicznego w celu zapewnienia, że żądanie zostanie wykonane tylko raz"
-        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
           "source": "Sets the strictness of property name validation.",
           "message": "Określa rygorystyczność walidacji nazw właściwości."
@@ -407,10 +403,6 @@
           "source": "Exchange Rate",
           "message": "Kurs wymiany"
         },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
-          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency",
-          "message": "To pole wyświetla domyślny kurs wymiany waluty spółki docelowej na walutę spółki zależnej"
-        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
           "source": "Exclude From GL Numbering",
           "message": "Wyklucz z numeracji księgi głównej"
@@ -471,10 +463,6 @@
           "source": "Reversal Date",
           "message": "Data storna"
         },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
-          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted",
-          "message": "Jeśli ten wpis do księgi głównej ma zostać stornowany, wprowadź datę zaksięgowania wpisu stornującego"
-        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
           "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
           "message": "Zaznacz to pole, aby storno stało się transakcją zapamiętaną, która zostanie wykonana automatycznie w dniu podanym w wymaganym polu Data storna. Odznacz to pole, aby storno stało się transakcją wprowadzaną natychmiast z datą podaną w polu Data storna."
@@ -482,10 +470,6 @@
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
           "source": "Reversal Defer",
           "message": "Odrocz storno"
-        },
-        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
-          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field",
-          "message": "Zaznacz to pole, aby storno stało się transakcją zapamiętaną, która zostanie wykonana automatycznie w dniu podanym w wymaganym polu Data storna"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
           "source": "Ref Name",
@@ -978,10 +962,6 @@
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Ścieżka URI"
-        },
-        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
-          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
-          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

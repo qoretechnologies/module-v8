@@ -51,7 +51,8 @@ echo "export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT=${MODULE_SRC_DIR}/ts/dist/inde
 # catalogue has a current source-owned native i18n entry, and that no catalog
 # survives for an app that has been removed from the catalogue. Run this only
 # after rebuilding dist/index.js so the base image cannot hide source drift.
-${MODULE_SRC_DIR}/test/docker_test/check-i18n.sh \
+node --test "${MODULE_SRC_DIR}/test/docker_test/sync-i18n-translations.test.mjs"
+"${MODULE_SRC_DIR}/test/docker_test/check-i18n.sh" \
     "${MODULE_SRC_DIR}/qlib/TypeScriptActionInterface/i18n"
 
 # add Qore user and group

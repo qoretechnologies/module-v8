@@ -2,11 +2,11 @@
 
 `qlib/TypeScriptActionInterface/i18n` holds the source-owned native i18n
 catalogs for the presentation strings (`display_name`, `short_desc`, `desc`)
-exported by the TypeScript app catalogue. One directory per catalog domain,
-each holding a single `root.json`:
+exported by the TypeScript app catalogue. One directory per catalog domain
+holds the generated `root.json` and the standard translation locales:
 
 ```
-qlib/TypeScriptActionInterface/i18n/data-provider.<base64url(app name)>/root.json
+qlib/TypeScriptActionInterface/i18n/data-provider.<base64url(app name)>/{root,cs,de,...}.json
 ```
 
 The catalogs are generated, not hand-written. They are extracted from the
@@ -17,7 +17,7 @@ contributions of a given owner module.
 ## Ownership, not app enumeration
 
 `DataProviderActionCatalog` is a **process-wide** registry, and a catalog domain
-is keyed on the *app*, not on the module that registered it, so enumerating apps
+is keyed on the _app_, not on the module that registered it, so enumerating apps
 is not a usable scoping rule: `qore-data-provider-i18n --module
 TypeScriptActionInterface` extracts a catalog for every app registered in the
 process, including apps and actions this repository does not own. Two concrete
@@ -58,10 +58,31 @@ Qore/Qorus installation both still pull in those foreign strings.
 ## Regenerating
 
 **Always regenerate through `test/docker_test/update-i18n.sh`**, which runs the
-extraction inside the CI base image - the same module set CI verifies against -
-and replaces the catalog tree wholesale, so the catalogs of apps that have been
-removed from the TypeScript catalogue are dropped. It requires a current
-`ts/dist/index.js` (`yarn build` in `ts/`) and docker or podman.
+extraction inside the CI base image - the same module set CI verifies against.
+It requires a current `ts/dist/index.js` (`yarn build` in `ts/`) and docker or
+podman. For example:
+
+```bash
+cd ts
+nvm use v24
+yarn build
+cd ..
+test/docker_test/update-i18n.sh
+```
+
+Regeneration first writes the current roots into a same-filesystem staging
+directory. `sync-i18n-translations.mjs` then copies only translations whose
+recorded producer `source` still equals the generated root source. Entries for
+removed message IDs or changed source text are deliberately dropped, so normal
+root-locale fallback applies until they are translated again. Valid translations
+and nonstandard locale files are preserved, empty standard locale files are
+created for new domains, and orphaned app domains disappear because they are not
+present in the generated staging tree.
+
+The staged tree is checked with the same owner-aware, standard-locale validation
+as CI before the old tree is renamed. Replacement uses a backup rename and an
+exit trap, so an interrupted or failed second rename restores the previous tree
+rather than leaving the checkout without catalogs.
 
 ## What CI verifies
 
@@ -74,3 +95,8 @@ the base image cannot hide source drift), runs
 source drift, and fails on any catalog that is stale, missing, duplicated, or
 not owned by this module. The comparison is semantic (parsed JSON), so message
 ordering does not matter.
+
+Both container jobs also run the synchronization utility's Node unit and
+integration tests. They cover preservation, stale-entry and orphan removal, new
+domains, extra locales, malformed catalogs, locale mismatches, missing inputs,
+and the command-line interface.

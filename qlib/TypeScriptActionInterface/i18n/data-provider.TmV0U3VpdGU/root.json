@@ -140,8 +140,8 @@
           "message": "URI Path"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
-          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
-          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "The URI path relative to the connection's API base URL"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
           "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
@@ -716,8 +716,8 @@
           "message": "Exchange Rate"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
-          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency",
-          "message": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency"
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency…",
+          "message": "This field displays the default exchange rate of the To Subsidiary's currency…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.desc": {
           "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency. You can edit the exchange rate for this transaction only, or you can update the currency exchange rates list.",
@@ -784,8 +784,8 @@
           "message": "Reversal Date"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
-          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted",
-          "message": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted"
+          "source": "If this journal entry is intended to be reversed, enter the date for the…",
+          "message": "If this journal entry is intended to be reversed, enter the date for the…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.desc": {
           "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted. If Defer Entry is checked, this field is mandatory.",
@@ -796,8 +796,8 @@
           "message": "Reversal Defer"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
-          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field",
-          "message": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field"
+          "source": "Check this box to make the reversal a memorized transaction that automatically…",
+          "message": "Check this box to make the reversal a memorized transaction that automatically…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
           "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
@@ -868,8 +868,8 @@
           "message": "X Net Suite Idempotency Key"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
-          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once",
-          "message": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once"
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous…",
+          "message": "A user-defined unique idempotency key that is applied to every asynchronous…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.desc": {
           "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once. Only one request can be executed with every unique idempotency key. Use UUID in string format as defined by RFC 4122. If the request is executed synchronously, this value is ignored.",
