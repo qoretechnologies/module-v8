@@ -109,7 +109,7 @@
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.short_desc": {
           "source": "Create an invalidation request to clear cached content",
-          "message": "Erstellen Sie eine Invalidierungsanforderung, um zwischengespeicherte Inhalte zu löschen"
+          "message": "Invalidierungsanforderung erstellen, um zwischengespeicherte Inhalte zu leeren"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.desc": {
           "source": "Fetches a list of all CloudFront distributions in your AWS account, including their status, domain names, and configuration details. You can control the number of results and use pagination for large sets of distributions.",
@@ -237,7 +237,7 @@
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+          "message": "Pass-through; Verbindungsserialisierung nutzen, REST-Client entscheiden lassen"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -487,6 +487,10 @@
           "source": "URI Path",
           "message": "URI-Pfad"
         },
+        "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung"
+        },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
@@ -581,7 +585,7 @@
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.short_desc": {
           "source": "Set to true to enable the distribution, false to disable it",
-          "message": "Auf true setzen, um die Distribution zu aktivieren, auf false, um sie zu deaktivieren"
+          "message": "Auf true setzen zum Aktivieren der Distribution, auf false zum Deaktivieren"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.short_desc": {
           "source": "Enable or disable a CloudFront distribution",
@@ -597,7 +601,7 @@
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.short_desc": {
           "source": "Connect to Amazon CloudFront to manage CDN distributions, cache invalidations, and content delivery.",
-          "message": "Stellen Sie eine Verbindung mit Amazon CloudFront her, um CDN-Distributionen, Cache-Invalidierungen und die Inhaltsbereitstellung zu verwalten."
+          "message": "Mit CloudFront verbinden: CDN-Distributionen, Invalidierungen und Auslieferung."
         }
       }
     }

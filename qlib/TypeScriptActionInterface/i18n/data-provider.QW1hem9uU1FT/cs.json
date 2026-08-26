@@ -597,7 +597,7 @@
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+          "message": "Přímé předání; použije serializaci spojení a nechá rozhodnout REST klienta"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -847,6 +847,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relativní k základní adrese URL rozhraní API připojení"
+        },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
@@ -1029,7 +1033,7 @@
         },
         "app.QW1hem9uU1FT.short_desc": {
           "source": "Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.",
-          "message": "Připojte se k Amazon Simple Queue Service pro správu front zpráv a automatizaci postupů zpracování zpráv."
+          "message": "Připojte se k Amazon SQS pro správu front zpráv a automatizaci zpracování."
         }
       }
     }

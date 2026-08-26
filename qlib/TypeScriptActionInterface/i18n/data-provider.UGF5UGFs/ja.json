@@ -3259,6 +3259,10 @@
           "source": "URI Path",
           "message": "URIパス"
         },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
+        },
         "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
@@ -3429,7 +3433,7 @@
         },
         "app.UGF5UGFs.short_desc": {
           "source": "Integrate with PayPal to manage payments, orders, invoices, disputes, and subscriptions through comprehensive APIs.",
-          "message": "PayPalと連携して、包括的なAPIを通じて決済、注文、請求書、異議、およびサブスクリプションを管理します。"
+          "message": "PayPalと統合し、決済、注文、請求、異議申し立て、定期購入を管理"
         }
       }
     }

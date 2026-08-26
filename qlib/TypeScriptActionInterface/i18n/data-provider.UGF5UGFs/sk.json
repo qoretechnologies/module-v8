@@ -3259,6 +3259,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -3429,7 +3433,7 @@
         },
         "app.UGF5UGFs.short_desc": {
           "source": "Integrate with PayPal to manage payments, orders, invoices, disputes, and subscriptions through comprehensive APIs.",
-          "message": "Integrujte so službou PayPal na správu platieb, objednávok, faktúr, sporov a predplatných prostredníctvom komplexných API."
+          "message": "Integrujte sa s PayPal a spravujte platby, objednávky, faktúry a predplatné."
         }
       }
     }

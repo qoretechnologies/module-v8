@@ -469,7 +469,7 @@
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.short_desc": {
           "source": "Retrieve records from a HubSpot list with pagination and property filtering.",
-          "message": "Obtener registros de una lista de HubSpot con paginación y filtrado de propiedades."
+          "message": "Obtenga registros de una lista de HubSpot con paginación y filtros."
         },
         "app.SHVic3BvdA.action.ZGVsZXRl.desc": {
           "source": "Delete records from the given table in app \"Hubspot\"",
@@ -1085,7 +1085,7 @@
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -1334,6 +1334,10 @@
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Ruta URI"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
@@ -1685,7 +1689,7 @@
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1iYXRjaC11cHNlcnRfdXBzZXJ0.short_desc": {
           "source": "Create or update a batch of leads by unique property values",
-          "message": "Crear o actualizar un lote de clientes potenciales por valores de propiedad únicos"
+          "message": "Cree o actualice un lote de clientes potenciales por valores únicos"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.desc": {
           "source": "Search for leads based on specific criteria",
@@ -1961,7 +1965,7 @@
         },
         "app.SHVic3BvdA.short_desc": {
           "source": "Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.",
-          "message": "Conéctese sin problemas a la API de HubSpot para automatizar y agilizar sus procesos de CRM."
+          "message": "Conéctese a la API de HubSpot para automatizar sus procesos de CRM."
         }
       }
     }

@@ -723,6 +723,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -1077,7 +1081,7 @@
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.short_desc": {
           "source": "Triggers when an email with attachments is received, processing each matching attachment individually.",
-          "message": "Spustí sa po prijatí e-mailu s prílohami a spracuje každú zodpovedajúcu prílohu jednotlivo."
+          "message": "Spustí sa pri prijatí e-mailu s prílohami a spracuje každú prílohu zvlášť."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.desc": {
           "source": "Search and retrieve emails from Outlook based on dates, senders, recipients, subject, body content, and detailed attachment properties like names, patterns, MIME types, and sizes.",
@@ -1373,7 +1377,7 @@
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.short_desc": {
           "source": "Search for emails using various filter criteria including advanced attachment filters.",
-          "message": "Vyhľadávajte e-maily pomocou rôznych kritérií filtrovania vrátane pokročilých filtrov príloh."
+          "message": "Hľadajte e-maily pomocou rôznych kritérií vrátane pokročilých filtrov príloh."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.desc": {
           "source": "Compose and send an email message from your Microsoft Outlook account to one or more recipients.",
@@ -1645,7 +1649,7 @@
         },
         "app.T3V0bG9vaw.short_desc": {
           "source": "Get access to your calendar events, contacts, and emails in Microsoft Outlook.",
-          "message": "Získajte prístup k udalostiam kalendára, kontaktom a e-mailom v Microsoft Outlooku."
+          "message": "Získajte prístup k udalostiam kalendára, kontaktom a e-mailom v Outlooku."
         }
       }
     }

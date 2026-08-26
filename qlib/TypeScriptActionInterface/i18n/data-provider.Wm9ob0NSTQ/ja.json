@@ -823,6 +823,10 @@
           "source": "URI Path",
           "message": "URIパス"
         },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
+        },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
@@ -1077,7 +1081,7 @@
         },
         "app.Wm9ob0NSTQ.short_desc": {
           "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
-          "message": "Zoho CRMに接続し、すべてのグローバルデータセンターにわたる顧客関係管理を自動化します。"
+          "message": "全世界データセンター対応のZoho CRMに接続し顧客管理を自動化"
         }
       }
     }

@@ -2011,6 +2011,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -2713,7 +2717,7 @@
         },
         "app.Q2xpY2tVcA.short_desc": {
           "source": "ClickUp is a productivity platform that allows teams to manage tasks, projects, and workflows in one place.",
-          "message": "ClickUp je platforma na produktivitu, ktorá tímom umožňuje spravovať úlohy, projekty a pracovné postupy na jednom mieste."
+          "message": "ClickUp je platforma na správu úloh, projektov a procesov na jednom mieste."
         }
       }
     }

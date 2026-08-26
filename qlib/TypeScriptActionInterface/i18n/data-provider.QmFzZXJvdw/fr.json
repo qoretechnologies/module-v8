@@ -25,7 +25,7 @@
         },
         "app.QmFzZXJvdw.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"Baserow\"",
-          "message": "Créer de nouveaux enregistrements dans la table donnée dans l'application \"Baserow\""
+          "message": "Créer des enregistrements dans la table de l'app \"Baserow\""
         },
         "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.desc": {
           "source": "Creates a new record in the specified Baserow table. The action dynamically presents the table schema, allowing you to provide values for each column. Optionally specify a row ID to insert the new row before it. Returns the newly created row with all its data.",
@@ -333,7 +333,7 @@
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -357,7 +357,7 @@
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -583,6 +583,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -681,7 +685,7 @@
         },
         "app.QmFzZXJvdw.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Baserow\"",
-          "message": "Rechercher des enregistrements correspondants dans le tableau donné dans l'application \"Baserow\""
+          "message": "Rechercher des enregistrements dans la table de l'app \"Baserow\""
         },
         "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Baserow\"",
@@ -705,7 +709,7 @@
         },
         "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Baserow\"",
-          "message": "Rechercher un enregistrement correspondant unique dans le tableau donné dans l'application \"Baserow\""
+          "message": "Rechercher un enregistrement unique dans la table de l'app \"Baserow\""
         },
         "app.QmFzZXJvdw.action.dXBkYXRl.desc": {
           "source": "Update existing records in the given table in app \"Baserow\"",
@@ -729,7 +733,7 @@
         },
         "app.QmFzZXJvdw.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"Baserow\"",
-          "message": "Mettre à jour des enregistrements existants dans le tableau donné dans l'application \"Baserow\""
+          "message": "Mettre à jour des enregistrements dans la table de l'app \"Baserow\""
         },
         "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.desc": {
           "source": "Updates the values of an existing row in a Baserow table. The action dynamically presents the table schema, allowing you to modify values for each column. Returns the updated row with all its current data.",
@@ -813,7 +817,7 @@
         },
         "app.QmFzZXJvdw.short_desc": {
           "source": "Connect to Baserow to manage your database tables, rows, and files with powerful automation",
-          "message": "Connectez-vous à Baserow pour gérer vos tableaux de base de données, lignes et fichiers grâce à une automatisation puissante"
+          "message": "Gérez tables, lignes et fichiers de base de données avec Baserow."
         }
       }
     }

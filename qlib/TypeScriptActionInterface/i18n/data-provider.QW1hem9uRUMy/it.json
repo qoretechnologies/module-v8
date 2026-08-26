@@ -129,7 +129,7 @@
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al REST"
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -261,7 +261,7 @@
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
           "source": "Include request/timing/size debug info in the response",
-          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+          "message": "Include informazioni di debug su richiesta/tempi/dimensioni nella risposta"
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
           "source": "HTTP `OPTIONS`",
@@ -379,6 +379,10 @@
           "source": "URI Path",
           "message": "Percorso URI"
         },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione"
+        },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
@@ -465,7 +469,7 @@
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
           "source": "Triggers when a new EC2 instance is created or reaches a specified state",
-          "message": "Si attiva quando viene creata una nuova istanza EC2 o quando ne raggiunge uno stato specificato"
+          "message": "Si attiva quando una nuova istanza EC2 viene creata o raggiunge uno stato"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.desc": {
           "source": "This trigger monitors for new scheduled events on EC2 instances such as system reboots, maintenance windows, or instance retirements. It helps you stay informed about upcoming AWS-initiated actions on your infrastructure.",
@@ -529,7 +533,7 @@
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
           "source": "Triggers when a new scheduled maintenance event is detected on EC2 instances",
-          "message": "Si attiva quando viene rilevato un nuovo evento di manutenzione pianificato sulle istanze EC2"
+          "message": "Si attiva quando viene rilevato un nuovo evento di manutenzione programmata EC2"
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.desc": {
           "source": "Starts one or more Amazon EC2 instances that are currently in a stopped state. The instances will transition from stopped to pending and then to running state.",
@@ -661,7 +665,7 @@
         },
         "app.QW1hem9uRUMy.short_desc": {
           "source": "Connect to Amazon EC2 to manage and automate your cloud infrastructure operations.",
-          "message": "Connettiti ad Amazon EC2 per gestire e automatizzare le operazioni della tua infrastruttura cloud."
+          "message": "Connettiti ad Amazon EC2 per gestire le operazioni di infrastruttura cloud."
         }
       }
     }

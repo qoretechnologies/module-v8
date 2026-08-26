@@ -989,7 +989,7 @@
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a lead is added or updated in HubSpot.",
-          "message": "Spustí sa pri pridaní alebo aktualizácii potenciálneho zákazníka v službe HubSpot."
+          "message": "Spustí sa pri vytvorení alebo aktualizácii potenciálneho zákazníka v HubSpote."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
           "source": "This trigger alerts you to any new or updated products within your HubSpot account, ensuring that your product data remains synchronized with your workflows and external systems.",
@@ -1335,6 +1335,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -1553,7 +1557,7 @@
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1iYXRjaC11cHNlcnQ.short_desc": {
           "source": "Create or update a batch of users by unique property values",
-          "message": "Vytvoriť alebo aktualizovať dávku používateľov podľa jedinečných hodnôt vlastností"
+          "message": "Hromadne vytvoriť alebo aktualizovať používateľov podľa unikátnych vlastností"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.desc": {
           "source": "Search for users based on specific criteria",
@@ -1685,7 +1689,7 @@
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1iYXRjaC11cHNlcnRfdXBzZXJ0.short_desc": {
           "source": "Create or update a batch of leads by unique property values",
-          "message": "Vytvoriť alebo aktualizovať dávku potenciálnych zákazníkov podľa jedinečných hodnôt vlastností"
+          "message": "Hromadne vytvoriť alebo aktualizovať lídrov podľa unikátnych vlastností"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.desc": {
           "source": "Search for leads based on specific criteria",
@@ -1961,7 +1965,7 @@
         },
         "app.SHVic3BvdA.short_desc": {
           "source": "Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.",
-          "message": "Bezproblémovo sa pripojte k rozhraniu HubSpot API a automatizujte i zefektívnite svoje procesy v CRM."
+          "message": "Pripojte sa k API HubSpot a zjednodušte a automatizujte svoje CRM procesy."
         }
       }
     }

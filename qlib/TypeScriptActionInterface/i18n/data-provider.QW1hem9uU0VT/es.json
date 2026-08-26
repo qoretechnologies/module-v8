@@ -69,7 +69,7 @@
         },
         "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -319,6 +319,10 @@
           "source": "URI Path",
           "message": "Ruta URI"
         },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
+        },
         "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
@@ -365,11 +369,11 @@
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.short_desc": {
           "source": "The AWS region to monitor for new verified identities.",
-          "message": "La región de AWS que se va a monitorear en busca de nuevas identidades verificadas."
+          "message": "Región de AWS para supervisar nuevas identidades verificadas."
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.short_desc": {
           "source": "Triggers when a new email address or domain is verified.",
-          "message": "Se activa cuando se verifica una nueva dirección de correo electrónico o dominio."
+          "message": "Se activa cuando se verifica una nueva dirección de email o dominio."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.desc": {
           "source": "Send emails with support for HTML and text content, CC/BCC recipients, reply-to addresses, custom tags for tracking, and advanced delivery options. Includes comprehensive validation and error handling for reliable email delivery.",
@@ -401,7 +405,7 @@
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.short_desc": {
           "source": "Comma-separated list of CC recipient email addresses.",
-          "message": "Lista separada por comas de direcciones de correo electrónico de destinatarios en CC."
+          "message": "Lista separada por comas de direcciones de email en CC."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.allowed-value.c3RyaW5nOklTTy04ODU5LTE.display_name": {
           "source": "ISO-8859-1",
@@ -461,7 +465,7 @@
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.short_desc": {
           "source": "Comma-separated list of BCC recipient email addresses.",
-          "message": "Lista separada por comas de direcciones de correo electrónico de destinatarios en CCO."
+          "message": "Lista separada por comas de direcciones de email en CCO."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.desc": {
           "source": "The sender email address that must be verified in your Amazon SES account. This address will appear in the From field of the email.",
@@ -545,11 +549,11 @@
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.short_desc": {
           "source": "Key-value pairs for email categorization and tracking.",
-          "message": "Pares clave-valor para la categorización y el seguimiento de correos electrónicos."
+          "message": "Pares clave-valor para categorización y seguimiento de emails."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.short_desc": {
           "source": "Send an email through Amazon SES with full customization options.",
-          "message": "Envíe un correo electrónico a través de Amazon SES con opciones de personalización completas."
+          "message": "Envíe un email mediante Amazon SES con opciones de personalización."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.desc": {
           "source": "Initiate the verification process for an email address or domain. Amazon SES will send a verification email that must be clicked to complete the verification process.",
@@ -585,7 +589,7 @@
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.short_desc": {
           "source": "Verify an email address for sending through Amazon SES.",
-          "message": "Verifique una dirección de correo electrónico para el envío a través de Amazon SES."
+          "message": "Verifique una dirección de email para enviar mediante Amazon SES."
         },
         "app.QW1hem9uU0VT.desc": {
           "source": "The Amazon SES integration provides comprehensive email sending capabilities, identity verification, and delivery monitoring. Manage your email campaigns, verify domains and email addresses, track sending statistics, and monitor bounces and complaints through Amazon's reliable email infrastructure.",
@@ -597,7 +601,7 @@
         },
         "app.QW1hem9uU0VT.short_desc": {
           "source": "Send emails and manage email identities with Amazon Simple Email Service.",
-          "message": "Envíe correos electrónicos y gestione identidades de correo electrónico con Amazon Simple Email Service."
+          "message": "Envíe emails y gestione identidades con Amazon Simple Email Service."
         }
       }
     }

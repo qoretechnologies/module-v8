@@ -25,7 +25,7 @@
         },
         "app.U2VhVGFibGU.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"SeaTable\"",
-          "message": "Créer de nouveaux enregistrements dans la table spécifiée de l'application \"SeaTable\""
+          "message": "Créer des enregistrements dans la table de l'application « SeaTable »"
         },
         "app.U2VhVGFibGU.action.ZGVsZXRl.desc": {
           "source": "Delete records from the given table in app \"SeaTable\"",
@@ -93,7 +93,7 @@
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -117,7 +117,7 @@
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -343,6 +343,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -417,7 +421,7 @@
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"SeaTable\"",
-          "message": "Rechercher des enregistrements correspondants dans la table spécifiée de l'application \"SeaTable\""
+          "message": "Rechercher des enregistrements dans la table de l'application « SeaTable »"
         },
         "app.U2VhVGFibGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"SeaTable\"",
@@ -441,7 +445,7 @@
         },
         "app.U2VhVGFibGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"SeaTable\"",
-          "message": "Rechercher un enregistrement correspondant unique dans la table spécifiée de l'application \"SeaTable\""
+          "message": "Rechercher un enregistrement unique dans la table de l'app « SeaTable »"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.desc": {
           "source": "Executes a SQL query on your SeaTable base and returns the results. Supports SELECT, INSERT, UPDATE, and DELETE statements. Maximum of 10,000 rows can be returned for SELECT queries.",
@@ -489,7 +493,7 @@
         },
         "app.U2VhVGFibGU.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"SeaTable\"",
-          "message": "Mettre à jour des enregistrements existants dans la table spécifiée de l'application \"SeaTable\""
+          "message": "Mettre à jour des enregistrements dans la table de l'application « SeaTable »"
         },
         "app.U2VhVGFibGU.desc": {
           "source": "The SeaTable integration provides comprehensive access to your SeaTable database operations. Create, read, update, and delete records in your tables, execute SQL queries, and monitor new entries with real-time triggers. Whether you need to manage data, filter results with SQL, or track new records, this integration streamlines your SeaTable workflow automation and database management.",
@@ -501,7 +505,7 @@
         },
         "app.U2VhVGFibGU.short_desc": {
           "source": "Connect to SeaTable to manage your database tables and records with powerful automation",
-          "message": "Connectez-vous à SeaTable pour gérer les tables et enregistrements de votre base de données grâce à une puissante automatisation"
+          "message": "Se connecter à SeaTable pour gérer vos tables et données par automatisation"
         }
       }
     }

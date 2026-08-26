@@ -369,7 +369,7 @@
         },
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -618,6 +618,10 @@
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Ruta URI"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
         },
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
@@ -869,7 +873,7 @@
         },
         "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.short_desc": {
           "source": "The ID of the board to check for record field updates.",
-          "message": "El ID del tablero a comprobar para detectar actualizaciones en los campos del registro."
+          "message": "El ID del tablero donde verificar actualizaciones de campos del registro."
         },
         "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.short_desc": {
           "source": "Triggered when a record column value is updated.",
@@ -981,7 +985,7 @@
         },
         "app.TW9uZGF5.short_desc": {
           "source": "Connect to Monday.com to automate work management with boards, items, columns, and updates.",
-          "message": "Conéctese a Monday.com para automatizar la gestión del trabajo con tableros, elementos, columnas y actualizaciones."
+          "message": "Conéctese a Monday.com para gestionar tableros, elementos, columnas y cambios."
         }
       }
     }

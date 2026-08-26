@@ -723,6 +723,10 @@
           "source": "URI Path",
           "message": "URIパス"
         },
+        "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
+        },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
@@ -1077,7 +1081,7 @@
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.short_desc": {
           "source": "Triggers when an email with attachments is received, processing each matching attachment individually.",
-          "message": "添付ファイル付きのメールを受信したときにトリガーされ、一致する各添付ファイルを個別に処理します。"
+          "message": "添付ファイル付きメールを受信時にトリガーし、添付ファイルを個別処理"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.desc": {
           "source": "Search and retrieve emails from Outlook based on dates, senders, recipients, subject, body content, and detailed attachment properties like names, patterns, MIME types, and sizes.",
@@ -1373,7 +1377,7 @@
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.short_desc": {
           "source": "Search for emails using various filter criteria including advanced attachment filters.",
-          "message": "高度な添付ファイルフィルターを含むさまざまなフィルター条件を使用してメールを検索します。"
+          "message": "添付ファイルの高度な条件など多彩なフィルタでメールを検索します"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.desc": {
           "source": "Compose and send an email message from your Microsoft Outlook account to one or more recipients.",

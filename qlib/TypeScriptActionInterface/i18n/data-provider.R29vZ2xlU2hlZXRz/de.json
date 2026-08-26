@@ -73,7 +73,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
           "source": "Copy a worksheet from one Google Sheets spreadsheet to another",
-          "message": "Kopieren Sie ein Tabellenblatt von einem Google Sheets-Spreadsheet in ein anderes"
+          "message": "Tabellenblatt von einer Google-Tabelle in eine andere kopieren"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.desc": {
           "source": "Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting",
@@ -145,7 +145,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"GoogleSheets\"",
-          "message": "Erstellen Sie neue Datensätze in der angegebenen Tabelle in der App „GoogleSheets“"
+          "message": "Neue Datensätze in der Tabelle der App „GoogleSheets“ erstellen"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.desc": {
           "source": "Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.",
@@ -193,7 +193,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
           "source": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.",
-          "message": "Ein neues Google Sheets-Spreadsheet mit optionalen Kopfzeilen oder durch Kopieren eines bestehenden Spreadsheets erstellen."
+          "message": "Neue Google-Tabelle mit Kopfzeilen oder als Kopie erstellen"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.desc": {
           "source": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.",
@@ -325,7 +325,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
           "source": "Create a new worksheet in a Google Sheets spreadsheet with optional headers.",
-          "message": "Erstellt ein neues Tabellenblatt in einer Google Sheets-Tabellendatei mit optionalen Kopfzeilen."
+          "message": "Neues Tabellenblatt in Google-Tabelle mit Kopfzeilen erstellen"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
           "source": "Append new rows to an existing Google Sheets table with data mapped to the table headers",
@@ -769,7 +769,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
           "source": "Search for rows in a Google Sheets spreadsheet that match specific criteria.",
-          "message": "Suchen Sie nach Zeilen in einer Google Sheets-Tabellenkalkulation, die bestimmten Kriterien entsprechen."
+          "message": "Zeilen in Google-Tabelle nach bestimmten Kriterien suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.desc": {
           "source": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
@@ -813,7 +813,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+          "message": "Pass-through; Verbindungsserialisierung nutzen, REST-Client entscheiden lassen"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -1063,6 +1063,10 @@
           "source": "URI Path",
           "message": "URI-Pfad"
         },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung"
+        },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
@@ -1161,7 +1165,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {
           "source": "Triggers when a new sheet is added to a Google Spreadsheet.",
-          "message": "Wird ausgelöst, wenn einer Google Sheets-Tabellenkalkulation ein neues Tabellenblatt hinzugefügt wird."
+          "message": "Wird ausgelöst, wenn ein neues Tabellenblatt hinzugefügt wird"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.desc": {
           "source": "Search for matching records in the given table in app \"GoogleSheets\"",
@@ -1185,7 +1189,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"GoogleSheets\"",
-          "message": "Suchen Sie nach übereinstimmenden Datensätzen in der angegebenen Tabelle in der App \"GoogleSheets\""
+          "message": "Passende Datensätze in der Tabelle der App „GoogleSheets“ suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
@@ -1209,7 +1213,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
-          "message": "Suchen Sie nach einem einzelnen übereinstimmenden Datensatz in der angegebenen Tabelle in der App \"GoogleSheets\""
+          "message": "Einzelnen Datensatz in der Tabelle der App „GoogleSheets“ suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.desc": {
           "source": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
@@ -1301,7 +1305,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
           "source": "Search for Google Sheets spreadsheets with advanced filtering and sorting options.",
-          "message": "Suchen Sie nach Google Sheets-Tabellenkalkulationen mit erweiterten Filter- und Sortieroptionen."
+          "message": "Google-Tabellen mit erweiterten Filtern und Sortierung suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.desc": {
           "source": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.",
@@ -1345,11 +1349,11 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
           "source": "Title text to search for (case-insensitive)",
-          "message": "Titeltext, nach dem gesucht werden soll (ohne Berücksichtigung von Groß-/Kleinschreibung)"
+          "message": "Gesuchter Titeltext (ohne Berücksichtigung der Groß-/Kleinschreibung)"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
           "source": "Find worksheets within a Google Spreadsheet by title.",
-          "message": "Tabellenblätter innerhalb einer Google Sheets-Tabellenkalkulation nach Titel finden."
+          "message": "Tabellenblätter in einer Google-Tabelle nach Titel suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.desc": {
           "source": "Update existing records in the given table in app \"GoogleSheets\"",
@@ -1373,7 +1377,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"GoogleSheets\"",
-          "message": "Bestehende Datensätze in der angegebenen Tabelle in der App \"GoogleSheets\" aktualisieren"
+          "message": "Bestehende Datensätze in der Tabelle der App „GoogleSheets“ ändern"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
           "source": "Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.",

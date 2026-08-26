@@ -285,7 +285,7 @@
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -309,7 +309,7 @@
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -535,6 +535,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -697,7 +701,7 @@
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.short_desc": {
           "source": "Monitor AWS resources and applications with comprehensive alarm management and real-time state tracking.",
-          "message": "Surveillez les ressources et applications AWS grâce à une gestion complète des alarmes et un suivi d'état en temps réel."
+          "message": "Surveillez les ressources AWS avec gestion des alarmes et suivi en temps réel."
         }
       }
     }

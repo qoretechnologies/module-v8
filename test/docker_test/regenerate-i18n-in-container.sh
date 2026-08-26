@@ -43,7 +43,7 @@ backup_dir="${stage_dir}.old"
 qore-data-provider-i18n --output "${stage_dir}" --owner TypeScriptActionInterface
 node "${src_dir}/test/docker_test/sync-i18n-translations.mjs" "${i18n_dir}" "${stage_dir}"
 qore-data-provider-i18n --no-color --check-source-tree --require-standard-locales \
-    --owner TypeScriptActionInterface --output "${stage_dir}"
+    --require-complete-locales --owner TypeScriptActionInterface --output "${stage_dir}"
 chmod 755 "${stage_dir}"
 
 mv "${i18n_dir}" "${backup_dir}"

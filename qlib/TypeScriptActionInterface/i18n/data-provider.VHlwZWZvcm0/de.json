@@ -109,7 +109,7 @@
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.short_desc": {
           "source": "Create a new Typeform with fields, logic, and custom settings.",
-          "message": "Erstellen Sie ein neues Typeform mit Feldern, Logik und benutzerdefinierten Einstellungen."
+          "message": "Neues Typeform-Formular mit Feldern, Logik und Einstellungen erstellen."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.desc": {
           "source": "Uploads an image to your Typeform account that can be used in your forms for picture choice questions, form backgrounds, or other visual elements. You can upload either by providing a file or a URL to an existing image.",
@@ -597,7 +597,7 @@
         },
         "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+          "message": "Pass-through; Verbindungsserialisierung nutzen, REST-Client entscheiden lassen"
         },
         "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -847,6 +847,10 @@
           "source": "URI Path",
           "message": "URI-Pfad"
         },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung"
+        },
         "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
@@ -897,7 +901,7 @@
         },
         "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
           "source": "Triggers when a new response is submitted to a Typeform form.",
-          "message": "Wird ausgelöst, wenn eine neue Antwort auf ein Typeform-Formular übermittelt wird."
+          "message": "Wird ausgelöst, wenn eine neue Antwort an Typeform übermittelt wird."
         },
         "app.VHlwZWZvcm0.desc": {
           "source": "Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.",
@@ -909,7 +913,7 @@
         },
         "app.VHlwZWZvcm0.short_desc": {
           "source": "Create and manage interactive forms, surveys, and quizzes with Typeform.",
-          "message": "Erstellen und verwalten Sie interaktive Formulare, Umfragen und Quizze mit Typeform."
+          "message": "Interaktive Formulare, Umfragen und Quizze mit Typeform erstellen."
         }
       }
     }

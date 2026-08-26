@@ -861,7 +861,7 @@
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
           "source": "Replaces text fields with new values using specific tags; returns new values as output",
-          "message": "特定のタグを使用してテキストフィールドを新しい値に置換し、新しい値を出力として返します"
+          "message": "特定タグでテキストフィールドを置換し、新しい値を出力します"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.desc": {
           "source": "Unpublishes (deactivates) a content type, reverting it to draft state. No new entries can be created for a deactivated content type.",
@@ -1418,6 +1418,10 @@
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "URIパス"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

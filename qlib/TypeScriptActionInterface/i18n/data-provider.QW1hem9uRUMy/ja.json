@@ -379,6 +379,10 @@
           "source": "URI Path",
           "message": "URIパス"
         },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
+        },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
@@ -465,7 +469,7 @@
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
           "source": "Triggers when a new EC2 instance is created or reaches a specified state",
-          "message": "新しいEC2インスタンスが作成されたか、指定された状態に達したときにトリガーされます"
+          "message": "EC2インスタンスが新規作成されたか指定状態になった時にトリガー"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.desc": {
           "source": "This trigger monitors for new scheduled events on EC2 instances such as system reboots, maintenance windows, or instance retirements. It helps you stay informed about upcoming AWS-initiated actions on your infrastructure.",
@@ -529,7 +533,7 @@
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
           "source": "Triggers when a new scheduled maintenance event is detected on EC2 instances",
-          "message": "EC2インスタンスで新しいスケジュールされたメンテナンスイベントが検出されたときにトリガーされます"
+          "message": "EC2インスタンスで新しい定期メンテイベントが検出された時にトリガー"
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.desc": {
           "source": "Starts one or more Amazon EC2 instances that are currently in a stopped state. The instances will transition from stopped to pending and then to running state.",
@@ -661,7 +665,7 @@
         },
         "app.QW1hem9uRUMy.short_desc": {
           "source": "Connect to Amazon EC2 to manage and automate your cloud infrastructure operations.",
-          "message": "Amazon EC2に接続して、クラウドインフラストラクチャの運用を管理および自動化します。"
+          "message": "Amazon EC2に接続し、クラウドアクティビティを自動化・管理します"
         }
       }
     }

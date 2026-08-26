@@ -605,7 +605,7 @@
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al REST"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -737,7 +737,7 @@
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
           "source": "Include request/timing/size debug info in the response",
-          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+          "message": "Include informazioni di debug su richiesta/tempi/dimensioni nella risposta"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
           "source": "HTTP `OPTIONS`",
@@ -855,6 +855,10 @@
           "source": "URI Path",
           "message": "Percorso URI"
         },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione"
+        },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
@@ -941,7 +945,7 @@
         },
         "app.QW1hem9uTGFtYmRh.short_desc": {
           "source": "Serverless compute service that runs code without provisioning or managing servers.",
-          "message": "Servizio di calcolo serverless che esegue codice senza dover configurare o gestire server."
+          "message": "Servizio serverless che esegue codice senza gestire server."
         }
       }
     }

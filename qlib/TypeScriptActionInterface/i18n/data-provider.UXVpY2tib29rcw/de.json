@@ -589,11 +589,11 @@
         },
         "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated credit memos",
-          "message": "Auswählen, ob bei erstellten oder aktualisierten Gutschriften ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Gutschriften auswählen"
         },
         "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a credit memo is created or updated in QuickBooks",
-          "message": "Wird ausgelöst, wenn eine Gutschrift in QuickBooks erstellt oder aktualisiert wird"
+          "message": "Wird ausgelöst, wenn eine Gutschrift in QuickBooks erstellt/geändert wird"
         },
         "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.desc": {
           "source": "Monitor QuickBooks for new customers or updates to existing customers. This trigger allows you to respond to customer events in real-time.",
@@ -1145,11 +1145,11 @@
         },
         "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated deposits",
-          "message": "Auswählen, ob bei erstellten oder aktualisierten Einzahlungen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Einzahlungen auswählen"
         },
         "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a deposit is created or updated in QuickBooks",
-          "message": "Wird ausgelöst, wenn eine Einzahlung in QuickBooks erstellt oder aktualisiert wird"
+          "message": "Wird ausgelöst, wenn eine Einzahlung in QuickBooks erstellt/geändert wird"
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.desc": {
           "source": "Monitor QuickBooks for new estimates or updates to existing estimates. This trigger allows you to respond to estimate events in real-time.",
@@ -1177,11 +1177,11 @@
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated estimates",
-          "message": "Auswählen, ob bei erstellten oder aktualisierten Kostenvoranschlägen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Kostenvoranschlägen auswählen"
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when an estimate is created or updated in QuickBooks",
-          "message": "Wird ausgelöst, wenn ein Kostenvoranschlag in QuickBooks erstellt oder aktualisiert wird"
+          "message": "Wird ausgelöst, wenn ein Angebot in QuickBooks erstellt/geändert wird"
         },
         "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.desc": {
           "source": "Monitor QuickBooks for new invoices or updates to existing invoices. This trigger allows you to respond to invoice events in real-time.",
@@ -1209,7 +1209,7 @@
         },
         "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated invoices",
-          "message": "Auswählen, ob bei erstellten oder aktualisierten Rechnungen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Rechnungen auswählen"
         },
         "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
           "source": "Triggers when an invoice is created or updated in QuickBooks",
@@ -1273,11 +1273,11 @@
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated journal entries",
-          "message": "Auswählen, ob bei erstellten oder aktualisierten Buchungssätzen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Journalbuchungen auswählen"
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a journal entry is created or updated in QuickBooks",
-          "message": "Wird ausgelöst, wenn ein Buchungssatz in QuickBooks erstellt oder aktualisiert wird"
+          "message": "Wird ausgelöst, wenn eine Buchung in QuickBooks erstellt/geändert wird"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.desc": {
           "source": "Fetch multiple vendors from QuickBooks with optional filtering, sorting, and pagination capabilities",
@@ -2401,7 +2401,7 @@
         },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+          "message": "Pass-through; Verbindungsserialisierung nutzen, REST-Client entscheiden lassen"
         },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -2651,6 +2651,10 @@
           "source": "URI Path",
           "message": "URI-Pfad"
         },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung"
+        },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
@@ -2705,11 +2709,11 @@
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated sales receipts",
-          "message": "Wählen Sie, ob bei erstellten oder aktualisierten Verkaufsbelegen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Quittungen auswählen"
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a sales receipt is created or updated in QuickBooks",
-          "message": "Wird ausgelöst, wenn ein Verkaufsbeleg in QuickBooks erstellt oder aktualisiert wird"
+          "message": "Wird ausgelöst, wenn ein Beleg in QuickBooks erstellt/geändert wird"
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNo.desc": {
           "source": "Search for matching records in the given table in app \"Quickbooks\"",
@@ -2733,7 +2737,7 @@
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Quickbooks\"",
-          "message": "In der angegebenen Tabelle in der App „Quickbooks“ nach passenden Datensätzen suchen"
+          "message": "Passende Datensätze in der Tabelle der App \"Quickbooks\" suchen"
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Quickbooks\"",
@@ -2757,7 +2761,7 @@
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Quickbooks\"",
-          "message": "In der angegebenen Tabelle in der App „Quickbooks“ nach einem einzelnen passenden Datensatz suchen"
+          "message": "Einen passenden Datensatz in der Tabelle der App \"Quickbooks\" suchen"
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.desc": {
           "source": "Monitor QuickBooks for new payments or updates to existing payments. This trigger allows you to respond to payment events in real-time.",
@@ -2785,7 +2789,7 @@
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated payments",
-          "message": "Wählen Sie, ob bei erstellten oder aktualisierten Zahlungen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Zahlungen auswählen"
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a payment is created or updated in QuickBooks",
@@ -2817,11 +2821,11 @@
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated purchase orders",
-          "message": "Wählen Sie, ob bei erstellten oder aktualisierten Bestellungen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Bestellungen auswählen"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a purchase order is created or updated in QuickBooks",
-          "message": "Wird ausgelöst, wenn eine Bestellung in QuickBooks erstellt oder aktualisiert wird"
+          "message": "Wird ausgelöst, wenn Bestellung in QuickBooks erstellt/geändert wird"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.desc": {
           "source": "Monitor QuickBooks for new purchases or updates to existing purchases. This trigger allows you to respond to purchase events in real-time.",
@@ -2849,7 +2853,7 @@
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated purchases",
-          "message": "Wählen Sie, ob bei erstellten oder aktualisierten Einkäufen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Einkäufen auswählen"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a purchase is created or updated in QuickBooks",
@@ -2881,11 +2885,11 @@
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated refund receipts",
-          "message": "Wählen Sie, ob bei erstellten oder aktualisierten Erstattungsbelegen ausgelöst werden soll"
+          "message": "Auslösen bei erstellten/aktualisierten Erstattungsbelegen auswählen"
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a refund receipt is created or updated in QuickBooks",
-          "message": "Wird ausgelöst, wenn ein Erstattungsbeleg in QuickBooks erstellt oder aktualisiert wird"
+          "message": "Wird ausgelöst, wenn Erstattung in QuickBooks erstellt/geändert wird"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRl.desc": {
           "source": "Update existing records in the given table in app \"Quickbooks\"",
@@ -2909,7 +2913,7 @@
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"Quickbooks\"",
-          "message": "Bestehende Datensätze in der angegebenen Tabelle in der App „Quickbooks“ aktualisieren"
+          "message": "Bestehende Datensätze in der Tabelle der App \"Quickbooks\" aktualisieren"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.desc": {
           "source": "Modify an existing bill with new vendor information, line items, and other details",
@@ -3321,7 +3325,7 @@
         },
         "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated vendors",
-          "message": "Auswählen, ob bei erstellten oder aktualisierten Lieferanten ausgelöst werden soll"
+          "message": "Auslösen bei erstellten oder aktualisierten Lieferanten auswählen"
         },
         "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.short_desc": {
           "source": "Triggers when a vendor is created or updated in QuickBooks",

@@ -679,6 +679,10 @@
           "source": "URI Path",
           "message": "URIパス"
         },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
+        },
         "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
@@ -1389,7 +1393,7 @@
         },
         "app.U2xhY2s.short_desc": {
           "source": "Connect with Slack to send messages, manage channels, and automate team communication",
-          "message": "Slack に接続してメッセージ送信、チャンネル管理、チームコミュニケーションの自動化を行います"
+          "message": "Slackに接続し、メッセージ送信、チャンネル管理、連絡を自動化"
         }
       }
     }

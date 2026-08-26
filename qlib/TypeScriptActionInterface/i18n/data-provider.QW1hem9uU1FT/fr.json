@@ -285,7 +285,7 @@
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
           "source": "Maximum receives before moving to dead letter queue",
-          "message": "Nombre maximal de réceptions avant déplacement vers la file d'attente d'invalides"
+          "message": "Nombre maximal de réceptions avant transfert vers la file de rebut"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.desc": {
           "source": "The length of time (60-1209600 seconds) that messages are retained in the queue.",
@@ -597,7 +597,7 @@
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -621,7 +621,7 @@
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -847,6 +847,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -1029,7 +1033,7 @@
         },
         "app.QW1hem9uU1FT.short_desc": {
           "source": "Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.",
-          "message": "Connectez-vous à Amazon Simple Queue Service pour gérer les files d'attente de messages et automatiser les flux de traitement des messages."
+          "message": "Gérez vos files de messages et vos flux de traitement avec Amazon SQS."
         }
       }
     }

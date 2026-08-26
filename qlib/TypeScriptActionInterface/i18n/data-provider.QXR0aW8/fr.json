@@ -601,7 +601,7 @@
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
           "source": "Search for entries in an Attio list with filtering and sorting options.",
-          "message": "Rechercher des entrées dans une liste Attio avec des options de filtrage et de tri."
+          "message": "Rechercher des entrées de liste Attio avec options de filtre et de tri."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.desc": {
           "source": "Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.",
@@ -693,7 +693,7 @@
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
           "source": "Search for records in an Attio object with filtering and sorting options.",
-          "message": "Rechercher des enregistrements dans un objet Attio avec des options de filtrage et de tri."
+          "message": "Rechercher des fiches d'objet Attio avec options de filtre et de tri."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.desc": {
           "source": "This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made.",
@@ -881,7 +881,7 @@
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -905,7 +905,7 @@
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -1131,6 +1131,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -1181,7 +1185,7 @@
         },
         "app.QXR0aW8.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Attio\"",
-          "message": "Rechercher des enregistrements correspondants dans la table donnée de l'application \"Attio\""
+          "message": "Rechercher des enregistrements dans la table de l'app \"Attio\""
         },
         "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Attio\"",
@@ -1205,7 +1209,7 @@
         },
         "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Attio\"",
-          "message": "Rechercher un seul enregistrement correspondant dans la table donnée de l'application \"Attio\""
+          "message": "Rechercher un enregistrement unique dans la table de l'app \"Attio\""
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.desc": {
           "source": "This trigger fires whenever a new task is created in your Attio workspace. It provides details about the created task including its ID, title, description, assignees, due date, and the actor who created it.",
@@ -1241,7 +1245,7 @@
         },
         "app.QXR0aW8.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"Attio\"",
-          "message": "Mettre à jour les enregistrements existants dans la table donnée de l'application \"Attio\""
+          "message": "Mettre à jour des enregistrements dans la table de l'app \"Attio\""
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.desc": {
           "source": "Updates the values of an existing record in a specified Attio object. Requires the object type, record ID, and the attribute values to update.",

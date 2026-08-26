@@ -193,7 +193,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
           "source": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.",
-          "message": "Crear una nueva hoja de cálculo de Google Sheets con encabezados opcionales o copiando una existente."
+          "message": "Crear una hoja de Google Sheets con encabezados o copiando una existente."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.desc": {
           "source": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.",
@@ -325,7 +325,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
           "source": "Create a new worksheet in a Google Sheets spreadsheet with optional headers.",
-          "message": "Cree una nueva hoja de trabajo en una hoja de cálculo de Google Sheets con encabezados opcionales."
+          "message": "Crear una hoja de trabajo en Google Sheets con encabezados opcionales."
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
           "source": "Append new rows to an existing Google Sheets table with data mapped to the table headers",
@@ -769,7 +769,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
           "source": "Search for rows in a Google Sheets spreadsheet that match specific criteria.",
-          "message": "Buscar filas en una hoja de cálculo de Google Sheets que coincidan con criterios específicos."
+          "message": "Buscar filas en Google Sheets que coincidan con criterios específicos."
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.desc": {
           "source": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
@@ -813,7 +813,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -1063,6 +1063,10 @@
           "source": "URI Path",
           "message": "Ruta URI"
         },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
+        },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
@@ -1209,7 +1213,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
-          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"GoogleSheets\""
+          "message": "Buscar un registro coincidente en la tabla dada en la app \"GoogleSheets\""
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.desc": {
           "source": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
@@ -1301,7 +1305,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
           "source": "Search for Google Sheets spreadsheets with advanced filtering and sorting options.",
-          "message": "Buscar hojas de cálculo de Google Sheets con opciones avanzadas de filtrado y ordenación."
+          "message": "Buscar hojas de cálculo de Google Sheets con filtros y orden avanzados."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.desc": {
           "source": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.",
@@ -1345,7 +1349,7 @@
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
           "source": "Title text to search for (case-insensitive)",
-          "message": "Texto del título que se desea buscar (no distingue entre mayúsculas y minúsculas)"
+          "message": "Texto de título para buscar (no distingue mayúsculas de minúsculas)"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
           "source": "Find worksheets within a Google Spreadsheet by title.",

@@ -223,6 +223,10 @@
           "source": "Offset",
           "message": "Posun"
         },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Used for…",
+          "message": "Používa sa na…"
+        },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.desc": {
           "source": "Restrict the response to campaigns sent after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "message": "Obmedziť odpoveď na kampane odoslané po nastavenom čase. Používa formát času ISO 8601: 2015-10-21T15:41:36+00:00."
@@ -646,6 +650,10 @@
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Cesta URI"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

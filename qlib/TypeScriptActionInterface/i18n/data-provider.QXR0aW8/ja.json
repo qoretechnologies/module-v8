@@ -601,7 +601,7 @@
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
           "source": "Search for entries in an Attio list with filtering and sorting options.",
-          "message": "フィルタリングとソートのオプションを使用して、Attioリスト内のエントリーを検索します。"
+          "message": "フィルタや並べ替えを指定してAttioリストのエントリを検索します"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.desc": {
           "source": "Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.",
@@ -693,7 +693,7 @@
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
           "source": "Search for records in an Attio object with filtering and sorting options.",
-          "message": "フィルタリングとソートのオプションを使用して、Attioオブジェクト内のレコードを検索します。"
+          "message": "フィルタや並べ替えを指定してAttioオブジェクトのレコードを検索します"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.desc": {
           "source": "This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made.",
@@ -1130,6 +1130,10 @@
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "URIパス"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

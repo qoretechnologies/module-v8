@@ -223,6 +223,10 @@
           "source": "Offset",
           "message": "Desplazamiento"
         },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Used for…",
+          "message": "Se usa para…"
+        },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.desc": {
           "source": "Restrict the response to campaigns sent after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "message": "Restringe la respuesta a las campañas enviadas después de la hora establecida. Utiliza el formato de hora ISO 8601: 2015-10-21T15:41:36+00:00."
@@ -397,7 +401,7 @@
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -647,6 +651,10 @@
           "source": "URI Path",
           "message": "Ruta URI"
         },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
+        },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
@@ -745,7 +753,7 @@
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Mailchimp\"",
-          "message": "Buscar registros coincidentes en la tabla especificada en la aplicación \"Mailchimp\""
+          "message": "Busque registros coincidentes en la tabla indicada de la app \"Mailchimp\""
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
@@ -769,7 +777,7 @@
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
-          "message": "Buscar un único registro coincidente en la tabla especificada en la aplicación \"Mailchimp\""
+          "message": "Busque un único registro coincidente en la tabla dada de la app \"Mailchimp\""
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.desc": {
           "source": "Searches for subscriber tags by name to help organize and segment your audience members.",

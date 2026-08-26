@@ -1177,7 +1177,7 @@
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated estimates",
-          "message": "Vyberte, či sa má spúšťať pri vytvorených alebo aktualizovaných cenových ponukách"
+          "message": "Zvoľte, či spúšťať pri vytvorení alebo úprave cenových ponúk"
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when an estimate is created or updated in QuickBooks",
@@ -1273,7 +1273,7 @@
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated journal entries",
-          "message": "Vyberte, či sa má spúšťať pri vytvorených alebo aktualizovaných účtovných zápisoch"
+          "message": "Zvoľte, či spúšťať pri vytvorení alebo úprave účtovných zápisov"
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a journal entry is created or updated in QuickBooks",
@@ -2651,6 +2651,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -2705,11 +2709,11 @@
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated sales receipts",
-          "message": "Vyberte, či sa má spúšťať pri vytvorených alebo aktualizovaných potvrdeniach o predaji"
+          "message": "Zvoľte, či spúšťať pri vytvorení alebo úprave príjmových dokladov"
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a sales receipt is created or updated in QuickBooks",
-          "message": "Spustí sa pri vytvorení alebo aktualizácii potvrdenia o predaji v službe QuickBooks"
+          "message": "Spustí sa pri vytvorení alebo úprave príjmového dokladu v QuickBooks"
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNo.desc": {
           "source": "Search for matching records in the given table in app \"Quickbooks\"",
@@ -2881,11 +2885,11 @@
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated refund receipts",
-          "message": "Vyberte, či sa má spúšťať pri vytvorených alebo aktualizovaných dokladoch o vrátení peňazí"
+          "message": "Zvoľte, či spúšťať pri vytvorení alebo úprave dokladov o vrátení platby"
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a refund receipt is created or updated in QuickBooks",
-          "message": "Spustí sa pri vytvorení alebo aktualizácii dokladu o vrátení peňazí v službe QuickBooks"
+          "message": "Spustí sa pri vytvorení alebo úprave dokladu o vrátení platby v QuickBooks"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRl.desc": {
           "source": "Update existing records in the given table in app \"Quickbooks\"",

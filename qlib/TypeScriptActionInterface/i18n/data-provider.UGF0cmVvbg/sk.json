@@ -523,6 +523,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -741,7 +745,7 @@
         },
         "app.UGF0cmVvbg.short_desc": {
           "source": "Connect to Patreon to manage your creator content, memberships, and patron relationships.",
-          "message": "Pripojte sa k službe Patreon a spravujte svoj autorský obsah, členstvá a vzťahy s podporovateľmi."
+          "message": "Pripojte sa k Patreon a spravujte obsah, členstvá a vzťahy s podporovateľmi."
         }
       }
     }

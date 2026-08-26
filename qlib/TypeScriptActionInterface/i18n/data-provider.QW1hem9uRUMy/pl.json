@@ -129,7 +129,7 @@
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+          "message": "Przekazywanie; użyj serializacji połączenia i pozwól decydować klientowi REST"
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -379,6 +379,10 @@
           "source": "URI Path",
           "message": "Ścieżka URI"
         },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia"
+        },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
@@ -465,7 +469,7 @@
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
           "source": "Triggers when a new EC2 instance is created or reaches a specified state",
-          "message": "Uruchamia się, gdy zostanie utworzona nowa instancja EC2 lub osiągnie ona określony stan"
+          "message": "Uruchamia, gdy nowa instancja EC2 zostanie utworzona lub zmieni stan"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.desc": {
           "source": "This trigger monitors for new scheduled events on EC2 instances such as system reboots, maintenance windows, or instance retirements. It helps you stay informed about upcoming AWS-initiated actions on your infrastructure.",
@@ -529,7 +533,7 @@
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
           "source": "Triggers when a new scheduled maintenance event is detected on EC2 instances",
-          "message": "Uruchamia się, gdy na instancjach EC2 zostanie wykryte nowe zaplanowane zdarzenie konserwacyjne"
+          "message": "Uruchamia po wykryciu zaplanowanego zdarzenia konserwacji instancji EC2"
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.desc": {
           "source": "Starts one or more Amazon EC2 instances that are currently in a stopped state. The instances will transition from stopped to pending and then to running state.",
@@ -661,7 +665,7 @@
         },
         "app.QW1hem9uRUMy.short_desc": {
           "source": "Connect to Amazon EC2 to manage and automate your cloud infrastructure operations.",
-          "message": "Połącz się z Amazon EC2, aby zarządzać i automatyzować operacje w infrastrukturze chmurowej."
+          "message": "Połącz z Amazon EC2, aby zarządzać infrastrukturą chmurową i ją automatyzować."
         }
       }
     }

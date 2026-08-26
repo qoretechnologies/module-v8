@@ -319,6 +319,10 @@
           "source": "X Net Suite Idempotency Key",
           "message": "X Net Suite Idempotency Key"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous…",
+          "message": "모든 비동기 요청에 적용되는 사용자 정의 고유 멱등성 키입니다…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
           "source": "Sets the strictness of property name validation.",
           "message": "속성 이름 유효성 검사의 엄격성을 설정합니다."
@@ -403,6 +407,10 @@
           "source": "Exchange Rate",
           "message": "환율"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency…",
+          "message": "이 필드에는 대상 자회사 통화의 기본 환율이 표시됩니다…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
           "source": "Exclude from GL Numbering",
           "message": "GL 번호 지정에서 제외"
@@ -463,6 +471,10 @@
           "source": "Reversal Date",
           "message": "역분개 일자"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the…",
+          "message": "이 분개 항목을 역분개하려는 경우 해당 날짜를 입력하십시오…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
           "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
           "message": "필수 역분개 일자 필드에 입력된 날짜에 자동으로 발생하는 암기된 트랜잭션으로 역분개를 수행하려면 이 확인란을 선택합니다. 역분개 일자 필드의 날짜로 즉시 입력되는 트랜잭션으로 역분개를 수행하려면 이 확인란의 선택을 취소합니다."
@@ -470,6 +482,10 @@
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
           "source": "Reversal Defer",
           "message": "역분개 지연"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically…",
+          "message": "역분개를 자동으로 실행되는 트랜잭션으로 만들려면 이 확인란을 선택하십시오…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
           "source": "Ref Name",
@@ -962,6 +978,10 @@
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "URI 경로"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

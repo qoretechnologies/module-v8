@@ -113,7 +113,7 @@
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.short_desc": {
           "source": "Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub",
-          "message": "Jedinečné identifikátory (UUID) používané na načítanie konkrétnych častí dočasných znalostí v Serenity* AI Hub"
+          "message": "Unikátne identifikátory (UUID) na získanie nestálych znalostí v Serenity AI Hub"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.short_desc": {
           "source": "Executes an agent with the given code.",
@@ -491,6 +491,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -589,7 +593,7 @@
         },
         "app.U2VyZW5pdHk.short_desc": {
           "source": "Create conversations, execute agents and manage interactions with Serenity AI Hub.",
-          "message": "Vytvárajte konverzácie, spúšťajte agentov a spravujte interakcie pomocou Serenity AI Hub."
+          "message": "Vytvárajte konverzácie, spúšťajte agentov a spravujte interakcie v Serenity."
         }
       }
     }

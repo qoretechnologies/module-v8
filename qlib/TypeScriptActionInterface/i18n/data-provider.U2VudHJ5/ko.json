@@ -663,6 +663,10 @@
           "source": "URI Path",
           "message": "URI 경로"
         },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로"
+        },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
@@ -941,7 +945,7 @@
         },
         "app.U2VudHJ5.short_desc": {
           "source": "Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.",
-          "message": "개발자 우선 디버깅 플랫폼을 통해 오류를 모니터링 및 수정하고, 성능 문제를 추적하며, 애플리케이션 상태를 유지 관리하세요."
+          "message": "개발자 중심 디버깅 플랫폼으로 오류 수정, 성능 추적 및 앱 상태를 관리합니다."
         }
       }
     }

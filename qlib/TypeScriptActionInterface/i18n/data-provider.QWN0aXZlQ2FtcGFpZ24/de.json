@@ -49,7 +49,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"ActiveCampaign\"",
-          "message": "Erstellen Sie neue Datensätze in der angegebenen Tabelle in der App \"ActiveCampaign\""
+          "message": "Neue Datensätze in der angegebenen Tabelle in App „ActiveCampaign“ erstellen"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.desc": {
           "source": "Create a new account (company/organization) in ActiveCampaign",
@@ -1393,7 +1393,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+          "message": "Pass-through; Verbindungsserialisierung nutzen, REST-Client entscheiden lassen"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -1643,6 +1643,10 @@
           "source": "URI Path",
           "message": "URI-Pfad"
         },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung"
+        },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
@@ -1789,7 +1793,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"ActiveCampaign\"",
-          "message": "Nach übereinstimmenden Datensätzen in der angegebenen Tabelle in der App \"ActiveCampaign\" suchen"
+          "message": "Nach passenden Datensätzen in der Tabelle der App „ActiveCampaign“ suchen"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
@@ -1813,7 +1817,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
-          "message": "Nach einem einzelnen übereinstimmenden Datensatz in der angegebenen Tabelle in der App \"ActiveCampaign\" suchen"
+          "message": "Nach einzelnem Datensatz in der Tabelle der App „ActiveCampaign“ suchen"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.desc": {
           "source": "Remove a specific tag from a contact in ActiveCampaign",
@@ -1873,7 +1877,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"ActiveCampaign\"",
-          "message": "Bestehende Datensätze in der angegebenen Tabelle in der App \"ActiveCampaign\" aktualisieren"
+          "message": "Bestehende Datensätze in der Tabelle in App „ActiveCampaign“ aktualisieren"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.desc": {
           "source": "Update the information of an existing account in ActiveCampaign",

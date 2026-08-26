@@ -49,7 +49,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"ActiveCampaign\"",
-          "message": "Créer de nouveaux enregistrements dans la table donnée dans l'application « ActiveCampaign »"
+          "message": "Créer des enregistrements dans la table de l'app \"ActiveCampaign\""
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.desc": {
           "source": "Create a new account (company/organization) in ActiveCampaign",
@@ -765,7 +765,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.short_desc": {
           "source": "Delete records from the given table in app \"ActiveCampaign\"",
-          "message": "Supprimer les enregistrements de la table donnée dans l'application \"ActiveCampaign\""
+          "message": "Supprimer des enregistrements de la table de l'app \"ActiveCampaign\""
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.desc": {
           "source": "Retrieve a paginated list of tags in ActiveCampaign with optional search functionality",
@@ -1393,7 +1393,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -1417,7 +1417,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -1643,6 +1643,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -1789,7 +1793,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"ActiveCampaign\"",
-          "message": "Rechercher des enregistrements correspondants dans la table donnée de l'application \"ActiveCampaign\""
+          "message": "Rechercher des enregistrements dans la table de l'app \"ActiveCampaign\""
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
@@ -1813,7 +1817,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
-          "message": "Rechercher un enregistrement correspondant unique dans la table donnée de l'application \"ActiveCampaign\""
+          "message": "Rechercher un enregistrement unique dans la table de l'app \"ActiveCampaign\""
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.desc": {
           "source": "Remove a specific tag from a contact in ActiveCampaign",
@@ -1873,7 +1877,7 @@
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"ActiveCampaign\"",
-          "message": "Mettre à jour les enregistrements existants dans la table donnée de l'application \"ActiveCampaign\""
+          "message": "Mettre à jour des enregistrements dans la table de l'app \"ActiveCampaign\""
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.desc": {
           "source": "Update the information of an existing account in ActiveCampaign",

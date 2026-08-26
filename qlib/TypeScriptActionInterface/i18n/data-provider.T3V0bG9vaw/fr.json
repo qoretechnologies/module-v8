@@ -473,7 +473,7 @@
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -497,7 +497,7 @@
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -723,6 +723,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -913,7 +917,7 @@
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.short_desc": {
           "source": "Triggers when a new email is received in your Outlook inbox",
-          "message": "Se déclenche lorsqu'un nouvel e-mail est reçu dans votre boîte de réception Outlook"
+          "message": "Se déclenche lors de la réception d'un e-mail dans Outlook"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.desc": {
           "source": "Monitors an Outlook mailbox for new emails with attachments. When an email with attachments is received, each attachment that matches the specified filters will trigger a separate event. This allows for processing individual attachments from emails while maintaining the full email context.",
@@ -1077,7 +1081,7 @@
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.short_desc": {
           "source": "Triggers when an email with attachments is received, processing each matching attachment individually.",
-          "message": "Se déclenche lorsqu'un e-mail avec pièces jointes est reçu, en traitant chaque pièce jointe correspondante individuellement."
+          "message": "Se déclenche à la réception d'un e-mail contenant des pièces jointes."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.desc": {
           "source": "Search and retrieve emails from Outlook based on dates, senders, recipients, subject, body content, and detailed attachment properties like names, patterns, MIME types, and sizes.",
@@ -1373,7 +1377,7 @@
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.short_desc": {
           "source": "Search for emails using various filter criteria including advanced attachment filters.",
-          "message": "Rechercher des e-mails à l'aide de divers critères de filtre, y compris des filtres de pièces jointes avancés."
+          "message": "Rechercher des e-mails avec divers filtres, y compris les pièces jointes."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.desc": {
           "source": "Compose and send an email message from your Microsoft Outlook account to one or more recipients.",
@@ -1645,7 +1649,7 @@
         },
         "app.T3V0bG9vaw.short_desc": {
           "source": "Get access to your calendar events, contacts, and emails in Microsoft Outlook.",
-          "message": "Accédez à vos événements de calendrier, contacts et e-mails dans Microsoft Outlook."
+          "message": "Accédez à vos événements, contacts et e-mails dans Microsoft Outlook."
         }
       }
     }

@@ -221,7 +221,7 @@
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.short_desc": {
           "source": "Create a new Google Docs document from an existing template with placeholder replacements.",
-          "message": "Vytvoriť nový dokument Google Docs z existujúcej šablóny s nahradením zástupných symbolov."
+          "message": "Vytvorte dokument Google Docs zo šablóny s nahradením zástupných symbolov."
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.desc": {
           "source": "Appends text to a Google Docs document with options for positioning (beginning, end, or specific index), text formatting, and line breaks. Supports bold, italic, underline, font size, and font family styling.",
@@ -635,6 +635,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -821,7 +825,7 @@
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.short_desc": {
           "source": "Search for Google Docs documents with advanced filtering and sorting options.",
-          "message": "Vyhľadávať dokumenty Google Docs s pokročilými možnosťami filtrovania a zoradenia."
+          "message": "Vyhľadávajte dokumenty Google Docs s pokročilým filtrovaním a radením."
         },
         "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.desc": {
           "source": "Uploads a document file (Word, PDF, etc.) to Google Drive and converts it to Google Docs format for editing and collaboration.",

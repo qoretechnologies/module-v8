@@ -629,7 +629,7 @@
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.short_desc": {
           "source": "List companies with filtering, sorting, and pagination options.",
-          "message": "フィルタリング、ソート、ページネーションのオプションを指定して会社を一覧表示します。"
+          "message": "フィルタ、並べ替え、ページ指定を用いて会社の一覧を取得します"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.desc": {
           "source": "Retrieves a list of leads from Odoo CRM with support for filtering by field values, sorting by specific fields, and pagination. Returns lead information including ID, name, email, contact name, and partner name.",
@@ -701,7 +701,7 @@
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.short_desc": {
           "source": "List leads with filtering, sorting, and pagination options.",
-          "message": "フィルタリング、ソート、ページネーションのオプションを指定してリードを一覧表示します。"
+          "message": "フィルタ、並べ替え、ページ指定を用いてリードの一覧を取得します"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.desc": {
           "source": "Retrieves a list of partners from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns partner information including ID, display name, and email.",
@@ -773,7 +773,7 @@
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.short_desc": {
           "source": "List partners with filtering, sorting, and pagination options.",
-          "message": "フィルタリング、ソート、ページネーションのオプションを指定してパートナーを一覧表示します。"
+          "message": "フィルタ、並べ替え、ページ指定を用いて取引先の一覧を取得します"
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.desc": {
           "source": "Make a custom HTTP / REST API call to **Odoo CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
@@ -1066,6 +1066,10 @@
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "URIパス"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

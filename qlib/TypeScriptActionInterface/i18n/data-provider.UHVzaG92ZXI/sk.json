@@ -295,6 +295,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -365,7 +369,7 @@
         },
         "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.short_desc": {
           "source": "Seconds until notification stops retrying (maximum 10800)",
-          "message": "Počet sekúnd, kým sa oznámenie prestane pokúšať o opätovné odoslanie (maximálne 10800)"
+          "message": "Počet sekúnd do ukončenia opakovania oznámenia (maximálne 10800)"
         },
         "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
           "source": "Monospace",

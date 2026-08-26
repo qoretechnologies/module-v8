@@ -45,7 +45,7 @@
         },
         "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -294,6 +294,10 @@
         "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Ruta URI"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
         },
         "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
@@ -569,7 +573,7 @@
         },
         "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.short_desc": {
           "source": "Send a high-priority emergency notification with acknowledgment tracking",
-          "message": "Enviar una notificación de emergencia de alta prioridad con seguimiento de acuse de recibo"
+          "message": "Envíe notificaciones de emergencia prioritarias con acuse de recibo"
         },
         "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.desc": {
           "source": "Send a push notification with customizable priority, sound, and formatting. Supports priorities from lowest (no alert) to high (bypasses quiet hours).",

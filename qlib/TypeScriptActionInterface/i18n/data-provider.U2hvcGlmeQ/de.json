@@ -2241,7 +2241,7 @@
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+          "message": "Pass-through; Verbindungsserialisierung nutzen, REST-Client entscheiden lassen"
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -2491,6 +2491,10 @@
           "source": "URI Path",
           "message": "URI-Pfad"
         },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung"
+        },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
@@ -2541,7 +2545,7 @@
         },
         "app.U2hvcGlmeQ.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Shopify\"",
-          "message": "Nach übereinstimmenden Datensätzen in der angegebenen Tabelle in App „Shopify“ suchen"
+          "message": "Passende Datensätze in der Tabelle der App \"Shopify\" suchen"
         },
         "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Shopify\"",
@@ -2565,7 +2569,7 @@
         },
         "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Shopify\"",
-          "message": "Nach einem einzelnen passenden Datensatz in der angegebenen Tabelle in der App \"Shopify\" suchen"
+          "message": "Einen passenden Datensatz in der Tabelle der App \"Shopify\" suchen"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.desc": {
           "source": "This trigger activates when a Shopify checkout is created but not completed within the specified time window. Use this to send recovery emails, offer discounts, or analyze cart abandonment patterns.",
@@ -2709,7 +2713,7 @@
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a new order is placed with the specified status",
-          "message": "Wird ausgelöst, wenn eine neue Bestellung mit dem angegebenen Status aufgegeben wird"
+          "message": "Wird ausgelöst, wenn eine neue Bestellung mit dem Status eingeht"
         },
         "app.U2hvcGlmeQ.action.dXBkYXRl.desc": {
           "source": "Update existing records in the given table in app \"Shopify\"",
@@ -2733,7 +2737,7 @@
         },
         "app.U2hvcGlmeQ.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"Shopify\"",
-          "message": "Vorhandene Datensätze in der angegebenen Tabelle in der App \"Shopify\" aktualisieren"
+          "message": "Bestehende Datensätze in der Tabelle der App \"Shopify\" aktualisieren"
         },
         "app.U2hvcGlmeQ.desc": {
           "source": "Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales.",

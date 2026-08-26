@@ -573,7 +573,7 @@
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -823,6 +823,10 @@
           "source": "URI Path",
           "message": "Ruta URI"
         },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
+        },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
@@ -945,7 +949,7 @@
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"ZohoCRM\"",
-          "message": "Buscar registros coincidentes en la tabla especificada en la aplicación \"ZohoCRM\""
+          "message": "Busque registros coincidentes en la tabla indicada de la app \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
@@ -969,7 +973,7 @@
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
-          "message": "Buscar un único registro coincidente en la tabla especificada en la aplicación \"ZohoCRM\""
+          "message": "Busque un único registro coincidente en la tabla dada de la app \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRl.desc": {
           "source": "Update existing records in the given table in app \"ZohoCRM\"",
@@ -993,7 +997,7 @@
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"ZohoCRM\"",
-          "message": "Actualizar registros existentes en la tabla especificada en la aplicación \"ZohoCRM\""
+          "message": "Actualice registros existentes en la tabla indicada de la app \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.desc": {
           "source": "Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.",
@@ -1077,7 +1081,7 @@
         },
         "app.Wm9ob0NSTQ.short_desc": {
           "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
-          "message": "Conéctese a Zoho CRM para automatizar la gestión de relaciones con clientes en todos los centros de datos globales."
+          "message": "Conéctese a Zoho CRM para automatizar la gestión de clientes a nivel global."
         }
       }
     }

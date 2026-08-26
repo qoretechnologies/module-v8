@@ -453,7 +453,7 @@
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
           "source": "List all Google Cloud projects accessible with the current credentials",
-          "message": "Alle Google Cloud-Projekte auflisten, auf die mit den aktuellen Anmeldedaten zugegriffen werden kann"
+          "message": "Alle mit den Anmeldedaten zugänglichen Google-Cloud-Projekte auflisten"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.desc": {
           "source": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
@@ -497,7 +497,7 @@
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+          "message": "Pass-through; Verbindungsserialisierung nutzen, REST-Client entscheiden lassen"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -747,6 +747,10 @@
           "source": "URI Path",
           "message": "URI-Pfad"
         },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung"
+        },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
@@ -833,7 +837,7 @@
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
           "source": "Triggers when a new document is created in a Firestore collection",
-          "message": "Wird ausgelöst, wenn ein neues Dokument in einer Firestore-Sammlung erstellt wird"
+          "message": "Wird ausgelöst, wenn ein Dokument in Firestore erstellt wird"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.desc": {
           "source": "Performs advanced queries on a Firestore collection with support for multiple filters, ordering, and limits. This allows you to search for specific documents based on field values and retrieve them in a particular order.",
@@ -1049,7 +1053,7 @@
         },
         "app.RmlyZXN0b3Jl.short_desc": {
           "source": "Connect to Google Cloud Firestore to manage your NoSQL document database.",
-          "message": "Stellen Sie eine Verbindung zu Google Cloud Firestore her, um Ihre NoSQL-Dokumentendatenbank zu verwalten."
+          "message": "Google Cloud Firestore für NoSQL-Dokumentendatenbanken anbinden"
         }
       }
     }

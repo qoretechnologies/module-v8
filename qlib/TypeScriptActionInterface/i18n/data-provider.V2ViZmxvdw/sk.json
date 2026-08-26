@@ -867,6 +867,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -1241,7 +1245,7 @@
         },
         "app.V2ViZmxvdw.short_desc": {
           "source": "Webflow is a web design tool, CMS, and hosting platform that allows users to build responsive websites visually.",
-          "message": "Webflow je nástroj na tvorbu webov, CMS a hostingová platforma, ktorá používateľom umožňuje vizuálne vytvárať responzívne webové stránky."
+          "message": "Webflow je nástroj na vizuálny webdizajn, CMS a hosting responzívnych webov."
         }
       }
     }

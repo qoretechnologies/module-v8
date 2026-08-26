@@ -2401,7 +2401,7 @@
         },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -2651,6 +2651,10 @@
           "source": "URI Path",
           "message": "Ruta URI"
         },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
+        },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
@@ -2733,7 +2737,7 @@
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Quickbooks\"",
-          "message": "Buscar registros coincidentes en la tabla especificada en la aplicación \"Quickbooks\""
+          "message": "Busque registros coincidentes en la tabla indicada de la app \"Quickbooks\""
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Quickbooks\"",
@@ -2757,7 +2761,7 @@
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Quickbooks\"",
-          "message": "Buscar un único registro coincidente en la tabla especificada en la aplicación \"Quickbooks\""
+          "message": "Busque un único registro coincidente en la tabla dada de la app \"Quickbooks\""
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.desc": {
           "source": "Monitor QuickBooks for new payments or updates to existing payments. This trigger allows you to respond to payment events in real-time.",
@@ -2817,7 +2821,7 @@
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated purchase orders",
-          "message": "Elija si desea activar el disparador con órdenes de compra creadas o actualizadas"
+          "message": "Elija si se activa con órdenes de compra creadas o actualizadas"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a purchase order is created or updated in QuickBooks",
@@ -2881,7 +2885,7 @@
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
           "source": "Choose whether to trigger on created or updated refund receipts",
-          "message": "Elija si desea activar el disparador con recibos de reembolso creados o actualizados"
+          "message": "Elija si se activa con recibos de reembolso creados o actualizados"
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a refund receipt is created or updated in QuickBooks",
@@ -2909,7 +2913,7 @@
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"Quickbooks\"",
-          "message": "Actualizar registros existentes en la tabla especificada en la aplicación \"Quickbooks\""
+          "message": "Actualice registros existentes en la tabla indicada de la app \"Quickbooks\""
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.desc": {
           "source": "Modify an existing bill with new vendor information, line items, and other details",

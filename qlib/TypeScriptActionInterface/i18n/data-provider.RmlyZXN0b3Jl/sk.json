@@ -453,7 +453,7 @@
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
           "source": "List all Google Cloud projects accessible with the current credentials",
-          "message": "Zoznam všetkých projektov Google Cloud prístupných s aktuálnymi prihlasovacími údajmi"
+          "message": "Zoznam všetkých projektov Google Cloud dostupných s aktuálnymi prihlasovacími…"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.desc": {
           "source": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
@@ -746,6 +746,10 @@
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Cesta URI"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
@@ -1049,7 +1053,7 @@
         },
         "app.RmlyZXN0b3Jl.short_desc": {
           "source": "Connect to Google Cloud Firestore to manage your NoSQL document database.",
-          "message": "Pripojte sa k databáze Google Cloud Firestore a spravujte svoju dokumentovú databázu NoSQL."
+          "message": "Pripojte sa ku Google Cloud Firestore a spravujte databázu NoSQL dokumentov."
         }
       }
     }

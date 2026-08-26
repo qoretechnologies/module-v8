@@ -25,7 +25,7 @@
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"ZohoCRM\"",
-          "message": "Créer de nouveaux enregistrements dans la table donnée dans l'application \"ZohoCRM\""
+          "message": "Créer des enregistrements dans la table de l'application \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.desc": {
           "source": "Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.",
@@ -573,7 +573,7 @@
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -597,7 +597,7 @@
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -823,6 +823,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -945,7 +949,7 @@
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"ZohoCRM\"",
-          "message": "Rechercher des enregistrements correspondants dans la table spécifiée de l'application « ZohoCRM »"
+          "message": "Rechercher des enregistrements dans la table de l'application \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
@@ -969,7 +973,7 @@
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
-          "message": "Rechercher un enregistrement correspondant unique dans la table spécifiée de l'application « ZohoCRM »"
+          "message": "Rechercher un enregistrement unique dans la table de l'app \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRl.desc": {
           "source": "Update existing records in the given table in app \"ZohoCRM\"",
@@ -993,7 +997,7 @@
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"ZohoCRM\"",
-          "message": "Mettre à jour des enregistrements existants dans la table spécifiée de l'application « ZohoCRM »"
+          "message": "Mettre à jour des enregistrements dans la table de l'app \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.desc": {
           "source": "Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.",
@@ -1065,7 +1069,7 @@
         },
         "app.Wm9ob0NSTQ.action.dXBzZXJ0.short_desc": {
           "source": "Upsert records in the given table in app \"ZohoCRM\"",
-          "message": "Insérer ou mettre à jour (upsert) des enregistrements dans la table spécifiée de l'application « ZohoCRM »"
+          "message": "Insérer ou actualiser des enregistrements dans la table de l'app \"ZohoCRM\""
         },
         "app.Wm9ob0NSTQ.desc": {
           "source": "The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.",
@@ -1077,7 +1081,7 @@
         },
         "app.Wm9ob0NSTQ.short_desc": {
           "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
-          "message": "Connectez-vous à Zoho CRM pour automatiser la gestion de la relation client à travers tous les centres de données mondiaux."
+          "message": "Connectez Zoho CRM pour automatiser la gestion de la relation client."
         }
       }
     }

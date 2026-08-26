@@ -25,7 +25,7 @@
         },
         "app.UGlwZWRyaXZl.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"Pipedrive\"",
-          "message": "Créer de nouveaux enregistrements dans la table spécifiée dans l'application \"Pipedrive\""
+          "message": "Créer des enregistrements dans la table de l'application « Pipedrive »"
         },
         "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.desc": {
           "source": "Adds a new activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">adding an activity<-a>. <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
@@ -337,7 +337,7 @@
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRl.short_desc": {
           "source": "Delete records from the given table in app \"Pipedrive\"",
-          "message": "Supprimer des enregistrements de la table donnée dans l'application « Pipedrive »"
+          "message": "Supprimer des enregistrements de la table de l'application « Pipedrive »"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.desc": {
           "source": "Marks an activity as deleted. After 30 days, the activity will be permanently deleted.",
@@ -477,7 +477,7 @@
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -501,7 +501,7 @@
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -727,6 +727,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -777,7 +781,7 @@
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Pipedrive\"",
-          "message": "Rechercher des enregistrements correspondants dans la table donnée dans l'application « Pipedrive »"
+          "message": "Rechercher des enregistrements dans la table de l'application « Pipedrive »"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
@@ -801,7 +805,7 @@
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
-          "message": "Rechercher un enregistrement correspondant unique dans la table donnée dans l'application « Pipedrive »"
+          "message": "Rechercher un enregistrement unique dans la table de l'app « Pipedrive »"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.desc": {
           "source": "This trigger activates when a selected action is performed on a note in Pipedrive. Actions include creating, updating, deleting a note or any change.",
@@ -1217,7 +1221,7 @@
         },
         "app.UGlwZWRyaXZl.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"Pipedrive\"",
-          "message": "Mettre à jour des enregistrements existants dans la table donnée dans l'application « Pipedrive »"
+          "message": "Mettre à jour des enregistrements de la table dans l'app « Pipedrive »"
         },
         "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.desc": {
           "source": "Updates an activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",

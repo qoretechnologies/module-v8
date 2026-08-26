@@ -85,7 +85,7 @@
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.short_desc": {
           "source": "Retrieves participant information for a specific Google Meet conference.",
-          "message": "Recupera le informazioni sui partecipanti per una specifica conferenza Google Meet."
+          "message": "Recupera le informazioni sui partecipanti per una riunione Google Meet."
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.desc": {
           "source": "Retrieves all available recordings associated with a specific Google Meet conference. Returns details about each recording including state, timing information, and storage location.",
@@ -273,7 +273,7 @@
         },
         "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al REST"
         },
         "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -405,7 +405,7 @@
         },
         "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
           "source": "Include request/timing/size debug info in the response",
-          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+          "message": "Include informazioni di debug su richiesta/tempi/dimensioni nella risposta"
         },
         "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
           "source": "HTTP `OPTIONS`",
@@ -523,6 +523,10 @@
           "source": "URI Path",
           "message": "Percorso URI"
         },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione"
+        },
         "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
@@ -573,7 +577,7 @@
         },
         "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.short_desc": {
           "source": "Triggers when a new recording is created for a Google Meet conference.",
-          "message": "Si attiva quando viene creata una nuova registrazione per una conferenza Google Meet."
+          "message": "Si attiva quando viene creata una nuova registrazione per una riunione Meet."
         },
         "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.desc": {
           "source": "Monitors a specific Google Meet conference and triggers when a new transcript has been generated. Returns details about the transcript including its name, state, timing information, and Google Docs destination details.",
@@ -597,7 +601,7 @@
         },
         "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.short_desc": {
           "source": "Triggers when a new transcript is created for a Google Meet conference.",
-          "message": "Si attiva quando viene creata una nuova trascrizione per una conferenza Google Meet."
+          "message": "Si attiva quando viene creata una nuova trascrizione per una riunione Meet."
         },
         "app.R29vZ2xlTWVldA.desc": {
           "source": "Integrate with Google Meet to manage your meetings and events. This integration allows you to perform actions and respond to events in your Google Meet account, enabling you to automate meeting management and scheduling workflows.",

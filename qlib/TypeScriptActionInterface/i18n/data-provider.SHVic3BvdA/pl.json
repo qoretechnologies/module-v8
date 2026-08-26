@@ -641,7 +641,7 @@
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.short_desc": {
           "source": "Triggers when a support ticket is created or updated in HubSpot.",
-          "message": "Uruchamia, gdy w HubSpot zostanie utworzone lub zaktualizowane zgłoszenie pomocy technicznej."
+          "message": "Uruchamia, gdy zgłoszenie pomocy zostanie utworzone lub zmienione w HubSpot."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
           "source": "This trigger fires upon the creation or update of a user within HubSpot, helping you keep track of user accounts and maintain updated access control for your team.",
@@ -861,7 +861,7 @@
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a custom object is added or updated in HubSpot.",
-          "message": "Uruchamia, gdy w HubSpot zostanie dodany lub zaktualizowany obiekt niestandardowy."
+          "message": "Uruchamia, gdy obiekt niestandardowy zostanie dodany lub zmieniony w HubSpot."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
           "source": "This trigger fires when a deal is created or modified in HubSpot, allowing you to track sales opportunities and integrate with your sales pipeline automation workflows.",
@@ -1085,7 +1085,7 @@
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+          "message": "Przekazywanie; użyj serializacji połączenia i pozwól decydować klientowi REST"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -1335,6 +1335,10 @@
           "source": "URI Path",
           "message": "Ścieżka URI"
         },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia"
+        },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
@@ -1553,7 +1557,7 @@
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1iYXRjaC11cHNlcnQ.short_desc": {
           "source": "Create or update a batch of users by unique property values",
-          "message": "Utwórz lub zaktualizuj partię użytkowników według unikatowych wartości właściwości"
+          "message": "Utwórz lub zaktualizuj partię użytkowników według unikalnych właściwości"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.desc": {
           "source": "Search for users based on specific criteria",
@@ -1961,7 +1965,7 @@
         },
         "app.SHVic3BvdA.short_desc": {
           "source": "Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.",
-          "message": "Bezproblemowo łącz się z interfejsem API HubSpot, aby zautomatyzować i usprawnić procesy CRM."
+          "message": "Połącz z API HubSpot, aby zautomatyzować i usprawnić procesy CRM."
         }
       }
     }

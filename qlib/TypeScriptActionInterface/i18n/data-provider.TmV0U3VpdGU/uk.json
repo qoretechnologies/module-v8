@@ -319,6 +319,10 @@
           "source": "X Net Suite Idempotency Key",
           "message": "X Net Suite Idempotency Key"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous…",
+          "message": "Визначений користувачем унікальний ключ ідемпотентності для кожної асинхронної…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
           "source": "Sets the strictness of property name validation.",
           "message": "Встановлює суворість перевірки назв властивостей."
@@ -403,6 +407,10 @@
           "source": "Exchange Rate",
           "message": "Обмінний курс"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency…",
+          "message": "У цьому полі відображається курс валюти дочірньої компанії за замовчуванням…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
           "source": "Exclude from GL Numbering",
           "message": "Виключити з нумерації головної книги"
@@ -463,6 +471,10 @@
           "source": "Reversal Date",
           "message": "Дата сторнування"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the…",
+          "message": "Якщо цей запис журналу потрібно сторнувати, вкажіть дату для…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
           "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
           "message": "Установіть цей прапорець, щоб зробити сторнування збереженою транзакцією, яка автоматично виконується в дату, зазначену в обов'язковому полі «Дата сторнування». Зніміть цей прапорець, щоб зробити сторнування негайно введеною транзакцією з датою з поля «Дата сторнування»."
@@ -470,6 +482,10 @@
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
           "source": "Reversal Defer",
           "message": "Відкладення сторнування"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically…",
+          "message": "Позначте цей прапорець, щоб зробити сторнування збереженою транзакцією, яка…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
           "source": "Ref Name",
@@ -713,7 +729,7 @@
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+          "message": "Наскрізний режим; використати серіалізацію підключення за вибором REST-клієнта"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -809,7 +825,7 @@
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
           "source": "Return non-2xx responses normally instead of throwing",
-          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+          "message": "Повертати відповіді не-2xx як звичайні замість створення помилки"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
           "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
@@ -962,6 +978,10 @@
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Шлях URI"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Шлях URI відносно базової URL-адреси API підключення"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

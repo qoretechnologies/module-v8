@@ -73,7 +73,7 @@
         },
         "app.TmV0U3VpdGU.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"NetSuite\"",
-          "message": "Créer de nouveaux enregistrements dans la table donnée de l'application \"NetSuite\""
+          "message": "Créer des enregistrements dans la table de l'application « NetSuite »"
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.desc": {
           "source": "Fetches detailed information of a single customer by its ID.",
@@ -319,6 +319,10 @@
           "source": "X Net Suite Idempotency Key",
           "message": "X Net Suite Idempotency Key"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous…",
+          "message": "Clé d'idempotence unique définie par l'utilisateur appliquée à chaque appel…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
           "source": "Sets the strictness of property name validation.",
           "message": "Définit le niveau de rigueur de la validation des noms de propriétés."
@@ -403,6 +407,10 @@
           "source": "Exchange Rate",
           "message": "Taux de change"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency…",
+          "message": "Affiche le taux de change par défaut de la devise de la filiale cible…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
           "source": "Exclude from GL Numbering",
           "message": "Exclure de la numérotation GL"
@@ -463,6 +471,10 @@
           "source": "Reversal Date",
           "message": "Date de contrepassation"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the…",
+          "message": "Si cette écriture doit être extournée, entrez la date pour la…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
           "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
           "message": "Cochez cette case pour faire de la contrepassation une transaction mémorisée qui se produit automatiquement à la date saisie dans le champ obligatoire Date de contrepassation. Décochez cette case pour faire de la contrepassation une transaction immédiatement saisie avec la date dans le champ Date de contrepassation."
@@ -470,6 +482,10 @@
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
           "source": "Reversal Defer",
           "message": "Différer la contrepassation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically…",
+          "message": "Cochez pour faire de l'extourne une transaction mémorisée qui…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
           "source": "Ref Name",
@@ -713,7 +729,7 @@
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -737,7 +753,7 @@
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -963,6 +979,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -1097,7 +1117,7 @@
         },
         "app.TmV0U3VpdGU.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"NetSuite\"",
-          "message": "Rechercher les enregistrements correspondants dans la table donnée dans l'application « NetSuite »"
+          "message": "Rechercher des enregistrements dans la table de l'application « NetSuite »"
         },
         "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"NetSuite\"",
@@ -1121,7 +1141,7 @@
         },
         "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"NetSuite\"",
-          "message": "Rechercher un enregistrement correspondant unique dans la table donnée dans l'application « NetSuite »"
+          "message": "Rechercher un enregistrement unique dans la table de l'app « NetSuite »"
         },
         "app.TmV0U3VpdGU.action.c3VpdGVfcWw.desc": {
           "source": "Run a SuiteQL query",
@@ -1269,7 +1289,7 @@
         },
         "app.TmV0U3VpdGU.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"NetSuite\"",
-          "message": "Mettre à jour des enregistrements existants dans la table spécifiée de l'application \"NetSuite\""
+          "message": "Mettre à jour des enregistrements dans la table de l'application « NetSuite »"
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.desc": {
           "source": "Removes a vendor record from NetSuite based on its ID.",

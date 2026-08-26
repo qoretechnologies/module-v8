@@ -663,6 +663,10 @@
           "source": "URI Path",
           "message": "URI 路徑"
         },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "相對於連線 API 基礎 URL 的 URI 路徑"
+        },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
@@ -941,7 +945,7 @@
         },
         "app.U2VudHJ5.short_desc": {
           "source": "Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.",
-          "message": "透過以開發者為優先的偵錯平台監控並修正錯誤、追蹤效能問題，並維持應用程式健全狀況。"
+          "message": "透過以開發者為主的偵錯平台監控並修正錯誤、追蹤效能問題，維護應用程式健全度。"
         }
       }
     }

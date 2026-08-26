@@ -285,7 +285,7 @@
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
           "source": "Maximum receives before moving to dead letter queue",
-          "message": "Максимальна кількість отримувань перед переміщенням до черги недійсних повідомлень"
+          "message": "Максимум спроб отримання до переміщення в чергу недійсних повідомлень"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.desc": {
           "source": "The length of time (60-1209600 seconds) that messages are retained in the queue.",
@@ -597,7 +597,7 @@
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+          "message": "Наскрізний режим; використати серіалізацію підключення за вибором REST-клієнта"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -693,7 +693,7 @@
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
           "source": "Return non-2xx responses normally instead of throwing",
-          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+          "message": "Повертати відповіді не-2xx як звичайні замість створення помилки"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
           "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
@@ -846,6 +846,10 @@
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Шлях URI"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Шлях URI відносно базової URL-адреси API підключення"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
@@ -1029,7 +1033,7 @@
         },
         "app.QW1hem9uU1FT.short_desc": {
           "source": "Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.",
-          "message": "Підключайтеся до Amazon Simple Queue Service для керування чергами повідомлень та автоматизації робочих процесів обробки повідомлень."
+          "message": "Підключіться до Amazon SQS для керування чергами й обробки повідомлень."
         }
       }
     }

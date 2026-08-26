@@ -25,7 +25,7 @@
         },
         "app.SHVic3BvdA.action.Y3JlYXRl.short_desc": {
           "source": "Create new records in the given table in app \"Hubspot\"",
-          "message": "Créer de nouveaux enregistrements dans la table spécifiée de l'application « Hubspot »"
+          "message": "Créer des enregistrements dans la table de l'application \"Hubspot\""
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.desc": {
           "source": "Creates a new HubSpot form definition with the specified field groups, configuration, display options, and legal consent settings.",
@@ -469,7 +469,7 @@
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.short_desc": {
           "source": "Retrieve records from a HubSpot list with pagination and property filtering.",
-          "message": "Récupérer les enregistrements d'une liste HubSpot avec pagination et filtrage des propriétés."
+          "message": "Récupérer des entrées d'une liste HubSpot avec pagination et filtres."
         },
         "app.SHVic3BvdA.action.ZGVsZXRl.desc": {
           "source": "Delete records from the given table in app \"Hubspot\"",
@@ -937,7 +937,7 @@
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a new submission is received for a HubSpot form.",
-          "message": "Se déclenche lorsqu'une nouvelle soumission est reçue pour un formulaire HubSpot."
+          "message": "Se déclenche lors de la soumission d'un formulaire HubSpot."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
           "source": "Monitor new leads and updates to existing leads in HubSpot with this trigger, enabling efficient lead management and follow-up processes.",
@@ -1085,7 +1085,7 @@
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+          "message": "Pass-through ; utilise la sérialisation et laisse décider le client REST"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -1109,7 +1109,7 @@
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
           "source": "Serialize body as application/x-www-form-urlencoded form fields",
-          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+          "message": "Sérialiser le corps en champs application/x-www-form-urlencoded"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
           "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
@@ -1335,6 +1335,10 @@
           "source": "URI Path",
           "message": "Chemin URI"
         },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de connexion"
+        },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
@@ -1385,7 +1389,7 @@
         },
         "app.SHVic3BvdA.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Hubspot\"",
-          "message": "Rechercher des enregistrements correspondants dans la table donnée dans l'application « Hubspot »"
+          "message": "Rechercher des enregistrements correspondants dans l'app \"Hubspot\""
         },
         "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"Hubspot\"",
@@ -1409,7 +1413,7 @@
         },
         "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"Hubspot\"",
-          "message": "Rechercher un enregistrement correspondant unique dans la table donnée dans l'application « Hubspot »"
+          "message": "Rechercher un enregistrement unique correspondant dans l'app \"Hubspot\""
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.desc": {
           "source": "Search and retrieve HubSpot lists based on specified criteria and filters.",
@@ -1505,7 +1509,7 @@
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.short_desc": {
           "source": "Submit data to a HubSpot form on behalf of the connected portal.",
-          "message": "Soumettre des données à un formulaire HubSpot pour le compte du portail connecté."
+          "message": "Envoyer des données à un formulaire HubSpot pour le portail connecté."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLWJhdGNoLXVwc2VydF91cHNlcnQ.desc": {
           "source": "Post-crm-v3-objects-tickets-batch-upsert upsert",
@@ -1553,7 +1557,7 @@
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1iYXRjaC11cHNlcnQ.short_desc": {
           "source": "Create or update a batch of users by unique property values",
-          "message": "Créer ou mettre à jour un lot d'utilisateurs selon des valeurs de propriété uniques"
+          "message": "Créer ou mettre à jour un lot d'utilisateurs par propriétés uniques"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.desc": {
           "source": "Search for users based on specific criteria",
@@ -1649,7 +1653,7 @@
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1iYXRjaC11cHNlcnRfdXBzZXJ0.short_desc": {
           "source": "Create or update a batch of deals by unique property values",
-          "message": "Créer ou mettre à jour un lot de transactions selon des valeurs de propriété uniques"
+          "message": "Créer ou mettre à jour un lot de transactions par propriétés uniques"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.desc": {
           "source": "Search for deals based on specific criteria",
@@ -1913,7 +1917,7 @@
         },
         "app.SHVic3BvdA.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"Hubspot\"",
-          "message": "Mettre à jour les enregistrements existants dans la table donnée de l'application « Hubspot »"
+          "message": "Mettre à jour des enregistrements dans la table de l'app \"Hubspot\""
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.desc": {
           "source": "Updates one or more components of a HubSpot form definition without affecting the rest of the configuration.",
@@ -1949,7 +1953,7 @@
         },
         "app.SHVic3BvdA.action.dXBzZXJ0.short_desc": {
           "source": "Upsert records in the given table in app \"Hubspot\"",
-          "message": "Insérer ou mettre à jour des enregistrements dans la table donnée de l'application « Hubspot »"
+          "message": "Insérer ou mettre à jour des enregistrements dans l'app \"Hubspot\""
         },
         "app.SHVic3BvdA.desc": {
           "source": "The HubSpot integration provides a comprehensive collection of actions and triggers to interact with the HubSpot API. Whether you need to manage companies, contacts, deals, or custom objects, this integration simplifies your workflow automation and CRM management.",
@@ -1961,7 +1965,7 @@
         },
         "app.SHVic3BvdA.short_desc": {
           "source": "Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.",
-          "message": "Connectez-vous en toute transparence à l'API HubSpot pour automatiser et rationaliser vos processus CRM."
+          "message": "Connectez l'API HubSpot pour automatiser et optimiser vos processus CRM."
         }
       }
     }

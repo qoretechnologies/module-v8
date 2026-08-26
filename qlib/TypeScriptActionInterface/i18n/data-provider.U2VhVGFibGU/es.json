@@ -93,7 +93,7 @@
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
           "source": "Pass-through; use connection serialization and let the REST client decide",
-          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+          "message": "Paso directo; usa serialización de conexión y decide el cliente REST"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
           "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
@@ -343,6 +343,10 @@
           "source": "URI Path",
           "message": "Ruta URI"
         },
+        "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Ruta URI relativa a la URL base de la API de la conexión"
+        },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
@@ -417,7 +421,7 @@
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"SeaTable\"",
-          "message": "Buscar registros coincidentes en la tabla especificada en la aplicación \"SeaTable\""
+          "message": "Busque registros coincidentes en la tabla indicada de la app \"SeaTable\""
         },
         "app.U2VhVGFibGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
           "source": "Search for a single matching record in the given table in app \"SeaTable\"",
@@ -441,7 +445,7 @@
         },
         "app.U2VhVGFibGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
           "source": "Search for a single matching record in the given table in app \"SeaTable\"",
-          "message": "Buscar un único registro coincidente en la tabla especificada en la aplicación \"SeaTable\""
+          "message": "Busque un único registro coincidente en la tabla dada de la app \"SeaTable\""
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.desc": {
           "source": "Executes a SQL query on your SeaTable base and returns the results. Supports SELECT, INSERT, UPDATE, and DELETE statements. Maximum of 10,000 rows can be returned for SELECT queries.",
@@ -489,7 +493,7 @@
         },
         "app.U2VhVGFibGU.action.dXBkYXRl.short_desc": {
           "source": "Update existing records in the given table in app \"SeaTable\"",
-          "message": "Actualizar registros existentes en la tabla especificada en la aplicación \"SeaTable\""
+          "message": "Actualice registros existentes en la tabla indicada de la app \"SeaTable\""
         },
         "app.U2VhVGFibGU.desc": {
           "source": "The SeaTable integration provides comprehensive access to your SeaTable database operations. Create, read, update, and delete records in your tables, execute SQL queries, and monitor new entries with real-time triggers. Whether you need to manage data, filter results with SQL, or track new records, this integration streamlines your SeaTable workflow automation and database management.",
@@ -501,7 +505,7 @@
         },
         "app.U2VhVGFibGU.short_desc": {
           "source": "Connect to SeaTable to manage your database tables and records with powerful automation",
-          "message": "Conéctese a SeaTable para administrar las tablas y los registros de su base de datos con una potente automatización"
+          "message": "Conéctese a SeaTable para gestionar tablas y registros con automatización"
         }
       }
     }

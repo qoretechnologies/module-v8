@@ -775,6 +775,10 @@
           "source": "URI Path",
           "message": "Cesta URI"
         },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
+        },
         "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
@@ -993,7 +997,7 @@
         },
         "app.Q3JhZnQ.short_desc": {
           "source": "Connect to Craft to manage documents, collections, tasks, and blocks seamlessly.",
-          "message": "Pripojte sa k aplikácii Craft a spravujte dokumenty, kolekcie, úlohy a bloky bez námahy."
+          "message": "Pripojte sa ku Craft a spravujte dokumenty, kolekcie, úlohy a bloky."
         }
       }
     }

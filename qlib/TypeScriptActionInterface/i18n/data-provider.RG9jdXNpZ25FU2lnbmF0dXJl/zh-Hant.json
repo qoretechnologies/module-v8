@@ -205,7 +205,7 @@
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.short_desc": {
           "source": "Returns a URL to the recipient view UI. For signer recipients, returns the embedded signing view. Can also be used for other recipient types.",
-          "message": "傳回收件者檢視 UI 的 URL。對於簽署人收件者，傳回內嵌簽署檢視。亦可用於其他收件者類型。"
+          "message": "傳回收件者檢視 UI 的 URL。提供簽署者的嵌入簽署檢視，亦支援其他收件者類型。"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.desc": {
           "source": "This trigger activates whenever there’s a change in a DocuSign envelope’s lifecycle. It listens for a variety of updates, such as when an envelope is sent to recipients, delivered, signed, completed, or declined. It also includes administrative events like envelopes being resent, corrected, purged, deleted, discarded, newly created, or removed. By setting up this trigger, you can stay informed of envelope progress and status changes, enabling timely follow-ups, record-keeping, or other automated actions in your workflow.",
@@ -229,7 +229,7 @@
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.short_desc": {
           "source": "Triggers whenever a DocuSign envelope's status or properties are updated, including events like it being sent, delivered, signed, completed, declined, voided, corrected, purged, or deleted.",
-          "message": "每當 DocuSign 信封的狀態或屬性更新時觸發，包括其被傳送、送達、簽署、完成、拒絕、作廢、更正、清除或刪除等事件。"
+          "message": "當 DocuSign 信封狀態或屬性更新時觸發，包含傳送、簽署、完成、作廢或刪除等。"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.desc": {
           "source": "Make a custom HTTP / REST API call to **Docusign eSignature** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
@@ -522,6 +522,10 @@
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "URI 路徑"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "相對於連線 API 基礎 URL 的 URI 路徑"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

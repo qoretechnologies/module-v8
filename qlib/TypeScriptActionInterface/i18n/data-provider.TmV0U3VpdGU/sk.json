@@ -319,6 +319,10 @@
           "source": "X Net Suite Idempotency Key",
           "message": "X Net Suite Idempotency Key"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous…",
+          "message": "Používateľom definovaný unikátny kľúč idempotencie použitý na každú asynchrónnu…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
           "source": "Sets the strictness of property name validation.",
           "message": "Nastavuje prísnosť overovania názvov vlastností."
@@ -403,6 +407,10 @@
           "source": "Exchange Rate",
           "message": "Výmenný kurz"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency…",
+          "message": "Toto pole zobrazuje predvolený výmenný kurz meny cieľovej dcérskej spoločnosti…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
           "source": "Exclude from GL Numbering",
           "message": "Vylúčiť z číslovania hlavnej knihy"
@@ -463,6 +471,10 @@
           "source": "Reversal Date",
           "message": "Dátum storna"
         },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the…",
+          "message": "Ak má byť tento účtovný zápis stornovaný, zadajte dátum pre…"
+        },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
           "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
           "message": "Začiarknutím tohto políčka zmeníte storno na zapamätanú transakciu, ktorá sa automaticky uskutoční v dátume zadanom v povinnom poli Dátum storna. Zrušením začiarknutia tohto políčka vytvoríte storno ako okamžite zadanú transakciu s dátumom v poli Dátum storna."
@@ -470,6 +482,10 @@
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
           "source": "Reversal Defer",
           "message": "Odklad storna"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically…",
+          "message": "Začiarknite toto pole, ak má byť storno zapamätanou transakciou, ktorá sa auto…"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
           "source": "Ref Name",
@@ -962,6 +978,10 @@
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
           "source": "URI Path",
           "message": "Cesta URI"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "Cesta URI relatívna k základnej adrese API pripojenia"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",

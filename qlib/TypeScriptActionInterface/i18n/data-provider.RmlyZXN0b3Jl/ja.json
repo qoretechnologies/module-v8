@@ -747,6 +747,10 @@
           "source": "URI Path",
           "message": "URIパス"
         },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL",
+          "message": "接続のAPIベースURLに対する相対URIパス"
+        },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
           "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
           "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
@@ -905,7 +909,7 @@
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
           "source": "Query documents in a Firestore collection with filters and ordering",
-          "message": "フィルターと並び替えを使用してFirestoreコレクション内のドキュメントをクエリします"
+          "message": "フィルタと並べ替えを指定してFirestoreコレクションの文書を検索"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
           "source": "Restores Firestore data from a previous backup stored in Google Cloud Storage. This operation can restore the entire database or specific collections. Warning: This will overwrite existing documents with the same IDs.",
