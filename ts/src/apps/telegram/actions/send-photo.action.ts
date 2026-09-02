@@ -4,6 +4,7 @@ import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global
 import { TELEGRAM_APP_NAME, TelegramError } from '../constants';
 import { createTelegramClient } from '../helpers/constants';
 import { GetTelegramRecentChatsAllowedValues } from '../helpers/get-recent-chats-allowed-values';
+import { TelegramPhotoListType } from '../response-types';
 
 const action = 'send_photo';
 
@@ -108,19 +109,10 @@ const sendPhoto = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       date: { type: 'integer' },
       photo: {
-        type: {
-          type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              file_id: { type: 'string' },
-              file_unique_id: { type: 'string' },
-              file_size: { type: 'integer' },
-              width: { type: 'integer' },
-              height: { type: 'integer' },
-            },
-          },
-        },
+        type: TelegramPhotoListType,
+        short_desc:
+          'Available sizes of the sent photo, smallest first; use the file_id of the last element ' +
+          'with the get_file action to download the largest size',
       },
       caption: { type: 'string' },
     },

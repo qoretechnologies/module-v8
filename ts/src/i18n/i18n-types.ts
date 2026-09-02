@@ -106009,6 +106009,42 @@ type RootTranslation = {
 						}
 					}
 				}
+				get_file: {
+					/**
+					 * G​e​t​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​o​w​n​l​o​a​d​ ​a​ ​f​i​l​e​ ​r​e​c​e​i​v​e​d​ ​b​y​ ​o​r​ ​s​e​n​t​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​b​o​t
+					 */
+					shortDesc: string
+					/**
+					 * D​o​w​n​l​o​a​d​s​ ​a​ ​p​h​o​t​o​,​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​,​ ​a​u​d​i​o​ ​f​i​l​e​,​ ​d​o​c​u​m​e​n​t​,​ ​v​i​d​e​o​ ​o​r​ ​v​i​d​e​o​ ​n​o​t​e​ ​b​y​ ​i​t​s​ ​T​e​l​e​g​r​a​m​ ​f​i​l​e​ ​I​D​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​i​t​ ​a​s​ ​a​ ​f​i​l​e​ ​(​n​a​m​e​,​ ​M​I​M​E​ ​t​y​p​e​ ​a​n​d​ ​b​a​s​e​6​4​ ​c​o​n​t​e​n​t​)​ ​t​o​g​e​t​h​e​r​ ​w​i​t​h​ ​t​h​e​ ​T​e​l​e​g​r​a​m​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a​.​ ​T​h​e​ ​T​e​l​e​g​r​a​m​ ​B​o​t​ ​A​P​I​ ​c​a​n​ ​o​n​l​y​ ​s​e​r​v​e​ ​f​i​l​e​s​ ​u​p​ ​t​o​ ​2​0​ ​M​B​ ​t​h​i​s​ ​w​a​y​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​T​e​l​e​g​r​a​m​ ​f​i​l​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​a​k​e​ ​t​h​e​ ​v​a​l​u​e​ ​f​r​o​m​ ​t​h​e​ ​*​*​N​e​w​ ​M​e​s​s​a​g​e​*​*​ ​t​r​i​g​g​e​r​ ​p​a​y​l​o​a​d​:​ ​`​v​o​i​c​e​.​f​i​l​e​_​i​d​`​,​ ​`​a​u​d​i​o​.​f​i​l​e​_​i​d​`​,​ ​`​d​o​c​u​m​e​n​t​.​f​i​l​e​_​i​d​`​,​ ​`​v​i​d​e​o​.​f​i​l​e​_​i​d​`​,​ ​`​v​i​d​e​o​_​n​o​t​e​.​f​i​l​e​_​i​d​`​,​ ​o​r​ ​`​p​h​o​t​o​[​<​n​>​]​.​f​i​l​e​_​i​d​`​ ​(​t​h​e​ ​l​a​s​t​ ​e​l​e​m​e​n​t​ ​o​f​ ​`​p​h​o​t​o​`​ ​i​s​ ​t​h​e​ ​l​a​r​g​e​s​t​ ​s​i​z​e​)​,​ ​o​r​ ​f​r​o​m​ ​t​h​e​ ​`​p​h​o​t​o​`​ ​l​i​s​t​ ​i​n​ ​t​h​e​ ​*​*​S​e​n​d​ ​P​h​o​t​o​*​*​ ​r​e​s​p​o​n​s​e​.​ ​F​i​l​e​s​ ​l​a​r​g​e​r​ ​t​h​a​n​ ​2​0​ ​M​B​ ​c​a​n​n​o​t​ ​b​e​ ​d​o​w​n​l​o​a​d​e​d​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​B​o​t​ ​A​P​I​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 			triggers: {
 				new_message: {
@@ -222928,6 +222964,42 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * The maximum number of recent chats to retrieve (default: 10)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * Get File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Download a file received by or sent through the bot
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Message Management
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Telegram file identifier of the file to download
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.
 							 */
 							longDesc: () => LocalizedString
 						}

@@ -305,6 +305,21 @@ Your Telegram Bot Token in the format \`123456789:ABCdefGHIjklMNOpqrsTUVwxyz\`. 
         },
       },
     },
+    get_file: {
+      displayName: 'Get File',
+      shortDesc: 'Download a file received by or sent through the bot',
+      longDesc:
+        'Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.',
+      groups: ['Message Management'],
+      options: {
+        file_id: {
+          displayName: 'File ID',
+          shortDesc: 'The Telegram file identifier of the file to download',
+          longDesc:
+            'Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.',
+        },
+      },
+    },
   },
   triggers: {
     new_message: {
