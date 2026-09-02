@@ -11,6 +11,7 @@ import {
   DeleteTelegramMessage,
   GetTelegramFile,
   SendTelegramPhoto,
+  SendTelegramVoice,
 } from '../apps/telegram/actions';
 import { TELEGRAM_API_URL, TELEGRAM_APP_NAME, TelegramError } from '../apps/telegram/constants';
 import {
@@ -49,6 +50,7 @@ const BASE_EVENT_FIELD_NAMES = ['message_id', 'from', 'chat', 'date', 'text', 'e
 
 const getFileAction = GetTelegramFile as IQoreAppActionWithFunction;
 const sendPhotoAction = SendTelegramPhoto as IQoreAppActionWithFunction;
+const sendVoiceAction = SendTelegramVoice as IQoreAppActionWithFunction;
 const deleteMessageAction = DeleteTelegramMessage as IQoreAppActionWithFunction;
 
 type TNewMessageContext = Parameters<
@@ -221,6 +223,84 @@ describe('Telegram', () => {
       await expect(
         getFileAction.api_function({ file_id: '' }, undefined, contextWithToken)
       ).rejects.toThrow(/file_id/);
+    });
+  });
+
+  // ─── Offline: send_voice action shape ─────────────────────────────────
+
+  describe('send_voice action definition', () => {
+    it('Should be registered as a Telegram action', () => {
+      expect(SendTelegramVoice.app).toBe(TELEGRAM_APP_NAME);
+      expect(SendTelegramVoice.action).toBe('send_voice');
+      expect(SendTelegramVoice.action_code).toBe(EQoreAppActionCode.ACTION);
+      expect(typeof sendVoiceAction.api_function).toBe('function');
+    });
+
+    it('Should require the chat and a voice file', () => {
+      const options: TQoreOptions = sendVoiceAction.options ?? {};
+
+      expect(Object.keys(options)).toEqual([
+        'chat',
+        'voice',
+        'caption_format',
+        'caption',
+        'duration',
+        'protect_content',
+        'disable_notification',
+      ]);
+      expect(options.chat.required).toBe(true);
+      expect(options.voice.type).toBe('file');
+      expect(options.voice.required).toBe(true);
+      expect(options.duration.type).toBe('integer');
+      expect(options.duration.required).toBe(false);
+    });
+
+    it('Should declare the sent voice message in the response', () => {
+      const responseType = sendVoiceAction.response_type;
+
+      if (typeof responseType !== 'object' || !('fields' in responseType) || !responseType.fields) {
+        throw new Error('send_voice response_type does not declare hash fields');
+      }
+
+      expect(responseType.type).toBe('hash');
+      expect(Object.keys(responseType.fields)).toEqual([
+        'message_id',
+        'from',
+        'chat',
+        'date',
+        'voice',
+        'caption',
+      ]);
+      expect(responseType.fields.voice.type).toBe(TelegramVoiceType);
+    });
+
+    it('Should fail without a bot token before contacting Telegram', async () => {
+      await expect(
+        sendVoiceAction.api_function(
+          { chat: 1, voice: { name: 'a.ogg', mime_type: 'audio/ogg', content: '' } },
+          undefined,
+          { conn_opts: { token: '' } }
+        )
+      ).rejects.toThrow(/token/);
+    });
+
+    it('Should fail without a voice file before contacting Telegram', async () => {
+      const contextWithToken: TQoreAppActionFunctionContext = { conn_opts: { token: '123:ABC' } };
+
+      await expect(
+        sendVoiceAction.api_function({ chat: 1 }, undefined, contextWithToken)
+      ).rejects.toThrow(/voice/);
+    });
+
+    it('Should localize the send_voice action and all of its options', () => {
+      const locale = TelegramAppEn.actions.send_voice;
+      const options: TQoreOptions = sendVoiceAction.options ?? {};
+
+      expect(locale.displayName).toBeTruthy();
+      expect(locale.shortDesc).toBeTruthy();
+      expect(locale.longDesc).toBeTruthy();
+      expect(locale.groups).toEqual(['Messaging']);
+      expect(Object.keys(locale.options).sort()).toEqual(Object.keys(options).sort());
     });
   });
 
@@ -508,6 +588,53 @@ describe('Telegram', () => {
             baseContext
           )
         ).rejects.toThrow(TelegramError);
+      })
+    );
+
+    it(
+      'Should send a voice message and download it again with get_file',
+      skipOnTransientError(async () => {
+        if (!hasCredentials) return;
+
+        // Telegram needs a real OGG/OPUS, MP3, or M4A file; point TELEGRAM_VOICE_FILE at one to run this
+        const voicePath = process.env.TELEGRAM_VOICE_FILE;
+
+        if (!voicePath) {
+          console.warn('Skipping send_voice live test: TELEGRAM_VOICE_FILE is not set');
+
+          return;
+        }
+
+        const { readFileSync } = await import('node:fs');
+        const { basename } = await import('node:path');
+        const voiceBytes = readFileSync(voicePath);
+
+        const result = await sendVoiceAction.api_function(
+          {
+            chat: chatId,
+            voice: {
+              name: basename(voicePath),
+              mime_type: resolveTelegramMimeType(null, voicePath),
+              content: voiceBytes.toString('base64'),
+            },
+            caption: 'Telegram send_voice integration test',
+          },
+          undefined,
+          baseContext
+        );
+
+        expect(result.message_id).toBeDefined();
+        expect(result.voice?.file_id).toBeTruthy();
+
+        createdMessageIds.push(result.message_id);
+
+        const downloaded = await getFileAction.api_function(
+          { file_id: result.voice.file_id },
+          undefined,
+          baseContext
+        );
+
+        expect(Buffer.from(downloaded.content, 'base64').byteLength).toBe(voiceBytes.byteLength);
       })
     );
 

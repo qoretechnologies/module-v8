@@ -110,6 +110,52 @@ Your Telegram Bot Token in the format \`123456789:ABCdefGHIjklMNOpqrsTUVwxyz\`. 
         },
       },
     },
+    send_voice: {
+      displayName: 'Send Voice Message',
+      shortDesc: 'Send an audio file to a chat as a voice message',
+      longDesc:
+        'Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one',
+      groups: ['Messaging'],
+      options: {
+        chat: {
+          displayName: 'Chat',
+          shortDesc: 'The chat to send the voice message to',
+          longDesc: 'Select the chat, group, or channel where you want to send the voice message',
+        },
+        voice: {
+          displayName: 'Voice File',
+          shortDesc: 'The audio file to send as a voice message',
+          longDesc:
+            'The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in',
+        },
+        caption_format: {
+          displayName: 'Caption Format',
+          shortDesc: 'How to format the caption text',
+          longDesc: 'Choose the formatting mode for the voice message caption',
+        },
+        caption: {
+          displayName: 'Caption',
+          shortDesc: 'Optional caption for the voice message',
+          longDesc: 'Text shown together with the voice message',
+        },
+        duration: {
+          displayName: 'Duration',
+          shortDesc: 'Duration of the voice message in seconds',
+          longDesc:
+            'Optional duration of the voice message in seconds, shown by Telegram before the message is played',
+        },
+        protect_content: {
+          displayName: 'Protect Content',
+          shortDesc: 'Protect content from forwarding and saving',
+          longDesc: 'If enabled, the voice message cannot be forwarded or saved by users',
+        },
+        disable_notification: {
+          displayName: 'Send Silently',
+          shortDesc: 'Send the voice message without notification sound',
+          longDesc: 'If enabled, users will receive the voice message without notification sound',
+        },
+      },
+    },
     send_poll: {
       displayName: 'Send Poll',
       shortDesc: 'Create and send a poll or quiz to a chat',
