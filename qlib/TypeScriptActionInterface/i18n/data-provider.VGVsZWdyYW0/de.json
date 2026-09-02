@@ -3,6 +3,30 @@
   "locales": {
     "de": {
       "messages": {
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.desc": {
+          "source": "Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.",
+          "message": "Lädt ein Foto, eine Sprachnachricht, eine Audiodatei, ein Dokument, ein Video oder eine Videonachricht anhand der Telegram-Datei-ID herunter und gibt sie als Datei (Name, MIME-Typ und Base64-Inhalt) zusammen mit den Telegram-Dateimetadaten zurück. Die Telegram Bot API liefert auf diesem Weg nur Dateien bis 20 MB."
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.display_name": {
+          "source": "Get File",
+          "message": "Datei abrufen"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.",
+          "message": "Übernehmen Sie den Wert aus den Daten des Triggers **Neue Nachricht**: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id` oder `photo[<n>].file_id` (das letzte Element von `photo` ist die größte Größe), oder aus der Liste `photo` in der Antwort von **Foto senden**. Dateien über 20 MB können nicht über die Bot API heruntergeladen werden."
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "Datei-ID"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The Telegram file identifier of the file to download",
+          "message": "Die Telegram-Dateikennung der herunterzuladenden Datei"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.short_desc": {
+          "source": "Download a file received by or sent through the bot",
+          "message": "Eine vom Bot empfangene oder über ihn gesendete Datei herunterladen"
+        },
         "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.desc": {
           "source": "Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.",
           "message": "Eine Nachricht aus dem Chat entfernen. Der Bot kann seine eigenen Nachrichten löschen sowie Nachrichten von anderen Benutzern, wenn er über Administratorrechte verfügt."
@@ -498,6 +522,118 @@
         "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.short_desc": {
           "source": "Triggers when a new message is received in a specific chat",
           "message": "Wird ausgelöst, wenn eine neue Nachricht in einem bestimmten Chat empfangen wird"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.desc": {
+          "source": "Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one",
+          "message": "Lädt eine Audiodatei hoch und sendet sie als Sprachnachricht, die Telegram direkt im Chat abspielt. Die Datei muss OGG mit OPUS-Codierung, MP3 oder M4A sein und darf höchstens 50 MB groß sein. Verwenden Sie die Aktion **Datei abrufen**, um eine vom Bot empfangene Sprachnachricht wiederzuverwenden, oder eine Text-zu-Sprache-Aktion, um eine zu erzeugen"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.display_name": {
+          "source": "Send Voice Message",
+          "message": "Sprachnachricht senden"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.desc": {
+          "source": "Text shown together with the voice message",
+          "message": "Text, der zusammen mit der Sprachnachricht angezeigt wird"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.display_name": {
+          "source": "Caption",
+          "message": "Beschriftung"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the voice message",
+          "message": "Optionale Beschriftung der Sprachnachricht"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the voice message caption",
+          "message": "Wählen Sie den Formatierungsmodus für die Beschriftung der Sprachnachricht"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "Bildunterschriftenformat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "Wie der Text der Bildunterschrift formatiert werden soll"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the voice message",
+          "message": "Wählen Sie den Chat, die Gruppe oder den Kanal aus, an den die Sprachnachricht gesendet werden soll"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the voice message to",
+          "message": "Der Chat, an den die Sprachnachricht gesendet wird"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the voice message without notification sound",
+          "message": "Wenn aktiviert, erhalten die Benutzer die Sprachnachricht ohne Benachrichtigungston"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Lautlos senden"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the voice message without notification sound",
+          "message": "Die Sprachnachricht ohne Benachrichtigungston senden"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.desc": {
+          "source": "Optional duration of the voice message in seconds, shown by Telegram before the message is played",
+          "message": "Optionale Dauer der Sprachnachricht in Sekunden, die Telegram vor dem Abspielen anzeigt"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "Dauer"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.short_desc": {
+          "source": "Duration of the voice message in seconds",
+          "message": "Dauer der Sprachnachricht in Sekunden"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the voice message cannot be forwarded or saved by users",
+          "message": "Wenn aktiviert, können Benutzer die Sprachnachricht weder weiterleiten noch speichern"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "Inhalt schützen"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "Inhalt vor Weiterleitung und Speichern schützen"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.desc": {
+          "source": "The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in",
+          "message": "Die als Sprachnachricht zu sendende Audiodatei: OGG mit OPUS-Codierung, MP3 oder M4A, bis zu 50 MB. Ihr Name und MIME-Typ teilen Telegram mit, in welchem Format die Daten vorliegen"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.display_name": {
+          "source": "Voice File",
+          "message": "Sprachdatei"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.short_desc": {
+          "source": "The audio file to send as a voice message",
+          "message": "Die als Sprachnachricht zu sendende Audiodatei"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.short_desc": {
+          "source": "Send an audio file to a chat as a voice message",
+          "message": "Eine Audiodatei als Sprachnachricht an einen Chat senden"
         },
         "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.desc": {
           "source": "Send a text message with optional formatting to any chat, group, or channel accessible by your bot",

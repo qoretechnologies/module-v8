@@ -3,6 +3,30 @@
   "locales": {
     "ja": {
       "messages": {
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.desc": {
+          "source": "Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.",
+          "message": "Telegram のファイル ID を指定して写真、音声メッセージ、音声ファイル、ドキュメント、動画、またはビデオノートをダウンロードし、Telegram のファイルメタデータとともにファイル（名前、MIME タイプ、base64 の内容）として返します。Telegram Bot API がこの方法で提供できるファイルは 20 MB までです。"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.display_name": {
+          "source": "Get File",
+          "message": "ファイルを取得"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.",
+          "message": "**新しいメッセージ** トリガーのペイロードにある `voice.file_id`、`audio.file_id`、`document.file_id`、`video.file_id`、`video_note.file_id`、または `photo[<n>].file_id`（`photo` の最後の要素が最大サイズ）、あるいは **写真を送信** の応答にある `photo` リストから値を取得します。20 MB を超えるファイルは Bot API ではダウンロードできません。"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ファイル ID"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The Telegram file identifier of the file to download",
+          "message": "ダウンロードするファイルの Telegram ファイル識別子"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.short_desc": {
+          "source": "Download a file received by or sent through the bot",
+          "message": "ボットが受信した、またはボット経由で送信したファイルをダウンロードします"
+        },
         "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.desc": {
           "source": "Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.",
           "message": "チャットからメッセージを削除します。ボットは、自身のメッセージのほか、管理者権限がある場合は他のユーザーからのメッセージも削除できます。"
@@ -498,6 +522,118 @@
         "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.short_desc": {
           "source": "Triggers when a new message is received in a specific chat",
           "message": "特定のチャットで新しいメッセージが受信されたときにトリガーします"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.desc": {
+          "source": "Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one",
+          "message": "音声ファイルをアップロードし、Telegram がチャット内で再生する音声メッセージとして送信します。ファイルは OPUS でエンコードされた OGG、MP3、または M4A で、最大 50 MB です。ボットが受信した音声メッセージを再利用するには **ファイルを取得** アクションを、音声メッセージを生成するにはテキスト読み上げアクションを使用してください"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.display_name": {
+          "source": "Send Voice Message",
+          "message": "音声メッセージを送信"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.desc": {
+          "source": "Text shown together with the voice message",
+          "message": "音声メッセージとともに表示されるテキスト"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.display_name": {
+          "source": "Caption",
+          "message": "キャプション"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the voice message",
+          "message": "音声メッセージの任意のキャプション"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the voice message caption",
+          "message": "音声メッセージのキャプションの書式設定モードを選択します"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "キャプションの形式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "キャプションテキストのフォーマット方法"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the voice message",
+          "message": "音声メッセージを送信するチャット、グループ、またはチャンネルを選択します"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "チャット"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the voice message to",
+          "message": "音声メッセージの送信先のチャット"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the voice message without notification sound",
+          "message": "有効にすると、ユーザーは通知音なしで音声メッセージを受信します"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "サイレント送信"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the voice message without notification sound",
+          "message": "通知音なしで音声メッセージを送信します"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.desc": {
+          "source": "Optional duration of the voice message in seconds, shown by Telegram before the message is played",
+          "message": "音声メッセージの長さ（秒）。任意で、再生前に Telegram に表示されます"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "長さ"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.short_desc": {
+          "source": "Duration of the voice message in seconds",
+          "message": "音声メッセージの長さ（秒）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the voice message cannot be forwarded or saved by users",
+          "message": "有効にすると、ユーザーは音声メッセージを転送したり保存したりできません"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "コンテンツを保護"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "コンテンツの転送や保存を防止します"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.desc": {
+          "source": "The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in",
+          "message": "音声メッセージとして送信する音声ファイル。OPUS でエンコードされた OGG、MP3、または M4A で、最大 50 MB です。名前と MIME タイプによって、データの形式が Telegram に伝わります"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.display_name": {
+          "source": "Voice File",
+          "message": "音声ファイル"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.short_desc": {
+          "source": "The audio file to send as a voice message",
+          "message": "音声メッセージとして送信する音声ファイル"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.short_desc": {
+          "source": "Send an audio file to a chat as a voice message",
+          "message": "音声ファイルを音声メッセージとしてチャットに送信します"
         },
         "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.desc": {
           "source": "Send a text message with optional formatting to any chat, group, or channel accessible by your bot",
