@@ -23,6 +23,7 @@ import { createTelegramClient } from '../helpers/constants';
 import {
   describeTelegramFileError,
   downloadTelegramFile,
+  redactBotToken,
   resolveTelegramMimeType,
 } from '../helpers/file';
 import { TelegramFileBaseFields } from '../response-types';
@@ -97,7 +98,7 @@ const getFile = QoreAppCreator.createLocalizedAction<typeof options>({
       };
     } catch (error) {
       throw new TelegramError(
-        `Failed to ${humanizeNameTitle(action)}: ${describeTelegramFileError(error)}`
+        `Failed to ${humanizeNameTitle(action)}: ${redactBotToken(describeTelegramFileError(error), token)}`
       );
     }
   },

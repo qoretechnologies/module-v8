@@ -4,12 +4,12 @@ import {
   TQoreAppActionOption,
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
-import { pick } from 'lodash';
 import { Message } from 'node-telegram-bot-api';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { TELEGRAM_APP_NAME, TelegramError } from '../constants';
 import { createTelegramClient } from '../helpers/constants';
+import { trimToDeclaredFields } from '../helpers/event-fields';
 import { GetTelegramRecentChatsAllowedValues } from '../helpers/get-recent-chats-allowed-values';
 import { TelegramMessageMediaFields } from '../response-types';
 
@@ -210,10 +210,11 @@ const NewMessage = QoreAppCreator.createLocalizedTrigger({
       return NEW_MESSAGE_EXAMPLE_EVENT_DATA;
     }
 
-    // merge the live message over the static sample so that every declared field is present
+    // merge the live message over the static sample so that every declared field is present; the
+    // message is trimmed to the declared schema at every level so undeclared Bot API keys never leak
     return {
       ...NEW_MESSAGE_EXAMPLE_EVENT_DATA,
-      ...pick(latestMessage, Object.keys(eventFields)),
+      ...trimToDeclaredFields(latestMessage, eventFields),
     };
   },
   event_info: {

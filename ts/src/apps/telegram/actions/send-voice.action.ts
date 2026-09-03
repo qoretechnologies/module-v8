@@ -94,7 +94,8 @@ const sendVoice = QoreAppCreator.createLocalizedAction<typeof options>({
         voiceBuffer,
         {
           ...(disable_notification && { disable_notification }),
-          ...(caption && { caption, parse_mode: caption_format as ParseMode }),
+          ...(caption && { caption }),
+          ...(caption && caption_format !== 'plain' && { parse_mode: caption_format as ParseMode }),
           ...(duration && { duration }),
           ...(protect_content && { protect_content }),
         },

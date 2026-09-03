@@ -28,7 +28,7 @@ export const TelegramFileBaseFields = {
   },
   file_size: {
     type: 'integer',
-    short_desc: 'File size in bytes',
+    short_desc: 'File size in bytes; absent when Telegram does not report it',
   },
 } satisfies Record<string, TQoreAppActionOption>;
 
@@ -39,12 +39,12 @@ const durationField = {
 
 const mimeTypeField = {
   type: 'string',
-  short_desc: 'MIME type of the file as defined by the sender',
+  short_desc: 'MIME type of the file as defined by the sender; absent when not provided',
 } satisfies TQoreAppActionOption;
 
 const fileNameField = {
   type: 'string',
-  short_desc: 'Original file name as defined by the sender',
+  short_desc: 'Original file name as defined by the sender; absent when not provided',
 } satisfies TQoreAppActionOption;
 
 /**

@@ -24,6 +24,12 @@ export const buildTelegramFileUrl = (token: string, filePath: string): string =>
   `${TELEGRAM_API_URL}/file/bot${token}/${filePath}`;
 
 /**
+ * Removes the bot token from a message so that errors mentioning the download URL never reveal it
+ */
+export const redactBotToken = (message: string, token: string): string =>
+  token ? message.split(token).join('<bot token>') : message;
+
+/**
  * Picks the MIME type from the Content-Type header when it is specific, otherwise derives it
  * from the file path extension, falling back to application/octet-stream
  */
@@ -58,7 +64,16 @@ export const downloadTelegramFile = async (
   token: string,
   filePath: string
 ): Promise<ITelegramDownloadedFile> => {
-  const response = await fetch(buildTelegramFileUrl(token, filePath));
+  let response: Response;
+
+  try {
+    response = await fetch(buildTelegramFileUrl(token, filePath));
+  } catch (error) {
+    // a network failure may quote the request URL, which contains the bot token
+    const message = error instanceof Error ? error.message : String(error);
+
+    throw new TelegramError(`Downloading "${filePath}" failed: ${redactBotToken(message, token)}`);
+  }
 
   if (!response.ok) {
     // the download URL contains the bot token, so it must never be part of the error message

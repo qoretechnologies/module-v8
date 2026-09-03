@@ -14,9 +14,11 @@ import {
   SendTelegramVoice,
 } from '../apps/telegram/actions';
 import { TELEGRAM_API_URL, TELEGRAM_APP_NAME, TelegramError } from '../apps/telegram/constants';
+import { trimToDeclaredFields } from '../apps/telegram/helpers/event-fields';
 import {
   buildTelegramFileUrl,
   describeTelegramFileError,
+  redactBotToken,
   resolveTelegramMimeType,
   TELEGRAM_DEFAULT_MIME_TYPE,
   TELEGRAM_GET_FILE_SIZE_LIMIT,
@@ -138,8 +140,16 @@ describe('Telegram', () => {
       return;
     }
 
+    const parsedChatId = Number(chat);
+
+    if (!Number.isFinite(parsedChatId)) {
+      console.warn(`Skipping Telegram live tests: TELEGRAM_CHAT_ID "${chat}" is not a number.`);
+
+      return;
+    }
+
     baseContext.conn_opts = { token };
-    chatId = Number(chat);
+    chatId = parsedChatId;
     hasCredentials = true;
   });
 
@@ -345,6 +355,16 @@ describe('Telegram', () => {
       expect(description).toContain(TELEGRAM_GET_FILE_SIZE_LIMIT);
     });
 
+    it('Should redact the bot token from messages', () => {
+      const token = '123456789:ABCdefGHIjklMNOpqrsTUVwxyz';
+      const message = `fetch failed for ${buildTelegramFileUrl(token, 'voice/file_1.oga')}`;
+
+      expect(redactBotToken(message, token)).not.toContain(token);
+      expect(redactBotToken(message, token)).toContain('/file/bot<bot token>/voice/file_1.oga');
+      expect(redactBotToken('no token here', token)).toBe('no token here');
+      expect(redactBotToken(message, '')).toBe(message);
+    });
+
     it('Should pass other errors through unchanged', () => {
       expect(
         describeTelegramFileError(new Error('ETELEGRAM: 400 Bad Request: invalid file_id'))
@@ -357,6 +377,38 @@ describe('Telegram', () => {
   });
 
   // ─── Offline: shared media response types ─────────────────────────────
+
+  describe('example event trimming', () => {
+    const fields = getEventInfoFields();
+
+    it('Should drop undeclared keys at every level', () => {
+      const trimmed = trimToDeclaredFields(
+        {
+          message_id: 7,
+          text: 'hi',
+          undeclared_top_level: true,
+          document: { file_id: 'd', file_unique_id: 'du', file_size: 3, thumb: { file_id: 't' } },
+          entities: [{ offset: 0, length: 2, type: 'bold', url: 'https://example.com' }],
+          photo: [{ file_id: 'p', file_unique_id: 'pu', width: 1, height: 1, extra: 'x' }],
+        },
+        fields
+      );
+
+      expect(trimmed).toEqual({
+        message_id: 7,
+        text: 'hi',
+        document: { file_id: 'd', file_unique_id: 'du', file_size: 3 },
+        entities: [{ offset: 0, length: 2, type: 'bold' }],
+        photo: [{ file_id: 'p', file_unique_id: 'pu', width: 1, height: 1 }],
+      });
+    });
+
+    it('Should keep absent declared fields absent and reject non-objects', () => {
+      expect(trimToDeclaredFields({ message_id: 1 }, fields)).toEqual({ message_id: 1 });
+      expect(trimToDeclaredFields(null, fields)).toEqual({});
+      expect(trimToDeclaredFields([1, 2], fields)).toEqual({});
+    });
+  });
 
   describe('media response types', () => {
     it('Should share the Telegram file base fields', () => {

@@ -71,7 +71,8 @@ const sendPhoto = QoreAppCreator.createLocalizedAction<typeof options>({
 
       const response = await client.sendPhoto(chat, photoBuffer, {
         ...(disable_notification && { disable_notification }),
-        ...(caption && { caption, parse_mode: caption_format as ParseMode }),
+        ...(caption && { caption }),
+        ...(caption && caption_format !== 'plain' && { parse_mode: caption_format as ParseMode }),
         ...(protect_content && { protect_content }),
       });
 
