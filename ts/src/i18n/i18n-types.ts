@@ -105499,6 +105499,126 @@ type RootTranslation = {
 						}
 					}
 				}
+				send_voice: {
+					/**
+					 * S​e​n​d​ ​V​o​i​c​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​a​u​d​i​o​ ​f​i​l​e​ ​t​o​ ​a​ ​c​h​a​t​ ​a​s​ ​a​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​d​ ​s​e​n​d​ ​a​n​ ​a​u​d​i​o​ ​f​i​l​e​ ​a​s​ ​a​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​t​h​a​t​ ​T​e​l​e​g​r​a​m​ ​p​l​a​y​s​ ​i​n​l​i​n​e​.​ ​T​h​e​ ​f​i​l​e​ ​m​u​s​t​ ​b​e​ ​O​G​G​ ​e​n​c​o​d​e​d​ ​w​i​t​h​ ​O​P​U​S​,​ ​M​P​3​,​ ​o​r​ ​M​4​A​,​ ​a​n​d​ ​a​t​ ​m​o​s​t​ ​5​0​ ​M​B​.​ ​U​s​e​ ​t​h​e​ ​*​*​G​e​t​ ​F​i​l​e​*​*​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​u​s​e​ ​a​ ​v​o​i​c​e​ ​n​o​t​e​ ​t​h​e​ ​b​o​t​ ​r​e​c​e​i​v​e​d​,​ ​o​r​ ​a​ ​t​e​x​t​-​t​o​-​s​p​e​e​c​h​ ​a​c​t​i​o​n​ ​t​o​ ​p​r​o​d​u​c​e​ ​o​n​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * M​e​s​s​a​g​i​n​g
+						 */
+						'0': string
+					}
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​t​,​ ​g​r​o​u​p​,​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e
+							 */
+							longDesc: string
+						}
+						voice: {
+							/**
+							 * V​o​i​c​e​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​u​d​i​o​ ​f​i​l​e​ ​t​o​ ​s​e​n​d​ ​a​s​ ​a​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​u​d​i​o​ ​f​i​l​e​ ​t​o​ ​s​e​n​d​ ​a​s​ ​a​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​:​ ​O​G​G​ ​e​n​c​o​d​e​d​ ​w​i​t​h​ ​O​P​U​S​,​ ​M​P​3​,​ ​o​r​ ​M​4​A​,​ ​u​p​ ​t​o​ ​5​0​ ​M​B​.​ ​I​t​s​ ​n​a​m​e​ ​a​n​d​ ​M​I​M​E​ ​t​y​p​e​ ​t​e​l​l​ ​T​e​l​e​g​r​a​m​ ​w​h​i​c​h​ ​f​o​r​m​a​t​ ​t​h​e​ ​b​y​t​e​s​ ​a​r​e​ ​i​n
+							 */
+							longDesc: string
+						}
+						caption_format: {
+							/**
+							 * C​a​p​t​i​o​n​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​f​o​r​m​a​t​ ​t​h​e​ ​c​a​p​t​i​o​n​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​f​o​r​m​a​t​t​i​n​g​ ​m​o​d​e​ ​f​o​r​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​c​a​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+						caption: {
+							/**
+							 * C​a​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​a​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​e​x​t​ ​s​h​o​w​n​ ​t​o​g​e​t​h​e​r​ ​w​i​t​h​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e
+							 */
+							longDesc: string
+						}
+						duration: {
+							/**
+							 * D​u​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​u​r​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​i​n​ ​s​e​c​o​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​u​r​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​i​n​ ​s​e​c​o​n​d​s​,​ ​s​h​o​w​n​ ​b​y​ ​T​e​l​e​g​r​a​m​ ​b​e​f​o​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​l​a​y​e​d
+							 */
+							longDesc: string
+						}
+						protect_content: {
+							/**
+							 * P​r​o​t​e​c​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​t​e​c​t​ ​c​o​n​t​e​n​t​ ​f​r​o​m​ ​f​o​r​w​a​r​d​i​n​g​ ​a​n​d​ ​s​a​v​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​c​a​n​n​o​t​ ​b​e​ ​f​o​r​w​a​r​d​e​d​ ​o​r​ ​s​a​v​e​d​ ​b​y​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						disable_notification: {
+							/**
+							 * S​e​n​d​ ​S​i​l​e​n​t​l​y
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							longDesc: string
+						}
+					}
+				}
 				send_poll: {
 					/**
 					 * S​e​n​d​ ​P​o​l​l
@@ -106004,6 +106124,42 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​e​n​t​ ​c​h​a​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​1​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * G​e​t​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​o​w​n​l​o​a​d​ ​a​ ​f​i​l​e​ ​r​e​c​e​i​v​e​d​ ​b​y​ ​o​r​ ​s​e​n​t​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​b​o​t
+					 */
+					shortDesc: string
+					/**
+					 * D​o​w​n​l​o​a​d​s​ ​a​ ​p​h​o​t​o​,​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​,​ ​a​u​d​i​o​ ​f​i​l​e​,​ ​d​o​c​u​m​e​n​t​,​ ​v​i​d​e​o​ ​o​r​ ​v​i​d​e​o​ ​n​o​t​e​ ​b​y​ ​i​t​s​ ​T​e​l​e​g​r​a​m​ ​f​i​l​e​ ​I​D​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​i​t​ ​a​s​ ​a​ ​f​i​l​e​ ​(​n​a​m​e​,​ ​M​I​M​E​ ​t​y​p​e​ ​a​n​d​ ​b​a​s​e​6​4​ ​c​o​n​t​e​n​t​)​ ​t​o​g​e​t​h​e​r​ ​w​i​t​h​ ​t​h​e​ ​T​e​l​e​g​r​a​m​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a​.​ ​T​h​e​ ​T​e​l​e​g​r​a​m​ ​B​o​t​ ​A​P​I​ ​c​a​n​ ​o​n​l​y​ ​s​e​r​v​e​ ​f​i​l​e​s​ ​u​p​ ​t​o​ ​2​0​ ​M​B​ ​t​h​i​s​ ​w​a​y​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​T​e​l​e​g​r​a​m​ ​f​i​l​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​a​k​e​ ​t​h​e​ ​v​a​l​u​e​ ​f​r​o​m​ ​t​h​e​ ​*​*​N​e​w​ ​M​e​s​s​a​g​e​*​*​ ​t​r​i​g​g​e​r​ ​p​a​y​l​o​a​d​:​ ​`​v​o​i​c​e​.​f​i​l​e​_​i​d​`​,​ ​`​a​u​d​i​o​.​f​i​l​e​_​i​d​`​,​ ​`​d​o​c​u​m​e​n​t​.​f​i​l​e​_​i​d​`​,​ ​`​v​i​d​e​o​.​f​i​l​e​_​i​d​`​,​ ​`​v​i​d​e​o​_​n​o​t​e​.​f​i​l​e​_​i​d​`​,​ ​o​r​ ​`​p​h​o​t​o​[​<​n​>​]​.​f​i​l​e​_​i​d​`​ ​(​t​h​e​ ​l​a​s​t​ ​e​l​e​m​e​n​t​ ​o​f​ ​`​p​h​o​t​o​`​ ​i​s​ ​t​h​e​ ​l​a​r​g​e​s​t​ ​s​i​z​e​)​,​ ​o​r​ ​f​r​o​m​ ​t​h​e​ ​`​p​h​o​t​o​`​ ​l​i​s​t​ ​i​n​ ​t​h​e​ ​*​*​S​e​n​d​ ​P​h​o​t​o​*​*​ ​r​e​s​p​o​n​s​e​.​ ​F​i​l​e​s​ ​l​a​r​g​e​r​ ​t​h​a​n​ ​2​0​ ​M​B​ ​c​a​n​n​o​t​ ​b​e​ ​d​o​w​n​l​o​a​d​e​d​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​B​o​t​ ​A​P​I​.
 							 */
 							longDesc: string
 						}
@@ -222423,6 +222579,126 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				send_voice: {
+					/**
+					 * Send Voice Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an audio file to a chat as a voice message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Messaging
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat to send the voice message to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the chat, group, or channel where you want to send the voice message
+							 */
+							longDesc: () => LocalizedString
+						}
+						voice: {
+							/**
+							 * Voice File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The audio file to send as a voice message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in
+							 */
+							longDesc: () => LocalizedString
+						}
+						caption_format: {
+							/**
+							 * Caption Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to format the caption text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the formatting mode for the voice message caption
+							 */
+							longDesc: () => LocalizedString
+						}
+						caption: {
+							/**
+							 * Caption
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional caption for the voice message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Text shown together with the voice message
+							 */
+							longDesc: () => LocalizedString
+						}
+						duration: {
+							/**
+							 * Duration
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Duration of the voice message in seconds
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional duration of the voice message in seconds, shown by Telegram before the message is played
+							 */
+							longDesc: () => LocalizedString
+						}
+						protect_content: {
+							/**
+							 * Protect Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Protect content from forwarding and saving
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the voice message cannot be forwarded or saved by users
+							 */
+							longDesc: () => LocalizedString
+						}
+						disable_notification: {
+							/**
+							 * Send Silently
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send the voice message without notification sound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, users will receive the voice message without notification sound
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				send_poll: {
 					/**
 					 * Send Poll
@@ -222928,6 +223204,42 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * The maximum number of recent chats to retrieve (default: 10)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * Get File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Download a file received by or sent through the bot
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Message Management
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Telegram file identifier of the file to download
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.
 							 */
 							longDesc: () => LocalizedString
 						}

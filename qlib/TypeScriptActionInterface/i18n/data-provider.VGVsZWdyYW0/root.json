@@ -963,6 +963,142 @@
           "source": "If enabled, links in the message will not show automatic previews",
           "message": "If enabled, links in the message will not show automatic previews"
         },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.display_name": {
+          "source": "Get File",
+          "message": "Get File"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.short_desc": {
+          "source": "Download a file received by or sent through the bot",
+          "message": "Download a file received by or sent through the bot"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.desc": {
+          "source": "Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.",
+          "message": "Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way."
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "File ID"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The Telegram file identifier of the file to download",
+          "message": "The Telegram file identifier of the file to download"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.",
+          "message": "Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API."
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.display_name": {
+          "source": "Send Voice Message",
+          "message": "Send Voice Message"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.short_desc": {
+          "source": "Send an audio file to a chat as a voice message",
+          "message": "Send an audio file to a chat as a voice message"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.desc": {
+          "source": "Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one",
+          "message": "Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the voice message to",
+          "message": "The chat to send the voice message to"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the voice message",
+          "message": "Select the chat, group, or channel where you want to send the voice message"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.display_name": {
+          "source": "Voice File",
+          "message": "Voice File"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.short_desc": {
+          "source": "The audio file to send as a voice message",
+          "message": "The audio file to send as a voice message"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.desc": {
+          "source": "The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in",
+          "message": "The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "Caption Format"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "How to format the caption text"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the voice message caption",
+          "message": "Choose the formatting mode for the voice message caption"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.display_name": {
+          "source": "Caption",
+          "message": "Caption"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the voice message",
+          "message": "Optional caption for the voice message"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.desc": {
+          "source": "Text shown together with the voice message",
+          "message": "Text shown together with the voice message"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "Duration"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.short_desc": {
+          "source": "Duration of the voice message in seconds",
+          "message": "Duration of the voice message in seconds"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.desc": {
+          "source": "Optional duration of the voice message in seconds, shown by Telegram before the message is played",
+          "message": "Optional duration of the voice message in seconds, shown by Telegram before the message is played"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "Protect Content"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "Protect content from forwarding and saving"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the voice message cannot be forwarded or saved by users",
+          "message": "If enabled, the voice message cannot be forwarded or saved by users"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Send Silently"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the voice message without notification sound",
+          "message": "Send the voice message without notification sound"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the voice message without notification sound",
+          "message": "If enabled, users will receive the voice message without notification sound"
+        },
         "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.display_name": {
           "source": "New Message",
           "message": "New Message"

@@ -110,6 +110,52 @@ Your Telegram Bot Token in the format \`123456789:ABCdefGHIjklMNOpqrsTUVwxyz\`. 
         },
       },
     },
+    send_voice: {
+      displayName: 'Send Voice Message',
+      shortDesc: 'Send an audio file to a chat as a voice message',
+      longDesc:
+        'Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one',
+      groups: ['Messaging'],
+      options: {
+        chat: {
+          displayName: 'Chat',
+          shortDesc: 'The chat to send the voice message to',
+          longDesc: 'Select the chat, group, or channel where you want to send the voice message',
+        },
+        voice: {
+          displayName: 'Voice File',
+          shortDesc: 'The audio file to send as a voice message',
+          longDesc:
+            'The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in',
+        },
+        caption_format: {
+          displayName: 'Caption Format',
+          shortDesc: 'How to format the caption text',
+          longDesc: 'Choose the formatting mode for the voice message caption',
+        },
+        caption: {
+          displayName: 'Caption',
+          shortDesc: 'Optional caption for the voice message',
+          longDesc: 'Text shown together with the voice message',
+        },
+        duration: {
+          displayName: 'Duration',
+          shortDesc: 'Duration of the voice message in seconds',
+          longDesc:
+            'Optional duration of the voice message in seconds, shown by Telegram before the message is played',
+        },
+        protect_content: {
+          displayName: 'Protect Content',
+          shortDesc: 'Protect content from forwarding and saving',
+          longDesc: 'If enabled, the voice message cannot be forwarded or saved by users',
+        },
+        disable_notification: {
+          displayName: 'Send Silently',
+          shortDesc: 'Send the voice message without notification sound',
+          longDesc: 'If enabled, users will receive the voice message without notification sound',
+        },
+      },
+    },
     send_poll: {
       displayName: 'Send Poll',
       shortDesc: 'Create and send a poll or quiz to a chat',
@@ -302,6 +348,21 @@ Your Telegram Bot Token in the format \`123456789:ABCdefGHIjklMNOpqrsTUVwxyz\`. 
           displayName: 'Limit',
           shortDesc: 'Maximum number of chats to return',
           longDesc: 'The maximum number of recent chats to retrieve (default: 10)',
+        },
+      },
+    },
+    get_file: {
+      displayName: 'Get File',
+      shortDesc: 'Download a file received by or sent through the bot',
+      longDesc:
+        'Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.',
+      groups: ['Message Management'],
+      options: {
+        file_id: {
+          displayName: 'File ID',
+          shortDesc: 'The Telegram file identifier of the file to download',
+          longDesc:
+            'Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.',
         },
       },
     },

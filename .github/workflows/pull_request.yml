@@ -193,6 +193,8 @@ env:
   GOOGLE_ADS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_CLIENT_SECRET }}
   GOOGLE_ADS_DEVELOPER_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_DEVELOPER_TOKEN }}
   GOOGLE_ADS_CUSTOMER_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_CUSTOMER_ID }}
+  TELEGRAM_BOT_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TELEGRAM_BOT_TOKEN }}
+  TELEGRAM_CHAT_ID: ${{ fromJson(secrets.TEST_VARIABLES).TELEGRAM_CHAT_ID }}
 
 jobs:
   # App catalogue TypeScript build + jest unit tests. Nothing here needs Qore, so this

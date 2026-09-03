@@ -1,12 +1,26 @@
+/**
+ * Send Voice Action
+ *
+ * Sends an audio file to a chat as a voice message, which Telegram shows as a playable voice
+ * note. The file must be OGG encoded with OPUS, MP3, or M4A.
+ *
+ * @see https://core.telegram.org/bots/api#sendvoice
+ *
+ * Copyright 2026 Qore Technologies, s.r.o.
+ */
+
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { ParseMode } from 'node-telegram-bot-api';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { TELEGRAM_APP_NAME, TelegramError } from '../constants';
 import { createTelegramClient } from '../helpers/constants';
 import { GetTelegramRecentChatsAllowedValues } from '../helpers/get-recent-chats-allowed-values';
-import { TelegramPhotoListType } from '../response-types';
+import { TelegramVoiceType } from '../response-types';
 
-const action = 'send_photo';
+const action = 'send_voice';
+
+export const TELEGRAM_DEFAULT_VOICE_FILE_NAME = 'voice.ogg';
+export const TELEGRAM_DEFAULT_VOICE_MIME_TYPE = 'audio/ogg';
 
 const options = {
   chat: {
@@ -15,7 +29,7 @@ const options = {
     allowed_values_creatable: true,
     type: 'number',
   },
-  photo: {
+  voice: {
     type: 'file',
     required: true,
   },
@@ -34,6 +48,10 @@ const options = {
     preselected: true,
     type: 'string',
   },
+  duration: {
+    required: false,
+    type: 'integer',
+  },
   protect_content: {
     required: false,
     type: 'bool',
@@ -44,16 +62,16 @@ const options = {
   },
 } satisfies TQoreOptions;
 
-const sendPhoto = QoreAppCreator.createLocalizedAction<typeof options>({
+const sendVoice = QoreAppCreator.createLocalizedAction<typeof options>({
   app: TELEGRAM_APP_NAME,
   action,
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, photo, chat } = getQoreContextRequiredValues({
+    const { token, voice, chat } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
       connectionFields: ['token'],
-      optionFields: ['photo', 'chat'],
+      optionFields: ['voice', 'chat'],
       ErrorClass: TelegramError,
     });
 
@@ -64,17 +82,28 @@ const sendPhoto = QoreAppCreator.createLocalizedAction<typeof options>({
       disable_notification = false,
       caption_format = 'plain',
       caption,
+      duration,
     } = obj || {};
 
     try {
-      const photoBuffer = Buffer.from(photo.content, 'base64');
+      const voiceBuffer = Buffer.from(voice.content, 'base64');
 
-      const response = await client.sendPhoto(chat, photoBuffer, {
-        ...(disable_notification && { disable_notification }),
-        ...(caption && { caption }),
-        ...(caption && caption_format !== 'plain' && { parse_mode: caption_format as ParseMode }),
-        ...(protect_content && { protect_content }),
-      });
+      // the file name and content type tell Telegram which container the bytes are in
+      const response = await client.sendVoice(
+        chat,
+        voiceBuffer,
+        {
+          ...(disable_notification && { disable_notification }),
+          ...(caption && { caption }),
+          ...(caption && caption_format !== 'plain' && { parse_mode: caption_format as ParseMode }),
+          ...(Number.isFinite(duration) && { duration }),
+          ...(protect_content && { protect_content }),
+        },
+        {
+          filename: voice.name || TELEGRAM_DEFAULT_VOICE_FILE_NAME,
+          contentType: voice.mime_type || TELEGRAM_DEFAULT_VOICE_MIME_TYPE,
+        }
+      );
 
       return response;
     } catch (error) {
@@ -109,15 +138,13 @@ const sendPhoto = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       date: { type: 'integer' },
-      photo: {
-        type: TelegramPhotoListType,
-        short_desc:
-          'Available sizes of the sent photo, smallest first; use the file_id of the last element ' +
-          'with the get_file action to download the largest size',
+      voice: {
+        type: TelegramVoiceType,
+        short_desc: 'The sent voice message; its file_id can be passed to the get_file action',
       },
       caption: { type: 'string' },
     },
   },
 });
 
-export default sendPhoto;
+export default sendVoice;

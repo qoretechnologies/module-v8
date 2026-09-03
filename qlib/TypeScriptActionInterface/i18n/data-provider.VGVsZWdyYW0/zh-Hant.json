@@ -3,6 +3,30 @@
   "locales": {
     "zh-Hant": {
       "messages": {
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.desc": {
+          "source": "Downloads a photo, voice message, audio file, document, video or video note by its Telegram file ID and returns it as a file (name, MIME type and base64 content) together with the Telegram file metadata. The Telegram Bot API can only serve files up to 20 MB this way.",
+          "message": "依 Telegram 檔案 ID 下載相片、語音訊息、音訊檔案、文件、影片或影片訊息，並連同 Telegram 檔案中繼資料以檔案（名稱、MIME 類型與 base64 內容）形式傳回。Telegram Bot API 以此方式僅能提供 20 MB 以內的檔案。"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.display_name": {
+          "source": "Get File",
+          "message": "取得檔案"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "Take the value from the **New Message** trigger payload: `voice.file_id`, `audio.file_id`, `document.file_id`, `video.file_id`, `video_note.file_id`, or `photo[<n>].file_id` (the last element of `photo` is the largest size), or from the `photo` list in the **Send Photo** response. Files larger than 20 MB cannot be downloaded through the Bot API.",
+          "message": "從 **新訊息** 觸發器的資料中取得值：`voice.file_id`、`audio.file_id`、`document.file_id`、`video.file_id`、`video_note.file_id` 或 `photo[<n>].file_id`（`photo` 的最後一個元素為最大尺寸），或從 **發送相片** 回應中的 `photo` 清單取得。超過 20 MB 的檔案無法透過 Bot API 下載。"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "檔案 ID"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The Telegram file identifier of the file to download",
+          "message": "要下載之檔案的 Telegram 檔案識別碼"
+        },
+        "app.VGVsZWdyYW0.action.Z2V0X2ZpbGU.short_desc": {
+          "source": "Download a file received by or sent through the bot",
+          "message": "下載機器人收到或透過機器人傳送的檔案"
+        },
         "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.desc": {
           "source": "Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.",
           "message": "從聊天中移除訊息。如果機器人擁有管理員權限，它可以刪除自己的訊息以及其他使用者的訊息。"
@@ -498,6 +522,118 @@
         "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.short_desc": {
           "source": "Triggers when a new message is received in a specific chat",
           "message": "在特定聊天室中收到新訊息時觸發"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.desc": {
+          "source": "Upload and send an audio file as a voice message that Telegram plays inline. The file must be OGG encoded with OPUS, MP3, or M4A, and at most 50 MB. Use the **Get File** action to reuse a voice note the bot received, or a text-to-speech action to produce one",
+          "message": "上傳音訊檔案並以語音訊息形式傳送，Telegram 會直接在聊天中播放。檔案必須是以 OPUS 編碼的 OGG、MP3 或 M4A，且不超過 50 MB。使用 **取得檔案** 動作重複使用機器人收到的語音訊息，或使用文字轉語音動作產生一則"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.display_name": {
+          "source": "Send Voice Message",
+          "message": "傳送語音訊息"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.desc": {
+          "source": "Text shown together with the voice message",
+          "message": "與語音訊息一併顯示的文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.display_name": {
+          "source": "Caption",
+          "message": "說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the voice message",
+          "message": "語音訊息的選用說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the voice message caption",
+          "message": "選擇語音訊息說明文字的格式模式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "說明文字格式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "如何格式化說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the voice message",
+          "message": "選取要傳送語音訊息的聊天、群組或頻道"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the voice message to",
+          "message": "要傳送語音訊息的聊天"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the voice message without notification sound",
+          "message": "啟用後，使用者收到語音訊息時不會有通知音效"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "以靜音方式發送"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the voice message without notification sound",
+          "message": "傳送語音訊息時不播放通知音效"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.desc": {
+          "source": "Optional duration of the voice message in seconds, shown by Telegram before the message is played",
+          "message": "語音訊息的選用長度（秒），Telegram 會在播放訊息前顯示"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "長度"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.ZHVyYXRpb24.short_desc": {
+          "source": "Duration of the voice message in seconds",
+          "message": "語音訊息的長度（秒）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the voice message cannot be forwarded or saved by users",
+          "message": "啟用後，使用者無法轉寄或儲存語音訊息"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "保護內容"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "防止內容被轉發與儲存"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.desc": {
+          "source": "The audio file to send as a voice message: OGG encoded with OPUS, MP3, or M4A, up to 50 MB. Its name and MIME type tell Telegram which format the bytes are in",
+          "message": "要以語音訊息形式傳送的音訊檔案：以 OPUS 編碼的 OGG、MP3 或 M4A，最大 50 MB。其名稱與 MIME 類型會告知 Telegram 資料的格式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.display_name": {
+          "source": "Voice File",
+          "message": "語音檔案"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.option.dm9pY2U.short_desc": {
+          "source": "The audio file to send as a voice message",
+          "message": "要以語音訊息形式傳送的音訊檔案"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF92b2ljZQ.short_desc": {
+          "source": "Send an audio file to a chat as a voice message",
+          "message": "將音訊檔案以語音訊息形式傳送到聊天"
         },
         "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.desc": {
           "source": "Send a text message with optional formatting to any chat, group, or channel accessible by your bot",

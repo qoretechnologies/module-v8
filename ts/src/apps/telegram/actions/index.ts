@@ -6,3 +6,5 @@ export { default as PinTelegramMessage } from './pin-message.action';
 export { default as UnpinTelegramMessage } from './unpin-message.action';
 export { default as DeleteTelegramMessage } from './delete-message.action';
 export { default as EditTelegramMessage } from './edit-message.action';
+export { default as GetTelegramFile } from './get-file.action';
+export { default as SendTelegramVoice } from './send-voice.action';

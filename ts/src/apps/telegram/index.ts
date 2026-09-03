@@ -2,7 +2,12 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { TELEGRAM_APP_LOGO, TELEGRAM_APP_NAME, TELEGRAM_CONN_OPTIONS } from './constants';
+import {
+  TELEGRAM_API_URL,
+  TELEGRAM_APP_LOGO,
+  TELEGRAM_APP_NAME,
+  TELEGRAM_CONN_OPTIONS,
+} from './constants';
 
 import * as TELEGRAM_ACTIONS from './actions';
 import * as TELEGRAM_TRIGGERS from './triggers';
@@ -21,7 +26,7 @@ export default (locale: Locales) =>
     logo_file_name: 'logo.svg',
     logo_mime_type: 'image/svg+xml',
     rest: {
-      url: 'https://api.telegram.org',
+      url: TELEGRAM_API_URL,
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
