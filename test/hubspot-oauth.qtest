@@ -297,11 +297,27 @@ class HubspotOAuthTest inherits QUnit::Test {
         assertEq("https://callback.example.test/oauth?return=crm&label=two words", args.redirect_uri);
         assertFalse(args.scope =~ /\b(content|cms\.domains\.read)\b/);
         assertTrue(args.scope =~ /crm.objects.contacts.read/);
+        hash<auto> requested;
+        foreach string name in (args.scope.split(" ")) {
+            requested{name} = True;
+        }
+        foreach string scope in ("crm.objects.tickets.read", "crm.objects.tickets.write",
+                "crm.schemas.tickets.read", "crm.schemas.tickets.write") {
+            assertTrue(requested{scope});
+        }
+        assertFalse(args.scope =~ /\b(tickets|files|hubdb)( |$)/);
+        assertFalse(args.scope =~ /\b(files|hubdb)\./);
         assertEq("https://app.hubspot.com/oauth/authorize", Util::parse_uri_query(uri).method);
         conn = connection(extra: {"oauth2_auth_args": {"optional_scope": "cms.domains.read"}});
         assertEq("cms.domains.read", Util::parse_uri_query(conn.getAuthorizationCodeRequest()).params.optional_scope);
         conn = connection(extra: {"oauth2_auth_args": {}});
         assertNothing(Util::parse_uri_query(conn.getAuthorizationCodeRequest()).params.optional_scope);
+        # Explicit connection profiles override catalog defaults. A CMS-only candidate must not
+        # inherit ticket, file, HubDB, or custom-object access from the generic CRM connector.
+        conn = connection(extra: {"oauth2_scopes": ("oauth", "crm.objects.contacts.read")});
+        hash<auto> scoped = Util::parse_uri_query(conn.getAuthorizationCodeRequest()).params;
+        assertEq("oauth crm.objects.contacts.read", scoped.scope);
+        assertEq("content cms.domains.read", scoped.optional_scope);
     }
 
     testGranted() {

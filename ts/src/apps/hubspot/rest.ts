@@ -35,7 +35,11 @@ export const getHubspotRestOptions = () =>
     oauth2_scopes: [
       'media_bridge.read',
       'oauth',
-      'tickets',
+      // Match HubSpot's granular replacement of the legacy tickets grant.
+      'crm.objects.tickets.read',
+      'crm.objects.tickets.write',
+      'crm.schemas.tickets.read',
+      'crm.schemas.tickets.write',
       'e-commerce',
       'crm.objects.custom.read',
       'crm.objects.custom.write',

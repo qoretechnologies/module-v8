@@ -3,8 +3,7 @@
 Copyright 2026 Qore Technologies, s.r.o.
 
 The HubSpot catalog requests `content cms.domains.read` through
-`rest.oauth2_auth_args.optional_scope`. The existing required CRM scopes remain
-unchanged. HubSpot can omit optional scopes when the selected account cannot
+`rest.oauth2_auth_args.optional_scope`. HubSpot can omit optional scopes when the selected account cannot
 grant them. A successful CRM connection ping does not establish CMS access.
 
 | Operation | Endpoint families | Required grant |
@@ -19,6 +18,28 @@ template/source-code, or domain-write access. A manually configured domain-write
 operation requires an actual `cms.domains.write` grant; it is never inferred from
 domain-read or content access. No additional CMS actions or schemas are installed;
 use the existing **Make an API call** action.
+
+## Granular scope migration — 2026-09-17
+
+The default ticket grant now requests `crm.objects.tickets.read`,
+`crm.objects.tickets.write`, `crm.schemas.tickets.read`, and `crm.schemas.tickets.write`
+instead of the legacy `tickets` scope. Migrate the corresponding external app configuration before
+deploying these defaults. Persisted `oauth2_scopes` overrides must be updated separately; changing
+the catalog does not replace them or expand an existing token's grant.
+
+The external Qorus HubSpot Access app also migrated `files` to `files.read`, `files.write`,
+and `files.delete`, plus granular HubDB and timeline scopes. These are conditionally required
+capabilities of the external app, not requirements of every Qorus connection. The default connector
+does not request file, HubDB, or timeline access. Do not add those scopes to a CMS-only connection
+unless its operations require them. A consent failure naming HubDB must be investigated against
+the actual install URL's `scope` parameter; configuring conditional HubDB support alone does not
+require every account to have it.
+
+Qore's `RestClient` and the cloud token exchange/introspection service treat scope names as opaque
+strings. No provider-specific change in Qore's generic OAuth engine or the qorus-api client-secret
+registry is needed for a file-scope rename. If migrating `content` to granular page scopes, update
+`TypeScriptHubspotRestClient`'s operation-level grant checks as well: it currently requires the
+documented legacy `content` grant for supported page paths. File scopes do not grant page editing.
 
 These scope requirements apply to the documented v3 and `2026-03` endpoint
 families. The developer platform/app version and the REST API version are separate.
