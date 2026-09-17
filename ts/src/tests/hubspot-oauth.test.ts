@@ -31,7 +31,10 @@ describe('Hubspot OAuth endpoints', () => {
     expect(app.rest.oauth2_scopes).toEqual([
       'media_bridge.read',
       'oauth',
-      'tickets',
+      'crm.objects.tickets.read',
+      'crm.objects.tickets.write',
+      'crm.schemas.tickets.read',
+      'crm.schemas.tickets.write',
       'e-commerce',
       'crm.objects.custom.read',
       'crm.objects.custom.write',
@@ -61,6 +64,9 @@ describe('Hubspot OAuth endpoints', () => {
       ...app.rest.oauth2_auth_args.optional_scope.split(' '),
     ];
     expect(scopes).not.toContain('files');
+    expect(scopes.some((scope) => scope.startsWith('files.'))).toBe(false);
+    expect(scopes.some((scope) => scope === 'hubdb' || scope.startsWith('hubdb.'))).toBe(false);
+    expect(scopes).not.toContain('tickets');
     expect(scopes).not.toContain('cms.domains.write');
     expect(scopes).not.toContain('cms.source_code.read');
     expect(scopes).not.toContain('cms.source_code.write');
