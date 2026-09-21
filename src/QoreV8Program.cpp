@@ -926,7 +926,12 @@ static void deref_callref(const v8::WeakCallbackInfo<QoreV8CallbackInfo>& data) 
 }
 #endif
 
-v8::Local<v8::Value> QoreV8Program::getV8Value(const QoreValue val, ExceptionSink* xsink) {
+v8::Local<v8::Value> QoreV8Program::getV8Value(const QoreValue val_arg, ExceptionSink* xsink) {
+    // A member assigned with the weak reference operator ":=" or the opaque reference operator
+    // "@=" is stored in its container as the reference itself, and the list and hash cases
+    // below pass what the container holds straight back here.  Resolve it, or an ordinary
+    // convertible hash or list reaches the default case and is rejected.
+    const QoreValue val = val_arg.resolveIndirect();
     //printd(5, "QoreV8Program::getV8Value() type '%s'\n", val.getFullTypeName());
 
     v8::Isolate::Scope isolate_scope(isolate);

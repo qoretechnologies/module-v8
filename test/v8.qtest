@@ -2,6 +2,10 @@
 
 %modern
 
+# conversion to V8 has to resolve these; see indirectReferencesTest()
+%allow-weak-references
+%allow-opaque-references
+
 %requires v8
 %requires QUnit
 %requires Util
@@ -13,6 +17,7 @@ class V8Test inherits Test {
     }
 
     constructor() : Test("v8 test", "1.0") {
+        addTestCase("indirect references", \indirectReferencesTest());
         addTestCase("function test", \functionTest());
         addTestCase("named argument calls", \namedArgumentTest());
         addTestCase("timeout", \timeoutTest());
@@ -24,6 +29,46 @@ class V8Test inherits Test {
         addTestCase("crash safety test", \crashSafetyTest());
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
+    }
+
+    #! A container member holding a weak or opaque reference must convert as its target
+    /** A member assigned with ":=" or "@=" is stored in its container as the reference itself, and
+        the list and hash cases of getV8Value() pass what the container holds straight back to it.
+        Without QoreValue::resolveIndirect() the reference reaches the default case and the whole
+        call fails with "Cannot convert Qore values of type 'weak hash reference' to a V8 value".
+    */
+    indirectReferencesTest() {
+        JavaScriptProgram js("function probe(v) { return v; }", "indirect.js");
+        code probe = js.getGlobal().probe.toData();
+
+        # strings throughout: JavaScript numbers are doubles, so a round trip is not type-preserving
+        # for integers and would test the number conversion rather than the reference resolution
+        hash<auto> inner = {"a": "one", "b": "two"};
+        list<auto> ilist = ("one", "two", "three");
+
+        hash<auto> weak = {};
+        weak{"h"} := inner;
+        weak{"l"} := ilist;
+        assertEq({"h": inner, "l": ilist}, probe(weak).toData(),
+            "weak references in a hash convert as their targets");
+
+        # a JavaScript array comes back as a Qore list directly, unlike an object, which needs
+        # toData() to be unwrapped
+        list<auto> weak_list = ();
+        weak_list[0] := inner;
+        assertEq((inner,), map $1.toData(), probe(weak_list),
+            "a weak reference in a list converts as its target");
+
+        hash<auto> opaque = {};
+        opaque{"h"} @= inner;
+        opaque{"l"} @= ilist;
+        assertEq({"h": inner, "l": ilist}, probe(opaque).toData(),
+            "opaque references in a hash convert as their targets");
+
+        list<auto> opaque_list = ();
+        opaque_list[0] @= ilist;
+        assertEq((ilist,), probe(opaque_list),
+            "an opaque reference in a list converts as its target");
     }
 
     functionTest() {
