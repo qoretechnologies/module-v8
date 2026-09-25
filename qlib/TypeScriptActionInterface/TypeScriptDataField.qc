@@ -31,7 +31,8 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
 
     #! Returns the type of the field
     AbstractDataProviderType getType() {
-        if (attr.dynamic_type) {
+        # static metadata, such as the data provider index, never depends on a call context
+        if (attr.dynamic_type && !DataProviderStaticMetadataHelper::get()) {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.dynamic_type);
             try {
                 auto res;
@@ -75,7 +76,8 @@ AbstractDataProviderType declared_type = field.getDeclaredType();
 
     #! Get default value, if any
     auto getDefaultValue() {
-        if (attr.get_default_value.val()) {
+        # static metadata, such as the data provider index, never depends on a call context
+        if (attr.get_default_value.val() && !DataProviderStaticMetadataHelper::get()) {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
             try {
                 *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();

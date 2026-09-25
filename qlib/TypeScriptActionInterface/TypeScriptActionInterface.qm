@@ -85,6 +85,9 @@ module TypeScriptActionInterface {
     @section TypeScriptActionInterface_relnotes Release Notes
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - fields do not run their dynamic type or default value callbacks while static metadata is read (see
+      \c DataProvider::DataProviderStaticMetadataHelper), so building the data provider index no longer runs them
+      without a context, which failed for apps such as Brevo
     - added a versioned TypeScript provider-schema boundary with exact absent/empty/null handling, structurally scoped
       \c AllowedValueInfo conversion, and a lightweight app/action identity inventory for qualified provider-index
       discovery; raw payload hashes containing a \c value member remain opaque, and source failures before identity
