@@ -374,6 +374,25 @@ bool QoreV8Program::shutdown() {
     return rv;
 }
 
+void QoreV8Program::drainPlatformTasks() {
+    assert(isolate);
+    // NOTE: the node::CommonEnvironmentSetup destructor unregisters the isolate from the platform before disposing
+    // of the isolate, and only Isolate::Dispose() cancels and joins the isolate's concurrent tasks (ex: an async
+    // WebAssembly compilation started with WebAssembly.compile()).  A concurrent task that completes in between
+    // posts a foreground task to the per-isolate task runner, which unregistering the isolate is concurrently
+    // tearing down; the unsynchronized access to its async handle crashes the process in uv_async_send().  Node
+    // no longer drains the platform when the environment is freed (nodejs/node#51290), so all concurrent tasks
+    // are waited for here, and the foreground tasks they post are run, while the isolate is still registered.
+    // JavaScript execution is disallowed, as the environment has been stopped; no context is entered, so
+    // foreground tasks are run outside of a node callback scope, which would otherwise drain the tick queue
+    v8::Locker locker(isolate);
+    v8::Isolate::Scope isolate_scope(isolate);
+    v8::Isolate::DisallowJavascriptExecutionScope disallow_js(isolate,
+        v8::Isolate::DisallowJavascriptExecutionScope::THROW_ON_FAILURE);
+    v8::HandleScope handle_scope(isolate);
+    platform->DrainTasks(isolate);
+}
+
 void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
     printd(5, "QoreV8Program::deleteIntern() this: %p\n", this);
     {
@@ -396,6 +415,7 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
     }
     if (env) {
         node::Stop(env);
+        drainPlatformTasks();
         env = nullptr;
     }
 

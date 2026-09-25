@@ -203,7 +203,12 @@ public:
     DLLLOCAL void trackFunctionData(QoreV8FunctionData* d) { funcDataRefs.push_back(d); }
     DLLLOCAL void trackMemberHandlerData(QoreV8MemberHandlerData* d) { memberHandlerDataRefs.push_back(d); }
 
-    DLLLOCAL void resetObject(v8::Global<v8::Object>& obj) {
+    //! Resets a persistent handle held by an object that can outlive the program and releases its weak reference
+    /** The object holding the handle must hold a weak reference to the program, which keeps the isolate alive
+        until the handle is reset
+    */
+    template <typename T>
+    DLLLOCAL void resetObject(v8::Global<T>& obj) {
         {
             AutoLocker al(m);
             if (valid) {
@@ -277,6 +282,11 @@ protected:
     DLLLOCAL int init(ExceptionSink* xsink);
 
     DLLLOCAL void deleteIntern(ExceptionSink* xsink);
+
+    //! Waits for all pending platform tasks to complete before the isolate is unregistered from the platform
+    /** Must be called after node::Stop() and while the node environment is still alive
+    */
+    DLLLOCAL void drainPlatformTasks();
 
     DLLLOCAL int saveQoreReferenceDefault(const QoreValue& rv, ExceptionSink& xsink);
 

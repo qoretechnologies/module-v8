@@ -4,7 +4,7 @@
 
     Qore Programming Language
 
-    Copyright (C) 2024 Qore Technologies, s.r.o.
+    Copyright (C) 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -286,8 +286,8 @@ QoreHashNode* QoreV8Object::toHash(QoreV8ProgramHelper& v8h, v8::Local<v8::Value
                 }
                 continue;
             }
-            v8::Local<v8::Object> obj = o.ToLocalChecked();
-            ReferenceHolder<QoreV8Object> tmp(new QoreV8Object(v8h.getProgram(), obj), xsink);
+            // the object holding the member is the parent ('this') of member functions
+            ReferenceHolder<QoreV8Object> tmp(new QoreV8Object(v8h.getProgram(), o.ToLocalChecked()), xsink);
             ReferenceHolder<AbstractQoreNode> h0(tmp->toData(v8h, obj, objset), xsink);
             if (*xsink) {
                 return nullptr;

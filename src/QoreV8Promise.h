@@ -4,7 +4,7 @@
 
     Qore Programming Language
 
-    Copyright (C) 2024 Qore Technologies, s.r.o.
+    Copyright (C) 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -74,6 +74,9 @@ public:
             v8::Local<v8::Promise> promise) : ref(const_cast<ResolvedCallReferenceNode*>(ref)), pgm(pgm),
             promise(pgm->getIsolate(), promise) {
         this->ref->ref();
+        // this object can outlive the program (ex: when stored in a JavaScriptPromise object that is destroyed
+        // after the program); the weak reference keeps the program data valid until the handle is reset
+        pgm->weakRef();
     }
 
     DLLLOCAL virtual ~QoreV8PromiseCallbackInfo() {
@@ -84,6 +87,7 @@ public:
             ref->deref(&xsink);
             ref = nullptr;
         }
+        pgm->resetObject(promise);
     }
 
     DLLLOCAL bool derefImpl(ExceptionSink* xsink) {

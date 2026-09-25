@@ -1,0 +1,78 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+
+%requires QUnit
+%requires Util
+
+%exec-class V8StdioInheritanceTest
+
+#! Tests that child processes inherit the stdio file descriptors of a process that has loaded the v8 module
+/** Node's per-process initialization marks the stdio file descriptors close-on-exec by default, which started all
+    child processes without stdin, stdout, and stderr unless they were explicitly redirected; ex: the output of
+    system() was lost.
+
+    The test runs a Qore child process with its stdio file descriptors connected to known files and pipes; the
+    child loads the v8 module and starts grandchild processes that use the inherited stdio file descriptors.
+*/
+class V8StdioInheritanceTest inherits Test {
+    private {
+        #! the interpreter running this test, used to launch the children
+        string qore_exe;
+        #! environment the children need to pick up the same build as the parent
+        string env_prefix = "";
+    }
+
+    constructor() : Test("v8 stdio inheritance test", "1.0") {
+        qore_exe = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY ?? QORE_ARGV[0];
+        if (ENV.LD_LIBRARY_PATH) {
+            env_prefix += sprintf("LD_LIBRARY_PATH=%s ", ENV.LD_LIBRARY_PATH);
+        }
+        if (ENV.QORE_MODULE_DIR) {
+            env_prefix += sprintf("QORE_MODULE_DIR=%s ", ENV.QORE_MODULE_DIR);
+        }
+
+        addTestCase("child processes inherit stdio", \stdioInheritance());
+
+        set_return_value(main());
+    }
+
+    stdioInheritance() {
+        string base = tmp_location() + DirSep + sprintf("v8-stdio-inheritance-%d", getpid());
+        string script = base + ".q";
+        string input = base + ".in";
+        string errors = base + ".err";
+        on_exit {
+            unlink(script);
+            unlink(input);
+            unlink(errors);
+        }
+        writeFile(script, "%modern
+%requires v8
+# a JavaScript program is created to ensure that the module is fully initialized
+JavaScriptProgram js(\"globalThis.x = 1;\", \"stdio.js\");
+# stdin: the grandchild reads the child's stdin; its stdout is redirected to capture it
+print(backquote(\"cat\"));
+# stdout and stderr: the grandchild writes to the child's stdout and stderr
+system(\"echo stdout-inherited\");
+system(\"echo stderr-inherited >&2\");
+");
+        writeFile(input, "stdin-inherited\n");
+
+        int rc;
+        string out = backquote(sprintf("%s%s -b %s < %s 2> %s", env_prefix, qore_exe, script, input, errors), \rc);
+        string err = ReadOnlyFile::readTextFile(errors);
+        assertEq(0, rc, "child errors: " + err);
+        assertEq("stdin-inherited\nstdout-inherited\n", out);
+        assertEq("stderr-inherited\n", err);
+    }
+
+    private static writeFile(string path, string data) {
+        File f();
+        f.open2(path, O_CREAT | O_TRUNC | O_WRONLY);
+        f.write(data);
+    }
+}

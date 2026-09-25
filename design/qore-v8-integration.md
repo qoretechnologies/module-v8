@@ -207,6 +207,16 @@ premature garbage collection. By default, references are stored in thread-local 
 When a `QoreV8Program` is destroyed, `deleteIntern()` performs deterministic cleanup of all
 tracked resources:
 
+0. **Platform tasks**: the node environment is stopped with `node::Stop()`, then
+   `drainPlatformTasks()` calls `MultiIsolatePlatform::DrainTasks()` (under the isolate's
+   `Locker`, with JavaScript execution disallowed and no context entered). This waits for all
+   concurrent platform tasks, such as an async `WebAssembly.compile()`, and runs the foreground
+   tasks they post. It has to happen while the isolate is still registered with the platform.
+   The `node::CommonEnvironmentSetup` destructor calls `UnregisterIsolate()` before
+   `Isolate::Dispose()`, and only `Dispose()` cancels and joins concurrent tasks. A task that
+   finishes in between posts to a per-isolate task runner whose async handle is being torn down
+   without synchronization, and crashes in `uv_async_send()`. Node's `FreeEnvironment()` stopped
+   draining the platform itself in nodejs/node#51290.
 1. **objectRefs**: All tracked `QoreV8ObjectRef` objects are iterated — each `QoreObject*` is
    `tDeref()`'d, the persistent handle is reset, and the struct is deleted.
 2. **nsDataRefs**: All tracked `QoreV8NamespaceData` objects are cleaned up (persistent handles
@@ -216,6 +226,24 @@ tracked resources:
    `QoreV8MemberHandlerData` structs are deleted.
 
 This ensures no leaks even if V8's GC hasn't run before program destruction.
+
+### Handles That Outlive the Program
+
+The isolate is disposed only when the last weak program reference is released
+(`QoreV8Program::weakRef()` / `weakDeref()`). Any Qore-side object that holds a `v8::Global` and
+can outlive the program therefore holds a weak program reference, and releases the handle with
+`QoreV8Program::resetObject()` before releasing that reference. Examples are `QoreV8Object` (the
+private data of `JavaScriptObject` and `JavaScriptPromise`) and `QoreV8PromiseCallbackInfo`
+(stored as a hidden member of `JavaScriptPromise` objects, and cleaned up after the object's
+private data). Once the program is invalid, `resetObject()` forgets the handle instead of
+resetting it.
+
+## Process Initialization
+
+`node::InitializeOncePerProcess()` is called with `kEnableStdioInheritance`. Without it, node
+marks the embedding process's stdio file descriptors close-on-exec. Every child process Qore
+started afterwards (`system()`, `backquote()`, and so on) then ran without stdin, stdout and
+stderr unless they were explicitly redirected.
 
 ### Tracking Sets
 

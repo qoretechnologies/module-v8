@@ -1,0 +1,236 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+
+%requires v8
+%requires QUnit
+%requires Util
+
+%exec-class JsTeardownTest
+
+#! Tests destroying JavaScript programs with work in progress and with objects that outlive the program
+/** WebAssembly.compile() compiles the module in V8 platform worker threads; when a compilation step completes, V8
+    posts a foreground task to the isolate's task runner.  Node's embedder teardown unregisters the isolate from
+    the platform before the isolate is disposed (which is what cancels the isolate's concurrent tasks), so a
+    compilation step completing while the isolate was being unregistered accessed the task runner's async handle
+    while it was being closed, crashing the process in uv_async_send() on a platform worker thread.  The race is
+    narrow, so the crash was intermittent; these tests tear down programs with compilations in progress repeatedly,
+    in multiple threads, and at process exit.
+
+    Promise callbacks and JavaScript call references can outlive their program; releasing them must not access the
+    program's disposed isolate.
+*/
+class JsTeardownTest inherits Test {
+    public {
+        #! JavaScript source that builds a WebAssembly module large enough to be compiled in multiple threads
+        const WasmSource = "
+function app(a, b) { for (const x of b) { a.push(x); } return a; }
+function leb(n) {
+    const out = [];
+    do { let b = n & 0x7f; n >>>= 7; if (n) { b |= 0x80; } out.push(b); } while (n);
+    return out;
+}
+function section(id, bytes) { return app(app([id], leb(bytes.length)), bytes); }
+function vec(items) { const out = leb(items.length); for (const i of items) { app(out, i); } return out; }
+// returns a module with 'nfuncs' functions of type () -> i32, each summing 'nops' constants
+function makeModule(nfuncs, nops) {
+    const body = [0];
+    for (let i = 0; i < nops; ++i) { body.push(0x41, 0x01); }
+    for (let i = 1; i < nops; ++i) { body.push(0x6a); }
+    body.push(0x0b);
+    const fbody = app(leb(body.length), body);
+    const bytes = [0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00];
+    app(bytes, section(1, vec([[0x60, 0x00, 0x01, 0x7f]])));
+    app(bytes, section(3, vec(Array(nfuncs).fill([0]))));
+    const code = leb(nfuncs);
+    for (let i = 0; i < nfuncs; ++i) { app(code, fbody); }
+    app(bytes, section(10, code));
+    return new Uint8Array(bytes);
+}
+const mod = makeModule(2000, 400);
+// an invalid module: the last function body is truncated, so validation fails in the background
+const badMod = mod.slice(0, mod.length - 2);
+// starts compiling the module asynchronously; returns a promise that resolves with the number of exports of the
+// compiled module or with the name of the error class if the compilation fails
+globalThis.startCompile = function(bad) {
+    return WebAssembly.compile(bad ? badMod : mod).then((m) => WebAssembly.Module.exports(m).length,
+        (e) => e.constructor.name);
+};
+";
+
+        #! number of programs torn down with a compilation in progress per test case
+        const Iters = 10;
+
+        #! number of threads for the multithreaded test case
+        const Threads = 4;
+    }
+
+    private {
+        #! the interpreter running this test, used to launch the children
+        string qore_exe;
+        #! environment the children need to pick up the same build as the parent
+        string env_prefix = "";
+    }
+
+    constructor() : Test("js teardown test", "1.0") {
+        qore_exe = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY ?? QORE_ARGV[0];
+        if (ENV.LD_LIBRARY_PATH) {
+            env_prefix += sprintf("LD_LIBRARY_PATH=%s ", ENV.LD_LIBRARY_PATH);
+        }
+        if (ENV.QORE_MODULE_DIR) {
+            env_prefix += sprintf("QORE_MODULE_DIR=%s ", ENV.QORE_MODULE_DIR);
+        }
+
+        addTestCase("compilation completes when the event loop is run", \compileCompletes());
+        addTestCase("invalid module is rejected when the event loop is run", \compileRejected());
+        addTestCase("destroy with a compilation in progress", \destroyDuringCompile());
+        addTestCase("destroy with a failing compilation in progress", \destroyDuringFailingCompile());
+        addTestCase("destroy with compilations in progress in multiple threads", \destroyDuringCompileThreads());
+        addTestCase("destroy after the compilation completed", \destroyAfterCompile());
+        addTestCase("exit with a compilation in progress", \exitDuringCompile());
+        addTestCase("promise with a callback outlives the program", \promiseOutlivesProgram());
+        addTestCase("call reference outlives the program", \callRefOutlivesProgram());
+
+        set_return_value(main());
+    }
+
+    promiseOutlivesProgram() {
+        JavaScriptProgram js("globalThis.p = new Promise((resolve) => { globalThis.resolve = resolve; });",
+            "promise-outlives.js");
+        JavaScriptPromise p = js.getGlobal().p;
+        bool called = False;
+        p.then(sub (auto v) { called = True; });
+        assertEq(Pending, p.getState());
+        delete js;
+        # the promise is unusable once its program has been destroyed
+        assertThrows("JAVASCRIPT-PROGRAM-ERROR", \p.getState());
+        # releasing the promise and its callback must not access the disposed isolate
+        delete p;
+        assertNothing(p);
+        assertFalse(called);
+    }
+
+    callRefOutlivesProgram() {
+        JavaScriptProgram js("globalThis.obj = { v: 2, get(x) { return this.v * x; } };", "callref-outlives.js");
+        # the call reference holds a persistent handle to its parent object
+        hash<auto> obj = js.getGlobal().obj.toData();
+        code f = remove obj.get;
+        assertEq(6, f(3), "the method is called with its parent object as 'this'");
+        delete js;
+        # the call reference is unusable once its program has been destroyed
+        assertThrows("JAVASCRIPT-PROGRAM-ERROR", f, 3);
+        # releasing the call reference must not access the disposed isolate
+        remove f;
+        assertNothing(f);
+    }
+
+    compileCompletes() {
+        JavaScriptProgram js(WasmSource, "wasm-teardown.js");
+        auto rv;
+        JavaScriptPromise p = js.getGlobal().startCompile(False);
+        p.then(sub (auto v) { rv = v; });
+        js.spinEventLoop();
+        assertEq(0, rv, "the module compiles; it has no exports");
+    }
+
+    compileRejected() {
+        JavaScriptProgram js(WasmSource, "wasm-teardown.js");
+        auto rv;
+        JavaScriptPromise p = js.getGlobal().startCompile(True);
+        p.then(sub (auto v) { rv = v; });
+        js.spinEventLoop();
+        assertEq("CompileError", rv);
+    }
+
+    destroyDuringCompile() {
+        for (int i = 0; i < Iters; ++i) {
+            assertFalse(startAndDestroy(False));
+        }
+    }
+
+    destroyDuringFailingCompile() {
+        for (int i = 0; i < Iters; ++i) {
+            assertFalse(startAndDestroy(True));
+        }
+    }
+
+    destroyDuringCompileThreads() {
+        Counter done(Threads);
+        list<auto> results = ();
+        Mutex m();
+        for (int t = 0; t < Threads; ++t) {
+            background sub () {
+                on_exit done.dec();
+                try {
+                    for (int i = 0; i < Iters; ++i) {
+                        bool rv = startAndDestroy(False);
+                        m.lock();
+                        on_exit m.unlock();
+                        results += rv;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    m.lock();
+                    on_exit m.unlock();
+                    results += get_exception_string(ex);
+                }
+            }();
+        }
+        done.waitForZero();
+        assertEq(Threads * Iters, results.size());
+        assertEq((), (map $1, results, $1 !== False), "no errors and no promise settled after destruction");
+    }
+
+    destroyAfterCompile() {
+        JavaScriptProgram js(WasmSource, "wasm-teardown.js");
+        auto rv;
+        JavaScriptPromise p = js.getGlobal().startCompile(False);
+        p.then(sub (auto v) { rv = v; });
+        js.spinEventLoop();
+        assertEq(0, rv);
+        delete js;
+        assertNothing(js);
+    }
+
+    exitDuringCompile() {
+        # the child exits with compilations in progress in programs that are only torn down at process exit
+        string script = tmp_location() + DirSep + sprintf("js-teardown-%d.q", getpid());
+        on_exit unlink(script);
+        {
+            File f();
+            f.open2(script, O_CREAT | O_TRUNC | O_WRONLY);
+            f.write(sprintf("%%modern
+%%requires v8
+our list<JavaScriptProgram> progs = ();
+for (int i = 0; i < %d; ++i) {
+    JavaScriptProgram js(%y, \"wasm-teardown.js\");
+    js.getGlobal().startCompile(False);
+    progs += js;
+}
+printf(\"started\\n\");
+", Iters, WasmSource));
+        }
+        # a crash is reported by the shell as 128 + the signal number (ex: 139 for SIGSEGV)
+        int rc;
+        string out = backquote(sprintf("%s%s -b %s 2>&1", env_prefix, qore_exe, script), \rc);
+        assertEq(0, rc, "child output: " + out);
+        assertEq("started\n", out);
+    }
+
+    #! starts a compilation, destroys the program, and returns whether the compilation promise was settled
+    /** the promise must not be settled: the program is destroyed before the event loop is run, and no
+        JavaScript may be executed while a destroyed program's pending tasks are drained
+    */
+    private bool startAndDestroy(bool bad) {
+        bool settled = False;
+        {
+            JavaScriptProgram js(WasmSource, "wasm-teardown.js");
+            JavaScriptPromise p = js.getGlobal().startCompile(bad);
+            p.then(sub (auto v) { settled = True; });
+            delete js;
+        }
+        return settled;
+    }
+}
