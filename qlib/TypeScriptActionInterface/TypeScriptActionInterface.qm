@@ -85,6 +85,10 @@ module TypeScriptActionInterface {
     @section TypeScriptActionInterface_relnotes Release Notes
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - the TypeScript app catalogue settings (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT and
+      \c QORE_TYPESCRIPT_ACTION_SCRIPTS) are read from the process environment when the module is initialized, so a
+      process can decide not to load the catalogue after it has started, such as a data provider index worker that
+      indexes other providers
     - fields do not run their dynamic type or default value callbacks while static metadata is read (see
       \c DataProvider::DataProviderStaticMetadataHelper), so building the data provider index no longer runs them
       without a context, which failed for apps such as Brevo

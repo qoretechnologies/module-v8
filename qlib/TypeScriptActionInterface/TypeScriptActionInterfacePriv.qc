@@ -110,8 +110,10 @@ function setenv(vr, value) {
 
             string cwd = getcwd();
 
-            # initialize master TypeScript action script first
-            if ((*string script_path = ENV.QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT).val()) {
+            # initialize master TypeScript action script first; the process environment is read rather than ENV,
+            # which holds the environment of the process when it started, so that a process can decide not to load
+            # the app catalogue after it has started (ex: a data provider index worker indexing other providers)
+            if ((*string script_path = getenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT")).val()) {
                 # app definitions in the catalogue refer to their resources with paths relative to the catalogue
                 # directory (ex: "schemas/asana.swagger.json"), so apps registered from the catalogue must resolve
                 # such paths relative to that directory and not to the current working directory of this process,
@@ -145,7 +147,7 @@ function setenv(vr, value) {
                 }
             }
 
-            *string scripts = ENV.QORE_TYPESCRIPT_ACTION_SCRIPTS;
+            *string scripts = getenv("QORE_TYPESCRIPT_ACTION_SCRIPTS");
             if (scripts.val()) {
                 map createPool($1, cwd, \TypeScriptActionInterfacePriv::registerApp()), scripts.split(":");
             }
