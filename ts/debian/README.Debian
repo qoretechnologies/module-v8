@@ -12,3 +12,62 @@ are immutable; application indexes and caches belong in application-owned paths.
 
 This local prototype has not been cleared for public redistribution. See
 schema-provenance.json and the dependency notices for outstanding provenance.
+
+HubSpot schemas
+---------------
+
+The package contains no HubSpot OpenAPI documents. After reviewing HubSpot's
+Developer Terms (https://legal.hubspot.com/hs-developer-terms), run as the account
+that will run the application:
+
+ qore-hubspot-schemas update
+ qore-hubspot-schemas run -- YOUR_APPLICATION [arguments]
+
+The catalogue environment variable above is still required. This explicit command
+fetches current documents for the supported v3 APIs (OpenAPI 3.0 format), not an
+arbitrary new API generation labelled LATEST. Forms currently requires HubSpot's
+v3 preview entry. The public catalogue endpoint may change or disappear; it has
+no availability guarantee. No schema download occurs at build time, during dpkg
+installation, on application startup, or from a maintainer script.
+
+The updater checks all ten documents, local references, API server URLs and the
+66 supported operations. It applies known Deals/Lists path aliases and retains
+all 78 declared HubSpot action identities, then materializes those actions using
+the installed Qore runtime. It activates the snapshot only if every check passes.
+This checks schema compatibility; it does not test authenticated service calls.
+
+The default cache is $XDG_CACHE_HOME/qore/hubspot, or ~/.cache/qore/hubspot.
+Use --cache-dir /absolute/path before the command for a service-owned cache.
+Do not run the updater as root for a service using another account. Each snapshot
+has its own SHA-256 directory and manifest with source locations and input/output
+hashes. Keep the snapshot directory private to the account; do not edit it.
+The run wrapper selects a verified snapshot and passes its immutable path through
+QORE_HUBSPOT_SCHEMA_SNAPSHOT. Existing processes keep their selected snapshot;
+restart them explicitly after an update. A service manager can instead set that
+variable to the absolute path printed by qore-hubspot-schemas status. Do not point
+it at a mutable symlink. No active snapshot is silently selected at module import.
+
+Without a valid pinned snapshot, HubSpot retains its complete discovery inventory
+and reports HUBSPOT-SCHEMAS-UNAVAILABLE when initialized. Other apps remain usable.
+An incompatible update fails without changing the active snapshot:
+
+ qore-hubspot-schemas status
+ qore-hubspot-schemas rollback
+ qore-hubspot-schemas rollback SNAPSHOT_SHA256
+
+Rollback rechecks compatibility with the currently installed catalogue and Qore.
+Snapshots from an older contract may require a fresh download after an upgrade.
+To work offline, obtain authorized v3 documents on a connected machine and copy
+companies.swagger.json, contacts.swagger.json, custom-objects.swagger.json,
+deals.swagger.json, forms.swagger.json, leads.swagger.json, lists.swagger.json,
+products.swagger.json, tickets.swagger.json and users.swagger.json into one
+private directory, then run:
+
+ qore-hubspot-schemas import /absolute/path/to/documents
+
+Update/import/rollback use an exclusive .update-lock containing the writer PID.
+After a crashed updater, confirm that PID is no longer running before removing
+only the stale lock. Old snapshots are retained for running processes and rollback;
+remove an obsolete snapshot manually only after those processes have stopped.
+Deleting or purging the package does not delete application-owned caches. Manage
+retention and removal according to your applicable HubSpot terms and requirements.

@@ -26,6 +26,7 @@ import { createHubspotRecords } from './helpers/record-based/create-records';
 import { updateHubspotRecords } from './helpers/record-based/update-records';
 import { deleteHubspotRecords } from './helpers/record-based/delete-records';
 import { upsertHubspotRecords } from './helpers/record-based/upsert-records';
+import { hubspotSchemaMetadata } from '../../schema-cache/hubspot';
 
 export default (locale: Locales) =>
   ({
@@ -72,38 +73,7 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: 128,
     },
-    swagger_schema_map: {
-      companies: {
-        swagger: 'schemas/hubspot/companies.swagger.json',
-      },
-      contacts: {
-        swagger: 'schemas/hubspot/contacts.swagger.json',
-      },
-      deals: {
-        swagger: 'schemas/hubspot/deals.swagger.json',
-      },
-      'custom-objects': {
-        swagger: 'schemas/hubspot/custom-objects.swagger.json',
-      },
-      leads: {
-        swagger: 'schemas/hubspot/leads.swagger.json',
-      },
-      products: {
-        swagger: 'schemas/hubspot/products.swagger.json',
-      },
-      tickets: {
-        swagger: 'schemas/hubspot/tickets.swagger.json',
-      },
-      users: {
-        swagger: 'schemas/hubspot/users.swagger.json',
-      },
-      lists: {
-        swagger: 'schemas/hubspot/lists.swagger.json',
-      },
-      forms: {
-        swagger: 'schemas/hubspot/forms.swagger.json',
-      },
-    },
+    ...hubspotSchemaMetadata(),
     search_options: HubspotSearchOptions,
     upsert_options: HubspotUpsertOptions,
     expressions: getHubspotExpressions(locale),

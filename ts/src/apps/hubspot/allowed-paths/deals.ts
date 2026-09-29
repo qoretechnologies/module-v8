@@ -1,7 +1,5 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import hubspotDeals from '../../../schemas/hubspot/deals.swagger.json';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotDealAllowedValues } from '../helpers/get-deal-allowed-values';
 import { getHubspotDealPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
@@ -23,7 +21,7 @@ const propertiesQuery = {
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_DEALS_ALLOWED_PATHS = {
-  '/crm/v3/objects/deals': {
+  '/crm/v3/objects/0-3': {
     GET: {
       override_options: {
         properties: propertiesQuery,
@@ -39,7 +37,7 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
       },
     },
   },
-  '/crm/v3/objects/deals/batch/upsert': {
+  '/crm/v3/objects/0-3/batch/upsert': {
     POST: {
       override_options: {
         'inputs.idProperty': {
@@ -54,7 +52,7 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
       },
     },
   },
-  '/crm/v3/objects/deals/{dealId}': {
+  '/crm/v3/objects/0-3/{dealId}': {
     GET: {
       override_options: {
         properties: propertiesQuery,
@@ -76,7 +74,7 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
       },
     },
   },
-  '/crm/v3/objects/deals/search': {
+  '/crm/v3/objects/0-3/search': {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
@@ -97,8 +95,7 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_DEALS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotDeals as unknown as OpenAPIV2.Document,
+export const HUBSPOT_DEALS_ACTIONS = buildHubspotActions({
   schemaPath: 'deals',
   allowedPaths: HUBSPOT_DEALS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

@@ -1,3 +1,10 @@
+qore-v8-module (2.1.0~git20260929.2+ds-0qore1~ubuntu26.04) resolute; urgency=medium
+
+  * Retain structured initialization errors for apps requiring optional local
+    resources, without losing their declared app/action identities.
+
+ -- David Nichols <david@qore.org>  Tue, 29 Sep 2026 16:00:00 +0200
+
 qore-v8-module (2.1.0~git20260929.1+ds-0qore1~ubuntu26.04) resolute; urgency=medium
 
   * Preserve an unchanged generated app-directory map so separately packaged

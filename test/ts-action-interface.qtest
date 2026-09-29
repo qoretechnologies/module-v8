@@ -64,6 +64,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("structured field choices", \structuredFieldChoicesTest());
         addTestCase("producer schema boundary", \producerSchemaBoundaryTest());
         addTestCase("eager registration failure reporting", \eagerRegistrationFailureTest());
+        addTestCase("optional resource initialization failures", \optionalResourceFailureTest());
         addTestCase("producer identity contract skew", \inventoryContractSkewTest());
 
         # Return for compatibility with test harnesses that check the script's return value
@@ -1445,6 +1446,43 @@ var obj = {
                     $1 == legacy_path),
                 "the skewed action script is reported exactly once, not once per app");
         }
+    }
+
+    private optionalResourceFailureTest() {
+        string app = "TypeScriptResource_" + get_random_string(8);
+        JavaScriptProgramPool pool("", "resource-test.js", sub (JavaScriptProgram pgm) {});
+        hash<auto> info = {
+            "name": app, "display_name": app,
+            "short_desc": "Optional resource test", "desc": "Optional resource test",
+            "groups": ("Other",), "logo": make_base64_string(<00>),
+            "logo_file_name": "test.svg", "logo_mime_type": MimeTypeSvg, "dynamic": True,
+            "initialization_error": {"err": "RESOURCE-NOT-CONFIGURED", "desc": "Install the local resource"},
+        };
+        TypeScriptActionInterface::registerDiscoveryInventory(({"app": app}, {"app": app, "action": "stable"}));
+        TypeScriptActionInterface::registerApp(info, pool);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        assertThrows("APP-ERROR", "is not registered", sub () {
+            DataProviderActionCatalog::getAppEx(app);
+        });
+        auto failures = DataProviderActionCatalog::getInitializationFailures((app,));
+        assertEq(1, failures.size());
+        assertEq("app", failures[0].kind);
+        assertEq("RESOURCE-NOT-CONFIGURED", failures[0].error);
+        assertEq(2, (map $1, TypeScriptActionInterface::getDiscoveryInventory(), $1.app == app).size(),
+            "an unavailable resource preserves every declared identity");
+        TypeScriptActionInterface::deregisterDynamicApp(app);
+        info.initialization_error = {"err": "RESOURCE-NOT-CONFIGURED", "desc": NOTHING};
+        TypeScriptActionInterface::registerApp(info, pool);
+        assertThrows("APP-ERROR", "is not registered", sub () {
+            DataProviderActionCatalog::getAppEx(app);
+        });
+        assertEq("APP-ERROR", DataProviderActionCatalog::getInitializationFailures((app,))[0].error);
+        TypeScriptActionInterface::deregisterDynamicApp(app);
+        remove info.initialization_error;
+        TypeScriptActionInterface::registerApp(info, pool);
+        assertEq(app, DataProviderActionCatalog::getAppEx(app).name);
+        assertEq((), DataProviderActionCatalog::getInitializationFailures((app,)),
+            "a new registration with a valid resource clears the failure");
     }
 
     private eagerRegistrationFailureTest() {

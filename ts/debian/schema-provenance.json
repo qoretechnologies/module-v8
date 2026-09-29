@@ -24,76 +24,6 @@
       "primary_source": "https://developers.freshdesk.com/api/"
     },
     {
-      "file": "ts/src/schemas/hubspot/companies.swagger.json",
-      "sha256": "00bcd41e41984e5668829e54354152814a82300f8e2d9e3568a267ef13a0fa55",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/contacts.swagger.json",
-      "sha256": "d128d5598e9ea5f32ce2ef0701b8ff939f8c6fc7e35e999991a0055cc3f21cf4",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/custom-objects.swagger.json",
-      "sha256": "d5af9b151568be8fad9a1ad205f5ae71d95340facef1f8c99776517bc3c58fa3",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/deals.swagger.json",
-      "sha256": "d48d5114f5ed5eea9aedb9cf9b2bc70c7ee6001d52fb38c07d673dc9fa444ebd",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/forms.swagger.json",
-      "sha256": "59996a04c28cd2ba041d59c6c97b550acd6599853c1e2fb0ebdf08511d871f91",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/leads.swagger.json",
-      "sha256": "f9497c2ad9619645360b07b69c2468e6cb0d45cb5aa73de91fcf5b5dc4d228af",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/lists.swagger.json",
-      "sha256": "53242c55901e17b7b81d3d78b11b1f28897eddb9f884c7886242075144c229e7",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/products.swagger.json",
-      "sha256": "03bde3dd6fa333e10860a0132a0cec1f0ff1586f3bd7f9fa69505ddc25eccb28",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/tickets.swagger.json",
-      "sha256": "3989277edc7054ded52f598fa4067467aeb7f9e79cab3e08f8fb939ee55db5d6",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
-      "file": "ts/src/schemas/hubspot/users.swagger.json",
-      "sha256": "303a7827de0074a3bc2e62f6ba3c47b62ce49456522b66f5c25eb60c9314210e",
-      "license": null,
-      "finding": "Public API endpoint verified, but no inline license; GitHub public-spec collection explicitly proprietary/not licensed for external use. Exact provenance and applicable grant unresolved.",
-      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs"
-    },
-    {
       "file": "ts/src/schemas/jira.swagger.json",
       "sha256": "7045f3f022fb5b7365e175994d048415668c81b90faaa7247bf710ca42c3bfdb",
       "license": "Apache-2.0",
@@ -148,6 +78,15 @@
       "license": null,
       "finding": "Legacy zoom/api has an inline MIT specification, but differs from this modern Meetings schema. Current API terms allow integrations with restrictions, not an unrestricted source redistribution grant.",
       "primary_source": "https://explore.zoom.us/docs/en-us/legal/zoom_api_license_and_tou.html"
+    }
+  ],
+  "external_resources": [
+    {
+      "app": "Hubspot",
+      "distributed": false,
+      "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs",
+      "terms": "https://legal.hubspot.com/hs-developer-terms",
+      "finding": "Schema documents removed. Explicit post-install download/import into an application-owned cache; no package/build/install hook retrieves them. Public endpoint availability and terms are controlled by HubSpot."
     }
   ]
 }

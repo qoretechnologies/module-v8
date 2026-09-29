@@ -408,19 +408,22 @@ public class TypeScriptActionInterface {
                     DiscoveryInventoryProviderName);
             }
         }
-        if (!app) {
+        # Failed initialization never creates a catalog app; clear the producer's pending/failed
+        # registration too, so explicit replacement can retry with a now-available local resource.
+        if (!app && !exists appcasemap{name.lwr()}) {
             return;
         }
         on_success if (app.info.path.val()) {
             remove_path(app.info.path);
         }
 
-        string appname = app.name.lwr();
+        string appname = name.lwr();
 
         remove appcasemap{appname};
         remove initmap{name};
         remove appmap{name};
         remove initialized_appmap{name};
+        remove actionmap{name};
         root.deregisterChild(appname);
 
         string sname = "tsrest-" + appname;
@@ -1570,6 +1573,17 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             TSAI::error("%s", get_exception_string($1));
         }
         string appname = app.name.lwr();
+
+        # A catalogue may publish stable identities while an optional local resource is unavailable.
+        # Retain this as a structured app initialization failure through the on_error handler above.
+        if (exists app.initialization_error) {
+            auto ex = remove app.initialization_error;
+            if (ex.typeCode() != NT_HASH || ex.err.typeCode() != NT_STRING || !ex.err.val()
+                    || ex.desc.typeCode() != NT_STRING || !ex.desc.val()) {
+                throw "APP-ERROR", sprintf("Invalid initialization_error for app %y", app.name);
+            }
+            throw ex.err, ex.desc;
+        }
 
         # Normalize swagger_* aliases to openapi_* (openapi_* are the primary property names)
         if (app.swagger) {

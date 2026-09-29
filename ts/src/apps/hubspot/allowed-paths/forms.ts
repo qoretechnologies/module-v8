@@ -1,7 +1,5 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import hubspotForms from '../../../schemas/hubspot/forms.swagger.json';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME } from '../constants';
 import { getHubspotFormAllowedValues } from '../helpers/get-form-allowed-values';
 
@@ -63,8 +61,7 @@ export const HUBSPOT_FORMS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_FORMS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotForms as unknown as OpenAPIV2.Document,
+export const HUBSPOT_FORMS_ACTIONS = buildHubspotActions({
   schemaPath: 'forms',
   allowedPaths: HUBSPOT_FORMS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

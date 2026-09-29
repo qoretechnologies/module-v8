@@ -88,6 +88,11 @@ module TypeScriptActionInterface {
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - Catalogue apps can report an \c initialization_error hash with \c err and \c desc strings when a required
+      local resource is unavailable. The module preserves the declared discovery inventory and records a structured
+      app initialization failure instead of registering an incomplete app. The optional HubSpot catalogue uses this
+      for its separately downloaded schema snapshots. Explicit deregistration clears failed initialization
+      state so the app can be registered again after its resources become available.
     - the TypeScript app catalogue settings (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT and
       \c QORE_TYPESCRIPT_ACTION_SCRIPTS) are read from the process environment when the module is initialized, so a
       process can decide not to load the catalogue after it has started, such as a data provider index worker that

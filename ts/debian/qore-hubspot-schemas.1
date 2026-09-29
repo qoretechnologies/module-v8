@@ -1,0 +1,55 @@
+.\" Copyright 2026 Qore Technologies, s.r.o.
+.\" SPDX-License-Identifier: MIT
+.TH QORE-HUBSPOT-SCHEMAS 1 "September 2026" "Qore" "User Commands"
+.SH NAME
+qore-hubspot-schemas \- manage private HubSpot schema snapshots
+.SH SYNOPSIS
+.B qore-hubspot-schemas
+.RB [ --cache-dir " DIR"]
+.I COMMAND
+.SH DESCRIPTION
+Explicitly obtain and qualify current documents for the supported HubSpot v3 APIs.
+All ten documents and all declared actions must qualify with the installed Qore
+runtime before atomic activation. No live authenticated API operation is tested.
+Packages contain no HubSpot schema documents and installation never downloads them.
+.SH COMMANDS
+.TP
+.B update
+Download supported schemas from HubSpot's public API catalogue and activate them.
+.TP
+.B import DIR
+Read ten NAME.swagger.json files from DIR, qualify and activate the snapshot.
+.TP
+.B status
+Print the verified active snapshot's absolute directory.
+.TP
+.B rollback [DIGEST]
+Requalify and activate the previous snapshot, or the specified snapshot digest.
+.TP
+.B run -- COMMAND [ARGS]
+Run a command with the active immutable snapshot pinned in its environment.
+Running applications retain their snapshot until restarted.
+.SH ENVIRONMENT
+.TP
+.B QORE_HUBSPOT_SCHEMA_SNAPSHOT
+Absolute immutable snapshot directory used by the HubSpot app.
+.TP
+.B QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT
+Set to /usr/share/qore-v8-app-catalogue/dist/index.js to enable this catalogue.
+.TP
+.B XDG_CACHE_HOME
+Default cache root; falls back to ~/.cache. Snapshots live under qore/hubspot.
+.SH EXIT STATUS
+Zero indicates success. An update failure leaves the active snapshot unchanged.
+The run command returns the child command's exit status.
+.SH FILES
+Snapshots and the active.json pointer belong to the application account, outside
+package-owned directories. A crashed writer can leave .update-lock; confirm its
+recorded PID has stopped before removing the stale lock. Snapshots are retained
+until explicitly removed by the owner.
+.SH NOTES
+Run as the application account. Review HubSpot's Developer Terms at
+https://legal.hubspot.com/hs-developer-terms before obtaining documents.
+Endpoint availability is controlled by HubSpot. Unsupported changes fail closed.
+.SH SEE ALSO
+/usr/share/doc/qore-v8-app-catalogue/README.Debian

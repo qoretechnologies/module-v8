@@ -1,7 +1,5 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import hubspotCustomObjects from '../../../schemas/hubspot/custom-objects.swagger.json';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotCustomObjectTypeAllowedValues } from '../helpers/get-custom-object-type-allowed-values';
 import { getHubspotCustomObjectIdAllowedValues } from '../helpers/get-custom-object-id-allowed-values';
@@ -107,8 +105,7 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_CUSTOM_OBJECTS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotCustomObjects as unknown as OpenAPIV2.Document,
+export const HUBSPOT_CUSTOM_OBJECTS_ACTIONS = buildHubspotActions({
   schemaPath: 'custom-objects',
   allowedPaths: HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

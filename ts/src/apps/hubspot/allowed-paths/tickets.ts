@@ -1,7 +1,5 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import hubspotTickets from '../../../schemas/hubspot/tickets.swagger.json';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotTicketAllowedValues } from '../helpers/get-ticket-allowed-value';
 import { getHubspotTicketPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
@@ -97,8 +95,7 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_TICKETS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotTickets as unknown as OpenAPIV2.Document,
+export const HUBSPOT_TICKETS_ACTIONS = buildHubspotActions({
   schemaPath: 'tickets',
   allowedPaths: HUBSPOT_TICKETS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

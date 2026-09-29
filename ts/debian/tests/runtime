@@ -7,12 +7,19 @@ source_debian=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 catalogue=/usr/share/qore-v8-app-catalogue
 unset NODE_PATH NODE_OPTIONS LD_LIBRARY_PATH LD_PRELOAD QORE_MODULE_DIR QORE_MODULE_DIR_ONLY
 unset QORE_INCLUDE_DIR QORE_TYPESCRIPT_ACTION_SCRIPTS QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS
+unset QORE_HUBSPOT_SCHEMA_SNAPSHOT
 unset QORE_DATA_PROVIDERS QORE_CONNECTION_PROVIDERS QORE_DATASOURCE_PROVIDERS QORE_PROVIDER_INDEX_DIR
 export QORE_MODULE_DIR="$(/usr/bin/qore --module-path)"
 export QORE_MODULE_DIR_ONLY=1
 export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT="$catalogue/dist/index.js"
 
 /usr/bin/node "$source_debian/tests/production.js" "$catalogue"
+test ! -e "$catalogue/dist/schemas/hubspot"
+qore-hubspot-schemas --help
+if qore-hubspot-schemas --cache-dir "$AUTOPKGTEST_TMP/empty-cache" status; then
+    echo 'An unconfigured cache unexpectedly succeeded' >&2
+    exit 1
+fi
 
 for mode in tiered ast; do
     logfile="$AUTOPKGTEST_TMP/catalogue-$mode.log"
@@ -33,3 +40,19 @@ for mode in tiered ast; do
         exit 1
     fi
 done
+
+# The optional HubSpot setup must fail structurally, without hiding its identities.
+/usr/bin/qore -M -l TypeScriptActionInterface -e '
+    DataProvider::checkStaticInit();
+    try { DataProviderActionCatalog::getAppEx("Hubspot"); } catch (auto ex) {}
+    auto failures = DataProviderActionCatalog::getInitializationFailures(("Hubspot",));
+    if (!(map $1, failures, $1.error == "HUBSPOT-SCHEMAS-UNAVAILABLE")) {
+        throw "MISSING-STRUCTURED-FAILURE", "An unconfigured HubSpot app must report its missing schema cache";
+    }
+    auto inventory = TypeScriptActionInterface::getDiscoveryInventory();
+    if ((map $1, inventory, $1.app == "Hubspot" && $1.action).size() != 78) {
+        throw "MISSING-INVENTORY", "HubSpot identities must survive unavailable schemas";
+    }
+    DataProviderActionCatalog::getAppEx("Slack");
+    print("Unconfigured HubSpot retains its identities and leaves Slack available\n");
+'

@@ -1,7 +1,5 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import hubspotUsers from '../../../schemas/hubspot/users.swagger.json';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotUserAllowedValues } from '../helpers/get-user-allowed-values';
 import { getHubspotUserPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
@@ -80,8 +78,7 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_USERS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotUsers as unknown as OpenAPIV2.Document,
+export const HUBSPOT_USERS_ACTIONS = buildHubspotActions({
   schemaPath: 'users',
   allowedPaths: HUBSPOT_USERS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

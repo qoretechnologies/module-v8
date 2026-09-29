@@ -1,7 +1,5 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotProductIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 import {
@@ -97,8 +95,7 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_PRODUCTS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotProducts as unknown as OpenAPIV2.Document,
+export const HUBSPOT_PRODUCTS_ACTIONS = buildHubspotActions({
   schemaPath: 'products',
   allowedPaths: HUBSPOT_PRODUCTS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

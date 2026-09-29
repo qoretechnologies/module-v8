@@ -1,7 +1,5 @@
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import hubspotLists from '../../../schemas/hubspot/lists.swagger.json';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME } from '../constants';
 import { getHubspotFolderAllowedValues } from '../helpers/get-list-folder-allowed-values';
 import { getHubspotListAllowedValues } from '../helpers/get-list-id-allowed-values';
@@ -11,7 +9,7 @@ import { hubspotListTypeAllowedValues } from '../helpers/list-processing-type-al
 import { hubspotListSortAllowedValues } from '../helpers/list-search-sort-allowed-values';
 
 export const HUBSPOT_LISTS_ALLOWED_PATHS = {
-  '/crm/v3/lists/': {
+  '/crm/v3/lists': {
     POST: {
       override_options: {
         objectTypeId: {
@@ -95,8 +93,7 @@ export const HUBSPOT_LISTS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_LISTS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotLists as unknown as OpenAPIV2.Document,
+export const HUBSPOT_LISTS_ACTIONS = buildHubspotActions({
   schemaPath: 'lists',
   allowedPaths: HUBSPOT_LISTS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

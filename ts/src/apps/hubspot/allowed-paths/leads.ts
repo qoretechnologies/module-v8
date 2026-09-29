@@ -1,8 +1,6 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import hubspotLeads from '../../../schemas/hubspot/leads.swagger.json';
 import { getHubspotLeadAllowedValues } from '../helpers/get-lead-allowed-values';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import { OpenAPIV2 } from 'openapi-types';
+import { buildHubspotActions } from '../helpers/schema-actions';
 import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotLeadPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotLeadIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
@@ -97,8 +95,7 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const HUBSPOT_LEADS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: hubspotLeads as unknown as OpenAPIV2.Document,
+export const HUBSPOT_LEADS_ACTIONS = buildHubspotActions({
   schemaPath: 'leads',
   allowedPaths: HUBSPOT_LEADS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,

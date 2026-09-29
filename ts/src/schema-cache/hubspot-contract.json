@@ -1,0 +1,702 @@
+{
+  "version": 1,
+  "app": "Hubspot",
+  "schemas": {
+    "companies": {
+      "group": "CRM",
+      "name": "Companies",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/companies",
+          "method": "get",
+          "action": "get-crm-v3-objects-companies_getPage",
+          "sourcePaths": [
+            "/crm/v3/objects/companies"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/companies",
+          "method": "post",
+          "action": "post-crm-v3-objects-companies_create",
+          "sourcePaths": [
+            "/crm/v3/objects/companies"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/companies/batch/upsert",
+          "method": "post",
+          "action": "post-crm-v3-objects-companies-batch-upsert_upsert",
+          "sourcePaths": [
+            "/crm/v3/objects/companies/batch/upsert"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/companies/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-companies-search_doSearch",
+          "sourcePaths": [
+            "/crm/v3/objects/companies/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/companies/{companyId}",
+          "method": "delete",
+          "action": "delete-crm-v3-objects-companies-companyId_archive",
+          "sourcePaths": [
+            "/crm/v3/objects/companies/{companyId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/companies/{companyId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-companies-companyId_getById",
+          "sourcePaths": [
+            "/crm/v3/objects/companies/{companyId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/companies/{companyId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-companies-companyId_update",
+          "sourcePaths": [
+            "/crm/v3/objects/companies/{companyId}"
+          ]
+        }
+      ]
+    },
+    "contacts": {
+      "group": "CRM",
+      "name": "Contacts",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/contacts",
+          "method": "get",
+          "action": "get-crm-v3-objects-contacts",
+          "sourcePaths": [
+            "/crm/v3/objects/contacts"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/contacts",
+          "method": "post",
+          "action": "post-crm-v3-objects-contacts",
+          "sourcePaths": [
+            "/crm/v3/objects/contacts"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/contacts/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-contacts-search",
+          "sourcePaths": [
+            "/crm/v3/objects/contacts/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/contacts/{contactId}",
+          "method": "delete",
+          "action": "delete-crm-v3-objects-contacts-contactId",
+          "sourcePaths": [
+            "/crm/v3/objects/contacts/{contactId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/contacts/{contactId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-contacts-contactId",
+          "sourcePaths": [
+            "/crm/v3/objects/contacts/{contactId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/contacts/{contactId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-contacts-contactId",
+          "sourcePaths": [
+            "/crm/v3/objects/contacts/{contactId}"
+          ]
+        }
+      ]
+    },
+    "deals": {
+      "group": "CRM",
+      "name": "Deals",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/0-3",
+          "method": "get",
+          "action": "get-crm-v3-objects-deals_getPage",
+          "sourcePaths": [
+            "/crm/v3/objects/0-3",
+            "/crm/v3/objects/deals"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/0-3",
+          "method": "post",
+          "action": "post-crm-v3-objects-deals_create",
+          "sourcePaths": [
+            "/crm/v3/objects/0-3",
+            "/crm/v3/objects/deals"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/0-3/batch/upsert",
+          "method": "post",
+          "action": "post-crm-v3-objects-deals-batch-upsert_upsert",
+          "sourcePaths": [
+            "/crm/v3/objects/0-3/batch/upsert",
+            "/crm/v3/objects/deals/batch/upsert"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/0-3/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-deals-search_doSearch",
+          "sourcePaths": [
+            "/crm/v3/objects/0-3/search",
+            "/crm/v3/objects/deals/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/0-3/{dealId}",
+          "method": "delete",
+          "action": "delete-crm-v3-objects-deals-dealId_archive",
+          "sourcePaths": [
+            "/crm/v3/objects/0-3/{dealId}",
+            "/crm/v3/objects/deals/{dealId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/0-3/{dealId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-deals-dealId_getById",
+          "sourcePaths": [
+            "/crm/v3/objects/0-3/{dealId}",
+            "/crm/v3/objects/deals/{dealId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/0-3/{dealId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-deals-dealId_update",
+          "sourcePaths": [
+            "/crm/v3/objects/0-3/{dealId}",
+            "/crm/v3/objects/deals/{dealId}"
+          ]
+        }
+      ]
+    },
+    "custom-objects": {
+      "group": "CRM",
+      "name": "Custom Objects",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/{objectType}",
+          "method": "get",
+          "action": "get-crm-v3-objects-objectType_getPage",
+          "sourcePaths": [
+            "/crm/v3/objects/{objectType}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/{objectType}",
+          "method": "post",
+          "action": "post-crm-v3-objects-objectType_create",
+          "sourcePaths": [
+            "/crm/v3/objects/{objectType}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/{objectType}/batch/upsert",
+          "method": "post",
+          "action": "post-crm-v3-objects-objectType-batch-upsert",
+          "sourcePaths": [
+            "/crm/v3/objects/{objectType}/batch/upsert"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/{objectType}/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-objectType-search_doSearch",
+          "sourcePaths": [
+            "/crm/v3/objects/{objectType}/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/{objectType}/{objectId}",
+          "method": "delete",
+          "action": "delete-crm-v3-objects-objectType-objectId_archive",
+          "sourcePaths": [
+            "/crm/v3/objects/{objectType}/{objectId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/{objectType}/{objectId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-objectType-objectId_getById",
+          "sourcePaths": [
+            "/crm/v3/objects/{objectType}/{objectId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/{objectType}/{objectId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-objectType-objectId_update",
+          "sourcePaths": [
+            "/crm/v3/objects/{objectType}/{objectId}"
+          ]
+        }
+      ]
+    },
+    "leads": {
+      "group": "CRM",
+      "name": "Leads",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/leads",
+          "method": "get",
+          "action": "get-crm-v3-objects-leads_getPage",
+          "sourcePaths": [
+            "/crm/v3/objects/leads"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/leads",
+          "method": "post",
+          "action": "post-crm-v3-objects-leads_create",
+          "sourcePaths": [
+            "/crm/v3/objects/leads"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/leads/batch/upsert",
+          "method": "post",
+          "action": "post-crm-v3-objects-leads-batch-upsert_upsert",
+          "sourcePaths": [
+            "/crm/v3/objects/leads/batch/upsert"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/leads/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-leads-search_doSearch",
+          "sourcePaths": [
+            "/crm/v3/objects/leads/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/leads/{leadsId}",
+          "method": "delete",
+          "action": "delete-crm-v3-objects-leads-leadsId_archive",
+          "sourcePaths": [
+            "/crm/v3/objects/leads/{leadsId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/leads/{leadsId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-leads-leadsId_getById",
+          "sourcePaths": [
+            "/crm/v3/objects/leads/{leadsId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/leads/{leadsId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-leads-leadsId_update",
+          "sourcePaths": [
+            "/crm/v3/objects/leads/{leadsId}"
+          ]
+        }
+      ]
+    },
+    "products": {
+      "group": "CRM",
+      "name": "Products",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/products",
+          "method": "get",
+          "action": "get-crm-v3-objects-products_getPage",
+          "sourcePaths": [
+            "/crm/v3/objects/products"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/products",
+          "method": "post",
+          "action": "post-crm-v3-objects-products_create",
+          "sourcePaths": [
+            "/crm/v3/objects/products"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/products/batch/upsert",
+          "method": "post",
+          "action": "post-crm-v3-objects-products-batch-upsert_upsert",
+          "sourcePaths": [
+            "/crm/v3/objects/products/batch/upsert"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/products/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-products-search_doSearch",
+          "sourcePaths": [
+            "/crm/v3/objects/products/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/products/{productId}",
+          "method": "delete",
+          "action": "delete-crm-v3-objects-products-productId_archive",
+          "sourcePaths": [
+            "/crm/v3/objects/products/{productId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/products/{productId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-products-productId_getById",
+          "sourcePaths": [
+            "/crm/v3/objects/products/{productId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/products/{productId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-products-productId_update",
+          "sourcePaths": [
+            "/crm/v3/objects/products/{productId}"
+          ]
+        }
+      ]
+    },
+    "tickets": {
+      "group": "CRM",
+      "name": "Tickets",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/tickets",
+          "method": "get",
+          "action": "get-crm-v3-objects-tickets_getPage",
+          "sourcePaths": [
+            "/crm/v3/objects/tickets"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/tickets",
+          "method": "post",
+          "action": "post-crm-v3-objects-tickets_create",
+          "sourcePaths": [
+            "/crm/v3/objects/tickets"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/tickets/batch/upsert",
+          "method": "post",
+          "action": "post-crm-v3-objects-tickets-batch-upsert_upsert",
+          "sourcePaths": [
+            "/crm/v3/objects/tickets/batch/upsert"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/tickets/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-tickets-search_doSearch",
+          "sourcePaths": [
+            "/crm/v3/objects/tickets/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/tickets/{ticketId}",
+          "method": "delete",
+          "action": "delete-crm-v3-objects-tickets-ticketId_archive",
+          "sourcePaths": [
+            "/crm/v3/objects/tickets/{ticketId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/tickets/{ticketId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-tickets-ticketId_getById",
+          "sourcePaths": [
+            "/crm/v3/objects/tickets/{ticketId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/tickets/{ticketId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-tickets-ticketId_update",
+          "sourcePaths": [
+            "/crm/v3/objects/tickets/{ticketId}"
+          ]
+        }
+      ]
+    },
+    "users": {
+      "group": "CRM",
+      "name": "Users",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/objects/users",
+          "method": "get",
+          "action": "get-crm-v3-objects-users",
+          "sourcePaths": [
+            "/crm/v3/objects/users"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/users/batch/upsert",
+          "method": "post",
+          "action": "post-crm-v3-objects-users-batch-upsert",
+          "sourcePaths": [
+            "/crm/v3/objects/users/batch/upsert"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/users/search",
+          "method": "post",
+          "action": "post-crm-v3-objects-users-search",
+          "sourcePaths": [
+            "/crm/v3/objects/users/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/users/{userId}",
+          "method": "get",
+          "action": "get-crm-v3-objects-users-userId",
+          "sourcePaths": [
+            "/crm/v3/objects/users/{userId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/objects/users/{userId}",
+          "method": "patch",
+          "action": "patch-crm-v3-objects-users-userId",
+          "sourcePaths": [
+            "/crm/v3/objects/users/{userId}"
+          ]
+        }
+      ]
+    },
+    "lists": {
+      "group": "CRM",
+      "name": "Lists",
+      "apiVersion": "3",
+      "allowPreview": false,
+      "operations": [
+        {
+          "path": "/crm/v3/lists",
+          "method": "post",
+          "action": "create_list",
+          "sourcePaths": [
+            "/crm/v3/lists",
+            "/crm/v3/lists/"
+          ]
+        },
+        {
+          "path": "/crm/v3/lists/search",
+          "method": "post",
+          "action": "search_lists",
+          "sourcePaths": [
+            "/crm/v3/lists/search"
+          ]
+        },
+        {
+          "path": "/crm/v3/lists/{listId}",
+          "method": "delete",
+          "action": "delete_list",
+          "sourcePaths": [
+            "/crm/v3/lists/{listId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/lists/{listId}",
+          "method": "get",
+          "action": "get_list",
+          "sourcePaths": [
+            "/crm/v3/lists/{listId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/lists/{listId}/memberships/add",
+          "method": "put",
+          "action": "add_memberships",
+          "sourcePaths": [
+            "/crm/v3/lists/{listId}/memberships/add"
+          ]
+        },
+        {
+          "path": "/crm/v3/lists/{listId}/memberships/add-from/{sourceListId}",
+          "method": "put",
+          "action": "add_members_from_source_list",
+          "sourcePaths": [
+            "/crm/v3/lists/{listId}/memberships/add-from/{sourceListId}"
+          ]
+        },
+        {
+          "path": "/crm/v3/lists/{listId}/memberships/remove",
+          "method": "put",
+          "action": "remove_members_from_list",
+          "sourcePaths": [
+            "/crm/v3/lists/{listId}/memberships/remove"
+          ]
+        }
+      ]
+    },
+    "forms": {
+      "group": "Marketing",
+      "name": "Forms",
+      "apiVersion": "3",
+      "allowPreview": true,
+      "operations": [
+        {
+          "path": "/marketing/v3/forms",
+          "method": "get",
+          "action": "get_forms",
+          "sourcePaths": [
+            "/marketing/v3/forms"
+          ]
+        },
+        {
+          "path": "/marketing/v3/forms",
+          "method": "post",
+          "action": "create_form",
+          "sourcePaths": [
+            "/marketing/v3/forms"
+          ]
+        },
+        {
+          "path": "/marketing/v3/forms/{formId}",
+          "method": "delete",
+          "action": "archive_form",
+          "sourcePaths": [
+            "/marketing/v3/forms/{formId}"
+          ]
+        },
+        {
+          "path": "/marketing/v3/forms/{formId}",
+          "method": "get",
+          "action": "get_form",
+          "sourcePaths": [
+            "/marketing/v3/forms/{formId}"
+          ]
+        },
+        {
+          "path": "/marketing/v3/forms/{formId}",
+          "method": "patch",
+          "action": "update_form",
+          "sourcePaths": [
+            "/marketing/v3/forms/{formId}"
+          ]
+        },
+        {
+          "path": "/marketing/v3/forms/{formId}",
+          "method": "put",
+          "action": "replace_form",
+          "sourcePaths": [
+            "/marketing/v3/forms/{formId}"
+          ]
+        }
+      ]
+    }
+  },
+  "actions": [
+    "get-crm-v3-objects-companies_getPage",
+    "post-crm-v3-objects-companies_create",
+    "post-crm-v3-objects-companies-batch-upsert_upsert",
+    "post-crm-v3-objects-companies-search_doSearch",
+    "delete-crm-v3-objects-companies-companyId_archive",
+    "get-crm-v3-objects-companies-companyId_getById",
+    "patch-crm-v3-objects-companies-companyId_update",
+    "get-crm-v3-objects-contacts",
+    "post-crm-v3-objects-contacts",
+    "post-crm-v3-objects-contacts-search",
+    "delete-crm-v3-objects-contacts-contactId",
+    "get-crm-v3-objects-contacts-contactId",
+    "patch-crm-v3-objects-contacts-contactId",
+    "get-crm-v3-objects-objectType_getPage",
+    "post-crm-v3-objects-objectType_create",
+    "post-crm-v3-objects-objectType-batch-upsert",
+    "post-crm-v3-objects-objectType-search_doSearch",
+    "delete-crm-v3-objects-objectType-objectId_archive",
+    "get-crm-v3-objects-objectType-objectId_getById",
+    "patch-crm-v3-objects-objectType-objectId_update",
+    "get-crm-v3-objects-deals_getPage",
+    "post-crm-v3-objects-deals_create",
+    "post-crm-v3-objects-deals-batch-upsert_upsert",
+    "post-crm-v3-objects-deals-search_doSearch",
+    "delete-crm-v3-objects-deals-dealId_archive",
+    "get-crm-v3-objects-deals-dealId_getById",
+    "patch-crm-v3-objects-deals-dealId_update",
+    "get-crm-v3-objects-leads_getPage",
+    "post-crm-v3-objects-leads_create",
+    "post-crm-v3-objects-leads-batch-upsert_upsert",
+    "post-crm-v3-objects-leads-search_doSearch",
+    "delete-crm-v3-objects-leads-leadsId_archive",
+    "get-crm-v3-objects-leads-leadsId_getById",
+    "patch-crm-v3-objects-leads-leadsId_update",
+    "get-crm-v3-objects-products_getPage",
+    "post-crm-v3-objects-products_create",
+    "post-crm-v3-objects-products-batch-upsert_upsert",
+    "post-crm-v3-objects-products-search_doSearch",
+    "delete-crm-v3-objects-products-productId_archive",
+    "get-crm-v3-objects-products-productId_getById",
+    "patch-crm-v3-objects-products-productId_update",
+    "get-crm-v3-objects-tickets_getPage",
+    "post-crm-v3-objects-tickets_create",
+    "post-crm-v3-objects-tickets-batch-upsert_upsert",
+    "post-crm-v3-objects-tickets-search_doSearch",
+    "delete-crm-v3-objects-tickets-ticketId_archive",
+    "get-crm-v3-objects-tickets-ticketId_getById",
+    "patch-crm-v3-objects-tickets-ticketId_update",
+    "get-crm-v3-objects-users",
+    "post-crm-v3-objects-users-batch-upsert",
+    "post-crm-v3-objects-users-search",
+    "get-crm-v3-objects-users-userId",
+    "patch-crm-v3-objects-users-userId",
+    "create_list",
+    "search_lists",
+    "delete_list",
+    "get_list",
+    "add_memberships",
+    "add_members_from_source_list",
+    "remove_members_from_list",
+    "get_forms",
+    "create_form",
+    "archive_form",
+    "get_form",
+    "update_form",
+    "replace_form",
+    "get_list_records",
+    "get_form_submissions",
+    "submit_form",
+    "hubspot_company_created_or_updated_trigger",
+    "hubspot_contact_created_or_updated_trigger",
+    "hubspot_custom_object_created_or_updated_trigger",
+    "hubspot_deal_created_or_updated_trigger",
+    "hubspot_lead_created_or_updated_trigger",
+    "hubspot_product_created_or_updated_trigger",
+    "hubspot_ticket_created_or_updated_trigger",
+    "hubspot_user_created_or_updated_trigger",
+    "hubspot_form_submitted_trigger"
+  ]
+}
