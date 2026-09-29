@@ -1,4 +1,3 @@
-import { runCLI } from 'jest';
 import * as path from 'path';
 import { IQoreRestConnectionConfig } from '@qoretechnologies/ts-toolkit';
 import { StrictRecord } from '../global/models/utils';
@@ -34,6 +33,8 @@ export class QTester {
 }
 
 async function runJest() {
+  // The production catalogue exports QTester, but only explicit test runs need Jest.
+  const { runCLI } = await import('jest');
   const { results } = await runCLI(
     {
       testMatch: ['**/?(*.)+(qtest).[tj]s?(x)'],
