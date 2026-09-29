@@ -1,3 +1,10 @@
+qore-v8-module (2.1.0~git20260929.1+ds-0qore1~ubuntu26.04) resolute; urgency=medium
+
+  * Preserve an unchanged generated app-directory map so separately packaged
+    catalogues can keep their installed resources read-only.
+
+ -- David Nichols <david@qore.org>  Tue, 29 Sep 2026 10:35:00 +0000
+
 qore-v8-module (2.1.0~git20260928.1+ds-0qore1~ubuntu26.04) resolute; urgency=medium
 
   * Package native bindings, two compiled/source helpers, tools, metadata,
