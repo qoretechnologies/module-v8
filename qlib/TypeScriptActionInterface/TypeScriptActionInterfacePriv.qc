@@ -215,7 +215,7 @@ function setenv(vr, value) {
         \c registerApp(); any pending action initialization is completed later by
         @ref TypeScriptActionInterface::TypeScriptActionInterface::initAllApps()
         "initAllApps()" when \c DPO_DisableOnDemandInitialization is set.  As a side
-        effect the directory <-> app-name map is (re)written next to the app directory
+        effect a changed directory <-> app-name map is written next to the app directory
         so that subsequent runtime starts can register apps pending from the index
         without loading them (the app directory name is not derivable from the app
         name).
@@ -244,9 +244,15 @@ function setenv(vr, value) {
         if (dirmap) {
             string map_file = dirname(apps_dir) + DirSep + TypeScriptActionInterface::AppDirMapFile;
             try {
+                string map_data = make_yaml(dirmap);
+                # Packages can ship this generated map in a read-only catalogue directory.
+                # Preserve identical maps instead of opening an installed resource for writing.
+                if (is_readable(map_file) && File::readTextFile(map_file) == map_data) {
+                    return;
+                }
                 File f();
                 f.open2(map_file, O_CREAT | O_WRONLY | O_TRUNC, 0644);
-                f.write(make_yaml(dirmap));
+                f.write(map_data);
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Failed to write app-dir map %y: %s: %s", map_file, ex.err, ex.desc);
             }
