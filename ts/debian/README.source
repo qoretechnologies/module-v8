@@ -4,7 +4,10 @@ Qore optional TypeScript catalogue source package
 This recipe builds the full catalogue, with its production JavaScript dependency
 tree, as a separate Architecture: all package. The native V8 source package
 continues to exclude ts/. The catalogue requires the V8 package containing the
-immutable directory-map fix and structured optional-resource initialization errors. Activate it explicitly as described in README.Debian.
+immutable directory-map fix, structured optional-resource initialization errors,
+and matching HubSpot presentation catalogs. Its versioned compatibility
+fingerprints reject unreviewed schema changes before cache activation. Activate
+it explicitly as described in README.Debian.
 
 PUBLICATION GATE: the full catalogue has not been cleared for redistribution.
 The schema-provenance.json file records missing/conflicting grants, for the remaining bundled schemas. HubSpot documents are excluded entirely;
