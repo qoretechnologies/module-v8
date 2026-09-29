@@ -1,0 +1,19 @@
+#!/bin/sh
+# Copyright (C) 2026 David Nichols
+# SPDX-License-Identifier: MIT
+set -eu
+unset NODE_OPTIONS NODE_PATH QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT QORE_TYPESCRIPT_ACTION_SCRIPTS QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS QORE_MODULE_DIR QORE_MODULE_DIR_ONLY QORE_INCLUDE_DIR LD_LIBRARY_PATH LD_PRELOAD
+cd "$AUTOPKGTEST_TMP"
+cat > v8-smoke.q <<'EOF'
+%modern
+%requires v8
+%requires TypeScriptProxy
+%requires TypeScriptActionInterface
+JavaScriptProgram js("globalThis.answer = 6 * 7;", "package.js");
+TypeScriptProgram ts("enum Kind { Package = 42 }; globalThis.answer = Kind.Package;", "package.ts");
+if (js.getGlobal().answer != 42 || ts.getGlobal().answer != 42) {
+    throw "PACKAGE-TEST-ERROR", "Installed JavaScript/TypeScript execution failed";
+}
+EOF
+/usr/bin/qcc -o v8-smoke v8-smoke.q
+timeout 60 ./v8-smoke

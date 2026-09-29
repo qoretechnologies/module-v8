@@ -84,6 +84,9 @@ module TypeScriptActionInterface {
 
     @section TypeScriptActionInterface_relnotes Release Notes
 
+    Generic API calls preserve the app-specific synchronous client's authentication and request policies,
+    including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
+
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
     - the TypeScript app catalogue settings (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT and
       \c QORE_TYPESCRIPT_ACTION_SCRIPTS) are read from the process environment when the module is initialized, so a

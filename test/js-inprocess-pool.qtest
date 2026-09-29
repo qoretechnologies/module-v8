@@ -2,13 +2,27 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
 %modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
 
 %requires QUnit
+%requires GoogleDataProvider
 %requires RestClient
-%requires ../qlib/TypeScriptActionInterface
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%ifndef MISSING_EXTERNAL_MODULE
+%requires TypeScriptActionInterface
+%endif
 %requires v8
 
 %exec-class JavaScriptInProcessPoolTest
+
+%ifndef MISSING_EXTERNAL_MODULE
+
+%include google-discovery-fixture.q
 
 public class JavaScriptInProcessPoolTest inherits QUnit::Test {
     private {
@@ -57,6 +71,7 @@ public class JavaScriptInProcessPoolTest inherits QUnit::Test {
     }
 
     globalSetUp() {
+        GoogleDiscoveryFixture::seed();
         chdir(get_script_dir());
         # Create pool with a proper init callback that calls registerAppActions
         # This ensures clone programs also register apps (matching the production pattern)
@@ -625,3 +640,14 @@ async function runWithTimeout(promise, delay) {
         assertNothing(ip5, "Pool must not be created after disabling on-demand");
     }
 }
+
+%else
+class JavaScriptInProcessPoolTest inherits QUnit::Test {
+    constructor() : Test("External module dependencies", "1.0", \ARGV) {
+        addTestCase("process/uuid dependencies", sub() {
+            testSkip("process or uuid module is unavailable");
+        });
+        set_return_value(main());
+    }
+}
+%endif

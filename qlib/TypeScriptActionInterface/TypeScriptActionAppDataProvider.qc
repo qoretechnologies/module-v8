@@ -108,6 +108,16 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         return conn;
     }
 
+    #! Preserves the app connection's authentication and request policies for generic API calls
+    /** @return the app-specific synchronous client, or @ref NOTHING when no connection is set
+
+        Creating the client does not connect. In particular, HubSpot's grant checks and AWS signing
+        are implemented by this client and must also apply to the generic API action.
+    */
+    private *object getRestClientForGenericCallImpl() {
+        return conn ? conn.get(False) : NOTHING;
+    }
+
     #! Returns the data provider name
     string getName() {
         return name;

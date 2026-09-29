@@ -1,6 +1,7 @@
 #!/usr/bin/env qore
 
 %modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
 
 %requires v8
 %requires QUnit
@@ -15,12 +16,15 @@ class TypeScriptTest inherits Test {
     }
 
     constructor() : Test("TypeScript test", "1.0") {
-        # Check if TypeScript transpilation is available (requires Node.js 24+ with
-        # stripTypeScriptTypes)
+        # Only missing compiler support is optional. Syntax/runtime failures in this valid
+        # probe must fail the suite rather than silently skipping every TypeScript test.
         try {
             TypeScriptProgram ts("const x: number = 1;", "check.ts");
             ts_available = True;
         } catch (hash<ExceptionInfo> ex) {
+            if (ex.desc.find("QORE_TYPESCRIPT_UNAVAILABLE:") < 0) {
+                rethrow;
+            }
             ts_available = False;
             skip_reason = sprintf("TypeScript transpilation not available: %s", ex.desc);
         }
@@ -28,6 +32,7 @@ class TypeScriptTest inherits Test {
         # Unit tests - TypeScript language features
         addTestCase("named argument calls", \namedArgumentTest());
         addTestCase("basic type stripping", \basicTypeStrippingTest());
+        addTestCase("source labels do not select parser modes", \sourceLabelTest());
         addTestCase("type aliases and union types", \typeAliasUnionTest());
         addTestCase("interfaces", \interfaceTest());
         addTestCase("interface extends", \interfaceExtendsTest());
@@ -92,6 +97,14 @@ class TypeScriptTest inherits Test {
 
         assertEq(5, ts.getGlobal().total);
         ts.setSaveReferenceCallback(save_reference_callback: NOTHING);
+    }
+
+    sourceLabelTest() {
+        skipIfTsUnavailable();
+        foreach string label in ("input.js", "input.json", "input.d.ts", "<input>") {
+            TypeScriptProgram ts("const value: number = 42; globalThis.answer = value;", label);
+            assertEq(42, ts.getGlobal().answer);
+        }
     }
 
     basicTypeStrippingTest() {

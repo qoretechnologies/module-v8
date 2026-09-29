@@ -1,0 +1,26 @@
+." Copyright (C) 2026 David Nichols; SPDX-License-Identifier: MIT
+.TH TS-PROXY 1 "September 2026" "Qore" "User Commands"
+.SH NAME
+ts-proxy \- JavaScript worker for Qore process pools
+.SH SYNOPSIS
+.B ts-proxy
+.BI --socket= path
+.RI [ options ]
+.SH DESCRIPTION
+Runs the JavaScript worker protocol over the specified Unix socket.
+Normally started by TypeScriptActionInterface process pools.
+.SH OPTIONS
+.TP
+.BR -s , " --socket=" path
+Parent Unix socket path.
+.TP
+.BR -l , " --logdir=" directory
+Log directory.
+.TP
+.BR -v , " --verbose"
+Increase logging verbosity.
+.TP
+.BR -h , " --help"
+Display usage.
+.SH ENVIRONMENT
+TS_PROXY_PROCESS_KEY supplies the parent worker authentication key.

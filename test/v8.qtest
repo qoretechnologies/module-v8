@@ -1,6 +1,7 @@
 #!/usr/bin/env qore
 
 %modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
 
 # conversion to V8 has to resolve these; see indirectReferencesTest()
 %allow-weak-references

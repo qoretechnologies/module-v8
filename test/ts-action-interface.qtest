@@ -7,12 +7,25 @@
 %prepend-module-path "${SCRIPT_DIR}/../qlib"
 
 %requires QUnit
+%requires GoogleDataProvider
 %requires RestClient
 %requires DiscordRestClient
-%requires ../qlib/TypeScriptActionInterface
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%ifndef MISSING_EXTERNAL_MODULE
+%requires TypeScriptActionInterface
+%endif
 %requires v8
 
 %exec-class TypeScriptActionInterfaceTest
+
+%ifndef MISSING_EXTERNAL_MODULE
+
+%include google-discovery-fixture.q
 
 public class TypeScriptActionInterfaceTest inherits QUnit::Test {
     private {
@@ -76,6 +89,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
     }
 
     globalSetUp() {
+        GoogleDiscoveryFixture::seed();
         chdir(get_script_dir());
         JavaScriptProgramPool pool("var exports = {};
 // Returns a Promise that resolves immediately with the state of 'promise'
@@ -1525,3 +1539,14 @@ class MyObserver inherits Observer {
     }
 
 }
+
+%else
+class TypeScriptActionInterfaceTest inherits QUnit::Test {
+    constructor() : Test("External module dependencies", "1.0", \ARGV) {
+        addTestCase("process/uuid dependencies", sub() {
+            testSkip("process or uuid module is unavailable");
+        });
+        set_return_value(main());
+    }
+}
+%endif

@@ -1,0 +1,14 @@
+." Copyright (C) 2026 David Nichols; SPDX-License-Identifier: MIT
+.TH NETSUITE-MAKE-GENERIC-SCHEMA 1 "September 2026" "Qore" "User Commands"
+.SH NAME
+netsuite-make-generic-schema \- remove account-specific NetSuite schema customizations
+.SH SYNOPSIS
+.B netsuite-make-generic-schema
+.RI [ options ] " input-file output-file"
+.SH DESCRIPTION
+Reads a NetSuite Swagger JSON schema, removes account customizations and writes
+its generic schema as YAML. An existing output file is overwritten.
+.SH OPTIONS
+.TP
+.BR -h , " --help"
+Display usage.

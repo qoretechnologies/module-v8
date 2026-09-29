@@ -1,6 +1,7 @@
 #!/usr/bin/env qore
 
 %modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
 
 %requires v8
 %requires QUnit

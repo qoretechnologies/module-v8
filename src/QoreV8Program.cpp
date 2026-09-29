@@ -294,14 +294,56 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         QoreStringMaker envstr("const publicRequire = require('module').createRequire("
             "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
         if (transpile_ts) {
+            v8::Local<v8::String> compiler_name, compiler_json;
+            if (!v8::String::NewFromUtf8(isolate, QORE_TYPESCRIPT_MODULE).ToLocal(&compiler_name)
+                    || !v8::JSON::Stringify(setup->context(), compiler_name).ToLocal(&compiler_json)) {
+                if (!checkException(xsink, tryCatch)) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Cannot encode the TypeScript compiler path");
+                }
+                valid = false;
+                ctx.Reset();
+                global.Reset();
+                return -1;
+            }
+            v8::String::Utf8Value compiler_source(isolate, compiler_json);
+            if (!*compiler_source) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Cannot convert the TypeScript compiler path");
+                valid = false;
+                ctx.Reset();
+                global.Reset();
+                return -1;
+            }
+            envstr.concat("const _tsModule = ");
+            envstr.concat(*compiler_source);
+            envstr.concat(";\n");
             envstr.concat(
                 "const _tsStrip = require('module').stripTypeScriptTypes;\n"
-                "if (typeof _tsStrip !== 'function') {\n"
-                "  throw new Error('TypeScript support requires Node.js 24+ "
-                    "with stripTypeScriptTypes');\n"
+                "let _tsSource;\n"
+                "if (typeof _tsStrip === 'function' && process.features.typescript !== false) {\n"
+                "  _tsSource = _tsStrip(process.env._qore_v8_source, { mode: 'transform' });\n"
+                "} else {\n"
+                // Debian/Ubuntu build Node without Amaro. Use their separately packaged compiler;
+                // preserve script/module semantics and report syntax errors before executing any code.
+                "  let _ts;\n"
+                "  try { _ts = publicRequire(_tsModule); } catch (err) {\n"
+                "    if (err.code !== 'MODULE_NOT_FOUND' || "
+                    "!err.message.startsWith(\"Cannot find module '\" + _tsModule + \"'\")) throw err;\n"
+                "    throw new Error('QORE_TYPESCRIPT_UNAVAILABLE: install the typescript package "
+                    "or use Node.js with built-in TypeScript support');\n"
+                "  }\n"
+                "  const result = _ts.transpileModule(process.env._qore_v8_source, {\n"
+                // The source label belongs to the VM stack trace; it must not select TypeScript's
+                // JSON, declaration-file, or JavaScript parser modes based on a filename suffix.
+                "    fileName: 'qore-typescript-input.ts', reportDiagnostics: true,\n"
+                "    compilerOptions: { target: _ts.ScriptTarget.ESNext, module: _ts.ModuleKind.ESNext }\n"
+                "  });\n"
+                "  const errors = (result.diagnostics || []).filter(d => d.category === _ts.DiagnosticCategory.Error);\n"
+                "  if (errors.length) {\n"
+                "    throw new SyntaxError(errors.map(d => _ts.flattenDiagnosticMessageText(d.messageText, '\\n'))"
+                    ".join('\\n'));\n"
+                "  }\n"
+                "  _tsSource = result.outputText;\n"
                 "}\n"
-                "const _tsSource = _tsStrip(process.env._qore_v8_source, "
-                    "{ mode: 'transform' });\n"
                 "publicRequire('node:vm').runInThisContext(_tsSource, {\n"
                 "  'filename': process.env._qore_v8_filename\n"
                 "});"

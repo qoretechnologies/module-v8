@@ -9,7 +9,7 @@ Name:           qore-v8-module
 Version:        1.0.0
 Release:        1
 Summary:        Qorus Integration Engine - Qore v8 module
-License:        MIT
+License:        LGPL-2.1-or-later AND MIT
 Group:          Productivity/Networking/Other
 Url:            https://qoretechnologies.com
 Source:         qore-v8-module-%{version}.tar.bz2

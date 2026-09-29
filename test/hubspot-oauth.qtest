@@ -5,15 +5,23 @@
 # QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS unset; see docs/hubspot-cms-oauth.md.
 %modern
 %prepend-module-path "${SCRIPT_DIR}/../qlib"
-%requires ../qlib/TypeScriptActionInterface
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%ifndef MISSING_EXTERNAL_MODULE
+%requires TypeScriptActionInterface
+%endif
 %requires QUnit
 %requires HttpServer
 %requires RestClient
 %requires v8
-%try-module json
-%error "The HubSpot fixture requires the json module"
-%endtry
+%requires json
 %exec-class HubspotOAuthTest
+
+%ifndef MISSING_EXTERNAL_MODULE
 
 #! Local, read-only HubSpot fixture; no production accounts or content are used
 class HubspotOAuthHandler inherits AbstractHttpRequestHandler {
@@ -204,6 +212,16 @@ class HubspotRequestErrorClient inherits TypeScriptHubspotRestClient {
     }
 }
 
+#! Exercises the generic API path inherited by TypeScript action children
+class HubspotGenericChildProvider inherits TypeScriptActionDataProviderBase {
+    constructor(RestConnection conn) : TypeScriptActionDataProviderBase(conn, "fixture-child") {
+    }
+
+    private hash<DataProviderInfo> getStaticInfoImpl() {
+        return <DataProviderInfo>{"type": "HubspotGenericChildProvider"};
+    }
+}
+
 class HubspotOAuthTest inherits QUnit::Test {
     private {
         HttpServer server;
@@ -214,8 +232,16 @@ class HubspotOAuthTest inherits QUnit::Test {
     }
 
     constructor() : Test("HubSpot optional CMS OAuth", "1.0") {
+        if (!hstat(get_script_dir() + "/../ts/dist/apps/hubspot/rest.js")) {
+            addTestCase("HubSpot catalog fixture", sub() {
+                testSkip("build the matching TypeScript catalog to run the HubSpot OAuth fixture");
+            });
+            set_return_value(main());
+            return;
+        }
         addTestCase("real catalog consent URL and overrides", \testConsent());
         addTestCase("granted CMS pages and domains", \testGranted());
+        addTestCase("generic child preserves CMS policies", \testGenericChild());
         addTestCase("missing, declined and unavailable scopes", \testMissing());
         addTestCase("invalid metadata and safe errors", \testMetadata());
         addTestCase("account entitlement rejection", \testEntitlement());
@@ -232,6 +258,9 @@ class HubspotOAuthTest inherits QUnit::Test {
     }
 
     globalSetUp() {
+        if (!hstat(get_script_dir() + "/../ts/dist/apps/hubspot/rest.js")) {
+            return;
+        }
         handler = new HubspotOAuthHandler();
         server = new HttpServer();
         server.setDefaultHandler("fixture", handler);
@@ -339,6 +368,20 @@ class HubspotOAuthTest inherits QUnit::Test {
         AbstractRestClient copy = client.copyWithUrl(rest_url);
         assertTrue(copy instanceof TypeScriptHubspotRestClient);
         assertEq("cms-1", copy.restGet("/cms/v3/domains").body.results[0].id);
+    }
+
+    testGenericChild() {
+        HubspotGenericChildProvider granted(connection("cms-token"));
+        assertTrue(granted.getRestClientForGenericCall() instanceof TypeScriptHubspotRestClient);
+        AbstractDataProvider api = granted.getChildProviderEx("__call__");
+        assertEq("cms-1", api.doRequest({"method": "GET", "path": "/cms/v3/domains"}).body.results[0].id);
+        HubspotGenericChildProvider denied(connection("crm-token"));
+        assertTrue(denied.getRestClientForGenericCall() instanceof TypeScriptHubspotRestClient);
+        api = denied.getChildProviderEx("__call__");
+        int before = handler.count("/cms/v3/domains");
+        assertThrows("HUBSPOT-CMS-CAPABILITY-ERROR", \api.doRequest(),
+            ({"method": "GET", "path": "/cms/v3/domains", "error_passthru": True},));
+        assertEq(before, handler.count("/cms/v3/domains"), "denied child calls must not reach the CMS endpoint");
     }
 
     testMissing() {
@@ -678,3 +721,14 @@ class HubspotOAuthTest inherits QUnit::Test {
         assertFalse(rendered =~ /fixture-secret|metadata-error-token/);
     }
 }
+
+%else
+class HubspotOAuthTest inherits QUnit::Test {
+    constructor() : Test("External module dependencies", "1.0", \ARGV) {
+        addTestCase("process/uuid dependencies", sub() {
+            testSkip("process or uuid module is unavailable");
+        });
+        set_return_value(main());
+    }
+}
+%endif

@@ -30,8 +30,13 @@ class NetsuiteMakeGenericSchema {
         opts = GetOpt::parseExit(Opts, \ARGV);
         *string input = shift ARGV;
         *string output = shift ARGV;
-        if (opts.help || !exists input || !exists output) {
+        if (opts.help) {
             usage();
+            return;
+        }
+        if (!exists input || !exists output) {
+            usage();
+            exit(2);
         }
 
         string json = File::readTextFile(input);

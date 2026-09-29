@@ -92,6 +92,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return conn;
     }
 
+    #! Preserves the app connection's authentication and request policies for generic API calls
+    /** @return the app-specific synchronous client, or @ref NOTHING when no connection is set
+
+        Creating the client does not connect. Generic calls from child providers must use the same
+        app-specific grant checks and signing as calls from the app root.
+    */
+    private *object getRestClientForGenericCallImpl() {
+        return conn ? conn.get(False) : NOTHING;
+    }
+
     #! Returns the logger interface for logging
     *LoggerInterface getLogger() {
         return logger;

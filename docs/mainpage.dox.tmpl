@@ -164,14 +164,16 @@ var has = "name" in obj;  // true
 
     The @ref V8::TypeScriptProgram "TypeScriptProgram" class extends @ref V8::JavaScriptProgram "JavaScriptProgram"
     to support TypeScript source code. TypeScript is transpiled to JavaScript at runtime using Node.js's built-in
-    \c stripTypeScriptTypes() API (requires Node.js 24+), which handles type stripping, enum transformation, and
-    namespace transformation with zero external dependencies.
+    \c stripTypeScriptTypes() API (Node.js 22.13+ builds with TypeScript support), which handles type stripping, enum transformation, and
+    namespace transformation. Node.js builds without that compiler use the separate \c typescript package.
 
     @subsection v8_ts_requirements Requirements
 
-    - <b>Node.js 24+</b> is required for TypeScript transpilation. The \c stripTypeScriptTypes() API is not
-      available in earlier versions. If the API is not available, the constructor throws a
-      \c JAVASCRIPT-EXCEPTION error.
+    - Node.js 22.13+ provides \c stripTypeScriptTypes() when compiled with TypeScript support.
+      Builds without that support (including Debian/Ubuntu's Node.js) use the separately installed
+      \c typescript compiler package; install \c node-typescript on Debian/Ubuntu.
+      Both implementations preserve ES module syntax and report syntax errors before execution.
+      If neither compiler is available, the constructor throws a \c JAVASCRIPT-EXCEPTION error.
     - The transpilation uses \c transform mode, which supports type stripping, enums, and namespace transformation.
 
     @subsection v8_ts_basic_example Basic Example
@@ -649,6 +651,9 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @section v8releasenotes v8 Module Release Notes
 
     @subsection v8_2_2 v8 Module Version 2.2
+    - added TypeScript compiler package support for Node.js builds without the built-in compiler, including
+      Debian and Ubuntu; syntax errors are reported before execution
+    - added Debian/Ubuntu packaging for the native bridge, helper modules, tools, metadata and translations
     - fixed a deadlock that hung the calling thread when a JavaScript program was destroyed while a call was in
       progress in another thread; destruction is deferred until the call in progress completes, but the deferred
       destructor was run with the (non-recursive) program lock held, and it acquires the same lock, so the thread
@@ -690,7 +695,7 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
 
     @subsection v8_2_1 v8 Module Version 2.1
     - added the @ref V8::TypeScriptProgram "TypeScriptProgram" class for runtime TypeScript transpilation and
-      execution using Node.js 24+'s built-in \c stripTypeScriptTypes() API
+      execution using Node.js's built-in \c stripTypeScriptTypes() API
     - supports type stripping, interfaces, enums (including const enums), typed classes with inheritance,
       generics, namespaces, and all standard TypeScript syntax
     - TypeScript programs inherit all @ref V8::JavaScriptProgram "JavaScriptProgram" methods and the

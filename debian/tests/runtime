@@ -1,0 +1,19 @@
+#!/bin/sh
+# Copyright (C) 2026 David Nichols
+# SPDX-License-Identifier: MIT
+set -eu
+export LC_ALL=C.UTF-8
+unset NODE_OPTIONS NODE_PATH NODE_INCLUDE_DIR NODE_LIB_DIR V8_CPPGC_INCLUDE_DIR QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT QORE_TYPESCRIPT_ACTION_SCRIPTS QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS QORE_DATA_PROVIDERS QORE_CONNECTION_PROVIDERS QORE_DATASOURCE_PROVIDERS QORE_PROVIDER_INDEX_DIR QORE_MODULE_DIR QORE_MODULE_DIR_ONLY QORE_INCLUDE_DIR LD_LIBRARY_PATH LD_PRELOAD
+export QORE_MODULE_DIR=$(/usr/bin/qore --module-path)
+export QORE_MODULE_DIR_ONLY=1
+cp -a test "$AUTOPKGTEST_TMP/test"
+cp debian/tests/run-suites debian/tests/cli "$AUTOPKGTEST_TMP/"
+cd "$AUTOPKGTEST_TMP"
+module_dir=$(printf '%s\n' "$QORE_MODULE_DIR" | tr : '\n' | while IFS= read -r path; do
+    if [ -f "$path/TypeScriptProxy/TypeScriptProxy.qmod" ]; then printf '%s\n' "$path"; break; fi
+done)
+test -n "$module_dir"
+export QORE_V8_TEST_MODULE_DIR="$module_dir"
+export QORE_V8_TEST_QMOD_DIR="$module_dir"
+./run-suites
+exec ./cli

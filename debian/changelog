@@ -1,0 +1,16 @@
+qore-v8-module (2.1.0~git20260928.1+ds-0qore1~ubuntu26.04) resolute; urgency=medium
+
+  * Package native bindings, two compiled/source helpers, tools, metadata,
+    resources/translations, API docs, test examples and debug symbols.
+    Split shared data into an architecture-independent package.
+  * Support distribution Node.js builds without the built-in TypeScript
+    compiler using the separately packaged TypeScript implementation.
+  * Test against an offline synthetic Google Discovery schema and identify
+    missing external modules and the optional HubSpot catalogue fixture.
+  * Preserve app-specific authentication and grant checks in generic API
+    calls from root and child providers; resolve helper documentation links.
+  * Make the NetSuite schema tool stop after help and reject missing arguments.
+  * Align native license metadata with its LGPL source notices.
+  * Add installed runtime/compiler tests and reproducible offline profiles.
+
+ -- David Nichols <david@qore.org>  Tue, 29 Sep 2026 04:04:52 -0000

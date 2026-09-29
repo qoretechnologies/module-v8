@@ -27,7 +27,7 @@
 //! Program for embedding and executing TypeScript code with runtime transpilation to JavaScript
 /**
     TypeScript source code is transpiled to JavaScript using Node.js's built-in
-    \c stripTypeScriptTypes() API (requires Node.js 24+) before execution. The transpilation
+    \c stripTypeScriptTypes() API (Node.js 22.13+ builds with TypeScript support) before execution, or the separately installed \c typescript compiler on builds without it. The transpilation
     uses \c transform mode, which handles type stripping, enums, and namespace transformation.
 
     All methods from @ref JavaScriptProgram are inherited and work identically.

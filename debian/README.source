@@ -1,0 +1,44 @@
+Qore V8 module packages
+=======================
+
+This development snapshot targets qore-testing, not general release. The
+runtime contains native bindings, TypeScriptProxy/TypeScriptActionInterface
+AOT modules, two tools and metadata. Its exact-version common package provides
+source modules, resources and all qlib catalogs.
+The doc package contains three API references and test examples.
+
+Tracked container-build artifacts are excluded and all binaries are rebuilt.
+The separately built ts/ app catalogue is excluded from the +ds source archive.
+It needs its own offline npm dependency and third-party schema license inventory.
+No npm install or network download occurs during these package builds. The bridge
+and user-supplied apps work without this optional catalogue. Configure an app
+script with QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT or QORE_TYPESCRIPT_ACTION_SCRIPTS.
+Catalog-derived qlib translations are retained for those apps. The offline
+build checks complete locale/message/source parity against their committed
+roots; current app ownership and regenerated-root qualification require the
+separately built catalogue and are not claimed by this bridge-only package.
+
+Use dpkg-buildpackage -us -uc with the matching Qore 3 SDK, packaged process/uuid
+modules, libnode-dev and node-typescript. Ubuntu's Node exposes stripTypeScriptTypes
+but disables its built-in compiler; TypeScriptProgram uses node-typescript in that
+case. QORE_TYPESCRIPT_MODULE selects the compiler name/path at CMake configure
+time; packaging sets its absolute distribution path so standalone qcc executables
+work regardless of their own directory. It preserves ES module syntax, reports syntax diagnostics, and never treats
+other transpilation/runtime errors as an unavailable compiler.
+
+Full, arch-only, indep-only, nocheck and nodoc profiles build offline. Cross builds
+need a separate host SDK and are explicitly rejected. Fixed qcc partitions,
+ordered sibling modules and preserved AOT trailers support reproducibility.
+Tests use loopback fixtures and synthetic Google Discovery metadata. The optional
+HubSpot OAuth suite explicitly skips when its matching built catalogue is absent;
+separate qualification must supply its matching rest.js fixture and dependencies.
+Eight fault-injection cases explicitly skip for release AOT modules, where their
+debug hooks are compiled out; source-mode qualification executes these cases. A
+real child-exit/restart test runs in both modes without debug hooks.
+Runtime/compiler autopkgtests exclude checkout module paths. Supplement these
+with source-mode, teardown, resource/locale, debug and install/purge/reinstall checks.
+
+Before general publication, freeze the Qore ABI, qualify other Debian/Ubuntu
+releases and architectures, and test relevant upgrades. No previous module package
+is available for upgrade tests. Testing PPA publication needs the matching
+published SDK and process/uuid packages, source signing and upload.

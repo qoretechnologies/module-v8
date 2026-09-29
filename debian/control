@@ -1,0 +1,58 @@
+Source: qore-v8-module
+Section: interpreters
+Priority: optional
+Maintainer: David Nichols <david@qore.org>
+Build-Depends: debhelper-compat (= 13),
+               cmake (>= 3.21),
+               libnode-dev (>= 22.13),
+               nodejs (>= 22.13),
+               node-typescript (>= 5.2),
+               libqore-dev (>= 3.0.0~),
+               qore (>= 3.0.0~),
+               qore-process-module,
+               qore-uuid-module,
+               qore-misc-tools (>= 3.0.0~) <!nocheck>,
+               openssl <!nocheck>,
+               python3
+Build-Depends-Indep: doxygen <!nodoc>
+Standards-Version: 4.7.4
+Rules-Requires-Root: no
+Homepage: https://qore.org
+Vcs-Git: https://github.com/qoretechnologies/module-v8.git
+Vcs-Browser: https://github.com/qoretechnologies/module-v8
+
+Package: qore-v8-module
+Architecture: any
+Depends: qore-v8-module-common (= ${source:Version}),
+         ${qore:Depends},
+         ${shlibs:Depends},
+         ${misc:Depends},
+         node-typescript (>= 5.2),
+         qore-process-module,
+         qore-uuid-module
+Suggests: qore-v8-module-doc
+Description: JavaScript and TypeScript integration for Qore
+ This package provides native Node.js/V8 bindings, compiled and source
+ TypeScriptProxy and TypeScriptActionInterface modules, two command-line
+ tools, compiler metadata, provider resources and translations.
+ The separately built TypeScript app catalogue is not included.
+
+Package: qore-v8-module-common
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: shared sources and translations for Qore's JavaScript modules
+ This package contains the architecture-independent source modules, resources
+ and translation catalogs for TypeScriptProxy and TypeScriptActionInterface.
+ The TypeScript app catalogue and its npm dependencies are separate.
+
+Package: qore-v8-module-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Build-Profiles: <!nodoc>
+Depends: ${misc:Depends}
+Suggests: qore-v8-module
+Description: documentation and examples for Qore's JavaScript modules
+ This package contains three HTML API references and test examples for the
+ JavaScript/TypeScript bindings, process pools and action integration.

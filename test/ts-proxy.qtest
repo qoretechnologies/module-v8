@@ -2,12 +2,23 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
 %modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
 
 %requires QUnit
-%requires ../qlib/TypeScriptActionInterface
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%ifndef MISSING_EXTERNAL_MODULE
+%requires TypeScriptActionInterface
+%endif
 %requires v8
 
 %exec-class TsProxyTest
+
+%ifndef MISSING_EXTERNAL_MODULE
 
 public class TsProxyTest inherits QUnit::Test {
     private {
@@ -21,6 +32,7 @@ public class TsProxyTest inherits QUnit::Test {
         checkEnvironment();
 
         addTestCase("proxy tests", \proxyTests());
+        addTestCase("proxy restarts after child exit", \proxyUnexpectedExitTest());
         addTestCase("proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
         addTestCase("proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
         addTestCase("proxy parent send error mid-command", \proxyParentSendErrorMidCommandTest());
@@ -53,11 +65,9 @@ public class TsProxyTest inherits QUnit::Test {
 
     private checkEnvironment() {
         string local_bin = sprintf("%s/../bin", get_script_dir());
-        if (!hstat(local_bin)) {
-            skip_reason = sprintf("Local bin directory missing: %s", local_bin);
-            return;
+        if (hstat(local_bin)) {
+            setenv("PATH", local_bin + ":" + ENV.PATH);
         }
-        setenv("PATH", local_bin + ":" + ENV.PATH);
 
         # Check if ts-proxy binary is available
         try {
@@ -90,6 +100,29 @@ public class TsProxyTest inherits QUnit::Test {
         if (!env_ready) {
             testSkip(skip_reason);
         }
+    }
+
+    # Fault-injection hooks are removed when the release qmod is compiled.
+    # --enable-debug only enables hooks in source parsed by the current process.
+    private skipIfDebugHooksUnavailable() {
+        if (get_module_hash().TypeScriptActionInterface.filename.endsWith(".qmod")) {
+            testSkip("fault injection requires TypeScriptActionInterface source with --enable-debug");
+        }
+    }
+
+    private proxyUnexpectedExitTest() {
+        skipIfNotReady();
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0);
+        assertEq(0, system(sprintf("kill -9 %d", pid)));
+        assertThrows("APP-ERROR", \proxy.getDynamicOptions(),
+            ("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING));
+        assertTrue(proxy.getInfo()."proxy-pid" != pid,
+            "the release proxy must restart a terminated child before retrying the command");
+        assertEq(1, proxy.getInfo()."restart-count");
     }
 
     # All proxy tests run in a single test case to share the proxy infrastructure
@@ -159,6 +192,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxySocketCloseMidCommandTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         bool debug_enabled = False;
         @debug {
@@ -200,6 +234,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxyBoundedRestartTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         bool debug_enabled = False;
         @debug {
@@ -246,6 +281,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxyParentSendErrorMidCommandTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         bool debug_enabled = False;
         @debug {
@@ -288,6 +324,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxyParentSendErrorBoundedRestartTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         bool debug_enabled = False;
         @debug {
@@ -332,6 +369,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxyRestartErrorHandlingTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         JavaScriptProgramProxy::init(new Mutex());
         on_exit JavaScriptProgramProxy::shutdown();
@@ -392,6 +430,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxySendErrorHandlingTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         JavaScriptProgramProxy::init(new Mutex());
         on_exit JavaScriptProgramProxy::shutdown();
@@ -448,6 +487,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxyRestartWaitFastPathTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         bool debug_enabled = False;
         @debug {
@@ -474,6 +514,7 @@ public class TsProxyTest inherits QUnit::Test {
 
     private proxyStartupSendErrorHandlingTest() {
         skipIfNotReady();
+        skipIfDebugHooksUnavailable();
 
         bool debug_enabled = False;
         @debug {
@@ -503,3 +544,14 @@ public class TsProxyTest inherits QUnit::Test {
         assertTrue(threw, "startup send error should raise");
     }
 }
+
+%else
+class TsProxyTest inherits QUnit::Test {
+    constructor() : Test("External module dependencies", "1.0", \ARGV) {
+        addTestCase("process/uuid dependencies", sub() {
+            testSkip("process or uuid module is unavailable");
+        });
+        set_return_value(main());
+    }
+}
+%endif

@@ -1,0 +1,7 @@
+Tests: runtime
+Depends: qore-v8-module, openssl
+Restrictions: allow-stderr
+
+Tests: compiler
+Depends: qore-v8-module, libqore-dev
+Restrictions: allow-stderr

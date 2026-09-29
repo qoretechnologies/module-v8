@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.21)
 project(qore-v8-module)
 
 set (VERSION_MAJOR 2)
@@ -25,6 +25,10 @@ if (UNIX AND NOT APPLE)
 endif()
 
 find_package(Qore 2.0 REQUIRED)
+
+# An absolute compiler path also works in qcc executables: Node derives its global
+# search paths from the executable location, which is not necessarily /usr/bin.
+set(QORE_TYPESCRIPT_MODULE "typescript" CACHE STRING "TypeScript compiler module name or absolute path")
 
 # Locate libnode. When NODE_LIB_DIR is set we MUST use the libnode in that
 # directory; falling back to a system libnode while including Node headers
@@ -170,6 +174,7 @@ set(QORE_DOX_TMPL_SRC
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/images")
 
 add_library(${module_name} MODULE ${CPP_SRC} ${QPP_SOURCES})
+target_compile_definitions(${module_name} PRIVATE QORE_TYPESCRIPT_MODULE="${QORE_TYPESCRIPT_MODULE}")
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 #include_directories(${Python3_INCLUDE_DIRS})
@@ -229,4 +234,9 @@ if (DOXYGEN_FOUND)
     qore_wrap_dox(QORE_DOX_SRC ${QORE_DOX_TMPL_SRC})
     add_custom_target(QORE_MOD_DOX_FILES DEPENDS ${QORE_DOX_SRC})
     add_dependencies(docs-module QORE_MOD_DOX_FILES)
+endif()
+
+# Resolve native-to-helper API links after both helper tag files are complete.
+if (COMMAND qore_binary_module_two_phase_docs)
+    qore_binary_module_two_phase_docs(v8 "TypeScriptProxy;TypeScriptActionInterface")
 endif()

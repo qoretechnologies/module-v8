@@ -1741,7 +1741,7 @@ exports.actionsCatalogue = {
             "logo_file_name": "gmail-test.svg",
             "logo_mime_type": "image/svg+xml",
             "google_app": {
-                "api": "gmail",
+                "api": "qore-fixture-gmail",
             },
             "rest": {
                 "data": "json",

@@ -1,0 +1,28 @@
+#!/bin/sh
+# Copyright (C) 2026 David Nichols
+# SPDX-License-Identifier: MIT
+set -eu
+tool=${1:-/usr/bin/netsuite-make-generic-schema}
+tmpdir=$(mktemp -d)
+trap 'rm -rf "$tmpdir"' EXIT HUP INT TERM
+"$tool" --help > "$tmpdir/help"
+if "$tool" > "$tmpdir/missing" 2>&1; then
+    echo 'Missing input/output arguments unexpectedly succeeded' >&2
+    exit 1
+fi
+cat > "$tmpdir/input.json" <<'EOF'
+{"info":{"description":"NetSuite for account PRIVATE"},"host":"private","definitions":{"customer":{"properties":{"name":{"type":"string"},"custbody_example":{"type":"string"}},"x-ns-filterable":["name","custbody_example"]},"customrecord_example":{"type":"object"}}}
+EOF
+"$tool" --help "$tmpdir/input.json" "$tmpdir/untouched.yaml" > /dev/null
+test ! -e "$tmpdir/untouched.yaml"
+"$tool" "$tmpdir/input.json" "$tmpdir/output.yaml"
+PACKAGE_SCHEMA_OUTPUT="$tmpdir/output.yaml" /usr/bin/qore -l yaml -e '
+hash<auto> schema = parse_yaml(File::readTextFile(ENV.PACKAGE_SCHEMA_OUTPUT));
+if (schema.host != "{{account_id}}.suitetalk.api.netsuite.com"
+        || schema.info.description != "NetSuite"
+        || exists schema.definitions.customrecord_example
+        || exists schema.definitions.customer.properties.custbody_example
+        || schema.definitions.customer.properties.name.type != "string"
+        || schema.definitions.customer."x-ns-filterable" != ("name",)) {
+    throw "PACKAGE-TEST-ERROR", "NetSuite schema cleanup failed";
+}'
