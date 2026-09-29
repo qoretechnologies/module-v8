@@ -1,0 +1,14 @@
+Optional Qore TypeScript catalogue
+==================================
+
+Activate explicitly for a Qore process with:
+
+ export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT=/usr/share/qore-v8-app-catalogue/dist/index.js
+
+Then load TypeScriptActionInterface or use Qore's data-provider tools. The package
+includes production JavaScript dependencies, not Jest or development tools.
+Service credentials are provided separately by the application. Installed files
+are immutable; application indexes and caches belong in application-owned paths.
+
+This local prototype has not been cleared for public redistribution. See
+schema-provenance.json and the dependency notices for outstanding provenance.

@@ -15,3 +15,12 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# Generated Debian catalogue inputs and output
+/vendor/
+/.debian-*
+/debian/.debhelper/
+/debian/debhelper-build-stamp
+/debian/files
+/debian/*.substvars
+/debian/qore-v8-app-catalogue/

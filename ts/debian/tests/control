@@ -1,0 +1,4 @@
+Tests: runtime
+Depends: @
+# Node warns about upstream deprecated APIs on stderr.
+Restrictions: allow-stderr

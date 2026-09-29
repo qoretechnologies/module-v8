@@ -1,0 +1,44 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Qore TypeScript API and application catalogue
+Source: https://github.com/qoretechnologies/module-v8
+Comment: LOCAL QUALIFICATION PROTOTYPE: PUBLIC REDISTRIBUTION REVIEW INCOMPLETE.
+ Schema and dependency grants must be resolved before upload. Files below are
+ identified separately; public API availability does not establish a license.
+
+Files: *
+Copyright: 2024-2026 Qore Technologies, s.r.o. and Qore Programming Language
+License: MIT
+ MIT License
+ .
+ Copyright (C) 2024 Qore Programming Language
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+Files: src/schemas/*
+Copyright: Respective service providers and schema authors
+License: pending-review
+ See debian/schema-provenance.json for file hashes, source URLs and findings.
+ This notice does not grant redistribution rights.
+
+Files: vendor/*
+Copyright: Respective dependency authors, preserved in bundled notices
+License: various
+ The source archives preserve upstream licenses. The binary package preserves
+ all bundled license and notice files and includes a dependency inventory.
+ The complete per-file Debian copyright mapping remains a publication gate.

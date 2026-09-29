@@ -1,0 +1,4 @@
+#!/bin/sh
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+exec /usr/bin/node "$QORE_CATALOGUE_YARN" "$@"

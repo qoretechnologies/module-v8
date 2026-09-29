@@ -1,0 +1,18 @@
+Source: qore-v8-app-catalogue
+Section: interpreters
+Priority: optional
+Maintainer: David Nichols <david@qore.org>
+Build-Depends: debhelper-compat (= 13), nodejs (>= 22.13), python3, qore (>= 3.0.0~)
+Standards-Version: 4.7.4
+Rules-Requires-Root: no
+Homepage: https://qore.org
+Vcs-Git: https://github.com/qoretechnologies/module-v8.git
+Vcs-Browser: https://github.com/qoretechnologies/module-v8/tree/develop/ts
+
+Package: qore-v8-app-catalogue
+Architecture: all
+Depends: ${misc:Depends}, qore-v8-module (>= 2.1.0~git20260929.1), nodejs (>= 22.13)
+Description: optional application catalogue for the Qore TypeScript interface
+ This package provides the compiled TypeScript application catalogue and its
+ private JavaScript dependencies for integrations with external service APIs.
+ Applications require their own service credentials and access permissions.

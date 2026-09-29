@@ -1,0 +1,35 @@
+#!/bin/sh
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+set -eu
+
+source_debian=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+catalogue=/usr/share/qore-v8-app-catalogue
+unset NODE_PATH NODE_OPTIONS LD_LIBRARY_PATH LD_PRELOAD QORE_MODULE_DIR QORE_MODULE_DIR_ONLY
+unset QORE_INCLUDE_DIR QORE_TYPESCRIPT_ACTION_SCRIPTS QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS
+unset QORE_DATA_PROVIDERS QORE_CONNECTION_PROVIDERS QORE_DATASOURCE_PROVIDERS QORE_PROVIDER_INDEX_DIR
+export QORE_MODULE_DIR="$(/usr/bin/qore --module-path)"
+export QORE_MODULE_DIR_ONLY=1
+export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT="$catalogue/dist/index.js"
+
+/usr/bin/node "$source_debian/tests/production.js" "$catalogue"
+
+for mode in tiered ast; do
+    logfile="$AUTOPKGTEST_TMP/catalogue-$mode.log"
+    if ! /usr/bin/qore -M --exec-mode="$mode" -l TypeScriptActionInterface -l json -e '
+        DataProvider::checkStaticInit();
+        auto inventory = TypeScriptActionInterface::getDiscoveryInventory();
+        auto expected = parse_json(File::readTextFile(ARGV[0]));
+        if (inventory != expected) {
+            throw "CATALOGUE-INVENTORY-MISMATCH", "Installed app/action identities differ from the qualified snapshot";
+        }
+        printf("Verified %d installed catalogue identities\n", inventory.size());
+    ' "$source_debian/expected-inventory.json" > "$logfile" 2>&1; then
+        cat "$logfile"
+        exit 1
+    fi
+    cat "$logfile"
+    if grep -F '[ERROR]' "$logfile"; then
+        exit 1
+    fi
+done

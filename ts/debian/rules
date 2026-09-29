@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+export LC_ALL = C.UTF-8
+export TZ = UTC
+unexport NODE_PATH
+unexport NODE_OPTIONS
+unexport QORE_MODULE_DIR
+unexport QORE_INCLUDE_DIR
+unexport LD_LIBRARY_PATH
+unexport LD_PRELOAD
+
+%:
+	dh $@ --buildsystem=none
+
+override_dh_auto_build:
+	python3 debian/build-catalogue.py build
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
+	python3 debian/build-catalogue.py test
+endif
+
+override_dh_auto_install:
+	python3 debian/build-catalogue.py install
+
+override_dh_auto_clean:
+	python3 debian/build-catalogue.py clean
+
+override_dh_fixperms:
+	dh_fixperms
+	python3 debian/build-catalogue.py permissions
