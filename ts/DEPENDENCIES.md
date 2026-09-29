@@ -32,3 +32,10 @@ upstream advisories:
 The catalogue registration and dependency regression tests run without service
 credentials or network access. Live integration tests require their respective
 service accounts and are separate qualification work.
+
+The Webflow SDK minimum is 3.3.4. That official npm release includes its MIT
+license and copyright notice; the previously locked 3.2.1 archive omitted them.
+The corresponding [upstream source revision and license](https://github.com/webflow/js-webflow-api/blob/a870bfe3a5b547e338e89490197757eff50b16bb/LICENSE)
+provide a matching provenance record. Preserve the bundled `LICENSE` when
+redistributing the dependency. This SDK license does not establish permission
+to redistribute other services' OpenAPI schemas.
