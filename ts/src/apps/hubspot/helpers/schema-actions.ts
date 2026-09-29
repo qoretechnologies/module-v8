@@ -24,5 +24,9 @@ export function buildHubspotActions(
   if (actions.length !== contract.operations.length) {
     throw new Error(`HubSpot action overrides differ from the contract: ${options.schemaPath}`);
   }
-  return actions;
+  // The native translation catalog owns these stable English source strings. A
+  // minimal operation contract has no upstream summary/description to fall back
+  // to; retain the owned presentation instead of exposing technical action IDs.
+  const presentation = new Map(contract.operations.map(operation => [operation.action, operation.presentation]));
+  return actions.map(action => ({ ...action, ...presentation.get(action.action) }));
 }

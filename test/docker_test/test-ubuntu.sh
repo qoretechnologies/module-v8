@@ -52,6 +52,26 @@ unset QORE_TYPESCRIPT_ACTION_SCRIPTS QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS
 unset QORE_DATA_PROVIDERS QORE_CONNECTION_PROVIDERS QORE_DATASOURCE_PROVIDERS
 unset QORE_PROVIDER_INDEX_DIR
 
+# The catalogue deliberately ships no HubSpot documents. Fetch and qualify a private
+# snapshot explicitly before materializing apps for i18n and provider qualification.
+# Keep only the checksum/provenance manifest in CI artifacts, never the documents.
+qualification_dir=${MODULE_SRC_DIR}/qualification
+qualification_index=$(mktemp -d)
+hubspot_cache=$(mktemp -d)
+trap 'rm -rf "$qualification_index" "$hubspot_cache"' EXIT HUP INT TERM
+mkdir -p "$qualification_dir"
+hubspot_setup_log="$qualification_dir/hubspot-schema-setup-${CI_JOB_NAME:-local}.log"
+if ! node "${MODULE_SRC_DIR}/ts/dist/schema-cache/hubspot-cli.js" \
+        --cache-dir "$hubspot_cache" update > "$hubspot_setup_log" 2>&1; then
+    cat "$hubspot_setup_log"
+    exit 1
+fi
+QORE_HUBSPOT_SCHEMA_SNAPSHOT=$(node "${MODULE_SRC_DIR}/ts/dist/schema-cache/hubspot-cli.js" \
+    --cache-dir "$hubspot_cache" status)
+export QORE_HUBSPOT_SCHEMA_SNAPSHOT
+cp "$QORE_HUBSPOT_SCHEMA_SNAPSHOT/manifest.json" \
+    "$qualification_dir/hubspot-schema-manifest-${CI_JOB_NAME:-local}.json"
+
 # Ensure that every provider presentation string exported by the TypeScript
 # catalogue has a current source-owned native i18n entry, and that no catalog
 # survives for an app that has been removed from the catalogue. Run this only
@@ -65,10 +85,6 @@ node --test \
 # Build the complete provider index through Qore's qualified publication path
 # using installed modules.  Keep the structured report even when qualification
 # fails so CI never has to infer completeness from logs.
-qualification_dir=${MODULE_SRC_DIR}/qualification
-qualification_index=$(mktemp -d)
-trap 'rm -rf "$qualification_index"' EXIT HUP INT TERM
-mkdir -p "$qualification_dir"
 env -u QORE_TYPESCRIPT_ACTION_SCRIPTS -u QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS \
     -u QORE_DATA_PROVIDERS -u QORE_CONNECTION_PROVIDERS -u QORE_DATASOURCE_PROVIDERS \
     -u QORE_PROVIDER_INDEX_DIR \
@@ -82,6 +98,7 @@ useradd -o -m -d /home/qore -u ${QORE_UID} -g ${QORE_GID} qore
 
 # own everything by the qore user
 chown -R qore:qore ${MODULE_SRC_DIR}
+chown -R qore:qore "$hubspot_cache"
 
 # run the tests
 export QORE_MODULE_DIR=${MODULE_SRC_DIR}/qlib:${QORE_MODULE_DIR}

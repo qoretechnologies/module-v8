@@ -4,7 +4,7 @@
 import * as path from 'node:path';
 import { constants } from 'node:os';
 import { execFileSync, spawn } from 'node:child_process';
-import { hubspotContract, readFile, SNAPSHOT_ENV, verifySnapshot } from './hubspot';
+import { hubspotContract, readFile, SNAPSHOT_ENV, verifySchemaCompatibility, verifySnapshot } from './hubspot';
 import {
   activateSnapshot, activeSnapshot, defaultCacheDir, downloadInputs, importInputs,
   installSnapshot, withCacheLock,
@@ -25,6 +25,7 @@ HubSpot terms: https://legal.hubspot.com/hs-developer-terms
 /** Require the exact public inventory and materialize every HubSpot action with the installed Qore runtime. */
 export async function qualifySnapshot(snapshot: string): Promise<void> {
   verifySnapshot(snapshot);
+  verifySchemaCompatibility(snapshot);
   const env = { ...process.env };
   for (const key of ['NODE_PATH', 'NODE_OPTIONS', 'LD_LIBRARY_PATH', 'LD_PRELOAD', 'QORE_MODULE_DIR',
     'QORE_MODULE_DIR_ONLY', 'QORE_INCLUDE_DIR', 'QORE_TYPESCRIPT_ACTION_SCRIPTS',

@@ -14,7 +14,12 @@
           "action": "get-crm-v3-objects-companies_getPage",
           "sourcePaths": [
             "/crm/v3/objects/companies"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve Companies",
+            "short_desc": "Retrieve companies",
+            "desc": "Retrieve all companies, using query parameters to control the information that gets returned."
+          }
         },
         {
           "path": "/crm/v3/objects/companies",
@@ -22,7 +27,12 @@
           "action": "post-crm-v3-objects-companies_create",
           "sourcePaths": [
             "/crm/v3/objects/companies"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create a Company",
+            "short_desc": "Create a company",
+            "desc": "Create a single company. Include a `properties` object to define [property values](https:-developers.hubspot.com-docs-guides-api-crm-properties) for the company, along with an `associations` array to define [associations](https:-developers.hubspot.com-docs-guides-api-crm-associations-associations-v4) with other CRM records."
+          }
         },
         {
           "path": "/crm/v3/objects/companies/batch/upsert",
@@ -30,7 +40,12 @@
           "action": "post-crm-v3-objects-companies-batch-upsert_upsert",
           "sourcePaths": [
             "/crm/v3/objects/companies/batch/upsert"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create or Update Companies",
+            "short_desc": "Create or update multiple companies",
+            "desc": "Create or update companies identified by a unique property value as specified by the `idProperty` query parameter. `idProperty` query param refers to a property whose values are unique for the object."
+          }
         },
         {
           "path": "/crm/v3/objects/companies/search",
@@ -38,7 +53,12 @@
           "action": "post-crm-v3-objects-companies-search_doSearch",
           "sourcePaths": [
             "/crm/v3/objects/companies/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search for Companies",
+            "short_desc": "Search for companies",
+            "desc": "Search for companies by filtering on properties, searching through associations, and sorting results. Learn more about [CRM search](https:-developers.hubspot.com-docs-guides-api-crm-search#make-a-search-request)."
+          }
         },
         {
           "path": "/crm/v3/objects/companies/{companyId}",
@@ -46,7 +66,12 @@
           "action": "delete-crm-v3-objects-companies-companyId_archive",
           "sourcePaths": [
             "/crm/v3/objects/companies/{companyId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Archive a Company",
+            "short_desc": "Archive a company",
+            "desc": "Delete a company by ID. Deleted companies can be restored within 90 days of deletion. Learn more about [restoring records](https:-knowledge.hubspot.com-records-restore-deleted-records)."
+          }
         },
         {
           "path": "/crm/v3/objects/companies/{companyId}",
@@ -54,7 +79,12 @@
           "action": "get-crm-v3-objects-companies-companyId_getById",
           "sourcePaths": [
             "/crm/v3/objects/companies/{companyId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve a Company",
+            "short_desc": "Retrieve a company",
+            "desc": "Retrieve a company by its ID (`companyId`) or by a unique property (`idProperty`). You can specify what is returned using the `properties` query parameter."
+          }
         },
         {
           "path": "/crm/v3/objects/companies/{companyId}",
@@ -62,7 +92,12 @@
           "action": "patch-crm-v3-objects-companies-companyId_update",
           "sourcePaths": [
             "/crm/v3/objects/companies/{companyId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update a Company",
+            "short_desc": "Update a company",
+            "desc": "Update a company by ID (`companyId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -78,7 +113,12 @@
           "action": "get-crm-v3-objects-contacts",
           "sourcePaths": [
             "/crm/v3/objects/contacts"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Contacts",
+            "short_desc": "Retrieve a list of contacts",
+            "desc": "Read a page of contacts. Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/contacts",
@@ -86,7 +126,12 @@
           "action": "post-crm-v3-objects-contacts",
           "sourcePaths": [
             "/crm/v3/objects/contacts"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create Contact",
+            "short_desc": "Create a new contact",
+            "desc": "Create a contact with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard contacts is provided."
+          }
         },
         {
           "path": "/crm/v3/objects/contacts/search",
@@ -94,7 +139,12 @@
           "action": "post-crm-v3-objects-contacts-search",
           "sourcePaths": [
             "/crm/v3/objects/contacts/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Contacts",
+            "short_desc": "Search for contacts based on specific criteria",
+            "desc": "Search for contacts based on specific criteria"
+          }
         },
         {
           "path": "/crm/v3/objects/contacts/{contactId}",
@@ -102,7 +152,12 @@
           "action": "delete-crm-v3-objects-contacts-contactId",
           "sourcePaths": [
             "/crm/v3/objects/contacts/{contactId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Delete Contact",
+            "short_desc": "Soft delete a selected contact",
+            "desc": "Move an Object identified by `contactId` to the recycling bin."
+          }
         },
         {
           "path": "/crm/v3/objects/contacts/{contactId}",
@@ -110,7 +165,12 @@
           "action": "get-crm-v3-objects-contacts-contactId",
           "sourcePaths": [
             "/crm/v3/objects/contacts/{contactId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve Contact",
+            "short_desc": "Retrieve a specific contact",
+            "desc": "Read an Object identified by `contactId`. `contactId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/contacts/{contactId}",
@@ -118,7 +178,12 @@
           "action": "patch-crm-v3-objects-contacts-contactId",
           "sourcePaths": [
             "/crm/v3/objects/contacts/{contactId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update Contact",
+            "short_desc": "Update an existing contact",
+            "desc": "Perform a partial update of an Object identified by `contactId`. `contactId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -135,7 +200,12 @@
           "sourcePaths": [
             "/crm/v3/objects/0-3",
             "/crm/v3/objects/deals"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Deals",
+            "short_desc": "Retrieve a list of deals",
+            "desc": "Read a page of deals. Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/0-3",
@@ -144,7 +214,12 @@
           "sourcePaths": [
             "/crm/v3/objects/0-3",
             "/crm/v3/objects/deals"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create Deal",
+            "short_desc": "Create a new deal",
+            "desc": "Create a deal with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard deals is provided."
+          }
         },
         {
           "path": "/crm/v3/objects/0-3/batch/upsert",
@@ -153,7 +228,12 @@
           "sourcePaths": [
             "/crm/v3/objects/0-3/batch/upsert",
             "/crm/v3/objects/deals/batch/upsert"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create or Update Deals",
+            "short_desc": "Create or update a batch of deals by unique property values",
+            "desc": "Post-crm-v3-objects-deals-batch-upsert upsert"
+          }
         },
         {
           "path": "/crm/v3/objects/0-3/search",
@@ -162,7 +242,12 @@
           "sourcePaths": [
             "/crm/v3/objects/0-3/search",
             "/crm/v3/objects/deals/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Deals",
+            "short_desc": "Search for deals based on specific criteria",
+            "desc": "Search for deals based on specific criteria"
+          }
         },
         {
           "path": "/crm/v3/objects/0-3/{dealId}",
@@ -171,7 +256,12 @@
           "sourcePaths": [
             "/crm/v3/objects/0-3/{dealId}",
             "/crm/v3/objects/deals/{dealId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Delete a Deal",
+            "short_desc": "Soft delete a selected deal",
+            "desc": "Move an Object identified by `dealId` to the recycling bin."
+          }
         },
         {
           "path": "/crm/v3/objects/0-3/{dealId}",
@@ -180,7 +270,12 @@
           "sourcePaths": [
             "/crm/v3/objects/0-3/{dealId}",
             "/crm/v3/objects/deals/{dealId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve Deal",
+            "short_desc": "Retrieve a specific deal",
+            "desc": "Read an Object identified by `dealId`. `dealId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/0-3/{dealId}",
@@ -189,7 +284,12 @@
           "sourcePaths": [
             "/crm/v3/objects/0-3/{dealId}",
             "/crm/v3/objects/deals/{dealId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update Deal",
+            "short_desc": "Update an existing deal",
+            "desc": "Perform a partial update of an Object identified by `dealId`. `dealId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -205,7 +305,12 @@
           "action": "get-crm-v3-objects-objectType_getPage",
           "sourcePaths": [
             "/crm/v3/objects/{objectType}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Custom Objects",
+            "short_desc": "Retrieve a list of selected custom objects",
+            "desc": "Read a page of objects. Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/{objectType}",
@@ -213,7 +318,12 @@
           "action": "post-crm-v3-objects-objectType_create",
           "sourcePaths": [
             "/crm/v3/objects/{objectType}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create Custom Object",
+            "short_desc": "Create a new custom object of a selected type",
+            "desc": "Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided."
+          }
         },
         {
           "path": "/crm/v3/objects/{objectType}/batch/upsert",
@@ -221,7 +331,12 @@
           "action": "post-crm-v3-objects-objectType-batch-upsert",
           "sourcePaths": [
             "/crm/v3/objects/{objectType}/batch/upsert"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create or Update Custom Objects",
+            "short_desc": "Create or update a batch of objects by unique property values",
+            "desc": "Post-crm-v3-objects-object type-batch-upsert"
+          }
         },
         {
           "path": "/crm/v3/objects/{objectType}/search",
@@ -229,7 +344,12 @@
           "action": "post-crm-v3-objects-objectType-search_doSearch",
           "sourcePaths": [
             "/crm/v3/objects/{objectType}/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Custom Objects",
+            "short_desc": "Search for custom objects based on specific criteria",
+            "desc": "Search for custom objects based on specific criteria"
+          }
         },
         {
           "path": "/crm/v3/objects/{objectType}/{objectId}",
@@ -237,7 +357,12 @@
           "action": "delete-crm-v3-objects-objectType-objectId_archive",
           "sourcePaths": [
             "/crm/v3/objects/{objectType}/{objectId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Delete Custom Object",
+            "short_desc": "Soft delete a selected custom object",
+            "desc": "Move an Object identified by `objectId` to the recycling bin."
+          }
         },
         {
           "path": "/crm/v3/objects/{objectType}/{objectId}",
@@ -245,7 +370,12 @@
           "action": "get-crm-v3-objects-objectType-objectId_getById",
           "sourcePaths": [
             "/crm/v3/objects/{objectType}/{objectId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve Custom Object",
+            "short_desc": "Retrieve a specific custom object",
+            "desc": "Read an Object identified by `objectId`. `objectId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/{objectType}/{objectId}",
@@ -253,7 +383,12 @@
           "action": "patch-crm-v3-objects-objectType-objectId_update",
           "sourcePaths": [
             "/crm/v3/objects/{objectType}/{objectId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update Custom Object",
+            "short_desc": "Update an existing custom object",
+            "desc": "Perform a partial update of an Object identified by `objectId`. `objectId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -269,7 +404,12 @@
           "action": "get-crm-v3-objects-leads_getPage",
           "sourcePaths": [
             "/crm/v3/objects/leads"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Leads",
+            "short_desc": "Retrieve a list of leads",
+            "desc": "Read a page of leads. Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/leads",
@@ -277,7 +417,12 @@
           "action": "post-crm-v3-objects-leads_create",
           "sourcePaths": [
             "/crm/v3/objects/leads"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create Lead",
+            "short_desc": "Create a new lead",
+            "desc": "Create a lead with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard leads is provided."
+          }
         },
         {
           "path": "/crm/v3/objects/leads/batch/upsert",
@@ -285,7 +430,12 @@
           "action": "post-crm-v3-objects-leads-batch-upsert_upsert",
           "sourcePaths": [
             "/crm/v3/objects/leads/batch/upsert"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create or Update Leads",
+            "short_desc": "Create or update a batch of leads by unique property values",
+            "desc": "Create or update records identified by `leadsId` or optionally a unique property value as specified by the `idProperty` query param. `leadsId` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object."
+          }
         },
         {
           "path": "/crm/v3/objects/leads/search",
@@ -293,7 +443,12 @@
           "action": "post-crm-v3-objects-leads-search_doSearch",
           "sourcePaths": [
             "/crm/v3/objects/leads/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Leads",
+            "short_desc": "Search for leads based on specific criteria",
+            "desc": "Search for leads based on specific criteria"
+          }
         },
         {
           "path": "/crm/v3/objects/leads/{leadsId}",
@@ -301,7 +456,12 @@
           "action": "delete-crm-v3-objects-leads-leadsId_archive",
           "sourcePaths": [
             "/crm/v3/objects/leads/{leadsId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Delete Lead",
+            "short_desc": "Soft delete a selected lead",
+            "desc": "Move an Object identified by `leadsId` to the recycling bin."
+          }
         },
         {
           "path": "/crm/v3/objects/leads/{leadsId}",
@@ -309,7 +469,12 @@
           "action": "get-crm-v3-objects-leads-leadsId_getById",
           "sourcePaths": [
             "/crm/v3/objects/leads/{leadsId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve Lead",
+            "short_desc": "Retrieve a specific lead",
+            "desc": "Read an Object identified by `leadsId`. `leadsId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/leads/{leadsId}",
@@ -317,7 +482,12 @@
           "action": "patch-crm-v3-objects-leads-leadsId_update",
           "sourcePaths": [
             "/crm/v3/objects/leads/{leadsId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update Lead",
+            "short_desc": "Update an existing lead",
+            "desc": "Perform a partial update of an Object identified by `leadsId`or optionally a unique property value as specified by the `idProperty` query param. `leadsId` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -333,7 +503,12 @@
           "action": "get-crm-v3-objects-products_getPage",
           "sourcePaths": [
             "/crm/v3/objects/products"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Products",
+            "short_desc": "Retrieve a list of products",
+            "desc": "Read a page of products. Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/products",
@@ -341,7 +516,12 @@
           "action": "post-crm-v3-objects-products_create",
           "sourcePaths": [
             "/crm/v3/objects/products"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create Product",
+            "short_desc": "Create a new product",
+            "desc": "Create a product with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard products is provided."
+          }
         },
         {
           "path": "/crm/v3/objects/products/batch/upsert",
@@ -349,7 +529,12 @@
           "action": "post-crm-v3-objects-products-batch-upsert_upsert",
           "sourcePaths": [
             "/crm/v3/objects/products/batch/upsert"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create or Update Products",
+            "short_desc": "Create or update a batch of products by unique property values",
+            "desc": "Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object."
+          }
         },
         {
           "path": "/crm/v3/objects/products/search",
@@ -357,7 +542,12 @@
           "action": "post-crm-v3-objects-products-search_doSearch",
           "sourcePaths": [
             "/crm/v3/objects/products/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Products",
+            "short_desc": "Search for products based on specific criteria",
+            "desc": "Search for products based on specific criteria"
+          }
         },
         {
           "path": "/crm/v3/objects/products/{productId}",
@@ -365,7 +555,12 @@
           "action": "delete-crm-v3-objects-products-productId_archive",
           "sourcePaths": [
             "/crm/v3/objects/products/{productId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Delete Product",
+            "short_desc": "Soft delete a selected product",
+            "desc": "Move an Object identified by `productId` to the recycling bin."
+          }
         },
         {
           "path": "/crm/v3/objects/products/{productId}",
@@ -373,7 +568,12 @@
           "action": "get-crm-v3-objects-products-productId_getById",
           "sourcePaths": [
             "/crm/v3/objects/products/{productId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve Product",
+            "short_desc": "Retrieve a specific product",
+            "desc": "Read an Object identified by `productId`. `productId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/products/{productId}",
@@ -381,7 +581,12 @@
           "action": "patch-crm-v3-objects-products-productId_update",
           "sourcePaths": [
             "/crm/v3/objects/products/{productId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update Product",
+            "short_desc": "Update an existing product",
+            "desc": "Perform a partial update of an Object identified by `productId`. `productId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -397,7 +602,12 @@
           "action": "get-crm-v3-objects-tickets_getPage",
           "sourcePaths": [
             "/crm/v3/objects/tickets"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Tickets",
+            "short_desc": "Retrieve a list of tickets",
+            "desc": "Read a page of tickets. Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/tickets",
@@ -405,7 +615,12 @@
           "action": "post-crm-v3-objects-tickets_create",
           "sourcePaths": [
             "/crm/v3/objects/tickets"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create Ticket",
+            "short_desc": "Create a new ticket",
+            "desc": "Create a ticket with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard tickets is provided."
+          }
         },
         {
           "path": "/crm/v3/objects/tickets/batch/upsert",
@@ -413,7 +628,12 @@
           "action": "post-crm-v3-objects-tickets-batch-upsert_upsert",
           "sourcePaths": [
             "/crm/v3/objects/tickets/batch/upsert"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create or Update Tickets",
+            "short_desc": "Create or update a batch of tickets by unique property values",
+            "desc": "Post-crm-v3-objects-tickets-batch-upsert upsert"
+          }
         },
         {
           "path": "/crm/v3/objects/tickets/search",
@@ -421,7 +641,12 @@
           "action": "post-crm-v3-objects-tickets-search_doSearch",
           "sourcePaths": [
             "/crm/v3/objects/tickets/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Tickets",
+            "short_desc": "Search for tickets based on specific criteria",
+            "desc": "Search for tickets based on specific criteria"
+          }
         },
         {
           "path": "/crm/v3/objects/tickets/{ticketId}",
@@ -429,7 +654,12 @@
           "action": "delete-crm-v3-objects-tickets-ticketId_archive",
           "sourcePaths": [
             "/crm/v3/objects/tickets/{ticketId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Delete Ticket",
+            "short_desc": "Soft delete a selected ticket",
+            "desc": "Move an Object identified by `ticketId` to the recycling bin."
+          }
         },
         {
           "path": "/crm/v3/objects/tickets/{ticketId}",
@@ -437,7 +667,12 @@
           "action": "get-crm-v3-objects-tickets-ticketId_getById",
           "sourcePaths": [
             "/crm/v3/objects/tickets/{ticketId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve Ticket",
+            "short_desc": "Retrieve a specific ticket",
+            "desc": "Read an Object identified by `ticketId`. `ticketId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/tickets/{ticketId}",
@@ -445,7 +680,12 @@
           "action": "patch-crm-v3-objects-tickets-ticketId_update",
           "sourcePaths": [
             "/crm/v3/objects/tickets/{ticketId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update Ticket",
+            "short_desc": "Update an existing ticket",
+            "desc": "Perform a partial update of an Object identified by `ticketId`. `ticketId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -461,7 +701,12 @@
           "action": "get-crm-v3-objects-users",
           "sourcePaths": [
             "/crm/v3/objects/users"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Users",
+            "short_desc": "Retrieve a list of users",
+            "desc": "Read a page of users. Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/users/batch/upsert",
@@ -469,7 +714,12 @@
           "action": "post-crm-v3-objects-users-batch-upsert",
           "sourcePaths": [
             "/crm/v3/objects/users/batch/upsert"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create or Update Users",
+            "short_desc": "Create or update a batch of users by unique property values",
+            "desc": "Post-crm-v3-objects-users-batch-upsert"
+          }
         },
         {
           "path": "/crm/v3/objects/users/search",
@@ -477,7 +727,12 @@
           "action": "post-crm-v3-objects-users-search",
           "sourcePaths": [
             "/crm/v3/objects/users/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Users",
+            "short_desc": "Search for users based on specific criteria",
+            "desc": "Search for users based on specific criteria"
+          }
         },
         {
           "path": "/crm/v3/objects/users/{userId}",
@@ -485,7 +740,12 @@
           "action": "get-crm-v3-objects-users-userId",
           "sourcePaths": [
             "/crm/v3/objects/users/{userId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Retrieve User",
+            "short_desc": "Retrieve a specific user",
+            "desc": "Read an Object identified by `userId`. `userId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+          }
         },
         {
           "path": "/crm/v3/objects/users/{userId}",
@@ -493,7 +753,12 @@
           "action": "patch-crm-v3-objects-users-userId",
           "sourcePaths": [
             "/crm/v3/objects/users/{userId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update User",
+            "short_desc": "Update an existing user",
+            "desc": "Perform a partial update of an Object identified by `userId`. `userId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
+          }
         }
       ]
     },
@@ -510,7 +775,12 @@
           "sourcePaths": [
             "/crm/v3/lists",
             "/crm/v3/lists/"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create List",
+            "short_desc": "Create a new HubSpot list",
+            "desc": "Creates a new list in HubSpot CRM with the specified configuration and properties."
+          }
         },
         {
           "path": "/crm/v3/lists/search",
@@ -518,7 +788,12 @@
           "action": "search_lists",
           "sourcePaths": [
             "/crm/v3/lists/search"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Search Lists",
+            "short_desc": "Search for HubSpot lists",
+            "desc": "Search and retrieve HubSpot lists based on specified criteria and filters."
+          }
         },
         {
           "path": "/crm/v3/lists/{listId}",
@@ -526,7 +801,12 @@
           "action": "delete_list",
           "sourcePaths": [
             "/crm/v3/lists/{listId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Delete List",
+            "short_desc": "Delete a HubSpot list",
+            "desc": "Permanently removes a specified list from HubSpot CRM by its ID."
+          }
         },
         {
           "path": "/crm/v3/lists/{listId}",
@@ -534,7 +814,12 @@
           "action": "get_list",
           "sourcePaths": [
             "/crm/v3/lists/{listId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Get List",
+            "short_desc": "Retrieve a HubSpot list by ID",
+            "desc": "Fetches detailed information about a specific HubSpot list using its unique identifier."
+          }
         },
         {
           "path": "/crm/v3/lists/{listId}/memberships/add",
@@ -542,7 +827,12 @@
           "action": "add_memberships",
           "sourcePaths": [
             "/crm/v3/lists/{listId}/memberships/add"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Add List Records",
+            "short_desc": "Add records to a HubSpot list",
+            "desc": "Adds specified records as members to an existing HubSpot list."
+          }
         },
         {
           "path": "/crm/v3/lists/{listId}/memberships/add-from/{sourceListId}",
@@ -550,7 +840,12 @@
           "action": "add_members_from_source_list",
           "sourcePaths": [
             "/crm/v3/lists/{listId}/memberships/add-from/{sourceListId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Add Records from Another List",
+            "short_desc": "Copy all members from one list to another",
+            "desc": "Adds all members from a source HubSpot list to a target list, effectively copying the membership."
+          }
         },
         {
           "path": "/crm/v3/lists/{listId}/memberships/remove",
@@ -558,7 +853,12 @@
           "action": "remove_members_from_list",
           "sourcePaths": [
             "/crm/v3/lists/{listId}/memberships/remove"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Remove List Records",
+            "short_desc": "Remove records from a HubSpot list",
+            "desc": "Removes specified records from an existing HubSpot list membership."
+          }
         }
       ]
     },
@@ -574,7 +874,12 @@
           "action": "get_forms",
           "sourcePaths": [
             "/marketing/v3/forms"
-          ]
+          ],
+          "presentation": {
+            "display_name": "List Forms",
+            "short_desc": "Retrieve a paginated list of HubSpot marketing forms.",
+            "desc": "Returns a list of marketing form definitions in your HubSpot account, optionally filtered by form type (native HubSpot, captured, pop-up flow, or blog comment) and archive status."
+          }
         },
         {
           "path": "/marketing/v3/forms",
@@ -582,7 +887,12 @@
           "action": "create_form",
           "sourcePaths": [
             "/marketing/v3/forms"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Create Form",
+            "short_desc": "Create a new HubSpot marketing form definition.",
+            "desc": "Creates a new HubSpot form definition with the specified field groups, configuration, display options, and legal consent settings."
+          }
         },
         {
           "path": "/marketing/v3/forms/{formId}",
@@ -590,7 +900,12 @@
           "action": "archive_form",
           "sourcePaths": [
             "/marketing/v3/forms/{formId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Archive Form",
+            "short_desc": "Archive a HubSpot form definition.",
+            "desc": "Archives a HubSpot form definition. New submissions will no longer be accepted; the definition is permanently deleted three months after archival."
+          }
         },
         {
           "path": "/marketing/v3/forms/{formId}",
@@ -598,7 +913,12 @@
           "action": "get_form",
           "sourcePaths": [
             "/marketing/v3/forms/{formId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Get Form",
+            "short_desc": "Retrieve a single HubSpot form definition by ID.",
+            "desc": "Returns the complete form definition for the supplied form ID, including all field groups, configuration, display options, and legal consent settings."
+          }
         },
         {
           "path": "/marketing/v3/forms/{formId}",
@@ -606,7 +926,12 @@
           "action": "update_form",
           "sourcePaths": [
             "/marketing/v3/forms/{formId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Update Form",
+            "short_desc": "Partially update a HubSpot form definition.",
+            "desc": "Updates one or more components of a HubSpot form definition without affecting the rest of the configuration."
+          }
         },
         {
           "path": "/marketing/v3/forms/{formId}",
@@ -614,7 +939,12 @@
           "action": "replace_form",
           "sourcePaths": [
             "/marketing/v3/forms/{formId}"
-          ]
+          ],
+          "presentation": {
+            "display_name": "Replace Form",
+            "short_desc": "Replace the full form definition.",
+            "desc": "Replaces all fields of a HubSpot form definition with the supplied payload. Any properties not included will be reset to their defaults."
+          }
         }
       ]
     }

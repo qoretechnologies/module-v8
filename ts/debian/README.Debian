@@ -36,6 +36,15 @@ all 78 declared HubSpot action identities, then materializes those actions using
 the installed Qore runtime. It activates the snapshot only if every check passes.
 This checks schema compatibility; it does not test authenticated service calls.
 
+The catalogue also pins compatibility fingerprints for the selected operations
+and every schema they reference. Changes to inputs, outputs, required fields,
+choices or presentation require a matching catalogue update, including its
+translations. Changed publication metadata and unused endpoints do not require
+an update. New upstream operations never silently become new catalogue actions.
+An unreviewed schema change produces HUBSPOT-SCHEMA-INCOMPATIBLE and leaves the
+previous active snapshot selected. Action names and descriptions are owned by
+the versioned local action contract, independent of upstream operation IDs.
+
 The default cache is $XDG_CACHE_HOME/qore/hubspot, or ~/.cache/qore/hubspot.
 Use --cache-dir /absolute/path before the command for a service-owned cache.
 Do not run the updater as root for a service using another account. Each snapshot

@@ -2,9 +2,11 @@
 // SPDX-License-Identifier: MIT
 import * as fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import hubspotApp from '../apps/hubspot';
 import * as os from 'node:os';
 import * as path from 'node:path';
-import { hubspotContract, normalizeSchema, schemaNames, verifySnapshot, readFile } from '../schema-cache/hubspot';
+import { hubspotContract, normalizeSchema, schemaCompatibilityDigest, schemaNames, verifySnapshot, readFile,
+  verifySchemaCompatibility } from '../schema-cache/hubspot';
 import {
   activateSnapshot, activeSnapshot, download, Inputs, installSnapshot, selectDownloads, withCacheLock,
 } from '../schema-cache/hubspot-store';
@@ -35,6 +37,20 @@ describe('HubSpot schema snapshots', () => {
   beforeEach(() => { directory = fs.mkdtempSync(path.join(os.tmpdir(), 'qore-hubspot-cache-')); });
   afterEach(() => fs.rmSync(directory, { recursive: true, force: true }));
 
+  it('Keeps user-facing action presentation independent of downloaded schemas', () => {
+    const actions = hubspotApp('en').actions;
+    for (const schema of Object.values(hubspotContract.schemas)) {
+      for (const operation of schema.operations) {
+        const action = actions.find(candidate => candidate.action === operation.action);
+        expect(action).toMatchObject(operation.presentation);
+        expect(action?.display_name).not.toContain('/crm/');
+        expect(action?.desc).toBeTruthy();
+      }
+    }
+    expect(actions.find(action => action.action === 'get-crm-v3-objects-companies_getPage'))
+      .toMatchObject({ display_name: 'Retrieve Companies', short_desc: 'Retrieve companies' });
+  });
+
   it('Rejects a named pipe without blocking while opening an offline input', () => {
     const filename = path.join(directory, 'pipe');
     execFileSync('mkfifo', [filename]);
@@ -63,6 +79,42 @@ describe('HubSpot schema snapshots', () => {
     expect(() => normalizeSchema('deals', missing)).toThrow(/INCOMPATIBLE/);
     doc.paths[route.replace('/deals', '/0-3')] = doc.paths[route];
     expect(() => normalizeSchema('deals', doc)).toThrow(/exactly one/);
+  });
+
+  it('Detects changes to referenced inputs, outputs and presentation but ignores unrelated publication changes', () => {
+    const original = normalizeSchema('companies', JSON.parse(inputs().companies.bytes.toString()));
+    const expected = schemaCompatibilityDigest(original);
+    const changedPublication = structuredClone(original);
+    changedPublication.info.version = 'new publication';
+    changedPublication.components.schemas.Unused = { type: 'integer' };
+    // Canonical object ordering is independent of JSON serialization order.
+    changedPublication.components.schemas.Result = { properties: { id: { type: 'string' } }, type: 'object' };
+    expect(schemaCompatibilityDigest(changedPublication)).toBe(expected);
+    for (const change of [
+      (doc: typeof original) => { doc.components.schemas.Result.properties.id.type = 'integer'; },
+      (doc: typeof original) => { doc.components.schemas.Result.required = ['id']; },
+      (doc: typeof original) => { doc.components.schemas.Result.properties.id.description = 'New presentation'; },
+      (doc: typeof original) => { doc.components.schemas.Result.properties.id.enum = ['limited']; },
+      (doc: typeof original) => { doc.components.schemas.Result.properties.extra = { type: 'string' }; },
+      (doc: typeof original) => { Object.values<any>(doc.paths)[0].get.parameters = [
+        { name: 'newRequired', in: 'query', required: true, schema: { type: 'string' } },
+      ]; },
+    ]) {
+      const changed = structuredClone(original);
+      change(changed);
+      expect(schemaCompatibilityDigest(changed)).not.toBe(expected);
+    }
+    // Local reference cycles terminate and remain deterministic.
+    original.components.schemas.Result.properties.child = { $ref: '#/components/schemas/Result' };
+    expect(schemaCompatibilityDigest(original)).toBe(schemaCompatibilityDigest(structuredClone(original)));
+  });
+
+  it('Does not activate an unreviewed schema surface even when its operation inventory matches', async () => {
+    const first = await installSnapshot(directory, inputs(), async () => {});
+    await expect(installSnapshot(directory, inputs('two'), async snapshot => {
+      verifySchemaCompatibility(snapshot);
+    })).rejects.toThrow(/supported operation metadata changed/);
+    expect(activeSnapshot(directory)).toBe(first);
   });
 
   it('Rejects external and dangling references, unsupported formats and unexpected API servers', () => {
