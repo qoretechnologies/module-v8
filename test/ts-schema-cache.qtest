@@ -1,0 +1,268 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+%requires QUnit
+%requires FsUtil
+%requires v8
+%try-module json
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module yaml
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%exec-class SchemaCacheTest
+
+%ifndef MISSING_EXTERNAL_MODULE
+#! Each fixture owns its files and restores the cache environment even on failure.
+class SchemaCacheFixture inherits TmpDir {
+    private {
+        *string saved_dir = ENV.QORE_V8_CACHE_DIR;
+        *string saved_disable = ENV.QORE_V8_DISABLE_CACHE;
+    }
+
+    constructor() : TmpDir("qore-v8-schema-cache-", NOTHING, "/tmp") {
+        ENV.QORE_V8_CACHE_DIR = path + "/cache";
+        remove ENV.QORE_V8_DISABLE_CACHE;
+        Qore::mkdir(ENV.QORE_V8_CACHE_DIR, 0700);
+    }
+
+    destructor() {
+        if (exists saved_dir) {
+            ENV.QORE_V8_CACHE_DIR = saved_dir;
+        } else {
+            remove ENV.QORE_V8_CACHE_DIR;
+        }
+        if (exists saved_disable) {
+            ENV.QORE_V8_DISABLE_CACHE = saved_disable;
+        } else {
+            remove ENV.QORE_V8_DISABLE_CACHE;
+        }
+    }
+
+    string writeSchema(string relative_path, bool openapi3 = False) {
+        string location = path + "/" + relative_path;
+        Qore::mkdir(dirname(location), 0700, True);
+        hash<auto> schema = {} + {
+            "info": {"title": "Schema cache fixture", "version": "1"},
+            "paths": map {$1: {
+                "get": {"responses": {"200": {"description": "Read an item"}}},
+                "post": {"responses": {"200": {"description": "Create an item"}}}
+            }}, ("/first", "/second", "/first,/second"),
+        };
+        if (openapi3) {
+            schema.openapi = "3.0.3";
+            schema.servers = ({"url": "https://example.com"},);
+        } else {
+            schema.swagger = "2.0";
+            schema.host = "example.com";
+            schema.schemes = ("https",);
+        }
+        File output();
+        output.open2(location, O_CREAT | O_EXCL | O_WRONLY, 0600);
+        output.write(make_json(schema));
+        output.close();
+        return location;
+    }
+
+    list<string> cacheFiles() {
+        Dir cache();
+        cache.chdir(path + "/cache");
+        return sort(cache.listFiles());
+    }
+}
+
+class SchemaCacheTest inherits QUnit::Test {
+    constructor() : Test("TypeScript schema cache", "1.0") {
+        addTestCase("long snapshot locations and cache reload", \snapshotTest());
+        addTestCase("canonical allowed-path sets and distinct locations", \identityTest());
+        addTestCase("unambiguous path boundaries", \pathBoundaryTest());
+        addTestCase("unfiltered Swagger and OpenAPI schemas", \unfilteredTest());
+        addTestCase("legacy cache entries are ignored", \legacyTest());
+        addTestCase("invalid input does not populate the cache", \invalidInputTest());
+        addTestCase("disabled cache bypasses reads and writes", \disabledTest());
+        set_return_value(main());
+    }
+
+    private hash<string, list<string>> load(string location, *list<auto> paths) {
+        # Modules capture ENV when loaded. Start each load with the fixture's environment;
+        # separate processes also prove that reloads use the disk cache.
+        hash<auto> env = ENV;
+        remove env.QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT;
+        remove env.QORE_TYPESCRIPT_ACTION_SCRIPTS;
+        remove env.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS;
+        remove env.QORE_DATA_PROVIDERS;
+        remove env.QORE_CONNECTION_PROVIDERS;
+        remove env.QORE_DATASOURCE_PROVIDERS;
+        env.QORE_PROVIDER_INDEX_DIR = ENV.QORE_V8_CACHE_DIR;
+        env.QORE_MODULE_DIR = get_script_dir() + "/../qlib:" + (ENV.QORE_MODULE_DIR ?? "");
+        env.QORE_V8_SCHEMA_CACHE_TEST_INPUT = make_json((location, paths));
+        hash<auto> result = Process::run(Process::getExecutablePath(),
+            ("--enable-debug", "-l", get_script_dir() + "/../qlib/TypeScriptActionInterface",
+                "-l", "json", "-e", "%modern\ntry {
+    list<auto> args = parse_json(ENV.QORE_V8_SCHEMA_CACHE_TEST_INPUT);
+    auto schema = TypeScriptActionInterface::getRestSchema(\"SchemaCacheFixture\", args[0], NOTHING, args[1], NOTHING);
+    printf(\"%s\\n\", make_json({\"paths\": schema.getPathOperationHash()}));
+} catch (hash<ExceptionInfo> ex) {
+    printf(\"%s\\n\", make_json({\"err\": ex.err, \"desc\": ex.desc}));
+}"), {"env": env});
+        assertTrue(result.ok);
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        assertEq("", result.stderr, "schema loads emit no warnings or errors");
+        hash<auto> output = parse_json(result.stdout);
+        if (output.err) {
+            throw output.err, output.desc;
+        }
+        return cast<hash<string, list<string>>>(output.paths);
+    }
+
+    private checkNames(list<string> names, int count) {
+        assertEq(count, names.size());
+        foreach string name in (names) {
+            assertEq(76, name.size(), "cache basename length is independent of source location and path count");
+            assertTrue(name =~ /^schema-[0-9a-f]{64}\.yaml$/);
+        }
+    }
+
+    private snapshotTest() {
+        SchemaCacheFixture fixture();
+        on_exit delete fixture;
+        # Use maximal-length directory components and a path close to Linux PATH_MAX.
+        string relative_path = "app-schemas/" + sprintf("%0255d", 0);
+        while (relative_path.size() < 3600) {
+            relative_path += "/" + sprintf("%0255d", 1);
+        }
+        relative_path += "/snapshots/" + "snapshot".toSHA256() + "/schema.json";
+        string location = fixture.writeSchema(relative_path);
+        assertGt(3800, location.size());
+        hash<string, list<string>> expected = {"first": ("get",)};
+        assertEq(expected, load(location, ("/first:GET",)));
+        list<string> names = fixture.cacheFiles();
+        checkNames(names, 1);
+        assertEq(0, unlink(location));
+        assertEq(expected, load(location, ("/first:GET",)), "second load must read the cached filtered schema");
+        assertEq(names, fixture.cacheFiles());
+
+        location = fixture.writeSchema("short.json");
+        assertEq(expected, load(location, ("/first:GET",)));
+        checkNames(fixture.cacheFiles(), 2);
+    }
+
+    private identityTest() {
+        SchemaCacheFixture fixture();
+        on_exit delete fixture;
+        string location = fixture.writeSchema("schema.json");
+        list<auto> paths = ("/second:POST", "/first:GET", "/first:GET");
+        hash<string, list<string>> expected = {"first": ("get",), "second": ("post",)};
+        assertEq(expected, load(location, paths));
+        list<string> names = fixture.cacheFiles();
+        checkNames(names, 1);
+        assertEq(0, unlink(location));
+        assertEq(expected, load(location, ("/first:GET", "/second:POST")));
+        assertEq(expected, load(location, paths));
+        assertEq(names, fixture.cacheFiles(), "order and duplicate paths do not create new entries");
+
+        fixture.writeSchema("schema.json");
+        assertEq({"first": ("post",)}, load(location, ("/first:POST",)));
+        assertEq({"second": ("get",)}, load(location, ("/second:GET",)));
+        checkNames(fixture.cacheFiles(), 3);
+        string other = fixture.writeSchema("other.json");
+        assertEq(expected, load(other, paths));
+        checkNames(fixture.cacheFiles(), 4);
+        assertEq(0, unlink(other));
+        assertEq(expected, load(other, paths));
+    }
+
+    private pathBoundaryTest() {
+        SchemaCacheFixture fixture();
+        on_exit delete fixture;
+        string location = fixture.writeSchema("schema.json");
+        # These lists had identical comma-joined representations in the old key.
+        assertEq(("first,/second",), sort(keys load(location, ("/first,/second",))));
+        assertEq(("first", "second"), sort(keys load(location, ("/first", "/second"))));
+        checkNames(fixture.cacheFiles(), 2);
+    }
+
+    private unfilteredTest() {
+        foreach bool openapi3 in ((False, True)) {
+            SchemaCacheFixture fixture();
+            on_exit delete fixture;
+            string location = fixture.writeSchema("schema.json", openapi3);
+            hash<string, list<string>> expected = load(location, NOTHING);
+            assertEq(("first", "first,/second", "second"), sort(keys expected));
+            checkNames(fixture.cacheFiles(), 1);
+            assertEq(0, unlink(location));
+            assertEq(expected, load(location, NOTHING));
+            assertEq(expected, load(location, ()), "empty and absent allowed paths both mean no filtering");
+            checkNames(fixture.cacheFiles(), 1);
+        }
+    }
+
+    private legacyTest() {
+        SchemaCacheFixture fixture();
+        on_exit delete fixture;
+        string location = fixture.writeSchema("schema.json");
+        string legacy = fixture.path + "/cache/schema-" + encode_url(location, True) + "-none.yaml";
+        File output();
+        output.open2(legacy, O_CREAT | O_EXCL | O_WRONLY, 0600);
+        output.write("invalid legacy schema");
+        output.close();
+        assertEq(3, load(location, NOTHING).size());
+        assertEq(2, fixture.cacheFiles().size());
+        assertEq("invalid legacy schema", File::readTextFile(legacy), "legacy files are left untouched");
+        assertEq(0, unlink(location));
+        assertEq(3, load(location, NOTHING).size());
+    }
+
+    private invalidInputTest() {
+        SchemaCacheFixture fixture();
+        on_exit delete fixture;
+        string location = fixture.path + "/missing.json";
+        assertThrows("FILE-OPEN2-ERROR", sub () { load(location, ("/first",)); });
+        assertEq(0, fixture.cacheFiles().size());
+        location = fixture.writeSchema("schema.json");
+        assertThrows("INVALID-HTTP-METHOD", sub () { load(location, ("/first:INVALID",)); });
+        assertEq(0, fixture.cacheFiles().size());
+        string invalid = fixture.path + "/invalid.json";
+        File output();
+        output.open2(invalid, O_CREAT | O_EXCL | O_WRONLY, 0600);
+        output.write("invalid source schema");
+        output.close();
+        assertThrows("INVALID-SCHEMA", sub () { load(invalid, NOTHING); });
+        assertEq(0, fixture.cacheFiles().size());
+        assertEq({"first": ("get",)}, load(location, ("/first:GET",)), "failure does not poison later loads");
+        checkNames(fixture.cacheFiles(), 1);
+    }
+
+    private disabledTest() {
+        SchemaCacheFixture fixture();
+        on_exit delete fixture;
+        string location = fixture.writeSchema("schema.json");
+        ENV.QORE_V8_DISABLE_CACHE = "1";
+        assertEq({"first": ("get",)}, load(location, ("/first:GET",)));
+        assertEq(0, fixture.cacheFiles().size());
+        remove ENV.QORE_V8_DISABLE_CACHE;
+        load(location, ("/first:GET",));
+        list<string> names = fixture.cacheFiles();
+        checkNames(names, 1);
+        assertEq(0, unlink(location));
+        ENV.QORE_V8_DISABLE_CACHE = "1";
+        assertThrows("FILE-OPEN2-ERROR", sub () { load(location, ("/first:GET",)); });
+        assertEq(names, fixture.cacheFiles());
+    }
+}
+%else
+class SchemaCacheTest inherits QUnit::Test {
+    constructor() : Test("TypeScript schema cache", "1.0") {
+        addTestCase("external dependencies", sub () { testSkip("json, yaml, process and uuid modules are required"); });
+        set_return_value(main());
+    }
+}
+%endif

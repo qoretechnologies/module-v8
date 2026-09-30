@@ -2022,16 +2022,35 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         root.registerChild(appname, prov);
     }
 
+    #! Loads a REST schema, caching its source under a bounded digest of its location and allowed paths
+    /** @param appname the app name used when filtering the schema and applying type overrides
+        @param schema_loc the schema location accepted by FileLocationHandler
+        @param schema_opts options passed to RestSchemaLoader::fromString()
+        @param paths allowed paths with optional HTTP method suffixes, such as \c /lists:GET; empty or absent means
+        no filtering
+        @param type_overrides type overrides applied after loading the schema
+        @return the schema validator with the requested filtering and type overrides
+        @throw FILE-OPEN2-ERROR a required source or cache file cannot be opened
+        @throw INVALID-HTTP-METHOD an allowed path contains an unsupported HTTP method
+        @throw INVALID-SCHEMA the source is not a valid REST schema
+        @note Path order and duplicates share a cache entry. Legacy cache filenames are ignored and regenerated.
+        Validator options and type overrides are applied on every load and are not part of the cached source.
+        @par Example
+        @code
+AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("Mailchimp",
+    "/opt/qorus/app-schemas/mailchimp/schema.json", NOTHING, ("/lists:GET",), NOTHING);
+        @endcode
+    */
     static AbstractRestSchemaValidator getRestSchema(string appname, string schema_loc, *hash<auto> schema_opts,
             *list<auto> paths, *hash<auto> type_overrides) {
-        # first check cache
-        string path_sha512;
-        if (paths) {
-            path_sha512 = (foldl $1 + "," + $2, paths).toSHA512();
-        } else {
-            path_sha512 = "none";
+        # Hash both inputs to keep the basename bounded even for long snapshot locations.
+        # Allowed paths form a set; JSON preserves boundaries even when paths contain commas.
+        hash<string, bool> path_set;
+        foreach string path in (paths) {
+            path_set{path} = True;
         }
-        string filename = sprintf("schema-%s-%s.yaml", encode_url(schema_loc, True), path_sha512);
+        list<string> canonical_paths = sort(keys path_set) ?? ();
+        string filename = sprintf("schema-%s.yaml", make_json((schema_loc, canonical_paths)).toSHA256());
         bool store_in_cache;
         *string schema_source = TypeScriptActionInterface::getCachedSchema(\store_in_cache, filename);
         if (!schema_source) {

@@ -88,6 +88,10 @@ module TypeScriptActionInterface {
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - schema cache filenames use a fixed-length SHA-256 digest of the schema location and canonical allowed-path
+      set, so long snapshot locations no longer exceed filesystem filename limits. Path order and duplicates
+      share one entry, and paths containing commas cannot collide with multiple separate paths. Old cache
+      filenames are ignored and entries are regenerated on first use; see \c design/schema-cache.md.
     - schema-backed requests preserve percent-encoded path/query values without encoding them twice;
       requests containing only path variables pass an empty object to request conversion callbacks
     - Apps reporting \c APP-SCHEMAS-UNAVAILABLE now register their identity, REST connection scheme, and OAuth2
