@@ -4,17 +4,12 @@ import {
   TQoreAppActionOverrideOption,
 } from '@qoretechnologies/ts-toolkit';
 import { getPipedriveDealIdAllowedValues } from '../helpers/get-deal-id-allowed-values';
-import {
-  getPipedriveDealChannelAllowedValues,
-  getPipedriveDealOriginAllowedValues,
-} from '../helpers/get-deal-properties-allowed-values';
 import { getPipedriveDealFilterIdAllowedValues } from '../helpers/get-filter-id-allowed-values';
 import { getPipedriveOrganizationIdAllowedValues } from '../helpers/get-organization-id-allowed-values';
 import { getPipedrivePersonIdAllowedValues } from '../helpers/get-person-id-allowed-values';
 import { getPipedriveUserIdAllowedValues } from '../helpers/get-user-id-allowed-values';
 import { getPipedrivePipelineIdAllowedValues } from '../helpers/get-pipeline-allowed-values';
 import { getPipedriveStageIdAllowedValues } from '../helpers/get-stage-id-allowed-values';
-import { omit } from 'lodash';
 
 const dealsOptions = {
   org_id: {
@@ -23,14 +18,8 @@ const dealsOptions = {
   person_id: {
     get_allowed_values: getPipedrivePersonIdAllowedValues,
   },
-  user_id: {
+  owner_id: {
     get_allowed_values: getPipedriveUserIdAllowedValues,
-  },
-  channel_id: {
-    get_allowed_values: getPipedriveDealChannelAllowedValues,
-  },
-  origin_id: {
-    get_allowed_values: getPipedriveDealOriginAllowedValues,
   },
   pipeline_id: {
     get_allowed_values: getPipedrivePipelineIdAllowedValues,
@@ -41,10 +30,10 @@ const dealsOptions = {
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 export const PIPEDRIVE_DEALS_ALLOWED_PATHS = {
-  '/deals': {
+  '/api/v2/deals': {
     GET: {
       override_options: {
-        user_id: {
+        owner_id: {
           get_allowed_values: getPipedriveUserIdAllowedValues,
         },
         filter_id: {
@@ -59,7 +48,7 @@ export const PIPEDRIVE_DEALS_ALLOWED_PATHS = {
       override_options: dealsOptions,
     },
   },
-  '/deals/{id}': {
+  '/api/v2/deals/{id}': {
     GET: {
       override_options: {
         id: {
@@ -67,12 +56,12 @@ export const PIPEDRIVE_DEALS_ALLOWED_PATHS = {
         },
       },
     },
-    PUT: {
+    PATCH: {
       override_options: {
         id: {
           get_allowed_values: getPipedriveDealIdAllowedValues,
         },
-        ...omit(dealsOptions, ['origin_id']),
+        ...dealsOptions,
       },
     },
     DELETE: {

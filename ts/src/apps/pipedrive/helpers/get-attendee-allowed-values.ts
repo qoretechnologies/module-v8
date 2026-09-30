@@ -6,7 +6,7 @@ import {
 import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedrivePersonData = {
-  id: string;
+  id: number;
   name: string;
   emails?: { value: string }[];
   phones?: { value: string }[];
@@ -16,7 +16,7 @@ type TPipedrivePersonData = {
 
 const mapPipedriveAttendee = (person: TPipedrivePersonData): IQoreAllowedValue<object> => ({
   display_name: person.name,
-  value: { email_address: person.emails![0].value, person_id: person.id },
+  value: { email: person.emails![0].value, person_id: person.id },
   desc:
     `Email: ${person.emails![0].value}\n\n` +
     (person.org_name ? `Organization: ${person.org_name}\n\n` : '') +

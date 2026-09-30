@@ -24,14 +24,14 @@ const projectsOptions = {
   deal_ids: {
     get_element_allowed_values: getPipedriveDealIdAllowedValues,
   },
-  org_id: {
-    get_allowed_values: getPipedriveOrganizationIdAllowedValues,
+  org_ids: {
+    get_element_allowed_values: getPipedriveOrganizationIdAllowedValues,
   },
   owner_id: {
     get_allowed_values: getPipedriveUserIdAllowedValues,
   },
-  person_id: {
-    get_allowed_values: getPipedrivePersonIdAllowedValues,
+  person_ids: {
+    get_element_allowed_values: getPipedrivePersonIdAllowedValues,
   },
   template_id: {
     get_allowed_values: getPipedriveProjectTemplateIdAllowedValues,
@@ -39,7 +39,7 @@ const projectsOptions = {
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 export const PIPEDRIVE_PROJECTS_ALLOWED_PATHS = {
-  '/projects': {
+  '/api/v2/projects': {
     GET: {
       override_options: {
         filter_id: {
@@ -51,7 +51,7 @@ export const PIPEDRIVE_PROJECTS_ALLOWED_PATHS = {
       override_options: projectsOptions,
     },
   },
-  '/projects/{id}': {
+  '/api/v2/projects/{id}': {
     GET: {
       override_options: {
         id: {
@@ -59,7 +59,7 @@ export const PIPEDRIVE_PROJECTS_ALLOWED_PATHS = {
         },
       },
     },
-    PUT: {
+    PATCH: {
       override_options: {
         id: {
           get_allowed_values: getPipedriveProjectIdAllowedValues,

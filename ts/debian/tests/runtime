@@ -30,7 +30,7 @@ fi
 
 for mode in tiered ast; do
     logfile="$AUTOPKGTEST_TMP/catalogue-$mode.log"
-    if ! /usr/bin/qore -M --exec-mode="$mode" -l TypeScriptActionInterface -l json -e '
+    if ! /usr/bin/qore -M --enable-debug --exec-mode="$mode" -l TypeScriptActionInterface -l json -e '
         DataProvider::checkStaticInit();
         auto inventory = TypeScriptActionInterface::getDiscoveryInventory();
         auto expected = parse_json(File::readTextFile(ARGV[0]));
@@ -49,7 +49,7 @@ for mode in tiered ast; do
 done
 
 # The optional HubSpot setup must fail structurally, without hiding its identities.
-/usr/bin/qore -M -l TypeScriptActionInterface -e '
+/usr/bin/qore -M --enable-debug -l TypeScriptActionInterface -e '
     DataProvider::checkStaticInit();
     try { DataProviderActionCatalog::getAppEx("Hubspot"); } catch (auto ex) {}
     auto failures = DataProviderActionCatalog::getInitializationFailures(("Hubspot",));
@@ -65,18 +65,24 @@ done
 '
 
 # All eight external-schema apps remain discoverable and fail explicitly when used unconfigured.
-/usr/bin/qore -M -l TypeScriptActionInterface -l json -e '
+/usr/bin/qore -M --enable-debug -l TypeScriptActionInterface -l json -e '
     DataProvider::checkStaticInit();
     auto contracts = parse_json(File::readTextFile(ARGV[0])).apps;
     auto inventory = TypeScriptActionInterface::getDiscoveryInventory();
     foreach auto contract in (contracts.values()) {
-        try { DataProviderActionCatalog::getAppEx(contract.app); } catch (auto ex) {}
+        DataProviderActionCatalog::getAppEx(contract.app);
+        if (!TypeScriptActionInterface::getAppSchemaError(contract.app)) {
+            throw "MISSING-SCHEMA-ERROR", contract.app;
+        }
+        try { TypeScriptActionInterface::checkAppActions(contract.app); } catch (auto ex) {}
         auto failures = DataProviderActionCatalog::getInitializationFailures((contract.app,));
         if (!(map $1, failures, $1.error == "APP-SCHEMAS-UNAVAILABLE")) {
             throw "MISSING-STRUCTURED-FAILURE", contract.app;
         }
         auto actual = map $1.action, inventory, $1.app == contract.app && $1.action;
-        if (sort(actual) != sort(contract.actions)) throw "MISSING-INVENTORY", contract.app;
+        if (sort(actual) != sort(contract.actions)) {
+            throw "MISSING-INVENTORY", contract.app;
+        }
     }
     DataProviderActionCatalog::getAppEx("Slack");
     print("All external-schema identities remain discoverable; Slack remains usable\n");

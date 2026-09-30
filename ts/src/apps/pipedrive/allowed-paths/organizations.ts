@@ -18,10 +18,10 @@ const organizationsOptions = {
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 export const PIPEDRIVE_ORGANIZATIONS_ALLOWED_PATHS = {
-  '/organizations': {
+  '/api/v2/organizations': {
     GET: {
       override_options: {
-        user_id: {
+        owner_id: {
           get_allowed_values: getPipedriveUserIdAllowedValues,
         },
         filter_id: {
@@ -33,7 +33,7 @@ export const PIPEDRIVE_ORGANIZATIONS_ALLOWED_PATHS = {
       override_options: organizationsOptions,
     },
   },
-  '/organizations/{id}': {
+  '/api/v2/organizations/{id}': {
     GET: {
       override_options: {
         id: {
@@ -41,7 +41,7 @@ export const PIPEDRIVE_ORGANIZATIONS_ALLOWED_PATHS = {
         },
       },
     },
-    PUT: {
+    PATCH: {
       override_options: {
         id: {
           get_allowed_values: getPipedriveOrganizationIdAllowedValues,

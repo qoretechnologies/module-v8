@@ -31,7 +31,7 @@ export const getPipedriveProjectTemplateIdAllowedValues: TQoreGetAllowedValuesFu
   const projectTemplates = await fetchPipedriveAllowedValues<TPipedriveProjectTemplateData>({
     token,
     mapItemToAllowedValue: mapPipedriveProjectTemplate,
-    path: 'v1/projectTemplates',
+    path: 'projectTemplates',
   });
 
   return projectTemplates;

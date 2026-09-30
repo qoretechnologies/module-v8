@@ -7,7 +7,7 @@ import { getPipedrivePersonIdAllowedValues } from '../helpers/get-person-id-allo
 import { getPipedriveUserIdAllowedValues } from '../helpers/get-user-id-allowed-values';
 
 export const PIPEDRIVE_NOTES_ALLOWED_PATHS = {
-  '/notes': {
+  '/v1/notes': {
     GET: {
       override_options: {
         user_id: {
@@ -51,7 +51,7 @@ export const PIPEDRIVE_NOTES_ALLOWED_PATHS = {
       },
     },
   },
-  '/notes/{id}': {
+  '/v1/notes/{id}': {
     GET: {
       override_options: {
         id: {

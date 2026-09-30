@@ -34,7 +34,7 @@ export const getPipedriveProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
   const projects = await fetchPipedriveAllowedValues<TPipedriveProjectData>({
     token,
     mapItemToAllowedValue: mapPipedriveProject,
-    path: 'v1/projects',
+    path: 'projects',
   });
 
   return projects;

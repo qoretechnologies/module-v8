@@ -1,7 +1,7 @@
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { getTrelloBoardIdAllowedValues } from '../helpers/get-board-id-allowed-values';
 import { getTrelloBoardListsIdAllowedValues } from '../helpers/get-list-id-allowed-values';
-import { removeTrelloFieldsFromQuery } from './constants';
+import { removeTrelloSelectionFields } from './constants';
 
 export const TRELLO_LISTS_ALLOWED_PATHS = {
   '/lists': {
@@ -33,7 +33,7 @@ export const TRELLO_LISTS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloBoardListsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard']),
     },
     PUT: {
       override_options: {

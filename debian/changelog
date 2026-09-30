@@ -1,3 +1,12 @@
+qore-v8-module (2.1.0~git20260930.1+ds-0qore1~ubuntu26.04) resolute; urgency=medium
+
+  * Fix additional schema-backed action options and their dependencies.
+  * Accept narrowly typed REST connection options, including API-key headers.
+  * Preserve encoded schema request targets and empty request converter inputs.
+  * Qualify current Pipedrive and Trello schemas with complete action types.
+
+ -- David Nichols <david@qore.org>  Wed, 30 Sep 2026 13:00:00 +0200
+
 qore-v8-module (2.1.0~git20260929.3+ds-0qore1~ubuntu26.04) resolute; urgency=medium
 
   * Refresh HubSpot source catalogs and all 12 translations to match the

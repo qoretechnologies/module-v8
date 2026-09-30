@@ -12,6 +12,7 @@ import {
   PipedriveTableToObjectMap,
   TPipedriveTable,
   usePipedriveV1Endpoint,
+  pipedriveTablePath,
 } from './constants';
 import { Debugger } from '../../../../utils/Debugger';
 
@@ -33,6 +34,7 @@ export const deletePipedriveRecords: TQoreDeleteRecordsFunction = async (context
     throw new PipedriveError('Table name is required');
   }
 
+  pipedriveTablePath(tableName);
   let filterId: number | undefined;
 
   try {
@@ -84,12 +86,12 @@ export const deletePipedriveRecords: TQoreDeleteRecordsFunction = async (context
       searchParams.filter_id = filterId;
     }
 
-    const records = await fetchPipedrivePaginatedRecords<any, Record<string, any>>({
+    const records = await fetchPipedrivePaginatedRecords<Record<string, any>>({
       token,
       method: 'GET',
       path: searchPath,
       params: searchParams,
-      maxResults: 500,
+      maxResults: Number.MAX_SAFE_INTEGER,
       limit: 500,
       object: 'data',
     });

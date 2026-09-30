@@ -358,7 +358,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 if (i.value.depends_on) {
                     TypeScriptActionInterface::checkFieldDependencies(type);
                 }
-                if (i.value_depends_on) {
+                if (i.value.depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
                 if (prov.getName() != "GET") {
@@ -735,7 +735,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
         }
 
-        hash<auto> req0;
+        hash<auto> req0 = {};
         debug("Action options for action %y: %y reqmap: %y", getName(), LoggerUtil::getArgSummary(req),
             reqmap{request_key});
         map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap{request_key}.pairIterator(),
@@ -751,12 +751,19 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             debug("REST request for action after conversion %y: %y", getName(), LoggerUtil::getArgSummary(req));
         }
 
-        auto rv = prov.doRequest(req, request_options +
-            (response_data_converter
-                ? {"include_response_headers": True}
-                : NOTHING
-            )
-        );
+        auto rv;
+        {
+            # The schema provider encodes path variables and query values. The request's freshly acquired
+            # synchronous client must send those octets unchanged; restore its policy even on failure.
+            bool encoded = rest.setPreEncodedUrls(True);
+            on_exit rest.setPreEncodedUrls(encoded);
+            rv = prov.doRequest(req, request_options +
+                (response_data_converter
+                    ? {"include_response_headers": True}
+                    : NOTHING
+                )
+            );
+        }
         if (response_data_converter) {
             if (!ctxinfo) {
                 ctxinfo = getCallContextInfo();

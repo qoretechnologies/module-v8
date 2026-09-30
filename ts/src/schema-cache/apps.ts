@@ -93,6 +93,9 @@ export function validateDocument(document: unknown): asserts document is JsonObj
 /** Pin supported routes and operation IDs; preserve request/response and security metadata. */
 export function normalizeSchema(id: string, input: unknown): JsonObject {
   const contract = appContract(id);
+  if (id === 'pipedrive' && input && typeof input === 'object' && Object.hasOwn(input, 'v1')) {
+    input = composePipedriveSchemas(input);
+  }
   validateDocument(input);
   const document: JsonObject = JSON.parse(JSON.stringify(input));
   const selected: JsonObject = Object.create(null);
@@ -137,6 +140,77 @@ export function normalizeSchema(id: string, input: unknown): JsonObject {
   }
   validateDocument(document);
   return document;
+}
+
+/** Combine the official Pipedrive generations without changing their request/response contracts.
+ * Imports use {v1: <document>, v2: <document>}; references and security names are scoped per document.
+ */
+export function composePipedriveSchemas(input: unknown): JsonObject {
+  requireObject(input, 'Pipedrive bundle');
+  if (Object.keys(input).sort().join(',') !== 'v1,v2') {
+    throw new Error('APP-SCHEMA-INVALID: Pipedrive requires exactly v1 and v2 documents');
+  }
+  const result: JsonObject = { openapi: '3.0.1', info: { title: 'Pipedrive', version: 'v1+v2' },
+    servers: [{ url: 'https://api.pipedrive.com' }], paths: {}, components: Object.create(null) };
+  const supported = new Set(appContract('pipedrive').operations.map(operation => operation.path));
+  for (const version of ['v1', 'v2']) {
+    const source = input[version];
+    validateDocument(source);
+    const prefix = version === 'v1' ? '/v1' : '/api/v2';
+    if (source.openapi !== '3.0.1' || JSON.stringify(source.servers)
+        !== JSON.stringify([{ url: `https://api.pipedrive.com${prefix}` }])) {
+      throw new Error(`APP-SCHEMA-INCOMPATIBLE: Pipedrive ${version}: unexpected API server or version`);
+    }
+    // Validate before traversing; JSON round-trip also guarantees caller-owned documents stay untouched.
+    const document: JsonObject = JSON.parse(JSON.stringify(source));
+    const queue: JsonObject[] = [document];
+    for (let i = 0; i < queue.length; ++i) {
+      const value = queue[i];
+      for (const [key, child] of Object.entries(value)) {
+        if (key === '$ref') {
+          if (typeof child !== 'string' || !/^#\/components\/[^/]+\/[^/]+/.test(child)) {
+            throw new Error('APP-SCHEMA-INCOMPATIBLE: Pipedrive references must target components');
+          }
+          value[key] = child.replace(/^(#\/components\/[^/]+\/)/, `$1${version}_`);
+        } else if (key === 'security') {
+          if (!Array.isArray(child)) {
+            throw new Error('APP-SCHEMA-INVALID: Pipedrive security must be an array');
+          }
+          value[key] = child.map(requirement => {
+            requireObject(requirement, 'security requirement');
+            return Object.fromEntries(Object.entries(requirement).map(([name, scopes]) => [`${version}_${name}`, scopes]));
+          });
+        } else if (child && typeof child === 'object') {
+          queue.push(child);
+        }
+      }
+    }
+    for (const [kind, entries] of Object.entries(document.components || {})) {
+      requireObject(entries, `components.${kind}`);
+      result.components[kind] ||= Object.create(null);
+      for (const [name, value] of Object.entries(entries)) {
+        result.components[kind][`${version}_${name}`] = value;
+      }
+    }
+    for (const [route, item] of Object.entries(document.paths)) {
+      if (!supported.has(prefix + route)) {
+        continue;
+      }
+      requireObject(item, route);
+      // The explicit version is in the path. Unreviewed operation/path server overrides must fail closed.
+      if (item.servers || methods.some(method => item[method]?.servers)) {
+        throw new Error('APP-SCHEMA-INCOMPATIBLE: Pipedrive path/operation server override');
+      }
+      for (const method of methods) {
+        if (item[method] && !Object.hasOwn(item[method], 'security') && document.security) {
+          item[method].security = document.security;
+        }
+      }
+      result.paths[prefix + route] = item;
+    }
+  }
+  validateDocument(result);
+  return result;
 }
 
 /** Fingerprint the supported surface and reference closure, including field presentation. */

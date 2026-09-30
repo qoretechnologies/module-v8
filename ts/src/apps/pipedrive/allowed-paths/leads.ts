@@ -24,7 +24,7 @@ const leadsOptions = {
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 export const PIPEDRIVE_LEADS_ALLOWED_PATHS = {
-  '/leads': {
+  '/v1/leads': {
     GET: {
       override_options: {
         owner_id: {
@@ -55,7 +55,7 @@ export const PIPEDRIVE_LEADS_ALLOWED_PATHS = {
       },
     },
   },
-  '/leads/{id}': {
+  '/v1/leads/{id}': {
     GET: {
       override_options: {
         id: {

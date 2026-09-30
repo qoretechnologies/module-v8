@@ -1,5 +1,4 @@
 import { TQoreUpdateRecordsFunction } from '@qoretechnologies/ts-toolkit';
-import { omit } from 'lodash';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { extractPipedriveError, PipedriveError } from '../../constants';
 import { fetchPipedrivePaginatedRecords, pipedriveApiClient } from '../client';
@@ -13,6 +12,8 @@ import {
   PipedriveTableToObjectMap,
   TPipedriveTable,
   usePipedriveV1Endpoint,
+  pipedriveRecordBody,
+  pipedriveTablePath,
 } from './constants';
 import { Debugger } from '../../../../utils/Debugger';
 
@@ -43,6 +44,8 @@ export const updatePipedriveRecords: TQoreUpdateRecordsFunction = async (
     throw new PipedriveError('No fields to update');
   }
 
+  pipedriveTablePath(tableName);
+  const updateBody = pipedriveRecordBody(tableName, fields);
   let filterId: number | undefined;
 
   try {
@@ -94,12 +97,12 @@ export const updatePipedriveRecords: TQoreUpdateRecordsFunction = async (
       searchParams.filter_id = filterId;
     }
 
-    const records = await fetchPipedrivePaginatedRecords<any, Record<string, any>>({
+    const records = await fetchPipedrivePaginatedRecords<Record<string, any>>({
       token,
       method: 'GET',
       path: searchPath,
       params: searchParams,
-      maxResults: 500,
+      maxResults: Number.MAX_SAFE_INTEGER,
       limit: 500,
       object: 'data',
     });
@@ -113,20 +116,11 @@ export const updatePipedriveRecords: TQoreUpdateRecordsFunction = async (
     const updatePath = useV1Endpoint ? `v1/${tableName}` : tableName;
     let updatedCount = 0;
 
-    const fieldsToUpdate = omit(fields, 'custom_fields');
-    let customFieldsToUpdate: Record<string, any> = {};
-
-    if (fields.custom_fields && typeof fields.custom_fields === 'object') {
-      customFieldsToUpdate = fields.custom_fields as Record<string, any>;
-    }
-
-    const updateBody = { ...fieldsToUpdate, ...customFieldsToUpdate };
-
     for (const recordId of recordIds) {
       try {
         await pipedriveApiClient({
           token,
-          method: 'PATCH',
+          method: tableName === 'notes' ? 'PUT' : 'PATCH',
           path: `${updatePath}/${recordId}`,
           body: updateBody,
         });

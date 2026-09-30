@@ -22,14 +22,15 @@
       "documentation": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1540810174.html"
     },
     "pipedrive": {
-      "url": "https://developers.pipedrive.com/docs/api/v1/openapi.json",
-      "documentation": "https://developers.pipedrive.com/docs/api/v1",
-      "compatibilityNote": "The current v1 download no longer includes several supported endpoints, including GET /activities. It is rejected; use an approved legacy export until the app migrates to the newer API."
+      "documentation": "https://pipedrive.readme.io/docs/pipedrive-api-v2-migration-guide",
+      "urls": {
+        "v1": "https://developers.pipedrive.com/docs/api/v1/openapi.json",
+        "v2": "https://developers.pipedrive.com/docs/api/v2/openapi.json"
+      }
     },
     "trello": {
       "url": "https://dac-static.atlassian.com/cloud/trello/swagger.v3.json",
-      "documentation": "https://developer.atlassian.com/cloud/trello/rest/api-group-actions/",
-      "compatibilityNote": "The current OpenAPI 3 download differs from the qualified Swagger 2 contract and is rejected. Use an approved export until the app and field presentation are migrated together."
+      "documentation": "https://developer.atlassian.com/cloud/trello/rest/api-group-actions/"
     },
     "zendesk": {
       "importHelp": "Download a compatible JSON schema using the OpenAPI link in the official Ticketing documentation, then import it. Automatic download has not been verified.",

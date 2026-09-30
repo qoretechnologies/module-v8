@@ -15,7 +15,6 @@ export const PipedriveActivityFields = {
   owner_id: { type: 'int', desc: 'The ID of the user who owns the activity' },
   deal_id: { type: 'int', desc: 'The ID of the deal linked to the activity' },
   lead_id: { type: 'string', desc: 'The ID of the lead linked to the activity' },
-  person_id: { type: 'int', desc: 'The ID of the person linked to the activity' },
   org_id: { type: 'int', desc: 'The ID of the organization linked to the activity' },
   project_id: { type: 'int', desc: 'The ID of the project linked to the activity' },
   due_date: { type: 'string', desc: 'The due date of the activity' },
@@ -35,6 +34,7 @@ export const PipedriveActivityFields = {
     desc: 'The priority of the activity. Mappable to a specific string using activityFields API.',
   },
   note: { type: 'string', desc: 'Note for the activity' },
+  outcome: { type: 'int', desc: 'The outcome ID for the activity' },
 } satisfies Record<string, TQoreAppActionOption>;
 
 export const getPipedriveActivityRecordType: TQoreGetDynamicTypeFunction = async (

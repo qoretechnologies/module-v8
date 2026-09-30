@@ -42,34 +42,43 @@ auto expected = parse_json(ARGV[0]);
 string app = ARGV[1];
 list<string> actual = ();
 foreach auto identity in (TypeScriptActionInterface::getDiscoveryInventory()) {
-    if (identity.app == app && identity.action) actual += identity.action;
+    if (identity.app == app && identity.action) { actual += identity.action; }
 }
-if (sort(actual) != sort(expected)) throw "APP-SCHEMA-INVENTORY-ERROR", app;
+if (sort(actual) != sort(expected)) { throw "APP-SCHEMA-INVENTORY-ERROR", app; }
 hash<auto> actions;
 try {
     actions = DataProviderActionCatalog::getActionHashEx(app);
 } catch (auto ex) {
     auto failures = DataProviderActionCatalog::getInitializationFailures((app,));
-    if (failures) throw "APP-SCHEMA-INITIALIZATION-ERROR", make_json(failures);
+    if (failures) { throw "APP-SCHEMA-INITIALIZATION-ERROR", make_json(failures); }
     throw ex.err, ex.desc;
 }
 foreach string name in (expected) {
-    if (!exists actions{name}) throw "APP-SCHEMA-ACTION-ERROR", name;
+    if (!exists actions{name}) { throw "APP-SCHEMA-ACTION-ERROR", name; }
+    try {
+        auto action = DataProviderActionCatalog::checkAppActionOptions(app, name);
+        if (action.get_output_type) { action.get_output_type(); }
+    } catch (auto ex) {
+        throw "APP-SCHEMA-ACTION-ERROR", sprintf("%s/%s: %s: %s", app, name, ex.err, ex.desc);
+    }
 }
 auto failures = DataProviderActionCatalog::getInitializationFailures((app,));
-if (failures) throw "APP-SCHEMA-INITIALIZATION-ERROR", make_json(failures);
+if (failures) { throw "APP-SCHEMA-INITIALIZATION-ERROR", make_json(failures); }
 printf("APP-SNAPSHOT-QUALIFIED:%d\\n", expected.size());`;
-  let output: string;
-  try {
-    output = execFileSync('qore', ['-M', '-l', 'TypeScriptActionInterface', '-l', 'json', '-e', program,
-      JSON.stringify(contract.actions), contract.app], { env, encoding: 'utf8', timeout: 120000,
-      maxBuffer: 8 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] });
-  } catch (error) {
-    const failure = error as { stderr?: string; message: string };
-    throw new Error(`APP-SCHEMA-QUALIFICATION: ${contract.app}: ${failure.stderr || failure.message}`);
-  }
-  if (!output.includes(`APP-SNAPSHOT-QUALIFIED:${contract.actions.length}\n`)) {
-    throw new Error('APP-SCHEMA-QUALIFICATION: runtime did not confirm the expected actions');
+  for (const mode of ['tiered', 'ast']) {
+    let output: string;
+    try {
+      output = execFileSync('qore', ['-M', '--enable-debug', `--exec-mode=${mode}`,
+        '-l', 'TypeScriptActionInterface', '-l', 'json', '-e', program,
+        JSON.stringify(contract.actions), contract.app], { env, encoding: 'utf8', timeout: 120000,
+        maxBuffer: 8 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] });
+    } catch (error) {
+      const failure = error as { stderr?: string; message: string };
+      throw new Error(`APP-SCHEMA-QUALIFICATION: ${contract.app} (${mode}): ${failure.stderr || failure.message}`);
+    }
+    if (!output.includes(`APP-SNAPSHOT-QUALIFIED:${contract.actions.length}\n`)) {
+      throw new Error('APP-SCHEMA-QUALIFICATION: runtime did not confirm the expected actions');
+    }
   }
 }
 
@@ -110,8 +119,8 @@ export async function main(args: string[] = process.argv.slice(2)): Promise<void
     if (!args.length) throw new Error('update requires APP [APP ...] or --all');
     if (args.includes('--all')) {
       if (args.length !== 1) throw new Error('--all cannot be combined with app names');
-      args = appIds.filter(id => appSources[id].url);
-      for (const id of appIds.filter(id => !appSources[id].url)) {
+      args = appIds.filter(id => appSources[id].url || appSources[id].urls);
+      for (const id of appIds.filter(id => !appSources[id].url && !appSources[id].urls)) {
         console.error(`${id}: import required. ${appSources[id].importHelp}`);
       }
     }

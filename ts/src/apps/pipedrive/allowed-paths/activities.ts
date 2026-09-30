@@ -24,70 +24,36 @@ const activitiesOptions = {
   org_id: {
     get_allowed_values: getPipedriveOrganizationIdAllowedValues,
   },
-  person_id: {
-    get_allowed_values: getPipedrivePersonIdAllowedValues,
-  },
   project_id: {
     get_allowed_values: getPipedriveProjectIdAllowedValues,
   },
-  user_id: {
+  owner_id: {
     get_allowed_values: getPipedriveUserIdAllowedValues,
   },
   type: {
     get_allowed_values: getPipedriveActivityTypeAllowedValues,
   },
   attendees: {
-    type: {
-      type: 'list',
-      element_type: {
-        type: 'hash',
-        fields: {
-          email_address: {
-            type: 'string',
-            required: true,
-          },
-          person_id: {
-            type: 'number',
-            required: false,
-            get_allowed_values: getPipedrivePersonIdAllowedValues,
-          },
-        },
-      },
-    },
     element_allowed_values_creatable: true,
     get_element_allowed_values: getPipedriveAttendeeAllowedValues,
   },
-  participants: {
-    type: {
-      type: 'list',
-      element_type: {
-        type: 'hash',
-        fields: {
-          person_id: {
-            type: 'number',
-            required: true,
-            get_allowed_values: getPipedrivePersonIdAllowedValues,
-          },
-          primary_flag: {
-            type: 'bool',
-            required: true,
-            default_value: false,
-          },
-        },
-      },
-    },
+  'attendees.person_id': {
+    get_allowed_values: getPipedrivePersonIdAllowedValues,
+  },
+  'attendees.user_id': {
+    get_allowed_values: getPipedriveUserIdAllowedValues,
+  },
+  'participants.person_id': {
+    get_allowed_values: getPipedrivePersonIdAllowedValues,
   },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 export const PIPEDRIVE_ACTIVITIES_ALLOWED_PATHS = {
-  '/activities': {
+  '/api/v2/activities': {
     GET: {
       override_options: {
-        user_id: {
+        owner_id: {
           get_allowed_values: getPipedriveUserIdAllowedValues,
-        },
-        type: {
-          get_allowed_values: getPipedriveActivityTypeAllowedValues,
         },
         filter_id: {
           get_allowed_values: getPipedriveActivityFilterIdAllowedValues,
@@ -98,7 +64,7 @@ export const PIPEDRIVE_ACTIVITIES_ALLOWED_PATHS = {
       override_options: activitiesOptions,
     },
   },
-  '/activities/{id}': {
+  '/api/v2/activities/{id}': {
     GET: {
       override_options: {
         id: {
@@ -106,7 +72,7 @@ export const PIPEDRIVE_ACTIVITIES_ALLOWED_PATHS = {
         },
       },
     },
-    PUT: {
+    PATCH: {
       override_options: {
         ...activitiesOptions,
         id: {

@@ -3,7 +3,7 @@ import { getTrelloBoardIdAllowedValues } from '../helpers/get-board-id-allowed-v
 import { getTrelloBoardListsIdAllowedValues } from '../helpers/get-list-id-allowed-values';
 import { getTrelloListCardsIdAllowedValues } from '../helpers/get-card-id-allowed-values';
 import { getTrelloCardChecklistsIdAllowedValues } from '../helpers/get-checklist-id-allowed-values';
-import { removeTrelloFieldsFromQuery } from './constants';
+import { removeTrelloSelectionFields } from './constants';
 import { getTrelloBoardMembersIdAllowedValues } from '../helpers/get-board-members-allowed-values';
 
 export const TRELLO_CHECKLISTS_ALLOWED_PATHS = {
@@ -42,7 +42,7 @@ export const TRELLO_CHECKLISTS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloCardChecklistsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList', 'idCard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard', 'idList', 'idCard']),
     },
     GET: {
       override_options: {
@@ -74,7 +74,7 @@ export const TRELLO_CHECKLISTS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloCardChecklistsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList', 'idCard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard', 'idList', 'idCard']),
     },
   },
 } satisfies TAllowedPaths;

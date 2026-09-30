@@ -88,6 +88,8 @@ module TypeScriptActionInterface {
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - schema-backed requests preserve percent-encoded path/query values without encoding them twice;
+      requests containing only path variables pass an empty object to request conversion callbacks
     - Apps reporting \c APP-SCHEMAS-UNAVAILABLE now register their identity, REST connection scheme, and OAuth2
       metadata while retaining structured failures for deferred actions. A synchronous \c schema_metadata callback
       refreshes failed snapshot selections on retry; successfully selected snapshots remain pinned until restart.
@@ -99,6 +101,11 @@ module TypeScriptActionInterface {
     - Catalogue protocol 2 detects incompatible Qore module and JS dist installations before registration. Unknown
       app metadata keys produce an actionable \c TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR before typed-hash conversion.
       See \c design/producer-schema-boundary.md and the \c qore-app-schemas manual for deployment details.
+    - REST connections accept narrowly typed option hashes, including header-only authentication options.
+      Internally added options no longer fail when their value type differs from the caller's options.
+    - Fixed adding schema-backed action options with dependencies: option overrides now read the dependency
+      list from the option value instead of the iterator record. This supports Trello's additional board/list
+      selectors when materializing its current OpenAPI 3 actions.
     - the TypeScript app catalogue settings (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT and
       \c QORE_TYPESCRIPT_ACTION_SCRIPTS) are read from the process environment when the module is initialized, so a
       process can decide not to load the catalogue after it has started, such as a data provider index worker that

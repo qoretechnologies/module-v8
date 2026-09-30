@@ -17,7 +17,7 @@ PRODUCTION = ROOT / '.debian-production'
 MANIFEST = json.loads((ROOT / 'debian/vendor-manifest.json').read_text())
 TESTS = ('actions-catalogue', 'app-api-versions', 'helpers', 'qore-api-client',
          'event-triggers', 'slack-allowed-values-cache', 'monday-pagination',
-         'hubspot-oauth', 'dependency-security', 'catalogue-entry', 'hubspot-schema-cache', 'app-schema-cache')
+         'hubspot-oauth', 'dependency-security', 'catalogue-entry', 'hubspot-schema-cache', 'app-schema-cache', 'pipedrive-migration', 'trello-migration')
 ENV = {**os.environ, 'YARN_ENABLE_NETWORK': '0', 'YARN_ENABLE_GLOBAL_CACHE': '0',
        'YARN_ENABLE_TELEMETRY': '0', 'YARN_ENABLE_SCRIPTS': '0',
        'YARN_GLOBAL_FOLDER': str(ROOT / '.debian-yarn-global'),

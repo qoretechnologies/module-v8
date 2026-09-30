@@ -5,7 +5,7 @@ import {
 import { omit } from 'lodash';
 import { getQoreContextRequiredValues, mapObjectToColumnFormat } from '../../../../global/helpers';
 import { extractPipedriveError, PipedriveError } from '../../constants';
-import { fetchPipedrivePaginatedRecords, pipedriveApiClient } from '../client';
+import { pipedriveRecordPages, pipedriveApiClient } from '../client';
 import {
   getPipedriveFieldNameToIdMap,
   PipedriveTableNameToFieldEndpointMap,
@@ -16,6 +16,7 @@ import {
   PipedriveTableToObjectMap,
   TPipedriveTable,
   usePipedriveV1Endpoint,
+  pipedriveTablePath,
 } from './constants';
 import { Debugger } from '../../../../utils/Debugger';
 
@@ -37,6 +38,7 @@ export const searchPipedriveRecords: TQoreSearchRecordsFunction = async (ctx, wh
     throw new PipedriveError('Table name is required in opts.table');
   }
 
+  const recordPath = pipedriveTablePath(tableName);
   let filterId: number | undefined;
 
   if (where) {
@@ -81,48 +83,54 @@ export const searchPipedriveRecords: TQoreSearchRecordsFunction = async (ctx, wh
   const orderBy = opts?.orderBy as { column: string; ascending?: boolean } | undefined;
   const maxLimit = opts?.limit as number | undefined;
 
+  let pages: AsyncGenerator<Record<string, any>[]> | undefined;
+  let finished = false;
+  let retrievedCount = 0;
+  const cleanup = async () => {
+    if (filterId !== undefined) {
+      const id = filterId;
+      filterId = undefined;
+      try {
+        await pipedriveApiClient({ token, method: 'DELETE', path: `v1/filters/${id}` });
+      } catch (error) {
+        Debugger.log(`Failed to delete temporary filter ${id}: ${extractPipedriveError(error)}`);
+      }
+    }
+  };
   const get_records: TQoreSearchRecordsIterator = async (_ctx, blockSize) => {
+    if (finished) {
+      return null;
+    }
     try {
-      const queryParams: Record<string, any> = {};
-
-      if (filterId) {
-        queryParams.filter_id = filterId;
-      }
-
-      if (orderBy) {
-        const sortField = `${orderBy.column} ${orderBy.ascending !== false ? 'ASC' : 'DESC'}`;
-        queryParams.sort = sortField;
-      }
-
-      const useV1Endpoint = usePipedriveV1Endpoint(tableName);
-
-      const records = await fetchPipedrivePaginatedRecords<any, Record<string, any>>({
-        token,
-        method: 'GET',
-        path: useV1Endpoint ? `v1/${tableName}` : tableName,
-        params: queryParams,
-        maxResults: maxLimit,
-        limit: blockSize,
-        object: 'data',
-      });
-
-      if (maxLimit !== undefined && records?.length >= maxLimit) {
-        if (filterId) {
-          try {
-            await pipedriveApiClient({
-              token,
-              method: 'DELETE',
-              path: `v1/filters/${filterId}`,
-            });
-          } catch (error) {
-            Debugger.log(
-              `Failed to delete temporary filter with ID ${filterId}: ${extractPipedriveError(error)}`
-            );
+      if (!pages) {
+        const queryParams: Record<string, string> = {};
+        if (filterId !== undefined) {
+          queryParams.filter_id = String(filterId);
+        }
+        if (orderBy) {
+          if (usePipedriveV1Endpoint(tableName)) {
+            queryParams.sort = `${orderBy.column} ${orderBy.ascending !== false ? 'ASC' : 'DESC'}`;
+          } else {
+            queryParams.sort_by = orderBy.column;
+            queryParams.sort_direction = orderBy.ascending !== false ? 'asc' : 'desc';
           }
         }
+        pages = pipedriveRecordPages<Record<string, any>>({ token, path: recordPath,
+          params: queryParams, limit: Math.min(blockSize, 500),
+          maxResults: maxLimit ?? Number.MAX_SAFE_INTEGER });
+      }
+      const next = await pages.next();
+      if (next.done) {
+        finished = true;
+        await cleanup();
         return null;
       }
-
+      const records = next.value;
+      retrievedCount += records.length;
+      if (maxLimit !== undefined && retrievedCount >= maxLimit) {
+        finished = true;
+        await cleanup();
+      }
       const formattedRecords = records.map((record) => {
         if (record.custom_fields && typeof record.custom_fields === 'object') {
           return { ...omit(record, 'custom_fields'), ...record.custom_fields };
@@ -132,21 +140,8 @@ export const searchPipedriveRecords: TQoreSearchRecordsFunction = async (ctx, wh
 
       return mapObjectToColumnFormat(formattedRecords);
     } catch (error) {
-      if (filterId) {
-        try {
-          await pipedriveApiClient({
-            token,
-            method: 'DELETE',
-            path: `v1/filters/${filterId}`,
-          });
-        } catch (cleanupError) {
-          Debugger.log(
-            `Failed to delete temporary filter with ID ${filterId}: ${extractPipedriveError(
-              cleanupError
-            )}`
-          );
-        }
-      }
+      finished = true;
+      await cleanup();
 
       if (error instanceof PipedriveError) {
         throw error;

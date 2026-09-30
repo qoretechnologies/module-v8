@@ -291,7 +291,7 @@ export const createGetPipedriveExampleEventDataFunction = (
     try {
       const records = await pipedriveApiClient<Record<string, any>[]>({
         method: 'GET',
-        path: `v1/${objectType}`,
+        path: ['users', 'notes', 'leads'].includes(objectType) ? `v1/${objectType}` : objectType,
         token: token!,
         params: {
           limit: '1',

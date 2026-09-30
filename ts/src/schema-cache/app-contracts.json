@@ -1274,203 +1274,203 @@
       "sourceFile": "pipedrive.swagger.json",
       "operations": [
         {
-          "path": "/activities",
+          "path": "/api/v2/activities",
           "method": "get",
           "operationId": "getActivities"
         },
         {
-          "path": "/activities",
+          "path": "/api/v2/activities",
           "method": "post",
           "operationId": "addActivity"
         },
         {
-          "path": "/activities/{id}",
+          "path": "/api/v2/activities/{id}",
           "method": "delete",
           "operationId": "deleteActivity"
         },
         {
-          "path": "/activities/{id}",
+          "path": "/api/v2/activities/{id}",
           "method": "get",
           "operationId": "getActivity"
         },
         {
-          "path": "/activities/{id}",
-          "method": "put",
+          "path": "/api/v2/activities/{id}",
+          "method": "patch",
           "operationId": "updateActivity"
         },
         {
-          "path": "/deals",
+          "path": "/api/v2/deals",
           "method": "get",
           "operationId": "getDeals"
         },
         {
-          "path": "/deals",
+          "path": "/api/v2/deals",
           "method": "post",
           "operationId": "addDeal"
         },
         {
-          "path": "/deals/{id}",
+          "path": "/api/v2/deals/{id}",
           "method": "delete",
           "operationId": "deleteDeal"
         },
         {
-          "path": "/deals/{id}",
+          "path": "/api/v2/deals/{id}",
           "method": "get",
           "operationId": "getDeal"
         },
         {
-          "path": "/deals/{id}",
-          "method": "put",
+          "path": "/api/v2/deals/{id}",
+          "method": "patch",
           "operationId": "updateDeal"
         },
         {
-          "path": "/leads",
+          "path": "/v1/leads",
           "method": "get",
           "operationId": "getLeads"
         },
         {
-          "path": "/leads",
+          "path": "/v1/leads",
           "method": "post",
           "operationId": "addLead"
         },
         {
-          "path": "/leads/{id}",
+          "path": "/v1/leads/{id}",
           "method": "delete",
           "operationId": "deleteLead"
         },
         {
-          "path": "/leads/{id}",
+          "path": "/v1/leads/{id}",
           "method": "get",
           "operationId": "getLead"
         },
         {
-          "path": "/leads/{id}",
+          "path": "/v1/leads/{id}",
           "method": "patch",
           "operationId": "updateLead"
         },
         {
-          "path": "/notes",
+          "path": "/v1/notes",
           "method": "get",
           "operationId": "getNotes"
         },
         {
-          "path": "/notes",
+          "path": "/v1/notes",
           "method": "post",
           "operationId": "addNote"
         },
         {
-          "path": "/notes/{id}",
+          "path": "/v1/notes/{id}",
           "method": "delete",
           "operationId": "deleteNote"
         },
         {
-          "path": "/notes/{id}",
+          "path": "/v1/notes/{id}",
           "method": "get",
           "operationId": "getNote"
         },
         {
-          "path": "/notes/{id}",
+          "path": "/v1/notes/{id}",
           "method": "put",
           "operationId": "updateNote"
         },
         {
-          "path": "/organizations",
+          "path": "/api/v2/organizations",
           "method": "get",
           "operationId": "getOrganizations"
         },
         {
-          "path": "/organizations",
+          "path": "/api/v2/organizations",
           "method": "post",
           "operationId": "addOrganization"
         },
         {
-          "path": "/organizations/{id}",
+          "path": "/api/v2/organizations/{id}",
           "method": "delete",
           "operationId": "deleteOrganization"
         },
         {
-          "path": "/organizations/{id}",
+          "path": "/api/v2/organizations/{id}",
           "method": "get",
           "operationId": "getOrganization"
         },
         {
-          "path": "/organizations/{id}",
-          "method": "put",
+          "path": "/api/v2/organizations/{id}",
+          "method": "patch",
           "operationId": "updateOrganization"
         },
         {
-          "path": "/persons",
+          "path": "/api/v2/persons",
           "method": "get",
           "operationId": "getPersons"
         },
         {
-          "path": "/persons",
+          "path": "/api/v2/persons",
           "method": "post",
           "operationId": "addPerson"
         },
         {
-          "path": "/persons/{id}",
+          "path": "/api/v2/persons/{id}",
           "method": "delete",
           "operationId": "deletePerson"
         },
         {
-          "path": "/persons/{id}",
+          "path": "/api/v2/persons/{id}",
           "method": "get",
           "operationId": "getPerson"
         },
         {
-          "path": "/persons/{id}",
-          "method": "put",
+          "path": "/api/v2/persons/{id}",
+          "method": "patch",
           "operationId": "updatePerson"
         },
         {
-          "path": "/projects",
+          "path": "/api/v2/projects",
           "method": "get",
           "operationId": "getProjects"
         },
         {
-          "path": "/projects",
+          "path": "/api/v2/projects",
           "method": "post",
           "operationId": "addProject"
         },
         {
-          "path": "/projects/{id}",
+          "path": "/api/v2/projects/{id}",
           "method": "delete",
           "operationId": "deleteProject"
         },
         {
-          "path": "/projects/{id}",
+          "path": "/api/v2/projects/{id}",
           "method": "get",
           "operationId": "getProject"
         },
         {
-          "path": "/projects/{id}",
-          "method": "put",
+          "path": "/api/v2/projects/{id}",
+          "method": "patch",
           "operationId": "updateProject"
         },
         {
-          "path": "/tasks",
+          "path": "/api/v2/tasks",
           "method": "get",
           "operationId": "getTasks"
         },
         {
-          "path": "/tasks",
+          "path": "/api/v2/tasks",
           "method": "post",
           "operationId": "addTask"
         },
         {
-          "path": "/tasks/{id}",
+          "path": "/api/v2/tasks/{id}",
           "method": "delete",
           "operationId": "deleteTask"
         },
         {
-          "path": "/tasks/{id}",
+          "path": "/api/v2/tasks/{id}",
           "method": "get",
           "operationId": "getTask"
         },
         {
-          "path": "/tasks/{id}",
-          "method": "put",
+          "path": "/api/v2/tasks/{id}",
+          "method": "patch",
           "operationId": "updateTask"
         }
       ],

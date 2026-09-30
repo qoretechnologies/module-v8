@@ -6,7 +6,7 @@ import { getTrelloCardChecklistsIdAllowedValues } from '../helpers/get-checklist
 import { getTrelloChecklistItemsIdAllowedValues } from '../helpers/get-checklist-item-id-allowed-values';
 import { getTrelloBoardLabelsIdAllowedValues } from '../helpers/get-label-id-allowed-values';
 import { getTrelloBoardListsIdAllowedValues } from '../helpers/get-list-id-allowed-values';
-import { removeTrelloFieldsFromQuery } from './constants';
+import { removeTrelloSelectionFields } from './constants';
 
 export const TRELLO_CARDS_ALLOWED_PATHS = {
   '/cards': {
@@ -39,7 +39,7 @@ export const TRELLO_CARDS_ALLOWED_PATHS = {
           get_element_allowed_values: getTrelloBoardLabelsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard']),
     },
   },
   '/cards/{id}': {
@@ -65,7 +65,7 @@ export const TRELLO_CARDS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloListCardsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard']),
     },
   },
   '/cards/{id}/actions/comments': {
@@ -91,7 +91,7 @@ export const TRELLO_CARDS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloListCardsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard', 'idList']),
     },
   },
   '/cards/{id}/checkItem/{idCheckItem}': {
@@ -127,7 +127,7 @@ export const TRELLO_CARDS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloChecklistItemsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard', 'idList']),
     },
   },
   '/cards/{id}/idLabels': {
@@ -153,7 +153,7 @@ export const TRELLO_CARDS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloListCardsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard', 'idList']),
     },
   },
   '/cards/{id}/idMembers': {
@@ -184,7 +184,7 @@ export const TRELLO_CARDS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloBoardMembersIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard', 'idList']),
     },
   },
 } satisfies TAllowedPaths;

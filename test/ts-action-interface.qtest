@@ -70,6 +70,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("failed existing app initialization retry", \existingAppRetryTest());
         addTestCase("failed deferred action retry", \deferredActionRetryTest());
         addTestCase("app metadata protocol validation", \appMetadataProtocolTest());
+        addTestCase("schema option additions", \schemaOptionAdditionsTest());
         addTestCase("producer identity contract skew", \inventoryContractSkewTest());
 
         # Return for compatibility with test harnesses that check the script's return value
@@ -1612,6 +1613,54 @@ app.future_metadata = true;", appSource(app)), "metadata-protocol.js", sub (Java
         assertEq(app, DataProviderActionCatalog::getAppEx(app).name);
         assertEq((), DataProviderActionCatalog::getInitializationFailures((app,)),
             "a new registration with a valid resource clears the failure");
+    }
+
+    private schemaOptionAdditionsTest() {
+        string app = "SchemaOptions_" + get_random_string(8);
+        JavaScriptProgramPool pool("", "schema-options.js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::registerApp({
+            "name": app,
+            "display_name": "Schema option test",
+            "short_desc": "Schema option test",
+            "desc": "Schema option test",
+            "groups": ("Other",),
+            "logo": make_base64_string(<00>),
+            "logo_file_name": "test.svg",
+            "logo_mime_type": MimeTypeSvg,
+            "dynamic": True,
+            "rest": {"url": "https://example.invalid", "data": "json"},
+            "openapi": getcwd() + "/PetStore.openapi3.yaml",
+        }, pool);
+        DataProviderActionCatalog::getAppEx(app);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        # A header-only option hash must also accept the internally added app name.
+        TypeScriptAppRestConnection conn({
+            "name": "schema-option-connection",
+            "url": "tsrest-" + app.lwr() + "://",
+            "opts": {"headers": {"X-Test": "synthetic"}},
+        });
+        assertEq(app, conn.getAppName());
+        assertEq("synthetic", conn.getRealOptions().headers{"X-Test"});
+        TypeScriptActionInterface::registerAction({
+            "app": app,
+            "action": "get-pet",
+            "display_name": "Get pet",
+            "short_desc": "Read a test pet",
+            "desc": "Read a test pet using an additional selection field.",
+            "action_code": DPAT_API,
+            "openapi_path": "/pet/{petId}/GET",
+            "override_options": {
+                "board": {"type": "string", "required": False},
+                "list": {"type": "string", "required": False, "depends_on": ("board",)},
+            },
+        }, pool);
+        auto action = DataProviderActionCatalog::checkAppActionOptions(app, "get-pet");
+        assertTrue(exists action.options.board);
+        assertTrue(exists action.options.list);
+        assertTrue(exists action.options.petId);
+        assertEq(("board",), action.options.list.depends_on);
+        assertEq(keys action.options,
+            keys DataProviderActionCatalog::checkAppActionOptions(app, "get-pet").options);
     }
 
     private eagerRegistrationFailureTest() {

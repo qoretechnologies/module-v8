@@ -1,0 +1,29 @@
+{
+  "copyright": "Copyright 2026 Qore Technologies, s.r.o.",
+  "license": "MIT",
+  "reviewed": "2026-09-30",
+  "apps": {
+    "pipedrive": {
+      "sha256": "b36c156e6dbc30e1762ac983fa8d3e91c3835b604e6b47289ef525b185ea4c08",
+      "sources": {
+        "v1": {
+          "url": "https://developers.pipedrive.com/docs/api/v1/openapi.json",
+          "sha256": "6c4479a3fdb417dfd28e181bdb68df3fcc87aa97338335c65ce86e45ce64c19e"
+        },
+        "v2": {
+          "url": "https://developers.pipedrive.com/docs/api/v2/openapi.json",
+          "sha256": "73b1319b2da9420840235e735a7bcdfcb7040a4b9e8eb2788005ff87c4dc3480"
+        }
+      }
+    },
+    "trello": {
+      "sha256": "b07c97d06e93f7caff661a307e86f2b58c1f97591614ac8179f8e31bda27334b",
+      "sources": {
+        "schema": {
+          "url": "https://dac-static.atlassian.com/cloud/trello/swagger.v3.json",
+          "sha256": "b07c97d06e93f7caff661a307e86f2b58c1f97591614ac8179f8e31bda27334b"
+        }
+      }
+    }
+  }
+}

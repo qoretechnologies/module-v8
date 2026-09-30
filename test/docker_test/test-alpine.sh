@@ -77,8 +77,9 @@ cp "$QORE_HUBSPOT_SCHEMA_SNAPSHOT/manifest.json" \
 # Exercise missing-cache and cache-integrity regressions without service access.
 cd "${MODULE_SRC_DIR}/ts"
 node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --maxWorkers=2 \
-    --config src/jest.config.ts --runTestsByPath src/tests/app-schema-cache.test.ts
-# Repository schemas are qualification inputs; Debian exports omit them.
+    --config src/jest.config.ts --runTestsByPath src/tests/app-schema-cache.test.ts \
+    src/tests/pipedrive-migration.test.ts src/tests/trello-migration.test.ts
+# Repository and checksum-pinned private downloads are qualification inputs; Debian exports omit them.
 QORE_APP_SCHEMA_SNAPSHOTS=$("${MODULE_SRC_DIR}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache")
 export QORE_APP_SCHEMA_SNAPSHOTS
 node -e 'const fs=require("fs"); const out=process.argv[1]; const result={};
@@ -92,6 +93,7 @@ for (const [id,dir] of Object.entries(JSON.parse(process.env.QORE_APP_SCHEMA_SNA
 # survives for an app that has been removed from the catalogue. Run this only
 # after rebuilding dist/index.js so the base image cannot hide source drift.
 node --test \
+    "${MODULE_SRC_DIR}/test/docker_test/download-app-schema-inputs.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/sync-i18n-translations.test.mjs" \
     "${MODULE_SRC_DIR}/test/docker_test/qualification-environment.test.mjs"
 "${MODULE_SRC_DIR}/test/docker_test/check-i18n.sh" \

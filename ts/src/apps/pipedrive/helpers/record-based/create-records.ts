@@ -1,14 +1,15 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
 import { TQoreCreateRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import {
-  delay,
   getQoreContextRequiredValues,
   mapColumnFormatToObject,
   mapObjectToColumnFormat,
 } from '../../../../global/helpers';
 import { extractPipedriveError, PipedriveError } from '../../constants';
 import { pipedriveApiClient } from '../client';
-import { isPipedriveCustomField } from '../constants';
-import { omit, pick } from 'lodash';
+import { pipedriveRecordBody, pipedriveTablePath } from './constants';
+import { omit } from 'lodash';
 import { Debugger } from '../../../../utils/Debugger';
 
 export const createPipedriveRecords: TQoreCreateRecordsFunction = async (
@@ -29,9 +30,7 @@ export const createPipedriveRecords: TQoreCreateRecordsFunction = async (
     throw new PipedriveError('The table is required to create Pipedrive records');
   }
 
-  const record = recordsArray[0];
-
-  const customFields = Object.keys(record).filter((key) => isPipedriveCustomField(key));
+  const path = pipedriveTablePath(table);
 
   try {
     const responses: Record<string, any>[] = [];
@@ -41,9 +40,9 @@ export const createPipedriveRecords: TQoreCreateRecordsFunction = async (
         const response = await pipedriveApiClient<Record<string, any>>({
           token,
           method: 'POST',
-          body: { ...omit(record, customFields), custom_fields: pick(record, customFields) },
+          body: pipedriveRecordBody(table, record),
           object: 'data',
-          path: table,
+          path,
         });
         responses.push(response);
       } catch (error) {
@@ -53,8 +52,6 @@ export const createPipedriveRecords: TQoreCreateRecordsFunction = async (
           Debugger.log(`Failed to create record for Pipedrive: ${extractPipedriveError(error)}`);
           responses.push({});
         }
-      } finally {
-        await delay(300);
       }
     }
 

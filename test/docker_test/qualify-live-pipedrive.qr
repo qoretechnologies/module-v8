@@ -1,0 +1,106 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+# Opt-in live qualification. Run through qore-app-schemas run with a test-account API key.
+%modern
+%requires TypeScriptActionInterface
+
+class LivePipedriveMigration {
+    private {
+        AbstractDataProvider provider;
+        list<hash<auto>> created;
+        string marker = "Qore-5473-" + get_random_string(12);
+    }
+
+    constructor() {
+        if (!ENV.PIPEDRIVE_APIKEY) {
+            throw "LIVE-TEST-CONFIGURATION", "PIPEDRIVE_APIKEY must identify a test account";
+        }
+        DataProvider::checkStaticInit();
+        DataProviderActionCatalog::getAppEx("Pipedrive");
+        hash<auto> options = {
+            "oauth2_grant_type": NOTHING,
+            "headers": {"x-api-token": ENV.PIPEDRIVE_APIKEY},
+        };
+        TypeScriptAppRestConnection conn({"name": marker, "url": "tsrest-pipedrive://", "opts": options});
+        provider = TypeScriptActionInterface::getDataProvider("pipedrive", conn);
+        on_exit cleanup();
+        run();
+        print("Pipedrive native v1/v2 CRUD, typed activity participants and cursor pagination passed\n");
+    }
+
+    private hash<auto> request(string action, hash<auto> data) {
+        auto result = provider.getChildProviderEx(action).doRequest(data);
+        @assert(result.success);
+        return result;
+    }
+
+    private auto create(string action, string delete_action, hash<auto> data) {
+        auto result = request(action, data).data;
+        @assert(result.id);
+        push created, {"action": delete_action, "id": result.id};
+        return result.id;
+    }
+
+    private run() {
+        auto person = create("addPerson", "deletePerson", {"name": marker + " person"});
+        auto second = create("addPerson", "deletePerson", {"name": marker + " second"});
+        request("updatePerson", {"id": person, "name": marker + " updated"});
+        @assert(request("getPerson", {"id": person}).data.name == marker + " updated");
+
+        auto page = request("getPersons", {"ids": (person.toString(), second.toString()), "limit": 1});
+        @assert(page.data.size() == 1);
+        @assert(page.additional_data.next_cursor);
+        auto next = request("getPersons", {"ids": (person.toString(), second.toString()), "limit": 1,
+            "cursor": page.additional_data.next_cursor});
+        @assert(next.data.size() == 1);
+        @assert(next.data[0].id != page.data[0].id);
+
+        auto deal = create("addDeal", "deleteDeal", {"title": marker, "person_id": person});
+        request("updateDeal", {"id": deal, "title": marker + " updated"});
+        @assert(request("getDeal", {"id": deal}).data.title == marker + " updated");
+
+        auto lead = create("addLead", "deleteLead", {"title": marker, "person_id": person});
+        request("updateLead", {"id": lead, "title": marker + " updated"});
+        @assert(request("getLead", {"id": lead}).data.title == marker + " updated");
+
+        auto note = create("addNote", "deleteNote", {"content": marker, "person_id": person});
+        request("updateNote", {"id": note, "content": marker + " updated"});
+        @assert(request("getNote", {"id": note}).data.content == marker + " updated");
+
+        auto activity = create("addActivity", "deleteActivity", {"subject": marker,
+            "participants": ({"person_id": person, "primary": True},)});
+        request("updateActivity", {"id": activity, "subject": marker + " updated", "done": True});
+        auto result = request("getActivity", {"id": activity}).data;
+        @assert(result.subject == marker + " updated");
+        @assert(result.done);
+        @assert(result.person_id == person);
+    }
+
+    private cleanup() {
+        list<string> failures;
+        while (created) {
+            auto item = pop created;
+            try {
+                request(item.action, {"id": item.id});
+            } catch (auto ex) {
+                push failures, sprintf("%s id %s: %s", item.action, item.id.toString(), ex.err);
+            }
+        }
+        if (failures) {
+            throw "LIVE-TEST-CLEANUP", sprintf("Remove the remaining test records: %Y", failures);
+        }
+        print("All Pipedrive qualification records removed\n");
+    }
+}
+
+try {
+    new LivePipedriveMigration();
+} catch (auto ex) {
+    # Network exceptions can include authentication headers; never print them.
+    stderr.printf("Pipedrive live qualification failed: %s\n", ex.err);
+    if (ex.err == "LIVE-TEST-CLEANUP") {
+        stderr.print(ex.desc + "\n");
+    }
+    exit(1);
+}

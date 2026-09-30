@@ -191,6 +191,64 @@ describe('App schema cache', () => {
     await expect(withAppLock(directory, 'trello', async () => 42)).resolves.toBe(42);
   });
 
+  it('Qualifies dynamic inputs and outputs in clean installed normal and AST processes', async () => {
+    const snapshot = await installSnapshot(directory, 'trello', input('trello'), async () => {});
+    const exec = jest.spyOn(require('node:child_process'), 'execFileSync').mockImplementation((_file: any, args: any) => {
+      return args[0] === '--module-path' ? '/usr/share/qore-modules\n' : 'APP-SNAPSHOT-QUALIFIED:38\n';
+    });
+    const { qualifySnapshot } = require('../schema-cache/app-cli');
+    await qualifySnapshot('trello', snapshot);
+    expect(exec).toHaveBeenCalledTimes(3);
+    for (const [index, mode] of ['tiered', 'ast'].entries()) {
+      const args = exec.mock.calls[index + 1][1] as string[];
+      const env = (exec.mock.calls[index + 1][2] as any).env;
+      expect(args).toContain(`--exec-mode=${mode}`);
+      expect(args).toContain('--enable-debug');
+      expect(args.join(' ')).toContain('checkAppActionOptions(app, name)');
+      expect(args.join(' ')).toContain('action.get_output_type()');
+      expect(env.QORE_MODULE_DIR).toBe('/usr/share/qore-modules');
+      expect(env.QORE_MODULE_DIR_ONLY).toBe('1');
+      expect(env.QORE_TYPESCRIPT_ACTION_SCRIPTS).toBeUndefined();
+      expect(JSON.parse(env[SNAPSHOTS_ENV])).toEqual({ trello: snapshot });
+    }
+    exec.mockImplementation(() => { throw new Error('synthetic runtime failure'); });
+    await expect(installSnapshot(directory, 'trello', input('trello', 'two'), qualifySnapshot)).rejects.toThrow(/failure/);
+    expect(activeSnapshot(directory, 'trello')).toBe(snapshot);
+  });
+
+  it('Downloads both Pipedrive generations and leaves activation unchanged if either download fails', async () => {
+    const get = jest.spyOn(require('node:https'), 'get').mockImplementation((...args: any[]) => {
+      const request = new EventEmitter();
+      Object.assign(request, { destroy(error: Error) { request.emit('error', error); request.emit('close'); } });
+      process.nextTick(() => {
+        const version = args[0].includes('/v1/') ? 'v1' : 'v2';
+        const response = Object.assign(new EventEmitter(), { statusCode: 200, resume() {} });
+        args[2](response);
+        response.emit('data', Buffer.from(JSON.stringify({ version })));
+        response.emit('end'); request.emit('close');
+      });
+      return request;
+    });
+    expect(JSON.parse((await downloadInput('pipedrive')).bytes.toString()))
+      .toEqual({ v1: { version: 'v1' }, v2: { version: 'v2' } });
+    expect(get.mock.calls.map(call => call[0])).toEqual([
+      'https://developers.pipedrive.com/docs/api/v1/openapi.json',
+      'https://developers.pipedrive.com/docs/api/v2/openapi.json',
+    ]);
+    const snapshot = await installSnapshot(directory, 'pipedrive', input('pipedrive'), async () => {});
+    const implementation = get.getMockImplementation()!;
+    get.mockImplementationOnce(implementation).mockImplementationOnce((...args: any[]) => {
+      const request = new EventEmitter();
+      process.nextTick(() => {
+        args[2](Object.assign(new EventEmitter(), { statusCode: 503, resume() {} }));
+        request.emit('close');
+      });
+      return request;
+    });
+    await expect(downloadInput('pipedrive')).rejects.toThrow('HTTP 503');
+    expect(activeSnapshot(directory, 'pipedrive')).toBe(snapshot);
+  });
+
   it('Rejects unknown apps and import-only downloads before connecting', async () => {
     const get = jest.spyOn(require('node:https'), 'get');
     for (const id of ['../trello', 'constructor', 'freshdesk', 'netsuite', 'zendesk', 'zoom']) {

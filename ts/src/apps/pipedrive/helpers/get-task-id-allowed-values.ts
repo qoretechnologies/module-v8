@@ -31,7 +31,7 @@ export const createPipedriveTaskIdAllowedValuesFunction = (
     const tasks = await fetchPipedriveAllowedValues<TPipedriveTaskData>({
       token,
       mapItemToAllowedValue: mapPipedriveTask,
-      path: 'v1/tasks',
+      path: 'tasks',
       ...(type === 'parent-only' ? { params: { parent_task_id: 'null' } } : {}),
     });
 

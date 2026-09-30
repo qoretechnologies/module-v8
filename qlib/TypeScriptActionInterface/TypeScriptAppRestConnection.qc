@@ -447,7 +447,8 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         if (!url.val()) {
             throw "TYPESCRIPT-REST-CONNECTION-ERROR", "Cannot determine TypeScript REST app; missing URL";
         }
-        config.opts.app = (url =~ x/^tsrest-(.+):\/\//)[0];
+        # Merge instead of inserting into a potentially narrower caller-owned hash type.
+        config.opts = (config.opts ?? {}) + {"app": (url =~ x/^tsrest-(.+):\/\//)[0]};
         if (!exists config.opts.app) {
             throw "TYPESCRIPT-REST-CONNECTION-ERROR", sprintf("Cannot determine TypeScript REST app from URL %y",
                 url);

@@ -74,13 +74,14 @@ in `QORE_APP_SCHEMA_SNAPSHOTS`. Discovery exposes the exact owned inventory even
 when setup is missing; materialization retains `APP-SCHEMAS-UNAVAILABLE` as a
 structured failure. A new download cannot rename actions or add unreviewed fields.
 
-The repository retains its existing eight historical schema inputs for CI and
-translation qualification. `test/docker_test/setup-app-schemas.sh` explicitly
-imports those inputs into a temporary private cache, fully qualifies every app,
-and returns its snapshot map. CI saves only manifests/reports and removes the
-cache on exit. This keeps CI independent of account credentials and changing
-public API versions. Public-source retrieval is tested separately from those
-fixed regression inputs.
+The repository retains its historical schema inputs for six apps. Pipedrive and
+Trello use checksum-pinned public inputs retrieved explicitly by
+`test/docker_test/setup-app-schemas.sh` into a private cache. The script imports
+and qualifies every app and returns its snapshot map. CI saves only
+manifests/reports and removes the cache and downloaded inputs on exit. An
+upstream checksum change fails qualification until reviewed. See the
+[Pipedrive/Trello migration](pipedrive-trello-schema-updates.md) for API versions,
+field changes, offline imports and coordinated native runtime requirements.
 
 Debian export **must** use `ts/debian/export-source.py`. It omits the eight
 documents from the source package. `copy-schemas.js` omits them from compiled

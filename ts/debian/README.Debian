@@ -90,9 +90,22 @@ package and the installed catalogue. Run setup as the service/application user:
 
  qore-app-schemas list
  qore-app-schemas update magento mailchimp
+ qore-app-schemas update pipedrive trello
  qore-app-schemas update --all
  qore-app-schemas import freshdesk /absolute/path/to/export.json
  qore-app-schemas run -- YOUR_APPLICATION [arguments]
+
+Pipedrive combines the official v1 and v2 documents; offline imports accept an
+object with v1 and v2 keys containing those documents. Leads and notes retain v1
+routes; activities, deals, organizations, persons, projects and tasks use v2.
+Trello uses its official OpenAPI 3 document. Both migrations retain action names
+but change request/response fields. Install the matching V8 module and Qore
+standard library with the OpenApi3 combined-security and RestClient explicit
+authorization-header fixes. Qualification resolves
+all action inputs and outputs in normal and AST execution before activation.
+Legacy snapshots require a new import or update after upgrading the catalogue.
+See docs/pipedrive-trello-schema-updates.md in the module-v8 source for input
+mapping changes, scopes and examples.
 
 The --all form attempts public sources and lists apps requiring imports. It does
 not claim to configure import-only apps. An incompatible public API generation

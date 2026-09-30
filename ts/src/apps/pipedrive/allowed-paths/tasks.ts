@@ -23,7 +23,7 @@ const tasksOptions = {
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 export const PIPEDRIVE_TASKS_ALLOWED_PATHS = {
-  '/tasks': {
+  '/api/v2/tasks': {
     GET: {
       override_options: {
         assignee_id: {
@@ -41,7 +41,7 @@ export const PIPEDRIVE_TASKS_ALLOWED_PATHS = {
       override_options: tasksOptions,
     },
   },
-  '/tasks/{id}': {
+  '/api/v2/tasks/{id}': {
     GET: {
       override_options: {
         id: {
@@ -49,7 +49,7 @@ export const PIPEDRIVE_TASKS_ALLOWED_PATHS = {
         },
       },
     },
-    PUT: {
+    PATCH: {
       override_options: {
         id: {
           get_allowed_values: getPipedriveTaskIdAllowedValues,

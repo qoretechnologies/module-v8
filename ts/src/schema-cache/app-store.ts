@@ -9,7 +9,7 @@ import { appContract, appIds, contractDigest, digest, MAX_BYTES, normalizeSchema
   SnapshotManifest, verifyCompatibility, verifySnapshot } from './apps';
 
 export const appSources = sources.apps as Record<string, {
-  url?: string; sha256?: string; importHelp?: string; documentation: string;
+  url?: string; urls?: Record<string, string>; sha256?: string; importHelp?: string; documentation: string;
 }>;
 export type SchemaInput = { bytes: Buffer; source: string };
 
@@ -54,6 +54,17 @@ function requestJson(url: string, headers: Record<string, string> = {}): Promise
 export async function downloadInput(id: string): Promise<SchemaInput> {
   appContract(id);
   const source = appSources[id];
+  if (source.urls) {
+    const documents: Record<string, unknown> = {};
+    for (const [version, url] of Object.entries(source.urls)) {
+      documents[version] = JSON.parse((await requestJson(url)).toString());
+    }
+    const bytes = Buffer.from(JSON.stringify(documents));
+    if (bytes.length > MAX_BYTES) {
+      throw new Error('APP-SCHEMA-DOWNLOAD: combined response too large');
+    }
+    return { bytes, source: JSON.stringify(source.urls) };
+  }
   if (!source.url) throw new Error(`APP-SCHEMA-IMPORT-REQUIRED: ${id}: ${source.importHelp}`);
   const bytes = await requestJson(source.url);
   if (source.sha256 && digest(bytes) !== source.sha256) throw new Error('APP-SCHEMA-DOWNLOAD: pinned source checksum mismatch');

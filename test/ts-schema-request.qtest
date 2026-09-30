@@ -1,0 +1,122 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+%requires QUnit
+%requires HttpServer
+%requires v8
+%try-module json
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%ifndef MISSING_EXTERNAL_MODULE
+%requires TypeScriptActionInterface
+%endif
+%exec-class SchemaRequestTest
+
+%ifndef MISSING_EXTERNAL_MODULE
+class SchemaRequestHandler inherits AbstractHttpRequestHandler {
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        return makeResponse(cx.raw_path =~ /q=fail/ ? 400 : 200,
+            make_json({"path": cx.raw_path}), {"Content-Type": "application/json"});
+    }
+}
+
+class SchemaRequestConnection inherits TypeScriptAppRestConnection {
+    public {
+        TypeScriptAppRestClient last;
+    }
+    constructor(hash<auto> config) : TypeScriptAppRestConnection(config) {
+    }
+    private TypeScriptAppRestClient getImpl(bool connect = True, *hash<auto> rtopts) {
+        last = new TypeScriptAppRestClient(self, getConnectionOptions(), !connect);
+        return last;
+    }
+}
+
+class SchemaRequestTest inherits QUnit::Test {
+    constructor() : Test("TypeScript schema request encoding", "1.0") {
+        addTestCase("encoded path and query transport with error recovery", \requestTest());
+        set_return_value(main());
+    }
+
+    private requestTest() {
+        DataProvider::checkStaticInit();
+        HttpServer server();
+        on_exit delete server;
+        server.setDefaultHandler("fixture", new SchemaRequestHandler());
+        string pem = backquote("openssl req -config /dev/null -x509 -newkey rsa:2048 -keyout /dev/stdout "
+            "-out /dev/stdout -days 1 -nodes -subj /CN=localhost 2>/dev/null");
+        SSLPrivateKey key((pem =~ x/(-----BEGIN PRIVATE KEY-----[\s\S]+?-----END PRIVATE KEY-----)/)[0]);
+        SSLCertificate cert((pem =~ x/(-----BEGIN CERTIFICATE-----[\s\S]+?-----END CERTIFICATE-----)/)[0]);
+        int port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0,
+            "key": key, "cert": cert, "enable_h3": False}).port;
+        string url = sprintf("https://127.0.0.1:%d", port);
+        hash<auto> schema = {"openapi": "3.0.3", "info": {"title": "Encoding fixture", "version": "1"},
+            "servers": ({"url": url},), "paths": {"/items/{id}": {"put": {
+                "parameters": (
+                    {"name": "id", "in": "path", "required": True, "schema": {"type": "string"}},
+                    {"name": "q", "in": "query", "schema": {"type": "string"}},
+                    {"name": "tags", "in": "query", "schema": {"type": "array", "items": {"type": "string"}}}
+                ),
+                "responses": {"200": {"description": "Echo", "content": {"application/json": {
+                    "schema": {"type": "object", "properties": {"path": {"type": "string"}}}
+                }}}}
+            }}}};
+        string app = "SchemaEncoding_" + get_random_string(8);
+        JavaScriptProgramPool pool("var exports = {}; exports.convert = request => {"
+            "if (!request || typeof request !== 'object') throw new Error('Expected a request object');"
+            "return request; };", "schema-encoding.js", sub (JavaScriptProgram pgm) {});
+        string schema_file = "/tmp/qore-ts-schema-" + get_random_string(24) + ".json";
+        File schema_output();
+        schema_output.open2(schema_file, O_CREAT | O_EXCL | O_WRONLY, 0600);
+        on_exit unlink(schema_file);
+        schema_output.write(make_json(schema));
+        schema_output.close();
+        TypeScriptActionInterface::registerApp({"name": app, "display_name": "Schema encoding",
+            "short_desc": "Schema encoding fixture", "desc": "Local schema request encoding fixture.",
+            "groups": ("Other",), "logo": make_base64_string(<00>), "logo_file_name": "test.svg",
+            "logo_mime_type": "image/svg+xml", "dynamic": True,
+            "rest": {"url": url, "data": "json"}, "openapi": schema_file}, pool);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        DataProviderActionCatalog::getAppEx(app);
+        TypeScriptActionInterface::registerAction({"app": app, "action": "update-item",
+            "display_name": "Update Item", "short_desc": "Update an item", "desc": "Echo a request locally.",
+            "action_code": DPAT_API, "openapi_path": "/items/{id}/PUT",
+            "request_data_converter": pool.getProgram().getGlobal().exports.toData().convert}, pool);
+        foreach bool encoded in ((False, True)) {
+            SchemaRequestConnection conn({"name": "encoding-fixture", "url": "tsrest-" + app.lwr() + "://",
+                "opts": {"ssl_verify_cert": False, "pre_encoded_urls": encoded}});
+            auto action = TypeScriptActionInterface::getDataProvider(app.lwr(), conn).getChildProviderEx("update-item");
+            hash<auto> request = {"id": "segment/a% b", "q": "space & plus+%", "tags": ("a,b", "c&d")};
+            auto response = action.doRequest(request);
+            assertEq("/items/segment%2Fa%25%20b?q=space%20%26%20plus%2B%25&tags=a%2Cb&tags=c%26d",
+                response.path ?? response.body.path);
+            assertEq(encoded, conn.last.getPreEncodedUrls());
+            assertThrows("HTTP-CLIENT-RECEIVE-ERROR", sub () {
+                action.doRequest({"id": "one", "q": "fail"});
+            });
+            assertEq(encoded, conn.last.getPreEncodedUrls(), "failure restores the client's encoding policy");
+            response = action.doRequest({"id": "one", "q": ""});
+            assertEq("/items/one?q=", response.path ?? response.body.path);
+            assertEq(encoded, conn.last.getPreEncodedUrls());
+            response = action.doRequest({"id": "one"});
+            assertEq("/items/one", response.path ?? response.body.path,
+                "path-only requests still pass an empty object to the request converter");
+        }
+    }
+}
+%else
+class SchemaRequestTest inherits QUnit::Test {
+    constructor() : Test("TypeScript schema request encoding", "1.0") {
+        addTestCase("external dependencies", sub () { testSkip("json, process and uuid modules are required"); });
+        set_return_value(main());
+    }
+}
+%endif

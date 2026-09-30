@@ -1,3 +1,16 @@
+qore-v8-app-catalogue (0.1.0~git20260930.2-0qore1~ubuntu26.04) resolute; urgency=medium
+
+  * Remove Trello UI selectors from both query and body request locations.
+  * Match the current native catalogue protocol in installed smoke tests.
+
+  * Migrate Pipedrive to coordinated official v1/v2 schemas and Trello to
+    OpenAPI 3, preserving all 47 and 38 action/trigger identities.
+  * Correct Pipedrive pagination, request methods and record custom fields.
+  * Materialize dynamic inputs and outputs in normal and AST qualification.
+  * Require the coordinated OpenApi3 security and V8 option override fixes.
+
+ -- David Nichols <david@qore.org>  Wed, 30 Sep 2026 13:00:00 +0200
+
 qore-v8-app-catalogue (0.1.0~git20260930.1-0qore1~ubuntu26.04) resolute; urgency=medium
 
   * Retrieve and qualify external schemas in independent application caches.

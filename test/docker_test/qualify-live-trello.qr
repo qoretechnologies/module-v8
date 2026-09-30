@@ -1,0 +1,78 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+# Opt-in live qualification. Creates and removes one private test board.
+%modern
+%requires TypeScriptActionInterface
+
+class LiveTrelloMigration {
+    private {
+        AbstractDataProvider provider;
+        *string board;
+        string marker = "Qore-5473-" + get_random_string(12);
+    }
+
+    constructor() {
+        if (!ENV.TRELLO_KEY || !ENV.TRELLO_APIKEY) {
+            throw "LIVE-TEST-CONFIGURATION", "TRELLO_KEY and TRELLO_APIKEY must identify a test account";
+        }
+        DataProvider::checkStaticInit();
+        DataProviderActionCatalog::getAppEx("Trello");
+        hash<auto> options = {"oauth2_grant_type": NOTHING,
+            "key": ENV.TRELLO_KEY, "token": ENV.TRELLO_APIKEY};
+        TypeScriptAppRestConnection conn({"name": marker, "url": "tsrest-trello://", "opts": options});
+        provider = TypeScriptActionInterface::getDataProvider("trello", conn);
+        on_exit cleanup();
+        run();
+        print("Trello native board/list/card creation, updates and reads passed\n");
+    }
+
+    private auto request(string action, hash<auto> data) {
+        auto response = provider.getChildProviderEx(action).doRequest(data);
+        # Operations without a declared response schema retain the REST body wrapper.
+        return response.typeCode() == NT_HASH && exists response.body ? response.body : response;
+    }
+
+    private run() {
+        auto result = request("post-boards", {"name": marker, "defaultLists": False,
+            "prefs_permissionLevel": "private"});
+        board = result.id;
+        @assert(board);
+        @assert(result.prefs.permissionLevel == "private");
+        request("put-boards-id", {"id": board, "name": marker + " updated"});
+        @assert(request("get-boards-id", {"id": board}).name == marker + " updated");
+
+        string list_id = request("post-lists", {"idBoard": board, "name": marker}).id;
+        @assert(list_id);
+        request("put-lists-id", {"id": list_id, "name": marker + " updated"});
+        @assert(request("get-lists-id", {"id": list_id}).name == marker + " updated");
+
+        string card = request("post-cards", {"idBoard": board, "idList": list_id, "name": marker}).id;
+        @assert(card);
+        result = request("put-cards-id", {"id": card, "name": marker + " updated"});
+        @assert(result.id == card);
+        @assert(result.name == marker + " updated");
+    }
+
+    private cleanup() {
+        if (board) {
+            try {
+                request("delete-boards-id", {"id": board});
+            } catch (auto ex) {
+                throw "LIVE-TEST-CLEANUP", "Remove the remaining test board: " + board;
+            }
+            print("Trello qualification board and its contents removed\n");
+        }
+    }
+}
+
+try {
+    new LiveTrelloMigration();
+} catch (auto ex) {
+    # Network exceptions can include authentication headers; never print them.
+    stderr.printf("Trello live qualification failed: %s\n", ex.err);
+    if (ex.err == "LIVE-TEST-CLEANUP") {
+        stderr.print(ex.desc + "\n");
+    }
+    exit(1);
+}

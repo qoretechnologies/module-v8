@@ -14,6 +14,7 @@ const inventory = [];
 let apps = 0;
 let actions = 0;
 actionsCatalogue.registerAppActions({
+  getCatalogueProtocolVersion() { return 2; },
   registerDiscoveryInventory(batch) { inventory.push(...batch); },
   registerApp() { ++apps; },
   registerExistingApp() { ++apps; },

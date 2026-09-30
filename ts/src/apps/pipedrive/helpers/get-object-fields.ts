@@ -84,27 +84,17 @@ export const getPipedriveObjectFields = async (
   token: string,
   pathToObjectFields: string
 ): Promise<TPipedriveObjectField[]> => {
-  const dealFields: TPipedriveObjectField[] = [];
-
-  try {
-    const data = await fetchPipedrivePaginatedRecords<any, TPipedriveObjectField>({
-      token,
-      path: `v1${pathToObjectFields}`,
-      object: 'data',
-    });
-
-    dealFields.push(...data);
-  } catch (error) {
-    Debugger.log(`Failed to fetch Pipedrive object fields: ${error}`);
-  } finally {
-    return dealFields;
-  }
+  return fetchPipedrivePaginatedRecords<TPipedriveObjectField>({
+    token,
+    path: `v1${pathToObjectFields}`,
+    object: 'data',
+  });
 };
 
 export const PipedriveTableNameToFieldEndpointMap: Record<TPipedriveTable, string | undefined> = {
   activities: '/activityFields',
   deals: '/dealFields',
-  notes: '/noteFields',
+  notes: undefined,
   organizations: '/organizationFields',
   persons: '/personFields',
   products: '/productFields',
@@ -140,7 +130,9 @@ export const mapPipedriveFieldsToQoreOptions = async (options: {
   pathToObjectFields: string;
   requiredFields?: string[];
 }): Promise<TQoreOptions> => {
-  const qoreOptions: TQoreOptions = {};
+  // v1 field metadata does not enumerate every v2 request field (for example emails/phones).
+  // Keep the owned v2 fields and enrich them with account labels and custom fields.
+  const qoreOptions: TQoreOptions = { ...options.predefinedFields };
   try {
     const pipedriveFields = await getPipedriveObjectFields(
       options.token,
@@ -155,7 +147,8 @@ export const mapPipedriveFieldsToQoreOptions = async (options: {
     );
 
     for (const field of pipedriveFilteredFields) {
-      const fieldType = (PipedriveTypeToQoreTypeMap[field.field_type] || 'any') as TQoreAnyType;
+      const fieldType = (options.predefinedFields[field.key]?.type
+        ?? PipedriveTypeToQoreTypeMap[field.field_type] ?? 'any') as TQoreAnyType;
       const fieldOptions = field.options || [];
       const isMultiselect = PIPEDRIVE_MULTISELECT_FIELD_TYPES.includes(field.field_type);
       const fieldDesc = options.predefinedFields[field.key]?.desc;

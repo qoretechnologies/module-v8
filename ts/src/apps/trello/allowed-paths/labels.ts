@@ -1,7 +1,7 @@
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { getTrelloBoardIdAllowedValues } from '../helpers/get-board-id-allowed-values';
 import { getTrelloBoardLabelsIdAllowedValues } from '../helpers/get-label-id-allowed-values';
-import { removeTrelloFieldsFromQuery } from './constants';
+import { removeTrelloSelectionFields } from './constants';
 
 export const TRELLO_LABELS_ALLOWED_PATHS = {
   '/labels': {
@@ -27,7 +27,7 @@ export const TRELLO_LABELS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloBoardLabelsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard']),
     },
     PUT: {
       override_options: {
@@ -42,7 +42,7 @@ export const TRELLO_LABELS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloBoardLabelsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard']),
     },
     DELETE: {
       override_options: {
@@ -57,7 +57,7 @@ export const TRELLO_LABELS_ALLOWED_PATHS = {
           get_allowed_values: getTrelloBoardLabelsIdAllowedValues,
         },
       },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard']),
+      request_data_converter: removeTrelloSelectionFields(['idBoard']),
     },
   },
 } satisfies TAllowedPaths;

@@ -22,10 +22,10 @@ const personsOptions = {
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 export const PIPEDRIVE_PERSONS_ALLOWED_PATHS = {
-  '/persons': {
+  '/api/v2/persons': {
     GET: {
       override_options: {
-        user_id: {
+        owner_id: {
           get_allowed_values: getPipedriveUserIdAllowedValues,
         },
         filter_id: {
@@ -37,7 +37,7 @@ export const PIPEDRIVE_PERSONS_ALLOWED_PATHS = {
       override_options: personsOptions,
     },
   },
-  '/persons/{id}': {
+  '/api/v2/persons/{id}': {
     GET: {
       override_options: {
         id: {
@@ -45,7 +45,7 @@ export const PIPEDRIVE_PERSONS_ALLOWED_PATHS = {
         },
       },
     },
-    PUT: {
+    PATCH: {
       override_options: {
         id: {
           get_allowed_values: getPipedrivePersonIdAllowedValues,
