@@ -65,6 +65,11 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("producer schema boundary", \producerSchemaBoundaryTest());
         addTestCase("eager registration failure reporting", \eagerRegistrationFailureTest());
         addTestCase("optional resource initialization failures", \optionalResourceFailureTest());
+        addTestCase("schema connections and retry", \schemaConnectionRetryTest());
+        addTestCase("failed app initialization retry", \failedAppRetryTest());
+        addTestCase("failed existing app initialization retry", \existingAppRetryTest());
+        addTestCase("failed deferred action retry", \deferredActionRetryTest());
+        addTestCase("app metadata protocol validation", \appMetadataProtocolTest());
         addTestCase("producer identity contract skew", \inventoryContractSkewTest());
 
         # Return for compatibility with test harnesses that check the script's return value
@@ -1446,6 +1451,130 @@ var obj = {
                     $1 == legacy_path),
                 "the skewed action script is reported exactly once, not once per app");
         }
+    }
+
+    #! Missing schemas preserve real connection/OAuth2 metadata and can recover in the same JS pool
+    private schemaConnectionRetryTest() {
+        string app = "SchemaRetry_" + get_random_string(8);
+        string source = sprintf("var exports = {}; var ready = false; var app = %s;
+app.rest = {url: 'https://example.invalid', data: 'json', oauth2_auth_url: 'https://example.invalid/auth'};
+app.swagger_options = {parse_flags: -128};
+app.schema_metadata = () => ready ? {swagger: 'PetStore.swagger.yaml'} : {
+  initialization_error: {err: 'APP-SCHEMAS-UNAVAILABLE', desc: 'Run qore-app-schemas update trello'}
+};
+var action = {app: app.name, action: 'get-pet', display_name: 'Get Pet',
+  short_desc: 'Read a pet', desc: 'Read a pet by its identifier', action_code: 2,
+  swagger_path: 'pet/{id}/GET'};", appSource(app));
+        JavaScriptProgramPool pool(source, "schema-retry.js", sub (JavaScriptProgram pgm) {
+            JavaScriptObject global = pgm.getGlobal();
+            TypeScriptActionInterface::registerApp(global.app);
+            TypeScriptActionInterface::registerAction(global.action);
+        });
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        string scheme_name = "tsrest-" + app.lwr();
+        hash<ConnectionSchemeInfo> scheme = ConnectionSchemeCache::getSchemeEx(scheme_name);
+        assertEq(app, DataProviderActionCatalog::getAppEx(app).name);
+        assertEq("https://example.invalid/auth", scheme.options.oauth2_auth_url.default_value);
+        string connection = TypeScriptActionInterface::createConnection(app.lwr(), {} + {"opts": {"token": "test"}});
+        assertEq(scheme_name + "://example.invalid", TypeScriptActionInterface::getConnection(connection).getUrl());
+        assertEq("APP-SCHEMAS-UNAVAILABLE", TypeScriptActionInterface::getAppSchemaError(app).err);
+        assertThrows("APP-SCHEMAS-UNAVAILABLE", "update trello", sub () {
+            TypeScriptActionInterface::execAppActionIntern(app.lwr(), "get-pet", connection, NOTHING);
+        });
+        auto failures = DataProviderActionCatalog::getInitializationFailures((app,));
+        assertEq(1, failures.size());
+        assertEq("action", failures[0].kind);
+        assertEq("get-pet", failures[0].action);
+        assertEq("APP-SCHEMAS-UNAVAILABLE", failures[0].error);
+        assertFalse(TypeScriptActionInterface::initApp(app), "missing schemas remain retryable");
+        pool.getProgram().getGlobal().setProperty("ready", True);
+        assertTrue(TypeScriptActionInterface::initApp(app), "a configured snapshot completes the same app");
+        assertNothing(TypeScriptActionInterface::getAppSchemaError(app));
+        TypeScriptActionInterface::checkAppActions(app);
+        assertEq("get-pet", DataProviderActionCatalog::getAppActionEx(app, "get-pet").action);
+        assertEq((), DataProviderActionCatalog::getInitializationFailures((app,)));
+        assertEq(scheme, ConnectionSchemeCache::getSchemeEx(scheme_name), "connection metadata is preserved");
+        assertFalse(TypeScriptActionInterface::initApp(app), "completed initialization is idempotent");
+    }
+
+    #! An actual initialization exception retains the pending app and is retried without re-registration
+    private failedAppRetryTest() {
+        string app = "AppRetry_" + get_random_string(8);
+        JavaScriptProgramPool pool(sprintf("var exports = {}; var ready = false; var app = %s;
+app.schema_metadata = () => ready ? {} : {
+  initialization_error: {err: 'RESOURCE-NOT-CONFIGURED', desc: 'Install the resource'}
+};", appSource(app)), "app-retry.js", sub (JavaScriptProgram pgm) {
+            TypeScriptActionInterface::registerApp(pgm.getGlobal().app);
+        });
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        for (int i = 0; i < 2; ++i) {
+            assertThrows("RESOURCE-NOT-CONFIGURED", "Install", sub () {
+                TypeScriptActionInterface::initApp(app);
+            });
+        }
+        assertEq("RESOURCE-NOT-CONFIGURED",
+            DataProviderActionCatalog::getInitializationFailures((app,))[0].error);
+        pool.getProgram().getGlobal().setProperty("ready", True);
+        assertTrue(TypeScriptActionInterface::initApp(app));
+        assertEq(app, DataProviderActionCatalog::getAppEx(app).name);
+        assertEq((), DataProviderActionCatalog::getInitializationFailures((app,)));
+    }
+
+    private existingAppRetryTest() {
+        string app = "ExistingRetry_" + get_random_string(8);
+        JavaScriptProgramPool pool("", "existing-retry.js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::root.registerChild(app.lwr(),
+            TypeScriptActionInterface::getAppDataProvider("js-test"));
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        assertThrows("TYPESCRIPT-CHILD-ERROR", "already registered", sub () {
+            TypeScriptActionInterface::registerExistingApp({"name": app, "module": "DiscordDataProvider"}, pool);
+        });
+        assertThrows("TYPESCRIPT-CHILD-ERROR", "already registered", sub () {
+            TypeScriptActionInterface::initApp(app);
+        });
+        TypeScriptActionInterface::root.deregisterChild(app.lwr());
+        assertTrue(TypeScriptActionInterface::initApp(app));
+        assertEq(app.lwr(), TypeScriptActionInterface::getAppDataProvider(app).getName());
+        assertFalse(TypeScriptActionInterface::initApp(app));
+    }
+
+    private deferredActionRetryTest() {
+        string app = "DeferredRetry_" + get_random_string(8);
+        JavaScriptProgramPool pool("var exports = {}; var app = " + appSource(app) + ";",
+            "deferred-retry.js", sub (JavaScriptProgram pgm) {
+                TypeScriptActionInterface::registerApp(pgm.getGlobal().app);
+            });
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        hash<auto> action = {"app": app, "action": "deferred", "display_name": "Deferred Action",
+            "short_desc": "Retry deferred action registration", "desc": "Retry deferred action registration",
+            "action_code": 999};
+        TypeScriptActionInterface::registerAction(action, pool);
+        for (int i = 0; i < 2; ++i) {
+            assertThrows("TYPESCRIPT-ACTION-ERROR", "unsupported", sub () {
+                TypeScriptActionInterface::initAppAction(app, "deferred");
+            });
+        }
+        action.action_code = DPAT_API;
+        action.api_function = sub () {};
+        TypeScriptActionInterface::registerAction(action, pool);
+        TypeScriptActionInterface::checkAppActions(app);
+        assertEq("deferred", DataProviderActionCatalog::getAppActionEx(app, "deferred").action);
+        assertEq((), DataProviderActionCatalog::getInitializationFailures((app,)));
+    }
+
+    private appMetadataProtocolTest() {
+        string app = "MetadataProtocol_" + get_random_string(8);
+        JavaScriptProgramPool pool(sprintf("var exports = {}; var app = %s;
+app.future_metadata = true;", appSource(app)), "metadata-protocol.js", sub (JavaScriptProgram pgm) {
+            TypeScriptActionInterface::registerApp(pgm.getGlobal().app);
+        });
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        assertEq(2, TypeScriptActionInterface::Api.getCatalogueProtocolVersion());
+        assertThrows("TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR", "future_metadata", sub () {
+            TypeScriptActionInterface::initApp(app);
+        });
+        assertEq("TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR",
+            DataProviderActionCatalog::getInitializationFailures((app,))[0].error);
     }
 
     private optionalResourceFailureTest() {

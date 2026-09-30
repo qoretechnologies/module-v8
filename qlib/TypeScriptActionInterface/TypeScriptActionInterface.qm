@@ -88,11 +88,17 @@ module TypeScriptActionInterface {
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
-    - Catalogue apps can report an \c initialization_error hash with \c err and \c desc strings when a required
-      local resource is unavailable. The module preserves the declared discovery inventory and records a structured
-      app initialization failure instead of registering an incomplete app. The optional HubSpot catalogue uses this
-      for its separately downloaded schema snapshots. Explicit deregistration clears failed initialization
-      state so the app can be registered again after its resources become available.
+    - Apps reporting \c APP-SCHEMAS-UNAVAILABLE now register their identity, REST connection scheme, and OAuth2
+      metadata while retaining structured failures for deferred actions. A synchronous \c schema_metadata callback
+      refreshes failed snapshot selections on retry; successfully selected snapshots remain pinned until restart.
+      TypeScriptActionInterface::getAppSchemaError() exposes the last schema error without blocking connections.
+      Other initialization errors still fail app registration. Failed app and action initializations retain their
+      pending metadata and can be retried in the same process.
+    - removed a stale Zoom webinar-update \c template_id override that synthesized an untyped option absent
+      from the supported Meetings schema and prevented snapshot qualification
+    - Catalogue protocol 2 detects incompatible Qore module and JS dist installations before registration. Unknown
+      app metadata keys produce an actionable \c TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR before typed-hash conversion.
+      See \c design/producer-schema-boundary.md and the \c qore-app-schemas manual for deployment details.
     - the TypeScript app catalogue settings (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT and
       \c QORE_TYPESCRIPT_ACTION_SCRIPTS) are read from the process environment when the module is initialized, so a
       process can decide not to load the catalogue after it has started, such as a data provider index worker that

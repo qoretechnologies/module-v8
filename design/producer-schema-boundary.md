@@ -13,6 +13,52 @@ schema materialization. The boundary removes the member after validation so it n
 Adding or changing producer structure requires a new version and an explicit compatibility branch here. Do not infer a
 version from labels, optional members, or JavaScript object shape.
 
+## Catalogue handshake and optional schemas
+
+The bundled catalogue requires catalogue protocol **2**, returned by the Qore API's
+`getCatalogueProtocolVersion()` callback. This is separate from `provider_schema_version`: it describes
+registration capabilities, including connection availability during snapshot failures and schema refresh on retry.
+The catalogue checks this version before publishing any identity or registering any app, including custom and lazy
+loads. A missing version callback means legacy protocol 1. Unsupported versions produce
+`TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR` naming both versions and installation remediation. Older custom scripts that do
+not perform the handshake retain the existing legacy behavior. Final app metadata keys are validated against the
+installed `DataProviderAppInfo` declaration before typed-hash conversion, so unknown keys produce a protocol error
+rather than `HASHDECL-INIT-ERROR`.
+
+For `APP-SCHEMAS-UNAVAILABLE`, app initialization registers identity, the connection scheme, and OAuth2 metadata.
+It retains the pending app and action definitions without marking the app fully initialized. Actions remain absent
+from the materialized catalogue and each receives the original structured error through
+`DataProviderActionCatalog::getInitializationFailures()`. `TypeScriptActionInterface::getAppSchemaError()` exposes
+the current app-level schema error without triggering initialization or making the catalogue app unavailable.
+Action initialization and provider access raise that error, including remediation; connection creation remains
+available. Other initialization errors, including malformed error metadata, still throw.
+
+The catalogue supplies a synchronous `schema_metadata` callback returning only `swagger`, `swagger_schema_map`, or
+`initialization_error`. It reads local configuration and verifies snapshots; it never downloads schemas. Failed
+selections are not pinned. Each retry refreshes these fields in the same JavaScript pool, preserving connection
+callbacks and already registered connection metadata. Once schema and record-based registration succeeds, the app
+moves from pending to initialized. Deferred actions are removed only for the duration of registration (to prevent
+re-entrant registration), and restored on failure. Successfully materialized actions clear their retained errors.
+Existing-app extensions also keep pending metadata until registration succeeds.
+
+### Qorus deployment
+
+Run `qore-app-schemas update trello` (or `import APP FILE` for import-only apps) explicitly, then obtain the JSON map
+with `qore-app-schemas status`. Set `QORE_APP_SCHEMA_SNAPSHOTS` to this map in **qorus-core's service/container
+environment**, so its TypeScript workers and proxy children inherit it. Setting it only in an operator's shell or
+IDE process does not configure the running service. Snapshot directories must be absolute immutable paths, readable
+at the same paths by the service account and child containers. Use `--cache-dir DIR` consistently when setup runs
+under a different account. `qore-app-schemas run -- COMMAND` supplies the map to a newly launched process and children.
+
+A process can retry an initially missing or invalid snapshot if its JavaScript environment is corrected (or the
+configured missing files are installed). Changing a shell or service definition does not update an already running
+process's environment, so deployment configuration changes normally require restarting qorus-core. Once a snapshot
+has passed verification, `appSchemaMetadata()` pins it: switching to another snapshot requires restarting even if
+that process's environment can be changed. `update` alone only changes the cache's active selection.
+
+Install both the Qore module and JS `dist` from the same revision. Check `QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT`,
+`QORE_MODULE_DIR`, and any module copy in `$OMQ_DIR/qlib` when diagnosing a protocol mismatch.
+
 ## Allowed values
 
 Only the declared `allowed_values` and `element_allowed_values` positions are converted to `AllowedValueInfo`. The

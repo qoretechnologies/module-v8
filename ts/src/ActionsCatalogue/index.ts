@@ -27,7 +27,10 @@ if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
 }
 
+export const CATALOGUE_PROTOCOL_VERSION = 2;
+
 export interface IQoreApi {
+  getCatalogueProtocolVersion: () => number;
   registerDiscoveryInventory: (inventory: Array<{ app: string; action?: string }>) => void;
   registerApp: (app: IQoreApp) => void;
   registerExistingApp: (app: IQoreExistingApp) => void;
@@ -41,6 +44,7 @@ export interface IQoreApi {
 // raised many frames deep in a per-app registration loop (or, for a callback that
 // is only used on some paths, a failure that appears much later).
 const REQUIRED_QORE_API: ReadonlyArray<keyof IQoreApi> = [
+  'getCatalogueProtocolVersion',
   'registerDiscoveryInventory',
   'registerApp',
   'registerExistingApp',
@@ -51,6 +55,16 @@ const REQUIRED_QORE_API: ReadonlyArray<keyof IQoreApi> = [
     Throws before anything is registered, so a version-skewed pair cannot half-register
     a catalogue. */
 export const assertQoreApi = (api: IQoreApi): void => {
+  const moduleVersion = typeof api?.getCatalogueProtocolVersion === 'function'
+    ? api.getCatalogueProtocolVersion() : 1;
+  if (moduleVersion !== CATALOGUE_PROTOCOL_VERSION) {
+    throw new Error(
+      `TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR: JS catalogue protocol ${CATALOGUE_PROTOCOL_VERSION}, ` +
+      `Qore module protocol ${String(moduleVersion)}; rebuild and install the Qore module and JS dist ` +
+      `from the same source revision, including Qorus's qlib directory. Check ` +
+      `QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT and QORE_MODULE_DIR.`
+    );
+  }
   const present = api ? Object.keys(api) : [];
   const missing = REQUIRED_QORE_API.filter(
     (name) => typeof (api as unknown as Record<string, unknown>)?.[name] !== 'function'

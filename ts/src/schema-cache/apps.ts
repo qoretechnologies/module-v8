@@ -205,11 +205,20 @@ export function verifySnapshot(id: string, directory: string, parse = true): str
 
 const pinned = new Map<string, string>();
 
-/** Keep lightweight identities available when an optional schema has not been configured. */
-export function appSchemaMetadata(id: string): {
+export type AppSchemaMetadata = {
   swagger?: string; swagger_schema_map?: Record<string, { swagger: string }>;
   initialization_error?: { err: string; desc: string };
+};
+
+/** Keep identities available and let the runtime refresh unsuccessful schema selections. */
+export function appSchemaMetadata(id: string): AppSchemaMetadata & {
+  schema_metadata: () => AppSchemaMetadata;
 } {
+  return { ...resolveAppSchemaMetadata(id), schema_metadata: () => resolveAppSchemaMetadata(id) };
+}
+
+/** Retry unsuccessful selections; only a verified snapshot pins the running process. */
+function resolveAppSchemaMetadata(id: string): AppSchemaMetadata {
   const contract = appContract(id);
   try {
     const snapshots = JSON.parse(process.env[SNAPSHOTS_ENV] || '{}');

@@ -222,9 +222,6 @@ export const ZOOM_MEETINGS_ALLOWED_PATHS = {
           depends_on: ['webinarId'],
           get_allowed_values: getZoomWebinarOccurrenceIdAllowedValues,
         },
-        template_id: {
-          get_allowed_values: getZoomWebinarTemplateIdAllowedValues,
-        },
         timezone: {
           allowed_values: ZoomTimezoneAllowedValues,
         },

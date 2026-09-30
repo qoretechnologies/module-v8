@@ -183,6 +183,9 @@ public class TypeScriptActionInterface {
         #! Current canonical TypeScript provider-schema boundary version
         const ProviderSchemaVersion = 1;
 
+        #! Catalogue protocol supporting retryable schema metadata and connection-only registration
+        const CatalogueProtocolVersion = 2;
+
         #! Stable owner identity for qualified discovery inventory
         const DiscoveryInventoryProviderName = "TypeScriptActionInterface";
 
@@ -221,6 +224,14 @@ public class TypeScriptActionInterface {
 
         #! App map after app initialization: app -> info
         static hash<string, hash<AppInfo>> initialized_appmap;
+
+        #! Apps whose identity and connection are registered, including those waiting for schemas
+        static hash<string, bool> app_connection_registered;
+
+        #! Last schema availability error; individual map operations are atomic in the Qore runtime
+        static hash<string, hash<ExceptionInfo>> app_schema_error_map;
+
+        const AppMetadataKeys = map $1.getName(), TypedHash::forName("DataProviderAppInfo").getMembers();
 
         #! Init map for apps already initialized
         static hash<string, bool> initmap;
@@ -423,6 +434,8 @@ public class TypeScriptActionInterface {
         remove initmap{name};
         remove appmap{name};
         remove initialized_appmap{name};
+        remove app_connection_registered{name};
+        remove app_schema_error_map{name};
         remove actionmap{name};
         root.deregisterChild(appname);
 
@@ -1291,8 +1304,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             }
             search_options = remove app.search_options;
         }
+        *code<auto()> schema_metadata = remove app.schema_metadata;
         appmap{app.name} = <AppInfo>{
             "app": app,
+            "schema_metadata": schema_metadata,
             "cwd": TypeScriptActionInterface::getAppBaseDir(),
 
             "get_table_list": get_table_list,
@@ -1380,17 +1395,21 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         appcasemap{appname} = app.name;
 
         # must register the app immediately
-        TypeScriptActionInterface::initExistingAppIntern(info);
+        appmap{app.name} = info;
+        TypeScriptActionInterface::initApp(app.name);
         TSAI::debug("Registered existing app %y", app.name);
     }
 
     static bool initAppAction(string app, string action) {
         TypeScriptActionInterface::initApp(app);
+        app = appcasemap{app} ?? app;
+        TypeScriptActionInterface::checkAppSchemaError(app);
         if (*hash<ActionInfo> info = remove actionmap{app}{action}) {
+            on_error actionmap{app}{action} = info;
+            TypeScriptActionInterface::registerActionIntern(info.action, info.pool);
             if (!actionmap{app}) {
                 remove actionmap{app};
             }
-            TypeScriptActionInterface::registerActionIntern(info.action, info.pool);
             return True;
         }
         return False;
@@ -1489,14 +1508,14 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                     CompletingPendingAppHelper cpah();
                     TypeScriptActionInterfacePriv::loadAppFromPath(load_path);
                 }
-                if (!(info = remove appmap{app})) {
+                if (!(info = appmap{app}) || info.pending_path) {
                     throw "APP-ERROR", sprintf("App %y failed to load its implementation from %y", app,
                         load_path);
                 }
-                return TypeScriptActionInterface::initAppIntern(info, do_actions);
             }
-            remove appmap{app};
-            return TypeScriptActionInterface::initAppIntern(info, do_actions);
+            return info.app."module"
+                ? TypeScriptActionInterface::initExistingAppIntern(info, do_actions)
+                : TypeScriptActionInterface::initAppIntern(info, do_actions);
         }
         if (dynamic_path) {
             string fname = sprintf("%s/index.js", dynamic_path);
@@ -1514,22 +1533,47 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     static private bool initAppIntern(hash<AppInfo> info, *bool do_actions) {
-        initialized_appmap{info.app.name} = info;
-        initmap{info.app.name} = True;
+        on_error if (!initmap{info.app.name}) {
+            DataProviderActionCatalog::reportInitializationFailure("app", info.app.name, NOTHING, $1,
+                TypeScriptActionInterface::getModulePath());
+        }
         # change the cwd to process relative paths and restore on exit
         string cwd = getcwd();
         on_exit chdir(cwd);
         chdir(info.cwd);
         if (!do_actions) {
             # mark the app with action capabilities before registering
-            map info.app{ActionCodeFlagMap{$1.action.action_code}} = True, actionmap{info.app.name}.iterator();
+            map info.app{ActionCodeFlagMap{$1.action.action_code}} = True, actionmap{info.app.name}.iterator(),
+                exists ActionCodeFlagMap{$1.action.action_code};
         }
 
-        TypeScriptActionInterface::registerAppIntern(info.app, info.pool);
-        # always initialize record-based actions if applicable
-        if (info.get_table_list) {
-            TypeScriptActionInterface::registerRecordBasedActions(info);
+        # Refresh only schema metadata, without reloading app code or its connection callbacks.
+        # A missing/invalid snapshot is not pinned, so installing it permits an in-process retry.
+        if (info.schema_metadata) {
+            auto metadata = info.schema_metadata();
+            if (metadata instanceof JavaScriptObject) {
+                metadata = metadata.toData();
+            }
+            if (metadata.typeCode() != NT_HASH
+                    || (metadata - ("swagger", "swagger_schema_map", "initialization_error"))) {
+                throw "APP-ERROR", sprintf("Invalid schema_metadata result for app %y", info.app.name);
+            }
+            info.app -= ("swagger", "swagger_schema_map", "initialization_error");
+            info.app += metadata;
         }
+        if (!TypeScriptActionInterface::registerAppIntern(info.app, info.pool)) {
+            return False;
+        }
+        # always initialize record-based actions if applicable
+        {
+            on_error remove initialized_appmap{info.app.name};
+            initialized_appmap{info.app.name} = info;
+            if (info.get_table_list) {
+                TypeScriptActionInterface::registerRecordBasedActions(info);
+            }
+        }
+        initmap{info.app.name} = True;
+        remove appmap{info.app.name};
 
         if (do_actions) {
             TypeScriptActionInterface::checkAppActions(info.app.name);
@@ -1538,12 +1582,14 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     static private bool initExistingAppIntern(hash<AppInfo> info, *bool do_actions) {
-        initmap{info.app.name} = True;
         # change the cwd to process relative paths and restore on exit
         string cwd = getcwd();
         on_exit chdir(cwd);
         chdir(info.cwd);
         TypeScriptActionInterface::registerExistingAppIntern(info.app, info.pool);
+        initialized_appmap{info.app.name} = info;
+        initmap{info.app.name} = True;
+        remove appmap{info.app.name};
 
         if (do_actions) {
             TypeScriptActionInterface::checkAppActions(info.app.name);
@@ -1556,12 +1602,34 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
-        if (*hash<string, hash<ActionInfo>> actions = remove actionmap{app}) {
-            map TypeScriptActionInterface::registerActionIntern($1.action, $1.pool), actions.iterator();
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::checkAppSchemaError(app);
+        foreach string action in (keys actionmap{app}) {
+            TypeScriptActionInterface::initAppAction(app, action);
         }
     }
 
-    static private registerAppIntern(hash<auto> app, JavaScriptProgramPool pool) {
+    #! Raises the retained resource error only at an action boundary
+    private static checkAppSchemaError(string app) {
+        if (*hash<ExceptionInfo> ex = app_schema_error_map{app}) {
+            throw ex.err, ex.desc;
+        }
+    }
+
+    #! Returns the last schema availability error without initializing an app
+    /** @param app technical app name (canonical or lowercase)
+        @return the structured error, or NOTHING if no schema error has been observed
+        @note Missing schemas do not prevent connection creation. A successful retry clears this error.
+        @par Example
+        @code{.py}
+        auto error = TypeScriptActionInterface::getAppSchemaError("trello");
+        @endcode
+    */
+    static *hash<ExceptionInfo> getAppSchemaError(string app) {
+        return app_schema_error_map{appcasemap{app} ?? app};
+    }
+
+    static private bool registerAppIntern(hash<auto> app, JavaScriptProgramPool pool) {
         #printf("TypeScriptActionInterface::registerApp() %y %y\n", now_us(), app.name);
         if (app.name =~ / /) {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
@@ -1574,15 +1642,19 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
         string appname = app.name.lwr();
 
-        # A catalogue may publish stable identities while an optional local resource is unavailable.
-        # Retain this as a structured app initialization failure through the on_error handler above.
+        # Missing action schemas must not block the app's connection or OAuth2 metadata.
+        *hash<ExceptionInfo> schema_error;
         if (exists app.initialization_error) {
             auto ex = remove app.initialization_error;
             if (ex.typeCode() != NT_HASH || ex.err.typeCode() != NT_STRING || !ex.err.val()
                     || ex.desc.typeCode() != NT_STRING || !ex.desc.val()) {
                 throw "APP-ERROR", sprintf("Invalid initialization_error for app %y", app.name);
             }
-            throw ex.err, ex.desc;
+            if (ex.err != "APP-SCHEMAS-UNAVAILABLE") {
+                throw ex.err, ex.desc;
+            }
+            schema_error = <ExceptionInfo>{"err": ex.err, "desc": ex.desc};
+            app -= ("swagger", "swagger_schema_map", "openapi", "openapi_schema_map");
         }
 
         # Normalize swagger_* aliases to openapi_* (openapi_* are the primary property names)
@@ -1648,6 +1720,38 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                     remove i.value.openapi_paths, remove i.value.openapi_type_overrides);
             }
         }
+        app -= ("openapi_options", "openapi_paths", "openapi_type_overrides");
+        if (!app_connection_registered{app.name}) {
+            TypeScriptActionInterface::registerAppConnection(app, pool, schema ? True : False,
+                schema_schema_map ? True : False);
+        }
+
+        if (schema) {
+            app_schema_map{appname} = schema;
+        }
+        if (schema_schema_map) {
+            app_schema_schema_map{appname} = schema_schema_map;
+        }
+        # Store include_response_headers flag if explicitly set (only store if False to save memory)
+        if (exists include_response_headers && !include_response_headers) {
+            app_include_response_headers_map{appname} = include_response_headers;
+        }
+        if (schema_error) {
+            app_schema_error_map{app.name} = schema_error;
+            foreach string action in (keys actionmap{app.name}) {
+                DataProviderActionCatalog::reportInitializationFailure("action", app.name, action, schema_error,
+                    TypeScriptActionInterface::getModulePath());
+            }
+            return False;
+        }
+        remove app_schema_error_map{app.name};
+        return True;
+    }
+
+    #! Registers schema-independent app identity, connection options, and authentication callbacks once
+    private static registerAppConnection(hash<auto> app, JavaScriptProgramPool pool, bool has_schema,
+            bool has_schema_map) {
+        string appname = app.name.lwr();
         hash<auto> app0 += app;
         if (app.logo) {
             app0.logo = parse_base64_string(app.logo);
@@ -1659,11 +1763,11 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         hash<GoogleAppInfo> google_app;
         if (exists (*hash<auto> h = remove app0.google_app)) {
-            if (schema) {
+            if (has_schema) {
                 throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and \"openapi\" "
                     "attributes", app.name, google_app);
             }
-            if (schema_schema_map) {
+            if (has_schema_map) {
                 throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and "
                     "\"openapi_schema_map\" attributes", app.name, google_app);
             }
@@ -1878,6 +1982,12 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                 aws_app_map{appname} = True;
             }
         }
+        if (*hash<auto> unknown = app0 - AppMetadataKeys) {
+            throw "TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR", sprintf(
+                "App %y has unsupported metadata keys %y (module catalogue protocol %d). "
+                "Rebuild and install the Qore module and JS dist from the same source revision, "
+                "including Qorus's qlib directory.", app.name, keys unknown, CatalogueProtocolVersion);
+        }
         DataProviderActionCatalog::registerApp(cast<hash<DataProviderAppInfo>>(app0));
 
         TypeScriptActionAppDataProvider prov(appname);
@@ -1892,19 +2002,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             google_app_map{appname} = google_app;
         }
 
-        if (schema) {
-            app_schema_map{appname} = schema;
-        }
-        if (schema_schema_map) {
-            app_schema_schema_map{appname} = schema_schema_map;
-        }
         if (url_template_options) {
             atmap{appname} = url_template_options;
         }
-        # Store include_response_headers flag if explicitly set (only store if False to save memory)
-        if (exists include_response_headers && !include_response_headers) {
-            app_include_response_headers_map{appname} = include_response_headers;
-        }
+        app_connection_registered{app.name} = True;
     }
 
     static private registerExistingAppIntern(hash<auto> app, JavaScriptProgramPool pool) {
@@ -2281,7 +2382,14 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             "action", action.app + "/" + action.action);
         # register the action immediately if the app has already been registered
         if (initmap{action.app}) {
+            *hash<ActionInfo> pending = remove actionmap{action.app}{action.action};
+            on_error if (pending) {
+                actionmap{action.app}{action.action} = pending;
+            }
             TypeScriptActionInterface::registerActionIntern(action, pool);
+            if (!actionmap{action.app}) {
+                remove actionmap{action.app};
+            }
             return;
         }
         actionmap{action.app}{action.action} = <ActionInfo>{
@@ -2300,6 +2408,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             rethrow $1.err, sprintf("%s (while registering action %y for app %y)", $1.desc, action.action,
                 action.app), $1.arg;
         }
+        TypeScriptActionInterface::checkAppSchemaError(action.app);
         TypeScriptActionInterface::generateDataProvider(\action, pool);
         DataProviderActionCatalog::registerAction(cast<hash<DataProviderActionInfo>>(action));
     }
@@ -4026,9 +4135,22 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         return info;
     }
 
+    #! Returns the catalogue protocol supported by this module
+    /** @return the integer protocol version for the JavaScript catalogue handshake
+        @note Install the module and catalogue from the same source revision.
+        @par Example
+        @code{.py}
+        int protocol = TypeScriptActionInterface::getCatalogueProtocolVersion();
+        @endcode
+    */
+    static int getCatalogueProtocolVersion() {
+        return CatalogueProtocolVersion;
+    }
+
     #! Returns a hash that can be used to access these methods in JavaScript
     static hash<string, code> getInterface() {
         return {
+            "getCatalogueProtocolVersion": \TypeScriptActionInterface::getCatalogueProtocolVersion(),
             "registerDiscoveryInventory":
                 \TypeScriptActionInterface::registerDiscoveryInventory(),
             "registerApp": \TypeScriptActionInterface::registerApp(),
@@ -4459,6 +4581,9 @@ class TyeScriptTypeEditor inherits QoreDataType {
 hashdecl AppInfo {
     #! The app info from JavaScript
     hash<auto> app;
+
+    #! Synchronous local schema metadata refresher; owned by this app's JavaScript pool
+    *code<auto()> schema_metadata;
 
     #! The current working directory
     string cwd = getcwd();

@@ -1,7 +1,9 @@
 import { readFileSync } from 'fs';
 import { forEach } from 'lodash';
 import { join } from 'node:path';
-import { ActionsCatalogue, actionsCatalogue, assertQoreApi, IQoreApi } from '../ActionsCatalogue';
+import {
+  ActionsCatalogue, actionsCatalogue, assertQoreApi, CATALOGUE_PROTOCOL_VERSION, IQoreApi,
+} from '../ActionsCatalogue';
 import en from '../i18n/en';
 import { APP_GROUPS, isValidAppGroup } from '../i18n/groups';
 
@@ -38,6 +40,7 @@ describe('Qorus Apps Catalogue tests', () => {
     };
 
     catalogue.registerAppActions({
+      getCatalogueProtocolVersion: () => CATALOGUE_PROTOCOL_VERSION,
       registerDiscoveryInventory: (inventory) => {
         inventory.forEach((identity) => declared.add(`${identity.app}/${identity.action || ''}`));
       },
@@ -49,46 +52,34 @@ describe('Qorus Apps Catalogue tests', () => {
     });
   });
 
-  it('Asserts the Qore registration API before registering anything', () => {
+  it('Rejects incompatible catalogue protocols before any app is registered', () => {
     const catalogue = new ActionsCatalogue();
-    const registerApp = jest.fn();
-    const registerAction = jest.fn();
-    // a TypeScriptActionInterface module older than this bundle omits the API members it
-    // does not know about; the catalogue must say so instead of failing deep in a loop
-    const legacyApi = {
-      registerApp,
+    const api = {
+      getCatalogueProtocolVersion: () => CATALOGUE_PROTOCOL_VERSION,
+      registerDiscoveryInventory: jest.fn(),
+      registerApp: jest.fn(),
       registerExistingApp: jest.fn(),
-      registerAction,
-    } as unknown as IQoreApi;
-
-    expect(() => catalogue.registerAppActions(legacyApi)).toThrow(/registerDiscoveryInventory/);
-    expect(() => catalogue.registerAppActions(legacyApi)).toThrow(
-      /module is older than this bundle/
-    );
-    expect(registerApp).not.toHaveBeenCalled();
-    expect(registerAction).not.toHaveBeenCalled();
-
-    // every missing callback is named in one error, not discovered one at a time
-    expect(() => assertQoreApi({} as unknown as IQoreApi)).toThrow(
-      /registerDiscoveryInventory, registerApp, registerExistingApp, registerAction/
-    );
-    // a non-function member is as unusable as an absent one
-    expect(() =>
-      assertQoreApi({
-        registerDiscoveryInventory: 'nope',
-        registerApp,
-        registerExistingApp: jest.fn(),
-        registerAction,
-      } as unknown as IQoreApi)
-    ).toThrow(/registerDiscoveryInventory/);
-    expect(() =>
-      assertQoreApi({
-        registerDiscoveryInventory: jest.fn(),
-        registerApp,
-        registerExistingApp: jest.fn(),
-        registerAction,
-      })
-    ).not.toThrow();
+      registerAction: jest.fn(),
+    };
+    for (const version of [undefined, 1, 3, null, '2']) {
+      const incompatible = { ...api, getCatalogueProtocolVersion: version === undefined
+        ? undefined : () => version } as unknown as IQoreApi;
+      expect(() => catalogue.registerAppActions(incompatible)).toThrow(
+        /TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR: JS catalogue protocol 2, Qore module protocol/
+      );
+      expect(() => catalogue.registerAppActions(incompatible)).toThrow(/same source revision/);
+    }
+    expect(api.registerApp).not.toHaveBeenCalled();
+    expect(api.registerExistingApp).not.toHaveBeenCalled();
+    expect(api.registerAction).not.toHaveBeenCalled();
+    expect(api.registerDiscoveryInventory).not.toHaveBeenCalled();
+    expect(() => assertQoreApi(api)).not.toThrow();
+    expect(() => assertQoreApi({ ...api, registerAction: undefined } as unknown as IQoreApi))
+      .toThrow(/callback registerAction/);
+    expect(() => assertQoreApi({ getCatalogueProtocolVersion: api.getCatalogueProtocolVersion } as IQoreApi))
+      .toThrow(/registerDiscoveryInventory, registerApp, registerExistingApp, registerAction/);
+    expect(() => assertQoreApi({ ...api, registerDiscoveryInventory: 'invalid' } as unknown as IQoreApi))
+      .toThrow(/registerDiscoveryInventory/);
   });
 
   it('Should register the apps', () => {

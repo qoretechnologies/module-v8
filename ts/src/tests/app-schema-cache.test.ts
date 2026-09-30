@@ -54,6 +54,14 @@ describe('App schema cache', () => {
     expect(count).toBe(265);
   });
 
+  it('Does not synthesize a template option unsupported by the webinar update schema', () => {
+    const app = require('../apps/zoom').default('en');
+    const update = app.actions.find((action: any) => action.action === 'webinarUpdate');
+    const create = app.actions.find((action: any) => action.action === 'webinarCreate');
+    expect(update.override_options).not.toHaveProperty('template_id');
+    expect(create.override_options.template_id.get_allowed_values).toEqual(expect.any(Function));
+  });
+
   it('Retains all 228 supported operations and overrides upstream operation IDs', () => {
     let count = 0;
     for (const id of appIds) {
@@ -150,6 +158,17 @@ describe('App schema cache', () => {
     (compatibility.apps as Record<string, string[]>).trello.push('new-reviewed-revision');
     expect(contractDigest('trello')).not.toBe(previous);
     (compatibility.apps as Record<string, string[]>).trello.pop();
+  });
+
+  it('Refreshes missing and invalid selections in the same app instance', async () => {
+    const app = require('../apps/trello').default('en');
+    expect(app.initialization_error.err).toBe('APP-SCHEMAS-UNAVAILABLE');
+    expect(app.schema_metadata().initialization_error.desc).toMatch(/update trello/);
+    process.env[SNAPSHOTS_ENV] = JSON.stringify({ trello: path.join(directory, 'missing') });
+    expect(app.schema_metadata().initialization_error.err).toBe('APP-SCHEMAS-UNAVAILABLE');
+    const snapshot = await installSnapshot(directory, 'trello', input('trello'), async () => {});
+    process.env[SNAPSHOTS_ENV] = JSON.stringify({ trello: snapshot });
+    expect(app.schema_metadata()).toEqual({ swagger: path.join(snapshot, 'schema.json') });
   });
 
   it('Keeps a running app pinned and reports a malformed or switched snapshot structurally', async () => {
