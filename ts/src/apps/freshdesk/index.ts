@@ -1,3 +1,4 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import {
   TQoreAppActionFunctionContext,
@@ -42,7 +43,7 @@ export default (locale: Locales) =>
       `4MzZ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+`,
     logo_file_name: 'freshdesk-logo.svg',
     logo_mime_type: 'image/svg+xml',
-    swagger: 'schemas/freshdesk.swagger.json',
+    ...appSchemaMetadata('freshdesk'),
     swagger_options: {
       parse_flags: 128,
     },

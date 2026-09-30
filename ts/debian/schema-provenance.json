@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-09-30T06:50:51.755423+00:00",
-  "public_upload_status": "NOT CLEARED: missing/conflicting grants must be resolved or covered by an applicable permission record before claiming redistribution/PPA eligibility. Local build work can continue.",
+  "checked_at": "2026-09-30T09:55:54.677529+00:00",
+  "public_upload_status": "NOT CLEARED: external schemas are excluded; dependency notices/copyright mapping and restricted-license PPA eligibility remain publication gates.",
   "schemas": [
     {
       "file": "ts/src/schemas/asana.swagger.json",
@@ -24,74 +24,11 @@
       "redistribution_review": "cleared: MIT attribution recorded in debian/copyright"
     },
     {
-      "file": "ts/src/schemas/freshdesk.swagger.json",
-      "sha256": "8e8993bf1e85b1706151aa5e3103e00d76d6cc7f091a3aedcbebf3f980dd1669",
-      "license": null,
-      "finding": "bundled file credits third-party schema author; API documentation availability does not establish file license",
-      "primary_source": "https://developers.freshdesk.com/api/"
-    },
-    {
       "file": "ts/src/schemas/jira.swagger.json",
       "sha256": "7045f3f022fb5b7365e175994d048415668c81b90faaa7247bf710ca42c3bfdb",
       "license": "Apache-2.0",
       "finding": "declared in bundled schema",
       "primary_source": "https://developer.atlassian.com/cloud/jira/platform/rest/"
-    },
-    {
-      "file": "ts/src/schemas/magento.swagger.json",
-      "sha256": "4e66ee99defd50d2d5cb4d5249abc80080f854fe879bfc6c7aec44f60d6a63f7",
-      "license": null,
-      "finding": "The archived official magento/devdocs repository contains a matching Magento B2B 2.2.10 schema with identical definitions. Paths/presentation differ. Its repository license is OSL-3.0, not the Apache-2.0 license of newer AdobeDocs schemas. Exact transformation, applicable notices and OSL distribution conditions remain to be completed; no blanket clearance is claimed.",
-      "primary_source": "https://github.com/AdobeDocs/commerce-webapi",
-      "candidate_upstream_file": "https://raw.githubusercontent.com/magento/devdocs/f99b4927ca0b0c75eb4910ecd718da00957f9491/src/redoc/2.2/latest-2.2.schema.json",
-      "candidate_license_source": "https://raw.githubusercontent.com/magento/devdocs/f99b4927ca0b0c75eb4910ecd718da00957f9491/LICENSE.txt"
-    },
-    {
-      "file": "ts/src/schemas/mailchimp.swagger.json",
-      "sha256": "1fb70ce81a38cc6ad07e6ea21d060e98cdac835f8577ecd9ba9a52fc03f3ae56",
-      "license": "LicenseRef-Mailchimp-Client-Library",
-      "finding": "Pinned official 3.0.81 specification matches the bundled document after twelve notify_on_subscribe/notify_on_unsubscribe type corrections and one empty parameter-description addition. The custom license permits redistribution subject to its conditions. Complete the modified-file notices, full license inclusion and PPA eligibility assessment before upload.",
-      "primary_source": "https://github.com/mailchimp/mailchimp-client-lib-codegen",
-      "upstream_commit": "547f82081fbe0d915b0540ac9df9ea262646e99e",
-      "upstream_file": "https://raw.githubusercontent.com/mailchimp/mailchimp-client-lib-codegen/547f82081fbe0d915b0540ac9df9ea262646e99e/spec/marketing.json",
-      "upstream_sha256": "c12da65d002fb0c1a5f033b0349f7c5fce76fe74b6cea2b59ada2f6e14a82a3c",
-      "license_source": "https://raw.githubusercontent.com/mailchimp/mailchimp-client-lib-codegen/547f82081fbe0d915b0540ac9df9ea262646e99e/LICENSE",
-      "license_sha256": "8e0b5de8995421007b8d0d84f857cc4408fd7900b909e2a016b50c3cc9cc483e"
-    },
-    {
-      "file": "ts/src/schemas/netsuite.swagger.json",
-      "sha256": "f347dd36d6f79a0e32b38d05be84c10f89f4d3be3d239bf0f1b25764bd4665b6",
-      "license": null,
-      "finding": "official documentation describes obtaining OpenAPI metadata; redistribution grant for this bundled file unresolved",
-      "primary_source": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_1540810168.html"
-    },
-    {
-      "file": "ts/src/schemas/pipedrive.swagger.json",
-      "sha256": "c89f96966334a3e3a95a81591bb58b0732353b5eccd0165db4291a9e875c7039",
-      "license": null,
-      "finding": "MIT official SDK found; no proof yet that its grant covers this bundled JSON",
-      "primary_source": "https://github.com/pipedrive/client-nodejs"
-    },
-    {
-      "file": "ts/src/schemas/trello.swagger.json",
-      "sha256": "2c7e3e06d907946a8ea86a5fbab6f8d36e0cdaf61a59699ff9db1c9de48c85f4",
-      "license": null,
-      "finding": "official specification is downloadable for SDK generation; exact redistribution terms unresolved",
-      "primary_source": "https://developer.atlassian.com/cloud/trello/rest/"
-    },
-    {
-      "file": "ts/src/schemas/zendesk.swagger.json",
-      "sha256": "6e40b24b94d512e9df9a160b5494c1c22d9dd2bbeac6ce6aa6eacd150a356056",
-      "license": null,
-      "finding": "official Support API OpenAPI is downloadable; developer terms are limited and non-sublicensable",
-      "primary_source": "https://developer.zendesk.com/api-reference/ticketing/introduction/"
-    },
-    {
-      "file": "ts/src/schemas/zoom/meetings.swagger.json",
-      "sha256": "2a743046542f203242fdcc971ad75e6cea6a9e4a1b901c3ea535bb6d7a0f5ad5",
-      "license": null,
-      "finding": "Legacy zoom/api has an inline MIT specification, but differs from this modern Meetings schema. Current API terms allow integrations with restrictions, not an unrestricted source redistribution grant.",
-      "primary_source": "https://explore.zoom.us/docs/en-us/legal/zoom_api_license_and_tou.html"
     }
   ],
   "external_resources": [
@@ -101,6 +38,133 @@
       "primary_source": "https://api.hubspot.com/public/api/spec/v1/specs",
       "terms": "https://legal.hubspot.com/hs-developer-terms",
       "finding": "Schema documents removed. Explicit post-install download/import into an application-owned cache; no package/build/install hook retrieves them. Public endpoint availability and terms are controlled by HubSpot."
+    },
+    {
+      "app": "Freshdesk",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/freshdesk.swagger.json",
+      "qualification_input_sha256": "8e8993bf1e85b1706151aa5e3103e00d76d6cc7f091a3aedcbebf3f980dd1669",
+      "primary_source": "https://developers.freshdesk.com/api/",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/freshdesk.swagger.json",
+        "sha256": "8e8993bf1e85b1706151aa5e3103e00d76d6cc7f091a3aedcbebf3f980dd1669",
+        "license": null,
+        "finding": "bundled file credits third-party schema author; API documentation availability does not establish file license",
+        "primary_source": "https://developers.freshdesk.com/api/"
+      }
+    },
+    {
+      "app": "Magento",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/magento.swagger.json",
+      "qualification_input_sha256": "4e66ee99defd50d2d5cb4d5249abc80080f854fe879bfc6c7aec44f60d6a63f7",
+      "primary_source": "https://github.com/AdobeDocs/commerce-webapi",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/magento.swagger.json",
+        "sha256": "4e66ee99defd50d2d5cb4d5249abc80080f854fe879bfc6c7aec44f60d6a63f7",
+        "license": null,
+        "finding": "The archived official magento/devdocs repository contains a matching Magento B2B 2.2.10 schema with identical definitions. Paths/presentation differ. Its repository license is OSL-3.0, not the Apache-2.0 license of newer AdobeDocs schemas. Exact transformation, applicable notices and OSL distribution conditions remain to be completed; no blanket clearance is claimed.",
+        "primary_source": "https://github.com/AdobeDocs/commerce-webapi",
+        "candidate_upstream_file": "https://raw.githubusercontent.com/magento/devdocs/f99b4927ca0b0c75eb4910ecd718da00957f9491/src/redoc/2.2/latest-2.2.schema.json",
+        "candidate_license_source": "https://raw.githubusercontent.com/magento/devdocs/f99b4927ca0b0c75eb4910ecd718da00957f9491/LICENSE.txt"
+      }
+    },
+    {
+      "app": "Mailchimp",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/mailchimp.swagger.json",
+      "qualification_input_sha256": "1fb70ce81a38cc6ad07e6ea21d060e98cdac835f8577ecd9ba9a52fc03f3ae56",
+      "primary_source": "https://github.com/mailchimp/mailchimp-client-lib-codegen",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/mailchimp.swagger.json",
+        "sha256": "1fb70ce81a38cc6ad07e6ea21d060e98cdac835f8577ecd9ba9a52fc03f3ae56",
+        "license": "LicenseRef-Mailchimp-Client-Library",
+        "finding": "Pinned official 3.0.81 specification matches the bundled document after twelve notify_on_subscribe/notify_on_unsubscribe type corrections and one empty parameter-description addition. The custom license permits redistribution subject to its conditions. Complete the modified-file notices, full license inclusion and PPA eligibility assessment before upload.",
+        "primary_source": "https://github.com/mailchimp/mailchimp-client-lib-codegen",
+        "upstream_commit": "547f82081fbe0d915b0540ac9df9ea262646e99e",
+        "upstream_file": "https://raw.githubusercontent.com/mailchimp/mailchimp-client-lib-codegen/547f82081fbe0d915b0540ac9df9ea262646e99e/spec/marketing.json",
+        "upstream_sha256": "c12da65d002fb0c1a5f033b0349f7c5fce76fe74b6cea2b59ada2f6e14a82a3c",
+        "license_source": "https://raw.githubusercontent.com/mailchimp/mailchimp-client-lib-codegen/547f82081fbe0d915b0540ac9df9ea262646e99e/LICENSE",
+        "license_sha256": "8e0b5de8995421007b8d0d84f857cc4408fd7900b909e2a016b50c3cc9cc483e"
+      }
+    },
+    {
+      "app": "NetSuite",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/netsuite.swagger.json",
+      "qualification_input_sha256": "f347dd36d6f79a0e32b38d05be84c10f89f4d3be3d239bf0f1b25764bd4665b6",
+      "primary_source": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_1540810168.html",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/netsuite.swagger.json",
+        "sha256": "f347dd36d6f79a0e32b38d05be84c10f89f4d3be3d239bf0f1b25764bd4665b6",
+        "license": null,
+        "finding": "official documentation describes obtaining OpenAPI metadata; redistribution grant for this bundled file unresolved",
+        "primary_source": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_1540810168.html"
+      }
+    },
+    {
+      "app": "Pipedrive",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/pipedrive.swagger.json",
+      "qualification_input_sha256": "c89f96966334a3e3a95a81591bb58b0732353b5eccd0165db4291a9e875c7039",
+      "primary_source": "https://github.com/pipedrive/client-nodejs",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/pipedrive.swagger.json",
+        "sha256": "c89f96966334a3e3a95a81591bb58b0732353b5eccd0165db4291a9e875c7039",
+        "license": null,
+        "finding": "MIT official SDK found; no proof yet that its grant covers this bundled JSON",
+        "primary_source": "https://github.com/pipedrive/client-nodejs"
+      }
+    },
+    {
+      "app": "Trello",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/trello.swagger.json",
+      "qualification_input_sha256": "2c7e3e06d907946a8ea86a5fbab6f8d36e0cdaf61a59699ff9db1c9de48c85f4",
+      "primary_source": "https://developer.atlassian.com/cloud/trello/rest/",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/trello.swagger.json",
+        "sha256": "2c7e3e06d907946a8ea86a5fbab6f8d36e0cdaf61a59699ff9db1c9de48c85f4",
+        "license": null,
+        "finding": "official specification is downloadable for SDK generation; exact redistribution terms unresolved",
+        "primary_source": "https://developer.atlassian.com/cloud/trello/rest/"
+      }
+    },
+    {
+      "app": "Zendesk",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/zendesk.swagger.json",
+      "qualification_input_sha256": "6e40b24b94d512e9df9a160b5494c1c22d9dd2bbeac6ce6aa6eacd150a356056",
+      "primary_source": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/zendesk.swagger.json",
+        "sha256": "6e40b24b94d512e9df9a160b5494c1c22d9dd2bbeac6ce6aa6eacd150a356056",
+        "license": null,
+        "finding": "official Support API OpenAPI is downloadable; developer terms are limited and non-sublicensable",
+        "primary_source": "https://developer.zendesk.com/api-reference/ticketing/introduction/"
+      }
+    },
+    {
+      "app": "Zoom",
+      "distributed": false,
+      "repository_qualification_input": "ts/src/schemas/zoom/meetings.swagger.json",
+      "qualification_input_sha256": "2a743046542f203242fdcc971ad75e6cea6a9e4a1b901c3ea535bb6d7a0f5ad5",
+      "primary_source": "https://explore.zoom.us/docs/en-us/legal/zoom_api_license_and_tou.html",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "previous_assessment": {
+        "file": "ts/src/schemas/zoom/meetings.swagger.json",
+        "sha256": "2a743046542f203242fdcc971ad75e6cea6a9e4a1b901c3ea535bb6d7a0f5ad5",
+        "license": null,
+        "finding": "Legacy zoom/api has an inline MIT specification, but differs from this modern Meetings schema. Current API terms allow integrations with restrictions, not an unrestricted source redistribution grant.",
+        "primary_source": "https://explore.zoom.us/docs/en-us/legal/zoom_api_license_and_tou.html"
+      }
     }
   ]
 }

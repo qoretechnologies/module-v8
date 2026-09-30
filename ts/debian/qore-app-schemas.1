@@ -1,0 +1,70 @@
+.\" Copyright 2026 Qore Technologies, s.r.o.
+.\" SPDX-License-Identifier: MIT
+.TH QORE-APP-SCHEMAS 1 "September 2026" "Qore" "User Commands"
+.SH NAME
+qore-app-schemas \- retrieve and qualify private application schemas
+.SH SYNOPSIS
+.B qore-app-schemas
+.RB [ --cache-dir " DIR"]
+.I COMMAND
+.SH DESCRIPTION
+Manages independent schema snapshots for Freshdesk, Magento, Mailchimp,
+NetSuite, Pipedrive, Trello, Zendesk and Zoom. Documents are obtained directly
+from declared upstream sources or imported locally. Every candidate must match
+the installed catalogue's compatibility fingerprints and pass installed Qore
+action qualification before activation. A failed candidate preserves the
+previous selection. No download occurs during package builds, installation,
+or application startup.
+.SH COMMANDS
+.TP
+.B list
+Show source URLs and instructions for apps requiring imports.
+.TP
+.B update APP [APP ...]
+Download and qualify selected public schemas. Failures are reported separately.
+.TP
+.B update --all
+Attempt all declared public downloads and print instructions for import-only
+apps. This does not configure apps requiring imports. A failed download or
+qualification returns a nonzero exit status.
+.TP
+.B import APP FILE
+Import a compatible Swagger 2.0 or OpenAPI 3.0 JSON document.
+.TP
+.B fetch-netsuite ACCOUNT TOKEN_FILE
+Fetch account metadata using an OAuth bearer token from an owner-only regular
+file (mode 600). Credentials are never passed as command arguments, redirected,
+or stored in the snapshot. Customized or incompatible exports are rejected.
+.TP
+.B status [APP]
+Print one active snapshot path or the JSON map of configured apps.
+.TP
+.B rollback APP [DIGEST]
+Requalify and activate the previous or specified snapshot.
+.TP
+.B run -- COMMAND [ARGS]
+Run an application with its configured snapshot map pinned. Unconfigured apps
+remain discoverable and report a structured initialization error when used.
+.SH ENVIRONMENT
+.TP
+.B QORE_APP_SCHEMA_SNAPSHOTS
+JSON object mapping app IDs to absolute immutable snapshot directories.
+Use the output of status for service configuration. Restart services after
+selecting a new snapshot. Relative paths and symlink aliases are rejected.
+.TP
+.B XDG_CACHE_HOME
+Cache root; defaults to ~/.cache. App snapshots live under qore/app-schemas.
+.SH EXAMPLES
+.nf
+qore-app-schemas update magento mailchimp
+qore-app-schemas import freshdesk /path/to/export.json
+qore-app-schemas run -- qore my-application.q
+qore-hubspot-schemas run -- qore-app-schemas run -- COMMAND
+.fi
+.SH NOTES
+An upstream API generation change may require a matching catalogue update.
+The updater never approves new fingerprints itself. See README.Debian and
+the provider's terms before obtaining documents. Import-only apps do not
+silently fall back to bundled documents.
+.SH SEE ALSO
+.BR qore-hubspot-schemas (1)

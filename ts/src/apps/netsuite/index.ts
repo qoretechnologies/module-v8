@@ -1,3 +1,4 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
 import {
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
@@ -55,7 +56,7 @@ export default (locale: Locales) =>
       'pbGw9IiMxMjU1ODAiLz48L3N2Zz4=',
     logo_file_name: 'netsuite-logo.svg',
     logo_mime_type: 'image/svg+xml',
-    swagger: 'schemas/netsuite.swagger.json',
+    ...appSchemaMetadata('netsuite'),
     swagger_paths: createSwaggerPaths(NETSUITE_ALLOWED_PATHS),
     rest: {
       url: 'https://{{account_id}}.suitetalk.api.netsuite.com/services/rest/record',

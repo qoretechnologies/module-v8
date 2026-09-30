@@ -8,6 +8,7 @@ catalogue=/usr/share/qore-v8-app-catalogue
 unset NODE_PATH NODE_OPTIONS LD_LIBRARY_PATH LD_PRELOAD QORE_MODULE_DIR QORE_MODULE_DIR_ONLY
 unset QORE_INCLUDE_DIR QORE_TYPESCRIPT_ACTION_SCRIPTS QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS
 unset QORE_HUBSPOT_SCHEMA_SNAPSHOT
+unset QORE_APP_SCHEMA_SNAPSHOTS
 unset QORE_DATA_PROVIDERS QORE_CONNECTION_PROVIDERS QORE_DATASOURCE_PROVIDERS QORE_PROVIDER_INDEX_DIR
 export QORE_MODULE_DIR="$(/usr/bin/qore --module-path)"
 export QORE_MODULE_DIR_ONLY=1
@@ -16,6 +17,12 @@ export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT="$catalogue/dist/index.js"
 /usr/bin/node "$source_debian/tests/production.js" "$catalogue"
 test ! -e "$catalogue/dist/schemas/hubspot"
 qore-hubspot-schemas --help
+qore-app-schemas --help
+test "$(qore-app-schemas --cache-dir "$AUTOPKGTEST_TMP/empty-app-cache" status)" = '{}'
+/usr/bin/node -e 'const fs=require("fs"),path=require("path"); const root=process.argv[1];
+const {apps}=require(root+"/dist/schema-cache/app-contracts.json");
+for(const app of Object.values(apps)) if(fs.existsSync(path.join(root,"dist/schemas",app.sourceFile)))
+    throw new Error("External schema shipped: "+app.sourceFile);' "$catalogue"
 if qore-hubspot-schemas --cache-dir "$AUTOPKGTEST_TMP/empty-cache" status; then
     echo 'An unconfigured cache unexpectedly succeeded' >&2
     exit 1
@@ -56,3 +63,21 @@ done
     DataProviderActionCatalog::getAppEx("Slack");
     print("Unconfigured HubSpot retains its identities and leaves Slack available\n");
 '
+
+# All eight external-schema apps remain discoverable and fail explicitly when used unconfigured.
+/usr/bin/qore -M -l TypeScriptActionInterface -l json -e '
+    DataProvider::checkStaticInit();
+    auto contracts = parse_json(File::readTextFile(ARGV[0])).apps;
+    auto inventory = TypeScriptActionInterface::getDiscoveryInventory();
+    foreach auto contract in (contracts.values()) {
+        try { DataProviderActionCatalog::getAppEx(contract.app); } catch (auto ex) {}
+        auto failures = DataProviderActionCatalog::getInitializationFailures((contract.app,));
+        if (!(map $1, failures, $1.error == "APP-SCHEMAS-UNAVAILABLE")) {
+            throw "MISSING-STRUCTURED-FAILURE", contract.app;
+        }
+        auto actual = map $1.action, inventory, $1.app == contract.app && $1.action;
+        if (sort(actual) != sort(contract.actions)) throw "MISSING-INVENTORY", contract.app;
+    }
+    DataProviderActionCatalog::getAppEx("Slack");
+    print("All external-schema identities remain discoverable; Slack remains usable\n");
+' "$catalogue/dist/schema-cache/app-contracts.json"

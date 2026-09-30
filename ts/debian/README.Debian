@@ -80,3 +80,63 @@ only the stale lock. Old snapshots are retained for running processes and rollba
 remove an obsolete snapshot manually only after those processes have stopped.
 Deleting or purging the package does not delete application-owned caches. Manage
 retention and removal according to your applicable HubSpot terms and requirements.
+
+Other external schemas
+----------------------
+
+Freshdesk, Magento, Mailchimp, NetSuite, Pipedrive, Trello, Zendesk and Zoom also
+use private snapshots. Their documents are excluded from both the Debian source
+package and the installed catalogue. Run setup as the service/application user:
+
+ qore-app-schemas list
+ qore-app-schemas update magento mailchimp
+ qore-app-schemas update --all
+ qore-app-schemas import freshdesk /absolute/path/to/export.json
+ qore-app-schemas run -- YOUR_APPLICATION [arguments]
+
+The --all form attempts public sources and lists apps requiring imports. It does
+not claim to configure import-only apps. An incompatible public API generation
+fails with APP-SCHEMA-INCOMPATIBLE and requires a matching catalogue release or
+an approved older export. A public download being available does not mean that
+it still describes this catalogue's supported API generation.
+
+For NetSuite, an authenticated metadata fetch is available:
+
+ qore-app-schemas fetch-netsuite ACCOUNT /absolute/path/to/token-file
+
+The token file must be owned by the current user and readable only by that user
+(chmod 600). Use an OAuth bearer token; never put its contents on the command
+line. The endpoint is account-specific. Customizations or new API generations
+can make the document incompatible with the generic action contract. They are
+rejected before activation. Importing an approved JSON export is also supported.
+Freshdesk, Zendesk and Zoom currently require compatible JSON imports; see list
+for the official documentation and source-specific instructions.
+
+App/action identities and existing action presentation remain in the package.
+Downloads cannot rename or silently add actions. Every import, update and
+rollback checks supported operations and their referenced fields, constraints,
+choices, presentation and server/security settings against reviewed fingerprints,
+then materializes every action with the installed Qore runtime. The updater
+never approves new fingerprints on its own. Setup makes no authenticated service
+API calls other than the explicitly requested NetSuite metadata fetch.
+
+ qore-app-schemas status
+ qore-app-schemas status magento
+ qore-app-schemas rollback magento
+ qore-app-schemas rollback magento SNAPSHOT_SHA256
+
+The default cache is $XDG_CACHE_HOME/qore/app-schemas (or ~/.cache/qore/app-schemas).
+Each app has its own update lock, immutable snapshots and atomic active.json.
+A failed update preserves the previous selection and does not block other apps.
+Unconfigured apps retain their identities and report APP-SCHEMAS-UNAVAILABLE
+when used. Existing processes retain their selected snapshots; restart them to
+use an update. For services, set QORE_APP_SCHEMA_SNAPSHOTS to the JSON map printed
+by status. All values must be absolute immutable snapshot paths, not symlinks.
+HubSpot keeps its existing command and environment variable; wrappers compose:
+
+ qore-hubspot-schemas run -- qore-app-schemas run -- YOUR_APPLICATION [arguments]
+
+Only explicit update/fetch commands access the network. Builds, package
+installation and startup do not fetch schemas. Offline JSON imports undergo the
+same checks. After a crash, confirm the PID in .update-lock has stopped before
+removing that lock. Package removal does not remove application-owned caches.

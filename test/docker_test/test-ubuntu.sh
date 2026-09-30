@@ -58,7 +58,8 @@ unset QORE_PROVIDER_INDEX_DIR
 qualification_dir=${MODULE_SRC_DIR}/qualification
 qualification_index=$(mktemp -d)
 hubspot_cache=$(mktemp -d)
-trap 'rm -rf "$qualification_index" "$hubspot_cache"' EXIT HUP INT TERM
+app_schema_cache=$(mktemp -d)
+trap 'rm -rf "$qualification_index" "$hubspot_cache" "$app_schema_cache"' EXIT HUP INT TERM
 mkdir -p "$qualification_dir"
 hubspot_setup_log="$qualification_dir/hubspot-schema-setup-${CI_JOB_NAME:-local}.log"
 if ! node "${MODULE_SRC_DIR}/ts/dist/schema-cache/hubspot-cli.js" \
@@ -71,6 +72,19 @@ QORE_HUBSPOT_SCHEMA_SNAPSHOT=$(node "${MODULE_SRC_DIR}/ts/dist/schema-cache/hubs
 export QORE_HUBSPOT_SCHEMA_SNAPSHOT
 cp "$QORE_HUBSPOT_SCHEMA_SNAPSHOT/manifest.json" \
     "$qualification_dir/hubspot-schema-manifest-${CI_JOB_NAME:-local}.json"
+
+# Exercise missing-cache and cache-integrity regressions without service access.
+cd "${MODULE_SRC_DIR}/ts"
+node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --maxWorkers=2 \
+    --config src/jest.config.ts --runTestsByPath src/tests/app-schema-cache.test.ts
+# Repository schemas are qualification inputs; Debian exports omit them.
+QORE_APP_SCHEMA_SNAPSHOTS=$("${MODULE_SRC_DIR}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache")
+export QORE_APP_SCHEMA_SNAPSHOTS
+node -e 'const fs=require("fs"); const out=process.argv[1]; const result={};
+for (const [id,dir] of Object.entries(JSON.parse(process.env.QORE_APP_SCHEMA_SNAPSHOTS))) {
+    result[id]=JSON.parse(fs.readFileSync(dir+"/manifest.json"));
+} fs.writeFileSync(out,JSON.stringify(result,null,2)+"\n");' \
+    "$qualification_dir/app-schema-manifests-${CI_JOB_NAME:-local}.json"
 
 # Ensure that every provider presentation string exported by the TypeScript
 # catalogue has a current source-owned native i18n entry, and that no catalog
@@ -98,7 +112,7 @@ useradd -o -m -d /home/qore -u ${QORE_UID} -g ${QORE_GID} qore
 
 # own everything by the qore user
 chown -R qore:qore ${MODULE_SRC_DIR}
-chown -R qore:qore "$hubspot_cache"
+chown -R qore:qore "$hubspot_cache" "$app_schema_cache"
 
 # run the tests
 export QORE_MODULE_DIR=${MODULE_SRC_DIR}/qlib:${QORE_MODULE_DIR}

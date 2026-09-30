@@ -1,0 +1,4 @@
+#!/bin/sh
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+exec /usr/bin/node /usr/share/qore-v8-app-catalogue/dist/schema-cache/app-cli.js "$@"

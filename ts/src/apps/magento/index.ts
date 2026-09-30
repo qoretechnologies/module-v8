@@ -1,3 +1,4 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
@@ -18,7 +19,7 @@ export default (locale: Locales) =>
     logo: MAGENTO_APP_LOGO,
     logo_file_name: 'magento-logo.svg',
     logo_mime_type: 'image/svg+xml',
-    swagger: 'schemas/magento.swagger.json',
+    ...appSchemaMetadata('magento'),
     swagger_options: {
       parse_flags: -1,
     },

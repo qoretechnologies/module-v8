@@ -1,3 +1,4 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
 import {
   QorusRequest,
   TQoreAppWithActions,
@@ -51,7 +52,7 @@ export default (locale: Locales) =>
       ping_path: '/3.0/ping',
       ping_method: 'GET',
     },
-    swagger: 'schemas/mailchimp.swagger.json',
+    ...appSchemaMetadata('mailchimp'),
     swagger_options: {
       parse_flags: -1,
     },

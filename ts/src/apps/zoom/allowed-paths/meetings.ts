@@ -1,7 +1,5 @@
+import { buildAppSchemaActions } from '../../../schema-cache/app-actions';
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import zoomMeetings from '../../../schemas/zoom/meetings.swagger.json';
 import { ZOOM_APP_NAME } from '../constants';
 import { getZoomMeetingIDAllowedValues } from '../helpers/get-meeting-id-allowed-values';
 import { getZoomWebinarIdAllowedValues } from '../helpers/get-webinar-id-allowed-values';
@@ -286,8 +284,7 @@ export const ZOOM_MEETINGS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const ZOOM_MEETINGS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: zoomMeetings as unknown as OpenAPIV2.Document,
+export const ZOOM_MEETINGS_ACTIONS = buildAppSchemaActions('zoom', {
   allowedPaths: ZOOM_MEETINGS_ALLOWED_PATHS,
   schemaPath: 'meetings',
   app: ZOOM_APP_NAME,

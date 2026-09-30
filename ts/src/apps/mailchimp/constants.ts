@@ -1,8 +1,6 @@
+import { buildAppSchemaActions } from '../../schema-cache/app-actions';
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { omit } from 'lodash';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import mailchimp from '../../schemas/mailchimp.swagger.json';
 import { getMailchimpCampaignIdAllowedValues } from './helpers/get-campaign-id-allowed-values';
 import { getMailchimpCustomerIdAllowedValues } from './helpers/get-customer-id-allowed-values';
 import { getMailchimpCampaignFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
@@ -343,8 +341,7 @@ export const MAILCHIMP_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const MAILCHIMP_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: mailchimp as unknown as OpenAPIV2.Document,
+export const MAILCHIMP_ACTIONS = buildAppSchemaActions('mailchimp', {
   allowedPaths: MAILCHIMP_ALLOWED_PATHS,
   app: MAILCHIMP_APP_NAME,
   globalResponseDataConverter: (response) => {

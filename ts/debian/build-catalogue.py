@@ -17,13 +17,24 @@ PRODUCTION = ROOT / '.debian-production'
 MANIFEST = json.loads((ROOT / 'debian/vendor-manifest.json').read_text())
 TESTS = ('actions-catalogue', 'app-api-versions', 'helpers', 'qore-api-client',
          'event-triggers', 'slack-allowed-values-cache', 'monday-pagination',
-         'hubspot-oauth', 'dependency-security', 'catalogue-entry', 'hubspot-schema-cache')
+         'hubspot-oauth', 'dependency-security', 'catalogue-entry', 'hubspot-schema-cache', 'app-schema-cache')
 ENV = {**os.environ, 'YARN_ENABLE_NETWORK': '0', 'YARN_ENABLE_GLOBAL_CACHE': '0',
        'YARN_ENABLE_TELEMETRY': '0', 'YARN_ENABLE_SCRIPTS': '0',
        'YARN_GLOBAL_FOLDER': str(ROOT / '.debian-yarn-global'),
        'YARN_CACHE_FOLDER': str(ROOT / 'vendor/yarn-cache'),
        'QORE_CATALOGUE_YARN': str(ROOT / 'vendor/yarn-4.12.0.js'),
        'PATH': str(ROOT / 'debian/bin') + ':/usr/bin:/bin', 'QORE_MODULE_DIR_ONLY': '1'}
+for key in ('QORE_APP_SCHEMA_SNAPSHOTS', 'QORE_HUBSPOT_SCHEMA_SNAPSHOT'):
+    ENV.pop(key, None)
+
+EXTERNAL_SCHEMAS = [app['sourceFile'] for app in json.loads(
+    (ROOT / 'src/schema-cache/app-contracts.json').read_text())['apps'].values()]
+
+
+def verify_schema_exclusions(directory):
+    for relative in ['hubspot', *EXTERNAL_SCHEMAS]:
+        if (directory / relative).exists():
+            raise ValueError('External schema must not be packaged: ' + relative)
 
 ENV['QORE_MODULE_DIR'] = subprocess.check_output(
     ['/usr/bin/qore', '--module-path'], text=True,
@@ -40,8 +51,7 @@ def verify_inputs():
                       ('vendor/yarn-4.12.0.js', 'yarn_sha256')]:
         if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != MANIFEST[key]:
             raise ValueError('Input changed; regenerate reviewed manifest: ' + name)
-    if (ROOT / 'src/schemas/hubspot').exists():
-        raise ValueError('HubSpot documents must not be distributed in the source package')
+    verify_schema_exclusions(ROOT / 'src/schemas')
     cache = ROOT / 'vendor/yarn-cache'
     expected = {record['archive'] for record in MANIFEST['archives']}
     actual = {path.name for path in cache.glob('*.zip')}
@@ -128,11 +138,11 @@ def test():
 def install():
     target = ROOT / 'debian/qore-v8-app-catalogue/usr/share/qore-v8-app-catalogue'
     target.mkdir(parents=True, exist_ok=True)
-    if (PRODUCTION / 'dist/schemas/hubspot').exists():
-        raise ValueError('HubSpot documents must not be distributed in binary packages')
+    verify_schema_exclusions(PRODUCTION / 'dist/schemas')
     bindir = ROOT / 'debian/qore-v8-app-catalogue/usr/bin'
     bindir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(ROOT / 'debian/qore-hubspot-schemas', bindir / 'qore-hubspot-schemas')
+    shutil.copy2(ROOT / 'debian/qore-app-schemas', bindir / 'qore-app-schemas')
     for name in ('dist', 'node_modules'):
         shutil.copytree(PRODUCTION / name, target / name, symlinks=True)
     shutil.copy2(ROOT / 'package.json', target / 'package.json')

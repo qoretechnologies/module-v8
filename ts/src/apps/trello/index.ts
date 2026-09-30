@@ -1,3 +1,4 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
 import {
   IQoreRestConnectionModifiers,
   TQoreAppWithActions,
@@ -77,7 +78,7 @@ export default (locale: Locales) =>
       ping_path: '/1/members/me',
       oauth2_scope_separator_char: ',',
     },
-    swagger: 'schemas/trello.swagger.json',
+    ...appSchemaMetadata('trello'),
     swagger_options: {
       parse_flags: -128,
     },

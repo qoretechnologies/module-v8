@@ -1,3 +1,4 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
@@ -34,9 +35,5 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: -1,
     },
-    swagger_schema_map: {
-      meetings: {
-        swagger: 'schemas/zoom/meetings.swagger.json',
-      },
-    },
+    ...appSchemaMetadata('zoom'),
   }) satisfies TQoreAppWithActions;

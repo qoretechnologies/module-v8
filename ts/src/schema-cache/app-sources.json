@@ -1,0 +1,43 @@
+{
+  "copyright": "Copyright 2026 Qore Technologies, s.r.o.",
+  "license": "MIT",
+  "version": 1,
+  "apps": {
+    "freshdesk": {
+      "importHelp": "Import a compatible Freshdesk Swagger JSON export. No canonical public download has been verified.",
+      "documentation": "https://developers.freshdesk.com/api/"
+    },
+    "magento": {
+      "url": "https://raw.githubusercontent.com/magento/devdocs/f99b4927ca0b0c75eb4910ecd718da00957f9491/src/redoc/2.2/latest-2.2.schema.json",
+      "sha256": "c1d952c43a95c72172bf3014c8956a5906b09f5ca3f81b40f0b41ed7bc1d01e9",
+      "documentation": "https://github.com/magento/devdocs"
+    },
+    "mailchimp": {
+      "url": "https://raw.githubusercontent.com/mailchimp/mailchimp-client-lib-codegen/547f82081fbe0d915b0540ac9df9ea262646e99e/spec/marketing.json",
+      "sha256": "c12da65d002fb0c1a5f033b0349f7c5fce76fe74b6cea2b59ada2f6e14a82a3c",
+      "documentation": "https://github.com/mailchimp/mailchimp-client-lib-codegen"
+    },
+    "netsuite": {
+      "importHelp": "Use fetch-netsuite ACCOUNT TOKEN_FILE, or import a compatible generic Swagger JSON export. Account customizations and unreviewed API generations may require a catalogue update.",
+      "documentation": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1540810174.html"
+    },
+    "pipedrive": {
+      "url": "https://developers.pipedrive.com/docs/api/v1/openapi.json",
+      "documentation": "https://developers.pipedrive.com/docs/api/v1",
+      "compatibilityNote": "The current v1 download no longer includes several supported endpoints, including GET /activities. It is rejected; use an approved legacy export until the app migrates to the newer API."
+    },
+    "trello": {
+      "url": "https://dac-static.atlassian.com/cloud/trello/swagger.v3.json",
+      "documentation": "https://developer.atlassian.com/cloud/trello/rest/api-group-actions/",
+      "compatibilityNote": "The current OpenAPI 3 download differs from the qualified Swagger 2 contract and is rejected. Use an approved export until the app and field presentation are migrated together."
+    },
+    "zendesk": {
+      "importHelp": "Download a compatible JSON schema using the OpenAPI link in the official Ticketing documentation, then import it. Automatic download has not been verified.",
+      "documentation": "https://developer.zendesk.com/api-reference/ticketing/introduction/"
+    },
+    "zoom": {
+      "importHelp": "Import a compatible Meetings Swagger JSON export. The old zoom/api GitHub schema does not describe the supported Meetings contract.",
+      "documentation": "https://developers.zoom.us/docs/api/meetings/"
+    }
+  }
+}

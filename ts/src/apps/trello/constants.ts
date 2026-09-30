@@ -1,7 +1,5 @@
+import { buildAppSchemaActions } from '../../schema-cache/app-actions';
 import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
-import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import trello from '../../schemas/trello.swagger.json';
-import { OpenAPIV2 } from 'openapi-types';
 import { TRELLO_BOARDS_ALLOWED_PATHS } from './allowed-paths/boards';
 import { TRELLO_CARDS_ALLOWED_PATHS } from './allowed-paths/cards';
 import { TRELLO_CHECKLISTS_ALLOWED_PATHS } from './allowed-paths/checklists';
@@ -33,8 +31,7 @@ export const TRELLO_ALLOWED_PATHS = {
   ...TRELLO_SEARCH_ALLOWED_PATHS,
 } satisfies TAllowedPaths;
 
-export const TRELLO_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: trello as unknown as OpenAPIV2.Document,
+export const TRELLO_ACTIONS = buildAppSchemaActions('trello', {
   allowedPaths: TRELLO_ALLOWED_PATHS,
   app: TRELLO_APP_NAME,
 });

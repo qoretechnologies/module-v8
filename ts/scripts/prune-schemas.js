@@ -57,6 +57,8 @@ function pruneApp(appDir) {
     return { app: appDir, error: 'getApp failed: ' + e.message };
   }
   if (!app || !app.swagger) return null; // not a schema-based app
+  // An explicitly configured external cache belongs to its operator, never to a build.
+  if (path.isAbsolute(app.swagger)) return null;
 
   const schemaFile = path.join(DIST, app.swagger);
   if (!fs.existsSync(schemaFile)) return { app: app.name, error: 'schema missing: ' + app.swagger };

@@ -1,0 +1,2643 @@
+{
+  "copyright": "Copyright 2026 Qore Technologies, s.r.o.",
+  "license": "MIT",
+  "version": 1,
+  "apps": {
+    "freshdesk": {
+      "app": "Freshdesk",
+      "sourceFile": "freshdesk.swagger.json",
+      "operations": [
+        {
+          "path": "/api/v2/agents",
+          "method": "get",
+          "operationId": "api_v2_agents_get"
+        },
+        {
+          "path": "/api/v2/agents",
+          "method": "post",
+          "operationId": "api_v2_agents_post"
+        },
+        {
+          "path": "/api/v2/agents/bulk",
+          "method": "post",
+          "operationId": "api_v2_agents_bulk_post"
+        },
+        {
+          "path": "/api/v2/agents/me",
+          "method": "get",
+          "operationId": "api_v2_agents_me_get"
+        },
+        {
+          "path": "/api/v2/agents/{id}",
+          "method": "delete",
+          "operationId": "api_v2_agents_id_delete"
+        },
+        {
+          "path": "/api/v2/agents/{id}",
+          "method": "put",
+          "operationId": "api_v2_agents_id_put"
+        },
+        {
+          "path": "/api/v2/companies",
+          "method": "get",
+          "operationId": "api_v2_companies_get"
+        },
+        {
+          "path": "/api/v2/companies",
+          "method": "post",
+          "operationId": "api_v2_companies_post"
+        },
+        {
+          "path": "/api/v2/companies/{id}",
+          "method": "delete",
+          "operationId": "api_v2_companies_id_delete"
+        },
+        {
+          "path": "/api/v2/companies/{id}",
+          "method": "get",
+          "operationId": "api_v2_companies_id_get"
+        },
+        {
+          "path": "/api/v2/companies/{id}",
+          "method": "put",
+          "operationId": "api_v2_companies_id_put"
+        },
+        {
+          "path": "/api/v2/contacts",
+          "method": "get",
+          "operationId": "api_v2_contacts_get"
+        },
+        {
+          "path": "/api/v2/contacts",
+          "method": "post",
+          "operationId": "api_v2_contacts_post"
+        },
+        {
+          "path": "/api/v2/contacts/{id}",
+          "method": "delete",
+          "operationId": "api_v2_contacts_id_delete"
+        },
+        {
+          "path": "/api/v2/contacts/{id}",
+          "method": "get",
+          "operationId": "api_v2_contacts_id_get"
+        },
+        {
+          "path": "/api/v2/contacts/{id}",
+          "method": "put",
+          "operationId": "api_v2_contacts_id_put"
+        },
+        {
+          "path": "/api/v2/contacts/{id}/hard_delete",
+          "method": "delete",
+          "operationId": "api_v2_contacts_id_hard_delete_delete"
+        },
+        {
+          "path": "/api/v2/custom_objects/schemas",
+          "method": "get",
+          "operationId": "api_v2_custom_objects_schemas_get"
+        },
+        {
+          "path": "/api/v2/custom_objects/schemas/{id}/fields",
+          "method": "get",
+          "operationId": "api_v2_custom_objects_schemas_id_fields_get"
+        },
+        {
+          "path": "/api/v2/custom_objects/schemas/{schemaId}/records/{id}",
+          "method": "delete",
+          "operationId": "api_v2_custom_objects_schemas_schemaId_records_id_delete"
+        },
+        {
+          "path": "/api/v2/custom_objects/schemas/{schemaId}/records/{id}",
+          "method": "get",
+          "operationId": "api_v2_custom_objects_schemas_schemaId_records_id_get"
+        },
+        {
+          "path": "/api/v2/custom_objects/schemas/{schemaId}/records/{id}",
+          "method": "put",
+          "operationId": "api_v2_custom_objects_schemas_schemaId_records_id_put"
+        },
+        {
+          "path": "/api/v2/tickets",
+          "method": "get",
+          "operationId": "api_v2_tickets_get"
+        },
+        {
+          "path": "/api/v2/tickets",
+          "method": "post",
+          "operationId": "api_v2_tickets_post"
+        },
+        {
+          "path": "/api/v2/tickets/{id}",
+          "method": "delete",
+          "operationId": "api_v2_tickets_id_delete"
+        },
+        {
+          "path": "/api/v2/tickets/{id}",
+          "method": "get",
+          "operationId": "api_v2_tickets_id_get"
+        },
+        {
+          "path": "/api/v2/tickets/{id}",
+          "method": "put",
+          "operationId": "api_v2_tickets_id_put"
+        },
+        {
+          "path": "/api/v2/tickets/{id}/summary",
+          "method": "delete",
+          "operationId": "api_v2_tickets_id_summary_delete"
+        },
+        {
+          "path": "/api/v2/tickets/{id}/summary",
+          "method": "get",
+          "operationId": "api_v2_tickets_id_summary_get"
+        },
+        {
+          "path": "/api/v2/tickets/{id}/summary",
+          "method": "put",
+          "operationId": "api_v2_tickets_id_summary_put"
+        }
+      ],
+      "actions": [
+        "api_v2_agents_bulk_post",
+        "api_v2_agents_get",
+        "api_v2_agents_id_delete",
+        "api_v2_agents_id_put",
+        "api_v2_agents_me_get",
+        "api_v2_agents_post",
+        "api_v2_companies_get",
+        "api_v2_companies_id_delete",
+        "api_v2_companies_id_get",
+        "api_v2_companies_id_put",
+        "api_v2_companies_post",
+        "api_v2_contacts_get",
+        "api_v2_contacts_id_delete",
+        "api_v2_contacts_id_get",
+        "api_v2_contacts_id_hard_delete_delete",
+        "api_v2_contacts_id_put",
+        "api_v2_contacts_post",
+        "api_v2_custom_objects_schemas_get",
+        "api_v2_custom_objects_schemas_id_fields_get",
+        "api_v2_custom_objects_schemas_schemaId_records_id_delete",
+        "api_v2_custom_objects_schemas_schemaId_records_id_get",
+        "api_v2_custom_objects_schemas_schemaId_records_id_put",
+        "api_v2_tickets_get",
+        "api_v2_tickets_id_delete",
+        "api_v2_tickets_id_get",
+        "api_v2_tickets_id_put",
+        "api_v2_tickets_id_summary_delete",
+        "api_v2_tickets_id_summary_get",
+        "api_v2_tickets_id_summary_put",
+        "api_v2_tickets_post",
+        "new_contact_trigger",
+        "new_ticket_trigger",
+        "updated_contact_trigger",
+        "updated_ticket_trigger"
+      ],
+      "presentation": {
+        "api_v2_tickets_get": {
+          "display_name": "List All Tickets",
+          "short_desc": "List All Tickets",
+          "desc": "List all tickets.\nUse filters to view only specific tickets (those which match the criteria that you choose). By default, only tickets that have not been deleted or marked as spam will be returned, unless you use the 'deleted' filter.\nNote:\n  1. By default, only tickets that have been created within the past 30 days will be returned. For older tickets, use the updated_since filter.\n  2. A maximum of 300 pages (9000 tickets) will be returned.\n  3. When using filters, the query string must be URL encoded.\n  4. Use 'include' to embed additional details in the response.\n  5. For accounts created after 2018-11-30, you will have to use include to get description.\n"
+        },
+        "api_v2_tickets_post": {
+          "display_name": "Create a Ticket",
+          "short_desc": "Create a Ticket",
+          "desc": "Create a new ticket."
+        },
+        "api_v2_tickets_id_delete": {
+          "display_name": "Delete a Ticket",
+          "short_desc": "Delete a Ticket",
+          "desc": "Deletes the ticket specified by the ticket ID. Note that this action is irreversible."
+        },
+        "api_v2_tickets_id_get": {
+          "display_name": "View a Ticket",
+          "short_desc": "View a Ticket",
+          "desc": "Fetches the ticket for the given ID.\nNote:\n  1. The maximum number of API requests per hour is 1000. Once this limit is reached, any further requests will be denied with a 429 response.\n  2. Deleted tickets will not be returned.\n  3. To view a deleted ticket, use the `deleted` filter.\n"
+        },
+        "api_v2_tickets_id_put": {
+          "display_name": "Update a Ticket",
+          "short_desc": "Update a Ticket",
+          "desc": "Update specific attributes of a ticket. Note: Unlike normal tickets, the subject and description of outbound tickets cannot be updated."
+        },
+        "api_v2_tickets_id_summary_delete": {
+          "display_name": "Delete Summary",
+          "short_desc": "Delete Summary",
+          "desc": "Delete the summary of a ticket."
+        },
+        "api_v2_tickets_id_summary_get": {
+          "display_name": "View Summary",
+          "short_desc": "View Summary",
+          "desc": "Retrieve the summary of a ticket."
+        },
+        "api_v2_tickets_id_summary_put": {
+          "display_name": "Update Summary",
+          "short_desc": "Update Summary",
+          "desc": "Update the summary of a ticket."
+        },
+        "api_v2_agents_get": {
+          "display_name": "List All Agents",
+          "short_desc": "List All Agents",
+          "desc": "Use filters to view only specific agents. The filters can be combined and the query string must be URL encoded."
+        },
+        "api_v2_agents_post": {
+          "display_name": "Create an Agent",
+          "short_desc": "Create an Agent",
+          "desc": "Create a new agent."
+        },
+        "api_v2_agents_bulk_post": {
+          "display_name": "Create Multiple Agents",
+          "short_desc": "Create Multiple Agents",
+          "desc": "Create multiple agents at once."
+        },
+        "api_v2_agents_me_get": {
+          "display_name": "Currently Authenticated Agent",
+          "short_desc": "Currently Authenticated Agent",
+          "desc": "Retrieve the details of the currently authenticated agent."
+        },
+        "api_v2_agents_id_delete": {
+          "display_name": "Delete an Agent",
+          "short_desc": "Delete an Agent",
+          "desc": "Delete an existing agent. Note: Deleting an agent will downgrade the agent into a contact."
+        },
+        "api_v2_agents_id_put": {
+          "display_name": "Update an Agent",
+          "short_desc": "Update an Agent",
+          "desc": "Update an existing agent. Note: Agent's name, phone, mobile number, and job title can't be updated using the API. They can be updated from the Neo Admin Center."
+        },
+        "api_v2_contacts_get": {
+          "display_name": "List All Contacts",
+          "short_desc": "List All Contacts",
+          "desc": "Retrieve a list of contacts based on specified filters."
+        },
+        "api_v2_contacts_post": {
+          "display_name": "Create a Contact",
+          "short_desc": "Create a Contact",
+          "desc": "Create a new contact in Freshdesk."
+        },
+        "api_v2_contacts_id_delete": {
+          "display_name": "Soft Delete a Contact",
+          "short_desc": "Soft Delete a Contact",
+          "desc": "Soft delete a contact. The contact will be marked as deleted."
+        },
+        "api_v2_contacts_id_get": {
+          "display_name": "View Contact",
+          "short_desc": "View Contact",
+          "desc": "Retrieve a list of contacts based on specified filters."
+        },
+        "api_v2_contacts_id_put": {
+          "display_name": "Update a Contact",
+          "short_desc": "Update a Contact",
+          "desc": "Update an existing contact in Freshdesk."
+        },
+        "api_v2_contacts_id_hard_delete_delete": {
+          "display_name": "Permanently Delete a Contact",
+          "short_desc": "Permanently Delete a Contact",
+          "desc": "Hard delete a contact to completely remove it from the portal. Can be used for GDPR compliance."
+        },
+        "api_v2_companies_get": {
+          "display_name": "List All Companies",
+          "short_desc": "List All Companies",
+          "desc": "Use this API to fetch a list of all companies."
+        },
+        "api_v2_companies_post": {
+          "display_name": "Create a Company",
+          "short_desc": "Create a Company",
+          "desc": "Create a new company."
+        },
+        "api_v2_companies_id_delete": {
+          "display_name": "Delete a Company",
+          "short_desc": "Delete a Company",
+          "desc": "Delete a specific company. \nNote: \n1. Deleting a company does not delete the contacts that are associated with it. However the association will be removed.\n2. Once deleted, a company cannot be restored.\n"
+        },
+        "api_v2_companies_id_get": {
+          "display_name": "View a Company",
+          "short_desc": "View a Company",
+          "desc": "View details of a specific company."
+        },
+        "api_v2_companies_id_put": {
+          "display_name": "Update a Company",
+          "short_desc": "Update a Company",
+          "desc": "Update details of a specific company."
+        },
+        "api_v2_custom_objects_schemas_get": {
+          "display_name": "Get All Custom Object Schemas",
+          "short_desc": "Get all custom object schemas",
+          "desc": "Api v2 custom objects schemas get"
+        },
+        "api_v2_custom_objects_schemas_id_fields_get": {
+          "display_name": "List Custom Object Fields",
+          "short_desc": "List custom object fields",
+          "desc": "Api v2 custom objects schemas id fields get"
+        },
+        "api_v2_custom_objects_schemas_schemaId_records_id_delete": {
+          "display_name": "Delete a Record",
+          "short_desc": "Delete a record",
+          "desc": "Api v2 custom objects schemas schema id records id delete"
+        },
+        "api_v2_custom_objects_schemas_schemaId_records_id_get": {
+          "display_name": "Get a Record",
+          "short_desc": "Get a record",
+          "desc": "Api v2 custom objects schemas schema id records id get"
+        },
+        "api_v2_custom_objects_schemas_schemaId_records_id_put": {
+          "display_name": "Update a Record",
+          "short_desc": "Update a record",
+          "desc": "Api v2 custom objects schemas schema id records id put"
+        }
+      }
+    },
+    "magento": {
+      "app": "Magento",
+      "sourceFile": "magento.swagger.json",
+      "operations": [
+        {
+          "path": "/V1/customers/{customerId}",
+          "method": "get",
+          "operationId": "customerCustomerRepositoryV1GetByIdGet"
+        },
+        {
+          "path": "/V1/customers/{customerId}",
+          "method": "put",
+          "operationId": "customerCustomerRepositoryV1SavePut"
+        },
+        {
+          "path": "/V1/customers/{customerId}",
+          "method": "delete",
+          "operationId": "customerCustomerRepositoryV1DeleteByIdDelete"
+        },
+        {
+          "path": "/V1/customers/search",
+          "method": "get",
+          "operationId": "customerCustomerRepositoryV1GetListGet"
+        },
+        {
+          "path": "/V1/customers",
+          "method": "post",
+          "operationId": "customerAccountManagementV1CreateAccountPost"
+        },
+        {
+          "path": "/V1/products",
+          "method": "post",
+          "operationId": "catalogProductRepositoryV1SavePost"
+        },
+        {
+          "path": "/V1/products",
+          "method": "get",
+          "operationId": "catalogProductRepositoryV1GetListGet"
+        },
+        {
+          "path": "/V1/products/{sku}",
+          "method": "put",
+          "operationId": "catalogProductRepositoryV1SavePut"
+        },
+        {
+          "path": "/V1/products/{sku}",
+          "method": "delete",
+          "operationId": "catalogProductRepositoryV1DeleteByIdDelete"
+        },
+        {
+          "path": "/V1/products/{sku}",
+          "method": "get",
+          "operationId": "catalogProductRepositoryV1GetGet"
+        },
+        {
+          "path": "/V1/carts/search",
+          "method": "get",
+          "operationId": "quoteCartRepositoryV1GetListGet"
+        },
+        {
+          "path": "/V1/orders/{id}",
+          "method": "get",
+          "operationId": "salesOrderRepositoryV1GetGet"
+        },
+        {
+          "path": "/V1/orders",
+          "method": "get",
+          "operationId": "salesOrderRepositoryV1GetListGet"
+        },
+        {
+          "path": "/V1/orders/create",
+          "method": "put",
+          "operationId": "salesOrderRepositoryV1SavePut"
+        },
+        {
+          "path": "/V1/orders/{id}/comments",
+          "method": "post",
+          "operationId": "salesOrderManagementV1AddCommentPost"
+        },
+        {
+          "path": "/V1/orders/{id}/comments",
+          "method": "get",
+          "operationId": "salesOrderManagementV1GetCommentsListGet"
+        },
+        {
+          "path": "/V1/invoices",
+          "method": "get",
+          "operationId": "salesInvoiceRepositoryV1GetListGet"
+        },
+        {
+          "path": "/V1/invoices",
+          "method": "post",
+          "operationId": "salesInvoiceRepositoryV1SavePost"
+        },
+        {
+          "path": "/V1/shipments",
+          "method": "get",
+          "operationId": "salesShipmentRepositoryV1GetListGet"
+        },
+        {
+          "path": "/V1/shipment",
+          "method": "post",
+          "operationId": "salesShipmentRepositoryV1SavePost"
+        },
+        {
+          "path": "/V1/transactions",
+          "method": "get",
+          "operationId": "salesTransactionRepositoryV1GetListGet"
+        }
+      ],
+      "actions": [
+        "catalogProductRepositoryV1DeleteByIdDelete",
+        "catalogProductRepositoryV1GetGet",
+        "catalogProductRepositoryV1GetListGet",
+        "catalogProductRepositoryV1SavePost",
+        "catalogProductRepositoryV1SavePut",
+        "customer-created-or-updated",
+        "customerAccountManagementV1CreateAccountPost",
+        "customerCustomerRepositoryV1DeleteByIdDelete",
+        "customerCustomerRepositoryV1GetByIdGet",
+        "customerCustomerRepositoryV1GetListGet",
+        "customerCustomerRepositoryV1SavePut",
+        "invoice-created-or-updated",
+        "order-created",
+        "product-created-or-updated",
+        "quoteCartRepositoryV1GetListGet",
+        "salesInvoiceRepositoryV1GetListGet",
+        "salesInvoiceRepositoryV1SavePost",
+        "salesOrderManagementV1AddCommentPost",
+        "salesOrderManagementV1GetCommentsListGet",
+        "salesOrderRepositoryV1GetGet",
+        "salesOrderRepositoryV1GetListGet",
+        "salesOrderRepositoryV1SavePut",
+        "salesShipmentRepositoryV1GetListGet",
+        "salesShipmentRepositoryV1SavePost",
+        "salesTransactionRepositoryV1GetListGet",
+        "shipment-created"
+      ],
+      "presentation": {
+        "customerCustomerRepositoryV1GetByIdGet": {
+          "display_name": "Get Customer by Id",
+          "short_desc": "Retrieve a specific customer account by ID",
+          "desc": "Retrieves detailed information about a customer account using the customer ID. Returns all customer attributes including address information, account status, and custom attributes."
+        },
+        "customerCustomerRepositoryV1SavePut": {
+          "display_name": "Update Customer",
+          "short_desc": "Update an existing customer account",
+          "desc": "Updates customer information for an existing account. This endpoint allows modification of personal information, addresses, custom attributes, and other account details. The customer ID must be included in the request."
+        },
+        "customerCustomerRepositoryV1DeleteByIdDelete": {
+          "display_name": "Delete Customer",
+          "short_desc": "Remove a customer account by ID",
+          "desc": "Permanently deletes a customer account from the system. This operation cannot be undone and will remove all customer data associated with the specified ID, including addresses and order history references."
+        },
+        "customerCustomerRepositoryV1GetListGet": {
+          "display_name": "List Customers",
+          "short_desc": "Retrieve a list of customer accounts",
+          "desc": "Returns a list of customer accounts that match specified search criteria. Results can be filtered, sorted, and paginated. Use search criteria parameters to narrow results by email, name, creation date, or other customer attributes."
+        },
+        "customerAccountManagementV1CreateAccountPost": {
+          "display_name": "Create Customer Account",
+          "short_desc": "Register a new customer account",
+          "desc": "Creates a new customer account with the provided information. Required fields include email, password, and first/last name. Optional details include addresses, date of birth, and custom attributes. Returns the newly created customer ID upon success."
+        },
+        "catalogProductRepositoryV1SavePost": {
+          "display_name": "Create Product",
+          "short_desc": "Add a new product to the catalog",
+          "desc": "Creates a new product in the catalog with specified attributes, pricing, and inventory information. Products can be simple, configurable, bundled, grouped, virtual, or downloadable. Media gallery entries, tier prices, and custom options can also be defined."
+        },
+        "catalogProductRepositoryV1GetListGet": {
+          "display_name": "List Products",
+          "short_desc": "Retrieve a list of products from the catalog",
+          "desc": "Returns a collection of products that match the specified search criteria. Results can be filtered by attributes like name, SKU, price, and status. Supports pagination, sorting, and inclusion of custom attributes in the response."
+        },
+        "catalogProductRepositoryV1SavePut": {
+          "display_name": "Update Product",
+          "short_desc": "Modify an existing product",
+          "desc": "Updates an existing product in the catalog. Can modify any product attribute including name, price, description, images, inventory, and category assignments. The product SKU or ID must be specified in the request."
+        },
+        "catalogProductRepositoryV1DeleteByIdDelete": {
+          "display_name": "Delete Product",
+          "short_desc": "Remove a product from the catalog",
+          "desc": "Permanently removes a product from the catalog by ID or SKU. This operation cannot be undone and may affect existing orders and carts that reference the deleted product."
+        },
+        "catalogProductRepositoryV1GetGet": {
+          "display_name": "Get Product Details",
+          "short_desc": "Retrieve detailed information about a specific product",
+          "desc": "Retrieves comprehensive information about a specific product by SKU or ID. The response includes all product attributes, images, pricing information, inventory status, and category assignments. Additional parameters can control which data is included."
+        },
+        "quoteCartRepositoryV1GetListGet": {
+          "display_name": "List Shopping Carts",
+          "short_desc": "Retrieve a list of active shopping carts",
+          "desc": "Returns a collection of active shopping carts that match the specified search criteria. Results can be filtered by customer ID, creation date, and cart status. Each cart includes items, applied coupons, and shipping/billing information if available."
+        },
+        "salesOrderRepositoryV1GetGet": {
+          "display_name": "Get Order Details",
+          "short_desc": "Retrieve detailed information about a specific order",
+          "desc": "Retrieves comprehensive information about a specific order by ID. Includes order items, billing and shipping addresses, payment information, applied discounts, and order status history. Useful for order processing and customer service inquiries."
+        },
+        "salesOrderRepositoryV1GetListGet": {
+          "display_name": "List Orders",
+          "short_desc": "Retrieve a list of orders based on search criteria",
+          "desc": "Returns a collection of orders that match the specified search criteria. Results can be filtered by customer, status, date range, and total amount. Supports pagination and sorting to efficiently browse large order volumes."
+        },
+        "salesOrderRepositoryV1SavePut": {
+          "display_name": "Create Order",
+          "short_desc": "Persists order information to the system",
+          "desc": "Performs persist operations for a specified order. Saves the order data to the database, including customer information, line items, payment details, shipping information, and other relevant order metadata."
+        },
+        "salesOrderManagementV1AddCommentPost": {
+          "display_name": "Add Order Comment",
+          "short_desc": "Append a comment to an existing order",
+          "desc": "Adds a comment to the order history. Comments can be internal (visible only to administrators) or customer-visible. Each comment is timestamped and attributed to the author. Useful for documenting order processing steps and customer communications."
+        },
+        "salesOrderManagementV1GetCommentsListGet": {
+          "display_name": "Get Order Comments",
+          "short_desc": "Retrieve the comment history for an order",
+          "desc": "Returns the complete comment history for a specific order. Results include comment text, timestamp, author information, and visibility status (customer-visible or admin-only). Comments are returned in chronological order."
+        },
+        "salesInvoiceRepositoryV1GetListGet": {
+          "display_name": "List Invoices",
+          "short_desc": "Retrieve a collection of invoices",
+          "desc": "Returns a list of invoices based on specified search criteria. Results can be filtered by order ID, customer, date, and amount. Each invoice includes line items, payment information, and related order details. Supports pagination and sorting."
+        },
+        "salesInvoiceRepositoryV1SavePost": {
+          "display_name": "Create Invoice",
+          "short_desc": "Creates a new invoice for an order",
+          "desc": "Creates a new invoice record for an existing order, documenting the financial transaction and payment request. Allows for specifying line items to be invoiced, payment details, and comments that will appear on the customer's invoice."
+        },
+        "salesShipmentRepositoryV1GetListGet": {
+          "display_name": "List Shipments",
+          "short_desc": "Retrieve a collection of order shipments",
+          "desc": "Returns a list of shipments based on specified search criteria. Results can be filtered by order ID, customer, creation date, and tracking information. Each shipment includes items shipped, quantities, tracking numbers, and carrier information."
+        },
+        "salesShipmentRepositoryV1SavePost": {
+          "display_name": "Create Shipment",
+          "short_desc": "Creates a new shipment for an order",
+          "desc": "Creates a new shipment record for an existing order, allowing you to document and track the physical sending of order items to the customer. Includes options for specifying tracking numbers, shipping carriers, and shipped items with their quantities."
+        },
+        "salesTransactionRepositoryV1GetListGet": {
+          "display_name": "List Payment Transactions",
+          "short_desc": "Retrieve a collection of payment transactions",
+          "desc": "Returns a list of payment transactions based on specified search criteria. Results can be filtered by order ID, payment method, transaction type, and status. Each transaction includes amount, status, and related payment gateway information."
+        }
+      }
+    },
+    "mailchimp": {
+      "app": "Mailchimp",
+      "sourceFile": "mailchimp.swagger.json",
+      "operations": [
+        {
+          "path": "/campaigns",
+          "method": "get",
+          "operationId": "getCampaigns"
+        },
+        {
+          "path": "/campaigns",
+          "method": "post",
+          "operationId": "postCampaigns"
+        },
+        {
+          "path": "/campaigns/{campaign_id}/actions/send",
+          "method": "post",
+          "operationId": "postCampaignsIdActionsSend"
+        },
+        {
+          "path": "/lists",
+          "method": "post",
+          "operationId": "postLists"
+        },
+        {
+          "path": "/lists/{list_id}/tag-search",
+          "method": "get",
+          "operationId": "searchTagsByName"
+        },
+        {
+          "path": "/lists/{list_id}/members",
+          "method": "get",
+          "operationId": "getListsIdMembers"
+        },
+        {
+          "path": "/lists/{list_id}/members",
+          "method": "post",
+          "operationId": "postListsIdMembers"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}",
+          "method": "get",
+          "operationId": "getListsIdMembersId"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}",
+          "method": "put",
+          "operationId": "putListsIdMembersId"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}",
+          "method": "delete",
+          "operationId": "deleteListsIdMembersId"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}/tags",
+          "method": "post",
+          "operationId": "postListMemberTags"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}/events",
+          "method": "post",
+          "operationId": "postListMemberEvents"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}/notes",
+          "method": "post",
+          "operationId": "postListsIdMembersIdNotes"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}",
+          "method": "patch",
+          "operationId": "patchListsIdMembersIdNotesId"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}",
+          "method": "delete",
+          "operationId": "deleteListsIdMembersIdNotesId"
+        },
+        {
+          "path": "/lists/{list_id}/members/{subscriber_hash}/actions/delete-permanent",
+          "method": "post",
+          "operationId": "postListsIdMembersHashActionsDeletePermanent"
+        },
+        {
+          "path": "/reports",
+          "method": "get",
+          "operationId": "getReports"
+        },
+        {
+          "path": "/reports/{campaign_id}",
+          "method": "get",
+          "operationId": "getReportsId"
+        },
+        {
+          "path": "/reports/{campaign_id}/click-details",
+          "method": "get",
+          "operationId": "getReportsIdClickDetails"
+        },
+        {
+          "path": "/ecommerce/stores/{store_id}/customers/{customer_id}",
+          "method": "get",
+          "operationId": "getEcommerceStoresIdCustomersId"
+        },
+        {
+          "path": "/search-campaigns",
+          "method": "get",
+          "operationId": "getSearchCampaigns"
+        },
+        {
+          "path": "/search-members",
+          "method": "get",
+          "operationId": "getSearchMembers"
+        }
+      ],
+      "actions": [
+        "deleteListsIdMembersId",
+        "deleteListsIdMembersIdNotesId",
+        "email_opened",
+        "getCampaigns",
+        "getEcommerceStoresIdCustomersId",
+        "getListsIdMembers",
+        "getListsIdMembersId",
+        "getReports",
+        "getReportsId",
+        "getReportsIdClickDetails",
+        "getSearchCampaigns",
+        "getSearchMembers",
+        "new_subscriber",
+        "new_unsubscriber",
+        "patchListsIdMembersIdNotesId",
+        "postCampaigns",
+        "postCampaignsIdActionsSend",
+        "postListMemberEvents",
+        "postListMemberTags",
+        "postLists",
+        "postListsIdMembers",
+        "postListsIdMembersHashActionsDeletePermanent",
+        "postListsIdMembersIdNotes",
+        "putListsIdMembersId",
+        "searchTagsByName"
+      ],
+      "presentation": {
+        "getCampaigns": {
+          "display_name": "Get Campaigns",
+          "short_desc": "Retrieve a list of email campaigns",
+          "desc": "Fetches all email campaigns from your Mailchimp account with their details including status, settings, and performance metrics."
+        },
+        "postCampaigns": {
+          "display_name": "Create Campaign",
+          "short_desc": "Create a new email campaign",
+          "desc": "Creates a new email campaign in Mailchimp with specified settings, content, and audience targeting options."
+        },
+        "postCampaignsIdActionsSend": {
+          "display_name": "Send Campaign",
+          "short_desc": "Send an email campaign",
+          "desc": "Sends a previously created email campaign to its targeted audience immediately or schedules it for later delivery."
+        },
+        "postLists": {
+          "display_name": "Create Audience",
+          "short_desc": "Create a new audience",
+          "desc": "Creates a new audience (mailing list) in Mailchimp with specified settings and configuration options."
+        },
+        "searchTagsByName": {
+          "display_name": "Search Tags by Name",
+          "short_desc": "Search for tags by name",
+          "desc": "Searches for subscriber tags by name to help organize and segment your audience members."
+        },
+        "getListsIdMembers": {
+          "display_name": "Get Audience Members",
+          "short_desc": "Retrieve members from an audience",
+          "desc": "Fetches all members (subscribers) from a specific audience with their contact information and subscription details."
+        },
+        "postListsIdMembers": {
+          "display_name": "Add Audience Member",
+          "short_desc": "Add a new member to an audience",
+          "desc": "Adds a new subscriber to a specific audience with their contact information and subscription preferences."
+        },
+        "getListsIdMembersId": {
+          "display_name": "Get Audience Member",
+          "short_desc": "Retrieve a specific audience member",
+          "desc": "Fetches detailed information about a specific member (subscriber) from an audience including their profile and activity data."
+        },
+        "putListsIdMembersId": {
+          "display_name": "Update Audience Member",
+          "short_desc": "Update an audience member",
+          "desc": "Updates the information and subscription preferences of an existing member in an audience."
+        },
+        "deleteListsIdMembersId": {
+          "display_name": "Remove Audience Member",
+          "short_desc": "Remove a member from an audience",
+          "desc": "Removes a subscriber from an audience while preserving their data for compliance purposes."
+        },
+        "postListMemberTags": {
+          "display_name": "Add Member Tags",
+          "short_desc": "Add tags to audience members",
+          "desc": "Adds one or more tags to audience members for better segmentation and organization."
+        },
+        "postListMemberEvents": {
+          "display_name": "Add Member Events",
+          "short_desc": "Add events to audience members",
+          "desc": "Records custom events for audience members to track their behavior and interactions with your brand."
+        },
+        "postListsIdMembersIdNotes": {
+          "display_name": "Add Member Note",
+          "short_desc": "Add a note to an audience member",
+          "desc": "Adds a note to a specific audience member for internal tracking and customer relationship management."
+        },
+        "patchListsIdMembersIdNotesId": {
+          "display_name": "Update Member Note",
+          "short_desc": "Update an audience member note",
+          "desc": "Updates an existing note attached to an audience member with new information or corrections."
+        },
+        "deleteListsIdMembersIdNotesId": {
+          "display_name": "Delete Member Note",
+          "short_desc": "Delete an audience member note",
+          "desc": "Permanently removes a note from an audience member's profile."
+        },
+        "postListsIdMembersHashActionsDeletePermanent": {
+          "display_name": "Permanently Delete Member",
+          "short_desc": "Permanently delete an audience member",
+          "desc": "Permanently removes an audience member and all their associated data from Mailchimp. This action cannot be undone."
+        },
+        "getReports": {
+          "display_name": "Get Campaign Reports",
+          "short_desc": "Retrieve campaign performance reports",
+          "desc": "Fetches performance reports for your email campaigns including open rates, click rates, and engagement metrics."
+        },
+        "getReportsId": {
+          "display_name": "Get Campaign Report",
+          "short_desc": "Retrieve a specific campaign report",
+          "desc": "Fetches detailed performance metrics and analytics for a specific email campaign."
+        },
+        "getReportsIdClickDetails": {
+          "display_name": "Get Campaign Click Details",
+          "short_desc": "Retrieve click details for a campaign",
+          "desc": "Fetches detailed information about clicks in a specific campaign including which links were clicked and by whom."
+        },
+        "getEcommerceStoresIdCustomersId": {
+          "display_name": "Get Store Customer",
+          "short_desc": "Retrieve a specific store customer",
+          "desc": "Fetches detailed information about a specific customer from your connected e-commerce store."
+        },
+        "getSearchCampaigns": {
+          "display_name": "Search Campaigns",
+          "short_desc": "Search for campaigns",
+          "desc": "Searches through your email campaigns using various criteria to find specific campaigns quickly."
+        },
+        "getSearchMembers": {
+          "display_name": "Search Audience Members",
+          "short_desc": "Search for audience members",
+          "desc": "Searches through audience members using various criteria such as email, name, or tags to find specific subscribers."
+        }
+      }
+    },
+    "netsuite": {
+      "app": "NetSuite",
+      "sourceFile": "netsuite.swagger.json",
+      "operations": [
+        {
+          "path": "/account",
+          "method": "post",
+          "operationId": "account_post"
+        },
+        {
+          "path": "/account/{id}",
+          "method": "delete",
+          "operationId": "account_id_delete"
+        },
+        {
+          "path": "/account/{id}",
+          "method": "get",
+          "operationId": "account_id_get"
+        },
+        {
+          "path": "/account/{id}",
+          "method": "patch",
+          "operationId": "account_id_patch"
+        },
+        {
+          "path": "/contact",
+          "method": "post",
+          "operationId": "contact_post"
+        },
+        {
+          "path": "/contact/{id}",
+          "method": "delete",
+          "operationId": "contact_id_delete"
+        },
+        {
+          "path": "/contact/{id}",
+          "method": "get",
+          "operationId": "contact_id_get"
+        },
+        {
+          "path": "/contact/{id}",
+          "method": "patch",
+          "operationId": "contact_id_patch"
+        },
+        {
+          "path": "/customer",
+          "method": "post",
+          "operationId": "customer_post"
+        },
+        {
+          "path": "/customer/{id}",
+          "method": "delete",
+          "operationId": "customer_id_delete"
+        },
+        {
+          "path": "/customer/{id}",
+          "method": "get",
+          "operationId": "customer_id_get"
+        },
+        {
+          "path": "/customer/{id}",
+          "method": "patch",
+          "operationId": "customer_id_patch"
+        },
+        {
+          "path": "/invoice",
+          "method": "post",
+          "operationId": "invoice_post"
+        },
+        {
+          "path": "/invoice/{id}",
+          "method": "delete",
+          "operationId": "invoice_id_delete"
+        },
+        {
+          "path": "/invoice/{id}",
+          "method": "get",
+          "operationId": "invoice_id_get"
+        },
+        {
+          "path": "/invoice/{id}",
+          "method": "patch",
+          "operationId": "invoice_id_patch"
+        },
+        {
+          "path": "/journalEntry",
+          "method": "post",
+          "operationId": "journalEntry_post"
+        },
+        {
+          "path": "/journalEntry/{id}",
+          "method": "delete",
+          "operationId": "journalEntry_id_delete"
+        },
+        {
+          "path": "/journalEntry/{id}",
+          "method": "get",
+          "operationId": "journalEntry_id_get"
+        },
+        {
+          "path": "/journalEntry/{id}",
+          "method": "patch",
+          "operationId": "journalEntry_id_patch"
+        },
+        {
+          "path": "/opportunity",
+          "method": "post",
+          "operationId": "opportunity_post"
+        },
+        {
+          "path": "/opportunity/{id}",
+          "method": "delete",
+          "operationId": "opportunity_id_delete"
+        },
+        {
+          "path": "/opportunity/{id}",
+          "method": "get",
+          "operationId": "opportunity_id_get"
+        },
+        {
+          "path": "/opportunity/{id}",
+          "method": "patch",
+          "operationId": "opportunity_id_patch"
+        },
+        {
+          "path": "/purchaseOrder",
+          "method": "post",
+          "operationId": "purchaseOrder_post"
+        },
+        {
+          "path": "/purchaseOrder/{id}",
+          "method": "delete",
+          "operationId": "purchaseOrder_id_delete"
+        },
+        {
+          "path": "/purchaseOrder/{id}",
+          "method": "get",
+          "operationId": "purchaseOrder_id_get"
+        },
+        {
+          "path": "/purchaseOrder/{id}",
+          "method": "patch",
+          "operationId": "purchaseOrder_id_patch"
+        },
+        {
+          "path": "/salesOrder",
+          "method": "post",
+          "operationId": "salesOrder_post"
+        },
+        {
+          "path": "/salesOrder/{id}",
+          "method": "delete",
+          "operationId": "salesOrder_id_delete"
+        },
+        {
+          "path": "/salesOrder/{id}",
+          "method": "get",
+          "operationId": "salesOrder_id_get"
+        },
+        {
+          "path": "/salesOrder/{id}",
+          "method": "patch",
+          "operationId": "salesOrder_id_patch"
+        },
+        {
+          "path": "/vendor",
+          "method": "post",
+          "operationId": "vendor_post"
+        },
+        {
+          "path": "/vendor/{id}",
+          "method": "delete",
+          "operationId": "vendor_id_delete"
+        },
+        {
+          "path": "/vendor/{id}",
+          "method": "get",
+          "operationId": "vendor_id_get"
+        },
+        {
+          "path": "/vendor/{id}",
+          "method": "patch",
+          "operationId": "vendor_id_patch"
+        }
+      ],
+      "actions": [
+        "account_id_delete",
+        "account_id_get",
+        "account_id_patch",
+        "account_post",
+        "contact_id_delete",
+        "contact_id_get",
+        "contact_id_patch",
+        "contact_post",
+        "customer_id_delete",
+        "customer_id_get",
+        "customer_id_patch",
+        "customer_post",
+        "customer_post_simplified",
+        "invoice_id_delete",
+        "invoice_id_get",
+        "invoice_id_patch",
+        "invoice_post",
+        "journalEntry_id_delete",
+        "journalEntry_id_get",
+        "journalEntry_id_patch",
+        "journalEntry_post",
+        "list_records",
+        "new_record",
+        "opportunity_id_delete",
+        "opportunity_id_get",
+        "opportunity_id_patch",
+        "opportunity_post",
+        "purchaseOrder_id_delete",
+        "purchaseOrder_id_get",
+        "purchaseOrder_id_patch",
+        "purchaseOrder_post",
+        "salesOrder_id_delete",
+        "salesOrder_id_get",
+        "salesOrder_id_patch",
+        "salesOrder_post",
+        "salesOrder_post_simplified",
+        "suite_ql",
+        "vendor_id_delete",
+        "vendor_id_get",
+        "vendor_id_patch",
+        "vendor_post"
+      ],
+      "presentation": {
+        "account_post": {
+          "display_name": "Create Account",
+          "short_desc": "Creates a new account.",
+          "desc": "Allows the user to create a new account record in NetSuite."
+        },
+        "account_id_delete": {
+          "display_name": "Delete Account",
+          "short_desc": "Deletes a specific account.",
+          "desc": "Removes an account record from NetSuite based on its ID."
+        },
+        "account_id_get": {
+          "display_name": "Get Account",
+          "short_desc": "Retrieve details of a specific account.",
+          "desc": "Fetches detailed information of a single account by its ID."
+        },
+        "account_id_patch": {
+          "display_name": "Update Account",
+          "short_desc": "Updates an existing account.",
+          "desc": "Allows the user to update details of a specific account by its ID."
+        },
+        "contact_post": {
+          "display_name": "Create Contact",
+          "short_desc": "Creates a new contact.",
+          "desc": "Allows the user to create a new contact record in NetSuite."
+        },
+        "contact_id_delete": {
+          "display_name": "Delete Contact",
+          "short_desc": "Deletes a specific contact.",
+          "desc": "Removes a contact record from NetSuite based on its ID."
+        },
+        "contact_id_get": {
+          "display_name": "Get Contact",
+          "short_desc": "Retrieve details of a specific contact.",
+          "desc": "Fetches detailed information of a single contact by its ID."
+        },
+        "contact_id_patch": {
+          "display_name": "Update Contact",
+          "short_desc": "Updates an existing contact.",
+          "desc": "Allows the user to update details of a specific contact by its ID."
+        },
+        "customer_post": {
+          "display_name": "Create Customer",
+          "short_desc": "Creates a new customer.",
+          "desc": "Allows the user to create a new customer record in NetSuite."
+        },
+        "customer_id_delete": {
+          "display_name": "Delete Customer",
+          "short_desc": "Deletes a specific customer.",
+          "desc": "Removes a customer record from NetSuite based on its ID."
+        },
+        "customer_id_get": {
+          "display_name": "Get Customer",
+          "short_desc": "Retrieve details of a specific customer.",
+          "desc": "Fetches detailed information of a single customer by its ID."
+        },
+        "customer_id_patch": {
+          "display_name": "Update Customer",
+          "short_desc": "Updates an existing customer.",
+          "desc": "Allows the user to update details of a specific customer by its ID."
+        },
+        "invoice_post": {
+          "display_name": "Create Invoice",
+          "short_desc": "Creates a new invoice.",
+          "desc": "Allows the user to create a new invoice record in NetSuite."
+        },
+        "invoice_id_delete": {
+          "display_name": "Delete Invoice",
+          "short_desc": "Deletes a specific invoice.",
+          "desc": "Removes an invoice record from NetSuite based on its ID."
+        },
+        "invoice_id_get": {
+          "display_name": "Get Invoice",
+          "short_desc": "Retrieve details of a specific invoice.",
+          "desc": "Fetches detailed information of a single invoice by its ID."
+        },
+        "invoice_id_patch": {
+          "display_name": "Update Invoice",
+          "short_desc": "Updates an existing invoice.",
+          "desc": "Allows the user to update details of a specific invoice by its ID."
+        },
+        "journalEntry_post": {
+          "display_name": "Create Journal Entry",
+          "short_desc": "Creates a new journal entry.",
+          "desc": "Allows the user to create a new journal entry record in NetSuite."
+        },
+        "journalEntry_id_delete": {
+          "display_name": "Delete Journal Entry",
+          "short_desc": "Deletes a specific journal entry.",
+          "desc": "Removes a journal entry record from NetSuite based on its ID."
+        },
+        "journalEntry_id_get": {
+          "display_name": "Get Journal Entry",
+          "short_desc": "Retrieve details of a specific journal entry.",
+          "desc": "Fetches detailed information of a single journal entry by its ID."
+        },
+        "journalEntry_id_patch": {
+          "display_name": "Update Record.",
+          "short_desc": "Update record.",
+          "desc": "Journal entry id patch"
+        },
+        "opportunity_post": {
+          "display_name": "Create Opportunity",
+          "short_desc": "Creates a new opportunity.",
+          "desc": "Allows the user to create a new opportunity record in NetSuite."
+        },
+        "opportunity_id_delete": {
+          "display_name": "Delete Opportunity",
+          "short_desc": "Deletes a specific opportunity.",
+          "desc": "Removes an opportunity record from NetSuite based on its ID."
+        },
+        "opportunity_id_get": {
+          "display_name": "Get Opportunity",
+          "short_desc": "Retrieve details of a specific opportunity.",
+          "desc": "Fetches detailed information of a single opportunity by its ID."
+        },
+        "opportunity_id_patch": {
+          "display_name": "Update Opportunity",
+          "short_desc": "Updates an existing opportunity.",
+          "desc": "Allows the user to update details of a specific opportunity by its ID."
+        },
+        "purchaseOrder_post": {
+          "display_name": "Create Purchase Order",
+          "short_desc": "Creates a new purchase order.",
+          "desc": "Allows the user to create a new purchase order record in NetSuite."
+        },
+        "purchaseOrder_id_delete": {
+          "display_name": "Delete Purchase Order",
+          "short_desc": "Deletes a specific purchase order.",
+          "desc": "Removes a purchase order record from NetSuite based on its ID."
+        },
+        "purchaseOrder_id_get": {
+          "display_name": "Get Purchase Order",
+          "short_desc": "Retrieve details of a specific purchase order.",
+          "desc": "Fetches detailed information of a single purchase order by its ID."
+        },
+        "purchaseOrder_id_patch": {
+          "display_name": "Update Purchase Order",
+          "short_desc": "Updates an existing purchase order.",
+          "desc": "Allows the user to update details of a specific purchase order by its ID."
+        },
+        "salesOrder_post": {
+          "display_name": "Create Sales Order",
+          "short_desc": "Creates a new sales order.",
+          "desc": "Allows the user to create a new sales order record in NetSuite."
+        },
+        "salesOrder_id_delete": {
+          "display_name": "Delete Sales Order",
+          "short_desc": "Deletes a specific sales order.",
+          "desc": "Removes a sales order record from NetSuite based on its ID."
+        },
+        "salesOrder_id_get": {
+          "display_name": "Get Sales Order",
+          "short_desc": "Retrieve details of a specific sales order.",
+          "desc": "Fetches detailed information of a single sales order by its ID."
+        },
+        "salesOrder_id_patch": {
+          "display_name": "Update Sales Order",
+          "short_desc": "Updates an existing sales order.",
+          "desc": "Allows the user to update details of a specific sales order by its ID."
+        },
+        "vendor_post": {
+          "display_name": "Create Vendor",
+          "short_desc": "Creates a new vendor.",
+          "desc": "Allows the user to create a new vendor record in NetSuite."
+        },
+        "vendor_id_delete": {
+          "display_name": "Delete Vendor",
+          "short_desc": "Deletes a specific vendor.",
+          "desc": "Removes a vendor record from NetSuite based on its ID."
+        },
+        "vendor_id_get": {
+          "display_name": "Get Vendor",
+          "short_desc": "Retrieve details of a specific vendor.",
+          "desc": "Fetches detailed information of a single vendor by its ID."
+        },
+        "vendor_id_patch": {
+          "display_name": "Update Vendor",
+          "short_desc": "Updates an existing vendor.",
+          "desc": "Allows the user to update details of a specific vendor by its ID."
+        },
+        "customer_post_simplified": {
+          "display_name": "Create Customer (simplified)",
+          "short_desc": "Creates a new customer with simplified options.",
+          "desc": "Creates a new customer in NetSuite with simplified fields"
+        },
+        "salesOrder_post_simplified": {
+          "display_name": "Create Sales Order (simplified)",
+          "short_desc": "Creates a new sales order with simplified options.",
+          "desc": "Creates a new customer sales order in NetSuite with only the most commonly used fields, making order creation faster and more straightforward."
+        }
+      }
+    },
+    "pipedrive": {
+      "app": "Pipedrive",
+      "sourceFile": "pipedrive.swagger.json",
+      "operations": [
+        {
+          "path": "/activities",
+          "method": "get",
+          "operationId": "getActivities"
+        },
+        {
+          "path": "/activities",
+          "method": "post",
+          "operationId": "addActivity"
+        },
+        {
+          "path": "/activities/{id}",
+          "method": "delete",
+          "operationId": "deleteActivity"
+        },
+        {
+          "path": "/activities/{id}",
+          "method": "get",
+          "operationId": "getActivity"
+        },
+        {
+          "path": "/activities/{id}",
+          "method": "put",
+          "operationId": "updateActivity"
+        },
+        {
+          "path": "/deals",
+          "method": "get",
+          "operationId": "getDeals"
+        },
+        {
+          "path": "/deals",
+          "method": "post",
+          "operationId": "addDeal"
+        },
+        {
+          "path": "/deals/{id}",
+          "method": "delete",
+          "operationId": "deleteDeal"
+        },
+        {
+          "path": "/deals/{id}",
+          "method": "get",
+          "operationId": "getDeal"
+        },
+        {
+          "path": "/deals/{id}",
+          "method": "put",
+          "operationId": "updateDeal"
+        },
+        {
+          "path": "/leads",
+          "method": "get",
+          "operationId": "getLeads"
+        },
+        {
+          "path": "/leads",
+          "method": "post",
+          "operationId": "addLead"
+        },
+        {
+          "path": "/leads/{id}",
+          "method": "delete",
+          "operationId": "deleteLead"
+        },
+        {
+          "path": "/leads/{id}",
+          "method": "get",
+          "operationId": "getLead"
+        },
+        {
+          "path": "/leads/{id}",
+          "method": "patch",
+          "operationId": "updateLead"
+        },
+        {
+          "path": "/notes",
+          "method": "get",
+          "operationId": "getNotes"
+        },
+        {
+          "path": "/notes",
+          "method": "post",
+          "operationId": "addNote"
+        },
+        {
+          "path": "/notes/{id}",
+          "method": "delete",
+          "operationId": "deleteNote"
+        },
+        {
+          "path": "/notes/{id}",
+          "method": "get",
+          "operationId": "getNote"
+        },
+        {
+          "path": "/notes/{id}",
+          "method": "put",
+          "operationId": "updateNote"
+        },
+        {
+          "path": "/organizations",
+          "method": "get",
+          "operationId": "getOrganizations"
+        },
+        {
+          "path": "/organizations",
+          "method": "post",
+          "operationId": "addOrganization"
+        },
+        {
+          "path": "/organizations/{id}",
+          "method": "delete",
+          "operationId": "deleteOrganization"
+        },
+        {
+          "path": "/organizations/{id}",
+          "method": "get",
+          "operationId": "getOrganization"
+        },
+        {
+          "path": "/organizations/{id}",
+          "method": "put",
+          "operationId": "updateOrganization"
+        },
+        {
+          "path": "/persons",
+          "method": "get",
+          "operationId": "getPersons"
+        },
+        {
+          "path": "/persons",
+          "method": "post",
+          "operationId": "addPerson"
+        },
+        {
+          "path": "/persons/{id}",
+          "method": "delete",
+          "operationId": "deletePerson"
+        },
+        {
+          "path": "/persons/{id}",
+          "method": "get",
+          "operationId": "getPerson"
+        },
+        {
+          "path": "/persons/{id}",
+          "method": "put",
+          "operationId": "updatePerson"
+        },
+        {
+          "path": "/projects",
+          "method": "get",
+          "operationId": "getProjects"
+        },
+        {
+          "path": "/projects",
+          "method": "post",
+          "operationId": "addProject"
+        },
+        {
+          "path": "/projects/{id}",
+          "method": "delete",
+          "operationId": "deleteProject"
+        },
+        {
+          "path": "/projects/{id}",
+          "method": "get",
+          "operationId": "getProject"
+        },
+        {
+          "path": "/projects/{id}",
+          "method": "put",
+          "operationId": "updateProject"
+        },
+        {
+          "path": "/tasks",
+          "method": "get",
+          "operationId": "getTasks"
+        },
+        {
+          "path": "/tasks",
+          "method": "post",
+          "operationId": "addTask"
+        },
+        {
+          "path": "/tasks/{id}",
+          "method": "delete",
+          "operationId": "deleteTask"
+        },
+        {
+          "path": "/tasks/{id}",
+          "method": "get",
+          "operationId": "getTask"
+        },
+        {
+          "path": "/tasks/{id}",
+          "method": "put",
+          "operationId": "updateTask"
+        }
+      ],
+      "actions": [
+        "addActivity",
+        "addDeal",
+        "addLead",
+        "addNote",
+        "addOrganization",
+        "addPerson",
+        "addProject",
+        "addTask",
+        "deleteActivity",
+        "deleteDeal",
+        "deleteLead",
+        "deleteNote",
+        "deleteOrganization",
+        "deletePerson",
+        "deleteProject",
+        "deleteTask",
+        "getActivities",
+        "getActivity",
+        "getDeal",
+        "getDeals",
+        "getLead",
+        "getLeads",
+        "getNote",
+        "getNotes",
+        "getOrganization",
+        "getOrganizations",
+        "getPerson",
+        "getPersons",
+        "getProject",
+        "getProjects",
+        "getTask",
+        "getTasks",
+        "pipedrive_activity_trigger",
+        "pipedrive_deal_trigger",
+        "pipedrive_lead_trigger",
+        "pipedrive_note_trigger",
+        "pipedrive_organization_trigger",
+        "pipedrive_person_trigger",
+        "pipedrive_user_trigger",
+        "updateActivity",
+        "updateDeal",
+        "updateLead",
+        "updateNote",
+        "updateOrganization",
+        "updatePerson",
+        "updateProject",
+        "updateTask"
+      ],
+      "presentation": {
+        "getActivities": {
+          "display_name": "Get All Activities Assigned to a Particular User",
+          "short_desc": "Get all activities assigned to a particular user",
+          "desc": "Returns all activities assigned to a particular user."
+        },
+        "addActivity": {
+          "display_name": "Add an Activity",
+          "short_desc": "Add an activity",
+          "desc": "Adds a new activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">adding an activity<-a>. <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***"
+        },
+        "deleteActivity": {
+          "display_name": "Delete an Activity",
+          "short_desc": "Delete an activity",
+          "desc": "Marks an activity as deleted. After 30 days, the activity will be permanently deleted."
+        },
+        "getActivity": {
+          "display_name": "Get Details of an Activity",
+          "short_desc": "Get details of an activity",
+          "desc": "Returns the details of a specific activity."
+        },
+        "updateActivity": {
+          "display_name": "Update an Activity",
+          "short_desc": "Update an activity",
+          "desc": "Updates an activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***"
+        },
+        "getDeals": {
+          "display_name": "Get All Deals",
+          "short_desc": "Get all deals",
+          "desc": "Returns all deals. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">getting all deals<-a>."
+        },
+        "addDeal": {
+          "display_name": "Add a Deal",
+          "short_desc": "Add a deal",
+          "desc": "Adds a new deal. All deals created through the Pipedrive API will have a `origin` set to `API`. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the dealFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">adding a deal<-a>."
+        },
+        "deleteDeal": {
+          "display_name": "Delete a Deal",
+          "short_desc": "Delete a deal",
+          "desc": "Marks a deal as deleted. After 30 days, the deal will be permanently deleted."
+        },
+        "getDeal": {
+          "display_name": "Get Details of a Deal",
+          "short_desc": "Get details of a deal",
+          "desc": "Returns the details of a specific deal. Note that this also returns some additional fields which are not present when asking for all deals \u2013 such as deal age and stay in pipeline stages. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of dealFields. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">getting details of a deal<-a>."
+        },
+        "updateDeal": {
+          "display_name": "Update a Deal",
+          "short_desc": "Update a deal",
+          "desc": "Updates the properties of a deal. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">updating a deal<-a>."
+        },
+        "getLeads": {
+          "display_name": "Get All Leads",
+          "short_desc": "Get all leads",
+          "desc": "Returns multiple leads. Leads are sorted by the time they were created, from oldest to newest. Pagination can be controlled using `limit` and `start` query parameters. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals.\n"
+        },
+        "addLead": {
+          "display_name": "Add a Lead",
+          "short_desc": "Add a lead",
+          "desc": "Creates a lead. A lead always has to be linked to a person or an organization or both. All leads created through the Pipedrive API will have a lead source and origin set to `API`. Here's the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">adding a lead<-a>. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields' values tutorial<-a>."
+        },
+        "deleteLead": {
+          "display_name": "Delete a Lead",
+          "short_desc": "Delete a lead",
+          "desc": "Deletes a specific lead."
+        },
+        "getLead": {
+          "display_name": "Get One Lead",
+          "short_desc": "Get one lead",
+          "desc": "Returns details of a specific lead. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields\u2019 structure from deals."
+        },
+        "updateLead": {
+          "display_name": "Update a Lead",
+          "short_desc": "Update a lead",
+          "desc": "Updates one or more properties of a lead. Only properties included in the request will be updated. Send `null` to unset a property (applicable for example for `value`, `person_id` or `organization_id`). If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields\u2019 structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields\u2019 values tutorial<-a>."
+        },
+        "getNotes": {
+          "display_name": "Get All Notes",
+          "short_desc": "Get all notes",
+          "desc": "Returns all notes."
+        },
+        "addNote": {
+          "display_name": "Add a Note",
+          "short_desc": "Add a note",
+          "desc": "Adds a new note."
+        },
+        "deleteNote": {
+          "display_name": "Delete a Note",
+          "short_desc": "Delete a note",
+          "desc": "Deletes a specific note."
+        },
+        "getNote": {
+          "display_name": "Get One Note",
+          "short_desc": "Get one note",
+          "desc": "Returns details about a specific note."
+        },
+        "updateNote": {
+          "display_name": "Update a Note",
+          "short_desc": "Update a note",
+          "desc": "Updates a note."
+        },
+        "getOrganizations": {
+          "display_name": "Get All Organizations",
+          "short_desc": "Get all organizations",
+          "desc": "Returns all organizations."
+        },
+        "addOrganization": {
+          "display_name": "Add an Organization",
+          "short_desc": "Add an organization",
+          "desc": "Adds a new organization. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the organizationFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">adding an organization<-a>."
+        },
+        "deleteOrganization": {
+          "display_name": "Delete an Organization",
+          "short_desc": "Delete an organization",
+          "desc": "Marks an organization as deleted. After 30 days, the organization will be permanently deleted."
+        },
+        "getOrganization": {
+          "display_name": "Get Details of an Organization",
+          "short_desc": "Get details of an organization",
+          "desc": "Returns the details of an organization. Note that this also returns some additional fields which are not present when asking for all organizations. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of organizationFields."
+        },
+        "updateOrganization": {
+          "display_name": "Update an Organization",
+          "short_desc": "Update an organization",
+          "desc": "Updates the properties of an organization."
+        },
+        "getPersons": {
+          "display_name": "Get All Persons",
+          "short_desc": "Get all persons",
+          "desc": "Returns all persons."
+        },
+        "addPerson": {
+          "display_name": "Add a Person",
+          "short_desc": "Add a person",
+          "desc": "Adds a new person. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the personFields and look for `key` values.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field."
+        },
+        "deletePerson": {
+          "display_name": "Delete a Person",
+          "short_desc": "Delete a person",
+          "desc": "Marks a person as deleted. After 30 days, the person will be permanently deleted."
+        },
+        "getPerson": {
+          "display_name": "Get Details of a Person",
+          "short_desc": "Get details of a person",
+          "desc": "Returns the details of a person. Note that this also returns some additional fields which are not present when asking for all persons. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of personFields.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also return the `data.marketing_status` field."
+        },
+        "updatePerson": {
+          "display_name": "Update a Person",
+          "short_desc": "Update a person",
+          "desc": "Updates the properties of a person. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">updating a person<-a>.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field."
+        },
+        "getProjects": {
+          "display_name": "Get All Projects",
+          "short_desc": "Get all projects",
+          "desc": "Returns all projects. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>."
+        },
+        "addProject": {
+          "display_name": "Add a Project",
+          "short_desc": "Add a project",
+          "desc": "Adds a new project. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys."
+        },
+        "deleteProject": {
+          "display_name": "Delete a Project",
+          "short_desc": "Delete a project",
+          "desc": "Marks a project as deleted."
+        },
+        "getProject": {
+          "display_name": "Get Details of a Project",
+          "short_desc": "Get details of a project",
+          "desc": "Returns the details of a specific project. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of project fields."
+        },
+        "updateProject": {
+          "display_name": "Update a Project",
+          "short_desc": "Update a project",
+          "desc": "Updates a project."
+        },
+        "getTasks": {
+          "display_name": "Get All Tasks",
+          "short_desc": "Get all tasks",
+          "desc": "Returns all tasks. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>."
+        },
+        "addTask": {
+          "display_name": "Add a Task",
+          "short_desc": "Add a task",
+          "desc": "Adds a new task."
+        },
+        "deleteTask": {
+          "display_name": "Delete a Task",
+          "short_desc": "Delete a task",
+          "desc": "Marks a task as deleted. If the task has subtasks then those will also be deleted."
+        },
+        "getTask": {
+          "display_name": "Get Details of a Task",
+          "short_desc": "Get details of a task",
+          "desc": "Returns the details of a specific task."
+        },
+        "updateTask": {
+          "display_name": "Update a Task",
+          "short_desc": "Update a task",
+          "desc": "Updates a task."
+        }
+      }
+    },
+    "trello": {
+      "app": "Trello",
+      "sourceFile": "trello.swagger.json",
+      "operations": [
+        {
+          "path": "/boards",
+          "method": "post",
+          "operationId": "post-boards"
+        },
+        {
+          "path": "/boards/{id}",
+          "method": "delete",
+          "operationId": "delete-boards-id"
+        },
+        {
+          "path": "/boards/{id}",
+          "method": "get",
+          "operationId": "get-boards-id"
+        },
+        {
+          "path": "/boards/{id}",
+          "method": "put",
+          "operationId": "put-boards-id"
+        },
+        {
+          "path": "/boards/{id}/members/{idMember}",
+          "method": "put",
+          "operationId": "put-boards-id-members-idmember"
+        },
+        {
+          "path": "/cards",
+          "method": "post",
+          "operationId": "post-cards"
+        },
+        {
+          "path": "/cards/{id}",
+          "method": "put",
+          "operationId": "put-cards-id"
+        },
+        {
+          "path": "/cards/{id}/actions/comments",
+          "method": "post",
+          "operationId": "post-cards-id-actions-comments"
+        },
+        {
+          "path": "/cards/{id}/checkItem/{idCheckItem}",
+          "method": "put",
+          "operationId": "put-cards-id-checkitem-idcheckitem"
+        },
+        {
+          "path": "/cards/{id}/idLabels",
+          "method": "post",
+          "operationId": "post-cards-id-idlabels"
+        },
+        {
+          "path": "/cards/{id}/idMembers",
+          "method": "post",
+          "operationId": "post-cards-id-idmembers"
+        },
+        {
+          "path": "/checklists/{id}/checkItems",
+          "method": "get",
+          "operationId": "get-checklists-id-checkitems"
+        },
+        {
+          "path": "/checklists/{id}/checkItems",
+          "method": "post",
+          "operationId": "post-checklists-id-checkitems"
+        },
+        {
+          "path": "/labels",
+          "method": "post",
+          "operationId": "post-labels"
+        },
+        {
+          "path": "/labels/{id}",
+          "method": "delete",
+          "operationId": "delete-labels-id"
+        },
+        {
+          "path": "/labels/{id}",
+          "method": "get",
+          "operationId": "get-labels-id"
+        },
+        {
+          "path": "/labels/{id}",
+          "method": "put",
+          "operationId": "put-labels-id"
+        },
+        {
+          "path": "/lists",
+          "method": "post",
+          "operationId": "post-lists"
+        },
+        {
+          "path": "/lists/{id}",
+          "method": "get",
+          "operationId": "get-lists-id"
+        },
+        {
+          "path": "/lists/{id}",
+          "method": "put",
+          "operationId": "put-lists-id"
+        },
+        {
+          "path": "/members/{id}",
+          "method": "get",
+          "operationId": "get-members-id"
+        },
+        {
+          "path": "/members/{id}",
+          "method": "put",
+          "operationId": "put-members-id"
+        },
+        {
+          "path": "/organizations",
+          "method": "post",
+          "operationId": "post-organizations"
+        },
+        {
+          "path": "/organizations/{id}",
+          "method": "delete",
+          "operationId": "delete-organizations-id"
+        },
+        {
+          "path": "/organizations/{id}",
+          "method": "get",
+          "operationId": "get-organizations-id"
+        },
+        {
+          "path": "/organizations/{id}",
+          "method": "put",
+          "operationId": "put-organizations-id"
+        },
+        {
+          "path": "/organizations/{id}/boards",
+          "method": "get",
+          "operationId": "get-organizations-id-boards"
+        },
+        {
+          "path": "/organizations/{id}/members",
+          "method": "get",
+          "operationId": "get-organizations-id-members"
+        },
+        {
+          "path": "/organizations/{id}/members",
+          "method": "put",
+          "operationId": "put-organizations-id-members"
+        },
+        {
+          "path": "/organizations/{id}/members/{idMember}",
+          "method": "delete",
+          "operationId": "delete-organizations-id-members"
+        },
+        {
+          "path": "/organizations/{id}/members/{idMember}",
+          "method": "put",
+          "operationId": "put-organizations-id-members-idmember"
+        },
+        {
+          "path": "/search/members",
+          "method": "get",
+          "operationId": "get-search-members"
+        }
+      ],
+      "actions": [
+        "card-due",
+        "delete-boards-id",
+        "delete-labels-id",
+        "delete-organizations-id",
+        "delete-organizations-id-members",
+        "get-boards-id",
+        "get-checklists-id-checkitems",
+        "get-labels-id",
+        "get-lists-id",
+        "get-members-id",
+        "get-organizations-id",
+        "get-organizations-id-boards",
+        "get-organizations-id-members",
+        "get-search-members",
+        "new-board",
+        "new-card",
+        "new-label",
+        "new-list",
+        "new-member",
+        "post-boards",
+        "post-cards",
+        "post-cards-id-actions-comments",
+        "post-cards-id-idlabels",
+        "post-cards-id-idmembers",
+        "post-checklists-id-checkitems",
+        "post-labels",
+        "post-lists",
+        "post-organizations",
+        "put-boards-id",
+        "put-boards-id-members-idmember",
+        "put-cards-id",
+        "put-cards-id-checkitem-idcheckitem",
+        "put-labels-id",
+        "put-lists-id",
+        "put-members-id",
+        "put-organizations-id",
+        "put-organizations-id-members",
+        "put-organizations-id-members-idmember"
+      ],
+      "presentation": {
+        "post-boards": {
+          "display_name": "Create a Board",
+          "short_desc": "Create a Board",
+          "desc": "Create a new board."
+        },
+        "delete-boards-id": {
+          "display_name": "Delete a Board",
+          "short_desc": "Delete a Board",
+          "desc": "Delete a board."
+        },
+        "get-boards-id": {
+          "display_name": "Get a Board",
+          "short_desc": "Get a Board",
+          "desc": "Request a single board."
+        },
+        "put-boards-id": {
+          "display_name": "Update a Board",
+          "short_desc": "Update a Board",
+          "desc": "Update an existing board by id"
+        },
+        "put-boards-id-members-idmember": {
+          "display_name": "Add a Member to a Board",
+          "short_desc": "Add a Member to a Board",
+          "desc": "Add a member to the board."
+        },
+        "post-cards": {
+          "display_name": "Create a New Card",
+          "short_desc": "Create a new Card",
+          "desc": "Create a new card. Query parameters may also be replaced with a JSON request body instead."
+        },
+        "put-cards-id": {
+          "display_name": "Update a Card",
+          "short_desc": "Update a Card",
+          "desc": "Update a card. Query parameters may also be replaced with a JSON request body instead."
+        },
+        "post-cards-id-actions-comments": {
+          "display_name": "Add a New Comment to a Card",
+          "short_desc": "Add a new comment to a Card",
+          "desc": "Add a new comment to a card"
+        },
+        "put-cards-id-checkitem-idcheckitem": {
+          "display_name": "Update a Checkitem on a Card",
+          "short_desc": "Update a checkItem on a Card",
+          "desc": "Update an item in a checklist on a card."
+        },
+        "post-cards-id-idlabels": {
+          "display_name": "Add a Label to a Card",
+          "short_desc": "Add a Label to a Card",
+          "desc": "Add a label to a card"
+        },
+        "post-cards-id-idmembers": {
+          "display_name": "Add a Member to a Card",
+          "short_desc": "Add a Member to a Card",
+          "desc": "Add a member to a card"
+        },
+        "get-checklists-id-checkitems": {
+          "display_name": "Get Checkitems on a Checklist",
+          "short_desc": "Get Checkitems on a Checklist",
+          "desc": "Get-checklists-id-checkitems"
+        },
+        "post-checklists-id-checkitems": {
+          "display_name": "Create Checkitem on Checklist",
+          "short_desc": "Create Checkitem on Checklist",
+          "desc": "Post-checklists-id-checkitems"
+        },
+        "post-labels": {
+          "display_name": "Create a Label",
+          "short_desc": "Create a Label",
+          "desc": "Create a new Label on a Board."
+        },
+        "delete-labels-id": {
+          "display_name": "Delete a Label",
+          "short_desc": "Delete a Label",
+          "desc": "Delete a label by ID."
+        },
+        "get-labels-id": {
+          "display_name": "Get a Label",
+          "short_desc": "Get a Label",
+          "desc": "Get information about a single Label."
+        },
+        "put-labels-id": {
+          "display_name": "Update a Label",
+          "short_desc": "Update a Label",
+          "desc": "Update a label by ID."
+        },
+        "post-lists": {
+          "display_name": "Create a New List",
+          "short_desc": "Create a new List",
+          "desc": "Create a new List on a Board"
+        },
+        "get-lists-id": {
+          "display_name": "Get a List",
+          "short_desc": "Get a List",
+          "desc": "Get information about a List"
+        },
+        "put-lists-id": {
+          "display_name": "Update a List",
+          "short_desc": "Update a List",
+          "desc": "Update the properties of a List"
+        },
+        "get-members-id": {
+          "display_name": "Get a Member",
+          "short_desc": "Get a Member",
+          "desc": "Get a member"
+        },
+        "put-members-id": {
+          "display_name": "Update a Member",
+          "short_desc": "Update a Member",
+          "desc": "Update a Member"
+        },
+        "post-organizations": {
+          "display_name": "Create a New Organization",
+          "short_desc": "Create a new Organization",
+          "desc": "Create a new Workspace"
+        },
+        "delete-organizations-id": {
+          "display_name": "Delete an Organization",
+          "short_desc": "Delete an Organization",
+          "desc": "Delete an Organization"
+        },
+        "get-organizations-id": {
+          "display_name": "Get an Organization",
+          "short_desc": "Get an Organization",
+          "desc": "Get-organizations-id"
+        },
+        "put-organizations-id": {
+          "display_name": "Update an Organization",
+          "short_desc": "Update an Organization",
+          "desc": "Update an organization"
+        },
+        "get-organizations-id-boards": {
+          "display_name": "Get Boards in an Organization",
+          "short_desc": "Get Boards in an Organization",
+          "desc": "List the boards in a Workspace"
+        },
+        "get-organizations-id-members": {
+          "display_name": "Get the Members of an Organization",
+          "short_desc": "Get the Members of an Organization",
+          "desc": "List the members in a Workspace"
+        },
+        "put-organizations-id-members": {
+          "display_name": "Update an Organization's Members",
+          "short_desc": "Update an Organization's Members",
+          "desc": "Put-organizations-id-members"
+        },
+        "delete-organizations-id-members": {
+          "display_name": "Remove a Member from an Organization",
+          "short_desc": "Remove a Member from an Organization",
+          "desc": "Remove a member from a Workspace"
+        },
+        "put-organizations-id-members-idmember": {
+          "display_name": "Update a Member of an Organization",
+          "short_desc": "Update a Member of an Organization",
+          "desc": "Add a member to a Workspace or update their member type."
+        },
+        "get-search-members": {
+          "display_name": "Search for Members",
+          "short_desc": "Search for Members",
+          "desc": "Search for Trello members."
+        }
+      }
+    },
+    "zendesk": {
+      "app": "Zendesk",
+      "sourceFile": "zendesk.swagger.json",
+      "operations": [
+        {
+          "path": "/api/v2/account/settings",
+          "method": "get",
+          "operationId": "ShowAccountSettings"
+        },
+        {
+          "path": "/api/v2/attachments/{attachment_id}",
+          "method": "get",
+          "operationId": "ShowAttachment"
+        },
+        {
+          "path": "/api/v2/groups",
+          "method": "get",
+          "operationId": "ListGroups"
+        },
+        {
+          "path": "/api/v2/groups",
+          "method": "post",
+          "operationId": "CreateGroup"
+        },
+        {
+          "path": "/api/v2/groups/{group_id}",
+          "method": "delete",
+          "operationId": "DeleteGroup"
+        },
+        {
+          "path": "/api/v2/groups/{group_id}",
+          "method": "get",
+          "operationId": "ShowGroupById"
+        },
+        {
+          "path": "/api/v2/groups/{group_id}",
+          "method": "put",
+          "operationId": "UpdateGroup"
+        },
+        {
+          "path": "/api/v2/organizations",
+          "method": "get",
+          "operationId": "ListOrganizations"
+        },
+        {
+          "path": "/api/v2/organizations",
+          "method": "post",
+          "operationId": "CreateOrganization"
+        },
+        {
+          "path": "/api/v2/organizations/{organization_id}",
+          "method": "delete",
+          "operationId": "DeleteOrganization"
+        },
+        {
+          "path": "/api/v2/organizations/{organization_id}",
+          "method": "get",
+          "operationId": "ShowOrganization"
+        },
+        {
+          "path": "/api/v2/organizations/{organization_id}",
+          "method": "put",
+          "operationId": "UpdateOrganization"
+        },
+        {
+          "path": "/api/v2/search",
+          "method": "get",
+          "operationId": "ListSearchResults"
+        },
+        {
+          "path": "/api/v2/ticket_metrics",
+          "method": "get",
+          "operationId": "ListTicketMetrics"
+        },
+        {
+          "path": "/api/v2/ticket_metrics/{ticket_metric_id}",
+          "method": "get",
+          "operationId": "ShowTicketMetrics"
+        },
+        {
+          "path": "/api/v2/tickets",
+          "method": "get",
+          "operationId": "ListTickets"
+        },
+        {
+          "path": "/api/v2/tickets",
+          "method": "post",
+          "operationId": "CreateTicket"
+        },
+        {
+          "path": "/api/v2/tickets/count",
+          "method": "get",
+          "operationId": "CountTickets"
+        },
+        {
+          "path": "/api/v2/tickets/{ticket_id}",
+          "method": "delete",
+          "operationId": "DeleteTicket"
+        },
+        {
+          "path": "/api/v2/tickets/{ticket_id}",
+          "method": "get",
+          "operationId": "ShowTicket"
+        },
+        {
+          "path": "/api/v2/tickets/{ticket_id}",
+          "method": "put",
+          "operationId": "UpdateTicket"
+        },
+        {
+          "path": "/api/v2/uploads/{token}",
+          "method": "delete",
+          "operationId": "DeleteUpload"
+        },
+        {
+          "path": "/api/v2/users",
+          "method": "get",
+          "operationId": "ListUsers"
+        },
+        {
+          "path": "/api/v2/users",
+          "method": "post",
+          "operationId": "CreateUser"
+        },
+        {
+          "path": "/api/v2/users/{user_id}",
+          "method": "delete",
+          "operationId": "DeleteUser"
+        },
+        {
+          "path": "/api/v2/users/{user_id}",
+          "method": "get",
+          "operationId": "ShowUser"
+        },
+        {
+          "path": "/api/v2/users/{user_id}",
+          "method": "put",
+          "operationId": "UpdateUser"
+        }
+      ],
+      "actions": [
+        "CountTickets",
+        "CreateGroup",
+        "CreateOrganization",
+        "CreateTicket",
+        "CreateUser",
+        "DeleteGroup",
+        "DeleteOrganization",
+        "DeleteTicket",
+        "DeleteUpload",
+        "DeleteUser",
+        "ListGroups",
+        "ListOrganizations",
+        "ListSearchResults",
+        "ListTicketMetrics",
+        "ListTickets",
+        "ListUsers",
+        "ShowAccountSettings",
+        "ShowAttachment",
+        "ShowGroupById",
+        "ShowOrganization",
+        "ShowTicket",
+        "ShowTicketMetrics",
+        "ShowUser",
+        "UpdateGroup",
+        "UpdateOrganization",
+        "UpdateTicket",
+        "UpdateUser",
+        "new_custom_object_record",
+        "new_organization",
+        "new_ticket",
+        "new_user"
+      ],
+      "presentation": {
+        "ShowAccountSettings": {
+          "display_name": "Show Settings",
+          "short_desc": "Show Settings",
+          "desc": "Shows the settings that are available for the account.\n\n#### Allowed For\n\n* Agents\n"
+        },
+        "ShowAttachment": {
+          "display_name": "Show Attachment",
+          "short_desc": "Show Attachment",
+          "desc": "Shows attachment details. You can get the value of the `attachment_id` parameter by listing the ticket's comments.\nSee [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments). Each comment\nin the list has an `attachments` list that specifies an `id` for each attachment.\n\n\n #### Allowed for\n\n * Agents\n"
+        },
+        "ListGroups": {
+          "display_name": "List Groups",
+          "short_desc": "List Groups",
+          "desc": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins\n* Agents\n"
+        },
+        "CreateGroup": {
+          "display_name": "Create Group",
+          "short_desc": "Create Group",
+          "desc": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n"
+        },
+        "DeleteGroup": {
+          "display_name": "Delete Group",
+          "short_desc": "Delete Group",
+          "desc": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n"
+        },
+        "ShowGroupById": {
+          "display_name": "Show Group",
+          "short_desc": "Show Group",
+          "desc": "#### Allowed For\n\n* Admins\n* Agents\n"
+        },
+        "UpdateGroup": {
+          "display_name": "Update Group",
+          "short_desc": "Update Group",
+          "desc": "#### Allowed For\n\n* Admins\n"
+        },
+        "ListOrganizations": {
+          "display_name": "List Organizations",
+          "short_desc": "List Organizations",
+          "desc": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents, with certain restrictions\n\nIf the agent has a custom agent role that restricts their access to only users in their own organization, a 403 Forbidden error is returned. See [Creating custom agent roles](https:-support.zendesk.com-hc-en-us-articles-203662026-Creating-custom-roles-and-assigning-agents#topic_cxn_hig_bd) in Zendesk help.\n"
+        },
+        "CreateOrganization": {
+          "display_name": "Create Organization",
+          "short_desc": "Create Organization",
+          "desc": "You must provide a unique `name` for each organization. Normally\nthe system doesn't allow records to be created with identical names.\nHowever, a race condition can occur if you make two or more identical\nPOSTs very close to each other, causing the records to have identical\norganization names.\n\n#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n"
+        },
+        "DeleteOrganization": {
+          "display_name": "Delete Organization",
+          "short_desc": "Delete Organization",
+          "desc": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n"
+        },
+        "ShowOrganization": {
+          "display_name": "Show Organization",
+          "short_desc": "Show Organization",
+          "desc": "#### Allowed For\n\n* Admins\n* Agents\n"
+        },
+        "UpdateOrganization": {
+          "display_name": "Update Organization",
+          "short_desc": "Update Organization",
+          "desc": "#### Allowed For\n\n* Admins\n* Agents\n\nAgents with no permissions restrictions can only update \"notes\" on organizations.\n\n**Note:** Updating an organization's `domain_names` property overwrites all existing `domain_names` values. To prevent this, submit a complete list of `domain_names` for the organization in your request.\n\n#### Example Request\n\n```js\n\n  \"organization\": \n    \"notes\": \"Something interesting\"\n  \n\n```\n"
+        },
+        "ListSearchResults": {
+          "display_name": "List Search Results",
+          "short_desc": "List Search Results",
+          "desc": "Returns the search results. See [Query basics](#query-basics) for the syntax of the `query` parameter.\n\nUse the ampersand character (&) to append the `sort_by` or `sort_order` parameters to the URL.\n\nFor examples, see [Searching with Zendesk API](-documentation-ticketing-using-the-zendesk-api-searching-with-the-zendesk-api).\n\n#### Allowed For\n\n* Agents\n\n#### Pagination\n\n* Offset pagination only\n\nOffset pagination may result in duplicate results when paging. You can also use the \n[Export Search Results](-api-reference-ticketing-ticket-management-search-#export-search-results) endpoint, which \nuses cursor-based pagination and doesn't return duplicate results. See \n[Using cursor pagination](-api-reference-introduction-pagination-#using-cursor-pagination) for more information.\n\n\n#### Errors JSON Format\n\nErrors are represented as JSON objects which have the following keys:\n\n| Name                  | Type                 | Comment\n| - | -| -\n| error                 | string               | The type of error. Examples: \"unavailable\", \"invalid\"\n| description           | string               |\n\n##### Example Error\n```js\n\n  \"error\": \"unavailable\",\n  \"description\": \"Sorry, we could not complete your search query. Please try again in a moment.\"\n\n```\n"
+        },
+        "ListTicketMetrics": {
+          "display_name": "List Ticket Metrics",
+          "short_desc": "List Ticket Metrics",
+          "desc": "Returns a list of tickets with their metrics.\n\nTickets are ordered chronologically by created date, from newest to oldest.\nThe last ticket listed may not be the absolute oldest ticket in your account\ndue to ticket archiving.\n\nArchived tickets are not included in the response. See\n[About archived tickets](https:-support.zendesk.com-hc-en-us-articles-203657756) in\nZendesk help.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n\n#### Allowed For\n\n* Agents\n"
+        },
+        "ShowTicketMetrics": {
+          "display_name": "Show Ticket Metrics",
+          "short_desc": "Show Ticket Metrics",
+          "desc": "Returns a specific metric, or the metrics of a specific ticket.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents\n"
+        },
+        "ListTickets": {
+          "display_name": "List Tickets",
+          "short_desc": "List Tickets",
+          "desc": "List tickets"
+        },
+        "CreateTicket": {
+          "display_name": "Create Ticket",
+          "short_desc": "Create Ticket",
+          "desc": "Create ticket"
+        },
+        "CountTickets": {
+          "display_name": "Count Tickets",
+          "short_desc": "Count Tickets",
+          "desc": "Returns an approximate count of tickets in the account. If the count exceeds 100,000, it is updated every 24 hours.\n\n`ccd` lists tickets that the specified user is cc'd on.\n\nThe `count[refreshed_at]` property is a timestamp that indicates when the count was last updated.\n\n**Note**: When the count exceeds 100,000, `count[refreshed_at]` may occasionally be null.\nThis indicates that the count is being updated in the background, and `count[value]` is limited to 100,000 until the update is complete.\n\n#### Allowed For\n* Agents"
+        },
+        "DeleteTicket": {
+          "display_name": "Delete Ticket",
+          "short_desc": "Delete Ticket",
+          "desc": "#### Allowed For\n\n* Admins\n* Agents with permission to delete tickets\n\nAgent delete permissions are set in Support. See\n[Deleting tickets](https:-support.zendesk.com-hc-en-us-articles-203690936)\nin the Support Help Center.\n\n#### Ticket deletion rate limit\n\nYou can delete 400 tickets every 1 minute using this endpoint.\nThe rate limiting mechanism behaves as described in\n[Rate limits](-api-reference-introduction-rate-limits-) in the API introduction.\nZendesk recommends that you obey the Retry-After header values.\nTo delete many tickets, you may use [Bulk Delete Tickets](-api-reference-ticketing-tickets-tickets-#bulk-delete-tickets)."
+        },
+        "ShowTicket": {
+          "display_name": "Show Ticket",
+          "short_desc": "Show Ticket",
+          "desc": "Returns a number of ticket properties though not the ticket comments. To get the comments, use [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Allowed For\n* Agents"
+        },
+        "UpdateTicket": {
+          "display_name": "Update Ticket",
+          "short_desc": "Update Ticket",
+          "desc": "Update ticket"
+        },
+        "DeleteUpload": {
+          "display_name": "Delete Upload",
+          "short_desc": "Delete Upload",
+          "desc": "#### Allowed for\n\n* End Users\n"
+        },
+        "ListUsers": {
+          "display_name": "List Users",
+          "short_desc": "List Users",
+          "desc": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins, Agents and Light Agents\n"
+        },
+        "CreateUser": {
+          "display_name": "Create User",
+          "short_desc": "Create User",
+          "desc": "Create user"
+        },
+        "DeleteUser": {
+          "display_name": "Delete User",
+          "short_desc": "Delete User",
+          "desc": "Deletes the user and associated records from the account.\n\n**Warning**:\n\n* Deleted users are not recoverable.\n* Both agents and administrators can soft delete users in the agent interface in Zendesk Support. Agents with permission can delete end users, while administrators can delete all users except the account owner.\n\nTo comply with GDPR, a further step is needed. See [Permanently Delete User](-api-reference-ticketing-users-users-#permanently-delete-user).\n\n#### Allowed For\n\n* Admins and [agents in custom roles with permission](https:-support.zendesk.com-hc-en-us-articles-4408882153882#topic_cxn_hig_bd) to manage end users or team members\n"
+        },
+        "ShowUser": {
+          "display_name": "Show User",
+          "short_desc": "Show User",
+          "desc": "#### Allowed For\n\n* Agents\n"
+        },
+        "UpdateUser": {
+          "display_name": "Update User",
+          "short_desc": "Update User",
+          "desc": "Update user"
+        }
+      }
+    },
+    "zoom": {
+      "app": "Zoom",
+      "sourceFile": "zoom/meetings.swagger.json",
+      "schemaKey": "meetings",
+      "operations": [
+        {
+          "path": "/meetings/{meetingId}",
+          "method": "delete",
+          "operationId": "meetingDelete"
+        },
+        {
+          "path": "/meetings/{meetingId}",
+          "method": "get",
+          "operationId": "meeting"
+        },
+        {
+          "path": "/meetings/{meetingId}",
+          "method": "patch",
+          "operationId": "meetingUpdate"
+        },
+        {
+          "path": "/meetings/{meetingId}/meeting_summary",
+          "method": "get",
+          "operationId": "Getameetingsummary"
+        },
+        {
+          "path": "/meetings/{meetingId}/recordings",
+          "method": "delete",
+          "operationId": "recordingDelete"
+        },
+        {
+          "path": "/meetings/{meetingId}/recordings",
+          "method": "get",
+          "operationId": "recordingGet"
+        },
+        {
+          "path": "/meetings/{meetingId}/registrants",
+          "method": "get",
+          "operationId": "meetingRegistrants"
+        },
+        {
+          "path": "/meetings/{meetingId}/registrants",
+          "method": "post",
+          "operationId": "meetingRegistrantCreate"
+        },
+        {
+          "path": "/past_meetings/{meetingId}/participants",
+          "method": "get",
+          "operationId": "pastMeetingParticipants"
+        },
+        {
+          "path": "/past_webinars/{webinarId}/participants",
+          "method": "get",
+          "operationId": "listWebinarParticipants"
+        },
+        {
+          "path": "/users/{userId}/meetings",
+          "method": "get",
+          "operationId": "meetings"
+        },
+        {
+          "path": "/users/{userId}/meetings",
+          "method": "post",
+          "operationId": "meetingCreate"
+        },
+        {
+          "path": "/users/{userId}/recordings",
+          "method": "get",
+          "operationId": "recordingsList"
+        },
+        {
+          "path": "/users/{userId}/webinars",
+          "method": "get",
+          "operationId": "webinars"
+        },
+        {
+          "path": "/users/{userId}/webinars",
+          "method": "post",
+          "operationId": "webinarCreate"
+        },
+        {
+          "path": "/webinars/{webinarId}",
+          "method": "delete",
+          "operationId": "webinarDelete"
+        },
+        {
+          "path": "/webinars/{webinarId}",
+          "method": "get",
+          "operationId": "webinar"
+        },
+        {
+          "path": "/webinars/{webinarId}",
+          "method": "patch",
+          "operationId": "webinarUpdate"
+        },
+        {
+          "path": "/webinars/{webinarId}/registrants",
+          "method": "get",
+          "operationId": "webinarRegistrants"
+        },
+        {
+          "path": "/webinars/{webinarId}/registrants",
+          "method": "post",
+          "operationId": "webinarRegistrantCreate"
+        }
+      ],
+      "actions": [
+        "Getameetingsummary",
+        "listWebinarParticipants",
+        "meeting",
+        "meetingCreate",
+        "meetingDelete",
+        "meetingRegistrantCreate",
+        "meetingRegistrants",
+        "meetingUpdate",
+        "meetings",
+        "new_meeting",
+        "new_meeting_summary",
+        "new_webinar",
+        "pastMeetingParticipants",
+        "recordingDelete",
+        "recordingGet",
+        "recordingsList",
+        "webinar",
+        "webinarCreate",
+        "webinarDelete",
+        "webinarRegistrantCreate",
+        "webinarRegistrants",
+        "webinarUpdate",
+        "webinars"
+      ],
+      "presentation": {
+        "meetingDelete": {
+          "display_name": "Delete a Meeting",
+          "short_desc": "Delete a meeting",
+          "desc": "Delete a meeting.\n\n**Prerequisites**:\n* For recurring meetings, the `occurrence_id` is required to delete a specific occurrence. If not provided, the entire recurring series will be deleted.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "meeting": {
+          "display_name": "Get a Meeting",
+          "short_desc": "Get a meeting",
+          "desc": "Retrieve the given meeting's details.\n\n**Prerequisites**:\n* Host user must have a Zoom Meetings Basic license or higher.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "meetingUpdate": {
+          "display_name": "Update a Meeting",
+          "short_desc": "Update a meeting",
+          "desc": "Update meeting details.\n\n**Prerequisites**\n* The `start_time` value must be a future date. If the value is omitted or a date is in the past, the API ignores this value and does not update any recurring meetings.\n* The `recurrence` object is required only when updating the entire series of a recurring meeting with `type=8`.\n* This API has a rate limit of **100 requests per day**. You can update a meeting for a maximum of 100 times within a 24-hour period.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "Getameetingsummary": {
+          "display_name": "Get a Meeting Summary",
+          "short_desc": "Get a meeting summary",
+          "desc": "Display information about a meeting summary.\n\n**Prerequisites**\n* Host user type must have a Pro or higher plan.\n* Enable the **Meeting Summary with AI Companion** feature in the host's account.\n* E2ee meetings do not have summary feature enabled.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "recordingDelete": {
+          "display_name": "Delete Meeting or Webinar Recordings",
+          "short_desc": "Delete meeting or webinar recordings",
+          "desc": "Delete all of a meeting's or webinar's recording files.  \n\n**Prerequisites**:\n* Cloud Recording should be enabled on the user's account.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "recordingGet": {
+          "display_name": "Get Meeting Recordings",
+          "short_desc": "Get meeting recordings",
+          "desc": "Returns all of a meeting's [recordings](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4). Use the `download_url` property listed in the response to download the recording files.  To access a password-protected cloud recording, send the `download_access_token` or the user's [OAuth access token](-docs-integrations-oauth-) as a Bearer token in the Authorization header. For example: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "meetingRegistrants": {
+          "display_name": "List Meeting Registrants",
+          "short_desc": "List meeting registrants",
+          "desc": "List users that have registered for a meeting. A host or a user with admin permission can require [registration for a Zoom meeting](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings).\n\n**Prerequisites**:\n* Host user type must be **Pro** or higher plan.\n* Registration must be enabled for the meeting.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "meetingRegistrantCreate": {
+          "display_name": "Add a Meeting Registrant",
+          "short_desc": "Add a meeting registrant",
+          "desc": "Create and submit a user's registration to a meeting. See [Customizing webinar registration](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration) for details on how to set the requirements for these fields. Note that there is a maximum limit of 4,999 registrants per meeting and users will see an error if the meeting's capacity is reached. \n\n **Prerequisites:** \n* The host must be a **Licensed** user type.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "pastMeetingParticipants": {
+          "display_name": "Get Past Meeting Participants",
+          "short_desc": "Get past meeting participants",
+          "desc": "Retrieve information on participants from a past meeting. Note the API doesn't return results if there's only one participant in a meeting.  \n   \n \n**Prerequisites:**  \n \n* Paid account on a Pro or higher plan.\n\n  \n    \n   **Note**: Please double encode your UUID when using this API if the UUID begins with a '-'or contains '-' in it.\n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "listWebinarParticipants": {
+          "display_name": "List Webinar Participants",
+          "short_desc": "List webinar participants",
+          "desc": "Retrieve a list of all the participants who attended a webinar hosted in the past. \n\n**Prerequisites:** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "meetings": {
+          "display_name": "List Meetings",
+          "short_desc": "List meetings",
+          "desc": "List a meeting host user's scheduled meetings. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* This API **only** supports scheduled meetings. This API does not return information about instant meetings.\n* This API only returns a user's [unexpired meetings](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844).\n* When `type` is set to `upcoming`, `upcoming_meetings`, or `previous_meetings`, only a maximum of 6 months of meeting data will be returned. \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "meetingCreate": {
+          "display_name": "Create a Meeting",
+          "short_desc": "Create a meeting",
+          "desc": "[Create a meeting](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) for a user. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* A meeting's `start_url` value is the URL a host or an alternative host can use to start a meeting. The `start_url` value's expiration time is **two hours** for all regular users.\n* For `custCreate` meeting hosts - users created with the `custCreate` parameter via the [**Create users**](-docs-api-users-#tag-users-POST-users) API - the expiration time of the `start_url` parameter is **90 days** from the generation of the `start_url`.\n* For security reasons, the recommended way to programmatically get the updated `start_url` value after expiry is to call the [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId) API. Refer to the `start_url` value in the response.\n* **100 requests per day**. The rate limit is applied against the `userId` of the **meeting host** used to make the request.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "recordingsList": {
+          "display_name": "List All Recordings",
+          "short_desc": "List all recordings",
+          "desc": "Lists all [cloud recordings](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) for a user.  \n\nFor user-level apps, pass the [`me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.  To access a user's passcode protected cloud recording, send the user's [OAuth access token](https:-developers.zoom.us-docs-integrations-oauth-) as a bearer token in the authorization header.  \n\nExample:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Prerequisites:**  \n* Must have a Pro or a higher plan.  \n* Must enable Cloud Recording on the user's account.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "webinars": {
+          "display_name": "List Webinars",
+          "short_desc": "List webinars",
+          "desc": "List all the webinars scheduled by or on behalf a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars let a host broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Note** This API only returns a user's [unexpired webinars](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844). \n\n **Prerequisites** \n* A Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "webinarCreate": {
+          "display_name": "Create a Webinar",
+          "short_desc": "Create a webinar",
+          "desc": "Schedule a webinar for a user who is a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Webinars allow a host to broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Rate limit:**\nUp to a maximum of **100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites:** \n* A Pro or higher plan with a [Webinar plan](https:-zoom.us-webinar) add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "webinarDelete": {
+          "display_name": "Delete a Webinar",
+          "short_desc": "Delete a webinar",
+          "desc": "Delete a webinar. \n\n\n**Prerequisites:**  \n \n* Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "webinar": {
+          "display_name": "Get a Webinar",
+          "short_desc": "Get a webinar",
+          "desc": "Get details for a scheduled Zoom webinar.\n  \n   \n \n**Prerequisites:**\n* Pro or higher plan with a Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "webinarUpdate": {
+          "display_name": "Update a Webinar",
+          "short_desc": "Update a webinar",
+          "desc": "Make updates to a scheduled webinar. \n\n**100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "webinarRegistrants": {
+          "display_name": "List Webinar Registrants",
+          "short_desc": "List webinar registrants",
+          "desc": "List all users that have registered for a given webinar. Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. The webinar functionality lets a host broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar.  \n\n\n**Prerequisites**\n* Pro or higher plan with a Webinar add-on.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "webinarRegistrantCreate": {
+          "display_name": "Add a Webinar Registrant",
+          "short_desc": "Add a webinar registrant",
+          "desc": "Create and submit a user's registration for a webinar. Zoom users with a [Webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars allow hosts to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar. \n\n**Prerequisites:** \n* A Pro or higher plan with the Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        }
+      }
+    }
+  }
+}

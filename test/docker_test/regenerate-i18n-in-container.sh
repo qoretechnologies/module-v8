@@ -12,6 +12,7 @@ i18n_dir="${i18n_parent}/i18n"
 stage_dir=
 backup_dir=
 hubspot_cache=
+app_schema_cache=
 
 cleanup() {
     rc=$?
@@ -26,6 +27,9 @@ cleanup() {
     fi
     if [[ -n "${stage_dir}" && -d "${stage_dir}" ]]; then
         rm -rf "${stage_dir}" || rc=1
+    fi
+    if [[ -n "${app_schema_cache}" && -d "${app_schema_cache}" ]]; then
+        rm -rf "${app_schema_cache}" || rc=1
     fi
     if [[ -n "${hubspot_cache}" && -d "${hubspot_cache}" ]]; then
         rm -rf "${hubspot_cache}" || rc=1
@@ -48,6 +52,9 @@ node "${src_dir}/ts/dist/schema-cache/hubspot-cli.js" --cache-dir "$hubspot_cach
 QORE_HUBSPOT_SCHEMA_SNAPSHOT=$(node "${src_dir}/ts/dist/schema-cache/hubspot-cli.js" \
     --cache-dir "$hubspot_cache" status)
 export QORE_HUBSPOT_SCHEMA_SNAPSHOT
+app_schema_cache=$(mktemp -d)
+QORE_APP_SCHEMA_SNAPSHOTS=$("${src_dir}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache")
+export QORE_APP_SCHEMA_SNAPSHOTS
 
 stage_dir=$(mktemp -d -p "${i18n_parent}" .i18n.stage.XXXXXX)
 backup_dir="${stage_dir}.old"

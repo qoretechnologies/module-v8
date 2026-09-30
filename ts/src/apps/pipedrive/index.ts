@@ -1,3 +1,4 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
 import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
@@ -74,7 +75,7 @@ export default (locale: Locales) =>
       ping_method: 'GET',
       ping_path: '/v1/users/me',
     },
-    swagger: 'schemas/pipedrive.swagger.json',
+    ...appSchemaMetadata('pipedrive'),
     swagger_paths: createSwaggerPaths(PIPEDRIVE_ALLOWED_PATHS),
     swagger_options: {
       parse_flags: -1,

@@ -1,6 +1,5 @@
+import { buildAppSchemaActions } from '../../schema-cache/app-actions';
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import netsuite from '../../schemas/netsuite.swagger.json';
 import { NETSUITE_ACCOUNT_ALLOWED_PATHS } from './allowed-paths/account';
 import { NETSUITE_CONTACT_ALLOWED_PATHS } from './allowed-paths/contact';
 import { NETSUITE_CUSTOMER_ALLOWED_PATHS } from './allowed-paths/customer';
@@ -29,8 +28,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   ...NETSUITE_VENDOR_ALLOWED_PATHS,
 } satisfies TAllowedPaths;
 
-export const NETSUITE_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: netsuite as any,
+export const NETSUITE_ACTIONS = buildAppSchemaActions('netsuite', {
   allowedPaths: NETSUITE_ALLOWED_PATHS,
   app: NETSUITE_APP_NAME,
 });
@@ -40,8 +38,7 @@ export const NETSUITE_SIMPLIFIED_ALLOWED_PATHS = {
   ...NETSUITE_SIMPLIFIED_CUSTOMER_ALLOWED_PATHS,
 } satisfies TAllowedPaths;
 
-export const NETSUITE_SIMPLIFIED_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: netsuite as any,
+export const NETSUITE_SIMPLIFIED_ACTIONS = buildAppSchemaActions('netsuite', {
   actionNameModifier: 'simplified',
   allowedPaths: NETSUITE_SIMPLIFIED_ALLOWED_PATHS,
   app: NETSUITE_APP_NAME,

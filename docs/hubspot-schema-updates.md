@@ -54,3 +54,50 @@ the downloaded documents on exit. A changed supported schema fails CI with an
 actionable compatibility error, rather than silently changing app behavior.
 CI and the explicit translation-regeneration workflow require network access;
 Debian package builds and installed application startup do not download schemas.
+
+## Other app schema snapshots
+
+Freshdesk, Magento, Mailchimp, NetSuite, Pipedrive, Trello, Zendesk and Zoom use
+the same explicit setup model through `qore-app-schemas`. The technical action
+inventory and existing English presentation live in
+`ts/src/schema-cache/app-contracts.json`; approved supported-surface fingerprints
+live in `app-compatibility.json`. Provider source URLs and import instructions
+live in `app-sources.json`. An app's fingerprint list is reviewed source data,
+never a list automatically learned from downloads. Route aliases and the existing
+Mailchimp type correction are applied once by `normalizeSchema()`.
+
+Each app has a separate cache and writer lock. Import/update/rollback first
+validate bounded JSON and local references, then compatibility and every action
+in an installed Qore process. Only a successful candidate changes that app's
+atomic active selection. The `run` wrapper passes a JSON map of immutable paths
+in `QORE_APP_SCHEMA_SNAPSHOTS`. Discovery exposes the exact owned inventory even
+when setup is missing; materialization retains `APP-SCHEMAS-UNAVAILABLE` as a
+structured failure. A new download cannot rename actions or add unreviewed fields.
+
+The repository retains its existing eight historical schema inputs for CI and
+translation qualification. `test/docker_test/setup-app-schemas.sh` explicitly
+imports those inputs into a temporary private cache, fully qualifies every app,
+and returns its snapshot map. CI saves only manifests/reports and removes the
+cache on exit. This keeps CI independent of account credentials and changing
+public API versions. Public-source retrieval is tested separately from those
+fixed regression inputs.
+
+Debian export **must** use `ts/debian/export-source.py`. It omits the eight
+documents from the source package. `copy-schemas.js` omits them from compiled
+catalogues, and Debian build/install checks reject documents in either inputs
+or payloads. There is no implicit fallback to a repository or installed schema.
+The metadata package retains its other dependency redistribution review gates.
+
+For a supported upstream change, follow the review, action/schema qualification,
+presentation extraction, translation-parity and installed-artifact checks above.
+Compute proposed fingerprints with `normalizeSchema(id, document)` and
+`schemaCompatibilityDigest(normalized)` from `dist/schema-cache/apps.js`. Review
+the request/response and security changes before adding any fingerprint. A newly
+removed endpoint or changed API generation requires an app migration; copying a
+new fingerprint into the allowlist cannot repair missing operations.
+
+NetSuite retrieval uses an account-specific HTTPS endpoint and an owner-only
+bearer-token file. It never follows redirects or saves credentials. No live
+account call is part of the offline regression suite. Local imports remain
+available for account-bound schemas and providers without a verified public
+download. Service owners must test authenticated API behavior separately.

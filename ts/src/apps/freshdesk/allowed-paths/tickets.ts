@@ -1,6 +1,5 @@
+import { buildAppSchemaActions } from '../../../schema-cache/app-actions';
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import freshDeskSchema from '../../../schemas/freshdesk.swagger.json';
 import { FRESHDESK_APP_NAME } from '../constants';
 import {
   getFreshdeskTicketIdAllowedValues,
@@ -111,8 +110,7 @@ export const FRESHDESK_TICKETS_ALLOWED_PATHS = {
   },
 } satisfies TAllowedPaths;
 
-export const FRESHDESK_TICKETS_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: freshDeskSchema,
+export const FRESHDESK_TICKETS_ACTIONS = buildAppSchemaActions('freshdesk', {
   allowedPaths: FRESHDESK_TICKETS_ALLOWED_PATHS,
   app: FRESHDESK_APP_NAME,
 });

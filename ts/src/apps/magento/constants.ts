@@ -1,6 +1,5 @@
+import { buildAppSchemaActions } from '../../schema-cache/app-actions';
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import magento from '../../schemas/magento.swagger.json';
 import { MAGENTO_CARTS_ALLOWED_PATHS } from './allowed-paths/carts';
 import { MAGENTO_CUSTOMERS_ALLOWED_PATHS } from './allowed-paths/customers';
 import { MAGENTO_INVOICES_ALLOWED_PATHS } from './allowed-paths/invoices';
@@ -23,8 +22,7 @@ export const MAGENTO_ALLOWED_PATHS = {
   ...MAGENTO_TRANSACTIONS_ALLOWED_PATHS,
 } satisfies TAllowedPaths;
 
-export const MAGENTO_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: magento,
+export const MAGENTO_ACTIONS = buildAppSchemaActions('magento', {
   allowedPaths: MAGENTO_ALLOWED_PATHS,
   app: MAGENTO_APP_NAME,
 });

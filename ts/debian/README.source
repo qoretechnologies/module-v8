@@ -13,13 +13,16 @@ PUBLICATION GATE: the full catalogue has not been cleared for redistribution.
 The schema-provenance.json file records pinned evidence and the remaining
 missing/conflicting grants. Asana and Jira declare Apache-2.0; the original
 DocuSign import has been matched to its MIT-licensed upstream revision. Their
-notices are recorded separately in debian/copyright. The Mailchimp specification
-has also been matched to an upstream revision, but its custom license conditions
-and PPA eligibility remain under review. The older Magento schema comes from a
-different repository/license lineage than the current AdobeDocs schemas.
+notices are recorded separately in debian/copyright. The other eight schema
+files are repository qualification inputs only: export-source.py omits them
+from Debian sources, copy-schemas.js omits them from compiled distributions,
+and build-catalogue.py rejects their presence in package inputs or payloads.
+The pinned local operation/presentation contracts and compatibility fingerprints
+contain no provider request/response schema documents. See README.Debian for
+explicit download/import and private snapshots, including the existing HubSpot
+cache. No redistribution grant for omitted schemas is assumed.
 
-HubSpot documents are excluded entirely; see README.Debian for the explicit
-per-user cache. The Facebook SDK's Platform License permits redistribution for
+The Facebook SDK's Platform License permits redistribution for
 Facebook integrations, but its PPA eligibility still needs confirmation under
 https://documentation.ubuntu.com/launchpad/user/reference/launchpad-and-community/legal/launchpad-policies/.
 A service-specific redistribution grant and Launchpad hosting eligibility are
@@ -35,9 +38,17 @@ Do not substitute an existing node_modules directory, a different Yarn release
 or a newly resolved dependency graph. The manifest validates package.json,
 yarn.lock, the Yarn executable and every cache archive before and after build.
 
-For a checkout, obtain the matching vendor component from the qualified source
-package and extract it at ts/vendor/. This generated directory is not committed
-to Git. Dependency updates require a newly prefetched and reviewed component,
+For a checkout, first export tracked, reviewed sources into a NEW directory:
+
+ python3 ts/debian/export-source.py /absolute/path/qore-v8-app-catalogue-VERSION
+
+Obtain the matching orig-vendor component from the qualified source package and
+extract it in that exported directory (creating vendor/). Create the main orig
+archive from the export excluding debian/ and vendor/, and retain the vendor
+component separately. Do not archive ts/ directly: it retains historical schema
+qualification inputs which are not cleared for this package. New source files
+must be tracked before export. The vendor directory is not committed to Git.
+Dependency updates require a newly prefetched and reviewed component,
 updated integrity records and the same offline qualification. The Yarn download
 is https://repo.yarnpkg.com/4.12.0/packages/yarnpkg-cli/bin/yarn.js; its expected
 SHA-256 is in vendor-manifest.json and its packageManager SHA-512 is in package.json.

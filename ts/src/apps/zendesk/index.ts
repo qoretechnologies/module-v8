@@ -1,13 +1,13 @@
+import { appSchemaMetadata } from '../../schema-cache/apps';
+import { buildAppSchemaActions } from '../../schema-cache/app-actions';
 import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import {
-  buildActionsFromSwaggerSchema,
   createSwaggerPaths,
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
 import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import ZendeskSchema from '../../schemas/zendesk.swagger.json';
 import { ZENDESK_APP_NAME, ZENDESK_CONN_OPTIONS } from './app-constants';
 import { ZENDESK_ALLOWED_PATHS } from './constants';
 import * as zendeskTriggers from './triggers';
@@ -22,8 +22,7 @@ import { updateZendeskRecords } from './helpers/record-based/update-records';
 
 export { ZENDESK_APP_NAME, ZENDESK_CONN_OPTIONS };
 
-export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: ZendeskSchema as any,
+export const ZENDESK_ACTIONS = buildAppSchemaActions('zendesk', {
   allowedPaths: ZENDESK_ALLOWED_PATHS,
   app: ZENDESK_APP_NAME,
 });
@@ -53,7 +52,7 @@ export default (locale: Locales) =>
       'dWxlOm5vbnplcm87Ii8+Cjwvc3ZnPgo=',
     logo_file_name: 'zendesk.svg',
     logo_mime_type: 'image/svg+xml',
-    swagger: 'schemas/zendesk.swagger.json',
+    ...appSchemaMetadata('zendesk'),
     swagger_options: {
       parse_flags: 128,
     },

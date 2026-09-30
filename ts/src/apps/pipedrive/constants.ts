@@ -1,7 +1,5 @@
+import { buildAppSchemaActions } from '../../schema-cache/app-actions';
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import pipedrive from '../../schemas/pipedrive.swagger.json';
 import { PIPEDRIVE_ACTIVITIES_ALLOWED_PATHS } from './allowed-paths/activities';
 import { PIPEDRIVE_DEALS_ALLOWED_PATHS } from './allowed-paths/deals';
 import { PIPEDRIVE_LEADS_ALLOWED_PATHS } from './allowed-paths/leads';
@@ -30,8 +28,7 @@ export const PIPEDRIVE_ALLOWED_PATHS = {
   ...PIPEDRIVE_TASKS_ALLOWED_PATHS,
 } satisfies TAllowedPaths;
 
-export const PIPEDRIVE_ACTIONS = buildActionsFromSwaggerSchema({
-  schema: pipedrive as unknown as OpenAPIV2.Document,
+export const PIPEDRIVE_ACTIONS = buildAppSchemaActions('pipedrive', {
   allowedPaths: PIPEDRIVE_ALLOWED_PATHS,
   app: PIPEDRIVE_APP_NAME,
 });
