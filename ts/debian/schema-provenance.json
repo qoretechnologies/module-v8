@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-29T10:29:13.835058+00:00",
+  "checked_at": "2026-09-30T06:50:51.755423+00:00",
   "public_upload_status": "NOT CLEARED: missing/conflicting grants must be resolved or covered by an applicable permission record before claiming redistribution/PPA eligibility. Local build work can continue.",
   "schemas": [
     {
@@ -13,8 +13,15 @@
       "file": "ts/src/schemas/esignature.swagger.json",
       "sha256": "fc96b73f75a1cfed0a9420976df3dd43666e3c1021641c0a2110faea2d9aa44d",
       "license": "MIT",
-      "finding": "official schema repository license identified; exact bundled revision not established",
-      "primary_source": "https://github.com/docusign/OpenAPI-Specifications"
+      "finding": "Original Qore import is semantically identical to the pinned official MIT-licensed schema. Current changes remove 394 empty consumes and 389 empty produces arrays and correct connectOAuthConfig.customParameters from string to object. The Debian copyright file preserves the DocuSign notice and MIT grant.",
+      "primary_source": "https://github.com/docusign/OpenAPI-Specifications",
+      "upstream_commit": "f07e03d20837a18b247ff2573b1f98570af39b56",
+      "upstream_file": "https://raw.githubusercontent.com/docusign/OpenAPI-Specifications/f07e03d20837a18b247ff2573b1f98570af39b56/esignature.rest.swagger-v2.1.json",
+      "upstream_sha256": "08d37f4c70d72124d036c7f1d689eec1b033e8b9bb1a53d7d51d1bd41ba47da3",
+      "license_source": "https://raw.githubusercontent.com/docusign/OpenAPI-Specifications/f07e03d20837a18b247ff2573b1f98570af39b56/LICENSE",
+      "license_sha256": "9f65c5c97185680eba2223cd325d7a771d75c59c4538a864396b35b1d31c9d19",
+      "first_qore_import": "80ba6b1c753de008309dad9db2803f3c73ceaf45",
+      "redistribution_review": "cleared: MIT attribution recorded in debian/copyright"
     },
     {
       "file": "ts/src/schemas/freshdesk.swagger.json",
@@ -34,15 +41,22 @@
       "file": "ts/src/schemas/magento.swagger.json",
       "sha256": "4e66ee99defd50d2d5cb4d5249abc80080f854fe879bfc6c7aec44f60d6a63f7",
       "license": null,
-      "finding": "Apache-2.0 schemas found in AdobeDocs/commerce-webapi; bundled B2B schema origin not established",
-      "primary_source": "https://github.com/AdobeDocs/commerce-webapi"
+      "finding": "The archived official magento/devdocs repository contains a matching Magento B2B 2.2.10 schema with identical definitions. Paths/presentation differ. Its repository license is OSL-3.0, not the Apache-2.0 license of newer AdobeDocs schemas. Exact transformation, applicable notices and OSL distribution conditions remain to be completed; no blanket clearance is claimed.",
+      "primary_source": "https://github.com/AdobeDocs/commerce-webapi",
+      "candidate_upstream_file": "https://raw.githubusercontent.com/magento/devdocs/f99b4927ca0b0c75eb4910ecd718da00957f9491/src/redoc/2.2/latest-2.2.schema.json",
+      "candidate_license_source": "https://raw.githubusercontent.com/magento/devdocs/f99b4927ca0b0c75eb4910ecd718da00957f9491/LICENSE.txt"
     },
     {
       "file": "ts/src/schemas/mailchimp.swagger.json",
       "sha256": "1fb70ce81a38cc6ad07e6ea21d060e98cdac835f8577ecd9ba9a52fc03f3ae56",
       "license": "LicenseRef-Mailchimp-Client-Library",
-      "finding": "official spec/marketing.json repository permits redistribution with conditions; preserve complete license",
-      "primary_source": "https://github.com/mailchimp/mailchimp-client-lib-codegen"
+      "finding": "Pinned official 3.0.81 specification matches the bundled document after twelve notify_on_subscribe/notify_on_unsubscribe type corrections and one empty parameter-description addition. The custom license permits redistribution subject to its conditions. Complete the modified-file notices, full license inclusion and PPA eligibility assessment before upload.",
+      "primary_source": "https://github.com/mailchimp/mailchimp-client-lib-codegen",
+      "upstream_commit": "547f82081fbe0d915b0540ac9df9ea262646e99e",
+      "upstream_file": "https://raw.githubusercontent.com/mailchimp/mailchimp-client-lib-codegen/547f82081fbe0d915b0540ac9df9ea262646e99e/spec/marketing.json",
+      "upstream_sha256": "c12da65d002fb0c1a5f033b0349f7c5fce76fe74b6cea2b59ada2f6e14a82a3c",
+      "license_source": "https://raw.githubusercontent.com/mailchimp/mailchimp-client-lib-codegen/547f82081fbe0d915b0540ac9df9ea262646e99e/LICENSE",
+      "license_sha256": "8e0b5de8995421007b8d0d84f857cc4408fd7900b909e2a016b50c3cc9cc483e"
     },
     {
       "file": "ts/src/schemas/netsuite.swagger.json",

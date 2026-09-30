@@ -10,9 +10,20 @@ fingerprints reject unreviewed schema changes before cache activation. Activate
 it explicitly as described in README.Debian.
 
 PUBLICATION GATE: the full catalogue has not been cleared for redistribution.
-The schema-provenance.json file records missing/conflicting grants, for the remaining bundled schemas. HubSpot documents are excluded entirely;
-see README.Debian for the explicit per-user cache. The Facebook SDK's Platform
-License also needs a PPA eligibility review. Complete the per-file Debian
+The schema-provenance.json file records pinned evidence and the remaining
+missing/conflicting grants. Asana and Jira declare Apache-2.0; the original
+DocuSign import has been matched to its MIT-licensed upstream revision. Their
+notices are recorded separately in debian/copyright. The Mailchimp specification
+has also been matched to an upstream revision, but its custom license conditions
+and PPA eligibility remain under review. The older Magento schema comes from a
+different repository/license lineage than the current AdobeDocs schemas.
+
+HubSpot documents are excluded entirely; see README.Debian for the explicit
+per-user cache. The Facebook SDK's Platform License permits redistribution for
+Facebook integrations, but its PPA eligibility still needs confirmation under
+https://documentation.ubuntu.com/launchpad/user/reference/launchpad-and-community/legal/launchpad-policies/.
+A service-specific redistribution grant and Launchpad hosting eligibility are
+separate requirements. Complete the per-file Debian
 copyright mapping and preserve all applicable terms before uploading a source
 or binary package to any public repository. These checks apply to testing PPAs
 as well as general releases. No package upload is performed by this recipe.

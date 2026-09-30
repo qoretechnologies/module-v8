@@ -36,9 +36,43 @@ License: pending-review
  See debian/schema-provenance.json for file hashes, source URLs and findings.
  This notice does not grant redistribution rights.
 
+Files: src/schemas/asana.swagger.json
+Copyright: Asana, Inc.
+License: Apache-2.0
+Comment: The bundled schema declares Apache-2.0 in info.license.
+
+Files: src/schemas/esignature.swagger.json
+Copyright: 2017- DocuSign, Inc. (https://www.docusign.com)
+License: MIT
+Comment: The original import matches the official schema at revision
+ f07e03d20837a18b247ff2573b1f98570af39b56. Local changes remove empty media-type
+ overrides and correct the customParameters property type. See
+ debian/schema-provenance.json for the pinned source, license and hashes.
+
+Files: src/schemas/jira.swagger.json
+Copyright: Atlassian
+License: Apache-2.0
+Comment: The bundled schema declares Apache-2.0 in info.license.
+
 Files: vendor/*
 Copyright: Respective dependency authors, preserved in bundled notices
 License: various
  The source archives preserve upstream licenses. The binary package preserves
  all bundled license and notice files and includes a dependency inventory.
  The complete per-file Debian copyright mapping remains a publication gate.
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+     https://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the complete license text can be found in
+ /usr/share/common-licenses/Apache-2.0.
