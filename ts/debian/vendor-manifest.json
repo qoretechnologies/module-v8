@@ -6834,7 +6834,9 @@
         "type": "git",
         "url": "git://github.com/TooTallNate/node-agent-base.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/agent-base/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -7073,7 +7075,8 @@
         "url": "git://github.com/paulmillr/Array.prototype.findIndex.git"
       },
       "notice_files": [
-        "node_modules/array.prototype.findindex/LICENSE"
+        "node_modules/array.prototype.findindex/LICENSE",
+        "node_modules/array.prototype.findindex/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -7168,7 +7171,9 @@
         "type": "git",
         "url": "git@github.com:indutny/asn1.js"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/asn1.js/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -7182,7 +7187,9 @@
         "type": "git",
         "url": "https://github.com/mcavage/node-assert-plus.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/assert-plus/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -7459,7 +7466,8 @@
         "url": "git://github.com/juliangruber/balanced-match.git"
       },
       "notice_files": [
-        "node_modules/balanced-match/LICENSE.md"
+        "node_modules/balanced-match/LICENSE.md",
+        "node_modules/balanced-match/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -7597,7 +7605,8 @@
         "url": "git://github.com/petkaantonov/bluebird.git"
       },
       "notice_files": [
-        "node_modules/bluebird/LICENSE"
+        "node_modules/bluebird/LICENSE",
+        "node_modules/bluebird/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -7691,7 +7700,8 @@
         "url": "git://github.com/juliangruber/brace-expansion.git"
       },
       "notice_files": [
-        "node_modules/brace-expansion/LICENSE"
+        "node_modules/brace-expansion/LICENSE",
+        "node_modules/brace-expansion/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -7707,7 +7717,8 @@
         "url": "git://github.com/juliangruber/brace-expansion.git"
       },
       "notice_files": [
-        "node_modules/brace-expansion/LICENSE"
+        "node_modules/brace-expansion/LICENSE",
+        "node_modules/brace-expansion/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -7751,7 +7762,9 @@
         "type": "git",
         "url": "git@github.com:indutny/brorand"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/brorand/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -8518,7 +8531,7 @@
       "sha256": "b356c77e4e82e953a55f5e0c8fcfa6497498b2ed54c98069b805c10be3510c4f",
       "name": "computed-style",
       "version": "0.1.4",
-      "license": null,
+      "license": "MIT",
       "repository": {
         "type": "git",
         "url": "git://github.com/twolfson/computedStyle.git"
@@ -8527,7 +8540,14 @@
         "node_modules/computed-style/LICENSE-MIT"
       ],
       "native_files": [],
-      "has_install_script": false
+      "has_install_script": false,
+      "license_review": {
+        "declared_license": null,
+        "basis": "Full license text in the pinned archive",
+        "files": [
+          "node_modules/computed-style/LICENSE-MIT"
+        ]
+      }
     },
     {
       "archive": "concat-map-npm-0.0.1-85a921b7ee-c996b1cfdf.zip",
@@ -8966,7 +8986,9 @@
         "type": "git",
         "url": "git://github.com/TooTallNate/node-data-uri-to-buffer.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/data-uri-to-buffer/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -9045,7 +9067,8 @@
         "url": "git://github.com/visionmedia/debug.git"
       },
       "notice_files": [
-        "node_modules/debug/LICENSE"
+        "node_modules/debug/LICENSE",
+        "node_modules/debug/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -9061,7 +9084,8 @@
         "url": "git://github.com/debug-js/debug.git"
       },
       "notice_files": [
-        "node_modules/debug/LICENSE"
+        "node_modules/debug/LICENSE",
+        "node_modules/debug/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -9214,7 +9238,9 @@
         "type": "git",
         "url": "git+ssh://git@github.com/indutny/des.js.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/des.js/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -9328,7 +9354,8 @@
       "notice_files": [
         "node_modules/doctrine/LICENSE",
         "node_modules/doctrine/LICENSE.closure-compiler",
-        "node_modules/doctrine/LICENSE.esprima"
+        "node_modules/doctrine/LICENSE.esprima",
+        "node_modules/doctrine/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -9343,7 +9370,8 @@
       "notice_files": [
         "node_modules/doctrine/LICENSE",
         "node_modules/doctrine/LICENSE.closure-compiler",
-        "node_modules/doctrine/LICENSE.esprima"
+        "node_modules/doctrine/LICENSE.esprima",
+        "node_modules/doctrine/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -9575,7 +9603,9 @@
         "type": "git",
         "url": "git@github.com:indutny/elliptic"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/elliptic/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -9593,7 +9623,19 @@
         "node_modules/email-validator/LICENSE"
       ],
       "native_files": [],
-      "has_install_script": false
+      "has_install_script": false,
+      "license_review": {
+        "declared_license": null,
+        "legacy_licenses": [
+          {
+            "type": "MIT",
+            "url": "http://github.com/manishsaraan/email-validator/raw/master/LICENSE"
+          }
+        ],
+        "license_file": "node_modules/email-validator/LICENSE",
+        "license_file_identifier": "Unlicense",
+        "finding": "Legacy package.json declares MIT, while the full bundled LICENSE is Unlicense. Preserve both records; do not resolve the discrepancy by discarding either."
+      }
     },
     {
       "archive": "emittery-npm-0.13.1-cb6cd1bb03-1573d0ae29.zip",
@@ -10045,7 +10087,8 @@
       "license": "MIT",
       "repository": "eslint/eslint",
       "notice_files": [
-        "node_modules/eslint/LICENSE"
+        "node_modules/eslint/LICENSE",
+        "node_modules/eslint/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -10293,7 +10336,9 @@
         "type": "git",
         "url": "https://github.com/estools/esrecurse.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/esrecurse/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -10308,7 +10353,8 @@
         "url": "http://github.com/estools/estraverse.git"
       },
       "notice_files": [
-        "node_modules/estraverse/LICENSE.BSD"
+        "node_modules/estraverse/LICENSE.BSD",
+        "node_modules/estraverse/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -10337,7 +10383,8 @@
         "url": "http://github.com/estools/esutils.git"
       },
       "notice_files": [
-        "node_modules/esutils/LICENSE.BSD"
+        "node_modules/esutils/LICENSE.BSD",
+        "node_modules/esutils/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -10700,7 +10747,7 @@
       "sha256": "79f2bee218f15f8a020331e87a13db2b69dbce1646dca097d3c4ceffa34338fe",
       "name": "fast-shallow-equal",
       "version": "1.0.0",
-      "license": null,
+      "license": "Unlicense",
       "repository": {
         "type": "git",
         "url": "https://github.com/streamich/fast-shallow-equal.git"
@@ -10709,7 +10756,14 @@
         "node_modules/fast-shallow-equal/LICENSE"
       ],
       "native_files": [],
-      "has_install_script": false
+      "has_install_script": false,
+      "license_review": {
+        "declared_license": null,
+        "basis": "Full license text in the pinned archive",
+        "files": [
+          "node_modules/fast-shallow-equal/LICENSE"
+        ]
+      }
     },
     {
       "archive": "fastest-stable-stringify-npm-2.0.2-f2a059d214-abbe5ff48f.zip",
@@ -11984,7 +12038,9 @@
         "type": "git",
         "url": "git@github.com:indutny/hash.js"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/hash.js/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -12085,7 +12141,9 @@
         "type": "git",
         "url": "git+ssh://git@github.com/indutny/hmac-drbg.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/hmac-drbg/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -12160,7 +12218,9 @@
         "type": "git",
         "url": "git://github.com/TooTallNate/node-http-proxy-agent.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/http-proxy-agent/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -12207,7 +12267,9 @@
         "type": "git",
         "url": "git://github.com/TooTallNate/node-https-proxy-agent.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/https-proxy-agent/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -12405,7 +12467,9 @@
         "type": "git",
         "url": "https://github.com/jensyt/imurmurhash-js"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/imurmurhash/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -13257,7 +13321,9 @@
         "type": "git",
         "url": "git://github.com/juliangruber/isarray.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/isarray/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -13271,7 +13337,9 @@
         "type": "git",
         "url": "git://github.com/juliangruber/isarray.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/isarray/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -13712,7 +13780,9 @@
         "type": "git",
         "url": "https://github.com/arcanis/jest-pnp-resolver.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/jest-pnp-resolver/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -14189,7 +14259,8 @@
         "url": "git://github.com/brianloveswords/node-jwa.git"
       },
       "notice_files": [
-        "node_modules/jwa/LICENSE"
+        "node_modules/jwa/LICENSE",
+        "node_modules/jwa/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -14205,7 +14276,8 @@
         "url": "git://github.com/brianloveswords/node-jws.git"
       },
       "notice_files": [
-        "node_modules/jws/LICENSE"
+        "node_modules/jws/LICENSE",
+        "node_modules/jws/readme.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -14332,7 +14404,7 @@
       "sha256": "d9ed8ce56573790b92cefc3ae6cdcc669d3236bab2fbd069d3938224c9555f1b",
       "name": "line-height",
       "version": "0.1.1",
-      "license": null,
+      "license": "MIT",
       "repository": {
         "type": "git",
         "url": "git://github.com/twolfson/line-height.git"
@@ -14341,7 +14413,14 @@
         "node_modules/line-height/LICENSE-MIT"
       ],
       "native_files": [],
-      "has_install_script": false
+      "has_install_script": false,
+      "license_review": {
+        "declared_license": null,
+        "basis": "Full license text in the pinned archive",
+        "files": [
+          "node_modules/line-height/LICENSE-MIT"
+        ]
+      }
     },
     {
       "archive": "lines-and-columns-npm-1.2.4-d6c7cc5799-3da6ee62d4.zip",
@@ -15806,7 +15885,9 @@
         "type": "git",
         "url": "git@github.com:indutny/miller-rabin"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/miller-rabin/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -15917,7 +15998,9 @@
         "type": "git",
         "url": "git+ssh://git@github.com/indutny/minimalistic-crypto-utils.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/minimalistic-crypto-utils/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -16668,7 +16751,9 @@
         "type": "git",
         "url": "git+https://github.com/vettloffah/odoo-await.git"
       },
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/odoo-await/README.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -16709,7 +16794,8 @@
       "license": "MIT",
       "repository": "https://github.com/kogosoftwarellc/open-api/tree/master/packages/openapi-types",
       "notice_files": [
-        "node_modules/openapi-types/LICENSE"
+        "node_modules/openapi-types/LICENSE",
+        "node_modules/openapi-types/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -17509,7 +17595,8 @@
         "url": "git@github.com:lupomontero/psl.git"
       },
       "notice_files": [
-        "node_modules/psl/LICENSE"
+        "node_modules/psl/LICENSE",
+        "node_modules/psl/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -18025,7 +18112,7 @@
       "sha256": "c2179dc2cfcd2f5509bd473ebed77eb7729cb4291fb40eb41e32f15c32027b2d",
       "name": "react-universal-interface",
       "version": "0.6.2",
-      "license": null,
+      "license": "Unlicense",
       "repository": {
         "type": "git",
         "url": "https://github.com/streamich/react-universal-interface.git"
@@ -18034,7 +18121,14 @@
         "node_modules/react-universal-interface/LICENSE"
       ],
       "native_files": [],
-      "has_install_script": false
+      "has_install_script": false,
+      "license_review": {
+        "declared_license": null,
+        "basis": "Full license text in the pinned archive",
+        "files": [
+          "node_modules/react-universal-interface/LICENSE"
+        ]
+      }
     },
     {
       "archive": "react-use-npm-17.6.0-327459097c-d122199f3e.zip",
@@ -20185,7 +20279,9 @@
       "version": "1.0.0",
       "license": "MIT",
       "repository": "git://github.com/ianstormtaylor/title-case-minors.git",
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/title-case-minors/Readme.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -20260,7 +20356,9 @@
       "version": "1.0.0",
       "license": "MIT",
       "repository": "git://github.com/ianstormtaylor/to-capital-case.git",
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/to-capital-case/Readme.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -20271,7 +20369,9 @@
       "version": "1.0.2",
       "license": "MIT",
       "repository": "git://github.com/ianstormtaylor/to-no-case.git",
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/to-no-case/Readme.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -20306,7 +20406,9 @@
       "version": "1.0.0",
       "license": "MIT",
       "repository": "git://github.com/ianstormtaylor/to-space-case.git",
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/to-space-case/Readme.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -20317,7 +20419,9 @@
       "version": "1.0.0",
       "license": "MIT",
       "repository": "git://github.com/ianstormtaylor/to-title-case.git",
-      "notice_files": [],
+      "notice_files": [
+        "node_modules/to-title-case/Readme.md"
+      ],
       "native_files": [],
       "has_install_script": false
     },
@@ -20346,7 +20450,8 @@
         "url": "git://github.com/salesforce/tough-cookie.git"
       },
       "notice_files": [
-        "node_modules/tough-cookie/LICENSE"
+        "node_modules/tough-cookie/LICENSE",
+        "node_modules/tough-cookie/README.md"
       ],
       "native_files": [],
       "has_install_script": false
@@ -20582,7 +20687,8 @@
         "url": "https://github.com/Microsoft/tslib.git"
       },
       "notice_files": [
-        "node_modules/tslib/LICENSE.txt"
+        "node_modules/tslib/LICENSE.txt",
+        "node_modules/tslib/CopyrightNotice.txt"
       ],
       "native_files": [],
       "has_install_script": false
@@ -21312,7 +21418,7 @@
       "sha256": "0382e5a6f97055ae416048159a4adba06b48262671b73ee1763906c1b4bb592b",
       "name": "url-template",
       "version": "2.0.8",
-      "license": "BSD",
+      "license": "BSD-3-Clause",
       "repository": {
         "type": "git",
         "url": "git://github.com/bramstein/url-template.git"
@@ -21321,7 +21427,14 @@
         "node_modules/url-template/LICENSE"
       ],
       "native_files": [],
-      "has_install_script": false
+      "has_install_script": false,
+      "license_review": {
+        "declared_license": "BSD",
+        "basis": "Full license text in the pinned archive",
+        "files": [
+          "node_modules/url-template/LICENSE"
+        ]
+      }
     },
     {
       "archive": "use-context-selector-npm-1.4.4-34f384c183-19d11287de.zip",
@@ -21367,7 +21480,8 @@
         "url": "git://github.com/TooTallNate/util-deprecate.git"
       },
       "notice_files": [
-        "node_modules/util-deprecate/LICENSE"
+        "node_modules/util-deprecate/LICENSE",
+        "node_modules/util-deprecate/README.md"
       ],
       "native_files": [],
       "has_install_script": false

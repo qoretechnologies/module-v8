@@ -43,6 +43,11 @@ is https://repo.yarnpkg.com/4.12.0/packages/yarnpkg-cli/bin/yarn.js; its expecte
 SHA-256 is in vendor-manifest.json and its packageManager SHA-512 is in package.json.
 All network prefetching happens before creating the source package. Upstream npm
 archives and their license/notice files are preserved in the vendor component.
+The notice inventory also includes README files containing complete license
+grants and separate copyright notices such as tslib's CopyrightNotice.txt.
+These files are copied verbatim into the binary package's dependency-notices
+directory. Reviewed license identifiers retain the original package metadata
+in license_review; conflicting declarations remain explicit review findings.
 
 Install declared Build-Depends, then run dpkg-buildpackage -b -us -uc from the
 extracted source directory. Use a clean Ubuntu 26.04 amd64 build environment;
