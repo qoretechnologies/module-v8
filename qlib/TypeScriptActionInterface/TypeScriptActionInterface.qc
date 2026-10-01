@@ -458,8 +458,29 @@ public class TypeScriptActionInterface {
     }
 
     #! Initialize all pending apps
+    /** Failures are retained in DataProviderActionCatalog::getInitializationFailures() while remaining apps
+        continue to initialize. Failed apps retain their pending metadata for a later retry.
+        @param do_actions also initialize each app's actions if True
+        @note Direct calls to initApp() and initAppAction() still propagate initialization errors.
+        @par Example
+        @code{.py}
+        TypeScriptActionInterface::initAllApps(False);
+        auto failures = DataProviderActionCatalog::getInitializationFailures();
+        @endcode
+    */
     static initAllApps(bool do_actions = True) {
-        map TypeScriptActionInterface::initApp($1, do_actions), keys appmap;
+        foreach string app in (keys appmap) {
+            try {
+                TypeScriptActionInterface::initApp(app, do_actions);
+            } catch (hash<ExceptionInfo> ex) {
+                # Action initialization already retains the exact action failure; do not mark a successfully
+                # initialized app as failed. Also cover errors before registerAppIntern(), such as lazy loads.
+                if (!initmap{app}) {
+                    DataProviderActionCatalog::reportInitializationFailure("app", app, NOTHING, ex,
+                        TypeScriptActionInterface::getModulePath());
+                }
+            }
+        }
     }
 
     #! Returns a list of all pending apps
@@ -1650,7 +1671,8 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                     || ex.desc.typeCode() != NT_STRING || !ex.desc.val()) {
                 throw "APP-ERROR", sprintf("Invalid initialization_error for app %y", app.name);
             }
-            if (ex.err != "APP-SCHEMAS-UNAVAILABLE") {
+            # HubSpot's catalogue predates the shared schema cache and retains its own error code.
+            if (ex.err != "APP-SCHEMAS-UNAVAILABLE" && ex.err != "HUBSPOT-SCHEMAS-UNAVAILABLE") {
                 throw ex.err, ex.desc;
             }
             schema_error = <ExceptionInfo>{"err": ex.err, "desc": ex.desc};

@@ -10,6 +10,9 @@
 %requires GoogleDataProvider
 %requires RestClient
 %requires DiscordRestClient
+%try-module json
+%define MISSING_EXTERNAL_MODULE
+%endtry
 %try-module process
 %define MISSING_EXTERNAL_MODULE
 %endtry
@@ -66,6 +69,9 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("eager registration failure reporting", \eagerRegistrationFailureTest());
         addTestCase("optional resource initialization failures", \optionalResourceFailureTest());
         addTestCase("schema connections and retry", \schemaConnectionRetryTest());
+        addTestCase("HubSpot schema connections and retry", sub () {
+            schemaConnectionRetryTest("HUBSPOT-SCHEMAS-UNAVAILABLE");
+        });
         addTestCase("failed app initialization retry", \failedAppRetryTest());
         addTestCase("failed existing app initialization retry", \existingAppRetryTest());
         addTestCase("failed deferred action retry", \deferredActionRetryTest());
@@ -1455,17 +1461,17 @@ var obj = {
     }
 
     #! Missing schemas preserve real connection/OAuth2 metadata and can recover in the same JS pool
-    private schemaConnectionRetryTest() {
+    private schemaConnectionRetryTest(string error = "APP-SCHEMAS-UNAVAILABLE") {
         string app = "SchemaRetry_" + get_random_string(8);
         string source = sprintf("var exports = {}; var ready = false; var app = %s;
 app.rest = {url: 'https://example.invalid', data: 'json', oauth2_auth_url: 'https://example.invalid/auth'};
 app.swagger_options = {parse_flags: -128};
 app.schema_metadata = () => ready ? {swagger: 'PetStore.swagger.yaml'} : {
-  initialization_error: {err: 'APP-SCHEMAS-UNAVAILABLE', desc: 'Run qore-app-schemas update trello'}
+  initialization_error: {err: %s, desc: 'Install the schema snapshot'}
 };
 var action = {app: app.name, action: 'get-pet', display_name: 'Get Pet',
   short_desc: 'Read a pet', desc: 'Read a pet by its identifier', action_code: 2,
-  swagger_path: 'pet/{id}/GET'};", appSource(app));
+  swagger_path: 'pet/{id}/GET'};", appSource(app), make_json(error));
         JavaScriptProgramPool pool(source, "schema-retry.js", sub (JavaScriptProgram pgm) {
             JavaScriptObject global = pgm.getGlobal();
             TypeScriptActionInterface::registerApp(global.app);
@@ -1478,15 +1484,15 @@ var action = {app: app.name, action: 'get-pet', display_name: 'Get Pet',
         assertEq("https://example.invalid/auth", scheme.options.oauth2_auth_url.default_value);
         string connection = TypeScriptActionInterface::createConnection(app.lwr(), {} + {"opts": {"token": "test"}});
         assertEq(scheme_name + "://example.invalid", TypeScriptActionInterface::getConnection(connection).getUrl());
-        assertEq("APP-SCHEMAS-UNAVAILABLE", TypeScriptActionInterface::getAppSchemaError(app).err);
-        assertThrows("APP-SCHEMAS-UNAVAILABLE", "update trello", sub () {
+        assertEq(error, TypeScriptActionInterface::getAppSchemaError(app).err);
+        assertThrows(error, "Install the schema snapshot", sub () {
             TypeScriptActionInterface::execAppActionIntern(app.lwr(), "get-pet", connection, NOTHING);
         });
         auto failures = DataProviderActionCatalog::getInitializationFailures((app,));
         assertEq(1, failures.size());
         assertEq("action", failures[0].kind);
         assertEq("get-pet", failures[0].action);
-        assertEq("APP-SCHEMAS-UNAVAILABLE", failures[0].error);
+        assertEq(error, failures[0].error);
         assertFalse(TypeScriptActionInterface::initApp(app), "missing schemas remain retryable");
         pool.getProgram().getGlobal().setProperty("ready", True);
         assertTrue(TypeScriptActionInterface::initApp(app), "a configured snapshot completes the same app");

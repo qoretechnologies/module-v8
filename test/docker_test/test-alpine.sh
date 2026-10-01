@@ -125,8 +125,8 @@ chown -R qore:qore "$hubspot_cache" "$app_schema_cache"
 export QORE_MODULE_DIR=${MODULE_SRC_DIR}/qlib:${QORE_MODULE_DIR}
 cd ${MODULE_SRC_DIR}
 for test in test/*.qtest; do
-    if [ "$test" = test/hubspot-oauth.qtest ]; then
-        # This fixture registers its own local HubSpot app; do not preload the live catalog.
+    if [ "$test" = test/hubspot-oauth.qtest ] || [ "$test" = test/ts-app-initialization.qtest ]; then
+        # These fixtures register their own local apps; do not preload the live catalog.
         gosu qore:qore env -u QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT -u QORE_TYPESCRIPT_ACTION_SCRIPTS \
             -u QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS qore --enable-debug "$test" -vv
     else

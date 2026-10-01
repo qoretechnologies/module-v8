@@ -25,13 +25,20 @@ not perform the handshake retain the existing legacy behavior. Final app metadat
 installed `DataProviderAppInfo` declaration before typed-hash conversion, so unknown keys produce a protocol error
 rather than `HASHDECL-INIT-ERROR`.
 
-For `APP-SCHEMAS-UNAVAILABLE`, app initialization registers identity, the connection scheme, and OAuth2 metadata.
+For `APP-SCHEMAS-UNAVAILABLE` and HubSpot's existing `HUBSPOT-SCHEMAS-UNAVAILABLE`, app initialization registers
+identity, the connection scheme, and OAuth2 metadata. The original error code and remediation text are preserved.
 It retains the pending app and action definitions without marking the app fully initialized. Actions remain absent
 from the materialized catalogue and each receives the original structured error through
 `DataProviderActionCatalog::getInitializationFailures()`. `TypeScriptActionInterface::getAppSchemaError()` exposes
 the current app-level schema error without triggering initialization or making the catalogue app unavailable.
 Action initialization and provider access raise that error, including remediation; connection creation remains
-available. Other initialization errors, including malformed error metadata, still throw.
+available. Other initialization errors, including malformed error metadata, still throw on direct initialization.
+
+`initAllApps()` isolates each pending app's initialization: an app failure is retained through
+`reportInitializationFailure()` and does not prevent subsequent apps from registering, including during module
+loading. Failed apps remain pending for retry. If the app has already initialized and one of its actions fails,
+the existing action failure is retained without adding a misleading app failure. Callers can inspect
+`getInitializationFailures()` after a bulk load; a successful module load does not imply a complete catalogue.
 
 The catalogue supplies a synchronous `schema_metadata` callback returning only `swagger`, `swagger_schema_map`, or
 `initialization_error`. It reads local configuration and verifies snapshots; it never downloads schemas. Failed

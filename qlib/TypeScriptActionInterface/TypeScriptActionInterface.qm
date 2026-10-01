@@ -88,6 +88,10 @@ module TypeScriptActionInterface {
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - Bulk app initialization retains each app's failure and continues registering the remaining apps;
+      direct app/action initialization still raises the original error. HubSpot's
+      \c HUBSPOT-SCHEMAS-UNAVAILABLE error now preserves its identity, connection scheme, and OAuth2 metadata
+      just like \c APP-SCHEMAS-UNAVAILABLE, while its actions retain the schema error and remediation.
     - schema cache filenames use a fixed-length SHA-256 digest of the schema location and canonical allowed-path
       set, so long snapshot locations no longer exceed filesystem filename limits. Path order and duplicates
       share one entry, and paths containing commas cannot collide with multiple separate paths. Old cache

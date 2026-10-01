@@ -1,0 +1,298 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+# Run with the TypeScript catalogue environment variables unset, as in the CI runners.
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+%requires QUnit
+%requires v8
+%requires ConnectionProvider
+%requires FsUtil
+%try-module json
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%ifndef MISSING_EXTERNAL_MODULE
+%requires TypeScriptActionInterface
+%endif
+%exec-class AppInitializationTest
+
+%ifndef MISSING_EXTERNAL_MODULE
+class AppInitializationTest inherits QUnit::Test {
+    constructor() : Test("TypeScript app initialization", "1.0") {
+        addTestCase("bulk failures remain isolated and retryable", \bulkTest());
+        addTestCase("action failures retain their action identity", \actionFailureTest());
+        addTestCase("module loading survives app initialization failure", \moduleLoadTest());
+        addTestCase("HubSpot without a schema snapshot", \hubspotTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        Logger logger("initialization-test", LoggerLevel::LevelFatal);
+        logger.addAppender(new LoggerAppenderNull());
+        DataProvider::setGlobalLogger(logger);
+        DataProvider::checkStaticInit();
+    }
+
+    private hash<auto> appInfo(string name) {
+        return {"name": name, "display_name": name, "short_desc": "App initialization fixture",
+            "desc": "Verify independent app initialization and recovery.",
+            "groups": (AppGroup::ApiIntegration,), "logo": make_base64_string(<00>),
+            "logo_file_name": "fixture.svg", "logo_mime_type": "image/svg+xml", "dynamic": True};
+    }
+
+    private hash<auto> actionInfo(string app) {
+        return {"app": app, "action": "read", "display_name": "Read Fixture",
+            "short_desc": "Read a fixture", "desc": "Read a fixture to verify action registration.",
+            "action_code": DPAT_API, "api_function": sub () {}};
+    }
+
+    private bulkTest() {
+        assertEq((), TypeScriptActionInterface::getPendingApps());
+        TypeScriptActionInterface::initAllApps();
+        foreach bool do_actions in ((False, True)) {
+            string suffix = get_random_string(8);
+            list<string> names = map $1 + suffix, ("First", "Broken", "Middle", "Callback", "Last");
+            on_exit foreach string name in (names) {
+                TypeScriptActionInterface::deregisterDynamicApp(name);
+            }
+            JavaScriptProgramPool pool("", "bulk-initialization.js", sub (JavaScriptProgram pgm) {});
+            bool ready = False;
+            hash<string, int> calls;
+            foreach string name in (names) {
+                hash<auto> app = appInfo(name);
+                string fixture_name = name;
+                app.schema_metadata = hash<auto> sub () {
+                    ++calls{fixture_name};
+                    if (!ready && fixture_name == names[1]) {
+                        return {"initialization_error": {"err": "FIXTURE-UNAVAILABLE",
+                            "desc": "Install the fixture resource"}};
+                    }
+                    if (!ready && fixture_name == names[3]) {
+                        throw "FIXTURE-CALLBACK-ERROR", "Cannot read fixture metadata", {"fixture": fixture_name};
+                    }
+                    return {};
+                };
+                TypeScriptActionInterface::registerApp(app, pool);
+                TypeScriptActionInterface::registerAction(actionInfo(name), pool);
+            }
+            assertEq((map $1.lwr(), names), TypeScriptActionInterface::getPendingApps());
+            for (int attempt = 1; attempt <= 2; ++attempt) {
+                TypeScriptActionInterface::initAllApps(do_actions);
+                assertEq((names[1].lwr(), names[3].lwr()), TypeScriptActionInterface::getPendingApps(),
+                    "all healthy apps, including those after failures, were initialized eagerly");
+                foreach string name in ((names[0], names[2], names[4])) {
+                    assertEq(1, calls{name}, "successful initialization is idempotent");
+                    assertEq(name, DataProviderActionCatalog::getAppEx(name).name);
+                    if (do_actions) {
+                        assertEq("read", DataProviderActionCatalog::getAppActionEx(name, "read").action);
+                    }
+                }
+                assertEq(attempt, calls{names[1]});
+                assertEq(attempt, calls{names[3]});
+                auto failures = DataProviderActionCatalog::getInitializationFailures(names);
+                assertEq(2, failures.size(), "repeated attempts do not duplicate failures");
+                assertEq("app", failures[0].kind);
+                assertEq(names[1], failures[0].app);
+                assertEq("FIXTURE-UNAVAILABLE", failures[0].error);
+                assertEq("Install the fixture resource", failures[0].description);
+                assertEq("app", failures[1].kind);
+                assertEq(names[3], failures[1].app);
+                assertEq("FIXTURE-CALLBACK-ERROR", failures[1].error);
+                assertEq({"fixture": names[3]}, failures[1].argument);
+                assertTrue(failures[1].module_context.val());
+            }
+            assertThrows("FIXTURE-UNAVAILABLE", sub () {
+                TypeScriptActionInterface::initApp(names[1]);
+            });
+            ready = True;
+            TypeScriptActionInterface::initAllApps(do_actions);
+            assertEq((), TypeScriptActionInterface::getPendingApps());
+            assertEq((), DataProviderActionCatalog::getInitializationFailures(names));
+            foreach string name in (names) {
+                assertEq(name, DataProviderActionCatalog::getAppEx(name).name);
+                TypeScriptActionInterface::checkAppActions(name);
+                assertEq("read", DataProviderActionCatalog::getAppActionEx(name, "read").action);
+            }
+            hash<string, int> previous_calls = calls;
+            TypeScriptActionInterface::initAllApps(do_actions);
+            assertEq(previous_calls, calls, "an empty pending set does not repeat initialization");
+        }
+    }
+
+    private actionFailureTest() {
+        string app = "ActionFailure_" + get_random_string(8);
+        string later = "AfterActionFailure_" + get_random_string(8);
+        on_exit {
+            TypeScriptActionInterface::deregisterDynamicApp(app);
+            TypeScriptActionInterface::deregisterDynamicApp(later);
+        }
+        JavaScriptProgramPool pool("", "action-initialization.js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::registerApp(appInfo(app), pool);
+        hash<auto> action = actionInfo(app);
+        action.action_code = 999;
+        TypeScriptActionInterface::registerAction(action, pool);
+        TypeScriptActionInterface::registerApp(appInfo(later), pool);
+        TypeScriptActionInterface::registerAction(actionInfo(later), pool);
+        TypeScriptActionInterface::initAllApps();
+        assertEq((), TypeScriptActionInterface::getPendingApps());
+        assertEq(later, DataProviderActionCatalog::getAppEx(later).name);
+        assertEq("read", DataProviderActionCatalog::getAppActionEx(later, "read").action);
+        auto failures = DataProviderActionCatalog::getInitializationFailures((app, later));
+        assertEq(1, failures.size(), "an action failure must not become a spurious app failure");
+        assertEq("action", failures[0].kind);
+        assertEq(app, failures[0].app);
+        assertEq("read", failures[0].action);
+        assertEq("TYPESCRIPT-ACTION-ERROR", failures[0].error);
+        assertThrows("TYPESCRIPT-ACTION-ERROR", sub () {
+            TypeScriptActionInterface::initAppAction(app, "read");
+        });
+        TypeScriptActionInterface::registerAction(actionInfo(app), pool);
+        assertEq("read", DataProviderActionCatalog::getAppActionEx(app, "read").action);
+        assertEq((), DataProviderActionCatalog::getInitializationFailures((app, later)));
+    }
+
+    private hubspotTest() {
+        string dist = get_script_dir() + "/../ts/dist";
+        if (!hstat(dist + "/apps/hubspot/rest.js") || !hstat(dist + "/schema-cache/hubspot.js")) {
+            testSkip("build the matching TypeScript catalogue to run the HubSpot fixture");
+        }
+        dist = realpath(dist);
+        # Exercise the production schema and connection metadata factories and exact action inventory.
+        # These have no dependency on the action execution SDKs or a live HubSpot account.
+        string source = "var exports = {}; const saved = process.env.QORE_HUBSPOT_SCHEMA_SNAPSHOT;\n"
+            "const schemas = require(" + make_json(dist + "/schema-cache/hubspot") + ");\n"
+            "const rest = require(" + make_json(dist + "/apps/hubspot/rest") + ");\n"
+            "try {\n"
+            "  delete process.env.QORE_HUBSPOT_SCHEMA_SNAPSHOT;\n"
+            "  exports.app = {name: rest.HUBSPOT_APP_NAME, rest: rest.getHubspotRestOptions(),\n"
+            "    ...schemas.hubspotSchemaMetadata()};\n"
+            "  exports.actions = schemas.hubspotContract.actions;\n"
+            "} finally {\n"
+            "  if (saved === undefined) { delete process.env.QORE_HUBSPOT_SCHEMA_SNAPSHOT; }\n"
+            "  else { process.env.QORE_HUBSPOT_SCHEMA_SNAPSHOT = saved; }\n"
+            "}\n";
+        JavaScriptProgramPool pool(source, get_script_dir() + "/../ts/hubspot-initialization-fixture.js",
+            sub (JavaScriptProgram pgm) {});
+        hash<auto> app = pool.getProgram().getGlobal().exports.app.toData();
+        string name = app.name;
+        app = appInfo(name) + app;
+        string later = "AfterHubspot_" + get_random_string(8);
+        on_exit {
+            TypeScriptActionInterface::deregisterDynamicApp(name);
+            TypeScriptActionInterface::deregisterDynamicApp(later);
+        }
+        list<string> actions = pool.getProgram().getGlobal().exports.actions;
+        hash<auto> error = app.initialization_error;
+        assertEq("HUBSPOT-SCHEMAS-UNAVAILABLE", error.err);
+        TypeScriptActionInterface::registerApp(app, pool);
+        foreach string action in (actions) {
+            hash<auto> info = actionInfo(name);
+            info.action = action;
+            TypeScriptActionInterface::registerAction(info, pool);
+        }
+        TypeScriptActionInterface::registerApp(appInfo(later), pool);
+        TypeScriptActionInterface::registerAction(actionInfo(later), pool);
+        TypeScriptActionInterface::initAllApps();
+        assertEq((name.lwr(),), TypeScriptActionInterface::getPendingApps());
+        assertEq(name, DataProviderActionCatalog::getAppEx(name).name);
+        assertEq(later, DataProviderActionCatalog::getAppEx(later).name);
+        assertEq("read", DataProviderActionCatalog::getAppActionEx(later, "read").action);
+        hash<ConnectionSchemeInfo> scheme = ConnectionSchemeCache::getSchemeEx("tsrest-hubspot");
+        assertEq(app.rest.oauth2_auth_url, scheme.options.oauth2_auth_url.default_value);
+        assertEq(app.rest.oauth2_token_url, scheme.options.oauth2_token_url.default_value);
+        string connection = TypeScriptActionInterface::createConnection(name.lwr(), {} + {"opts": {"token": "test"}});
+        assertEq("tsrest-hubspot://api.hubapi.com", TypeScriptActionInterface::getConnection(connection).getUrl());
+        assertEq(error.err, TypeScriptActionInterface::getAppSchemaError(name).err);
+        assertEq(error.desc, TypeScriptActionInterface::getAppSchemaError(name).desc);
+        auto failures = DataProviderActionCatalog::getInitializationFailures((name, later));
+        assertEq(actions.size(), failures.size());
+        assertEq(sort(actions), sort(map $1.action, failures));
+        foreach auto failure in (failures) {
+            assertEq("action", failure.kind);
+            assertEq(name, failure.app);
+            assertEq(error.err, failure.error);
+            assertEq(error.desc, failure.description);
+        }
+        assertThrows(error.err, "QORE_HUBSPOT_SCHEMA_SNAPSHOT", sub () {
+            TypeScriptActionInterface::initAppAction(name, actions[0]);
+        });
+        assertThrows(error.err, sub () {
+            TypeScriptActionInterface::execAppActionIntern(name.lwr(), actions[0], connection, NOTHING);
+        });
+        TypeScriptActionInterface::initAllApps(False);
+        auto retried = DataProviderActionCatalog::getInitializationFailures((name, later));
+        assertEq(failures.size(), retried.size());
+        foreach auto failure in (retried) {
+            assertEq("action", failure.kind);
+            assertEq(error.err, failure.error);
+            assertEq(error.desc, failure.description);
+        }
+        assertEq(scheme, ConnectionSchemeCache::getSchemeEx("tsrest-hubspot"));
+    }
+
+    private moduleLoadTest() {
+        TmpDir fixture("qore-v8-app-init-", NOTHING, "/tmp");
+        on_exit delete fixture;
+        list<string> names = ("BulkLoadFirst", "BulkLoadFailure", "BulkLoadLast");
+        string source = "exports.actionsCatalogue = {registerAppActions(api) {\n";
+        foreach string name in (names) {
+            hash<auto> app = appInfo(name);
+            if (name == names[1]) {
+                app.initialization_error = {"err": "FIXTURE-LOAD-ERROR", "desc": "Install the app resource"};
+            }
+            source += "api.registerDiscoveryInventory(" + make_json(({"app": name},)) + ");\n"
+                "api.registerApp(" + make_json(app) + ");\n";
+        }
+        source += "}};\n";
+        string script = fixture.path + "/catalogue.js";
+        File output();
+        output.open2(script, O_CREAT | O_EXCL | O_WRONLY, 0600);
+        output.write(source);
+        output.close();
+        hash<auto> env = ENV;
+        env -= ("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT", "QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS",
+            "QORE_DATA_PROVIDERS", "QORE_CONNECTION_PROVIDERS", "QORE_DATASOURCE_PROVIDERS");
+        env.QORE_TYPESCRIPT_ACTION_SCRIPTS = script;
+        env.QORE_PROVIDER_INDEX_DIR = fixture.path;
+        env.QORE_MODULE_DIR = get_script_dir() + "/../qlib:" + (ENV.QORE_MODULE_DIR ?? "");
+        hash<auto> result = Process::run(Process::getExecutablePath(),
+            ("--enable-debug", "-l", "DataProvider", "-l", "Logger", "-l", "json", "-e", "%modern\n"
+                "Logger logger(\"module-load-test\", LoggerLevel::LevelFatal);\n"
+                "logger.addAppender(new LoggerAppenderNull());\n"
+                "DataProvider::setGlobalLogger(logger);\n"
+                "DataProvider::addOptions(DPO_DisableOnDemandInitialization);\n"
+                "load_module(\"TypeScriptActionInterface\");\n"
+                "printf(\"%s\\n\", make_json({\n"
+                "  \"pending\": call_static_method(\"TypeScriptActionInterface\", \"getPendingApps\"),\n"
+                "  \"failures\": DataProviderActionCatalog::getInitializationFailures(),\n"
+                "  \"first\": DataProviderActionCatalog::getAppEx(\"BulkLoadFirst\").name,\n"
+                "  \"last\": DataProviderActionCatalog::getAppEx(\"BulkLoadLast\").name\n"
+                "}));"), {"env": env});
+        assertTrue(result.ok);
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        assertEq("", result.stderr, "module loading emits no warnings or unhandled errors");
+        hash<auto> data = parse_json(result.stdout);
+        assertEq((names[1].lwr(),), data.pending);
+        assertEq(names[0], data.first);
+        assertEq(names[2], data.last);
+        assertEq(1, data.failures.size());
+        assertEq("app", data.failures[0].kind);
+        assertEq(names[1], data.failures[0].app);
+        assertEq("FIXTURE-LOAD-ERROR", data.failures[0].error);
+        assertEq("Install the app resource", data.failures[0].description);
+    }
+}
+%else
+class AppInitializationTest inherits QUnit::Test {
+    constructor() : Test("TypeScript app initialization", "1.0") {
+        addTestCase("external dependencies", sub () { testSkip("json, process and uuid modules are required"); });
+        set_return_value(main());
+    }
+}
+%endif
