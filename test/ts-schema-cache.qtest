@@ -31,7 +31,7 @@ class SchemaCacheFixture inherits TmpDir {
     constructor() : TmpDir("qore-v8-schema-cache-", NOTHING, "/tmp") {
         ENV.QORE_V8_CACHE_DIR = path + "/cache";
         remove ENV.QORE_V8_DISABLE_CACHE;
-        Qore::mkdir(ENV.QORE_V8_CACHE_DIR, 0700);
+        Qore::mkdir_ex(ENV.QORE_V8_CACHE_DIR, 0700);
     }
 
     destructor() {
@@ -49,7 +49,7 @@ class SchemaCacheFixture inherits TmpDir {
 
     string writeSchema(string relative_path, bool openapi3 = False) {
         string location = path + "/" + relative_path;
-        Qore::mkdir(dirname(location), 0700, True);
+        Qore::mkdir_ex(dirname(location), 0700, True);
         hash<auto> schema = {} + {
             "info": {"title": "Schema cache fixture", "version": "1"},
             "paths": map {$1: {
@@ -134,14 +134,19 @@ class SchemaCacheTest inherits QUnit::Test {
     private snapshotTest() {
         SchemaCacheFixture fixture();
         on_exit delete fixture;
-        # Use maximal-length directory components and a path close to Linux PATH_MAX.
+        # Use 255-byte directory components and a path close to the platform's PATH_MAX.
+        int path_max = Qore::PlatformOS == "Darwin" ? 1024 : 4096;
+        string suffix = "/snapshots/" + "snapshot".toSHA256() + "/schema.json";
+        # Reserve space for the fixture root, its separator, and the snapshot suffix.
+        int budget = path_max - fixture.path.size() - 1 - suffix.size();
         string relative_path = "app-schemas/" + sprintf("%0255d", 0);
-        while (relative_path.size() < 3600) {
+        while (relative_path.size() + 256 < budget) {
             relative_path += "/" + sprintf("%0255d", 1);
         }
-        relative_path += "/snapshots/" + "snapshot".toSHA256() + "/schema.json";
+        relative_path += suffix;
         string location = fixture.writeSchema(relative_path);
-        assertGt(3800, location.size());
+        assertGt(path_max - 300, location.size());
+        assertLt(path_max, location.size());
         hash<string, list<string>> expected = {"first": ("get",)};
         assertEq(expected, load(location, ("/first:GET",)));
         list<string> names = fixture.cacheFiles();
