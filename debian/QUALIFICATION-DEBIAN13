@@ -1,0 +1,66 @@
+Debian 13 package qualification: 2026-10-02
+==========================================
+
+Copyright 2026 Qore Technologies, s.r.o.
+
+Result: PASS for the local development snapshot below, on native amd64 and
+arm64 (aarch64 Linux on hoppy). This is not a final release or publication.
+
+Package version: 2.1.0~git20261002.2+ds-0qore1~deb13
+Source base commit: e093a1839c4c428bf0dc815ffc9e6539066254b4
+Qore SDK/runtime: 3.0.0~git20261001.1-0qore1~deb13
+Evidence bundle: qore-debian13-final-modules-20261001
+Results: <architecture>/v8/QUALIFICATION.json and architecture-only.json.
+The bundle retains source/binary hashes, dependency inventories, image IDs,
+commands, complete logs, original failures and corrected runs.
+
+Completed checks
+----------------
+
+- Independent source preparations reproduce the .dsc and all source archives.
+- Two full unprivileged, offline builds use the same clean dependency image,
+  different build paths and parallelism, and varied incoming locale/timezone.
+- All 4 binary packages, including documentation and detached debug symbols,
+  match byte-for-byte between the full builds on each architecture.
+- A third clean architecture-only (-B) build omits Doxygen and Graphviz;
+  its packages match the corresponding full-build packages exactly.
+- Source/binary Lintian has no errors. A pinned Lintian 2.129 checker uses the
+  Debian profile separately from the Debian build and runtime environments.
+- Package manifest, ELF hardening, detached DWARF/build IDs/debuglink CRCs,
+  and Qore AOT metadata checks pass where applicable.
+- Installation without Recommends or libqore-dev loads the packaged modules.
+  Installed autopkgtests pass offline as an unprivileged user:
+  runtime, compiler.
+- Exact coinstallation of runtime/documentation/debug artifacts, dpkg file
+  verification, purge, autoremove and SDK-free reinstall all pass.
+
+The native bridge uses the separately qualified Node 22 and TypeScript 5.2
+backports. The optional TypeScript app catalogue is outside this checkpoint.
+
+Qualification found that schema-cache test subprocesses assumed a source
+checkout. They now honor the existing QORE_V8_TEST_QMOD_DIR override used by
+Debian builds and installed tests. The original source-checkout fallback is
+preserved; both modes pass all 7 schema-cache cases and 175 assertions.
+An additional combined-load check exposed Node replacing Qore's signal mask
+and handlers, including the JVM's SIGSEGV handler. Native initialization now
+uses kNoDefaultSignalHandling so the embedding process retains ownership.
+The isolated SIGTERM regression fails before the change and passes afterward;
+WebAssembly valid and out-of-bounds memory access still behaves correctly.
+All 117 packaged native/AOT names load together in forward/reverse order in
+fresh tiered and AST processes on both CPUs, offline and without the Qore SDK.
+
+Installed compiled-module suites retain eight source-only proxy fault-injection
+skips and two optional HubSpot catalogue fixture skips. The cache fixture has
+no skips. Logs preserve the exact executed tests and declared skip reasons;
+this result does not claim coverage of the optional app catalogue.
+
+Scope and remaining gates
+-------------------------
+
+Only services exercised by the package tests are covered. There is no prior
+Debian package baseline for upgrade/ABI qualification. Other distribution
+versions, additional profiles, final Qore ABI/release freeze and exact final
+artifact acceptance remain separate checks. These unsigned local artifacts
+need a signed Debian archive before public delivery; an Ubuntu PPA does not
+publish Debian packages. Existing upstream and private dependency licensing
+and maintenance requirements in README.source continue to apply.
