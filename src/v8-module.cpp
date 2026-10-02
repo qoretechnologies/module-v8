@@ -131,6 +131,9 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
     init_result =
         node::InitializeOncePerProcess(args, {
             node::ProcessInitializationFlags::kEnableStdioInheritance,
+            // Qore owns process signal handling. Node's defaults also replace the JVM's
+            // SIGSEGV handler with its WebAssembly trap handler, breaking runtime coexistence.
+            node::ProcessInitializationFlags::kNoDefaultSignalHandling,
             node::ProcessInitializationFlags::kNoInitializeV8,
             node::ProcessInitializationFlags::kNoInitializeNodeV8Platform,
         });

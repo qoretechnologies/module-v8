@@ -1,0 +1,60 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+%requires QUnit
+%requires v8
+%try-module process
+%define MISSING_PROCESS_MODULE
+%endtry
+%exec-class V8SignalHandlingTest
+
+#! Loading V8 must preserve the embedding process's signal handlers and mask.
+class V8SignalHandlingTest inherits Test {
+    constructor() : Test("v8 host signal handling", "1.0") {
+        addTestCase("Qore handlers survive V8 initialization", \signalHandling());
+        set_return_value(main());
+    }
+
+    signalHandling() {
+%ifdef MISSING_PROCESS_MODULE
+        testSkip("the optional process module is required for the isolated signal test");
+%else
+        if (Qore::PlatformOS == "Windows") {
+            testSkip("this fixture requires POSIX signal handling");
+            return;
+        }
+        hash<auto> env = ENV;
+        bool found = False;
+        # Load the exact module already selected by the parent, after the child installs its handler.
+        foreach hash<auto> info in (get_module_list()) {
+            if (info.name == "v8") {
+                env.QORE_V8_SIGNAL_TEST_MODULE = info.filename;
+                found = True;
+                break;
+            }
+        }
+        assertTrue(found);
+        hash<auto> result = Process::run(Process::getExecutablePath(), ("-e", "%modern
+Queue received();
+set_signal_handler(SIGTERM, sub (int sig) { received.push(sig); });
+on_exit remove_signal_handler(SIGTERM);
+kill(getpid(), SIGTERM);
+if (received.get(5s) != SIGTERM) {
+    throw \"SIGNAL-TEST-ERROR\", \"Baseline handler did not receive SIGTERM\";
+}
+load_module(ENV.QORE_V8_SIGNAL_TEST_MODULE);
+kill(getpid(), SIGTERM);
+if (received.get(5s) != SIGTERM) {
+    throw \"SIGNAL-TEST-ERROR\", \"V8 changed the embedding process signal handling\";
+}
+printf(\"signals-preserved\\n\");
+"), {"env": env});
+        assertTrue(result.ok);
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        assertEq("signals-preserved\n", result.stdout);
+        assertEq("", result.stderr);
+%endif
+    }
+}

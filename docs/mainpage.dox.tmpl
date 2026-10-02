@@ -651,6 +651,8 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @section v8releasenotes v8 Module Release Notes
 
     @subsection v8_2_2 v8 Module Version 2.2
+    - preserve the embedding process's signal handlers and signal mask during Node initialization; this fixes
+      broken %Qore signal delivery and crashes when Node's WebAssembly trap handler replaced the JVM's handler
     - added TypeScript compiler package support for Node.js builds without the built-in compiler, including
       Debian and Ubuntu; syntax errors are reported before execution
     - added Debian/Ubuntu packaging for the native bridge, helper modules, tools, metadata and translations
