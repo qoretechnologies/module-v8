@@ -102,10 +102,16 @@ class SchemaCacheTest inherits QUnit::Test {
         remove env.QORE_CONNECTION_PROVIDERS;
         remove env.QORE_DATASOURCE_PROVIDERS;
         env.QORE_PROVIDER_INDEX_DIR = ENV.QORE_V8_CACHE_DIR;
-        env.QORE_MODULE_DIR = get_script_dir() + "/../qlib:" + (ENV.QORE_MODULE_DIR ?? "");
+        # Installed-package tests provide the compiled module root; ordinary source tests
+        # continue to load the module from this checkout.
+        *string qmod_dir = ENV.QORE_V8_TEST_QMOD_DIR;
+        string module_dir = qmod_dir ? qmod_dir : get_script_dir() + "/../qlib";
+        string action_module = module_dir + "/TypeScriptActionInterface"
+            + (qmod_dir ? "/TypeScriptActionInterface.qmod" : "");
+        env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
         env.QORE_V8_SCHEMA_CACHE_TEST_INPUT = make_json((location, paths));
         hash<auto> result = Process::run(Process::getExecutablePath(),
-            ("--enable-debug", "-l", get_script_dir() + "/../qlib/TypeScriptActionInterface",
+            ("--enable-debug", "-l", action_module,
                 "-l", "json", "-e", "%modern\ntry {
     list<auto> args = parse_json(ENV.QORE_V8_SCHEMA_CACHE_TEST_INPUT);
     auto schema = TypeScriptActionInterface::getRestSchema(\"SchemaCacheFixture\", args[0], NOTHING, args[1], NOTHING);
