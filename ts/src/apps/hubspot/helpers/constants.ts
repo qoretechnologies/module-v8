@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
@@ -113,69 +116,64 @@ export const fetchHubspotRecords = async <ItemType = unknown>(
   const maxResults = options.maxResults || 200;
   const limit = options.limit || 100;
 
-  try {
-    do {
-      if (Date.now() - startTime > HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(`Timeout fetching hubspot allowed values for ${object}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching hubspot allowed values for ${object}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const body: Record<string, any> = {
-        limit: limit.toString(),
-      };
+    const body: Record<string, any> = {
+      limit: limit.toString(),
+    };
 
-      if (options.properties?.length) {
-        body.properties = options.properties;
-      }
+    if (options.properties?.length) {
+      body.properties = options.properties;
+    }
 
-      if (after) {
-        body.after = after;
-      }
+    if (after) {
+      body.after = after;
+    }
 
-      if (options.sort) {
-        body.sorts = [options.sort];
-      }
+    if (options.sort) {
+      body.sorts = [options.sort];
+    }
 
-      const response = await QorusRequest.post<{
-        data: THubspotObjectsResponse<ItemType>;
-      }>(
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          path: `/crm/v3/objects/${object}/search`,
-          data: body,
+    const response = await QorusRequest.post<{
+      data: THubspotObjectsResponse<ItemType>;
+    }>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
         },
-        {
-          url: `https://api.hubapi.com`,
-          endpointId: 'Hubspot',
-        }
-      );
-
-      const responseData: THubspotObjectsResponse<ItemType> | undefined = response?.data;
-
-      if (!responseData?.results?.length) {
-        break;
+        path: `/crm/v3/objects/${object}/search`,
+        data: body,
+      },
+      {
+        url: `https://api.hubapi.com`,
+        endpointId: 'Hubspot',
       }
+    );
+    if (Date.now() - startTime >= HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching hubspot allowed values for ${object}`);
+    }
 
-      after = responseData?.paging?.next.after;
+    const responseData: THubspotObjectsResponse<ItemType> | undefined = response?.data;
 
-      items.push(...responseData.results);
+    if (!responseData?.results?.length) {
+      break;
+    }
 
-      if (after) {
-        await delay(HUBSPOT_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (after);
-  } catch (error) {
-    console.error(error);
-    Debugger.log(`Error fetching hubspot records for ${object}`, error);
+    after = responseData?.paging?.next.after;
 
-    return items;
-  }
+    items.push(...responseData.results);
+
+    if (after) {
+      await delay(HUBSPOT_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (after);
 
   return items;
 };

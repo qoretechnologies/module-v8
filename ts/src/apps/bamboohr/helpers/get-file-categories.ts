@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 /**
  * File Categories Helper
  *
@@ -21,9 +24,15 @@ import {
 } from '../types';
 
 // Cache for employee file categories with 5-minute TTL
-const employeeCategoriesCache = new Map<string, { data: IBambooHRFileCategory[]; timestamp: number }>();
+const employeeCategoriesCache = new Map<
+  string,
+  { data: IBambooHRFileCategory[]; timestamp: number }
+>();
 // Cache for company file categories with 5-minute TTL
-const companyCategoriesCache = new Map<string, { data: IBambooHRFileCategory[]; timestamp: number }>();
+const companyCategoriesCache = new Map<
+  string,
+  { data: IBambooHRFileCategory[]; timestamp: number }
+>();
 const CACHE_TTL = 5 * 60 * 1000;
 
 /**
@@ -124,16 +133,12 @@ export const getEmployeeFileCategoriesAllowedValues = async (
     return [];
   }
 
-  try {
-    const categories = await getEmployeeFileCategories(connOpts, employeeId);
+  const categories = await getEmployeeFileCategories(connOpts, employeeId);
 
-    return categories.map((category) => ({
-      value: String(category.id),
-      display_name: category.name,
-    }));
-  } catch {
-    return [];
-  }
+  return categories.map((category) => ({
+    value: String(category.id),
+    display_name: category.name,
+  }));
 };
 
 /**
@@ -148,14 +153,10 @@ export const getCompanyFileCategoriesAllowedValues = async (
     return [];
   }
 
-  try {
-    const categories = await getCompanyFileCategories(connOpts);
+  const categories = await getCompanyFileCategories(connOpts);
 
-    return categories.map((category) => ({
-      value: String(category.id),
-      display_name: category.name,
-    }));
-  } catch {
-    return [];
-  }
+  return categories.map((category) => ({
+    value: String(category.id),
+    display_name: category.name,
+  }));
 };

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
@@ -141,48 +144,45 @@ export const fetchFirebasePaginatedData = async <ItemType = unknown>(
   const startTime = Date.now();
   let nextPageToken: string | undefined = undefined;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Firebase data for ${path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Firebase data for ${path}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const response: any = await firebaseApiClient<any>({
-        token,
-        path,
-        method,
-        params: {
-          ...options.params,
-          maxResults: String(Math.min(1000, maxResults - items.length)),
-          ...(nextPageToken && { pageToken: nextPageToken }),
-        },
-        body,
-        baseUrl,
-      });
+    const response: any = await firebaseApiClient<any>({
+      token,
+      path,
+      method,
+      params: {
+        ...options.params,
+        maxResults: String(Math.min(1000, maxResults - items.length)),
+        ...(nextPageToken && { pageToken: nextPageToken }),
+      },
+      body,
+      baseUrl,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Firebase data for ${path}`);
+    }
 
-      const responseItems = response.users || response.topics || response.items || [];
+    const responseItems = response.users || response.topics || response.items || [];
 
-      if (!responseItems.length) {
-        break;
-      }
+    if (!responseItems.length) {
+      break;
+    }
 
-      items.push(...(responseItems as unknown as ItemType[]));
+    items.push(...(responseItems as unknown as ItemType[]));
 
-      nextPageToken = response[pageTokenKey];
+    nextPageToken = response[pageTokenKey];
 
-      if (nextPageToken) {
-        await delay(fetchDelay);
-      }
-    } while (nextPageToken && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Firebase data`, error);
-    return items;
-  }
+    if (nextPageToken) {
+      await delay(fetchDelay);
+    }
+  } while (nextPageToken && items.length < maxResults);
 
   return items;
 };

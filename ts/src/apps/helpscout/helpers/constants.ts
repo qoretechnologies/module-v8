@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get, omit } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -180,50 +183,46 @@ export const fetchHelpScoutPaginatedRecords = async <
   let page = 1;
   let totalPages = 1;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching HelpScout records for ${options.path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching HelpScout records for ${options.path}`);
+    }
 
-      const response: ResponseType = await helpScoutApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        params: {
-          size: limit || HELPSCOUT_PER_PAGE,
-          page,
-          ...options.params,
-        },
-        body,
-      });
+    const response: ResponseType = await helpScoutApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      params: {
+        size: limit || HELPSCOUT_PER_PAGE,
+        page,
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching HelpScout records for ${options.path}`);
+    }
 
-      let objectData: ItemType[] | undefined;
+    let objectData: ItemType[] | undefined;
 
-      if (Array.isArray(response)) {
-        if (!response.length) break;
-        items.push(...response);
-        break;
-      } else if (response._embedded) {
-        objectData = get(response._embedded, object) as ItemType[] | undefined;
-      } else {
-        objectData = get(response, object) as ItemType[] | undefined;
-      }
+    if (Array.isArray(response)) {
+      if (!response.length) break;
+      items.push(...response);
+      break;
+    } else if (response._embedded) {
+      objectData = get(response._embedded, object) as ItemType[] | undefined;
+    } else {
+      objectData = get(response, object) as ItemType[] | undefined;
+    }
 
-      if (!objectData?.length) break;
-      items.push(...objectData);
-      totalPages = response.page?.total_pages || 1;
-      page++;
-      if (items.length < maxResults && page <= totalPages) {
-        await delay(fetchDelay);
-      }
-    } while (items.length < maxResults && page <= totalPages);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated helpscout records for ${object}`, error);
-
-    return items;
-  }
+    if (!objectData?.length) break;
+    items.push(...objectData);
+    totalPages = response.page?.total_pages || 1;
+    page++;
+    if (items.length < maxResults && page <= totalPages) {
+      await delay(fetchDelay);
+    }
+  } while (items.length < maxResults && page <= totalPages);
 
   return items;
 };

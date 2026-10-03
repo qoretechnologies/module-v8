@@ -211,29 +211,25 @@ export const getAsanaCustomFields = async (options: {
   // Fetch custom fields for this workspace
   const customFieldsMap = new Map<string, TCustomFieldInfo>();
 
-  try {
-    const response = await asanaClient.get<{ data: TCustomField[] }>(
-      `workspaces/${workspaceGid}/custom_fields`,
-      {
-        token,
-        params: {
-          opt_fields:
-            'gid,name,resource_subtype,type,enum_options,enum_options.gid,enum_options.name,enum_options.enabled,enum_options.color',
-        },
-      }
-    );
-
-    const fields = response?.data || [];
-    for (const field of fields) {
-      customFieldsMap.set(field.name, {
-        gid: field.gid,
-        name: field.name,
-        type: field.resource_subtype || field.type || 'text',
-        enumOptions: field.enum_options,
-      });
+  const response = await asanaClient.get<{ data: TCustomField[] }>(
+    `workspaces/${workspaceGid}/custom_fields`,
+    {
+      token,
+      params: {
+        opt_fields:
+          'gid,name,resource_subtype,type,enum_options,enum_options.gid,enum_options.name,enum_options.enabled,enum_options.color',
+      },
     }
-  } catch {
-    // Custom fields might not be available, continue with empty map
+  );
+
+  const fields = response?.data || [];
+  for (const field of fields) {
+    customFieldsMap.set(field.name, {
+      gid: field.gid,
+      name: field.name,
+      type: field.resource_subtype || field.type || 'text',
+      enumOptions: field.enum_options,
+    });
   }
 
   // Cache the custom fields

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Estimate } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksEstimateToAllowedValue = (estimate: Estimate): IQoreAllowedValue<string> => {
   const customerName = estimate.CustomerRef?.name || 'Unknown Customer';
@@ -42,34 +41,10 @@ export const getQuickbooksEstimateIdAllowedValues: TQoreGetAllowedValuesFunction
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allEstimates: Estimate[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const estimates = await client.findEstimates({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allEstimates.push(...(estimates.QueryResponse.Estimate || []));
-    total = estimates.QueryResponse.maxResults || 0;
-
-    while (
-      allEstimates.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allEstimates.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const estimates = await client.findEstimates({
-        desc: 'MetaData.CreateTime',
-        offset: allEstimates.length,
-      });
-
-      allEstimates.push(...(estimates.QueryResponse.Estimate || []));
-      total = estimates.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch estimates: ${error}`);
-  }
+  const allEstimates = await fetchQuickbooksRecords<Estimate>(
+    (query) => client.findEstimates(query),
+    'Estimate'
+  );
 
   return allEstimates.map(mapQuickbooksEstimateToAllowedValue);
 };

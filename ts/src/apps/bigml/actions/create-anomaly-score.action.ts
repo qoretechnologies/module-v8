@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { BIG_ML_APP_NAME, BigMlError } from '../constants';
@@ -18,40 +21,36 @@ const options = {
     type: 'hash',
     required: true,
     get_dynamic_type: async (context) => {
-      try {
-        const { token, username, anomaly } = getQoreContextRequiredValues({
-          context,
-          connectionFields: ['token', 'username'],
-          optionFields: ['anomaly'],
-          ErrorClass: BigMlError,
-        });
+      const { token, username, anomaly } = getQoreContextRequiredValues({
+        context,
+        connectionFields: ['token', 'username'],
+        optionFields: ['anomaly'],
+        ErrorClass: BigMlError,
+      });
 
-        const response = await bigMlApiClient<{
-          dataset: string;
-        }>({
-          token,
-          username,
-          method: 'GET',
-          path: anomaly,
-        });
+      const response = await bigMlApiClient<{
+        dataset: string;
+      }>({
+        token,
+        username,
+        method: 'GET',
+        path: anomaly,
+      });
 
-        if (!response.dataset) {
-          throw new BigMlError(`Anomaly detector ${anomaly} does not have a dataset associated.`);
-        }
-
-        const fields = await mapBigMlDatasetFieldsToQoreOptions({
-          token,
-          username,
-          dataset: response.dataset,
-        });
-
-        return {
-          type: 'hash',
-          fields,
-        };
-      } catch (error) {
-        return 'hash';
+      if (!response.dataset) {
+        throw new BigMlError(`Anomaly detector ${anomaly} does not have a dataset associated.`);
       }
+
+      const fields = await mapBigMlDatasetFieldsToQoreOptions({
+        token,
+        username,
+        dataset: response.dataset,
+      });
+
+      return {
+        type: 'hash',
+        fields,
+      };
     },
   },
   name: {

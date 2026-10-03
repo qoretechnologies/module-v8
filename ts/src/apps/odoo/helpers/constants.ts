@@ -1,7 +1,9 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
 import OdooAwait from 'odoo-await';
 import { delay } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 
 export const createOdooClient = async (options: {
   subdomain: string;
@@ -59,36 +61,32 @@ export const fetchOdooRecords = async <ItemType = unknown>(
 
   const client = await createOdooClient(options);
 
-  try {
-    do {
-      if (Date.now() - startTime > ODOO_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(`Timeout fetching Odoo allowed values for ${model}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= ODOO_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Odoo allowed values for ${model}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const data: ItemType[] = await client.searchRead(model, filter, fields || [], {
-        limit,
-        offset,
-      });
+    const data: ItemType[] = await client.searchRead(model, filter, fields || [], {
+      limit,
+      offset,
+    });
+    if (Date.now() - startTime >= ODOO_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Odoo allowed values for ${model}`);
+    }
 
-      items.push(...data);
+    items.push(...data);
 
-      hasMore = data.length === limit;
-      offset += limit;
+    hasMore = data.length === limit;
+    offset += limit;
 
-      if (hasMore) {
-        await delay(ODOO_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (hasMore);
-  } catch (error) {
-    Debugger.log(`Error fetching Odoo records for ${model}`, error);
-
-    return items;
-  }
+    if (hasMore) {
+      await delay(ODOO_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (hasMore);
 
   return items;
 };

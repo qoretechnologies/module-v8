@@ -41,22 +41,18 @@ const fetchContactFieldValues = async (
   const result = new Map<string, Array<{ field: string; value: string }>>();
 
   for (const contactId of contactIds) {
-    try {
-      const response = await activeCampaignClient.get<{
-        fieldValues: Array<{ contact: string; field: string; value: string }>;
-      }>(`contacts/${contactId}/fieldValues`, {
-        token,
-        baseUrl: instanceUrl,
-      });
+    const response = await activeCampaignClient.get<{
+      fieldValues: Array<{ contact: string; field: string; value: string }>;
+    }>(`contacts/${contactId}/fieldValues`, {
+      token,
+      baseUrl: instanceUrl,
+    });
 
-      const values = (response.fieldValues || [])
-        .filter((fv) => fv.value !== '')
-        .map((fv) => ({ field: fv.field, value: fv.value }));
+    const values = (response.fieldValues || [])
+      .filter((fv) => fv.value !== '')
+      .map((fv) => ({ field: fv.field, value: fv.value }));
 
-      result.set(contactId, values);
-    } catch {
-      result.set(contactId, []);
-    }
+    result.set(contactId, values);
   }
 
   return result;
@@ -73,28 +69,24 @@ const fetchDealCustomFieldValues = async (
   const result = new Map<string, Array<{ customFieldId: number | string; fieldValue: string }>>();
 
   for (const dealId of dealIds) {
-    try {
-      const response = await activeCampaignClient.get<{
-        dealCustomFieldData: Array<{
-          dealId: string;
-          customFieldId: number;
-          fieldValue: string;
-        }>;
-      }>(`deals/${dealId}/dealCustomFieldData`, {
-        token,
-        baseUrl: instanceUrl,
-      });
+    const response = await activeCampaignClient.get<{
+      dealCustomFieldData: Array<{
+        dealId: string;
+        customFieldId: number;
+        fieldValue: string;
+      }>;
+    }>(`deals/${dealId}/dealCustomFieldData`, {
+      token,
+      baseUrl: instanceUrl,
+    });
 
-      result.set(
-        dealId,
-        (response.dealCustomFieldData || []).map((d) => ({
-          customFieldId: d.customFieldId,
-          fieldValue: d.fieldValue,
-        }))
-      );
-    } catch {
-      result.set(dealId, []);
-    }
+    result.set(
+      dealId,
+      (response.dealCustomFieldData || []).map((d) => ({
+        customFieldId: d.customFieldId,
+        fieldValue: d.fieldValue,
+      }))
+    );
   }
 
   return result;
@@ -106,10 +98,12 @@ const fetchDealCustomFieldValues = async (
 const extractAccountCustomFields = (
   account: Record<string, unknown>
 ): Array<{ customFieldId: number | string; fieldValue: string }> => {
-  const fields = account.fields as Array<{
-    customFieldId: number;
-    fieldValue: string;
-  }> | undefined;
+  const fields = account.fields as
+    | Array<{
+        customFieldId: number;
+        fieldValue: string;
+      }>
+    | undefined;
 
   if (!fields || !Array.isArray(fields)) {
     return [];
@@ -124,9 +118,7 @@ const extractAccountCustomFields = (
 /**
  * Check if a WHERE condition references any custom fields
  */
-const whereReferencesCustomFields = (
-  where?: { exp: string; args?: unknown[] } | null
-): boolean => {
+const whereReferencesCustomFields = (where?: { exp: string; args?: unknown[] } | null): boolean => {
   if (!where || !where.args) {
     return false;
   }
@@ -205,7 +197,11 @@ export const searchActiveCampaignRecords: TQoreSearchRecordsFunction = async (ct
     leftover = [];
 
     // Keep fetching pages until we have enough filtered records or run out
-    while (filteredBatch.length < pageSize && hasMore && totalReturned + filteredBatch.length < limit) {
+    while (
+      filteredBatch.length < pageSize &&
+      hasMore &&
+      totalReturned + filteredBatch.length < limit
+    ) {
       const fetchLimit = Math.min(MAX_PAGE_SIZE, limit - totalReturned - filteredBatch.length);
 
       const response = await activeCampaignClient.get<Record<string, unknown>>(
@@ -235,13 +231,21 @@ export const searchActiveCampaignRecords: TQoreSearchRecordsFunction = async (ct
         const contactIds = items.map((item) => String(item.id));
         const cfValues = await fetchContactFieldValues(contactIds, token, instance_url);
         records = items.map((item) =>
-          transformToRecord(item, tableName, cfValues.get(String(item.id)) as Array<Record<string, unknown>>)
+          transformToRecord(
+            item,
+            tableName,
+            cfValues.get(String(item.id)) as Array<Record<string, unknown>>
+          )
         );
       } else if (tableName === 'Deals' && needsCustomFields) {
         const dealIds = items.map((item) => String(item.id));
         const cfValues = await fetchDealCustomFieldValues(dealIds, token, instance_url);
         records = items.map((item) =>
-          transformToRecord(item, tableName, cfValues.get(String(item.id)) as Array<Record<string, unknown>>)
+          transformToRecord(
+            item,
+            tableName,
+            cfValues.get(String(item.id)) as Array<Record<string, unknown>>
+          )
         );
       } else if (tableName === 'Accounts') {
         records = items.map((item) => {

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { getContentfulScopedClient } from '../client';
 import { getDefaultLocale } from './contentful-type-mapping';
@@ -14,30 +17,26 @@ export const getContentfulEntryAllowedValues: TQoreGetAllowedValuesFunction<
     return [];
   }
 
-  try {
-    const client = getContentfulScopedClient(context, spaceId, environmentId);
-    const defaultLocale = await getDefaultLocale(client, spaceId);
+  const client = getContentfulScopedClient(context, spaceId, environmentId);
+  const defaultLocale = await getDefaultLocale(client, spaceId);
 
-    const query: Record<string, unknown> = { limit: 100 };
-    if (contentTypeId) {
-      query.content_type = contentTypeId;
-    }
-
-    const entries = await client.entry.getMany({ query });
-
-    return entries.items.map((entry) => {
-      const fields = entry.fields as Record<string, Record<string, unknown>>;
-      const displayField = Object.keys(fields)[0];
-      const displayValue = displayField
-        ? String(fields[displayField]?.[defaultLocale] || entry.sys.id)
-        : entry.sys.id;
-
-      return {
-        value: entry.sys.id,
-        display_name: displayValue,
-      };
-    });
-  } catch {
-    return [];
+  const query: Record<string, unknown> = { limit: 100 };
+  if (contentTypeId) {
+    query.content_type = contentTypeId;
   }
+
+  const entries = await client.entry.getMany({ query });
+
+  return entries.items.map((entry) => {
+    const fields = entry.fields as Record<string, Record<string, unknown>>;
+    const displayField = Object.keys(fields)[0];
+    const displayValue = displayField
+      ? String(fields[displayField]?.[defaultLocale] || entry.sys.id)
+      : entry.sys.id;
+
+    return {
+      value: entry.sys.id,
+      display_name: displayValue,
+    };
+  });
 };

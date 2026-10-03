@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreTypeObjectNonList,
   TQoreAppActionFunctionContext,
@@ -5,7 +8,6 @@ import {
   TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
-import { Debugger } from '../../../../utils/Debugger';
 import { ZendeskError } from '../../constants';
 import { getZendeskFieldDynamicTypeFunction } from '../get-object-custom-fields';
 import { TZendeskTable } from './get-table-list';
@@ -48,13 +50,9 @@ const getTicketRecordType = async (
 ): Promise<TQoreTypeObject> => {
   let dynamicType: IQoreTypeObjectNonList = { type: 'hash', fields: {} };
 
-  try {
-    dynamicType = (await getZendeskFieldDynamicTypeFunction('tickets')(
-      context
-    )) as IQoreTypeObjectNonList;
-  } catch (error) {
-    Debugger.log('Failed to get dynamic ticket fields, falling back to static fields');
-  }
+  dynamicType = (await getZendeskFieldDynamicTypeFunction('tickets')(
+    context
+  )) as IQoreTypeObjectNonList;
 
   return {
     type: 'hash',
@@ -140,25 +138,17 @@ const getUserRecordType = async (
 ): Promise<TQoreTypeObject> => {
   let dynamicType: IQoreTypeObjectNonList = { type: 'hash', fields: {} };
 
-  try {
-    dynamicType = (await getZendeskFieldDynamicTypeFunction('users')(
-      context
-    )) as IQoreTypeObjectNonList;
-  } catch (error) {
-    Debugger.log('Failed to get dynamic user fields, falling back to static fields');
-  }
+  dynamicType = (await getZendeskFieldDynamicTypeFunction('users')(
+    context
+  )) as IQoreTypeObjectNonList;
 
   let brandAllowedValues;
   let organizationAllowedValues;
 
-  try {
-    [brandAllowedValues, organizationAllowedValues] = await Promise.all([
-      getBrandIdAllowedValues(context as any),
-      getOrganizationIdAllowedValues(context as any),
-    ]);
-  } catch (error) {
-    Debugger.log('Failed to resolve Zendesk user allowed values for record type', error);
-  }
+  [brandAllowedValues, organizationAllowedValues] = await Promise.all([
+    getBrandIdAllowedValues(context as any),
+    getOrganizationIdAllowedValues(context as any),
+  ]);
 
   return {
     type: 'hash',
@@ -246,21 +236,13 @@ const getOrganizationRecordType = async (
 ): Promise<TQoreTypeObject> => {
   let dynamicType: IQoreTypeObjectNonList = { type: 'hash', fields: {} };
 
-  try {
-    dynamicType = (await getZendeskFieldDynamicTypeFunction('organizations')(
-      context
-    )) as IQoreTypeObjectNonList;
-  } catch (error) {
-    Debugger.log('Failed to get dynamic organization fields, falling back to static fields');
-  }
+  dynamicType = (await getZendeskFieldDynamicTypeFunction('organizations')(
+    context
+  )) as IQoreTypeObjectNonList;
 
   let groupAllowedValues;
 
-  try {
-    groupAllowedValues = await getGroupIdAllowedValues(context as any);
-  } catch (error) {
-    Debugger.log('Failed to resolve Zendesk group allowed values for record type', error);
-  }
+  groupAllowedValues = await getGroupIdAllowedValues(context as any);
 
   return {
     type: 'hash',
@@ -319,15 +301,9 @@ const getCustomObjectRecordType = async (options: {
 }): Promise<TQoreTypeObject> => {
   let dynamicType: IQoreTypeObjectNonList = { type: 'hash', fields: {} };
 
-  try {
-    dynamicType = (await getZendeskFieldDynamicTypeFunction(options.tableName)(
-      options.context
-    )) as IQoreTypeObjectNonList;
-  } catch (error) {
-    Debugger.log(
-      `Failed to get dynamic ${options.tableName} fields, falling back to static fields`
-    );
-  }
+  dynamicType = (await getZendeskFieldDynamicTypeFunction(options.tableName)(
+    options.context
+  )) as IQoreTypeObjectNonList;
 
   return {
     type: 'hash',

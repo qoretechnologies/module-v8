@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import axios from 'axios';
 import { get } from 'lodash';
@@ -161,46 +164,42 @@ export const fetchZohoCrmPaginatedRecords = async <
   let page_token: string | undefined;
   let moreRecords = true;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching ZohoCRM records for ${options.path}`);
-        break;
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching ZohoCRM records for ${options.path}`);
+    }
+
+    const response: ResponseType = await zohoCrmApiClient<ResponseType>({
+      token,
+      path,
+      url,
+      method,
+      params: {
+        per_page: String(ZOHO_CRM_PER_PAGE),
+        ...(page_token && { page_token }),
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching ZohoCRM records for ${options.path}`);
+    }
+
+    if (Array.isArray(response)) {
+      if (!response.length) break;
+      items.push(...response);
+      break;
+    } else {
+      const objectData = get(response, object) as ItemType[] | undefined;
+      if (!objectData?.length) break;
+      items.push(...objectData);
+      moreRecords = response?.info?.more_records ?? false;
+      if (items.length < maxResults && moreRecords) {
+        await delay(fetchDelay);
+        page_token = response?.info?.next_page_token;
       }
-
-      const response: ResponseType = await zohoCrmApiClient<ResponseType>({
-        token,
-        path,
-        url,
-        method,
-        params: {
-          per_page: String(ZOHO_CRM_PER_PAGE),
-          ...(page_token && { page_token }),
-          ...options.params,
-        },
-        body,
-      });
-
-      if (Array.isArray(response)) {
-        if (!response.length) break;
-        items.push(...response);
-        break;
-      } else {
-        const objectData = get(response, object) as ItemType[] | undefined;
-        if (!objectData?.length) break;
-        items.push(...objectData);
-        moreRecords = response?.info?.more_records ?? false;
-        if (items.length < maxResults && moreRecords) {
-          await delay(fetchDelay);
-          page_token = response?.info?.next_page_token;
-        }
-      }
-    } while (items.length < maxResults && moreRecords);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated zoho crm records for ${object}`, error);
-
-    return items;
-  }
+    }
+  } while (items.length < maxResults && moreRecords);
 
   return items;
 };

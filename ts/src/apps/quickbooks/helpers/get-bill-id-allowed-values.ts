@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Bill } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksBillToAllowedValue = (bill: Bill): IQoreAllowedValue<string> => {
   const vendorName = bill.VendorRef?.name || 'Unknown Vendor';
@@ -37,34 +36,7 @@ export const getQuickbooksBillIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allBills: Bill[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const bills = await client.findBills({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allBills.push(...(bills.QueryResponse.Bill || []));
-    total = bills.QueryResponse.maxResults || 0;
-
-    while (
-      allBills.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allBills.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const bills = await client.findBills({
-        desc: 'MetaData.CreateTime',
-        offset: allBills.length,
-      });
-
-      allBills.push(...(bills.QueryResponse.Bill || []));
-      total = bills.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch bills: ${error}`);
-  }
+  const allBills = await fetchQuickbooksRecords<Bill>((query) => client.findBills(query), 'Bill');
 
   return allBills.map(mapQuickbooksBillToAllowedValue);
 };

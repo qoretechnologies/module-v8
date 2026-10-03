@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { NETSUITE_CONN_OPTIONS } from '../conn-options';
 import { fetchNetsuiteAllowedValues } from './constants';
@@ -13,24 +16,20 @@ export const getNetsuiteRecordTypesAllowedValues: TQoreGetAllowedValuesFunction<
     throw new Error('The token and account_id are required to get NetSuite record types');
   }
 
-  try {
-    const customTypes = await fetchNetsuiteAllowedValues({
-      account_id,
-      token,
-      mapItemToAllowedValue: (item: any): IQoreAllowedValue<string> => ({
-        value: item.scriptid || `customrecord_${item.internalid}`,
-        display_name: item.name,
-        desc:
-          `Custom record type\n\n` +
-          `ID: ${item.internalid || 'N/A'}${item.scriptid ? `\n\nScript ID: ${item.scriptid}` : ''}`,
-      }),
-      query: 'SELECT internalid, name, scriptid FROM customrecordtype ORDER BY name',
-    });
+  const customTypes = await fetchNetsuiteAllowedValues({
+    account_id,
+    token,
+    mapItemToAllowedValue: (item: any): IQoreAllowedValue<string> => ({
+      value: item.scriptid || `customrecord_${item.internalid}`,
+      display_name: item.name,
+      desc:
+        `Custom record type\n\n` +
+        `ID: ${item.internalid || 'N/A'}${item.scriptid ? `\n\nScript ID: ${item.scriptid}` : ''}`,
+    }),
+    query: 'SELECT internalid, name, scriptid FROM customrecordtype ORDER BY name',
+  });
 
-    return [...standardRecordTypes, ...customTypes] as IQoreAllowedValue<string>[];
-  } catch (error) {
-    return standardRecordTypes;
-  }
+  return [...standardRecordTypes, ...customTypes] as IQoreAllowedValue<string>[];
 };
 
 const standardRecordTypes: IQoreAllowedValue<string>[] = [

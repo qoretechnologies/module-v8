@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -15,28 +18,24 @@ export const getNocoDBAttachmentFieldAllowedValues: TQoreGetAllowedValuesFunctio
   TCustomConnOptions,
   string
 > = async (context) => {
-  try {
-    const { token, url, baseId, table } = getQoreContextRequiredValues({
-      context,
-      connectionFields: ['token', 'url'],
-      optionFields: ['baseId', 'table'],
-      ErrorClass: NocoDBError,
-    });
+  const { token, url, baseId, table } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['token', 'url'],
+    optionFields: ['baseId', 'table'],
+    ErrorClass: NocoDBError,
+  });
 
-    const columns = await getNocoDBTableColumns({ token, url, baseId, tableId: table });
+  const columns = await getNocoDBTableColumns({ token, url, baseId, tableId: table });
 
-    // Filter to only Attachment type fields (v3 uses 'type', v2 uses 'uidt')
-    const attachmentFields = columns.filter(
-      (col) => col.type === 'Attachment' || col.uidt === 'Attachment'
-    );
+  // Filter to only Attachment type fields (v3 uses 'type', v2 uses 'uidt')
+  const attachmentFields = columns.filter(
+    (col) => col.type === 'Attachment' || col.uidt === 'Attachment'
+  );
 
-    return attachmentFields.map(
-      (col): IQoreAllowedValue<string> => ({
-        value: col.id,
-        display_name: col.title,
-      })
-    );
-  } catch {
-    return [];
-  }
+  return attachmentFields.map(
+    (col): IQoreAllowedValue<string> => ({
+      value: col.id,
+      display_name: col.title,
+    })
+  );
 };

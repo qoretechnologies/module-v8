@@ -8,7 +8,6 @@
  */
 
 import { QorusRequest, TQoreType } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../../utils/Debugger';
 import { delay } from '../../../../global/helpers';
 import { fetchSuiteQlData } from '../constants';
 
@@ -151,25 +150,20 @@ export const getRecordFieldsViaQuery = async (options: {
 
   const fieldsMap = new Map<string, TQoreType>();
 
-  try {
-    const safeRecordType = escapeSqlIdentifier(recordType);
-    const result = await fetchSuiteQlData({
-      accountId,
-      token,
-      q: `SELECT * FROM ${safeRecordType}`,
-      limit: 1,
-    });
+  const safeRecordType = escapeSqlIdentifier(recordType);
+  const result = await fetchSuiteQlData({
+    accountId,
+    token,
+    q: `SELECT * FROM ${safeRecordType}`,
+    limit: 1,
+  });
 
-    if (result.items.length > 0) {
-      const record = result.items[0] as Record<string, unknown>;
-      for (const [fieldName, fieldValue] of Object.entries(record)) {
-        fieldsMap.set(fieldName, inferQoreTypeFromValue(fieldValue));
-      }
-    } else {
-      fieldsMap.set('id', 'string');
+  if (result.items.length > 0) {
+    const record = result.items[0] as Record<string, unknown>;
+    for (const [fieldName, fieldValue] of Object.entries(record)) {
+      fieldsMap.set(fieldName, inferQoreTypeFromValue(fieldValue));
     }
-  } catch (error) {
-    Debugger.log(`Failed to fetch fields for ${recordType}: ${error}`);
+  } else {
     fieldsMap.set('id', 'string');
   }
 

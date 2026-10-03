@@ -20,6 +20,51 @@ their API requires.
 
 **Base class:** `src/global/helpers/QoreApiClient.ts`
 
+### Lookup failure semantics
+
+Allowed values, default values, dynamic types, table lists, and record-field metadata must reject
+failed API requests. A successful empty collection is valid; an error must never become `[]`,
+accumulated pages, or a static schema. Qorus caches successful lookup results, so returning a
+fallback on failure makes that fallback indistinguishable from real data. A thrown error reaches
+the shared reference-data cache, which reports it to concurrent callers and permits an immediate
+retry. App-local caches must likewise be populated only after successful retrieval.
+
+```typescript
+const records = await client.fetchPaginated<{ id: string; name: string }>({
+  path: 'projects', token, itemsPath: 'projects',
+});
+return records.map((record) => ({ value: record.id, display_name: record.name }));
+```
+
+Catch only when adding useful error context or handling a specifically documented response.
+Do not return a value from `finally`: it overrides both thrown exceptions and rejected awaited
+requests. Missing prerequisite selections may still return the helper's documented placeholder;
+that is distinct from a request that was attempted and failed.
+
+`QoreApiClient.fetchPaginated()` rejects failed pages, malformed collections, unusable/repeated
+continuations, and expired scan deadlines. It follows an empty page when the service reports more
+pages, accepts an unpaginated top-level array, and honors the requested result cap. App-specific
+paginators and SDK helpers also propagate request failures; bounded scans check their deadlines
+before requests and after responses, including the final response. These scan checks do not cancel
+an in-flight SDK request. Transport cancellation and rate-limit retries remain client-specific.
+
+Record operations must finish required selection and field-resolution requests before writing.
+For example, Baserow update/delete selection failures now abort the operation instead of applying
+a batch to the first successfully retrieved page. Custom-field resolution failures in ClickUp,
+Asana, Freshdesk, and NetSuite must not produce or cache incomplete schemas.
+
+QuickBooks lookups share `fetchQuickbooksRecords()`: `QueryResponse.maxResults` is the current
+page count, not the total number of matches. They request explicit page sizes and offsets, stop on
+a short/empty page or the configured cap, and reject errors and expired deadlines.
+See [Intuit's QueryResponse documentation](https://static.developer.intuit.com/sdkdocs/qbv3doc/ippdotnetdevkitv3/html/a77ed435-080a-c935-aad5-d09b2088d222.htm).
+Calendly's `pagination.next_page` is a URL while `next_page_token` is an opaque request parameter;
+see [Calendly API conventions](https://developer.calendly.com/api-docs/overview/api/api-conventions).
+
+Regression tests in `src/tests/app-*-failures.test.ts`, `quickbooks-pagination-failures.test.ts`,
+and `odoo-lookup-failures.test.ts` inject transport/SDK failures without live services. They cover
+initial and later-page failures, legitimate empty results, deadlines, nested lookups, recovery
+after errors, and preventing writes after failed reads. Use fake clocks for deadline tests.
+
 ### Basic Pattern — Survey Monkey Reference
 
 Survey Monkey demonstrates the correct minimal implementation. Key principles:

@@ -1,7 +1,9 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { JIRA_CONN_OPTIONS } from '../conn-options';
-import { Debugger } from '../../../utils/Debugger';
 import { delay } from '../../../global/helpers';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -67,41 +69,35 @@ export const getJiraCommentIdAllowedValues: TQoreGetAllowedValuesFunction<
   let total = 0;
   const maxResults = 100;
 
-  try {
-    do {
-      if (Date.now() - startTime > JIRA_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(
-          `Timeout fetching jira comments for issue ${issueIdOrKey} at startAt=${startAt}`
-        );
+  do {
+    if (Date.now() - startTime >= JIRA_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(
+        `Timeout fetching jira comments for issue ${issueIdOrKey} at startAt=${startAt}`
+      );
+    }
 
-        return comments;
-      }
+    const { comments: fetchedComments, total: fetchedTotal } = await fetchJiraComments({
+      token,
+      cloud_id,
+      issueIdOrKey,
+      startAt,
+      maxResults,
+    });
+    if (Date.now() - startTime >= JIRA_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(
+        `Timeout fetching jira comments for issue ${issueIdOrKey} at startAt=${startAt}`
+      );
+    }
 
-      const { comments: fetchedComments, total: fetchedTotal } = await fetchJiraComments({
-        token,
-        cloud_id,
-        issueIdOrKey,
-        startAt,
-        maxResults,
-      });
+    comments.push(...fetchedComments.map(mapJiraComment));
 
-      comments.push(...fetchedComments.map(mapJiraComment));
+    total = fetchedTotal;
+    startAt += maxResults;
 
-      total = fetchedTotal;
-      startAt += maxResults;
-
-      if (startAt < total) {
-        await delay(JIRA_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (startAt < total);
-  } catch (error) {
-    Debugger.log(
-      `Error fetching jira comments for issue ${issueIdOrKey} at startAt=${startAt}:`,
-      error
-    );
-
-    return comments;
-  }
+    if (startAt < total) {
+      await delay(JIRA_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (startAt < total);
 
   return comments;
 };

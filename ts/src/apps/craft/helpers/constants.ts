@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import axios from 'axios';
 import { get } from 'lodash';
@@ -123,28 +126,22 @@ export const fetchCraftPaginatedRecords = async <
 
   const items: ItemType[] = [];
 
-  try {
-    const response: ResponseType = await craftApiClient<ResponseType>({
-      path,
-      url,
-      token,
-      method,
-      params,
-      body,
-    });
+  const response: ResponseType = await craftApiClient<ResponseType>({
+    path,
+    url,
+    token,
+    method,
+    params,
+    body,
+  });
 
-    if (Array.isArray(response)) {
-      if (!response.length) return items;
-      items.push(...response);
-    } else {
-      const objectData = get(response, object) as ItemType[] | undefined;
-      if (!objectData?.length) return items;
-      items.push(...objectData);
-    }
-  } catch (error) {
-    Debugger.log(`Error fetching paginated craft records for ${object}`, error);
-
-    return items;
+  if (Array.isArray(response)) {
+    if (!response.length) return items;
+    items.push(...response);
+  } else {
+    const objectData = get(response, object) as ItemType[] | undefined;
+    if (!objectData?.length) return items;
+    items.push(...objectData);
   }
 
   return items;

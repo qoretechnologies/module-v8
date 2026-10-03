@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Deposit } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksDepositToAllowedValue = (deposit: Deposit): IQoreAllowedValue<string> => {
   const totalAmount = deposit.TotalAmt || 0;
@@ -45,34 +44,10 @@ export const getQuickbooksDepositIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allDeposits: Deposit[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const deposits = await client.findDeposits({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allDeposits.push(...(deposits.QueryResponse.Deposit || []));
-    total = deposits.QueryResponse.maxResults || 0;
-
-    while (
-      allDeposits.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allDeposits.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const deposits = await client.findDeposits({
-        desc: 'MetaData.CreateTime',
-        offset: allDeposits.length,
-      });
-
-      allDeposits.push(...(deposits.QueryResponse.Deposit || []));
-      total = deposits.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch deposits: ${error}`);
-  }
+  const allDeposits = await fetchQuickbooksRecords<Deposit>(
+    (query) => client.findDeposits(query),
+    'Deposit'
+  );
 
   return allDeposits.map(mapQuickbooksDepositToAllowedValue);
 };

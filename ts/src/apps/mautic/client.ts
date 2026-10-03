@@ -1,4 +1,11 @@
-import { QoreApiClient, PaginatedRequestOptions, BaseRequestOptions } from '../../global/helpers/QoreApiClient';
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
+import {
+  QoreApiClient,
+  PaginatedRequestOptions,
+  BaseRequestOptions,
+} from '../../global/helpers/QoreApiClient';
 
 export class MauticApiClient extends QoreApiClient {
   constructor() {
@@ -116,7 +123,10 @@ export class MauticApiClient extends QoreApiClient {
   /**
    * Mautic returns objects keyed by ID, convert to array
    */
-  protected extractItems<ItemType>(response: unknown, options: PaginatedRequestOptions): ItemType[] {
+  protected extractItems<ItemType>(
+    response: unknown,
+    options: PaginatedRequestOptions
+  ): ItemType[] {
     const itemsPath = options.itemsPath || this.getDefaultItemsPath();
     const data = (response as Record<string, unknown>)?.[itemsPath];
 
@@ -128,7 +138,7 @@ export class MauticApiClient extends QoreApiClient {
       return Object.values(data) as ItemType[];
     }
 
-    return [];
+    throw new Error(`Invalid Mautic response: expected ${itemsPath} collection`);
   }
 
   /**
@@ -147,7 +157,7 @@ export class MauticApiClient extends QoreApiClient {
     items: unknown[],
     options: PaginatedRequestOptions
   ): boolean {
-    const total = (response as Record<string, unknown>)?.total as number || 0;
+    const total = ((response as Record<string, unknown>)?.total as number) || 0;
     const maxResults = options.maxResults || 500;
     return items.length < total && items.length < maxResults;
   }

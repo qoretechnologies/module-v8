@@ -1,6 +1,8 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 
 export const MAGENTO_ALLOWED_VALUES_FETCH_DELAY = 300;
 export const MAGENTO_ALLOWED_VALUES_TIMEOUT = 10_000;
@@ -93,38 +95,35 @@ export const fetchMagentoAllowedValues = async <ItemType = unknown, AllowedValue
   let offset = 0;
   const limit = 500;
 
-  try {
-    let hasMore = true;
+  let hasMore = true;
 
-    while (hasMore) {
-      if (Date.now() - startTime > MAGENTO_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(`Timeout fetching Magento allowed values`);
-        break;
-      }
-
-      const { data, hasMore: more } = await fetchMagentoData({
-        path: options.path,
-        token: options.token,
-        params: options.params,
-        url: options.url,
-        limit,
-        offset,
-      });
-
-      allowedValues.push(...data.map(options.mapItemToAllowedValue));
-
-      hasMore = more;
-      offset += data.length;
-
-      if (hasMore) {
-        await delay(MAGENTO_ALLOWED_VALUES_FETCH_DELAY);
-      }
+  while (hasMore) {
+    if (Date.now() - startTime >= MAGENTO_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Magento allowed values`);
     }
-  } catch (error) {
-    Debugger.log(`Failed to fetch Magento allowed values: ${error}`);
-  } finally {
-    return allowedValues;
+
+    const { data, hasMore: more } = await fetchMagentoData({
+      path: options.path,
+      token: options.token,
+      params: options.params,
+      url: options.url,
+      limit,
+      offset,
+    });
+    if (Date.now() - startTime >= MAGENTO_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Magento allowed values`);
+    }
+
+    allowedValues.push(...data.map(options.mapItemToAllowedValue));
+
+    hasMore = more;
+    offset += data.length;
+
+    if (hasMore) {
+      await delay(MAGENTO_ALLOWED_VALUES_FETCH_DELAY);
+    }
   }
+  return allowedValues;
 };
 
 export const fetchMagentoObjectFieldsAllowedValues = async (
@@ -132,35 +131,29 @@ export const fetchMagentoObjectFieldsAllowedValues = async (
 ): Promise<IQoreAllowedValue<string>[]> => {
   const allowedValues: IQoreAllowedValue<string>[] = [];
 
-  try {
-    const { data } = await fetchMagentoData<Record<string, any>>({
-      path: options.path,
-      token: options.token,
-      params: options.params,
-      url: options.url,
-      limit: 1,
-    });
+  const { data } = await fetchMagentoData<Record<string, any>>({
+    path: options.path,
+    token: options.token,
+    params: options.params,
+    url: options.url,
+    limit: 1,
+  });
 
-    if (!data.length) {
-      throw new Error('No data returned from Magento');
-    }
-
-    const item = data[0];
-
-    Object.entries(item).forEach(([key, value]) => {
-      if (typeof value === 'object') return;
-
-      allowedValues.push({
-        value: key,
-        display_name: key,
-        short_desc: `Example value: ${value}`,
-      });
-    });
-
-    return allowedValues;
-  } catch (error) {
-    Debugger.log(`Failed to fetch Magento object fields allowed values: ${error}`);
-
-    return [];
+  if (!data.length) {
+    throw new Error('No data returned from Magento');
   }
+
+  const item = data[0];
+
+  Object.entries(item).forEach(([key, value]) => {
+    if (typeof value === 'object') return;
+
+    allowedValues.push({
+      value: key,
+      display_name: key,
+      short_desc: `Example value: ${value}`,
+    });
+  });
+
+  return allowedValues;
 };

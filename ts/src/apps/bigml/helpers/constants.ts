@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -125,50 +128,46 @@ export const fetchBigMlPaginatedRecords = async <
   let hasMore = true;
   let offset = 0;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching BigMl records for ${options.path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching BigMl records for ${options.path}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const response = await bigMlApiClient<ResponseType>({
-        token,
-        username,
-        path,
-        method,
-        params: {
-          offset: offset.toString(),
-          limit: limit.toString(),
-          ...options.params,
-        },
-        body,
-      });
+    const response = await bigMlApiClient<ResponseType>({
+      token,
+      username,
+      path,
+      method,
+      params: {
+        offset: offset.toString(),
+        limit: limit.toString(),
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching BigMl records for ${options.path}`);
+    }
 
-      const objectData = get(response, object) as ItemType[] | undefined;
+    const objectData = get(response, object) as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      hasMore = !!response.meta?.next;
+    hasMore = !!response.meta?.next;
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      if (hasMore) {
-        offset += limit;
-        await delay(fetchDelay);
-      }
-    } while (hasMore && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated BigML records for ${object}`, error);
-
-    return items;
-  }
+    if (hasMore) {
+      offset += limit;
+      await delay(fetchDelay);
+    }
+  } while (hasMore && items.length < maxResults);
 
   return items;
 };

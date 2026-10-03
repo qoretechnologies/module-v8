@@ -1,10 +1,12 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 import { JIRA_CONN_OPTIONS } from '../conn-options';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -73,35 +75,30 @@ export const getJiraIssueIdAllowedValues: TQoreGetAllowedValuesFunction<
   let total = 0;
   const maxResults = 100;
 
-  try {
-    do {
-      if (Date.now() - startTime > JIRA_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.info(`Jira issues fetch timeout`);
+  do {
+    if (Date.now() - startTime >= JIRA_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Jira issues fetch timeout`);
+    }
 
-        return issues;
-      }
+    const { issues: fetchedIssues, total: fetchedTotal } = await fetchJiraIssues({
+      token,
+      cloud_id,
+      startAt,
+      maxResults,
+    });
+    if (Date.now() - startTime >= JIRA_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Jira issues fetch timeout`);
+    }
 
-      const { issues: fetchedIssues, total: fetchedTotal } = await fetchJiraIssues({
-        token,
-        cloud_id,
-        startAt,
-        maxResults,
-      });
+    issues.push(...fetchedIssues.map(mapJiraIssue));
 
-      issues.push(...fetchedIssues.map(mapJiraIssue));
+    total = fetchedTotal;
+    startAt += maxResults;
 
-      total = fetchedTotal;
-      startAt += maxResults;
-
-      if (startAt < total) {
-        await delay(JIRA_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (startAt < total);
-  } catch (error) {
-    Debugger.info(`Error fetching jira issues: ${error}`);
-
-    return issues;
-  }
+    if (startAt < total) {
+      await delay(JIRA_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (startAt < total);
 
   return issues;
 };

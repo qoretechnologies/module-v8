@@ -1,6 +1,8 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 import { delay } from '../../../global/helpers';
 
 export const NETSUITE_ALLOWED_VALUES_FETCH_DELAY = 300;
@@ -66,37 +68,32 @@ export const fetchNetsuiteAllowedValues = async ({
   let offset = 0;
   const limit = 1000;
 
-  try {
-    let hasMore = true;
+  let hasMore = true;
 
-    while (hasMore && allowedValues.length < limit) {
-      if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log('NetSuite records fetching timeout');
-
-        break;
-      }
-
-      const { items, hasMore: more } = await fetchSuiteQlData({
-        accountId: account_id,
-        token,
-        offset,
-        q: query,
-      });
-
-      allowedValues.push(...items.map(mapItemToAllowedValue));
-
-      hasMore = more;
-      offset += items.length;
-
-      if (hasMore) {
-        await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
-      }
+  while (hasMore && allowedValues.length < limit) {
+    if (Date.now() - startTime >= NETSUITE_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error('NetSuite records fetching timeout');
     }
 
-    return allowedValues;
-  } catch (error) {
-    Debugger.log('Error fetching Netsuite records:', error);
+    const { items, hasMore: more } = await fetchSuiteQlData({
+      accountId: account_id,
+      token,
+      offset,
+      q: query,
+    });
+    if (Date.now() - startTime >= NETSUITE_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error('NetSuite records fetching timeout');
+    }
 
-    return allowedValues;
+    allowedValues.push(...items.map(mapItemToAllowedValue));
+
+    hasMore = more;
+    offset += items.length;
+
+    if (hasMore) {
+      await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
+    }
   }
+
+  return allowedValues;
 };

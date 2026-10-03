@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Class } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksClassToAllowedValue = (qbClass: Class): IQoreAllowedValue<string> => {
   const className = qbClass.Name || 'Unknown Class';
@@ -46,34 +45,10 @@ export const getQuickbooksClassIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allClasses: Class[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const classes = await client.findClasses({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allClasses.push(...(classes.QueryResponse.Class || []));
-    total = classes.QueryResponse.maxResults || 0;
-
-    while (
-      allClasses.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allClasses.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const classes = await client.findClasses({
-        desc: 'MetaData.CreateTime',
-        offset: allClasses.length,
-      });
-
-      allClasses.push(...(classes.QueryResponse.Class || []));
-      total = classes.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch classes: ${error}`);
-  }
+  const allClasses = await fetchQuickbooksRecords<Class>(
+    (query) => client.findClasses(query),
+    'Class'
+  );
 
   return allClasses.map(mapQuickbooksClassToAllowedValue);
 };

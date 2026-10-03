@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -20,58 +23,50 @@ export const getNocoDBTableAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
   string
 > = async (context) => {
-  try {
-    const { token, url, baseId } = getQoreContextRequiredValues({
-      context,
-      connectionFields: ['token', 'url'],
-      optionFields: ['baseId'],
-      ErrorClass: NocoDBError,
-    });
+  const { token, url, baseId } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['token', 'url'],
+    optionFields: ['baseId'],
+    ErrorClass: NocoDBError,
+  });
 
-    const response = await nocodbClient.get<NocoDBTablesResponse>(`meta/bases/${baseId}/tables`, {
-      token,
-      connectionOptions: { url },
-    });
+  const response = await nocodbClient.get<NocoDBTablesResponse>(`meta/bases/${baseId}/tables`, {
+    token,
+    connectionOptions: { url },
+  });
 
-    const tables = response?.list || [];
+  const tables = response?.list || [];
 
-    return tables.map(
-      (table): IQoreAllowedValue<string> => ({
-        value: table.title,
-        display_name: table.title,
-      })
-    );
-  } catch {
-    return [];
-  }
+  return tables.map(
+    (table): IQoreAllowedValue<string> => ({
+      value: table.title,
+      display_name: table.title,
+    })
+  );
 };
 
 export const getNocoDBTableIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
   string
 > = async (context) => {
-  try {
-    const { token, url, baseId } = getQoreContextRequiredValues({
-      context,
-      connectionFields: ['token', 'url'],
-      optionFields: ['baseId'],
-      ErrorClass: NocoDBError,
-    });
+  const { token, url, baseId } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['token', 'url'],
+    optionFields: ['baseId'],
+    ErrorClass: NocoDBError,
+  });
 
-    const response = await nocodbClient.get<NocoDBTablesResponse>(`meta/bases/${baseId}/tables`, {
-      token,
-      connectionOptions: { url },
-    });
+  const response = await nocodbClient.get<NocoDBTablesResponse>(`meta/bases/${baseId}/tables`, {
+    token,
+    connectionOptions: { url },
+  });
 
-    const tables = response?.list || [];
+  const tables = response?.list || [];
 
-    return tables.map(
-      (table): IQoreAllowedValue<string> => ({
-        value: table.id,
-        display_name: table.title,
-      })
-    );
-  } catch {
-    return [];
-  }
+  return tables.map(
+    (table): IQoreAllowedValue<string> => ({
+      value: table.id,
+      display_name: table.title,
+    })
+  );
 };

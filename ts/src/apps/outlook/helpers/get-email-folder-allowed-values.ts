@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
 import { MailFolder } from '@microsoft/microsoft-graph-types';
 import {
@@ -49,28 +52,22 @@ export const getOutlookMailFoldersAllowedValues: TQoreGetAllowedValuesFunction<
         });
 
         if (folder.childFolderCount && folder.childFolderCount > 0) {
-          try {
-            const childFoldersResponse = await client
-              .api(`/me/mailFolders/${folder.id}/childFolders`)
-              .select('id,displayName,childFolderCount,totalItemCount,unreadItemCount')
-              .top(100)
-              .get();
+          const childFoldersResponse = await client
+            .api(`/me/mailFolders/${folder.id}/childFolders`)
+            .select('id,displayName,childFolderCount,totalItemCount,unreadItemCount')
+            .top(100)
+            .get();
 
-            for (const childFolder of childFoldersResponse.value as MailFolder[]) {
-              allowedValues.push({
-                display_name: `↳ ${childFolder.displayName || 'Unnamed Folder'}`,
-                value: childFolder.id!,
-                short_desc:
-                  `Parent: ${folder.displayName}\n` +
-                  `Total Items: ${childFolder.totalItemCount || 0}\n` +
-                  `Unread Items: ${childFolder.unreadItemCount || 0}\n` +
-                  `Child Folders: ${childFolder.childFolderCount || 0}`,
-              });
-            }
-          } catch (error) {
-            console.error(
-              `Failed to fetch child folders for ${folder.displayName}: ${error.message}`
-            );
+          for (const childFolder of childFoldersResponse.value as MailFolder[]) {
+            allowedValues.push({
+              display_name: `↳ ${childFolder.displayName || 'Unnamed Folder'}`,
+              value: childFolder.id!,
+              short_desc:
+                `Parent: ${folder.displayName}\n` +
+                `Total Items: ${childFolder.totalItemCount || 0}\n` +
+                `Unread Items: ${childFolder.unreadItemCount || 0}\n` +
+                `Child Folders: ${childFolder.childFolderCount || 0}`,
+            });
           }
         }
       }

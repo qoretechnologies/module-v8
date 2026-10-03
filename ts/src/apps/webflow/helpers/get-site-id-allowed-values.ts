@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -27,14 +30,10 @@ export const getWebflowSiteIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const items: Site[] = [];
 
-  try {
-    const response = await client.sites.list();
+  const response = await client.sites.list();
 
-    if (response.sites) {
-      items.push(...response.sites);
-    }
-  } catch (error) {
-    console.error(`Failed to fetch sites: ${error}`);
+  if (response.sites) {
+    items.push(...response.sites);
   }
 
   return items.map(mapWebflowItemToAllowedValue);

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TQoreAnyType,
@@ -5,7 +8,6 @@ import {
   TQoreOptions,
   TQoreType,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 import { fetchPipedrivePaginatedRecords } from './client';
 import { getPipedriveOrganizationIdAllowedValues } from './get-organization-id-allowed-values';
 import { getPipedrivePersonIdAllowedValues } from './get-person-id-allowed-values';
@@ -108,20 +110,15 @@ export const getPipedriveFieldNameToIdMap = async (
 ): Promise<Record<string, string> | undefined> => {
   const fieldNameToIdMap: Record<string, string> = {};
 
-  try {
-    const fields = await getPipedriveObjectFields(token, pathToFields);
+  const fields = await getPipedriveObjectFields(token, pathToFields);
 
-    fields.forEach((field) => {
-      if (field.id) {
-        fieldNameToIdMap[field.key] = field.id.toString();
-      }
-    });
+  fields.forEach((field) => {
+    if (field.id) {
+      fieldNameToIdMap[field.key] = field.id.toString();
+    }
+  });
 
-    return fieldNameToIdMap;
-  } catch (error) {
-    Debugger.log(`Failed to get Pipedrive field name to ID map: ${error}`);
-    return undefined;
-  }
+  return fieldNameToIdMap;
 };
 
 export const mapPipedriveFieldsToQoreOptions = async (options: {
@@ -147,8 +144,9 @@ export const mapPipedriveFieldsToQoreOptions = async (options: {
     );
 
     for (const field of pipedriveFilteredFields) {
-      const fieldType = (options.predefinedFields[field.key]?.type
-        ?? PipedriveTypeToQoreTypeMap[field.field_type] ?? 'any') as TQoreAnyType;
+      const fieldType = (options.predefinedFields[field.key]?.type ??
+        PipedriveTypeToQoreTypeMap[field.field_type] ??
+        'any') as TQoreAnyType;
       const fieldOptions = field.options || [];
       const isMultiselect = PIPEDRIVE_MULTISELECT_FIELD_TYPES.includes(field.field_type);
       const fieldDesc = options.predefinedFields[field.key]?.desc;

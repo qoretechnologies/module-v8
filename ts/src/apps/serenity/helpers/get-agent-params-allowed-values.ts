@@ -1,10 +1,12 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { TSerenityAgent, TSerenityAgentsResponse } from './get-agent-allowed-values';
-import { Debugger } from '../../../utils/Debugger';
 import { SERENITY_CONN_OPTIONS } from '../constants';
 
 // TODO: Update if agent endpoint appears in the future
@@ -12,36 +14,30 @@ const getSerenityAgent = async (
   token: string,
   agentCode: string
 ): Promise<TSerenityAgent | null> => {
-  try {
-    const response = await QorusRequest.get<TSerenityAgentsResponse>(
-      {
-        path: '/api/v2/agent',
-        headers: {
-          'X-API-KEY': token,
-        },
-        params: {
-          page: '1',
-          term: agentCode,
-        },
+  const response = await QorusRequest.get<TSerenityAgentsResponse>(
+    {
+      path: '/api/v2/agent',
+      headers: {
+        'X-API-KEY': token,
       },
-      {
-        url: `https://api.serenitystar.ai`,
-        endpointId: 'Serenity',
-      }
-    );
-
-    const responseData = response?.data;
-
-    if (!responseData) {
-      throw new Error('Failed to get Serenity agent');
+      params: {
+        page: '1',
+        term: agentCode,
+      },
+    },
+    {
+      url: `https://api.serenitystar.ai`,
+      endpointId: 'Serenity',
     }
+  );
 
-    return responseData.items?.[0] || null;
-  } catch (error) {
-    Debugger.log('Failed to get Serenity activity agent allowed values', error);
+  const responseData = response?.data;
 
-    return null;
+  if (!responseData) {
+    throw new Error('Failed to get Serenity agent');
   }
+
+  return responseData.items?.[0] || null;
 };
 
 const extractParameters = (templateString: string): string[] => {
@@ -77,17 +73,11 @@ export const getSerenityAgentParamsAllowedValues: TQoreGetAllowedValuesFunction<
     );
   }
 
-  try {
-    const agent = await getSerenityAgent(token!, agentCode);
+  const agent = await getSerenityAgent(token!, agentCode);
 
-    if (!agent || !agent.ask) {
-      return [];
-    }
-
-    return extractParameters(agent.ask).map((param) => ({ value: param, display_name: param }));
-  } catch (error) {
-    Debugger.log('Failed to get Serenity agent params allowed values', error);
-
+  if (!agent || !agent.ask) {
     return [];
   }
+
+  return extractParameters(agent.ask).map((param) => ({ value: param, display_name: param }));
 };

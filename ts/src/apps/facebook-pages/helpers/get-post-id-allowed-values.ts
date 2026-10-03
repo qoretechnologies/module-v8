@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -43,12 +46,8 @@ export const getFacebookPostIdAllowedValues: TQoreGetAllowedValuesFunction<
       hasMore = pageCursor.hasNext();
 
       if (hasMore) {
-        try {
-          const nextBatch = await pageCursor.next();
-          cursor = nextBatch.paging?.cursors?.after;
-        } catch (nextError) {
-          hasMore = false;
-        }
+        const nextBatch = await pageCursor.next();
+        cursor = nextBatch.paging?.cursors?.after;
       }
 
       if (posts.length >= 100) {

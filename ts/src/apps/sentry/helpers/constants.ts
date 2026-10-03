@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import axios from 'axios';
 import { get } from 'lodash';
@@ -168,45 +171,41 @@ export const fetchSentryPaginatedRecords = async <
   const startTime = Date.now();
   let cursor: string | undefined;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Sentry records for ${path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Sentry records for ${path}`);
+    }
 
-      const response = await sentryApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        params: {
-          ...options.params,
-          ...(cursor && { cursor }),
-        },
-        body,
-      });
+    const response = await sentryApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      params: {
+        ...options.params,
+        ...(cursor && { cursor }),
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Sentry records for ${path}`);
+    }
 
-      const objectData = get(response, object) as ItemType[] | undefined;
+    const objectData = get(response, object) as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      cursor = response.links?.next?.results === 'true' ? response.links?.next?.cursor : undefined;
+    cursor = response.links?.next?.results === 'true' ? response.links?.next?.cursor : undefined;
 
-      if (items.length < maxResults) {
-        await delay(fetchDelay);
-      } else {
-        cursor = undefined;
-      }
-    } while (cursor && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Sentry records for ${object}`, error);
-
-    return items;
-  }
+    if (items.length < maxResults) {
+      await delay(fetchDelay);
+    } else {
+      cursor = undefined;
+    }
+  } while (cursor && items.length < maxResults);
 
   return items;
 };

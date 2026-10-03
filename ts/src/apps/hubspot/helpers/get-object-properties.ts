@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   IQoreTypeObjectNonList,
@@ -7,7 +10,6 @@ import {
   TQoreSimpleType,
   TQoreType,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 import { TFetchHubspotObjectPropertiesOptions } from './object-properties-allowed-values';
 import { getHubspotTicketPipelineStageAllowedValues } from './get-ticket-pipeline-stage-allowed-values';
 import { getHubspotTicketPipelineAllowedValues } from './get-ticket-pipeline-allowed-values';
@@ -86,77 +88,73 @@ export const getHubspotPropertyOptionFunction = ({
 }): TQoreGetDynamicTypeFunction => {
   return async (context): Promise<TQoreType> => {
     const additionalProperties: IQoreTypeObjectNonList['fields'] = {};
-    try {
-      const token = context?.conn_opts?.token;
+    const token = context?.conn_opts?.token;
 
-      if (!token) {
-        throw new Error(`The token is required to get Hubspot ${object} properties`);
+    if (!token) {
+      throw new Error(`The token is required to get Hubspot ${object} properties`);
+    }
+    const properties = await fetchHubspotObjectEditableProperties({
+      token,
+      object,
+    });
+
+    properties.forEach((property) => {
+      let defaultPropertyValues: Partial<TQoreAppActionOption> = {};
+      const propertyValues: Partial<TQoreAppActionOption> = {};
+
+      if (defaultProperties?.[property.name]) {
+        defaultPropertyValues = omit(defaultProperties[property.name], [
+          'short_desc',
+          'display_name',
+          'desc',
+        ]) as Partial<TQoreAppActionOption>;
       }
-      const properties = await fetchHubspotObjectEditableProperties({
-        token,
-        object,
-      });
 
-      properties.forEach((property) => {
-        let defaultPropertyValues: Partial<TQoreAppActionOption> = {};
-        const propertyValues: Partial<TQoreAppActionOption> = {};
+      if (property.options?.length) {
+        propertyValues.allowed_values = property.options.map(
+          (option): IQoreAllowedValue<any> => ({
+            display_name: option.label,
+            value:
+              HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] === 'bool'
+                ? option.value === 'true'
+                : option.value,
+          })
+        );
+      }
 
-        if (defaultProperties?.[property.name]) {
-          defaultPropertyValues = omit(defaultProperties[property.name], [
-            'short_desc',
-            'display_name',
-            'desc',
-          ]) as Partial<TQoreAppActionOption>;
+      // @ts-expect-error - TS doesn't recognize the mapped type
+      additionalProperties[property.name] = {
+        type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
+        display_name: property.label,
+        short_desc: property.description,
+        ...propertyValues,
+        ...defaultPropertyValues,
+        required: false,
+      };
+    });
+
+    if (Object.keys(additionalProperties).length && defaultProperties) {
+      Object.keys(defaultProperties).forEach((key) => {
+        if (!additionalProperties[key]) {
+          return;
         }
+        const defaultProperty = defaultProperties[key];
+        const additionalProperty = additionalProperties[key] as TQoreAppActionOption;
 
-        if (property.options?.length) {
-          propertyValues.allowed_values = property.options.map(
-            (option): IQoreAllowedValue<any> => ({
-              display_name: option.label,
-              value:
-                HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] === 'bool'
-                  ? option.value === 'true'
-                  : option.value,
-            })
-          );
-        }
-
-        // @ts-expect-error - TS doesn't recognize the mapped type
-        additionalProperties[property.name] = {
-          type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
-          display_name: property.label,
-          short_desc: property.description,
-          ...propertyValues,
-          ...defaultPropertyValues,
-          required: false,
+        additionalProperties[key] = {
+          ...additionalProperty,
+          required: !!defaultProperty.required,
         };
       });
-    } catch (error) {
-      Debugger.log(`Error while getting hubspot ${object} properties`, error);
-    } finally {
-      if (Object.keys(additionalProperties).length && defaultProperties) {
-        Object.keys(defaultProperties).forEach((key) => {
-          if (!additionalProperties[key]) {
-            return;
-          }
-          const defaultProperty = defaultProperties[key];
-          const additionalProperty = additionalProperties[key] as TQoreAppActionOption;
-
-          additionalProperties[key] = {
-            ...additionalProperty,
-            required: !!defaultProperty.required,
-          };
-        });
-      }
-
-      return {
-        type: 'hash',
-        fields: {
-          ...defaultProperties,
-          ...additionalProperties,
-        },
-      };
     }
+
+    return {
+      type: 'hash',
+      fields: {
+        ...defaultProperties,
+        ...additionalProperties,
+      },
+    };
   };
 };
 
@@ -397,50 +395,46 @@ export const getHubspotCustomObjectPropertiesType: TQoreGetDynamicTypeFunction =
   context
 ): Promise<TQoreType> => {
   const additionalProperties: IQoreTypeObjectNonList['fields'] = {};
-  try {
-    const token = context?.conn_opts?.token;
-    const objectType = context?.opts?.objectType;
+  const token = context?.conn_opts?.token;
+  const objectType = context?.opts?.objectType;
 
-    if (!token || !objectType) {
-      throw new Error(
-        `The token and object type are required to get Hubspot custom object properties`
-      );
-    }
-    const properties = await fetchHubspotObjectEditableProperties({
-      token,
-      object: objectType,
-    });
-
-    properties.forEach((property) => {
-      // @ts-expect-error - TS doesn't recognize the mapped type
-      additionalProperties[property.name] = {
-        type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
-        display_name: property.label,
-        short_desc: property.description,
-        ...(property.options?.length
-          ? {
-              allowed_values_creatable: true,
-              allowed_values: property.options.map(
-                (option): IQoreAllowedValue<string> => ({
-                  display_name: option.label,
-                  value: option.value,
-                })
-              ),
-            }
-          : {}),
-        required: false,
-      };
-    });
-  } catch (error) {
-    Debugger.log(`Error while getting hubspot custom object properties`, error);
-  } finally {
-    return Object.keys(additionalProperties).length
-      ? {
-          type: 'hash',
-          fields: additionalProperties,
-        }
-      : {
-          type: 'hash',
-        };
+  if (!token || !objectType) {
+    throw new Error(
+      `The token and object type are required to get Hubspot custom object properties`
+    );
   }
+  const properties = await fetchHubspotObjectEditableProperties({
+    token,
+    object: objectType,
+  });
+
+  properties.forEach((property) => {
+    // @ts-expect-error - TS doesn't recognize the mapped type
+    additionalProperties[property.name] = {
+      type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
+      display_name: property.label,
+      short_desc: property.description,
+      ...(property.options?.length
+        ? {
+            allowed_values_creatable: true,
+            allowed_values: property.options.map(
+              (option): IQoreAllowedValue<string> => ({
+                display_name: option.label,
+                value: option.value,
+              })
+            ),
+          }
+        : {}),
+      required: false,
+    };
+  });
+
+  return Object.keys(additionalProperties).length
+    ? {
+        type: 'hash',
+        fields: additionalProperties,
+      }
+    : {
+        type: 'hash',
+      };
 };

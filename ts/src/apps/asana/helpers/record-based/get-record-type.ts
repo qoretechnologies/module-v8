@@ -7,7 +7,11 @@
  * Copyright 2026 Qore Technologies, s.r.o.
  */
 
-import { TQoreGetRecordTypeFunction, TQoreType, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
+import {
+  TQoreGetRecordTypeFunction,
+  TQoreType,
+  TQoreTypeObject,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import {
   AsanaError,
@@ -40,34 +44,27 @@ export const getAsanaRecordType: TQoreGetRecordTypeFunction = async (context, ta
   // Fetch custom fields for this workspace
   const customFields: Record<string, TFieldDefinition> = {};
 
-  try {
-    const customFieldsMap = await getAsanaCustomFields({ token, workspaceGid });
+  const customFieldsMap = await getAsanaCustomFields({ token, workspaceGid });
 
-    // Add custom fields with cf_ prefix
-    for (const [fieldName, fieldInfo] of customFieldsMap.entries()) {
-      const qoreType = mapAsanaFieldTypeToQore(fieldInfo.type);
-      const fieldDef: TFieldDefinition = {
-        type: qoreType,
-        desc: `Custom field: ${fieldName} (${fieldInfo.type})`,
-      };
+  // Add custom fields with cf_ prefix
+  for (const [fieldName, fieldInfo] of customFieldsMap.entries()) {
+    const qoreType = mapAsanaFieldTypeToQore(fieldInfo.type);
+    const fieldDef: TFieldDefinition = {
+      type: qoreType,
+      desc: `Custom field: ${fieldName} (${fieldInfo.type})`,
+    };
 
-      // Add allowed values for enum fields
-      if (
-        (fieldInfo.type === 'enum' || fieldInfo.type === 'multi_enum') &&
-        fieldInfo.enumOptions
-      ) {
-        const enabledOptions = fieldInfo.enumOptions.filter((opt) => opt.enabled);
-        if (enabledOptions.length > 0) {
-          // For type definitions, we just include the type
-          // Allowed values would be handled separately in options
-          fieldDef.desc += ` - Options: ${enabledOptions.map((o) => o.name).join(', ')}`;
-        }
+    // Add allowed values for enum fields
+    if ((fieldInfo.type === 'enum' || fieldInfo.type === 'multi_enum') && fieldInfo.enumOptions) {
+      const enabledOptions = fieldInfo.enumOptions.filter((opt) => opt.enabled);
+      if (enabledOptions.length > 0) {
+        // For type definitions, we just include the type
+        // Allowed values would be handled separately in options
+        fieldDef.desc += ` - Options: ${enabledOptions.map((o) => o.name).join(', ')}`;
       }
-
-      customFields[`${CUSTOM_FIELD_PREFIX}${fieldName}`] = fieldDef;
     }
-  } catch {
-    // Custom fields endpoint might fail for some workspaces, continue with base fields
+
+    customFields[`${CUSTOM_FIELD_PREFIX}${fieldName}`] = fieldDef;
   }
 
   // Return the record type with standard and custom fields

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { TaxCode } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksTaxCodeToAllowedValue = (taxCode: TaxCode): IQoreAllowedValue<string> => {
   const taxCodeName = taxCode.Name || 'Unknown Tax Code';
@@ -46,34 +45,10 @@ export const getQuickbooksTaxCodeIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allTaxCodes: TaxCode[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const taxCodes = await client.findTaxCodes({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allTaxCodes.push(...(taxCodes.QueryResponse.TaxCode || []));
-    total = taxCodes.QueryResponse.maxResults || 0;
-
-    while (
-      allTaxCodes.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allTaxCodes.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const taxCodes = await client.findTaxCodes({
-        desc: 'MetaData.CreateTime',
-        offset: allTaxCodes.length,
-      });
-
-      allTaxCodes.push(...(taxCodes.QueryResponse.TaxCode || []));
-      total = taxCodes.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch tax codes: ${error}`);
-  }
+  const allTaxCodes = await fetchQuickbooksRecords<TaxCode>(
+    (query) => client.findTaxCodes(query),
+    'TaxCode'
+  );
 
   return allTaxCodes.map(mapQuickbooksTaxCodeToAllowedValue);
 };

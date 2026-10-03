@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Payment } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksPaymentToAllowedValue = (payment: Payment): IQoreAllowedValue<string> => {
   const customerName = payment.CustomerRef?.name || 'Unknown Customer';
@@ -44,34 +43,10 @@ export const getQuickbooksPaymentIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allPayments: Payment[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const payments = await client.findPayments({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allPayments.push(...(payments.QueryResponse.Payment || []));
-    total = payments.QueryResponse.maxResults || 0;
-
-    while (
-      allPayments.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allPayments.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const payments = await client.findPayments({
-        desc: 'MetaData.CreateTime',
-        offset: allPayments.length,
-      });
-
-      allPayments.push(...(payments.QueryResponse.Payment || []));
-      total = payments.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch payments: ${error}`);
-  }
+  const allPayments = await fetchQuickbooksRecords<Payment>(
+    (query) => client.findPayments(query),
+    'Payment'
+  );
 
   return allPayments.map(mapQuickbooksPaymentToAllowedValue);
 };

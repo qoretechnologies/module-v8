@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
@@ -5,7 +8,6 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 import { AIRTABLE_APP_NAME, AirtableError } from '../constants';
 
 type Base = {
@@ -32,25 +34,20 @@ export const getAirtableBaseIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const items: IQoreAllowedValue<string>[] = [];
 
-  try {
-    const response = await QorusRequest.get<{ data: { bases: Base[] } }>(
-      {
-        path: '/v0/meta/bases',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+  const response = await QorusRequest.get<{ data: { bases: Base[] } }>(
+    {
+      path: '/v0/meta/bases',
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-      {
-        url: 'https://api.airtable.com',
-        endpointId: AIRTABLE_APP_NAME,
-      }
-    );
+    },
+    {
+      url: 'https://api.airtable.com',
+      endpointId: AIRTABLE_APP_NAME,
+    }
+  );
 
-    items.push(...(response?.data.bases || []).map((base) => mapAirtableItemToAllowedValue(base)));
-  } catch (error) {
-
-    Debugger.log(`Failed to fetch bases: ${error}`);
-  }
+  items.push(...(response?.data.bases || []).map((base) => mapAirtableItemToAllowedValue(base)));
 
   return items;
 };

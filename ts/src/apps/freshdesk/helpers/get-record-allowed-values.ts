@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TQoreGetAllowedValuesFunction,
@@ -30,25 +33,19 @@ export const getFreshdeskRecordCurrentValue: TQoreGetDefaultValueFunction<
     return FreshdeskRecordDefaultValue;
   }
 
-  try {
-    const data = await freshdeskClient.get<{ data: unknown }>(
-      `/api/v2/custom_objects/schemas/${schemaId}/records/${id}`,
-      {
-        token,
-        connectionOptions: { subdomain },
-      }
-    );
-
-    if (!data) {
-      return FreshdeskRecordDefaultValue;
+  const data = await freshdeskClient.get<{ data: unknown }>(
+    `/api/v2/custom_objects/schemas/${schemaId}/records/${id}`,
+    {
+      token,
+      connectionOptions: { subdomain },
     }
+  );
 
-    return data.data;
-  } catch (error) {
-    Debugger.log('Error while trying to get the current value of record:', error);
-
+  if (!data) {
     return FreshdeskRecordDefaultValue;
   }
+
+  return data.data;
 };
 
 export const getFreshdeskRecordVersion: TQoreGetDefaultValueFunction<
@@ -74,25 +71,19 @@ export const getFreshdeskRecordVersion: TQoreGetDefaultValueFunction<
     return FreshdeskRecordDefaultValue;
   }
 
-  try {
-    const data = await freshdeskClient.get<{ data: unknown; version: number }>(
-      `/api/v2/custom_objects/schemas/${schemaId}/records/${id}`,
-      {
-        token,
-        connectionOptions: { subdomain },
-      }
-    );
-
-    if (!data) {
-      return FreshdeskRecordDefaultValue.version;
+  const data = await freshdeskClient.get<{ data: unknown; version: number }>(
+    `/api/v2/custom_objects/schemas/${schemaId}/records/${id}`,
+    {
+      token,
+      connectionOptions: { subdomain },
     }
+  );
 
-    return data.version;
-  } catch (error) {
-    Debugger.log('Error while trying to get the current value of record:', error);
-
+  if (!data) {
     return FreshdeskRecordDefaultValue.version;
   }
+
+  return data.version;
 };
 
 export const getFreshdeskSchemaRecordValue: TQoreGetDefaultValueFunction<
@@ -116,25 +107,19 @@ export const getFreshdeskSchemaRecordValue: TQoreGetDefaultValueFunction<
     return FreshdeskRecordDefaultValue;
   }
 
-  try {
-    const data = await freshdeskClient.get<{ records: unknown[] }>(
-      `/api/v2/custom_objects/schemas/${schemaId}/records`,
-      {
-        token,
-        connectionOptions: { subdomain },
-      }
-    );
-
-    if (!data) {
-      return FreshdeskRecordDefaultValue;
+  const data = await freshdeskClient.get<{ records: unknown[] }>(
+    `/api/v2/custom_objects/schemas/${schemaId}/records`,
+    {
+      token,
+      connectionOptions: { subdomain },
     }
+  );
 
-    return data.records[0] ? data.records[0] : FreshdeskRecordDefaultValue;
-  } catch (error) {
-    Debugger.log('Error while trying to get the current value of record:', error);
-
+  if (!data) {
     return FreshdeskRecordDefaultValue;
   }
+
+  return data.records[0] ? data.records[0] : FreshdeskRecordDefaultValue;
 };
 
 export const getFreshdeskRecordIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -158,29 +143,25 @@ export const getFreshdeskRecordIdAllowedValues: TQoreGetAllowedValuesFunction<
     return [];
   }
 
-  try {
-    const data = await freshdeskClient.get<{ records: { display_id: string }[] }>(
-      `/api/v2/custom_objects/schemas/${schemaId}/records`,
-      {
-        token,
-        connectionOptions: { subdomain },
-        params: { page_size: '100' },
-      }
-    );
-
-    if (!data) {
-      return [];
+  const data = await freshdeskClient.get<{ records: { display_id: string }[] }>(
+    `/api/v2/custom_objects/schemas/${schemaId}/records`,
+    {
+      token,
+      connectionOptions: { subdomain },
+      params: { page_size: '100' },
     }
+  );
 
-    return data.records.map(
-      (record): IQoreAllowedValue => ({
-        value: record.display_id,
-        display_name: record.display_id,
-      })
-    );
-  } catch {
+  if (!data) {
     return [];
   }
+
+  return data.records.map(
+    (record): IQoreAllowedValue => ({
+      value: record.display_id,
+      display_name: record.display_id,
+    })
+  );
 };
 
 export const FreshdeskRecordDefaultValue = {

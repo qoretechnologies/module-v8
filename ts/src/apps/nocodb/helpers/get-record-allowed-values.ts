@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -15,45 +18,41 @@ export const getNocoDBRecordAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
   string
 > = async (context) => {
-  try {
-    const { token, url, baseId, table } = getQoreContextRequiredValues({
-      context,
-      connectionFields: ['token', 'url'],
-      optionFields: ['baseId', 'table'],
-      ErrorClass: NocoDBError,
-    });
+  const { token, url, baseId, table } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['token', 'url'],
+    optionFields: ['baseId', 'table'],
+    ErrorClass: NocoDBError,
+  });
 
-    // Fetch records from the table (limit to reasonable amount for dropdown)
-    const response = await nocodbClient.get<NocoDBV3Response>(`data/${baseId}/${table}/records`, {
-      token,
-      connectionOptions: { url },
-      params: {
-        limit: '100',
-      },
-    });
+  // Fetch records from the table (limit to reasonable amount for dropdown)
+  const response = await nocodbClient.get<NocoDBV3Response>(`data/${baseId}/${table}/records`, {
+    token,
+    connectionOptions: { url },
+    params: {
+      limit: '100',
+    },
+  });
 
-    const records = response?.records || [];
+  const records = response?.records || [];
 
-    if (records.length === 0) {
-      return [];
-    }
-
-    // Transform v3 response to flat format
-    const flatRecords = fromV3Response(records);
-
-    return flatRecords.map((record): IQoreAllowedValue<string> => {
-      const id = String(record.id);
-      // Try to find a suitable display field (common field names for primary/title)
-      const displayValue = findDisplayValue(record, id);
-
-      return {
-        value: id,
-        display_name: displayValue,
-      };
-    });
-  } catch {
+  if (records.length === 0) {
     return [];
   }
+
+  // Transform v3 response to flat format
+  const flatRecords = fromV3Response(records);
+
+  return flatRecords.map((record): IQoreAllowedValue<string> => {
+    const id = String(record.id);
+    // Try to find a suitable display field (common field names for primary/title)
+    const displayValue = findDisplayValue(record, id);
+
+    return {
+      value: id,
+      display_name: displayValue,
+    };
+  });
 };
 
 /**

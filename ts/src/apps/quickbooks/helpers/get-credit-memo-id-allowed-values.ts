@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { CreditMemo } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksCreditMemoToAllowedValue = (
   creditMemo: CreditMemo
@@ -45,34 +44,10 @@ export const getQuickbooksCreditMemoIdAllowedValues: TQoreGetAllowedValuesFuncti
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allCreditMemos: CreditMemo[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const creditMemos = await client.findCreditMemos({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allCreditMemos.push(...(creditMemos.QueryResponse.CreditMemo || []));
-    total = creditMemos.QueryResponse.maxResults || 0;
-
-    while (
-      allCreditMemos.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allCreditMemos.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const creditMemos = await client.findCreditMemos({
-        desc: 'MetaData.CreateTime',
-        offset: allCreditMemos.length,
-      });
-
-      allCreditMemos.push(...(creditMemos.QueryResponse.CreditMemo || []));
-      total = creditMemos.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch credit memos: ${error}`);
-  }
+  const allCreditMemos = await fetchQuickbooksRecords<CreditMemo>(
+    (query) => client.findCreditMemos(query),
+    'CreditMemo'
+  );
 
   return allCreditMemos.map(mapQuickbooksCreditMemoToAllowedValue);
 };

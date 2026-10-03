@@ -110,25 +110,16 @@ const transformTaskToRecord = (task: TTask): Record<string, unknown> => {
 /**
  * Get custom field name to ID mapping for a list
  */
-const getCustomFieldMap = async (
-  token: string,
-  listId: string
-): Promise<Map<string, string>> => {
+const getCustomFieldMap = async (token: string, listId: string): Promise<Map<string, string>> => {
   const fieldMap = new Map<string, string>();
 
-  try {
-    const response = await clickUpClient.get<{ fields: TCustomField[] }>(
-      `list/${listId}/field`,
-      { token }
-    );
+  const response = await clickUpClient.get<{ fields: TCustomField[] }>(`list/${listId}/field`, {
+    token,
+  });
 
-    const fields = response?.fields || [];
-    for (const field of fields) {
-      fieldMap.set(field.name, field.id);
-    }
-  } catch {
-    // Custom fields might not be available for all lists
-    // Continue with empty map
+  const fields = response?.fields || [];
+  for (const field of fields) {
+    fieldMap.set(field.name, field.id);
   }
 
   return fieldMap;

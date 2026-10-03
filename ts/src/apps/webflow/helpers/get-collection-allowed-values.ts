@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -31,14 +34,10 @@ export const getWebflowCollectionAllowedValues: TQoreGetAllowedValuesFunction<
 
   const items: CollectionListArrayItem[] = [];
 
-  try {
-    const response = await client.collections.list(site);
+  const response = await client.collections.list(site);
 
-    if (response.collections) {
-      items.push(...response.collections);
-    }
-  } catch (error) {
-    console.error(`Failed to fetch collections: ${error}`);
+  if (response.collections) {
+    items.push(...response.collections);
   }
 
   return items.map(mapWebflowItemToAllowedValue);

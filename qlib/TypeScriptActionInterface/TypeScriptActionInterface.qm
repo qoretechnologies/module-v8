@@ -100,6 +100,12 @@ public sub ASSERT(*softbool b) {}
     minutes. Concurrent callers share an in-progress lookup. If the lookup fails, all callers using that entry
     receive the error, and the next lookup can retry immediately. An empty successful result remains cacheable.
 
+    TypeScript app lookup helpers propagate failed API requests instead of returning empty choices, partial
+    pages, default values, or incomplete dynamic schemas. The shared API client also rejects malformed
+    collections and invalid pagination continuations. Bounded app-specific scans report deadline expiration
+    as an error. Record operations requiring those reads abort before their write phase if selection or field
+    resolution fails. Existing result caps and placeholders for unselected prerequisite options still apply.
+
     Slack channel, archived-channel and user choices also have a per-connection sixty-second cache in the
     TypeScript catalogue. Slack pagination rejects transport errors, HTTP errors, API errors and incomplete scans
     that exceed the timeout; it never returns a failed scan as an empty or partial successful result. Pages with no
@@ -119,6 +125,11 @@ public sub ASSERT(*softbool b) {}
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - Extend reference-data failure propagation across TypeScript app integrations, including shared pagination,
+      SDK lookups, nested metadata retrieval, and record schemas. Remove exception-suppressing returns from
+      HubSpot and Magento cleanup blocks; failed requests no longer appear as cacheable empty or partial data.
+      Correct QuickBooks page-count handling and empty-page termination, Calendly continuation handling, Figma
+      next-page query preservation and unpaginated responses, and PayPal's final-page boundary.
     - Slack channel and user lookups now report failures instead of showing empty or incomplete choices, and
       respect rate-limit retry delays. Failed reference data lookups can be retried immediately without waiting
       for cached errors to expire

@@ -1,6 +1,8 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { TQoreGetDefaultValueFunction } from '@qoretechnologies/ts-toolkit';
 import { SERENITY_CONN_OPTIONS } from '../constants';
-import { Debugger } from '../../../utils/Debugger';
 import { getSerenityAgentParamsAllowedValues } from './get-agent-params-allowed-values';
 
 type TSerenityAgentExecutionParamsDefaultValue = Array<{ key: string; value: string }>;
@@ -23,16 +25,10 @@ export const getSerenityExecuteAgentParamsDefaultValue: TQoreGetDefaultValueFunc
     );
   }
 
-  try {
-    const paramsAllowedValues = await getSerenityAgentParamsAllowedValues(context);
+  const paramsAllowedValues = await getSerenityAgentParamsAllowedValues(context);
 
-    return paramsAllowedValues.map((param) => ({
-      key: param.value,
-      value: '',
-    }));
-  } catch (error) {
-    Debugger.log('Failed to get Serenity agent params default values', error);
-
-    return [];
-  }
+  return paramsAllowedValues.map((param) => ({
+    key: param.value,
+    value: '',
+  }));
 };

@@ -7,7 +7,11 @@
  * Copyright 2026 Qore Technologies, s.r.o.
  */
 
-import { TQoreGetRecordTypeFunction, TQoreType, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
+import {
+  TQoreGetRecordTypeFunction,
+  TQoreType,
+  TQoreTypeObject,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import {
   CUSTOM_FIELD_PREFIX,
@@ -53,17 +57,13 @@ export const getMailchimpRecordType: TQoreGetRecordTypeFunction = async (context
   // Fetch merge fields for this audience
   const mergeFieldDefs: Record<string, { type: TQoreType; desc: string }> = {};
 
-  try {
-    const mergeFields = await getMergeFieldsForList({ token, datacenter, listId });
+  const mergeFields = await getMergeFieldsForList({ token, datacenter, listId });
 
-    for (const field of mergeFields) {
-      mergeFieldDefs[`${CUSTOM_FIELD_PREFIX}${field.tag}`] = {
-        type: mapMergeFieldTypeToQore(field.type),
-        desc: `Merge field: ${field.name} (${field.type})${field.required ? ' [required]' : ''}`,
-      };
-    }
-  } catch {
-    // Merge fields might fail for some audiences, continue with base fields
+  for (const field of mergeFields) {
+    mergeFieldDefs[`${CUSTOM_FIELD_PREFIX}${field.tag}`] = {
+      type: mapMergeFieldTypeToQore(field.type),
+      desc: `Merge field: ${field.name} (${field.type})${field.required ? ' [required]' : ''}`,
+    };
   }
 
   return {
@@ -77,7 +77,10 @@ export const getMailchimpRecordType: TQoreGetRecordTypeFunction = async (context
       list_id: { type: 'string', desc: 'Audience (list) ID' },
 
       // Status and type
-      status: { type: 'string', desc: 'Subscription status (subscribed, unsubscribed, pending, cleaned, transactional, archived)' },
+      status: {
+        type: 'string',
+        desc: 'Subscription status (subscribed, unsubscribed, pending, cleaned, transactional, archived)',
+      },
       email_type: { type: 'string', desc: 'Email type (html or text)' },
 
       // Profile

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import axios from 'axios';
 import { get } from 'lodash';
@@ -131,48 +134,44 @@ export const fetchCanvaPaginatedRecords = async <
   const startTime = Date.now();
   let continuation: string | undefined;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Canva records for ${options.path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Canva records for ${options.path}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const response = await canvaApiClient<ResponseType>({
-        token,
-        path: options.path,
-        method,
-        params: {
-          ...(continuation && { continuation }),
-          ...options.params,
-        },
-        body,
-      });
+    const response = await canvaApiClient<ResponseType>({
+      token,
+      path: options.path,
+      method,
+      params: {
+        ...(continuation && { continuation }),
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Canva records for ${options.path}`);
+    }
 
-      const objectData = get(response, object) as ItemType[] | undefined;
+    const objectData = get(response, object) as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      if (items.length < maxResults) {
-        continuation = response.continuation;
-        await delay(fetchDelay);
-      } else {
-        continuation = undefined;
-      }
-    } while (continuation && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Canva records for ${object}`, error);
-
-    return items;
-  }
+    if (items.length < maxResults) {
+      continuation = response.continuation;
+      await delay(fetchDelay);
+    } else {
+      continuation = undefined;
+    }
+  } while (continuation && items.length < maxResults);
 
   return items;
 };

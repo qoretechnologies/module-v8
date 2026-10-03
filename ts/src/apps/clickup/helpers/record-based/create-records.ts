@@ -46,24 +46,16 @@ type TTask = {
 /**
  * Get custom field name to ID mapping for a list
  */
-const getCustomFieldMap = async (
-  token: string,
-  listId: string
-): Promise<Map<string, string>> => {
+const getCustomFieldMap = async (token: string, listId: string): Promise<Map<string, string>> => {
   const fieldMap = new Map<string, string>();
 
-  try {
-    const response = await clickUpClient.get<{ fields: TCustomField[] }>(
-      `list/${listId}/field`,
-      { token }
-    );
+  const response = await clickUpClient.get<{ fields: TCustomField[] }>(`list/${listId}/field`, {
+    token,
+  });
 
-    const fields = response?.fields || [];
-    for (const field of fields) {
-      fieldMap.set(field.name, field.id);
-    }
-  } catch {
-    // Custom fields might not be available
+  const fields = response?.fields || [];
+  for (const field of fields) {
+    fieldMap.set(field.name, field.id);
   }
 
   return fieldMap;
@@ -194,7 +186,11 @@ const transformTaskToRecord = (task: TTask): Record<string, unknown> => {
  * Create tasks (records) in a ClickUp list.
  * Tasks are created sequentially since ClickUp does not support batch creation.
  */
-export const createClickUpRecords: TQoreCreateRecordsFunction = async (context, records, options) => {
+export const createClickUpRecords: TQoreCreateRecordsFunction = async (
+  context,
+  records,
+  options
+) => {
   const { token } = getQoreContextRequiredValues({
     context,
     connectionFields: ['token'],
@@ -227,11 +223,9 @@ export const createClickUpRecords: TQoreCreateRecordsFunction = async (context, 
         throw new ClickUpError('Task name is required');
       }
 
-      const createdTask = await clickUpClient.post<TTask>(
-        `list/${listId}/task`,
-        taskPayload,
-        { token }
-      );
+      const createdTask = await clickUpClient.post<TTask>(`list/${listId}/task`, taskPayload, {
+        token,
+      });
 
       createdRecords.push(transformTaskToRecord(createdTask));
     }

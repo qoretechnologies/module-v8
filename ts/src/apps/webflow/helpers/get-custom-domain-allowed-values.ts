@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -28,14 +31,10 @@ export const getWebflowCustomDomainAllowedValues: TQoreGetAllowedValuesFunction<
 
   const items: Site[] = [];
 
-  try {
-    const response = await client.sites.getCustomDomain(site);
+  const response = await client.sites.getCustomDomain(site);
 
-    if (response.customDomains) {
-      items.push(...response.customDomains);
-    }
-  } catch (error) {
-    console.error(`Failed to fetch custom domains: ${error}`);
+  if (response.customDomains) {
+    items.push(...response.customDomains);
   }
 
   return items.map(mapWebflowItemToAllowedValue);

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
@@ -5,7 +8,6 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 import { HUBSPOT_ALLOWED_VALUES_FETCH_DELAY, HUBSPOT_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 export type THubspotFormSummary = {
@@ -30,56 +32,52 @@ export const fetchHubspotForms = async (token: string): Promise<THubspotFormSumm
   let after: string | undefined = undefined;
   const startTime = Date.now();
 
-  try {
-    do {
-      if (Date.now() - startTime > HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log('Timeout fetching hubspot forms allowed values');
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error('Timeout fetching hubspot forms allowed values');
+    }
 
-      if (items.length >= FORMS_MAX_RESULTS) {
-        break;
-      }
+    if (items.length >= FORMS_MAX_RESULTS) {
+      break;
+    }
 
-      const params: Record<string, string | number> = { limit: FORMS_PAGE_SIZE };
+    const params: Record<string, string | number> = { limit: FORMS_PAGE_SIZE };
 
-      if (after) {
-        params.after = after;
-      }
+    if (after) {
+      params.after = after;
+    }
 
-      const response = await QorusRequest.get<{ data: THubspotFormsListResponse }>(
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          path: '/marketing/v3/forms',
-          params,
+    const response = await QorusRequest.get<{ data: THubspotFormsListResponse }>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
         },
-        {
-          url: 'https://api.hubapi.com',
-          endpointId: 'Hubspot',
-        }
-      );
-
-      const responseData = response?.data;
-
-      if (!responseData?.results?.length) {
-        break;
+        path: '/marketing/v3/forms',
+        params,
+      },
+      {
+        url: 'https://api.hubapi.com',
+        endpointId: 'Hubspot',
       }
+    );
+    if (Date.now() - startTime >= HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error('Timeout fetching hubspot forms allowed values');
+    }
 
-      items.push(...responseData.results);
+    const responseData = response?.data;
 
-      after = responseData.paging?.next?.after;
+    if (!responseData?.results?.length) {
+      break;
+    }
 
-      if (after) {
-        await delay(HUBSPOT_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (after);
-  } catch (error) {
-    Debugger.log('Error fetching hubspot forms', error);
+    items.push(...responseData.results);
 
-    return items;
-  }
+    after = responseData.paging?.next?.after;
+
+    if (after) {
+      await delay(HUBSPOT_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (after);
 
   return items;
 };

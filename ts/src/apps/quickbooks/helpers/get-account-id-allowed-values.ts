@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Account } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksItemToAllowedValue = (item: Account): IQoreAllowedValue<string> => ({
   value: item.Id!,
@@ -29,34 +28,10 @@ export const getQuickbooksAccountIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allAccounts: Account[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const accounts = await client.findAccounts({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allAccounts.push(...(accounts.QueryResponse.Account || []));
-    total = accounts.QueryResponse.maxResults || 0;
-
-    while (
-      allAccounts.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allAccounts.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const accounts = await client.findAccounts({
-        desc: 'MetaData.CreateTime',
-        offset: allAccounts.length,
-      });
-
-      allAccounts.push(...(accounts.QueryResponse.Account || []));
-      total = accounts.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch addresses: ${error}`);
-  }
+  const allAccounts = await fetchQuickbooksRecords<Account>(
+    (query) => client.findAccounts(query),
+    'Account'
+  );
 
   return allAccounts.map(mapQuickbooksItemToAllowedValue);
 };

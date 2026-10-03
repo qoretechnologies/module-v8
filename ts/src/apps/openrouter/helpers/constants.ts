@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -116,49 +119,45 @@ export const fetchOpenRouterPaginatedRecords = async <
   let total = 0;
   let offset = 0;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Open Router records for ${options.path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Open Router records for ${options.path}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const response = await openRouterApiClient<ResponseType>({
-        token,
-        path: options.path,
-        method,
-        params: {
-          offset: offset.toString(),
-          limit: limit.toString(),
-          ...options.params,
-        },
-        body,
-      });
+    const response = await openRouterApiClient<ResponseType>({
+      token,
+      path: options.path,
+      method,
+      params: {
+        offset: offset.toString(),
+        limit: limit.toString(),
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Open Router records for ${options.path}`);
+    }
 
-      const objectData = get(response, object) as ItemType[] | undefined;
+    const objectData = get(response, object) as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      total = response.meta?.total || 0;
+    total = response.meta?.total || 0;
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      if (items.length < total) {
-        offset += limit;
-        await delay(fetchDelay);
-      }
-    } while (items.length < total && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Open Router records for ${object}`, error);
-
-    return items;
-  }
+    if (items.length < total) {
+      offset += limit;
+      await delay(fetchDelay);
+    }
+  } while (items.length < total && items.length < maxResults);
 
   return items;
 };

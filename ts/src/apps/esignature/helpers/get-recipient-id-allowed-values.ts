@@ -1,9 +1,11 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 import { ESIGNATURE_CONN_OPTIONS } from '../conn-options';
 
 export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -30,41 +32,35 @@ export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunctio
 
   const items: IQoreAllowedValue<string>[] = [];
 
-  try {
-    const { data } = await QorusRequest.get<any>(
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        path: `/restapi/v2.1/accounts/${accountId}/envelopes/${envelopeId}/recipients`,
+  const { data } = await QorusRequest.get<any>(
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-      { url: `https://${base_uri}`, endpointId: 'Esignature' }
-    );
+      path: `/restapi/v2.1/accounts/${accountId}/envelopes/${envelopeId}/recipients`,
+    },
+    { url: `https://${base_uri}`, endpointId: 'Esignature' }
+  );
 
-    for (const [key, fetchedItems] of Object.entries(data)) {
-      if (Array.isArray(fetchedItems)) {
-        items.push(
-          ...fetchedItems.map(
-            (item: any): IQoreAllowedValue<string> => ({
-              value: item.recipientId,
-              display_name: item.name || 'Unnamed Recipient',
-              desc: [
-                `Recipient Type: ${key}`,
-                `ID: ${item.userId || 'N/A'}`,
-                `First Name: ${item.firstName || 'N/A'}`,
-                `Last Name: ${item.lastName || 'N/A'}`,
-                `Email: ${item.email || 'N/A'}`,
-              ].join('\n\n'),
-            })
-          )
-        );
-      }
+  for (const [key, fetchedItems] of Object.entries(data)) {
+    if (Array.isArray(fetchedItems)) {
+      items.push(
+        ...fetchedItems.map(
+          (item: any): IQoreAllowedValue<string> => ({
+            value: item.recipientId,
+            display_name: item.name || 'Unnamed Recipient',
+            desc: [
+              `Recipient Type: ${key}`,
+              `ID: ${item.userId || 'N/A'}`,
+              `First Name: ${item.firstName || 'N/A'}`,
+              `Last Name: ${item.lastName || 'N/A'}`,
+              `Email: ${item.email || 'N/A'}`,
+            ].join('\n\n'),
+          })
+        )
+      );
     }
-
-    return items;
-  } catch (error) {
-    Debugger.log(`Error fetching recipients for envelope ${envelopeId}:`, error);
-
-    return [];
   }
+
+  return items;
 };

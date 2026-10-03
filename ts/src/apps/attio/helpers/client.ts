@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import axios from 'axios';
 import { get } from 'lodash';
@@ -158,55 +161,51 @@ export const fetchAttioPaginatedRecords = async <
   let currentPage = 1;
   let moreRecords = true;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Attio records for ${options.path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Attio records for ${options.path}`);
+    }
 
-      const response: ResponseType = await attioApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        params: {
-          limit: String(ATTIO_PER_PAGE),
-          ...(cursor && { cursor }),
-          ...(!cursor &&
-            currentPage > 1 && {
-              offset: ((currentPage - 1) * ATTIO_PER_PAGE).toString(),
-            }),
-          ...options.params,
-        },
-        body,
-      });
+    const response: ResponseType = await attioApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      params: {
+        limit: String(ATTIO_PER_PAGE),
+        ...(cursor && { cursor }),
+        ...(!cursor &&
+          currentPage > 1 && {
+            offset: ((currentPage - 1) * ATTIO_PER_PAGE).toString(),
+          }),
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Attio records for ${options.path}`);
+    }
 
-      if (Array.isArray(response)) {
-        if (!response.length) break;
-        items.push(...response);
-        break;
+    if (Array.isArray(response)) {
+      if (!response.length) break;
+      items.push(...response);
+      break;
+    } else {
+      const objectData = get(response, object) as ItemType[] | undefined;
+      if (!objectData?.length) break;
+      items.push(...objectData);
+
+      if (response.pagination) {
+        moreRecords = Boolean(response?.pagination?.next_cursor) ?? false;
       } else {
-        const objectData = get(response, object) as ItemType[] | undefined;
-        if (!objectData?.length) break;
-        items.push(...objectData);
-
-        if (response.pagination) {
-          moreRecords = Boolean(response?.pagination?.next_cursor) ?? false;
-        } else {
-          moreRecords = objectData?.length === ATTIO_PER_PAGE;
-          currentPage++;
-        }
-        if (items.length < maxResults && moreRecords) {
-          await delay(fetchDelay);
-          cursor = response?.pagination?.next_cursor;
-        }
+        moreRecords = objectData?.length === ATTIO_PER_PAGE;
+        currentPage++;
       }
-    } while (items.length < maxResults && moreRecords);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated attio records for ${object}`, error);
-
-    return items;
-  }
+      if (items.length < maxResults && moreRecords) {
+        await delay(fetchDelay);
+        cursor = response?.pagination?.next_cursor;
+      }
+    }
+  } while (items.length < maxResults && moreRecords);
 
   return items;
 };

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
@@ -38,61 +41,57 @@ export const CreateZendeskGetAllowedValuesFunction = (
     const startTime = Date.now();
     let page: string | null = null;
 
-    try {
-      do {
-        if (Date.now() - startTime > ZENDESK_ALLOWED_VALUES_TIMEOUT) {
-          Debugger.log(`Timeout fetching Zendesk ${entity}`);
-          break;
-        }
+    do {
+      if (Date.now() - startTime >= ZENDESK_ALLOWED_VALUES_TIMEOUT) {
+        throw new Error(`Timeout fetching Zendesk ${entity}`);
+      }
 
-        const params: Record<string, string> = {
-          ...additionalParams,
-          ...(page && { page }),
-        };
+      const params: Record<string, string> = {
+        ...additionalParams,
+        ...(page && { page }),
+      };
 
-        const response: { data: IZendeskResponseData } | undefined = await QorusRequest.get<{
-          data: IZendeskResponseData;
-        }>(
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-            path: `/api/v2/${entity}`,
-            params,
+      const response: { data: IZendeskResponseData } | undefined = await QorusRequest.get<{
+        data: IZendeskResponseData;
+      }>(
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
           },
-          { url: `https://${subdomain}.zendesk.com`, endpointId: 'Zendesk' }
-        );
+          path: `/api/v2/${entity}`,
+          params,
+        },
+        { url: `https://${subdomain}.zendesk.com`, endpointId: 'Zendesk' }
+      );
+      if (Date.now() - startTime >= ZENDESK_ALLOWED_VALUES_TIMEOUT) {
+        throw new Error(`Timeout fetching Zendesk ${entity}`);
+      }
 
-        const responseData: IZendeskResponseData | undefined = response?.data;
+      const responseData: IZendeskResponseData | undefined = response?.data;
 
-        if (!responseData) {
-          Debugger.log(`No data found for ${entity}`);
-          break;
-        }
+      if (!responseData) {
+        Debugger.log(`No data found for ${entity}`);
+        break;
+      }
 
-        const additionalValues: IQoreAllowedValue<number>[] = responseData[entity].map(
-          (entity: TEntityData): IQoreAllowedValue<number> => ({
-            value: entity.id,
-            display_name: entity[displayNameField],
-            ...(composeDescription && { desc: composeDescription(entity) }),
-          })
-        );
+      const additionalValues: IQoreAllowedValue<number>[] = responseData[entity].map(
+        (entity: TEntityData): IQoreAllowedValue<number> => ({
+          value: entity.id,
+          display_name: entity[displayNameField],
+          ...(composeDescription && { desc: composeDescription(entity) }),
+        })
+      );
 
-        values.push(...additionalValues);
+      values.push(...additionalValues);
 
-        page = responseData.next_page
-          ? new URL(responseData.next_page).searchParams.get('page')
-          : null;
+      page = responseData.next_page
+        ? new URL(responseData.next_page).searchParams.get('page')
+        : null;
 
-        if (page) {
-          await delay(ZENDESK_ALLOWED_VALUES_FETCH_DELAY);
-        }
-      } while (page);
-    } catch (error) {
-      Debugger.log(`Error fetching allowed values for ${entity}`, error);
-
-      return values;
-    }
+      if (page) {
+        await delay(ZENDESK_ALLOWED_VALUES_FETCH_DELAY);
+      }
+    } while (page);
 
     return values;
   };

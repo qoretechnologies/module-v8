@@ -1,10 +1,12 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 import { JIRA_CONN_OPTIONS } from '../conn-options';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -66,40 +68,35 @@ export const getJiraWorklogIdAllowedValues: TQoreGetAllowedValuesFunction<
   let total = 0;
   const maxResults = 100;
 
-  try {
-    do {
-      if (Date.now() - startTime > JIRA_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(
-          `Timeout fetching jira worklogs for issue ${issueIdOrKey} at startAt=${startAt}`
-        );
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= JIRA_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(
+        `Timeout fetching jira worklogs for issue ${issueIdOrKey} at startAt=${startAt}`
+      );
+    }
 
-      const { worklogs: fetchedWorklogs, total: fetchedTotal } = await fetchJiraWorklogs({
-        token,
-        cloud_id,
-        issueIdOrKey,
-        startAt,
-        maxResults,
-      });
+    const { worklogs: fetchedWorklogs, total: fetchedTotal } = await fetchJiraWorklogs({
+      token,
+      cloud_id,
+      issueIdOrKey,
+      startAt,
+      maxResults,
+    });
+    if (Date.now() - startTime >= JIRA_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(
+        `Timeout fetching jira worklogs for issue ${issueIdOrKey} at startAt=${startAt}`
+      );
+    }
 
-      worklogs.push(...fetchedWorklogs.map(mapJiraWorklog));
+    worklogs.push(...fetchedWorklogs.map(mapJiraWorklog));
 
-      total = fetchedTotal;
-      startAt += maxResults;
+    total = fetchedTotal;
+    startAt += maxResults;
 
-      if (startAt < total) {
-        await delay(JIRA_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (startAt < total);
-  } catch (error) {
-    Debugger.log(
-      `Error fetching jira worklogs for issue ${issueIdOrKey} at startAt=${startAt}:`,
-      error
-    );
-
-    return worklogs;
-  }
+    if (startAt < total) {
+      await delay(JIRA_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (startAt < total);
 
   return worklogs;
 };

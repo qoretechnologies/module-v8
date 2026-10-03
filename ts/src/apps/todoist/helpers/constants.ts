@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -128,45 +131,41 @@ export const fetchTodoistPaginatedRecords = async <
   const startTime = Date.now();
   let cursor: string | undefined;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Todoist records for ${path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Todoist records for ${path}`);
+    }
 
-      const response = await todoistApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        params: {
-          ...options.params,
-          ...(cursor && { cursor }),
-        },
-        body,
-      });
+    const response = await todoistApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      params: {
+        ...options.params,
+        ...(cursor && { cursor }),
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Todoist records for ${path}`);
+    }
 
-      const objectData = get(response, object) as ItemType[] | undefined;
+    const objectData = get(response, object) as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      cursor = response.next_cursor;
+    cursor = response.next_cursor;
 
-      if (items.length < maxResults) {
-        await delay(fetchDelay);
-      } else {
-        cursor = undefined;
-      }
-    } while (cursor && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Todoist records for ${object}`, error);
-
-    return items;
-  }
+    if (items.length < maxResults) {
+      await delay(fetchDelay);
+    } else {
+      cursor = undefined;
+    }
+  } while (cursor && items.length < maxResults);
 
   return items;
 };

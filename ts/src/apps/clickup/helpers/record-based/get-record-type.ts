@@ -48,25 +48,20 @@ export const getClickUpRecordType: TQoreGetRecordTypeFunction = async (context, 
   // Fetch custom fields for this list
   const customFields: Record<string, TFieldDefinition> = {};
 
-  try {
-    const customFieldsResponse = await clickUpClient.get<{ fields: TCustomField[] }>(
-      `list/${listId}/field`,
-      { token }
-    );
+  const customFieldsResponse = await clickUpClient.get<{ fields: TCustomField[] }>(
+    `list/${listId}/field`,
+    { token }
+  );
 
-    const fields = customFieldsResponse?.fields || [];
+  const fields = customFieldsResponse?.fields || [];
 
-    // Add custom fields with cf_ prefix
-    for (const field of fields) {
-      const qoreType = mapClickUpFieldTypeToQore(field.type);
-      customFields[`cf_${field.name}`] = {
-        type: qoreType,
-        desc: `Custom field: ${field.name} (${field.type})`,
-      };
-    }
-  } catch {
-    // Custom fields endpoint might fail for some lists, continue with base fields
-    // This is non-fatal - we can still work with standard fields
+  // Add custom fields with cf_ prefix
+  for (const field of fields) {
+    const qoreType = mapClickUpFieldTypeToQore(field.type);
+    customFields[`cf_${field.name}`] = {
+      type: qoreType,
+      desc: `Custom field: ${field.name} (${field.type})`,
+    };
   }
 
   // Return the record type with standard and custom fields

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -31,15 +34,11 @@ export const getTypeformWorkspaceIdAllowedValues: TQoreGetAllowedValuesFunction<
   let page = 1;
   let totalPages = 1;
 
-  try {
-    while (page <= totalPages) {
-      const response = await client.workspaces.list({ page });
-      allWorkspaces.push(...response.items);
-      totalPages = response.page_count;
-      page++;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch workspaces: ${error}`);
+  while (page <= totalPages) {
+    const response = await client.workspaces.list({ page });
+    allWorkspaces.push(...response.items);
+    totalPages = response.page_count;
+    page++;
   }
 
   return allWorkspaces.map(mapTypeformItemToAllowedValue);

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../../global/helpers';
@@ -131,43 +134,39 @@ export const fetchAirtablePaginatedRecords = async <
 
   let offset: string | undefined;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Airtable records for ${options.path}`);
-        break;
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Airtable records for ${options.path}`);
+    }
+
+    const response = await airtableApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      params: {
+        ...(offset && { offset }),
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Airtable records for ${options.path}`);
+    }
+
+    if (Array.isArray(response)) {
+      if (!response.length) break;
+      items.push(...response);
+      break;
+    } else {
+      const objectData = get(response, object) as ItemType[] | undefined;
+      if (!objectData?.length) break;
+      items.push(...objectData);
+      offset = response.offset;
+      if (items.length < maxResults && offset) {
+        await delay(fetchDelay);
       }
-
-      const response = await airtableApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        params: {
-          ...(offset && { offset }),
-          ...options.params,
-        },
-        body,
-      });
-
-      if (Array.isArray(response)) {
-        if (!response.length) break;
-        items.push(...response);
-        break;
-      } else {
-        const objectData = get(response, object) as ItemType[] | undefined;
-        if (!objectData?.length) break;
-        items.push(...objectData);
-        offset = response.offset;
-        if (items.length < maxResults && offset) {
-          await delay(fetchDelay);
-        }
-      }
-    } while (items.length < maxResults && offset);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Airtable records for ${object}`, error);
-
-    return items;
-  }
+    }
+  } while (items.length < maxResults && offset);
 
   return items;
 };

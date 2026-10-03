@@ -10,7 +10,6 @@
  */
 
 import { TQoreType } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../../utils/Debugger';
 import { freshdeskClient } from '../../client';
 
 /**
@@ -125,7 +124,10 @@ export const CONTACT_FIELDS: Record<string, TFieldDefinition> = {
   time_zone: { type: 'string', desc: 'Time zone of the contact' },
   company_id: { type: 'int', desc: 'ID of the associated company' },
   active: { type: 'bool', desc: 'Whether the contact is active' },
-  tags: { type: { type: 'list', element_type: 'string' }, desc: 'Tags associated with the contact' },
+  tags: {
+    type: { type: 'list', element_type: 'string' },
+    desc: 'Tags associated with the contact',
+  },
   other_emails: {
     type: { type: 'list', element_type: 'string' },
     desc: 'Additional email addresses',
@@ -226,22 +228,18 @@ export const getCustomFields = async (
   const config = ENTITY_CONFIG[entity];
   const fieldsMap = new Map<string, TFreshdeskCustomField>();
 
-  try {
-    const fields = await freshdeskClient.get<TFreshdeskCustomField[]>(config.fieldsPath, {
-      token,
-      connectionOptions: { subdomain },
-    });
+  const fields = await freshdeskClient.get<TFreshdeskCustomField[]>(config.fieldsPath, {
+    token,
+    connectionOptions: { subdomain },
+  });
 
-    if (Array.isArray(fields)) {
-      for (const field of fields) {
-        // Custom fields have names starting with cf_
-        if (field.name && field.name.startsWith(CUSTOM_FIELD_PREFIX)) {
-          fieldsMap.set(field.name, field);
-        }
+  if (Array.isArray(fields)) {
+    for (const field of fields) {
+      // Custom fields have names starting with cf_
+      if (field.name && field.name.startsWith(CUSTOM_FIELD_PREFIX)) {
+        fieldsMap.set(field.name, field);
       }
     }
-  } catch (error) {
-    Debugger.log(`Failed to fetch custom fields for ${entity}: ${error}`);
   }
 
   customFieldCaches[entity] = { fields: fieldsMap, token };
@@ -387,4 +385,3 @@ export const normalizeSetToSingleRecord = (
 
   return {};
 };
-

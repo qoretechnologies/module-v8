@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Vendor } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksVendorToAllowedValue = (vendor: Vendor): IQoreAllowedValue<string> => {
   const vendorName = vendor.DisplayName || 'Unknown Vendor';
@@ -47,34 +46,10 @@ export const getQuickbooksVendorIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allVendors: Vendor[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const vendors = await client.findVendors({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allVendors.push(...(vendors.QueryResponse.Vendor || []));
-    total = vendors.QueryResponse.maxResults || 0;
-
-    while (
-      allVendors.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allVendors.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const vendors = await client.findVendors({
-        desc: 'MetaData.CreateTime',
-        offset: allVendors.length,
-      });
-
-      allVendors.push(...(vendors.QueryResponse.Vendor || []));
-      total = vendors.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch vendors: ${error}`);
-  }
+  const allVendors = await fetchQuickbooksRecords<Vendor>(
+    (query) => client.findVendors(query),
+    'Vendor'
+  );
 
   return allVendors.map(mapQuickbooksVendorToAllowedValue);
 };

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 /**
  * Time Off Types Helper
  *
@@ -36,10 +39,13 @@ export const getTimeOffTypes = async (
     return cached.data;
   }
 
-  const response = await bambooHRClient.get<{ timeOffTypes: IBambooHRTimeOffType[] }>('meta/time_off/types', {
-    token: connectionOptions.token,
-    connectionOptions: { company_domain: connectionOptions.company_domain },
-  });
+  const response = await bambooHRClient.get<{ timeOffTypes: IBambooHRTimeOffType[] }>(
+    'meta/time_off/types',
+    {
+      token: connectionOptions.token,
+      connectionOptions: { company_domain: connectionOptions.company_domain },
+    }
+  );
 
   const types = response?.timeOffTypes || [];
 
@@ -63,16 +69,12 @@ export const getTimeOffTypesAllowedValues = async (
     return [];
   }
 
-  try {
-    const types = await getTimeOffTypes(connOpts);
+  const types = await getTimeOffTypes(connOpts);
 
-    return types.map((type) => ({
-      value: type.id,
-      display_name: type.name,
-    }));
-  } catch {
-    return [];
-  }
+  return types.map((type) => ({
+    value: type.id,
+    display_name: type.name,
+  }));
 };
 
 /**

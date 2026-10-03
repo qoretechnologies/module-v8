@@ -1,9 +1,11 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   TQoreAppActionOption,
   TQoreGetDynamicTypeFunction,
   TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../../utils/Debugger';
 import { PipedriveError } from '../../constants';
 import { getPipedriveDealChannelAllowedValues } from '../get-deal-properties-allowed-values';
 import { getPipedrivePersonIdAllowedValues } from '../get-person-id-allowed-values';
@@ -62,15 +64,11 @@ export const getPipedriveLeadRecordType: TQoreGetDynamicTypeFunction = async (
     let organizationAllowedValues;
     let channelAllowedValues;
 
-    try {
-      [personAllowedValues, organizationAllowedValues, channelAllowedValues] = await Promise.all([
-        getPipedrivePersonIdAllowedValues(context),
-        getPipedriveOrganizationIdAllowedValues(context),
-        getPipedriveDealChannelAllowedValues(context),
-      ]);
-    } catch (error) {
-      Debugger.log('Failed to resolve Pipedrive lead allowed values for record type', error);
-    }
+    [personAllowedValues, organizationAllowedValues, channelAllowedValues] = await Promise.all([
+      getPipedrivePersonIdAllowedValues(context),
+      getPipedriveOrganizationIdAllowedValues(context),
+      getPipedriveDealChannelAllowedValues(context),
+    ]);
 
     return {
       type: 'hash',

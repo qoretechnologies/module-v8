@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -132,47 +135,43 @@ export const fetchPayPalPaginatedRecords = async <
   let nextPage = 1;
   let totalPages = 1;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching PayPal records for ${path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching PayPal records for ${path}`);
+    }
 
-      const response = await payPalApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        environment,
-        params: {
-          ...options.params,
-          page: nextPage ? String(nextPage) : '1',
-        },
-        body,
-      });
+    const response = await payPalApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      environment,
+      params: {
+        ...options.params,
+        page: nextPage ? String(nextPage) : '1',
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching PayPal records for ${path}`);
+    }
 
-      const objectData = get(response, object) as ItemType[] | undefined;
+    const objectData = get(response, object) as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      totalPages = response.total_pages || 1;
+    totalPages = response.total_pages || 1;
 
-      if (items.length < maxResults) {
-        nextPage = response.page + 1;
-        await delay(fetchDelay);
-      } else {
-        totalPages = nextPage;
-      }
-    } while (nextPage < totalPages && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated PayPal records for ${object}`, error);
-
-    return items;
-  }
+    if (items.length < maxResults) {
+      nextPage = response.page + 1;
+      await delay(fetchDelay);
+    } else {
+      totalPages = nextPage;
+    }
+  } while (nextPage <= totalPages && items.length < maxResults);
 
   return items;
 };

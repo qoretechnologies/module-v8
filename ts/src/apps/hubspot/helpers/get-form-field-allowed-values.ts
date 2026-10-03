@@ -1,10 +1,12 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 
 type THubspotFormField = {
   name?: string;
@@ -40,34 +42,28 @@ export const getHubspotFormFieldAllowedValues: TQoreGetAllowedValuesFunction<
     return [];
   }
 
-  try {
-    const response = await QorusRequest.get<{ data: THubspotFormDefinition }>(
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        path: `/marketing/v3/forms/${formId}`,
+  const response = await QorusRequest.get<{ data: THubspotFormDefinition }>(
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-      {
-        url: 'https://api.hubapi.com',
-        endpointId: 'Hubspot',
-      }
-    );
-
-    const form = response?.data;
-
-    if (!form?.fieldGroups?.length) {
-      return [];
+      path: `/marketing/v3/forms/${formId}`,
+    },
+    {
+      url: 'https://api.hubapi.com',
+      endpointId: 'Hubspot',
     }
+  );
 
-    const fields = form.fieldGroups
-      .flatMap((group) => group.fields ?? [])
-      .filter((field): field is THubspotFormField => Boolean(field?.name));
+  const form = response?.data;
 
-    return fields.map(mapFieldToAllowedValue);
-  } catch (error) {
-    Debugger.log('Error fetching Hubspot form fields', error);
-
+  if (!form?.fieldGroups?.length) {
     return [];
   }
+
+  const fields = form.fieldGroups
+    .flatMap((group) => group.fields ?? [])
+    .filter((field): field is THubspotFormField => Boolean(field?.name));
+
+  return fields.map(mapFieldToAllowedValue);
 };

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -130,45 +133,43 @@ export const fetchFigmaPaginatedRecords = async <
   const startTime = Date.now();
   let nextPage: string | undefined;
 
-  try {
-    do {
-      const path = nextPage ? new URL(nextPage).pathname : options.path;
+  do {
+    const nextUrl = nextPage ? new URL(nextPage) : undefined;
+    const path = nextUrl ? nextUrl.pathname : options.path;
 
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Figma records for ${options.path}`);
-        break;
-      }
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Figma records for ${options.path}`);
+    }
 
-      const response = await figmaApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        params: {
-          ...options.params,
-        },
-        body,
-      });
+    const response = await figmaApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      params: {
+        ...options.params,
+        ...(nextUrl && Object.fromEntries(nextUrl.searchParams)),
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Figma records for ${options.path}`);
+    }
 
-      const objectData = get(response, object) as ItemType[] | undefined;
+    const objectData = get(response, object) as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      if (items.length < maxResults) {
-        nextPage = response.pagination.next_page;
-        await delay(fetchDelay);
-      } else {
-        nextPage = undefined;
-      }
-    } while (nextPage && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Figma records for ${object}`, error);
-
-    return items;
-  }
+    if (items.length < maxResults) {
+      nextPage = response.pagination?.next_page;
+      await delay(fetchDelay);
+    } else {
+      nextPage = undefined;
+    }
+  } while (nextPage && items.length < maxResults);
 
   return items;
 };

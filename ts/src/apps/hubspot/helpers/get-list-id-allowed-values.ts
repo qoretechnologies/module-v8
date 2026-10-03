@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
@@ -5,7 +8,6 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 import { HUBSPOT_ALLOWED_VALUES_FETCH_DELAY, HUBSPOT_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 type THubspotList = {
@@ -24,64 +26,59 @@ export const fetchHubspotLists = async (token: string): Promise<THubspotList[]> 
   const maxResults = 1000;
   const limit = 100;
 
-  try {
-    do {
-      if (Date.now() - startTime > HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(`Timeout fetching hubspot allowed values for lists`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching hubspot allowed values for lists`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const body: Record<string, any> = {
-        limit: limit.toString(),
-      };
+    const body: Record<string, any> = {
+      limit: limit.toString(),
+    };
 
-      if (offset) {
-        body.offset = offset;
-      }
+    if (offset) {
+      body.offset = offset;
+    }
 
-      const response = await QorusRequest.post<{
-        data: { hasMore: boolean; offset: number; lists: THubspotList[] };
-      }>(
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          path: `/crm/v3/lists/search`,
-          data: body,
+    const response = await QorusRequest.post<{
+      data: { hasMore: boolean; offset: number; lists: THubspotList[] };
+    }>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
         },
-        {
-          url: `https://api.hubapi.com`,
-          endpointId: 'Hubspot',
-        }
-      );
-
-      const responseData: { hasMore: boolean; offset: number; lists: THubspotList[] } | undefined =
-        response?.data;
-
-      hasMore = responseData?.hasMore ?? false;
-
-      if (!responseData?.lists?.length) {
-        break;
+        path: `/crm/v3/lists/search`,
+        data: body,
+      },
+      {
+        url: `https://api.hubapi.com`,
+        endpointId: 'Hubspot',
       }
+    );
+    if (Date.now() - startTime >= HUBSPOT_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching hubspot allowed values for lists`);
+    }
 
-      offset = responseData?.offset;
+    const responseData: { hasMore: boolean; offset: number; lists: THubspotList[] } | undefined =
+      response?.data;
 
-      items.push(...responseData.lists);
+    hasMore = responseData?.hasMore ?? false;
 
-      if (offset) {
-        await delay(HUBSPOT_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (hasMore);
-  } catch (error) {
-    console.error(error);
-    Debugger.log(`Error fetching hubspot records for lists`, error);
+    if (!responseData?.lists?.length) {
+      break;
+    }
 
-    return items;
-  }
+    offset = responseData?.offset;
+
+    items.push(...responseData.lists);
+
+    if (offset) {
+      await delay(HUBSPOT_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (hasMore);
 
   return items;
 };

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 /**
  * QoreApiClient - Class-based Reusable HTTP Client for App Integrations
  *
@@ -6,7 +9,7 @@
  * - All pagination patterns (page, offset, cursor, token, URL-based)
  * - QorusRequest for all HTTP methods (GET, POST, PUT, PATCH, DELETE)
  * - Custom authentication, path formatting, and response processing
- * - Graceful error handling and timeout management
+ * - Failure propagation and timeout management
  *
  * @example
  * ```typescript
@@ -348,82 +351,85 @@ export abstract class QoreApiClient {
 
   /**
    * Fetch paginated data
-   * Handles all pagination patterns automatically via overridable methods
+   * Handles all pagination patterns automatically via overridable methods.
+   * @param options Request details, collection path and pagination limits
+   * @returns Successfully retrieved items up to maxResults; an empty collection is valid
+   * @throws Error If any page fails, the response is malformed, pagination cycles or the scan times out
+   * @note Failed scans never return partial results to allowed-values caches or record operations.
    */
   async fetchPaginated<ItemType = unknown>(options: PaginatedRequestOptions): Promise<ItemType[]> {
     const items: ItemType[] = [];
-    const timeout = options.timeout || this.defaultTimeout;
-    const fetchDelay = options.fetchDelay || this.defaultFetchDelay;
-    const maxResults = options.maxResults || 500;
+    const timeout = options.timeout ?? this.defaultTimeout;
+    const fetchDelay = options.fetchDelay ?? this.defaultFetchDelay;
+    const maxResults = options.maxResults ?? 500;
+    if (
+      !Number.isFinite(timeout) ||
+      timeout <= 0 ||
+      !Number.isFinite(fetchDelay) ||
+      fetchDelay < 0 ||
+      !Number.isSafeInteger(maxResults) ||
+      maxResults < 0
+    ) {
+      throw new Error('Invalid pagination timeout, fetchDelay or maxResults');
+    }
     const startTime = Date.now();
 
     // OVERRIDABLE: Get initial params
     let currentParams = this.getInitialPaginationParams(options);
     let currentPath = options.path;
 
-    try {
-      while (true) {
-        // Timeout check
-        if (Date.now() - startTime > timeout) {
-          Debugger.log(`Timeout fetching ${this.config.appName} records for ${options.path}`);
-          break;
-        }
-
-        // Max results check
-        if (items.length >= maxResults) {
-          break;
-        }
-
-        // Make request (always use GET for pagination)
-        const response = await this.get(currentPath, {
-          ...options,
-          params: currentParams,
-        });
-
-        // OVERRIDABLE: Extract items from response
-        const pageItems = this.extractItems<ItemType>(response, options);
-
-        // Handle array responses (no pagination)
-        if (Array.isArray(response)) {
-          items.push(...(response as unknown as ItemType[]));
-          break;
-        }
-
-        // Handle empty responses
-        if (!pageItems?.length) break;
-
-        items.push(...pageItems);
-
-        // OVERRIDABLE: Check if there are more pages
-        if (!this.hasMorePages(response, currentParams, items, options)) {
-          break;
-        }
-
-        // OVERRIDABLE: Get next page path (for URL-based pagination like Figma)
-        const nextPath = this.getNextPagePath(response, currentPath);
-        if (nextPath !== currentPath) {
-          currentPath = nextPath;
-        }
-
-        // OVERRIDABLE: Build next page params
-        const nextParams = this.getNextPageParams(response, currentParams, options);
-        if (!nextParams) break;
-
-        currentParams = nextParams;
-
-        // Delay between requests
-        if (items.length < maxResults) {
-          await delay(fetchDelay);
-        }
+    const seenPages = new Set<string>();
+    while (items.length < maxResults) {
+      if (Date.now() - startTime >= timeout) {
+        throw new Error(`Timeout fetching ${this.config.appName} records for ${options.path}`);
       }
 
-      // Return up to maxResults
-      return items.slice(0, maxResults);
-    } catch (error) {
-      Debugger.log(`Error fetching paginated ${this.config.appName} records`, error);
-      // Return what we got so far (graceful degradation)
-      return items;
+      const pageKey = JSON.stringify([currentPath, currentParams]);
+      if (seenPages.has(pageKey)) {
+        throw new Error(`Repeated pagination page from ${this.config.appName} for ${options.path}`);
+      }
+      seenPages.add(pageKey);
+
+      const response = await this.get(currentPath, { ...options, params: currentParams });
+      if (Date.now() - startTime >= timeout) {
+        throw new Error(`Timeout fetching ${this.config.appName} records for ${options.path}`);
+      }
+
+      // Top-level arrays are unpaginated; wrapped collections use the app's extraction contract.
+      const pageItems = Array.isArray(response)
+        ? (response as ItemType[])
+        : this.extractItems<ItemType>(response, options);
+      if (!Array.isArray(pageItems)) {
+        throw new Error(
+          `Invalid collection response from ${this.config.appName} for ${options.path}`
+        );
+      }
+      items.push(...pageItems.slice(0, maxResults - items.length));
+      if (
+        Array.isArray(response) ||
+        items.length >= maxResults ||
+        !this.hasMorePages(response, currentParams, items, options)
+      ) {
+        break;
+      }
+
+      // An empty page is not terminal when the service explicitly reports more pages.
+      currentPath = this.getNextPagePath(response, currentPath);
+      const nextParams = this.getNextPageParams(response, currentParams, options);
+      if (!nextParams) {
+        throw new Error(
+          `Missing continuation in ${this.config.appName} response for ${options.path}`
+        );
+      }
+      currentParams = nextParams;
+      if (fetchDelay >= timeout - (Date.now() - startTime)) {
+        throw new Error(`Timeout fetching ${this.config.appName} records for ${options.path}`);
+      }
+      if (fetchDelay > 0) {
+        await delay(fetchDelay);
+      }
     }
+    return items;
   }
 
   /**
@@ -644,26 +650,30 @@ export abstract class QoreApiClient {
    * protected extractItems<T>(response: any, options: PaginatedRequestOptions): T[] {
    *   const itemsPath = options.itemsPath || 'results';
    *   const embedded = get(response, `_embedded.${itemsPath}`);
-   *   if (embedded) return embedded;
-   *   return get(response, itemsPath) || [];
+   *   const items = embedded ?? get(response, itemsPath);
+   *   if (!Array.isArray(items)) throw new Error('Invalid collection response');
+   *   return items;
    * }
    *
    * // Browse AI: Nested structure
    * protected extractItems<T>(response: any, options: PaginatedRequestOptions): T[] {
    *   const itemsPath = options.itemsPath || 'result';
-   *   return get(response, `${itemsPath}.items`) || [];
+   *   const items = get(response, `${itemsPath}.items`);
+   *   if (!Array.isArray(items)) throw new Error('Invalid collection response');
+   *   return items;
    * }
    * ```
    */
   protected extractItems<ItemType>(response: any, options: PaginatedRequestOptions): ItemType[] {
     const itemsPath = options.itemsPath || this.getDefaultItemsPath();
 
-    // Try _embedded first (HAL pattern - HelpScout, Front)
+    // Do not interpret a missing/malformed collection as a successful empty result.
     const embedded = get(response, `_embedded.${itemsPath}`);
-    if (embedded) return embedded;
-
-    // Direct path
-    return get(response, itemsPath) || [];
+    const items: unknown = embedded === undefined ? get(response, itemsPath) : embedded;
+    if (!Array.isArray(items)) {
+      throw new Error(`Invalid ${this.config.appName} response: expected ${itemsPath} array`);
+    }
+    return items as ItemType[];
   }
 
   /**

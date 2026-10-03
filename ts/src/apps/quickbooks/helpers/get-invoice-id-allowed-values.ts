@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { Invoice } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksInvoiceToAllowedValue = (invoice: Invoice): IQoreAllowedValue<string> => {
   const customerName = invoice.CustomerRef?.name || 'Unknown Customer';
@@ -46,34 +45,10 @@ export const getQuickbooksInvoiceIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allInvoices: Invoice[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const invoices = await client.findInvoices({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allInvoices.push(...(invoices.QueryResponse.Invoice || []));
-    total = invoices.QueryResponse.maxResults || 0;
-
-    while (
-      allInvoices.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allInvoices.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const invoices = await client.findInvoices({
-        desc: 'MetaData.CreateTime',
-        offset: allInvoices.length,
-      });
-
-      allInvoices.push(...(invoices.QueryResponse.Invoice || []));
-      total = invoices.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch invoices: ${error}`);
-  }
+  const allInvoices = await fetchQuickbooksRecords<Invoice>(
+    (query) => client.findInvoices(query),
+    'Invoice'
+  );
 
   return allInvoices.map(mapQuickbooksInvoiceToAllowedValue);
 };

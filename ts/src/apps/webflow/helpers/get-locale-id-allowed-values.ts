@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -31,15 +34,11 @@ export const getWebflowCmsLocaleIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const items: (Locale & { primary?: boolean })[] = [];
 
-  try {
-    const response = await client.sites.get(site);
+  const response = await client.sites.get(site);
 
-    if (response?.locales) {
-      if (response?.locales.primary) items.push({ ...response.locales.primary, primary: true });
-      if (response?.locales.secondary) items.push(...response.locales.secondary);
-    }
-  } catch (error) {
-    console.error(`Failed to fetch locales: ${error}`);
+  if (response?.locales) {
+    if (response?.locales.primary) items.push({ ...response.locales.primary, primary: true });
+    if (response?.locales.secondary) items.push(...response.locales.secondary);
   }
 
   return items.map(mapWebflowItemToAllowedValue);

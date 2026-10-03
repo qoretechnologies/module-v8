@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { getContentfulScopedClient } from '../client';
 
@@ -12,17 +15,13 @@ export const getContentfulContentTypeAllowedValues: TQoreGetAllowedValuesFunctio
     return [];
   }
 
-  try {
-    const client = getContentfulScopedClient(context, spaceId, environmentId);
-    const contentTypes = await client.contentType.getMany({
-      query: { limit: 1000 },
-    });
+  const client = getContentfulScopedClient(context, spaceId, environmentId);
+  const contentTypes = await client.contentType.getMany({
+    query: { limit: 1000 },
+  });
 
-    return contentTypes.items.map((ct) => ({
-      value: ct.sys.id,
-      display_name: ct.name,
-    }));
-  } catch {
-    return [];
-  }
+  return contentTypes.items.map((ct) => ({
+    value: ct.sys.id,
+    display_name: ct.name,
+  }));
 };

@@ -1,6 +1,8 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
-import { Debugger } from '../../../utils/Debugger';
 import { BUSINESS_CENTRAL_APP_NAME } from '../constants';
 
 export const BUSINESS_CENTRAL_ALLOWED_VALUES_TIMEOUT = 60_000;
@@ -48,68 +50,63 @@ export const fetchBusinessCentralRecords = async <ItemType = unknown>(
   let offset = 0;
   let hasMore = true;
 
-  try {
-    do {
-      if (Date.now() - startTime > BUSINESS_CENTRAL_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(`Timeout fetching Business Central allowed values for ${object}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= BUSINESS_CENTRAL_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Business Central allowed values for ${object}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const path = `/v2.0/${dynamics_env}/api/v2.0/${object}`;
+    const path = `/v2.0/${dynamics_env}/api/v2.0/${object}`;
 
-      const params: Record<string, string> = {
-        $top: limit.toString(),
-        $skip: offset.toString(),
-      };
+    const params: Record<string, string> = {
+      $top: limit.toString(),
+      $skip: offset.toString(),
+    };
 
-      if (options.fields && options.fields.length > 0) {
-        params['$select'] = options.fields.join(',');
-      }
+    if (options.fields && options.fields.length > 0) {
+      params['$select'] = options.fields.join(',');
+    }
 
-      if (options.filter) {
-        params.$filter = `${options.filter.field} ${options.filter.operator} '${options.filter.value}'`;
-      }
+    if (options.filter) {
+      params.$filter = `${options.filter.field} ${options.filter.operator} '${options.filter.value}'`;
+    }
 
-      if (options.orderBy) {
-        params.$orderby = `${options.orderBy} ${options.sortOrder || 'asc'}`;
-      }
+    if (options.orderBy) {
+      params.$orderby = `${options.orderBy} ${options.sortOrder || 'asc'}`;
+    }
 
-      const response = await QorusRequest.get<{ data: TBusinessCentralResponse<ItemType> }>(
-        {
-          path,
-          params,
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: 'application/json',
-          },
+    const response = await QorusRequest.get<{ data: TBusinessCentralResponse<ItemType> }>(
+      {
+        path,
+        params,
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/json',
         },
-        {
-          url: 'https://api.businesscentral.dynamics.com',
-          endpointId: BUSINESS_CENTRAL_APP_NAME,
-        }
-      );
-
-      const data = response?.data?.value || [];
-
-      items.push(...data);
-
-      hasMore = data.length === limit;
-      offset += limit;
-
-      if (hasMore) {
-        await delay(BUSINESS_CENTRAL_ALLOWED_VALUES_FETCH_DELAY);
+      },
+      {
+        url: 'https://api.businesscentral.dynamics.com',
+        endpointId: BUSINESS_CENTRAL_APP_NAME,
       }
-    } while (hasMore);
-  } catch (error) {
-    console.error(error);
-    Debugger.log(`Error fetching Business Central records for ${object}`, error);
+    );
+    if (Date.now() - startTime >= BUSINESS_CENTRAL_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Business Central allowed values for ${object}`);
+    }
 
-    return items;
-  }
+    const data = response?.data?.value || [];
+
+    items.push(...data);
+
+    hasMore = data.length === limit;
+    offset += limit;
+
+    if (hasMore) {
+      await delay(BUSINESS_CENTRAL_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (hasMore);
 
   return items;
 };

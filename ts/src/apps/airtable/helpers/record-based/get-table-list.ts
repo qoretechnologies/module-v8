@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { TQoreGetTableListFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { AirtableError } from '../../constants';
@@ -26,13 +29,9 @@ export const getAirtableTableList: TQoreGetTableListFunction = async (context) =
     const tableNames: string[] = [];
 
     for (const base of bases) {
-      try {
-        const tablesMap = await getAirtableTablesMap({ token, baseId: base.id });
-        for (const tableName of Object.keys(tablesMap)) {
-          tableNames.push(`${base.name}/${tableName}`);
-        }
-      } catch (error) {
-        continue;
+      const tablesMap = await getAirtableTablesMap({ token, baseId: base.id });
+      for (const tableName of Object.keys(tablesMap)) {
+        tableNames.push(`${base.name}/${tableName}`);
       }
     }
 

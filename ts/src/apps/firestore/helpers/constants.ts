@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
@@ -145,47 +148,44 @@ export const fetchFirestorePaginatedDocuments = async <ItemType = TFirestoreDocu
   const startTime = Date.now();
   let nextPageToken: string | undefined = undefined;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Firestore documents for ${path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Firestore documents for ${path}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const response: TFirestoreListResponse = await firestoreApiClient<TFirestoreListResponse>({
-        token,
-        path,
-        method,
-        params: {
-          ...options.params,
-          pageSize: String(Math.min(300, maxResults - items.length)),
-          ...(nextPageToken && { pageToken: nextPageToken }),
-        },
-        body,
-      });
+    const response: TFirestoreListResponse = await firestoreApiClient<TFirestoreListResponse>({
+      token,
+      path,
+      method,
+      params: {
+        ...options.params,
+        pageSize: String(Math.min(300, maxResults - items.length)),
+        ...(nextPageToken && { pageToken: nextPageToken }),
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Firestore documents for ${path}`);
+    }
 
-      const documents = response.documents || [];
+    const documents = response.documents || [];
 
-      if (!documents.length) {
-        break;
-      }
+    if (!documents.length) {
+      break;
+    }
 
-      items.push(...(documents as unknown as ItemType[]));
+    items.push(...(documents as unknown as ItemType[]));
 
-      nextPageToken = response.nextPageToken;
+    nextPageToken = response.nextPageToken;
 
-      if (nextPageToken) {
-        await delay(fetchDelay);
-      }
-    } while (nextPageToken && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Firestore documents`, error);
-    return items;
-  }
+    if (nextPageToken) {
+      await delay(fetchDelay);
+    }
+  } while (nextPageToken && items.length < maxResults);
 
   return items;
 };

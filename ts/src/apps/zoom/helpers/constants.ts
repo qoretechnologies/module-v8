@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
@@ -45,61 +48,56 @@ export const fetchZoomRecords = async <ItemType = unknown, ResponseKey extends s
   const maxResults = options.maxResults || 200;
   const limit = options.limit || 100;
 
-  try {
-    do {
-      if (Date.now() - startTime > ZOOM_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(`Timeout fetching Zoom allowed values for ${object}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= ZOOM_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Zoom allowed values for ${object}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const response: { data?: TObjectsResponse<ItemType, ResponseKey> } =
-        (await QorusRequest.get<{
-          data: TObjectsResponse<ItemType, ResponseKey>;
-        }>(
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-            params: {
-              ...(nextPageToken && { next_page_token: nextPageToken }),
-              page_size: limit.toString(),
-            },
-            path,
+    const response: { data?: TObjectsResponse<ItemType, ResponseKey> } =
+      (await QorusRequest.get<{
+        data: TObjectsResponse<ItemType, ResponseKey>;
+      }>(
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
           },
-          ZoomEndpointData
-        )) || {};
+          params: {
+            ...(nextPageToken && { next_page_token: nextPageToken }),
+            page_size: limit.toString(),
+          },
+          path,
+        },
+        ZoomEndpointData
+      )) || {};
+    if (Date.now() - startTime >= ZOOM_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Zoom allowed values for ${object}`);
+    }
 
-      const responseData = response.data;
+    const responseData = response.data;
 
-      if (!responseData) {
-        Debugger.log(`No data found for Zoom records for ${object}`);
-        break;
-      }
+    if (!responseData) {
+      Debugger.log(`No data found for Zoom records for ${object}`);
+      break;
+    }
 
-      const objectData = responseData[object as ResponseKey];
+    const objectData = responseData[object as ResponseKey];
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      nextPageToken = responseData?.next_page_token || undefined;
+    nextPageToken = responseData?.next_page_token || undefined;
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      if (nextPageToken) {
-        await delay(ZOOM_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (nextPageToken);
-  } catch (error) {
-    console.error(error);
-    Debugger.log(`Error fetching zoom records for ${object}`, error);
-
-    return items;
-  }
+    if (nextPageToken) {
+      await delay(ZOOM_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (nextPageToken);
 
   return items;
 };

@@ -1,9 +1,11 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TQoreAppActionFunctionContext,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 import { freshdeskClient } from '../client';
 import { FRESHDESK_CONN_OPTIONS } from '../conn-options';
 import { fetchFreshdeskAllowedValues } from './constants';
@@ -123,8 +125,7 @@ const getFreshdeskTicketSourceName = (id: number): string => {
 
 async function getFreshdeskFieldAllowedValues(
   fieldName: string,
-  context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>,
-  defaultValues: IQoreAllowedValue[]
+  context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>
 ): Promise<IQoreAllowedValue[]> {
   const token = context?.conn_opts?.token;
   const subdomain = context?.conn_opts?.subdomain;
@@ -138,41 +139,32 @@ async function getFreshdeskFieldAllowedValues(
     );
   }
 
-  try {
-    const ticketFields = await getTicketFields(token, subdomain);
-    const fieldId = ticketFields.find((field) => field.name === fieldName)?.id;
-    if (!fieldId) throw new Error(`Failed to get ${fieldName} field id`);
+  const ticketFields = await getTicketFields(token, subdomain);
+  const fieldId = ticketFields.find((field) => field.name === fieldName)?.id;
+  if (!fieldId) throw new Error(`Failed to get ${fieldName} field id`);
 
-    const field = await getFreshdeskTicketField(fieldId, token, subdomain);
-    if (!field.choices) throw new Error(`Failed to get ${fieldName} field choices`);
+  const field = await getFreshdeskTicketField(fieldId, token, subdomain);
+  if (!field.choices) throw new Error(`Failed to get ${fieldName} field choices`);
 
-    return field.choices.map(
-      (choice): IQoreAllowedValue => ({
-        value: choice.id,
-        display_name: choice.label,
-      })
-    );
-  } catch (error) {
-    Debugger.log(String(error));
-
-    return defaultValues;
-  }
+  return field.choices.map(
+    (choice): IQoreAllowedValue => ({
+      value: choice.id,
+      display_name: choice.label,
+    })
+  );
 }
 
 export const getFreshdeskTicketStatusAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
-> = async (context?) =>
-  await getFreshdeskFieldAllowedValues('status', context!, FreshdeskTicketStatusAllowedValues);
+> = async (context?) => await getFreshdeskFieldAllowedValues('status', context!);
 
 export const getFreshdeskTicketPriorityAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
-> = async (context?) =>
-  await getFreshdeskFieldAllowedValues('priority', context!, FreshdeskTicketPriorityAllowedValues);
+> = async (context?) => await getFreshdeskFieldAllowedValues('priority', context!);
 
 export const getFreshdeskTicketSourceAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
-> = async (context?) =>
-  await getFreshdeskFieldAllowedValues('source', context!, FreshdeskTicketSourceAllowedValues);
+> = async (context?) => await getFreshdeskFieldAllowedValues('source', context!);
 
 export const FreshdeskTicketStatusAllowedValues = [
   {

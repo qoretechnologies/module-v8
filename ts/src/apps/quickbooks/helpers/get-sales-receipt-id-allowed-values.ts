@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { SalesReceipt } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksSalesReceiptToAllowedValue = (
   salesReceipt: SalesReceipt
@@ -47,34 +46,10 @@ export const getQuickbooksSalesReceiptIdAllowedValues: TQoreGetAllowedValuesFunc
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allSalesReceipts: SalesReceipt[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const salesReceipts = await client.findSalesReceipts({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allSalesReceipts.push(...(salesReceipts.QueryResponse.SalesReceipt || []));
-    total = salesReceipts.QueryResponse.maxResults || 0;
-
-    while (
-      allSalesReceipts.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allSalesReceipts.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const salesReceipts = await client.findSalesReceipts({
-        desc: 'MetaData.CreateTime',
-        offset: allSalesReceipts.length,
-      });
-
-      allSalesReceipts.push(...(salesReceipts.QueryResponse.SalesReceipt || []));
-      total = salesReceipts.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch sales receipts: ${error}`);
-  }
+  const allSalesReceipts = await fetchQuickbooksRecords<SalesReceipt>(
+    (query) => client.findSalesReceipts(query),
+    'SalesReceipt'
+  );
 
   return allSalesReceipts.map(mapQuickbooksSalesReceiptToAllowedValue);
 };

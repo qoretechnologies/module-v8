@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
 
 export const fetchOutlookEmails = async (
@@ -32,14 +35,9 @@ export const fetchOutlookEmails = async (
   nextLink = response['@odata.nextLink'];
 
   while (allEmails.length < options.limit && nextLink) {
-    try {
-      response = await client.api(nextLink).get();
-      allEmails = allEmails.concat(response.value);
-      nextLink = response['@odata.nextLink'];
-    } catch (error) {
-      console.error('Error during pagination:', error);
-      break;
-    }
+    response = await client.api(nextLink).get();
+    allEmails = allEmails.concat(response.value);
+    nextLink = response['@odata.nextLink'];
   }
 
   return allEmails.slice(0, options.limit);
@@ -50,13 +48,8 @@ export const fetchOutlookAttachments = async (client: Client, emails: any[]): Pr
 
   await Promise.all(
     emailsWithAttachments.map(async (email) => {
-      try {
-        const attachmentsResponse = await client.api(`/me/messages/${email.id}/attachments`).get();
-        email.attachments = attachmentsResponse.value;
-      } catch (error) {
-        console.error(`Error fetching attachments for email ${email.id}:`, error);
-        email.attachments = [];
-      }
+      const attachmentsResponse = await client.api(`/me/messages/${email.id}/attachments`).get();
+      email.attachments = attachmentsResponse.value;
     })
   );
 
@@ -79,9 +72,6 @@ export const fetchOutlookAttachmentContent = async (
               .get()
               .then((response) => {
                 Object.assign(attachment, response);
-              })
-              .catch((error) => {
-                console.error(`Error fetching attachment content for ${attachment.id}:`, error);
               })
           );
         }

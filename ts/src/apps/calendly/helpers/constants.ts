@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -52,6 +55,8 @@ export const fetchCalendlyRecords = async <
   const { token, object = 'collection', method = 'GET', body } = options;
   const items: ItemType[] = [];
   let next: string | undefined = undefined;
+  let pageToken: string | undefined;
+  let nextParams: Record<string, string> = {};
   const startTime = Date.now();
   const maxResults = options.maxResults || 200;
   const count = options.limit?.toString() || '100';
@@ -61,87 +66,90 @@ export const fetchCalendlyRecords = async <
 
   const url = options.useMockServer ? 'https://stoplight.io' : `https://api.calendly.com`;
 
-  try {
-    do {
-      if (Date.now() - startTime > CALENDLY_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log(`Timeout fetching Calendly allowed values for ${path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= CALENDLY_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Calendly allowed values for ${path}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      let response: { data?: TObjectsResponse<ItemType, ResponseKey> } = {};
+    let response: { data?: TObjectsResponse<ItemType, ResponseKey> } = {};
 
-      if (method === 'GET') {
-        response =
-          (await QorusRequest.get<{
-            data: TObjectsResponse<ItemType, ResponseKey>;
-          }>(
-            {
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },
-              params: {
-                count,
-                ...options.params,
-              },
-              path,
+    if (method === 'GET') {
+      response =
+        (await QorusRequest.get<{
+          data: TObjectsResponse<ItemType, ResponseKey>;
+        }>(
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
             },
-            {
-              url,
-              endpointId: CALENDLY_APP_NAME,
-            }
-          )) || {};
-      } else {
-        response =
-          (await QorusRequest.post<{
-            data: TObjectsResponse<ItemType, ResponseKey>;
-          }>(
-            {
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },
-              path,
-              ...(body && { data: body }),
+            params: {
+              count,
+              ...options.params,
+              ...nextParams,
+              ...(pageToken && { page_token: pageToken }),
             },
-            {
-              url,
-              endpointId: CALENDLY_APP_NAME,
-            }
-          )) || {};
-      }
+            path,
+          },
+          {
+            url,
+            endpointId: CALENDLY_APP_NAME,
+          }
+        )) || {};
+    } else {
+      response =
+        (await QorusRequest.post<{
+          data: TObjectsResponse<ItemType, ResponseKey>;
+        }>(
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+            path,
+            ...(body && { data: body }),
+          },
+          {
+            url,
+            endpointId: CALENDLY_APP_NAME,
+          }
+        )) || {};
+    }
+    if (Date.now() - startTime >= CALENDLY_ALLOWED_VALUES_TIMEOUT) {
+      throw new Error(`Timeout fetching Calendly allowed values for ${path}`);
+    }
 
-      const responseData = response.data;
+    const responseData = response.data;
 
-      if (!responseData) {
-        Debugger.log(`No data found for Calendly records for ${path}`);
-        break;
-      }
+    if (!responseData) {
+      Debugger.log(`No data found for Calendly records for ${path}`);
+      break;
+    }
 
-      const objectData = responseData[object as ResponseKey];
+    const objectData = responseData[object as ResponseKey];
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      next = responseData?.pagination?.next_page_token || undefined;
+    next = responseData?.pagination?.next_page || undefined;
+    pageToken = responseData?.pagination?.next_page_token || undefined;
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      if (next) {
-        const url = new URL(next);
-        const pathAfterBase = url.pathname + url.search;
-        path = pathAfterBase;
-        await delay(CALENDLY_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    } while (next);
-  } catch (error) {
-    Debugger.log(`Error fetching Calendly records for ${object}`, error);
-
-    return items;
-  }
+    if (next) {
+      const url = new URL(next);
+      path = url.pathname;
+      nextParams = Object.fromEntries(url.searchParams);
+    } else {
+      nextParams = {};
+    }
+    if (next || pageToken) {
+      await delay(CALENDLY_ALLOWED_VALUES_FETCH_DELAY);
+    }
+  } while (next || pageToken);
 
   return items;
 };

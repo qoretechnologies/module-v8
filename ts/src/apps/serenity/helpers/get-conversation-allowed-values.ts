@@ -1,10 +1,12 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { SERENITY_CONN_OPTIONS } from '../constants';
-import { Debugger } from '../../../utils/Debugger';
 
 type TSerenityConversation = {
   id: string;
@@ -29,37 +31,31 @@ const getSerenityConversations = async (
   agentCode: string,
   page = 1
 ): Promise<TSerenityConversation[]> => {
-  try {
-    const response = await QorusRequest.get<TSerenityConversationsResponse>(
-      {
-        path: '/api/v2/AgentInstance',
-        headers: {
-          'X-API-KEY': token,
-        },
-        params: {
-          pageSize: '100',
-          code: agentCode,
-          page: page.toString(),
-        },
+  const response = await QorusRequest.get<TSerenityConversationsResponse>(
+    {
+      path: '/api/v2/AgentInstance',
+      headers: {
+        'X-API-KEY': token,
       },
-      {
-        url: `https://api.serenitystar.ai`,
-        endpointId: 'Serenity',
-      }
-    );
-
-    const responseData = response?.data;
-
-    if (!responseData) {
-      throw new Error('Failed to get Serenity activity agent allowed values');
+      params: {
+        pageSize: '100',
+        code: agentCode,
+        page: page.toString(),
+      },
+    },
+    {
+      url: `https://api.serenitystar.ai`,
+      endpointId: 'Serenity',
     }
+  );
 
-    return responseData.items;
-  } catch (error) {
-    Debugger.log('Failed to get Serenity activity agent allowed values', error);
+  const responseData = response?.data;
 
-    return [];
+  if (!responseData) {
+    throw new Error('Failed to get Serenity activity agent allowed values');
   }
+
+  return responseData.items;
 };
 
 export const getSerenityConversationAllowedValues: TQoreGetAllowedValuesFunction<

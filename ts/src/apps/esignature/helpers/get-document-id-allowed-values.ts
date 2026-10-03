@@ -1,9 +1,11 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 import { ESIGNATURE_CONN_OPTIONS } from '../conn-options';
 
 export const getEsignatureDocumentIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -30,33 +32,27 @@ export const getEsignatureDocumentIdAllowedValues: TQoreGetAllowedValuesFunction
 
   const items: IQoreAllowedValue<string>[] = [];
 
-  try {
-    const { data } = await QorusRequest.get<any>(
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        path: `/restapi/v2.1/accounts/${accountId}/envelopes/${envelopeId}/documents`,
+  const { data } = await QorusRequest.get<any>(
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-      { url: `https://${base_uri}`, endpointId: 'Esignature' }
-    );
+      path: `/restapi/v2.1/accounts/${accountId}/envelopes/${envelopeId}/documents`,
+    },
+    { url: `https://${base_uri}`, endpointId: 'Esignature' }
+  );
 
-    const { envelopeDocuments: fetchedItems } = data;
+  const { envelopeDocuments: fetchedItems } = data;
 
-    items.push(
-      ...fetchedItems.map(
-        (item: any): IQoreAllowedValue<string> => ({
-          value: item.documentId.toString(),
-          display_name: item.name,
-          short_desc: `Id: ${item.documentId}\n\ntype: ${item.type}\n\n`,
-        })
-      )
-    );
+  items.push(
+    ...fetchedItems.map(
+      (item: any): IQoreAllowedValue<string> => ({
+        value: item.documentId.toString(),
+        display_name: item.name,
+        short_desc: `Id: ${item.documentId}\n\ntype: ${item.type}\n\n`,
+      })
+    )
+  );
 
-    return items;
-  } catch (error) {
-    Debugger.log(`Error fetching documents for envelope ${envelopeId}:`, error);
-
-    return [];
-  }
+  return items;
 };

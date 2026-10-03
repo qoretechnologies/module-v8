@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -29,12 +32,8 @@ export const getTypeformImageIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const items: Image[] = [];
 
-  try {
-    const images = await client.images.list();
-    items.push(...images);
-  } catch (error) {
-    console.error(`Failed to fetch images: ${error}`);
-  }
+  const images = await client.images.list();
+  items.push(...images);
 
   return items.map(mapTypeformItemToAllowedValue);
 };

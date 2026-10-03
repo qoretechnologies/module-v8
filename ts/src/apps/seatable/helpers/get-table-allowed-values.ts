@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -15,24 +18,22 @@ export const getSeaTableTableAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
   string
 > = async (context) => {
-  try {
-    const { token, url } = getQoreContextRequiredValues({
-      context,
-      connectionFields: ['token', 'url'],
-      ErrorClass: SeaTableError,
-    });
+  const { token, url } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['token', 'url'],
+    ErrorClass: SeaTableError,
+  });
 
-    const response = await seatableClient.baseGet<SeaTableMetadataResponse>('metadata/', {
-      connectionOptions: { url, token },
-    });
+  const response = await seatableClient.baseGet<SeaTableMetadataResponse>('metadata/', {
+    connectionOptions: { url, token },
+  });
 
-    const tables = response?.metadata?.tables || [];
+  const tables = response?.metadata?.tables || [];
 
-    return tables.map((table): IQoreAllowedValue<string> => ({
+  return tables.map(
+    (table): IQoreAllowedValue<string> => ({
       value: table.name,
       display_name: table.name,
-    }));
-  } catch {
-    return [];
-  }
+    })
+  );
 };

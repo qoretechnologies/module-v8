@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -31,28 +34,24 @@ export const getWebflowItemAllowedValues: TQoreGetAllowedValuesFunction<
 
   const items: CollectionItem[] = [];
 
-  try {
-    let total = 0;
-    let offset = 0;
+  let total = 0;
+  let offset = 0;
 
-    do {
-      const response = await client.collections.items.listItems(collection, {
-        sortBy: 'lastPublished',
-        limit: 100,
-        sortOrder: 'desc',
-        offset,
-      });
+  do {
+    const response = await client.collections.items.listItems(collection, {
+      sortBy: 'lastPublished',
+      limit: 100,
+      sortOrder: 'desc',
+      offset,
+    });
 
-      if (response.items) {
-        items.push(...response.items);
-        total = response.pagination?.total || 0;
-      }
+    if (response.items) {
+      items.push(...response.items);
+      total = response.pagination?.total || 0;
+    }
 
-      offset += 100;
-    } while (items.length < total && items.length < WEBFLOW_ALLOWED_ITEMS_LIMIT);
-  } catch (error) {
-    console.error(`Failed to fetch items: ${error}`);
-  }
+    offset += 100;
+  } while (items.length < total && items.length < WEBFLOW_ALLOWED_ITEMS_LIMIT);
 
   return items.map(mapWebflowItemToAllowedValue);
 };

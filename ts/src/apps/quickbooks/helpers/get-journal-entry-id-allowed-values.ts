@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
@@ -6,11 +9,7 @@ import {
 import { JournalEntry } from 'quickbooks-node-promise/dist/qbTypes';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QuickbooksError } from '../constants';
-import {
-  createQuickbooksClient,
-  QUICKBOOKS_ALLOWED_VALUES_LIMIT,
-  QUICKBOOKS_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { createQuickbooksClient, fetchQuickbooksRecords } from './constants';
 
 const mapQuickbooksJournalEntryToAllowedValue = (
   journalEntry: JournalEntry
@@ -46,34 +45,10 @@ export const getQuickbooksJournalEntryIdAllowedValues: TQoreGetAllowedValuesFunc
 
   const client = createQuickbooksClient({ token, instance_type, realm_id });
 
-  const allJournalEntries: JournalEntry[] = [];
-  let total = 0;
-  const start = Date.now();
-
-  try {
-    const journalEntries = await client.findJournalEntries({
-      desc: 'MetaData.CreateTime',
-    });
-
-    allJournalEntries.push(...(journalEntries.QueryResponse.JournalEntry || []));
-    total = journalEntries.QueryResponse.maxResults || 0;
-
-    while (
-      allJournalEntries.length <= QUICKBOOKS_ALLOWED_VALUES_LIMIT &&
-      allJournalEntries.length <= total &&
-      Date.now() - start < QUICKBOOKS_ALLOWED_VALUES_TIMEOUT
-    ) {
-      const journalEntries = await client.findJournalEntries({
-        desc: 'MetaData.CreateTime',
-        offset: allJournalEntries.length,
-      });
-
-      allJournalEntries.push(...(journalEntries.QueryResponse.JournalEntry || []));
-      total = journalEntries.QueryResponse.maxResults || 0;
-    }
-  } catch (error) {
-    console.error(`Failed to fetch journal entries: ${error}`);
-  }
+  const allJournalEntries = await fetchQuickbooksRecords<JournalEntry>(
+    (query) => client.findJournalEntries(query),
+    'JournalEntry'
+  );
 
   return allJournalEntries.map(mapQuickbooksJournalEntryToAllowedValue);
 };

@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import axios from 'axios';
 import { get } from 'lodash';
@@ -203,58 +206,54 @@ export const fetchCopperCrmPaginatedRecords = async <
   let pageNumber = 1;
   let totalResults: number | undefined = undefined;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching CopperCRM records for ${options.path}`);
-        break;
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching CopperCRM records for ${options.path}`);
+    }
+
+    const params = {
+      ...options.params,
+      ...(method === 'GET' && {
+        page_size: limit.toString(),
+        page_number: pageNumber.toString(),
+      }),
+    };
+
+    const body = {
+      ...options.body,
+      ...(method === 'POST' && {
+        page_size: limit,
+        page_number: pageNumber,
+      }),
+    };
+
+    const response: ResponseType = await copperCrmApiClient<ResponseType>({
+      token,
+      path,
+      method,
+      params,
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching CopperCRM records for ${options.path}`);
+    }
+
+    if (Array.isArray(response)) {
+      if (!response.length) break;
+      items.push(...response);
+      break;
+    } else {
+      const objectData = get(response, object) as ItemType[] | undefined;
+      if (!objectData?.length) break;
+      items.push(...objectData);
+      totalResults = response.totalResults;
+
+      if (items.length < maxResults && items.length < (totalResults || 0)) {
+        await delay(fetchDelay);
+        pageNumber += 1;
       }
-
-      const params = {
-        ...options.params,
-        ...(method === 'GET' && {
-          page_size: limit.toString(),
-          page_number: pageNumber.toString(),
-        }),
-      };
-
-      const body = {
-        ...options.body,
-        ...(method === 'POST' && {
-          page_size: limit,
-          page_number: pageNumber,
-        }),
-      };
-
-      const response: ResponseType = await copperCrmApiClient<ResponseType>({
-        token,
-        path,
-        method,
-        params,
-        body,
-      });
-
-      if (Array.isArray(response)) {
-        if (!response.length) break;
-        items.push(...response);
-        break;
-      } else {
-        const objectData = get(response, object) as ItemType[] | undefined;
-        if (!objectData?.length) break;
-        items.push(...objectData);
-        totalResults = response.totalResults;
-
-        if (items.length < maxResults && items.length < (totalResults || 0)) {
-          await delay(fetchDelay);
-          pageNumber += 1;
-        }
-      }
-    } while (items.length < maxResults && items.length < (totalResults || 0));
-  } catch (error) {
-    Debugger.log(`Error fetching paginated CopperCRM records for ${options.path}`, error);
-
-    return items;
-  }
+    }
+  } while (items.length < maxResults && items.length < (totalResults || 0));
 
   return items;
 };

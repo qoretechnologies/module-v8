@@ -1,9 +1,11 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreAllowedValue,
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
 import { SERENITY_CONN_OPTIONS } from '../constants';
 
 const SERENITY_AGENT_TYPES: Record<number, string> = {
@@ -37,36 +39,30 @@ const mapSerenityAgent = (agent: TSerenityAgent): IQoreAllowedValue<string> => (
 });
 
 const getSerenityAgents = async (token: string, page = 1): Promise<TSerenityAgent[]> => {
-  try {
-    const response = await QorusRequest.get<TSerenityAgentsResponse>(
-      {
-        path: '/api/v2/agent',
-        headers: {
-          'X-API-KEY': token,
-        },
-        params: {
-          pageSize: '100',
-          page: page.toString(),
-        },
+  const response = await QorusRequest.get<TSerenityAgentsResponse>(
+    {
+      path: '/api/v2/agent',
+      headers: {
+        'X-API-KEY': token,
       },
-      {
-        url: `https://api.serenitystar.ai`,
-        endpointId: 'Serenity',
-      }
-    );
-
-    const responseData = response?.data;
-
-    if (!responseData) {
-      throw new Error('Failed to get Serenity activity agent allowed values');
+      params: {
+        pageSize: '100',
+        page: page.toString(),
+      },
+    },
+    {
+      url: `https://api.serenitystar.ai`,
+      endpointId: 'Serenity',
     }
+  );
 
-    return responseData.items;
-  } catch (error) {
-    Debugger.log('Failed to get Serenity activity agent allowed values', error);
+  const responseData = response?.data;
 
-    return [];
+  if (!responseData) {
+    throw new Error('Failed to get Serenity activity agent allowed values');
   }
+
+  return responseData.items;
 };
 
 const createGetSerenityAgentAllowedValues =

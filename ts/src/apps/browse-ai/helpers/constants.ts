@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
@@ -118,50 +121,46 @@ export const fetchBrowseAiPaginatedRecords = async <
   let hasMore = false;
   let page = 1;
 
-  try {
-    do {
-      if (Date.now() - startTime > timeout) {
-        Debugger.log(`Timeout fetching Browse AI records for ${options.path}`);
-        break;
-      }
+  do {
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Browse AI records for ${options.path}`);
+    }
 
-      if (items.length >= maxResults) {
-        break;
-      }
+    if (items.length >= maxResults) {
+      break;
+    }
 
-      const response = await browseAiApiClient<ResponseType['result']>({
-        token,
-        path: options.path,
-        method,
-        object: 'result',
-        params: {
-          page: page.toString(),
-          pageSize: pageSize.toString(),
-          ...options.params,
-        },
-        body,
-      });
+    const response = await browseAiApiClient<ResponseType['result']>({
+      token,
+      path: options.path,
+      method,
+      object: 'result',
+      params: {
+        page: page.toString(),
+        pageSize: pageSize.toString(),
+        ...options.params,
+      },
+      body,
+    });
+    if (Date.now() - startTime >= timeout) {
+      throw new Error(`Timeout fetching Browse AI records for ${options.path}`);
+    }
 
-      const objectData = get(response, `${object}.items`) as unknown as ItemType[] | undefined;
+    const objectData = get(response, `${object}.items`) as unknown as ItemType[] | undefined;
 
-      if (!objectData?.length) {
-        break;
-      }
+    if (!objectData?.length) {
+      break;
+    }
 
-      hasMore = get(response, object).hasMore || false;
+    hasMore = get(response, object).hasMore || false;
 
-      items.push(...objectData);
+    items.push(...objectData);
 
-      if (hasMore) {
-        page += 1;
-        await delay(fetchDelay);
-      }
-    } while (hasMore && items.length < maxResults);
-  } catch (error) {
-    Debugger.log(`Error fetching paginated Browse Ai records for ${object}`, error);
-
-    return items;
-  }
+    if (hasMore) {
+      page += 1;
+      await delay(fetchDelay);
+    }
+  } while (hasMore && items.length < maxResults);
 
   return items;
 };

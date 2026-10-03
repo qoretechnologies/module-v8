@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import {
   IQoreTypeObjectNonList,
   TQoreAppActionOption,
@@ -52,36 +55,27 @@ export const createHubspotGetDynamicEventInfoType = ({
       return eventInfoType;
     }
 
-    try {
-      const properties = await fetchHubspotObjectProperties(object, token);
+    const properties = await fetchHubspotObjectProperties(object, token);
 
-      const newObjectProperties = {} satisfies Record<string, TQoreAppActionOption>;
+    const newObjectProperties = {} satisfies Record<string, TQoreAppActionOption>;
 
-      properties.forEach((property) => {
-        if (additionalProperties.includes(property.name)) {
-          // @ts-expect-error - TS doesn't recognize the mapped type
-          newObjectProperties[property.name] = {
-            type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
-            display_name: property.label,
-            desc: property.description,
-          };
-        }
-      });
+    properties.forEach((property) => {
+      if (additionalProperties.includes(property.name)) {
+        // @ts-expect-error - TS doesn't recognize the mapped type
+        newObjectProperties[property.name] = {
+          type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
+          display_name: property.label,
+          desc: property.description,
+        };
+      }
+    });
 
-      eventInfoType.fields.properties.type.fields = {
-        ...eventInfoType.fields!.properties.type.fields,
-        ...newObjectProperties,
-      };
+    eventInfoType.fields.properties.type.fields = {
+      ...eventInfoType.fields!.properties.type.fields,
+      ...newObjectProperties,
+    };
 
-      return eventInfoType;
-    } catch (error) {
-      eventInfoType.fields.properties.type.fields = {
-        ...eventInfoType.fields.properties.type.fields,
-        ...defaultProperties.fields,
-      };
-
-      return eventInfoType;
-    }
+    return eventInfoType;
   };
 };
 

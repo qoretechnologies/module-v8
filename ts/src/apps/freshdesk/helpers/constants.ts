@@ -1,3 +1,6 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
 import { freshdeskClient } from '../client';
 
@@ -13,19 +16,15 @@ export const fetchFreshdeskAllowedValues = async <ItemType = unknown>(
 ): Promise<IQoreAllowedValue[]> => {
   const { path, subdomain, token } = options;
 
-  try {
-    const data = await freshdeskClient.get<ItemType[]>(path, {
-      token,
-      connectionOptions: { subdomain },
-      params: { per_page: '100' },
-    });
+  const data = await freshdeskClient.get<ItemType[]>(path, {
+    token,
+    connectionOptions: { subdomain },
+    params: { per_page: '100' },
+  });
 
-    if (!data) {
-      return [];
-    }
-
-    return data.map(options.mapItemToAllowedValue);
-  } catch {
+  if (!data) {
     return [];
   }
+
+  return data.map(options.mapItemToAllowedValue);
 };

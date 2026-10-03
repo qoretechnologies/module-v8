@@ -7,7 +7,11 @@
  * Copyright 2026 Qore Technologies, s.r.o.
  */
 
-import { TQoreGetRecordTypeFunction, TQoreType, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
+import {
+  TQoreGetRecordTypeFunction,
+  TQoreType,
+  TQoreTypeObject,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import {
   CUSTOM_FIELD_PREFIX,
@@ -26,7 +30,10 @@ type TFieldDefinition = {
 /**
  * Build a description string for a custom field, including choices if available.
  */
-const buildCustomFieldDesc = (fieldInfo: { label?: string; choices?: Record<string, string> | string[] }, fieldName: string): string => {
+const buildCustomFieldDesc = (
+  fieldInfo: { label?: string; choices?: Record<string, string> | string[] },
+  fieldName: string
+): string => {
   let desc = `Custom field: ${fieldInfo.label || fieldName}`;
 
   if (!fieldInfo.choices) {
@@ -63,21 +70,17 @@ export const getFreshdeskRecordType: TQoreGetRecordTypeFunction = async (context
   // Fetch custom fields from the API
   const customFields: Record<string, TFieldDefinition> = {};
 
-  try {
-    const customFieldsMap = await getCustomFields(token, subdomain, entity);
+  const customFieldsMap = await getCustomFields(token, subdomain, entity);
 
-    for (const [fieldName, fieldInfo] of customFieldsMap.entries()) {
-      const cfKey = fieldName.startsWith(CUSTOM_FIELD_PREFIX)
-        ? fieldName
-        : `${CUSTOM_FIELD_PREFIX}${fieldName}`;
+  for (const [fieldName, fieldInfo] of customFieldsMap.entries()) {
+    const cfKey = fieldName.startsWith(CUSTOM_FIELD_PREFIX)
+      ? fieldName
+      : `${CUSTOM_FIELD_PREFIX}${fieldName}`;
 
-      customFields[cfKey] = {
-        type: mapFreshdeskFieldTypeToQore(fieldInfo.type),
-        desc: buildCustomFieldDesc(fieldInfo, fieldName),
-      };
-    }
-  } catch {
-    // Custom fields endpoint might fail, continue with standard fields only
+    customFields[cfKey] = {
+      type: mapFreshdeskFieldTypeToQore(fieldInfo.type),
+      desc: buildCustomFieldDesc(fieldInfo, fieldName),
+    };
   }
 
   return {
