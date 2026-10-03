@@ -93,7 +93,7 @@ v8pgm.setSaveReferenceCallback(callback);
     set, then the standard thread-local implementation is used where %Qore references are saved in a thread-local
     hash.
 
-    @see @ref v8_qore_reference_management for more information
+    @see @ref v8_qore_reference_managementguide for more information
 */
 JavaScriptProgram::setSaveReferenceCallback(*code save_reference_callback) [dom=PROCESS;flags=NAMED_ARGS] {
     jsp->setSaveReferenceCallback(save_reference_callback);

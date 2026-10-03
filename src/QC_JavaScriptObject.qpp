@@ -51,11 +51,11 @@ JavaScriptObject::constructor(JavaScriptProgram[QoreV8ProgramData] program) [fla
 //! Call the object as a function and return the result
 /** @param js_this the "this" object to call the function on
     @param ... arguments to the function should follow the name converted to JavaScript values as per
-    @ref javascript_qore_to_javascript
+    @ref v8javascript_qore_to_javascriptguide
 
-    @return the return value of the JavaScript function converted to Qore as per @ref javascript_javascript_to_qore
+    @return the return value of the JavaScript function converted to Qore as per @ref v8javascript_javascript_to_qoreguide
 
-    @see @ref javascript_exceptions
+    @see @ref v8javascript_exceptionsguide
 */
 auto JavaScriptObject::callAsFunction(auto js_this, ...) {
     QoreV8ProgramHelper v8h(xsink, o->getProgram());
@@ -68,11 +68,11 @@ auto JavaScriptObject::callAsFunction(auto js_this, ...) {
 //! Call the object as a function and return the result
 /** @param this_arg the "this" object to call the function on
     @param arguments arguments to the function as a list converted to JavaScript values as per
-    @ref javascript_qore_to_javascript
+    @ref v8javascript_qore_to_javascriptguide
 
-    @return the return value of the JavaScript function converted to Qore as per @ref javascript_javascript_to_qore
+    @return the return value of the JavaScript function converted to Qore as per @ref v8javascript_javascript_to_qoreguide
 
-    @see @ref javascript_exceptions
+    @see @ref v8javascript_exceptionsguide
 */
 auto JavaScriptObject::callAsFunctionArgs(auto this_arg, *softlist<auto> arguments) [flags=NAMED_ARGS] {
     QoreV8ProgramHelper v8h(xsink, o->getProgram());
