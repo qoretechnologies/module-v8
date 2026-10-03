@@ -10,6 +10,9 @@
 %requires v8
 %requires QUnit
 %requires Util
+%try-module process
+%define MISSING_PROCESS_MODULE
+%endtry
 
 %exec-class V8Test
 
@@ -28,8 +31,34 @@ class V8Test inherits Test {
         addTestCase("v8 program test", \v8ProgramTest());
         addTestCase("exception test", \v8ExceptionTest());
         addTestCase("crash safety test", \crashSafetyTest());
+        addTestCase("unhandled rejection keeps the program usable", \unhandledRejectionTest());
+        addTestCase("WebAssembly memory bounds", \wasmBoundsTest());
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
+    }
+
+    #! WebAssembly must trap out-of-bounds accesses without owning the host's signal handlers.
+    wasmBoundsTest() {
+        JavaScriptProgram js("
+const bytes = new Uint8Array([
+    0, 97, 115, 109, 1, 0, 0, 0,
+    1, 6, 1, 96, 1, 127, 1, 127,
+    3, 2, 1, 0,
+    5, 3, 1, 0, 1,
+    7, 17, 2, 6, 109, 101, 109, 111, 114, 121, 2, 0, 4, 108, 111, 97, 100, 0, 0,
+    10, 9, 1, 7, 0, 32, 0, 40, 2, 0, 11
+]);
+const instance = new WebAssembly.Instance(new WebAssembly.Module(bytes));
+globalThis.inBounds = instance.exports.load(0);
+globalThis.trapped = false;
+try {
+    instance.exports.load(65536);
+} catch (error) {
+    globalThis.trapped = error instanceof WebAssembly.RuntimeError;
+}
+", "wasm-bounds.js");
+        assertEq(0, js.getGlobal().inBounds);
+        assertTrue(js.getGlobal().trapped);
     }
 
     #! A container member holding a weak or opaque reference must convert as its target
@@ -966,6 +995,101 @@ obj", "test.js");
         }
         on_error printf("exception arg: %y\n", ex.arg);
         assertEq("DUPLICATE-RECORD", ex.arg.errorCode);
+    }
+
+    #! An unhandled promise rejection is a warning, not the end of the program
+    /** Node's default raises it as an uncaught exception, which ends the embedded "process" and leaves the
+        program marked invalid for good; every later call then fails with "has been destroyed".
+    */
+    unhandledRejectionTest() {
+        # Assert the default warning output in an isolated child; do not let an
+        # intentional negative fixture emit unchecked warnings from this suite.
+        if (!ENV.QORE_V8_REJECTION_CHILD) {
+%ifdef MISSING_PROCESS_MODULE
+            testSkip("the process module is required to capture rejection diagnostics");
+%else
+            hash<auto> env = ENV;
+            env.QORE_V8_REJECTION_CHILD = "1";
+            env -= ("QUNIT_INCLUDE", "QUNIT_EXCLUDE");
+            *string module;
+            foreach hash<auto> info in (get_module_list()) {
+                if (info.name == "v8") {
+                    module = info.filename;
+                    break;
+                }
+            }
+            assertTrue(exists module && module != "");
+            hash<auto> result = Process::run(Process::getExecutablePath(),
+                ("-b", "--enable-debug", "-l", module, get_script_dir() + "/v8.qtest",
+                    "--include=unhandled rejection keeps the program usable"), {"env": env});
+            assertTrue(result.ok);
+            assertEq(0, result.exit_code, result.stdout + result.stderr);
+            assertTrue(index(result.stdout, "rejection-fixture-complete") >= 0, result.stdout);
+            foreach string message in (("write ETIMEDOUT (simulated)", "reported to the program")) {
+                assertTrue(index(result.stderr, "UnhandledPromiseRejectionWarning: Error: " + message) >= 0,
+                    result.stderr);
+            }
+            assertTrue(index(result.stderr, "Error: caught") < 0, result.stderr);
+            int warnings = 0;
+            foreach string line in (result.stderr.split("\n")) {
+                if (!line) {
+                    continue;
+                }
+                if (line =~ /^\(node:\d+\) UnhandledPromiseRejectionWarning: /) {
+                    ++warnings;
+                } else {
+                    assertTrue(line =~ /^    at / || line =~ /^\(Use .* to show where the warning was created\)$/,
+                        line);
+                }
+            }
+            assertEq(4, warnings, result.stderr);
+%endif
+            return;
+        }
+        # a rejection nobody waits for, from a background callback, as a network write that times out would
+        JavaScriptProgram js("globalThis.ok = () => 42;\n"
+            + "globalThis.rejectLater = () => {\n"
+            + "  setTimeout(() => Promise.reject(new Error('write ETIMEDOUT (simulated)')), 1);\n"
+            + "  return 1;\n"
+            + "};\n"
+            + "globalThis.rejectNow = () => { Promise.reject(new Error('synchronous rejection')); return 2; };\n",
+            "unhandled_rejection_test.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq(42, global.ok.toData()());
+
+        assertEq(1, global.rejectLater.toData()());
+        # run the loop to completion so the timer fires and the rejection is processed
+        assertEq(0, js.spinEventLoop(), "the event loop completes; the program did not exit");
+        assertEq(42, js.getGlobal().ok.toData()(), "the program is still usable after a background rejection");
+
+        assertEq(2, js.getGlobal().rejectNow.toData()());
+        js.spinEventLoop();
+        assertEq(42, js.getGlobal().ok.toData()(), "... and after one raised while a call is running");
+
+        # a handler the program registers itself still receives the rejection
+        JavaScriptProgram handled("globalThis.seen = [];\n"
+            + "process.on('unhandledRejection', (reason) => { globalThis.seen.push(reason.message); });\n"
+            + "globalThis.rejectLater = () => {\n"
+            + "  setTimeout(() => Promise.reject(new Error('reported to the program')), 1);\n"
+            + "  return 1;\n"
+            + "};\n"
+            + "globalThis.getSeen = () => globalThis.seen;\n",
+            "unhandled_rejection_handler_test.js");
+        assertEq(1, handled.getGlobal().rejectLater.toData()());
+        handled.spinEventLoop();
+        assertEq(("reported to the program",), handled.getGlobal().getSeen.toData()());
+
+        # a rejection that is handled is no warning at all, and changes nothing either
+        JavaScriptProgram caught("globalThis.ok = () => 42;\n"
+            + "globalThis.rejectCaught = () => {\n"
+            + "  setTimeout(() => Promise.reject(new Error('caught')).catch(() => {}), 1);\n"
+            + "  return 1;\n"
+            + "};\n",
+            "handled_rejection_test.js");
+        assertEq(1, caught.getGlobal().rejectCaught.toData()());
+        assertEq(0, caught.spinEventLoop());
+        assertEq(42, caught.getGlobal().ok.toData()());
+        printf("rejection-fixture-complete\n");
     }
 
     crashSafetyTest() {

@@ -615,6 +615,12 @@ ip.shutdown();
 
     Exceptions in JavaScript are propagated to %Qore as %Qore exceptions.
 
+    A promise that is rejected without a handler does not end the program: it is reported as a Node.js
+    \c UnhandledPromiseRejectionWarning on standard error, and the program stays usable (the module initializes
+    Node with \c --unhandled-rejections=warn).  A handler the program registers with
+    <tt>process.on('unhandledRejection', ...)</tt> receives the rejection as usual.  An exception thrown outside any
+    call - for example in a timer callback - and a call to \c process.exit() still end the program.
+
     @section v8_qore_reference_management Managing References to Qore Data in JavaScript
 
     %Qore's deterministic garbage collection approach and reliance on destructors means that references to %Qore
@@ -658,6 +664,14 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @subsection v8_2_2 v8 Module Version 2.2
+    - an unhandled promise rejection no longer ends a JavaScript program: it is reported as a Node.js
+      \c UnhandledPromiseRejectionWarning, with the rejection's stack, on standard error, and the program stays
+      usable.  Before, Node's default raised it as an uncaught exception, which ended the program's environment and
+      left the program unusable for good ("has been destroyed") until the host process was restarted; a single
+      background request that failed with nobody waiting for it (for example a network write that timed out) disabled
+      every TypeScript app sharing the program.  A program's own \c unhandledRejection handlers still run
+    - preserve the embedding process's signal handlers and signal mask during Node initialization; this fixes
+      broken %Qore signal delivery and crashes when Node's WebAssembly trap handler replaced the JVM's handler
     - added TypeScript compiler package support for Node.js builds without the built-in compiler, including
       Debian and Ubuntu; syntax errors are reported before execution
     - added Debian/Ubuntu packaging for the native bridge, helper modules, tools, metadata and translations

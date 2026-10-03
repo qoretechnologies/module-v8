@@ -1,3 +1,12 @@
+qore-v8-module (2.1.0~git20261002.1+ds-0qore1~ubuntu26.04) resolute; urgency=medium
+
+  * Preserve Qore and JVM signal handlers during Node initialization.
+  * Add signal-delivery and WebAssembly bounds regression coverage.
+  * Use installed compiled modules in schema-cache test subprocesses.
+  * Include current schema-cache path and app-initialization fixes.
+
+ -- David Nichols <david@qore.org>  Fri, 02 Oct 2026 11:00:00 +0000
+
 qore-v8-module (2.1.0~git20260930.1+ds-0qore1~ubuntu26.04) resolute; urgency=medium
 
   * Fix additional schema-backed action options and their dependencies.

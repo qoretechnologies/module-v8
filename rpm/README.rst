@@ -28,3 +28,14 @@ gates. This recipe is a candidate and is not qualified for publication.
 
 Leap's Node.js executable/devel packages do not supply ``libnode``. Its bridge
 build therefore also requires a separately qualified shared-library SDK.
+
+The rejection regression runs its intentional unhandled promises in an isolated
+child and asserts the exact expected warning classes and continued execution.
+Normal suites therefore reject unrelated stderr rather than accepting arbitrary
+Node warnings. The signal fixture verifies Qore handlers before and after V8
+loads; the WebAssembly fixture also verifies a normal read and a bounds trap.
+
+Combined Fedora/AlmaLinux native qualification is recorded in
+``test/audits/rpm-integration.rst``. The corresponding packaging evidence records
+148 cases and 1,153 assertions per target, plus separate memory and descriptor
+checks with only the user-approved external diagnostic sites.
