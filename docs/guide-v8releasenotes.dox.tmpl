@@ -1,0 +1,100 @@
+/* Copyright (C) 2026 Qore Technologies, s.r.o. */
+
+/** @page v8releasenotesguide v8 Module Release Notes
+
+    @tableofcontents
+
+    @section v8_build_compatibility Node.js Build Compatibility
+
+    - GNU and Clang builds use Node's documented C++ aliasing setting for its inline V8 callbacks.
+    - Documentation imports the packaged DataProvider and ConnectionProvider indexes and corrects
+      stale reference targets and misplaced parameter documentation. Packaging can enable
+      \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
+
+    @section v8_2_2 v8 Module Version 2.2
+    - an unhandled promise rejection no longer ends a JavaScript program: it is reported as a Node.js
+      \c UnhandledPromiseRejectionWarning, with the rejection's stack, on standard error, and the program stays
+      usable.  Before, Node's default raised it as an uncaught exception, which ended the program's environment and
+      left the program unusable for good ("has been destroyed") until the host process was restarted; a single
+      background request that failed with nobody waiting for it (for example a network write that timed out) disabled
+      every TypeScript app sharing the program.  A program's own \c unhandledRejection handlers still run
+    - preserve the embedding process's signal handlers and signal mask during Node initialization; this fixes
+      broken %Qore signal delivery and crashes when Node's WebAssembly trap handler replaced the JVM's handler
+    - added TypeScript compiler package support for Node.js builds without the built-in compiler, including
+      Debian and Ubuntu; syntax errors are reported before execution
+    - added Debian/Ubuntu packaging for the native bridge, helper modules, tools, metadata and translations
+    - fixed a deadlock that hung the calling thread when a JavaScript program was destroyed while a call was in
+      progress in another thread; destruction is deferred until the call in progress completes, but the deferred
+      destructor was run with the (non-recursive) program lock held, and it acquires the same lock, so the thread
+      finishing the call deadlocked against itself; the deferred destructor now runs with the lock released
+      (<a href="https://github.com/qoretechnologies/qore/issues/5383">qore issue 5383</a>)
+    - fixed a race in module shutdown, where the set of JavaScript programs was iterated without holding the lock
+      protecting it, while other threads could insert and erase entries concurrently
+      (<a href="https://github.com/qoretechnologies/qore/issues/5383">qore issue 5383</a>)
+    - V8 and node are no longer torn down at module shutdown when JavaScript code is still being executed in
+      another thread; disposing of the isolate and the platform under running code crashes the process, so the
+      platform is intentionally leaked instead, as the process is terminating in any case
+      (<a href="https://github.com/qoretechnologies/qore/issues/5383">qore issue 5383</a>)
+    - fixed a deadlock that could hang the process (most visibly during shutdown) when apps were initialized
+      concurrently: on-demand app initialization holds an internal lock while lazily loading modules (REST schema
+      validators, the app's own module, etc.), and a concurrent module load could, from its initializer, register
+      an app child data provider and re-enter app initialization &mdash; the two lock orders formed an ABBA
+      deadlock; app initialization now acquires the global module-load lock before its own lock (via
+      @ref Qore::call_with_module_load_lock() "call_with_module_load_lock()"), giving a single consistent lock
+      order (requires %Qore 3.0)
+    - fixed ~15s of fixed latency per app action against upstreams that keep the HTTP connection open after the
+      response (ex: Slack, YouTube / Google APIs); the embedded Node event loop was pumped with \c UV_RUN_DEFAULT,
+      which over-runs until no active handles remain, so a lingering keep-alive socket stalled delivery until it
+      idled out even though the response had already arrived; the loop is now pumped with \c UV_RUN_ONCE while
+      waiting on a Promise and \c UV_RUN_NOWAIT for best-effort drains
+      (<a href="https://github.com/qoretechnologies/qorus/issues/343">qorus issue 343</a>)
+    - added the @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
+      concurrent in-process JavaScript execution without IPC overhead
+      (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)
+    - added @ref TypeScriptActionInterface::InProcessProgramInfo "InProcessProgramInfo" hashdecl
+    - added on-demand pool creation via
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::startInProcessServerOnDemand()
+      "TypeScriptActionInterface::startInProcessServerOnDemand()" with configurable maximum pool size
+    - added direct pool injection via
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::setInProcessServer()
+      "TypeScriptActionInterface::setInProcessServer()"
+    - added clone-mode closure capture mechanism using thread-local
+      \c PoolCloneModeHelper to create
+      pool programs without modifying global state
+
+    @section v8_2_1 v8 Module Version 2.1
+    - added the @ref V8::TypeScriptProgram "TypeScriptProgram" class for runtime TypeScript transpilation and
+      execution using Node.js's built-in \c stripTypeScriptTypes() API
+    - supports type stripping, interfaces, enums (including const enums), typed classes with inheritance,
+      generics, namespaces, and all standard TypeScript syntax
+    - TypeScript programs inherit all @ref V8::JavaScriptProgram "JavaScriptProgram" methods and the
+      \c qore global object for %Qore API access
+    - fixed a memory leak in \c QoreV8ProgramData::deref() where tracked V8 resources were not cleaned up
+      when a constructor failed
+
+    @section v8_2_0 v8 Module Version 2.0
+    - added the \c qore global object for transparent access to %Qore APIs from JavaScript
+    - JavaScript code can now access %Qore namespaces, classes, functions, constants, and enums
+    - class wrapping supports constructors, instance methods, static methods, and inheritance
+    - public data members of wrapped %Qore objects can be read, written, and enumerated from JavaScript
+    - %Qore exceptions propagate as catchable JavaScript errors
+
+    @section v8_1_0_4 v8 Module Version 1.0.4
+    - improved ts-proxy restart robustness and shutdown handling to avoid deadlocks
+    - handled EPIPE and closed sockets more gracefully in ts-proxy communications
+
+    @section v8_1_0_3 v8 Module Version 1.0.3
+    - fixed a bug returning action option info for Swagger-based actions
+      (<a href="https://github.com/qorelanguage/qore/issues/4956">issue 4956</a>)
+
+    @section v8_1_0_2 v8 Module Version 1.0.2
+    - fixed a bug returning reference data in action providers
+      (<a href="https://github.com/qorelanguage/qore/issues/4955">issue 4955</a>)
+
+    @section v8_1_0_1 v8 Module Version 1.0.1
+    - fixed a bug retrieving dynamic types in the \c ts-proxy process
+      (<a href="https://github.com/qorelanguage/qore/issues/4938">issue 4938</a>)
+
+    @section v8_1_0 v8 Module Version 1.0
+    - initial public release
+*/

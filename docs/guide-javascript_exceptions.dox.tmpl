@@ -1,0 +1,14 @@
+/* Copyright (C) 2026 Qore Technologies, s.r.o. */
+
+/** @page v8javascript_exceptionsguide JavaScript Exceptions
+
+    @tableofcontents
+
+    Exceptions in JavaScript are propagated to %Qore as %Qore exceptions.
+
+    A promise that is rejected without a handler does not end the program: it is reported as a Node.js
+    \c UnhandledPromiseRejectionWarning on standard error, and the program stays usable (the module initializes
+    Node with \c --unhandled-rejections=warn).  A handler the program registers with
+    <tt>process.on('unhandledRejection', ...)</tt> receives the rejection as usual.  An exception thrown outside any
+    call - for example in a timer callback - and a call to \c process.exit() still end the program.
+*/

@@ -1,0 +1,24 @@
+/* Copyright (C) 2026 Qore Technologies, s.r.o. */
+
+/** @page v8_examplesguide Examples
+
+    @tableofcontents
+
+    @par Example:
+    @code{.py}
+#!/usr/bin/env qore
+
+%new-style
+%require-types
+%strict-args
+%enable-all-warnings
+
+%requires v8
+
+JavaScriptProgram js("var foo = function(arg) { return arg + 1; }", "test.js");
+js.run();
+JavaScriptObject gb = js.getGlobal();
+JavaScriptObject foo = gb.getKeyValue("foo");
+int i = foo.callAsFunction(gb, 1);
+    @endcode
+*/

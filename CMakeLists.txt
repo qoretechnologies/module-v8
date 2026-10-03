@@ -175,6 +175,15 @@ set(module_name "v8")
 
 set(QORE_DOX_TMPL_SRC
     docs/mainpage.dox.tmpl
+    docs/guide-javascript_exceptions.dox.tmpl
+    docs/guide-javascript_javascript_to_qore.dox.tmpl
+    docs/guide-javascript_qore_to_javascript.dox.tmpl
+    docs/guide-v8_examples.dox.tmpl
+    docs/guide-v8_inprocess_pool.dox.tmpl
+    docs/guide-v8_qore_import.dox.tmpl
+    docs/guide-v8_qore_reference_management.dox.tmpl
+    docs/guide-v8_typescript.dox.tmpl
+    docs/guide-v8releasenotes.dox.tmpl
 )
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/images")
 
@@ -204,7 +213,17 @@ if (DEFINED ENV{DOXYGEN_EXECUTABLE})
     set(DOXYGEN_EXECUTABLE $ENV{DOXYGEN_EXECUTABLE})
 endif()
 
-set(MODULE_DOX_INPUT ${CMAKE_BINARY_DIR})
+list(APPEND MODULE_DOX_INPUT
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-javascript_exceptions.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-javascript_javascript_to_qore.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-javascript_qore_to_javascript.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-v8_examples.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-v8_inprocess_pool.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-v8_qore_import.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-v8_qore_reference_management.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-v8_typescript.dox
+    ${CMAKE_CURRENT_BINARY_DIR}/guide-v8releasenotes.dox
+)
 qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
 
 qore_user_modules("${QMOD}")

@@ -73,11 +73,23 @@ module TypeScriptActionInterface {
     };
 }
 
+%ifdef QoreDebug
+public sub ASSERT(*softbool b) {
+    if (!b) {
+        throw "ASSERTION-FAILED", "assertion failed";
+    }
+}
+%else
+public sub ASSERT(*softbool b) {}
+%endif
+
 /** @mainpage TypeScriptActionInterface Module
 
     @tableofcontents
 
-    @section TypeScriptActionInterfaceintro Introduction to the TypeScriptActionInterface Module
+    @section typescriptactioninterfaceintro TypeScriptActionInterface Module Introduction
+
+    @anchor TypeScriptActionInterfaceintro
 
     The %TypeScriptActionInterface module provides a @ref dataproviderintro "data provider" and app action API for
     TypeScript code.
@@ -158,12 +170,12 @@ module TypeScriptActionInterface {
       module is loaded, apps are registered \a pending from the data provider index and each app's
       implementation is loaded only on first use (via the catalogue, connection scheme, or data
       provider tree); this is transparent to API users and significantly reduces the memory used by
-      the @ref TypeScriptProxy "ts-proxy" layer. A directory&lt;-&gt;app-name map (\c ts-app-dirs.yaml)
+      the @ref typescriptproxyintro "ts-proxy" layer. A directory&lt;-&gt;app-name map (\c ts-app-dirs.yaml)
       is written next to the app directory during a full load (e.g. \c "qctl update-index") and read at
       runtime to register apps pending from the index; if it is unavailable the module falls back to a
       full load
     - fixed a race where a command could fail with a fatal \c SOCKET-NOT-OPEN error when the command
-      IPC socket to the @ref TypeScriptProxy "ts-proxy" child was closed while the child process was
+      IPC socket to the @ref typescriptproxyintro "ts-proxy" child was closed while the child process was
       still running (more likely under load, such as the lazy-load latency of a first app call): the
       proxy now restarts the child and retries the command instead of surfacing the socket error to
       the caller
@@ -181,7 +193,7 @@ module TypeScriptActionInterface {
     - added @ref TypeScriptActionInterface::TypeScriptActionInterface::shutdownInProcessServer()
       "TypeScriptActionInterface::shutdownInProcessServer()" for safe pool shutdown
     - added clone-mode closure capture mechanism using thread-local
-      @ref TypeScriptActionInterfacePriv::Priv::PoolCloneModeHelper "PoolCloneModeHelper" to create
+      @ref Priv::PoolCloneModeHelper "PoolCloneModeHelper" to create
       pool programs without modifying global state
     - added static chdir mutex in
       @ref TypeScriptActionInterface::JavaScriptProgramPool "JavaScriptProgramPool" to prevent
@@ -190,13 +202,3 @@ module TypeScriptActionInterface {
     @subsection TypeScriptActionInterface_v1_0 TypeScriptActionInterface v1.0
     - initial release of the module
 */
-
-%ifdef QoreDebug
-public sub ASSERT(*softbool b) {
-    if (!b) {
-        throw "ASSERTION-FAILED", "assertion failed";
-    }
-}
-%else
-public sub ASSERT(*softbool b) {}
-%endif

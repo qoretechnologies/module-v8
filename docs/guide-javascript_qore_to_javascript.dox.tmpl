@@ -1,0 +1,22 @@
+/* Copyright (C) 2026 Qore Technologies, s.r.o. */
+
+/** @page v8javascript_qore_to_javascriptguide Qore to JavaScript Data Conversions
+
+    @tableofcontents
+
+    |!Source %Qore Type|!Target JavaScript Type
+    |\c binary|\c string (base64-encoded value)
+    |\c bool|\c bool
+    |\c date|\c string (ISO-8601 format)
+    |\c float|\c number
+    |\c hash|\c object
+    |\c int|\c int32, \c uint32, \b bigint
+    |\c list|\c array
+    |\c string|\c string
+    |@ref V8::JavaScriptObject|\c object
+    |\c code|\c callable object
+    |\c NOTHING, \c NULL|\c null
+
+    Other %Qore types cannot be converted to JavaScript; attempting to convert an unsupported type will result in a
+    runtime exception.
+*/

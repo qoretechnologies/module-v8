@@ -1,0 +1,18 @@
+/* Copyright (C) 2026 Qore Technologies, s.r.o. */
+
+/** @page v8javascript_javascript_to_qoreguide JavaScript to Qore Data Conversions
+
+    @tableofcontents
+
+    |!Source JavaScript Type|!Target %Qore Type
+    |\c bool|\c bool
+    |\c int32, \c uint32, \c bigint|\c int or \c number if greater than 64-bits
+    |\c number|\c float
+    |\c array|\c list
+    |\c string|\c string
+    |\c object|@ref V8::JavaScriptObject
+    |\c null, \c undefined|\c NOTHING
+
+    Other JavaScript types cannot be converted to %Qore; attempting to convert an unsupported type will result in a
+    runtime exception.
+*/

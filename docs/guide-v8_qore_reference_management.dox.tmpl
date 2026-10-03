@@ -1,0 +1,37 @@
+/* Copyright (C) 2026 Qore Technologies, s.r.o. */
+
+/** @page v8_qore_reference_managementguide Managing References to Qore Data in JavaScript
+
+    @tableofcontents
+
+    %Qore's deterministic garbage collection approach and reliance on destructors means that references to %Qore
+    data stored in %JavaScript must have their reference counts managed externally.
+
+    %JavaScript objects storing references to %Qore data hold only weak references to %Qore data.
+
+    @section v8_qore_object_lifecycle_default Default Qore Reference Management
+
+    By default, %Qore references are saved in thread-local data, so the lifecycle of the object is automatically limited
+    to the existence of the thread.
+
+    The thread-local hash key name used to save the list of objects created is determined by the value of the
+    \c "_v8_save" thread-local key, if set.  If no such key is set, then \c "_v8_save" is used instead as the
+    literal key for saving the list of objects.
+
+    @section v8_qore_referene_explicit Explicit Qore Reference Management
+
+    References to %Qore data can be managed explicitly by using the
+    @ref V8::JavaScriptProgram::setSaveReferenceCallback() "JavaScriptProgram::setSaveReferenceCallback()" method to set a
+    callback that is called every time a %Qore references is stored in a %JavaScript object.
+
+    This callback must take a single \c auto argument as in the following example:
+
+    @code{.py}
+hash<auto> ref_cache;
+code callback = sub (auto v) {
+    # save reference in cache, so it doesn't go out of scope
+    ref_cache{v.uniqueHash()} = v;
+}
+JavaScriptProgram::setSaveReferenceCallback(callback);
+    @endcode
+*/
