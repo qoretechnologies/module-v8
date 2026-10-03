@@ -114,7 +114,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
     #! Returns information on supported reference data
     /** @return a hash of supported reference data; keys in the hash returned are supported in calls to
-        @ref getReferenceData()
+        @ref DataProvider::AbstractDataProvider::getReferenceData()
     */
     *hash<string, bool> getSupportedReferenceData() {
         return map {$1: True}, keys (omap + romap);
@@ -122,7 +122,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
     #! Returns information on supported reference data values
     /** @return a hash of supported reference data values; keys in the hash returned are supported in calls to
-        @ref getReferenceDataValues()
+        @ref DataProvider::AbstractDataProvider::getReferenceDataValue()
     */
     *hash<string, bool> getSupportedReferenceDataValues() {
         return map {$1: True}, keys dvmap;
@@ -648,7 +648,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns action options corresponding to the given option data
-    /** @param options sample option data that can be used to determine the final type
+    /** @param action the action whose option definitions are resolved
+        @param options sample option data that can be used to determine the final type
 
         @return action options according to the available option data
 

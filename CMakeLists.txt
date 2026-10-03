@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
 cmake_minimum_required(VERSION 3.21)
 project(qore-v8-module)
 
@@ -25,6 +27,9 @@ if (UNIX AND NOT APPLE)
 endif()
 
 find_package(Qore 2.0 REQUIRED)
+
+set(QORE_DOXYGEN_MODULES DataProvider ConnectionProvider)
+option(QORE_V8_STRICT_DOCS "Fail V8 documentation builds on warnings" OFF)
 
 # An absolute compiler path also works in qcc executables: Node derives its global
 # search paths from the executable location, which is not necessarily /usr/bin.
@@ -174,6 +179,12 @@ set(QORE_DOX_TMPL_SRC
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/images")
 
 add_library(${module_name} MODULE ${CPP_SRC} ${QPP_SOURCES})
+# Node's common.gypi applies this to C++ consumers too. Public V8 callback
+# headers access pointer values through integer slots; strict alias analysis is
+# invalid for those inline definitions (PropertyCallbackInfo::GetIsolate).
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(${module_name} PRIVATE -fno-strict-aliasing)
+endif()
 target_compile_definitions(${module_name} PRIVATE QORE_TYPESCRIPT_MODULE="${QORE_TYPESCRIPT_MODULE}")
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
@@ -239,4 +250,16 @@ endif()
 # Resolve native-to-helper API links after both helper tag files are complete.
 if (COMMAND qore_binary_module_two_phase_docs)
     qore_binary_module_two_phase_docs(v8 "TypeScriptProxy;TypeScriptActionInterface")
+endif()
+
+if(DOXYGEN_FOUND AND QORE_V8_STRICT_DOCS)
+    file(GLOB _v8_doxyfiles "${CMAKE_BINARY_DIR}/doxygen/Doxyfile.*")
+    if(EXISTS "${CMAKE_BINARY_DIR}/Doxyfile.final")
+        list(APPEND _v8_doxyfiles "${CMAKE_BINARY_DIR}/Doxyfile.final")
+    else()
+        list(APPEND _v8_doxyfiles "${CMAKE_BINARY_DIR}/Doxyfile")
+    endif()
+    foreach(_v8_doxyfile IN LISTS _v8_doxyfiles)
+        file(APPEND "${_v8_doxyfile}" "\nWARN_AS_ERROR = FAIL_ON_WARNINGS\n")
+    endforeach()
 endif()

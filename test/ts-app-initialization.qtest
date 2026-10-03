@@ -260,9 +260,10 @@ class AppInitializationTest inherits QUnit::Test {
             "QORE_DATA_PROVIDERS", "QORE_CONNECTION_PROVIDERS", "QORE_DATASOURCE_PROVIDERS");
         env.QORE_TYPESCRIPT_ACTION_SCRIPTS = script;
         env.QORE_PROVIDER_INDEX_DIR = fixture.path;
-        env.QORE_MODULE_DIR = get_script_dir() + "/../qlib:" + (ENV.QORE_MODULE_DIR ?? "");
+        string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
         hash<auto> result = Process::run(Process::getExecutablePath(),
-            ("--enable-debug", "-l", "DataProvider", "-l", "Logger", "-l", "json", "-e", "%modern\n"
+            ("-b", "--enable-debug", "-l", "DataProvider", "-l", "Logger", "-l", "json", "-e", "%modern\n"
                 "Logger logger(\"module-load-test\", LoggerLevel::LevelFatal);\n"
                 "logger.addAppender(new LoggerAppenderNull());\n"
                 "DataProvider::setGlobalLogger(logger);\n"

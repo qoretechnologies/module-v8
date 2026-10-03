@@ -714,6 +714,19 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }, appmap.pairIterator();
     }
 
+    #! Sets the base directory used to resolve paths in app definitions relative to the app catalogue
+    /** @param dir the directory holding the app catalogue; @ref nothing to resolve relative paths against the
+        current working directory of the process
+    */
+    static setAppBaseDir(*string dir) {
+        app_base_dir = dir;
+    }
+
+    #! Returns the base directory used to resolve paths in app definitions relative to the app catalogue
+    static string getAppBaseDir() {
+        return app_base_dir ?? getcwd();
+    }
+
     #! Registers the module's apps as pending from the data index, loaded on demand
     /** Reads the generated directory<->app-name map (\c ts-app-dirs.yaml, written next
         to \a apps_dir by a previous full load) rather than scanning the filesystem,
@@ -730,19 +743,6 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         e.g. before the index has ever been built — the caller then falls back to a
         full load)
     */
-    #! Sets the base directory used to resolve paths in app definitions relative to the app catalogue
-    /** @param dir the directory holding the app catalogue; @ref nothing to resolve relative paths against the
-        current working directory of the process
-    */
-    static setAppBaseDir(*string dir) {
-        app_base_dir = dir;
-    }
-
-    #! Returns the base directory used to resolve paths in app definitions relative to the app catalogue
-    static string getAppBaseDir() {
-        return app_base_dir ?? getcwd();
-    }
-
     static int registerPendingAppsFromIndex(string apps_dir) {
         # The app directory name is not derivable from the app name (e.g. dir
         # "active-directory" -> app "AzureActiveDirectory", "esignature" ->

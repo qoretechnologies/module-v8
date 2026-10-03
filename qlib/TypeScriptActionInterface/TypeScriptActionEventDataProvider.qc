@@ -83,7 +83,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         *hash<auto> event_options;
 
         #! @note the stop flag itself is inherited from @ref DataProvider::AbstractWatchDataProviderBase
-        #! "AbstractWatchDataProviderBase" as \c stop_flag, so that @ref isStopping() reports this provider's state
+        #! "AbstractWatchDataProviderBase" as \c stop_flag, so that @ref DataProvider::AbstractWatchDataProviderBase::isStopping() reports this provider's state
 
         #! The checkpoint state restored for the event function, if any
         auto checkpoint_state;

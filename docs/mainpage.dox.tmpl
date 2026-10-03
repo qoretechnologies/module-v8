@@ -650,6 +650,13 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
 
     @section v8releasenotes v8 Module Release Notes
 
+    @subsection v8_build_compatibility Node.js Build Compatibility
+
+    - GNU and Clang builds use Node's documented C++ aliasing setting for its inline V8 callbacks.
+    - Documentation imports the packaged DataProvider and ConnectionProvider indexes and corrects
+      stale reference targets and misplaced parameter documentation. Packaging can enable
+      \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
+
     @subsection v8_2_2 v8 Module Version 2.2
     - added TypeScript compiler package support for Node.js builds without the built-in compiler, including
       Debian and Ubuntu; syntax errors are reported before execution
@@ -690,7 +697,7 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
       @ref TypeScriptActionInterface::TypeScriptActionInterface::setInProcessServer()
       "TypeScriptActionInterface::setInProcessServer()"
     - added clone-mode closure capture mechanism using thread-local
-      @ref TypeScriptActionInterfacePriv::Priv::PoolCloneModeHelper "PoolCloneModeHelper" to create
+      \c PoolCloneModeHelper to create
       pool programs without modifying global state
 
     @subsection v8_2_1 v8 Module Version 2.1

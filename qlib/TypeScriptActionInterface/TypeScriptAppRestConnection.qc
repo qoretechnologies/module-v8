@@ -223,7 +223,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         @param attributes various attributes. See below
         @param options connection options
 
-        See @ref ConnectionProvider::AbstractConnection::constructor() for \c attributes and \c options reference.
+        See @ref ConnectionProvider::AbstractConnection "AbstractConnection" for its constructor \c attributes and \c options reference.
 
         @throw CONNECTION-OPTION-ERROR missing or invalid connection option
     */
@@ -816,7 +816,7 @@ public class TypeScriptAwsAppRestConnection inherits TypeScriptAppRestConnection
         @param attributes various attributes. See below
         @param options connection options
 
-        See @ref ConnectionProvider::AbstractConnection::constructor() for \c attributes and \c options reference.
+        See @ref ConnectionProvider::AbstractConnection "AbstractConnection" for its constructor \c attributes and \c options reference.
 
         @throw CONNECTION-OPTION-ERROR missing or invalid connection option
     */
