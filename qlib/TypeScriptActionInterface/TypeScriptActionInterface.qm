@@ -94,12 +94,35 @@ public sub ASSERT(*softbool b) {}
     The %TypeScriptActionInterface module provides a @ref dataproviderintro "data provider" and app action API for
     TypeScript code.
 
+    @section typescriptactioninterface_reference_data Reference Data Failures and Retries
+
+    Reference data lookups, such as channel and user choices in an action form, cache successful results for ten
+    minutes. Concurrent callers share an in-progress lookup. If the lookup fails, all callers using that entry
+    receive the error, and the next lookup can retry immediately. An empty successful result remains cacheable.
+
+    Slack channel, archived-channel and user choices also have a per-connection sixty-second cache in the
+    TypeScript catalogue. Slack pagination rejects transport errors, HTTP errors, API errors and incomplete scans
+    that exceed the timeout; it never returns a failed scan as an empty or partial successful result. Pages with no
+    items still advance when Slack supplies a continuation cursor. The configured result limit still applies.
+
+    Slack read requests retry HTTP 429 responses up to three times, using Slack's \c Retry-After delay. Each scan
+    shares a sixty-second budget by default across requests, page delays and retries. If the requested retry delay
+    does not fit in the remaining budget, the rate-limit error is returned without making an early retry.
+
+    @par Example
+    If loading a Slack channel selector fails with \c missing_scope, correct the connection's permissions and
+    request its choices again. The failed lookup does not prevent a fresh request for the next ten minutes.
+
     @section TypeScriptActionInterface_relnotes Release Notes
 
     Generic API calls preserve the app-specific synchronous client's authentication and request policies,
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - Slack channel and user lookups now report failures instead of showing empty or incomplete choices, and
+      respect rate-limit retry delays. Failed reference data lookups can be retried immediately without waiting
+      for cached errors to expire
+      (<a href="https://github.com/qoretechnologies/qorus/issues/651">qorus issue 651</a>).
     - Bulk app initialization retains each app's failure and continues registering the remaining apps;
       direct app/action initialization still raises the original error. HubSpot's
       \c HUBSPOT-SCHEMAS-UNAVAILABLE error now preserves its identity, connection scheme, and OAuth2 metadata

@@ -1,0 +1,132 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%requires QUnit
+%include ../qlib/TypeScriptActionInterface/TypeScriptActionDataCache.qc
+%exec-class TypeScriptDataCacheTest
+
+class TypeScriptDataCacheTest inherits QUnit::Test {
+    constructor() : Test("TypeScript reference data cache", "1.0") {
+        addTestCase("canceled entry reports its error to every reader", \canceledEntry());
+        addTestCase("failed lookup is retried immediately", \retryFailure());
+        addTestCase("successful empty results remain cached", \emptySuccess());
+        addTestCase("in-flight entries are shared", \pendingEntry());
+        addTestCase("only completed successes expire by age", \expiration());
+        addTestCase("concurrent readers receive a success", sub () { concurrentReaders(False); });
+        addTestCase("concurrent readers receive an error", sub () { concurrentReaders(True); });
+        set_return_value(main());
+    }
+
+    canceledEntry() {
+        TypeScriptActionInterface::CacheEntry entry();
+        hash<ExceptionInfo> ex = <ExceptionInfo>{"err": "SLACK-ERROR", "desc": "missing_scope",
+            "arg": {"scope": "channels:read"}};
+        entry.cancel(ex);
+        for (int i = 0; i < 2; ++i) {
+            assertThrows("SLACK-ERROR", "missing_scope", \entry.getValue());
+        }
+    }
+
+    retryFailure() {
+        TypeScriptActionInterface::TypeScriptDataCache cache();
+        bool created;
+        TypeScriptActionInterface::CacheEntry first = cache.get("channels", \created);
+        assertTrue(created);
+        hash<ExceptionInfo> ex = <ExceptionInfo>{"err": "SLACK-ERROR", "desc": "ratelimited"};
+        first.cancel(ex);
+        created = False;
+        TypeScriptActionInterface::CacheEntry retry = cache.get("channels", \created);
+        assertTrue(created, "a failed entry cannot be a cache hit");
+        retry.setValue(({"id": "C1"},));
+        assertEq(({"id": "C1"},), retry.getValue());
+        assertThrows("SLACK-ERROR", "ratelimited", \first.getValue());
+    }
+
+    emptySuccess() {
+        TypeScriptActionInterface::TypeScriptDataCache cache();
+        bool created;
+        TypeScriptActionInterface::CacheEntry entry = cache.get("channels", \created);
+        assertTrue(created);
+        list<auto> empty = ();
+        entry.setValue(empty);
+        TypeScriptActionInterface::CacheEntry cached = cache.get("channels", \created);
+        assertFalse(created, "get resets the creation flag on a cache hit");
+        assertEq(empty, cached.getValue());
+    }
+
+    pendingEntry() {
+        TypeScriptActionInterface::TypeScriptDataCache cache();
+        bool created;
+        TypeScriptActionInterface::CacheEntry entry = cache.get("channels", \created);
+        assertTrue(created);
+        TypeScriptActionInterface::CacheEntry shared = cache.get("channels", \created);
+        assertFalse(created);
+        assertTrue(entry === shared, "concurrent lookups share the in-flight entry");
+        entry.setValue("complete");
+        assertEq("complete", shared.getValue());
+        TypeScriptActionInterface::CacheEntry other = cache.get("users", \created);
+        assertTrue(created, "distinct keys use separate entries");
+        other.setValue("users");
+        assertEq("complete", entry.getValue());
+    }
+
+    expiration() {
+        TypeScriptActionInterface::CacheEntry entry();
+        date before = now_us() - 1s;
+        assertFalse(entry.isExpired(now_us() + 1h), "pending work must not be evicted");
+        entry.setValue(False);
+        assertFalse(entry.isExpired(before));
+        assertTrue(entry.isExpired(now_us() + 1s));
+        assertEq(False, entry.getValue(), "false is a valid result");
+        TypeScriptActionInterface::CacheEntry failed();
+        failed.cancel(<ExceptionInfo>{"err": "SLACK-ERROR", "desc": "missing_scope"});
+        assertTrue(failed.isExpired(before), "errors are immediately expired regardless of age");
+    }
+
+    # Counter handshakes synchronize readers; no sleeps or polling are needed.
+    concurrentReaders(bool fail) {
+        TypeScriptActionInterface::TypeScriptDataCache cache();
+        bool created;
+        TypeScriptActionInterface::CacheEntry entry = cache.get("channels", \created);
+        Counter acquired(8);
+        Counter done(8);
+        Queue results();
+        for (int i = 0; i < 8; ++i) {
+            background sub () {
+                on_exit done.dec();
+                bool is_new;
+                try {
+                    TypeScriptActionInterface::CacheEntry shared;
+                    {
+                        on_exit acquired.dec();
+                        shared = cache.get("channels", \is_new);
+                    }
+                    results.push({"created": is_new, "value": shared.getValue()});
+                } catch (hash<ExceptionInfo> ex) {
+                    results.push({"created": is_new, "error": ex});
+                }
+            }();
+        }
+        acquired.waitForZero();
+        if (fail) {
+            entry.cancel(<ExceptionInfo>{"err": "SLACK-ERROR", "desc": "missing_scope",
+                "arg": {"scope": "channels:read"}});
+        } else {
+            entry.setValue(({"id": "C1"},));
+        }
+        done.waitForZero();
+        for (int i = 0; i < 8; ++i) {
+            hash<auto> result = results.get();
+            assertFalse(result.created);
+            if (fail) {
+                assertEq("SLACK-ERROR", result.error.err);
+                assertEq("missing_scope", result.error.desc);
+                assertEq({"scope": "channels:read"}, result.error.arg);
+            } else {
+                assertEq(({"id": "C1"},), result.value);
+            }
+        }
+    }
+}

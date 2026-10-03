@@ -1,4 +1,8 @@
+// Copyright 2026 Qore Technologies, s.r.o.
+// SPDX-License-Identifier: MIT
+
 import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
+import axios from 'axios';
 import { slackClient } from '../apps/slack/client';
 import {
   clearSlackAllowedValuesCache,
@@ -171,6 +175,72 @@ describe('Slack allowed-values short-TTL cache', () => {
       await expect(getSlackChannelsAllowedValues({ conn_opts: {} as any })).rejects.toThrow(
         'Missing authentication token'
       );
+    });
+  });
+
+  describe.each([
+    {
+      name: 'channels',
+      resolver: getSlackChannelsAllowedValues,
+      itemsPath: 'channels',
+      item: { id: 'C1', name: 'general' },
+      expected: [{ value: 'C1', display_name: 'general' }],
+    },
+    {
+      name: 'archived channels',
+      resolver: getSlackArchivedChannelsAllowedValues,
+      itemsPath: 'channels',
+      item: { id: 'C2', name: 'old', is_archived: true },
+      expected: [{ value: 'C2', display_name: 'old' }],
+    },
+    {
+      name: 'users',
+      resolver: getSlackUsersAllowedValues,
+      itemsPath: 'members',
+      item: { id: 'U1', real_name: 'Alice' },
+      expected: [{ value: 'U1', display_name: 'Alice' }],
+    },
+  ])('$name with the real paginator', ({ resolver, itemsPath, item, expected }) => {
+    const context = { conn_opts: { token: 'test-token' } };
+
+    it('propagates API failures and immediately retries without a poisoned cache entry', async () => {
+      const get = jest
+        .spyOn(axios, 'get')
+        .mockResolvedValueOnce({ data: { ok: false, error: 'missing_scope' } })
+        .mockResolvedValueOnce({ data: { ok: true, [itemsPath]: [item] } });
+      await expect(resolver(context)).rejects.toThrow('missing_scope');
+      await expect(resolver(context)).resolves.toEqual(expected);
+      await expect(resolver(context)).resolves.toEqual(expected);
+      expect(get).toHaveBeenCalledTimes(2);
+    });
+
+    it('does not cache a partial scan when a later page fails', async () => {
+      jest.useFakeTimers();
+      const get = jest
+        .spyOn(axios, 'get')
+        .mockResolvedValueOnce({
+          data: {
+            ok: true,
+            [itemsPath]: [item],
+            response_metadata: { next_cursor: 'next' },
+          },
+        })
+        .mockRejectedValueOnce(new Error('connection reset'))
+        .mockResolvedValueOnce({ data: { ok: true, [itemsPath]: [item] } });
+      const failed = expect(resolver(context)).rejects.toThrow('connection reset');
+      await Promise.all([failed, jest.runAllTimersAsync()]);
+      await expect(resolver(context)).resolves.toEqual(expected);
+      await expect(resolver(context)).resolves.toEqual(expected);
+      expect(get).toHaveBeenCalledTimes(3);
+    });
+
+    it('caches a genuinely empty successful scan', async () => {
+      const get = jest
+        .spyOn(axios, 'get')
+        .mockResolvedValue({ data: { ok: true, [itemsPath]: [] } });
+      await expect(resolver(context)).resolves.toEqual([]);
+      await expect(resolver(context)).resolves.toEqual([]);
+      expect(get).toHaveBeenCalledTimes(1);
     });
   });
 });

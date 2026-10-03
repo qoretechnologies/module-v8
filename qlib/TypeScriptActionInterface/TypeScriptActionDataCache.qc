@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptDataCache.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptDataCache.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -38,20 +38,19 @@ class CacheEntry {
         date cached;
     }
 
+    #! Waits for completion and returns the value or raises the recorded error for every reader
     auto getValue() {
-        if (!ready) {
-            m.lock();
-            on_exit m.unlock();
+        m.lock();
+        on_exit m.unlock();
 
-            while (!ready) {
-                ++waiting;
-                c.wait(m);
-                --waiting;
-            }
+        while (!ready) {
+            ++waiting;
+            on_exit --waiting;
+            c.wait(m);
+        }
 
-            if (ex) {
-                throw ex.err, ex.desc, ex.arg;
-            }
+        if (ex) {
+            throw ex.err, ex.desc, ex.arg;
         }
         return val;
     }
@@ -80,8 +79,13 @@ class CacheEntry {
         }
     }
 
+    #! Returns True for a failed lookup or a successful result older than the cutoff; pending work does not expire
     bool isExpired(date cutoff) {
-        return cached ? (cached < cutoff) : False;
+        m.lock();
+        on_exit m.unlock();
+
+        # Failed lookups are never reusable; existing readers still receive the stored exception.
+        return ex ? True : (cached ? (cached < cutoff) : False);
     }
 }
 
@@ -96,15 +100,31 @@ public class TypeScriptDataCache {
         hash<string, CacheEntry> cache;
     }
 
+    #! Returns a shared pending or successful cache entry, replacing failed or expired entries
+    /** @param key cache key identifying the lookup and its connection/options
+        @param new_entry set to True if the caller must perform the lookup, otherwise False
+        @return the entry whose value all callers for this lookup share
+
+        @par Example
+        @code{.py}
+bool created;
+CacheEntry entry = cache.get("workspace-channel-choices", \created);
+if (created) {
+    on_error entry.cancel($1);
+    entry.setValue(fetchChannelChoices());
+}
+return entry.getValue();
+        @endcode
+    */
     CacheEntry get(string key, reference<bool> new_entry) {
         global.lock();
         on_exit global.unlock();
 
         *CacheEntry entry = getIntern(key);
+        new_entry = !entry;
         if (entry) {
             return entry;
         }
-        new_entry = True;
         return cache{key} = new CacheEntry();
     }
 
