@@ -28,6 +28,7 @@ class V8Test inherits Test {
         addTestCase("v8 program test", \v8ProgramTest());
         addTestCase("exception test", \v8ExceptionTest());
         addTestCase("crash safety test", \crashSafetyTest());
+        addTestCase("unhandled rejection keeps the program usable", \unhandledRejectionTest());
         addTestCase("WebAssembly memory bounds", \wasmBoundsTest());
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
@@ -991,6 +992,56 @@ obj", "test.js");
         }
         on_error printf("exception arg: %y\n", ex.arg);
         assertEq("DUPLICATE-RECORD", ex.arg.errorCode);
+    }
+
+    #! An unhandled promise rejection is a warning, not the end of the program
+    /** Node's default raises it as an uncaught exception, which ends the embedded "process" and leaves the
+        program marked invalid for good; every later call then fails with "has been destroyed".
+    */
+    unhandledRejectionTest() {
+        # a rejection nobody waits for, from a background callback, as a network write that times out would
+        JavaScriptProgram js("globalThis.ok = () => 42;\n"
+            + "globalThis.rejectLater = () => {\n"
+            + "  setTimeout(() => Promise.reject(new Error('write ETIMEDOUT (simulated)')), 1);\n"
+            + "  return 1;\n"
+            + "};\n"
+            + "globalThis.rejectNow = () => { Promise.reject(new Error('synchronous rejection')); return 2; };\n",
+            "unhandled_rejection_test.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq(42, global.ok.toData()());
+
+        assertEq(1, global.rejectLater.toData()());
+        # run the loop to completion so the timer fires and the rejection is processed
+        assertEq(0, js.spinEventLoop(), "the event loop completes; the program did not exit");
+        assertEq(42, js.getGlobal().ok.toData()(), "the program is still usable after a background rejection");
+
+        assertEq(2, js.getGlobal().rejectNow.toData()());
+        js.spinEventLoop();
+        assertEq(42, js.getGlobal().ok.toData()(), "... and after one raised while a call is running");
+
+        # a handler the program registers itself still receives the rejection
+        JavaScriptProgram handled("globalThis.seen = [];\n"
+            + "process.on('unhandledRejection', (reason) => { globalThis.seen.push(reason.message); });\n"
+            + "globalThis.rejectLater = () => {\n"
+            + "  setTimeout(() => Promise.reject(new Error('reported to the program')), 1);\n"
+            + "  return 1;\n"
+            + "};\n"
+            + "globalThis.getSeen = () => globalThis.seen;\n",
+            "unhandled_rejection_handler_test.js");
+        assertEq(1, handled.getGlobal().rejectLater.toData()());
+        handled.spinEventLoop();
+        assertEq(("reported to the program",), handled.getGlobal().getSeen.toData()());
+
+        # a rejection that is handled is no warning at all, and changes nothing either
+        JavaScriptProgram caught("globalThis.ok = () => 42;\n"
+            + "globalThis.rejectCaught = () => {\n"
+            + "  setTimeout(() => Promise.reject(new Error('caught')).catch(() => {}), 1);\n"
+            + "  return 1;\n"
+            + "};\n",
+            "handled_rejection_test.js");
+        assertEq(1, caught.getGlobal().rejectCaught.toData()());
+        assertEq(0, caught.spinEventLoop());
+        assertEq(42, caught.getGlobal().ok.toData()());
     }
 
     crashSafetyTest() {

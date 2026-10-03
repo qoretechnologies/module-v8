@@ -245,6 +245,18 @@ marks the embedding process's stdio file descriptors close-on-exec. Every child 
 started afterwards (`system()`, `backquote()`, and so on) then ran without stdin, stdout and
 stderr unless they were explicitly redirected.
 
+The process arguments include `--unhandled-rejections=warn`, and every program's environment is
+created from them (`QoreV8Program::QoreV8Program()` passes `init_result->args()` and
+`exec_args()`). An embedded program has no process of its own to end: Node's default mode raises an
+unhandled rejection as an uncaught exception, which reaches the process-exit handler installed by
+`QoreV8Program::init()`, and that handler marks the program invalid for good. One promise nobody
+waited for - a background network write that timed out - therefore left a long-lived program, and
+every TypeScript app loaded into it by `ts-proxy`, failing with "has been destroyed" until the host
+process was restarted. In `warn` mode the rejection is reported on stderr as an
+`UnhandledPromiseRejectionWarning` with its stack and the program stays usable; handlers a program
+registers for `unhandledRejection` still run. Uncaught exceptions and `process.exit()` still end
+the program (test: `test/v8.qtest` "unhandled rejection keeps the program usable").
+
 ### Tracking Sets
 
 `QoreV8Program` maintains tracking sets for all allocated wrapper data:

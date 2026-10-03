@@ -124,7 +124,13 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
         V8NS->addSystemClass(initJavaScriptPromiseClass(*V8NS));
     }
 
-    std::vector<std::string> args = {"qore"};
+    // An unhandled promise rejection is reported as a warning (with its stack) instead of being raised as an
+    // uncaught exception.  Node's default would end the "process", which for an embedded program means the
+    // program is marked invalid for good: every program that shares it (for example all TypeScript apps loaded
+    // into one ts-proxy) then fails with "has been destroyed" until the host process is restarted, because of a
+    // single promise nobody was waiting for (such as a network write that timed out in the background).  Handlers
+    // a program registers for "unhandledRejection" itself still run.
+    std::vector<std::string> args = {"qore", "--unhandled-rejections=warn"};
     // NOTE: stdio inheritance must stay enabled; otherwise node marks the stdio file descriptors of the embedding
     // process close-on-exec, so all child processes started by Qore afterwards (ex: with system() or backquote())
     // are started without stdin, stdout, and stderr unless they are explicitly redirected
