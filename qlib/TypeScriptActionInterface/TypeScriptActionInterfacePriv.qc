@@ -208,7 +208,7 @@ function setenv(vr, value) {
 
     #! Eagerly load and register every curated app under the given directory
     /** Fallback used when the data index / app-dir map is not available (e.g. while
-        `qctl update-index` builds the index): the apps cannot be registered pending,
+        <tt>qctl update-index</tt> builds the index): the apps cannot be registered pending,
         so load them all so they can be enumerated/indexed.  Each curated app (see
         the catalogue's \c getNewAppDirs()) is loaded through the master catalogue
         (\c require() in the master program, not a separate pool) and registered with
