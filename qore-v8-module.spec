@@ -11,7 +11,7 @@
 %bcond_without docs
 %global _find_debuginfo_dwz_opts %{nil}
 Name: qore-v8-module
-Version: 2.1.0
+Version: 2.2.0
 Release: 1%{?dist}
 Summary: JavaScript and TypeScript integration for Qore
 License: LGPL-2.1-or-later AND MIT AND Apache-2.0
@@ -140,6 +140,9 @@ qore-data-provider-i18n --no-color --check-tree --require-standard-locales \
 %doc %{_docdir}/%{name}-doc/
 %endif
 %changelog
+* Sun Oct 04 2026 David Nichols <david@qore.org> - 2.2.0-1
+- Align the package version with the module release.
+
 * Sat Oct 03 2026 David Nichols <david@qore.org> - 2.1.0-1
 - Package the Node.js bridge, AOT modules, tools, metadata and translations.
 - Use the packaged Qore SDK and Node 24 shared library; run offline suites.
