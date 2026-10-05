@@ -1,7 +1,7 @@
 // Copyright 2026 Qore Technologies, s.r.o.
 // SPDX-License-Identifier: MIT
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { composePipedriveSchemas, normalizeSchema, appContract } from '../schema-cache/apps';
+import { composePipedriveSchemas, normalizeSchema, appContract, schemaCompatibilityDigest } from '../schema-cache/apps';
 import { fetchPipedrivePaginatedRecords, pipedriveApiClient, pipedriveRecordPages } from '../apps/pipedrive/helpers/client';
 import { pipedriveRecordBody, pipedriveTablePath } from '../apps/pipedrive/helpers/record-based/constants';
 import { searchPipedriveRecords } from '../apps/pipedrive/helpers/record-based/search-records';
@@ -68,6 +68,43 @@ describe('Pipedrive API migration', () => {
       expect(() => normalizeSchema('pipedrive', input)).toThrow(/APP-SCHEMA-/);
     }
     expect(() => composePipedriveSchemas(null)).toThrow(/INVALID/);
+  });
+
+  it('preserves optional nullable lead archive reasons in request and response schemas', () => {
+    const input = bundle();
+    const previous = schemaCompatibilityDigest(normalizeSchema('pipedrive', input));
+    const field = { type: 'string', nullable: true, description: 'Synthetic archive explanation' };
+    const lead = { type: 'object', properties: { archive_reason: field } };
+    input.v1.paths['/leads/{id}'].patch.requestBody = {
+      content: { 'application/json': { schema: structuredClone(lead) } },
+    };
+    for (const [route, method] of [['/leads', 'get'], ['/leads', 'post'], ['/leads/{id}', 'get'],
+      ['/leads/{id}', 'patch']]) {
+      input.v1.paths[route][method].responses['200'].content['application/json'] = {
+        schema: structuredClone(lead), example: { archive_reason: null },
+      };
+    }
+    const original = structuredClone(input);
+    const doc = normalizeSchema('pipedrive', input);
+    expect(input).toEqual(original);
+    expect(doc.paths['/v1/leads/{id}'].patch.requestBody.content['application/json'].schema).toEqual(lead);
+    for (const [route, method] of [['/v1/leads', 'get'], ['/v1/leads', 'post'], ['/v1/leads/{id}', 'get'],
+      ['/v1/leads/{id}', 'patch']]) {
+      expect(doc.paths[route][method].responses['200'].content['application/json'])
+        .toEqual({ schema: lead, example: { archive_reason: null } });
+    }
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).not.toBe(previous);
+    for (const change of [
+      (schema: Record<string, any>) => { schema.properties.archive_reason.type = 'integer'; },
+      (schema: Record<string, any>) => { schema.properties.archive_reason.nullable = false; },
+      (schema: Record<string, any>) => { schema.required = ['archive_reason']; },
+      (schema: Record<string, any>) => { delete schema.properties.archive_reason; },
+    ]) {
+      const changed = structuredClone(doc);
+      change(changed.paths['/v1/leads/{id}'].patch.requestBody.content['application/json'].schema);
+      expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
+    }
   });
 
   it('keeps component dictionaries separate from object prototypes', () => {

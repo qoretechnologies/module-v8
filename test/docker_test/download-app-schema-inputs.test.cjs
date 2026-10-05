@@ -22,8 +22,11 @@ test('CI prefetch pins exact bytes and keeps private, exclusive inputs', async (
       assert.equal(fs.statSync(file).mode & 0o777, 0o600);
     }
     await assert.rejects(downloadInputs(directory, configuration, download), /EEXIST/);
+    const changed = Buffer.from('{"fixture":"changed"}');
+    const changedSha256 = createHash('sha256').update(changed).digest('hex');
     await assert.rejects(downloadInputs(path.join(directory, 'changed'), configuration,
-      async () => ({ bytes: Buffer.from('{"fixture":"changed"}') })), /Unreviewed pipedrive CI input/);
+      async () => ({ bytes: changed })), { message: `Unreviewed pipedrive CI input: expected SHA-256 ${sha256}, `
+        + `received ${changedSha256}; review the schema migration before changing the pinned checksum` });
     assert.equal(fs.existsSync(path.join(directory, 'changed/pipedrive.json')), false);
     await assert.rejects(downloadInputs(path.join(directory, 'failed'), configuration,
       async () => { throw new Error('synthetic network failure'); }), /synthetic network failure/);

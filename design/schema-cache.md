@@ -27,3 +27,20 @@ invalid path filter does not populate the cache.
 `test/ts-schema-cache.qtest` covers near-`PATH_MAX` snapshot locations with 255-byte directory components,
 bounded filenames, reloads in separate processes after removing the source, canonical path sets, distinct inputs,
 comma-containing paths, unfiltered Swagger/OpenAPI documents, legacy entries, failures, and disabled caching.
+
+## Reviewing CI schema inputs
+
+`test/docker_test/app-schema-inputs.json` pins the exact private Pipedrive and Trello qualification inputs.
+Pipedrive's bundle checksum covers `JSON.stringify({v1: <parsed document>, v2: <parsed document>})`, while each
+source checksum covers the original response bytes. A changed download fails with the expected and received
+checksums before the input is written. The separate `ts/src/schema-cache/app-compatibility.json` allowlist covers
+the normalized supported operations, their referenced schemas, presentation, and security metadata.
+
+When upstream changes a document, compare it against the previously reviewed input before updating either pin.
+Review request and response fields, requiredness, nullability, routes, references, and authentication; even an
+additive optional field changes the supported metadata fingerprint. Add the reviewed fingerprint while retaining
+previous compatible revisions, update the exact CI source and bundle checksums, and run the migration tests and
+installed runtime qualification in both tiered and AST modes. For example, an optional nullable lead field must
+remain optional and nullable after normalization and must materialize in Qore's action options and output types.
+Source-owned presentation catalogs must also pass `test/docker_test/check-i18n.sh` with the new snapshot.
+Keep downloaded provider documents in private temporary caches; commit only fingerprints and synthetic fixtures.

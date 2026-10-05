@@ -12,6 +12,8 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - accept the reviewed Pipedrive schema revision adding optional, nullable \c archive_reason to lead
+      updates and responses; retain the previous compatible revision and refresh CI's exact source checksums
     - an unhandled promise rejection no longer ends a JavaScript program: it is reported as a Node.js
       \c UnhandledPromiseRejectionWarning, with the rejection's stack, on standard error, and the program stays
       usable.  Before, Node's default raised it as an uncaught exception, which ended the program's environment and

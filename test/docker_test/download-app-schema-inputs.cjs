@@ -15,8 +15,10 @@ async function downloadInputs(directory, configuration = inputs, download = down
   fs.mkdirSync(directory, { recursive: true, mode: 0o700 });
   for (const [id, expected] of Object.entries(configuration.apps)) {
     const input = await download(id);
-    if (digest(input.bytes) !== expected.sha256) {
-      throw new Error(`Unreviewed ${id} CI input: review the schema migration before changing the pinned checksum`);
+    const actual = digest(input.bytes);
+    if (actual !== expected.sha256) {
+      throw new Error(`Unreviewed ${id} CI input: expected SHA-256 ${expected.sha256}, received ${actual}; `
+        + 'review the schema migration before changing the pinned checksum');
     }
     fs.writeFileSync(path.join(directory, `${id}.json`), input.bytes, { flag: 'wx', mode: 0o600 });
   }
