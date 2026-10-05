@@ -102,6 +102,17 @@ def verified_notices(root):
     if actual != files:
         raise ValueError('Supplemental notice directory differs from inventory')
 
+    additional = inventory.get('additional', {})
+    for relative, expected in additional.items():
+        path = relative_path(relative)
+        if path.parts[:2] not in (('debian', 'third-party-notices'), ('debian', 'third-party-sources')):
+            raise ValueError('Invalid additional notice path: ' + relative)
+        add('additional/' + '/'.join(path.parts[1:]), regular_file(root, relative).read_bytes(), expected)
+    actual = {str(path.relative_to(root)) for directory in ('third-party-notices', 'third-party-sources')
+              for path in (root / 'debian' / directory).rglob('*') if path.is_file() or path.is_symlink()}
+    if actual != set(additional):
+        raise ValueError('Additional notice/source directory differs from inventory')
+
     add('yarn/LICENSE', regular_file(root, 'vendor/YARN-LICENSE').read_bytes(),
         inventory['yarn_license_sha256'])
     return dict(sorted(notices.items()))

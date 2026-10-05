@@ -13,6 +13,7 @@ import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import dependency_notices as notices
+import copyright_map
 
 
 class NoticeTests(unittest.TestCase):
@@ -123,6 +124,96 @@ class NoticeTests(unittest.TestCase):
         self.write_inventory()
         with self.assertRaisesRegex(ValueError, 'Duplicate ZIP members'):
             notices.verified_notices(self.root)
+
+    def test_additional_notices_and_corresponding_sources(self):
+        for directory in ('third-party-notices', 'third-party-sources'):
+            relative = 'debian/' + directory + '/example'
+            path = self.root / relative
+            path.parent.mkdir(exist_ok=True)
+            path.write_bytes(b'Exact upstream bytes')
+            self.inventory.setdefault('additional', {})[relative] = notices.digest(path.read_bytes())
+        self.write_inventory()
+        self.assertEqual(notices.install(self.root, self.root / 'output'), 5)
+        self.assertEqual((self.root / 'output/additional/third-party-sources/example').read_bytes(),
+                         b'Exact upstream bytes')
+        path.write_bytes(b'Changed')
+        with self.assertRaisesRegex(ValueError, 'checksum mismatch'):
+            notices.verified_notices(self.root)
+        path.write_bytes(b'Exact upstream bytes')
+        (path.parent / 'unlisted').write_bytes(b'extra')
+        with self.assertRaisesRegex(ValueError, 'differs from inventory'):
+            notices.verified_notices(self.root)
+
+    def test_additional_notice_path_scope(self):
+        self.inventory['additional'] = {'vendor/YARN-LICENSE': notices.digest(b'Yarn notice\n')}
+        self.write_inventory()
+        with self.assertRaisesRegex(ValueError, 'Invalid additional notice path'):
+            notices.verified_notices(self.root)
+
+    def copyright_fixture(self):
+        members = sorted([self.member, 'node_modules/example/index.js'])
+        mapping = {'schema': 1, 'vendor_manifest_sha256': self.inventory['vendor_manifest_sha256'],
+                   'archives': [{'archive': self.archive,
+                       'sha256': self.manifest['archives'][0]['sha256'],
+                       'file_count': 2, 'members_sha256': notices.digest('\n'.join(members).encode()),
+                       'license': 'MIT', 'archive_licenses': ['MIT'], 'copyright': ['2026 Example'],
+                       'evidence': [self.member], 'exceptions': []}],
+                   'yarn': {'sha256': notices.digest(b'Yarn executable'), 'license': 'MIT'}}
+        (self.root / 'vendor/yarn-4.18.1.js').write_bytes(b'Yarn executable')
+        for name, field, data in [('copyright', 'copyright_sha256', b'Copyright record'),
+                                 ('license-texts.json', 'license_texts_sha256', b'{"licenses":{"MIT":"Grant"}}'),
+                                 ('third-party-provenance.json', 'provenance_sha256',
+                                  b'{"yarn":{"closure":{"packages":[]}},"documents":[],"source_archives":[]}')]:
+            (self.root / 'debian' / name).write_bytes(data)
+            mapping[field] = notices.digest(data)
+        (self.root / 'debian/copyright-map.json').write_text(json.dumps(mapping))
+        return mapping
+
+    def test_copyright_coverage_and_stale_document(self):
+        self.copyright_fixture()
+        self.assertEqual(copyright_map.verify(self.root), (1, 2))
+        (self.root / 'debian/copyright').write_text('Unreviewed change')
+        with self.assertRaisesRegex(ValueError, 'checksum mismatch'):
+            copyright_map.verify(self.root)
+
+    def test_copyright_missing_archive(self):
+        mapping = self.copyright_fixture()
+        mapping['archives'] = []
+        (self.root / 'debian/copyright-map.json').write_text(json.dumps(mapping))
+        with self.assertRaisesRegex(ValueError, 'every vendor archive'):
+            copyright_map.verify(self.root)
+
+    def test_copyright_unknown_license(self):
+        mapping = self.copyright_fixture()
+        mapping['archives'][0]['license'] = 'Unreviewed-License'
+        (self.root / 'debian/copyright-map.json').write_text(json.dumps(mapping))
+        with self.assertRaisesRegex(ValueError, 'Missing license text'):
+            copyright_map.verify(self.root)
+
+    def test_copyright_nonexistent_file_exception(self):
+        mapping = self.copyright_fixture()
+        mapping['archives'][0]['exceptions'] = [{'files': ['nonexistent'], 'license': 'MIT', 'basis': 'test'}]
+        (self.root / 'debian/copyright-map.json').write_text(json.dumps(mapping))
+        with self.assertRaisesRegex(ValueError, 'Invalid copyright exception'):
+            copyright_map.verify(self.root)
+
+    def test_yarn_unknown_license(self):
+        mapping = self.copyright_fixture()
+        mapping['yarn']['license'] = 'Unreviewed-License'
+        (self.root / 'debian/copyright-map.json').write_text(json.dumps(mapping))
+        with self.assertRaisesRegex(ValueError, 'Missing license text'):
+            copyright_map.verify(self.root)
+
+    def test_yarn_missing_dependency_notice(self):
+        mapping = self.copyright_fixture()
+        path = self.root / 'debian/third-party-provenance.json'
+        provenance = json.loads(path.read_bytes())
+        provenance['yarn']['closure']['packages'] = [{'name': 'omitted', 'version': '1.0.0'}]
+        path.write_text(json.dumps(provenance))
+        mapping['provenance_sha256'] = notices.digest(path.read_bytes())
+        (self.root / 'debian/copyright-map.json').write_text(json.dumps(mapping))
+        with self.assertRaisesRegex(ValueError, 'complete dependency closure'):
+            copyright_map.verify(self.root)
 
     def test_destination_fifo(self):
         destination = self.root / 'output'

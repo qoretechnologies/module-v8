@@ -77,7 +77,8 @@ cp "$QORE_HUBSPOT_SCHEMA_SNAPSHOT/manifest.json" \
 cd "${MODULE_SRC_DIR}/ts"
 node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --maxWorkers=2 \
     --config src/jest.config.ts --runTestsByPath src/tests/app-schema-cache.test.ts \
-    src/tests/pipedrive-migration.test.ts src/tests/trello-migration.test.ts
+    src/tests/pipedrive-migration.test.ts src/tests/trello-migration.test.ts \
+    src/tests/dependency-security.test.ts
 # Repository and checksum-pinned private downloads are qualification inputs; Debian exports omit them.
 QORE_APP_SCHEMA_SNAPSHOTS=$("${MODULE_SRC_DIR}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache")
 export QORE_APP_SCHEMA_SNAPSHOTS

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "vendor_manifest_sha256": "8000e920d4b943500f5070f571994fd32e74a396333bd9b005949f3bc26e90ec",
+  "vendor_manifest_sha256": "6fa808644a9ba78aad5f40e6bf2cd2b9f055db61ded4506e4c3bb2dca50d05d0",
   "yarn_license_sha256": "238d933f5c226cc197bd1dae2ad0c468e157b4cba8ed844f81549ba6db777dc4",
   "bundled": {
     "@anthropic-ai-sdk-npm-0.62.0-bd66e6fc36-883a5e1d74.zip": {
@@ -84,28 +84,40 @@
     "@babel-code-frame-npm-7.27.1-4dbcabb137-5dd9a18baa.zip": {
       "node_modules/@babel/code-frame/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
-    "@babel-compat-data-npm-7.28.5-41f8d327e8-702a25de73.zip": {
+    "@babel-code-frame-npm-7.29.7-cc910f9962-169fc20801.zip": {
+      "node_modules/@babel/code-frame/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    "@babel-compat-data-npm-7.29.7-6487d724ba-47913f05e0.zip": {
       "node_modules/@babel/compat-data/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
-    "@babel-core-npm-7.28.5-cd68c2d8db-535f822380.zip": {
+    "@babel-core-npm-7.29.6-821a1c9c02-0179b76397.zip": {
       "node_modules/@babel/core/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
     "@babel-generator-npm-7.28.5-fd8f3ae6b1-9f219fe1d5.zip": {
       "node_modules/@babel/generator/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
+    "@babel-generator-npm-7.29.8-00b0e7c8b6-7b89669631.zip": {
+      "node_modules/@babel/generator/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
     "@babel-helper-annotate-as-pure-npm-7.27.3-d8daa5b949-94996ce0a0.zip": {
       "node_modules/@babel/helper-annotate-as-pure/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
-    "@babel-helper-compilation-targets-npm-7.27.2-111dda04b6-f338fa00dc.zip": {
+    "@babel-helper-compilation-targets-npm-7.29.7-7cb31cc38d-4c15fd4c69.zip": {
       "node_modules/@babel/helper-compilation-targets/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
     "@babel-helper-globals-npm-7.28.0-8d79c12faf-5a0cd0c0e8.zip": {
       "node_modules/@babel/helper-globals/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
+    "@babel-helper-globals-npm-7.29.7-bb76425ef5-f38417c40b.zip": {
+      "node_modules/@babel/helper-globals/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
     "@babel-helper-module-imports-npm-7.27.1-3bf33978f4-e00aace096.zip": {
       "node_modules/@babel/helper-module-imports/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
-    "@babel-helper-module-transforms-npm-7.28.3-7b69ec189a-549be62515.zip": {
+    "@babel-helper-module-imports-npm-7.29.7-c44b78302c-6adf60d973.zip": {
+      "node_modules/@babel/helper-module-imports/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    "@babel-helper-module-transforms-npm-7.29.7-50e1c84dbd-ee5a2172c2.zip": {
       "node_modules/@babel/helper-module-transforms/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
     "@babel-helper-plugin-utils-npm-7.27.1-4f91e7999b-94cf22c81a.zip": {
@@ -114,16 +126,25 @@
     "@babel-helper-string-parser-npm-7.27.1-d1471e0598-8bda3448e0.zip": {
       "node_modules/@babel/helper-string-parser/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
+    "@babel-helper-string-parser-npm-7.29.7-87998d618e-194bc0f171.zip": {
+      "node_modules/@babel/helper-string-parser/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
     "@babel-helper-validator-identifier-npm-7.28.5-1953d49d2b-42aaebed91.zip": {
       "node_modules/@babel/helper-validator-identifier/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
-    "@babel-helper-validator-option-npm-7.27.1-7c563f0423-6fec5f006e.zip": {
+    "@babel-helper-validator-identifier-npm-7.29.7-9939aac13d-4795354e7a.zip": {
+      "node_modules/@babel/helper-validator-identifier/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    "@babel-helper-validator-option-npm-7.29.7-635d603818-d2a06c6d0a.zip": {
       "node_modules/@babel/helper-validator-option/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
-    "@babel-helpers-npm-7.28.4-d9f7567704-aaa5fb8098.zip": {
+    "@babel-helpers-npm-7.29.7-97e81ccfb9-218e8d1095.zip": {
       "node_modules/@babel/helpers/LICENSE": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30"
     },
     "@babel-parser-npm-7.28.5-f2345a6b62-5bbe48bf2c.zip": {
+      "node_modules/@babel/parser/LICENSE": "2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652"
+    },
+    "@babel-parser-npm-7.29.9-67a5dd3e9f-171b16eb45.zip": {
       "node_modules/@babel/parser/LICENSE": "2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652"
     },
     "@babel-plugin-syntax-async-generators-npm-7.8.4-d10cf993c9-d13efb2828.zip": {
@@ -183,10 +204,19 @@
     "@babel-template-npm-7.27.2-77e67eabbd-ed9e902265.zip": {
       "node_modules/@babel/template/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
+    "@babel-template-npm-7.29.7-46b79049c7-8bb7f900dc.zip": {
+      "node_modules/@babel/template/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
     "@babel-traverse-npm-7.28.5-2b51d83636-f6c4a59599.zip": {
       "node_modules/@babel/traverse/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
+    "@babel-traverse-npm-7.29.8-58d4eddcdc-87a28989c4.zip": {
+      "node_modules/@babel/traverse/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
     "@babel-types-npm-7.28.5-582d7cca8a-a5a483d210.zip": {
+      "node_modules/@babel/types/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    "@babel-types-npm-7.29.8-3f9597fc63-be7c279f0a.zip": {
       "node_modules/@babel/types/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
     },
     "@bcoe-v8-coverage-npm-0.2.3-9e27b3c57e-6b80ae4cb3.zip": {
@@ -311,12 +341,13 @@
     "@hubspot-api-client-npm-13.4.0-7e875d6e35-52ae19b6f5.zip": {
       "node_modules/@hubspot/api-client/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
-    "@humanfs-core-npm-0.19.1-e2e7aaeb6e-aa4e015217.zip": {
+    "@humanfs-core-npm-0.19.2-ad081ed090-d0a1d52d7b.zip": {
       "node_modules/@humanfs/core/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
-    "@humanfs-node-npm-0.16.7-fa16bdb590-9f83d3cf2c.zip": {
+    "@humanfs-node-npm-0.16.8-80d1509ded-56140579db.zip": {
       "node_modules/@humanfs/node/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
+    "@humanfs-types-npm-0.15.0-e47e8568ba-fc26b9a024.zip": {},
     "@humanwhocodes-config-array-npm-0.13.0-843095a032-205c99e756.zip": {
       "node_modules/@humanwhocodes/config-array/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
@@ -1208,9 +1239,10 @@
     "@typescript-eslint-visitor-keys-npm-8.50.0-290f6818bc-a13337ecc2.zip": {
       "node_modules/@typescript-eslint/visitor-keys/LICENSE": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
     },
-    "@ungap-structured-clone-npm-1.3.0-aea1bdf957-0fc3097c25.zip": {
+    "@ungap-structured-clone-npm-1.3.1-86eb1097d6-7e75faf93c.zip": {
       "node_modules/@ungap/structured-clone/LICENSE": "dc6d4961d8b6ee747231582ae9c53ce1d66bf76bc9f5a28f554c0e97210953bf"
     },
+    "@unrs-resolver-binding-linux-arm64-gnu-npm-1.11.1-9df43e91b5-10c0.zip": {},
     "@unrs-resolver-binding-linux-x64-gnu-npm-1.11.1-93a00570de-10c0.zip": {},
     "@xobotyi-scrollbar-width-npm-1.9.5-00ae5c32d1-4ebc79e4f7.zip": {
       "node_modules/@xobotyi/scrollbar-width/LICENSE": "54c61c2a73d100c38aeeb7a08fa8352f0861bedd9ddb84c03dbd6d6e1159a4c8"
@@ -1371,7 +1403,7 @@
     "base64-js-npm-1.5.1-b2f7275641-f23823513b.zip": {
       "node_modules/base64-js/LICENSE": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1"
     },
-    "baseline-browser-mapping-npm-2.9.11-39918188b7-eba49fcc1b.zip": {
+    "baseline-browser-mapping-npm-2.11.0-f6754b021f-03176d4d1c.zip": {
       "node_modules/baseline-browser-mapping/LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     "bcrypt-pbkdf-npm-1.0.2-80db8b16ed-ddfe85230b.zip": {
@@ -1420,6 +1452,9 @@
     "braces-npm-3.0.3-582c14023c-7c6dfd30c3.zip": {
       "node_modules/braces/LICENSE": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2"
     },
+    "braces-patch-f57dd084e4-faa5090ab5.zip": {
+      "node_modules/braces/LICENSE": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2"
+    },
     "brorand-npm-1.1.0-ea86634c4b-6f366d7c49.zip": {
       "node_modules/brorand/README.md": "d506a235e27d2912c7c93be50beaaffaa9cd11e5c3852acc08362005108b61dc"
     },
@@ -1438,8 +1473,8 @@
     "browserify-sign-npm-4.2.5-a092b1448f-6192f96969.zip": {
       "node_modules/browserify-sign/LICENSE": "a0e06d86a5a17341fa6134ee30ef18d73251cf32b8a577cdfd6aad6ad34af61d"
     },
-    "browserslist-npm-4.28.1-e455c4c2e8-545a5fa9d7.zip": {
-      "node_modules/browserslist/LICENSE": "f25bf9bf3ae8984bcd43bf7fb8f78e7eec8d577081fb8d0989cfa7c67ecebb8e"
+    "browserslist-npm-4.28.7-844ec494a5-dc41922a9f.zip": {
+      "node_modules/browserslist/LICENSE": "21c2679a63d7699c0e644409e2f17d0adbc7a965003feb06b3ff4b833d21f722"
     },
     "bs-logger-npm-0.2.6-7670f88b66-80e89aaaed.zip": {
       "node_modules/bs-logger/LICENSE": "0fb88779aa28bbadf7b81a4956f8ad874e5a1b87772547e36eceb3f046eeb4eb"
@@ -1481,7 +1516,7 @@
     "camelize-npm-1.0.1-d86ebe085a-4c9ac55efd.zip": {
       "node_modules/camelize/LICENSE": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
     },
-    "caniuse-lite-npm-1.0.30001761-a0289502a7-8ea4158ccd.zip": {
+    "caniuse-lite-npm-1.0.30001814-f0fbfdefbf-c1b93b8cd4.zip": {
       "node_modules/caniuse-lite/LICENSE": "fd3a263fe19ed8faa9068b43abaebafc02c77897b0c6fc09abc04bb592e5f16e"
     },
     "caseless-npm-0.12.0-e83bc5df83-ccf64bcb6c.zip": {
@@ -1787,10 +1822,13 @@
     "ecdsa-sig-formatter-npm-1.0.11-b6784e7852-ebfbf19d4b.zip": {
       "node_modules/ecdsa-sig-formatter/LICENSE": "50a6b24f8defc31a078aa9799a91d776f83948071574854f12473362aee74d0d"
     },
-    "electron-to-chromium-npm-1.5.267-b62f38d65a-0732bdb891.zip": {
+    "electron-to-chromium-npm-1.5.444-2dc43cf395-ad8e619617.zip": {
       "node_modules/electron-to-chromium/LICENSE": "25ba5c59dad3e0dd8f9540beaa0f0a86a10e3aec35af5fdc8e88c5f6a5c0d8c6"
     },
     "elliptic-npm-6.6.1-87bb857cbc-8b24ef782e.zip": {
+      "node_modules/elliptic/README.md": "361389f7c5c5e493c2af0e89333b4dce12cf6f4c8901b30f035475d2c0215473"
+    },
+    "elliptic-patch-c7822fa1bb-e6b1160251.zip": {
       "node_modules/elliptic/README.md": "361389f7c5c5e493c2af0e89333b4dce12cf6f4c8901b30f035475d2c0215473"
     },
     "email-validator-npm-2.0.4-ac07d6a6c7-580ac50374.zip": {
@@ -2231,7 +2269,7 @@
     "gtoken-npm-8.0.0-865f1fed28-058538e5bb.zip": {
       "node_modules/gtoken/LICENSE": "ace51ee77a0c6ebf8885e3b1de75b410f77fbc76602b063fbfd74d96f8574296"
     },
-    "handlebars-npm-4.7.8-25244c2c82-7aff423ea3.zip": {
+    "handlebars-npm-4.7.9-46c3c68605-22f8105a7e.zip": {
       "node_modules/handlebars/LICENSE": "e1955f622a2386195a4b67a1f30b9e88fde5cfb3fa95da46afdc4093bb9d0c5c"
     },
     "has-bigints-npm-1.1.0-d481f8ed50-2de0cdc4a1.zip": {
@@ -2295,6 +2333,9 @@
       "node_modules/html-url-attributes/license": "e18cf5173e928f808f0cd208097fee8fbec9d28fc0255213938e4c559e29ff58"
     },
     "http-cache-semantics-npm-4.2.0-fadacfb3ad-45b66a945c.zip": {
+      "node_modules/http-cache-semantics/LICENSE": "ab868ad5a2ef5068560d9cd3b2180ec63c140bb4c5cae1ba779d300a0ac74fa3"
+    },
+    "http-cache-semantics-patch-9898eb8de7-4c69e647ba.zip": {
       "node_modules/http-cache-semantics/LICENSE": "ab868ad5a2ef5068560d9cd3b2180ec63c140bb4c5cae1ba779d300a0ac74fa3"
     },
     "http-proxy-agent-npm-5.0.0-7f1f121b83-32a05e4134.zip": {
@@ -3139,7 +3180,7 @@
     "node-int64-npm-0.4.0-0dc04ec3b2-a6a4d8369e.zip": {
       "node_modules/node-int64/LICENSE": "8f85aab053e268546014761da47630a09886626afbd0d8d440cb2c69611bb8d3"
     },
-    "node-releases-npm-2.0.27-b2d1b8de4a-f1e6583b78.zip": {
+    "node-releases-npm-2.0.57-0e77e90f8d-fe5b68fba1.zip": {
       "node_modules/node-releases/LICENSE": "3706296ed611888111ceccc1dff4712844dea4bde0b185c82d718c3b69895abe"
     },
     "node-telegram-bot-api-npm-0.66.0-e139786553-8e1ec1b5e6.zip": {
@@ -3547,7 +3588,7 @@
     "resolve-npm-1.22.11-2b5ca6ec84-f657191507.zip": {
       "node_modules/resolve/LICENSE": "60acd7711e6c138e6041836e32d922705254cc1568a30fdf16aa8f59bb87aeaa"
     },
-    "resolve-patch-8d5745ba49-ee5b182f2e.zip": {
+    "resolve-patch-6a14e45123-55f7a29897.zip": {
       "node_modules/resolve/LICENSE": "60acd7711e6c138e6041836e32d922705254cc1568a30fdf16aa8f59bb87aeaa"
     },
     "resolve-pkg-maps-npm-1.0.0-135b70c854-fb8f7bbe2c.zip": {
@@ -3762,6 +3803,9 @@
     },
     "stream-events-npm-1.0.5-38468a7cf3-5d235a5799.zip": {},
     "stream-json-npm-1.9.1-067a312ba9-0521e5cb3f.zip": {
+      "node_modules/stream-json/LICENSE": "f0cafa4717146b30d7b5aeb4ff96cd5e9dafb03b97d2038d904d8b1e7a0400f3"
+    },
+    "stream-json-patch-6bbbb8eb53-ebc265ec67.zip": {
       "node_modules/stream-json/LICENSE": "f0cafa4717146b30d7b5aeb4ff96cd5e9dafb03b97d2038d904d8b1e7a0400f3"
     },
     "stream-shift-npm-1.0.3-c1c29210c7-939cd1051c.zip": {
@@ -4110,8 +4154,8 @@
     "untildify-npm-4.0.0-4a8b569825-d758e624c7.zip": {
       "node_modules/untildify/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
     },
-    "update-browserslist-db-npm-1.2.3-de1d320326-13a00355ea.zip": {
-      "node_modules/update-browserslist-db/LICENSE": "c414dde36704bd9c8a76c7aa2921b19270ff9abeb478ea0050250d16cf29b0f6"
+    "update-browserslist-db-npm-1.3.3-02e6a31cfe-07bab166c1.zip": {
+      "node_modules/update-browserslist-db/LICENSE": "9877e90da14aa8c931a1f9d07cc2a20ce119106e5dab1ebb41af865266d0cd2a"
     },
     "uri-js-npm-4.4.1-66d11cbcaf-4ef57b45aa.zip": {
       "node_modules/uri-js/LICENSE": "0af366eff4c01ec147c9c61ea9e8ffad64a4294754c9d79355f3fd1b97cb2fb9"
@@ -4135,10 +4179,7 @@
     "util-npm-0.10.4-7c577db41a-d29f6893e4.zip": {
       "node_modules/util/LICENSE": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
     },
-    "uuid-npm-8.3.2-eca0baba53-bcbb807a91.zip": {
-      "node_modules/uuid/LICENSE.md": "beaa6b04fb82e41dd2ad679e19e27953afb5999b1abbb455b6564e78ebfeb332"
-    },
-    "uuid-npm-9.0.1-39a8442bc6-1607dd32ac.zip": {
+    "uuid-npm-11.1.1-311687c807-9e3af58eba.zip": {
       "node_modules/uuid/LICENSE.md": "beaa6b04fb82e41dd2ad679e19e27953afb5999b1abbb455b6564e78ebfeb332"
     },
     "uvu-npm-0.5.6-c8507ad49b-ad32eb5f7d.zip": {
@@ -4726,5 +4767,285 @@
       "git_head": "9480a90b081f2afcaeb6ca0e882d191c138dd7a3",
       "registry_metadata_sha256": "04b1c2c01eba9e49fe376c34e22eabfd27db5070dade877672e8d8ab5233a1cd"
     }
-  ]
+  ],
+  "additional": {
+    "debian/third-party-notices/react-15.4.2/LICENSE": "6f66286d4dd445f058ff0ecdf1d3ef82be46f7199d5245e68dd0a57ae2d255a6",
+    "debian/third-party-notices/react-15.4.2/PATENTS": "b3755ec187d97484fa9e3223828fb11057d0c544d6f2fded30a1dc65c6acca4e",
+    "debian/third-party-notices/react-icons/ai/LICENSE": "5d367fb0a07340571542eb4ee8eb1add62d37b71bad6786a57c2e9a86bf76c70",
+    "debian/third-party-notices/react-icons/bi/LICENSE": "9da87f12e0cc2ddd3cd689ac4946a0508fc09b8d882e1430eb5ec16762b057a5",
+    "debian/third-party-notices/react-icons/bs/LICENSE": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969",
+    "debian/third-party-notices/react-icons/cg/LICENSE.md": "901673e29904f76a9735f1430f9ee59867aae09692168d7abf1ba6adf01f8195",
+    "debian/third-party-notices/react-icons/ci/LICENSE": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+    "debian/third-party-notices/react-icons/di/README.md": "d0c1eccf6379e2d4a702d15c8ab1bca43320edc63126ebd51f3907b8e879ee29",
+    "debian/third-party-notices/react-icons/fa/LICENSE.txt": "e779748dfe75e84f974df3c7bc07f842011a100159158b0f1f49b2f2a5a515cb",
+    "debian/third-party-notices/react-icons/fa6/LICENSE.txt": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc",
+    "debian/third-party-notices/react-icons/fc/LICENSE.md": "0c029819d69e43042904a3e9d12d25934d08398ba739e4364d61519aa1c2711c",
+    "debian/third-party-notices/react-icons/fi/package__LICENSE": "308028e93fcf84972523cdf6e616f73168546b4953895f516d01287f16fe7bee",
+    "debian/third-party-notices/react-icons/gi/license.txt": "cbbb0edc153248137e890b2336d87c0fff1608e167db173324d54b3605e468bd",
+    "debian/third-party-notices/react-icons/go/package__LICENSE": "4f886642f9e8d99eeadd484acdac011c3fde8a338faf52f5ca1408c13b9a9b63",
+    "debian/third-party-notices/react-icons/gr/LICENSE": "8ced93374d517d3f67dd5bf038c7b310367fae8124f480c688126bfdb02ec40b",
+    "debian/third-party-notices/react-icons/hi/LICENSE": "75523ddd65d9620bea09f84e89d0c373b4205a3708b8a1e9f9598a5438a3e641",
+    "debian/third-party-notices/react-icons/hi2/LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+    "debian/third-party-notices/react-icons/im/License.txt": "c968bcba0160bc24a97ff4644ef8fb23e82dfeb50c502cfc8cc4e2a1c895da8f",
+    "debian/third-party-notices/react-icons/io/package__LICENSE": "c89dabc60b2e4e1a04b33bd7010b5a56bb4725ffe8c00d793a5ae009fbbfebd8",
+    "debian/third-party-notices/react-icons/io5/package__LICENSE": "c89dabc60b2e4e1a04b33bd7010b5a56bb4725ffe8c00d793a5ae009fbbfebd8",
+    "debian/third-party-notices/react-icons/lia/LICENSE.md": "e8ed3ab816e05a011103815620fef5bf7686ad3943153daafe04d93b427c6116",
+    "debian/third-party-notices/react-icons/lu/package__LICENSE": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc",
+    "debian/third-party-notices/react-icons/md/LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "debian/third-party-notices/react-icons/pi/LICENSE": "b5b1f1da112d18ea2147decfd48ddc1bf2b5aeb6c265381579340e95b15a2bb2",
+    "debian/third-party-notices/react-icons/ri/License": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "debian/third-party-notices/react-icons/ri/README.md": "3e215b1707ce21a17c64364f533151fa60399570b118f2e20dcdc8b9fab9412a",
+    "debian/third-party-notices/react-icons/rx/LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+    "debian/third-party-notices/react-icons/si/LICENSE.md": "e43ad2b5f43c4798f7ceb92c259f4b854d59eb9dee3f4321ea0185758d7dea7b",
+    "debian/third-party-notices/react-icons/sl/LICENSE.md": "976d947830960c57ad2b3c697dc4c835260876553356e257a3cb023620e4f457",
+    "debian/third-party-notices/react-icons/tb/LICENSE": "d5a3f948ae5cb95bfc4d2f767ef2bf6a778815b0ddb2d1c48037744cf636518e",
+    "debian/third-party-notices/react-icons/tfi/README.md": "754c4d858274ac5f96a13cfb240fe2cf1e52f4d49f86934c52806873b3ac47a7",
+    "debian/third-party-notices/react-icons/ti/LICENCE.md": "fdf0eb43f872a92f53abfbab00b2c5137c6c4f0fca7cb90fda62a70c498a891c",
+    "debian/third-party-notices/react-icons/ti/README.md": "bdc2da6cc038e29bc6b4cdeb3b7eb7a17c94a8f537a237e0bdafd626344d1509",
+    "debian/third-party-notices/react-icons/ti/src__font__LICENCE.md": "c4a7dc38545d06d84b640888252c05074d9d1c5a12f9df5962744ffdb4bd4413",
+    "debian/third-party-notices/react-icons/vsc/LICENSE": "d6239afa918961b465b07bf7411cbe34ff6685854f58553db7966f4881a0211f",
+    "debian/third-party-notices/react-icons/wi/README.md": "fe5d8059a785adb47571fbae05d55ae88059224f1817dc1e797504a6098d6161",
+    "debian/third-party-notices/yarn/@algolia__cache-browser-local-storage-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__cache-common-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__cache-in-memory-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__client-account-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__client-analytics-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__client-common-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__client-personalization-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__client-search-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__logger-common-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__logger-console-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__requester-browser-xhr-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__requester-common-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__requester-node-http-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@algolia__transporter-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/@arcanis__slice-ansi-1.1.1/package-README": "ade58a4b0e0490282041e1c78d30ae2918661df8b8dd8d53c0fe0b0d8e489a20",
+    "debian/third-party-notices/yarn/@gar__promise-retry-1.0.3/LICENSE": "1c66b5311fc6328ab70616d2cf8e20a8e0a787f534831cf8a311b20098b617a5",
+    "debian/third-party-notices/yarn/@isaacs__balanced-match-4.0.1/LICENSE.md": "d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5",
+    "debian/third-party-notices/yarn/@isaacs__brace-expansion-5.0.0/LICENSE": "9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e",
+    "debian/third-party-notices/yarn/@isaacs__fs-minipass-4.0.1/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/@nodelib__fs.scandir-2.1.5/LICENSE": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+    "debian/third-party-notices/yarn/@nodelib__fs.stat-2.0.5/LICENSE": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+    "debian/third-party-notices/yarn/@nodelib__fs.walk-1.2.8/LICENSE": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+    "debian/third-party-notices/yarn/@npmcli__agent-4.0.0/upstream-package.json": "f307a5eaf2ddc572d85b7319f19c01867165a6694359e2248d6caef9161f6abb",
+    "debian/third-party-notices/yarn/@npmcli__fs-5.0.0/LICENSE.md": "27d998b503b18cdb16c49e93da04069a99ba8a1d7e18d67146de8e242f9a6d21",
+    "debian/third-party-notices/yarn/@npmcli__fs-5.0.0/lib/cp/LICENSE": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+    "debian/third-party-notices/yarn/@npmcli__redact-4.0.0/LICENSE": "d0b7cddf14a2005e05b397a950b9f69e1de412b8c6749e5b5d70610fb119e9ee",
+    "debian/third-party-notices/yarn/@sigstore__bundle-4.0.0/LICENSE": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+    "debian/third-party-notices/yarn/@sigstore__core-3.2.1/LICENSE": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+    "debian/third-party-notices/yarn/@sigstore__protobuf-specs-0.5.1/LICENSE": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+    "debian/third-party-notices/yarn/@sigstore__sign-4.1.1/LICENSE": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+    "debian/third-party-notices/yarn/@sigstore__tuf-4.0.2/LICENSE": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+    "debian/third-party-notices/yarn/@sigstore__verify-3.1.1/upstream-LICENSE": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+    "debian/third-party-notices/yarn/@sindresorhus__is-4.6.0/license": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+    "debian/third-party-notices/yarn/@szmarczak__http-timer-4.0.5/LICENSE": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+    "debian/third-party-notices/yarn/@tufjs__canonical-json-2.0.0/LICENSE": "564bcb001d6e131452a8e9fba0f0ccc59e8b881f84ce3e46e319a5a33e191e10",
+    "debian/third-party-notices/yarn/@tufjs__models-4.1.0/LICENSE": "564bcb001d6e131452a8e9fba0f0ccc59e8b881f84ce3e46e319a5a33e191e10",
+    "debian/third-party-notices/yarn/@types__cacheable-request-6.0.1/cacheable-request/LICENSE": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+    "debian/third-party-notices/yarn/@types__color-name-1.1.1/color-name/LICENSE": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+    "debian/third-party-notices/yarn/@types__emscripten-1.39.6/emscripten/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "debian/third-party-notices/yarn/@types__http-cache-semantics-4.0.4/http-cache-semantics/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "debian/third-party-notices/yarn/@types__keyv-3.1.1/keyv/LICENSE": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+    "debian/third-party-notices/yarn/@types__node-18.19.124/node v18.19/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "debian/third-party-notices/yarn/@types__node-24.3.1/node/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "debian/third-party-notices/yarn/@types__responselike-1.0.0/responselike/LICENSE": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+    "debian/third-party-notices/yarn/@types__semver-7.5.8/semver/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "debian/third-party-notices/yarn/@types__treeify-1.0.0/treeify/LICENSE": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+    "debian/third-party-notices/yarn/@types__yoga-layout-1.9.2/yoga-layout/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "debian/third-party-notices/yarn/@zkochan__cmd-shim-5.1.0/LICENSE": "6dca3e98ceb51bd8ee4205b354718da7952905e73f1ef30fb38bf81c12bfa40c",
+    "debian/third-party-notices/yarn/agent-base-7.1.4/LICENSE": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+    "debian/third-party-notices/yarn/algoliasearch-4.22.1/package-README": "a6c6368b0f17e9c5d8c4ac905a7f622c42003f19aa31dc5d72780110d29f6e7b",
+    "debian/third-party-notices/yarn/algoliasearch-4.22.1/upstream-LICENSE": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+    "debian/third-party-notices/yarn/ansi-colors-4.1.1/LICENSE": "94e1923e52409cfd50e97988d9772c0de15f65700097e3227fec367a39e82b94",
+    "debian/third-party-notices/yarn/ansi-escapes-4.3.2/license": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+    "debian/third-party-notices/yarn/ansi-regex-5.0.1/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/ansi-styles-4.2.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/argparse-2.0.1/LICENSE": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23",
+    "debian/third-party-notices/yarn/astral-regex-2.0.0/license": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3",
+    "debian/third-party-notices/yarn/auto-bind-4.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/balanced-match-1.0.0/LICENSE.md": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+    "debian/third-party-notices/yarn/base64-js-1.5.1/LICENSE": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1",
+    "debian/third-party-notices/yarn/bl-4.1.0/LICENSE.md": "9377db95383c8befacf05c6e465d969d756edf178487ca1344fdf3ba147c596f",
+    "debian/third-party-notices/yarn/brace-expansion-1.1.11/LICENSE": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+    "debian/third-party-notices/yarn/braces-3.0.2/LICENSE": "e70ff771504ba41f2be55de812a017ff46433d7a250c862e38fc419159e44500",
+    "debian/third-party-notices/yarn/buffer-5.7.1/LICENSE": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6",
+    "debian/third-party-notices/yarn/cacache-20.0.3/LICENSE.md": "720836c9bdad386485a492ab41fe08007ecf85ca278ddd8f9333494dcac4949d",
+    "debian/third-party-notices/yarn/cacheable-lookup-5.0.3/LICENSE": "b35de79efc88b23c73dd431df6075bed0890db0db1544ee3d57b046aa7a8e72b",
+    "debian/third-party-notices/yarn/cacheable-request-7.0.1/LICENSE": "861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac",
+    "debian/third-party-notices/yarn/camelcase-5.3.1/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/chalk-4.1.2/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/chownr-3.0.0/LICENSE.md": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+    "debian/third-party-notices/yarn/ci-info-2.0.0/LICENSE": "25bd22427e27b0d3f1c3da2670bb44b622bcced22ebdf4777d5488ac129370a1",
+    "debian/third-party-notices/yarn/ci-info-4.0.0/LICENSE": "f58943cb354fb2707fea2f7b26b04e6014ddb56835cdfd414c9d2c6c59165b64",
+    "debian/third-party-notices/yarn/cli-boxes-2.2.1/license": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+    "debian/third-party-notices/yarn/cli-cursor-3.1.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/cli-truncate-2.1.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/clipanion-4.0.0-rc.2/package-README": "196a06e2bf16bf4578847478924e0de7320d9541dfa4455efcb2bcaf2582b4c6",
+    "debian/third-party-notices/yarn/clone-response-1.0.2/LICENSE": "861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac",
+    "debian/third-party-notices/yarn/code-excerpt-3.0.0/license": "b53ca5a0db1b07785cbd9627341b6bd731ef6104bc3b74d44c15c5e7a8990f20",
+    "debian/third-party-notices/yarn/color-convert-2.0.1/LICENSE": "693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4",
+    "debian/third-party-notices/yarn/color-name-1.1.4/LICENSE": "c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2",
+    "debian/third-party-notices/yarn/commander-2.12.2/LICENSE": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b",
+    "debian/third-party-notices/yarn/concat-map-0.0.1/LICENSE": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b",
+    "debian/third-party-notices/yarn/convert-to-spaces-1.0.2/license": "49810fde850fee8647c52ae2d5debb9272c3b26634b9f6a800242b8aa823bad2",
+    "debian/third-party-notices/yarn/cross-spawn-7.0.6/LICENSE": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1",
+    "debian/third-party-notices/yarn/debug-4.4.3/LICENSE": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+    "debian/third-party-notices/yarn/decompress-response-6.0.0/license": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+    "debian/third-party-notices/yarn/defer-to-connect-2.0.1/LICENSE": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+    "debian/third-party-notices/yarn/diff-5.1.0/LICENSE": "152f0fb43e953fcf5c56c5bfa4c834bb96b1603e4026319c613dd3e734f305cf",
+    "debian/third-party-notices/yarn/dotenv-16.3.1/LICENSE": "74b629b24865e1e83c5277ee84590b7937644d6fd959d0c7bdce758676cd2ced",
+    "debian/third-party-notices/yarn/emoji-regex-8.0.0/LICENSE-MIT.txt": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+    "debian/third-party-notices/yarn/encoding-0.1.13/LICENSE": "2453d3b90aa23715eec80b25fcda1bebf71052ad41a6694d58a9aa867d103c81",
+    "debian/third-party-notices/yarn/end-of-stream-1.4.1/LICENSE": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+    "debian/third-party-notices/yarn/enquirer-2.3.6/LICENSE": "6be6dd088b7136b4e5d99223e88d5d49ea6587b8d81e634548fec49b95ee140b",
+    "debian/third-party-notices/yarn/es-toolkit-1.39.7/LICENSE": "d6bac1ac6f734db5f7e606a6402ac4d92f391c5fc553702f74a89f6e80587c9c",
+    "debian/third-party-notices/yarn/escape-string-regexp-2.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/fast-glob-3.3.2/LICENSE": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+    "debian/third-party-notices/yarn/fastq-1.17.1/LICENSE": "c3367f6d01a79d368fc4fbb41b3615fcd92f243d6597ab96742f6f976f9325af",
+    "debian/third-party-notices/yarn/fill-range-7.0.1/LICENSE": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
+    "debian/third-party-notices/yarn/fs-0.0.1-security/upstream-package.json": "fb6772bed9e09c79805af0e6dea2f99325fe8b9f9031586c9d52fb836e68c380",
+    "debian/third-party-notices/yarn/fs-constants-1.0.0/LICENSE": "2281f2db407bdbb54f069eec38128b2dee2c0c952f52b786ef1faecb81767b3c",
+    "debian/third-party-notices/yarn/fs-minipass-3.0.3/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/get-stream-5.1.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/git-up-7.0.0/LICENSE": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+    "debian/third-party-notices/yarn/git-url-parse-13.1.0/LICENSE": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+    "debian/third-party-notices/yarn/glob-13.0.0/LICENSE.md": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+    "debian/third-party-notices/yarn/glob-parent-5.1.2/LICENSE": "2c46f1325bd3822a33c1e2c1e49c18d13127ac00f9c8b3b79196c7a126f73cd9",
+    "debian/third-party-notices/yarn/got-11.8.2/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/grapheme-splitter-1.0.4/LICENSE": "80420e1ac2df657805043343290631f7f709e821c5f6c97fb7699dc362fcd049",
+    "debian/third-party-notices/yarn/has-flag-4.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/hpagent-1.2.0/LICENSE": "866fc13def0e8186ac9d084a973e59a0208f7327b1daafb024bbb06227f61150",
+    "debian/third-party-notices/yarn/http-cache-semantics-4.1.1/LICENSE": "ab868ad5a2ef5068560d9cd3b2180ec63c140bb4c5cae1ba779d300a0ac74fa3",
+    "debian/third-party-notices/yarn/http-proxy-agent-7.0.2/LICENSE": "71368fd0f5b4129191e9afcd1e1ef2dc89a9090d3e4d80bbab92dafd032b3bef",
+    "debian/third-party-notices/yarn/http2-wrapper-1.0.0-beta.5.2/LICENSE": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+    "debian/third-party-notices/yarn/https-proxy-agent-7.0.6/LICENSE": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+    "debian/third-party-notices/yarn/iconv-lite-0.6.3/LICENSE": "ac779f7314c74f232ef847ea86e714abe25cf6eeb5cc97b69451b74e2af6492d",
+    "debian/third-party-notices/yarn/ieee754-1.2.1/LICENSE": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1",
+    "debian/third-party-notices/yarn/imurmurhash-0.1.4/package-README": "4491517f7deb68d0b2a3bb590e785e276a60f12448447a9650d0bd50161a101c",
+    "debian/third-party-notices/yarn/indent-string-4.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/inherits-2.0.4/LICENSE": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+    "debian/third-party-notices/yarn/ink-3.2.0/license": "ac7dc693f011a591d380eb31da2b042c2443a83f9e200ac8a57398bdd86dacdd",
+    "debian/third-party-notices/yarn/ink-text-input-4.0.3/license": "ac7dc693f011a591d380eb31da2b042c2443a83f9e200ac8a57398bdd86dacdd",
+    "debian/third-party-notices/yarn/ip-address-10.1.0/LICENSE": "f8d791359a50cbcac82c29cb7b0b1b889b28be76fdd35b8ee33f0f7c8704702a",
+    "debian/third-party-notices/yarn/is-ci-2.0.0/LICENSE": "25bd22427e27b0d3f1c3da2670bb44b622bcced22ebdf4777d5488ac129370a1",
+    "debian/third-party-notices/yarn/is-extglob-2.1.1/LICENSE": "73b5283588baa142c5baaef5f56d3e8fdea7a30b214e8c5737e87640f882453a",
+    "debian/third-party-notices/yarn/is-fullwidth-code-point-3.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/is-glob-4.0.3/LICENSE": "4cd903859549d4b20b571041f96dfae1136ed079c476126268f9d7cc1b611150",
+    "debian/third-party-notices/yarn/is-number-7.0.0/LICENSE": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
+    "debian/third-party-notices/yarn/is-ssh-1.4.0/LICENSE": "447fbf7f897e92ca9cbd7366c789a7931d535df5aa3567138552a2a67ebd6240",
+    "debian/third-party-notices/yarn/is-windows-1.0.2/LICENSE": "6b8eac57398e657431675649c722902adbbd3058e3af382f6bc4fd1c05325df6",
+    "debian/third-party-notices/yarn/isexe-2.0.0/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/js-reporters-1.2.1/LICENSE": "ba020dd87ab775c4d3f3c7c7a61756f3372d1bfaa6f77e4ac26e6142ec10c43b",
+    "debian/third-party-notices/yarn/js-reporters-1.2.1/license-header": "fc73b470490c87ab1da7074813c82fc6f1eb9daa66958cd1f0736070df1b2197",
+    "debian/third-party-notices/yarn/js-tokens-4.0.0/LICENSE": "2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1",
+    "debian/third-party-notices/yarn/js-yaml-4.3.0/LICENSE": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550",
+    "debian/third-party-notices/yarn/json-buffer-3.0.1/LICENSE": "715f1f0f2eb7688e53e4e958acdc7fc9e365ae3eaf26efc2604b93cc65fdc3f5",
+    "debian/third-party-notices/yarn/keyv-4.5.4/package-README": "c39e1b3f735bb9302eb3cbd84aeb48c4311db64381f9e0a1aa4a61ddf59ce890",
+    "debian/third-party-notices/yarn/lodash-4.17.21/LICENSE": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+    "debian/third-party-notices/yarn/loose-envify-1.4.0/LICENSE": "4eb7543b08d955a6d23fcc224601d43ff566e775be918805e26210d7f6eb4893",
+    "debian/third-party-notices/yarn/lowercase-keys-2.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/lru-cache-11.2.5/LICENSE.md": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+    "debian/third-party-notices/yarn/make-fetch-happen-15.0.6/LICENSE": "a806e21000ee60cfd64a6f1416f29c7552b4834701974e86c0156f99c0cdd806",
+    "debian/third-party-notices/yarn/merge2-1.4.1/LICENSE": "b2590e53ea6e050512c3993bfc746c394bbba9242fd6909245201bdc1dc6862a",
+    "debian/third-party-notices/yarn/micromatch-4.0.5/LICENSE": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
+    "debian/third-party-notices/yarn/mimic-fn-2.1.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/mimic-response-1.0.1/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/mimic-response-3.1.0/license": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+    "debian/third-party-notices/yarn/minimatch-10.1.1/LICENSE.md": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901",
+    "debian/third-party-notices/yarn/minimatch-3.0.4/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/minipass-3.3.5/LICENSE": "a5a110eb524bf3217958e405b5e3411277e915a2f5902c330348877000337e53",
+    "debian/third-party-notices/yarn/minipass-7.1.2/LICENSE": "833faa18ac4b83a6372c05b3643d0d44ecd27d6627b8cd19b0f48fe74260cf39",
+    "debian/third-party-notices/yarn/minipass-collect-2.0.1/LICENSE": "b630651f34d0e0284ea940601bbe0a58f306ad7e9819e351d9dfab812f8d0f38",
+    "debian/third-party-notices/yarn/minipass-fetch-5.0.0/LICENSE": "1dedee6f84f5875ce4dc398d4d767274eb952a43cfd510a6ada856b2ed347472",
+    "debian/third-party-notices/yarn/minipass-flush-1.0.5/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/minipass-pipeline-1.2.4/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/minipass-sized-1.0.3/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/minizlib-3.1.0/LICENSE": "df05697a04b8997c79d423930534e59cc18828f6e22d0c8c2d62fcbea1c4f50b",
+    "debian/third-party-notices/yarn/ms-2.1.3/license.md": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+    "debian/third-party-notices/yarn/negotiator-1.0.0/LICENSE": "553d4d20029a24e315b428a1a54a9e109eaa340f2e958a4f50a92362c2c4070b",
+    "debian/third-party-notices/yarn/node-watch-0.6.0/LICENSE": "3e19293b6c06959f1c585315017fc80ef7798e1d63b46547e021608b647c6aac",
+    "debian/third-party-notices/yarn/normalize-url-4.5.1/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/object-assign-4.1.1/license": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c",
+    "debian/third-party-notices/yarn/once-1.4.0/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/onetime-5.1.2/license": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+    "debian/third-party-notices/yarn/p-cancelable-2.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/p-limit-2.2.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/p-map-7.0.4/license": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+    "debian/third-party-notices/yarn/p-try-2.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/parse-path-7.0.0/LICENSE": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+    "debian/third-party-notices/yarn/parse-url-8.1.0/LICENSE": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+    "debian/third-party-notices/yarn/patch-console-1.0.0/upstream-package.json": "da00574aaaa92031dd04c48caec60449b8397538d04fe4f518ef4c5693a64d82",
+    "debian/third-party-notices/yarn/path-key-3.1.1/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/path-parse-1.0.7/LICENSE": "3f4609137f65070541b9214300ea0d640af8192857de0eeb2b03403003d9228a",
+    "debian/third-party-notices/yarn/path-scurry-2.0.1/LICENSE.md": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+    "debian/third-party-notices/yarn/picomatch-2.3.1/LICENSE": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+    "debian/third-party-notices/yarn/proc-log-6.1.0/LICENSE": "dc32a0dee275e0a9aeffbc974dbf4899a30dcdc2e5ffa8934aecb69261065864",
+    "debian/third-party-notices/yarn/protocols-2.0.1/LICENSE": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+    "debian/third-party-notices/yarn/pump-3.0.0/LICENSE": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+    "debian/third-party-notices/yarn/queue-microtask-1.2.3/LICENSE": "d4c2065e2b936e62a4eb400efb4576edec9ca1388a9f78aa288e147275e7bc8b",
+    "debian/third-party-notices/yarn/quick-lru-5.1.1/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/qunit-2.9.2/LICENSE.txt": "d0a3bec5cb58d6061e564e94fc8a93584a4e722ab412e2c5b05340afbd94b815",
+    "debian/third-party-notices/yarn/react-17.0.2/LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "debian/third-party-notices/yarn/react-devtools-core-4.28.5/dist/standalone.js.LICENSE.txt": "c16b0772ca43008a33a00f09eb1fdc9b8daa3d602adc17423a67dde93bf01660",
+    "debian/third-party-notices/yarn/react-reconciler-0.26.2/LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "debian/third-party-notices/yarn/readable-stream-3.6.0/LICENSE": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+    "debian/third-party-notices/yarn/readline-sync-1.4.9/LICENSE-MIT": "4ee6bf89a35a031e24d8deb83aac3ab0eb6c815cf7c1bbe6afba217195dac599",
+    "debian/third-party-notices/yarn/resolve-1.9.0/LICENSE": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b",
+    "debian/third-party-notices/yarn/resolve-alpn-1.2.1/LICENSE": "03b347a3d13b0e5bdb8fc5edeed0286b1be51441c6490a90710692d227136e0d",
+    "debian/third-party-notices/yarn/responselike-2.0.0/LICENSE": "2c4e066228dbca96c8c6e8bef5377306f227ffa1d87a18a218b230e13ac5d39e",
+    "debian/third-party-notices/yarn/restore-cursor-3.1.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/reusify-1.0.4/LICENSE": "db0054e6418412e4a265236c94d1d8935057c67f367240b01bb2b0b2f9091812",
+    "debian/third-party-notices/yarn/run-parallel-1.2.0/LICENSE": "d4c2065e2b936e62a4eb400efb4576edec9ca1388a9f78aa288e147275e7bc8b",
+    "debian/third-party-notices/yarn/safe-buffer-5.1.2/LICENSE": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+    "debian/third-party-notices/yarn/safer-buffer-2.1.2/LICENSE": "4bc935e71be198c67ddf3c2b5fddb195f6edc182bfc155a96a6db61b44b494b9",
+    "debian/third-party-notices/yarn/scheduler-0.20.2/LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "debian/third-party-notices/yarn/semver-7.8.5/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/shebang-command-2.0.0/license": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3",
+    "debian/third-party-notices/yarn/shebang-regex-3.0.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/shell-quote-1.8.1/LICENSE": "8bb16db1b047019e4395965f2cf3611b06c34bf86dc2d0210b3c3f91b53c21fe",
+    "debian/third-party-notices/yarn/signal-exit-3.0.7/LICENSE.txt": "e05b1eaf5b5f99b7ad75cd1f38858ff9a311780b97715ead67936d60bf96aa7e",
+    "debian/third-party-notices/yarn/sigstore-4.1.1/LICENSE": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+    "debian/third-party-notices/yarn/slice-ansi-3.0.0/license": "3dc3b3d3a284d871f7f307655c90fb101d73abbf87bbddeefd2f67883353bdbc",
+    "debian/third-party-notices/yarn/smart-buffer-4.2.0/LICENSE": "c46e2c333e1c9e6fcfd130cf91b8e54bf67b60fabbc04996f7e199b990353ff3",
+    "debian/third-party-notices/yarn/socks-2.8.7/LICENSE": "4f4f28866154c8d758241a64296e8790d45d7d912ff7b029930778c06d8f2a72",
+    "debian/third-party-notices/yarn/socks-proxy-agent-8.0.5/LICENSE": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+    "debian/third-party-notices/yarn/ssri-12.0.0/LICENSE.md": "3749709146345fa15546aaba4e3ab1b3b92a4d930077b5bc32d90815cb63afaf",
+    "debian/third-party-notices/yarn/ssri-13.0.0/LICENSE.md": "3749709146345fa15546aaba4e3ab1b3b92a4d930077b5bc32d90815cb63afaf",
+    "debian/third-party-notices/yarn/stack-utils-2.0.5/license": "38edd343025e65db213da4842b38736af9a28af374acfb1af636a5c7e387dc6b",
+    "debian/third-party-notices/yarn/string-width-4.2.3/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/string_decoder-1.2.0/LICENSE": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+    "debian/third-party-notices/yarn/strip-ansi-6.0.1/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/supports-color-7.1.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/tar-7.5.9/LICENSE.md": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+    "debian/third-party-notices/yarn/tar-stream-2.2.0/LICENSE": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+    "debian/third-party-notices/yarn/tau-prolog-0.2.66/LICENSE": "97f3e263bd0acaad9311a44433f73e59877f639db8634a70e1180ef19e770486",
+    "debian/third-party-notices/yarn/tinylogic-2.0.0/package-README": "e39ffe4aa442a8db677d7fba61a5d8cc0a2a5e2d0cc26ad83c5e1436f4b653c6",
+    "debian/third-party-notices/yarn/to-regex-range-5.0.1/LICENSE": "e7d1fee7347ffddccc5fd03327ffdb50f8c112be0d5016d62388a92c4ae6e7a9",
+    "debian/third-party-notices/yarn/treeify-1.1.0/LICENSE": "83927d1555a8e1d5ed9896991fbb2b4cdfb64f45f5e12b7446c3bff5cea538d3",
+    "debian/third-party-notices/yarn/tslib-2.6.2/CopyrightNotice.txt": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b",
+    "debian/third-party-notices/yarn/tslib-2.6.2/LICENSE.txt": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+    "debian/third-party-notices/yarn/tuf-js-4.1.0/LICENSE": "564bcb001d6e131452a8e9fba0f0ccc59e8b881f84ce3e46e319a5a33e191e10",
+    "debian/third-party-notices/yarn/typanion-3.14.0/package-README": "1a5035a89293fe3ca49f5473525159d63624388421ba170f82ee6cf56e90556a",
+    "debian/third-party-notices/yarn/type-fest-0.12.0/license": "64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae",
+    "debian/third-party-notices/yarn/type-fest-0.15.1/license": "64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae",
+    "debian/third-party-notices/yarn/type-fest-0.21.3/license": "64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae",
+    "debian/third-party-notices/yarn/undici-types-5.26.5/upstream-LICENSE": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+    "debian/third-party-notices/yarn/undici-types-7.10.0/LICENSE": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+    "debian/third-party-notices/yarn/unique-filename-5.0.0/LICENSE": "11734bf6e540e2c021413451205315e5053932de9df9e81279cf2acad6f135ed",
+    "debian/third-party-notices/yarn/unique-slug-6.0.0/LICENSE": "8e8b31dd3582eb47f1b28bd6f009b54cd926adb9431e8424db7c2eae7c4af437",
+    "debian/third-party-notices/yarn/util-deprecate-1.0.2/LICENSE": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7",
+    "debian/third-party-notices/yarn/which-2.0.2/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/widest-line-3.1.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/wrap-ansi-6.2.0/license": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+    "debian/third-party-notices/yarn/wrappy-1.0.2/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/ws-7.5.10/LICENSE": "3de284c8e6fa7e8437eff6f53695471e0332129a5b42a79361e17b7637de94b3",
+    "debian/third-party-notices/yarn/yallist-4.0.0/LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+    "debian/third-party-notices/yarn/yallist-5.0.0/LICENSE.md": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+    "debian/third-party-notices/yarn/yoga-layout-prebuilt-1.10.0/license": "ac7dc693f011a591d380eb31da2b042c2443a83f9e200ac8a57398bdd86dacdd",
+    "debian/third-party-notices/yarn-native/arcanis-libzip-LICENSE": "af6d9141427cf40b7d1fa6d7f5473b06a7faa9f9b0a2ea588eb6ba7b2e1c8a9e",
+    "debian/third-party-notices/yarn-native/emscripten-core-emscripten-COPYRIGHT": "70ca142d257e2690a1f8eda8a296e64a6d1b16d8aee6784f8ddcf67f3163635d",
+    "debian/third-party-notices/yarn-native/emscripten-core-emscripten-LICENSE": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+    "debian/third-party-notices/yarn-native/zlib-ng-zlib-ng-LICENSE.md": "d3c80be055d94d798eaa786116e84fa0b010bc11420b5d2060d978ea77845436",
+    "debian/third-party-sources/circum-icons-cec1364b.tar.gz": "1eaf265d52b70e8bc57bdd692d9415e7cd5075c67ae787e84908f86c758f3c46"
+  }
 }

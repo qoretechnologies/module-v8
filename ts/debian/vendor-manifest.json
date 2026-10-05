@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "lock_sha256": "53c40d9b7e7d78e93f3002c38f86edb4dab78d822f4ca6fb974465ca0535b47b",
-  "package_sha256": "b6faeab7ad24ec07bb5ca2e6259a8ee97c5db1834e303d1ea3dee9841a5e0fef",
-  "yarn_sha256": "1fe4e1193cbcd13a48d8f436bb17d3c672b049a5e32a758aab9866a073db1702",
+  "lock_sha256": "f2cd19813d2a8569340ee3d8f37aa09810faedc5a97aa9081fab6c4a90b5769c",
+  "package_sha256": "5a4e4c54aaed1fd819c1bbe48fbb6c5773110209e9b480f2961b2047d923ec9b",
+  "yarn_sha256": "a28ad591febb769f939c11f82f89bacad0b0fac0c884d3b78fa2aaaee970907e",
   "archives": [
     {
       "archive": "@anthropic-ai-sdk-npm-0.62.0-bd66e6fc36-883a5e1d74.zip",
@@ -487,10 +487,27 @@
       "has_install_script": false
     },
     {
-      "archive": "@babel-compat-data-npm-7.28.5-41f8d327e8-702a25de73.zip",
-      "sha256": "a635115c1afbdee10004f77077e377a93b54aeab568d1571758ef6607ed7883a",
+      "archive": "@babel-code-frame-npm-7.29.7-cc910f9962-169fc20801.zip",
+      "sha256": "c0f01c6950a54a68b56071006b84e7440be9c1c9c8094d156ab426e749637e22",
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-code-frame"
+      },
+      "notice_files": [
+        "node_modules/@babel/code-frame/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "@babel-compat-data-npm-7.29.7-6487d724ba-47913f05e0.zip",
+      "sha256": "2690c3dea2cf3408e450466df85835f75c00b63a1bcef48204862278b1411b20",
       "name": "@babel/compat-data",
-      "version": "7.28.5",
+      "version": "7.29.7",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -504,10 +521,10 @@
       "has_install_script": false
     },
     {
-      "archive": "@babel-core-npm-7.28.5-cd68c2d8db-535f822380.zip",
-      "sha256": "220a6d459e276ee93ebbd8149ca2df118635fe8f3685ebdcffaf093e726b0e4f",
+      "archive": "@babel-core-npm-7.29.6-821a1c9c02-0179b76397.zip",
+      "sha256": "3c2b37688aa312bfd69ebcbb5c4adb7c842c893efb484713e5bf7314392d1cad",
       "name": "@babel/core",
-      "version": "7.28.5",
+      "version": "7.29.6",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -538,6 +555,23 @@
       "has_install_script": false
     },
     {
+      "archive": "@babel-generator-npm-7.29.8-00b0e7c8b6-7b89669631.zip",
+      "sha256": "e7f2b21403b7ded70843e6754cec6fc74c3d94c42d5d57da3537e9e911bdc882",
+      "name": "@babel/generator",
+      "version": "7.29.8",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-generator"
+      },
+      "notice_files": [
+        "node_modules/@babel/generator/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
       "archive": "@babel-helper-annotate-as-pure-npm-7.27.3-d8daa5b949-94996ce0a0.zip",
       "sha256": "13b12755eb8734cdfaba207270e665cb922c3b300eb32b42c83f67a294b5fb8d",
       "name": "@babel/helper-annotate-as-pure",
@@ -555,10 +589,10 @@
       "has_install_script": false
     },
     {
-      "archive": "@babel-helper-compilation-targets-npm-7.27.2-111dda04b6-f338fa00dc.zip",
-      "sha256": "b36abf91c2451d00b341a63af9af51a6760a07b7b06f6c7a908117897fc28db9",
+      "archive": "@babel-helper-compilation-targets-npm-7.29.7-7cb31cc38d-4c15fd4c69.zip",
+      "sha256": "6feac80a92543a187b923fce5a61f89d440f8eb82eb0a1fcc2e531024b35dfd0",
       "name": "@babel/helper-compilation-targets",
-      "version": "7.27.2",
+      "version": "7.29.7",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -589,6 +623,23 @@
       "has_install_script": false
     },
     {
+      "archive": "@babel-helper-globals-npm-7.29.7-bb76425ef5-f38417c40b.zip",
+      "sha256": "8cbb0050aa211bae4acf070b1a7baca6ab88110a7adceb424a545cd365965047",
+      "name": "@babel/helper-globals",
+      "version": "7.29.7",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-globals"
+      },
+      "notice_files": [
+        "node_modules/@babel/helper-globals/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
       "archive": "@babel-helper-module-imports-npm-7.27.1-3bf33978f4-e00aace096.zip",
       "sha256": "0bdfe5b45d851c754456eb9263c9c627bd7d9730c5914284f0257e51f8e38fa5",
       "name": "@babel/helper-module-imports",
@@ -606,10 +657,27 @@
       "has_install_script": false
     },
     {
-      "archive": "@babel-helper-module-transforms-npm-7.28.3-7b69ec189a-549be62515.zip",
-      "sha256": "061435fd540764fcd83a4264f5e16e63cdbea1109d90ea54e68a6bbd00e8f603",
+      "archive": "@babel-helper-module-imports-npm-7.29.7-c44b78302c-6adf60d973.zip",
+      "sha256": "4a75817dcea25bea8a415802a263c48d19ec80ce52ca88b5bb511e2648682346",
+      "name": "@babel/helper-module-imports",
+      "version": "7.29.7",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-module-imports"
+      },
+      "notice_files": [
+        "node_modules/@babel/helper-module-imports/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "@babel-helper-module-transforms-npm-7.29.7-50e1c84dbd-ee5a2172c2.zip",
+      "sha256": "70e532925bc7aaa7e50bfbd15334afd87ab8a0ba0ca5af8ada1f4bb664d4b9d5",
       "name": "@babel/helper-module-transforms",
-      "version": "7.28.3",
+      "version": "7.29.7",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -657,6 +725,23 @@
       "has_install_script": false
     },
     {
+      "archive": "@babel-helper-string-parser-npm-7.29.7-87998d618e-194bc0f171.zip",
+      "sha256": "84bcb6af6373fdc96e2b9ebba37903395814bff0f3b9d85d2d6be4c5fd0655c4",
+      "name": "@babel/helper-string-parser",
+      "version": "7.29.7",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-string-parser"
+      },
+      "notice_files": [
+        "node_modules/@babel/helper-string-parser/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
       "archive": "@babel-helper-validator-identifier-npm-7.28.5-1953d49d2b-42aaebed91.zip",
       "sha256": "8a343e9098b48a701603d751c7c34f0a99d41a04a279b7d92dac204b08026557",
       "name": "@babel/helper-validator-identifier",
@@ -674,10 +759,27 @@
       "has_install_script": false
     },
     {
-      "archive": "@babel-helper-validator-option-npm-7.27.1-7c563f0423-6fec5f006e.zip",
-      "sha256": "f4ee7735748305887245bb094e2a93519e9a887b86998adc37456f761cb79f47",
+      "archive": "@babel-helper-validator-identifier-npm-7.29.7-9939aac13d-4795354e7a.zip",
+      "sha256": "79292b4756b5a54a6e9f84d903a952301d4d6ab3b15f645209bab195a99a1ae8",
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-validator-identifier"
+      },
+      "notice_files": [
+        "node_modules/@babel/helper-validator-identifier/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "@babel-helper-validator-option-npm-7.29.7-635d603818-d2a06c6d0a.zip",
+      "sha256": "eff9c8e53c5532350f8ba6b4fa06730670d15ec07a99f5e50b74775a278cfe6f",
       "name": "@babel/helper-validator-option",
-      "version": "7.27.1",
+      "version": "7.29.7",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -691,10 +793,10 @@
       "has_install_script": false
     },
     {
-      "archive": "@babel-helpers-npm-7.28.4-d9f7567704-aaa5fb8098.zip",
-      "sha256": "0a228c8271ac6202ced7ec50e66b39f0982a8a0d766ae05ac28721f321937f46",
+      "archive": "@babel-helpers-npm-7.29.7-97e81ccfb9-218e8d1095.zip",
+      "sha256": "a220e08858c52a885c018b7c40a126617c291dd5bf9f7f4c95f85ccaee333e6a",
       "name": "@babel/helpers",
-      "version": "7.28.4",
+      "version": "7.29.7",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -712,6 +814,23 @@
       "sha256": "3a35aa1b68346c6911f79a88ced5cc31a8fcf3e1bfdb449766f49d4e523931ef",
       "name": "@babel/parser",
       "version": "7.28.5",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-parser"
+      },
+      "notice_files": [
+        "node_modules/@babel/parser/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "@babel-parser-npm-7.29.9-67a5dd3e9f-171b16eb45.zip",
+      "sha256": "d8e9273e56103d65c33734fbba434ad184e5050db7e82c3d9c4c4df415bc1de4",
+      "name": "@babel/parser",
+      "version": "7.29.9",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -1020,6 +1139,23 @@
       "has_install_script": false
     },
     {
+      "archive": "@babel-template-npm-7.29.7-46b79049c7-8bb7f900dc.zip",
+      "sha256": "98f028b31124be4fd3befee6ba55b7362ed93f6ce44dd8c32df652cb9229a152",
+      "name": "@babel/template",
+      "version": "7.29.7",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-template"
+      },
+      "notice_files": [
+        "node_modules/@babel/template/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
       "archive": "@babel-traverse-npm-7.28.5-2b51d83636-f6c4a59599.zip",
       "sha256": "9053a029988aabc1b8cc1cca72e0954d635bfad5746c9cd1de7ad7a5ee7fc950",
       "name": "@babel/traverse",
@@ -1037,10 +1173,44 @@
       "has_install_script": false
     },
     {
+      "archive": "@babel-traverse-npm-7.29.8-58d4eddcdc-87a28989c4.zip",
+      "sha256": "31b1c8cda8aac84ef51667746be0cd59f7f0a84d32e098178a28439e06a5f666",
+      "name": "@babel/traverse",
+      "version": "7.29.8",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "notice_files": [
+        "node_modules/@babel/traverse/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
       "archive": "@babel-types-npm-7.28.5-582d7cca8a-a5a483d210.zip",
       "sha256": "a6f1b06e09852202141feb63f63654513a642ff7ea95eca255380e1d5418c4c6",
       "name": "@babel/types",
       "version": "7.28.5",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "notice_files": [
+        "node_modules/@babel/types/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "@babel-types-npm-7.29.8-3f9597fc63-be7c279f0a.zip",
+      "sha256": "b38fbe77b43183e1a58b92cfc32c1dd25f938a250c6abb599fc16d87eb3b8c1a",
+      "name": "@babel/types",
+      "version": "7.29.8",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -1752,10 +1922,10 @@
       "has_install_script": false
     },
     {
-      "archive": "@humanfs-core-npm-0.19.1-e2e7aaeb6e-aa4e015217.zip",
-      "sha256": "43c487327dd88bc0523581c0f38b4ad0a9bd02b015a787cf77765d4444574f24",
+      "archive": "@humanfs-core-npm-0.19.2-ad081ed090-d0a1d52d7b.zip",
+      "sha256": "af4dc463734e1fe03296c08d954e9f50d839ff10b0f8fb12da33ce931097e15c",
       "name": "@humanfs/core",
-      "version": "0.19.1",
+      "version": "0.19.2",
       "license": "Apache-2.0",
       "repository": {
         "type": "git",
@@ -1768,10 +1938,10 @@
       "has_install_script": false
     },
     {
-      "archive": "@humanfs-node-npm-0.16.7-fa16bdb590-9f83d3cf2c.zip",
-      "sha256": "dcb4efc0f62fa5c1be05507f82bacc98b74e0f02425cbc2043c51e6b4abc7189",
+      "archive": "@humanfs-node-npm-0.16.8-80d1509ded-56140579db.zip",
+      "sha256": "adb475aa4d18dd10785533ee9ca2330d11a650d46c51730bf91d21d0dc25ce86",
       "name": "@humanfs/node",
-      "version": "0.16.7",
+      "version": "0.16.8",
       "license": "Apache-2.0",
       "repository": {
         "type": "git",
@@ -1781,6 +1951,20 @@
       "notice_files": [
         "node_modules/@humanfs/node/LICENSE"
       ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "@humanfs-types-npm-0.15.0-e47e8568ba-fc26b9a024.zip",
+      "sha256": "526208728ad4578f266a91502ff85cb021aae4c9b77b20260f36cebe91a64ad1",
+      "name": "@humanfs/types",
+      "version": "0.15.0",
+      "license": "Apache-2.0",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/humanwhocodes/humanfs.git"
+      },
+      "notice_files": [],
       "native_files": [],
       "has_install_script": false
     },
@@ -6687,10 +6871,10 @@
       "has_install_script": false
     },
     {
-      "archive": "@ungap-structured-clone-npm-1.3.0-aea1bdf957-0fc3097c25.zip",
-      "sha256": "ea6241201af9760932625dbfd1fa30e41b06f76d6291a185b13b28c59e226fbe",
+      "archive": "@ungap-structured-clone-npm-1.3.1-86eb1097d6-7e75faf93c.zip",
+      "sha256": "065810e121d803dba205cb6ea3f57e16813b450790ef91bda40d1c692ed36d63",
       "name": "@ungap/structured-clone",
-      "version": "1.3.0",
+      "version": "1.3.1",
       "license": "ISC",
       "repository": {
         "type": "git",
@@ -6700,6 +6884,19 @@
         "node_modules/@ungap/structured-clone/LICENSE"
       ],
       "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "@unrs-resolver-binding-linux-arm64-gnu-npm-1.11.1-9df43e91b5-10c0.zip",
+      "sha256": "e9ebffab4726bce7dc8cd5e0cca15d5e44170ccf1a2686a55fe79724e5a5efdd",
+      "name": "@unrs/resolver-binding-linux-arm64-gnu",
+      "version": "1.11.1",
+      "license": "MIT",
+      "repository": "git+https://github.com/unrs/unrs-resolver.git",
+      "notice_files": [],
+      "native_files": [
+        "node_modules/@unrs/resolver-binding-linux-arm64-gnu/resolver.linux-arm64-gnu.node"
+      ],
       "has_install_script": false
     },
     {
@@ -7506,10 +7703,10 @@
       "has_install_script": false
     },
     {
-      "archive": "baseline-browser-mapping-npm-2.9.11-39918188b7-eba49fcc1b.zip",
-      "sha256": "be5335f4f385c02523e911378bc2ea97b36408fe171f2952d8f45182daad9094",
+      "archive": "baseline-browser-mapping-npm-2.11.0-f6754b021f-03176d4d1c.zip",
+      "sha256": "bda3dbd8f577ba8d6e6c7aadb7813853c7d978ee0801d29845a00b5392b0b67c",
       "name": "baseline-browser-mapping",
-      "version": "2.9.11",
+      "version": "2.11.0",
       "license": "Apache-2.0",
       "repository": {
         "type": "git",
@@ -7754,6 +7951,19 @@
       "has_install_script": false
     },
     {
+      "archive": "braces-patch-f57dd084e4-faa5090ab5.zip",
+      "sha256": "a9fd30c624ac08512ae0d97ae2ea8caeffef2dad9bf06427fe916458e6057abc",
+      "name": "braces",
+      "version": "3.0.3",
+      "license": "MIT",
+      "repository": "micromatch/braces",
+      "notice_files": [
+        "node_modules/braces/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
       "archive": "brorand-npm-1.1.0-ea86634c4b-6f366d7c49.zip",
       "sha256": "4626fb9efc3197e5210834dc97fec65f0fbafa67fac802147a81b6149bfc63e0",
       "name": "brorand",
@@ -7850,10 +8060,10 @@
       "has_install_script": false
     },
     {
-      "archive": "browserslist-npm-4.28.1-e455c4c2e8-545a5fa9d7.zip",
-      "sha256": "f3018ebc094de4cae59ad05a946acab63ec9978885ba8e9c0a37c51480f241c6",
+      "archive": "browserslist-npm-4.28.7-844ec494a5-dc41922a9f.zip",
+      "sha256": "0685c7c4eceaef9f578638acb0f8344cb9d903abd8e4f90603a5c204f6bfa898",
       "name": "browserslist",
-      "version": "4.28.1",
+      "version": "4.28.7",
       "license": "MIT",
       "repository": "browserslist/browserslist",
       "notice_files": [
@@ -8067,10 +8277,10 @@
       "has_install_script": false
     },
     {
-      "archive": "caniuse-lite-npm-1.0.30001761-a0289502a7-8ea4158ccd.zip",
-      "sha256": "f3068cebb96ec219f93bc198463668c15019504f510597ec10683cd9811bd93f",
+      "archive": "caniuse-lite-npm-1.0.30001814-f0fbfdefbf-c1b93b8cd4.zip",
+      "sha256": "5a082a54e95d168f1f2900856001ba3b077442bc0286449c0ae691d1fde23b01",
       "name": "caniuse-lite",
-      "version": "1.0.30001761",
+      "version": "1.0.30001814",
       "license": "CC-BY-4.0",
       "repository": "browserslist/caniuse-lite",
       "notice_files": [
@@ -9579,14 +9789,14 @@
       "has_install_script": false
     },
     {
-      "archive": "electron-to-chromium-npm-1.5.267-b62f38d65a-0732bdb891.zip",
-      "sha256": "265f29ba451a7d89a96ce6e38879f5300fc642b2435f22d17f2f622537015b16",
+      "archive": "electron-to-chromium-npm-1.5.444-2dc43cf395-ad8e619617.zip",
+      "sha256": "0a4ca1691a6456aaad09550bf2210c6a329e480d4f0deb516aa2d41732c66444",
       "name": "electron-to-chromium",
-      "version": "1.5.267",
+      "version": "1.5.444",
       "license": "ISC",
       "repository": {
         "type": "git",
-        "url": "https://github.com/kilian/electron-to-chromium/"
+        "url": "git+https://github.com/Kilian/electron-to-chromium.git"
       },
       "notice_files": [
         "node_modules/electron-to-chromium/LICENSE"
@@ -9597,6 +9807,22 @@
     {
       "archive": "elliptic-npm-6.6.1-87bb857cbc-8b24ef782e.zip",
       "sha256": "3d6bf45f543102131960445b810961fccfcc4466cd490e61478d3921d20ed6fe",
+      "name": "elliptic",
+      "version": "6.6.1",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git@github.com:indutny/elliptic"
+      },
+      "notice_files": [
+        "node_modules/elliptic/README.md"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "elliptic-patch-c7822fa1bb-e6b1160251.zip",
+      "sha256": "310acdd541be8a13cf0b8b0a4c70f3ac210a14598a2bf5ce1d5f0c331c9e2874",
       "name": "elliptic",
       "version": "6.6.1",
       "license": "MIT",
@@ -11876,10 +12102,10 @@
       "has_install_script": false
     },
     {
-      "archive": "handlebars-npm-4.7.8-25244c2c82-7aff423ea3.zip",
-      "sha256": "97a86a182b280fe1a525d3863ba1e2e12897eb93d248c7611c07fa5cec7644f0",
+      "archive": "handlebars-npm-4.7.9-46c3c68605-22f8105a7e.zip",
+      "sha256": "0cbab30c833eb304f2d35f6774a835014b3f8f59bcc7ea013eb108a4eaa24da9",
       "name": "handlebars",
-      "version": "4.7.8",
+      "version": "4.7.9",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -12196,6 +12422,22 @@
     {
       "archive": "http-cache-semantics-npm-4.2.0-fadacfb3ad-45b66a945c.zip",
       "sha256": "bc5c5a245f4614b2791a8f66b211b47598ea6fb71cdf620fdd32e19585867ff4",
+      "name": "http-cache-semantics",
+      "version": "4.2.0",
+      "license": "BSD-2-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kornelski/http-cache-semantics.git"
+      },
+      "notice_files": [
+        "node_modules/http-cache-semantics/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "http-cache-semantics-patch-9898eb8de7-4c69e647ba.zip",
+      "sha256": "7d78df7ddad2903830690d64578c91b935c7ede4626b6a7b1ca4a63b33a4f172",
       "name": "http-cache-semantics",
       "version": "4.2.0",
       "license": "BSD-2-Clause",
@@ -16488,14 +16730,14 @@
       "has_install_script": false
     },
     {
-      "archive": "node-releases-npm-2.0.27-b2d1b8de4a-f1e6583b78.zip",
-      "sha256": "53a9f5ac053b12db9cda1e4ce072390c58e8b4eb9470e8af29eef2590c4504b6",
+      "archive": "node-releases-npm-2.0.57-0e77e90f8d-fe5b68fba1.zip",
+      "sha256": "9597f9388f26688e6cf2cf70c914242f8f54fae0044297b49063f0d57dfa0209",
       "name": "node-releases",
-      "version": "2.0.27",
+      "version": "2.0.57",
       "license": "MIT",
       "repository": {
         "type": "git",
-        "url": "git+https://github.com/chicoxyzzy/node-releases.git"
+        "url": "https://github.com/chicoxyzzy/node-releases.git"
       },
       "notice_files": [
         "node_modules/node-releases/LICENSE"
@@ -18542,8 +18784,8 @@
       "has_install_script": false
     },
     {
-      "archive": "resolve-patch-8d5745ba49-ee5b182f2e.zip",
-      "sha256": "8188686e51e13949330043dd756200d64843798c961034c9cc60e57474b962eb",
+      "archive": "resolve-patch-6a14e45123-55f7a29897.zip",
+      "sha256": "57876f09fe8dc210ee8c4fed379541af133e314cbc0ac80bacb5d188857d110c",
       "name": "resolve",
       "version": "1.22.11",
       "license": "MIT",
@@ -19661,6 +19903,22 @@
     {
       "archive": "stream-json-npm-1.9.1-067a312ba9-0521e5cb3f.zip",
       "sha256": "ef7097595cbe92382be394c99373178284442aa5e30b3297d53da5f0a64100ae",
+      "name": "stream-json",
+      "version": "1.9.1",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/uhop/stream-json.git"
+      },
+      "notice_files": [
+        "node_modules/stream-json/LICENSE"
+      ],
+      "native_files": [],
+      "has_install_script": false
+    },
+    {
+      "archive": "stream-json-patch-6bbbb8eb53-ebc265ec67.zip",
+      "sha256": "472a302225bb16e9947fc1112f71fb988a02d775a4e1102c0453e8f158caf710",
       "name": "stream-json",
       "version": "1.9.1",
       "license": "BSD-3-Clause",
@@ -21376,10 +21634,10 @@
       "has_install_script": false
     },
     {
-      "archive": "update-browserslist-db-npm-1.2.3-de1d320326-13a00355ea.zip",
-      "sha256": "7c1ce911902e15bb026031c88d304eef207e82e0f24c5b6fea7350a32c295890",
+      "archive": "update-browserslist-db-npm-1.3.3-02e6a31cfe-07bab166c1.zip",
+      "sha256": "3267ce2768194246c5ac8c645a7dd49fe9c48cd1d7e3c966d2b1cbc45d1d3a80",
       "name": "update-browserslist-db",
-      "version": "1.2.3",
+      "version": "1.3.3",
       "license": "MIT",
       "repository": "browserslist/update-db",
       "notice_files": [
@@ -21510,26 +21768,10 @@
       "has_install_script": false
     },
     {
-      "archive": "uuid-npm-8.3.2-eca0baba53-bcbb807a91.zip",
-      "sha256": "00a6b9e4056bed8c898d201f2986f63f9420bd6539224129eeb4b20cbd2bfff7",
+      "archive": "uuid-npm-11.1.1-311687c807-9e3af58eba.zip",
+      "sha256": "921843bd9ba0994f40932f5baf8ba99802869dc689f57bf2398a4528f5a9c249",
       "name": "uuid",
-      "version": "8.3.2",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/uuidjs/uuid.git"
-      },
-      "notice_files": [
-        "node_modules/uuid/LICENSE.md"
-      ],
-      "native_files": [],
-      "has_install_script": false
-    },
-    {
-      "archive": "uuid-npm-9.0.1-39a8442bc6-1607dd32ac.zip",
-      "sha256": "2fa440dc0b8e35390dd3cf674e4160003000d1756bc98fc1c5f16f38c9f26876",
-      "name": "uuid",
-      "version": "9.0.1",
+      "version": "11.1.1",
       "license": "MIT",
       "repository": {
         "type": "git",
@@ -22288,5 +22530,12 @@
       "native_files": [],
       "has_install_script": false
     }
-  ]
+  ],
+  "patches": {
+    "dependency-patches/braces-security.patch": "d5e4fcd4d8e1141870b3a05f89f60e722a3cdcce51de4aecd9494c4ab45ae93a",
+    "dependency-patches/elliptic-security.patch": "a81ccb902ad0053377fc731a608a4111c812bd15832300ce974f8799521e3746",
+    "dependency-patches/http-cache-semantics-security.patch": "b5ae64c484bdb001b80ad18dfa8cea033ea3a513ba6ddd50c3bc215f97179f3f",
+    "dependency-patches/stream-json-security.patch": "cedab20a39d65c9f338cc28ff111eb6fa08455e5ab451f6a217b422bef44462f"
+  },
+  "yarn_config_sha256": "ed9bc690d21622058ac502c00be5128096345ec58c424827fc9edeaef6446f08"
 }

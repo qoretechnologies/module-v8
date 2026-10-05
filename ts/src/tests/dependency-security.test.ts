@@ -3,6 +3,10 @@
 import { createRequire } from 'node:module';
 
 describe('Transitive dependency security and compatibility', () => {
+  it('Checks UUID bounds, streaming limits and deterministic signing through SDK dependencies', async () => {
+    const verifyDependencies = require('../../scripts/verify-dependency-security.js');
+    await verifyDependencies(require('node:path').resolve(__dirname, '../..'), true);
+  });
   it('Serializes nullable comma arrays through the request client dependency', () => {
     // Resolve from the consumer: a patched top-level copy alone is insufficient.
     const requestRequire = createRequire(require.resolve('@cypress/request'));

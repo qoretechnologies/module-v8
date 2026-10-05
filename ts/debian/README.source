@@ -9,7 +9,7 @@ and matching HubSpot presentation catalogs. Its versioned compatibility
 fingerprints reject unreviewed schema changes before cache activation. Activate
 it explicitly as described in README.Debian.
 
-PUBLICATION GATE: the full catalogue has not been cleared for redistribution.
+PUBLICATION GATE: Facebook SDK hosting approval remains outstanding.
 The schema-provenance.json file records pinned evidence and the remaining
 missing/conflicting grants. Asana and Jira declare Apache-2.0; the original
 DocuSign import has been matched to its MIT-licensed upstream revision. Their
@@ -26,17 +26,19 @@ The Facebook SDK's Platform License permits redistribution for
 Facebook integrations, but its PPA eligibility still needs confirmation under
 https://documentation.ubuntu.com/launchpad/user/reference/launchpad-and-community/legal/launchpad-policies/.
 A service-specific redistribution grant and Launchpad hosting eligibility are
-separate requirements. Complete the per-file Debian
-copyright mapping and preserve all applicable terms before uploading a source
-or binary package to any public repository. These checks apply to testing PPAs
-as well as general releases. No package upload is performed by this recipe.
+separate requirements. The per-file/archive map is in copyright-map.json, with
+reviewed scanner discrepancies and exact input digests. It covers source-only
+build dependencies as well as runtime components. No package upload is performed
+by this recipe; the Facebook hosting decision applies to testing PPAs too.
 
 Build from the .dsc and both upstream components: the first-party ts/ sources
 plus the versioned orig-vendor tarball. The vendor component supplies Yarn
-4.12.0, its license and the exact cache archives listed in vendor-manifest.json.
+4.18.1, its license and the exact cache archives listed in vendor-manifest.json.
 Do not substitute an existing node_modules directory, a different Yarn release
 or a newly resolved dependency graph. The manifest validates package.json,
-yarn.lock, the Yarn executable and every cache archive before and after build.
+yarn.lock, .yarnrc.yml, the Yarn executable, dependency patches and every cache
+archive before and after build. The copyright verifier also checks every archive
+and exception path against the reviewed member inventory.
 
 For a checkout, first export tracked, reviewed sources into a NEW directory:
 
@@ -50,7 +52,7 @@ qualification inputs which are not cleared for this package. New source files
 must be tracked before export. The vendor directory is not committed to Git.
 Dependency updates require a newly prefetched and reviewed component,
 updated integrity records and the same offline qualification. The Yarn download
-is https://repo.yarnpkg.com/4.12.0/packages/yarnpkg-cli/bin/yarn.js; its expected
+is https://repo.yarnpkg.com/4.18.1/packages/yarnpkg-cli/bin/yarn.js; its expected
 SHA-256 is in vendor-manifest.json and its packageManager SHA-512 is in package.json.
 All network prefetching happens before creating the source package. Upstream npm
 archives and their license/notice files are preserved in the vendor component.
@@ -69,23 +71,35 @@ Missing, modified, unlisted or symlinked notice inputs fail the build.
 Run `python3 debian/dependency_notices.py verify` in an exported source tree
 with vendor/ present to check the notice inputs independently of Qore.
 
-Notice retention does not establish complete license coverage. In particular,
-42 dependency archives still have only embedded or metadata license evidence;
-mixed-license generated code and nested bundled components require per-file
-mapping before publication. The per-file review must cover development inputs
-in the source package as well as the production dependency tree. Reviewed
-license identifiers retain the original package metadata
-in license_review; conflicting declarations remain explicit review findings.
+Copyright analysis records the exact license scope for each archive, including
+nested generated code, fonts, icon sets, bundled examples and Yarn components.
+The original metadata remains visible when it conflicts with an explicit grant.
+False-positive JSON/GPL detections and alternative licenses are reviewed in the
+map instead of being treated as additional code licenses. Where upstream gives
+no copyright holder statement, the map says so and preserves available author
+metadata without inventing a holder or year. Readable source annotations and all
+original notices remain intact.
+
+The additional third-party notices include React 15.4.2's license/patent grant,
+Yarn's pinned runtime dependency closure, libzip, zlib-ng and Emscripten/musl,
+and each of react-icons' 31 icon sets. Provenance identifies exact upstream
+revisions or integrity-verified npm archives. The MPL Circum Icons' original
+SVG sources are shipped in dependency-notices/additional/third-party-sources.
+The React wrappers remain readable JavaScript; fonts and artwork retain their
+original names. No legal evidence is downloaded during package builds.
+
+Security upgrades and the four pinned backports are documented in
+DEPENDENCY-SECURITY.md and dependency-patches/README.md. The build verifies all
+patches and runs security regressions through the SDK dependency paths.
 
 Install declared Build-Depends, then run dpkg-buildpackage -b -us -uc from the
-extracted source directory. The complete offline build is qualified on Ubuntu
-26.04 amd64. The installed Architecture: all package also passes native Ubuntu
-26.04 arm64 discovery and production tests, notice verification and
-install/purge/reinstall checks. The notice verifier and installer are additionally
-tested on Debian 13 amd64 and arm64; this alone does not qualify the complete
-catalogue on Debian. Other build architectures have not been qualified. npm's
-optional development bindings are platform dependent even though the installed
-JavaScript package is architecture independent. No native executable or addon
+extracted source directory. Native offline builds and installed-package checks
+are qualified on Debian 13 and Ubuntu 26.04, each on amd64 and arm64. Each build
+runs 142 JavaScript and 19 Python tests. Installed checks verify 81 apps and
+1,426 actions in fresh Qore processes, exact notice bytes, security regressions
+and install/purge/reinstall behavior. Other build architectures have not been
+qualified. npm's optional development bindings are platform dependent even
+though the installed JavaScript package is architecture independent. No native executable or addon
 is permitted in the installed catalogue tree.
 
 The build disables Yarn network access, global cache reuse, telemetry and

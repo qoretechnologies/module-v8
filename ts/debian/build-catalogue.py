@@ -11,6 +11,7 @@ import subprocess
 import sys
 import tempfile
 import dependency_notices
+import copyright_map
 
 ROOT = Path(__file__).resolve().parent.parent
 PRODUCTION = ROOT / '.debian-production'
@@ -22,7 +23,7 @@ ENV = {**os.environ, 'YARN_ENABLE_NETWORK': '0', 'YARN_ENABLE_GLOBAL_CACHE': '0'
        'YARN_ENABLE_TELEMETRY': '0', 'YARN_ENABLE_SCRIPTS': '0',
        'YARN_GLOBAL_FOLDER': str(ROOT / '.debian-yarn-global'),
        'YARN_CACHE_FOLDER': str(ROOT / 'vendor/yarn-cache'),
-       'QORE_CATALOGUE_YARN': str(ROOT / 'vendor/yarn-4.12.0.js'),
+       'QORE_CATALOGUE_YARN': str(ROOT / 'vendor/yarn-4.18.1.js'),
        'PATH': str(ROOT / 'debian/bin') + ':/usr/bin:/bin', 'QORE_MODULE_DIR_ONLY': '1'}
 for key in ('QORE_APP_SCHEMA_SNAPSHOTS', 'QORE_HUBSPOT_SCHEMA_SNAPSHOT'):
     ENV.pop(key, None)
@@ -48,9 +49,13 @@ def run(args, cwd=ROOT, **kwargs):
 
 def verify_inputs():
     for name, key in [('yarn.lock', 'lock_sha256'), ('package.json', 'package_sha256'),
-                      ('vendor/yarn-4.12.0.js', 'yarn_sha256')]:
+                      ('vendor/yarn-4.18.1.js', 'yarn_sha256'),
+                      ('.yarnrc.yml', 'yarn_config_sha256')]:
         if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != MANIFEST[key]:
             raise ValueError('Input changed; regenerate reviewed manifest: ' + name)
+    for name, expected in MANIFEST['patches'].items():
+        if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != expected:
+            raise ValueError('Dependency patch changed: ' + name)
     verify_schema_exclusions(ROOT / 'src/schemas')
     cache = ROOT / 'vendor/yarn-cache'
     expected = {record['archive'] for record in MANIFEST['archives']}
@@ -60,6 +65,7 @@ def verify_inputs():
     # Also checks every archive checksum, all retained notice bytes and the
     # separately pinned upstream notices before using any vendor input.
     dependency_notices.verified_notices(ROOT)
+    copyright_map.verify(ROOT)
 
 
 def prune_runtime():
@@ -98,6 +104,7 @@ def build():
     PRODUCTION.mkdir(exist_ok=True)
     for name in ('package.json', 'yarn.lock', '.yarnrc.yml'):
         shutil.copy2(ROOT / name, PRODUCTION / name)
+    shutil.copytree(ROOT / 'dependency-patches', PRODUCTION / 'dependency-patches', dirs_exist_ok=True)
     run(['yarn', 'workspaces', 'focus', '--production'], cwd=PRODUCTION)
     shutil.copytree(ROOT / 'dist', PRODUCTION / 'dist', dirs_exist_ok=True)
     # contentful-sdk-core declares its optional build-time Rollup binding as a
@@ -132,6 +139,7 @@ def test():
         fixture = Path(temporary) / 'catalogue'
         shutil.copytree(PRODUCTION, fixture, symlinks=True)
         run(['node', str(ROOT / 'debian/tests/production.js'), str(fixture)])
+        run(['node', str(ROOT / 'scripts/verify-dependency-security.js'), str(fixture)])
 
 
 def install():

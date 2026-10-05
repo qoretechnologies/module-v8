@@ -15,6 +15,7 @@ export QORE_MODULE_DIR_ONLY=1
 export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT="$catalogue/dist/index.js"
 
 /usr/bin/node "$source_debian/tests/production.js" "$catalogue"
+/usr/bin/node "$source_debian/../scripts/verify-dependency-security.js" "$catalogue"
 test ! -e "$catalogue/dist/schemas/hubspot"
 qore-hubspot-schemas --help
 qore-app-schemas --help

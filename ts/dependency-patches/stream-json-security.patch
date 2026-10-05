@@ -1,0 +1,25 @@
+diff --git a/filters/FilterBase.js b/filters/FilterBase.js
+--- a/filters/FilterBase.js
++++ b/filters/FilterBase.js
+@@ -25,6 +25,11 @@
+     super(Object.assign({}, options, {writableObjectMode: true, readableObjectMode: true}));
+     this._transform = this._check;
+     this._stack = [];
++    // Bound path-filter work on untrusted deeply nested JSON (CVE-2026-71429).
++    this._maxDepth = options && options.maxDepth !== undefined ? options.maxDepth : 1024;
++    if (this._maxDepth !== Infinity && (!Number.isSafeInteger(this._maxDepth) || this._maxDepth < 1)) {
++      throw new RangeError('maxDepth must be a positive safe integer or Infinity');
++    }
+ 
+     const filter = options && options.filter,
+       separator = (options && options.pathSeparator) || '.';
+@@ -55,6 +60,9 @@
+   }
+ 
+   _check(chunk, _, callback) {
++    if ((chunk.name === 'startObject' || chunk.name === 'startArray') && this._stack.length >= this._maxDepth) {
++      return callback(new RangeError('JSON nesting exceeds maxDepth'));
++    }
+     // update the last stack key
+     switch (chunk.name) {
+       case 'startObject':

@@ -141,7 +141,18 @@
   "resolutions": {
     "katex": "^0.16.21",
     "@cypress/request/qs": "6.16.0",
-    "react-use/js-cookie": "3.0.7"
+    "react-use/js-cookie": "3.0.7",
+    "handlebars": "4.7.9",
+    "browserslist": "4.28.7",
+    "baseline-browser-mapping": "2.11.0",
+    "@humanfs/node": "0.16.8",
+    "@babel/core": "7.29.6",
+    "uuid": "11.1.1",
+    "stream-json": "patch:stream-json@npm%3A1.9.1#./dependency-patches/stream-json-security.patch",
+    "elliptic": "patch:elliptic@npm%3A6.6.1#./dependency-patches/elliptic-security.patch",
+    "braces": "patch:braces@npm%3A3.0.3#./dependency-patches/braces-security.patch",
+    "http-cache-semantics": "patch:http-cache-semantics@npm%3A4.2.0#./dependency-patches/http-cache-semantics-security.patch",
+    "@ungap/structured-clone": "1.3.1"
   },
-  "packageManager": "yarn@4.12.0+sha512.f45ab632439a67f8bc759bf32ead036a1f413287b9042726b7cc4818b7b49e14e9423ba49b18f9e06ea4941c1ad062385b1d8760a8d5091a1a31e5f6219afca8"
+  "packageManager": "yarn@4.18.1+sha512.b2e1e7524f654f2749d32b4ebcb4622473cb5bcbc485df2007e12a154e50162a4d795526768bc5f5b8f81717bfd79deb2472813d86fb5ae2eb551fa9c872b08f"
 }

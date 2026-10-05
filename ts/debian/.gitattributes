@@ -2,3 +2,5 @@
 # SPDX-License-Identifier: MIT
 # Preserve checksum-pinned upstream notices byte for byte, including whitespace.
 upstream-notices/* -text -whitespace
+third-party-notices/** -text -whitespace
+third-party-sources/* -text -whitespace

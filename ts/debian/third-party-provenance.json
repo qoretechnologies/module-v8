@@ -1,0 +1,4349 @@
+{
+  "schema": 1,
+  "yarn": {
+    "revision": "75ebe063092f86e47e4afeaf1ae4bdf24402874b",
+    "source_sha256": "af95735b1bf98f4c5034f2be8f056c40cfcbfe7e7b55b22b04df44aaa3b4c9da",
+    "scope": "Conservative runtime dependency closure of the exact Yarn release, including standard plugins; notices may cover code removed by tree shaking.",
+    "closure": {
+      "revision": "75ebe063092f86e47e4afeaf1ae4bdf24402874b",
+      "packages": [
+        {
+          "name": "@algolia/cache-browser-local-storage",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/cache-common",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/cache-in-memory",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/client-account",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/client-analytics",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/client-common",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/client-personalization",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/client-search",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/logger-common",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/logger-console",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/requester-browser-xhr",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/requester-common",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/requester-node-http",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@algolia/transporter",
+          "version": "4.22.1"
+        },
+        {
+          "name": "@arcanis/slice-ansi",
+          "version": "1.1.1"
+        },
+        {
+          "name": "@gar/promise-retry",
+          "version": "1.0.3"
+        },
+        {
+          "name": "@isaacs/balanced-match",
+          "version": "4.0.1"
+        },
+        {
+          "name": "@isaacs/brace-expansion",
+          "version": "5.0.0"
+        },
+        {
+          "name": "@isaacs/fs-minipass",
+          "version": "4.0.1"
+        },
+        {
+          "name": "@nodelib/fs.scandir",
+          "version": "2.1.5"
+        },
+        {
+          "name": "@nodelib/fs.stat",
+          "version": "2.0.5"
+        },
+        {
+          "name": "@nodelib/fs.walk",
+          "version": "1.2.8"
+        },
+        {
+          "name": "@npmcli/agent",
+          "version": "4.0.0"
+        },
+        {
+          "name": "@npmcli/fs",
+          "version": "5.0.0"
+        },
+        {
+          "name": "@npmcli/redact",
+          "version": "4.0.0"
+        },
+        {
+          "name": "@sigstore/bundle",
+          "version": "4.0.0"
+        },
+        {
+          "name": "@sigstore/core",
+          "version": "3.2.1"
+        },
+        {
+          "name": "@sigstore/protobuf-specs",
+          "version": "0.5.1"
+        },
+        {
+          "name": "@sigstore/sign",
+          "version": "4.1.1"
+        },
+        {
+          "name": "@sigstore/tuf",
+          "version": "4.0.2"
+        },
+        {
+          "name": "@sigstore/verify",
+          "version": "3.1.1"
+        },
+        {
+          "name": "@sindresorhus/is",
+          "version": "4.6.0"
+        },
+        {
+          "name": "@szmarczak/http-timer",
+          "version": "4.0.5"
+        },
+        {
+          "name": "@tufjs/canonical-json",
+          "version": "2.0.0"
+        },
+        {
+          "name": "@tufjs/models",
+          "version": "4.1.0"
+        },
+        {
+          "name": "@types/cacheable-request",
+          "version": "6.0.1"
+        },
+        {
+          "name": "@types/color-name",
+          "version": "1.1.1"
+        },
+        {
+          "name": "@types/emscripten",
+          "version": "1.39.6"
+        },
+        {
+          "name": "@types/http-cache-semantics",
+          "version": "4.0.4"
+        },
+        {
+          "name": "@types/keyv",
+          "version": "3.1.1"
+        },
+        {
+          "name": "@types/node",
+          "version": "18.19.124"
+        },
+        {
+          "name": "@types/node",
+          "version": "24.3.1"
+        },
+        {
+          "name": "@types/responselike",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@types/semver",
+          "version": "7.5.8"
+        },
+        {
+          "name": "@types/treeify",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@types/yoga-layout",
+          "version": "1.9.2"
+        },
+        {
+          "name": "@zkochan/cmd-shim",
+          "version": "5.1.0"
+        },
+        {
+          "name": "agent-base",
+          "version": "7.1.4"
+        },
+        {
+          "name": "algoliasearch",
+          "version": "4.22.1"
+        },
+        {
+          "name": "ansi-colors",
+          "version": "4.1.1"
+        },
+        {
+          "name": "ansi-escapes",
+          "version": "4.3.2"
+        },
+        {
+          "name": "ansi-regex",
+          "version": "5.0.1"
+        },
+        {
+          "name": "ansi-styles",
+          "version": "4.2.0"
+        },
+        {
+          "name": "argparse",
+          "version": "2.0.1"
+        },
+        {
+          "name": "astral-regex",
+          "version": "2.0.0"
+        },
+        {
+          "name": "auto-bind",
+          "version": "4.0.0"
+        },
+        {
+          "name": "balanced-match",
+          "version": "1.0.0"
+        },
+        {
+          "name": "base64-js",
+          "version": "1.5.1"
+        },
+        {
+          "name": "bl",
+          "version": "4.1.0"
+        },
+        {
+          "name": "brace-expansion",
+          "version": "1.1.11"
+        },
+        {
+          "name": "braces",
+          "version": "3.0.2"
+        },
+        {
+          "name": "buffer",
+          "version": "5.7.1"
+        },
+        {
+          "name": "cacache",
+          "version": "20.0.3"
+        },
+        {
+          "name": "cacheable-lookup",
+          "version": "5.0.3"
+        },
+        {
+          "name": "cacheable-request",
+          "version": "7.0.1"
+        },
+        {
+          "name": "camelcase",
+          "version": "5.3.1"
+        },
+        {
+          "name": "chalk",
+          "version": "4.1.2"
+        },
+        {
+          "name": "chownr",
+          "version": "3.0.0"
+        },
+        {
+          "name": "ci-info",
+          "version": "2.0.0"
+        },
+        {
+          "name": "ci-info",
+          "version": "4.0.0"
+        },
+        {
+          "name": "cli-boxes",
+          "version": "2.2.1"
+        },
+        {
+          "name": "cli-cursor",
+          "version": "3.1.0"
+        },
+        {
+          "name": "cli-truncate",
+          "version": "2.1.0"
+        },
+        {
+          "name": "clipanion",
+          "version": "4.0.0-rc.2"
+        },
+        {
+          "name": "clone-response",
+          "version": "1.0.2"
+        },
+        {
+          "name": "code-excerpt",
+          "version": "3.0.0"
+        },
+        {
+          "name": "color-convert",
+          "version": "2.0.1"
+        },
+        {
+          "name": "color-name",
+          "version": "1.1.4"
+        },
+        {
+          "name": "commander",
+          "version": "2.12.2"
+        },
+        {
+          "name": "concat-map",
+          "version": "0.0.1"
+        },
+        {
+          "name": "convert-to-spaces",
+          "version": "1.0.2"
+        },
+        {
+          "name": "cross-spawn",
+          "version": "7.0.6"
+        },
+        {
+          "name": "debug",
+          "version": "4.4.3"
+        },
+        {
+          "name": "decompress-response",
+          "version": "6.0.0"
+        },
+        {
+          "name": "defer-to-connect",
+          "version": "2.0.1"
+        },
+        {
+          "name": "diff",
+          "version": "5.1.0"
+        },
+        {
+          "name": "dotenv",
+          "version": "16.3.1"
+        },
+        {
+          "name": "emoji-regex",
+          "version": "8.0.0"
+        },
+        {
+          "name": "encoding",
+          "version": "0.1.13"
+        },
+        {
+          "name": "end-of-stream",
+          "version": "1.4.1"
+        },
+        {
+          "name": "enquirer",
+          "version": "2.3.6"
+        },
+        {
+          "name": "es-toolkit",
+          "version": "1.39.7"
+        },
+        {
+          "name": "escape-string-regexp",
+          "version": "2.0.0"
+        },
+        {
+          "name": "fast-glob",
+          "version": "3.3.2"
+        },
+        {
+          "name": "fastq",
+          "version": "1.17.1"
+        },
+        {
+          "name": "fill-range",
+          "version": "7.0.1"
+        },
+        {
+          "name": "fs",
+          "version": "0.0.1-security"
+        },
+        {
+          "name": "fs-constants",
+          "version": "1.0.0"
+        },
+        {
+          "name": "fs-minipass",
+          "version": "3.0.3"
+        },
+        {
+          "name": "get-stream",
+          "version": "5.1.0"
+        },
+        {
+          "name": "git-up",
+          "version": "7.0.0"
+        },
+        {
+          "name": "git-url-parse",
+          "version": "13.1.0"
+        },
+        {
+          "name": "glob",
+          "version": "13.0.0"
+        },
+        {
+          "name": "glob-parent",
+          "version": "5.1.2"
+        },
+        {
+          "name": "got",
+          "version": "11.8.2"
+        },
+        {
+          "name": "grapheme-splitter",
+          "version": "1.0.4"
+        },
+        {
+          "name": "has-flag",
+          "version": "4.0.0"
+        },
+        {
+          "name": "hpagent",
+          "version": "1.2.0"
+        },
+        {
+          "name": "http-cache-semantics",
+          "version": "4.1.1"
+        },
+        {
+          "name": "http-proxy-agent",
+          "version": "7.0.2"
+        },
+        {
+          "name": "http2-wrapper",
+          "version": "1.0.0-beta.5.2"
+        },
+        {
+          "name": "https-proxy-agent",
+          "version": "7.0.6"
+        },
+        {
+          "name": "iconv-lite",
+          "version": "0.6.3"
+        },
+        {
+          "name": "ieee754",
+          "version": "1.2.1"
+        },
+        {
+          "name": "imurmurhash",
+          "version": "0.1.4"
+        },
+        {
+          "name": "indent-string",
+          "version": "4.0.0"
+        },
+        {
+          "name": "inherits",
+          "version": "2.0.4"
+        },
+        {
+          "name": "ink",
+          "version": "3.2.0"
+        },
+        {
+          "name": "ink-text-input",
+          "version": "4.0.3"
+        },
+        {
+          "name": "ip-address",
+          "version": "10.1.0"
+        },
+        {
+          "name": "is-ci",
+          "version": "2.0.0"
+        },
+        {
+          "name": "is-extglob",
+          "version": "2.1.1"
+        },
+        {
+          "name": "is-fullwidth-code-point",
+          "version": "3.0.0"
+        },
+        {
+          "name": "is-glob",
+          "version": "4.0.3"
+        },
+        {
+          "name": "is-number",
+          "version": "7.0.0"
+        },
+        {
+          "name": "is-ssh",
+          "version": "1.4.0"
+        },
+        {
+          "name": "is-windows",
+          "version": "1.0.2"
+        },
+        {
+          "name": "isexe",
+          "version": "2.0.0"
+        },
+        {
+          "name": "js-reporters",
+          "version": "1.2.1"
+        },
+        {
+          "name": "js-tokens",
+          "version": "4.0.0"
+        },
+        {
+          "name": "js-yaml",
+          "version": "4.3.0"
+        },
+        {
+          "name": "json-buffer",
+          "version": "3.0.1"
+        },
+        {
+          "name": "keyv",
+          "version": "4.5.4"
+        },
+        {
+          "name": "lodash",
+          "version": "4.17.21"
+        },
+        {
+          "name": "loose-envify",
+          "version": "1.4.0"
+        },
+        {
+          "name": "lowercase-keys",
+          "version": "2.0.0"
+        },
+        {
+          "name": "lru-cache",
+          "version": "11.2.5"
+        },
+        {
+          "name": "make-fetch-happen",
+          "version": "15.0.6"
+        },
+        {
+          "name": "merge2",
+          "version": "1.4.1"
+        },
+        {
+          "name": "micromatch",
+          "version": "4.0.5"
+        },
+        {
+          "name": "mimic-fn",
+          "version": "2.1.0"
+        },
+        {
+          "name": "mimic-response",
+          "version": "1.0.1"
+        },
+        {
+          "name": "mimic-response",
+          "version": "3.1.0"
+        },
+        {
+          "name": "minimatch",
+          "version": "10.1.1"
+        },
+        {
+          "name": "minimatch",
+          "version": "3.0.4"
+        },
+        {
+          "name": "minipass",
+          "version": "3.3.5"
+        },
+        {
+          "name": "minipass",
+          "version": "7.1.2"
+        },
+        {
+          "name": "minipass-collect",
+          "version": "2.0.1"
+        },
+        {
+          "name": "minipass-fetch",
+          "version": "5.0.0"
+        },
+        {
+          "name": "minipass-flush",
+          "version": "1.0.5"
+        },
+        {
+          "name": "minipass-pipeline",
+          "version": "1.2.4"
+        },
+        {
+          "name": "minipass-sized",
+          "version": "1.0.3"
+        },
+        {
+          "name": "minizlib",
+          "version": "3.1.0"
+        },
+        {
+          "name": "ms",
+          "version": "2.1.3"
+        },
+        {
+          "name": "negotiator",
+          "version": "1.0.0"
+        },
+        {
+          "name": "node-watch",
+          "version": "0.6.0"
+        },
+        {
+          "name": "normalize-url",
+          "version": "4.5.1"
+        },
+        {
+          "name": "object-assign",
+          "version": "4.1.1"
+        },
+        {
+          "name": "once",
+          "version": "1.4.0"
+        },
+        {
+          "name": "onetime",
+          "version": "5.1.2"
+        },
+        {
+          "name": "p-cancelable",
+          "version": "2.0.0"
+        },
+        {
+          "name": "p-limit",
+          "version": "2.2.0"
+        },
+        {
+          "name": "p-map",
+          "version": "7.0.4"
+        },
+        {
+          "name": "p-try",
+          "version": "2.0.0"
+        },
+        {
+          "name": "parse-path",
+          "version": "7.0.0"
+        },
+        {
+          "name": "parse-url",
+          "version": "8.1.0"
+        },
+        {
+          "name": "patch-console",
+          "version": "1.0.0"
+        },
+        {
+          "name": "path-key",
+          "version": "3.1.1"
+        },
+        {
+          "name": "path-parse",
+          "version": "1.0.7"
+        },
+        {
+          "name": "path-scurry",
+          "version": "2.0.1"
+        },
+        {
+          "name": "picomatch",
+          "version": "2.3.1"
+        },
+        {
+          "name": "proc-log",
+          "version": "6.1.0"
+        },
+        {
+          "name": "protocols",
+          "version": "2.0.1"
+        },
+        {
+          "name": "pump",
+          "version": "3.0.0"
+        },
+        {
+          "name": "queue-microtask",
+          "version": "1.2.3"
+        },
+        {
+          "name": "quick-lru",
+          "version": "5.1.1"
+        },
+        {
+          "name": "qunit",
+          "version": "2.9.2"
+        },
+        {
+          "name": "react",
+          "version": "17.0.2"
+        },
+        {
+          "name": "react-devtools-core",
+          "version": "4.28.5"
+        },
+        {
+          "name": "react-reconciler",
+          "version": "0.26.2"
+        },
+        {
+          "name": "readable-stream",
+          "version": "3.6.0"
+        },
+        {
+          "name": "readline-sync",
+          "version": "1.4.9"
+        },
+        {
+          "name": "resolve",
+          "version": "1.9.0"
+        },
+        {
+          "name": "resolve-alpn",
+          "version": "1.2.1"
+        },
+        {
+          "name": "responselike",
+          "version": "2.0.0"
+        },
+        {
+          "name": "restore-cursor",
+          "version": "3.1.0"
+        },
+        {
+          "name": "reusify",
+          "version": "1.0.4"
+        },
+        {
+          "name": "run-parallel",
+          "version": "1.2.0"
+        },
+        {
+          "name": "safe-buffer",
+          "version": "5.1.2"
+        },
+        {
+          "name": "safer-buffer",
+          "version": "2.1.2"
+        },
+        {
+          "name": "scheduler",
+          "version": "0.20.2"
+        },
+        {
+          "name": "semver",
+          "version": "7.8.5"
+        },
+        {
+          "name": "shebang-command",
+          "version": "2.0.0"
+        },
+        {
+          "name": "shebang-regex",
+          "version": "3.0.0"
+        },
+        {
+          "name": "shell-quote",
+          "version": "1.8.1"
+        },
+        {
+          "name": "signal-exit",
+          "version": "3.0.7"
+        },
+        {
+          "name": "sigstore",
+          "version": "4.1.1"
+        },
+        {
+          "name": "slice-ansi",
+          "version": "3.0.0"
+        },
+        {
+          "name": "smart-buffer",
+          "version": "4.2.0"
+        },
+        {
+          "name": "socks",
+          "version": "2.8.7"
+        },
+        {
+          "name": "socks-proxy-agent",
+          "version": "8.0.5"
+        },
+        {
+          "name": "ssri",
+          "version": "12.0.0"
+        },
+        {
+          "name": "ssri",
+          "version": "13.0.0"
+        },
+        {
+          "name": "stack-utils",
+          "version": "2.0.5"
+        },
+        {
+          "name": "string-width",
+          "version": "4.2.3"
+        },
+        {
+          "name": "string_decoder",
+          "version": "1.2.0"
+        },
+        {
+          "name": "strip-ansi",
+          "version": "6.0.1"
+        },
+        {
+          "name": "supports-color",
+          "version": "7.1.0"
+        },
+        {
+          "name": "tar",
+          "version": "7.5.9"
+        },
+        {
+          "name": "tar-stream",
+          "version": "2.2.0"
+        },
+        {
+          "name": "tau-prolog",
+          "version": "0.2.66"
+        },
+        {
+          "name": "tinylogic",
+          "version": "2.0.0"
+        },
+        {
+          "name": "to-regex-range",
+          "version": "5.0.1"
+        },
+        {
+          "name": "treeify",
+          "version": "1.1.0"
+        },
+        {
+          "name": "tslib",
+          "version": "2.6.2"
+        },
+        {
+          "name": "tuf-js",
+          "version": "4.1.0"
+        },
+        {
+          "name": "typanion",
+          "version": "3.14.0"
+        },
+        {
+          "name": "type-fest",
+          "version": "0.12.0"
+        },
+        {
+          "name": "type-fest",
+          "version": "0.15.1"
+        },
+        {
+          "name": "type-fest",
+          "version": "0.21.3"
+        },
+        {
+          "name": "undici-types",
+          "version": "5.26.5"
+        },
+        {
+          "name": "undici-types",
+          "version": "7.10.0"
+        },
+        {
+          "name": "unique-filename",
+          "version": "5.0.0"
+        },
+        {
+          "name": "unique-slug",
+          "version": "6.0.0"
+        },
+        {
+          "name": "util-deprecate",
+          "version": "1.0.2"
+        },
+        {
+          "name": "which",
+          "version": "2.0.2"
+        },
+        {
+          "name": "widest-line",
+          "version": "3.1.0"
+        },
+        {
+          "name": "wrap-ansi",
+          "version": "6.2.0"
+        },
+        {
+          "name": "wrappy",
+          "version": "1.0.2"
+        },
+        {
+          "name": "ws",
+          "version": "7.5.10"
+        },
+        {
+          "name": "yallist",
+          "version": "4.0.0"
+        },
+        {
+          "name": "yallist",
+          "version": "5.0.0"
+        },
+        {
+          "name": "yoga-layout-prebuilt",
+          "version": "1.10.0"
+        }
+      ],
+      "workspaces": [
+        "@yarnpkg/cli",
+        "@yarnpkg/core",
+        "@yarnpkg/extensions",
+        "@yarnpkg/fslib",
+        "@yarnpkg/libui",
+        "@yarnpkg/libzip",
+        "@yarnpkg/nm",
+        "@yarnpkg/parsers",
+        "@yarnpkg/plugin-catalog",
+        "@yarnpkg/plugin-compat",
+        "@yarnpkg/plugin-constraints",
+        "@yarnpkg/plugin-dlx",
+        "@yarnpkg/plugin-essentials",
+        "@yarnpkg/plugin-exec",
+        "@yarnpkg/plugin-file",
+        "@yarnpkg/plugin-git",
+        "@yarnpkg/plugin-github",
+        "@yarnpkg/plugin-http",
+        "@yarnpkg/plugin-init",
+        "@yarnpkg/plugin-interactive-tools",
+        "@yarnpkg/plugin-jsr",
+        "@yarnpkg/plugin-link",
+        "@yarnpkg/plugin-nm",
+        "@yarnpkg/plugin-npm",
+        "@yarnpkg/plugin-npm-cli",
+        "@yarnpkg/plugin-pack",
+        "@yarnpkg/plugin-patch",
+        "@yarnpkg/plugin-pnp",
+        "@yarnpkg/plugin-pnpm",
+        "@yarnpkg/plugin-stage",
+        "@yarnpkg/plugin-typescript",
+        "@yarnpkg/plugin-version",
+        "@yarnpkg/plugin-workspace-tools",
+        "@yarnpkg/pnp",
+        "@yarnpkg/shell"
+      ],
+      "unresolved": []
+    },
+    "missing_standalone_notices": "Release READMEs, exact upstream release notices or package.json license/author declarations are retained for every package without a standalone license file. No upstream copyright statement is invented."
+  },
+  "react_icons": {
+    "revision": "7b14efea784c5e83b30b87c969d35bcb8c478186",
+    "config_sha256": "1c21833749a4cbaf980943ce079520099439d564002e8d8b9b27dc8e4c28e56a",
+    "sets": [
+      {
+        "id": "ci",
+        "name": "Circum Icons",
+        "license": "MPL-2.0 license",
+        "projectUrl": "https://circumicons.com/",
+        "licenseUrl": "https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE",
+        "source": {
+          "url": "https://github.com/Klarr-Agency/Circum-Icons.git",
+          "revision": "cec1364b5199f55e946a9a8360385a958b98cc60"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/ci/LICENSE",
+            "url": "https://raw.githubusercontent.com/Klarr-Agency/Circum-Icons/cec1364b5199f55e946a9a8360385a958b98cc60/LICENSE",
+            "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1"
+          }
+        ],
+        "source_archive_url": "https://codeload.github.com/Klarr-Agency/Circum-Icons/tar.gz/cec1364b5199f55e946a9a8360385a958b98cc60",
+        "source_archive_sha256": "1eaf265d52b70e8bc57bdd692d9415e7cd5075c67ae787e84908f86c758f3c46"
+      },
+      {
+        "id": "fa",
+        "name": "Font Awesome 5",
+        "license": "CC BY 4.0 License",
+        "projectUrl": "https://fontawesome.com/",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": {
+          "url": "https://github.com/FortAwesome/Font-Awesome.git",
+          "revision": "afecf2af5d897b763e5e8e28d46aad2f710ccad6"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/fa/LICENSE.txt",
+            "url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/afecf2af5d897b763e5e8e28d46aad2f710ccad6/LICENSE.txt",
+            "sha256": "e779748dfe75e84f974df3c7bc07f842011a100159158b0f1f49b2f2a5a515cb"
+          }
+        ]
+      },
+      {
+        "id": "fa6",
+        "name": "Font Awesome 6",
+        "license": "CC BY 4.0 License",
+        "projectUrl": "https://fontawesome.com/",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": {
+          "url": "https://github.com/FortAwesome/Font-Awesome.git",
+          "revision": "37eff7fa00de26db41183a3ad8ed0e9119fbc44b"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/fa6/LICENSE.txt",
+            "url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/37eff7fa00de26db41183a3ad8ed0e9119fbc44b/LICENSE.txt",
+            "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc"
+          }
+        ]
+      },
+      {
+        "id": "io",
+        "name": "Ionicons 4",
+        "license": "MIT",
+        "projectUrl": "https://ionicons.com/",
+        "licenseUrl": "https://github.com/ionic-team/ionicons/blob/master/LICENSE",
+        "source": {
+          "name": "ionicons",
+          "version": "4.6.3",
+          "dist": {
+            "shasum": "e4f3a3e9b66761eb8c0db27798cc1a8ce97777d2",
+            "tarball": "https://registry.npmjs.org/ionicons/-/ionicons-4.6.3.tgz",
+            "fileCount": 2254,
+            "integrity": "sha512-cgP+VIr2cTJpMfFyVHTerq6n2jeoiGboVoe3GlaAo5zoSBDAEXORwUZhv6m+lCyxlsHCS3nqPUE+MKyZU71t8Q==",
+            "signatures": [
+              {
+                "sig": "MEUCIQDRvGVCYlqfmOyLP9ZlOvTqJQ6Ok/freNvL/BJMIAQkJAIgdsS9x6tMap6U2FcOxUSbLM3m/UsHcypmoAhWzmwteoA=",
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+              }
+            ],
+            "unpackedSize": 2748483,
+            "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdXLj5CRA9TVsSAnZWagAA4HMP/0FY1/s+G/zg+R0hlFlG\nAWwHNwVfLiC75j2wcc7LExN1mBWnpVWRldQW21u4UgeI7cu9lzF6uy5qmCbk\nz0KpfsKQuT+b22J+RILjjXyaptOHbxwWfc2gtLtaNLvgXgYuk4QzgYTGhCSO\nChTdlx3y6+K7+KuLrrfyUSMs1bV/GJMRM1Q2EiUzV5T9pk/L2eKlpONL2APy\nDpAnIQ9dKODcWN/IVU5QuEs5QXelYCQT9vv20Two6srCZidYFdvyZw1UiTIn\nblTK8yRf4cReFrayZohvRmsHY5P5UbjvTfo7OJlepGvgK1GnoLlh+U2WnBqa\neGaxTj7m5+JlVy2SRvJhDvGdlSVlZvGI+h2mrxpZ+55UX5174tSRlb7Vx9Y0\nsHc6MkKzWwKAD41edLtkRrCQ+JjiMUPTcws6aWisxzL6BTSnz4opfMT+8ULX\nvCGvkNpty3YGLZbUvrq3yL6yNI3KHbp+er1MnP51rS/lsint3y57EqoAQhoV\n7ifkgaw94teABIR/gv0Fr40SFCaoibw/1QxtGMreTIB8XzkzgUQDqVySYiGK\nEfoMy/3W4PRXSf5ZG2Wklf15OXvK28YAOnANgZ4gqbjh/oz3J79fGdMQOzT/\nc4AnxHoAAHymHGgtLc+sAZBTBLB78juVHICh39WuVitMNRp0SPnHLbBJ5CXt\nVwhQ\r\n=5umE\r\n-----END PGP SIGNATURE-----\r\n"
+          }
+        },
+        "notices": [
+          {
+            "file": "icon-notices/io/package__LICENSE",
+            "url": "https://registry.npmjs.org/ionicons/-/ionicons-4.6.3.tgz",
+            "member": "package/LICENSE",
+            "sha256": "c89dabc60b2e4e1a04b33bd7010b5a56bb4725ffe8c00d793a5ae009fbbfebd8"
+          },
+          {
+            "file": "icon-notices/io/package__dist__collection__test__copyright.svg",
+            "url": "https://registry.npmjs.org/ionicons/-/ionicons-4.6.3.tgz",
+            "member": "package/dist/collection/test/copyright.svg",
+            "sha256": "6e9644e69862206cd4e1e6b5c171de1b775fa44aa3fb87d89321384015b1f2f4"
+          }
+        ]
+      },
+      {
+        "id": "io5",
+        "name": "Ionicons 5",
+        "license": "MIT",
+        "projectUrl": "https://ionicons.com/",
+        "licenseUrl": "https://github.com/ionic-team/ionicons/blob/master/LICENSE",
+        "source": {
+          "name": "ionicons",
+          "version": "5.5.4",
+          "dist": {
+            "shasum": "5fef0c44038a630f5bb5f9a7dc83ec158bab95b1",
+            "tarball": "https://registry.npmjs.org/ionicons/-/ionicons-5.5.4.tgz",
+            "fileCount": 4082,
+            "integrity": "sha512-3ph8X9my3inhabWEZ7N0XRA0MnnNQ1v9a602mLNgWsIXnxE9G5BybIZ/pws/OZZ/hoNlvSjk801N03yL9/FNgQ==",
+            "signatures": [
+              {
+                "sig": "MEUCIGiTR0Qdq0NehVmgvoVhu2/oXMXl9QPd936PstnNLY3KAiEA16vNchfCE/PKFHTMsNktN/NSHuoeU8/r3MIu0MJnKGw=",
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+              }
+            ],
+            "unpackedSize": 6326900
+          }
+        },
+        "notices": [
+          {
+            "file": "icon-notices/io5/package__LICENSE",
+            "url": "https://registry.npmjs.org/ionicons/-/ionicons-5.5.4.tgz",
+            "member": "package/LICENSE",
+            "sha256": "c89dabc60b2e4e1a04b33bd7010b5a56bb4725ffe8c00d793a5ae009fbbfebd8"
+          },
+          {
+            "file": "icon-notices/io5/package__dist__collection__components__test__copyright.svg",
+            "url": "https://registry.npmjs.org/ionicons/-/ionicons-5.5.4.tgz",
+            "member": "package/dist/collection/components/test/copyright.svg",
+            "sha256": "6e9644e69862206cd4e1e6b5c171de1b775fa44aa3fb87d89321384015b1f2f4"
+          }
+        ]
+      },
+      {
+        "id": "md",
+        "name": "Material Design icons",
+        "license": "Apache License Version 2.0",
+        "projectUrl": "http://google.github.io/material-design-icons/",
+        "licenseUrl": "https://github.com/google/material-design-icons/blob/master/LICENSE",
+        "source": {
+          "url": "https://github.com/google/material-design-icons.git",
+          "revision": "ef43291c4d6ebbada3f46e1f584c39bc8f6861b2"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/md/LICENSE",
+            "url": "https://raw.githubusercontent.com/google/material-design-icons/ef43291c4d6ebbada3f46e1f584c39bc8f6861b2/LICENSE",
+            "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+          }
+        ]
+      },
+      {
+        "id": "ti",
+        "name": "Typicons",
+        "license": "CC BY-SA 3.0",
+        "projectUrl": "http://s-ings.com/typicons/",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": {
+          "url": "https://github.com/stephenhutchings/typicons.font.git",
+          "revision": "0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/ti/README.md",
+            "url": "https://raw.githubusercontent.com/stephenhutchings/typicons.font/0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84/README.md",
+            "sha256": "bdc2da6cc038e29bc6b4cdeb3b7eb7a17c94a8f537a237e0bdafd626344d1509"
+          },
+          {
+            "file": "icon-notices/ti/LICENCE.md",
+            "url": "https://raw.githubusercontent.com/stephenhutchings/typicons.font/0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84/LICENCE.md",
+            "sha256": "fdf0eb43f872a92f53abfbab00b2c5137c6c4f0fca7cb90fda62a70c498a891c"
+          },
+          {
+            "file": "icon-notices/ti/src__font__LICENCE.md",
+            "url": "https://raw.githubusercontent.com/stephenhutchings/typicons.font/0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84/src/font/LICENCE.md",
+            "sha256": "c4a7dc38545d06d84b640888252c05074d9d1c5a12f9df5962744ffdb4bd4413"
+          }
+        ]
+      },
+      {
+        "id": "go",
+        "name": "Github Octicons icons",
+        "license": "MIT",
+        "projectUrl": "https://octicons.github.com/",
+        "licenseUrl": "https://github.com/primer/octicons/blob/master/LICENSE",
+        "source": {
+          "name": "@primer/octicons",
+          "version": "18.3.0",
+          "dist": {
+            "shasum": "49fdcbb59f8b072099512f1635de93cba63d3396",
+            "tarball": "https://registry.npmjs.org/@primer/octicons/-/octicons-18.3.0.tgz",
+            "fileCount": 1160,
+            "integrity": "sha512-vyUej5rKjXfqHAmYSo2k3pA9IsL5KJaYOBVXvc188FwBfUweA+WVP3qwWyZTSQnp9LK6yOajGyr0SCMIa9ombw==",
+            "signatures": [
+              {
+                "sig": "MEQCIDOE7erA94Mcl6woxQtXWh26z1ny1S9jJLFMyfw5Q5rRAiArJNwUGArkfLKXPys4a3/MyrC06FtOo7f/LtslKt2B1g==",
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+              }
+            ],
+            "unpackedSize": 2164269,
+            "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkHN+sACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpceQ//YUZtoxye/MIUP1P/IpMdv3Viqw1Tt8zpveSUOSWIhnYKVGgh\r\nTFDL+4RqQtukyrf97R8EU9PL/QzHyFQvjNkR97tCz6ZVpme36rbZJz9HHUm6\r\nmEG3+3K+q9F3glGlLv9MfcJGs6MsVOpUvD2Qvq8sc/aAzDM3/35vXApQ5uAt\r\nFrfm94O0CufpPpDu7HbV1NYMzzmDTGUOmvCsVFzPagB/88fEsh0Opy208nyM\r\n58bwkiCtu4cZX6F0KKQVFfx6NBK+V1FCplVsmsrKs11TnkMH2WO9M+z0LJ8K\r\nvckWNMVHewxCPO6zgsNzmmqG0xgQziq3Cs+UxNyoiIfeAZL+TO4xbCSzaKam\r\n4QMhqgizxOQm07Zab8FfKpG5/l19LWR9ysg5CeHlKNl/cKhrDP1oNEfAk8xn\r\nCoqreOsKG3lfQ+x42PFzNqtVBSnd2eTneAuweDag3swF7rHtjMt2/NQ7B+3I\r\nt6Md1hXD7wCn1AxK5OB8ZzzoaYkNRYzQ3cKfQLYVb9+vHnw8+MFIWCbp/X+N\r\nolo429vHf3xGsmtGACPABW70xNzoPuMTaiCSxcf0qV394olUvJR2lSFMI609\r\nrPC9adSbcRzZdnNHTOd2EOHueDUSjiig90sSUSdyk/sPefkcxpKeQqi8Z7Io\r\nZmJ+i2VhJs08cdVtUZJ+/+iQHkKQzCJYTFw=\r\n=9NQ+\r\n-----END PGP SIGNATURE-----\r\n"
+          }
+        },
+        "notices": [
+          {
+            "file": "icon-notices/go/package__LICENSE",
+            "url": "https://registry.npmjs.org/@primer/octicons/-/octicons-18.3.0.tgz",
+            "member": "package/LICENSE",
+            "sha256": "4f886642f9e8d99eeadd484acdac011c3fde8a338faf52f5ca1408c13b9a9b63"
+          }
+        ]
+      },
+      {
+        "id": "fi",
+        "name": "Feather",
+        "license": "MIT",
+        "projectUrl": "https://feathericons.com/",
+        "licenseUrl": "https://github.com/feathericons/feather/blob/master/LICENSE",
+        "source": {
+          "name": "feather-icons",
+          "version": "4.29.2",
+          "dist": {
+            "shasum": "b03a47588a1c400f215e884504db1c18860d89f8",
+            "tarball": "https://registry.npmjs.org/feather-icons/-/feather-icons-4.29.2.tgz",
+            "fileCount": 296,
+            "integrity": "sha512-0TaCFTnBTVCz6U+baY2UJNKne5ifGh7sMG4ZC2LoBWCZdIyPa+y6UiR4lEYGws1JOFWdee8KAsAIvu0VcXqiqA==",
+            "signatures": [
+              {
+                "sig": "MEQCIFKGYj6pdIaVyWBhCIEg3rSXWHEqQjLOQnT05p6VG+00AiASa9IbvxIKSL9yqTSFPk8aJRBSzljFE0RqUKhulU36Bw==",
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+              }
+            ],
+            "unpackedSize": 625269
+          }
+        },
+        "notices": [
+          {
+            "file": "icon-notices/fi/package__LICENSE",
+            "url": "https://registry.npmjs.org/feather-icons/-/feather-icons-4.29.2.tgz",
+            "member": "package/LICENSE",
+            "sha256": "308028e93fcf84972523cdf6e616f73168546b4953895f516d01287f16fe7bee"
+          }
+        ]
+      },
+      {
+        "id": "lu",
+        "name": "Lucide",
+        "license": "ISC",
+        "projectUrl": "https://lucide.dev/",
+        "licenseUrl": "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
+        "source": {
+          "name": "lucide-static",
+          "version": "0.462.0",
+          "dist": {
+            "shasum": "f6c5d4d667690da8490c10369fbfe918daed1bda",
+            "tarball": "https://registry.npmjs.org/lucide-static/-/lucide-static-0.462.0.tgz",
+            "fileCount": 4651,
+            "integrity": "sha512-tAVmvvxha2IMSwB4Bu4obGYgupLlXRNooDWelyINkkkX6Be7orvarPUPOBenjHeyiW7Xk8/yYDbpo8o7FElWCQ==",
+            "signatures": [
+              {
+                "sig": "MEUCIApnbR049RzL/QSrSwZUis3XQUhXAAuD8ACc7M0l7c4qAiEA+it3qRJ8ea+49ptQ0vj23BqHcuBgQItbMJKgLUGFA/w=",
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+              }
+            ],
+            "unpackedSize": 30881399
+          }
+        },
+        "notices": [
+          {
+            "file": "icon-notices/lu/package__LICENSE",
+            "url": "https://registry.npmjs.org/lucide-static/-/lucide-static-0.462.0.tgz",
+            "member": "package/LICENSE",
+            "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+          },
+          {
+            "file": "icon-notices/lu/package__dist__esm__icons__copyright.js",
+            "url": "https://registry.npmjs.org/lucide-static/-/lucide-static-0.462.0.tgz",
+            "member": "package/dist/esm/icons/copyright.js",
+            "sha256": "5683c60fc3d26fe50e9e28cff96f9200dbabecb03ba496a74525be6edaf96dc7"
+          },
+          {
+            "file": "icon-notices/lu/package__dist__esm__icons__copyright.js.map",
+            "url": "https://registry.npmjs.org/lucide-static/-/lucide-static-0.462.0.tgz",
+            "member": "package/dist/esm/icons/copyright.js.map",
+            "sha256": "ec8b7420678ad7d50bc638b9ccd78413448f8be4bcbcf9fd85b305e3055a72df"
+          },
+          {
+            "file": "icon-notices/lu/package__icons__copyright.svg",
+            "url": "https://registry.npmjs.org/lucide-static/-/lucide-static-0.462.0.tgz",
+            "member": "package/icons/copyright.svg",
+            "sha256": "b1adf02f68b2d39cba318c338268930fcbce97964ec964dacb6fa7f1e0c50a0f"
+          }
+        ]
+      },
+      {
+        "id": "gi",
+        "name": "Game Icons",
+        "license": "CC BY 3.0",
+        "projectUrl": "https://game-icons.net/",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "source": {
+          "url": "https://github.com/delacannon/game-icons-inverted.git",
+          "revision": "12920d6565588f0512542a3cb0cdfd36a497f910"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/gi/license.txt",
+            "url": "https://raw.githubusercontent.com/delacannon/game-icons-inverted/12920d6565588f0512542a3cb0cdfd36a497f910/license.txt",
+            "sha256": "cbbb0edc153248137e890b2336d87c0fff1608e167db173324d54b3605e468bd"
+          }
+        ]
+      },
+      {
+        "id": "wi",
+        "name": "Weather Icons",
+        "license": "SIL OFL 1.1",
+        "projectUrl": "https://erikflowers.github.io/weather-icons/",
+        "licenseUrl": "http://scripts.sil.org/OFL",
+        "source": {
+          "url": "https://github.com/erikflowers/weather-icons.git",
+          "revision": "bb80982bf1f43f2d57f9dd753e7413bf88beb9ed"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/wi/README.md",
+            "url": "https://raw.githubusercontent.com/erikflowers/weather-icons/bb80982bf1f43f2d57f9dd753e7413bf88beb9ed/README.md",
+            "sha256": "fe5d8059a785adb47571fbae05d55ae88059224f1817dc1e797504a6098d6161"
+          }
+        ]
+      },
+      {
+        "id": "di",
+        "name": "Devicons",
+        "license": "MIT",
+        "projectUrl": "https://vorillaz.github.io/devicons/",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/vorillaz/devicons.git",
+          "revision": "ba75593fdf8d66496676a90cbf127d721f73e961"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/di/README.md",
+            "url": "https://raw.githubusercontent.com/vorillaz/devicons/ba75593fdf8d66496676a90cbf127d721f73e961/README.md",
+            "sha256": "d0c1eccf6379e2d4a702d15c8ab1bca43320edc63126ebd51f3907b8e879ee29"
+          },
+          {
+            "file": "icon-notices/di/!PNG__mitlicence.png",
+            "url": "https://raw.githubusercontent.com/vorillaz/devicons/ba75593fdf8d66496676a90cbf127d721f73e961/!PNG/mitlicence.png",
+            "sha256": "9031a1905615a10050a097019ec6502a48f2185a99e672f89103e871828147df"
+          },
+          {
+            "file": "icon-notices/di/!SVG__mitlicence.svg",
+            "url": "https://raw.githubusercontent.com/vorillaz/devicons/ba75593fdf8d66496676a90cbf127d721f73e961/!SVG/mitlicence.svg",
+            "sha256": "bde90a1c5bcb6dab69aedec8277dc0e5f0cda91b9b146a97a8ebe15c8ee75e89"
+          }
+        ]
+      },
+      {
+        "id": "ai",
+        "name": "Ant Design Icons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/ant-design/ant-design-icons",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/ant-design/ant-design-icons.git",
+          "revision": "6f00108512f880149afe0904fb4a1cf776612aa0"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/ai/LICENSE",
+            "url": "https://raw.githubusercontent.com/ant-design/ant-design-icons/6f00108512f880149afe0904fb4a1cf776612aa0/LICENSE",
+            "sha256": "5d367fb0a07340571542eb4ee8eb1add62d37b71bad6786a57c2e9a86bf76c70"
+          }
+        ]
+      },
+      {
+        "id": "bs",
+        "name": "Bootstrap Icons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/twbs/icons",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/twbs/icons.git",
+          "revision": "dfc7bdc1bf536ac631ec12c8592e4d7bcd1d0ee9"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/bs/LICENSE",
+            "url": "https://raw.githubusercontent.com/twbs/icons/dfc7bdc1bf536ac631ec12c8592e4d7bcd1d0ee9/LICENSE",
+            "sha256": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969"
+          }
+        ]
+      },
+      {
+        "id": "ri",
+        "name": "Remix Icon",
+        "license": "Apache License Version 2.0",
+        "projectUrl": "https://github.com/Remix-Design/RemixIcon",
+        "licenseUrl": "http://www.apache.org/licenses/",
+        "source": {
+          "url": "https://github.com/Remix-Design/RemixIcon.git",
+          "revision": "c1c01303b97f81bce88374220e08c3d80c9f241a"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/ri/License",
+            "url": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/c1c01303b97f81bce88374220e08c3d80c9f241a/License",
+            "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+          },
+          {
+            "file": "icon-notices/ri/README.md",
+            "url": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/c1c01303b97f81bce88374220e08c3d80c9f241a/README.md",
+            "sha256": "3e215b1707ce21a17c64364f533151fa60399570b118f2e20dcdc8b9fab9412a"
+          },
+          {
+            "file": "icon-notices/ri/README_CN.md",
+            "url": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/c1c01303b97f81bce88374220e08c3d80c9f241a/README_CN.md",
+            "sha256": "4427a6ea9b9f3ac34f160c2f034e6287bcf50aea18675d469955321790c069c4"
+          }
+        ]
+      },
+      {
+        "id": "fc",
+        "name": "Flat Color Icons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/icons8/flat-color-icons",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/icons8/flat-color-icons.git",
+          "revision": "8eccbbbd8b2af1d2c9593e7cfba5ecb0d68ee378"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/fc/LICENSE.md",
+            "url": "https://raw.githubusercontent.com/icons8/flat-color-icons/8eccbbbd8b2af1d2c9593e7cfba5ecb0d68ee378/LICENSE.md",
+            "sha256": "0c029819d69e43042904a3e9d12d25934d08398ba739e4364d61519aa1c2711c"
+          }
+        ]
+      },
+      {
+        "id": "gr",
+        "name": "Grommet-Icons",
+        "license": "Apache License Version 2.0",
+        "projectUrl": "https://github.com/grommet/grommet-icons",
+        "licenseUrl": "http://www.apache.org/licenses/",
+        "source": {
+          "url": "https://github.com/grommet/grommet-icons.git",
+          "revision": "f9548cae611e0390efa38885d150ffa351451762"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/gr/LICENSE",
+            "url": "https://raw.githubusercontent.com/grommet/grommet-icons/f9548cae611e0390efa38885d150ffa351451762/LICENSE",
+            "sha256": "8ced93374d517d3f67dd5bf038c7b310367fae8124f480c688126bfdb02ec40b"
+          }
+        ]
+      },
+      {
+        "id": "hi",
+        "name": "Heroicons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/tailwindlabs/heroicons",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/tailwindlabs/heroicons.git",
+          "revision": "b6de5792d3d53ff81c71b1b8283463aad622e0e3"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/hi/LICENSE",
+            "url": "https://raw.githubusercontent.com/tailwindlabs/heroicons/b6de5792d3d53ff81c71b1b8283463aad622e0e3/LICENSE",
+            "sha256": "75523ddd65d9620bea09f84e89d0c373b4205a3708b8a1e9f9598a5438a3e641"
+          }
+        ]
+      },
+      {
+        "id": "hi2",
+        "name": "Heroicons 2",
+        "license": "MIT",
+        "projectUrl": "https://github.com/tailwindlabs/heroicons",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/tailwindlabs/heroicons.git",
+          "revision": "2d1c52ce682b375e8900b1b119aa02a6f1706327"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/hi2/LICENSE",
+            "url": "https://raw.githubusercontent.com/tailwindlabs/heroicons/2d1c52ce682b375e8900b1b119aa02a6f1706327/LICENSE",
+            "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+          }
+        ]
+      },
+      {
+        "id": "si",
+        "name": "Simple Icons",
+        "license": "CC0 1.0 Universal",
+        "projectUrl": "https://simpleicons.org/",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": {
+          "url": "https://github.com/simple-icons/simple-icons.git",
+          "revision": "fd1797e18ce3e0e0c667f1baeb6f226d8f4307ca"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/si/LICENSE.md",
+            "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/fd1797e18ce3e0e0c667f1baeb6f226d8f4307ca/LICENSE.md",
+            "sha256": "e43ad2b5f43c4798f7ceb92c259f4b854d59eb9dee3f4321ea0185758d7dea7b"
+          }
+        ]
+      },
+      {
+        "id": "sl",
+        "name": "Simple Line Icons",
+        "license": "MIT",
+        "projectUrl": "https://thesabbir.github.io/simple-line-icons/",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/thesabbir/simple-line-icons.git",
+          "revision": "f3ed94dd797bdcab52d6f27ba589aea4bb6f3e4d"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/sl/LICENSE.md",
+            "url": "https://raw.githubusercontent.com/thesabbir/simple-line-icons/f3ed94dd797bdcab52d6f27ba589aea4bb6f3e4d/LICENSE.md",
+            "sha256": "976d947830960c57ad2b3c697dc4c835260876553356e257a3cb023620e4f457"
+          }
+        ]
+      },
+      {
+        "id": "im",
+        "name": "IcoMoon Free",
+        "license": "CC BY 4.0 License",
+        "projectUrl": "https://github.com/Keyamoon/IcoMoon-Free",
+        "licenseUrl": "https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt",
+        "source": {
+          "url": "https://github.com/Keyamoon/IcoMoon-Free.git",
+          "revision": "d006795ede82361e1bac1ee76f215cf1dc51e4ca"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/im/License.txt",
+            "url": "https://raw.githubusercontent.com/Keyamoon/IcoMoon-Free/d006795ede82361e1bac1ee76f215cf1dc51e4ca/License.txt",
+            "sha256": "c968bcba0160bc24a97ff4644ef8fb23e82dfeb50c502cfc8cc4e2a1c895da8f"
+          }
+        ]
+      },
+      {
+        "id": "bi",
+        "name": "BoxIcons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/atisawd/boxicons",
+        "licenseUrl": "https://github.com/atisawd/boxicons/blob/master/LICENSE",
+        "source": {
+          "url": "https://github.com/atisawd/boxicons.git",
+          "revision": "9ffa9136e8681886bb7bd2145cd4098717ce1c11"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/bi/LICENSE",
+            "url": "https://raw.githubusercontent.com/atisawd/boxicons/9ffa9136e8681886bb7bd2145cd4098717ce1c11/LICENSE",
+            "sha256": "9da87f12e0cc2ddd3cd689ac4946a0508fc09b8d882e1430eb5ec16762b057a5"
+          }
+        ]
+      },
+      {
+        "id": "cg",
+        "name": "css.gg",
+        "license": "MIT",
+        "projectUrl": "https://github.com/astrit/css.gg",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/astrit/css.gg.git",
+          "revision": "ad0428df5491082b29a81d64dbdc59b9602cc059"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/cg/LICENSE.md",
+            "url": "https://raw.githubusercontent.com/astrit/css.gg/ad0428df5491082b29a81d64dbdc59b9602cc059/LICENSE.md",
+            "sha256": "901673e29904f76a9735f1430f9ee59867aae09692168d7abf1ba6adf01f8195"
+          }
+        ]
+      },
+      {
+        "id": "vsc",
+        "name": "VS Code Icons",
+        "license": "CC BY 4.0",
+        "projectUrl": "https://github.com/microsoft/vscode-codicons",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": {
+          "url": "https://github.com/microsoft/vscode-codicons.git",
+          "revision": "2520ba03063c129873840898a903932271126c70"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/vsc/LICENSE",
+            "url": "https://raw.githubusercontent.com/microsoft/vscode-codicons/2520ba03063c129873840898a903932271126c70/LICENSE",
+            "sha256": "d6239afa918961b465b07bf7411cbe34ff6685854f58553db7966f4881a0211f"
+          }
+        ]
+      },
+      {
+        "id": "tb",
+        "name": "Tabler Icons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/tabler/tabler-icons",
+        "licenseUrl": "https://opensource.org/licenses/MIT",
+        "source": {
+          "url": "https://github.com/tabler/tabler-icons.git",
+          "revision": "01eb08a9bc8075f5bd6828ac30b0a3a038a9ef46"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/tb/LICENSE",
+            "url": "https://raw.githubusercontent.com/tabler/tabler-icons/01eb08a9bc8075f5bd6828ac30b0a3a038a9ef46/LICENSE",
+            "sha256": "d5a3f948ae5cb95bfc4d2f767ef2bf6a778815b0ddb2d1c48037744cf636518e"
+          }
+        ]
+      },
+      {
+        "id": "tfi",
+        "name": "Themify Icons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/lykmapipo/themify-icons",
+        "licenseUrl": "https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE",
+        "source": {
+          "url": "https://github.com/lykmapipo/themify-icons.git",
+          "revision": "9600186b24a7242f0e1e0a186983e6253301bb5d"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/tfi/README.md",
+            "url": "https://raw.githubusercontent.com/lykmapipo/themify-icons/9600186b24a7242f0e1e0a186983e6253301bb5d/README.md",
+            "sha256": "754c4d858274ac5f96a13cfb240fe2cf1e52f4d49f86934c52806873b3ac47a7"
+          }
+        ]
+      },
+      {
+        "id": "rx",
+        "name": "Radix Icons",
+        "license": "MIT",
+        "projectUrl": "https://icons.radix-ui.com",
+        "licenseUrl": "https://github.com/radix-ui/icons/blob/master/LICENSE",
+        "source": {
+          "url": "https://github.com/radix-ui/icons.git",
+          "revision": "bde33b13aa5848555f5512ac12155930fb4beb7d"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/rx/LICENSE",
+            "url": "https://raw.githubusercontent.com/radix-ui/icons/bde33b13aa5848555f5512ac12155930fb4beb7d/LICENSE",
+            "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+          }
+        ]
+      },
+      {
+        "id": "pi",
+        "name": "Phosphor Icons",
+        "license": "MIT",
+        "projectUrl": "https://github.com/phosphor-icons/core",
+        "licenseUrl": "https://github.com/phosphor-icons/core/blob/main/LICENSE",
+        "source": {
+          "url": "https://github.com/phosphor-icons/core.git",
+          "revision": "7790ae563ef83ac36094b15b5e109d89fef09337"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/pi/LICENSE",
+            "url": "https://raw.githubusercontent.com/phosphor-icons/core/7790ae563ef83ac36094b15b5e109d89fef09337/LICENSE",
+            "sha256": "b5b1f1da112d18ea2147decfd48ddc1bf2b5aeb6c265381579340e95b15a2bb2"
+          }
+        ]
+      },
+      {
+        "id": "lia",
+        "name": "Icons8 Line Awesome",
+        "license": "MIT",
+        "projectUrl": "https://icons8.com/line-awesome",
+        "licenseUrl": "https://github.com/icons8/line-awesome/blob/master/LICENSE.md",
+        "source": {
+          "url": "https://github.com/icons8/line-awesome.git",
+          "revision": "78a101217707c9b1c4dcf2a821be75684e36307f"
+        },
+        "notices": [
+          {
+            "file": "icon-notices/lia/LICENSE.md",
+            "url": "https://raw.githubusercontent.com/icons8/line-awesome/78a101217707c9b1c4dcf2a821be75684e36307f/LICENSE.md",
+            "sha256": "e8ed3ab816e05a011103815620fef5bf7686ad3943153daafe04d93b427c6116"
+          }
+        ]
+      }
+    ]
+  },
+  "documents": [
+    {
+      "file": "debian/third-party-notices/yarn-native/arcanis-libzip-LICENSE",
+      "sha256": "af6d9141427cf40b7d1fa6d7f5473b06a7faa9f9b0a2ea588eb6ba7b2e1c8a9e",
+      "url": "https://raw.githubusercontent.com/arcanis/libzip/664462465d2730d51f04437c90ed7ebcbe19a36f/LICENSE",
+      "revision": "664462465d2730d51f04437c90ed7ebcbe19a36f"
+    },
+    {
+      "file": "debian/third-party-notices/yarn-native/zlib-ng-zlib-ng-LICENSE.md",
+      "sha256": "d3c80be055d94d798eaa786116e84fa0b010bc11420b5d2060d978ea77845436",
+      "url": "https://raw.githubusercontent.com/zlib-ng/zlib-ng/f75c6856c32a0ade1f33e266fb370bac92d15fac/LICENSE.md",
+      "revision": "f75c6856c32a0ade1f33e266fb370bac92d15fac"
+    },
+    {
+      "file": "debian/third-party-notices/yarn-native/emscripten-core-emscripten-LICENSE",
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+      "url": "https://raw.githubusercontent.com/emscripten-core/emscripten/e998705dbddf40a7f68119e8418b53a5160b19d4/LICENSE",
+      "revision": "e998705dbddf40a7f68119e8418b53a5160b19d4"
+    },
+    {
+      "file": "debian/third-party-notices/yarn-native/emscripten-core-emscripten-COPYRIGHT",
+      "sha256": "70ca142d257e2690a1f8eda8a296e64a6d1b16d8aee6784f8ddcf67f3163635d",
+      "url": "https://raw.githubusercontent.com/emscripten-core/emscripten/e998705dbddf40a7f68119e8418b53a5160b19d4/system/lib/libc/musl/COPYRIGHT",
+      "revision": "e998705dbddf40a7f68119e8418b53a5160b19d4"
+    },
+    {
+      "file": "debian/third-party-notices/react-15.4.2/LICENSE",
+      "sha256": "6f66286d4dd445f058ff0ecdf1d3ef82be46f7199d5245e68dd0a57ae2d255a6",
+      "url": "https://raw.githubusercontent.com/facebook/react/03464f06d2efd1f736e04f3b5648eabe07c69904/LICENSE",
+      "revision": "03464f06d2efd1f736e04f3b5648eabe07c69904"
+    },
+    {
+      "file": "debian/third-party-notices/react-15.4.2/PATENTS",
+      "sha256": "b3755ec187d97484fa9e3223828fb11057d0c544d6f2fded30a1dc65c6acca4e",
+      "url": "https://raw.githubusercontent.com/facebook/react/03464f06d2efd1f736e04f3b5648eabe07c69904/PATENTS",
+      "revision": "03464f06d2efd1f736e04f3b5648eabe07c69904"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/ci/LICENSE",
+      "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+      "url": "https://raw.githubusercontent.com/Klarr-Agency/Circum-Icons/cec1364b5199f55e946a9a8360385a958b98cc60/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/fa/LICENSE.txt",
+      "sha256": "e779748dfe75e84f974df3c7bc07f842011a100159158b0f1f49b2f2a5a515cb",
+      "url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/afecf2af5d897b763e5e8e28d46aad2f710ccad6/LICENSE.txt"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/fa6/LICENSE.txt",
+      "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc",
+      "url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/37eff7fa00de26db41183a3ad8ed0e9119fbc44b/LICENSE.txt"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/io/package__LICENSE",
+      "sha256": "c89dabc60b2e4e1a04b33bd7010b5a56bb4725ffe8c00d793a5ae009fbbfebd8",
+      "url": "https://registry.npmjs.org/ionicons/-/ionicons-4.6.3.tgz",
+      "member": "package/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/io5/package__LICENSE",
+      "sha256": "c89dabc60b2e4e1a04b33bd7010b5a56bb4725ffe8c00d793a5ae009fbbfebd8",
+      "url": "https://registry.npmjs.org/ionicons/-/ionicons-5.5.4.tgz",
+      "member": "package/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/md/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/ef43291c4d6ebbada3f46e1f584c39bc8f6861b2/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/ti/README.md",
+      "sha256": "bdc2da6cc038e29bc6b4cdeb3b7eb7a17c94a8f537a237e0bdafd626344d1509",
+      "url": "https://raw.githubusercontent.com/stephenhutchings/typicons.font/0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84/README.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/ti/LICENCE.md",
+      "sha256": "fdf0eb43f872a92f53abfbab00b2c5137c6c4f0fca7cb90fda62a70c498a891c",
+      "url": "https://raw.githubusercontent.com/stephenhutchings/typicons.font/0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84/LICENCE.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/ti/src__font__LICENCE.md",
+      "sha256": "c4a7dc38545d06d84b640888252c05074d9d1c5a12f9df5962744ffdb4bd4413",
+      "url": "https://raw.githubusercontent.com/stephenhutchings/typicons.font/0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84/src/font/LICENCE.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/go/package__LICENSE",
+      "sha256": "4f886642f9e8d99eeadd484acdac011c3fde8a338faf52f5ca1408c13b9a9b63",
+      "url": "https://registry.npmjs.org/@primer/octicons/-/octicons-18.3.0.tgz",
+      "member": "package/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/fi/package__LICENSE",
+      "sha256": "308028e93fcf84972523cdf6e616f73168546b4953895f516d01287f16fe7bee",
+      "url": "https://registry.npmjs.org/feather-icons/-/feather-icons-4.29.2.tgz",
+      "member": "package/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/lu/package__LICENSE",
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc",
+      "url": "https://registry.npmjs.org/lucide-static/-/lucide-static-0.462.0.tgz",
+      "member": "package/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/gi/license.txt",
+      "sha256": "cbbb0edc153248137e890b2336d87c0fff1608e167db173324d54b3605e468bd",
+      "url": "https://raw.githubusercontent.com/delacannon/game-icons-inverted/12920d6565588f0512542a3cb0cdfd36a497f910/license.txt"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/wi/README.md",
+      "sha256": "fe5d8059a785adb47571fbae05d55ae88059224f1817dc1e797504a6098d6161",
+      "url": "https://raw.githubusercontent.com/erikflowers/weather-icons/bb80982bf1f43f2d57f9dd753e7413bf88beb9ed/README.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/di/README.md",
+      "sha256": "d0c1eccf6379e2d4a702d15c8ab1bca43320edc63126ebd51f3907b8e879ee29",
+      "url": "https://raw.githubusercontent.com/vorillaz/devicons/ba75593fdf8d66496676a90cbf127d721f73e961/README.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/ai/LICENSE",
+      "sha256": "5d367fb0a07340571542eb4ee8eb1add62d37b71bad6786a57c2e9a86bf76c70",
+      "url": "https://raw.githubusercontent.com/ant-design/ant-design-icons/6f00108512f880149afe0904fb4a1cf776612aa0/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/bs/LICENSE",
+      "sha256": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969",
+      "url": "https://raw.githubusercontent.com/twbs/icons/dfc7bdc1bf536ac631ec12c8592e4d7bcd1d0ee9/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/ri/License",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/c1c01303b97f81bce88374220e08c3d80c9f241a/License"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/ri/README.md",
+      "sha256": "3e215b1707ce21a17c64364f533151fa60399570b118f2e20dcdc8b9fab9412a",
+      "url": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/c1c01303b97f81bce88374220e08c3d80c9f241a/README.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/fc/LICENSE.md",
+      "sha256": "0c029819d69e43042904a3e9d12d25934d08398ba739e4364d61519aa1c2711c",
+      "url": "https://raw.githubusercontent.com/icons8/flat-color-icons/8eccbbbd8b2af1d2c9593e7cfba5ecb0d68ee378/LICENSE.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/gr/LICENSE",
+      "sha256": "8ced93374d517d3f67dd5bf038c7b310367fae8124f480c688126bfdb02ec40b",
+      "url": "https://raw.githubusercontent.com/grommet/grommet-icons/f9548cae611e0390efa38885d150ffa351451762/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/hi/LICENSE",
+      "sha256": "75523ddd65d9620bea09f84e89d0c373b4205a3708b8a1e9f9598a5438a3e641",
+      "url": "https://raw.githubusercontent.com/tailwindlabs/heroicons/b6de5792d3d53ff81c71b1b8283463aad622e0e3/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/hi2/LICENSE",
+      "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+      "url": "https://raw.githubusercontent.com/tailwindlabs/heroicons/2d1c52ce682b375e8900b1b119aa02a6f1706327/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/si/LICENSE.md",
+      "sha256": "e43ad2b5f43c4798f7ceb92c259f4b854d59eb9dee3f4321ea0185758d7dea7b",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/fd1797e18ce3e0e0c667f1baeb6f226d8f4307ca/LICENSE.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/sl/LICENSE.md",
+      "sha256": "976d947830960c57ad2b3c697dc4c835260876553356e257a3cb023620e4f457",
+      "url": "https://raw.githubusercontent.com/thesabbir/simple-line-icons/f3ed94dd797bdcab52d6f27ba589aea4bb6f3e4d/LICENSE.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/im/License.txt",
+      "sha256": "c968bcba0160bc24a97ff4644ef8fb23e82dfeb50c502cfc8cc4e2a1c895da8f",
+      "url": "https://raw.githubusercontent.com/Keyamoon/IcoMoon-Free/d006795ede82361e1bac1ee76f215cf1dc51e4ca/License.txt"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/bi/LICENSE",
+      "sha256": "9da87f12e0cc2ddd3cd689ac4946a0508fc09b8d882e1430eb5ec16762b057a5",
+      "url": "https://raw.githubusercontent.com/atisawd/boxicons/9ffa9136e8681886bb7bd2145cd4098717ce1c11/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/cg/LICENSE.md",
+      "sha256": "901673e29904f76a9735f1430f9ee59867aae09692168d7abf1ba6adf01f8195",
+      "url": "https://raw.githubusercontent.com/astrit/css.gg/ad0428df5491082b29a81d64dbdc59b9602cc059/LICENSE.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/vsc/LICENSE",
+      "sha256": "d6239afa918961b465b07bf7411cbe34ff6685854f58553db7966f4881a0211f",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode-codicons/2520ba03063c129873840898a903932271126c70/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/tb/LICENSE",
+      "sha256": "d5a3f948ae5cb95bfc4d2f767ef2bf6a778815b0ddb2d1c48037744cf636518e",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/01eb08a9bc8075f5bd6828ac30b0a3a038a9ef46/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/tfi/README.md",
+      "sha256": "754c4d858274ac5f96a13cfb240fe2cf1e52f4d49f86934c52806873b3ac47a7",
+      "url": "https://raw.githubusercontent.com/lykmapipo/themify-icons/9600186b24a7242f0e1e0a186983e6253301bb5d/README.md"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/rx/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "url": "https://raw.githubusercontent.com/radix-ui/icons/bde33b13aa5848555f5512ac12155930fb4beb7d/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/pi/LICENSE",
+      "sha256": "b5b1f1da112d18ea2147decfd48ddc1bf2b5aeb6c265381579340e95b15a2bb2",
+      "url": "https://raw.githubusercontent.com/phosphor-icons/core/7790ae563ef83ac36094b15b5e109d89fef09337/LICENSE"
+    },
+    {
+      "file": "debian/third-party-notices/react-icons/lia/LICENSE.md",
+      "sha256": "e8ed3ab816e05a011103815620fef5bf7686ad3943153daafe04d93b427c6116",
+      "url": "https://raw.githubusercontent.com/icons8/line-awesome/78a101217707c9b1c4dcf2a821be75684e36307f/LICENSE.md"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@gar__promise-retry-1.0.3/LICENSE",
+      "sha256": "1c66b5311fc6328ab70616d2cf8e20a8e0a787f534831cf8a311b20098b617a5",
+      "package": "@gar/promise-retry",
+      "version": "1.0.3",
+      "url": "https://registry.npmjs.org/@gar/promise-retry/-/promise-retry-1.0.3.tgz",
+      "integrity": "sha512-GmzA9ckNokPypTg10pgpeHNQe7ph+iIKKmhKu3Ob9ANkswreCx7R3cKmY781K8QK3AqVL3xVh9A42JvIAbkkSA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@isaacs__balanced-match-4.0.1/LICENSE.md",
+      "sha256": "d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5",
+      "package": "@isaacs/balanced-match",
+      "version": "4.0.1",
+      "url": "https://registry.npmjs.org/@isaacs/balanced-match/-/balanced-match-4.0.1.tgz",
+      "integrity": "sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==",
+      "member": "package/LICENSE.md",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@isaacs__brace-expansion-5.0.0/LICENSE",
+      "sha256": "9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e",
+      "package": "@isaacs/brace-expansion",
+      "version": "5.0.0",
+      "url": "https://registry.npmjs.org/@isaacs/brace-expansion/-/brace-expansion-5.0.0.tgz",
+      "integrity": "sha512-ZT55BDLV0yv0RBm2czMiZ+SqCGO7AvmOM3G/w2xhVPH+te0aKgFjmBvGlL1dH+ql2tgGO3MVrbb3jCKyvpgnxA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@isaacs__fs-minipass-4.0.1/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "@isaacs/fs-minipass",
+      "version": "4.0.1",
+      "url": "https://registry.npmjs.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz",
+      "integrity": "sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@nodelib__fs.scandir-2.1.5/LICENSE",
+      "sha256": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+      "package": "@nodelib/fs.scandir",
+      "version": "2.1.5",
+      "url": "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz",
+      "integrity": "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@nodelib__fs.stat-2.0.5/LICENSE",
+      "sha256": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+      "package": "@nodelib/fs.stat",
+      "version": "2.0.5",
+      "url": "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz",
+      "integrity": "sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@nodelib__fs.walk-1.2.8/LICENSE",
+      "sha256": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+      "package": "@nodelib/fs.walk",
+      "version": "1.2.8",
+      "url": "https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz",
+      "integrity": "sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@npmcli__fs-5.0.0/lib/cp/LICENSE",
+      "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+      "package": "@npmcli/fs",
+      "version": "5.0.0",
+      "url": "https://registry.npmjs.org/@npmcli/fs/-/fs-5.0.0.tgz",
+      "integrity": "sha512-7OsC1gNORBEawOa5+j2pXN9vsicaIOH5cPXxoR6fJOmH6/EXpJB2CajXOu1fPRFun2m1lktEFX11+P89hqO/og==",
+      "member": "package/lib/cp/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@npmcli__fs-5.0.0/LICENSE.md",
+      "sha256": "27d998b503b18cdb16c49e93da04069a99ba8a1d7e18d67146de8e242f9a6d21",
+      "package": "@npmcli/fs",
+      "version": "5.0.0",
+      "url": "https://registry.npmjs.org/@npmcli/fs/-/fs-5.0.0.tgz",
+      "integrity": "sha512-7OsC1gNORBEawOa5+j2pXN9vsicaIOH5cPXxoR6fJOmH6/EXpJB2CajXOu1fPRFun2m1lktEFX11+P89hqO/og==",
+      "member": "package/LICENSE.md",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@npmcli__redact-4.0.0/LICENSE",
+      "sha256": "d0b7cddf14a2005e05b397a950b9f69e1de412b8c6749e5b5d70610fb119e9ee",
+      "package": "@npmcli/redact",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/@npmcli/redact/-/redact-4.0.0.tgz",
+      "integrity": "sha512-gOBg5YHMfZy+TfHArfVogwgfBeQnKbbGo3pSUyK/gSI0AVu+pEiDVcKlQb0D8Mg1LNRZILZ6XG8I5dJ4KuAd9Q==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@sigstore__bundle-4.0.0/LICENSE",
+      "sha256": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+      "package": "@sigstore/bundle",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/@sigstore/bundle/-/bundle-4.0.0.tgz",
+      "integrity": "sha512-NwCl5Y0V6Di0NexvkTqdoVfmjTaQwoLM236r89KEojGmq/jMls8S+zb7yOwAPdXvbwfKDlP+lmXgAL4vKSQT+A==",
+      "member": "package/LICENSE",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@sigstore__core-3.2.1/LICENSE",
+      "sha256": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+      "package": "@sigstore/core",
+      "version": "3.2.1",
+      "url": "https://registry.npmjs.org/@sigstore/core/-/core-3.2.1.tgz",
+      "integrity": "sha512-qRsxPnCrbC/puegGxKuynfnxgLiHqWStrSjxkoB4YKqq3Z3s4cyZyj42ZdWFAEblNP65C+rBH8EuREHIXoi83g==",
+      "member": "package/LICENSE",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@sigstore__protobuf-specs-0.5.1/LICENSE",
+      "sha256": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+      "package": "@sigstore/protobuf-specs",
+      "version": "0.5.1",
+      "url": "https://registry.npmjs.org/@sigstore/protobuf-specs/-/protobuf-specs-0.5.1.tgz",
+      "integrity": "sha512-/ScWUhhoFasJsSRGTVBwId1loQjjnjAfE4djL6ZhrXRpNCmPTnUKF5Jokd58ILseOMjzET3UrMOtJPS9sYeI0g==",
+      "member": "package/LICENSE",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@sigstore__sign-4.1.1/LICENSE",
+      "sha256": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+      "package": "@sigstore/sign",
+      "version": "4.1.1",
+      "url": "https://registry.npmjs.org/@sigstore/sign/-/sign-4.1.1.tgz",
+      "integrity": "sha512-Hf4xglukg0XXQ2RiD5vSoLjdPe8OBUPA8XeVjUObheuDcWdYWrnH/BNmxZCzkAy68MzmNCxXLeurJvs6hcP2OQ==",
+      "member": "package/LICENSE",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@sigstore__tuf-4.0.2/LICENSE",
+      "sha256": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+      "package": "@sigstore/tuf",
+      "version": "4.0.2",
+      "url": "https://registry.npmjs.org/@sigstore/tuf/-/tuf-4.0.2.tgz",
+      "integrity": "sha512-TCAzTy0xzdP79EnxSjq9KQ3eaR7+FmudLC6eRKknVKZbV7ZNlGLClAAQb/HMNJ5n2OBNk2GT1tEmU0xuPr+SLQ==",
+      "member": "package/LICENSE",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@sindresorhus__is-4.6.0/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "package": "@sindresorhus/is",
+      "version": "4.6.0",
+      "url": "https://registry.npmjs.org/@sindresorhus/is/-/is-4.6.0.tgz",
+      "integrity": "sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@szmarczak__http-timer-4.0.5/LICENSE",
+      "sha256": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+      "package": "@szmarczak/http-timer",
+      "version": "4.0.5",
+      "url": "https://registry.npmjs.org/@szmarczak/http-timer/-/http-timer-4.0.5.tgz",
+      "integrity": "sha512-PyRA9sm1Yayuj5OIoJ1hGt2YISX45w9WcFbh6ddT0Z/0yaFxOtGLInr4jUfU1EAFVs0Yfyfev4RNwBlUaHdlDQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@tufjs__canonical-json-2.0.0/LICENSE",
+      "sha256": "564bcb001d6e131452a8e9fba0f0ccc59e8b881f84ce3e46e319a5a33e191e10",
+      "package": "@tufjs/canonical-json",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/@tufjs/canonical-json/-/canonical-json-2.0.0.tgz",
+      "integrity": "sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@tufjs__models-4.1.0/LICENSE",
+      "sha256": "564bcb001d6e131452a8e9fba0f0ccc59e8b881f84ce3e46e319a5a33e191e10",
+      "package": "@tufjs/models",
+      "version": "4.1.0",
+      "url": "https://registry.npmjs.org/@tufjs/models/-/models-4.1.0.tgz",
+      "integrity": "sha512-Y8cK9aggNRsqJVaKUlEYs4s7CvQ1b1ta2DVPyAimb0I2qhzjNk+A+mxvll/klL0RlfuIUei8BF7YWiua4kQqww==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__cacheable-request-6.0.1/cacheable-request/LICENSE",
+      "sha256": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+      "package": "@types/cacheable-request",
+      "version": "6.0.1",
+      "url": "https://registry.npmjs.org/@types/cacheable-request/-/cacheable-request-6.0.1.tgz",
+      "integrity": "sha512-ykFq2zmBGOCbpIXtoVbz4SKY5QriWPh3AjyU4G74RYbtt5yOc5OfaY75ftjg7mikMOla1CTGpX3lLbuJh8DTrQ==",
+      "member": "package/cacheable-request/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__color-name-1.1.1/color-name/LICENSE",
+      "sha256": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+      "package": "@types/color-name",
+      "version": "1.1.1",
+      "url": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
+      "integrity": "sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==",
+      "member": "package/color-name/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__emscripten-1.39.6/emscripten/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "package": "@types/emscripten",
+      "version": "1.39.6",
+      "url": "https://registry.npmjs.org/@types/emscripten/-/emscripten-1.39.6.tgz",
+      "integrity": "sha512-H90aoynNhhkQP6DRweEjJp5vfUVdIj7tdPLsu7pq89vODD/lcugKfZOsfgwpvM6XUewEp2N5dCg1Uf3Qe55Dcg==",
+      "member": "package/emscripten/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__http-cache-semantics-4.0.4/http-cache-semantics/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "package": "@types/http-cache-semantics",
+      "version": "4.0.4",
+      "url": "https://registry.npmjs.org/@types/http-cache-semantics/-/http-cache-semantics-4.0.4.tgz",
+      "integrity": "sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==",
+      "member": "package/http-cache-semantics/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__keyv-3.1.1/keyv/LICENSE",
+      "sha256": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+      "package": "@types/keyv",
+      "version": "3.1.1",
+      "url": "https://registry.npmjs.org/@types/keyv/-/keyv-3.1.1.tgz",
+      "integrity": "sha512-MPtoySlAZQ37VoLaPcTHCu1RWJ4llDkULYZIzOYxlhxBqYPB0RsRlmMU0R6tahtFe27mIdkHV+551ZWV4PLmVw==",
+      "member": "package/keyv/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__node-18.19.124/node v18.19/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "package": "@types/node",
+      "version": "18.19.124",
+      "url": "https://registry.npmjs.org/@types/node/-/node-18.19.124.tgz",
+      "integrity": "sha512-hY4YWZFLs3ku6D2Gqo3RchTd9VRCcrjqp/I0mmohYeUVA5Y8eCXKJEasHxLAJVZRJuQogfd1GiJ9lgogBgKeuQ==",
+      "member": "package/node v18.19/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__node-24.3.1/node/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "package": "@types/node",
+      "version": "24.3.1",
+      "url": "https://registry.npmjs.org/@types/node/-/node-24.3.1.tgz",
+      "integrity": "sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==",
+      "member": "package/node/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__responselike-1.0.0/responselike/LICENSE",
+      "sha256": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+      "package": "@types/responselike",
+      "version": "1.0.0",
+      "url": "https://registry.npmjs.org/@types/responselike/-/responselike-1.0.0.tgz",
+      "integrity": "sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==",
+      "member": "package/responselike/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__semver-7.5.8/semver/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "package": "@types/semver",
+      "version": "7.5.8",
+      "url": "https://registry.npmjs.org/@types/semver/-/semver-7.5.8.tgz",
+      "integrity": "sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==",
+      "member": "package/semver/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__treeify-1.0.0/treeify/LICENSE",
+      "sha256": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6",
+      "package": "@types/treeify",
+      "version": "1.0.0",
+      "url": "https://registry.npmjs.org/@types/treeify/-/treeify-1.0.0.tgz",
+      "integrity": "sha512-ONpcZAEYlbPx4EtJwfTyCDQJGUpKf4sEcuySdCVjK5Fj/3vHp5HII1fqa1/+qrsLnpYELCQTfVW/awsGJePoIg==",
+      "member": "package/treeify/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@types__yoga-layout-1.9.2/yoga-layout/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "package": "@types/yoga-layout",
+      "version": "1.9.2",
+      "url": "https://registry.npmjs.org/@types/yoga-layout/-/yoga-layout-1.9.2.tgz",
+      "integrity": "sha512-S9q47ByT2pPvD65IvrWp7qppVMpk9WGMbVq9wbWZOHg6tnXSD4vyhao6nOSBwwfDdV2p3Kx9evA9vI+XWTfDvw==",
+      "member": "package/yoga-layout/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@zkochan__cmd-shim-5.1.0/LICENSE",
+      "sha256": "6dca3e98ceb51bd8ee4205b354718da7952905e73f1ef30fb38bf81c12bfa40c",
+      "package": "@zkochan/cmd-shim",
+      "version": "5.1.0",
+      "url": "https://registry.npmjs.org/@zkochan/cmd-shim/-/cmd-shim-5.1.0.tgz",
+      "integrity": "sha512-i8bPf1u6Kv1qMBG2JqHvqpdo/+sMaOB5Ohonpm04fvBWZ7y4M0rfI7tbHYVCokWX4BUMR5Cpu4KRSFy+YuxSqQ==",
+      "member": "package/LICENSE",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/agent-base-7.1.4/LICENSE",
+      "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+      "package": "agent-base",
+      "version": "7.1.4",
+      "url": "https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz",
+      "integrity": "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ansi-colors-4.1.1/LICENSE",
+      "sha256": "94e1923e52409cfd50e97988d9772c0de15f65700097e3227fec367a39e82b94",
+      "package": "ansi-colors",
+      "version": "4.1.1",
+      "url": "https://registry.npmjs.org/ansi-colors/-/ansi-colors-4.1.1.tgz",
+      "integrity": "sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ansi-escapes-4.3.2/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "package": "ansi-escapes",
+      "version": "4.3.2",
+      "url": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.2.tgz",
+      "integrity": "sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ansi-regex-5.0.1/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "ansi-regex",
+      "version": "5.0.1",
+      "url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+      "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ansi-styles-4.2.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "ansi-styles",
+      "version": "4.2.0",
+      "url": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
+      "integrity": "sha512-7kFQgnEaMdRtwf6uSfUnVr9gSGC7faurn+J/Mv90/W+iTtN0405/nLdopfMWwchyxhbGYl6TC4Sccn9TUkGAgg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/argparse-2.0.1/LICENSE",
+      "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23",
+      "package": "argparse",
+      "version": "2.0.1",
+      "url": "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz",
+      "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==",
+      "member": "package/LICENSE",
+      "license": "Python-2.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/astral-regex-2.0.0/license",
+      "sha256": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3",
+      "package": "astral-regex",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz",
+      "integrity": "sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/auto-bind-4.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "auto-bind",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/auto-bind/-/auto-bind-4.0.0.tgz",
+      "integrity": "sha512-Hdw8qdNiqdJ8LqT0iK0sVzkFbzg6fhnQqqfWhBDxcHZvU75+B+ayzTy8x+k5Ix0Y92XOhOUlx74ps+bA6BeYMQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/balanced-match-1.0.0/LICENSE.md",
+      "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+      "package": "balanced-match",
+      "version": "1.0.0",
+      "url": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
+      "integrity": "sha512-9Y0g0Q8rmSt+H33DfKv7FOc3v+iRI+o1lbzt8jGcIosYW37IIW/2XVYq5NPdmaD5NQ59Nk26Kl/vZbwW9Fr8vg==",
+      "member": "package/LICENSE.md",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/base64-js-1.5.1/LICENSE",
+      "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1",
+      "package": "base64-js",
+      "version": "1.5.1",
+      "url": "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz",
+      "integrity": "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/bl-4.1.0/LICENSE.md",
+      "sha256": "9377db95383c8befacf05c6e465d969d756edf178487ca1344fdf3ba147c596f",
+      "package": "bl",
+      "version": "4.1.0",
+      "url": "https://registry.npmjs.org/bl/-/bl-4.1.0.tgz",
+      "integrity": "sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==",
+      "member": "package/LICENSE.md",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/brace-expansion-1.1.11/LICENSE",
+      "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "url": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+      "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/braces-3.0.2/LICENSE",
+      "sha256": "e70ff771504ba41f2be55de812a017ff46433d7a250c862e38fc419159e44500",
+      "package": "braces",
+      "version": "3.0.2",
+      "url": "https://registry.npmjs.org/braces/-/braces-3.0.2.tgz",
+      "integrity": "sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/buffer-5.7.1/LICENSE",
+      "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6",
+      "package": "buffer",
+      "version": "5.7.1",
+      "url": "https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz",
+      "integrity": "sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/cacache-20.0.3/LICENSE.md",
+      "sha256": "720836c9bdad386485a492ab41fe08007ecf85ca278ddd8f9333494dcac4949d",
+      "package": "cacache",
+      "version": "20.0.3",
+      "url": "https://registry.npmjs.org/cacache/-/cacache-20.0.3.tgz",
+      "integrity": "sha512-3pUp4e8hv07k1QlijZu6Kn7c9+ZpWWk4j3F8N3xPuCExULobqJydKYOTj1FTq58srkJsXvO7LbGAH4C0ZU3WGw==",
+      "member": "package/LICENSE.md",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/cacheable-lookup-5.0.3/LICENSE",
+      "sha256": "b35de79efc88b23c73dd431df6075bed0890db0db1544ee3d57b046aa7a8e72b",
+      "package": "cacheable-lookup",
+      "version": "5.0.3",
+      "url": "https://registry.npmjs.org/cacheable-lookup/-/cacheable-lookup-5.0.3.tgz",
+      "integrity": "sha512-W+JBqF9SWe18A72XFzN/V/CULFzPm7sBXzzR6ekkE+3tLG72wFZrBiBZhrZuDoYexop4PHJVdFAKb/Nj9+tm9w==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/cacheable-request-7.0.1/LICENSE",
+      "sha256": "861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac",
+      "package": "cacheable-request",
+      "version": "7.0.1",
+      "url": "https://registry.npmjs.org/cacheable-request/-/cacheable-request-7.0.1.tgz",
+      "integrity": "sha512-lt0mJ6YAnsrBErpTMWeu5kl/tg9xMAWjavYTN6VQXM1A/teBITuNcccXsCxF0tDQQJf9DfAaX5O4e0zp0KlfZw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/camelcase-5.3.1/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "camelcase",
+      "version": "5.3.1",
+      "url": "https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz",
+      "integrity": "sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/chalk-4.1.2/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "chalk",
+      "version": "4.1.2",
+      "url": "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz",
+      "integrity": "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/chownr-3.0.0/LICENSE.md",
+      "sha256": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+      "package": "chownr",
+      "version": "3.0.0",
+      "url": "https://registry.npmjs.org/chownr/-/chownr-3.0.0.tgz",
+      "integrity": "sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==",
+      "member": "package/LICENSE.md",
+      "license": "BlueOak-1.0.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ci-info-2.0.0/LICENSE",
+      "sha256": "25bd22427e27b0d3f1c3da2670bb44b622bcced22ebdf4777d5488ac129370a1",
+      "package": "ci-info",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/ci-info/-/ci-info-2.0.0.tgz",
+      "integrity": "sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ci-info-4.0.0/LICENSE",
+      "sha256": "f58943cb354fb2707fea2f7b26b04e6014ddb56835cdfd414c9d2c6c59165b64",
+      "package": "ci-info",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/ci-info/-/ci-info-4.0.0.tgz",
+      "integrity": "sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/cli-boxes-2.2.1/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "package": "cli-boxes",
+      "version": "2.2.1",
+      "url": "https://registry.npmjs.org/cli-boxes/-/cli-boxes-2.2.1.tgz",
+      "integrity": "sha512-y4coMcylgSCdVinjiDBuR8PCC2bLjyGTwEmPb9NHR/QaNU6EUOXcTY/s6VjGMD6ENSEaeQYHCY0GNGS5jfMwPw==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/cli-cursor-3.1.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "cli-cursor",
+      "version": "3.1.0",
+      "url": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz",
+      "integrity": "sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/cli-truncate-2.1.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "cli-truncate",
+      "version": "2.1.0",
+      "url": "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.1.0.tgz",
+      "integrity": "sha512-n8fOixwDD6b/ObinzTrp1ZKFzbgvKZvuz/TvejnLn1aQfC6r52XEx85FmuC+3HI+JM7coBRXUvNqEU2PHVrHpg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/clone-response-1.0.2/LICENSE",
+      "sha256": "861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac",
+      "package": "clone-response",
+      "version": "1.0.2",
+      "url": "https://registry.npmjs.org/clone-response/-/clone-response-1.0.2.tgz",
+      "integrity": "sha512-yjLXh88P599UOyPTFX0POsd7WxnbsVsGohcwzHOLspIhhpalPw1BcqED8NblyZLKcGrL8dTgMlcaZxV2jAD41Q==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/code-excerpt-3.0.0/license",
+      "sha256": "b53ca5a0db1b07785cbd9627341b6bd731ef6104bc3b74d44c15c5e7a8990f20",
+      "package": "code-excerpt",
+      "version": "3.0.0",
+      "url": "https://registry.npmjs.org/code-excerpt/-/code-excerpt-3.0.0.tgz",
+      "integrity": "sha512-VHNTVhd7KsLGOqfX3SyeO8RyYPMp1GJOg194VITk04WMYCv4plV68YWe6TJZxd9MhobjtpMRnVky01gqZsalaw==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/color-convert-2.0.1/LICENSE",
+      "sha256": "693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4",
+      "package": "color-convert",
+      "version": "2.0.1",
+      "url": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+      "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/color-name-1.1.4/LICENSE",
+      "sha256": "c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2",
+      "package": "color-name",
+      "version": "1.1.4",
+      "url": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+      "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/commander-2.12.2/LICENSE",
+      "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b",
+      "package": "commander",
+      "version": "2.12.2",
+      "url": "https://registry.npmjs.org/commander/-/commander-2.12.2.tgz",
+      "integrity": "sha512-BFnaq5ZOGcDN7FlrtBT4xxkgIToalIIxwjxLWVJ8bGTpe1LroqMiqQXdA7ygc7CRvaYS+9zfPGFnJqFSayx+AA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/concat-map-0.0.1/LICENSE",
+      "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b",
+      "package": "concat-map",
+      "version": "0.0.1",
+      "url": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+      "integrity": "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/convert-to-spaces-1.0.2/license",
+      "sha256": "49810fde850fee8647c52ae2d5debb9272c3b26634b9f6a800242b8aa823bad2",
+      "package": "convert-to-spaces",
+      "version": "1.0.2",
+      "url": "https://registry.npmjs.org/convert-to-spaces/-/convert-to-spaces-1.0.2.tgz",
+      "integrity": "sha512-cj09EBuObp9gZNQCzc7hByQyrs6jVGE+o9kSJmeUoj+GiPiJvi5LYqEH/Hmme4+MTLHM+Ejtq+FChpjjEnsPdQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/cross-spawn-7.0.6/LICENSE",
+      "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1",
+      "package": "cross-spawn",
+      "version": "7.0.6",
+      "url": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz",
+      "integrity": "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/debug-4.4.3/LICENSE",
+      "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+      "package": "debug",
+      "version": "4.4.3",
+      "url": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
+      "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/decompress-response-6.0.0/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "package": "decompress-response",
+      "version": "6.0.0",
+      "url": "https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz",
+      "integrity": "sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/defer-to-connect-2.0.1/LICENSE",
+      "sha256": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+      "package": "defer-to-connect",
+      "version": "2.0.1",
+      "url": "https://registry.npmjs.org/defer-to-connect/-/defer-to-connect-2.0.1.tgz",
+      "integrity": "sha512-4tvttepXG1VaYGrRibk5EwJd1t4udunSOVMdLSAL6mId1ix438oPwPZMALY41FCijukO1L0twNcGsdzS7dHgDg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/diff-5.1.0/LICENSE",
+      "sha256": "152f0fb43e953fcf5c56c5bfa4c834bb96b1603e4026319c613dd3e734f305cf",
+      "package": "diff",
+      "version": "5.1.0",
+      "url": "https://registry.npmjs.org/diff/-/diff-5.1.0.tgz",
+      "integrity": "sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==",
+      "member": "package/LICENSE",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/dotenv-16.3.1/LICENSE",
+      "sha256": "74b629b24865e1e83c5277ee84590b7937644d6fd959d0c7bdce758676cd2ced",
+      "package": "dotenv",
+      "version": "16.3.1",
+      "url": "https://registry.npmjs.org/dotenv/-/dotenv-16.3.1.tgz",
+      "integrity": "sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==",
+      "member": "package/LICENSE",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/emoji-regex-8.0.0/LICENSE-MIT.txt",
+      "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+      "package": "emoji-regex",
+      "version": "8.0.0",
+      "url": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+      "member": "package/LICENSE-MIT.txt",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/encoding-0.1.13/LICENSE",
+      "sha256": "2453d3b90aa23715eec80b25fcda1bebf71052ad41a6694d58a9aa867d103c81",
+      "package": "encoding",
+      "version": "0.1.13",
+      "url": "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz",
+      "integrity": "sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/end-of-stream-1.4.1/LICENSE",
+      "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+      "package": "end-of-stream",
+      "version": "1.4.1",
+      "url": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.1.tgz",
+      "integrity": "sha512-1MkrZNvWTKCaigbn+W15elq2BB/L22nqrSY5DKlo3X6+vclJm8Bb5djXJBmEX6fS3+zCh/F4VBK5Z2KxJt4s2Q==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/enquirer-2.3.6/LICENSE",
+      "sha256": "6be6dd088b7136b4e5d99223e88d5d49ea6587b8d81e634548fec49b95ee140b",
+      "package": "enquirer",
+      "version": "2.3.6",
+      "url": "https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz",
+      "integrity": "sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/es-toolkit-1.39.7/LICENSE",
+      "sha256": "d6bac1ac6f734db5f7e606a6402ac4d92f391c5fc553702f74a89f6e80587c9c",
+      "package": "es-toolkit",
+      "version": "1.39.7",
+      "url": "https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.39.7.tgz",
+      "integrity": "sha512-ek/wWryKouBrZIjkwW2BFf91CWOIMvoy2AE5YYgUrfWsJQM2Su1LoLtrw8uusEpN9RfqLlV/0FVNjT0WMv8Bxw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/escape-string-regexp-2.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "escape-string-regexp",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz",
+      "integrity": "sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/fast-glob-3.3.2/LICENSE",
+      "sha256": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+      "package": "fast-glob",
+      "version": "3.3.2",
+      "url": "https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.2.tgz",
+      "integrity": "sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/fastq-1.17.1/LICENSE",
+      "sha256": "c3367f6d01a79d368fc4fbb41b3615fcd92f243d6597ab96742f6f976f9325af",
+      "package": "fastq",
+      "version": "1.17.1",
+      "url": "https://registry.npmjs.org/fastq/-/fastq-1.17.1.tgz",
+      "integrity": "sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/fill-range-7.0.1/LICENSE",
+      "sha256": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
+      "package": "fill-range",
+      "version": "7.0.1",
+      "url": "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz",
+      "integrity": "sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/fs-constants-1.0.0/LICENSE",
+      "sha256": "2281f2db407bdbb54f069eec38128b2dee2c0c952f52b786ef1faecb81767b3c",
+      "package": "fs-constants",
+      "version": "1.0.0",
+      "url": "https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz",
+      "integrity": "sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/fs-minipass-3.0.3/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "fs-minipass",
+      "version": "3.0.3",
+      "url": "https://registry.npmjs.org/fs-minipass/-/fs-minipass-3.0.3.tgz",
+      "integrity": "sha512-XUBA9XClHbnJWSfBzjkm6RvPsyg3sryZt06BEQoXcF7EK/xpGaQYJgQKDJSUH5SGZ76Y7pFx1QBnXz09rU5Fbw==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/get-stream-5.1.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "get-stream",
+      "version": "5.1.0",
+      "url": "https://registry.npmjs.org/get-stream/-/get-stream-5.1.0.tgz",
+      "integrity": "sha512-EXr1FOzrzTfGeL0gQdeFEvOMm2mzMOglyiOXSTpPC+iAjAKftbr3jpCMWynogwYnM+eSj9sHGc6wjIcDvYiygw==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/git-up-7.0.0/LICENSE",
+      "sha256": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+      "package": "git-up",
+      "version": "7.0.0",
+      "url": "https://registry.npmjs.org/git-up/-/git-up-7.0.0.tgz",
+      "integrity": "sha512-ONdIrbBCFusq1Oy0sC71F5azx8bVkvtZtMJAsv+a6lz5YAmbNnLD6HAB4gptHZVLPR8S2/kVN6Gab7lryq5+lQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/git-url-parse-13.1.0/LICENSE",
+      "sha256": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+      "package": "git-url-parse",
+      "version": "13.1.0",
+      "url": "https://registry.npmjs.org/git-url-parse/-/git-url-parse-13.1.0.tgz",
+      "integrity": "sha512-5FvPJP/70WkIprlUZ33bm4UAaFdjcLkJLpWft1BeZKqwR0uhhNGoKwlUaPtVb4LxCSQ++erHapRak9kWGj+FCA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/glob-13.0.0/LICENSE.md",
+      "sha256": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+      "package": "glob",
+      "version": "13.0.0",
+      "url": "https://registry.npmjs.org/glob/-/glob-13.0.0.tgz",
+      "integrity": "sha512-tvZgpqk6fz4BaNZ66ZsRaZnbHvP/jG3uKJvAZOwEVUL4RTA5nJeeLYfyN9/VA8NX/V3IBG+hkeuGpKjvELkVhA==",
+      "member": "package/LICENSE.md",
+      "license": "BlueOak-1.0.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/glob-parent-5.1.2/LICENSE",
+      "sha256": "2c46f1325bd3822a33c1e2c1e49c18d13127ac00f9c8b3b79196c7a126f73cd9",
+      "package": "glob-parent",
+      "version": "5.1.2",
+      "url": "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz",
+      "integrity": "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/got-11.8.2/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "got",
+      "version": "11.8.2",
+      "url": "https://registry.npmjs.org/got/-/got-11.8.2.tgz",
+      "integrity": "sha512-D0QywKgIe30ODs+fm8wMZiAcZjypcCodPNuMz5H9Mny7RJ+IjJ10BdmGW7OM7fHXP+O7r6ZwapQ/YQmMSvB0UQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/grapheme-splitter-1.0.4/LICENSE",
+      "sha256": "80420e1ac2df657805043343290631f7f709e821c5f6c97fb7699dc362fcd049",
+      "package": "grapheme-splitter",
+      "version": "1.0.4",
+      "url": "https://registry.npmjs.org/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz",
+      "integrity": "sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/has-flag-4.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "has-flag",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
+      "integrity": "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/hpagent-1.2.0/LICENSE",
+      "sha256": "866fc13def0e8186ac9d084a973e59a0208f7327b1daafb024bbb06227f61150",
+      "package": "hpagent",
+      "version": "1.2.0",
+      "url": "https://registry.npmjs.org/hpagent/-/hpagent-1.2.0.tgz",
+      "integrity": "sha512-A91dYTeIB6NoXG+PxTQpCCDDnfHsW9kc06Lvpu1TEe9gnd6ZFeiBoRO9JvzEv6xK7EX97/dUE8g/vBMTqTS3CA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/http-cache-semantics-4.1.1/LICENSE",
+      "sha256": "ab868ad5a2ef5068560d9cd3b2180ec63c140bb4c5cae1ba779d300a0ac74fa3",
+      "package": "http-cache-semantics",
+      "version": "4.1.1",
+      "url": "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz",
+      "integrity": "sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==",
+      "member": "package/LICENSE",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/http-proxy-agent-7.0.2/LICENSE",
+      "sha256": "71368fd0f5b4129191e9afcd1e1ef2dc89a9090d3e4d80bbab92dafd032b3bef",
+      "package": "http-proxy-agent",
+      "version": "7.0.2",
+      "url": "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz",
+      "integrity": "sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/http2-wrapper-1.0.0-beta.5.2/LICENSE",
+      "sha256": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+      "package": "http2-wrapper",
+      "version": "1.0.0-beta.5.2",
+      "url": "https://registry.npmjs.org/http2-wrapper/-/http2-wrapper-1.0.0-beta.5.2.tgz",
+      "integrity": "sha512-xYz9goEyBnC8XwXDTuC/MZ6t+MrKVQZOk4s7+PaDkwIsQd8IwqvM+0M6bA/2lvG8GHXcPdf+MejTUeO2LCPCeQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/https-proxy-agent-7.0.6/LICENSE",
+      "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+      "package": "https-proxy-agent",
+      "version": "7.0.6",
+      "url": "https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz",
+      "integrity": "sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/iconv-lite-0.6.3/LICENSE",
+      "sha256": "ac779f7314c74f232ef847ea86e714abe25cf6eeb5cc97b69451b74e2af6492d",
+      "package": "iconv-lite",
+      "version": "0.6.3",
+      "url": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz",
+      "integrity": "sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ieee754-1.2.1/LICENSE",
+      "sha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1",
+      "package": "ieee754",
+      "version": "1.2.1",
+      "url": "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz",
+      "integrity": "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==",
+      "member": "package/LICENSE",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/indent-string-4.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "indent-string",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz",
+      "integrity": "sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/inherits-2.0.4/LICENSE",
+      "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+      "package": "inherits",
+      "version": "2.0.4",
+      "url": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+      "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ink-3.2.0/license",
+      "sha256": "ac7dc693f011a591d380eb31da2b042c2443a83f9e200ac8a57398bdd86dacdd",
+      "package": "ink",
+      "version": "3.2.0",
+      "url": "https://registry.npmjs.org/ink/-/ink-3.2.0.tgz",
+      "integrity": "sha512-firNp1q3xxTzoItj/eOOSZQnYSlyrWks5llCTVX37nJ59K3eXbQ8PtzCguqo8YI19EELo5QxaKnJd4VxzhU8tg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ink-text-input-4.0.3/license",
+      "sha256": "ac7dc693f011a591d380eb31da2b042c2443a83f9e200ac8a57398bdd86dacdd",
+      "package": "ink-text-input",
+      "version": "4.0.3",
+      "url": "https://registry.npmjs.org/ink-text-input/-/ink-text-input-4.0.3.tgz",
+      "integrity": "sha512-eQD01ik9ltmNoHmkeQ2t8LszYkv2XwuPSUz3ie/85qer6Ll/j0QSlSaLNl6ENHZakBHdCBVZY04iOXcLLXA0PQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ip-address-10.1.0/LICENSE",
+      "sha256": "f8d791359a50cbcac82c29cb7b0b1b889b28be76fdd35b8ee33f0f7c8704702a",
+      "package": "ip-address",
+      "version": "10.1.0",
+      "url": "https://registry.npmjs.org/ip-address/-/ip-address-10.1.0.tgz",
+      "integrity": "sha512-XXADHxXmvT9+CRxhXg56LJovE+bmWnEWB78LB83VZTprKTmaC5QfruXocxzTZ2Kl0DNwKuBdlIhjL8LeY8Sf8Q==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/is-ci-2.0.0/LICENSE",
+      "sha256": "25bd22427e27b0d3f1c3da2670bb44b622bcced22ebdf4777d5488ac129370a1",
+      "package": "is-ci",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/is-ci/-/is-ci-2.0.0.tgz",
+      "integrity": "sha512-YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/is-extglob-2.1.1/LICENSE",
+      "sha256": "73b5283588baa142c5baaef5f56d3e8fdea7a30b214e8c5737e87640f882453a",
+      "package": "is-extglob",
+      "version": "2.1.1",
+      "url": "https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz",
+      "integrity": "sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/is-fullwidth-code-point-3.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "url": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+      "integrity": "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/is-glob-4.0.3/LICENSE",
+      "sha256": "4cd903859549d4b20b571041f96dfae1136ed079c476126268f9d7cc1b611150",
+      "package": "is-glob",
+      "version": "4.0.3",
+      "url": "https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz",
+      "integrity": "sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/is-number-7.0.0/LICENSE",
+      "sha256": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
+      "package": "is-number",
+      "version": "7.0.0",
+      "url": "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz",
+      "integrity": "sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/is-ssh-1.4.0/LICENSE",
+      "sha256": "447fbf7f897e92ca9cbd7366c789a7931d535df5aa3567138552a2a67ebd6240",
+      "package": "is-ssh",
+      "version": "1.4.0",
+      "url": "https://registry.npmjs.org/is-ssh/-/is-ssh-1.4.0.tgz",
+      "integrity": "sha512-x7+VxdxOdlV3CYpjvRLBv5Lo9OJerlYanjwFrPR9fuGPjCiNiCzFgAWpiLAohSbsnH4ZAys3SBh+hq5rJosxUQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/is-windows-1.0.2/LICENSE",
+      "sha256": "6b8eac57398e657431675649c722902adbbd3058e3af382f6bc4fd1c05325df6",
+      "package": "is-windows",
+      "version": "1.0.2",
+      "url": "https://registry.npmjs.org/is-windows/-/is-windows-1.0.2.tgz",
+      "integrity": "sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/isexe-2.0.0/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "isexe",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
+      "integrity": "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/js-reporters-1.2.1/LICENSE",
+      "sha256": "ba020dd87ab775c4d3f3c7c7a61756f3372d1bfaa6f77e4ac26e6142ec10c43b",
+      "package": "js-reporters",
+      "version": "1.2.1",
+      "url": "https://registry.npmjs.org/js-reporters/-/js-reporters-1.2.1.tgz",
+      "integrity": "sha512-E4/TBelYYApx/lszChawx4+4MxEAZzL2hNYjQfHsIuu/vlYHkNRrlhTwaeABe5QhK546XmmAvqnCKHgawZs50g==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/js-reporters-1.2.1/license-header",
+      "sha256": "fc73b470490c87ab1da7074813c82fc6f1eb9daa66958cd1f0736070df1b2197",
+      "package": "js-reporters",
+      "version": "1.2.1",
+      "url": "https://registry.npmjs.org/js-reporters/-/js-reporters-1.2.1.tgz",
+      "integrity": "sha512-E4/TBelYYApx/lszChawx4+4MxEAZzL2hNYjQfHsIuu/vlYHkNRrlhTwaeABe5QhK546XmmAvqnCKHgawZs50g==",
+      "member": "package/license-header",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/js-tokens-4.0.0/LICENSE",
+      "sha256": "2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1",
+      "package": "js-tokens",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
+      "integrity": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/js-yaml-4.3.0/LICENSE",
+      "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550",
+      "package": "js-yaml",
+      "version": "4.3.0",
+      "url": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.3.0.tgz",
+      "integrity": "sha512-1td788aAnnZ5qs7V2QIRl1owjtYpbKt749Y3xauqQgwIIGF/xXWz1wMTEBx5O3LK3lXLVuqXPdPxj2BoFHaW9Q==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/json-buffer-3.0.1/LICENSE",
+      "sha256": "715f1f0f2eb7688e53e4e958acdc7fc9e365ae3eaf26efc2604b93cc65fdc3f5",
+      "package": "json-buffer",
+      "version": "3.0.1",
+      "url": "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.1.tgz",
+      "integrity": "sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/lodash-4.17.21/LICENSE",
+      "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+      "package": "lodash",
+      "version": "4.17.21",
+      "url": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
+      "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/loose-envify-1.4.0/LICENSE",
+      "sha256": "4eb7543b08d955a6d23fcc224601d43ff566e775be918805e26210d7f6eb4893",
+      "package": "loose-envify",
+      "version": "1.4.0",
+      "url": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
+      "integrity": "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/lowercase-keys-2.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "lowercase-keys",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-2.0.0.tgz",
+      "integrity": "sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/lru-cache-11.2.5/LICENSE.md",
+      "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+      "package": "lru-cache",
+      "version": "11.2.5",
+      "url": "https://registry.npmjs.org/lru-cache/-/lru-cache-11.2.5.tgz",
+      "integrity": "sha512-vFrFJkWtJvJnD5hg+hJvVE8Lh/TcMzKnTgCWmtBipwI5yLX/iX+5UB2tfuyODF5E7k9xEzMdYgGqaSb1c0c5Yw==",
+      "member": "package/LICENSE.md",
+      "license": "BlueOak-1.0.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/make-fetch-happen-15.0.6/LICENSE",
+      "sha256": "a806e21000ee60cfd64a6f1416f29c7552b4834701974e86c0156f99c0cdd806",
+      "package": "make-fetch-happen",
+      "version": "15.0.6",
+      "url": "https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-15.0.6.tgz",
+      "integrity": "sha512-Je0fLJ0F5atA7F+eIlLzk+Wkcl57JDf4kf+EW8xiP5E31xOQxkIxTbgf1Oi1Lw9tRI9UEMRdI5Vz2xTzoNU1Jw==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/merge2-1.4.1/LICENSE",
+      "sha256": "b2590e53ea6e050512c3993bfc746c394bbba9242fd6909245201bdc1dc6862a",
+      "package": "merge2",
+      "version": "1.4.1",
+      "url": "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz",
+      "integrity": "sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/micromatch-4.0.5/LICENSE",
+      "sha256": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
+      "package": "micromatch",
+      "version": "4.0.5",
+      "url": "https://registry.npmjs.org/micromatch/-/micromatch-4.0.5.tgz",
+      "integrity": "sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/mimic-fn-2.1.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "mimic-fn",
+      "version": "2.1.0",
+      "url": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz",
+      "integrity": "sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/mimic-response-1.0.1/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "mimic-response",
+      "version": "1.0.1",
+      "url": "https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz",
+      "integrity": "sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/mimic-response-3.1.0/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "package": "mimic-response",
+      "version": "3.1.0",
+      "url": "https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz",
+      "integrity": "sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minimatch-10.1.1/LICENSE.md",
+      "sha256": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901",
+      "package": "minimatch",
+      "version": "10.1.1",
+      "url": "https://registry.npmjs.org/minimatch/-/minimatch-10.1.1.tgz",
+      "integrity": "sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==",
+      "member": "package/LICENSE.md",
+      "license": "BlueOak-1.0.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minimatch-3.0.4/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "url": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+      "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minipass-3.3.5/LICENSE",
+      "sha256": "a5a110eb524bf3217958e405b5e3411277e915a2f5902c330348877000337e53",
+      "package": "minipass",
+      "version": "3.3.5",
+      "url": "https://registry.npmjs.org/minipass/-/minipass-3.3.5.tgz",
+      "integrity": "sha512-rQ/p+KfKBkeNwo04U15i+hOwoVBVmekmm/HcfTkTN2t9pbQKCMm4eN5gFeqgrrSp/kH/7BYYhTIHOxGqzbBPaA==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minipass-7.1.2/LICENSE",
+      "sha256": "833faa18ac4b83a6372c05b3643d0d44ecd27d6627b8cd19b0f48fe74260cf39",
+      "package": "minipass",
+      "version": "7.1.2",
+      "url": "https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz",
+      "integrity": "sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minipass-collect-2.0.1/LICENSE",
+      "sha256": "b630651f34d0e0284ea940601bbe0a58f306ad7e9819e351d9dfab812f8d0f38",
+      "package": "minipass-collect",
+      "version": "2.0.1",
+      "url": "https://registry.npmjs.org/minipass-collect/-/minipass-collect-2.0.1.tgz",
+      "integrity": "sha512-D7V8PO9oaz7PWGLbCACuI1qEOsq7UKfLotx/C0Aet43fCUB/wfQ7DYeq2oR/svFJGYDHPr38SHATeaj/ZoKHKw==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minipass-fetch-5.0.0/LICENSE",
+      "sha256": "1dedee6f84f5875ce4dc398d4d767274eb952a43cfd510a6ada856b2ed347472",
+      "package": "minipass-fetch",
+      "version": "5.0.0",
+      "url": "https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-5.0.0.tgz",
+      "integrity": "sha512-fiCdUALipqgPWrOVTz9fw0XhcazULXOSU6ie40DDbX1F49p1dBrSRBuswndTx1x3vEb/g0FT7vC4c4C2u/mh3A==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minipass-flush-1.0.5/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "minipass-flush",
+      "version": "1.0.5",
+      "url": "https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz",
+      "integrity": "sha512-JmQSYYpPUqX5Jyn1mXaRwOda1uQ8HP5KAT/oDSLCzt1BYRhQU0/hDtsB1ufZfEEzMZ9aAVmsBw8+FWsIXlClWw==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minipass-pipeline-1.2.4/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "minipass-pipeline",
+      "version": "1.2.4",
+      "url": "https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz",
+      "integrity": "sha512-xuIq7cIOt09RPRJ19gdi4b+RiNvDFYe5JH+ggNvBqGqpQXcru3PcRmOZuHBKWK1Txf9+cQ+HMVN4d6z46LZP7A==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minipass-sized-1.0.3/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "minipass-sized",
+      "version": "1.0.3",
+      "url": "https://registry.npmjs.org/minipass-sized/-/minipass-sized-1.0.3.tgz",
+      "integrity": "sha512-MbkQQ2CTiBMlA2Dm/5cY+9SWFEN8pzzOXi6rlM5Xxq0Yqbda5ZQy9sU75a673FE9ZK0Zsbr6Y5iP6u9nktfg2g==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/minizlib-3.1.0/LICENSE",
+      "sha256": "df05697a04b8997c79d423930534e59cc18828f6e22d0c8c2d62fcbea1c4f50b",
+      "package": "minizlib",
+      "version": "3.1.0",
+      "url": "https://registry.npmjs.org/minizlib/-/minizlib-3.1.0.tgz",
+      "integrity": "sha512-KZxYo1BUkWD2TVFLr0MQoM8vUUigWD3LlD83a/75BqC+4qE0Hb1Vo5v1FgcfaNXvfXzr+5EhQ6ing/CaBijTlw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ms-2.1.3/license.md",
+      "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+      "package": "ms",
+      "version": "2.1.3",
+      "url": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
+      "member": "package/license.md",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/negotiator-1.0.0/LICENSE",
+      "sha256": "553d4d20029a24e315b428a1a54a9e109eaa340f2e958a4f50a92362c2c4070b",
+      "package": "negotiator",
+      "version": "1.0.0",
+      "url": "https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz",
+      "integrity": "sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/node-watch-0.6.0/LICENSE",
+      "sha256": "3e19293b6c06959f1c585315017fc80ef7798e1d63b46547e021608b647c6aac",
+      "package": "node-watch",
+      "version": "0.6.0",
+      "url": "https://registry.npmjs.org/node-watch/-/node-watch-0.6.0.tgz",
+      "integrity": "sha512-XAgTL05z75ptd7JSVejH1a2Dm1zmXYhuDr9l230Qk6Z7/7GPcnAs/UyJJ4ggsXSvWil8iOzwQLW0zuGUvHpG8g==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/normalize-url-4.5.1/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "normalize-url",
+      "version": "4.5.1",
+      "url": "https://registry.npmjs.org/normalize-url/-/normalize-url-4.5.1.tgz",
+      "integrity": "sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/object-assign-4.1.1/license",
+      "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c",
+      "package": "object-assign",
+      "version": "4.1.1",
+      "url": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
+      "integrity": "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/once-1.4.0/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "once",
+      "version": "1.4.0",
+      "url": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+      "integrity": "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/onetime-5.1.2/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "package": "onetime",
+      "version": "5.1.2",
+      "url": "https://registry.npmjs.org/onetime/-/onetime-5.1.2.tgz",
+      "integrity": "sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/p-cancelable-2.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "p-cancelable",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/p-cancelable/-/p-cancelable-2.0.0.tgz",
+      "integrity": "sha512-wvPXDmbMmu2ksjkB4Z3nZWTSkJEb9lqVdMaCKpZUGJG9TMiNp9XcbG3fn9fPKjem04fJMJnXoyFPk2FmgiaiNg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/p-limit-2.2.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "p-limit",
+      "version": "2.2.0",
+      "url": "https://registry.npmjs.org/p-limit/-/p-limit-2.2.0.tgz",
+      "integrity": "sha512-pZbTJpoUsCzV48Mc9Nh51VbwO0X9cuPFE8gYwx9BTCt9SF8/b7Zljd2fVgOxhIF/HDTKgpVzs+GPhyKfjLLFRQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/p-map-7.0.4/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "package": "p-map",
+      "version": "7.0.4",
+      "url": "https://registry.npmjs.org/p-map/-/p-map-7.0.4.tgz",
+      "integrity": "sha512-tkAQEw8ysMzmkhgw8k+1U/iPhWNhykKnSk4Rd5zLoPJCuJaGRPo6YposrZgaxHKzDHdDWWZvE/Sk7hsL2X/CpQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/p-try-2.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "p-try",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/p-try/-/p-try-2.0.0.tgz",
+      "integrity": "sha512-hMp0onDKIajHfIkdRk3P4CdCmErkYAxxDtP3Wx/4nZ3aGlau2VKh3mZpcuFkH27WQkL/3WBCPOktzA9ZOAnMQQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/parse-path-7.0.0/LICENSE",
+      "sha256": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+      "package": "parse-path",
+      "version": "7.0.0",
+      "url": "https://registry.npmjs.org/parse-path/-/parse-path-7.0.0.tgz",
+      "integrity": "sha512-Euf9GG8WT9CdqwuWJGdf3RkUcTBArppHABkO7Lm8IzRQp0e2r/kkFnmhu4TSK30Wcu5rVAZLmfPKSBBi9tWFog==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/parse-url-8.1.0/LICENSE",
+      "sha256": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+      "package": "parse-url",
+      "version": "8.1.0",
+      "url": "https://registry.npmjs.org/parse-url/-/parse-url-8.1.0.tgz",
+      "integrity": "sha512-xDvOoLU5XRrcOZvnI6b8zA6n9O9ejNk/GExuz1yBuWUGn9KA97GI6HTs6u02wKara1CeVmZhH+0TZFdWScR89w==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/path-key-3.1.1/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "path-key",
+      "version": "3.1.1",
+      "url": "https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz",
+      "integrity": "sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/path-parse-1.0.7/LICENSE",
+      "sha256": "3f4609137f65070541b9214300ea0d640af8192857de0eeb2b03403003d9228a",
+      "package": "path-parse",
+      "version": "1.0.7",
+      "url": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz",
+      "integrity": "sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/path-scurry-2.0.1/LICENSE.md",
+      "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+      "package": "path-scurry",
+      "version": "2.0.1",
+      "url": "https://registry.npmjs.org/path-scurry/-/path-scurry-2.0.1.tgz",
+      "integrity": "sha512-oWyT4gICAu+kaA7QWk/jvCHWarMKNs6pXOGWKDTr7cw4IGcUbW+PeTfbaQiLGheFRpjo6O9J0PmyMfQPjH71oA==",
+      "member": "package/LICENSE.md",
+      "license": "BlueOak-1.0.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/picomatch-2.3.1/LICENSE",
+      "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+      "package": "picomatch",
+      "version": "2.3.1",
+      "url": "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz",
+      "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/proc-log-6.1.0/LICENSE",
+      "sha256": "dc32a0dee275e0a9aeffbc974dbf4899a30dcdc2e5ffa8934aecb69261065864",
+      "package": "proc-log",
+      "version": "6.1.0",
+      "url": "https://registry.npmjs.org/proc-log/-/proc-log-6.1.0.tgz",
+      "integrity": "sha512-iG+GYldRf2BQ0UDUAd6JQ/RwzaQy6mXmsk/IzlYyal4A4SNFw54MeH4/tLkF4I5WoWG9SQwuqWzS99jaFQHBuQ==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/protocols-2.0.1/LICENSE",
+      "sha256": "7a18a3710531a917c53d00e472363af8c5a822ceca2fdbc77ffa08d6e1a8448d",
+      "package": "protocols",
+      "version": "2.0.1",
+      "url": "https://registry.npmjs.org/protocols/-/protocols-2.0.1.tgz",
+      "integrity": "sha512-/XJ368cyBJ7fzLMwLKv1e4vLxOju2MNAIokcr7meSaNcVbWz/CPcW22cP04mwxOErdA5mwjA8Q6w/cdAQxVn7Q==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/pump-3.0.0/LICENSE",
+      "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+      "package": "pump",
+      "version": "3.0.0",
+      "url": "https://registry.npmjs.org/pump/-/pump-3.0.0.tgz",
+      "integrity": "sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/queue-microtask-1.2.3/LICENSE",
+      "sha256": "d4c2065e2b936e62a4eb400efb4576edec9ca1388a9f78aa288e147275e7bc8b",
+      "package": "queue-microtask",
+      "version": "1.2.3",
+      "url": "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz",
+      "integrity": "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/quick-lru-5.1.1/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "quick-lru",
+      "version": "5.1.1",
+      "url": "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz",
+      "integrity": "sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/qunit-2.9.2/LICENSE.txt",
+      "sha256": "d0a3bec5cb58d6061e564e94fc8a93584a4e722ab412e2c5b05340afbd94b815",
+      "package": "qunit",
+      "version": "2.9.2",
+      "url": "https://registry.npmjs.org/qunit/-/qunit-2.9.2.tgz",
+      "integrity": "sha512-wTOYHnioWHcx5wa85Wl15IE7D6zTZe2CQlsodS14yj7s2FZ3MviRnQluspBZsueIDEO7doiuzKlv05yfky1R7w==",
+      "member": "package/LICENSE.txt",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/react-17.0.2/LICENSE",
+      "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+      "package": "react",
+      "version": "17.0.2",
+      "url": "https://registry.npmjs.org/react/-/react-17.0.2.tgz",
+      "integrity": "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/react-devtools-core-4.28.5/dist/standalone.js.LICENSE.txt",
+      "sha256": "c16b0772ca43008a33a00f09eb1fdc9b8daa3d602adc17423a67dde93bf01660",
+      "package": "react-devtools-core",
+      "version": "4.28.5",
+      "url": "https://registry.npmjs.org/react-devtools-core/-/react-devtools-core-4.28.5.tgz",
+      "integrity": "sha512-cq/o30z9W2Wb4rzBefjv5fBalHU0rJGZCHAkf/RHSBWSSYwh8PlQTqqOJmgIIbBtpj27T6FIPXeomIjZtCNVqA==",
+      "member": "package/dist/standalone.js.LICENSE.txt",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/react-reconciler-0.26.2/LICENSE",
+      "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+      "package": "react-reconciler",
+      "version": "0.26.2",
+      "url": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.26.2.tgz",
+      "integrity": "sha512-nK6kgY28HwrMNwDnMui3dvm3rCFjZrcGiuwLc5COUipBK5hWHLOxMJhSnSomirqWwjPBJKV1QcbkI0VJr7Gl1Q==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/readable-stream-3.6.0/LICENSE",
+      "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+      "package": "readable-stream",
+      "version": "3.6.0",
+      "url": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.0.tgz",
+      "integrity": "sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/readline-sync-1.4.9/LICENSE-MIT",
+      "sha256": "4ee6bf89a35a031e24d8deb83aac3ab0eb6c815cf7c1bbe6afba217195dac599",
+      "package": "readline-sync",
+      "version": "1.4.9",
+      "url": "https://registry.npmjs.org/readline-sync/-/readline-sync-1.4.9.tgz",
+      "integrity": "sha512-mp5h1N39kuKbCRGebLPIKTBOhuDw55GaNg5S+K9TW9uDAS1wIHpGUc2YokdUMZJb8GqS49sWmWEDijaESYh0Hg==",
+      "member": "package/LICENSE-MIT",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/resolve-1.9.0/LICENSE",
+      "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b",
+      "package": "resolve",
+      "version": "1.9.0",
+      "url": "https://registry.npmjs.org/resolve/-/resolve-1.9.0.tgz",
+      "integrity": "sha512-TZNye00tI67lwYvzxCxHGjwTNlUV70io54/Ed4j6PscB8xVfuBJpRenI/o6dVk0cY0PYTY27AgCoGGxRnYuItQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/resolve-alpn-1.2.1/LICENSE",
+      "sha256": "03b347a3d13b0e5bdb8fc5edeed0286b1be51441c6490a90710692d227136e0d",
+      "package": "resolve-alpn",
+      "version": "1.2.1",
+      "url": "https://registry.npmjs.org/resolve-alpn/-/resolve-alpn-1.2.1.tgz",
+      "integrity": "sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/responselike-2.0.0/LICENSE",
+      "sha256": "2c4e066228dbca96c8c6e8bef5377306f227ffa1d87a18a218b230e13ac5d39e",
+      "package": "responselike",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/responselike/-/responselike-2.0.0.tgz",
+      "integrity": "sha512-xH48u3FTB9VsZw7R+vvgaKeLKzT6jOogbQhEe/jewwnZgzPcnyWui2Av6JpoYZF/91uueC+lqhWqeURw5/qhCw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/restore-cursor-3.1.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "restore-cursor",
+      "version": "3.1.0",
+      "url": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-3.1.0.tgz",
+      "integrity": "sha512-l+sSefzHpj5qimhFSE5a8nufZYAM3sBSVMAPtYkmC+4EH2anSGaEMXSD0izRQbu9nfyQ9y5JrVmp7E8oZrUjvA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/reusify-1.0.4/LICENSE",
+      "sha256": "db0054e6418412e4a265236c94d1d8935057c67f367240b01bb2b0b2f9091812",
+      "package": "reusify",
+      "version": "1.0.4",
+      "url": "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz",
+      "integrity": "sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/run-parallel-1.2.0/LICENSE",
+      "sha256": "d4c2065e2b936e62a4eb400efb4576edec9ca1388a9f78aa288e147275e7bc8b",
+      "package": "run-parallel",
+      "version": "1.2.0",
+      "url": "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz",
+      "integrity": "sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/safe-buffer-5.1.2/LICENSE",
+      "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+      "package": "safe-buffer",
+      "version": "5.1.2",
+      "url": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
+      "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/safer-buffer-2.1.2/LICENSE",
+      "sha256": "4bc935e71be198c67ddf3c2b5fddb195f6edc182bfc155a96a6db61b44b494b9",
+      "package": "safer-buffer",
+      "version": "2.1.2",
+      "url": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
+      "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/scheduler-0.20.2/LICENSE",
+      "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+      "package": "scheduler",
+      "version": "0.20.2",
+      "url": "https://registry.npmjs.org/scheduler/-/scheduler-0.20.2.tgz",
+      "integrity": "sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/semver-7.8.5/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "semver",
+      "version": "7.8.5",
+      "url": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
+      "integrity": "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/shebang-command-2.0.0/license",
+      "sha256": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3",
+      "package": "shebang-command",
+      "version": "2.0.0",
+      "url": "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz",
+      "integrity": "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/shebang-regex-3.0.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "shebang-regex",
+      "version": "3.0.0",
+      "url": "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz",
+      "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/shell-quote-1.8.1/LICENSE",
+      "sha256": "8bb16db1b047019e4395965f2cf3611b06c34bf86dc2d0210b3c3f91b53c21fe",
+      "package": "shell-quote",
+      "version": "1.8.1",
+      "url": "https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.1.tgz",
+      "integrity": "sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/signal-exit-3.0.7/LICENSE.txt",
+      "sha256": "e05b1eaf5b5f99b7ad75cd1f38858ff9a311780b97715ead67936d60bf96aa7e",
+      "package": "signal-exit",
+      "version": "3.0.7",
+      "url": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz",
+      "integrity": "sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==",
+      "member": "package/LICENSE.txt",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/sigstore-4.1.1/LICENSE",
+      "sha256": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+      "package": "sigstore",
+      "version": "4.1.1",
+      "url": "https://registry.npmjs.org/sigstore/-/sigstore-4.1.1.tgz",
+      "integrity": "sha512-endqECJkfhozrXMK5ngu/UAA0xVcVEFdnHJCElGaExypjW+HK5i6zu3NteLoaX/iFbRUbC3+DjttQs0GARr+5w==",
+      "member": "package/LICENSE",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/slice-ansi-3.0.0/license",
+      "sha256": "3dc3b3d3a284d871f7f307655c90fb101d73abbf87bbddeefd2f67883353bdbc",
+      "package": "slice-ansi",
+      "version": "3.0.0",
+      "url": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-3.0.0.tgz",
+      "integrity": "sha512-pSyv7bSTC7ig9Dcgbw9AuRNUb5k5V6oDudjZoMBSr13qpLBG7tB+zgCkARjq7xIUgdz5P1Qe8u+rSGdouOOIyQ==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/smart-buffer-4.2.0/LICENSE",
+      "sha256": "c46e2c333e1c9e6fcfd130cf91b8e54bf67b60fabbc04996f7e199b990353ff3",
+      "package": "smart-buffer",
+      "version": "4.2.0",
+      "url": "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz",
+      "integrity": "sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/socks-2.8.7/LICENSE",
+      "sha256": "4f4f28866154c8d758241a64296e8790d45d7d912ff7b029930778c06d8f2a72",
+      "package": "socks",
+      "version": "2.8.7",
+      "url": "https://registry.npmjs.org/socks/-/socks-2.8.7.tgz",
+      "integrity": "sha512-HLpt+uLy/pxB+bum/9DzAgiKS8CX1EvbWxI4zlmgGCExImLdiad2iCwXT5Z4c9c3Eq8rP2318mPW2c+QbtjK8A==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/socks-proxy-agent-8.0.5/LICENSE",
+      "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+      "package": "socks-proxy-agent",
+      "version": "8.0.5",
+      "url": "https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz",
+      "integrity": "sha512-HehCEsotFqbPW9sJ8WVYB6UbmIMv7kUUORIF2Nncq4VQvBfNBLibW9YZR5dlYCSUhwcD628pRllm7n+E+YTzJw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ssri-12.0.0/LICENSE.md",
+      "sha256": "3749709146345fa15546aaba4e3ab1b3b92a4d930077b5bc32d90815cb63afaf",
+      "package": "ssri",
+      "version": "12.0.0",
+      "url": "https://registry.npmjs.org/ssri/-/ssri-12.0.0.tgz",
+      "integrity": "sha512-S7iGNosepx9RadX82oimUkvr0Ct7IjJbEbs4mJcTxst8um95J3sDYU1RBEOvdu6oL1Wek2ODI5i4MAw+dZ6cAQ==",
+      "member": "package/LICENSE.md",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ssri-13.0.0/LICENSE.md",
+      "sha256": "3749709146345fa15546aaba4e3ab1b3b92a4d930077b5bc32d90815cb63afaf",
+      "package": "ssri",
+      "version": "13.0.0",
+      "url": "https://registry.npmjs.org/ssri/-/ssri-13.0.0.tgz",
+      "integrity": "sha512-yizwGBpbCn4YomB2lzhZqrHLJoqFGXihNbib3ozhqF/cIp5ue+xSmOQrjNasEE62hFxsCcg/V/z23t4n8jMEng==",
+      "member": "package/LICENSE.md",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/stack-utils-2.0.5/license",
+      "sha256": "38edd343025e65db213da4842b38736af9a28af374acfb1af636a5c7e387dc6b",
+      "package": "stack-utils",
+      "version": "2.0.5",
+      "url": "https://registry.npmjs.org/stack-utils/-/stack-utils-2.0.5.tgz",
+      "integrity": "sha512-xrQcmYhOsn/1kX+Vraq+7j4oE2j/6BFscZ0etmYg81xuM8Gq0022Pxb8+IqgOFUIaxHs0KaSb7T1+OegiNrNFA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/string-width-4.2.3/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "string-width",
+      "version": "4.2.3",
+      "url": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/string_decoder-1.2.0/LICENSE",
+      "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+      "package": "string_decoder",
+      "version": "1.2.0",
+      "url": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.2.0.tgz",
+      "integrity": "sha512-6YqyX6ZWEYguAxgZzHGL7SsCeGx3V2TtOTqZz1xSTSWnqsbWwbptafNyvf/ACquZUXV3DANr5BDIwNYe1mN42w==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/strip-ansi-6.0.1/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "strip-ansi",
+      "version": "6.0.1",
+      "url": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+      "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/supports-color-7.1.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "supports-color",
+      "version": "7.1.0",
+      "url": "https://registry.npmjs.org/supports-color/-/supports-color-7.1.0.tgz",
+      "integrity": "sha512-oRSIpR8pxT1Wr2FquTNnGet79b3BWljqOuoW/h4oBhxJ/HUbX5nX6JSruTkvXDCFMwDPvsaTTbvMLKZWSy0R5g==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/tar-7.5.9/LICENSE.md",
+      "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+      "package": "tar",
+      "version": "7.5.9",
+      "url": "https://registry.npmjs.org/tar/-/tar-7.5.9.tgz",
+      "integrity": "sha512-BTLcK0xsDh2+PUe9F6c2TlRp4zOOBMTkoQHQIWSIzI0R7KG46uEwq4OPk2W7bZcprBMsuaeFsqwYr7pjh6CuHg==",
+      "member": "package/LICENSE.md",
+      "license": "BlueOak-1.0.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/tar-stream-2.2.0/LICENSE",
+      "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+      "package": "tar-stream",
+      "version": "2.2.0",
+      "url": "https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz",
+      "integrity": "sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/tau-prolog-0.2.66/LICENSE",
+      "sha256": "97f3e263bd0acaad9311a44433f73e59877f639db8634a70e1180ef19e770486",
+      "package": "tau-prolog",
+      "version": "0.2.66",
+      "url": "https://registry.npmjs.org/tau-prolog/-/tau-prolog-0.2.66.tgz",
+      "integrity": "sha512-SpoqyOdBKPWNaShX/aSR3z8xQqS9mZ/oqU4NIYvfirn2A6zNYNarZFJAvduMmNYSlGc3MWhW7Ue9A70lLioX4A==",
+      "member": "package/LICENSE",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/to-regex-range-5.0.1/LICENSE",
+      "sha256": "e7d1fee7347ffddccc5fd03327ffdb50f8c112be0d5016d62388a92c4ae6e7a9",
+      "package": "to-regex-range",
+      "version": "5.0.1",
+      "url": "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz",
+      "integrity": "sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/treeify-1.1.0/LICENSE",
+      "sha256": "83927d1555a8e1d5ed9896991fbb2b4cdfb64f45f5e12b7446c3bff5cea538d3",
+      "package": "treeify",
+      "version": "1.1.0",
+      "url": "https://registry.npmjs.org/treeify/-/treeify-1.1.0.tgz",
+      "integrity": "sha512-1m4RA7xVAJrSGrrXGs0L3YTwyvBs2S8PbRHaLZAkFw7JR8oIFwYtysxlBZhYIa7xSyiYJKZ3iGrrk55cGA3i9A==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/tslib-2.6.2/CopyrightNotice.txt",
+      "sha256": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b",
+      "package": "tslib",
+      "version": "2.6.2",
+      "url": "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz",
+      "integrity": "sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==",
+      "member": "package/CopyrightNotice.txt",
+      "license": "0BSD"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/tslib-2.6.2/LICENSE.txt",
+      "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "package": "tslib",
+      "version": "2.6.2",
+      "url": "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz",
+      "integrity": "sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==",
+      "member": "package/LICENSE.txt",
+      "license": "0BSD"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/tuf-js-4.1.0/LICENSE",
+      "sha256": "564bcb001d6e131452a8e9fba0f0ccc59e8b881f84ce3e46e319a5a33e191e10",
+      "package": "tuf-js",
+      "version": "4.1.0",
+      "url": "https://registry.npmjs.org/tuf-js/-/tuf-js-4.1.0.tgz",
+      "integrity": "sha512-50QV99kCKH5P/Vs4E2Gzp7BopNV+KzTXqWeaxrfu5IQJBOULRsTIS9seSsOVT8ZnGXzCyx55nYWAi4qJzpZKEQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/type-fest-0.12.0/license",
+      "sha256": "64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae",
+      "package": "type-fest",
+      "version": "0.12.0",
+      "url": "https://registry.npmjs.org/type-fest/-/type-fest-0.12.0.tgz",
+      "integrity": "sha512-53RyidyjvkGpnWPMF9bQgFtWp+Sl8O2Rp13VavmJgfAP9WWG6q6TkrKU8iyJdnwnfgHI6k2hTlgqH4aSdjoTbg==",
+      "member": "package/license",
+      "license": "(MIT OR CC0-1.0)"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/type-fest-0.15.1/license",
+      "sha256": "64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae",
+      "package": "type-fest",
+      "version": "0.15.1",
+      "url": "https://registry.npmjs.org/type-fest/-/type-fest-0.15.1.tgz",
+      "integrity": "sha512-n+UXrN8i5ioo7kqT/nF8xsEzLaqFra7k32SEsSPwvXVGyAcRgV/FUQN/sgfptJTR1oRmmq7z4IXMFSM7im7C9A==",
+      "member": "package/license",
+      "license": "(MIT OR CC0-1.0)"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/type-fest-0.21.3/license",
+      "sha256": "64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae",
+      "package": "type-fest",
+      "version": "0.21.3",
+      "url": "https://registry.npmjs.org/type-fest/-/type-fest-0.21.3.tgz",
+      "integrity": "sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==",
+      "member": "package/license",
+      "license": "(MIT OR CC0-1.0)"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/undici-types-7.10.0/LICENSE",
+      "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+      "package": "undici-types",
+      "version": "7.10.0",
+      "url": "https://registry.npmjs.org/undici-types/-/undici-types-7.10.0.tgz",
+      "integrity": "sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/unique-filename-5.0.0/LICENSE",
+      "sha256": "11734bf6e540e2c021413451205315e5053932de9df9e81279cf2acad6f135ed",
+      "package": "unique-filename",
+      "version": "5.0.0",
+      "url": "https://registry.npmjs.org/unique-filename/-/unique-filename-5.0.0.tgz",
+      "integrity": "sha512-2RaJTAvAb4owyjllTfXzFClJ7WsGxlykkPvCr9pA//LD9goVq+m4PPAeBgNodGZ7nSrntT/auWpJ6Y5IFXcfjg==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/unique-slug-6.0.0/LICENSE",
+      "sha256": "8e8b31dd3582eb47f1b28bd6f009b54cd926adb9431e8424db7c2eae7c4af437",
+      "package": "unique-slug",
+      "version": "6.0.0",
+      "url": "https://registry.npmjs.org/unique-slug/-/unique-slug-6.0.0.tgz",
+      "integrity": "sha512-4Lup7Ezn8W3d52/xBhZBVdx323ckxa7DEvd9kPQHppTkLoJXw6ltrBCyj5pnrxj0qKDxYMJ56CoxNuFCscdTiw==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/util-deprecate-1.0.2/LICENSE",
+      "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7",
+      "package": "util-deprecate",
+      "version": "1.0.2",
+      "url": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
+      "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/which-2.0.2/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "which",
+      "version": "2.0.2",
+      "url": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
+      "integrity": "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/widest-line-3.1.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "widest-line",
+      "version": "3.1.0",
+      "url": "https://registry.npmjs.org/widest-line/-/widest-line-3.1.0.tgz",
+      "integrity": "sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/wrap-ansi-6.2.0/license",
+      "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+      "package": "wrap-ansi",
+      "version": "6.2.0",
+      "url": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz",
+      "integrity": "sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/wrappy-1.0.2/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "wrappy",
+      "version": "1.0.2",
+      "url": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+      "integrity": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/ws-7.5.10/LICENSE",
+      "sha256": "3de284c8e6fa7e8437eff6f53695471e0332129a5b42a79361e17b7637de94b3",
+      "package": "ws",
+      "version": "7.5.10",
+      "url": "https://registry.npmjs.org/ws/-/ws-7.5.10.tgz",
+      "integrity": "sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==",
+      "member": "package/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/yallist-4.0.0/LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "package": "yallist",
+      "version": "4.0.0",
+      "url": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
+      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
+      "member": "package/LICENSE",
+      "license": "ISC"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/yallist-5.0.0/LICENSE.md",
+      "sha256": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+      "package": "yallist",
+      "version": "5.0.0",
+      "url": "https://registry.npmjs.org/yallist/-/yallist-5.0.0.tgz",
+      "integrity": "sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==",
+      "member": "package/LICENSE.md",
+      "license": "BlueOak-1.0.0"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/yoga-layout-prebuilt-1.10.0/license",
+      "sha256": "ac7dc693f011a591d380eb31da2b042c2443a83f9e200ac8a57398bdd86dacdd",
+      "package": "yoga-layout-prebuilt",
+      "version": "1.10.0",
+      "url": "https://registry.npmjs.org/yoga-layout-prebuilt/-/yoga-layout-prebuilt-1.10.0.tgz",
+      "integrity": "sha512-YnOmtSbv4MTf7RGJMK0FvZ+KD8OEe/J5BNnR0GHhD8J/XcG/Qvxgszm0Un6FTHWW4uHlTgP0IztiXQnGyIR45g==",
+      "member": "package/license",
+      "license": "MIT"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__cache-browser-local-storage-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/cache-browser-local-storage",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__cache-common-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/cache-common",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__cache-in-memory-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/cache-in-memory",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__client-account-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/client-account",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__client-analytics-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/client-analytics",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__client-common-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/client-common",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__client-personalization-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/client-personalization",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__client-search-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/client-search",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__logger-common-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/logger-common",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__logger-console-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/logger-console",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__requester-browser-xhr-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/requester-browser-xhr",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__requester-common-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/requester-common",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__requester-node-http-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/requester-node-http",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "file": "debian/third-party-notices/yarn/@algolia__transporter-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "@algolia/transporter",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "name": "@arcanis/slice-ansi",
+      "version": "1.1.1",
+      "license": "MIT",
+      "git_head": "5bf035072236e3e0fff78c9c8c049ef461303bfd",
+      "repository": {},
+      "file": "debian/third-party-notices/yarn/@arcanis__slice-ansi-1.1.1/package-README",
+      "url": "https://registry.npmjs.org/@arcanis/slice-ansi/-/slice-ansi-1.1.1.tgz",
+      "integrity": "sha512-xguP2WR2Dv0gQ7Ykbdb7BNCnPnIPB94uTi0Z2NvkRBEnhbwjOQ7QyQKJXrVQg4qDpiD9hA5l5cCwy/z2OXgc3w==",
+      "member": "package/README.md",
+      "sha256": "ade58a4b0e0490282041e1c78d30ae2918661df8b8dd8d53c0fe0b0d8e489a20",
+      "basis": "Release README retains its copyright/license statement; package.json supplies the declared license.",
+      "package": "@arcanis/slice-ansi"
+    },
+    {
+      "name": "@npmcli/agent",
+      "version": "4.0.0",
+      "license": "ISC",
+      "git_head": "0f3b22d0e199237ec5628e2337ab3db027514367",
+      "repository": {
+        "url": "git+https://github.com/npm/agent.git",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/@npmcli__agent-4.0.0/upstream-package.json",
+      "url": "https://registry.npmjs.org/@npmcli/agent/-/agent-4.0.0.tgz",
+      "integrity": "sha512-kAQTcEN9E8ERLVg5AsGwLNoFb+oEG6engbqAU2P43gD4JEIkNGMHdVQ096FsOAAYpZPB0RSt0zgInKIAS1l5QA==",
+      "member": "package/package.json",
+      "sha256": "f307a5eaf2ddc572d85b7319f19c01867165a6694359e2248d6caef9161f6abb",
+      "basis": "Upstream supplies its license/author declaration only in package.json; no copyright year or holder is invented. fs is the empty npm security placeholder, not the Node standard library.",
+      "package": "@npmcli/agent"
+    },
+    {
+      "name": "@sigstore/verify",
+      "version": "3.1.1",
+      "license": "Apache-2.0",
+      "git_head": "c1dc7d4778a450787fc72b083f2490ad02b714c6",
+      "repository": {
+        "url": "git+https://github.com/sigstore/sigstore-js.git",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/@sigstore__verify-3.1.1/upstream-LICENSE",
+      "url": "https://raw.githubusercontent.com/sigstore/sigstore-js/c1dc7d4778a450787fc72b083f2490ad02b714c6/LICENSE",
+      "sha256": "364a130d2ca340bd56eb1e6d045fc6929bb0f9d0aa018f2c1949b29517e1cdd0",
+      "package": "@sigstore/verify"
+    },
+    {
+      "file": "debian/third-party-notices/yarn/algoliasearch-4.22.1/upstream-LICENSE",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289",
+      "package": "algoliasearch",
+      "version": "4.22.1",
+      "license": "MIT",
+      "url": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/252228ab7c5d5c94890885e8ce9bb9b072905756/LICENSE.md",
+      "revision": "252228ab7c5d5c94890885e8ce9bb9b072905756",
+      "basis": "License from the exact upstream 4.22.1 release tag; all Algolia modules in this closure are 4.22.1."
+    },
+    {
+      "name": "algoliasearch",
+      "version": "4.22.1",
+      "license": "MIT",
+      "git_head": null,
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/algoliasearch-4.22.1/package-README",
+      "url": "https://registry.npmjs.org/algoliasearch/-/algoliasearch-4.22.1.tgz",
+      "integrity": "sha512-jwydKFQJKIx9kIZ8Jm44SdpigFwRGPESaxZBaHSV0XWN2yBJAOT4mT7ppvlrpA4UGzz92pqFnVKr/kaZXrcreg==",
+      "member": "package/README.md",
+      "sha256": "a6c6368b0f17e9c5d8c4ac905a7f622c42003f19aa31dc5d72780110d29f6e7b",
+      "basis": "Release README retains its copyright/license statement; package.json supplies the declared license.",
+      "package": "algoliasearch"
+    },
+    {
+      "name": "clipanion",
+      "version": "4.0.0-rc.2",
+      "license": "MIT",
+      "git_head": "d667842f01cef26372c943ace542e2e73649ee2c",
+      "repository": {
+        "url": "https://github.com/arcanis/clipanion",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/clipanion-4.0.0-rc.2/package-README",
+      "url": "https://registry.npmjs.org/clipanion/-/clipanion-4.0.0-rc.2.tgz",
+      "integrity": "sha512-0IXugyri0bQs6/JLS9Uoh9xZ4kiDyFf6gAoikefPW/yHJZbS4We4jjx5HZPU/xfRjILSzZld9Q9P3JBJe6irUA==",
+      "member": "package/README.md",
+      "sha256": "196a06e2bf16bf4578847478924e0de7320d9541dfa4455efcb2bcaf2582b4c6",
+      "basis": "Release README retains its copyright/license statement; package.json supplies the declared license.",
+      "package": "clipanion"
+    },
+    {
+      "name": "fs",
+      "version": "0.0.1-security",
+      "license": "ISC",
+      "git_head": null,
+      "repository": {
+        "url": "git+https://github.com/npm/security-holder.git",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/fs-0.0.1-security/upstream-package.json",
+      "url": "https://registry.npmjs.org/fs/-/fs-0.0.1-security.tgz",
+      "integrity": "sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==",
+      "member": "package/package.json",
+      "sha256": "fb6772bed9e09c79805af0e6dea2f99325fe8b9f9031586c9d52fb836e68c380",
+      "basis": "Upstream supplies its license/author declaration only in package.json; no copyright year or holder is invented. fs is the empty npm security placeholder, not the Node standard library.",
+      "package": "fs"
+    },
+    {
+      "name": "imurmurhash",
+      "version": "0.1.4",
+      "license": "MIT",
+      "git_head": null,
+      "repository": {
+        "url": "https://github.com/jensyt/imurmurhash-js",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/imurmurhash-0.1.4/package-README",
+      "url": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz",
+      "integrity": "sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==",
+      "member": "package/README.md",
+      "sha256": "4491517f7deb68d0b2a3bb590e785e276a60f12448447a9650d0bd50161a101c",
+      "basis": "Release README retains its copyright/license statement; package.json supplies the declared license.",
+      "package": "imurmurhash"
+    },
+    {
+      "name": "keyv",
+      "version": "4.5.4",
+      "license": "MIT",
+      "git_head": null,
+      "repository": {
+        "url": "git+https://github.com/jaredwray/keyv.git",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/keyv-4.5.4/package-README",
+      "url": "https://registry.npmjs.org/keyv/-/keyv-4.5.4.tgz",
+      "integrity": "sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==",
+      "member": "package/README.md",
+      "sha256": "c39e1b3f735bb9302eb3cbd84aeb48c4311db64381f9e0a1aa4a61ddf59ce890",
+      "basis": "Release README retains its copyright/license statement; package.json supplies the declared license.",
+      "package": "keyv"
+    },
+    {
+      "name": "patch-console",
+      "version": "1.0.0",
+      "license": "MIT",
+      "git_head": "4c35d6c4d340aff921dafc8ec54bd0a5e4b7f930",
+      "repository": {
+        "url": "git+https://github.com/vadimdemedes/patch-console.git",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/patch-console-1.0.0/upstream-package.json",
+      "url": "https://registry.npmjs.org/patch-console/-/patch-console-1.0.0.tgz",
+      "integrity": "sha512-nxl9nrnLQmh64iTzMfyylSlRozL7kAXIaxw1fVcLYdyhNkJCRUzirRZTikXGJsg+hc4fqpneTK6iU2H1Q8THSA==",
+      "member": "package/package.json",
+      "sha256": "da00574aaaa92031dd04c48caec60449b8397538d04fe4f518ef4c5693a64d82",
+      "basis": "Upstream supplies its license/author declaration only in package.json; no copyright year or holder is invented. fs is the empty npm security placeholder, not the Node standard library.",
+      "package": "patch-console"
+    },
+    {
+      "name": "tinylogic",
+      "version": "2.0.0",
+      "license": "MIT",
+      "git_head": "3c44b760bf8bdf9d4faa557653c2dbf1b39924f6",
+      "repository": {
+        "url": "https://github.com/arcanis/tinylogic",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/tinylogic-2.0.0/package-README",
+      "url": "https://registry.npmjs.org/tinylogic/-/tinylogic-2.0.0.tgz",
+      "integrity": "sha512-dljTkiLLITtsjqBvTA1MRZQK/sGP4kI3UJKc3yA9fMzYbMF2RhcN04SeROVqJBIYYOoJMM8u0WDnhFwMSFQotw==",
+      "member": "package/README.md",
+      "sha256": "e39ffe4aa442a8db677d7fba61a5d8cc0a2a5e2d0cc26ad83c5e1436f4b653c6",
+      "basis": "Release README retains its copyright/license statement; package.json supplies the declared license.",
+      "package": "tinylogic"
+    },
+    {
+      "name": "typanion",
+      "version": "3.14.0",
+      "license": "MIT",
+      "git_head": "ab9f045afc697c998aff66992ad48cb8ba3478a4",
+      "repository": {
+        "url": "https://github.com/arcanis/typanion",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/typanion-3.14.0/package-README",
+      "url": "https://registry.npmjs.org/typanion/-/typanion-3.14.0.tgz",
+      "integrity": "sha512-ZW/lVMRabETuYCd9O9ZvMhAh8GslSqaUjxmK/JLPCh6l73CvLBiuXswj/+7LdnWOgYsQ130FqLzFz5aGT4I3Ug==",
+      "member": "package/README.md",
+      "sha256": "1a5035a89293fe3ca49f5473525159d63624388421ba170f82ee6cf56e90556a",
+      "basis": "Release README retains its copyright/license statement; package.json supplies the declared license.",
+      "package": "typanion"
+    },
+    {
+      "name": "undici-types",
+      "version": "5.26.5",
+      "license": "MIT",
+      "git_head": "9197790ae0d015b40b75fd0c5cdb7420704b5272",
+      "repository": {
+        "url": "git+https://github.com/nodejs/undici.git",
+        "type": "git"
+      },
+      "file": "debian/third-party-notices/yarn/undici-types-5.26.5/upstream-LICENSE",
+      "url": "https://raw.githubusercontent.com/nodejs/undici/9197790ae0d015b40b75fd0c5cdb7420704b5272/LICENSE",
+      "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+      "package": "undici-types"
+    }
+  ],
+  "source_archives": [
+    {
+      "file": "debian/third-party-sources/circum-icons-cec1364b.tar.gz",
+      "sha256": "1eaf265d52b70e8bc57bdd692d9415e7cd5075c67ae787e84908f86c758f3c46",
+      "url": "https://codeload.github.com/Klarr-Agency/Circum-Icons/tar.gz/cec1364b5199f55e946a9a8360385a958b98cc60",
+      "license": "MPL-2.0",
+      "basis": "Exact SVG source revision pinned by react-icons 5.4.0; original artwork and license are retained. The React wrappers are distributed as readable JavaScript."
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "schema": 1,
+  "checked_on": "2026-10-05",
+  "yarn_version": "4.18.1",
+  "upstream_revision": "75ebe063092f86e47e4afeaf1ae4bdf24402874b",
+  "registry": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+  "status": "Upgraded to current upstream release; residual build-tool advisories retained for review, not marked fixed.",
+  "unique_advisories": 42,
+  "scope": "Yarn is a source-package build input and is absent from the binary runtime package. The source closure may include tree-shaken code.",
+  "controls": [
+    "All package builds run without network access, with scripts and telemetry disabled.",
+    "Yarn and every archive are verified against independently reviewed checksums before execution.",
+    "The immutable lockfile and archive/member/license inventories are checked before and after builds.",
+    "Builds run as an unprivileged container user and use only the private, pinned cache.",
+    "Registry prefetching is a separate unprivileged preparation step; newly fetched inputs require renewed review and qualification."
+  ],
+  "release_followup": "Monitor Yarn advisories/releases, reassess actual reachability before changing build inputs or permissions, and update/requalify the pinned build tool. Do not interpret this bounded build configuration as remediation for general interactive use.",
+  "packages": [
+    {
+      "name": "@isaacs/brace-expansion",
+      "source_closure_versions": [
+        "5.0.0"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "@isaacs/brace-expansion has Uncontrolled Resource Consumption",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-7h2j-956f-4vf2",
+          "vulnerable_versions": "<=5.0.0"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "source_closure_versions": [
+        "1.1.11"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "brace-expansion Regular Expression Denial of Service vulnerability",
+          "severity": "low",
+          "url": "https://github.com/advisories/GHSA-v6h2-p8h4-qcjw",
+          "vulnerable_versions": ">=1.0.0 <=1.1.11"
+        },
+        {
+          "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-mh99-v99m-4gvg",
+          "vulnerable_versions": "<1.1.17"
+        },
+        {
+          "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-rgw5-rvv9-x895",
+          "vulnerable_versions": "<1.1.18"
+        },
+        {
+          "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-f886-m6hf-6m8v",
+          "vulnerable_versions": "<1.1.13"
+        },
+        {
+          "title": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-3jxr-9vmj-r5cp",
+          "vulnerable_versions": "<1.1.16"
+        },
+        {
+          "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-6j4f-fj2g-mc7p",
+          "vulnerable_versions": "<1.1.19"
+        },
+        {
+          "title": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-q2hr-2g5m-vwhr",
+          "vulnerable_versions": "<1.1.21"
+        },
+        {
+          "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-qhr7-859c-m2p7",
+          "vulnerable_versions": "<1.1.20"
+        }
+      ]
+    },
+    {
+      "name": "braces",
+      "source_closure_versions": [
+        "3.0.2"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "Uncontrolled resource consumption in braces",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-grv7-fg5c-xmjg",
+          "vulnerable_versions": "<3.0.3"
+        },
+        {
+          "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+          "vulnerable_versions": "<=3.0.3"
+        }
+      ]
+    },
+    {
+      "name": "diff",
+      "source_closure_versions": [
+        "5.1.0"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
+          "severity": "low",
+          "url": "https://github.com/advisories/GHSA-73rr-hh4g-fpgx",
+          "vulnerable_versions": ">=5.0.0 <5.2.2"
+        }
+      ]
+    },
+    {
+      "name": "got",
+      "source_closure_versions": [
+        "11.8.2"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "Got allows a redirect to a UNIX socket",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-pfrx-2q88-qq97",
+          "vulnerable_versions": "<11.8.5"
+        }
+      ]
+    },
+    {
+      "name": "http-cache-semantics",
+      "source_closure_versions": [
+        "4.1.1"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "http-cache-semantics max-stale handling can disclose cross-user cached responses",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-ch52-4w7c-c8xp",
+          "vulnerable_versions": "<=4.2.0"
+        }
+      ]
+    },
+    {
+      "name": "ip-address",
+      "source_closure_versions": [
+        "10.1.0"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "ip-address has XSS in Address6 HTML-emitting methods",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-v2v4-37r5-5v8g",
+          "vulnerable_versions": "<=10.1.0"
+        },
+        {
+          "title": "ip-address: Address4 decodes leading-zero octets as decimal while resolvers decode them as octal, allowing SSRF and trust-boundary bypass",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-mwp4-54f8-5fhr",
+          "vulnerable_versions": "<=10.3.0"
+        },
+        {
+          "title": "ip-address: Address6.isLinkLocal() recognizes fe80::/64 rather than fe80::/10, allowing SSRF and trust-boundary bypass to on-link hosts",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-rpw4-54j3-4h4q",
+          "vulnerable_versions": "<=10.5.0"
+        },
+        {
+          "title": "ip-address: isInSubnet() and isHostInSubnet() compare addresses of different families as if they shared an address space, allowing an allowlist check to admit an address outside its range",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-j6r3-76f7-8jcv",
+          "vulnerable_versions": "<=10.7.0"
+        },
+        {
+          "title": "ip-address: Address6 builds a parse diagnostic proportional to the input with no length bound, allowing a single long string to stall or crash the process",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-h3mg-xc3c-68pw",
+          "vulnerable_versions": "<=10.7.0"
+        }
+      ]
+    },
+    {
+      "name": "js-yaml",
+      "source_closure_versions": [
+        "4.3.0"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj",
+          "vulnerable_versions": ">=4.0.0 <4.3.1"
+        },
+        {
+          "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-2883-xcg3-v3hh",
+          "vulnerable_versions": ">=4.0.0 <4.3.2"
+        }
+      ]
+    },
+    {
+      "name": "lodash",
+      "source_closure_versions": [
+        "4.17.21"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg",
+          "vulnerable_versions": ">=4.0.0 <=4.17.22"
+        },
+        {
+          "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc",
+          "vulnerable_versions": ">=4.0.0 <=4.17.23"
+        },
+        {
+          "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh",
+          "vulnerable_versions": "<=4.17.23"
+        }
+      ]
+    },
+    {
+      "name": "micromatch",
+      "source_closure_versions": [
+        "4.0.5"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "Regular Expression Denial of Service (ReDoS) in micromatch",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-952p-6rrq-rcjv",
+          "vulnerable_versions": "<4.0.8"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "source_closure_versions": [
+        "10.1.1",
+        "3.0.4"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+          "vulnerable_versions": "<3.1.3"
+        },
+        {
+          "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+          "vulnerable_versions": ">=10.0.0 <10.2.1"
+        },
+        {
+          "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+          "vulnerable_versions": "<3.1.3"
+        },
+        {
+          "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+          "vulnerable_versions": ">=10.0.0 <10.2.3"
+        },
+        {
+          "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+          "vulnerable_versions": "<3.1.4"
+        },
+        {
+          "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+          "vulnerable_versions": ">=10.0.0 <10.2.3"
+        },
+        {
+          "title": "minimatch ReDoS vulnerability",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-f8q6-p94x-37v3",
+          "vulnerable_versions": "<3.0.5"
+        }
+      ]
+    },
+    {
+      "name": "picomatch",
+      "source_closure_versions": [
+        "2.3.1"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p",
+          "vulnerable_versions": "<2.3.2"
+        },
+        {
+          "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj",
+          "vulnerable_versions": "<2.3.2"
+        }
+      ]
+    },
+    {
+      "name": "shell-quote",
+      "source_closure_versions": [
+        "1.8.1"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "shell-quote quote() does not escape newlines in object .op values",
+          "severity": "critical",
+          "url": "https://github.com/advisories/GHSA-w7jw-789q-3m8p",
+          "vulnerable_versions": ">=1.1.0 <=1.8.3"
+        },
+        {
+          "title": "shell-quote: Quadratic-complexity Denial of Service in `parse()` (CWE-407)",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-395f-4hp3-45gv",
+          "vulnerable_versions": "<=1.8.4"
+        }
+      ]
+    },
+    {
+      "name": "tar",
+      "source_closure_versions": [
+        "7.5.9"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-qffp-2rhf-9h96",
+          "vulnerable_versions": "<=7.5.9"
+        },
+        {
+          "title": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-9ppj-qmqm-q256",
+          "vulnerable_versions": "<=7.5.10"
+        },
+        {
+          "title": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-vmf3-w455-68vh",
+          "vulnerable_versions": "<=7.5.15"
+        },
+        {
+          "title": "node-tar: Process crash via PAX numeric path type confusion",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-w8wr-v893-vjvp",
+          "vulnerable_versions": "<=7.5.17"
+        },
+        {
+          "title": "node-tar: Decompression/parse DoS via unlimited input",
+          "severity": "critical",
+          "url": "https://github.com/advisories/GHSA-23hp-3jrh-7fpw",
+          "vulnerable_versions": "<=7.5.18"
+        },
+        {
+          "title": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-8x88-c5mf-7j5w",
+          "vulnerable_versions": "<=7.5.17"
+        },
+        {
+          "title": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+          "severity": "moderate",
+          "url": "https://github.com/advisories/GHSA-gvwx-54wh-qm9j",
+          "vulnerable_versions": "<=7.5.16"
+        },
+        {
+          "title": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-r292-9mhp-454m",
+          "vulnerable_versions": "<=7.5.20"
+        }
+      ]
+    },
+    {
+      "name": "ws",
+      "source_closure_versions": [
+        "7.5.10"
+      ],
+      "assessment": "Potential build-tool exposure; conservative source closure, not proof that affected code survived bundling or is reachable. Not fixed by catalogue dependency resolutions.",
+      "advisories": [
+        {
+          "title": "ws: Memory exhaustion DoS from tiny fragments and data chunks",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-96hv-2xvq-fx4p",
+          "vulnerable_versions": ">=7.0.0 <7.5.11"
+        }
+      ]
+    }
+  ]
+}

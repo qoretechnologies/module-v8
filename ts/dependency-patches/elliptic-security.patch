@@ -1,0 +1,14 @@
+diff --git a/lib/elliptic/ec/index.js b/lib/elliptic/ec/index.js
+--- a/lib/elliptic/ec/index.js
++++ b/lib/elliptic/ec/index.js
+@@ -154,7 +154,9 @@
+     var k = options.k ?
+       options.k(iter) :
+       new BN(drbg.generate(this.n.byteLength()));
+-    k = this._truncateToN(k, true);
++    // Preserve the DRBG output width when the nonce starts with zero bytes.
++    // User-supplied k keeps the existing explicit-integer semantics.
++    k = this._truncateToN(k, true, options.k ? undefined : bytes * 8);
+     if (k.cmpn(1) <= 0 || k.cmp(ns1) >= 0)
+       continue;
+ 
