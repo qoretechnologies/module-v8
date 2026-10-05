@@ -57,12 +57,33 @@ archives and their license/notice files are preserved in the vendor component.
 The notice inventory also includes README files containing complete license
 grants and separate copyright notices such as tslib's CopyrightNotice.txt.
 These files are copied verbatim into the binary package's dependency-notices
-directory. Reviewed license identifiers retain the original package metadata
+directory. The separately reviewed notice-manifest.json binds this inventory
+to the entire vendor manifest and checks every retained notice's SHA-256.
+It also pins 43 supplemental upstream notices to the npm release's git revision
+and includes Yarn's license. Supplemental notices are committed under
+debian/upstream-notices; builds never fetch them. The binary package contains
+an installed-notices.json digest inventory for verifying the installed bytes.
+Debhelper compression excludes dependency-notices/ so the recorded paths and
+digests describe the installed files directly; the .deb itself is compressed.
+Missing, modified, unlisted or symlinked notice inputs fail the build.
+Run `python3 debian/dependency_notices.py verify` in an exported source tree
+with vendor/ present to check the notice inputs independently of Qore.
+
+Notice retention does not establish complete license coverage. In particular,
+42 dependency archives still have only embedded or metadata license evidence;
+mixed-license generated code and nested bundled components require per-file
+mapping before publication. The per-file review must cover development inputs
+in the source package as well as the production dependency tree. Reviewed
+license identifiers retain the original package metadata
 in license_review; conflicting declarations remain explicit review findings.
 
 Install declared Build-Depends, then run dpkg-buildpackage -b -us -uc from the
-extracted source directory. Use a clean Ubuntu 26.04 amd64 build environment;
-other build architectures and distributions have not been qualified. npm's
+extracted source directory. The complete offline build is qualified on Ubuntu
+26.04 amd64. The installed Architecture: all package also passes native Ubuntu
+26.04 arm64 discovery and production tests, notice verification and
+install/purge/reinstall checks. The notice verifier and installer are additionally
+tested on Debian 13 amd64 and arm64; this alone does not qualify the complete
+catalogue on Debian. Other build architectures have not been qualified. npm's
 optional development bindings are platform dependent even though the installed
 JavaScript package is architecture independent. No native executable or addon
 is permitted in the installed catalogue tree.

@@ -30,3 +30,7 @@ override_dh_auto_clean:
 override_dh_fixperms:
 	dh_fixperms
 	python3 debian/build-catalogue.py permissions
+
+override_dh_compress:
+	# Keep notice paths and bytes identical to installed-notices.json.
+	dh_compress -Xdependency-notices/

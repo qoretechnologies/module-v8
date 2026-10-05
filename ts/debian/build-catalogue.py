@@ -10,7 +10,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import zipfile
+import dependency_notices
 
 ROOT = Path(__file__).resolve().parent.parent
 PRODUCTION = ROOT / '.debian-production'
@@ -57,11 +57,9 @@ def verify_inputs():
     actual = {path.name for path in cache.glob('*.zip')}
     if expected != actual:
         raise ValueError('Cache differs from the exact dependency manifest')
-    for record in MANIFEST['archives']:
-        if Path(record['archive']).name != record['archive']:
-            raise ValueError('Invalid cache path')
-        if hashlib.sha256((cache / record['archive']).read_bytes()).hexdigest() != record['sha256']:
-            raise ValueError('Dependency checksum mismatch: ' + record['archive'])
+    # Also checks every archive checksum, all retained notice bytes and the
+    # separately pinned upstream notices before using any vendor input.
+    dependency_notices.verified_notices(ROOT)
 
 
 def prune_runtime():
@@ -124,6 +122,7 @@ process.stdout.write(JSON.stringify(map));'''], cwd=PRODUCTION, stdout=output)
 
 
 def test():
+    run(['python3', 'debian/tests/test_dependency_notices.py'])
     run(['node', '--experimental-vm-modules', 'node_modules/jest/bin/jest.js', '--ci',
          '--maxWorkers=2', '--config', 'src/jest.config.ts', '--runTestsByPath',
          *['src/tests/' + name + '.test.ts' for name in TESTS]])
@@ -156,18 +155,7 @@ def install():
             if magic in (b'\x7fELF', b'\xcf\xfa\xed\xfe', b'\xfe\xed\xfa\xcf') or path.suffix == '.node':
                 raise ValueError('Native file in Architecture: all package: ' + str(path))
     notices = ROOT / 'debian/qore-v8-app-catalogue/usr/share/doc/qore-v8-app-catalogue/dependency-notices'
-    notices.mkdir(parents=True, exist_ok=True)
-    for record in MANIFEST['archives']:
-        if not record['notice_files']:
-            continue
-        with zipfile.ZipFile(ROOT / 'vendor/yarn-cache' / record['archive']) as archive:
-            for member in record['notice_files']:
-                relative = Path(record['archive'].removesuffix('.zip')) / member
-                if '..' in relative.parts or relative.is_absolute():
-                    raise ValueError('Invalid notice path')
-                destination = notices / relative
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                destination.write_bytes(archive.read(member))
+    dependency_notices.install(ROOT, notices)
 
 
 def permissions():

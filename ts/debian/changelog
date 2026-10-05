@@ -1,3 +1,17 @@
+qore-v8-app-catalogue (0.1.0~git20261005.1-0qore1~ubuntu26.04) resolute; urgency=medium
+
+  * Preserve 43 supplemental notices from pinned upstream source revisions and
+    Yarn's license alongside the 1438 bundled notices.
+  * Retain seven additional nested and third-party notices in the vendor
+    cache.
+  * Verify the notice inventory and digests before building and installing;
+    retain installed digests and test rejection of unsafe inputs.
+  * Record supplemental license texts and their upstream copyrights separately.
+    Public uploads remain on hold for the complete per-file license review and
+    Facebook SDK hosting decision.
+
+ -- David Nichols <david@qore.org>  Mon, 05 Oct 2026 06:30:00 +0200
+
 qore-v8-app-catalogue (0.1.0~git20260930.2-0qore1~ubuntu26.04) resolute; urgency=medium
 
   * Remove Trello UI selectors from both query and body request locations.
