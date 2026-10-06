@@ -11,14 +11,16 @@
 %try-module uuid
 %define MISSING_EXTERNAL_MODULE
 %endtry
+%try-module json
+%define MISSING_EXTERNAL_MODULE
+%endtry
 %ifndef MISSING_EXTERNAL_MODULE
 %requires TypeScriptActionInterface
-%endif
-%requires QUnit
 %requires HttpServer
 %requires RestClient
+%endif
+%requires QUnit
 %requires v8
-%requires json
 %exec-class HubspotOAuthTest
 
 %ifndef MISSING_EXTERNAL_MODULE
@@ -47,6 +49,12 @@ class HubspotOAuthHandler inherits AbstractHttpRequestHandler {
         }
         hash<auto> result;
         int status = 200;
+        # Echo the exact wire target and JSON body for the generic CRM action regressions.
+        if (path =~ /^\/crm\/v3\/objects\/contacts\// || path == "/crm/v3/lists/fixture/memberships/add") {
+            return makeResponse(path.endsWith("/missing") ? 404 : 200,
+                make_json({"path": cx.raw_path, "body": exists body ? parse_json(body) : NOTHING,
+                    "authorization": hdr.authorization}), {"Content-Type": "application/json"});
+        }
         hash<auto> args;
         if (hdr.method == "POST") {
             args = mime_parse_form_urlencoded_string(body);
@@ -242,6 +250,7 @@ class HubspotOAuthTest inherits QUnit::Test {
         addTestCase("real catalog consent URL and overrides", \testConsent());
         addTestCase("granted CMS pages and domains", \testGranted());
         addTestCase("generic child preserves CMS policies", \testGenericChild());
+        addTestCase("generic CRM status, encoding and array bodies", \testGenericCrm());
         addTestCase("missing, declined and unavailable scopes", \testMissing());
         addTestCase("invalid metadata and safe errors", \testMetadata());
         addTestCase("account entitlement rejection", \testEntitlement());
@@ -382,6 +391,43 @@ class HubspotOAuthTest inherits QUnit::Test {
         assertThrows("HUBSPOT-CMS-CAPABILITY-ERROR", \api.doRequest(),
             ({"method": "GET", "path": "/cms/v3/domains", "error_passthru": True},));
         assertEq(before, handler.count("/cms/v3/domains"), "denied child calls must not reach the CMS endpoint");
+    }
+
+    testGenericCrm() {
+        TypeScriptAppRestConnection conn = connection();
+        RestClient client = conn.get(False);
+        AbstractDataProvider api = conn.getDataProvider().getChildProviderEx("__call__");
+        foreach hash<auto> policy in (({"error_passthru": True}, {"expected_status": (200, 404)})) {
+            hash<auto> response = api.doRequest({"method": "PATCH", "path": "/crm/v3/objects/contacts/missing",
+                "body": {"properties": {"email": "a+b@example.com"}}} + policy);
+            assertEq(404, response.status);
+            assertEq("a+b@example.com", response.body.body.properties.email);
+        }
+        assertThrows("HTTP-CLIENT-RECEIVE-ERROR", \api.doRequest(),
+            ({"method": "PATCH", "path": "/crm/v3/objects/contacts/missing"},));
+        foreach string body_type in (("auto", "json")) {
+            hash<auto> response = api.doRequest({"method": "PATCH", "path": "/crm/v3/objects/contacts/{email}",
+                "path_vars": {"email": "a+b@example.com"}, "query_args": {"idProperty": "email"},
+                "body_type": body_type, "body": {"properties": {"firstname": "Fixture"}}});
+            assertEq("/crm/v3/objects/contacts/a%2Bb%40example.com?idProperty=email", response.body.path);
+            assertEq("Bearer crm-token", response.body.authorization);
+            response = api.doRequest({"method": "PATCH", "path": "/crm/v3/objects/contacts/a%2Bb%40example.com",
+                "body_type": body_type});
+            assertEq("/crm/v3/objects/contacts/a%2Bb%40example.com", response.body.path);
+            response = api.doRequest({"method": "PUT", "path": "/crm/v3/lists/fixture/memberships/add",
+                "body_type": body_type, "body": ("123", "456")});
+            assertEq(("123", "456"), response.body.body);
+        }
+        assertFalse(client.getPreEncodedUrls());
+        assertFalse(client.getErrorPassthru());
+        assertEq("contact-1", client.restGet("/crm/v3/objects/contacts").body.results[0].id);
+        conn = connection("retry-token", {"oauth2_refresh_token": "cms-refresh-token"});
+        api = conn.getDataProvider().getChildProviderEx("__call__");
+        int inspections = handler.count("/oauth/2026-03/token/introspect");
+        assertEq("cms-1", api.doRequest({"method": "GET", "path": "/cms/v3/domains",
+            "expected_status": (200, 404)}).body.results[0].id);
+        assertEq(inspections + 2, handler.count("/oauth/2026-03/token/introspect"),
+            "generic-call status handling must retain OAuth retry and verify the replacement token");
     }
 
     testMissing() {

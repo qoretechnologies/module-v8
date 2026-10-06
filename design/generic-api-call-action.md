@@ -32,9 +32,10 @@ with no per-app code.
 2. A member named `conn` (the TypeScript convention used by
    `TypeScriptActionAppDataProvider`)
 
-When the framework finds a `conn` member, it calls `conn.get(False)` on the
-`AbstractConnection`, which returns the underlying authenticated REST client
-(a synchronous `RestClient`). The duck-typed `restDoRequest()` check passes
+When the framework finds a `conn` member, it first tries `conn.getAsync(False)`.
+Connections without async support, including the TypeScript app connections,
+fall back to `conn.get(False)`, which returns the authenticated synchronous
+`RestClient`. The duck-typed `restDoRequest()` check passes
 — both sync `RestClient` and async `RestClientIo` extend
 `RestClient::AbstractRestClient` which defines that method.
 
@@ -67,6 +68,21 @@ connection class, the predicate rejects it on the basis of its class
 hierarchy alone and no opt-out is required.
 
 ## Reference
+
+The shared Qore `RestClientDataProvider` fix for
+[qorus issue 626](https://github.com/qoretechnologies/qorus/issues/626) is required
+for correct generic HubSpot calls. It honors `error_passthru` and
+`expected_status`, preserves encoded paths, and accepts JSON array bodies.
+The generic synchronous call uses a same-class client copy to isolate its
+encoding and status settings; `TypeScriptAppRestClient::copySelf()` retains the
+owning connection, alternate token signer, and HubSpot CMS request checks.
+
+For contact upserts, use `/crm/v3/objects/contacts/{email}` with
+`path_vars: {email: "a+b@example.com"}`, `query_args: {idProperty: "email"}`, and
+`expected_status: [200, 404]`. Branch on the returned `status` to create a missing
+contact. For list memberships, `body_type: "json"` accepts a body such as
+`["123", "456"]`. The local `test/hubspot-oauth.qtest` covers these calls through
+the actual `tsrest-hubspot` connection, without a HubSpot account.
 
 - `qlib/TypeScriptActionInterface/TypeScriptActionAppDataProvider.qc` —
   root provider class; holds the `conn` member that the reflective
