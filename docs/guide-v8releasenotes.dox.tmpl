@@ -12,6 +12,9 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - accept the reviewed Pipedrive schema revision that documents the \c limit bounds (1 to 500) of the v2 list
+      operations, which the catalogue's client already enforces; retain the previous compatible revisions and
+      refresh CI's exact v2 source and bundle checksums
     - added local HubSpot generic-call coverage for error status policies, percent-encoded contact email
       paths, and JSON array membership bodies; these behaviors require the corresponding shared
       %Qore RestClientDataProvider fix, and retain HubSpot CMS authorization checks
