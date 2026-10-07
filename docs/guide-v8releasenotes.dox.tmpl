@@ -12,6 +12,8 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - the Pipedrive app requests only the OAuth2 scopes its actions, record operations and triggers use;
+      \c mail:full, \c recents:read, \c phone-integration and \c goals:read are no longer requested
     - accept the reviewed Pipedrive schema revision that documents the \c limit bounds (1 to 500) of the v2 list
       operations, which the catalogue's client already enforces; retain the previous compatible revisions and
       refresh CI's exact v2 source and bundle checksums
