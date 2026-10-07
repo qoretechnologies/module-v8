@@ -233,7 +233,8 @@ describe('Pipedrive API migration', () => {
     expect(await broken(ctx, 5)).toBeNull();
     await expect(searchPipedriveRecords(ctx, undefined, { table: '../bad' })).rejects.toThrow(/supported/);
     get.mockClear();
-    await expect(searchPipedriveRecords(ctx, { content: 'Example' }, { table: 'notes' }))
+    // a legacy where shape, deliberately outside the toolkit's conditions type: the search must refuse it
+    await expect(searchPipedriveRecords(ctx, { content: 'Example' } as any, { table: 'notes' }))
       .rejects.toThrow(/conditions is not supported/);
     expect(get).not.toHaveBeenCalled();
   });
