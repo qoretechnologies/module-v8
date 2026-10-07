@@ -3,7 +3,9 @@
 import { removeTrelloSelectionFields } from '../apps/trello/allowed-paths/constants';
 
 describe('Trello native selection fields', () => {
-  const convert = removeTrelloSelectionFields(['idBoard']);
+  const converter = removeTrelloSelectionFields(['idBoard']);
+  // the converter ignores the action context that the toolkit's converter type requires
+  const convert = (request: Record<string, any>) => converter(request as any, {} as any);
 
   it('removes UI selectors from either schema location without mutating the input', async () => {
     const request = { query: { idBoard: 'board', idList: 'list' }, body: { idBoard: 'board', name: 'card' } };
