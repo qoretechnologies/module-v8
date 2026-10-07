@@ -11,7 +11,8 @@ describe('Tests Pipedrive  actions', () => {
   let token: string;
   let baseContext: TQoreAppActionFunctionContext<TCustomConnOptions> = {};
 
-  beforeAll(async () => {
+  /** Exchanges the stored refresh token for an access token, when no `PIPEDRIVE_ACCESS_TOKEN` is given. */
+  const refreshAccessToken = async (): Promise<string> => {
     if (!refreshToken || !clientId || !clientSecret) {
       throw new Error('Pipedrive credentials are not provided');
     }
@@ -49,7 +50,13 @@ describe('Tests Pipedrive  actions', () => {
       throw new Error('Failed to get access token');
     }
 
-    token = responseData.access_token;
+    return responseData.access_token as string;
+  };
+
+  beforeAll(async () => {
+    // an access token minted outside the run is used as is, so a run does not spend
+    // the stored refresh token
+    token = process.env.PIPEDRIVE_ACCESS_TOKEN || (await refreshAccessToken());
 
     baseContext = {
       conn_opts: {
@@ -64,10 +71,28 @@ describe('Tests Pipedrive  actions', () => {
     });
 
     expect(connection).toBeDefined();
+
+    // leads and notes are attached to an organization, and a test account may hold none
+    const { body: organization } = await testApi.execAppAction(
+      'pipedrive',
+      'addOrganization',
+      connection,
+      { name: 'Qorus qtest fixture organization' }
+    );
+    fixtureOrganizationId = organization.data.id;
+  });
+
+  afterAll(async () => {
+    if (fixtureOrganizationId) {
+      await testApi.execAppAction('pipedrive', 'deleteOrganization', connection, {
+        id: fixtureOrganizationId,
+      });
+    }
   });
 
   // let boardId: string;
   let organizationId: number;
+  let fixtureOrganizationId: number;
   describe('Tests Pipedrive options allowed values', () => {
     afterEach(async () => {
       await delay(1000);
@@ -149,7 +174,7 @@ describe('Tests Pipedrive  actions', () => {
 
         expect(body).toBeDefined();
         expect(body.data).toBeDefined();
-        expect(body.data.length).toBeGreaterThan(0);
+        expect((body.data ?? []).length).toBeGreaterThan(0);
       });
 
       it('Should delete activity', async () => {
@@ -206,7 +231,7 @@ describe('Tests Pipedrive  actions', () => {
 
         expect(body).toBeDefined();
         expect(body.data).toBeDefined();
-        expect(body.data.length).toBeGreaterThan(0);
+        expect((body.data ?? []).length).toBeGreaterThan(0);
       });
 
       it('Should delete deal', async () => {
@@ -229,7 +254,7 @@ describe('Tests Pipedrive  actions', () => {
             amount: 1000,
             currency: 'USD',
           },
-          organization_id: organizationId,
+          organization_id: organizationId ?? fixtureOrganizationId,
         });
 
         expect(body).toBeDefined();
@@ -265,7 +290,7 @@ describe('Tests Pipedrive  actions', () => {
 
         expect(body).toBeDefined();
         expect(body.data).toBeDefined();
-        expect(body.data.length).toBeGreaterThan(0);
+        expect((body.data ?? []).length).toBeGreaterThan(0);
       });
 
       it('Should delete lead', async () => {
@@ -284,7 +309,7 @@ describe('Tests Pipedrive  actions', () => {
       it('Should create note', async () => {
         const { body } = await testApi.execAppAction('pipedrive', 'addNote', connection, {
           content: 'Test note content',
-          org_id: organizationId,
+          org_id: organizationId ?? fixtureOrganizationId,
         });
 
         expect(body).toBeDefined();
@@ -320,7 +345,7 @@ describe('Tests Pipedrive  actions', () => {
 
         expect(body).toBeDefined();
         expect(body.data).toBeDefined();
-        expect(body.data.length).toBeGreaterThan(0);
+        expect((body.data ?? []).length).toBeGreaterThan(0);
       });
 
       it('Should delete note', async () => {
@@ -380,7 +405,7 @@ describe('Tests Pipedrive  actions', () => {
 
         expect(body).toBeDefined();
         expect(body.data).toBeDefined();
-        expect(body.data.length).toBeGreaterThan(0);
+        expect((body.data ?? []).length).toBeGreaterThan(0);
       });
 
       it('Should delete organization', async () => {
@@ -439,7 +464,7 @@ describe('Tests Pipedrive  actions', () => {
 
         expect(body).toBeDefined();
         expect(body.data).toBeDefined();
-        expect(body.data.length).toBeGreaterThan(0);
+        expect((body.data ?? []).length).toBeGreaterThan(0);
       });
 
       it('Should delete person', async () => {
