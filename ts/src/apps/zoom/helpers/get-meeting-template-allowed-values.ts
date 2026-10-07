@@ -41,7 +41,9 @@ export const getZoomMeetingTemplateIdAllowedValues: TQoreGetAllowedValuesFunctio
     ErrorClass: ZoomError,
   });
 
-  const path = `/users/me/meeting_templates`;
+  const userId = context?.opts?.userId || 'me';
+
+  const path = `/users/${userId}/meeting_templates`;
 
   return await fetchZoomAllowedValues<TZoomMeetingTemplate, 'templates'>({
     token,

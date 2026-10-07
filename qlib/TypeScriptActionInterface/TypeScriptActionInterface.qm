@@ -125,6 +125,15 @@ public sub ASSERT(*softbool b) {}
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - Zoom: the New Meeting Summary trigger lists the user's own summaries (\c /users/me/meeting_summaries, which
+      the app's scopes cover) instead of the account-wide listing, which needs an admin scope a user-managed app
+      cannot hold, so the trigger never fired; the started, ended and summary triggers report every instance of a
+      recurring or personal-meeting-room meeting instead of the first one only, and trigger state stored under the
+      old key is discarded rather than replayed as new events; the webinar choices carry the integer webinar ID,
+      which every webinar endpoint accepts, instead of the instance UUID that Update, Delete and the registrant
+      endpoints reject; \c from is sent in the formats Zoom documents, a failed Zoom lookup names its HTTP status,
+      and the template lookups honor the user the action names
+      (<a href="https://github.com/qoretechnologies/qorus/issues/658">qorus issue 658</a>)
     - Extend reference-data failure propagation across TypeScript app integrations, including shared pagination,
       SDK lookups, nested metadata retrieval, and record schemas. Remove exception-suppressing returns from
       HubSpot and Magento cleanup blocks; failed requests no longer appear as cacheable empty or partial data.

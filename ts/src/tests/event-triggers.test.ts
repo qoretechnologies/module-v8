@@ -34,10 +34,7 @@ type TTestCheckpoint = ITriggerCheckpoint & {
  * @param trace - optional log that records when a store happens, so a test can assert the order of
  * delivery against storage rather than only that both occurred.
  */
-const makeCheckpoint = (
-  initial?: Record<string, any>,
-  trace?: string[]
-): TTestCheckpoint => {
+const makeCheckpoint = (initial?: Record<string, any>, trace?: string[]): TTestCheckpoint => {
   const cp: TTestCheckpoint = {
     state: initial,
     saved: [],
@@ -425,7 +422,12 @@ describe('withCheckpointSupport', () => {
       })
     );
 
-    const returned = wrapped.event_function({}, () => {}, () => false, undefined);
+    const returned = wrapped.event_function(
+      {},
+      () => {},
+      () => false,
+      undefined
+    );
 
     expect(returned).toBeInstanceOf(Promise);
     expect(finished).toBe(false);
@@ -441,7 +443,12 @@ describe('withCheckpointSupport', () => {
     );
 
     await expect(
-      wrapped.event_function({}, () => {}, () => false, undefined)
+      wrapped.event_function(
+        {},
+        () => {},
+        () => false,
+        undefined
+      )
     ).rejects.toThrow('event function failed');
   });
 
@@ -459,7 +466,12 @@ describe('withCheckpointSupport', () => {
       })
     );
 
-    await wrapped.event_function({}, () => {}, () => false, checkpoint);
+    await wrapped.event_function(
+      {},
+      () => {},
+      () => false,
+      checkpoint
+    );
 
     expect(seenInside).toBe(checkpoint);
     expect(seenAfterAwait).toBe(checkpoint);
@@ -479,8 +491,121 @@ describe('withCheckpointSupport', () => {
       })
     );
 
-    await wrapped.event_function({}, () => {}, () => false, { bogus: true });
+    await wrapped.event_function(
+      {},
+      () => {},
+      () => false,
+      { bogus: true }
+    );
 
     expect(seen).toBeUndefined();
+  });
+});
+
+describe('checkpoint key versions', () => {
+  // newest first, as a "latest N" API returns
+  const page: ITestItem[] = [
+    { id: 'b', created: 20 },
+    { id: 'a', created: 10 },
+  ];
+
+  /** One cycle of created-item polling against `page`, under the given checkpoint and key version. */
+  const pollCreated = (
+    checkpoint: ITriggerCheckpoint,
+    keyVersion: number | undefined,
+    delivered: string[],
+    items: ITestItem[] = page
+  ) => {
+    let polls = 0;
+
+    return runWithTriggerCheckpoint(checkpoint, () =>
+      pollCreatedItemsForTrigger<ITestItem>({
+        trigger_name: 'test',
+        uniqueField: 'id',
+        keyVersion,
+        getItems: async () => {
+          polls++;
+          return items;
+        },
+        update: (item) => {
+          delivered.push(item.id);
+        },
+        should_stop: () => polls > 1,
+      })
+    );
+  };
+
+  it('resumes from a checkpoint stored under the same key version', async () => {
+    const delivered: string[] = [];
+    const checkpoint = makeCheckpoint({ version: 1, keyVersion: 2, delivered: ['a'] });
+
+    await pollCreated(checkpoint, 2, delivered);
+
+    expect(delivered).toEqual(['b']);
+    expect(checkpoint.saved.at(-1)).toEqual({ version: 1, keyVersion: 2, delivered: ['a', 'b'] });
+  });
+
+  it('discards a checkpoint stored under an older key and takes a fresh baseline', async () => {
+    const delivered: string[] = [];
+    // the stored values were taken from another field: resuming would report every item as new
+    const checkpoint = makeCheckpoint({ version: 1, delivered: ['old-key-value'] });
+
+    await pollCreated(checkpoint, 2, delivered);
+
+    expect(delivered).toEqual([]);
+    // the baseline replaces the stale state, under the key version it was taken with
+    expect(checkpoint.saved).toEqual([{ version: 1, keyVersion: 2, delivered: ['b', 'a'] }]);
+  });
+
+  it('discards a checkpoint stored under a newer key than the trigger states', async () => {
+    const delivered: string[] = [];
+    const checkpoint = makeCheckpoint({ version: 1, keyVersion: 2, delivered: ['a'] });
+
+    await pollCreated(checkpoint, undefined, delivered);
+
+    expect(delivered).toEqual([]);
+    expect(checkpoint.saved).toEqual([{ version: 1, delivered: ['b', 'a'] }]);
+  });
+
+  it('stores the baseline, so a restart before the first delivery resumes from it', async () => {
+    const delivered: string[] = [];
+    const checkpoint = makeCheckpoint();
+
+    await pollCreated(checkpoint, undefined, delivered);
+
+    expect(delivered).toEqual([]);
+    expect(checkpoint.saved).toEqual([{ version: 1, delivered: ['b', 'a'] }]);
+
+    // the restart: 'c' arrived in between, and only it is delivered
+    await pollCreated(checkpoint, undefined, delivered, [{ id: 'c', created: 30 }, ...page]);
+
+    expect(delivered).toEqual(['c']);
+  });
+
+  it('applies the same rule to updated-item polling', async () => {
+    const delivered: string[] = [];
+    let polls = 0;
+    const checkpoint = makeCheckpoint({ version: 1, edits: [['a', 1000]] });
+
+    await runWithTriggerCheckpoint(checkpoint, () =>
+      pollUpdatedItemsForTrigger<ITestItem>({
+        trigger_name: 'test',
+        uniqueField: 'id',
+        updatedDateField: 'updated',
+        keyVersion: 2,
+        getItems: async () => {
+          polls++;
+          return [{ id: 'a', created: 0, updated: new Date(2000).toISOString() }];
+        },
+        update: (item) => {
+          delivered.push(item.id);
+        },
+        should_stop: () => polls > 1,
+      })
+    );
+
+    // under the stored key 'a' would count as edited since 1000; under the new key it is the baseline
+    expect(delivered).toEqual([]);
+    expect(checkpoint.saved).toEqual([{ version: 1, keyVersion: 2, edits: [['a', 2000]] }]);
   });
 });

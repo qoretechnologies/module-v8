@@ -78,7 +78,7 @@ const ZoomAppEn = {
           displayName: 'Meeting Event Type',
           shortDesc: 'Type of meeting event to monitor',
           longDesc:
-            'Specifies which type of meeting event should trigger this action. Choose "any" to trigger on all meeting creations, "live" for when meetings start, or "previous_meetings" for when meetings end.',
+            'Specifies which type of meeting event should trigger this action. Choose "upcoming" to trigger when a meeting is created (once per meeting, however many occurrences it has), "live" for when a meeting starts, or "previous_meetings" for when a meeting ends (once per occurrence of a recurring meeting).',
         },
       },
     },
