@@ -12,6 +12,18 @@ export class ZoomError extends Error {
 
 export const ZOOM_APP_API_URL = 'https://api.zoom.us/v2';
 
+/**
+ * The version of the unique keys the Zoom polling triggers dedupe on.
+ *
+ * Bumped whenever a trigger changes the field it takes its key from, so that a delivery checkpoint written
+ * under the old key is discarded and a fresh baseline taken, instead of every current item being replayed
+ * as new (see `pollCreatedItemsForTrigger`).
+ *
+ * - 2: meetings started or ended, and meeting summaries, dedupe on the instance UUID rather than the
+ *   meeting number, so every instance of a recurring or PMI meeting is reported
+ */
+export const ZOOM_TRIGGER_KEY_VERSION = 2;
+
 export const ZoomEndpointData = {
   url: ZOOM_APP_API_URL,
   endpointId: ZOOM_APP_NAME,

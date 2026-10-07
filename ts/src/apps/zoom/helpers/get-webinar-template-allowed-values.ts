@@ -41,7 +41,9 @@ export const getZoomWebinarTemplateIdAllowedValues: TQoreGetAllowedValuesFunctio
     ErrorClass: ZoomError,
   });
 
-  const path = `/users/me/webinar_templates`;
+  const userId = context?.opts?.userId || 'me';
+
+  const path = `/users/${userId}/webinar_templates`;
 
   return await fetchZoomAllowedValues<TZoomWebinarTemplate, 'templates'>({
     token,

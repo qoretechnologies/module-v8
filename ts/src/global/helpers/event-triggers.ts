@@ -33,6 +33,8 @@ export const delayOrCancel = (ms: number, shouldStop: () => boolean): Promise<vo
 /** The checkpoint envelope stored by {@link pollCreatedItemsForTrigger}. */
 interface ICreatedItemsCheckpoint {
   version: 1;
+  /** the trigger's `keyVersion` when the checkpoint was stored, if it states one */
+  keyVersion?: number;
   /** the unique values of the items already delivered */
   delivered: (string | number)[];
 }
@@ -40,6 +42,8 @@ interface ICreatedItemsCheckpoint {
 /** The checkpoint envelope stored by {@link pollUpdatedItemsForTrigger}. */
 interface IUpdatedItemsCheckpoint {
   version: 1;
+  /** the trigger's `keyVersion` when the checkpoint was stored, if it states one */
+  keyVersion?: number;
   /** the last delivered edit time, by unique value */
   edits: [string | number, number][];
 }
@@ -80,6 +84,35 @@ const pruneDelivered = (delivered: Set<string | number>): Set<string | number> =
 };
 
 /**
+ * Whether a restored checkpoint was stored under the unique key the trigger now uses.
+ *
+ * A checkpoint holds the unique values of the items already delivered. When a trigger changes the field it
+ * takes those values from (say from a meeting's number to the UUID of its instance), nothing the feed now
+ * returns matches the stored values, and resuming from them would report every current item as new. A
+ * trigger states its key with `keyVersion`; a checkpoint stored under a different one, or under none, is
+ * discarded in favor of a fresh baseline, exactly as on a first start.
+ */
+const checkpointKeyMatches = (
+  restored: { keyVersion?: number },
+  keyVersion: number | undefined
+): boolean => restored.keyVersion === keyVersion;
+
+/** The `keyVersion` part of a checkpoint envelope: present only when the trigger states one. */
+const keyVersionOf = (keyVersion: number | undefined): { keyVersion?: number } =>
+  keyVersion === undefined ? {} : { keyVersion };
+
+/** Why a stored checkpoint is not resumed from, for the log. */
+const describeDiscardedCheckpoint = (
+  trigger_name: string,
+  recognized: boolean,
+  restored: { keyVersion?: number },
+  keyVersion: number | undefined
+): string =>
+  recognized
+    ? `Not resuming trigger ${trigger_name} from its stored checkpoint: it was stored under unique key version ${restored.keyVersion ?? 'none'} and the trigger now uses ${keyVersion ?? 'none'}; taking a fresh baseline`
+    : `Not resuming trigger ${trigger_name} from its stored checkpoint: the stored state is not recognized; taking a fresh baseline`;
+
+/**
  * Polls for newly created items and triggers an update function for each new item.
  *
  * ### Delivery guarantees
@@ -100,6 +133,9 @@ const pruneDelivered = (delivered: Set<string | number>): Set<string | number> =
  * @param opts.getItems - A function that returns a promise resolving to an array of items.
  * @param opts.orderKey - Optional accessor returning an item's position in the feed; when given, items
  * are sorted ascending by it instead of the page simply being reversed.
+ * @param opts.keyVersion - The version of the unique key, for a trigger that has ever changed the field
+ * it takes the key from; a checkpoint stored under another version is discarded and a fresh baseline
+ * taken, so that the change does not replay every current item as new.
  * @param opts.update - A function that is called with each new item; awaited if it returns a promise.
  * @param opts.should_stop - A function that returns a boolean indicating whether to stop polling.
  *
@@ -110,26 +146,49 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
   uniqueField: keyof ItemType;
   getItems: () => Promise<ItemType[]>;
   orderKey?: (item: ItemType) => number | string;
+  keyVersion?: number;
   updateLastPollTime?: (lastPoll: Date) => void;
   update: (data: ItemType) => void | Promise<void>;
   should_stop: () => boolean;
 }) => {
-  const { trigger_name, getItems, update, should_stop, uniqueField, orderKey, updateLastPollTime } =
-    opts;
+  const {
+    trigger_name,
+    getItems,
+    update,
+    should_stop,
+    uniqueField,
+    orderKey,
+    keyVersion,
+    updateLastPollTime,
+  } = opts;
 
   let delivered = new Set<string | number>();
 
+  const checkpointOf = (): ICreatedItemsCheckpoint => ({
+    version: 1,
+    ...keyVersionOf(keyVersion),
+    delivered: Array.from(pruneDelivered(delivered)),
+  });
+
   try {
     const restored = loadTriggerCheckpoint<ICreatedItemsCheckpoint>(trigger_name);
+    const recognized = restored?.version === 1 && Array.isArray(restored.delivered);
 
-    if (restored?.version === 1 && Array.isArray(restored.delivered)) {
+    if (recognized && checkpointKeyMatches(restored, keyVersion)) {
       // resume where the previous run stopped, so items that arrived while the trigger was down are
       // still delivered rather than silently treated as already handled
       delivered = new Set(restored.delivered);
     } else {
-      // no durable position: establish a baseline so that a first start does not replay the whole feed
+      if (restored) {
+        Debugger.log(describeDiscardedCheckpoint(trigger_name, recognized, restored, keyVersion));
+      }
+
+      // no usable durable position: establish a baseline so that a first start does not replay the whole
+      // feed, and store it, so that a restart before the first delivery resumes from it (and so that a
+      // checkpoint stored under an old key is replaced)
       const initialItems = await getItems();
       delivered = new Set(initialItems.map((item) => item[uniqueField]));
+      await saveTriggerCheckpoint(trigger_name, checkpointOf());
     }
   } catch (error) {
     Debugger.log(`Error establishing the initial position for trigger: ${trigger_name}`, error);
@@ -154,10 +213,7 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
         // caught here rather than surfacing as an unhandled rejection
         await update(item);
         delivered.add(id);
-        await saveTriggerCheckpoint(trigger_name, {
-          version: 1,
-          delivered: Array.from(pruneDelivered(delivered)),
-        } satisfies ICreatedItemsCheckpoint);
+        await saveTriggerCheckpoint(trigger_name, checkpointOf());
       }
 
       delivered = pruneDelivered(delivered);
@@ -186,6 +242,7 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
  * @param opts.uniqueField - The unique field of the item used to identify it.
  * @param opts.updatedDateField - The field of the item that contains the date of update.
  * @param opts.getItems - A function that retrieves the items to be polled.
+ * @param opts.keyVersion - The version of the unique key; see {@link pollCreatedItemsForTrigger}.
  * @param opts.update - A function that performs an update action on an item; awaited if it returns a promise.
  * @param opts.should_stop - A function that determines whether the polling should stop.
  *
@@ -196,10 +253,12 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
   uniqueField: keyof ItemType;
   updatedDateField: keyof ItemType;
   getItems: () => Promise<ItemType[]>;
+  keyVersion?: number;
   update: (data: ItemType) => void | Promise<void>;
   should_stop: () => boolean;
 }) => {
-  const { trigger_name, getItems, update, should_stop, uniqueField, updatedDateField } = opts;
+  const { trigger_name, getItems, update, should_stop, uniqueField, updatedDateField, keyVersion } =
+    opts;
 
   let lastSeenEdits = new Map<string | number, number>();
 
@@ -215,17 +274,30 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
     return new Map(sortedEntries.slice(-DEFAULT_TRIGGER_SAVED_ITEMS_LIMIT_MAX));
   };
 
+  const checkpointOf = (): IUpdatedItemsCheckpoint => ({
+    version: 1,
+    ...keyVersionOf(keyVersion),
+    edits: Array.from(pruneEdits(lastSeenEdits).entries()),
+  });
+
   try {
     const restored = loadTriggerCheckpoint<IUpdatedItemsCheckpoint>(trigger_name);
+    const recognized = restored?.version === 1 && Array.isArray(restored.edits);
 
-    if (restored?.version === 1 && Array.isArray(restored.edits)) {
+    if (recognized && checkpointKeyMatches(restored, keyVersion)) {
       lastSeenEdits = new Map(restored.edits);
     } else {
+      if (restored) {
+        Debugger.log(describeDiscardedCheckpoint(trigger_name, recognized, restored, keyVersion));
+      }
+
       const initialItems = await getItems();
 
       for (const item of initialItems) {
         lastSeenEdits.set(item[uniqueField], getEditTime(item));
       }
+
+      await saveTriggerCheckpoint(trigger_name, checkpointOf());
     }
   } catch (error) {
     Debugger.log(`Error establishing the initial position for trigger: ${trigger_name}`, error);
@@ -236,7 +308,9 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
       const latestItems = await getItems();
 
       // oldest edit first, so a failure part-way through leaves only newer edits undelivered
-      const ordered = [...latestItems].sort((left, right) => getEditTime(left) - getEditTime(right));
+      const ordered = [...latestItems].sort(
+        (left, right) => getEditTime(left) - getEditTime(right)
+      );
 
       for (const item of ordered) {
         if (should_stop()) {
@@ -252,10 +326,7 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
 
         await update(item);
         lastSeenEdits.set(item[uniqueField], newEditTime);
-        await saveTriggerCheckpoint(trigger_name, {
-          version: 1,
-          edits: Array.from(pruneEdits(lastSeenEdits).entries()),
-        } satisfies IUpdatedItemsCheckpoint);
+        await saveTriggerCheckpoint(trigger_name, checkpointOf());
       }
 
       lastSeenEdits = pruneEdits(lastSeenEdits);

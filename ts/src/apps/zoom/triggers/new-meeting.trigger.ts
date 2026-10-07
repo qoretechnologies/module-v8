@@ -2,7 +2,8 @@ import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnolog
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { ZOOM_APP_NAME, ZoomEndpointData, ZoomError } from '../constants';
+import { ZOOM_APP_NAME, ZOOM_TRIGGER_KEY_VERSION, ZoomEndpointData, ZoomError } from '../constants';
+import { toZoomDate } from '../helpers/dates';
 
 type ZoomMeeting = {
   agenda: string;
@@ -25,6 +26,27 @@ const meetingTypeNames: Record<number, string> = {
   3: 'Recurring Meeting with no fixed time',
   8: 'Recurring Meeting with fixed time',
 };
+
+/**
+ * How far back of the last poll `from` reaches.
+ *
+ * Zoom takes `from` as a calendar day; the trigger sends the day in UTC, together with `timezone=UTC` so
+ * that Zoom reads it the same way. A day of slack keeps a meeting that runs across midnight, and the
+ * meetings of a user whose own day is behind or ahead of UTC, from falling between two polls. A meeting
+ * the window lists twice is delivered once: the trigger dedupes on its key.
+ */
+const MEETINGS_FROM_LOOKBACK_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * The field that identifies a meeting, per event type.
+ *
+ * Zoom's `id` is the meeting number, which every instance of a recurring or personal-meeting-room meeting
+ * shares; `uuid` identifies one instance. A meeting that starts or ends is an instance, so those event
+ * types dedupe on `uuid` and every occurrence is reported. A meeting being created is the series, so that
+ * one dedupes on `id`: a recurring meeting with ten occurrences is reported once, not ten times.
+ */
+const meetingUniqueField = (meeting_event_type: string): 'id' | 'uuid' =>
+  meeting_event_type === 'upcoming' ? 'id' : 'uuid';
 
 const ZoomNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ZOOM_APP_NAME,
@@ -59,10 +81,10 @@ const ZoomNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger({
       ErrorClass: ZoomError,
     });
 
-    let lastPollTime = new Date().toISOString();
+    let lastPollTime = new Date();
 
     const updateLastPollTime = (lastPoll: Date) => {
-      lastPollTime = lastPoll.toISOString();
+      lastPollTime = lastPoll;
     };
 
     const getItems = () => {
@@ -75,7 +97,8 @@ const ZoomNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger({
 
     await pollCreatedItemsForTrigger({
       trigger_name: 'zoom_new_meeting',
-      uniqueField: 'id',
+      uniqueField: meetingUniqueField(meeting_event_type),
+      keyVersion: ZOOM_TRIGGER_KEY_VERSION,
       getItems,
       update,
       updateLastPollTime,
@@ -91,6 +114,9 @@ const ZoomNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger({
 
     const meetings = await fetchLatestMeetings({
       token,
+      // the event type the trigger is being set up with, when the form already has one; Zoom's own
+      // default lists the meetings running right now, which is nearly always nothing
+      meeting_event_type: context?.opts?.meeting_event_type || 'upcoming',
     });
 
     return meetings?.length > 0 ? meetings[0] : null;
@@ -146,9 +172,17 @@ const ZoomNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger({
 
 export default ZoomNewMeetingTrigger;
 
+/**
+ * Lists the user's meetings of one kind.
+ *
+ * @param options.token - the connection's access token.
+ * @param options.from - the time of the last poll; the request lists the meetings of that day and the
+ * day before, in UTC, see {@link MEETINGS_FROM_LOOKBACK_MS}. Without it the latest meetings are listed.
+ * @param options.meeting_event_type - Zoom's `type` of listing: `upcoming`, `previous_meetings` or `live`.
+ */
 const fetchLatestMeetings = async (options: {
   token: string;
-  from?: string;
+  from?: Date;
   meeting_event_type?: string;
 }) => {
   const limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT;
@@ -159,7 +193,10 @@ const fetchLatestMeetings = async (options: {
         path: `/users/me/meetings`,
         params: {
           page_size: limit.toString(),
-          ...(options.from && { from: options.from }),
+          ...(options.from && {
+            from: toZoomDate(new Date(options.from.getTime() - MEETINGS_FROM_LOOKBACK_MS)),
+            timezone: 'UTC',
+          }),
           ...(options.meeting_event_type && { type: options.meeting_event_type }),
         },
         headers: {

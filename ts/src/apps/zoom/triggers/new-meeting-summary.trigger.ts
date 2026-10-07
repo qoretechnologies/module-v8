@@ -2,7 +2,8 @@ import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnolog
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { ZOOM_APP_NAME, ZoomEndpointData, ZoomError } from '../constants';
+import { ZOOM_APP_NAME, ZOOM_TRIGGER_KEY_VERSION, ZoomEndpointData, ZoomError } from '../constants';
+import { toZoomDateTime } from '../helpers/dates';
 
 type ZoomMeetingSummary = {
   meeting_end_time: string;
@@ -18,6 +19,27 @@ type ZoomMeetingSummary = {
   summary_start_time: string;
 };
 
+/**
+ * The body of `GET /users/{userId}/meeting_summaries`. On an account without the feature Zoom answers
+ * with a 200 that carries only `code` and `message` ("Only available for Paid account.").
+ */
+type ZoomMeetingSummariesResponse = {
+  summaries?: ZoomMeetingSummary[];
+  next_page_token?: string;
+  code?: number;
+  message?: string;
+};
+
+/**
+ * How far back of the last poll `from` reaches.
+ *
+ * The listing is filtered by the time Zoom created each summary, and the last poll time is taken once a
+ * cycle has finished, so a summary created while the previous cycle was running, or indexed late by Zoom,
+ * would otherwise fall between two polls for good. A summary the window lists twice is delivered once:
+ * the trigger dedupes on the meeting instance's UUID.
+ */
+const SUMMARIES_FROM_LOOKBACK_MS = 60 * 60 * 1000;
+
 const ZoomNewMeetingSummaryTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ZOOM_APP_NAME,
   action: 'new_meeting_summary',
@@ -29,10 +51,10 @@ const ZoomNewMeetingSummaryTrigger = QoreAppCreator.createLocalizedTrigger({
       ErrorClass: ZoomError,
     });
 
-    let lastPollTime = new Date().toISOString();
+    let lastPollTime = new Date();
 
     const updateLastPollTime = (lastPoll: Date) => {
-      lastPollTime = lastPoll.toISOString();
+      lastPollTime = lastPoll;
     };
 
     const getItems = () => {
@@ -41,7 +63,10 @@ const ZoomNewMeetingSummaryTrigger = QoreAppCreator.createLocalizedTrigger({
 
     await pollCreatedItemsForTrigger({
       trigger_name: 'zoom_new_meeting_summary',
-      uniqueField: 'meeting_id',
+      // every instance of a recurring or personal-meeting-room meeting gets its own summary, and all of
+      // them share `meeting_id`: the instance's UUID tells them apart
+      uniqueField: 'meeting_uuid',
+      keyVersion: ZOOM_TRIGGER_KEY_VERSION,
       getItems,
       update,
       updateLastPollTime,
@@ -104,18 +129,29 @@ const ZoomNewMeetingSummaryTrigger = QoreAppCreator.createLocalizedTrigger({
 
 export default ZoomNewMeetingSummaryTrigger;
 
-const fetchLatestMeetingSummaries = async (token: string, from?: string) => {
+/**
+ * Lists the user's meeting summaries, newest first.
+ *
+ * @param token - the connection's access token.
+ * @param from - the time of the last poll; the request lists the summaries created from an hour before
+ * it, see {@link SUMMARIES_FROM_LOOKBACK_MS}. Without it the latest summaries are listed.
+ */
+const fetchLatestMeetingSummaries = async (token: string, from?: Date) => {
   const limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT;
+  let response: { data?: ZoomMeetingSummariesResponse } | undefined;
 
   try {
-    const response = await QorusRequest.get<{
-      data: { summaries: ZoomMeetingSummary[] };
-    }>(
+    response = await QorusRequest.get<{ data: ZoomMeetingSummariesResponse }>(
       {
-        path: `/meetings/meeting_summaries`,
+        // the user's own summaries: `/meetings/meeting_summaries` lists the whole account's and needs an
+        // admin scope, which a user-managed app cannot hold
+        path: `/users/me/meeting_summaries`,
         params: {
           page_size: limit.toString(),
-          ...(from && { from }),
+          ...(from && {
+            from: toZoomDateTime(new Date(from.getTime() - SUMMARIES_FROM_LOOKBACK_MS)),
+            time_filter_field: 'summary_created_time',
+          }),
         },
         headers: {
           Authorization: `Bearer ${token}`,
@@ -123,15 +159,22 @@ const fetchLatestMeetingSummaries = async (token: string, from?: string) => {
       },
       ZoomEndpointData
     );
-
-    const summaries = response?.data?.summaries || [];
-
-    if (summaries.length === 0) {
-      return [];
-    }
-
-    return summaries;
   } catch (error) {
     throw new ZoomError(`Failed to fetch latest meeting summaries: ${error.message || error}`);
   }
+
+  const summaries = response?.data?.summaries;
+
+  if (!Array.isArray(summaries)) {
+    const message = response?.data?.message;
+
+    if (typeof message === 'string' && message) {
+      // say what Zoom said rather than report an empty feed: the account has no summaries to list
+      throw new ZoomError(`Zoom did not list the meeting summaries: ${message}`);
+    }
+
+    return [];
+  }
+
+  return summaries;
 };
