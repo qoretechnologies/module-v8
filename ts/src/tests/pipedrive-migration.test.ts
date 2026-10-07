@@ -107,6 +107,39 @@ describe('Pipedrive API migration', () => {
     }
   });
 
+  // The revision published on 2026-10-07 documents the bounds of the v2 list operations' `limit`
+  // parameter; the client has enforced the same bounds all along.
+  it('preserves the published limit bounds of v2 list operations, which the client enforces', async () => {
+    const input = bundle();
+    const previous = schemaCompatibilityDigest(normalizeSchema('pipedrive', input));
+    const lists = ['/activities', '/deals', '/organizations', '/persons', '/projects', '/tasks'];
+    const limit = { name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 500 } };
+    for (const route of lists) {
+      input.v2.paths[route].get.parameters = [structuredClone(limit)];
+    }
+    const original = structuredClone(input);
+    const doc = normalizeSchema('pipedrive', input);
+    expect(input).toEqual(original);
+    for (const route of lists) {
+      expect(doc.paths['/api/v2' + route].get.parameters).toEqual([limit]);
+    }
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).not.toBe(previous);
+    for (const change of [
+      (schema: Record<string, any>) => { schema.maximum = 1000; },
+      (schema: Record<string, any>) => { delete schema.minimum; },
+      (schema: Record<string, any>) => { schema.type = 'string'; },
+    ]) {
+      const changed = structuredClone(doc);
+      change(changed.paths['/api/v2/deals'].get.parameters[0].schema);
+      expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
+    }
+    for (const outside of [0, 501]) {
+      await expect(fetchPipedrivePaginatedRecords({ token: 'test', path: 'deals', limit: outside, maxResults: 1 }))
+        .rejects.toThrow('Invalid Pipedrive pagination limits');
+    }
+  });
+
   it('keeps component dictionaries separate from object prototypes', () => {
     const input = bundle();
     Object.defineProperty(input.v2.components, '__proto__', {
