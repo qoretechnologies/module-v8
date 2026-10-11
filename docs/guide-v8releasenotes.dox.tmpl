@@ -15,6 +15,12 @@
     - accept the reviewed Pipedrive schema revision that documents the \c limit bounds (1 to 500) of the v2 list
       operations, which the catalogue's client already enforces; retain the previous compatible revisions and
       refresh CI's exact v2 source and bundle checksums
+    - accept the reviewed Pipedrive schema revision of 2026-10-11: the \c ids of the v2 activity, deal,
+      organization and person list operations are integers, as the records' ids are; the \c sort of the v1 lead list
+      accepts every field that it documents, including \c label_ids, \c value, \c source_name, \c visible_to and
+      custom fields, instead of nine enumerated ones; and the deal of a note is declared as an object directly, with
+      the same nullable title; retain the previous compatible revisions and refresh CI's exact source and bundle
+      checksums
     - added local HubSpot generic-call coverage for error status policies, percent-encoded contact email
       paths, and JSON array membership bodies; these behaviors require the corresponding shared
       %Qore RestClientDataProvider fix, and retain HubSpot CMS authorization checks

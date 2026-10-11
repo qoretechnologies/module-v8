@@ -140,6 +140,95 @@ describe('Pipedrive API migration', () => {
     }
   });
 
+  // The revision published on 2026-10-11 types the `ids` of the v2 list operations as integers, which they are
+  // in every record; they were documented as strings.
+  it('types the ids of v2 list operations as integers', () => {
+    const lists = ['/activities', '/deals', '/organizations', '/persons'];
+    const ids = (type: string) => ({ in: 'query', name: 'ids', style: 'form', explode: false,
+      schema: { type: 'array', uniqueItems: true, maxItems: 100, items: { type } } });
+    const withIds = (type: string) => {
+      const input = bundle();
+      for (const route of lists) {
+        input.v2.paths[route].get.parameters = [ids(type)];
+      }
+      return input;
+    };
+    const previous = schemaCompatibilityDigest(normalizeSchema('pipedrive', withIds('string')));
+    const input = withIds('integer');
+    const original = structuredClone(input);
+    const doc = normalizeSchema('pipedrive', input);
+    expect(input).toEqual(original);
+    for (const route of lists) {
+      expect(doc.paths['/api/v2' + route].get.parameters).toEqual([ids('integer')]);
+    }
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).not.toBe(previous);
+    for (const change of [
+      (parameter: Record<string, any>) => { parameter.schema.items.type = 'string'; },
+      (parameter: Record<string, any>) => { parameter.schema.maxItems = 500; },
+      (parameter: Record<string, any>) => { parameter.explode = true; },
+    ]) {
+      const changed = structuredClone(doc);
+      change(changed.paths['/api/v2/persons'].get.parameters[0]);
+      expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
+    }
+  });
+
+  // The 2026-10-11 revision documents more lead sort fields (ex: label_ids, value, custom fields) and no longer
+  // restricts the sort to an enumeration of nine of them.
+  it('accepts every documented lead sort field', async () => {
+    const sort = (values?: string[]) => ({ in: 'query', name: 'sort', schema: {
+      type: 'string', ...(values ? { enum: values } : {}) } });
+    const withSort = (values?: string[]) => {
+      const input = bundle();
+      input.v1.paths['/leads'].get.parameters = [sort(values)];
+      return input;
+    };
+    const previous = schemaCompatibilityDigest(normalizeSchema('pipedrive', withSort(['id', 'title'])));
+    const doc = normalizeSchema('pipedrive', withSort());
+    expect(doc.paths['/v1/leads'].get.parameters).toEqual([sort()]);
+    expect(schemaCompatibilityDigest(doc)).not.toBe(previous);
+    // a record search sorts leads by a field outside the former enumeration
+    const get = jest.spyOn(QorusRequest, 'get').mockResolvedValue(reply([]));
+    const iterator = await searchPipedriveRecords(ctx, undefined, { table: 'leads',
+      orderBy: { column: 'label_ids', ascending: false } });
+    expect(await iterator(ctx, 1)).toBeNull();
+    expect(get.mock.calls[0][0]).toMatchObject({ path: '/v1/leads', params: { sort: 'label_ids DESC' } });
+  });
+
+  // The 2026-10-11 revision declares the deal of a note directly instead of as the only member of an allOf;
+  // both describe the same nullable object with the deal's title.
+  it('keeps the deal of a note as a nullable object with its title', () => {
+    const title = { type: 'string', description: 'The title of the deal this note is attached to' };
+    const direct = { type: 'object', nullable: true, description: 'The deal this note is attached to',
+      properties: { title } };
+    const composed = { type: 'object', nullable: true, allOf: [{ type: 'object',
+      description: 'The deal this note is attached to', properties: { title } }] };
+    const withDeal = (deal: Record<string, any>) => {
+      const input = bundle();
+      for (const [route, method] of [['/notes', 'get'], ['/notes', 'post'], ['/notes/{id}', 'get'],
+        ['/notes/{id}', 'put']]) {
+        input.v1.paths[route][method].responses['200'].content['application/json'].schema = {
+          type: 'object', properties: { data: { type: 'object', properties: { deal: structuredClone(deal) } } },
+        };
+      }
+      return input;
+    };
+    const previous = schemaCompatibilityDigest(normalizeSchema('pipedrive', withDeal(composed)));
+    const doc = normalizeSchema('pipedrive', withDeal(direct));
+    for (const [route, method] of [['/v1/notes', 'get'], ['/v1/notes', 'post'], ['/v1/notes/{id}', 'get'],
+      ['/v1/notes/{id}', 'put']]) {
+      expect(doc.paths[route][method].responses['200'].content['application/json'].schema.properties.data
+        .properties.deal).toEqual(direct);
+    }
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).not.toBe(previous);
+    const changed = structuredClone(doc);
+    changed.paths['/v1/notes'].get.responses['200'].content['application/json'].schema.properties.data.properties
+      .deal.nullable = false;
+    expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
+  });
+
   it('keeps component dictionaries separate from object prototypes', () => {
     const input = bundle();
     Object.defineProperty(input.v2.components, '__proto__', {
