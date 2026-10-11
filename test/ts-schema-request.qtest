@@ -51,10 +51,24 @@ class SchemaRequestTest inherits QUnit::Test {
         HttpServer server();
         on_exit delete server;
         server.setDefaultHandler("fixture", new SchemaRequestHandler());
-        string pem = backquote("openssl req -config /dev/null -x509 -newkey rsa:2048 -keyout /dev/stdout "
-            "-out /dev/stdout -days 1 -nodes -subj /CN=localhost 2>/dev/null");
-        SSLPrivateKey key((pem =~ x/(-----BEGIN PRIVATE KEY-----[\s\S]+?-----END PRIVATE KEY-----)/)[0]);
-        SSLCertificate cert((pem =~ x/(-----BEGIN CERTIFICATE-----[\s\S]+?-----END CERTIFICATE-----)/)[0]);
+        # a self-signed certificate for localhost; LibreSSL (macOS) refuses a configuration without a
+        # distinguished_name section, so the request gets a minimal one rather than /dev/null
+        string dir = tmp_location() + DirSep + "ts-schema-request-" + get_random_string(8);
+        mkdir(dir);
+        on_exit {
+            map unlink(dir + DirSep + $1), ("openssl.cnf", "key.pem", "cert.pem");
+            rmdir(dir);
+        }
+        File cnf();
+        cnf.open2(dir + DirSep + "openssl.cnf", O_CREAT | O_WRONLY | O_TRUNC);
+        cnf.write("[req]\ndistinguished_name = dn\n[dn]\n");
+        cnf.close();
+        int rc = system(sprintf("openssl req -config %s -x509 -newkey rsa:2048 -keyout %s -out %s -days 1 -nodes "
+            "-subj /CN=localhost 2>/dev/null", dir + DirSep + "openssl.cnf", dir + DirSep + "key.pem",
+            dir + DirSep + "cert.pem"));
+        assertEq(0, rc, "openssl creates the fixture's key and certificate");
+        SSLPrivateKey key(ReadOnlyFile::readTextFile(dir + DirSep + "key.pem"));
+        SSLCertificate cert(ReadOnlyFile::readTextFile(dir + DirSep + "cert.pem"));
         int port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0,
             "key": key, "cert": cert, "enable_h3": False}).port;
         string url = sprintf("https://127.0.0.1:%d", port);
