@@ -1,0 +1,160 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o. SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires QUnit
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%ifndef MISSING_EXTERNAL_MODULE
+%requires TypeScriptActionInterface
+%endif
+%requires v8
+
+%exec-class TsElementReferenceDataTest
+
+%ifndef MISSING_EXTERNAL_MODULE
+# A list whose elements come from a function (get_element_allowed_values) offers them as element reference data:
+# through getSupportedElementReferenceData() and getElementReferenceData(), which the IDE uses to fill the list's
+# dropdown, and as the element allowed values of a field whose dynamic type is resolved
+public class TsElementReferenceDataTest inherits QUnit::Test {
+    private {
+        AbstractDataProvider prov;
+    }
+
+    constructor() : Test("TypeScript element reference data", "1.0") {
+        addTestCase("a list option offers its elements as element reference data", \optionTest());
+        addTestCase("a resolved dynamic list field takes its values for its elements", \resolvedFieldTest());
+        addTestCase("a dynamic type gives a list field the values of its elements", \dynamicTypeTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        chdir(get_script_dir());
+        JavaScriptProgramPool pool("var exports = {};
+// Returns a Promise that resolves immediately with the state of 'promise'
+function promiseState(promise) {
+  const pendingState = { status: 'pending' };
+  return Promise.race([promise, pendingState]).then(
+    (value) =>
+      value === pendingState ? value : { status: 'fulfilled', value },
+    (reason) => ({ status: 'rejected', reason }),
+  );
+}
+
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+
+  // this inspects the state of the promise and returns immediately
+  // without this call, there is an 8-second delay when 'promise' rejects
+  await promiseState(promise);
+
+  // timeout variable to cancel the timeout in case the async function is faster
+  let timeout;
+  // get a promise to a cancelable timeout
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  // run the promise and cancel the timeout
+  return Promise.race([
+    promise,
+    top
+  ]).finally(() => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+  });
+}\n" + File::readTextFile("example.js"), "example.js",
+            sub (JavaScriptProgram pgm) {});
+        JavaScriptObject obj = pool.getProgram().getGlobal().exports;
+        obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+        # registers the app's connection scheme and REST options
+        TypeScriptActionInterface::initApp("js-test");
+
+        TypeScriptAppRestConnection conn({
+            "name": "test",
+            "url": "tsrest-js-test://",
+            "opts": {
+                "token": "x",
+            },
+        });
+        prov = TypeScriptActionInterface::getDataProvider("js-test", conn).getChildProviderEx("test-api");
+    }
+
+    #! A function that gives the values of a list's elements, as an app's get_element_allowed_values does
+    private static list<hash<AllowedValueInfo>> colors(...) {
+        return (
+            <AllowedValueInfo>{"display_name": "Red", "value": "red"},
+            <AllowedValueInfo>{"display_name": "Green", "value": "green"},
+        );
+    }
+
+    optionTest() {
+        # the "other" option is a list whose elements come from get_element_allowed_values
+        hash<string, bool> supported = prov.getSupportedElementReferenceData() ?? {};
+        assertTrue(supported.other ?? False, sprintf("the option's elements are offered: %y", keys supported));
+        assertEq(("this", "that"), map $1.value, prov.getElementReferenceData("other", {"count": 1}));
+        # so are those of its request field, which the same function gives
+        foreach string key in (keys supported) {
+            assertEq(("this", "that"), map $1.value, prov.getElementReferenceData(key, {"count": 1}), key);
+        }
+        # the option's elements are not the values of an option
+        assertFalse(prov.getSupportedReferenceData().hasKey("other"));
+        assertTrue(prov.getSupportedReferenceData().hasKey("count"));
+    }
+
+    resolvedFieldTest() {
+        # a dynamic type's field is resolved with its values when the type is returned
+        TypeScriptDataField field = TypeScriptActionInterface::getField("dynamic-type", "colors", {
+            "type": {
+                "type": "list",
+                "element_type": "string",
+            },
+            "get_element_allowed_values": \TsElementReferenceDataTest::colors(),
+        }, cast<TypeScriptActionDataProviderBase>(prov), NOTHING, True);
+        assertEq(("red", "green"), map $1.value, field.getElementAllowedValues());
+        # the values are those of the elements, not of the list
+        assertNothing(field.getAllowedValues());
+        assertEq(("red", "green"), field.acceptsValue(("red", "green")));
+    }
+
+    dynamicTypeTest() {
+        # a field of a dynamic type names the function that gives its elements, which is called when the type is
+        # resolved
+        TypeScriptDataField field = TypeScriptActionInterface::getField("event", "colors", {
+            "type": {
+                "type": "list",
+                "element_type": "string",
+            },
+            "get_element_allowed_values": \TsElementReferenceDataTest::colors(),
+        }, cast<TypeScriptActionDataProviderBase>(prov));
+        string key = field.getAttributes().element_ref_data;
+        assertTrue(key.val(), "the field names its element reference data");
+        assertTrue(prov.getSupportedElementReferenceData(){key} ?? False, "the provider offers the field's elements");
+
+        HashDataType type("event");
+        type.addField(field);
+        TypeScriptActionInterface::resolveDynamicType(cast<TypeScriptActionDataProviderBase>(prov), {}, type);
+        assertEq(("red", "green"), map $1.value, field.getElementAllowedValues());
+        assertFalse(field.getAttributes().hasKey("element_ref_data"), "the field's elements are resolved");
+    }
+}
+%else
+class TsElementReferenceDataTest inherits QUnit::Test {
+    constructor() : Test("TypeScript element reference data", "1.0") {
+        addTestCase("process/uuid dependencies", sub () {
+            testSkip("process or uuid module is unavailable");
+        });
+        set_return_value(main());
+    }
+}
+%endif

@@ -120,6 +120,15 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return map {$1: True}, keys (omap + romap);
     }
 
+    #! Returns information on supported element reference data
+    /** @return a hash of supported element reference data: the list options and fields whose elements a function
+        gives (\c get_element_allowed_values); keys in the hash returned are supported in calls to
+        @ref DataProvider::AbstractDataProvider::getElementReferenceData()
+    */
+    *hash<string, bool> getSupportedElementReferenceData() {
+        return map {$1: True}, keys (eomap + reomap);
+    }
+
     #! Returns information on supported reference data values
     /** @return a hash of supported reference data values; keys in the hash returned are supported in calls to
         @ref DataProvider::AbstractDataProvider::getReferenceDataValue()

@@ -4095,7 +4095,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 # remove any manual allowed values
                 remove info.element_allowed_values;
                 if (resolve_dynamic) {
-                    info.allowed_values = cast<AbstractDataProvider>(fctx).getElementReferenceDataSafe(key,
+                    info.element_allowed_values = cast<AbstractDataProvider>(fctx).getElementReferenceDataSafe(key,
                         DataProviderDataContextHelper::getHash());
                 } else {
                     info.attr.element_ref_data = key;
@@ -4493,7 +4493,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 f.replaceAttributes(attr - "ref_data");
             }
             if (attr.element_ref_data.val()) {
-                f.setElementAllowedValues(prov.getReferenceData(attr.element_ref_data, req) ?? (),
+                f.setElementAllowedValues(prov.getElementReferenceData(attr.element_ref_data, req) ?? (),
                     f.getElementAllowedValuesCreatable());
                 f.replaceAttributes(attr - "element_ref_data");
             }
