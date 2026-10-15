@@ -44,9 +44,8 @@ export default (locale: Locales) =>
       oauth2_token_url: 'https://oauth.pipedrive.com/oauth/token',
       oauth2_token_use_basic_auth: true,
       oauth2_scopes: [
-        'base', 'deals:full', 'mail:full', 'activities:full', 'contacts:full',
-        'products:full', 'users:read', 'recents:read', 'search:read', 'leads:full',
-        'phone-integration', 'goals:read', 'projects:full', 'webhooks:full',
+        'base', 'deals:full', 'activities:full', 'contacts:full', 'products:full',
+        'users:read', 'search:read', 'leads:full', 'projects:full', 'webhooks:full',
       ],
       ping_method: 'GET',
       ping_path: '/v1/users/me',
