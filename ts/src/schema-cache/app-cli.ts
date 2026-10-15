@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 // Copyright 2026 Qore Technologies, s.r.o.
 // SPDX-License-Identifier: MIT
-import { execFileSync, spawn } from 'node:child_process';
+import { spawn } from 'node:child_process';
 import { constants } from 'node:os';
 import * as path from 'node:path';
 import { appContract, appIds, readFile, SNAPSHOTS_ENV, verifySnapshot } from './apps';
 import { activeSnapshot, appSources, configuredSnapshots, defaultCacheDir, downloadInput,
   downloadNetSuite, installSnapshot, rollback } from './app-store';
+import { combinedExitStatus, EXIT_REFUSED, EXIT_UNVERIFIED, exitStatus } from './schema-errors';
+import { QUALIFICATION_TIMEOUT_MS, qoreModulePath, refusingProgram, runQualification } from './qualification';
 
 const help = `Usage: qore-app-schemas [--cache-dir DIR] COMMAND
   list                        Show apps, download sources and import instructions
@@ -21,6 +23,11 @@ const help = `Usage: qore-app-schemas [--cache-dir DIR] COMMAND
 Downloads happen only on explicit setup/update. Package builds, dpkg and startup stay offline.
 Incompatible updates fail without changing the active snapshot. Existing processes must restart.
 HubSpot retains its separate qore-hubspot-schemas command; wrappers can be nested.
+
+Exit status: 0 success; ${EXIT_REFUSED} a schema was refused (invalid, incompatible or refused by the Qore
+runtime); ${EXIT_UNVERIFIED} a schema could not be verified (the Qore runtime did not finish within
+${QUALIFICATION_TIMEOUT_MS / 1000} s per run, see QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS, or failed without a
+verdict); 1 any other error.
 `;
 
 /** Require the complete owned inventory and materialize every action in the installed Qore runtime. */
@@ -32,13 +39,13 @@ export async function qualifySnapshot(id: string, snapshot: string): Promise<voi
     'QORE_MODULE_DIR_ONLY', 'QORE_INCLUDE_DIR', 'QORE_TYPESCRIPT_ACTION_SCRIPTS',
     'QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS', 'QORE_DATA_PROVIDERS', 'QORE_CONNECTION_PROVIDERS',
     'QORE_DATASOURCE_PROVIDERS', 'QORE_PROVIDER_INDEX_DIR', SNAPSHOTS_ENV]) delete env[key];
-  env.QORE_MODULE_DIR = execFileSync('qore', ['--module-path'], { env, encoding: 'utf8', timeout: 30000 }).trim();
+  env.QORE_MODULE_DIR = qoreModulePath(env);
   env.QORE_MODULE_DIR_ONLY = '1';
   env.QORE_V8_DISABLE_CACHE = '1';
   env.QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT = path.resolve(__dirname, '../index.js');
   env[SNAPSHOTS_ENV] = JSON.stringify({ [id]: snapshot });
-  const program = `DataProvider::checkStaticInit();
-auto expected = parse_json(ARGV[0]);
+  // a check that fails is the runtime refusing the schema; any other failure verifies nothing
+  const program = refusingProgram('DataProvider::checkStaticInit();', `auto expected = parse_json(ARGV[0]);
 string app = ARGV[1];
 list<string> actual = ();
 foreach auto identity in (TypeScriptActionInterface::getDiscoveryInventory()) {
@@ -64,21 +71,12 @@ foreach string name in (expected) {
 }
 auto failures = DataProviderActionCatalog::getInitializationFailures((app,));
 if (failures) { throw "APP-SCHEMA-INITIALIZATION-ERROR", make_json(failures); }
-printf("APP-SNAPSHOT-QUALIFIED:%d\\n", expected.size());`;
+printf("APP-SNAPSHOT-QUALIFIED:%d\\n", expected.size());`, ['APP-SCHEMA-INVENTORY-ERROR',
+    'APP-SCHEMA-INITIALIZATION-ERROR', 'APP-SCHEMA-ACTION-ERROR']);
   for (const mode of ['tiered', 'ast']) {
-    let output: string;
-    try {
-      output = execFileSync('qore', ['-M', '--enable-debug', `--exec-mode=${mode}`,
-        '-l', 'TypeScriptActionInterface', '-l', 'json', '-e', program,
-        JSON.stringify(contract.actions), contract.app], { env, encoding: 'utf8', timeout: 120000,
-        maxBuffer: 8 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] });
-    } catch (error) {
-      const failure = error as { stderr?: string; message: string };
-      throw new Error(`APP-SCHEMA-QUALIFICATION: ${contract.app} (${mode}): ${failure.stderr || failure.message}`);
-    }
-    if (!output.includes(`APP-SNAPSHOT-QUALIFIED:${contract.actions.length}\n`)) {
-      throw new Error('APP-SCHEMA-QUALIFICATION: runtime did not confirm the expected actions');
-    }
+    runQualification(`${contract.app} (${mode})`, ['-M', '--enable-debug', `--exec-mode=${mode}`,
+      '-l', 'TypeScriptActionInterface', '-l', 'json', '-e', program, JSON.stringify(contract.actions), contract.app],
+      env, `APP-SNAPSHOT-QUALIFIED:${contract.actions.length}\n`);
   }
 }
 
@@ -126,12 +124,12 @@ export async function main(args: string[] = process.argv.slice(2)): Promise<void
     }
     // Validate all names before the first download or cache mutation.
     args.forEach(appContract);
-    let failed = false;
+    const errors: unknown[] = [];
     for (const id of new Set(args)) {
       try { console.log(`${id}: ${await installSnapshot(cache, id, await downloadInput(id), qualifySnapshot)}`); }
-      catch (error) { failed = true; console.error(`${id}: ${(error as Error).message}`); }
+      catch (error) { errors.push(error); console.error(`${id}: ${(error as Error).message}`); }
     }
-    if (failed) process.exitCode = 1;
+    if (errors.length) process.exitCode = combinedExitStatus(errors);
     return;
   }
   if (command === 'import') {
@@ -151,6 +149,16 @@ export async function main(args: string[] = process.argv.slice(2)): Promise<void
   throw new Error(`Unknown command: ${command}`);
 }
 
-if (require.main === module) main().catch(error => {
-  console.error(`qore-app-schemas: ${(error as Error).message}`); process.exitCode = 1;
-});
+/** Runs a command and returns its exit status; see the help text for its meaning. */
+export async function cli(args: string[] = process.argv.slice(2)): Promise<number> {
+  process.exitCode = undefined;
+  try {
+    await main(args);
+    return Number(process.exitCode ?? 0);
+  } catch (error) {
+    console.error(`qore-app-schemas: ${(error as Error).message}`);
+    return exitStatus(error);
+  }
+}
+
+if (require.main === module) cli().then(status => { process.exitCode = status; });

@@ -3,12 +3,14 @@
 // SPDX-License-Identifier: MIT
 import * as path from 'node:path';
 import { constants } from 'node:os';
-import { execFileSync, spawn } from 'node:child_process';
+import { spawn } from 'node:child_process';
 import { hubspotContract, readFile, SNAPSHOT_ENV, verifySchemaCompatibility, verifySnapshot } from './hubspot';
 import {
   activateSnapshot, activeSnapshot, defaultCacheDir, downloadInputs, importInputs,
   installSnapshot, withCacheLock,
 } from './hubspot-store';
+import { EXIT_REFUSED, EXIT_UNVERIFIED, exitStatus } from './schema-errors';
+import { QUALIFICATION_TIMEOUT_MS, qoreModulePath, refusingProgram, runQualification } from './qualification';
 
 const help = `Usage: qore-hubspot-schemas [--cache-dir DIR] COMMAND
   update                 Fetch and qualify current documents for supported v3 APIs
@@ -20,6 +22,11 @@ const help = `Usage: qore-hubspot-schemas [--cache-dir DIR] COMMAND
 Run update explicitly after installing the catalogue; apt/dpkg never downloads schemas.
 Existing processes keep their pinned snapshot. Restart them to use an update.
 HubSpot terms: https://legal.hubspot.com/hs-developer-terms
+
+Exit status: 0 success; ${EXIT_REFUSED} the schemas were refused (invalid, incompatible or refused by the Qore
+runtime); ${EXIT_UNVERIFIED} they could not be verified (the Qore runtime did not finish within
+${QUALIFICATION_TIMEOUT_MS / 1000} s, see QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS, or failed without a verdict);
+1 any other error.
 `;
 
 /** Require the exact public inventory and materialize every HubSpot action with the installed Qore runtime. */
@@ -31,13 +38,13 @@ export async function qualifySnapshot(snapshot: string): Promise<void> {
     'QORE_MODULE_DIR_ONLY', 'QORE_INCLUDE_DIR', 'QORE_TYPESCRIPT_ACTION_SCRIPTS',
     'QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS', 'QORE_DATA_PROVIDERS', 'QORE_CONNECTION_PROVIDERS',
     'QORE_DATASOURCE_PROVIDERS', 'QORE_PROVIDER_INDEX_DIR']) delete env[key];
-  env.QORE_MODULE_DIR = execFileSync('qore', ['--module-path'], { env, encoding: 'utf8', timeout: 30000 }).trim();
+  env.QORE_MODULE_DIR = qoreModulePath(env);
   env.QORE_MODULE_DIR_ONLY = '1';
   env.QORE_V8_DISABLE_CACHE = '1';
   env.QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT = path.resolve(__dirname, '../index.js');
   env[SNAPSHOT_ENV] = snapshot;
-  const program = `DataProvider::checkStaticInit();
-auto expected = parse_json(ARGV[0]);
+  // a check that fails is the runtime refusing the schemas; any other failure verifies nothing
+  const program = refusingProgram('DataProvider::checkStaticInit();', `auto expected = parse_json(ARGV[0]);
 list<string> actual = ();
 foreach auto identity in (TypeScriptActionInterface::getDiscoveryInventory()) {
     if (identity.app == "Hubspot" && identity.action) actual += identity.action;
@@ -49,16 +56,13 @@ foreach string name in (expected) {
 }
 auto failures = DataProviderActionCatalog::getInitializationFailures(("Hubspot",));
 if (failures) throw "HUBSPOT-SCHEMA-INITIALIZATION-ERROR", make_json(failures);
-printf("HUBSPOT-SNAPSHOT-QUALIFIED:%d\\n", expected.size());`;
-  const output = execFileSync('qore', ['-M', '-l', 'TypeScriptActionInterface', '-l', 'json', '-e', program,
-    JSON.stringify(hubspotContract.actions)], { env, encoding: 'utf8', timeout: 120000, maxBuffer: 8 * 1024 * 1024 });
-  if (!output.includes(`HUBSPOT-SNAPSHOT-QUALIFIED:${hubspotContract.actions.length}\n`)) {
-    throw new Error('HUBSPOT-SCHEMA-QUALIFICATION: runtime did not confirm the expected actions');
-  }
+printf("HUBSPOT-SNAPSHOT-QUALIFIED:%d\\n", expected.size());`, ['HUBSPOT-SCHEMA-INVENTORY-ERROR',
+    'HUBSPOT-SCHEMA-ACTION-ERROR', 'HUBSPOT-SCHEMA-INITIALIZATION-ERROR']);
+  runQualification('Hubspot', ['-M', '-l', 'TypeScriptActionInterface', '-l', 'json', '-e', program,
+    JSON.stringify(hubspotContract.actions)], env, `HUBSPOT-SNAPSHOT-QUALIFIED:${hubspotContract.actions.length}\n`);
 }
 
-async function main(): Promise<void> {
-  const args = process.argv.slice(2);
+export async function main(args: string[] = process.argv.slice(2)): Promise<void> {
   let cache = defaultCacheDir();
   if (args[0] === '--cache-dir') {
     if (!args[1]) throw new Error('--cache-dir requires a directory');
@@ -107,8 +111,16 @@ async function main(): Promise<void> {
   });
 }
 
-if (require.main === module) main().catch(error => {
-  const message = (error as Error).message;
-  console.error(`qore-hubspot-schemas: ${message}`);
-  process.exitCode = 1;
-});
+/** Runs a command and returns its exit status; see the help text for its meaning. */
+export async function cli(args: string[] = process.argv.slice(2)): Promise<number> {
+  process.exitCode = undefined;
+  try {
+    await main(args);
+    return Number(process.exitCode ?? 0);
+  } catch (error) {
+    console.error(`qore-hubspot-schemas: ${(error as Error).message}`);
+    return exitStatus(error);
+  }
+}
+
+if (require.main === module) cli().then(status => { process.exitCode = status; });

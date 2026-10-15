@@ -7,6 +7,7 @@ import * as path from 'node:path';
 import sources from './app-sources.json';
 import { appContract, appIds, contractDigest, digest, MAX_BYTES, normalizeSchema, readFile,
   SnapshotManifest, verifyCompatibility, verifySnapshot } from './apps';
+import { SchemaRefusedError } from './schema-errors';
 
 export const appSources = sources.apps as Record<string, {
   url?: string; urls?: Record<string, string>; sha256?: string; importHelp?: string; documentation: string;
@@ -167,8 +168,8 @@ function activate(root: string, id: string, snapshot: string): void {
 export async function installSnapshot(root: string, id: string, input: SchemaInput,
   qualify: (id: string, snapshot: string) => Promise<void>): Promise<string> {
   return withAppLock(root, id, async () => {
-    if (input.bytes.length > MAX_BYTES) throw new Error('APP-SCHEMA-INVALID: oversized schema');
-    const document = normalizeSchema(id, JSON.parse(input.bytes.toString()));
+    if (input.bytes.length > MAX_BYTES) throw new SchemaRefusedError('APP-SCHEMA-INVALID: oversized schema');
+    const document = normalizeSchema(id, parseSchema(input.bytes));
     verifyCompatibility(id, document);
     const parent = path.join(appDirectory(root, id), 'snapshots');
     ensureDirectory(parent);
@@ -203,4 +204,13 @@ export async function rollback(root: string, id: string, revision: string | unde
     activate(root, id, snapshot);
     return snapshot;
   });
+}
+
+/** Parses a schema document; a document that is not JSON is refused. */
+function parseSchema(bytes: Buffer): unknown {
+  try {
+    return JSON.parse(bytes.toString());
+  } catch (error) {
+    throw new SchemaRefusedError(`APP-SCHEMA-INVALID: not a JSON document: ${(error as Error).message}`);
+  }
 }

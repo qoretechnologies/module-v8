@@ -1,6 +1,6 @@
 .\" Copyright 2026 Qore Technologies, s.r.o.
 .\" SPDX-License-Identifier: MIT
-.TH QORE-HUBSPOT-SCHEMAS 1 "September 2026" "Qore" "User Commands"
+.TH QORE-HUBSPOT-SCHEMAS 1 "October 2026" "Qore" "User Commands"
 .SH NAME
 qore-hubspot-schemas \- manage private HubSpot schema snapshots
 .SH SYNOPSIS
@@ -37,11 +37,22 @@ Absolute immutable snapshot directory used by the HubSpot app.
 .B QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT
 Set to /usr/share/qore-v8-app-catalogue/dist/index.js to enable this catalogue.
 .TP
+.B QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS
+The longest one qualification run of the installed Qore runtime may take, in
+milliseconds; the default is 600000 (10 minutes), about 65 times the slowest
+measured run, so that a loaded host still verifies its schemas. A run that
+exceeds it reports APP-SCHEMA-UNVERIFIED and exit status 75.
+.TP
 .B XDG_CACHE_HOME
 Default cache root; falls back to ~/.cache. Snapshots live under qore/hubspot.
 .SH EXIT STATUS
-Zero indicates success. An update failure leaves the active snapshot unchanged.
-The run command returns the child command's exit status.
+Zero indicates success; 2 means the schemas were refused (invalid, not matching
+the installed catalogue's compatibility fingerprints, or refused by the installed
+Qore runtime); 75 means they could not be verified (the Qore runtime did not
+finish within its bound, was killed, could not start or failed without a verdict;
+the message starts with APP-SCHEMA-UNVERIFIED); 1 is any other error. A failure
+leaves the active snapshot unchanged. The run command returns the child command's
+exit status.
 .SH FILES
 Snapshots and the active.json pointer belong to the application account, outside
 package-owned directories. A crashed writer can leave .update-lock; confirm its

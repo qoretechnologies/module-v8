@@ -1,6 +1,6 @@
 .\" Copyright 2026 Qore Technologies, s.r.o.
 .\" SPDX-License-Identifier: MIT
-.TH QORE-APP-SCHEMAS 1 "September 2026" "Qore" "User Commands"
+.TH QORE-APP-SCHEMAS 1 "October 2026" "Qore" "User Commands"
 .SH NAME
 qore-app-schemas \- retrieve and qualify private application schemas
 .SH SYNOPSIS
@@ -69,8 +69,35 @@ copy in $OMQ_DIR/qlib. A catalogue protocol mismatch names both versions and
 reports TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR. Check QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT
 and QORE_MODULE_DIR.
 .TP
+.B QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS
+The longest one qualification run of the installed Qore runtime may take, in
+milliseconds; the default is 600000 (10 minutes), about 65 times the slowest
+measured run, so that a loaded host still verifies its schemas. A run that
+exceeds it reports APP-SCHEMA-UNVERIFIED and exit status 75.
+.TP
 .B XDG_CACHE_HOME
 Cache root; defaults to ~/.cache. App snapshots live under qore/app-schemas.
+.SH EXIT STATUS
+.TP
+.B 0
+Success.
+.TP
+.B 2
+A schema was refused: it is invalid, does not match the installed catalogue's
+compatibility fingerprints, or the installed Qore runtime refused its actions.
+.TP
+.B 75
+A schema could not be verified: the Qore runtime did not finish within its
+bound (see QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS), was killed, could not
+start or failed without a verdict. The message starts with APP-SCHEMA-UNVERIFIED;
+trying again, for example on a less loaded host, may verify the schema.
+.TP
+.B 1
+Any other error.
+.PP
+An update of several apps returns 2 if any schema was refused, 75 if every
+failure was unverified, and 1 otherwise. The run command returns the child
+command's exit status. A failure never changes the active selection.
 .SH EXAMPLES
 .nf
 qore-app-schemas update magento mailchimp

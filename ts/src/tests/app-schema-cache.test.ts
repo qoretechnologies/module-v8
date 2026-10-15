@@ -10,6 +10,8 @@ import { appContract, appIds, appSchemaMetadata, contractDigest, normalizeSchema
   schemaCompatibilityDigest, SNAPSHOTS_ENV, validateDocument, verifyCompatibility, verifySnapshot } from '../schema-cache/apps';
 import { activeSnapshot, configuredSnapshots, downloadInput, downloadNetSuite, installSnapshot,
   rollback, withAppLock } from '../schema-cache/app-store';
+import { EXIT_REFUSED, EXIT_UNVERIFIED, exitStatus, SchemaRefusedError,
+  SchemaUnverifiedError } from '../schema-cache/schema-errors';
 
 // Tests approve only Qore-owned synthetic fixtures. No provider document is embedded or fetched.
 jest.mock('../schema-cache/app-compatibility.json', () => ({ version: 1, apps: {} }));
@@ -214,6 +216,75 @@ describe('App schema cache', () => {
     exec.mockImplementation(() => { throw new Error('synthetic runtime failure'); });
     await expect(installSnapshot(directory, 'trello', input('trello', 'two'), qualifySnapshot)).rejects.toThrow(/failure/);
     expect(activeSnapshot(directory, 'trello')).toBe(snapshot);
+  });
+
+  it('Reports a runtime refusal as refused and any other runtime failure as unverified', async () => {
+    const cache = fs.realpathSync(directory);
+    const snapshot = await installSnapshot(cache, 'trello', input('trello'), async () => {});
+    const { qualifySnapshot } = require('../schema-cache/app-cli');
+    const app = appContract('trello').app;
+    const failure = (status: number | null, stdout = '', extra: Record<string, unknown> = {}) =>
+      Object.assign(new Error('Command failed'), { status, stdout, stderr: 'runtime detail\n', ...extra });
+    let next: Error = failure(1);
+    jest.spyOn(require('node:child_process'), 'execFileSync').mockImplementation((_file: any, args: any) => {
+      if (args[0] === '--module-path') return '/usr/share/qore-modules\n';
+      throw next;
+    });
+    next = failure(3, 'APP-SNAPSHOT-REFUSED:{"err":"APP-SCHEMA-ACTION-ERROR","desc":"getBoard: TYPE-ERROR"}\n');
+    const refused = await installSnapshot(cache, 'trello', input('trello', 'two'), qualifySnapshot)
+      .catch((error: Error) => error);
+    expect(refused).toBeInstanceOf(SchemaRefusedError);
+    expect(refused.message).toBe(`APP-SCHEMA-QUALIFICATION: ${app} (tiered): APP-SCHEMA-ACTION-ERROR: getBoard: TYPE-ERROR`);
+    expect(exitStatus(refused)).toBe(EXIT_REFUSED);
+    for (const [error, detail] of [
+      // the runtime failed before it reached a verdict
+      [failure(1), 'runtime detail'],
+      // the refusal status without the refusal the program prints is not a verdict
+      [failure(3, 'APP-SNAPSHOT-QUALIFIED:38\n'), 'runtime detail'],
+      [failure(null, '', { signal: 'SIGKILL' }), 'the Qore runtime was ended by SIGKILL'],
+    ] as Array<[Error, string]>) {
+      next = error;
+      const unverified = await installSnapshot(cache, 'trello', input('trello', 'two'), qualifySnapshot)
+        .catch((caught: Error) => caught);
+      expect(unverified).toBeInstanceOf(SchemaUnverifiedError);
+      expect(unverified.message).toBe(`APP-SCHEMA-UNVERIFIED: ${app} (tiered): ${detail}`);
+      expect(exitStatus(unverified)).toBe(EXIT_UNVERIFIED);
+    }
+    expect(activeSnapshot(cache, 'trello')).toBe(snapshot);
+  });
+
+  it('Ends a qualification that exceeds its bound as unverified (exit status 75), and a refused schema with 2', async () => {
+    const { cli } = require('../schema-cache/app-cli');
+    const cache = fs.realpathSync(directory);
+    const bin = fs.mkdtempSync(path.join(os.tmpdir(), 'qore-stand-in-'));
+    const saved = { PATH: process.env.PATH, timeout: process.env.QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS };
+    const messages = jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    try {
+      // a Qore runtime that never finishes a qualification
+      fs.writeFileSync(path.join(bin, 'qore'), '#!/bin/sh\nif [ "$1" = "--module-path" ]; then echo /nonexistent; exit 0; fi\n'
+        + 'exec sleep 60\n', { mode: 0o755 });
+      process.env.PATH = `${bin}${path.delimiter}${saved.PATH}`;
+      process.env.QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS = '500';
+      const file = path.join(directory, 'trello.json');
+      fs.writeFileSync(file, input('trello').bytes);
+      const started = Date.now();
+      expect(await cli(['--cache-dir', cache, 'import', 'trello', file])).toBe(EXIT_UNVERIFIED);
+      expect(Date.now() - started).toBeLessThan(30000);
+      expect(messages.mock.calls.flat().join('\n')).toContain(
+        `APP-SCHEMA-UNVERIFIED: ${appContract('trello').app} (tiered): the Qore runtime did not finish within 0.5 s`);
+      expect(() => activeSnapshot(cache, 'trello')).toThrow();
+      // a schema without a supported operation is refused before the runtime runs
+      const broken = fixture('trello');
+      delete broken.paths[appContract('trello').operations[0].path];
+      fs.writeFileSync(file, JSON.stringify(broken));
+      expect(await cli(['--cache-dir', cache, 'import', 'trello', file])).toBe(EXIT_REFUSED);
+    } finally {
+      process.env.PATH = saved.PATH;
+      if (saved.timeout === undefined) delete process.env.QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS;
+      else process.env.QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS = saved.timeout;
+      fs.rmSync(bin, { recursive: true, force: true });
+    }
   });
 
   it('Downloads both Pipedrive generations and leaves activation unchanged if either download fails', async () => {

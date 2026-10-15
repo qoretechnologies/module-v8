@@ -10,6 +10,7 @@ import { hubspotContract, normalizeSchema, schemaCompatibilityDigest, schemaName
 import {
   activateSnapshot, activeSnapshot, download, Inputs, installSnapshot, selectDownloads, withCacheLock,
 } from '../schema-cache/hubspot-store';
+import { EXIT_REFUSED, exitStatus, SchemaRefusedError } from '../schema-cache/schema-errors';
 
 // Qore-owned minimal fixtures. No upstream document, descriptions or data types are embedded.
 function inputs(revision = 'one'): Inputs {
@@ -111,10 +112,29 @@ describe('HubSpot schema snapshots', () => {
 
   it('Does not activate an unreviewed schema surface even when its operation inventory matches', async () => {
     const first = await installSnapshot(directory, inputs(), async () => {});
-    await expect(installSnapshot(directory, inputs('two'), async snapshot => {
+    const refused = await installSnapshot(directory, inputs('two'), async snapshot => {
       verifySchemaCompatibility(snapshot);
-    })).rejects.toThrow(/supported operation metadata changed/);
+    }).catch((error: Error) => error);
+    expect(refused.message).toMatch(/supported operation metadata changed/);
+    expect(refused).toBeInstanceOf(SchemaRefusedError);
+    expect(exitStatus(refused)).toBe(EXIT_REFUSED);
     expect(activeSnapshot(directory)).toBe(first);
+  });
+
+  it('Exits with the refused status for schemas the catalogue has not reviewed', async () => {
+    const { cli } = require('../schema-cache/hubspot-cli');
+    const source = fs.mkdtempSync(path.join(os.tmpdir(), 'qore-hubspot-input-'));
+    const messages = jest.spyOn(console, 'error').mockImplementation(() => {});
+    try {
+      for (const [name, input] of Object.entries(inputs('unreviewed'))) {
+        fs.writeFileSync(path.join(source, `${name}.swagger.json`), input.bytes);
+      }
+      expect(await cli(['--cache-dir', fs.realpathSync(directory), 'import', source])).toBe(EXIT_REFUSED);
+      expect(messages.mock.calls.flat().join('\n')).toMatch(/HUBSPOT-SCHEMA-INCOMPATIBLE/);
+    } finally {
+      messages.mockRestore();
+      fs.rmSync(source, { recursive: true, force: true });
+    }
   });
 
   it('Rejects external and dangling references, unsupported formats and unexpected API servers', () => {

@@ -5,6 +5,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import contract from './hubspot-contract.json';
 import compatibility from './hubspot-compatibility.json';
+import { SchemaRefusedError } from './schema-errors';
 
 type JsonObject = Record<string, any>;
 type Method = 'get' | 'post' | 'put' | 'patch' | 'delete' | 'head' | 'options' | 'trace';
@@ -29,30 +30,30 @@ export function digest(bytes: string | Buffer): string {
 
 function object(value: unknown, context: string): asserts value is JsonObject {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
-    throw new Error(`HUBSPOT-SCHEMA-INVALID: expected object at ${context}`);
+    throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INVALID: expected object at ${context}`);
   }
 }
 
 /** Validate bounded JSON and local references; schema parsing never fetches remote content. */
 export function validateDocument(document: unknown): asserts document is JsonObject {
   object(document, 'document');
-  if (!/^3\.0\.\d+$/.test(document.openapi)) throw new Error('HUBSPOT-SCHEMA-INVALID: OpenAPI 3.0 required');
+  if (!/^3\.0\.\d+$/.test(document.openapi)) throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: OpenAPI 3.0 required');
   object(document.paths, 'paths');
   object(document.info, 'info');
   const queue: Array<{ value: unknown; depth: number }> = [{ value: document, depth: 0 }];
   for (let index = 0; index < queue.length; ++index) {
     const { value, depth } = queue[index];
-    if (depth > 96 || queue.length > 500000) throw new Error('HUBSPOT-SCHEMA-INVALID: document too complex');
+    if (depth > 96 || queue.length > 500000) throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: document too complex');
     if (!value || typeof value !== 'object') continue;
     for (const [key, child] of Object.entries(value)) {
       if (key === '$ref') {
         if (typeof child !== 'string' || !child.startsWith('#/')) {
-          throw new Error('HUBSPOT-SCHEMA-INVALID: only local references are permitted');
+          throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: only local references are permitted');
         }
         let target: unknown = document;
         for (const segment of child.slice(2).split('/').map(s => s.replace(/~1/g, '/').replace(/~0/g, '~'))) {
           if (!target || typeof target !== 'object' || !Object.hasOwn(target, segment)) {
-            throw new Error(`HUBSPOT-SCHEMA-INVALID: unresolved reference ${child}`);
+            throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INVALID: unresolved reference ${child}`);
           }
           target = (target as JsonObject)[segment];
         }
@@ -60,21 +61,21 @@ export function validateDocument(document: unknown): asserts document is JsonObj
       if (key === 'servers') {
         if (!Array.isArray(child) || !child.length || child.some(server =>
           !server || server.url !== 'https://api.hubapi.com' || server.variables)) {
-          throw new Error('HUBSPOT-SCHEMA-INVALID: unexpected API server');
+          throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: unexpected API server');
         }
       }
       if (child && typeof child === 'object') queue.push({ value: child, depth: depth + 1 });
     }
   }
   if (!Array.isArray(document.servers) || !document.servers.length) {
-    throw new Error('HUBSPOT-SCHEMA-INVALID: API server is required');
+    throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: API server is required');
   }
 }
 
 /** Normalize one supported API generation to the versioned Qore action contract. */
 export function normalizeSchema(name: string, input: unknown): JsonObject {
   const definition = hubspotContract.schemas[name];
-  if (!definition) throw new Error(`HUBSPOT-SCHEMA-INVALID: unknown schema ${name}`);
+  if (!definition) throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INVALID: unknown schema ${name}`);
   validateDocument(input);
   const document: JsonObject = JSON.parse(JSON.stringify(input));
   const paths: JsonObject = {};
@@ -82,7 +83,7 @@ export function normalizeSchema(name: string, input: unknown): JsonObject {
     const matches = operation.sourcePaths.filter(route =>
       Object.hasOwn(document.paths, route) && Object.hasOwn(document.paths[route], operation.method));
     if (matches.length !== 1) {
-      throw new Error(`HUBSPOT-SCHEMA-INCOMPATIBLE: ${name}: expected exactly one ${operation.method} ${operation.path}`);
+      throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INCOMPATIBLE: ${name}: expected exactly one ${operation.method} ${operation.path}`);
     }
     const source = document.paths[matches[0]];
     const target = paths[operation.path] ||= {};
@@ -134,13 +135,13 @@ export function schemaCompatibilityDigest(document: JsonObject): string {
 export function verifySchemaCompatibility(directory: string): void {
   const expected = compatibility.schemas as Record<string, string>;
   if (compatibility.version !== 1 || JSON.stringify(Object.keys(expected).sort()) !== JSON.stringify(schemaNames)) {
-    throw new Error('HUBSPOT-SCHEMA-INCOMPATIBLE: incomplete catalogue compatibility inventory');
+    throw new SchemaRefusedError('HUBSPOT-SCHEMA-INCOMPATIBLE: incomplete catalogue compatibility inventory');
   }
   for (const name of schemaNames) {
     const document = JSON.parse(readFile(path.join(directory, `${name}.json`)).toString());
     const actual = schemaCompatibilityDigest(document);
     if (actual !== expected[name]) {
-      throw new Error(`HUBSPOT-SCHEMA-INCOMPATIBLE: ${name}: supported operation metadata changed `
+      throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INCOMPATIBLE: ${name}: supported operation metadata changed `
         + `(expected ${expected[name]}, received ${actual}). Update the app catalogue before using these schemas; `
         + 'the active snapshot has not been changed.');
     }
@@ -157,7 +158,7 @@ export function readFile(filename: string, limit = MAX_SCHEMA_BYTES): Buffer {
   const fd = fs.openSync(filename, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK);
   try {
     const info = fs.fstatSync(fd);
-    if (!info.isFile() || info.size > limit) throw new Error(`HUBSPOT-SCHEMA-INVALID: invalid file ${filename}`);
+    if (!info.isFile() || info.size > limit) throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INVALID: invalid file ${filename}`);
     const data = Buffer.alloc(info.size + 1);
     let length = 0;
     while (length < data.length) {
@@ -172,19 +173,19 @@ export function readFile(filename: string, limit = MAX_SCHEMA_BYTES): Buffer {
 
 /** Verify an immutable snapshot and return its canonical absolute directory. */
 export function verifySnapshot(directory: string, validateSchemas = true): string {
-  if (!path.isAbsolute(directory)) throw new Error('HUBSPOT-SCHEMA-INVALID: snapshot path must be absolute');
+  if (!path.isAbsolute(directory)) throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: snapshot path must be absolute');
   const resolved = fs.realpathSync(directory);
-  if (resolved !== directory) throw new Error('HUBSPOT-SCHEMA-INVALID: use an immutable snapshot, not a symlink');
+  if (resolved !== directory) throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: use an immutable snapshot, not a symlink');
   const bytes = readFile(path.join(directory, 'manifest.json'), 128 * 1024);
-  if (path.basename(directory) !== digest(bytes)) throw new Error('HUBSPOT-SCHEMA-INVALID: manifest digest mismatch');
+  if (path.basename(directory) !== digest(bytes)) throw new SchemaRefusedError('HUBSPOT-SCHEMA-INVALID: manifest digest mismatch');
   const manifest = JSON.parse(bytes.toString()) as SnapshotManifest;
   if (manifest.format !== 1 || manifest.contract !== contractDigest
       || JSON.stringify(Object.keys(manifest.files).sort()) !== JSON.stringify(schemaNames)) {
-    throw new Error('HUBSPOT-SCHEMA-INCOMPATIBLE: snapshot contract differs from this catalogue');
+    throw new SchemaRefusedError('HUBSPOT-SCHEMA-INCOMPATIBLE: snapshot contract differs from this catalogue');
   }
   for (const name of schemaNames) {
     const data = readFile(path.join(directory, `${name}.json`));
-    if (digest(data) !== manifest.files[name].sha256) throw new Error(`HUBSPOT-SCHEMA-INVALID: checksum mismatch: ${name}`);
+    if (digest(data) !== manifest.files[name].sha256) throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INVALID: checksum mismatch: ${name}`);
     if (!validateSchemas) continue;
     const document = JSON.parse(data.toString());
     // Validate the normalized boundary again on import/activation. Runtime callers
@@ -195,7 +196,7 @@ export function verifySnapshot(directory: string, validateSchemas = true): strin
         ['get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace'].includes(method))
         .map(([method, value]) => `${method} ${route} ${value.operationId}`)).sort();
     const expected = hubspotContract.schemas[name].operations.map(op => `${op.method} ${op.path} ${op.action}`).sort();
-    if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error(`HUBSPOT-SCHEMA-INCOMPATIBLE: operation contract: ${name}`);
+    if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INCOMPATIBLE: operation contract: ${name}`);
   }
   return directory;
 }

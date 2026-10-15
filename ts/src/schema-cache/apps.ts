@@ -5,6 +5,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import contracts from './app-contracts.json';
 import compatibility from './app-compatibility.json';
+import { SchemaRefusedError } from './schema-errors';
 
 export type JsonObject = Record<string, any>;
 export type AppContract = {
@@ -23,7 +24,7 @@ export function digest(bytes: string | Buffer): string {
 }
 
 export function appContract(id: string): AppContract {
-  if (!Object.hasOwn(appContracts, id)) throw new Error(`APP-SCHEMA-INVALID: unknown app ${id}`);
+  if (!Object.hasOwn(appContracts, id)) throw new SchemaRefusedError(`APP-SCHEMA-INVALID: unknown app ${id}`);
   return appContracts[id];
 }
 
@@ -34,7 +35,7 @@ export function contractDigest(id: string): string {
 
 export function requireObject(value: unknown, context: string): asserts value is JsonObject {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
-    throw new Error(`APP-SCHEMA-INVALID: expected object at ${context}`);
+    throw new SchemaRefusedError(`APP-SCHEMA-INVALID: expected object at ${context}`);
   }
 }
 
@@ -43,7 +44,7 @@ export function readFile(filename: string, limit = MAX_BYTES): Buffer {
   const fd = fs.openSync(filename, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK);
   try {
     const info = fs.fstatSync(fd);
-    if (!info.isFile() || info.size > limit) throw new Error('APP-SCHEMA-INVALID: invalid file');
+    if (!info.isFile() || info.size > limit) throw new SchemaRefusedError('APP-SCHEMA-INVALID: invalid file');
     const bytes = Buffer.alloc(info.size + 1);
     let length = 0;
     while (length < bytes.length) {
@@ -58,12 +59,12 @@ export function readFile(filename: string, limit = MAX_BYTES): Buffer {
 
 function resolveReference(document: JsonObject, reference: unknown): unknown {
   if (typeof reference !== 'string' || !reference.startsWith('#/')) {
-    throw new Error('APP-SCHEMA-INVALID: only local references are permitted');
+    throw new SchemaRefusedError('APP-SCHEMA-INVALID: only local references are permitted');
   }
   let target: unknown = document;
   for (const segment of reference.slice(2).split('/').map(s => s.replace(/~1/g, '/').replace(/~0/g, '~'))) {
     if (!target || typeof target !== 'object' || !Object.hasOwn(target, segment)) {
-      throw new Error(`APP-SCHEMA-INVALID: unresolved reference ${reference}`);
+      throw new SchemaRefusedError(`APP-SCHEMA-INVALID: unresolved reference ${reference}`);
     }
     target = (target as JsonObject)[segment];
   }
@@ -74,14 +75,14 @@ function resolveReference(document: JsonObject, reference: unknown): unknown {
 export function validateDocument(document: unknown): asserts document is JsonObject {
   requireObject(document, 'document');
   if (document.swagger !== '2.0' && !/^3\.0\.\d+$/.test(document.openapi)) {
-    throw new Error('APP-SCHEMA-INVALID: Swagger 2.0 or OpenAPI 3.0 required');
+    throw new SchemaRefusedError('APP-SCHEMA-INVALID: Swagger 2.0 or OpenAPI 3.0 required');
   }
   requireObject(document.paths, 'paths');
   requireObject(document.info, 'info');
   const queue: Array<{ value: unknown; depth: number }> = [{ value: document, depth: 0 }];
   for (let i = 0; i < queue.length; ++i) {
     const { value, depth } = queue[i];
-    if (depth > 96 || queue.length > 500000) throw new Error('APP-SCHEMA-INVALID: document too complex');
+    if (depth > 96 || queue.length > 500000) throw new SchemaRefusedError('APP-SCHEMA-INVALID: document too complex');
     if (!value || typeof value !== 'object') continue;
     for (const [key, child] of Object.entries(value)) {
       if (key === '$ref') resolveReference(document, child);
@@ -109,7 +110,7 @@ export function normalizeSchema(id: string, input: unknown): JsonObject {
       requireObject(document.paths[route], route);
       return Object.hasOwn(document.paths[route], operation.method);
     });
-    if (matches.length !== 1) throw new Error(`APP-SCHEMA-INCOMPATIBLE: ${id}: expected exactly one ${operation.method} ${operation.path}`);
+    if (matches.length !== 1) throw new SchemaRefusedError(`APP-SCHEMA-INCOMPATIBLE: ${id}: expected exactly one ${operation.method} ${operation.path}`);
     const source = document.paths[matches[0]];
     requireObject(source[operation.method], operation.operationId);
     requireObject(source[operation.method].responses, `${operation.operationId}.responses`);
@@ -148,7 +149,7 @@ export function normalizeSchema(id: string, input: unknown): JsonObject {
 export function composePipedriveSchemas(input: unknown): JsonObject {
   requireObject(input, 'Pipedrive bundle');
   if (Object.keys(input).sort().join(',') !== 'v1,v2') {
-    throw new Error('APP-SCHEMA-INVALID: Pipedrive requires exactly v1 and v2 documents');
+    throw new SchemaRefusedError('APP-SCHEMA-INVALID: Pipedrive requires exactly v1 and v2 documents');
   }
   const result: JsonObject = { openapi: '3.0.1', info: { title: 'Pipedrive', version: 'v1+v2' },
     servers: [{ url: 'https://api.pipedrive.com' }], paths: {}, components: Object.create(null) };
@@ -159,7 +160,7 @@ export function composePipedriveSchemas(input: unknown): JsonObject {
     const prefix = version === 'v1' ? '/v1' : '/api/v2';
     if (source.openapi !== '3.0.1' || JSON.stringify(source.servers)
         !== JSON.stringify([{ url: `https://api.pipedrive.com${prefix}` }])) {
-      throw new Error(`APP-SCHEMA-INCOMPATIBLE: Pipedrive ${version}: unexpected API server or version`);
+      throw new SchemaRefusedError(`APP-SCHEMA-INCOMPATIBLE: Pipedrive ${version}: unexpected API server or version`);
     }
     // Validate before traversing; JSON round-trip also guarantees caller-owned documents stay untouched.
     const document: JsonObject = JSON.parse(JSON.stringify(source));
@@ -169,12 +170,12 @@ export function composePipedriveSchemas(input: unknown): JsonObject {
       for (const [key, child] of Object.entries(value)) {
         if (key === '$ref') {
           if (typeof child !== 'string' || !/^#\/components\/[^/]+\/[^/]+/.test(child)) {
-            throw new Error('APP-SCHEMA-INCOMPATIBLE: Pipedrive references must target components');
+            throw new SchemaRefusedError('APP-SCHEMA-INCOMPATIBLE: Pipedrive references must target components');
           }
           value[key] = child.replace(/^(#\/components\/[^/]+\/)/, `$1${version}_`);
         } else if (key === 'security') {
           if (!Array.isArray(child)) {
-            throw new Error('APP-SCHEMA-INVALID: Pipedrive security must be an array');
+            throw new SchemaRefusedError('APP-SCHEMA-INVALID: Pipedrive security must be an array');
           }
           value[key] = child.map(requirement => {
             requireObject(requirement, 'security requirement');
@@ -199,7 +200,7 @@ export function composePipedriveSchemas(input: unknown): JsonObject {
       requireObject(item, route);
       // The explicit version is in the path. Unreviewed operation/path server overrides must fail closed.
       if (item.servers || methods.some(method => item[method]?.servers)) {
-        throw new Error('APP-SCHEMA-INCOMPATIBLE: Pipedrive path/operation server override');
+        throw new SchemaRefusedError('APP-SCHEMA-INCOMPATIBLE: Pipedrive path/operation server override');
       }
       for (const method of methods) {
         if (item[method] && !Object.hasOwn(item[method], 'security') && document.security) {
@@ -246,7 +247,7 @@ export function verifyCompatibility(id: string, document: JsonObject): void {
   const approved = (compatibility.apps as Record<string, string[]>)[id];
   const actual = schemaCompatibilityDigest(document);
   if (compatibility.version !== 1 || !approved?.includes(actual)) {
-    throw new Error(`APP-SCHEMA-INCOMPATIBLE: ${id}: supported metadata changed (${actual}). `
+    throw new SchemaRefusedError(`APP-SCHEMA-INCOMPATIBLE: ${id}: supported metadata changed (${actual}). `
       + 'Use a compatible export or update the app catalogue; the active snapshot has not changed.');
   }
 }
@@ -259,16 +260,16 @@ export type SnapshotManifest = {
 export function verifySnapshot(id: string, directory: string, parse = true): string {
   appContract(id);
   if (!path.isAbsolute(directory) || fs.realpathSync(directory) !== directory) {
-    throw new Error('APP-SCHEMA-INVALID: use an absolute immutable snapshot, not a symlink');
+    throw new SchemaRefusedError('APP-SCHEMA-INVALID: use an absolute immutable snapshot, not a symlink');
   }
   const raw = readFile(path.join(directory, 'manifest.json'), 128 * 1024);
-  if (path.basename(directory) !== digest(raw)) throw new Error('APP-SCHEMA-INVALID: manifest digest mismatch');
+  if (path.basename(directory) !== digest(raw)) throw new SchemaRefusedError('APP-SCHEMA-INVALID: manifest digest mismatch');
   const manifest = JSON.parse(raw.toString()) as SnapshotManifest;
   if (manifest.format !== 1 || manifest.app !== id || manifest.contract !== contractDigest(id)) {
-    throw new Error(`APP-SCHEMA-INCOMPATIBLE: ${id}: snapshot contract differs from this catalogue`);
+    throw new SchemaRefusedError(`APP-SCHEMA-INCOMPATIBLE: ${id}: snapshot contract differs from this catalogue`);
   }
   const bytes = readFile(path.join(directory, 'schema.json'));
-  if (digest(bytes) !== manifest.sha256) throw new Error('APP-SCHEMA-INVALID: schema checksum mismatch');
+  if (digest(bytes) !== manifest.sha256) throw new SchemaRefusedError('APP-SCHEMA-INVALID: schema checksum mismatch');
   if (parse) {
     const document = JSON.parse(bytes.toString());
     validateDocument(document);

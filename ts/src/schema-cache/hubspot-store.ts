@@ -8,6 +8,7 @@ import {
   contractDigest, digest, hubspotContract, MAX_SCHEMA_BYTES, normalizeSchema, readFile,
   schemaNames, SnapshotManifest, verifySnapshot,
 } from './hubspot';
+import { SchemaRefusedError } from './schema-errors';
 
 export const CATALOG_URL = 'https://api.hubspot.com/public/api/spec/v1/specs';
 export type SchemaInput = { bytes: Buffer; source: string };
@@ -141,7 +142,7 @@ export function activateSnapshot(directory: string, snapshot: string): void {
 /** Stage all files, verify the contract, then qualify against the installed runtime before activation. */
 export async function installSnapshot(directory: string, inputs: Inputs,
   qualify: (snapshot: string) => Promise<void>): Promise<string> {
-  if (JSON.stringify(Object.keys(inputs).sort()) !== JSON.stringify(schemaNames)) throw new Error('HUBSPOT-SCHEMA-CACHE: incomplete input set');
+  if (JSON.stringify(Object.keys(inputs).sort()) !== JSON.stringify(schemaNames)) throw new SchemaRefusedError('HUBSPOT-SCHEMA-CACHE: incomplete input set');
   const parent = path.join(directory, 'snapshots');
   fs.mkdirSync(parent, { recursive: true, mode: 0o700 });
   if (fs.realpathSync(parent) !== parent) throw new Error('HUBSPOT-SCHEMA-CACHE: snapshots directory must not be a symlink');
@@ -151,8 +152,8 @@ export async function installSnapshot(directory: string, inputs: Inputs,
     const manifest: SnapshotManifest = { format: 1, contract: contractDigest, files: {} };
     for (const name of schemaNames) {
       const input = inputs[name];
-      if (input.bytes.length > MAX_SCHEMA_BYTES) throw new Error(`HUBSPOT-SCHEMA-CACHE: oversized input ${name}`);
-      const normalized = JSON.stringify(normalizeSchema(name, JSON.parse(input.bytes.toString()))) + '\n';
+      if (input.bytes.length > MAX_SCHEMA_BYTES) throw new SchemaRefusedError(`HUBSPOT-SCHEMA-CACHE: oversized input ${name}`);
+      const normalized = JSON.stringify(normalizeSchema(name, parseSchema(input.bytes))) + '\n';
       fs.writeFileSync(path.join(stage, `${name}.json`), normalized, { mode: 0o444, flag: 'wx' });
       manifest.files[name] = { sha256: digest(normalized), sourceSha256: digest(input.bytes), source: input.source };
     }
@@ -171,5 +172,14 @@ export async function installSnapshot(directory: string, inputs: Inputs,
     return destination;
   } finally {
     if (!completed) fs.rmSync(stage, { recursive: true, force: true });
+  }
+}
+
+/** Parses a schema document; a document that is not JSON is refused. */
+function parseSchema(bytes: Buffer): unknown {
+  try {
+    return JSON.parse(bytes.toString());
+  } catch (error) {
+    throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INVALID: not a JSON document: ${(error as Error).message}`);
   }
 }
