@@ -804,8 +804,8 @@
           "message": "Cerca righe in un foglio Google Sheets che soddisfano criteri specifici."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
-          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
-          "message": "Cerca le righe in un foglio Google Sheets che corrispondono a un valore specifico in una colonna designata. Supporta la ricerca per intestazione o lettera di colonna, la paginazione e diversi formati di risposta."
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, a header row below titles, pagination, values as stored, as displayed, or as formulas, and different response formats.",
+          "message": "Cerca le righe in un foglio Google Sheets che corrispondono a un valore specifico in una colonna designata. Supporta la ricerca per intestazione o lettera di colonna, una riga di intestazione sotto i titoli, la paginazione, i valori così come sono memorizzati, come sono visualizzati o come formule, e diversi formati di risposta."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
           "source": "Spreadsheet ID",
@@ -878,6 +878,82 @@
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
           "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
           "message": "Limita il numero totale di righe in cui eseguire la ricerca per controllare le prestazioni con fogli di grandi dimensioni. Il valore predefinito è 5000."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
+          "source": "Header Row",
+          "message": "Riga di intestazione"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
+          "source": "Number of the row holding the column headers",
+          "message": "Numero della riga con le intestazioni di colonna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.desc": {
+          "source": "The number of the row that holds the column headers, for sheets with titles or notes above the table. Headers are read from this row, and rows are read and searched only below it; `row_index` in the result is still the row number in the sheet. Default is 1, the first row.",
+          "message": "Il numero della riga che contiene le intestazioni di colonna, per fogli con titoli o note sopra la tabella. Le intestazioni vengono lette da questa riga, e le righe vengono lette e cercate solo al di sotto; `row_index` nel risultato resta il numero di riga nel foglio. Il valore predefinito è 1, la prima riga."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
+          "source": "Values Returned",
+          "message": "Valori restituiti"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
+          "source": "Whether values, displayed text, or formulas are returned",
+          "message": "Se vengono restituiti valori, testo visualizzato o formule"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.desc": {
+          "source": "How cell values are returned and searched:\n\n- `unformatted` (the default): numbers, booleans, and text as stored in the cells; dates and times as serial numbers\n- `formatted`: each value as text, exactly as the sheet displays it, such as `1,234.50` or `10/07/2026`\n- `formula`: the formula of each formula cell, such as `=SUM(B2:B9)`; other cells as stored\n\nColumn headers are always read as displayed.",
+          "message": "Come i valori delle celle vengono restituiti e cercati:\n\n- `unformatted` (il predefinito): numeri, booleani e testo così come sono memorizzati nelle celle; date e ore come numeri seriali\n- `formatted`: ogni valore come testo, esattamente come lo visualizza il foglio, ad esempio `1,234.50` o `10/07/2026`\n- `formula`: la formula di ogni cella con formula, ad esempio `=SUM(B2:B9)`; le altre celle così come sono memorizzate\n\nLe intestazioni di colonna vengono sempre lette come visualizzate."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.display_name": {
+          "source": "Values",
+          "message": "Valori"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.desc": {
+          "source": "Numbers, booleans, and text as stored in the cells; dates and times as serial numbers",
+          "message": "Numeri, booleani e testo così come sono memorizzati nelle celle; date e ore come numeri seriali"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.display_name": {
+          "source": "Displayed text",
+          "message": "Testo visualizzato"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.desc": {
+          "source": "Each value as text, as the sheet displays it",
+          "message": "Ogni valore come testo, come lo visualizza il foglio"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.display_name": {
+          "source": "Formulas",
+          "message": "Formule"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.desc": {
+          "source": "The formula of each formula cell; other cells as stored",
+          "message": "La formula di ogni cella con formula; le altre celle così come sono memorizzate"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
+          "source": "Dates Returned",
+          "message": "Date restituite"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
+          "source": "Whether dates are returned as serial numbers or as displayed text",
+          "message": "Se le date vengono restituite come numeri seriali o come testo visualizzato"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.desc": {
+          "source": "How dates and times are returned and searched when values or formulas are returned:\n\n- `serial_number` (the default): as serial numbers, the days since 30 December 1899 with the time of day as the fraction, such as `46302.5` for 7 October 2026 at noon\n- `formatted_string`: as text, exactly as the sheet displays them, such as `10/7/2026`\n\nWith `value_render` set to `formatted`, every value, including dates, is returned as displayed.",
+          "message": "Come date e ore vengono restituite e cercate quando vengono restituiti valori o formule:\n\n- `serial_number` (il predefinito): come numeri seriali, i giorni dal 30 dicembre 1899 con l'ora del giorno come frazione, ad esempio `46302.5` per il 7 ottobre 2026 a mezzogiorno\n- `formatted_string`: come testo, esattamente come le visualizza il foglio, ad esempio `10/7/2026`\n\nCon `value_render` impostato su `formatted`, ogni valore, comprese le date, viene restituito come visualizzato."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.display_name": {
+          "source": "Serial numbers",
+          "message": "Numeri seriali"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.desc": {
+          "source": "Dates and times as serial numbers: days since 30 December 1899, with the time as the fraction",
+          "message": "Date e ore come numeri seriali: giorni dal 30 dicembre 1899, con l'ora come frazione"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.display_name": {
+          "source": "Displayed text",
+          "message": "Testo visualizzato"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.desc": {
+          "source": "Dates and times as text, as the sheet displays them",
+          "message": "Date e ore come testo, come le visualizza il foglio"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
           "source": "Response Format",

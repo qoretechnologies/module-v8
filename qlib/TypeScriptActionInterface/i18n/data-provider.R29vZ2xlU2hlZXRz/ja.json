@@ -804,8 +804,8 @@
           "message": "特定の条件に一致する Google Sheets スプレッドシート内の行を検索します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
-          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
-          "message": "指定された列の特定の値に一致する Google スプレッドシートの行を検索します。列ヘッダーまたは列文字による検索、ページネーション、さまざまなレスポンス形式に対応しています。"
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, a header row below titles, pagination, values as stored, as displayed, or as formulas, and different response formats.",
+          "message": "指定された列の特定の値に一致する Google スプレッドシートの行を検索します。列ヘッダーまたは列文字による検索、タイトルの下のヘッダー行、ページネーション、保存されたままの値・表示されたとおりの値・数式、さまざまなレスポンス形式に対応しています。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
           "source": "Spreadsheet ID",
@@ -878,6 +878,82 @@
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
           "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
           "message": "大規模なシートでのパフォーマンスを制御するため、検索する総行数を制限します。デフォルトは 5000 です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
+          "source": "Header Row",
+          "message": "ヘッダー行"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
+          "source": "Number of the row holding the column headers",
+          "message": "列ヘッダーがある行の番号"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.desc": {
+          "source": "The number of the row that holds the column headers, for sheets with titles or notes above the table. Headers are read from this row, and rows are read and searched only below it; `row_index` in the result is still the row number in the sheet. Default is 1, the first row.",
+          "message": "列ヘッダーがある行の番号です。表の上にタイトルやメモがあるシートで使用します。ヘッダーはこの行から読み取られ、行はこの行より下でのみ読み取りと検索が行われます。結果の `row_index` は引き続きシート内の行番号です。デフォルトは 1 (最初の行) です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
+          "source": "Values Returned",
+          "message": "返される値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
+          "source": "Whether values, displayed text, or formulas are returned",
+          "message": "値、表示テキスト、数式のどれを返すか"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.desc": {
+          "source": "How cell values are returned and searched:\n\n- `unformatted` (the default): numbers, booleans, and text as stored in the cells; dates and times as serial numbers\n- `formatted`: each value as text, exactly as the sheet displays it, such as `1,234.50` or `10/07/2026`\n- `formula`: the formula of each formula cell, such as `=SUM(B2:B9)`; other cells as stored\n\nColumn headers are always read as displayed.",
+          "message": "セルの値の返し方と検索方法:\n\n- `unformatted` (デフォルト): セルに保存されたままの数値、真偽値、テキスト。日付と時刻はシリアル値\n- `formatted`: シートでの表示どおりのテキストとしての各値。例: `1,234.50` や `10/07/2026`\n- `formula`: 数式セルの数式。例: `=SUM(B2:B9)`。その他のセルは保存されたまま\n\n列ヘッダーは常に表示どおりに読み取られます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.display_name": {
+          "source": "Values",
+          "message": "値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.desc": {
+          "source": "Numbers, booleans, and text as stored in the cells; dates and times as serial numbers",
+          "message": "セルに保存されたままの数値、真偽値、テキスト。日付と時刻はシリアル値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.display_name": {
+          "source": "Displayed text",
+          "message": "表示テキスト"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.desc": {
+          "source": "Each value as text, as the sheet displays it",
+          "message": "シートでの表示どおりのテキストとしての各値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.display_name": {
+          "source": "Formulas",
+          "message": "数式"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.desc": {
+          "source": "The formula of each formula cell; other cells as stored",
+          "message": "数式セルの数式。その他のセルは保存されたまま"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
+          "source": "Dates Returned",
+          "message": "返される日付"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
+          "source": "Whether dates are returned as serial numbers or as displayed text",
+          "message": "日付をシリアル値と表示テキストのどちらで返すか"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.desc": {
+          "source": "How dates and times are returned and searched when values or formulas are returned:\n\n- `serial_number` (the default): as serial numbers, the days since 30 December 1899 with the time of day as the fraction, such as `46302.5` for 7 October 2026 at noon\n- `formatted_string`: as text, exactly as the sheet displays them, such as `10/7/2026`\n\nWith `value_render` set to `formatted`, every value, including dates, is returned as displayed.",
+          "message": "値または数式を返す場合の日付と時刻の返し方と検索方法:\n\n- `serial_number` (デフォルト): シリアル値。1899 年 12 月 30 日からの日数で、時刻は小数部分です。例: 2026 年 10 月 7 日正午は `46302.5`\n- `formatted_string`: シートでの表示どおりのテキスト。例: `10/7/2026`\n\n`value_render` が `formatted` の場合は、日付を含むすべての値が表示どおりに返されます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.display_name": {
+          "source": "Serial numbers",
+          "message": "シリアル値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.desc": {
+          "source": "Dates and times as serial numbers: days since 30 December 1899, with the time as the fraction",
+          "message": "シリアル値としての日付と時刻: 1899 年 12 月 30 日からの日数。時刻は小数部分"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.display_name": {
+          "source": "Displayed text",
+          "message": "表示テキスト"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.desc": {
+          "source": "Dates and times as text, as the sheet displays them",
+          "message": "シートでの表示どおりのテキストとしての日付と時刻"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
           "source": "Response Format",

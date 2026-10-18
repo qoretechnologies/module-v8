@@ -804,8 +804,8 @@
           "message": "Buscar filas en Google Sheets que coincidan con criterios específicos."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
-          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
-          "message": "Busca filas en una hoja de Google Sheets que coincidan con un valor específico en una columna designada. Admite la búsqueda por encabezado o letra de columna, paginación y diferentes formatos de respuesta."
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, a header row below titles, pagination, values as stored, as displayed, or as formulas, and different response formats.",
+          "message": "Busca filas en una hoja de Google Sheets que coincidan con un valor específico en una columna designada. Admite la búsqueda por encabezado o letra de columna, una fila de encabezado bajo títulos, paginación, valores tal como se almacenan, tal como se muestran o como fórmulas, y diferentes formatos de respuesta."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
           "source": "Spreadsheet ID",
@@ -878,6 +878,82 @@
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
           "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
           "message": "Limita el número total de filas a buscar para controlar el rendimiento con hojas grandes. El valor predeterminado es 5000."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
+          "source": "Header Row",
+          "message": "Fila de encabezado"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
+          "source": "Number of the row holding the column headers",
+          "message": "Número de la fila con los encabezados de columna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.desc": {
+          "source": "The number of the row that holds the column headers, for sheets with titles or notes above the table. Headers are read from this row, and rows are read and searched only below it; `row_index` in the result is still the row number in the sheet. Default is 1, the first row.",
+          "message": "El número de la fila que contiene los encabezados de columna, para hojas con títulos o notas encima de la tabla. Los encabezados se leen de esta fila, y las filas solo se leen y buscan debajo de ella; `row_index` en el resultado sigue siendo el número de fila en la hoja. El valor predeterminado es 1, la primera fila."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
+          "source": "Values Returned",
+          "message": "Valores devueltos"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
+          "source": "Whether values, displayed text, or formulas are returned",
+          "message": "Si se devuelven valores, texto mostrado o fórmulas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.desc": {
+          "source": "How cell values are returned and searched:\n\n- `unformatted` (the default): numbers, booleans, and text as stored in the cells; dates and times as serial numbers\n- `formatted`: each value as text, exactly as the sheet displays it, such as `1,234.50` or `10/07/2026`\n- `formula`: the formula of each formula cell, such as `=SUM(B2:B9)`; other cells as stored\n\nColumn headers are always read as displayed.",
+          "message": "Cómo se devuelven y buscan los valores de las celdas:\n\n- `unformatted` (el predeterminado): números, booleanos y texto tal como se almacenan en las celdas; fechas y horas como números de serie\n- `formatted`: cada valor como texto, exactamente como lo muestra la hoja, por ejemplo `1,234.50` o `10/07/2026`\n- `formula`: la fórmula de cada celda con fórmula, por ejemplo `=SUM(B2:B9)`; las demás celdas tal como se almacenan\n\nLos encabezados de columna siempre se leen tal como se muestran."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.display_name": {
+          "source": "Values",
+          "message": "Valores"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.desc": {
+          "source": "Numbers, booleans, and text as stored in the cells; dates and times as serial numbers",
+          "message": "Números, booleanos y texto tal como se almacenan en las celdas; fechas y horas como números de serie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.display_name": {
+          "source": "Displayed text",
+          "message": "Texto mostrado"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.desc": {
+          "source": "Each value as text, as the sheet displays it",
+          "message": "Cada valor como texto, tal como lo muestra la hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.display_name": {
+          "source": "Formulas",
+          "message": "Fórmulas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.desc": {
+          "source": "The formula of each formula cell; other cells as stored",
+          "message": "La fórmula de cada celda con fórmula; las demás celdas tal como se almacenan"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
+          "source": "Dates Returned",
+          "message": "Fechas devueltas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
+          "source": "Whether dates are returned as serial numbers or as displayed text",
+          "message": "Si las fechas se devuelven como números de serie o como texto mostrado"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.desc": {
+          "source": "How dates and times are returned and searched when values or formulas are returned:\n\n- `serial_number` (the default): as serial numbers, the days since 30 December 1899 with the time of day as the fraction, such as `46302.5` for 7 October 2026 at noon\n- `formatted_string`: as text, exactly as the sheet displays them, such as `10/7/2026`\n\nWith `value_render` set to `formatted`, every value, including dates, is returned as displayed.",
+          "message": "Cómo se devuelven y buscan las fechas y horas cuando se devuelven valores o fórmulas:\n\n- `serial_number` (el predeterminado): como números de serie, los días desde el 30 de diciembre de 1899 con la hora del día como fracción, por ejemplo `46302.5` para el 7 de octubre de 2026 al mediodía\n- `formatted_string`: como texto, exactamente como los muestra la hoja, por ejemplo `10/7/2026`\n\nCon `value_render` establecido en `formatted`, cada valor, incluidas las fechas, se devuelve tal como se muestra."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.display_name": {
+          "source": "Serial numbers",
+          "message": "Números de serie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.desc": {
+          "source": "Dates and times as serial numbers: days since 30 December 1899, with the time as the fraction",
+          "message": "Fechas y horas como números de serie: días desde el 30 de diciembre de 1899, con la hora como fracción"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.display_name": {
+          "source": "Displayed text",
+          "message": "Texto mostrado"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.desc": {
+          "source": "Dates and times as text, as the sheet displays them",
+          "message": "Fechas y horas como texto, tal como las muestra la hoja"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
           "source": "Response Format",

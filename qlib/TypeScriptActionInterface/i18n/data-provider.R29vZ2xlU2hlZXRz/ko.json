@@ -804,8 +804,8 @@
           "message": "특정 기준과 일치하는 Google Sheets 스프레드시트의 행을 검색합니다."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
-          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
-          "message": "지정된 열에서 특정 값과 일치하는 Google Sheet의 행을 검색합니다. 열 헤더 또는 문자 기준 검색, 페이지 매김 및 다양한 응답 형식을 지원합니다."
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, a header row below titles, pagination, values as stored, as displayed, or as formulas, and different response formats.",
+          "message": "지정된 열에서 특정 값과 일치하는 Google Sheet의 행을 검색합니다. 열 헤더 또는 문자 기준 검색, 제목 아래의 헤더 행, 페이지 매김, 저장된 값·표시된 값·수식, 다양한 응답 형식을 지원합니다."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
           "source": "Spreadsheet ID",
@@ -878,6 +878,82 @@
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
           "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
           "message": "대용량 시트에서의 성능 제어를 위해 검색할 총 행 수를 제한합니다. 기본값은 5000입니다."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
+          "source": "Header Row",
+          "message": "헤더 행"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
+          "source": "Number of the row holding the column headers",
+          "message": "열 헤더가 있는 행 번호"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.desc": {
+          "source": "The number of the row that holds the column headers, for sheets with titles or notes above the table. Headers are read from this row, and rows are read and searched only below it; `row_index` in the result is still the row number in the sheet. Default is 1, the first row.",
+          "message": "열 헤더가 있는 행의 번호로, 표 위에 제목이나 메모가 있는 시트에 사용합니다. 헤더는 이 행에서 읽고, 행은 이 행 아래에서만 읽고 검색합니다. 결과의 `row_index`는 여전히 시트의 행 번호입니다. 기본값은 1(첫 번째 행)입니다."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
+          "source": "Values Returned",
+          "message": "반환되는 값"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
+          "source": "Whether values, displayed text, or formulas are returned",
+          "message": "값, 표시 텍스트, 수식 중 무엇을 반환할지"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.desc": {
+          "source": "How cell values are returned and searched:\n\n- `unformatted` (the default): numbers, booleans, and text as stored in the cells; dates and times as serial numbers\n- `formatted`: each value as text, exactly as the sheet displays it, such as `1,234.50` or `10/07/2026`\n- `formula`: the formula of each formula cell, such as `=SUM(B2:B9)`; other cells as stored\n\nColumn headers are always read as displayed.",
+          "message": "셀 값을 반환하고 검색하는 방식:\n\n- `unformatted`(기본값): 셀에 저장된 숫자, 불리언, 텍스트. 날짜와 시간은 일련번호\n- `formatted`: 시트에 표시되는 그대로의 텍스트로 된 각 값(예: `1,234.50` 또는 `10/07/2026`)\n- `formula`: 수식 셀의 수식(예: `=SUM(B2:B9)`). 다른 셀은 저장된 그대로\n\n열 헤더는 항상 표시된 그대로 읽습니다."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.display_name": {
+          "source": "Values",
+          "message": "값"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOnVuZm9ybWF0dGVk.desc": {
+          "source": "Numbers, booleans, and text as stored in the cells; dates and times as serial numbers",
+          "message": "셀에 저장된 숫자, 불리언, 텍스트. 날짜와 시간은 일련번호"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.display_name": {
+          "source": "Displayed text",
+          "message": "표시 텍스트"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm1hdHRlZA.desc": {
+          "source": "Each value as text, as the sheet displays it",
+          "message": "시트에 표시되는 그대로의 텍스트로 된 각 값"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.display_name": {
+          "source": "Formulas",
+          "message": "수식"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.allowed-value.c3RyaW5nOmZvcm11bGE.desc": {
+          "source": "The formula of each formula cell; other cells as stored",
+          "message": "수식 셀의 수식. 다른 셀은 저장된 그대로"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
+          "source": "Dates Returned",
+          "message": "반환되는 날짜"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
+          "source": "Whether dates are returned as serial numbers or as displayed text",
+          "message": "날짜를 일련번호로 반환할지 표시 텍스트로 반환할지"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.desc": {
+          "source": "How dates and times are returned and searched when values or formulas are returned:\n\n- `serial_number` (the default): as serial numbers, the days since 30 December 1899 with the time of day as the fraction, such as `46302.5` for 7 October 2026 at noon\n- `formatted_string`: as text, exactly as the sheet displays them, such as `10/7/2026`\n\nWith `value_render` set to `formatted`, every value, including dates, is returned as displayed.",
+          "message": "값이나 수식을 반환할 때 날짜와 시간을 반환하고 검색하는 방식:\n\n- `serial_number`(기본값): 일련번호. 1899년 12월 30일 이후의 일수이며 시각은 소수 부분입니다(예: 2026년 10월 7일 정오는 `46302.5`)\n- `formatted_string`: 시트에 표시되는 그대로의 텍스트(예: `10/7/2026`)\n\n`value_render`가 `formatted`이면 날짜를 포함한 모든 값이 표시된 그대로 반환됩니다."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.display_name": {
+          "source": "Serial numbers",
+          "message": "일련번호"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOnNlcmlhbF9udW1iZXI.desc": {
+          "source": "Dates and times as serial numbers: days since 30 December 1899, with the time as the fraction",
+          "message": "일련번호로 된 날짜와 시간: 1899년 12월 30일 이후의 일수이며 시각은 소수 부분"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.display_name": {
+          "source": "Displayed text",
+          "message": "표시 텍스트"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.allowed-value.c3RyaW5nOmZvcm1hdHRlZF9zdHJpbmc.desc": {
+          "source": "Dates and times as text, as the sheet displays them",
+          "message": "시트에 표시되는 그대로의 텍스트로 된 날짜와 시간"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
           "source": "Response Format",

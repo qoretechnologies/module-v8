@@ -122,7 +122,7 @@ const GoogleSheetsAppEn = {
       displayName: 'Find Spreadsheet Rows',
       shortDesc: 'Search for rows in a Google Sheets spreadsheet that match specific criteria.',
       longDesc:
-        'Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.',
+        'Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, a header row below titles, pagination, values as stored, as displayed, or as formulas, and different response formats.',
       options: {
         spreadsheet_id: {
           displayName: 'Spreadsheet ID',
@@ -158,6 +158,24 @@ const GoogleSheetsAppEn = {
           shortDesc: 'Maximum number of rows to search through',
           longDesc:
             'Limits the total number of rows to search to control performance with large sheets. Default is 5000.',
+        },
+        header_row: {
+          displayName: 'Header Row',
+          shortDesc: 'Number of the row holding the column headers',
+          longDesc:
+            'The number of the row that holds the column headers, for sheets with titles or notes above the table. Headers are read from this row, and rows are read and searched only below it; `row_index` in the result is still the row number in the sheet. Default is 1, the first row.',
+        },
+        value_render: {
+          displayName: 'Values Returned',
+          shortDesc: 'Whether values, displayed text, or formulas are returned',
+          longDesc:
+            'How cell values are returned and searched:\n\n- `unformatted` (the default): numbers, booleans, and text as stored in the cells; dates and times as serial numbers\n- `formatted`: each value as text, exactly as the sheet displays it, such as `1,234.50` or `10/07/2026`\n- `formula`: the formula of each formula cell, such as `=SUM(B2:B9)`; other cells as stored\n\nColumn headers are always read as displayed.',
+        },
+        date_render: {
+          displayName: 'Dates Returned',
+          shortDesc: 'Whether dates are returned as serial numbers or as displayed text',
+          longDesc:
+            'How dates and times are returned and searched when values or formulas are returned:\n\n- `serial_number` (the default): as serial numbers, the days since 30 December 1899 with the time of day as the fraction, such as `46302.5` for 7 October 2026 at noon\n- `formatted_string`: as text, exactly as the sheet displays them, such as `10/7/2026`\n\nWith `value_render` set to `formatted`, every value, including dates, is returned as displayed.',
         },
         response_type: {
           displayName: 'Response Format',

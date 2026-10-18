@@ -48499,7 +48499,7 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​ ​t​h​a​t​ ​m​a​t​c​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​i​n​ ​a​ ​d​e​s​i​g​n​a​t​e​d​ ​c​o​l​u​m​n​.​ ​S​u​p​p​o​r​t​s​ ​s​e​a​r​c​h​i​n​g​ ​b​y​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​ ​o​r​ ​l​e​t​t​e​r​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​d​ ​d​i​f​f​e​r​e​n​t​ ​r​e​s​p​o​n​s​e​ ​f​o​r​m​a​t​s​.
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​ ​t​h​a​t​ ​m​a​t​c​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​i​n​ ​a​ ​d​e​s​i​g​n​a​t​e​d​ ​c​o​l​u​m​n​.​ ​S​u​p​p​o​r​t​s​ ​s​e​a​r​c​h​i​n​g​ ​b​y​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​ ​o​r​ ​l​e​t​t​e​r​,​ ​a​ ​h​e​a​d​e​r​ ​r​o​w​ ​b​e​l​o​w​ ​t​i​t​l​e​s​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​v​a​l​u​e​s​ ​a​s​ ​s​t​o​r​e​d​,​ ​a​s​ ​d​i​s​p​l​a​y​e​d​,​ ​o​r​ ​a​s​ ​f​o​r​m​u​l​a​s​,​ ​a​n​d​ ​d​i​f​f​e​r​e​n​t​ ​r​e​s​p​o​n​s​e​ ​f​o​r​m​a​t​s​.
 					 */
 					longDesc: string
 					options: {
@@ -48584,6 +48584,59 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * L​i​m​i​t​s​ ​t​h​e​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​s​e​a​r​c​h​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​e​r​f​o​r​m​a​n​c​e​ ​w​i​t​h​ ​l​a​r​g​e​ ​s​h​e​e​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​0​0​.
+							 */
+							longDesc: string
+						}
+						header_row: {
+							/**
+							 * H​e​a​d​e​r​ ​R​o​w
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​r​o​w​ ​h​o​l​d​i​n​g​ ​t​h​e​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​r​o​w​ ​t​h​a​t​ ​h​o​l​d​s​ ​t​h​e​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s​,​ ​f​o​r​ ​s​h​e​e​t​s​ ​w​i​t​h​ ​t​i​t​l​e​s​ ​o​r​ ​n​o​t​e​s​ ​a​b​o​v​e​ ​t​h​e​ ​t​a​b​l​e​.​ ​H​e​a​d​e​r​s​ ​a​r​e​ ​r​e​a​d​ ​f​r​o​m​ ​t​h​i​s​ ​r​o​w​,​ ​a​n​d​ ​r​o​w​s​ ​a​r​e​ ​r​e​a​d​ ​a​n​d​ ​s​e​a​r​c​h​e​d​ ​o​n​l​y​ ​b​e​l​o​w​ ​i​t​;​ ​`​r​o​w​_​i​n​d​e​x​`​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​ ​i​s​ ​s​t​i​l​l​ ​t​h​e​ ​r​o​w​ ​n​u​m​b​e​r​ ​i​n​ ​t​h​e​ ​s​h​e​e​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​,​ ​t​h​e​ ​f​i​r​s​t​ ​r​o​w​.
+							 */
+							longDesc: string
+						}
+						value_render: {
+							/**
+							 * V​a​l​u​e​s​ ​R​e​t​u​r​n​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​v​a​l​u​e​s​,​ ​d​i​s​p​l​a​y​e​d​ ​t​e​x​t​,​ ​o​r​ ​f​o​r​m​u​l​a​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * H​o​w​ ​c​e​l​l​ ​v​a​l​u​e​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​a​n​d​ ​s​e​a​r​c​h​e​d​:​
+						​
+						​-​ ​`​u​n​f​o​r​m​a​t​t​e​d​`​ ​(​t​h​e​ ​d​e​f​a​u​l​t​)​:​ ​n​u​m​b​e​r​s​,​ ​b​o​o​l​e​a​n​s​,​ ​a​n​d​ ​t​e​x​t​ ​a​s​ ​s​t​o​r​e​d​ ​i​n​ ​t​h​e​ ​c​e​l​l​s​;​ ​d​a​t​e​s​ ​a​n​d​ ​t​i​m​e​s​ ​a​s​ ​s​e​r​i​a​l​ ​n​u​m​b​e​r​s​
+						​-​ ​`​f​o​r​m​a​t​t​e​d​`​:​ ​e​a​c​h​ ​v​a​l​u​e​ ​a​s​ ​t​e​x​t​,​ ​e​x​a​c​t​l​y​ ​a​s​ ​t​h​e​ ​s​h​e​e​t​ ​d​i​s​p​l​a​y​s​ ​i​t​,​ ​s​u​c​h​ ​a​s​ ​`​1​,​2​3​4​.​5​0​`​ ​o​r​ ​`​1​0​/​0​7​/​2​0​2​6​`​
+						​-​ ​`​f​o​r​m​u​l​a​`​:​ ​t​h​e​ ​f​o​r​m​u​l​a​ ​o​f​ ​e​a​c​h​ ​f​o​r​m​u​l​a​ ​c​e​l​l​,​ ​s​u​c​h​ ​a​s​ ​`​=​S​U​M​(​B​2​:​B​9​)​`​;​ ​o​t​h​e​r​ ​c​e​l​l​s​ ​a​s​ ​s​t​o​r​e​d​
+						​
+						​C​o​l​u​m​n​ ​h​e​a​d​e​r​s​ ​a​r​e​ ​a​l​w​a​y​s​ ​r​e​a​d​ ​a​s​ ​d​i​s​p​l​a​y​e​d​.
+							 */
+							longDesc: string
+						}
+						date_render: {
+							/**
+							 * D​a​t​e​s​ ​R​e​t​u​r​n​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​d​a​t​e​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​a​s​ ​s​e​r​i​a​l​ ​n​u​m​b​e​r​s​ ​o​r​ ​a​s​ ​d​i​s​p​l​a​y​e​d​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * H​o​w​ ​d​a​t​e​s​ ​a​n​d​ ​t​i​m​e​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​a​n​d​ ​s​e​a​r​c​h​e​d​ ​w​h​e​n​ ​v​a​l​u​e​s​ ​o​r​ ​f​o​r​m​u​l​a​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​:​
+						​
+						​-​ ​`​s​e​r​i​a​l​_​n​u​m​b​e​r​`​ ​(​t​h​e​ ​d​e​f​a​u​l​t​)​:​ ​a​s​ ​s​e​r​i​a​l​ ​n​u​m​b​e​r​s​,​ ​t​h​e​ ​d​a​y​s​ ​s​i​n​c​e​ ​3​0​ ​D​e​c​e​m​b​e​r​ ​1​8​9​9​ ​w​i​t​h​ ​t​h​e​ ​t​i​m​e​ ​o​f​ ​d​a​y​ ​a​s​ ​t​h​e​ ​f​r​a​c​t​i​o​n​,​ ​s​u​c​h​ ​a​s​ ​`​4​6​3​0​2​.​5​`​ ​f​o​r​ ​7​ ​O​c​t​o​b​e​r​ ​2​0​2​6​ ​a​t​ ​n​o​o​n​
+						​-​ ​`​f​o​r​m​a​t​t​e​d​_​s​t​r​i​n​g​`​:​ ​a​s​ ​t​e​x​t​,​ ​e​x​a​c​t​l​y​ ​a​s​ ​t​h​e​ ​s​h​e​e​t​ ​d​i​s​p​l​a​y​s​ ​t​h​e​m​,​ ​s​u​c​h​ ​a​s​ ​`​1​0​/​7​/​2​0​2​6​`​
+						​
+						​W​i​t​h​ ​`​v​a​l​u​e​_​r​e​n​d​e​r​`​ ​s​e​t​ ​t​o​ ​`​f​o​r​m​a​t​t​e​d​`​,​ ​e​v​e​r​y​ ​v​a​l​u​e​,​ ​i​n​c​l​u​d​i​n​g​ ​d​a​t​e​s​,​ ​i​s​ ​r​e​t​u​r​n​e​d​ ​a​s​ ​d​i​s​p​l​a​y​e​d​.
 							 */
 							longDesc: string
 						}
@@ -165579,7 +165632,7 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.
+					 * Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, a header row below titles, pagination, values as stored, as displayed, or as formulas, and different response formats.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -165664,6 +165717,59 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Limits the total number of rows to search to control performance with large sheets. Default is 5000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						header_row: {
+							/**
+							 * Header Row
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of the row holding the column headers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of the row that holds the column headers, for sheets with titles or notes above the table. Headers are read from this row, and rows are read and searched only below it; `row_index` in the result is still the row number in the sheet. Default is 1, the first row.
+							 */
+							longDesc: () => LocalizedString
+						}
+						value_render: {
+							/**
+							 * Values Returned
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether values, displayed text, or formulas are returned
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * How cell values are returned and searched:
+					
+						- `unformatted` (the default): numbers, booleans, and text as stored in the cells; dates and times as serial numbers
+						- `formatted`: each value as text, exactly as the sheet displays it, such as `1,234.50` or `10/07/2026`
+						- `formula`: the formula of each formula cell, such as `=SUM(B2:B9)`; other cells as stored
+					
+						Column headers are always read as displayed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_render: {
+							/**
+							 * Dates Returned
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether dates are returned as serial numbers or as displayed text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * How dates and times are returned and searched when values or formulas are returned:
+					
+						- `serial_number` (the default): as serial numbers, the days since 30 December 1899 with the time of day as the fraction, such as `46302.5` for 7 October 2026 at noon
+						- `formatted_string`: as text, exactly as the sheet displays them, such as `10/7/2026`
+					
+						With `value_render` set to `formatted`, every value, including dates, is returned as displayed.
 							 */
 							longDesc: () => LocalizedString
 						}

@@ -6,7 +6,7 @@ import { getGoogleDriveFileIdAllowedValues } from '../helpers/get-drive-file-id-
 import { getGoogleSheetIdAllowedValues } from '../helpers/get-sheet-id-allowed-values';
 import { createGoogleSheetsClient } from '../helpers/constants';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
-import { toColumnLetter } from '../actions/constants';
+import { quoteSheetTitle, toColumnLetter } from '../actions/constants';
 
 const GoogleSheetsNewRowTrigger = QoreAppCreator.createLocalizedTrigger({
   app: GOOGLE_SHEETS_APP_NAME,
@@ -99,9 +99,10 @@ const fetchLatestRows = async (token: string, spreadsheetId: string, sheetId: st
       throw new GoogleSheetsError(`Sheet title not found for sheet ID ${sheetId}`);
     }
 
+    const sheetRange = quoteSheetTitle(sheetTitle);
     const headersResponse = await sheetsClient.spreadsheets.values.get({
       spreadsheetId,
-      range: `'${sheetTitle}'!A1:Z1`,
+      range: `${sheetRange}!1:1`,
       valueRenderOption: 'UNFORMATTED_VALUE',
     });
 
@@ -110,11 +111,11 @@ const fetchLatestRows = async (token: string, spreadsheetId: string, sheetId: st
       return [];
     }
 
-    const lastColumn = toColumnLetter(headers.length - 1);
+    const lastColumn = toColumnLetter(headers.length);
 
     const countResponse = await sheetsClient.spreadsheets.values.get({
       spreadsheetId,
-      range: `'${sheetTitle}'!A:A`,
+      range: `${sheetRange}!A:A`,
       valueRenderOption: 'UNFORMATTED_VALUE',
     });
 
@@ -128,7 +129,7 @@ const fetchLatestRows = async (token: string, spreadsheetId: string, sheetId: st
 
     const dataResponse = await sheetsClient.spreadsheets.values.get({
       spreadsheetId,
-      range: `'${sheetTitle}'!A${startRowForLatest + 1}:${lastColumn}${actualRowCount}`,
+      range: `${sheetRange}!A${startRowForLatest + 1}:${lastColumn}${actualRowCount}`,
       valueRenderOption: 'UNFORMATTED_VALUE',
     });
 

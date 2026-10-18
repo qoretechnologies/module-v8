@@ -4,10 +4,23 @@ import { GOOGLE_SHEETS_APP_NAME, GoogleSheetsError } from '../constants';
 import { createGoogleSheetsClient } from '../helpers/constants';
 import { getGoogleDriveFileIdAllowedValues } from '../helpers/get-drive-file-id-allowed-values';
 import { getGoogleSheetIdAllowedValues } from '../helpers/get-sheet-id-allowed-values';
-import { toColumnLetter } from './constants';
+import { quoteSheetTitle, toColumnLetter } from './constants';
 import { getGoogleSheetHeadersAllowedValues } from '../helpers/get-headers-allowed-values';
 
 const MAX_FETCH_SIZE = 1000;
+
+/** The Sheets API value render option of each value_render option value */
+const VALUE_RENDER_OPTIONS: Record<string, string> = {
+  unformatted: 'UNFORMATTED_VALUE',
+  formatted: 'FORMATTED_VALUE',
+  formula: 'FORMULA',
+};
+
+/** The Sheets API date-time render option of each date_render option value */
+const DATE_RENDER_OPTIONS: Record<string, string> = {
+  serial_number: 'SERIAL_NUMBER',
+  formatted_string: 'FORMATTED_STRING',
+};
 
 const options = {
   spreadsheet_id: {
@@ -43,6 +56,50 @@ const options = {
     required: false,
     type: 'integer',
     default_value: 5000,
+  },
+  header_row: {
+    required: false,
+    type: 'integer',
+    default_value: 1,
+  },
+  value_render: {
+    required: false,
+    type: 'string',
+    default_value: 'unformatted',
+    allowed_values: [
+      {
+        display_name: 'Values',
+        value: 'unformatted',
+        desc: 'Numbers, booleans, and text as stored in the cells; dates and times as serial numbers',
+      },
+      {
+        display_name: 'Displayed text',
+        value: 'formatted',
+        desc: 'Each value as text, as the sheet displays it',
+      },
+      {
+        display_name: 'Formulas',
+        value: 'formula',
+        desc: 'The formula of each formula cell; other cells as stored',
+      },
+    ],
+  },
+  date_render: {
+    required: false,
+    type: 'string',
+    default_value: 'serial_number',
+    allowed_values: [
+      {
+        display_name: 'Serial numbers',
+        value: 'serial_number',
+        desc: 'Dates and times as serial numbers: days since 30 December 1899, with the time as the fraction',
+      },
+      {
+        display_name: 'Displayed text',
+        value: 'formatted_string',
+        desc: 'Dates and times as text, as the sheet displays them',
+      },
+    ],
   },
   response_type: {
     required: true,
@@ -127,6 +184,27 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
     const searchFromLastRow = obj?.search_from_last_row || false;
     const maxRowsToSearch = obj?.max_rows_to_search || 5000;
     const responseType = obj?.response_type || 'raw';
+    const headerRow = obj?.header_row ?? 1;
+    const valueRender = obj?.value_render || 'unformatted';
+    const valueRenderOption = VALUE_RENDER_OPTIONS[valueRender];
+    const dateRender = obj?.date_render || 'serial_number';
+    const dateTimeRenderOption = DATE_RENDER_OPTIONS[dateRender];
+
+    if (!Number.isInteger(headerRow) || headerRow < 1) {
+      throw new GoogleSheetsError(`header_row must be a row number of 1 or more; got ${headerRow}`);
+    }
+
+    if (!valueRenderOption) {
+      throw new GoogleSheetsError(
+        `unknown value_render "${valueRender}"; expecting one of: ${Object.keys(VALUE_RENDER_OPTIONS).join(', ')}`
+      );
+    }
+
+    if (!dateTimeRenderOption) {
+      throw new GoogleSheetsError(
+        `unknown date_render "${dateRender}"; expecting one of: ${Object.keys(DATE_RENDER_OPTIONS).join(', ')}`
+      );
+    }
 
     if (search && !search.header && !search.column) {
       throw new GoogleSheetsError('Either header or column must be provided in search criteria');
@@ -157,39 +235,49 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
         throw new GoogleSheetsError(`Could not determine sheet title for sheet ID ${sheet_id}`);
       }
 
+      const sheetRange = quoteSheetTitle(sheetTitle);
+      // the header names are read as the sheet displays them, whatever the value rendering
+      const getHeaders = async (): Promise<string[]> => {
+        const headersResponse = await sheetsClient.spreadsheets.values.get({
+          spreadsheetId: spreadsheet_id,
+          range: `${sheetRange}!${headerRow}:${headerRow}`,
+          valueRenderOption: 'FORMATTED_VALUE',
+        });
+        return headersResponse.data.values?.[0] || [];
+      };
+
       const metadataResponse = await sheetsClient.spreadsheets.get({
         spreadsheetId: spreadsheet_id,
-        ranges: [sheetTitle],
+        ranges: [sheetRange],
         includeGridData: false,
       });
 
       const gridProperties = metadataResponse.data.sheets?.[0]?.properties?.gridProperties;
-      const totalRowCount = (gridProperties?.rowCount || 0) - 1;
+      // the number of rows below the header row
+      const totalRowCount = Math.max((gridProperties?.rowCount || 0) - headerRow, 0);
       const columnCount = gridProperties?.columnCount || 0;
+      const lastColumn = toColumnLetter(columnCount);
 
       if (totalRowCount <= 0 || columnCount === 0) {
         return createEmptyResponse(responseType, totalRowCount, 0);
       }
 
       if (!search) {
-        const startRow = offset + 2;
+        const startRow = headerRow + offset + 1;
         const endRow = startRow + limit - 1;
 
         const valuesResponse = await sheetsClient.spreadsheets.values.get({
           spreadsheetId: spreadsheet_id,
-          range: `${sheetTitle}!A${startRow}:${toColumnLetter(columnCount - 1)}${endRow}`,
-          valueRenderOption: 'UNFORMATTED_VALUE',
+          range: `${sheetRange}!A${startRow}:${lastColumn}${endRow}`,
+          valueRenderOption,
+          dateTimeRenderOption,
         });
 
         const rows = valuesResponse.data.values || [];
 
         let headers: string[] = [];
         if (responseType === 'mapped-headers') {
-          const headersResponse = await sheetsClient.spreadsheets.values.get({
-            spreadsheetId: spreadsheet_id,
-            range: `${sheetTitle}!1:1`,
-          });
-          headers = headersResponse.data.values?.[0] || [];
+          headers = await getHeaders();
         }
 
         const rowsWithIndices = rows.map((values, i) => ({
@@ -207,14 +295,9 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
         });
       }
 
-      let headers = [];
+      let headers: string[] = [];
       if (search.header || responseType === 'mapped-headers') {
-        const headersResponse = await sheetsClient.spreadsheets.values.get({
-          spreadsheetId: spreadsheet_id,
-          range: `${sheetTitle}!1:1`,
-        });
-
-        headers = headersResponse.data.values?.[0] || [];
+        headers = await getHeaders();
 
         if (headers.length === 0) {
           return createEmptyResponse(responseType, totalRowCount, 0);
@@ -229,7 +312,7 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
         if (columnIndex === -1) {
           throw new GoogleSheetsError(`Header "${search.header}" not found in sheet`);
         }
-        columnLetter = toColumnLetter(columnIndex);
+        columnLetter = toColumnLetter(columnIndex + 1);
       } else if (search.column) {
         columnLetter = search.column.toUpperCase();
         columnIndex = columnLetterToIndex(columnLetter);
@@ -238,6 +321,7 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
       const rowsToSearch = Math.min(totalRowCount, maxRowsToSearch);
       let startRow, endRow;
 
+      // data rows are numbered from 1 below the header row
       if (searchFromLastRow) {
         startRow = totalRowCount - rowsToSearch + 1;
         if (startRow < 1) startRow = 1;
@@ -247,8 +331,9 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
         endRow = rowsToSearch;
       }
 
-      startRow++;
-      endRow++;
+      // the sheet rows
+      startRow += headerRow;
+      endRow += headerRow;
 
       const matchingRows: {
         row_index: number;
@@ -258,10 +343,12 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
       for (let chunkStart = startRow; chunkStart <= endRow; chunkStart += MAX_FETCH_SIZE) {
         const chunkEnd = Math.min(chunkStart + MAX_FETCH_SIZE - 1, endRow);
 
+        // the values searched are those returned
         const searchColumnResponse = await sheetsClient.spreadsheets.values.get({
           spreadsheetId: spreadsheet_id,
-          range: `${sheetTitle}!${columnLetter}${chunkStart}:${columnLetter}${chunkEnd}`,
-          valueRenderOption: 'UNFORMATTED_VALUE',
+          range: `${sheetRange}!${columnLetter}${chunkStart}:${columnLetter}${chunkEnd}`,
+          valueRenderOption,
+          dateTimeRenderOption,
         });
 
         const searchColumnValues = searchColumnResponse.data.values || [];
@@ -282,14 +369,13 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
         }
 
         if (matchingIndices.length > 0) {
-          const ranges = matchingIndices.map(
-            (rowIndex) => `${sheetTitle}!A${rowIndex}:${toColumnLetter(columnCount - 1)}${rowIndex}`
-          );
+          const ranges = matchingIndices.map((rowIndex) => `${sheetRange}!A${rowIndex}:${lastColumn}${rowIndex}`);
 
           const batchResponse = await sheetsClient.spreadsheets.values.batchGet({
             spreadsheetId: spreadsheet_id,
             ranges: ranges,
-            valueRenderOption: 'UNFORMATTED_VALUE',
+            valueRenderOption,
+            dateTimeRenderOption,
           });
 
           const valueRanges = batchResponse.data.valueRanges || [];
@@ -380,7 +466,7 @@ const createEmptyResponse = (responseType: string, totalRows: number, rowsSearch
     default:
       return {
         ...baseResponse,
-        raws: [],
+        rows: [],
       };
   }
 };

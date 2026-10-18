@@ -12,6 +12,17 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - the Google Sheets \c find_spreadsheet_rows action takes a \c header_row option, the row of the column headers
+      for sheets with titles or notes above the table (rows are read and searched below it), a \c value_render
+      option, to return and search the values as stored (the default), as the sheet displays them, or the formulas
+      of formula cells, and a \c date_render option, to return dates as serial numbers (the default) or as the sheet
+      displays them
+    - fixed the Google Sheets \c find_spreadsheet_rows action leaving out the last column of every row and
+      searching the column before the one named by the \c header search option (the first column was searched
+      correctly only by chance); the \c new_spreadsheet_row trigger also left out the last column and read at most
+      26 columns
+    - fixed Google Sheets ranges for sheet titles with spaces, punctuation or quotes in the \c find_spreadsheet_rows
+      action, which the API rejects unless the title is quoted
     - accept the reviewed Pipedrive schema revision that documents the \c limit bounds (1 to 500) of the v2 list
       operations, which the catalogue's client already enforces; retain the previous compatible revisions and
       refresh CI's exact v2 source and bundle checksums
