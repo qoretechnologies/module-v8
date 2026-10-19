@@ -5,19 +5,23 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { fetchPipedriveAllowedValues } from './client';
 
-type TPipedriveActivityTypeData = {
+export type TPipedriveActivityTypeData = {
   id: string;
   name: string;
+  // the value an activity's `type` field carries (`call`, `meeting`, ...); the activities API
+  // takes this key, not the numeric id (`POST /api/v2/activities` rejects an id with
+  // "Validation failed: type: Please provide a valid type")
+  key_string: string;
   icon_key?: string;
   is_custom_flag?: boolean;
   color?: string;
 };
 
-const mapPipedriveActivityType = (
+export const mapPipedriveActivityType = (
   activityType: TPipedriveActivityTypeData
 ): IQoreAllowedValue<string> => ({
   display_name: activityType.name,
-  value: activityType.id,
+  value: activityType.key_string,
   short_desc: `${activityType.is_custom_flag ? 'Custom activity' : 'Standard activity'}`,
 });
 
