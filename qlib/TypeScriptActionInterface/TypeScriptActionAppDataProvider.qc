@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionAppDataProvider.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptActionAppDataProvider.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -138,12 +138,12 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         # add children to the root data provider
         if (registerChildMethod) {
             registerChildMethod.call(pathname, AbstractDataProvider sub (string name, RestConnection conn) {
-                TypeScriptActionDataProviderBase prov = childMap{name}.copy();
-                prov.setConnection(conn);
-                if (!prov.getLogger() && logger) {
-                    prov.setLogger(logger);
+                TypeScriptActionDataProviderBase child = childMap{name}.copy();
+                child.setConnection(conn);
+                if (!child.getLogger() && logger) {
+                    child.setLogger(logger);
                 }
-                return prov;
+                return child;
             });
         }
     }

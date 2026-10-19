@@ -3135,7 +3135,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
 
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
-            ActionFunctionContext fctx(action.app, action.action, pool);
+            ActionFunctionContext openapi_fctx(action.app, action.action, pool);
 
             # check for path vars
             *hash<string, bool> path_vars = map {$1: True}, (openapi_path =~ x/\{([^\}]*)}/g);
@@ -3143,7 +3143,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             bool include_response_headers = app_include_response_headers_map{appname} ?? True;
             TypeScriptActionApiWithSchemaDataProvider dp(\action, openapi_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{appname},
-                remove action.override_options, remove action.ignore_options, fctx, get_dynamic_request_type,
+                remove action.override_options, remove action.ignore_options, openapi_fctx, get_dynamic_request_type,
                 get_dynamic_response_type, request_data_converter, response_data_converter, request_type,
                 response_type, include_response_headers);
             child = dp;
@@ -3812,7 +3812,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup, tags, resolve_dynamic);
         }
 
-        hash<auto> info;
         *Type type = DataTypeMap{(!required ? "*" : "") + remove h.type};
         if (!type) {
             throw "TYPE-ERROR", sprintf("Cannot match type %y to a known Qore type", orig.type);
