@@ -1,7 +1,7 @@
 #!/usr/bin/env qore
 # Copyright 2026 Qore Technologies, s.r.o.
 # SPDX-License-Identifier: MIT
-# Run with the TypeScript catalogue environment variables unset, as in the CI runners.
+# Runs itself again without the TypeScript catalogue environment variables when they are set.
 %modern
 %prepend-module-path "${SCRIPT_DIR}/../qlib"
 %requires QUnit
@@ -24,7 +24,25 @@
 
 %ifndef MISSING_EXTERNAL_MODULE
 class AppInitializationTest inherits QUnit::Test {
+    public {
+        #! the environment variables that give the module an app catalogue to load when it is initialized
+        const CatalogueEnv = ("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT", "QORE_TYPESCRIPT_ACTION_SCRIPTS",
+            "QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS", "QORE_DATA_PROVIDERS", "QORE_CONNECTION_PROVIDERS",
+            "QORE_DATASOURCE_PROVIDERS", "QORE_PROVIDER_INDEX_DIR");
+    }
+
     constructor() : Test("TypeScript app initialization", "1.0") {
+        # the cases count the pending apps and initialize all of them, so they must only see their own apps; the
+        # module loads the catalogue the environment names (in a Qorus development environment, for example) when
+        # it is initialized, so with such a catalogue the test runs itself again in a process without it
+        if (map $1, CatalogueEnv, ENV{$1}.val()) {
+            hash<auto> result = Process::run(Process::getExecutablePath(), QORE_ARGV[1..],
+                {"env": ENV - CatalogueEnv});
+            print(result.stdout);
+            stderr.print(result.stderr);
+            set_return_value(result.exit_code);
+            return;
+        }
         addTestCase("bulk failures remain isolated and retryable", \bulkTest());
         addTestCase("action failures retain their action identity", \actionFailureTest());
         addTestCase("module loading survives app initialization failure", \moduleLoadTest());
