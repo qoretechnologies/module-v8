@@ -1,0 +1,69 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires QUnit
+%requires TypeScriptActionInterface
+
+%exec-class TypeScriptDynamicAppNameTest
+
+#! A dynamic app's name must be a single path component
+/** A dynamic app uploaded as JavaScript is stored in a directory named after the app below the custom apps
+    directory.  The name comes from the uploaded code, so it is checked before it is used to build that directory's
+    path: it may contain only the characters the action catalogue accepts in an app name, which excludes path
+    separators and "..".
+*/
+class TypeScriptDynamicAppNameTest inherits QUnit::Test {
+    public {
+        #! Names that are not a single path component or use characters outside the catalogue's set
+        const InvalidNames = (
+            "../outside",
+            "..",
+            ".",
+            "a/b",
+            "a\\b",
+            "/absolute",
+            "a/../b",
+            "with space",
+            "dotted.name",
+            "",
+            "line\nbreak",
+        );
+
+        #! Names the catalogue accepts
+        const ValidNames = (
+            "custom-app_1",
+            "App2",
+            "x",
+        );
+    }
+
+    constructor() : QUnit::Test("TypeScriptDynamicAppName", "1.0", \ARGV) {
+        addTestCase("a name that is not a single path component is refused", \invalidNames());
+        addTestCase("a name made of the catalogue's characters is accepted", \validNames());
+        set_return_value(main());
+    }
+
+    invalidNames() {
+        foreach string name in (InvalidNames) {
+            assertThrows("APP-ERROR", "single path component", \TypeScriptActionInterface::checkDynamicAppName(),
+                (name,), sprintf("%y", name));
+        }
+    }
+
+    validNames() {
+        foreach string name in (ValidNames) {
+            *hash<ExceptionInfo> err;
+            try {
+                TypeScriptActionInterface::checkDynamicAppName(name);
+            } catch (hash<ExceptionInfo> ex) {
+                err = ex;
+            }
+            assertEq(NOTHING, err, sprintf("%y is accepted", name));
+        }
+    }
+}

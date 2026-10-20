@@ -1132,6 +1132,22 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
     }
 
+    #! Checks that a dynamic app's name can be used as the name of its directory
+    /** A dynamic app's files are stored in a directory named after the app below the custom apps directory, so the
+        name must be a single path component.  It may contain only the characters that the action catalogue accepts
+        in an app name (\c A-Z, \c a-z, \c 0-9, \c _ and \c -), which excludes path separators and \c "..".
+
+        @param name the app name to check
+
+        @throw APP-ERROR the name is not a valid dynamic app name
+    */
+    static checkDynamicAppName(string name) {
+        if (DataProviderActionCatalog::checkName(name)) {
+            throw "APP-ERROR", sprintf("dynamic app name %y is invalid; it must be a single path component made of "
+                "A-Z, a-z, 0-9, _ and - characters only", name);
+        }
+    }
+
     static registerApp(hash<auto> app, JavaScriptProgramPool pool) {
         if (app.name.typeCode() != NT_STRING || !app.name.val()) {
             throw "APP-ERROR", sprintf(
@@ -1156,6 +1172,8 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             if (app.name =~ / /) {
                 throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
             }
+            # a dynamic app's name becomes the name of its directory: DynamicAppContextHelper::get() refuses a name
+            # that is not a single path component (getDynamicAppDir()) before the app is registered
             *hash<auto> dynamic_info = DynamicAppContextHelper::get(app.name);
             if (dynamic_info && DynamicAppContextHelper::replacing()) {
                 # The JavaScript caller has already published the complete

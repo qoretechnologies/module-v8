@@ -277,6 +277,7 @@ function setenv(vr, value) {
             f.write(fdata);
         }
         *list<string> rv;
+        *string new_dir;
         {
             on_error remove_path(dir);
 
@@ -291,11 +292,15 @@ function setenv(vr, value) {
             if (rv.size() > 1) {
                 throw "REGISTER-APP-ERROR", sprintf("More than one dynamic app included in file: %y", rv);
             }
+            if (rv) {
+                # the app's directory is named after the app; getDynamicAppDir() refuses a name that is not a single
+                # path component, before the name is used in any filesystem operation
+                new_dir = getDynamicAppDir(base_dir, rv[0]);
+            }
         }
 
-        if (rv) {
+        if (new_dir) {
             # rename directory
-            string new_dir = getDynamicAppDir(base_dir, rv[0]);
             if (hstat(new_dir)) {
                 remove_path(new_dir);
             }
@@ -304,7 +309,12 @@ function setenv(vr, value) {
         return rv;
     }
 
+    #! Returns the directory of a dynamic app below the given custom apps directory
+    /** @throw APP-ERROR the app name is not a single path component (see
+        TypeScriptActionInterface::checkDynamicAppName())
+    */
     static string getDynamicAppDir(string dir, string name) {
+        TypeScriptActionInterface::checkDynamicAppName(name);
         return sprintf("%s/%s", dir, name);
     }
 

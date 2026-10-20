@@ -125,6 +125,11 @@ public sub ASSERT(*softbool b) {}
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - a dynamic app uploaded as JavaScript is refused with \c APP-ERROR unless its name is a single path component
+      made of the characters the action catalogue accepts (\c A-Z, \c a-z, \c 0-9, \c _ and \c -); the name is used
+      as the name of the app's directory below the custom apps directory, and a name containing a path separator or
+      \c ".." was used unchecked; see @ref TypeScriptActionInterface::TypeScriptActionInterface::checkDynamicAppName()
+      "TypeScriptActionInterface::checkDynamicAppName()"
     - a \c hash type with an element type and no fields gets the element type for all of its fields; it raised
       \c TYPE-ERROR because the element type was not passed on
     - an option whose \c rest_get_allowed_values or \c rest_get_element_allowed_values definition lacks
