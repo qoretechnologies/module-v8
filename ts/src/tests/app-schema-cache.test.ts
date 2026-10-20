@@ -234,7 +234,7 @@ describe('App schema cache', () => {
     const refused = await installSnapshot(cache, 'trello', input('trello', 'two'), qualifySnapshot)
       .catch((error: Error) => error);
     expect(refused).toBeInstanceOf(SchemaRefusedError);
-    expect(refused.message).toBe(`APP-SCHEMA-QUALIFICATION: ${app} (tiered): APP-SCHEMA-ACTION-ERROR: getBoard: TYPE-ERROR`);
+    expect((refused as Error).message).toBe(`APP-SCHEMA-QUALIFICATION: ${app} (tiered): APP-SCHEMA-ACTION-ERROR: getBoard: TYPE-ERROR`);
     expect(exitStatus(refused)).toBe(EXIT_REFUSED);
     for (const [error, detail] of [
       // the runtime failed before it reached a verdict
@@ -247,7 +247,7 @@ describe('App schema cache', () => {
       const unverified = await installSnapshot(cache, 'trello', input('trello', 'two'), qualifySnapshot)
         .catch((caught: Error) => caught);
       expect(unverified).toBeInstanceOf(SchemaUnverifiedError);
-      expect(unverified.message).toBe(`APP-SCHEMA-UNVERIFIED: ${app} (tiered): ${detail}`);
+      expect((unverified as Error).message).toBe(`APP-SCHEMA-UNVERIFIED: ${app} (tiered): ${detail}`);
       expect(exitStatus(unverified)).toBe(EXIT_UNVERIFIED);
     }
     expect(activeSnapshot(cache, 'trello')).toBe(snapshot);
