@@ -3135,7 +3135,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
 
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
-            ActionFunctionContext fctx(action.app, action.action, pool);
+            ActionFunctionContext openapi_fctx(action.app, action.action, pool);
 
             # check for path vars
             *hash<string, bool> path_vars = map {$1: True}, (openapi_path =~ x/\{([^\}]*)}/g);
@@ -3143,7 +3143,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             bool include_response_headers = app_include_response_headers_map{appname} ?? True;
             TypeScriptActionApiWithSchemaDataProvider dp(\action, openapi_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{appname},
-                remove action.override_options, remove action.ignore_options, fctx, get_dynamic_request_type,
+                remove action.override_options, remove action.ignore_options, openapi_fctx, get_dynamic_request_type,
                 get_dynamic_response_type, request_data_converter, response_data_converter, request_type,
                 response_type, include_response_headers);
             child = dp;
@@ -3335,10 +3335,10 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "\"rest_get_allowed_values\" attribute: %s: %s", action.app, action.action, key, $1.err, $1.desc);
                 info = cast<hash<RestGetAllowedValuesInfo>>(rest_get_allowed_values);
             }
-            if (*hash<auto> h = (RestGetAllowedValuesRequiredKeys - keys info)) {
-                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+            if (*hash<auto> missing = (RestGetAllowedValuesRequiredKeys - keys info)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"rest_get_allowed_values\" attribute; the following required keys are missing: %y", action.app,
-                    action.action, key, keys h);
+                    action.action, key, keys missing);
             }
             fctx.romap{key} = info;
             h.ref_data = key;
@@ -3365,10 +3365,10 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     $1.desc);
                 info = cast<hash<RestGetAllowedValuesInfo>>(rest_get_element_allowed_values);
             }
-            if (*hash<auto> h = (RestGetAllowedValuesRequiredKeys - keys info)) {
-                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+            if (*hash<auto> missing = (RestGetAllowedValuesRequiredKeys - keys info)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"rest_get_element_allowed_values\" attribute; the following required keys are missing: %y",
-                    action.app, action.action, key, keys h);
+                    action.app, action.action, key, keys missing);
             }
             fctx.reomap{key} = info;
             h.element_ref_data = key;
@@ -3812,7 +3812,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup, tags, resolve_dynamic);
         }
 
-        hash<auto> info;
         *Type type = DataTypeMap{(!required ? "*" : "") + remove h.type};
         if (!type) {
             throw "TYPE-ERROR", sprintf("Cannot match type %y to a known Qore type", orig.type);
@@ -3828,9 +3827,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 TypeScriptActionInterface::getHashTypeIntern(path, ht, f, required, fctx, ignore_dup,
                     resolve_dynamic);
             } else if (exists element_type) {
-                AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "/element",
-                    element_type, NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic);
-                ht.setDefaultOtherFieldType(element_type);
+                ht.setDefaultOtherFieldType(TypeScriptActionInterface::getType(path + "/element", element_type,
+                    NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic));
             }
             rv = ht;
         } else if (orig.type == "list") {

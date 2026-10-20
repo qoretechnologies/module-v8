@@ -125,6 +125,11 @@ public sub ASSERT(*softbool b) {}
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - a \c hash type with an element type and no fields gets the element type for all of its fields; it raised
+      \c TYPE-ERROR because the element type was not passed on
+    - an option whose \c rest_get_allowed_values or \c rest_get_element_allowed_values definition lacks
+      \c method, \c path or \c values is rejected with \c TYPESCRIPT-ACTION-ERROR when its action is registered;
+      it was accepted, and its allowed values could not be retrieved
     - Zoom: the New Meeting Summary trigger lists the user's own summaries (\c /users/me/meeting_summaries, which
       the app's scopes cover) instead of the account-wide listing, which needs an admin scope a user-managed app
       cannot hold, so the trigger never fired; the started, ended and summary triggers report every instance of a

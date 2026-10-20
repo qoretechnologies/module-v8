@@ -477,13 +477,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 if (!event.omap) {
                     error("No observers for event for key %y; ignoring", v.key);
                 }
-                foreach hash<auto> i in (event.omap.pairIterator()) {
+                foreach hash<auto> obs in (event.omap.pairIterator()) {
                     try {
-                        info("Calling notify() for %y: %y", i.key, v.event);
-                        i.value.notify(v.event);
-                        info("notify() done for %y", i.key);
+                        info("Calling notify() for %y: %y", obs.key, v.event);
+                        obs.value.notify(v.event);
+                        info("notify() done for %y", obs.key);
                     } catch (hash<ExceptionInfo> ex) {
-                        error("Error notifying observer %y for key %y: %s", i.key, v.key, get_exception_string(ex));
+                        error("Error notifying observer %y for key %y: %s", obs.key, v.key, get_exception_string(ex));
                     }
                 }
                 continue;
@@ -493,13 +493,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     error("No observers for event checkpoint for key %y; ignoring", v.key);
                     continue;
                 }
-                foreach hash<auto> i in (event.omap.pairIterator()) {
+                foreach hash<auto> obs in (event.omap.pairIterator()) {
                     try {
-                        i.value.persistEventCheckpoint(v.state);
+                        obs.value.persistEventCheckpoint(v.state);
                     } catch (hash<ExceptionInfo> ex) {
                         # the item covered by this checkpoint has already been delivered, so a failed write costs
                         # re-delivery on the next start, never a lost event
-                        error("Error storing event checkpoint for observer %y for key %y: %s", i.key, v.key,
+                        error("Error storing event checkpoint for observer %y for key %y: %s", obs.key, v.key,
                             get_exception_string(ex));
                     }
                 }
@@ -509,11 +509,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 if (!event.omap) {
                     error("No observers for event for key %y; ignoring", v.key);
                 }
-                foreach hash<auto> i in (event.omap.pairIterator()) {
+                foreach hash<auto> obs in (event.omap.pairIterator()) {
                     try {
-                        i.value.terminated();
+                        obs.value.terminated();
                     } catch (hash<ExceptionInfo> ex) {
-                        error("Error notifying observer %y of terminated event thread for key %y: %s", i.key, v.key,
+                        error("Error notifying observer %y of terminated event thread for key %y: %s", obs.key, v.key,
                             get_exception_string(ex));
                     }
                 }

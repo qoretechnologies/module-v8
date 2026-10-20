@@ -232,26 +232,26 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         # make sure and save "attr"
         *hash<auto> attr = info.attr;
 
-        AbstractDataProviderType type;
+        AbstractDataProviderType field_type;
 
         *bool req = remove type_hash.required;
         if (exists (auto tdesc = remove type_hash.type)) {
-            type = TypeScriptActionInterface::getType(path, tdesc, req ?? info.attr.required ?? qdf.isMandatory(),
-                NOTHING, fctx);
+            field_type = TypeScriptActionInterface::getType(path, tdesc,
+                req ?? info.attr.required ?? qdf.isMandatory(), NOTHING, fctx);
         } else if (exists req) {
-            type = qdf.getType();
+            field_type = qdf.getType();
             if (req) {
-                if (type.isOrNothingType()) {
-                    type = type.getMandatoryType();
+                if (field_type.isOrNothingType()) {
+                    field_type = field_type.getMandatoryType();
                 }
             } else {
-                if (type.isMandatory()) {
-                    type = type.getOrNothingType();
+                if (field_type.isMandatory()) {
+                    field_type = field_type.getOrNothingType();
                 }
             }
         }
 
-        info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req,
+        info += TypeScriptActionInterface::getFieldHash(path, info.name, field_type ?? qdf.getType(), \type_hash, req,
             fctx);
         if (attr) {
             info.attr += attr;
@@ -340,7 +340,6 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             string key = l[0];
 
             *AbstractDataField f = fields{key};
-            hash<auto> opt;
             if (!f) {
                 on_error rethrow $1.err, sprintf("%s (while add new field %y in %y for type %y; existing fields: %y)",
                     $1.desc, key, i.key, type.getName(), keys fields);
@@ -516,7 +515,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
 
         if (path_vars) {
-            hash<string, AbstractDataField> fields = map {$1: new TypeScriptDataField({
+            hash<string, AbstractDataField> path_fields = map {$1: new TypeScriptDataField({
                 "name": $1,
                 "type": AbstractDataProviderTypeMap."softstring",
                 "desc": sprintf("URI path variable %y", $1),
@@ -543,7 +542,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     while (path_vars{fname}) {
                         fname = sprintf("data-%d", ++i);
                     }
-                    fields{fname} = new TypeScriptDataField({
+                    path_fields{fname} = new TypeScriptDataField({
                         "name": fname,
                         "type": request_type_info.type,
                         "desc": "API request type",
@@ -551,10 +550,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 } else {
                     # NOTE: here we assume that any fields in the request type with the same name as a path var
                     # represent the same value
-                    fields += request_type_info.type.getFields() - keys path_vars;
+                    path_fields += request_type_info.type.getFields() - keys path_vars;
                 }
             }
-            request_type_info.type = new HashDataType(AutoHashType, "RestRequestType", fields);
+            request_type_info.type = new HashDataType(AutoHashType, "RestRequestType", path_fields);
         }
 
         # do not cache dynamic types (types with get_dynamic_type() functions)

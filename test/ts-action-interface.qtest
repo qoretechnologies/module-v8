@@ -77,6 +77,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("failed deferred action retry", \deferredActionRetryTest());
         addTestCase("app metadata protocol validation", \appMetadataProtocolTest());
         addTestCase("schema option additions", \schemaOptionAdditionsTest());
+        addTestCase("hash type element types and REST allowed values definitions", \typeAndOptionDefinitionTest());
         addTestCase("producer identity contract skew", \inventoryContractSkewTest());
 
         # Return for compatibility with test harnesses that check the script's return value
@@ -1619,6 +1620,68 @@ app.future_metadata = true;", appSource(app)), "metadata-protocol.js", sub (Java
         assertEq(app, DataProviderActionCatalog::getAppEx(app).name);
         assertEq((), DataProviderActionCatalog::getInitializationFailures((app,)),
             "a new registration with a valid resource clears the failure");
+    }
+
+    #! A hash type with an element type, and the validation of REST allowed values definitions
+    private typeAndOptionDefinitionTest() {
+        # a hash type without fields gets its element type for all of its fields
+        AbstractDataProviderType t = TypeScriptActionInterface::getType("test", {"type": "hash"}, True, "string");
+        assertTrue(t instanceof HashDataType);
+        assertEq("*string", cast<HashDataType>(t).getDefaultOtherFieldType().getName());
+        t = TypeScriptActionInterface::getType("test", {"type": "hash"}, True, {"type": "int"});
+        assertEq("*int", cast<HashDataType>(t).getDefaultOtherFieldType().getName());
+
+        string app = "OptionDefinitions_" + get_random_string(8);
+        JavaScriptProgramPool pool("", "option-definitions.js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::registerApp({
+            "name": app,
+            "display_name": app,
+            "short_desc": "option definition test",
+            "desc": "option definition test",
+            "groups": ("Other",),
+            "logo": make_base64_string(<00>),
+            "logo_file_name": "test.svg",
+            "logo_mime_type": MimeTypeSvg,
+            "dynamic": True,
+        }, pool);
+        DataProviderActionCatalog::getAppEx(app);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+
+        hash<auto> definition = {"method": "GET", "path": "/items", "values": "body.id"};
+        foreach string attr in (("rest_get_allowed_values", "rest_get_element_allowed_values")) {
+            auto type = attr == "rest_get_allowed_values" ? "string" : {"type": "list", "element_type": "string"};
+            # a definition without a required key is rejected
+            foreach string missing in (keys definition) {
+                hash<auto> option = {};
+                option.type = type;
+                option{attr} = definition - missing;
+                hash<auto> action = actionWithOption(app, attr + "-without-" + missing, option);
+                assertThrows("TYPESCRIPT-ACTION-ERROR", "required keys are missing: \\[\"" + missing + "\"\\]",
+                    \TypeScriptActionInterface::registerAction(), (action, pool));
+            }
+
+            # a complete definition is accepted
+            string action_name = attr + "-complete";
+            hash<auto> option = {};
+            option.type = type;
+            option{attr} = definition;
+            TypeScriptActionInterface::registerAction(actionWithOption(app, action_name, option), pool);
+            DataProviderActionCatalog::getAppActionEx(app, action_name);
+        }
+    }
+
+    #! Returns an API action with one option
+    private hash<auto> actionWithOption(string app, string action, hash<auto> option) {
+        return {
+            "app": app,
+            "action": action,
+            "display_name": action,
+            "short_desc": "option definition test",
+            "desc": "option definition test",
+            "action_code": DPAT_API,
+            "api_function": sub () {},
+            "options": {"opt": option},
+        };
     }
 
     private schemaOptionAdditionsTest() {

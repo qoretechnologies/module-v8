@@ -173,11 +173,11 @@ public class JavaScriptThreadProcessPool {
             AutoLock al(m);
 
             # look for a proxy already handling this exact event
-            foreach string pkey in (keys amap) {
-                if (amap{pkey}.p.supportsEvent(key)) {
-                    on_success ++amap{pkey}.ecount;
-                    amap{pkey}.p.addEventSourceLocked(observable, key);
-                    return amap{pkey}.p;
+            foreach string cached_key in (keys amap) {
+                if (amap{cached_key}.p.supportsEvent(key)) {
+                    on_success ++amap{cached_key}.ecount;
+                    amap{cached_key}.p.addEventSourceLocked(observable, key);
+                    return amap{cached_key}.p;
                 }
             }
 

@@ -920,8 +920,6 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             bool skipped;
             foreach hash<auto> i in (dtmap.pairIterator()) {
                 debug("Retrieving dynamic %s type for option %y for data provider %y", dtype, i.key, getName());
-                # include any context data in case request-specific info needs to be returned
-                *hash<auto> opts = DataProviderDataContextHelper::get();
 
                 # check for dependencies
                 if (type_info.type && (*hash<string, AbstractDataField> fields = type_info.type.getFields())
