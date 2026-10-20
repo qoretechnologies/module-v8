@@ -115,7 +115,7 @@ describe('HubSpot schema snapshots', () => {
     const refused = await installSnapshot(directory, inputs('two'), async snapshot => {
       verifySchemaCompatibility(snapshot);
     }).catch((error: Error) => error);
-    expect(refused.message).toMatch(/supported operation metadata changed/);
+    expect((refused as Error).message).toMatch(/supported operation metadata changed/);
     expect(refused).toBeInstanceOf(SchemaRefusedError);
     expect(exitStatus(refused)).toBe(EXIT_REFUSED);
     expect(activeSnapshot(directory)).toBe(first);
