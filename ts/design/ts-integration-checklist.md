@@ -219,7 +219,9 @@ For each option across all actions:
 - [ ] Uses `configDotenv({ path: '.env' })`
 - [ ] `beforeAll` with credential setup from env vars
 - [ ] `hasCredentials` flag or equivalent skip mechanism
-- [ ] Allowed values tests: positive + empty when no credentials (uses `checkAllowedValues`)
+- [ ] Allowed values tests: positive (uses `checkAllowedValues`) + the documented result without credentials: a
+      rejected lookup, or the helper's documented placeholder for a missing prerequisite selection (see "Lookup
+      failure semantics" in `standard-app-development-guide.md`), never an empty list for a lookup that failed
 - [ ] CRUD tests for main actions (at least create + list/get)
 - [ ] Trigger tests: `event_info` schema structure + `get_example_event_data` field matching
 - [ ] Negative tests (missing required fields)
@@ -227,6 +229,9 @@ For each option across all actions:
 - [ ] Uses `skipOnTransientError` wrapper for API calls
 - [ ] Environment variables documented
 - [ ] `pull-request.yml` updated if new env vars needed (follows `${{ fromJson(secrets.TEST_VARIABLES).VAR_NAME }}` pattern)
+- [ ] Suite listed in `test/docker_test/jest-suites.json`: as gating if it passes offline without credentials (GitLab
+      CI runs it and it must pass), otherwise as excluded with the reason (GitLab CI's `jest-suites.cjs check` fails
+      for a suite in neither list)
 
 ---
 

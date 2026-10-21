@@ -44,6 +44,7 @@ import { getGoogleAdsCampaignAllowedValues } from '../apps/google-ads/helpers/ge
 import { getGoogleAdsConversionActionAllowedValues } from '../apps/google-ads/helpers/get-conversion-action-allowed-values';
 import { getGoogleAdsCustomerListAllowedValues } from '../apps/google-ads/helpers/get-customer-list-allowed-values';
 import { getGoogleAdsKeywordAllowedValues } from '../apps/google-ads/helpers/get-keyword-allowed-values';
+import { GoogleAdsError } from '../apps/google-ads/constants';
 import { NewLeadFormSubmission } from '../apps/google-ads/triggers';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
@@ -239,10 +240,13 @@ describe('Google Ads', () => {
       })
     );
 
-    it('Should return empty array when connection options are missing', async () => {
-      const emptyAllowedValues = await getGoogleAdsCampaignAllowedValues({});
-      checkAllowedValues(emptyAllowedValues, { checkNonEmpty: false });
-      expect(emptyAllowedValues.length).toBe(0);
+    // a lookup that cannot be made is an error, never an empty (and cacheable) list of choices
+    it('Should reject a lookup without the required connection options', async () => {
+      const lookup = getGoogleAdsCampaignAllowedValues({});
+      await expect(lookup).rejects.toBeInstanceOf(GoogleAdsError);
+      await expect(lookup).rejects.toThrow(
+        /Missing required values:\s+Options: customer_id\s+Connection options: token, developer_token/
+      );
     });
   });
 

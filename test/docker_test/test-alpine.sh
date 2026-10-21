@@ -77,12 +77,15 @@ export QORE_HUBSPOT_SCHEMA_SNAPSHOT
 cp "$QORE_HUBSPOT_SCHEMA_SNAPSHOT/manifest.json" \
     "$qualification_dir/hubspot-schema-manifest-${CI_JOB_NAME:-local}.json"
 
-# Exercise missing-cache and cache-integrity regressions without service access.
+# Run the offline jest suites, including the missing-cache and cache-integrity regressions, without service
+# access. Every suite that jest finds is gating or excluded with a reason in jest-suites.json; the check fails
+# for a suite in neither list, so that no suite stops running unnoticed.
 cd "${MODULE_SRC_DIR}/ts"
+node "${MODULE_SRC_DIR}/test/docker_test/jest-suites.cjs" check
+jest_suites=$(node "${MODULE_SRC_DIR}/test/docker_test/jest-suites.cjs" gating)
+# shellcheck disable=SC2086 # one suite path per word
 node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --maxWorkers=2 \
-    --config src/jest.config.ts --runTestsByPath src/tests/app-schema-cache.test.ts \
-    src/tests/pipedrive-migration.test.ts src/tests/trello-migration.test.ts \
-    src/tests/dependency-security.test.ts src/tests/schema-download.test.ts
+    --config src/jest.config.ts --runTestsByPath $jest_suites
 # Repository and checksum-pinned private documents are qualification inputs; Debian exports omit them.
 QORE_APP_SCHEMA_SNAPSHOTS=$("${MODULE_SRC_DIR}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache" \
     "$schema_inputs")
@@ -99,6 +102,7 @@ for (const [id,dir] of Object.entries(JSON.parse(process.env.QORE_APP_SCHEMA_SNA
 # after rebuilding dist/index.js so the base image cannot hide source drift.
 node --test \
     "${MODULE_SRC_DIR}/test/docker_test/schema-inputs.test.cjs" \
+    "${MODULE_SRC_DIR}/test/docker_test/jest-suites.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/sync-i18n-translations.test.mjs" \
     "${MODULE_SRC_DIR}/test/docker_test/qualification-environment.test.mjs"
 "${MODULE_SRC_DIR}/test/docker_test/check-i18n.sh" \
