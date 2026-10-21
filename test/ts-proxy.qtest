@@ -21,6 +21,21 @@
 %ifndef MISSING_EXTERNAL_MODULE
 
 public class TsProxyTest inherits QUnit::Test {
+    public {
+        #! Safety ceiling for waiting on a proxy operation that must return
+        /** Only a deadlock guard: the waits end when the operation returns.  It is never a measure of how long a
+            correct proxy takes, because a cold child respawn takes seconds on an idle host and far longer on a
+            loaded one.
+        */
+        const HangGuard = 10m;
+
+        #! the environment variable that sets the time the parent waits for a child's startup message
+        const StartupTimeoutVar = "TS_PROXY_TEST_STARTUP_TIMEOUT_MS";
+
+        #! the environment variable that sets the time the parent waits for a command's response
+        const ResponseTimeoutVar = "TS_PROXY_TEST_RESPONSE_TIMEOUT_MS";
+    }
+
     private {
         Logger logger;
         bool env_ready = False;
@@ -30,6 +45,12 @@ public class TsProxyTest inherits QUnit::Test {
     constructor() : Test("TsProxyTest", "1.0") {
         setupLogger();
         checkEnvironment();
+        # Every case starts at least one child and sends it commands, and a child that starts or answers slowly is
+        # not a failure; the proxy's default startup (20s) and response (90s) timeouts are production policies
+        # that a loaded test host can exceed.  The startup failure case sets a short startup timeout of its own
+        string hang_guard_ms = string(get_duration_milliseconds(HangGuard));
+        setenv(StartupTimeoutVar, hang_guard_ms);
+        setenv(ResponseTimeoutVar, hang_guard_ms);
 
         addTestCase("proxy tests", \proxyTests());
         addTestCase("proxy restarts after child exit", \proxyUnexpectedExitTest());
@@ -100,6 +121,57 @@ public class TsProxyTest inherits QUnit::Test {
         if (!env_ready) {
             testSkip(skip_reason);
         }
+    }
+
+    #! Runs the call in a background thread and waits for it to return; returns the exception it raised, if any
+    /** The wait ends when the call returns; @ref HangGuard only turns a deadlock into a test failure instead of a
+        test that never ends
+
+        @param call the call to make
+        @param what a description of the call for the failure message
+    */
+    private *hash<ExceptionInfo> callGuarded(code<nothing()> call, string what) {
+        Mutex m();
+        Condition cond();
+        bool done = False;
+        *hash<ExceptionInfo> err;
+        background sub () {
+            try {
+                call();
+            } catch (hash<ExceptionInfo> ex) {
+                err = ex;
+            }
+            m.lock();
+            on_exit m.unlock();
+            done = True;
+            cond.broadcast();
+        }();
+
+        m.lock();
+        on_exit m.unlock();
+        date deadline = now_us() + HangGuard;
+        while (!done) {
+            date remaining = deadline - now_us();
+            # a non-zero return value means that the wait timed out
+            if (remaining <= 0s || cond.wait(m, remaining)) {
+                break;
+            }
+        }
+        assertTrue(done, sprintf("%s must return; it did not return within %y", what, HangGuard));
+        return err;
+    }
+
+    #! Sets an environment variable and returns a closure that restores its previous value
+    private code<nothing()> setenvScoped(string var, string value) {
+        *string old = getenv(var);
+        setenv(var, value);
+        return sub () {
+            if (exists old) {
+                setenv(var, old);
+            } else {
+                unsetenv(var);
+            }
+        };
     }
 
     # Fault-injection hooks are removed when the release qmod is compiled.
@@ -175,13 +247,13 @@ public class TsProxyTest inherits QUnit::Test {
             # Kill the child process to trigger restart logic
             try {
                 system(sprintf("kill -9 %d 2>/dev/null", original_pid));
-                usleep(100ms);
             } catch (hash<ExceptionInfo> ex) {
                 # Ignore - process may already be gone
             }
 
             # The restart happens lazily on next command
-            # We just verify the proxy object is still valid
+            # We just verify the proxy object is still valid; its unique hash does not depend on the child, so
+            # there is nothing to wait for
             assertTrue(proxy1.uniqueHash().val(), "proxy should still have valid hash after child kill");
 
             if (m_options.verbose > 1) {
@@ -380,8 +452,6 @@ public class TsProxyTest inherits QUnit::Test {
 
         setenv("TS_PROXY_TEST_FORCE_RESTART_ERROR", "1");
         on_exit unsetenv("TS_PROXY_TEST_FORCE_RESTART_ERROR");
-        setenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS", "1500");
-        on_exit unsetenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
 
         try {
             system(sprintf("kill -9 %d 2>/dev/null", pid));
@@ -389,6 +459,8 @@ public class TsProxyTest inherits QUnit::Test {
             # ignore
         }
 
+        # the child is dead and every restart fails, as forced, so the command fails with the error of the dead
+        # command channel (which error that is depends on when the kill takes effect)
         bool threw = False;
         try {
             proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
@@ -396,36 +468,17 @@ public class TsProxyTest inherits QUnit::Test {
             threw = True;
         }
         assertTrue(threw, "restart error should propagate");
+        assertEq(0, proxy.getInfo()."restart-count", "the forced restart error happens before a child is started");
 
         unsetenv("TS_PROXY_TEST_FORCE_RESTART_ERROR");
 
-        Mutex m();
-        Condition cond();
-        bool done = False;
-        background sub () {
-            try {
-                proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
-            } catch (hash<ExceptionInfo> ex) {
-                # ignore
-            }
-            m.lock();
-            on_exit m.unlock();
-            done = True;
-            cond.broadcast();
-        }();
-
-        m.lock();
-        on_exit m.unlock();
-        # NOTE: the deadline is only a deadlock guard; it must stay well above the cost of a cold
-        # proxy child respawn (~4.5s on Alpine CI), otherwise a correct implementation still fails
-        date start = now_us();
-        while (!done) {
-            cond.wait(m, 1s);
-            if (now_us() - start > 30s) {
-                break;
-            }
-        }
-        assertTrue(done, "restart retry should not deadlock");
+        # the failed restart must leave the proxy usable: the next command starts a new child and gets its answer
+        *hash<ExceptionInfo> err = callGuarded(sub () {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        }, "the command after a failed restart");
+        assertEq("APP-ERROR", err.err, "the restarted child answers the command");
+        assertEq(1, proxy.getInfo()."restart-count", "the command after the failed restart restarted the child");
+        assertTrue(proxy.getInfo()."proxy-pid" != pid, "a new child is running");
     }
 
     private proxySendErrorHandlingTest() {
@@ -439,50 +492,26 @@ public class TsProxyTest inherits QUnit::Test {
         ENV.TS_PROXY_TEST_FORCE_SEND_ERROR = "1";
         on_exit unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
         on_exit remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR;
-        setenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS", "1500");
-        on_exit unsetenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
 
         JavaScriptProgramProxy proxy();
         int pid = proxy.getInfo()."proxy-pid";
         assertTrue(pid > 0, "proxy should be running for send error test");
 
-        Mutex m();
-        Condition cond();
-        bool done = False;
-        background sub () {
-            try {
-                proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
-            } catch (hash<ExceptionInfo> ex) {
-                # ignore
-            }
-            m.lock();
-            on_exit m.unlock();
-            done = True;
-            cond.broadcast();
-        }();
-
-        m.lock();
-        on_exit m.unlock();
-        # NOTE: the deadline is only a deadlock guard; it must stay well above the cost of a cold
-        # proxy child respawn (~4.5s on Alpine CI), otherwise a correct implementation still fails
-        date start = now_us();
-        while (!done) {
-            cond.wait(m, 1s);
-            if (now_us() - start > 30s) {
-                break;
-            }
-        }
-        assertTrue(done, "send error should not deadlock");
+        # the child cannot send its answer and exits; the command fails with the error of the closed command
+        # channel, or, if the parent sees the child exit first, with the error of a restarted child that cannot
+        # answer either, so only the failure itself is certain
+        *hash<ExceptionInfo> err = callGuarded(sub () {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        }, "a command whose answer cannot be sent");
+        assertTrue(exists err, "a command whose answer cannot be sent fails");
 
         unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
         remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR;
-        bool threw = False;
-        try {
+        # the next command restarts the child if needed and gets its answer
+        err = callGuarded(sub () {
             proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
-        } catch (hash<ExceptionInfo> ex) {
-            threw = True;
-        }
-        assertTrue(threw, "send error should not break subsequent calls");
+        }, "the command after a lost answer");
+        assertEq("APP-ERROR", err.err, "send error should not break subsequent calls");
     }
 
     private proxyRestartWaitFastPathTest() {
@@ -532,8 +561,10 @@ public class TsProxyTest inherits QUnit::Test {
         ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = "1";
         on_exit unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP");
         on_exit remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP;
-        setenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS", "1500");
-        on_exit unsetenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS");
+        # the child fails at startup and exits, which ends the wait; the short timeout only bounds the wait if the
+        # child were to hang instead, and the case passes either way
+        code<nothing()> restore = setenvScoped(StartupTimeoutVar, "1500");
+        on_exit restore();
 
         bool threw = False;
         try {

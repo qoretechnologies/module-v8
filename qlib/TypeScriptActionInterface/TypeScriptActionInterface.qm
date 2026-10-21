@@ -125,6 +125,9 @@ public sub ASSERT(*softbool b) {}
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - added @ref TypeScriptActionInterface::JavaScriptInProcessPool::setWaitObserver()
+      "JavaScriptInProcessPool::setWaitObserver()", which reports each thread that has to wait for a program because
+      the pool has reached its maximum size
     - every program of an action script gets its own script's file name and directory in \c __filename and
       \c __dirname; they were read from environment variables shared by all programs, so a program created while
       a program of another script was being created in another thread could get the other script's location

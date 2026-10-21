@@ -1239,7 +1239,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     # Called with no locks held
     private restartProcessIntern(*bool no_restart_event) {
         @debug {
-            if (ENV.TS_PROXY_TEST_FORCE_RESTART_ERROR) {
+            # read the process environment like the other test hooks; the ENV hash does not see setenv()
+            if (getenv("TS_PROXY_TEST_FORCE_RESTART_ERROR").val()) {
                 throw "TS-PROXY-TEST-ERROR", "Forced restart error for testing";
             }
         }

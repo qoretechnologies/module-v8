@@ -36,17 +36,20 @@ class V8SignalHandlingTest inherits Test {
             }
         }
         assertTrue(found);
+        # the child's waits end when the signal arrives; their limit only turns a lost signal into a failure
+        # instead of a child that never ends, and is never a measure of how long delivery takes
         hash<auto> result = Process::run(Process::getExecutablePath(), ("-e", "%modern
+const HangGuard = 10m;
 Queue received();
 set_signal_handler(SIGTERM, sub (int sig) { received.push(sig); });
 on_exit remove_signal_handler(SIGTERM);
 kill(getpid(), SIGTERM);
-if (received.get(5s) != SIGTERM) {
+if (received.get(HangGuard) != SIGTERM) {
     throw \"SIGNAL-TEST-ERROR\", \"Baseline handler did not receive SIGTERM\";
 }
 load_module(ENV.QORE_V8_SIGNAL_TEST_MODULE);
 kill(getpid(), SIGTERM);
-if (received.get(5s) != SIGTERM) {
+if (received.get(HangGuard) != SIGTERM) {
     throw \"SIGNAL-TEST-ERROR\", \"V8 changed the embedding process signal handling\";
 }
 printf(\"signals-preserved\\n\");

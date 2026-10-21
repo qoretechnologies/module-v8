@@ -209,7 +209,8 @@ async function runWithTimeout(promise, delay) {
         };
         TypeScriptAppRestConnection conn(config);
 
-        list<hash<auto>> saved = ();
+        # the checkpoints arrive from the event thread
+        WaitableList saved_checkpoints();
         AbstractDataProvider prov =
             TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
                 .getChildProviderEx("js-event-checkpoint");
@@ -219,7 +220,7 @@ async function runWithTimeout(promise, delay) {
         cast<Observable>(prov).registerObserver(o);
         cast<AbstractWatchDataProviderBase>(prov).setCheckpointPersistence(NOTHING,
             sub (hash<auto> checkpoint) {
-                saved += checkpoint;
+                saved_checkpoints.add(checkpoint);
             });
         cast<DelayedObservable>(prov).observersReady();
         on_exit cast<DelayedObservable>(prov).stopEvents();
@@ -227,6 +228,12 @@ async function runWithTimeout(promise, delay) {
         hash<auto> event = o.waitForEvent();
         assertEq("checkpoint-event", event.data.name);
         assertEq(0, event.data.code, "nothing was restored on a first start");
+
+        # the event function stores its position after it raises the event, so wait for the position, and then
+        # for the event function to finish, so that every position it stores has arrived
+        saved_checkpoints.waitFor(1, "checkpoint");
+        cast<DelayedObservable>(prov).stopEvents();
+        list<auto> saved = saved_checkpoints.get();
 
         # the position stored by the event function reached the host callback, in a versioned envelope
         assertEq(1, saved.size(), "the event function's checkpoint reached the host");
@@ -238,18 +245,22 @@ async function runWithTimeout(promise, delay) {
         AbstractDataProvider prov2 =
             TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
                 .getChildProviderEx("js-event-checkpoint");
-        list<hash<auto>> saved2 = ();
+        WaitableList saved2_checkpoints();
         MyObserver o2();
         cast<Observable>(prov2).registerObserver(o2);
         cast<AbstractWatchDataProviderBase>(prov2).setCheckpointPersistence(saved[0],
             sub (hash<auto> checkpoint) {
-                saved2 += checkpoint;
+                saved2_checkpoints.add(checkpoint);
             });
         cast<DelayedObservable>(prov2).observersReady();
         on_exit cast<DelayedObservable>(prov2).stopEvents();
 
         hash<auto> event2 = o2.waitForEvent();
         assertEq(1, event2.data.code, "the stored position was restored into the event function");
+        saved2_checkpoints.waitFor(1, "resumed checkpoint");
+        cast<DelayedObservable>(prov2).stopEvents();
+        list<auto> saved2 = saved2_checkpoints.get();
+        assertEq(1, saved2.size(), "the resumed event function stored one position");
         assertEq({"cursor": 2}, saved2[0].state, "the resumed run advanced from the restored position");
         assertEq(2, saved2[0].seq, "the sequence number advances with the restored checkpoint");
     }
@@ -1794,35 +1805,76 @@ class TestRestClient inherits TypeScriptAppRestClient {
     }
 }
 
+#! Collects values delivered from another thread and lets a test wait until a given number has arrived
+class WaitableList {
+    public {
+        #! Safety ceiling for a wait: only a deadlock guard, never a measure of how long delivery takes
+        const HangGuard = 10m;
+    }
+
+    private {
+        list<auto> l = ();
+        Mutex m();
+        Condition cond();
+    }
+
+    #! Adds a value and wakes the waiting threads
+    add(auto value) {
+        m.lock();
+        on_exit m.unlock();
+        l += value;
+        cond.broadcast();
+    }
+
+    #! Returns the values delivered so far
+    list<auto> get() {
+        m.lock();
+        on_exit m.unlock();
+        return l;
+    }
+
+    #! Waits until at least the given number of values have been delivered and returns all values delivered
+    /** @throw TIMEOUT-ERROR the values did not arrive within @ref HangGuard
+    */
+    list<auto> waitFor(int count, string what) {
+        m.lock();
+        on_exit m.unlock();
+        date deadline = now_us() + HangGuard;
+        while (l.size() < count) {
+            date remaining = deadline - now_us();
+            # a non-zero return value means that the wait timed out
+            if (remaining <= 0s || cond.wait(m, remaining)) {
+                throw "TIMEOUT-ERROR", sprintf("%s: %d of %d value(s) arrived within %y", what, l.size(), count,
+                    HangGuard);
+            }
+        }
+        return l;
+    }
+}
+
 class MyObserver inherits Observer {
     public {
+        #! events received
         list<hash<auto>> l;
+    }
 
-        const PollInterval = 100ms;
+    private {
+        WaitableList events();
     }
 
     update(string event_id, hash<auto> data_) {
-        l += {
+        hash<auto> event = {
             "event_id": event_id,
             "data": data_,
         };
+        l += event;
+        events.add(event);
     }
 
-    hash<auto> waitForEvent(timeout to = 5s) {
-        date start = now_us();
-        while (True) {
-            if (l) {
-                break;
-            }
-            usleep(PollInterval);
-            date d = now_us() - start;
-            if (d > to) {
-                throw "TIMEOUT-ERROR", sprintf("Polling for an event took %y (limit: %y)", d, to);
-            }
-        }
-        return l[0];
+    #! Waits for the first event and returns it
+    hash<auto> waitForEvent() {
+        return events.waitFor(1, "event")[0];
     }
-
 }
 
 %else

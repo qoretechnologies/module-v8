@@ -75,6 +75,9 @@ public class JavaScriptInProcessPool {
         #! Number of threads waiting for a program to become available
         int waiting = 0;
 
+        #! Called when a thread starts waiting for a program; see @ref setWaitObserver()
+        *code<nothing(int)> wait_observer;
+
         #! Number of programs currently being created (to enforce max_size during concurrent creation)
         int creating = 0;
 
@@ -134,6 +137,29 @@ public class JavaScriptInProcessPool {
         }
     }
 
+    #! Sets a callback that is called each time a thread has to wait for a program
+    /** A thread waits in @ref get() when the pool has reached its maximum size and no program is idle.  The
+        callback is called in that thread, with the pool's lock held, just before the thread waits, with the number
+        of threads that are then waiting, including the calling thread; when any other thread next acquires the
+        pool's lock, the calling thread is waiting.  The callback must return quickly and must not call methods of
+        the pool; an exception it raises is raised by @ref get(), and the thread does not wait.
+
+        @param observer the callback, or @ref nothing to remove it
+
+        @par Example:
+        @code{.py}
+# detect when two threads are waiting for a program
+Counter waiting(2);
+pool.setWaitObserver(sub (int count) { waiting.dec(); });
+        @endcode
+    */
+    setWaitObserver(*code<nothing(int)> observer) {
+        m.lock();
+        on_exit m.unlock();
+
+        wait_observer = observer;
+    }
+
     #! Returns a unique hash for the pool (for DataProvider shutdown handler registration)
     string uniqueHash() {
         return pool.uniqueHash() + "-inprocess";
@@ -173,6 +199,9 @@ public class JavaScriptInProcessPool {
             # at max size (including in-flight creations); wait for a program to be released
             ++waiting;
             on_exit --waiting;
+            if (wait_observer) {
+                wait_observer(waiting);
+            }
             while (!imap && !shutdown_flag) {
                 cond.wait(m);
             }
