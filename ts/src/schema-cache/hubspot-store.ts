@@ -1,13 +1,13 @@
 // Copyright 2026 Qore Technologies, s.r.o.
 // SPDX-License-Identifier: MIT
 import * as fs from 'node:fs';
-import * as https from 'node:https';
 import * as os from 'node:os';
 import * as path from 'node:path';
 import {
   contractDigest, digest, hubspotContract, MAX_SCHEMA_BYTES, normalizeSchema, readFile,
   schemaNames, SnapshotManifest, verifySnapshot,
 } from './hubspot';
+import { downloadDocument } from './download';
 import { SchemaRefusedError } from './schema-errors';
 
 export const CATALOG_URL = 'https://api.hubspot.com/public/api/spec/v1/specs';
@@ -19,7 +19,10 @@ export function defaultCacheDir(): string {
   return path.join(base && path.isAbsolute(base) ? base : path.join(os.homedir(), '.cache'), 'qore', 'hubspot');
 }
 
-/** HTTPS-only public metadata retrieval. Redirects, credentials and arbitrary hosts are rejected. */
+/**
+ * HTTPS-only public metadata retrieval. Redirects, credentials and arbitrary hosts are rejected, and every request has
+ * a connection of its own; see {@link downloadDocument} for the errors.
+ */
 export function download(url: string): Promise<Buffer> {
   const parsed = new URL(url);
   if (parsed.origin !== 'https://api.hubspot.com' || parsed.username || parsed.password
@@ -27,28 +30,8 @@ export function download(url: string): Promise<Buffer> {
         && !/^\/public\/api\/spec\/v2\/specs\/release\/\d+\/version\/3$/.test(parsed.pathname))) {
     return Promise.reject(new Error(`HUBSPOT-SCHEMA-DOWNLOAD: unexpected URL ${url}`));
   }
-  return new Promise((resolve, reject) => {
-    const request = https.get(url, { headers: { Accept: 'application/json', 'User-Agent': 'qore-hubspot-schemas/1' } }, response => {
-      if (response.statusCode !== 200) {
-        response.resume();
-        reject(new Error(`HUBSPOT-SCHEMA-DOWNLOAD: HTTP ${response.statusCode} from ${url}`));
-        return;
-      }
-      let size = 0;
-      const chunks: Buffer[] = [];
-      response.on('data', (chunk: Buffer) => {
-        size += chunk.length;
-        if (size > MAX_SCHEMA_BYTES) {
-          response.destroy(new Error('HUBSPOT-SCHEMA-DOWNLOAD: response too large'));
-        } else chunks.push(chunk);
-      });
-      response.on('error', reject);
-      response.on('end', () => resolve(Buffer.concat(chunks)));
-    });
-    const timer = setTimeout(() => request.destroy(new Error('HUBSPOT-SCHEMA-DOWNLOAD: timeout')), 30000);
-    request.on('close', () => clearTimeout(timer));
-    request.on('error', reject);
-  });
+  return downloadDocument(url, { prefix: 'HUBSPOT-SCHEMA-DOWNLOAD', limit: MAX_SCHEMA_BYTES,
+    userAgent: 'qore-hubspot-schemas/1' });
 }
 
 /** Select only the supported API generation; LATEST may mean a different API entirely. */

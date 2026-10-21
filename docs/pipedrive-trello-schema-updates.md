@@ -107,11 +107,14 @@ constraints, references and security. No fingerprint is learned from downloads.
 The updater now resolves deferred input options and output types for every
 supported action in separate normal and AST processes, before activation.
 
-Repository CI explicitly retrieves checksum-pinned private inputs listed in
-`test/docker_test/app-schema-inputs.json`. The other six apps retain their
-historical qualification inputs. Downloaded documents are removed with the
-private cache and must not be retained as CI artifacts. Changing a pin requires
-schema review, deterministic regression tests and runtime qualification.
+Repository CI reads the checksum-pinned private documents listed in
+`test/docker_test/schema-inputs.json` from its private mirror by their pins, and
+never from the upstream services; a daily scheduled job compares the upstream
+documents with the pins (see [schema-cache.md](../design/schema-cache.md#ci-schema-inputs)).
+The other six apps retain their historical qualification inputs. The documents
+are removed with the private cache and must not be retained as CI artifacts.
+Changing a pin requires schema review, deterministic regression tests, runtime
+qualification and the reviewed document in the mirror.
 
 Re-extract the source-owned presentation with the workflow in
 [provider-i18n-catalogs.md](../design/provider-i18n-catalogs.md). Action identities

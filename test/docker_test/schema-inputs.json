@@ -1,0 +1,73 @@
+{
+  "copyright": "Copyright 2026 Qore Technologies, s.r.o.",
+  "license": "MIT",
+  "reviewed": "2026-10-21",
+  "apps": {
+    "pipedrive": {
+      "sha256": "46684e91c52dceb10355077823687305128b3a4f266447f0dca6d4e51f225985",
+      "sources": {
+        "v1": {
+          "url": "https://developers.pipedrive.com/docs/api/v1/openapi.json",
+          "sha256": "a4b67b3bef150723c29db8162b6cc4e920ea6787872d89f7d359a8ea87df6201"
+        },
+        "v2": {
+          "url": "https://developers.pipedrive.com/docs/api/v2/openapi.json",
+          "sha256": "8989a733aa9f8fa1221f2673137595b34606ed334e727716f28e905b3aff6297"
+        }
+      }
+    },
+    "trello": {
+      "sha256": "b07c97d06e93f7caff661a307e86f2b58c1f97591614ac8179f8e31bda27334b",
+      "sources": {
+        "schema": {
+          "url": "https://dac-static.atlassian.com/cloud/trello/swagger.v3.json",
+          "sha256": "b07c97d06e93f7caff661a307e86f2b58c1f97591614ac8179f8e31bda27334b"
+        }
+      }
+    }
+  },
+  "hubspot": {
+    "sources": {
+      "companies": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22149/version/3",
+        "sha256": "66ae33bab800023eaa1f13b774345a25ac7df4ad81f7540b450bae286c0d6b81"
+      },
+      "contacts": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22150/version/3",
+        "sha256": "f06332dbb49a33250568885e1b6ca34385ff1f284bd10fef6b38bae860f86609"
+      },
+      "custom-objects": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22154/version/3",
+        "sha256": "37af614ee7e473fd5734a1c2d34474cb31988b1d5784f96f2120554dc4e8be65"
+      },
+      "deals": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/25196/version/3",
+        "sha256": "a51c494439243ee852bae240a449a685385de3dab37681baa149264d238ed093"
+      },
+      "forms": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22204/version/3",
+        "sha256": "38ab61cff1ca6f005d5fda5cec7a935abcafe4d6b5fea2d8f012187e3de70dcf"
+      },
+      "leads": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22165/version/3",
+        "sha256": "782fa6cad2188472e416208a62a641217e595cc4c11e3103d350e31b6da12a42"
+      },
+      "lists": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/26235/version/3",
+        "sha256": "0c9dd4df50ff56bc8bfb8175acf8cc450e67437eb822351e0e63f0f6cc0adb28"
+      },
+      "products": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22179/version/3",
+        "sha256": "6fbe896f686bab4977628a680d296bbd238cba0ebcc8a8971a8a3bdb0c8d2c4a"
+      },
+      "tickets": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22189/version/3",
+        "sha256": "807e9a170c37d414a29aae0720301fb940987964e01bc2af8b4c4ab0f629bddd"
+      },
+      "users": {
+        "url": "https://api.hubspot.com/public/api/spec/v2/specs/release/22192/version/3",
+        "sha256": "6bb76edf9bfc2f4925d62bb259048b1c44777de6846fc1c385d41b70a52ac063"
+      }
+    }
+  }
+}

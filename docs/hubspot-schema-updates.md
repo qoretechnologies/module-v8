@@ -25,7 +25,8 @@ When an upstream change affects supported operations:
 
 1. Obtain the ten supported v3 documents from HubSpot into a private directory.
    Preserve the previous inputs locally to review the change. Do not commit
-   documents or add them to CI artifacts.
+   documents or add them to CI artifacts. The daily upstream check reports
+   each changed document with its pinned and new SHA-256.
 2. Review the changed request and response fields, constraints, requiredness and
    presentation. Update action overrides and the operation inventory if needed.
    New upstream endpoints require an explicit supported-action decision.
@@ -45,15 +46,21 @@ When an upstream change affects supported operations:
    installed-provider qualification and both Ubuntu and Alpine CI scripts.
    Validate authenticated API calls separately when a change affects request
    behavior; metadata qualification cannot confirm live service behavior.
-6. Release the catalogue contract, action changes and translations together.
+6. Update the documents' pins in `test/docker_test/schema-inputs.json` and add
+   the reviewed documents to CI's private mirror, as
+   [schema-cache.md](../design/schema-cache.md#ci-schema-inputs) describes.
+7. Release the catalogue contract, action changes and translations together.
    Operators can then update their cache and restart applications deliberately.
 
-CI explicitly downloads a private candidate before provider materialization.
-It keeps the provenance/checksum manifest and qualification reports, and removes
-the downloaded documents on exit. A changed supported schema fails CI with an
-actionable compatibility error, rather than silently changing app behavior.
-CI and the explicit translation-regeneration workflow require network access;
-Debian package builds and installed application startup do not download schemas.
+CI imports the pinned documents from its private mirror before provider
+materialization; it never downloads them from HubSpot. It keeps the
+provenance/checksum manifest and qualification reports, and removes the
+documents on exit. A daily scheduled job compares HubSpot's current documents
+with the pins and runs `qore-hubspot-schemas update` against HubSpot, so a
+changed document fails that job with its pinned and new SHA-256 rather than
+silently changing app behavior. The upstream check and the explicit
+translation-regeneration workflow require network access; Debian package builds
+and installed application startup do not download schemas.
 
 ## Other app schema snapshots
 
@@ -75,11 +82,11 @@ when setup is missing; materialization retains `APP-SCHEMAS-UNAVAILABLE` as a
 structured failure. A new download cannot rename actions or add unreviewed fields.
 
 The repository retains its historical schema inputs for six apps. Pipedrive and
-Trello use checksum-pinned public inputs retrieved explicitly by
-`test/docker_test/setup-app-schemas.sh` into a private cache. The script imports
-and qualifies every app and returns its snapshot map. CI saves only
-manifests/reports and removes the cache and downloaded inputs on exit. An
-upstream checksum change fails qualification until reviewed. See the
+Trello use checksum-pinned public documents that CI reads from its private mirror
+by their pins; `test/docker_test/setup-app-schemas.sh` imports and qualifies every
+app into a private cache and returns its snapshot map. CI saves only
+manifests/reports and removes the cache and the documents on exit. An upstream
+change fails the daily upstream check until it is reviewed and pinned. See the
 [Pipedrive/Trello migration](pipedrive-trello-schema-updates.md) for API versions,
 field changes, offline imports and coordinated native runtime requirements.
 

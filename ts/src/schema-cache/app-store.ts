@@ -1,12 +1,12 @@
 // Copyright 2026 Qore Technologies, s.r.o.
 // SPDX-License-Identifier: MIT
 import * as fs from 'node:fs';
-import * as https from 'node:https';
 import * as os from 'node:os';
 import * as path from 'node:path';
 import sources from './app-sources.json';
 import { appContract, appIds, contractDigest, digest, MAX_BYTES, normalizeSchema, readFile,
   SnapshotManifest, verifyCompatibility, verifySnapshot } from './apps';
+import { downloadDocument } from './download';
 import { SchemaRefusedError } from './schema-errors';
 
 export const appSources = sources.apps as Record<string, {
@@ -21,55 +21,57 @@ export function defaultCacheDir(): string {
 
 function appDirectory(root: string, id: string): string { appContract(id); return path.join(root, id); }
 
-/** Fetch a bounded JSON response. Redirects and URL credentials are never followed. */
+/** Fetch a bounded JSON response over a connection of its own; see {@link downloadDocument} for the errors. */
 function requestJson(url: string, headers: Record<string, string> = {}): Promise<Buffer> {
-  const parsed = new URL(url);
-  if (parsed.protocol !== 'https:' || parsed.username || parsed.password || parsed.search || parsed.hash) {
-    return Promise.reject(new Error('APP-SCHEMA-DOWNLOAD: invalid HTTPS source'));
+  return downloadDocument(url, { prefix: 'APP-SCHEMA-DOWNLOAD', limit: MAX_BYTES, userAgent: 'qore-app-schemas/1',
+    headers });
+}
+
+/** Returns the public download sources of an app by name: its named URLs, or "schema" for a single URL. */
+export function sourceUrls(id: string): Record<string, string> {
+  appContract(id);
+  const source = appSources[id];
+  if (source.urls) return { ...source.urls };
+  if (source.url) return { schema: source.url };
+  throw new Error(`APP-SCHEMA-IMPORT-REQUIRED: ${id}: ${source.importHelp}`);
+}
+
+/** Downloads one public source document of an app, as {@link sourceUrls} names it. */
+export async function downloadSource(id: string, name: string): Promise<Buffer> {
+  const urls = sourceUrls(id);
+  if (!Object.hasOwn(urls, name)) throw new Error(`APP-SCHEMA-DOWNLOAD: ${id} has no source ${name}`);
+  return requestJson(urls[name]);
+}
+
+/**
+ * Combines the source documents of an app into the schema input that is imported: the document of a single URL as it
+ * is, or the parsed documents of named URLs in one JSON object, in the catalogue's order.
+ */
+export function assembleInput(id: string, documents: Record<string, Buffer>): Buffer {
+  const names = Object.keys(sourceUrls(id));
+  if (JSON.stringify(Object.keys(documents).sort()) !== JSON.stringify([...names].sort())) {
+    throw new Error(`APP-SCHEMA-DOWNLOAD: ${id} needs the source documents ${names.join(', ')}`);
   }
-  return new Promise((resolve, reject) => {
-    const request = https.get(url, { headers: {
-      Accept: 'application/json', 'User-Agent': 'qore-app-schemas/1', ...headers,
-    } }, response => {
-      response.on('error', reject);
-      response.on('aborted', () => reject(new Error('APP-SCHEMA-DOWNLOAD: incomplete response')));
-      if (response.statusCode !== 200) {
-        response.resume(); reject(new Error(`APP-SCHEMA-DOWNLOAD: HTTP ${response.statusCode}`)); return;
-      }
-      const chunks: Buffer[] = [];
-      let size = 0;
-      response.on('data', (chunk: Buffer) => {
-        size += chunk.length;
-        if (size > MAX_BYTES) response.destroy(new Error('APP-SCHEMA-DOWNLOAD: response too large'));
-        else chunks.push(chunk);
-      });
-      response.on('end', () => resolve(Buffer.concat(chunks)));
-    });
-    const timer = setTimeout(() => request.destroy(new Error('APP-SCHEMA-DOWNLOAD: timeout')), 30000);
-    request.on('close', () => clearTimeout(timer));
-    request.on('error', reject);
-  });
+  if (!appSources[id].urls) return documents.schema;
+  const combined: Record<string, unknown> = {};
+  for (const name of names) combined[name] = JSON.parse(documents[name].toString());
+  const bytes = Buffer.from(JSON.stringify(combined));
+  if (bytes.length > MAX_BYTES) {
+    throw new Error('APP-SCHEMA-DOWNLOAD: combined response too large');
+  }
+  return bytes;
 }
 
 /** Download only the source declared by this catalogue, checking immutable-source hashes. */
 export async function downloadInput(id: string): Promise<SchemaInput> {
-  appContract(id);
+  const urls = sourceUrls(id);
+  const documents: Record<string, Buffer> = {};
+  for (const name of Object.keys(urls)) documents[name] = await downloadSource(id, name);
+  const bytes = assembleInput(id, documents);
   const source = appSources[id];
-  if (source.urls) {
-    const documents: Record<string, unknown> = {};
-    for (const [version, url] of Object.entries(source.urls)) {
-      documents[version] = JSON.parse((await requestJson(url)).toString());
-    }
-    const bytes = Buffer.from(JSON.stringify(documents));
-    if (bytes.length > MAX_BYTES) {
-      throw new Error('APP-SCHEMA-DOWNLOAD: combined response too large');
-    }
-    return { bytes, source: JSON.stringify(source.urls) };
-  }
-  if (!source.url) throw new Error(`APP-SCHEMA-IMPORT-REQUIRED: ${id}: ${source.importHelp}`);
-  const bytes = await requestJson(source.url);
+  if (source.urls) return { bytes, source: JSON.stringify(source.urls) };
   if (source.sha256 && digest(bytes) !== source.sha256) throw new Error('APP-SCHEMA-DOWNLOAD: pinned source checksum mismatch');
-  return { bytes, source: source.url };
+  return { bytes, source: urls.schema };
 }
 
 /** Read a bearer token from an owner-only file, never from command arguments or a persisted manifest. */

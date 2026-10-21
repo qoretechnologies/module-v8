@@ -3,6 +3,15 @@
 set -e
 set -x
 
+# --check-upstream-schemas: build, then run only the scheduled upstream schema check
+check_upstream=
+if [ "${1:-}" = --check-upstream-schemas ] && [ $# -eq 1 ]; then
+    check_upstream=1
+elif [ $# -ne 0 ]; then
+    echo "Usage: $0 [--check-upstream-schemas]" >&2
+    exit 1
+fi
+
 ENV_FILE=/tmp/env.sh
 
 . ${ENV_FILE}
@@ -52,18 +61,30 @@ unset QORE_TYPESCRIPT_ACTION_SCRIPTS QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS
 unset QORE_DATA_PROVIDERS QORE_CONNECTION_PROVIDERS QORE_DATASOURCE_PROVIDERS
 unset QORE_PROVIDER_INDEX_DIR
 
-# The catalogue deliberately ships no HubSpot documents. Fetch and qualify a private
-# snapshot explicitly before materializing apps for i18n and provider qualification.
-# Keep only the checksum/provenance manifest in CI artifacts, never the documents.
+# The catalogue deliberately ships no HubSpot documents. Every upstream schema document that CI qualifies is pinned
+# by the SHA-256 of its bytes in schema-inputs.json; CI reads the pinned documents from the project's private mirror
+# with the job token, never from the upstream services (a scheduled job compares them with the pins). Keep only the
+# checksum/provenance manifests in CI artifacts, never the documents.
 qualification_dir=${MODULE_SRC_DIR}/qualification
 qualification_index=$(mktemp -d)
+schema_inputs=$(mktemp -d)
 hubspot_cache=$(mktemp -d)
 app_schema_cache=$(mktemp -d)
-trap 'rm -rf "$qualification_index" "$hubspot_cache" "$app_schema_cache"' EXIT HUP INT TERM
+trap 'rm -rf "$qualification_index" "$schema_inputs" "$hubspot_cache" "$app_schema_cache"' EXIT HUP INT TERM
 mkdir -p "$qualification_dir"
+if [ -n "$check_upstream" ]; then
+    # The scheduled check: compare the upstream documents with the pins and run the user-facing update commands
+    # against the upstream services; it reports every change as "upstream changed: SOURCE, PIN → DIGEST".
+    upstream_cache=$(mktemp -d)
+    trap 'rm -rf "$qualification_index" "$schema_inputs" "$hubspot_cache" "$app_schema_cache" "$upstream_cache"' \
+        EXIT HUP INT TERM
+    node "${MODULE_SRC_DIR}/test/docker_test/schema-inputs.cjs" check-upstream "$upstream_cache"
+    exit 0
+fi
+node "${MODULE_SRC_DIR}/test/docker_test/schema-inputs.cjs" mirror "$schema_inputs"
 hubspot_setup_log="$qualification_dir/hubspot-schema-setup-${CI_JOB_NAME:-local}.log"
 if ! node "${MODULE_SRC_DIR}/ts/dist/schema-cache/hubspot-cli.js" \
-        --cache-dir "$hubspot_cache" update > "$hubspot_setup_log" 2>&1; then
+        --cache-dir "$hubspot_cache" import "$schema_inputs/hubspot" > "$hubspot_setup_log" 2>&1; then
     cat "$hubspot_setup_log"
     exit 1
 fi
@@ -78,9 +99,10 @@ cd "${MODULE_SRC_DIR}/ts"
 node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --maxWorkers=2 \
     --config src/jest.config.ts --runTestsByPath src/tests/app-schema-cache.test.ts \
     src/tests/pipedrive-migration.test.ts src/tests/trello-migration.test.ts \
-    src/tests/dependency-security.test.ts
-# Repository and checksum-pinned private downloads are qualification inputs; Debian exports omit them.
-QORE_APP_SCHEMA_SNAPSHOTS=$("${MODULE_SRC_DIR}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache")
+    src/tests/dependency-security.test.ts src/tests/schema-download.test.ts
+# Repository and checksum-pinned private documents are qualification inputs; Debian exports omit them.
+QORE_APP_SCHEMA_SNAPSHOTS=$("${MODULE_SRC_DIR}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache" \
+    "$schema_inputs")
 export QORE_APP_SCHEMA_SNAPSHOTS
 node -e 'const fs=require("fs"); const out=process.argv[1]; const result={};
 for (const [id,dir] of Object.entries(JSON.parse(process.env.QORE_APP_SCHEMA_SNAPSHOTS))) {
@@ -93,7 +115,7 @@ for (const [id,dir] of Object.entries(JSON.parse(process.env.QORE_APP_SCHEMA_SNA
 # survives for an app that has been removed from the catalogue. Run this only
 # after rebuilding dist/index.js so the base image cannot hide source drift.
 node --test \
-    "${MODULE_SRC_DIR}/test/docker_test/download-app-schema-inputs.test.cjs" \
+    "${MODULE_SRC_DIR}/test/docker_test/schema-inputs.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/sync-i18n-translations.test.mjs" \
     "${MODULE_SRC_DIR}/test/docker_test/qualification-environment.test.mjs"
 "${MODULE_SRC_DIR}/test/docker_test/check-i18n.sh" \

@@ -7,7 +7,8 @@ import * as path from 'node:path';
 import { appContract, appIds, readFile, SNAPSHOTS_ENV, verifySnapshot } from './apps';
 import { activeSnapshot, appSources, configuredSnapshots, defaultCacheDir, downloadInput,
   downloadNetSuite, installSnapshot, rollback } from './app-store';
-import { combinedExitStatus, EXIT_REFUSED, EXIT_UNVERIFIED, exitStatus } from './schema-errors';
+import { DOWNLOAD_TIMEOUT_MS } from './download';
+import { combinedExitStatus, EXIT_REFUSED, EXIT_UNAVAILABLE, EXIT_UNVERIFIED, exitStatus } from './schema-errors';
 import { QUALIFICATION_TIMEOUT_MS, qoreModulePath, refusingProgram, runQualification } from './qualification';
 
 const help = `Usage: qore-app-schemas [--cache-dir DIR] COMMAND
@@ -27,7 +28,10 @@ HubSpot retains its separate qore-hubspot-schemas command; wrappers can be neste
 Exit status: 0 success; ${EXIT_REFUSED} a schema was refused (invalid, incompatible or refused by the Qore
 runtime); ${EXIT_UNVERIFIED} a schema could not be verified (the Qore runtime did not finish within
 ${QUALIFICATION_TIMEOUT_MS / 1000} s per run, see QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS, or failed without a
-verdict); 1 any other error.
+verdict); ${EXIT_UNAVAILABLE} a schema source could not be reached or did not answer (the connection failed
+or closed early, no complete response within ${DOWNLOAD_TIMEOUT_MS / 1000} s, or HTTP 408, 429 or 5xx; the
+message names the URL); 1 any other error. An update of several apps exits ${EXIT_REFUSED} if any schema was
+refused, otherwise with the status that every failure has, or 1 for different ones.
 `;
 
 /** Require the complete owned inventory and materialize every action in the installed Qore runtime. */

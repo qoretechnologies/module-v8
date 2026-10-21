@@ -28,19 +28,61 @@ invalid path filter does not populate the cache.
 bounded filenames, reloads in separate processes after removing the source, canonical path sets, distinct inputs,
 comma-containing paths, unfiltered Swagger/OpenAPI documents, legacy entries, failures, and disabled caching.
 
-## Reviewing CI schema inputs
+## CI schema inputs
 
-`test/docker_test/app-schema-inputs.json` pins the exact private Pipedrive and Trello qualification inputs.
-Pipedrive's bundle checksum covers `JSON.stringify({v1: <parsed document>, v2: <parsed document>})`, while each
-source checksum covers the original response bytes. A changed download fails with the expected and received
-checksums before the input is written. The separate `ts/src/schema-cache/app-compatibility.json` allowlist covers
-the normalized supported operations, their referenced schemas, presentation, and security metadata.
+`test/docker_test/schema-inputs.json` pins every upstream document that CI qualifies with the SHA-256 of its bytes:
+the ten HubSpot documents (each with its v3 release URL), Pipedrive's v1 and v2 documents and Trello's document. The
+pins are the source of truth. Pipedrive's input pin covers `JSON.stringify({v1: <parsed document>, v2: <parsed
+document>})`, which `assembleInput()` in `app-store.ts` builds; Trello's input is its one document. A pinned URL
+must be the URL that the catalogue downloads (`app-sources.json`), and the pins must name exactly the documents that
+the catalogue downloads. The separate `ts/src/schema-cache/app-compatibility.json` and `hubspot-compatibility.json`
+allowlists cover the normalized supported operations, their referenced schemas, presentation, and security metadata.
 
-When upstream changes a document, compare it against the previously reviewed input before updating either pin.
+CI never downloads these documents from the upstream services. `test/docker_test/schema-inputs.cjs mirror DIR`
+reads each one by its pin from the project's private mirror, the generic package registry of mirror/module-v8:
+package `schema-inputs`, version `<SHA-256>`, file `<app>-<source>.json` (for example `hubspot-companies.json`,
+`pipedrive-v1.json`, `trello-schema.json`). `QORE_SCHEMA_INPUT_MIRROR` in `.gitlab-ci.yml` is the package's base
+URL, read with the job token (`CI_JOB_TOKEN`; elsewhere `QORE_SCHEMA_INPUT_MIRROR_TOKEN` is sent as `PRIVATE-TOKEN`).
+A token is sent only to the mirror and never printed. Every document is checked against its own pin and every app
+input against its pin; a document missing from the mirror, or with other bytes, fails the job with the pinned
+SHA-256 and the mirror URL. CI then imports the documents with `qore-hubspot-schemas import` and
+`test/docker_test/setup-app-schemas.sh` (`qore-app-schemas import`), so the same compatibility checks and installed
+runtime qualification run as for an update. The same commit therefore always qualifies the same documents, whatever
+the upstream services do. `test/docker_test/regenerate-i18n-in-container.sh` uses the same pinned documents
+(`schema-inputs.cjs upstream`, which downloads them from upstream and checks them against the pins), so that it
+generates the catalogs that CI checks.
+
+The daily pipeline schedule (`QORE_SCHEMA_UPSTREAM_CHECK=1`) runs the `check-upstream-schemas` job:
+`schema-inputs.cjs check-upstream` downloads every document from upstream as the catalogue does (HubSpot's through
+its live catalogue), compares it with its pin, and runs the user-facing `qore-hubspot-schemas update` and
+`qore-app-schemas update pipedrive trello` against the upstream services. A document that changed fails the job
+with `upstream changed: <source>, <pinned SHA-256> → <new SHA-256> (<URL>)`, or the old and new URL if HubSpot's
+catalogue selects another release. An upstream service that cannot be reached or does not answer is reported as
+`upstream unavailable` (exit status 69), not as a change.
+
+When upstream changes a document, compare it against the previously reviewed input before updating any pin.
 Review request and response fields, requiredness, nullability, routes, references, and authentication; even an
 additive optional field changes the supported metadata fingerprint. Add the reviewed fingerprint while retaining
-previous compatible revisions, update the exact CI source and bundle checksums, and run the migration tests and
-installed runtime qualification in both tiered and AST modes. For example, an optional nullable lead field must
-remain optional and nullable after normalization and must materialize in Qore's action options and output types.
-Source-owned presentation catalogs must also pass `test/docker_test/check-i18n.sh` with the new snapshot.
-Keep downloaded provider documents in private temporary caches; commit only fingerprints and synthetic fixtures.
+previous compatible revisions, update the document's pin (and Pipedrive's input pin, which `schema-inputs.cjs`
+reports when the sources no longer combine to it), and run the migration tests and installed runtime qualification
+in both tiered and AST modes. For example, an optional nullable lead field must remain optional and nullable after
+normalization and must materialize in Qore's action options and output types. Source-owned presentation catalogs
+must also pass `test/docker_test/check-i18n.sh` with the new snapshot.
+
+Add the reviewed document to the mirror before pushing the new pin: `schema-inputs.cjs stage DIR` downloads every
+pinned document from upstream, checks it against its pin, and writes `DIR/<SHA-256>/<file>`, printing one
+`<SHA-256> <file>` line per document. Upload the documents that the mirror lacks with an existing GitLab login (no
+new token):
+
+```sh
+node test/docker_test/schema-inputs.cjs stage "$dir" | while IFS=$'\t' read -r sha file; do
+    glab api "projects/mirror%2Fmodule-v8/packages/generic/schema-inputs/$sha/$file" >/dev/null 2>&1 && continue
+    glab api --method PUT "projects/mirror%2Fmodule-v8/packages/generic/schema-inputs/$sha/$file" \
+        --input "$dir/$sha/$file"
+done
+```
+
+A version is the document's SHA-256, so older pins keep working, and CI checks every document it reads against its
+pin, so a wrong upload fails CI instead of changing what it qualifies.
+Keep downloaded provider documents only in private caches and the mirror; commit only fingerprints, pins and
+synthetic fixtures, and keep only manifests in CI artifacts.

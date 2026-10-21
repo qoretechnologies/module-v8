@@ -92,12 +92,22 @@ bound (see QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS), was killed, could not
 start or failed without a verdict. The message starts with APP-SCHEMA-UNVERIFIED;
 trying again, for example on a less loaded host, may verify the schema.
 .TP
+.B 69
+A schema source could not be reached or did not answer: the connection failed
+or closed before the response was complete, no complete response arrived within
+30 seconds, or the source answered HTTP 408, 429 or 5xx. The message names the
+URL, the error code or HTTP status, and the Retry-After value the source sent.
+Nothing was changed; the source may answer later. Every download opens a
+connection of its own; nothing is retried.
+.TP
 .B 1
-Any other error.
+Any other error, including any other HTTP status (a redirect, for example, is
+not followed).
 .PP
-An update of several apps returns 2 if any schema was refused, 75 if every
-failure was unverified, and 1 otherwise. The run command returns the child
-command's exit status. A failure never changes the active selection.
+An update of several apps returns 2 if any schema was refused, otherwise the
+status that every failure has (75 or 69), and 1 for different ones. The run
+command returns the child command's exit status. A failure never changes the
+active selection.
 .SH EXAMPLES
 .nf
 qore-app-schemas update magento mailchimp

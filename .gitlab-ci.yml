@@ -15,9 +15,14 @@ default:
 variables:
   REPO_NAME: module-v8
   GIT_SUBMODULE_STRATEGY: recursive
+  # CI reads the upstream schema documents that it qualifies from this private mirror (the project's generic package
+  # registry) with the job token, each by the SHA-256 pinned in test/docker_test/schema-inputs.json
+  QORE_SCHEMA_INPUT_MIRROR: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/schema-inputs"
 
 test-ubuntu:
   stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE != "schedule"
   # The base-image pipeline publishes branch tags; untagged digests are not retained.
   image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop
   script:
@@ -41,6 +46,8 @@ test-ubuntu:
 
 test-alpine:
   stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE != "schedule"
   # Follow the published Alpine branch tag as well, rather than an unretained digest.
   image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop-alpine
   script:
@@ -61,3 +68,15 @@ test-alpine:
     paths:
       - qualification/
     expire_in: 7 days
+
+# The daily schedule (QORE_SCHEMA_UPSTREAM_CHECK=1) compares the upstream schema documents with the reviewed pins in
+# test/docker_test/schema-inputs.json and runs the user-facing update commands against the upstream services. It
+# reports on the upstream services, not on a commit, so it leaves the commit's GitHub status alone.
+check-upstream-schemas:
+  stage: test
+  image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $QORE_SCHEMA_UPSTREAM_CHECK == "1"
+  before_script: []
+  script:
+    - test/docker_test/test-ubuntu.sh --check-upstream-schemas

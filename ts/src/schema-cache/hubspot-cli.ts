@@ -9,7 +9,8 @@ import {
   activateSnapshot, activeSnapshot, defaultCacheDir, downloadInputs, importInputs,
   installSnapshot, withCacheLock,
 } from './hubspot-store';
-import { EXIT_REFUSED, EXIT_UNVERIFIED, exitStatus } from './schema-errors';
+import { DOWNLOAD_TIMEOUT_MS } from './download';
+import { EXIT_REFUSED, EXIT_UNAVAILABLE, EXIT_UNVERIFIED, exitStatus } from './schema-errors';
 import { QUALIFICATION_TIMEOUT_MS, qoreModulePath, refusingProgram, runQualification } from './qualification';
 
 const help = `Usage: qore-hubspot-schemas [--cache-dir DIR] COMMAND
@@ -26,6 +27,8 @@ HubSpot terms: https://legal.hubspot.com/hs-developer-terms
 Exit status: 0 success; ${EXIT_REFUSED} the schemas were refused (invalid, incompatible or refused by the Qore
 runtime); ${EXIT_UNVERIFIED} they could not be verified (the Qore runtime did not finish within
 ${QUALIFICATION_TIMEOUT_MS / 1000} s, see QORE_APP_SCHEMA_QUALIFICATION_TIMEOUT_MS, or failed without a verdict);
+${EXIT_UNAVAILABLE} HubSpot could not be reached or did not answer (the connection failed or closed early,
+no complete response within ${DOWNLOAD_TIMEOUT_MS / 1000} s, or HTTP 408, 429 or 5xx; the message names the URL);
 1 any other error.
 `;
 

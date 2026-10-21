@@ -50,9 +50,14 @@ Zero indicates success; 2 means the schemas were refused (invalid, not matching
 the installed catalogue's compatibility fingerprints, or refused by the installed
 Qore runtime); 75 means they could not be verified (the Qore runtime did not
 finish within its bound, was killed, could not start or failed without a verdict;
-the message starts with APP-SCHEMA-UNVERIFIED); 1 is any other error. A failure
-leaves the active snapshot unchanged. The run command returns the child command's
-exit status.
+the message starts with APP-SCHEMA-UNVERIFIED); 69 means HubSpot could not be
+reached or did not answer (the connection failed or closed before the response
+was complete, no complete response arrived within 30 seconds, or HubSpot
+answered HTTP 408, 429 or 5xx; the message names the URL, the error code or
+HTTP status, and the Retry-After value HubSpot sent; HubSpot may answer later);
+1 is any other error, including any other HTTP status. Every download opens a
+connection of its own; nothing is retried. A failure leaves the active snapshot
+unchanged. The run command returns the child command's exit status.
 .SH FILES
 Snapshots and the active.json pointer belong to the application account, outside
 package-owned directories. A crashed writer can leave .update-lock; confirm its

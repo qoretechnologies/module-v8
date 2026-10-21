@@ -12,6 +12,18 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - \c qore-app-schemas and \c qore-hubspot-schemas exit with the new status 69 when a schema source cannot be
+      reached or does not answer (the connection failed or closed before the response was complete, no complete
+      response arrived within 30 seconds, or the source answered HTTP 408, 429 or 5xx); the message names the URL, the
+      error code or HTTP status and the \c Retry-After value that the source sent.  Any other HTTP status remains exit
+      status 1; an update of several apps exits with 2 if any schema was refused, otherwise with the status that
+      every failure has, and 1 for different ones.  Every schema download
+      now opens a connection of its own, so a server closing a connection that an earlier download left open no
+      longer fails the next download with \c "socket hang up"; nothing is retried
+    - CI qualifies the HubSpot, Pipedrive and Trello schema documents that it pins by SHA-256 from a private mirror
+      instead of downloading them from the upstream services; every document is checked against its own pin, and a
+      daily scheduled check compares the upstream documents with the pins and runs the update commands against the
+      upstream services
     - the Google Sheets \c find_spreadsheet_rows action takes a \c header_row option, the row of the column headers
       for sheets with titles or notes above the table (rows are read and searched below it), a \c value_render
       option, to return and search the values as stored (the default), as the sheet displays them, or the formulas

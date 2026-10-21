@@ -11,6 +11,7 @@ i18n_parent="${src_dir}/qlib/TypeScriptActionInterface"
 i18n_dir="${i18n_parent}/i18n"
 stage_dir=
 backup_dir=
+schema_inputs=
 hubspot_cache=
 app_schema_cache=
 
@@ -34,6 +35,9 @@ cleanup() {
     if [[ -n "${hubspot_cache}" && -d "${hubspot_cache}" ]]; then
         rm -rf "${hubspot_cache}" || rc=1
     fi
+    if [[ -n "${schema_inputs}" && -d "${schema_inputs}" ]]; then
+        rm -rf "${schema_inputs}" || rc=1
+    fi
     exit "${rc}"
 }
 trap cleanup EXIT
@@ -45,15 +49,19 @@ set -u
 export QORE_MODULE_DIR="${src_dir}/qlib${QORE_MODULE_DIR:+:${QORE_MODULE_DIR}}"
 export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT="${src_dir}/ts/dist/index.js"
 
-# Regeneration explicitly retrieves supported schemas; the application and package
-# build remain offline. Never put downloaded documents in the source-owned tree.
+# Regeneration explicitly retrieves the pinned schema documents that CI qualifies (schema-inputs.json) from
+# their upstream services, so that it generates the catalogs that CI checks; a document that changed upstream fails
+# until its pin is reviewed. The application and package build remain offline. Never put downloaded documents in
+# the source-owned tree.
+schema_inputs=$(mktemp -d)
+node "${src_dir}/test/docker_test/schema-inputs.cjs" upstream "$schema_inputs"
 hubspot_cache=$(mktemp -d)
-node "${src_dir}/ts/dist/schema-cache/hubspot-cli.js" --cache-dir "$hubspot_cache" update
+node "${src_dir}/ts/dist/schema-cache/hubspot-cli.js" --cache-dir "$hubspot_cache" import "$schema_inputs/hubspot"
 QORE_HUBSPOT_SCHEMA_SNAPSHOT=$(node "${src_dir}/ts/dist/schema-cache/hubspot-cli.js" \
     --cache-dir "$hubspot_cache" status)
 export QORE_HUBSPOT_SCHEMA_SNAPSHOT
 app_schema_cache=$(mktemp -d)
-QORE_APP_SCHEMA_SNAPSHOTS=$("${src_dir}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache")
+QORE_APP_SCHEMA_SNAPSHOTS=$("${src_dir}/test/docker_test/setup-app-schemas.sh" "$app_schema_cache" "$schema_inputs")
 export QORE_APP_SCHEMA_SNAPSHOTS
 
 stage_dir=$(mktemp -d -p "${i18n_parent}" .i18n.stage.XXXXXX)
