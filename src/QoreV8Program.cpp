@@ -233,17 +233,59 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
     return false;
 }
 
+//! Name of the registered symbol of the global property that passes a program's source and label to its bootstrap code
+#define QORE_V8_BOOTSTRAP_KEY "qore.v8.bootstrap"
+
+//! Returns a JavaScript string for the given UTF-8 string, or an empty handle if it is too long or cannot be created
+static v8::MaybeLocal<v8::String> qore_v8_utf8_string(v8::Isolate* isolate, const QoreString& str) {
+    assert(str.getEncoding() == QCS_UTF8);
+    if (str.size() > static_cast<size_t>(v8::String::kMaxLength)) {
+        return v8::MaybeLocal<v8::String>();
+    }
+    return v8::String::NewFromUtf8(isolate, str.c_str(), v8::NewStringType::kNormal, static_cast<int>(str.size()));
+}
+
+int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tryCatch) {
+    v8::Local<v8::Context> context = setup->context();
+
+    v8::Local<v8::String> source_str;
+    if (!qore_v8_utf8_string(isolate, source).ToLocal(&source_str)) {
+        if (!checkException(xsink, tryCatch)) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "the JavaScript source of " QLLD " bytes is too long; "
+                "the maximum is %d bytes", static_cast<int64>(source.size()), v8::String::kMaxLength);
+        }
+        return -1;
+    }
+    v8::Local<v8::String> label_str;
+    if (!qore_v8_utf8_string(isolate, label).ToLocal(&label_str)) {
+        if (!checkException(xsink, tryCatch)) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "the JavaScript source label of " QLLD " bytes is too "
+                "long; the maximum is %d bytes", static_cast<int64>(label.size()), v8::String::kMaxLength);
+        }
+        return -1;
+    }
+
+    v8::Local<v8::Object> data = v8::Object::New(isolate);
+    v8::Local<v8::Symbol> key = v8::Symbol::For(isolate,
+        v8::String::NewFromUtf8Literal(isolate, QORE_V8_BOOTSTRAP_KEY));
+    if (!data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "source"),
+            source_str).FromMaybe(false)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "filename"),
+            label_str).FromMaybe(false)
+        || !context->Global()->DefineOwnProperty(context, key, data, v8::DontEnum).FromMaybe(false)) {
+        if (!checkException(xsink, tryCatch)) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "cannot pass the source to the JavaScript program");
+        }
+        return -1;
+    }
+    return 0;
+}
+
 int QoreV8Program::init(ExceptionSink* xsink) {
     if (!valid || !isolate) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Could not initialize JavaScript program");
         return -1;
     }
-
-    SystemEnvironment::set("_qore_v8_source", source.c_str());
-    SystemEnvironment::set("_qore_v8_filename", label.c_str());
-    char* dn = q_dirname(label.c_str());
-    ON_BLOCK_EXIT(free, dn);
-    SystemEnvironment::set("_qore_v8_dirname", dn);
 
     {
         v8::Locker locker(isolate);
@@ -258,6 +300,17 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // Set ctx and global early so checkException() can use them if LoadEnvironment fails
         ctx.Reset(isolate, setup->context());
         global.Reset(isolate, setup->context()->Global());
+
+        // Pass the source and its label to the bootstrap code below in this program's own context.  They must never
+        // be passed in the process environment: it is shared by all programs, so a program constructed in another
+        // thread at the same time would run this program's source, and on musl (whose setenv() is not thread-safe
+        // and frees the value it replaces) concurrent updates corrupt the heap
+        if (setBootstrapData(xsink, tryCatch)) {
+            valid = false;
+            ctx.Reset();
+            global.Reset();
+            return -1;
+        }
 
         // Intercept Node.js exit() to mark the program invalid instead of terminating the Qore process
         node::SetProcessExitHandler(env, [this](node::Environment* env, int exit_code) {
@@ -291,7 +344,11 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // load files from the disk, and uses the standard CommonJS file loader
         // instead of the internal-only `require` function.
 
-        QoreStringMaker envstr("const publicRequire = require('module').createRequire("
+        // the bootstrap data is removed from the global object before any other code is run
+        QoreStringMaker envstr("const _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
+            "const _qoreBoot = globalThis[_qoreBootKey];\n"
+            "delete globalThis[_qoreBootKey];\n"
+            "const publicRequire = require('module').createRequire("
             "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
         if (transpile_ts) {
             v8::Local<v8::String> compiler_name, compiler_json;
@@ -320,7 +377,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
                 "const _tsStrip = require('module').stripTypeScriptTypes;\n"
                 "let _tsSource;\n"
                 "if (typeof _tsStrip === 'function' && process.features.typescript !== false) {\n"
-                "  _tsSource = _tsStrip(process.env._qore_v8_source, { mode: 'transform' });\n"
+                "  _tsSource = _tsStrip(_qoreBoot.source, { mode: 'transform' });\n"
                 "} else {\n"
                 // Debian/Ubuntu build Node without Amaro. Use their separately packaged compiler;
                 // preserve script/module semantics and report syntax errors before executing any code.
@@ -331,7 +388,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
                 "    throw new Error('QORE_TYPESCRIPT_UNAVAILABLE: install the typescript package "
                     "or use Node.js with built-in TypeScript support');\n"
                 "  }\n"
-                "  const result = _ts.transpileModule(process.env._qore_v8_source, {\n"
+                "  const result = _ts.transpileModule(_qoreBoot.source, {\n"
                 // The source label belongs to the VM stack trace; it must not select TypeScript's
                 // JSON, declaration-file, or JavaScript parser modes based on a filename suffix.
                 "    fileName: 'qore-typescript-input.ts', reportDiagnostics: true,\n"
@@ -345,13 +402,13 @@ int QoreV8Program::init(ExceptionSink* xsink) {
                 "  _tsSource = result.outputText;\n"
                 "}\n"
                 "publicRequire('node:vm').runInThisContext(_tsSource, {\n"
-                "  'filename': process.env._qore_v8_filename\n"
+                "  'filename': _qoreBoot.filename\n"
                 "});"
             );
         } else {
             envstr.concat(
-                "publicRequire('node:vm').runInThisContext(process.env._qore_v8_source, {\n"
-                "  'filename': process.env._qore_v8_filename\n"
+                "publicRequire('node:vm').runInThisContext(_qoreBoot.source, {\n"
+                "  'filename': _qoreBoot.filename\n"
                 "});"
             );
         }

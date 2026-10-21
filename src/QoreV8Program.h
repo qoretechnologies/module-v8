@@ -281,6 +281,14 @@ protected:
 
     DLLLOCAL int init(ExceptionSink* xsink);
 
+    //! Passes the source and its label to the bootstrap code in the program's own context
+    /** Must be called with the program's context entered; the bootstrap code removes the data before it runs any
+        other code
+
+        @return 0 for OK, -1 if an exception was raised
+    */
+    DLLLOCAL int setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tryCatch);
+
     DLLLOCAL void deleteIntern(ExceptionSink* xsink);
 
     //! Waits for all pending platform tasks to complete before the isolate is unregistered from the platform

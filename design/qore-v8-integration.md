@@ -27,6 +27,25 @@ v8::Local<v8::Object> qoreGlobal = QoreV8NamespaceWrapper::create(isolate, conte
 global.Get(isolate)->Set(context, v8::String::NewFromUtf8(isolate, "qore"), qoreGlobal);
 ```
 
+### Program Source
+
+`init()` passes the program's source and its label to the bootstrap script that `LoadEnvironment()`
+runs in the program's own context: `setBootstrapData()` defines a non-enumerable global property,
+keyed by the registered symbol `Symbol.for('qore.v8.bootstrap')`, holding `{source, filename}`. The
+bootstrap script reads the property and deletes it before it runs any other code, then runs the
+source (stripping or transpiling it first for a `TypeScriptProgram`) with `vm.runInThisContext()`
+under the label.
+
+The source must never be passed in the process environment. The environment is shared by every
+program in the process, so a program created in another thread at the same time ran the other
+program's source. On musl, `setenv()` is not thread-safe and frees the value it replaces, and Qore's
+`SystemEnvironment` does not serialize it on Linux, so concurrent program creation also corrupted the
+heap (a double free of the replaced value) and crashed the process later at random.
+`test/js-program-concurrent-init.qtest` creates programs in 8 threads at the same time.
+
+The `TypeScriptActionInterface` module gives each action script's programs the script's own
+`__filename` and `__dirname` as literals in their default code, for the same reason.
+
 ### Property Resolution Flow
 
 When JavaScript accesses `qore.Qore.Thread.Mutex`, resolution proceeds:

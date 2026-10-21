@@ -36,10 +36,10 @@ class TypeScriptActionInterfacePriv {
         #! True when static JavaScript action initialization has already run
         static bool initialized;
 
-        #! Default code in each JavaScriptProgram object
-        const DefaultCode = "const __filename = process.env._qore_v8_filename;
-const __dirname = process.env._qore_v8_dirname;
-var exports = {};
+        #! Default code in each JavaScriptProgram object, after the script's file name and directory
+        /** @see getDefaultCode()
+        */
+        const DefaultCode = "var exports = {};
 // Returns a Promise that resolves immediately with the state of 'promise'
 function promiseState(promise) {
   const pendingState = { status: 'pending' };
@@ -170,6 +170,20 @@ function setenv(vr, value) {
         }
     }
 
+    #! Returns the default code for the programs of the given action script
+    /** @param path the path of the script, the value of \c __filename
+        @param dir the directory of the script, the value of \c __dirname
+
+        @return the code that precedes the script's source in each of its programs
+
+        The values are part of the code, so every program of the pool has its own script's values even when
+        programs of other scripts are created at the same time in other threads
+    */
+    static string getDefaultCode(string path, string dir) {
+        return sprintf("const __filename = %s;\nconst __dirname = %s;\n", make_json(path), make_json(dir))
+            + DefaultCode;
+    }
+
     #! Creates a pool and returns the pool if created
     static *JavaScriptProgramPool createPool(string path, string cwd, code init) {
         try {
@@ -180,9 +194,7 @@ function setenv(vr, value) {
             on_exit if (dir.val()) {
                 chdir(cwd);
             }
-            setenv("_qore_v8_filename", path);
-            setenv("_qore_v8_dirname", dir);
-            JavaScriptProgramPool pool(DefaultCode + File::readTextFile(basename(path)), path, init);
+            JavaScriptProgramPool pool(getDefaultCode(path, dir) + File::readTextFile(basename(path)), path, init);
             pstore{pool.uniqueHash()} = pool;
             TypeScriptActionInterface::clearDiscoverySourceFailure(path);
             return pool;

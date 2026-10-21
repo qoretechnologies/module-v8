@@ -258,7 +258,12 @@ class AppInitializationTest inherits QUnit::Test {
         TmpDir fixture("qore-v8-app-init-", NOTHING, "/tmp");
         on_exit delete fixture;
         list<string> names = ("BulkLoadFirst", "BulkLoadFailure", "BulkLoadLast");
-        string source = "exports.actionsCatalogue = {registerAppActions(api) {\n";
+        string script = fixture.path + "/catalogue.js";
+        # the script is given its own file name and directory
+        string source = sprintf("if (__filename !== %s || __dirname !== %s) {\n"
+            "  throw new Error('wrong script location: ' + __filename + ' in ' + __dirname);\n"
+            "}\n", make_json(script), make_json(fixture.path));
+        source += "exports.actionsCatalogue = {registerAppActions(api) {\n";
         foreach string name in (names) {
             hash<auto> app = appInfo(name);
             if (name == names[1]) {
@@ -268,7 +273,6 @@ class AppInitializationTest inherits QUnit::Test {
                 "api.registerApp(" + make_json(app) + ");\n";
         }
         source += "}};\n";
-        string script = fixture.path + "/catalogue.js";
         File output();
         output.open2(script, O_CREAT | O_EXCL | O_WRONLY, 0600);
         output.write(source);
@@ -276,6 +280,9 @@ class AppInitializationTest inherits QUnit::Test {
         hash<auto> env = ENV;
         env -= ("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT", "QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS",
             "QORE_DATA_PROVIDERS", "QORE_CONNECTION_PROVIDERS", "QORE_DATASOURCE_PROVIDERS");
+        # the environment variables that programs used to be passed their source and location in
+        list<string> location_env = ("_qore_v8_source", "_qore_v8_filename", "_qore_v8_dirname");
+        env -= location_env;
         env.QORE_TYPESCRIPT_ACTION_SCRIPTS = script;
         env.QORE_PROVIDER_INDEX_DIR = fixture.path;
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
@@ -291,6 +298,8 @@ class AppInitializationTest inherits QUnit::Test {
                 "  \"pending\": call_static_method(\"TypeScriptActionInterface\", \"getPendingApps\"),\n"
                 "  \"failures\": DataProviderActionCatalog::getInitializationFailures(),\n"
                 "  \"first\": DataProviderActionCatalog::getAppEx(\"BulkLoadFirst\").name,\n"
+                "  \"env\": (map $1, (" + (foldl $1 + ", " + $2, (map sprintf("%y", $1), location_env))
+                    + "), exists getenv($1)),\n"
                 "  \"last\": DataProviderActionCatalog::getAppEx(\"BulkLoadLast\").name\n"
                 "}));"), {"env": env});
         assertTrue(result.ok);
@@ -300,6 +309,7 @@ class AppInitializationTest inherits QUnit::Test {
         assertEq((names[1].lwr(),), data.pending);
         assertEq(names[0], data.first);
         assertEq(names[2], data.last);
+        assertEq((), data.env, "loading the script sets no environment variables");
         assertEq(1, data.failures.size());
         assertEq("app", data.failures[0].kind);
         assertEq(names[1], data.failures[0].app);

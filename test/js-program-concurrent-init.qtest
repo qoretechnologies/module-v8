@@ -1,0 +1,140 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires v8
+%requires QUnit
+%requires Util
+
+%exec-class JsConcurrentInitTest
+
+#! Tests creating JavaScript and TypeScript programs in multiple threads at the same time
+/** Programs used to receive their source and label in process environment variables, which all programs share: a
+    program created in another thread at the same time ran the other program's source, and on musl, whose setenv()
+    is not thread-safe and frees the value it replaces, concurrent updates corrupted the heap, which crashed the
+    process later at random (for example while a program was destroyed).
+*/
+class JsConcurrentInitTest inherits Test {
+    public {
+        #! number of threads creating programs at the same time
+        const Threads = 8;
+
+        #! number of programs each thread creates
+        const Iters = 10;
+
+        #! the environment variables that programs used to receive their source and label in
+        const EnvVars = ("_qore_v8_source", "_qore_v8_filename", "_qore_v8_dirname");
+    }
+
+    private {
+        #! True if TypeScript programs can be created
+        bool ts_available;
+
+        #! the reason the TypeScript test case is skipped
+        string ts_skip_reason;
+    }
+
+    constructor() : Test("js concurrent init test", "1.0") {
+        # Only missing compiler support is optional; any other failure of this valid probe fails the test
+        try {
+            TypeScriptProgram ts("const x: number = 1;", "check.ts");
+            ts_available = True;
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.desc.find("QORE_TYPESCRIPT_UNAVAILABLE:") < 0) {
+                rethrow;
+            }
+            ts_skip_reason = sprintf("TypeScript transpilation not available: %s", ex.desc);
+        }
+
+        addTestCase("creating a program leaves the process environment unchanged", \environmentUnchanged());
+        addTestCase("programs created at the same time run their own source", \concurrentJavaScript());
+        addTestCase("TypeScript programs created at the same time run their own source", \concurrentTypeScript());
+
+        set_return_value(main());
+    }
+
+    environmentUnchanged() {
+        hash<auto> before = getEnv();
+        {
+            JavaScriptProgram js("globalThis.id = 'env';", "env.js");
+            assertEq("env", js.getGlobal().id);
+        }
+        if (ts_available) {
+            TypeScriptProgram ts("const id: string = 'env-ts'; globalThis.id = id;", "env.ts");
+            assertEq("env-ts", ts.getGlobal().id);
+        }
+        assertEq(before, getEnv(), "programs do not set environment variables");
+    }
+
+    concurrentJavaScript() {
+        assertEq((), runConcurrently(False));
+    }
+
+    concurrentTypeScript() {
+        if (!ts_available) {
+            testSkip(ts_skip_reason);
+        }
+        assertEq((), runConcurrently(True));
+    }
+
+    #! Creates programs in multiple threads at the same time; returns a description of each program that failed
+    /** Each program records an identifier unique to the program and the stack of the code it runs, which names the
+        program's source label; the sources have different lengths
+    */
+    private list<string> runConcurrently(bool ts) {
+        Counter ready(Threads);
+        Counter start(1);
+        Counter done(Threads);
+        Mutex m();
+        list<string> errors = ();
+        for (int t = 0; t < Threads; ++t) {
+            background sub (int tid) {
+                on_exit done.dec();
+                ready.dec();
+                start.waitForZero();
+                for (int i = 0; i < Iters; ++i) {
+                    string id = sprintf("%d-%d", tid, i);
+                    string label = sprintf("concurrent-%s.%s", id, ts ? "ts" : "js");
+                    string pad = strmul(" ", tid * 97 + i);
+                    try {
+                        JavaScriptProgram js = ts
+                            ? new TypeScriptProgram(sprintf("const id: string = '%s'; globalThis.id = id; "
+                                "globalThis.stack = new Error().stack;%s", id, pad), label)
+                            : new JavaScriptProgram(sprintf("globalThis.id = '%s'; "
+                                "globalThis.stack = new Error().stack;%s", id, pad), label);
+                        JavaScriptObject g = js.getGlobal();
+                        auto got = g.id;
+                        auto stack = g.stack;
+                        if (got !== id) {
+                            m.lock();
+                            on_exit m.unlock();
+                            errors += sprintf("program %y ran the source of program %y", id, got);
+                        } else if (stack.typeCode() != NT_STRING || stack.find(label) < 0) {
+                            m.lock();
+                            on_exit m.unlock();
+                            errors += sprintf("program %y did not run as %y: stack %y", id, label, stack);
+                        }
+                    } catch (hash<ExceptionInfo> ex) {
+                        m.lock();
+                        on_exit m.unlock();
+                        errors += sprintf("program %y: %s", id, get_exception_string(ex));
+                    }
+                }
+            }(t);
+        }
+        # start all threads at the same time
+        ready.waitForZero();
+        start.dec();
+        done.waitForZero();
+        return errors;
+    }
+
+    #! Returns the values of the environment variables that programs used to be passed their source in
+    private hash<auto> getEnv() {
+        return map {$1: getenv($1)}, EnvVars;
+    }
+}
