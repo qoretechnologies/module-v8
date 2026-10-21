@@ -119,12 +119,50 @@ public sub ASSERT(*softbool b) {}
     If loading a Slack channel selector fails with \c missing_scope, correct the connection's permissions and
     request its choices again. The failed lookup does not prevent a fresh request for the next ten minutes.
 
+    @section typescriptactioninterface_time_limits Time Limits
+
+    Each call of an app's or action's function, such as an action's API function, a record operation, or a webhook
+    registration, has a time limit. A call that has not completed when its limit is reached fails with
+    \c JAVASCRIPT-ASYNC-ERROR ("Request timed out after ... ms"). The limit is 30 minutes by default, so long API
+    and AI actions can complete. Change it for all apps with
+    @ref TypeScriptActionInterface::TypeScriptActionInterface::setCallTimeout()
+    "TypeScriptActionInterface::setCallTimeout()", or by setting the \c QORE_TYPESCRIPT_CALL_TIMEOUT_SECS
+    environment variable to a number of seconds before the module is loaded. An app or action can set its own
+    limit in seconds with \c io_timeout_secs. Event functions have no limit; they run until their events are
+    stopped.
+
+    When apps run in \c ts-proxy child processes, each child applies the limit that is set when it is started. A
+    new child has 60 seconds to start; a child that has not started by then is terminated, and the action fails
+    with \c CHILD-ERROR. Change this with @ref TypeScriptActionInterface::JavaScriptProgramProxy::setStartupTimeout()
+    "JavaScriptProgramProxy::setStartupTimeout()", or by setting the \c QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS
+    environment variable to a number of seconds.
+
+    @par Example
+    @code{.py}
+# allow long AI actions up to one hour, and child processes two minutes to start on a busy host
+TypeScriptActionInterface::setCallTimeout(1h);
+JavaScriptProgramProxy::setStartupTimeout(2m);
+    @endcode
+
     @section TypeScriptActionInterface_relnotes Release Notes
 
     Generic API calls preserve the app-specific synchronous client's authentication and request policies,
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - the time limits of calls and of \c ts-proxy child process startup take effect as documented (see
+      @ref typescriptactioninterface_time_limits):
+      - each call of an app's or action's function has a 30-minute limit by default, which
+        @ref TypeScriptActionInterface::TypeScriptActionInterface::setCallTimeout()
+        "TypeScriptActionInterface::setCallTimeout()" or the \c QORE_TYPESCRIPT_CALL_TIMEOUT_SECS environment
+        variable changes and an app's or action's \c io_timeout_secs overrides; a call that never answered waited
+        over 8 hours, and a call run in a \c ts-proxy child process failed after 90 seconds
+      - event functions have no time limit; event sources stopped after just over 8 hours
+      - a new \c ts-proxy child process has 60 seconds to start by default, which
+        @ref TypeScriptActionInterface::JavaScriptProgramProxy::setStartupTimeout()
+        "JavaScriptProgramProxy::setStartupTimeout()" or the \c QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS
+        environment variable changes; a child that never started blocked the action for over 5 hours, and is now
+        terminated
     - added @ref TypeScriptActionInterface::JavaScriptInProcessPool::setWaitObserver()
       "JavaScriptInProcessPool::setWaitObserver()", which reports each thread that has to wait for a program because
       the pool has reached its maximum size

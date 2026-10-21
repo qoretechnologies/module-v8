@@ -5,10 +5,14 @@
 %prepend-module-path "${SCRIPT_DIR}/../qlib"
 
 %requires QUnit
+%requires FsUtil
 %try-module process
 %define MISSING_EXTERNAL_MODULE
 %endtry
 %try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module json
 %define MISSING_EXTERNAL_MODULE
 %endtry
 %ifndef MISSING_EXTERNAL_MODULE
@@ -29,9 +33,6 @@ public class TsProxyTest inherits QUnit::Test {
         */
         const HangGuard = 10m;
 
-        #! the environment variable that sets the time the parent waits for a child's startup message
-        const StartupTimeoutVar = "TS_PROXY_TEST_STARTUP_TIMEOUT_MS";
-
         #! the environment variable that sets the time the parent waits for a command's response
         const ResponseTimeoutVar = "TS_PROXY_TEST_RESPONSE_TIMEOUT_MS";
     }
@@ -46,11 +47,10 @@ public class TsProxyTest inherits QUnit::Test {
         setupLogger();
         checkEnvironment();
         # Every case starts at least one child and sends it commands, and a child that starts or answers slowly is
-        # not a failure; the proxy's default startup (20s) and response (90s) timeouts are production policies
-        # that a loaded test host can exceed.  The startup failure case sets a short startup timeout of its own
-        string hang_guard_ms = string(get_duration_milliseconds(HangGuard));
-        setenv(StartupTimeoutVar, hang_guard_ms);
-        setenv(ResponseTimeoutVar, hang_guard_ms);
+        # not a failure; the proxy's default startup (60s) and response (90s) timeouts are production policies
+        # that a loaded test host can exceed.  The startup and call timeout cases set short limits of their own
+        JavaScriptProgramProxy::setStartupTimeout(HangGuard);
+        setenv(ResponseTimeoutVar, string(get_duration_milliseconds(HangGuard)));
 
         addTestCase("proxy tests", \proxyTests());
         addTestCase("proxy restarts after child exit", \proxyUnexpectedExitTest());
@@ -62,6 +62,8 @@ public class TsProxyTest inherits QUnit::Test {
         addTestCase("proxy restart wait fast paths", \proxyRestartWaitFastPathTest());
         addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
         addTestCase("proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
+        addTestCase("a child that never starts fails at the startup timeout", \proxyStartupTimeoutTest());
+        addTestCase("a call that never answers fails at the call time limit", \proxyCallTimeoutTest());
 
         set_return_value(main());
     }
@@ -561,18 +563,109 @@ public class TsProxyTest inherits QUnit::Test {
         ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = "1";
         on_exit unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP");
         on_exit remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP;
-        # the child fails at startup and exits, which ends the wait; the short timeout only bounds the wait if the
-        # child were to hang instead, and the case passes either way
-        code<nothing()> restore = setenvScoped(StartupTimeoutVar, "1500");
-        on_exit restore();
-
-        bool threw = False;
-        try {
+        # the child fails at startup and exits, which ends the wait
+        *hash<ExceptionInfo> err = callGuarded(sub () {
             JavaScriptProgramProxy proxy();
-        } catch (hash<ExceptionInfo> ex) {
-            threw = True;
+        }, "starting a child that fails at startup");
+        assertEq("CHILD-ERROR", err.err, "startup send error should raise");
+        assertRegex("exited before it started", err.desc, "the error reports that the child exited");
+    }
+
+    private proxyStartupTimeoutTest() {
+        skipIfNotReady();
+        skipIfDebugHooksUnavailable();
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        # the child runs but never connects to its parent
+        code<nothing()> restore_hang = setenvScoped("TS_PROXY_TEST_STARTUP_HANG", "1");
+        on_exit restore_hang();
+        JavaScriptProgramProxy::setStartupTimeout(2s);
+        on_exit JavaScriptProgramProxy::setStartupTimeout(HangGuard);
+
+        *hash<ExceptionInfo> err = callGuarded(sub () {
+            JavaScriptProgramProxy proxy();
+        }, "starting a child that never starts");
+        assertEq("CHILD-ERROR", err.err, "a child that never starts is an error");
+        assertRegex("did not start within the startup timeout \\(<time: 2 seconds>\\)", err.desc,
+            "the configured startup timeout ended the wait");
+    }
+
+    private proxyCallTimeoutTest() {
+        skipIfNotReady();
+
+        # an app with an action whose API function never answers
+        TmpDir fixture("ts-proxy-call-limit-", NOTHING, tmp_location());
+        on_exit delete fixture;
+        string app = "TsProxyCallLimit" + get_random_string(8);
+        string script = fixture.path + DirSep + "call-limit.js";
+        {
+            File f();
+            f.open2(script, O_CREAT | O_EXCL | O_WRONLY, 0600);
+            f.write(sprintf("exports.actionsCatalogue = { registerAppActions(api) {
+    api.registerApp({ name: '%s', display_name: '%s', short_desc: 'Call limit fixture',
+        desc: 'Verifies the call time limit.', groups: ['Other'], logo: 'AA==', logo_file_name: 'test.svg',
+        logo_mime_type: 'image/svg+xml' });
+    api.registerAction({ app: '%s', action: 'never-answers', display_name: 'Never Answers',
+        short_desc: 'Never answers', desc: 'An API function whose promise is never settled.', action_code: 2,
+        api_function: () => new Promise(() => {}) });
+}};
+", app, app, app));
         }
-        assertTrue(threw, "startup send error should raise");
+
+        # The process that sends the call, and its child, load the script and take the call time limit from the
+        # environment when the module is loaded, so the call is made in a new process with that environment.  The
+        # call as the parent sends it has a pool and closure that are only used in the process that runs it
+        hash<auto> env = ENV - ("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT", "QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS");
+        env.QORE_TYPESCRIPT_ACTION_SCRIPTS = script;
+        env{TypeScriptActionInterface::CallTimeoutEnv} = "2";
+        env.PATH = getenv("PATH");
+        string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
+        string code = sprintf("%%modern
+JavaScriptProgramProxy::init(new Mutex());
+on_exit JavaScriptProgramProxy::shutdown();
+JavaScriptProgramProxy::setStartupTimeout(milliseconds(%d));
+JavaScriptProgramProxy proxy();
+int pid = proxy.getInfo().\"proxy-pid\";
+hash<AsyncCallInfo> api = <AsyncCallInfo>{
+    \"key\": \"app-%s-never-answers-api_function\",
+    \"app\": %y,
+    \"action\": \"never-answers\",
+    \"type\": \"api_function\",
+    \"label\": \"API function that never answers\",
+    \"pool\": new JavaScriptProgramPool(\"\", \"unused.js\", sub (JavaScriptProgram pgm) {}),
+    \"async_call\": sub () {},
+};
+# keys are added one by one; a hash literal would narrow the value type to that of its first value
+hash<auto> rv;
+rv.limit = TypeScriptActionInterface::getCallTimeout().durationSeconds();
+try {
+    proxy.getAsyncValue(api);
+} catch (hash<ExceptionInfo> ex) {
+    rv.err = ex.err;
+    rv.desc = ex.desc;
+}
+rv.same_child = proxy.getInfo().\"proxy-pid\" == pid;
+printf(\"RESULT: %%s\\n\", make_json(rv));
+", get_duration_milliseconds(HangGuard), app, app);
+
+        *hash<auto> result;
+        *hash<ExceptionInfo> err = callGuarded(sub () {
+            result = Process::run(Process::getExecutablePath(), ("-b", "--enable-debug", "-l", "v8", "-l",
+                "TypeScriptActionInterface", "-l", "json", "-e", code), {"env": env});
+        }, "a process making a call that never answers");
+        assertNothing(err, "the process ran");
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        # the module also logs to stdout when it loads the script
+        *string json = (result.stdout =~ x/^RESULT: (.*)$/m)[0];
+        assertTrue(exists json, "the process reports the result: " + result.stdout + result.stderr);
+        hash<auto> data = parse_json(json);
+        assertEq(2, data.limit, "the call time limit is taken from QORE_TYPESCRIPT_CALL_TIMEOUT_SECS");
+        assertEq("JAVASCRIPT-ASYNC-ERROR", data.err, "the call fails");
+        assertRegex("timed out after 2000 ms", data.desc, "the child ended the call at the call time limit");
+        assertTrue(data.same_child, "the child ended the call itself and keeps running");
     }
 }
 

@@ -114,7 +114,7 @@ exports.actionsCatalogue = {
                   path options; the key is the request option name, the value is the action option name; the value of
                   the connection option will be used as the value of the given action option in each call where the
                   option is present
-                - io_timeout_secs?: int -> provides the I/O timeout in seconds (NOTE: not yet implemented)
+                - io_timeout_secs?: int -> the time limit in seconds for calls of the REST modifier functions (default: 30)
                 - messages?: UiMessageInfo[] -> an optional list of UI message info hashes that will be shown in the
                   UI when a new connection is created
                 - options?: object -> describes connection options supported by connections for this application; keys
@@ -583,9 +583,10 @@ exports.actionsCatalogue = {
                     "status": "OK",
                 };
             },
-            /** the I/O timeout in seconds for async operations in "api_function" (default if not present: 30)
-
-                @note not yet implemented
+            /** the time limit in seconds for a call of "api_function" and the action's other functions (except
+                an event function, which has no limit); a call that has not completed when the limit is reached
+                fails (default if not present: the module's call time limit, 30 minutes unless set with
+                TypeScriptActionInterface::setCallTimeout() or QORE_TYPESCRIPT_CALL_TIMEOUT_SECS)
             */
             "io_timeout_secs": 30,
 

@@ -71,6 +71,13 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::disableServerOnDemand();
 
         info("Connecting to server at %y with key %y (logdir %y)", opts.socket, pkey, opts.logdir);
+        @debug {
+            # TEST: a child that runs but never starts: it waits until it is terminated
+            if (getenv("TS_PROXY_TEST_STARTUP_HANG")) {
+                Queue never_started();
+                never_started.get();
+            }
+        }
         s.connectUNIX(opts.socket);
         string yaml = makeSend(CC_STARTED, {
             "pkey": pkey,

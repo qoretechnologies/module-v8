@@ -47,8 +47,17 @@ public hashdecl AsyncCallInfo {
     #! Call to make
     code async_call;
 
-    #! Timeout
-    date to;
+    #! Time limit for the call
+    /** If not set, the call time limit of the module applies when the call is made; see
+        @ref TypeScriptActionInterface::TypeScriptActionInterface::setCallTimeout()
+        "TypeScriptActionInterface::setCallTimeout()"
+    */
+    *date to;
+
+    #! True if the call has no time limit
+    /** Event functions have no time limit: they run until their events are stopped
+    */
+    bool unlimited = False;
 
     #! Post-processing of successful call results
     *code post_processing;
@@ -179,6 +188,16 @@ public class TypeScriptActionInterface {
 
         #! Default post_auth I/O timeout in seconds
         const DefaultPostAuthIoTimeoutSecs = 30;
+
+        #! Default time limit for a call of an app's or action's function, such as an action's API function
+        /** @see setCallTimeout()
+        */
+        const DefaultCallTimeout = 30m;
+
+        #! Environment variable that sets the call time limit in seconds when the module is loaded
+        /** @see setCallTimeout()
+        */
+        const CallTimeoutEnv = "QORE_TYPESCRIPT_CALL_TIMEOUT_SECS";
 
         #! Current canonical TypeScript provider-schema boundary version
         const ProviderSchemaVersion = 1;
@@ -371,6 +390,65 @@ public class TypeScriptActionInterface {
 
         #! Optional maximum pool size for on-demand in-process server creation
         static *int in_process_max_size;
+
+        #! Time limit for calls of app and action functions; see setCallTimeout()
+        static date call_timeout = TypeScriptActionInterfacePriv::getEnvTimeout(CallTimeoutEnv, DefaultCallTimeout);
+    }
+
+    #! Sets the time limit for calls of app and action functions
+    /** The limit applies to each call of an app's or action's function, such as an action's API function, a
+        record operation, or a webhook registration, unless the app or action sets its own limit with
+        \c io_timeout_secs.  A call that has not completed when the limit is reached fails with an error.  Event
+        functions have no limit; they run until their events are stopped.
+
+        The limit applies to calls made after it is set, including calls run in \c ts-proxy child processes that
+        are started afterwards.  When the module is loaded, the limit is taken from the
+        \c QORE_TYPESCRIPT_CALL_TIMEOUT_SECS environment variable (a number of seconds) if it is set, and is
+        @ref DefaultCallTimeout (30 minutes) otherwise.
+
+        @param limit the time limit; must be at least one second
+
+        @throw CALL-TIMEOUT-ERROR the limit is less than one second
+
+        @par Example:
+        @code{.py}
+# allow long AI actions up to one hour
+TypeScriptActionInterface::setCallTimeout(1h);
+        @endcode
+    */
+    static setCallTimeout(date limit) {
+        if (limit < 1s) {
+            throw "CALL-TIMEOUT-ERROR", sprintf("the call time limit must be at least one second; got %y", limit);
+        }
+        call_timeout = limit;
+    }
+
+    #! Returns the time limit for calls of app and action functions
+    /** @see setCallTimeout()
+    */
+    static date getCallTimeout() {
+        return call_timeout;
+    }
+
+    #! Returns the time limit of a call of a function of an app or action with the given \c io_timeout_secs value
+    /** @param io_timeout_secs the app's or action's \c io_timeout_secs value, if any
+        @param name the name of the app or action for error messages
+
+        @return the app's or action's own limit, or @ref nothing if it has none, in which case the module's call
+        time limit applies when the call is made
+
+        @throw TYPESCRIPT-ACTION-ERROR \c io_timeout_secs is not a positive number of seconds
+    */
+    private static *date getCallTimeoutFor(auto io_timeout_secs, string name) {
+        if (!exists io_timeout_secs) {
+            return;
+        }
+        if ((io_timeout_secs.typeCode() != NT_INT && io_timeout_secs.typeCode() != NT_FLOAT
+                && io_timeout_secs.typeCode() != NT_NUMBER) || io_timeout_secs < 1) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("%s has an invalid \"io_timeout_secs\" value %y; expecting a "
+                "positive number of seconds", name, io_timeout_secs);
+        }
+        return seconds(io_timeout_secs);
     }
 
     #! Performs static initialization of the module
@@ -1234,10 +1312,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         hash<auto> create_options;
         hash<auto> upsert_options;
 
-        timeout io_timeout;
+        *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(remove app.io_timeout_secs,
+            sprintf("app %y", app.name));
         if (app.get_table_list) {
-            io_timeout = seconds(remove app.io_timeout_secs ?? DefaultIoTimeoutSecs);
-            get_table_list = tryGetAsyncAttribute(\app, "get_table_list", "get table list", pool, io_timeout,
+            get_table_list = tryGetAsyncAttribute(\app, "get_table_list", "get table list", pool, call_timeout,
                 app.name);
         }
         code check_record_based = sub () {
@@ -1251,12 +1329,12 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 %ifdef TransactionManagement
         if (app.begin_transaction) {
             check_record_based();
-            begin_transaction = tryGetAsyncAttribute(\app, "begin_transaction", "begin transaction", pool, io_timeout,
+            begin_transaction = tryGetAsyncAttribute(\app, "begin_transaction", "begin transaction", pool, call_timeout,
                 app.name);
         }
         if (app.commit) {
             check_record_based();
-            commit = tryGetAsyncAttribute(\app, "commit", "commit transaction", pool, io_timeout,
+            commit = tryGetAsyncAttribute(\app, "commit", "commit transaction", pool, call_timeout,
                 app.name);
         } else if (app.begin_transaction) {
             throw "APP-ERROR", sprintf("App %y cannot define 'begin_transaction' without also defining 'commit'",
@@ -1264,7 +1342,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
         if (app.rollback) {
             check_record_based();
-            rollback = tryGetAsyncAttribute(\app, "rollback", "rollback transaction", pool, io_timeout,
+            rollback = tryGetAsyncAttribute(\app, "rollback", "rollback transaction", pool, call_timeout,
                 app.name);
         } else if (app.commit) {
             throw "APP-ERROR", sprintf("App %y cannot define 'commit' without also defining 'rollback'",
@@ -1275,7 +1353,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 %endif
         if (app.get_record_type) {
             check_record_based();
-            get_record_type = tryGetAsyncAttribute(\app, "get_record_type", "get record type", pool, io_timeout,
+            get_record_type = tryGetAsyncAttribute(\app, "get_record_type", "get record type", pool, call_timeout,
                 app.name);
         } else if (get_table_list) {
             throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y is missing its \"get_record_type\" attribute, but this "
@@ -1289,13 +1367,13 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         if (app.search_records) {
             check_record_based();
-            search_records = tryGetAsyncAttribute(\app, "search_records", "search records", pool, io_timeout,
+            search_records = tryGetAsyncAttribute(\app, "search_records", "search records", pool, call_timeout,
                 app.name);
         }
 
         if (app.create_records) {
             check_record_based();
-            create_records = tryGetAsyncAttribute(\app, "create_records", "create records", pool, io_timeout,
+            create_records = tryGetAsyncAttribute(\app, "create_records", "create records", pool, call_timeout,
                 app.name);
 
             if (app.create_options) {
@@ -1308,13 +1386,13 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         if (app.update_records) {
             check_record_based();
-            update_records = tryGetAsyncAttribute(\app, "update_records", "update records", pool, io_timeout,
+            update_records = tryGetAsyncAttribute(\app, "update_records", "update records", pool, call_timeout,
                 app.name);
         }
 
         if (app.upsert_records) {
             check_record_based();
-            upsert_records = tryGetAsyncAttribute(\app, "upsert_records", "upsert records", pool, io_timeout,
+            upsert_records = tryGetAsyncAttribute(\app, "upsert_records", "upsert records", pool, call_timeout,
                 app.name);
 
             if (app.upsert_options) {
@@ -1327,7 +1405,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         if (app.delete_records) {
             check_record_based();
-            delete_records = tryGetAsyncAttribute(\app, "delete_records", "delete records", pool, io_timeout,
+            delete_records = tryGetAsyncAttribute(\app, "delete_records", "delete records", pool, call_timeout,
                 app.name);
         }
 
@@ -2567,7 +2645,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             };
         }
 
-        timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+        *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(remove action.io_timeout_secs,
+            sprintf("app %y action %y", action.app, action.action));
 
         hash<AsyncCallInfo> get_dynamic_type;
         if (exists (auto c = remove action.get_dynamic_type)) {
@@ -2583,7 +2662,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Dynamic option type function for app %y action %y", action.app, action.action),
                 "pool": pool,
                 "async_call": c,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
                 "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
             };
             # NOTE: all calls must be registered
@@ -2594,7 +2673,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
         }
         *hash<AsyncCallInfo> get_example_event_data = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "get_example_event_data", "example event data", pool, io_timeout, action.app, action.action);
+            "get_example_event_data", "example event data", pool, call_timeout, action.app, action.action);
 
         TypeScriptActionEventDataProviderBase child;
 
@@ -2635,7 +2714,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Webhook registration function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": webhook_register_code,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
             };
 
             auto webhook_deregister_code = remove action.webhook_deregister;
@@ -2652,7 +2731,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Webhook deregistration function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": webhook_deregister_code,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
             };
 
             auto webhook_event_loc = remove action.webhook_event_loc;
@@ -2700,7 +2779,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     webhook_assume_json.fullType());
             }
             *hash<AsyncCallInfo> format_event_data = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-                "format_event_data", "format event data", pool, io_timeout, action.app, action.action);
+                "format_event_data", "format event data", pool, call_timeout, action.app, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
             if (format_event_data) {
@@ -2727,7 +2806,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Async event function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": event_function,
-                "to": seconds(io_timeout),
+                # an event function runs until its events are stopped
+                "unlimited": True,
             };
             TypeScriptActionInterface::registerAsyncCall(\event, "app", app.name, action.action);
             child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, get_example_event_data,
@@ -2755,13 +2835,13 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
           conn_update (rest_modifiers.connection_update_option.code)
     */
     private static captureAppClosures(hash<auto> app, JavaScriptProgramPool pool) {
-        timeout io_timeout = seconds(app.io_timeout_secs ?? DefaultIoTimeoutSecs);
         string name = app.name;
+        *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(app.io_timeout_secs, sprintf("app %y", name));
 
         # Extract table/record async attribute closures (direct app attributes)
         foreach string attr in ("get_table_list", "get_record_type", "search_records", "create_records",
                 "update_records", "upsert_records", "delete_records") {
-            tryGetAsyncAttribute(\app, attr, attr, pool, io_timeout, name);
+            tryGetAsyncAttribute(\app, attr, attr, pool, call_timeout, name);
         }
 
         # Extract REST modifier closures from their actual paths in the app hash
@@ -2816,7 +2896,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     private static captureActionClosures(hash<auto> action, JavaScriptProgramPool pool) {
         string app = action.app;
         string act = action.action;
-        timeout io_timeout = seconds(action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+        *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(action.io_timeout_secs,
+            sprintf("app %y action %y", app, act));
 
         # API-level closures directly registered (matching key generation in generateApiDataProvider)
         if (action.api_function.callp()) {
@@ -2827,7 +2908,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("clone: API function for app %y action %y", app, act),
                 "pool": pool,
                 "async_call": action.api_function,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act);
         }
@@ -2843,7 +2924,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "label": sprintf("clone: %s for app %y action %y", attr, app, act),
                     "pool": pool,
                     "async_call": action{attr},
-                    "to": seconds(io_timeout),
+                    "to": call_timeout,
                 };
                 TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act, attr);
             }
@@ -2851,7 +2932,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
 
         # Event-related closures (registered via tryGetAsyncAttribute or direct; type = attribute name)
         foreach string attr in ("get_dynamic_type", "get_example_event_data", "format_event_data") {
-            tryGetAsyncAttribute(\action, attr, attr, pool, io_timeout, app, act);
+            tryGetAsyncAttribute(\action, attr, attr, pool, call_timeout, app, act);
         }
 
         # Event function (type = "event_function")
@@ -2863,7 +2944,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("clone: event function for app %y action %y", app, act),
                 "pool": pool,
                 "async_call": action.event_function,
-                "to": seconds(io_timeout),
+                # an event function runs until its events are stopped
+                "unlimited": True,
             };
             TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act);
         }
@@ -2878,7 +2960,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "label": sprintf("clone: %s for app %y action %y", attr, app, act),
                     "pool": pool,
                     "async_call": action{attr},
-                    "to": seconds(io_timeout),
+                    "to": call_timeout,
                 };
                 TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act);
             }
@@ -2902,7 +2984,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                                 opt_attr, app, act, i.key),
                             "pool": pool,
                             "async_call": i.value{opt_attr},
-                            "to": seconds(io_timeout),
+                            "to": call_timeout,
                         };
                         TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act, i.key);
                     }
@@ -2919,7 +3001,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                                 dep_attr, app, act, i.key),
                             "pool": pool,
                             "async_call": i.value{dep_attr},
-                            "to": seconds(io_timeout),
+                            "to": call_timeout,
                         };
                         TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act, i.key);
                     }
@@ -2929,7 +3011,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     static *hash<AsyncCallInfo> tryGetAsyncAttribute(reference<hash<auto>> h, string key, string type,
-            JavaScriptProgramPool pool, timeout io_timeout, string app, *string action, *string option) {
+            JavaScriptProgramPool pool, *date call_timeout, string app, *string action, *string option) {
         auto callable = remove h{key};
         if (!(exists callable)) {
             return;
@@ -2954,7 +3036,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             "label": sprintf("%s %s function", get_desc(), type),
             "pool": pool,
             "async_call": callable,
-            "to": seconds(io_timeout),
+            "to": call_timeout,
         };
         if (action) {
             rv.action = action;
@@ -3011,7 +3093,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "invalid \"api_function\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, api_function.fullType());
             }
-            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(remove action.io_timeout_secs,
+                sprintf("app %y action %y", action.app, action.action));
             if (api_function) {
                 api = <AsyncCallInfo>{
                     "app": app.name,
@@ -3020,7 +3103,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "label": sprintf("API function for app %y action %y", app.name, action.action),
                     "pool": pool,
                     "async_call": api_function,
-                    "to": seconds(io_timeout),
+                    "to": call_timeout,
                 };
                 TypeScriptActionInterface::registerAsyncCall(\api, "app", app.name, action.action);
             }
@@ -3032,7 +3115,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "\"get_dynamic_request_type\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, js_api.fullType());
             }
-            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(remove action.io_timeout_secs,
+                sprintf("app %y action %y", action.app, action.action));
             get_dynamic_request_type = <AsyncCallInfo>{
                 "app": app.name,
                 "action": action.action,
@@ -3040,7 +3124,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Request type function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": js_api,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\get_dynamic_request_type, "app", app.name, action.action,
                 "get_dynamic_request_type");
@@ -3052,7 +3136,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "\"get_dynamic_response_type\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, js_api.fullType());
             }
-            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(remove action.io_timeout_secs,
+                sprintf("app %y action %y", action.app, action.action));
             get_dynamic_response_type = <AsyncCallInfo>{
                 "app": app.name,
                 "action": action.action,
@@ -3060,7 +3145,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Response type function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": js_api,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\get_dynamic_response_type, "app", app.name, action.action,
                 "get_dynamic_response_type");
@@ -3071,7 +3156,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"request_data_converter\" "
                     "attribute; got type %y; expecting a callable value", action.app, action.action, js_api.fullType());
             }
-            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(remove action.io_timeout_secs,
+                sprintf("app %y action %y", action.app, action.action));
             request_data_converter = <AsyncCallInfo>{
                 "app": app.name,
                 "action": action.action,
@@ -3079,7 +3165,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Request type function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": js_api,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\request_data_converter, "app", app.name, action.action,
                 "request_data_converter");
@@ -3090,7 +3176,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_data_converter\" "
                     "attribute; got type %y; expecting a callable value", action.app, action.action, js_api.fullType());
             }
-            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            *date call_timeout = TypeScriptActionInterface::getCallTimeoutFor(remove action.io_timeout_secs,
+                sprintf("app %y action %y", action.app, action.action));
             response_data_converter = <AsyncCallInfo>{
                 "app": app.name,
                 "action": action.action,
@@ -3098,7 +3185,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "label": sprintf("Request type function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": js_api,
-                "to": seconds(io_timeout),
+                "to": call_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\response_data_converter, "app", app.name, action.action,
                 "response_data_converter");

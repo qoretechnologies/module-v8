@@ -280,10 +280,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         string errloc;
         if (v instanceof JavaScriptPromise) {
             JavaScriptProgram js = v.getProgram();
-            code run = js.getGlobal().runWithTimeout.toData();
-            int ms = api.to.durationMilliseconds();
-            TSAI::debug("%y: running Promise with async timeout: %dms", api.label, ms);
-            v = run(v, ms);
+            # an unlimited call (an event function) runs until its events are stopped
+            if (!api.unlimited) {
+                code run = js.getGlobal().runWithTimeout.toData();
+                int ms = (api.to ?? TypeScriptActionInterface::getCallTimeout()).durationMilliseconds();
+                TSAI::debug("%y: running Promise with async timeout: %dms", api.label, ms);
+                v = run(v, ms);
+            }
             Queue q();
             code push_val = sub (string w, auto v) {
                 if (w == "rejected" || (v.name && v.message && v.stack)) {

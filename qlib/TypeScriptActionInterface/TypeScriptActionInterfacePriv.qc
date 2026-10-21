@@ -68,7 +68,8 @@ async function runWithTimeout(promise, delay) {
   // timeout variable to cancel the timeout in case the async function is faster
   let timeout;
   // get a promise to a cancelable timeout
-  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out after ' +
+    delay + ' ms (the call time limit)')), delay)));
   // run the promise and cancel the timeout
   return Promise.race([
     promise,
@@ -82,6 +83,22 @@ function setenv(vr, value) {
   process.env[vr] = value;
 }
 ";
+    }
+
+    #! Returns the time limit set in seconds in the given environment variable, or the default
+    /** An invalid value is reported on stderr and the default is used, so that the module can still be loaded
+    */
+    static date getEnvTimeout(string var, date default_limit) {
+        *string secs = getenv(var);
+        if (!secs.val()) {
+            return default_limit;
+        }
+        if (secs !~ /^[0-9]+$/ || secs.toInt() < 1) {
+            stderr.printf("TypeScriptActionInterface: ignoring %s=%y: expecting a positive number of seconds; "
+                "using the default (%y)\n", var, secs, default_limit);
+            return default_limit;
+        }
+        return seconds(secs.toInt());
     }
 
     static init() {

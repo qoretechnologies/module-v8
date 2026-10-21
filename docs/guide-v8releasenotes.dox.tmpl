@@ -12,6 +12,16 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - the time limits of TypeScript app calls and of \c ts-proxy child process startup take effect as documented:
+      each call of an app's or action's function (such as an API, record or webhook function) fails after 30
+      minutes by default, so long API and AI actions can complete, while a call that never answers no longer
+      waits over 8 hours; change the limit with \c TypeScriptActionInterface::setCallTimeout() or the
+      \c QORE_TYPESCRIPT_CALL_TIMEOUT_SECS environment variable (a number of seconds), and an app or action can
+      set its own with \c io_timeout_secs.  Calls run in \c ts-proxy child processes get the same limit instead of
+      failing after 90 seconds.  Event functions have no limit; event sources no longer stop after just over 8
+      hours.  A new \c ts-proxy child process has 60 seconds to start by default (it had over 5 hours) and is
+      terminated if it has not started by then; change this with \c JavaScriptProgramProxy::setStartupTimeout()
+      or the \c QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS environment variable
     - \c qore-app-schemas and \c qore-hubspot-schemas exit with the new status 69 when a schema source cannot be
       reached or does not answer (the connection failed or closed before the response was complete, no complete
       response arrived within 30 seconds, or the source answered HTTP 408, 429 or 5xx); the message names the URL, the

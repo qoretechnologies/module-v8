@@ -20,10 +20,20 @@ manage event listeners without blocking core worker threads.
 
 ### Command Flow
 1) Parent starts the child (`ts-proxy`) and waits for a `CC_STARTED` message on
-   the command queue.
+   the command queue, for at most the startup timeout
+   (`JavaScriptProgramProxy::setStartupTimeout()`, `QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS`, 60s by
+   default). A child that exits first fails the start at once; a child that has not started in time is
+   terminated. The child's environment carries the parent's call time limit in
+   `QORE_TYPESCRIPT_CALL_TIMEOUT_SECS`, so the child applies it to the calls it runs.
 2) Parent sends commands with `sendCommandArgs()`:
    - `CALL`, `SETUP-EVENT`, `GET-DYNAMIC-OPTIONS`, etc.
-3) Child executes and replies with `CC_OK` or `CC_ERR`.
+3) Child executes and replies with `CC_OK` or `CC_ERR`. A `CALL` is run with its
+   time limit (the action's `io_timeout_secs`, or the module's call time limit),
+   and the child reports a call that exceeds it. The parent waits for the limit
+   plus `DefaultRequestTimeout` (90s); a child that has not answered by then is
+   terminated, because its late answer would be read as the answer to the next
+   command, and the next command starts a new child. Other commands wait
+   `DefaultRequestTimeout`.
 4) Parent validates responses and propagates errors.
 
 ## Event Listener Flow
@@ -58,10 +68,18 @@ Debug builds add `@debug()` logs and `@assert()` checks around the restart path,
 which are enabled with `qore -G`.
 
 ## Testing Hooks
+The hooks are environment variables read with `getenv()` in debug mode
+(`--enable-debug`); the `ENV` hash does not see `setenv()`.
+
 `TS_PROXY_TEST_FORCE_RESTART_ERROR` is a test-only environment variable used to
 force `restartProcessIntern()` to throw. It is used by `test/ts-proxy.qtest` to
 validate that restart failures do not deadlock callers and that errors are
 propagated correctly.
+
+`TS_PROXY_TEST_STARTUP_HANG` makes the child wait, without connecting, until it
+is terminated: a child that never starts, for the startup timeout test.
+`TS_PROXY_TEST_RESPONSE_TIMEOUT_MS` sets the time the parent waits for any
+command's answer.
 
 `TS_PROXY_TEST_FORCE_SEND_ERROR` forces the next parent socket send to fail
 after startup, simulating EPIPE/SOCKET-CLOSED behavior when responding to a

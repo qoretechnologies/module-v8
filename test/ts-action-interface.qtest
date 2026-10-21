@@ -59,6 +59,8 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("webhook format_event_data filter", \webhookFormatEventDataFilterTest());
         addTestCase("webhook format_event_data exception", \webhookFormatEventDataExceptionTest());
         addTestCase("pool", \poolTest());
+        addTestCase("call time limit", \callTimeLimitTest());
+        addTestCase("time limit settings", \timeLimitSettingsTest());
         addTestCase("sanity", \sanityTest());
         addTestCase("js", \jsTest());
         addTestCase("test API", \testApi());
@@ -678,6 +680,165 @@ async function runWithTimeout(promise, delay) {
         # The dynamic object's child is optional; an empty object still reaches authentication.
         assertThrows("JAVASCRIPT-EXCEPTION", "authorization_code", run,
             (TypeScriptActionInterface::TestApi, {"body": pet, "new0": {"new1": {}}}));
+    }
+
+    public {
+        #! JavaScript that the programs of the call time limit test run before their app definitions
+        const RunWithTimeoutSource = "var exports = {};
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+  let timeout;
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out after ' +
+    delay + ' ms')), delay)));
+  return await Promise.race([promise, top]).finally(() => {
+    if (timeout) clearTimeout(timeout);
+  });
+}
+";
+    }
+
+    #! Runs the call in a background thread and returns the exception it raised, if any, when it returns
+    /** The wait ends when the call returns; WaitableList::HangGuard only turns a call that never returns into a
+        failure instead of a test that never ends
+    */
+    private *hash<ExceptionInfo> callGuarded(code<nothing()> call, string what) {
+        WaitableList result();
+        background sub () {
+            *hash<ExceptionInfo> err;
+            try {
+                call();
+            } catch (hash<ExceptionInfo> ex) {
+                err = ex;
+            }
+            result.add(err);
+        }();
+        return result.waitFor(1, what)[0];
+    }
+
+    #! A call of an action's function fails at its time limit: the module's limit, or the action's own
+    private callTimeLimitTest() {
+        string app = "CallLimitApp" + get_random_string(8);
+        JavaScriptProgramPool pool(RunWithTimeoutSource + sprintf("exports.actionsCatalogue = {
+    registerAppActions(api) {
+        api.registerApp({ name: '%s', display_name: 'Call Limit', short_desc: 'Call limit fixture',
+            desc: 'Verifies the call time limit.', groups: ['Other'], logo: 'AA==', logo_file_name: 'test.svg',
+            logo_mime_type: 'image/svg+xml' });
+        api.registerAction({ app: '%s', action: 'answers', display_name: 'Answers', short_desc: 'Answers',
+            desc: 'An API function that answers at once.', action_code: 2, api_function: () => 1 });
+        api.registerAction({ app: '%s', action: 'never-answers', display_name: 'Never Answers',
+            short_desc: 'Never answers', desc: 'An API function whose promise is never settled.', action_code: 2,
+            api_function: () => new Promise(() => {}) });
+        api.registerAction({ app: '%s', action: 'own-limit', display_name: 'Own Limit', short_desc: 'Own limit',
+            desc: 'An API function with its own time limit that never answers.', action_code: 2,
+            io_timeout_secs: 1, api_function: () => new Promise(() => {}) });
+    }
+};
+", app, app, app, app), "call-limit.js", sub (JavaScriptProgram pgm) {
+            pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+        });
+
+        date old_limit = TypeScriptActionInterface::getCallTimeout();
+        on_exit TypeScriptActionInterface::setCallTimeout(old_limit);
+        assertThrows("CALL-TIMEOUT-ERROR", \TypeScriptActionInterface::setCallTimeout(), 0s);
+        TypeScriptActionInterface::setCallTimeout(2s);
+        assertEq(2s, TypeScriptActionInterface::getCallTimeout());
+
+        AbstractDataProvider root = TypeScriptActionInterface::getAppDataProvider(app);
+        AbstractDataProvider answers = root.getChildProviderEx("answers");
+        AbstractDataProvider never_answers = root.getChildProviderEx("never-answers");
+        AbstractDataProvider own_limit = root.getChildProviderEx("own-limit");
+
+        # a call that answers within the limit is not affected
+        assertEq(1, answers.doRequest());
+
+        # a call that never answers fails when the module's call time limit is reached
+        *hash<ExceptionInfo> err = callGuarded(sub () { never_answers.doRequest(); }, "a call that never answers");
+        assertEq("JAVASCRIPT-ASYNC-ERROR", err.err, "the call fails");
+        assertRegex("timed out after 2000 ms", err.desc, "the module's call time limit ended the call");
+
+        # an action's own limit (io_timeout_secs) applies instead of the module's
+        TypeScriptActionInterface::setCallTimeout(WaitableList::HangGuard);
+        err = callGuarded(sub () { own_limit.doRequest(); }, "a call with its own limit that never answers");
+        assertEq("JAVASCRIPT-ASYNC-ERROR", err.err, "the call with its own limit fails");
+        assertRegex("timed out after 1000 ms", err.desc, "the action's own limit ended the call");
+
+        # the limits as registered: none of its own, so the module's applies when the call is made, or its own
+        assertNothing(TypeScriptActionInterface::getCall(sprintf("app-%s-never-answers-api_function", app)).to);
+        assertEq(1s, TypeScriptActionInterface::getCall(sprintf("app-%s-own-limit-api_function", app)).to);
+
+        # an event function runs until its events are stopped, so it has no limit
+        TypeScriptAppRestConnection conn({
+            "name": "test",
+            "url": "tsrest-js-openapi-test://",
+            "opts": {"subdomain": "test", "token": "x"},
+        });
+        AbstractDataProvider event_prov = TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
+            .getChildProviderEx("js-event-1");
+        assertTrue(event_prov.supportsObservable());
+        hash<AsyncCallInfo> event = TypeScriptActionInterface::getCall("app-js-openapi-test-js-event-1-event_function");
+        assertTrue(event.unlimited, "an event function has no time limit");
+        assertNothing(event.to);
+    }
+
+    #! The time limit settings are taken from the environment when the module is loaded, and are validated
+    private timeLimitSettingsTest() {
+        # an action's own limit must be a positive number of seconds
+        string app = "BadLimitApp" + get_random_string(8);
+        assertThrows("TYPESCRIPT-ACTION-ERROR", "io_timeout_secs", sub () {
+            JavaScriptProgramPool pool(RunWithTimeoutSource + sprintf("exports.actionsCatalogue = {
+    registerAppActions(api) {
+        api.registerApp({ name: '%s', display_name: 'Bad Limit', short_desc: 'Bad limit fixture',
+            desc: 'Verifies io_timeout_secs validation.', groups: ['Other'], logo: 'AA==',
+            logo_file_name: 'test.svg', logo_mime_type: 'image/svg+xml' });
+        api.registerAction({ app: '%s', action: 'bad-limit', display_name: 'Bad Limit', short_desc: 'Bad limit',
+            desc: 'An API function with an invalid time limit.', action_code: 2, io_timeout_secs: 0,
+            api_function: () => 1 });
+    }
+};
+", app, app), "bad-limit.js", sub (JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            });
+            AbstractDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
+                .getChildProviderEx("bad-limit");
+        });
+
+        assertThrows("STARTUP-TIMEOUT-ERROR", \JavaScriptProgramProxy::setStartupTimeout(), 999ms);
+
+        # the environment variables set the limits when the module is loaded; an invalid value is reported and the
+        # default applies
+        string code = "%modern
+printf(\"%d %d\\n\", TypeScriptActionInterface::getCallTimeout().durationSeconds(),
+    JavaScriptProgramProxy::getStartupTimeout().durationSeconds());
+";
+        string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        hash<auto> env = ENV - ("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT", "QORE_TYPESCRIPT_ACTION_SCRIPTS",
+            "QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS");
+        env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
+        list<auto> args = ("-b", "-l", "v8", "-l", "TypeScriptActionInterface", "-e", code);
+
+        hash<auto> limit_env = env;
+        limit_env{TypeScriptActionInterface::CallTimeoutEnv} = "7";
+        limit_env{JavaScriptProgramProxy::StartupTimeoutEnv} = "9";
+        hash<auto> result = Process::run(Process::getExecutablePath(), args, {"env": limit_env});
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        assertEq("7 9\n", result.stdout, "the limits are taken from the environment");
+
+        limit_env{TypeScriptActionInterface::CallTimeoutEnv} = "soon";
+        limit_env{JavaScriptProgramProxy::StartupTimeoutEnv} = "0";
+        result = Process::run(Process::getExecutablePath(), args, {"env": limit_env});
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        assertEq(sprintf("%d %d\n", get_duration_seconds(TypeScriptActionInterface::DefaultCallTimeout),
+            get_duration_seconds(JavaScriptProgramProxy::DefaultStartupTimeout)), result.stdout,
+            "invalid values give the defaults");
+        assertRegex("ignoring QORE_TYPESCRIPT_CALL_TIMEOUT_SECS=\"soon\"", result.stderr,
+            "an invalid call time limit is reported");
+        assertRegex("ignoring QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS=\"0\"", result.stderr,
+            "an invalid startup timeout is reported");
     }
 
     private poolTest() {

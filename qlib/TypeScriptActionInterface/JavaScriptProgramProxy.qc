@@ -39,6 +39,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Default proxy request timeout
         const DefaultRequestTimeout = 90s;
 
+        #! Default time a new \c ts-proxy child process has to start; see setStartupTimeout()
+        const DefaultStartupTimeout = 60s;
+
+        #! Environment variable that sets the startup timeout in seconds when the module is loaded
+        /** @see setStartupTimeout()
+        */
+        const StartupTimeoutEnv = "QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS";
+
         #! Event source info
         hash<EventSourceInfo> event;
 
@@ -103,6 +111,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Semaphore descriptor info for the event listener thread
         hash<SocketPollInfo> es_sem_info;
+
+        #! Time a new child process has to start; see setStartupTimeout()
+        static date startup_timeout = TypeScriptActionInterfacePriv::getEnvTimeout(StartupTimeoutEnv,
+            DefaultStartupTimeout);
 
         #! Master UNIX socket file path
         static string master_path;
@@ -248,6 +260,36 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     static init(Mutex m) {
         JavaScriptProgramProxy::global_lock = m;
+    }
+
+    #! Sets the time a new \c ts-proxy child process has to start
+    /** A child process has started when it has connected to its parent; a child that has not started within this
+        time is terminated, and starting it fails with \c CHILD-ERROR.  When the module is loaded, the timeout is
+        taken from the \c QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS environment variable (a number of seconds)
+        if it is set, and is @ref DefaultStartupTimeout (60 seconds) otherwise.
+
+        @param limit the startup timeout; must be at least one second
+
+        @throw STARTUP-TIMEOUT-ERROR the timeout is less than one second
+
+        @par Example:
+        @code{.py}
+# allow child processes two minutes to start on a heavily loaded host
+JavaScriptProgramProxy::setStartupTimeout(2m);
+        @endcode
+    */
+    static setStartupTimeout(date limit) {
+        if (limit < 1s) {
+            throw "STARTUP-TIMEOUT-ERROR", sprintf("the startup timeout must be at least one second; got %y", limit);
+        }
+        startup_timeout = limit;
+    }
+
+    #! Returns the time a new \c ts-proxy child process has to start
+    /** @see setStartupTimeout()
+    */
+    static date getStartupTimeout() {
+        return startup_timeout;
     }
 
     static shutdown() {
@@ -677,7 +719,23 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (argv) {
             args += argv;
         }
-        auto rv = sendCommandArgs(api.to, PC_CALL, args);
+        # the child applies the call's time limit itself and reports a call that exceeds it, so the parent waits
+        # longer, by the time it allows any other command, to detect a child that does not answer at all.  Event
+        # functions, which have no limit, are never sent this way; they are started with PC_SETUP_EVENT
+        date limit = api.to ?? TypeScriptActionInterface::getCallTimeout();
+        auto rv;
+        try {
+            rv = sendCommandArgs(limit, PC_CALL, args, limit + DefaultRequestTimeout);
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err == "SOCKET-TIMEOUT" && proc.running()) {
+                # the child did not answer, and an answer it sent later would be read as the answer to the next
+                # command; terminate it, so that the next command starts a new child
+                error("Child PID %d did not answer call %y within %y; terminating it", proc.id(), api.label,
+                    limit + DefaultRequestTimeout);
+                proc.terminate();
+            }
+            rethrow;
+        }
         debug("getAsyncValue(%y): %y", LoggerUtil::getArgSummary(argv), LoggerUtil::getArgSummary(rv));
         return rv;
     }
@@ -844,7 +902,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         hash<auto> env = ENV + {
             "TS_PROXY_PROCESS_KEY": uh,
         };
-        timeout startup_timeout = 20s;
+        # the child applies the same time limit to the calls it runs; it takes whole seconds
+        env{TypeScriptActionInterface::CallTimeoutEnv} =
+            string((TypeScriptActionInterface::getCallTimeout().durationMilliseconds() + 999) / 1000);
+        date startup_limit = getStartupTimeout();
         @debug {
             *string send_error = getenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
             if (send_error.val()) {
@@ -854,16 +915,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             if (start_send_error && start_send_error.val()) {
                 env.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = start_send_error;
             }
-            *string startup_timeout_ms = getenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS");
-            if (startup_timeout_ms && startup_timeout_ms.val()) {
-                try {
-                    int ms = startup_timeout_ms.toInt();
-                    if (ms > 0) {
-                        startup_timeout = ms * 1ms;
-                    }
-                } catch (hash<ExceptionInfo> ex) {
-                    # ignore invalid value
-                }
+            # TEST: the child runs but never sends its startup message
+            *string start_hang = getenv("TS_PROXY_TEST_STARTUP_HANG");
+            if (start_hang && start_hang.val()) {
+                env.TS_PROXY_TEST_STARTUP_HANG = start_hang;
             }
         }
         string cmd = "ts-proxy";
@@ -897,10 +952,17 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     if (ex.err != "QUEUE-TIMEOUT") {
                         rethrow;
                     }
+                    if (!proc.running()) {
+                        rethrow "CHILD-ERROR", sprintf("The child process exited before it started, after %y",
+                            now_us() - start);
+                    }
                     date d = now_us() - start;
-                    if (d >= startup_timeout || !proc.running()) {
-                        rethrow "CHILD-ERROR", sprintf("Timeout (%y) waiting for startup message from child "
-                            "process: %s", d, get_exception_string(ex));
+                    if (d >= startup_limit) {
+                        # do not leave a child that never started running
+                        proc.terminate();
+                        logChildOutput(True);
+                        rethrow "CHILD-ERROR", sprintf("The child process did not start within the startup "
+                            "timeout (%y); see JavaScriptProgramProxy::setStartupTimeout()", startup_limit);
                     }
                 }
             }
