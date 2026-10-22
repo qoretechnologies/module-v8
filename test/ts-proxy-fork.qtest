@@ -1,0 +1,221 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires QUnit
+%requires Util
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module json
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%requires v8
+
+%exec-class TsProxyForkTest
+
+#! Tests TypeScript proxies in child processes created with fork()
+/** A child process created with fork() has none of the parent's threads.  When the script of a child of a process
+    with a TypeScript proxy ended, the proxy's destructor stopped the parent's \c ts-proxy child process, and the last
+    one shut the parent's master socket down, removed its file and waited forever for the parent's master listener
+    thread; a proxy used in the child sent its commands on the parent's connection, and a proxy created in the child
+    used the parent's master listener, which ignored the child's \c ts-proxy process.  Each case runs a script that
+    creates a proxy and forks; the script waits for the child's PID and prints the child's exit code, and then checks
+    that its own proxy still uses the same \c ts-proxy process and that its master listener still starts new ones.
+*/
+class TsProxyForkTest inherits Test {
+    public {
+        #! only turns a child that never exits into a failure; no case waits for a time to pass
+        const HangGuard = 10m;
+
+        #! the script; its argument is the name of the case
+        const Script = "%%modern
+%%requires process
+%%requires Logger
+%%requires TypeScriptActionInterface
+%%requires v8
+
+# in milliseconds
+const HangGuard = %d;
+
+string mode = ARGV[0];
+Logger logger(\"null\", LoggerLevel::getLevelFatal());
+logger.addAppender(new LoggerAppenderNull());
+DataProvider::setGlobalLogger(logger);
+JavaScriptProgramProxy::init(new Mutex());
+JavaScriptProgramProxy::setStartupTimeout(milliseconds(HangGuard));
+
+# returns the error that the ts-proxy process of the proxy answers a command with: it knows no such app
+string sub command(JavaScriptProgramProxy p) {
+    try {
+        p.getDynamicOptions(\"no-such-app\", \"no-such-action\", NOTHING, NOTHING, NOTHING);
+        return \"no error\";
+    } catch (hash<ExceptionInfo> ex) {
+        return ex.err;
+    }
+}
+
+our JavaScriptProgramProxy proxy();
+int proxy_pid = proxy.getInfo().\"proxy-pid\";
+string answer = command(proxy);
+
+int pid = fork();
+if (!pid) {
+    switch (mode) {
+        case \"delete\":
+            delete proxy;
+            exit(0);
+
+        case \"shutdown\":
+            JavaScriptProgramProxy::shutdown();
+            exit(0);
+
+        case \"use\":
+            # the proxy of the parent cannot be used
+            printf(\"child use: %%s\\n\", command(proxy));
+            flush();
+            exit(0);
+
+        case \"new\": {
+            # a proxy created in the child starts its own master listener
+            JavaScriptProgramProxy p2();
+            printf(\"child new: %%s\\n\", command(p2) == answer ? \"OK\" : \"failed\");
+            flush();
+            # stops the proxy of the child and the child's master listener
+            JavaScriptProgramProxy::shutdown();
+            break;
+        }
+    }
+    # \"end\", \"new\": the script of the child ends, which destroys its proxies
+    return;
+}
+
+Process p(pid);
+p.detach();
+if (!p.wait(HangGuard)) {
+    kill(pid, SIGKILL);
+    printf(\"child: did not exit\\n\");
+    exit(2);
+}
+printf(\"child: %%d\\n\", p.exitCode());
+# the proxy of the parent still uses the same ts-proxy process, which still answers
+printf(\"parent proxy: %%s\\n\", proxy.getInfo().\"proxy-pid\" == proxy_pid && command(proxy) == answer ? \"OK\"
+    : \"changed\");
+# the master listener of the parent still starts new ts-proxy processes
+JavaScriptProgramProxy p3();
+printf(\"parent new: %%s\\n\", command(p3) == answer ? \"OK\" : \"failed\");
+JavaScriptProgramProxy::shutdown();
+";
+    }
+
+    private {
+        #! the interpreter running this test, used to launch the scripts
+        string qore_exe;
+        #! the script file
+        string script;
+        #! the environment of the scripts
+        hash<auto> env;
+        #! why the cases are skipped
+        *string skip_reason;
+    }
+
+    constructor() : Test("ts-proxy fork test", "1.0") {
+        qore_exe = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY ?? QORE_ARGV[0];
+        script = tmp_location() + DirSep + sprintf("ts-proxy-fork-%d.q", getpid());
+        checkEnvironment();
+
+        addTestCase("a child whose script ends ends, and the parent's proxy still works", \childEnd());
+        addTestCase("a child that destroys the parent's proxy ends", \childDelete());
+        addTestCase("a child that shuts the proxies down ends", \childShutdown());
+        addTestCase("a child cannot use the parent's proxy", \childUse());
+        addTestCase("a child starts its own master listener", \childNew());
+
+        on_exit unlink(script);
+        {
+            File f();
+            f.open2(script, O_CREAT | O_TRUNC | O_WRONLY);
+            f.write(sprintf(Script, get_duration_milliseconds(HangGuard)));
+        }
+        set_return_value(main());
+    }
+
+    childEnd() {
+        runChild("end");
+    }
+
+    childDelete() {
+        runChild("delete");
+    }
+
+    childShutdown() {
+        runChild("shutdown");
+    }
+
+    childUse() {
+        runChild("use", "child use: TS-PROXY-ERROR\n");
+    }
+
+    childNew() {
+        runChild("new", "child new: OK\n");
+    }
+
+    private checkEnvironment() {
+%ifdef MISSING_EXTERNAL_MODULE
+        skip_reason = "the process, uuid or json module is missing";
+%else
+        string local_bin = sprintf("%s/../bin", get_script_dir());
+        string path = getenv("PATH") ?? "";
+        if (hstat(local_bin)) {
+            path = local_bin + ":" + path;
+        }
+        if (!(select path.split(":"), $1.val() && is_executable($1 + DirSep + "ts-proxy"))) {
+            skip_reason = "the ts-proxy program cannot be found";
+            return;
+        }
+        # the scripts load the TypeScript modules of this tree
+        string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        env = JavaScriptProgram::getEnvironment() + {
+            "PATH": path,
+            "QORE_MODULE_DIR": module_dir + ":" + (getenv("QORE_MODULE_DIR") ?? ""),
+        };
+%endif
+    }
+
+    #! runs the script for the given case and checks that the child ended and the parent's proxy still works
+    private runChild(string mode, string child_out = "") {
+%ifdef MISSING_EXTERNAL_MODULE
+        testSkip(skip_reason);
+%else
+        if (skip_reason) {
+            testSkip(skip_reason);
+        }
+        Process p(qore_exe, ("-b", script, mode), {"env": env});
+        # the script waits for its child for HangGuard
+        if (!p.wait(2 * HangGuard)) {
+            p.terminate();
+            p.wait();
+            fail(sprintf("%s: the script did not exit", mode));
+        }
+        string all = "";
+        while (*string str = p.readStdout(4096)) {
+            all += str;
+        }
+        # the result lines of the script; the TypeScript action interface can log other lines to stdout
+        string out = (map $1 + "\n", all.split("\n"), $1 =~ /^(child|parent)[ :]/).join("");
+        string err = "";
+        while (*string str = p.readStderr(4096)) {
+            err += str;
+        }
+        assertEq(child_out + "child: 0\nparent proxy: OK\nparent new: OK\n", out,
+            sprintf("%s; stdout: %s; stderr: %s", mode, all, err));
+        assertEq(0, p.exitCode(), mode);
+%endif
+    }
+}

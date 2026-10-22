@@ -25,6 +25,11 @@
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
 #! JavaScript program proxy class
+/** A proxy belongs to the process that created it: in a child process created with \c fork(), the \c ts-proxy
+    process, the listener threads and the sockets of a proxy made in the parent belong to the parent.  Destroying such
+    a proxy in the child stops nothing of the parent, and using it raises \c TS-PROXY-ERROR; a proxy created in the
+    child starts its own master listener
+*/
 public class JavaScriptProgramProxy inherits TypeScriptProxy {
     public {
         #! Process name
@@ -55,6 +60,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private {
+        #! The process that created the object; see inheritedByFork()
+        int owner_pid = getpid();
+
         # Child process object
         Process proc;
 
@@ -142,6 +150,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Master listener stop flag
         static bool master_listener_stop;
 
+        #! The process that started the master listener; see abandonInheritedMaster()
+        static int master_pid;
+
         #! File to signal the master listener thread
         static File sem_write;
 
@@ -176,6 +187,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     destructor() {
+        if (inheritedByFork()) {
+            abandonInForkedChild();
+            return;
+        }
         {
             m.lock();
             on_exit m.unlock();
@@ -230,6 +245,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     static stopMasterListener() {
+        if (master_pid != getpid()) {
+            abandonInheritedMaster();
+            return;
+        }
         master_listener_stop = True;
         try {
             sem_write.write(".");
@@ -293,6 +312,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     static shutdown() {
+        if (master_pid && master_pid != getpid()) {
+            # the lock is not acquired in a child process created with fork(): a thread of the parent could have
+            # held it when the process was copied
+            abandonInheritedMaster();
+            return;
+        }
         global_lock.lock();
         on_exit global_lock.unlock();
 
@@ -827,6 +852,69 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
+    #! Returns True if the object was made in a parent of this process, which was created with fork()
+    /** The \c ts-proxy child process, the listener threads and the sockets of such an object belong to the parent:
+        the child process of the parent has none of the parent's threads, and the protocol streams and the child
+        process are the parent's
+    */
+    private bool inheritedByFork() {
+        return owner_pid != getpid();
+    }
+
+    #! Throws an exception if the object was made in a parent of this process, which was created with fork()
+    /** Commands sent by this process would be mixed with the commands of the parent on the parent's connection to
+        its \c ts-proxy child process
+
+        @throw TS-PROXY-ERROR the object was made in a parent of this process
+    */
+    private checkNotInherited() {
+        if (inheritedByFork()) {
+            throw "TS-PROXY-ERROR", sprintf("this TypeScript proxy was made by the parent process (PID %d) and cannot "
+                "be used in a child process created with fork() (PID %d)", owner_pid, getpid());
+        }
+    }
+
+    #! Abandons the object in a child process created with fork(); see inheritedByFork()
+    /** Nothing is stopped or waited for, and no lock is acquired: the \c ts-proxy child process and the listener
+        threads of the object belong to the parent, and a thread of the parent could have held the locks when the
+        process was copied.  The sockets and files of the object are closed in this process only when the object's
+        members are destroyed.
+    */
+    private abandonInForkedChild() {
+        if (proc) {
+            # the object must not stop the parent's child process when it is destroyed
+            try {
+                proc.detach();
+            } catch (hash<ExceptionInfo> ex) {
+                # the process module abandons a Process object made in a parent process itself
+                # (PROCESS-FORK-ERROR)
+            }
+        }
+    }
+
+    #! Abandons the master listener of the parent in a child process created with fork()
+    /** The master listener thread does not exist in the child, and the master socket and its file belong to the
+        parent: the socket is closed in this process only, and its file is not removed.  The proxies made in the
+        parent are abandoned by their destructors (see abandonInForkedChild()).  The lock is not acquired.
+    */
+    private static abandonInheritedMaster() {
+        if (cmap) {
+            # the proxies made in the parent are removed; a proxy that this process is creating stays
+            int pid = getpid();
+            cmap = map {$1.key: $1.value}, cmap.pairIterator(), $1.value.owner_pid == pid;
+        }
+        remove master;
+        remove master_path;
+        remove master_listener_tid;
+        remove master_listener_stop;
+        remove sem_read;
+        remove sem_write;
+        remove sem_info;
+        # the counter counts the listener thread of the parent
+        master_listener_cnt = new Counter();
+        remove master_pid;
+    }
+
     private stopChildProcess() {
         # send shutdown command
         try {
@@ -971,6 +1059,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         global_lock.lock();
         on_exit global_lock.unlock();
 
+        if (master_pid && master_pid != getpid()) {
+            # this process was created with fork() by the process that started the master listener; it starts a
+            # master listener of its own
+            abandonInheritedMaster();
+        }
         if (master_path.val()) {
             @assert(master);
             return;
@@ -1013,6 +1106,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
             on_error master_listener_cnt.dec();
             master_listener_tid = background masterListenerThread(c);
         }
+        master_pid = getpid();
         c.waitForZero();
         TSAI::info("Master listener running in TID %d", master_listener_tid);
     }
@@ -1033,6 +1127,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
                 }
             }
         }
+        checkNotInherited();
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();

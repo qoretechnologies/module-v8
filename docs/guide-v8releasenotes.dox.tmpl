@@ -60,6 +60,10 @@
       their threads exist only in the parent, and with %Qore 3.0 the child ends without running exit-time handlers,
       whose code in Node.js is not safe in the child.  JavaScript code cannot be run in such a child: using a program
       of the parent or creating a program raises \c JAVASCRIPT-PROGRAM-ERROR
+    - a TypeScript proxy (\c JavaScriptProgramProxy) in a child process created with \c fork() no longer stops the
+      parent's \c ts-proxy process and master listener when it is destroyed, and the child's script no longer hangs
+      when it ends; using a proxy of the parent in the child raises \c TS-PROXY-ERROR, and a proxy created in the
+      child starts its own master listener
     - added @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()", which returns the
       variables of the process environment as they are now, read atomically, with the changes made since the process
       started; the \c ENV hash is the environment of the process when it started

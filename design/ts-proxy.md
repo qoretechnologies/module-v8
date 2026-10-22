@@ -97,6 +97,24 @@ send to fail. Both are used for negative and corner-case tests.
 by `test/ts-proxy.qtest` to verify that no-restart teardown commands and
 restart-owner reentry do not wait on `cond_restart`.
 
+## Child Processes Created With fork()
+
+A proxy belongs to the process that created it (`owner_pid`), and the master listener to the process that started it
+(`master_pid`). In a child process created with `fork()`, the `ts-proxy` processes, the listener threads, the
+master socket and its file belong to the parent:
+
+- the destructor of a proxy made in the parent only detaches its `Process` object (`abandonInForkedChild()`); it
+  sent the parent's `ts-proxy` process the exit command, and the last one shut the parent's master socket down,
+  removed its file and waited forever for the parent's master listener thread
+- `shutdown()` and `stopMasterListener()` abandon the parent's master listener without acquiring the global lock,
+  which a thread of the parent could have held (`abandonInheritedMaster()`)
+- a command on a proxy made in the parent raises `TS-PROXY-ERROR`: it would be sent on the parent's connection
+- the first proxy created in the child abandons the parent's master listener and starts one of its own
+
+A `Process` object made in the parent is abandoned by the process module itself in the child (its I/O thread does
+not exist there); with an older process module, deleting it in the child waits forever for that thread (test:
+`test/ts-proxy-fork.qtest`).
+
 ## Operational Notes
 - The UNIX socket path is short to avoid the ~104-byte limit.
 - If the child dies mid-command, the parent retries based on `RetryCounter`
