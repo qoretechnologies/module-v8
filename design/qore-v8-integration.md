@@ -39,12 +39,60 @@ under the label.
 The source must never be passed in the process environment. The environment is shared by every
 program in the process, so a program created in another thread at the same time ran the other
 program's source. On musl, `setenv()` is not thread-safe and frees the value it replaces, and Qore's
-`SystemEnvironment` does not serialize it on Linux, so concurrent program creation also corrupted the
+`SystemEnvironment` did not serialize it on Linux then, so concurrent program creation also corrupted the
 heap (a double free of the replaced value) and crashed the process later at random.
 `test/js-program-concurrent-init.qtest` creates programs in 8 threads at the same time.
 
 The `TypeScriptActionInterface` module gives each action script's programs the script's own
 `__filename` and `__dirname` as literals in their default code, for the same reason.
+
+### Process Environment
+
+Node reads and changes the environment for `process.env` with a lock of its own
+(`per_process::env_var_mutex`, `RealEnvStore` in `node_env_var.cc`), not with Qore's environment lock
+(`SystemEnvironment`, `QoreEnvironmentReadLock`, `AtomicEnvironmentSetter`), so the two did not exclude
+each other: a variable that Qore code replaced in another thread while JavaScript code read it could be
+read after it was freed (musl's `setenv()` frees the value it replaces), and a change made by JavaScript
+code could do the same to Qore code reading the environment, or copying it for a new process.
+
+The bootstrap script therefore replaces `process.env`, before any code of the program runs, with an
+object made by `qore_v8_create_env_factory()` (`QoreV8Environment.cpp`, passed in the bootstrap data as
+`env`; `QORE_V8_PROCESS_ENV_BOOTSTRAP` in `QoreV8Program.cpp`). Like Node's own object, it is an ordinary
+object with named property interceptors, made from an object template with a constructor template; its
+interceptors perform each operation on Node's original `process.env` object with Qore's lock held: shared
+for get, query and enumerate, exclusively for set, delete and define. Node's own handling is kept: the
+conversion of names and values to strings and its errors (`ERR_INVALID_OBJECT_DEFINE_PROPERTY` for a
+descriptor it refuses), and the time zone change that a change of `TZ` causes (`tzset()` and V8's time
+zone detection, which run inside the exclusive lock).
+
+- **Lock order:** Qore's lock is acquired first and Node's inside it, by Node's store; Node never waits
+  for Qore's lock while it holds its own.
+- **No JavaScript runs while the lock is held:** the operations of the original object are Node's C++
+  interceptors; names and values are converted to strings before the lock is acquired; a variable is
+  looked up with `HasOwnProperty()` before `Get()`, so that a name that is not set is not looked up in the
+  prototype chain under the lock; a descriptor that Node refuses is passed to Node's definer without the
+  lock, since Node raises its error without using the environment.
+- **Node's behavior is kept:** a symbol property is `undefined`; a name that is not a variable is looked
+  up in the prototype chain (`process.env.hasOwnProperty()`); a symbol name or value raises `TypeError`;
+  `delete` always returns `true`; `Object.keys()`, the spread operator, `JSON.stringify()` and
+  `util.inspect()` see the variables.
+- **One difference:** `structuredClone(process.env)`, and passing `process.env` itself to `postMessage()`,
+  raise `DataCloneError`: Node's serializer converts only its own `process.env` object, which it
+  recognizes by its template, to a plain object. A copy made with `{...process.env}` can be cloned.
+
+Node also reads the environment when it initializes the process (`node::InitializeOncePerProcess()`) and
+when it creates a program's environment (`node::CommonEnvironmentSetup::Create()`); no code of a program
+runs in either, and both are called with a `QoreEnvironmentReadLock`.
+
+Not covered, since no lock can be held around them: the variables that Node reads in `LoadEnvironment()`
+before the bootstrap script runs (its pre-execution code, which also runs code preloaded with
+`NODE_OPTIONS=--require`), reads made by libuv and by third-party libraries inside other calls (for
+example `os.homedir()`, OpenSSL and c-ares configuration variables), and `Worker` threads: a worker's
+`process.env` is a copy of the environment that Node makes without Qore's lock, or, with `SHARE_ENV`,
+Node's original store.
+
+`test/js-process-env.qtest` checks that the object behaves as Node's `process.env` and changes the
+environment in several threads while JavaScript code reads it.
 
 ### Property Resolution Flow
 
@@ -314,5 +362,5 @@ callback chains (Qore → JS → Qore → JS) to work correctly.
 | `src/QoreV8Program.h` | Program class with template cache and tracking sets |
 | `src/QoreV8Program.cpp` | Program init (qore global injection), cleanup, value conversion |
 | `src/QoreV8Environment.h` | Access to the process environment under Qore's environment lock |
-| `src/QoreV8Environment.cpp` | Atomic copy of the environment (`JavaScriptProgram::getEnvironment()`) |
+| `src/QoreV8Environment.cpp` | Atomic copy of the environment (`JavaScriptProgram::getEnvironment()`), `process.env` interceptors |
 | `CMakeLists.txt` | Build configuration (new source files added) |

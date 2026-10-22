@@ -25,7 +25,7 @@
 #ifndef _QORE_V8_ENVIRONMENT_H
 #define _QORE_V8_ENVIRONMENT_H
 
-#include <qore/Qore.h>
+#include "v8-module.h"
 
 #include <string>
 #include <utility>
@@ -43,5 +43,25 @@ DLLLOCAL std::vector<std::pair<std::string, std::string>> qore_v8_get_environmen
 /** @see qore_v8_get_environment()
 */
 DLLLOCAL QoreHashNode* qore_v8_get_environment_hash(ExceptionSink* xsink);
+
+//! Returns the function with which the bootstrap code of a program replaces \c process.env
+/** Node.js reads and changes the process environment for \c process.env with a lock of its own, which does not
+    serialize it with %Qore: a variable that %Qore changes in another thread while JavaScript code reads it can be
+    read after it was freed (musl frees the value that \c setenv() replaces), and a change made by JavaScript code
+    while %Qore reads the environment, or makes a copy of it for a new process, can do the same to %Qore.
+
+    The returned function takes Node's original \c process.env object and returns a new object for \c process.env
+    whose named property interceptors perform every operation on the original object with Qore's environment lock
+    held: shared to read the environment (get, query, enumerate), exclusively to change it (set, delete, define).
+    Node's own handling, including the conversion of values to strings, its errors, and the time zone change that a
+    change of \c TZ causes, is kept, and Node acquires its lock inside Qore's, never the other way around.  No
+    JavaScript code runs while the lock is held: the original object's operations are implemented in C++, and names
+    and values are converted to strings before the lock is acquired.  Like Node's object, the new one is an ordinary
+    object with interceptors (not a proxy); only Node's serializer does not know it, so \c structuredClone() of it
+    raises \c DataCloneError, where Node converts its own object to a plain object.
+
+    @return the function, or an empty handle if an exception is pending
+*/
+DLLLOCAL v8::MaybeLocal<v8::Function> qore_v8_create_env_factory(v8::Local<v8::Context> context);
 
 #endif

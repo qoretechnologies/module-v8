@@ -1,0 +1,248 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires v8
+%requires QUnit
+%requires Util
+
+%exec-class JsProcessEnvTest
+
+#! Tests process.env in JavaScript programs: it is the process environment, read and changed under Qore's lock
+/** Node.js reads and changes the environment for process.env with a lock of its own, so a variable that Qore
+    changed in another thread while JavaScript code read it could be read after it was freed (musl frees the value
+    that setenv() replaces), and the other way around.  Every program's process.env is an object whose interceptors
+    perform each operation on Node's original object with Qore's environment lock held; these tests check that it
+    behaves as Node's process.env does, and change the environment in several threads while JavaScript code uses it.
+*/
+class JsProcessEnvTest inherits Test {
+    public {
+        #! the JavaScript functions used by the tests
+        const Source = "
+globalThis.likeNode = () => !require('util').types.isProxy(process.env)
+    && Object.getPrototypeOf(Object.getPrototypeOf(process.env)) === Object.prototype
+    && JSON.parse(JSON.stringify(process.env)).PATH === process.env.PATH
+    && structuredClone({...process.env}).PATH === process.env.PATH;
+globalThis.getVar = (name) => process.env[name];
+globalThis.setVar = (name, value) => { process.env[name] = value; };
+globalThis.deleteVar = (name) => delete process.env[name];
+globalThis.hasVar = (name) => name in process.env;
+globalThis.hasOwnVar = (name) => process.env.hasOwnProperty(name);
+globalThis.keys = () => Object.keys(process.env);
+globalThis.spread = (name) => ({...process.env})[name];
+globalThis.descriptor = (name) => Object.getOwnPropertyDescriptor(process.env, name);
+globalThis.setNumber = (name) => { process.env[name] = 42; };
+globalThis.setBoolean = (name) => { process.env[name] = true; };
+globalThis.setObject = (name) => { process.env[name] = { toString() { return 'from toString()'; } }; };
+globalThis.setUndefined = (name) => { process.env[name] = undefined; };
+globalThis.errorOf = (f) => { try { f(); return 'no error'; } catch (e) { return `${e.name}: ${e.code ?? ''}: ${e.message}`; } };
+globalThis.setSymbolName = () => errorOf(() => { process.env[Symbol('x')] = 'y'; });
+globalThis.setSymbolValue = (name) => errorOf(() => { process.env[name] = Symbol('x'); });
+globalThis.getSymbol = () => process.env[Symbol.iterator] === undefined && process.env[Symbol('x')] === undefined;
+globalThis.defineValue = (name, value) => { Object.defineProperty(process.env, name, { value, writable: true, enumerable: true, configurable: true }); };
+globalThis.defineReadOnly = (name) => errorOf(() => Object.defineProperty(process.env, name, { value: 'x', writable: false, enumerable: true, configurable: true }));
+globalThis.defineAccessor = (name) => errorOf(() => Object.defineProperty(process.env, name, { get() { return 'x'; } }));
+globalThis.prototypeMethods = () => typeof process.env.toString === 'function'
+    && Object.prototype.toString.call(process.env) === '[object Object]'
+    && process.env.hasOwnProperty('PATH');
+globalThis.hours = (tz) => { process.env.TZ = tz; return new Date(0).getHours(); };
+globalThis.restoreTz = (tz) => { if (tz === undefined || tz === null) { delete process.env.TZ; } else { process.env.TZ = tz; } };
+globalThis.childValue = (name) => require('child_process').execFileSync('/bin/sh', ['-c', `printf '%s' \"$${name}\"`],
+    { encoding: 'utf8' });
+globalThis.inspected = () => require('util').inspect(process.env);
+globalThis.readLoop = (name, count) => {
+    let found = 0;
+    for (let i = 0; i < count; ++i) {
+        const value = process.env[name];
+        if (value !== undefined && !value.startsWith('value ')) {
+            throw new Error(`unexpected value: ${value}`);
+        }
+        if (value !== undefined) {
+            ++found;
+        }
+        process.env[name + '_JS'] = `value ${i}`;
+        delete process.env[name + '_JS'];
+    }
+    return found;
+};
+";
+    }
+
+    private {
+        #! the program used by the tests
+        JavaScriptProgram js;
+
+        #! the name of the variable that the tests use
+        string name = "QORE_V8_PROCESS_ENV_TEST_" + get_random_string(8);
+    }
+
+    constructor() : Test("JsProcessEnvTest", "1.0") {
+        js = new JavaScriptProgram(Source, "process-env.js");
+
+        addTestCase("process.env is an ordinary object in every kind of program", \objectTest());
+        addTestCase("JavaScript and Qore see each other's changes", \sharedTest());
+        addTestCase("values are converted to strings as Node.js converts them", \conversionTest());
+        addTestCase("enumeration and property descriptors", \enumerationTest());
+        addTestCase("defining properties", \defineTest());
+        addTestCase("symbols and prototype methods", \symbolTest());
+        addTestCase("changing TZ changes the time zone", \timeZoneTest());
+        addTestCase("a child process gets the environment", \childProcessTest());
+        addTestCase("inspecting process.env shows the variables", \inspectTest());
+        addTestCase("JavaScript and Qore change the environment in several threads", \concurrencyTest());
+
+        set_return_value(main());
+    }
+
+    globalTearDown() {
+        unsetenv(name);
+    }
+
+    #! Calls the given JavaScript function with the remaining arguments
+    private auto call(string func) {
+        return js.getGlobal().getProperty(func).callAsFunctionArgs(NOTHING, argv);
+    }
+
+    #! process.env is an object with interceptors like Node's, not a proxy, in every kind of program
+    objectTest() {
+        assertTrue(call("likeNode"), "a JavaScript program's process.env");
+        *TypeScriptProgram ts;
+        try {
+            ts = new TypeScriptProgram("globalThis.likeNode = (): boolean => !require('util').types.isProxy(process.env)
+    && JSON.parse(JSON.stringify(process.env)).PATH === process.env.PATH;", "process-env.ts");
+        } catch (hash<ExceptionInfo> ex) {
+            # only missing compiler support is optional
+            if (ex.desc.find("QORE_TYPESCRIPT_UNAVAILABLE:") < 0) {
+                rethrow;
+            }
+            testSkip("TypeScript transpilation is not available: " + ex.desc);
+        }
+        assertTrue(ts.getGlobal().getProperty("likeNode").callAsFunctionArgs(), "a TypeScript program's");
+        # the program's code gets the object when it starts
+        assertEq(0, setenv(name, "at start"));
+        on_exit unsetenv(name);
+        JavaScriptProgram js2(sprintf("globalThis.atStart = process.env[%y];", name), "at-start.js");
+        assertEq("at start", js2.getGlobal().atStart, "the environment when the program's code starts");
+    }
+
+    sharedTest() {
+        assertNothing(call("getVar", name), "the variable is not set yet");
+        assertFalse(call("hasVar", name));
+
+        assertEq(0, setenv(name, "set by Qore"));
+        assertEq("set by Qore", call("getVar", name), "JavaScript sees a variable that Qore sets");
+        assertTrue(call("hasVar", name));
+        assertTrue(call("hasOwnVar", name));
+
+        call("setVar", name, "set by JavaScript");
+        assertEq("set by JavaScript", getenv(name), "Qore sees a variable that JavaScript sets");
+        assertEq("set by JavaScript", JavaScriptProgram::getEnvironment(){name});
+
+        assertTrue(call("deleteVar", name), "delete returns true");
+        assertNothing(getenv(name), "Qore does not see a variable that JavaScript removes");
+        assertFalse(call("hasVar", name));
+        assertTrue(call("deleteVar", name), "deleting a variable that is not set returns true");
+
+        assertEq(0, setenv(name, ""));
+        assertEq("", call("getVar", name), "an empty value is a value");
+        assertEq(0, unsetenv(name));
+        assertNothing(call("getVar", name), "JavaScript does not see a variable that Qore removes");
+    }
+
+    conversionTest() {
+        call("setNumber", name);
+        assertEq("42", getenv(name));
+        call("setBoolean", name);
+        assertEq("true", getenv(name));
+        call("setObject", name);
+        assertEq("from toString()", getenv(name));
+        call("setUndefined", name);
+        assertEq("undefined", getenv(name));
+        assertEq("TypeError: : Cannot convert a Symbol value to a string", call("setSymbolValue", name));
+        assertEq(0, unsetenv(name));
+    }
+
+    enumerationTest() {
+        assertEq(0, setenv(name, "enumerated"));
+        on_exit unsetenv(name);
+        list<auto> names = call("keys");
+        assertTrue(inlist(name, names), "Object.keys() returns the variable");
+        assertTrue(inlist("PATH", names));
+        hash<auto> env = JavaScriptProgram::getEnvironment();
+        assertEq(sort(keys env), sort(names), "the variables are the variables of the process");
+        assertEq("enumerated", call("spread", name), "the spread operator copies the variables");
+        assertEq({"value": "enumerated", "writable": True, "enumerable": True, "configurable": True},
+            call("descriptor", name).toData());
+        assertNothing(call("descriptor", name + "_UNSET"), "a variable that is not set has no descriptor");
+    }
+
+    defineTest() {
+        call("defineValue", name, "defined");
+        on_exit unsetenv(name);
+        assertEq("defined", getenv(name), "a data descriptor sets the variable");
+        string err = call("defineReadOnly", name);
+        assertRegex("^TypeError: ERR_INVALID_OBJECT_DEFINE_PROPERTY: 'process.env' only accepts a configurable, "
+            "writable, and enumerable data descriptor", err);
+        err = call("defineAccessor", name);
+        assertRegex("^TypeError: ERR_INVALID_OBJECT_DEFINE_PROPERTY: 'process.env' does not accept an "
+            "accessor\\(getter/setter\\) descriptor", err);
+        assertEq("defined", getenv(name), "a refused descriptor does not change the variable");
+    }
+
+    symbolTest() {
+        assertTrue(call("getSymbol"), "a symbol property is undefined");
+        assertEq("TypeError: : Cannot convert a Symbol value to a string", call("setSymbolName"));
+        assertTrue(call("prototypeMethods"), "the methods of Object.prototype are available");
+    }
+
+    timeZoneTest() {
+        *string tz = getenv("TZ");
+        on_exit call("restoreTz", tz);
+        assertEq(0, int(call("hours", "UTC")));
+        assertEq(9, int(call("hours", "Asia/Tokyo")), "a change of TZ makes V8 detect the time zone again");
+        assertEq("Asia/Tokyo", getenv("TZ"));
+    }
+
+    childProcessTest() {
+        assertEq(0, setenv(name, "for the child"));
+        on_exit unsetenv(name);
+        assertEq("for the child", call("childValue", name), "a child process gets the variable");
+    }
+
+    inspectTest() {
+        assertEq(0, setenv(name, "inspected"));
+        on_exit unsetenv(name);
+        string str = call("inspected");
+        assertRegex(name + ": 'inspected'", str, "util.inspect() shows the variables");
+    }
+
+    #! JavaScript reads and changes the environment in one thread while Qore changes it in others
+    /** The threads change the environment's array of variables while JavaScript code reads a variable and changes
+        another; with valgrind or a build with AddressSanitizer, an access to freed memory is reported.  The test
+        checks only values, never times
+    */
+    concurrencyTest() {
+        # the variable is always set while JavaScript reads it
+        assertEq(0, setenv(name, "value start"));
+        bool stop;
+        Counter running(4);
+        on_exit {
+            stop = True;
+            running.waitForZero();
+        }
+        for (int t = 0; t < 4; ++t) {
+            background sub () {
+                on_exit running.dec();
+                for (int i = 0; !stop; ++i) {
+                    setenv(name, "value " + i);
+                    setenv(name + "_" + t, "value " + i);
+                    unsetenv(name + "_" + t);
+                }
+            }();
+        }
+        assertEq(2000, int(call("readLoop", name, 2000)), "every read returns a value that a thread set");
+    }
+}

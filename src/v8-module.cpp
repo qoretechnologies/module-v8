@@ -134,15 +134,19 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
     // NOTE: stdio inheritance must stay enabled; otherwise node marks the stdio file descriptors of the embedding
     // process close-on-exec, so all child processes started by Qore afterwards (ex: with system() or backquote())
     // are started without stdin, stdout, and stderr unless they are explicitly redirected
-    init_result =
-        node::InitializeOncePerProcess(args, {
-            node::ProcessInitializationFlags::kEnableStdioInheritance,
-            // Qore owns process signal handling. Node's defaults also replace the JVM's
-            // SIGSEGV handler with its WebAssembly trap handler, breaking runtime coexistence.
-            node::ProcessInitializationFlags::kNoDefaultSignalHandling,
-            node::ProcessInitializationFlags::kNoInitializeV8,
-            node::ProcessInitializationFlags::kNoInitializeNodeV8Platform,
-        });
+    {
+        // Node.js reads the environment when it initializes the process (NODE_OPTIONS, OpenSSL and ICU settings)
+        QoreEnvironmentReadLock env_lock;
+        init_result =
+            node::InitializeOncePerProcess(args, {
+                node::ProcessInitializationFlags::kEnableStdioInheritance,
+                // Qore owns process signal handling. Node's defaults also replace the JVM's
+                // SIGSEGV handler with its WebAssembly trap handler, breaking runtime coexistence.
+                node::ProcessInitializationFlags::kNoDefaultSignalHandling,
+                node::ProcessInitializationFlags::kNoInitializeV8,
+                node::ProcessInitializationFlags::kNoInitializeNodeV8Platform,
+            });
+    }
 
     if (!init_result->errors().empty()) {
         SimpleRefHolder<QoreStringNode> err(new QoreStringNode);

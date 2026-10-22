@@ -39,6 +39,13 @@
       program created at the same time, and on Alpine Linux (musl) the process could crash later at random, for
       example with a segmentation fault or <tt>Check failed: 0 == munmap(address, size)</tt>; programs no longer
       set the \c _qore_v8_source, \c _qore_v8_filename and \c _qore_v8_dirname environment variables
+    - \c process.env in JavaScript and TypeScript programs reads and changes the process environment under
+      %Qore's environment lock, as %Qore code does; Node.js used a lock of its own, so a variable that %Qore code
+      changed in another thread while JavaScript code read it could be read after it was freed (on Alpine Linux
+      (musl), which frees the value that \c setenv() replaces, the process could crash), and a change made by
+      JavaScript code could do the same to %Qore code reading the environment or starting a process.
+      \c process.env behaves as before, except that <tt>structuredClone(process.env)</tt> raises
+      \c DataCloneError; clone a copy instead (<tt>structuredClone({...process.env})</tt>)
     - added @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()", which returns the
       variables of the process environment as they are now, read atomically, with the changes made since the process
       started; the \c ENV hash is the environment of the process when it started

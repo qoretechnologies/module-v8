@@ -28,6 +28,7 @@
 #include "QoreV8StackLocationHelper.h"
 #include "QoreV8NamespaceWrapper.h"
 #include "QoreV8ClassWrapper.h"
+#include "QoreV8Environment.h"
 
 #include <uv.h>
 
@@ -57,8 +58,13 @@ QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
     // Setup up a libuv event loop, v8::Isolate, and Node.js Environment.
     // setup common environment
     std::vector<std::string> errors;
-    setup = node::CommonEnvironmentSetup::Create(platform.get(), &errors, init_result->args(),
-        init_result->exec_args(), node::EnvironmentFlags::kNoCreateInspector);
+    {
+        // Node.js reads the environment while it creates the environment and runs its own bootstrap code, which
+        // runs no code of the program
+        QoreEnvironmentReadLock env_lock;
+        setup = node::CommonEnvironmentSetup::Create(platform.get(), &errors, init_result->args(),
+            init_result->exec_args(), node::EnvironmentFlags::kNoCreateInspector);
+    }
     if (!setup) {
         for (const std::string& err : errors) {
             fprintf(stderr, "v8 module init error: %s: %s\n", init_result->args()[0].c_str(), err.c_str());
@@ -236,6 +242,14 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
 //! Name of the registered symbol of the global property that passes a program's source and label to its bootstrap code
 #define QORE_V8_BOOTSTRAP_KEY "qore.v8.bootstrap"
 
+//! Bootstrap code that replaces process.env with an object that reads and changes the environment under Qore's lock
+/** see qore_v8_create_env_factory(); the property is defined as Node defines it
+*/
+#define QORE_V8_PROCESS_ENV_BOOTSTRAP \
+    "Object.defineProperty(process, 'env', {\n" \
+    "  configurable: true, enumerable: true, writable: true, value: _qoreBoot.env(process.env),\n" \
+    "});\n"
+
 //! Returns a JavaScript string for the given UTF-8 string, or an empty handle if it is too long or cannot be created
 static v8::MaybeLocal<v8::String> qore_v8_utf8_string(v8::Isolate* isolate, const QoreString& str) {
     assert(str.getEncoding() == QCS_UTF8);
@@ -268,10 +282,15 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     v8::Local<v8::Object> data = v8::Object::New(isolate);
     v8::Local<v8::Symbol> key = v8::Symbol::For(isolate,
         v8::String::NewFromUtf8Literal(isolate, QORE_V8_BOOTSTRAP_KEY));
-    if (!data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "source"),
+    // the function with which the bootstrap code replaces process.env, so that it uses Qore's environment lock
+    v8::Local<v8::Function> env_factory;
+    if (!qore_v8_create_env_factory(context).ToLocal(&env_factory)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "source"),
             source_str).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "filename"),
             label_str).FromMaybe(false)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "env"),
+            env_factory).FromMaybe(false)
         || !context->Global()->DefineOwnProperty(context, key, data, v8::DontEnum).FromMaybe(false)) {
         if (!checkException(xsink, tryCatch)) {
             xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "cannot pass the source to the JavaScript program");
@@ -348,6 +367,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         QoreStringMaker envstr("const _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
             "const _qoreBoot = globalThis[_qoreBootKey];\n"
             "delete globalThis[_qoreBootKey];\n"
+            QORE_V8_PROCESS_ENV_BOOTSTRAP
             "const publicRequire = require('module').createRequire("
             "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
         if (transpile_ts) {
