@@ -46,6 +46,10 @@
       JavaScript code could do the same to %Qore code reading the environment or starting a process.
       \c process.env behaves as before, except that <tt>structuredClone(process.env)</tt> raises
       \c DataCloneError; clone a copy instead (<tt>structuredClone({...process.env})</tt>)
+    - a @ref V8::TypeScriptProgram "TypeScriptProgram" no longer prints "ExperimentalWarning: stripTypeScriptTypes is
+      an experimental feature and might change at any time" on stderr: experimental feature warnings are not printed
+      unless \c NODE_OPTIONS enables warnings (\c --warnings or \c --trace-warnings); listeners of the
+      \c warning event still receive them, and other warnings are printed as before
     - added @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()", which returns the
       variables of the process environment as they are now, read atomically, with the changes made since the process
       started; the \c ENV hash is the environment of the process when it started

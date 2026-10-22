@@ -1,0 +1,113 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires v8
+%requires QUnit
+%requires Util
+%try-module process
+%define MISSING_PROCESS_MODULE
+%endtry
+
+%exec-class TsWarningsTest
+
+#! Tests the Node.js process warnings that programs print on stderr
+/** Every TypeScriptProgram uses module.stripTypeScriptTypes() on Node.js builds with TypeScript support, and Node.js
+    reported it in each program with "ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might
+    change at any time" on stderr.  Experimental feature warnings are not printed unless NODE_OPTIONS enables
+    warnings explicitly; they are still emitted to the programs' warning listeners, and other warnings are printed.
+*/
+class TsWarningsTest inherits Test {
+    public {
+        #! the code run in a new process: it creates TypeScript programs and a JavaScript program that emits a warning
+        const Code = "%modern
+for (int i = 0; i < 3; ++i) {
+    TypeScriptProgram ts(\"const x: number = \" + i + \";\", \"warning-test-\" + i + \".ts\");
+}
+JavaScriptProgram js(\"process.emitWarning('a test warning', 'QoreTestWarning');\", \"warning-test.js\");
+printf(\"DONE\\n\");
+";
+
+        #! the experimental feature warning of TypeScript type stripping
+        const StripWarning = "ExperimentalWarning: stripTypeScriptTypes is an experimental feature";
+    }
+
+    private {
+        #! True if Node.js has built-in type stripping, which emits the experimental feature warning
+        bool builtin_strip;
+    }
+
+    constructor() : Test("TsWarningsTest", "1.0") {
+        JavaScriptProgram js("globalThis.builtinStrip = typeof require('module').stripTypeScriptTypes === 'function'
+    && process.features.typescript !== false;", "strip-check.js");
+        builtin_strip = js.getGlobal().builtinStrip;
+
+        addTestCase("a TypeScript program prints no experimental feature warning", \noWarningTest());
+        addTestCase("the warning is printed when NODE_OPTIONS enables warnings", \enabledWarningTest());
+        addTestCase("a program's warning listener receives the warning", \listenerTest());
+
+        set_return_value(main());
+    }
+
+    private skipIfNoBuiltinStrip() {
+        if (!builtin_strip) {
+            testSkip("this Node.js build has no built-in TypeScript type stripping, which emits the warning");
+        }
+    }
+
+%ifdef MISSING_PROCESS_MODULE
+    private hash<auto> runCode(*string node_options) {
+        testSkip("the process module is not available");
+    }
+%else
+    #! Runs the test code in a new process with the given NODE_OPTIONS and returns its result
+    private hash<auto> runCode(*string node_options) {
+        hash<auto> env = ENV;
+        remove env.NODE_OPTIONS;
+        if (exists node_options) {
+            env.NODE_OPTIONS = node_options;
+        }
+        env.PATH = getenv("PATH");
+        string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
+        return Process::run(Process::getExecutablePath(), ("-l", "v8", "-e", Code), {"env": env});
+    }
+%endif
+
+    noWarningTest() {
+        hash<auto> result = runCode();
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        assertRegex("DONE", result.stdout);
+        assertEq(-1, result.stderr.find(StripWarning), "no experimental feature warning: " + result.stderr);
+        assertEq(-1, result.stderr.find("ExperimentalWarning"), "no experimental feature warning: " + result.stderr);
+        # warnings of other types are printed
+        assertNeq(-1, result.stderr.find("QoreTestWarning: a test warning"), result.stderr);
+    }
+
+    enabledWarningTest() {
+        skipIfNoBuiltinStrip();
+        foreach string option in ("--warnings", "--trace-warnings", "--max-old-space-size=4096 \"--warnings\"") {
+            hash<auto> result = runCode(option);
+            assertEq(0, result.exit_code, result.stdout + result.stderr);
+            assertNeq(-1, result.stderr.find(StripWarning), sprintf("NODE_OPTIONS=%s: %s", option, result.stderr));
+            assertNeq(-1, result.stderr.find("QoreTestWarning: a test warning"), result.stderr);
+        }
+        # an option that does not enable warnings leaves the warning disabled
+        hash<auto> result = runCode("--max-old-space-size=4096");
+        assertEq(0, result.exit_code, result.stdout + result.stderr);
+        assertEq(-1, result.stderr.find(StripWarning), result.stderr);
+    }
+
+    listenerTest() {
+        skipIfNoBuiltinStrip();
+        # the warning is emitted after the program's code has run, which registers the listener
+        TypeScriptProgram ts("globalThis.warnings = [];
+process.on('warning', (w: Error) => { globalThis.warnings.push(w.name + ': ' + w.message); });", "listener.ts");
+        list<auto> warnings = ts.getGlobal().warnings;
+        assertEq(1, (select warnings, $1.find(StripWarning) == 0).size(), sprintf("%y", warnings));
+    }
+}

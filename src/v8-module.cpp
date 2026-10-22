@@ -114,6 +114,36 @@ static void v8_module_init(QoreModuleInitContext& ctx, ExceptionSink& xsink) {
     }
 }
 
+//! Returns true if the Node.js options in the \c NODE_OPTIONS environment variable explicitly enable warnings
+/** \c --warnings enables process warnings and \c --trace-warnings prints their stacks.  \c NODE_OPTIONS is a list
+    of options separated by white space, in which double quotes group a value with spaces.
+*/
+static bool qore_v8_node_options_enable_warnings() {
+    QoreEnvironmentValue node_options("NODE_OPTIONS");
+    if (!node_options) {
+        return false;
+    }
+    const std::string& str = node_options.str();
+    std::string token;
+    bool quoted = false;
+    for (size_t i = 0, e = str.size(); i <= e; ++i) {
+        char c = i < e ? str[i] : ' ';
+        if (c == '"') {
+            quoted = !quoted;
+            continue;
+        }
+        if (!quoted && (c == ' ' || c == '\t' || c == '\n')) {
+            if (token == "--warnings" || token == "--trace-warnings") {
+                return true;
+            }
+            token.clear();
+            continue;
+        }
+        token += c;
+    }
+    return false;
+}
+
 static QoreStringNode* v8_module_init_intern(bool repeat) {
     if (!V8NS) {
         V8NS = new QoreNamespace("V8");
@@ -131,6 +161,15 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
     // single promise nobody was waiting for (such as a network write that timed out in the background).  Handlers
     // a program registers for "unhandledRejection" itself still run.
     std::vector<std::string> args = {"qore", "--unhandled-rejections=warn"};
+    // Node.js reports the use of an experimental feature once in each program; every TypeScriptProgram uses
+    // module.stripTypeScriptTypes() (on Node.js builds with TypeScript support), which printed "ExperimentalWarning:
+    // stripTypeScriptTypes is an experimental feature and might change at any time" on stderr for every program.
+    // Warnings of this type are therefore not printed, with Node's documented --disable-warning option, unless
+    // NODE_OPTIONS explicitly enables warnings (--warnings, --trace-warnings).  They are still emitted: a program's
+    // process.on('warning') listener receives them, and warnings of every other type are printed as before
+    if (!qore_v8_node_options_enable_warnings()) {
+        args.push_back("--disable-warning=ExperimentalWarning");
+    }
     // NOTE: stdio inheritance must stay enabled; otherwise node marks the stdio file descriptors of the embedding
     // process close-on-exec, so all child processes started by Qore afterwards (ex: with system() or backquote())
     // are started without stdin, stdout, and stderr unless they are explicitly redirected

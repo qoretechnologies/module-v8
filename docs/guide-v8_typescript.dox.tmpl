@@ -17,6 +17,11 @@
       Both implementations preserve ES module syntax and report syntax errors before execution.
       If neither compiler is available, the constructor throws a \c JAVASCRIPT-EXCEPTION error.
     - The transpilation uses \c transform mode, which supports type stripping, enums, and namespace transformation.
+    - Node.js reports \c stripTypeScriptTypes() as an experimental feature; the module does not print experimental
+      feature warnings (\c ExperimentalWarning, with Node's \c --disable-warning option), so that every program does
+      not print one on stderr.  Set \c NODE_OPTIONS to \c --warnings or \c --trace-warnings before the module is
+      loaded to print them; a program's <tt>process.on('warning')</tt> listener receives them in any case, and
+      warnings of all other types are printed as usual.
 
     @section v8_ts_basic_example Basic Example
 
