@@ -109,7 +109,7 @@ function setenv(vr, value) {
 
         if (!DataProvider::getGlobalLogger()) {
             LoggerLevel ll;
-            if (ENV.QORE_TYPESCRIPT_ACTION_VERBOSE) {
+            if (getenv("QORE_TYPESCRIPT_ACTION_VERBOSE")) {
                 #ll = LoggerLevel::LevelInfo;
                 ll = LoggerLevel::LevelDebug;
             } else {
@@ -170,7 +170,7 @@ function setenv(vr, value) {
             }
         }
 
-        if ((*string scripts = ENV.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS).val()) {
+        if ((*string scripts = getenv("QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS")).val()) {
             # initialize all apps in advance when running tests
             DataProvider::addOptions(DPO_DisableOnDemandInitialization);
             DataProvider::checkStaticInit();

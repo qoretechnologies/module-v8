@@ -147,6 +147,7 @@ set(CPP_SRC
     src/QoreV8CallReference.cpp
     src/QoreV8NamespaceWrapper.cpp
     src/QoreV8ClassWrapper.cpp
+    src/QoreV8Environment.cpp
 )
 
 set(QMOD

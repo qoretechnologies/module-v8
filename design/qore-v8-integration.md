@@ -313,4 +313,6 @@ callback chains (Qore → JS → Qore → JS) to work correctly.
 | `src/QoreV8ClassWrapper.cpp` | Class wrapper implementation (constructor, methods, inheritance) |
 | `src/QoreV8Program.h` | Program class with template cache and tracking sets |
 | `src/QoreV8Program.cpp` | Program init (qore global injection), cleanup, value conversion |
+| `src/QoreV8Environment.h` | Access to the process environment under Qore's environment lock |
+| `src/QoreV8Environment.cpp` | Atomic copy of the environment (`JavaScriptProgram::getEnvironment()`) |
 | `CMakeLists.txt` | Build configuration (new source files added) |

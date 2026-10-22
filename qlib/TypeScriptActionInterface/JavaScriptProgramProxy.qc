@@ -895,32 +895,23 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
             sprintf("-s=%s", master_path),
             "-vvv",
         );
-        if (ENV.TS_PROXY_LOGDIR) {
-            args += sprintf("-l=%s", ENV.TS_PROXY_LOGDIR);
+        # the process environment is read rather than ENV, which holds the environment of the process when it
+        # started
+        if ((*string logdir = getenv("TS_PROXY_LOGDIR")).val()) {
+            args += sprintf("-l=%s", logdir);
         }
         string uh = self.uniqueHash();
-        hash<auto> env = ENV + {
+        # the child gets the process environment as it is now, read atomically, with the variables below; the
+        # environment option of the Process class replaces the child's environment.  ENV would give the child the
+        # environment of the process when it started, without the changes made since then with setenv() and
+        # unsetenv() (including the fault-injection variables of the tests, which the child reads)
+        hash<auto> env = JavaScriptProgram::getEnvironment() + {
             "TS_PROXY_PROCESS_KEY": uh,
         };
         # the child applies the same time limit to the calls it runs; it takes whole seconds
         env{TypeScriptActionInterface::CallTimeoutEnv} =
             string((TypeScriptActionInterface::getCallTimeout().durationMilliseconds() + 999) / 1000);
         date startup_limit = getStartupTimeout();
-        @debug {
-            *string send_error = getenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
-            if (send_error.val()) {
-                env.TS_PROXY_TEST_FORCE_SEND_ERROR = send_error;
-            }
-            *string start_send_error = getenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP");
-            if (start_send_error && start_send_error.val()) {
-                env.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = start_send_error;
-            }
-            # TEST: the child runs but never sends its startup message
-            *string start_hang = getenv("TS_PROXY_TEST_STARTUP_HANG");
-            if (start_hang && start_hang.val()) {
-                env.TS_PROXY_TEST_STARTUP_HANG = start_hang;
-            }
-        }
         string cmd = "ts-proxy";
         @debug {
             # When running with --enable-debug, spawn child via qore interpreter

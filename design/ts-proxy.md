@@ -23,8 +23,14 @@ manage event listeners without blocking core worker threads.
    the command queue, for at most the startup timeout
    (`JavaScriptProgramProxy::setStartupTimeout()`, `QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS`, 60s by
    default). A child that exits first fails the start at once; a child that has not started in time is
-   terminated. The child's environment carries the parent's call time limit in
-   `QORE_TYPESCRIPT_CALL_TIMEOUT_SECS`, so the child applies it to the calls it runs.
+   terminated. The child gets the parent's process environment as it is when the
+   child is started (`JavaScriptProgram::getEnvironment()`, which copies it under
+   Qore's environment lock), not the `ENV` hash, which is the environment of the
+   parent when it started and misses its `setenv()` and `unsetenv()` changes. The
+   `env` option of `Process` replaces the child's environment, so the copy is
+   passed with the child's own variables: `TS_PROXY_PROCESS_KEY` and the parent's
+   call time limit in `QORE_TYPESCRIPT_CALL_TIMEOUT_SECS`, so the child applies it
+   to the calls it runs.
 2) Parent sends commands with `sendCommandArgs()`:
    - `CALL`, `SETUP-EVENT`, `GET-DYNAMIC-OPTIONS`, etc.
 3) Child executes and replies with `CC_OK` or `CC_ERR`. A `CALL` is run with its
@@ -69,7 +75,8 @@ which are enabled with `qore -G`.
 
 ## Testing Hooks
 The hooks are environment variables read with `getenv()` in debug mode
-(`--enable-debug`); the `ENV` hash does not see `setenv()`.
+(`--enable-debug`); the `ENV` hash does not see `setenv()`. A child gets the
+hooks that a test sets with `setenv()` in its environment.
 
 `TS_PROXY_TEST_FORCE_RESTART_ERROR` is a test-only environment variable used to
 force `restartProcessIntern()` to throw. It is used by `test/ts-proxy.qtest` to

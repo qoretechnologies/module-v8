@@ -150,6 +150,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - a \c ts-proxy child process gets the process environment as it is when the child is started, read atomically
+      with @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()"; it got the \c ENV
+      hash, the environment of the process when it started, so variables set or removed with \c setenv() and
+      \c unsetenv() since then were missing in the child, or still set.  \c QORE_V8_CACHE_DIR,
+      \c QORE_V8_DISABLE_CACHE, \c TS_PROXY_LOGDIR, \c QORE_TYPESCRIPT_ACTION_VERBOSE and
+      \c QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS are read from the current environment as well
     - the time limits of calls and of \c ts-proxy child process startup take effect as documented (see
       @ref typescriptactioninterface_time_limits):
       - each call of an app's or action's function has a 30-minute limit by default, which

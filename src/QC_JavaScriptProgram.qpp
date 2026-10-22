@@ -24,6 +24,7 @@
 
 #include "QC_JavaScriptProgram.h"
 #include "QC_JavaScriptObject.h"
+#include "QoreV8Environment.h"
 
 //! Program for embedding and executing JavaScript code
 /**
@@ -115,4 +116,27 @@ int JavaScriptProgram::spinOnce() {
 */
 int JavaScriptProgram::spinEventLoop() {
     return jsp->spinEventLoop(xsink);
+}
+
+//! Returns the variables of the process environment as they are now
+/** The environment is copied atomically: no variable can be changed through %Qore while the copy is made.  The
+    copy includes every change made since the process started, with @ref Qore::setenv() "setenv()" and
+    @ref Qore::unsetenv() "unsetenv()" or by JavaScript code through \c process.env; the \c ENV hash, in
+    contrast, is the environment of the process when it started.
+
+    Use it to give a child process the current environment with changes of its own, for example with the \c env
+    option of the \c Process class of the \c process module, which replaces the child's environment.
+
+    @par Example:
+    @code{.py}
+hash<string, string> env = JavaScriptProgram::getEnvironment() + {"MY_VAR": "value"};
+    @endcode
+
+    @return the variables of the process environment; if a name appears more than once in the environment, its
+    first value, which @ref Qore::getenv() "getenv()" returns
+
+    @since v8 2.2
+*/
+static hash<string, string> JavaScriptProgram::getEnvironment() [flags=CONSTANT;dom=EXTERNAL_INFO] {
+    return qore_v8_get_environment_hash(xsink);
 }

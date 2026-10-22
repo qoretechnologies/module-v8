@@ -33,8 +33,41 @@ class V8Test inherits Test {
         addTestCase("crash safety test", \crashSafetyTest());
         addTestCase("unhandled rejection keeps the program usable", \unhandledRejectionTest());
         addTestCase("WebAssembly memory bounds", \wasmBoundsTest());
+        addTestCase("the current environment", \environmentTest());
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
+    }
+
+    #! JavaScriptProgram::getEnvironment() returns the environment as it is now, with the changes made since the
+    #! process started
+    environmentTest() {
+        string name = "QORE_V8_ENVIRONMENT_TEST_" + get_random_string(8);
+        on_exit unsetenv(name);
+        assertFalse(JavaScriptProgram::getEnvironment().hasKey(name), "the variable is not set yet");
+
+        assertEq(0, setenv(name, "first value"));
+        hash<string, string> env = JavaScriptProgram::getEnvironment();
+        assertEq("first value", env{name}, "a variable added with setenv() is returned");
+        assertFalse(ENV.hasKey(name), "ENV is the environment when the process started");
+        # every variable has the value that getenv() returns
+        foreach hash<auto> i in (env.pairIterator()) {
+            assertEq(getenv(i.key), i.value, i.key);
+        }
+        # every variable of the process when it started that has not been removed is returned
+        foreach string var in (keys ENV) {
+            if (exists getenv(var)) {
+                assertTrue(env.hasKey(var), var);
+            }
+        }
+
+        assertEq(0, setenv(name, "second value"));
+        assertEq("second value", JavaScriptProgram::getEnvironment(){name}, "a changed value is returned");
+
+        assertEq(0, setenv(name, ""));
+        assertEq("", JavaScriptProgram::getEnvironment(){name}, "an empty value is a value");
+
+        assertEq(0, unsetenv(name));
+        assertFalse(JavaScriptProgram::getEnvironment().hasKey(name), "a removed variable is not returned");
     }
 
     #! WebAssembly must trap out-of-bounds accesses without owning the host's signal handlers.

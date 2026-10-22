@@ -39,6 +39,15 @@
       program created at the same time, and on Alpine Linux (musl) the process could crash later at random, for
       example with a segmentation fault or <tt>Check failed: 0 == munmap(address, size)</tt>; programs no longer
       set the \c _qore_v8_source, \c _qore_v8_filename and \c _qore_v8_dirname environment variables
+    - added @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()", which returns the
+      variables of the process environment as they are now, read atomically, with the changes made since the process
+      started; the \c ENV hash is the environment of the process when it started
+    - a \c ts-proxy child process gets the environment of its parent as it is when the child is started; it got the
+      environment of the parent when the parent started, so variables set or removed with \c setenv() and
+      \c unsetenv() since then were missing in the child, or still set.  The environment variables that the
+      TypeScript action interface reads (\c QORE_V8_CACHE_DIR, \c QORE_V8_DISABLE_CACHE, \c TS_PROXY_LOGDIR,
+      \c QORE_TYPESCRIPT_ACTION_VERBOSE and \c QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS) are also read from the current
+      environment
     - the Google Sheets \c find_spreadsheet_rows action takes a \c header_row option, the row of the column headers
       for sheets with titles or notes above the table (rows are read and searched below it), a \c value_render
       option, to return and search the values as stored (the default), as the sheet displays them, or the formulas
