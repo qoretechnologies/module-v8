@@ -242,13 +242,64 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
 //! Name of the registered symbol of the global property that passes a program's source and label to its bootstrap code
 #define QORE_V8_BOOTSTRAP_KEY "qore.v8.bootstrap"
 
-//! Bootstrap code that replaces process.env with an object that reads and changes the environment under Qore's lock
-/** see qore_v8_create_env_factory(); the property is defined as Node defines it
+//! Bootstrap code that replaces process.env with a proxy that reads and changes the environment under Qore's lock
+/** Every operation is performed on Node's original process.env object by a function of the environment bridge (see
+    qore_v8_create_env_bridge()) with the lock held.  The proxy keeps the behavior of Node's object: a symbol
+    property is undefined, a name that is not a variable is looked up in the prototype chain (Object.prototype),
+    names and values are converted to strings (a symbol raises TypeError), delete always returns true, and
+    util.inspect() shows the variables.  Names and values are converted before the bridge is called, so that no
+    JavaScript code runs while the lock is held.
+
+    It is a proxy rather than an object with interceptors, as Node's own process.env is, because V8's serializer
+    refuses a proxy at once ("#<Object> could not be cloned."), while it passes an object with interceptors to the
+    serializer's delegate as a host object, and Node's v8.serialize() reports a host object that it cannot serialize
+    with util.inspect() of it, which put every variable of the environment in the error message.  The program
+    remembers the proxy (envCreated()), so that a JavaScript exception that contains it is converted without it (see
+    QoreV8Program::isRedactedEnv()).
 */
 #define QORE_V8_PROCESS_ENV_BOOTSTRAP \
-    "Object.defineProperty(process, 'env', {\n" \
-    "  configurable: true, enumerable: true, writable: true, value: _qoreBoot.env(process.env),\n" \
-    "});\n"
+    "{\n" \
+    "  const store = process.env;\n" \
+    "  const bridge = _qoreBoot.env;\n" \
+    "  const target = {};\n" \
+    "  Object.defineProperty(target, Symbol.for('nodejs.util.inspect.custom'), {\n" \
+    "    configurable: true,\n" \
+    "    value(depth, options, inspect) {\n" \
+    "      const vars = {};\n" \
+    "      for (const name of bridge.keys(store)) {\n" \
+    "        const value = bridge.get(store, name);\n" \
+    "        if (value !== undefined) { vars[name] = value; }\n" \
+    "      }\n" \
+    "      return inspect(vars, options);\n" \
+    "    },\n" \
+    "  });\n" \
+    "  const env = new Proxy(target, {\n" \
+    "      get(target, name, receiver) {\n" \
+    "        if (typeof name === 'symbol') { return undefined; }\n" \
+    "        const value = bridge.get(store, name);\n" \
+    "        return value !== undefined ? value : Reflect.get(target, name, receiver);\n" \
+    "      },\n" \
+    "      set(target, name, value) { bridge.set(store, `${name}`, `${value}`); return true; },\n" \
+    "      has(target, name) {\n" \
+    "        return (typeof name === 'string' && bridge.has(store, name)) || Reflect.has(target, name);\n" \
+    "      },\n" \
+    "      deleteProperty(target, name) {\n" \
+    "        if (typeof name === 'string') { bridge.delete(store, name); } else { Reflect.deleteProperty(target, name); }\n" \
+    "        return true;\n" \
+    "      },\n" \
+    "      ownKeys(target) { return [...new Set(bridge.keys(store))]; },\n" \
+    "      getOwnPropertyDescriptor(target, name) {\n" \
+    "        if (typeof name === 'string') {\n" \
+    "          const desc = bridge.descriptor(store, name);\n" \
+    "          if (desc !== undefined) { return desc; }\n" \
+    "        }\n" \
+    "        return Reflect.getOwnPropertyDescriptor(target, name);\n" \
+    "      },\n" \
+    "      defineProperty(target, name, desc) { bridge.define(store, name, desc); return true; },\n" \
+    "  });\n" \
+    "  Object.defineProperty(process, 'env', { configurable: true, enumerable: true, writable: true, value: env });\n" \
+    "  _qoreBoot.envCreated(env);\n" \
+    "}\n"
 
 //! Returns a JavaScript string for the given UTF-8 string, or an empty handle if it is too long or cannot be created
 static v8::MaybeLocal<v8::String> qore_v8_utf8_string(v8::Isolate* isolate, const QoreString& str) {
@@ -257,6 +308,14 @@ static v8::MaybeLocal<v8::String> qore_v8_utf8_string(v8::Isolate* isolate, cons
         return v8::MaybeLocal<v8::String>();
     }
     return v8::String::NewFromUtf8(isolate, str.c_str(), v8::NewStringType::kNormal, static_cast<int>(str.size()));
+}
+
+//! envCreated(env): passes the program's new process.env object to the program (the data of the function)
+static void qore_v8_env_created(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    if (info.Length() < 1 || !info[0]->IsObject() || !info.Data()->IsExternal()) {
+        return;
+    }
+    static_cast<QoreV8Program*>(info.Data().As<v8::External>()->Value())->setEnvObject(info[0].As<v8::Object>());
 }
 
 int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tryCatch) {
@@ -282,15 +341,20 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     v8::Local<v8::Object> data = v8::Object::New(isolate);
     v8::Local<v8::Symbol> key = v8::Symbol::For(isolate,
         v8::String::NewFromUtf8Literal(isolate, QORE_V8_BOOTSTRAP_KEY));
-    // the function with which the bootstrap code replaces process.env, so that it uses Qore's environment lock
-    v8::Local<v8::Function> env_factory;
-    if (!qore_v8_create_env_factory(context).ToLocal(&env_factory)
+    // the functions with which the bootstrap code makes process.env use Qore's environment lock, and the function
+    // with which it passes the new process.env object to the program
+    v8::Local<v8::Object> env_bridge;
+    v8::Local<v8::Function> env_created;
+    if (!qore_v8_create_env_bridge(isolate, context).ToLocal(&env_bridge)
+        || !v8::Function::New(context, qore_v8_env_created, v8::External::New(isolate, this)).ToLocal(&env_created)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "source"),
             source_str).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "filename"),
             label_str).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "env"),
-            env_factory).FromMaybe(false)
+            env_bridge).FromMaybe(false)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "envCreated"),
+            env_created).FromMaybe(false)
         || !context->Global()->DefineOwnProperty(context, key, data, v8::DontEnum).FromMaybe(false)) {
         if (!checkException(xsink, tryCatch)) {
             xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "cannot pass the source to the JavaScript program");
@@ -328,6 +392,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             valid = false;
             ctx.Reset();
             global.Reset();
+            env_object.Reset();
             return -1;
         }
 
@@ -380,6 +445,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
                 valid = false;
                 ctx.Reset();
                 global.Reset();
+                env_object.Reset();
                 return -1;
             }
             v8::String::Utf8Value compiler_source(isolate, compiler_json);
@@ -388,6 +454,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
                 valid = false;
                 ctx.Reset();
                 global.Reset();
+                env_object.Reset();
                 return -1;
             }
             envstr.concat("const _tsModule = ");
@@ -443,6 +510,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             // Reset ctx and global since init failed
             ctx.Reset();
             global.Reset();
+            env_object.Reset();
             return -1;
         }
 
@@ -455,6 +523,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             }
             ctx.Reset();
             global.Reset();
+            env_object.Reset();
             return -1;
         }
 
@@ -579,6 +648,7 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
 
     ctx.Reset();
     global.Reset();
+    env_object.Reset();
 }
 
 int QoreV8Program::saveQoreReference(const QoreValue& rv, ExceptionSink& xsink) {
@@ -681,8 +751,9 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
 
         v8::Local<v8::Context> context(isolate->GetCurrentContext());
 
-        // convert to a Qore value
+        // convert to a Qore value; the program's process.env object is left out (see isRedactedEnv())
         ValueHolder arg(xsink);
+        ExceptionConversionHelper ech(*this);
         if (ex->IsObject()) {
             v8::MaybeLocal<v8::Object> o = ex->ToObject(context);
             assert(!o.IsEmpty());

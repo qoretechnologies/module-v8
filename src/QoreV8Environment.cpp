@@ -69,120 +69,75 @@ QoreHashNode* qore_v8_get_environment_hash(ExceptionSink* xsink) {
     return rv.release();
 }
 
-// the result of a named property interceptor: V8 12 and later return whether the operation was intercepted
-#if V8_MAJOR_VERSION >= 12
-#define QORE_V8_ENV_INTERCEPTED v8::Intercepted
-#define QORE_V8_ENV_YES return v8::Intercepted::kYes
-#define QORE_V8_ENV_NO return v8::Intercepted::kNo
-// the setter and definer of V8 12 and later have no return value
-#define QORE_V8_ENV_SET_INFO v8::PropertyCallbackInfo<void>
-#else
-#define QORE_V8_ENV_INTERCEPTED void
-#define QORE_V8_ENV_YES return
-#define QORE_V8_ENV_NO return
-#define QORE_V8_ENV_SET_INFO v8::PropertyCallbackInfo<v8::Value>
-#endif
-
 namespace {
-//! Returns Node's original process.env object, the data of the interceptors
-template <typename T>
-v8::Local<v8::Object> qore_v8_env_store(const v8::PropertyCallbackInfo<T>& info) {
-    return info.Data().template As<v8::Object>();
-}
-
-//! Returns true if the given variable is set; the caller holds the environment lock
-/** Node's query interceptor answers, so no JavaScript code runs; false is also returned if an exception is pending
-*/
-bool qore_v8_env_exists(v8::Local<v8::Context> context, v8::Local<v8::Object> store, v8::Local<v8::Name> name) {
-    bool exists;
-    return store->HasOwnProperty(context, name).To(&exists) && exists;
-}
-
-//! Sets a variable as Node's process.env setter does; returns false if an exception is pending
-/** The name and the value are converted to strings before the lock is acquired, so that no JavaScript code (such as
-    a toString() method) runs while it is held; a symbol raises TypeError, as in Node
-*/
-bool qore_v8_env_set(v8::Isolate* isolate, v8::Local<v8::Object> store, v8::Local<v8::Name> property,
-        v8::Local<v8::Value> value) {
-    v8::Local<v8::Context> context = isolate->GetCurrentContext();
-    v8::Local<v8::String> name, str;
-    if (!property->ToString(context).ToLocal(&name) || !value->ToString(context).ToLocal(&str)) {
+//! Returns Node's original process.env object, the first argument of every bridge function
+bool qore_v8_env_store(const v8::FunctionCallbackInfo<v8::Value>& info, v8::Local<v8::Object>& store) {
+    if (info.Length() < 1 || !info[0]->IsObject()) {
+        info.GetIsolate()->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8Literal(info.GetIsolate(),
+            "the process environment bridge requires the original process.env object")));
         return false;
     }
-    // Node's setter changes the environment and, for TZ, calls tzset() and makes V8 detect the time zone again
-    AtomicEnvironmentSetter env_lock;
-    return store->Set(context, name, str).IsJust();
+    store = info[0].As<v8::Object>();
+    return true;
 }
 
-QORE_V8_ENV_INTERCEPTED qore_v8_env_getter(v8::Local<v8::Name> property,
-        const v8::PropertyCallbackInfo<v8::Value>& info) {
-    // a symbol is never a variable, and Node does not look it up any further
-    if (property->IsSymbol()) {
-        info.GetReturnValue().SetUndefined();
-        QORE_V8_ENV_YES;
+//! Returns the property name, the second argument of every bridge function but keys()
+bool qore_v8_env_name(const v8::FunctionCallbackInfo<v8::Value>& info, v8::Local<v8::Name>& name) {
+    if (info.Length() < 2 || !info[1]->IsName()) {
+        info.GetIsolate()->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8Literal(info.GetIsolate(),
+            "the process environment bridge requires a property name")));
+        return false;
     }
-    v8::Local<v8::Object> store = qore_v8_env_store(info);
-    v8::Isolate* isolate = info.GetIsolate();
-    v8::Local<v8::Context> context = isolate->GetCurrentContext();
-    QoreEnvironmentReadLock env_lock;
-    // a name that is not a variable is looked up in the prototype chain, after the lock is released
-    if (!qore_v8_env_exists(context, store, property)) {
-        QORE_V8_ENV_NO;
-    }
-    v8::Local<v8::Value> value;
-    if (store->Get(context, property).ToLocal(&value)) {
-        info.GetReturnValue().Set(value);
-    }
-    QORE_V8_ENV_YES;
+    name = info[1].As<v8::Name>();
+    return true;
 }
 
-QORE_V8_ENV_INTERCEPTED qore_v8_env_setter(v8::Local<v8::Name> property, v8::Local<v8::Value> value,
-        const QORE_V8_ENV_SET_INFO& info) {
-    if (qore_v8_env_set(info.GetIsolate(), qore_v8_env_store(info), property, value)) {
-#if V8_MAJOR_VERSION < 12
-        // the return value makes the assignment intercepted, as in Node's setter
-        info.GetReturnValue().Set(value);
-#endif
+//! get(store, name): the value of the variable, or undefined if it is not set
+void qore_v8_env_get(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Local<v8::Object> store;
+    v8::Local<v8::Name> name;
+    if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
+        return;
     }
-    QORE_V8_ENV_YES;
-}
-
-QORE_V8_ENV_INTERCEPTED qore_v8_env_query(v8::Local<v8::Name> property,
-        const v8::PropertyCallbackInfo<v8::Integer>& info) {
-    if (!property->IsString()) {
-        QORE_V8_ENV_NO;
-    }
-    v8::Local<v8::Object> store = qore_v8_env_store(info);
     v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
     QoreEnvironmentReadLock env_lock;
-    if (!qore_v8_env_exists(context, store, property)) {
-        QORE_V8_ENV_NO;
+    // the variable is looked up first, so that a name that is not set is not looked up in the prototype chain,
+    // where JavaScript code could run with the lock held
+    bool exists;
+    if (!store->HasOwnProperty(context, name).To(&exists) || !exists) {
+        return;
     }
-    // a variable is writable, enumerable and configurable
-    info.GetReturnValue().Set(static_cast<int32_t>(v8::None));
-    QORE_V8_ENV_YES;
+    v8::Local<v8::Value> value;
+    if (store->Get(context, name).ToLocal(&value)) {
+        info.GetReturnValue().Set(value);
+    }
 }
 
-QORE_V8_ENV_INTERCEPTED qore_v8_env_deleter(v8::Local<v8::Name> property,
-        const v8::PropertyCallbackInfo<v8::Boolean>& info) {
-    if (property->IsString()) {
-        v8::Local<v8::Object> store = qore_v8_env_store(info);
-        v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
-        AtomicEnvironmentSetter env_lock;
-        if (store->Delete(context, property).IsNothing()) {
-            QORE_V8_ENV_YES;
-        }
+//! has(store, name): true if the variable is set
+void qore_v8_env_has(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Local<v8::Object> store;
+    v8::Local<v8::Name> name;
+    if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
+        return;
     }
-    // process.env has no non-configurable properties, so delete always succeeds, as in Node
-    info.GetReturnValue().Set(true);
-    QORE_V8_ENV_YES;
+    v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
+    QoreEnvironmentReadLock env_lock;
+    bool exists;
+    if (store->HasOwnProperty(context, name).To(&exists)) {
+        info.GetReturnValue().Set(exists);
+    }
 }
 
-void qore_v8_env_enumerator(const v8::PropertyCallbackInfo<v8::Array>& info) {
-    v8::Local<v8::Object> store = qore_v8_env_store(info);
+//! keys(store): the names of the variables, as strings
+void qore_v8_env_keys(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Local<v8::Object> store;
+    if (!qore_v8_env_store(info, store)) {
+        return;
+    }
     v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
     QoreEnvironmentReadLock env_lock;
     v8::Local<v8::Array> names;
+    // a proxy's own keys must be strings or symbols: a name that looks like an index stays a string
     if (store->GetOwnPropertyNames(context,
             static_cast<v8::PropertyFilter>(v8::PropertyFilter::ONLY_ENUMERABLE | v8::PropertyFilter::SKIP_SYMBOLS),
             v8::KeyConversionMode::kConvertToString).ToLocal(&names)) {
@@ -190,50 +145,168 @@ void qore_v8_env_enumerator(const v8::PropertyCallbackInfo<v8::Array>& info) {
     }
 }
 
-QORE_V8_ENV_INTERCEPTED qore_v8_env_definer(v8::Local<v8::Name> property, const v8::PropertyDescriptor& desc,
-        const QORE_V8_ENV_SET_INFO& info) {
-    v8::Local<v8::Object> store = qore_v8_env_store(info);
-    if (desc.has_value() && desc.has_writable() && desc.has_enumerable() && desc.has_configurable()
-        && desc.writable() && desc.enumerable() && desc.configurable()) {
-        // the only descriptor that Node accepts: it sets the variable
-        if (qore_v8_env_set(info.GetIsolate(), store, property, desc.value())) {
-#if V8_MAJOR_VERSION < 12
-            // the return value makes the definition intercepted, so that no own property is defined on the object
-            info.GetReturnValue().Set(desc.value());
-#endif
-        }
-        QORE_V8_ENV_YES;
+//! descriptor(store, name): the property descriptor of the variable, or undefined if it is not set
+void qore_v8_env_descriptor(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Local<v8::Object> store;
+    v8::Local<v8::Name> name;
+    if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
+        return;
     }
-    // Node refuses any other descriptor with ERR_INVALID_OBJECT_DEFINE_PROPERTY without using the environment, so the
-    // descriptor is passed to it without the lock
-    store->DefineProperty(info.GetIsolate()->GetCurrentContext(), property,
-        const_cast<v8::PropertyDescriptor&>(desc)).IsJust();
-    QORE_V8_ENV_YES;
+    v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
+    QoreEnvironmentReadLock env_lock;
+    bool exists;
+    if (!store->HasOwnProperty(context, name).To(&exists) || !exists) {
+        return;
+    }
+    v8::Local<v8::Value> desc;
+    if (store->GetOwnPropertyDescriptor(context, name).ToLocal(&desc)) {
+        info.GetReturnValue().Set(desc);
+    }
 }
 
-//! wrap(store): returns a new process.env object for Node's original process.env object
-void qore_v8_env_wrap(const v8::FunctionCallbackInfo<v8::Value>& info) {
+//! set(store, name, value): sets the variable; the name and value are strings
+void qore_v8_env_set(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Local<v8::Object> store;
+    v8::Local<v8::Name> name;
+    if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
+        return;
+    }
+    if (info.Length() < 3 || !info[2]->IsString()) {
+        info.GetIsolate()->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8Literal(info.GetIsolate(),
+            "the process environment bridge requires a string value")));
+        return;
+    }
+    v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
+    AtomicEnvironmentSetter env_lock;
+    // Node's setter changes the environment and, for TZ, makes V8 detect the time zone again
+    bool rv;
+    if (store->Set(context, name, info[2]).To(&rv)) {
+        info.GetReturnValue().Set(rv);
+    }
+}
+
+//! delete(store, name): removes the variable
+void qore_v8_env_delete(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Local<v8::Object> store;
+    v8::Local<v8::Name> name;
+    if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
+        return;
+    }
+    v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
+    AtomicEnvironmentSetter env_lock;
+    bool rv;
+    if (store->Delete(context, name).To(&rv)) {
+        info.GetReturnValue().Set(rv);
+    }
+}
+
+//! Reads a field of a property descriptor object created by V8 for a proxy trap (a plain object of data properties)
+bool qore_v8_env_desc_field(v8::Local<v8::Context> context, v8::Local<v8::Object> desc, const char* field,
+        v8::Local<v8::Value>& value, bool& found) {
+    v8::Isolate* isolate = context->GetIsolate();
+    v8::Local<v8::String> key;
+    if (!v8::String::NewFromUtf8(isolate, field).ToLocal(&key) || !desc->HasOwnProperty(context, key).To(&found)) {
+        return false;
+    }
+    if (found && !desc->Get(context, key).ToLocal(&value)) {
+        return false;
+    }
+    return true;
+}
+
+//! define(store, name, descriptor): defines the variable as Node's process.env does: only a configurable, writable and
+//! enumerable data descriptor is accepted
+void qore_v8_env_define(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Local<v8::Object> store;
+    v8::Local<v8::Name> name;
+    if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
+        return;
+    }
     v8::Isolate* isolate = info.GetIsolate();
-    if (info.Length() < 1 || !info[0]->IsObject()) {
+    if (info.Length() < 3 || !info[2]->IsObject()) {
         isolate->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8Literal(isolate,
-            "the process environment requires the original process.env object")));
+            "the process environment bridge requires a property descriptor")));
         return;
     }
     v8::Local<v8::Context> context = isolate->GetCurrentContext();
-    // created like Node's process.env template, with a constructor template, so that the object is an ordinary API
-    // object that can be cloned and serialized as Node's can
-    v8::Local<v8::ObjectTemplate> tmpl = v8::ObjectTemplate::New(isolate, v8::FunctionTemplate::New(isolate));
-    // the interceptors read and change nothing but the environment, as Node's
-    tmpl->SetHandler(v8::NamedPropertyHandlerConfiguration(qore_v8_env_getter, qore_v8_env_setter,
-        qore_v8_env_query, qore_v8_env_deleter, qore_v8_env_enumerator, qore_v8_env_definer, nullptr, info[0],
-        v8::PropertyHandlerFlags::kHasNoSideEffect));
-    v8::Local<v8::Object> env;
-    if (tmpl->NewInstance(context).ToLocal(&env)) {
-        info.GetReturnValue().Set(env);
+    v8::Local<v8::Object> d = info[2].As<v8::Object>();
+
+    // the descriptor is read before the lock is acquired
+    v8::Local<v8::Value> value, writable, enumerable, configurable, get, set;
+    bool has_value = false, has_writable = false, has_enumerable = false, has_configurable = false, has_get = false,
+        has_set = false;
+    if (!qore_v8_env_desc_field(context, d, "value", value, has_value)
+        || !qore_v8_env_desc_field(context, d, "writable", writable, has_writable)
+        || !qore_v8_env_desc_field(context, d, "enumerable", enumerable, has_enumerable)
+        || !qore_v8_env_desc_field(context, d, "configurable", configurable, has_configurable)
+        || !qore_v8_env_desc_field(context, d, "get", get, has_get)
+        || !qore_v8_env_desc_field(context, d, "set", set, has_set)) {
+        return;
+    }
+    // the value of a descriptor that Node accepts (a configurable, writable and enumerable data descriptor) is
+    // converted to a string before the lock is acquired, as Node's setter would convert it; Node refuses any other
+    // descriptor without converting its value
+    if (has_value && has_writable && has_enumerable && has_configurable && writable->BooleanValue(isolate)
+        && enumerable->BooleanValue(isolate) && configurable->BooleanValue(isolate) && !value->IsString()
+        && !value->ToString(context).ToLocal(&value)) {
+        return;
+    }
+
+    // the descriptor is built on the stack: no C++ exception can be raised here, since it would pass through V8
+    auto define = [&](v8::PropertyDescriptor& pd) {
+        if (has_enumerable) {
+            pd.set_enumerable(enumerable->BooleanValue(isolate));
+        }
+        if (has_configurable) {
+            pd.set_configurable(configurable->BooleanValue(isolate));
+        }
+        AtomicEnvironmentSetter env_lock;
+        bool rv;
+        if (store->DefineProperty(context, name, pd).To(&rv)) {
+            info.GetReturnValue().Set(rv);
+        }
+    };
+    if (has_value) {
+        if (has_writable) {
+            v8::PropertyDescriptor pd(value, writable->BooleanValue(isolate));
+            define(pd);
+        } else {
+            v8::PropertyDescriptor pd(value);
+            define(pd);
+        }
+    } else if (has_get || has_set) {
+        v8::PropertyDescriptor pd(has_get ? get : v8::Local<v8::Value>(), has_set ? set : v8::Local<v8::Value>());
+        define(pd);
+    } else {
+        v8::PropertyDescriptor pd;
+        define(pd);
     }
 }
 }
 
-v8::MaybeLocal<v8::Function> qore_v8_create_env_factory(v8::Local<v8::Context> context) {
-    return v8::Function::New(context, qore_v8_env_wrap);
+v8::MaybeLocal<v8::Object> qore_v8_create_env_bridge(v8::Isolate* isolate, v8::Local<v8::Context> context) {
+    static const struct {
+        const char* name;
+        v8::FunctionCallback callback;
+    } functions[] = {
+        {"get", qore_v8_env_get},
+        {"has", qore_v8_env_has},
+        {"keys", qore_v8_env_keys},
+        {"descriptor", qore_v8_env_descriptor},
+        {"set", qore_v8_env_set},
+        {"delete", qore_v8_env_delete},
+        {"define", qore_v8_env_define},
+    };
+
+    v8::Local<v8::Object> bridge = v8::Object::New(isolate);
+    for (const auto& i : functions) {
+        v8::Local<v8::Function> func;
+        v8::Local<v8::String> key;
+        if (!v8::Function::New(context, i.callback).ToLocal(&func)
+            || !v8::String::NewFromUtf8(isolate, i.name).ToLocal(&key)
+            || !bridge->CreateDataProperty(context, key, func).FromMaybe(false)) {
+            return v8::MaybeLocal<v8::Object>();
+        }
+    }
+    return bridge;
 }

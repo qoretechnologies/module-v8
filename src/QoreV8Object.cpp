@@ -74,6 +74,10 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::V
             return nullptr;
         }
     }
+    // the variables of the environment are never put in a Qore exception
+    if (v8h.getProgram()->isRedactedEnv(obj)) {
+        return new QoreStringNode("<process.env>");
+    }
     if (obj->IsCallable()) {
         return new QoreV8CallReference(this, parent);
     }

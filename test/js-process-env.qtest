@@ -23,10 +23,16 @@ class JsProcessEnvTest inherits Test {
     public {
         #! the JavaScript functions used by the tests
         const Source = "
-globalThis.likeNode = () => !require('util').types.isProxy(process.env)
-    && Object.getPrototypeOf(Object.getPrototypeOf(process.env)) === Object.prototype
+globalThis.likeNode = () => require('util').types.isProxy(process.env)
+    && process.env instanceof Object
     && JSON.parse(JSON.stringify(process.env)).PATH === process.env.PATH
     && structuredClone({...process.env}).PATH === process.env.PATH;
+globalThis.serializeEnv = () => require('v8').serialize(process.env);
+globalThis.serializeNested = () => require('v8').serialize({ env: process.env });
+globalThis.cloneEnv = () => structuredClone(process.env);
+globalThis.throwEnv = () => { throw process.env; };
+globalThis.throwNested = () => { const e = new Error('failed'); e.env = process.env; throw e; };
+globalThis.getEnv = () => process.env;
 globalThis.getVar = (name) => process.env[name];
 globalThis.setVar = (name, value) => { process.env[name] = value; };
 globalThis.deleteVar = (name) => delete process.env[name];
@@ -83,7 +89,8 @@ globalThis.readLoop = (name, count) => {
     constructor() : Test("JsProcessEnvTest", "1.0") {
         js = new JavaScriptProgram(Source, "process-env.js");
 
-        addTestCase("process.env is an ordinary object in every kind of program", \objectTest());
+        addTestCase("process.env is the environment proxy in every kind of program", \objectTest());
+        addTestCase("an exception never includes the environment", \exceptionTest());
         addTestCase("JavaScript and Qore see each other's changes", \sharedTest());
         addTestCase("values are converted to strings as Node.js converts them", \conversionTest());
         addTestCase("enumeration and property descriptors", \enumerationTest());
@@ -106,12 +113,12 @@ globalThis.readLoop = (name, count) => {
         return js.getGlobal().getProperty(func).callAsFunctionArgs(NOTHING, argv);
     }
 
-    #! process.env is an object with interceptors like Node's, not a proxy, in every kind of program
+    #! process.env is the environment proxy, which can be copied as Node's object can, in every kind of program
     objectTest() {
         assertTrue(call("likeNode"), "a JavaScript program's process.env");
         *TypeScriptProgram ts;
         try {
-            ts = new TypeScriptProgram("globalThis.likeNode = (): boolean => !require('util').types.isProxy(process.env)
+            ts = new TypeScriptProgram("globalThis.likeNode = (): boolean => require('util').types.isProxy(process.env)
     && JSON.parse(JSON.stringify(process.env)).PATH === process.env.PATH;", "process-env.ts");
         } catch (hash<ExceptionInfo> ex) {
             # only missing compiler support is optional
@@ -126,6 +133,41 @@ globalThis.readLoop = (name, count) => {
         on_exit unsetenv(name);
         JavaScriptProgram js2(sprintf("globalThis.atStart = process.env[%y];", name), "at-start.js");
         assertEq("at start", js2.getGlobal().atStart, "the environment when the program's code starts");
+    }
+
+    #! Calls the given JavaScript function, which must raise an exception, and returns the exception
+    private hash<ExceptionInfo> callError(string func) {
+        *hash<ExceptionInfo> err;
+        try {
+            call(func);
+        } catch (hash<ExceptionInfo> ex) {
+            err = ex;
+        }
+        assertTrue(exists err, func + "() raises an exception");
+        return err;
+    }
+
+    #! Neither the description nor the argument of an exception raised by JavaScript code contain the environment
+    /** Node's v8.serialize() reported an object it cannot serialize with util.inspect() of it, so v8.serialize() of
+        process.env, an object with interceptors, raised an error whose message listed every variable; an exception
+        value containing process.env was converted with every variable
+    */
+    exceptionTest() {
+        string secret = "secret-" + get_random_string(16);
+        assertEq(0, setenv(name, secret));
+        on_exit unsetenv(name);
+
+        foreach string func in ("serializeEnv", "serializeNested", "cloneEnv", "throwEnv", "throwNested") {
+            hash<ExceptionInfo> err = callError(func);
+            assertEq("JAVASCRIPT-EXCEPTION", err.err, func);
+            assertEq(-1, err.desc.find(secret), sprintf("%s(): the description has no variable: %s", func, err.desc));
+            assertEq(-1, sprintf("%y", err.arg).find(secret), sprintf("%s(): the argument has no variable", func));
+        }
+        assertRegex("could not be cloned", callError("serializeEnv").desc);
+        assertEq("<process.env>", callError("throwEnv").arg, "a thrown process.env is replaced");
+        assertEq("<process.env>", callError("throwNested").arg.env, "process.env in a thrown error is replaced");
+        # Qore code that asks for the environment gets it
+        assertEq(secret, call("getEnv").toData(){name});
     }
 
     sharedTest() {

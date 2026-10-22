@@ -103,6 +103,38 @@ public:
     //! Checks if a JavaScript exception has been thrown and throws the corresponding Qore exception
     DLLLOCAL int checkException(ExceptionSink* xsink, const v8::TryCatch& tryCatch) const;
 
+    //! Sets the program's process.env object, which its bootstrap code creates
+    DLLLOCAL void setEnvObject(v8::Local<v8::Object> obj) {
+        env_object.Reset(isolate, obj);
+    }
+
+    //! Returns true if a JavaScript exception is being converted and the given object is the program's process.env
+    /** The variables of the environment are never put in a %Qore exception: an exception value that is or contains
+        the program's process.env object gets the string \c "<process.env>" in its place
+    */
+    DLLLOCAL bool isRedactedEnv(v8::Local<v8::Object> obj) const {
+        return exception_conversions && !env_object.IsEmpty() && obj->StrictEquals(env_object.Get(isolate));
+    }
+
+    //! Marks the conversion of a JavaScript exception to a %Qore value for its lifetime; see isRedactedEnv()
+    class ExceptionConversionHelper {
+    public:
+        DLLLOCAL ExceptionConversionHelper(const QoreV8Program& pgm) : pgm(pgm) {
+            ++pgm.exception_conversions;
+        }
+
+        DLLLOCAL ~ExceptionConversionHelper() {
+            assert(pgm.exception_conversions > 0);
+            --pgm.exception_conversions;
+        }
+
+        ExceptionConversionHelper(const ExceptionConversionHelper&) = delete;
+        ExceptionConversionHelper& operator=(const ExceptionConversionHelper&) = delete;
+
+    private:
+        const QoreV8Program& pgm;
+    };
+
     //! Returns the global proxy object
     DLLLOCAL QoreObject* getGlobal(ExceptionSink* xsink);
 
@@ -238,6 +270,10 @@ protected:
 
     v8::Global<v8::Object> global;
     v8::Global<v8::Context> ctx;
+    //! the program's process.env object; see isRedactedEnv()
+    v8::Global<v8::Object> env_object;
+    //! the number of JavaScript exceptions being converted to Qore values (all in the thread holding the isolate)
+    mutable int exception_conversions = 0;
 
     QoreObject* self = nullptr;
     QoreProgram* qpgm = getProgram();

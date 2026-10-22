@@ -46,6 +46,11 @@
       JavaScript code could do the same to %Qore code reading the environment or starting a process.
       \c process.env behaves as before, except that <tt>structuredClone(process.env)</tt> raises
       \c DataCloneError; clone a copy instead (<tt>structuredClone({...process.env})</tt>)
+    - an exception raised by JavaScript code never contains the variables of the process environment:
+      <tt>v8.serialize(process.env)</tt>, or of a value containing \c process.env, raised an error whose message
+      (and so the description of the \c JAVASCRIPT-EXCEPTION) listed every variable, which could put secrets in
+      logs; it now raises an error that the object could not be cloned.  An exception value that is or contains
+      \c process.env has the string \c "<process.env>" in its place in the exception argument
     - a @ref V8::TypeScriptProgram "TypeScriptProgram" no longer prints "ExperimentalWarning: stripTypeScriptTypes is
       an experimental feature and might change at any time" on stderr: experimental feature warnings are not printed
       unless \c NODE_OPTIONS enables warnings (\c --warnings or \c --trace-warnings); listeners of the

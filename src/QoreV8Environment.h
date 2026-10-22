@@ -44,24 +44,24 @@ DLLLOCAL std::vector<std::pair<std::string, std::string>> qore_v8_get_environmen
 */
 DLLLOCAL QoreHashNode* qore_v8_get_environment_hash(ExceptionSink* xsink);
 
-//! Returns the function with which the bootstrap code of a program replaces \c process.env
+//! Returns the functions with which the bootstrap code of a program makes \c process.env use Qore's environment lock
 /** Node.js reads and changes the process environment for \c process.env with a lock of its own, which does not
     serialize it with %Qore: a variable that %Qore changes in another thread while JavaScript code reads it can be
     read after it was freed (musl frees the value that \c setenv() replaces), and a change made by JavaScript code
     while %Qore reads the environment, or makes a copy of it for a new process, can do the same to %Qore.
 
-    The returned function takes Node's original \c process.env object and returns a new object for \c process.env
-    whose named property interceptors perform every operation on the original object with Qore's environment lock
-    held: shared to read the environment (get, query, enumerate), exclusively to change it (set, delete, define).
-    Node's own handling, including the conversion of values to strings, its errors, and the time zone change that a
-    change of \c TZ causes, is kept, and Node acquires its lock inside Qore's, never the other way around.  No
-    JavaScript code runs while the lock is held: the original object's operations are implemented in C++, and names
-    and values are converted to strings before the lock is acquired.  Like Node's object, the new one is an ordinary
-    object with interceptors (not a proxy); only Node's serializer does not know it, so \c structuredClone() of it
-    raises \c DataCloneError, where Node converts its own object to a plain object.
+    The bootstrap code of every program therefore replaces \c process.env with a proxy whose operations call the
+    returned functions, which perform them on Node's original \c process.env object (passed as their first
+    argument) with Qore's environment lock held: shared to read the environment (\c get, \c has, \c keys,
+    \c descriptor), exclusively to change it (\c set, \c delete, \c define).  Node's own handling, including the
+    conversion of values to strings, its errors, and the time zone change that a change of \c TZ causes, is kept,
+    and its lock is acquired by Node inside Qore's, never the other way around.  No JavaScript code runs while the
+    lock is held: the original object's operations are implemented in C++, and the proxy converts names and values
+    to strings before it calls the functions.
 
-    @return the function, or an empty handle if an exception is pending
+    @return an object with the functions \c get, \c has, \c keys, \c descriptor, \c set, \c delete and \c define,
+    or an empty handle if an exception is pending
 */
-DLLLOCAL v8::MaybeLocal<v8::Function> qore_v8_create_env_factory(v8::Local<v8::Context> context);
+DLLLOCAL v8::MaybeLocal<v8::Object> qore_v8_create_env_bridge(v8::Isolate* isolate, v8::Local<v8::Context> context);
 
 #endif

@@ -55,30 +55,47 @@ each other: a variable that Qore code replaced in another thread while JavaScrip
 read after it was freed (musl's `setenv()` frees the value it replaces), and a change made by JavaScript
 code could do the same to Qore code reading the environment, or copying it for a new process.
 
-The bootstrap script therefore replaces `process.env`, before any code of the program runs, with an
-object made by `qore_v8_create_env_factory()` (`QoreV8Environment.cpp`, passed in the bootstrap data as
-`env`; `QORE_V8_PROCESS_ENV_BOOTSTRAP` in `QoreV8Program.cpp`). Like Node's own object, it is an ordinary
-object with named property interceptors, made from an object template with a constructor template; its
-interceptors perform each operation on Node's original `process.env` object with Qore's lock held: shared
-for get, query and enumerate, exclusively for set, delete and define. Node's own handling is kept: the
-conversion of names and values to strings and its errors (`ERR_INVALID_OBJECT_DEFINE_PROPERTY` for a
-descriptor it refuses), and the time zone change that a change of `TZ` causes (`tzset()` and V8's time
-zone detection, which run inside the exclusive lock).
+The bootstrap script therefore replaces `process.env`, before any code of the program runs, with a
+proxy (`QORE_V8_PROCESS_ENV_BOOTSTRAP` in `QoreV8Program.cpp`) whose traps call the functions of the
+environment bridge (`qore_v8_create_env_bridge()` in `QoreV8Environment.cpp`, passed in the bootstrap
+data as `env`). Each function performs the operation on Node's original `process.env` object with Qore's
+lock held: shared for `get`, `has`, `keys` and `descriptor`, exclusively for `set`, `delete` and
+`define`. Node's own handling is kept: the conversion of names and values to strings and its errors
+(`ERR_INVALID_OBJECT_DEFINE_PROPERTY` for a descriptor it refuses), and the time zone change that a
+change of `TZ` causes (`tzset()` and V8's time zone detection, which run inside the exclusive lock).
 
 - **Lock order:** Qore's lock is acquired first and Node's inside it, by Node's store; Node never waits
   for Qore's lock while it holds its own.
 - **No JavaScript runs while the lock is held:** the operations of the original object are Node's C++
-  interceptors; names and values are converted to strings before the lock is acquired; a variable is
+  interceptors; the proxy converts names and values to strings before it calls a function; a variable is
   looked up with `HasOwnProperty()` before `Get()`, so that a name that is not set is not looked up in the
-  prototype chain under the lock; a descriptor that Node refuses is passed to Node's definer without the
-  lock, since Node raises its error without using the environment.
+  prototype chain under the lock; the descriptor of `define` is read, and its value converted, before the
+  lock is acquired.
 - **Node's behavior is kept:** a symbol property is `undefined`; a name that is not a variable is looked
-  up in the prototype chain (`process.env.hasOwnProperty()`); a symbol name or value raises `TypeError`;
-  `delete` always returns `true`; `Object.keys()`, the spread operator, `JSON.stringify()` and
-  `util.inspect()` see the variables.
-- **One difference:** `structuredClone(process.env)`, and passing `process.env` itself to `postMessage()`,
-  raise `DataCloneError`: Node's serializer converts only its own `process.env` object, which it
-  recognizes by its template, to a plain object. A copy made with `{...process.env}` can be cloned.
+  up in `Object.prototype` (`process.env.hasOwnProperty()`); a symbol name or value raises `TypeError`;
+  `delete` always returns `true`; `Object.keys()`, the spread operator and `JSON.stringify()` see the
+  variables. `util.inspect()` shows the target of a proxy, so the target has a `util.inspect.custom`
+  function that shows the variables.
+- **Differences:** `util.types.isProxy(process.env)` is `true`; `structuredClone(process.env)`, and
+  passing `process.env` itself to `postMessage()` or `v8.serialize()`, raise an error (Node's serializer
+  converts only its own `process.env` object to a plain object); a copy made with `{...process.env}` can
+  be cloned.
+
+#### Error messages and exceptions never contain the environment
+
+The proxy is a proxy rather than an object with interceptors, as Node's own `process.env` is, because
+V8's serializer refuses a proxy at once (`#<Object> could not be cloned.`), while it passes an object with
+interceptors to the serializer's delegate as a host object, and Node's `v8.serialize()`
+(`DefaultSerializer._writeHostObject()` in `lib/v8.js`) reports a host object that it cannot serialize as
+`Unserializable host object: ${inspect(object)}`, which listed every variable of the environment in the
+error message (and in the description of the `JAVASCRIPT-EXCEPTION`, and so in logs). Node's own
+`process.env` does this as well.
+
+The bootstrap script passes the proxy to the program (`envCreated()`), and the conversion of a JavaScript
+exception to a Qore value (`QoreV8Program::checkException()`, `ExceptionConversionHelper`) puts the
+string `"<process.env>"` in place of the proxy (`QoreV8Object::toData()`, `isRedactedEnv()`), so that an
+exception value that is or contains `process.env` does not carry the variables into the exception
+argument. Other conversions are not affected: Qore code that asks for `process.env` gets the variables.
 
 Node also reads the environment when it initializes the process (`node::InitializeOncePerProcess()`) and
 when it creates a program's environment (`node::CommonEnvironmentSetup::Create()`); no code of a program
@@ -91,8 +108,8 @@ example `os.homedir()`, OpenSSL and c-ares configuration variables), and `Worker
 `process.env` is a copy of the environment that Node makes without Qore's lock, or, with `SHARE_ENV`,
 Node's original store.
 
-`test/js-process-env.qtest` checks that the object behaves as Node's `process.env` and changes the
-environment in several threads while JavaScript code reads it.
+`test/js-process-env.qtest` checks that the proxy behaves as Node's `process.env`, that exceptions do not
+contain the environment, and changes the environment in several threads while JavaScript code reads it.
 
 ### Property Resolution Flow
 
@@ -362,5 +379,5 @@ callback chains (Qore → JS → Qore → JS) to work correctly.
 | `src/QoreV8Program.h` | Program class with template cache and tracking sets |
 | `src/QoreV8Program.cpp` | Program init (qore global injection), cleanup, value conversion |
 | `src/QoreV8Environment.h` | Access to the process environment under Qore's environment lock |
-| `src/QoreV8Environment.cpp` | Atomic copy of the environment (`JavaScriptProgram::getEnvironment()`), `process.env` interceptors |
+| `src/QoreV8Environment.cpp` | Atomic copy of the environment (`JavaScriptProgram::getEnvironment()`), environment bridge of `process.env` |
 | `CMakeLists.txt` | Build configuration (new source files added) |
