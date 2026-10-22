@@ -214,6 +214,22 @@ bool qore_v8_env_desc_field(v8::Local<v8::Context> context, v8::Local<v8::Object
     return true;
 }
 
+//! Raises Node's ERR_INVALID_OBJECT_DEFINE_PROPERTY error for a descriptor that process.env does not accept
+void qore_v8_env_throw_define_error(v8::Isolate* isolate, v8::Local<v8::Context> context, const char* msg) {
+    v8::Local<v8::String> str;
+    if (!v8::String::NewFromUtf8(isolate, msg).ToLocal(&str)) {
+        return;
+    }
+    v8::Local<v8::Value> err = v8::Exception::TypeError(str);
+    v8::Local<v8::String> code;
+    if (err->IsObject() && v8::String::NewFromUtf8(isolate, "ERR_INVALID_OBJECT_DEFINE_PROPERTY").ToLocal(&code)) {
+        // a data property: no setter runs
+        err.As<v8::Object>()->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "code"),
+            code).IsJust();
+    }
+    isolate->ThrowException(err);
+}
+
 //! define(store, name, descriptor): defines the variable as Node's process.env does: only a configurable, writable and
 //! enumerable data descriptor is accepted
 void qore_v8_env_define(const v8::FunctionCallbackInfo<v8::Value>& info) {
@@ -243,44 +259,35 @@ void qore_v8_env_define(const v8::FunctionCallbackInfo<v8::Value>& info) {
         || !qore_v8_env_desc_field(context, d, "set", set, has_set)) {
         return;
     }
-    // the value of a descriptor that Node accepts (a configurable, writable and enumerable data descriptor) is
-    // converted to a string before the lock is acquired, as Node's setter would convert it; Node refuses any other
-    // descriptor without converting its value
-    if (has_value && has_writable && has_enumerable && has_configurable && writable->BooleanValue(isolate)
-        && enumerable->BooleanValue(isolate) && configurable->BooleanValue(isolate) && !value->IsString()
-        && !value->ToString(context).ToLocal(&value)) {
-        return;
-    }
-
-    // the descriptor is built on the stack: no C++ exception can be raised here, since it would pass through V8
-    auto define = [&](v8::PropertyDescriptor& pd) {
-        if (has_enumerable) {
-            pd.set_enumerable(enumerable->BooleanValue(isolate));
+    // Node's rules (EnvDefiner() in node_env_var.cc) are applied here, and Node's error is raised: V8 11 (Node 20)
+    // does not raise the error of an interceptor's definer called through v8::Object::DefineProperty(), so the
+    // descriptor was accepted and ignored there
+    if (has_value) {
+        if (!has_writable || !has_enumerable || !has_configurable || !writable->BooleanValue(isolate)
+            || !enumerable->BooleanValue(isolate) || !configurable->BooleanValue(isolate)) {
+            qore_v8_env_throw_define_error(isolate, context,
+                "'process.env' only accepts a configurable, writable, and enumerable data descriptor");
+            return;
         }
-        if (has_configurable) {
-            pd.set_configurable(configurable->BooleanValue(isolate));
+        // the only descriptor that Node accepts: it sets the variable as an assignment does; the name and value are
+        // converted to strings before the lock is acquired (a symbol raises TypeError, as in Node)
+        v8::Local<v8::String> key, str;
+        if (!name->ToString(context).ToLocal(&key) || !value->ToString(context).ToLocal(&str)) {
+            return;
         }
         AtomicEnvironmentSetter env_lock;
-        bool rv;
-        if (store->DefineProperty(context, name, pd).To(&rv)) {
-            info.GetReturnValue().Set(rv);
+        if (store->Set(context, key, str).IsJust()) {
+            info.GetReturnValue().Set(true);
         }
-    };
-    if (has_value) {
-        if (has_writable) {
-            v8::PropertyDescriptor pd(value, writable->BooleanValue(isolate));
-            define(pd);
-        } else {
-            v8::PropertyDescriptor pd(value);
-            define(pd);
-        }
-    } else if (has_get || has_set) {
-        v8::PropertyDescriptor pd(has_get ? get : v8::Local<v8::Value>(), has_set ? set : v8::Local<v8::Value>());
-        define(pd);
-    } else {
-        v8::PropertyDescriptor pd;
-        define(pd);
+        return;
     }
+    if (has_get || has_set) {
+        qore_v8_env_throw_define_error(isolate, context,
+            "'process.env' does not accept an accessor(getter/setter) descriptor");
+        return;
+    }
+    qore_v8_env_throw_define_error(isolate, context,
+        "'process.env' only accepts a configurable, writable, and enumerable data descriptor");
 }
 }
 

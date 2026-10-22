@@ -71,6 +71,11 @@ change of `TZ` causes (`tzset()` and V8's time zone detection, which run inside 
   looked up with `HasOwnProperty()` before `Get()`, so that a name that is not set is not looked up in the
   prototype chain under the lock; the descriptor of `define` is read, and its value converted, before the
   lock is acquired.
+- **`define` applies Node's rules itself** (`EnvDefiner()`): a configurable, writable and enumerable data
+  descriptor sets the variable as an assignment does, and any other descriptor raises Node's
+  `ERR_INVALID_OBJECT_DEFINE_PROPERTY` error. Node's definer is not called through
+  `v8::Object::DefineProperty()`: V8 11 (Node 20) does not raise the definer's error there, so a refused
+  descriptor was silently ignored.
 - **Node's behavior is kept:** a symbol property is `undefined`; a name that is not a variable is looked
   up in `Object.prototype` (`process.env.hasOwnProperty()`); a symbol name or value raises `TypeError`;
   `delete` always returns `true`; `Object.keys()`, the spread operator and `JSON.stringify()` see the
