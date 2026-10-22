@@ -23,12 +23,15 @@
 */
 class TsWarningsTest inherits Test {
     public {
-        #! the code run in a new process: it creates TypeScript programs and a JavaScript program that emits a warning
-        const Code = "%modern
-for (int i = 0; i < 3; ++i) {
+        #! the code run in a new process that creates TypeScript programs, if TypeScript is available
+        const TsCode = "for (int i = 0; i < 3; ++i) {
     TypeScriptProgram ts(\"const x: number = \" + i + \";\", \"warning-test-\" + i + \".ts\");
 }
-JavaScriptProgram js(\"process.emitWarning('a test warning', 'QoreTestWarning');\", \"warning-test.js\");
+";
+
+        #! the code run in a new process that creates a JavaScript program that emits a warning
+        const JsCode = "JavaScriptProgram js(\"process.emitWarning('a test warning', 'QoreTestWarning');\",
+    \"warning-test.js\");
 printf(\"DONE\\n\");
 ";
 
@@ -39,12 +42,24 @@ printf(\"DONE\\n\");
     private {
         #! True if Node.js has built-in type stripping, which emits the experimental feature warning
         bool builtin_strip;
+
+        #! True if TypeScript programs can be created
+        bool ts_available;
     }
 
     constructor() : Test("TsWarningsTest", "1.0") {
         JavaScriptProgram js("globalThis.builtinStrip = typeof require('module').stripTypeScriptTypes === 'function'
     && process.features.typescript !== false;", "strip-check.js");
         builtin_strip = js.getGlobal().builtinStrip;
+        # Only missing compiler support is optional; any other failure of this valid probe fails the test
+        try {
+            TypeScriptProgram ts("const x: number = 1;", "check.ts");
+            ts_available = True;
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.desc.find("QORE_TYPESCRIPT_UNAVAILABLE:") < 0) {
+                rethrow;
+            }
+        }
 
         addTestCase("a TypeScript program prints no experimental feature warning", \noWarningTest());
         addTestCase("the warning is printed when NODE_OPTIONS enables warnings", \enabledWarningTest());
@@ -54,7 +69,7 @@ printf(\"DONE\\n\");
     }
 
     private skipIfNoBuiltinStrip() {
-        if (!builtin_strip) {
+        if (!builtin_strip || !ts_available) {
             testSkip("this Node.js build has no built-in TypeScript type stripping, which emits the warning");
         }
     }
@@ -74,7 +89,9 @@ printf(\"DONE\\n\");
         env.PATH = getenv("PATH");
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
         env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
-        return Process::run(Process::getExecutablePath(), ("-l", "v8", "-e", Code), {"env": env});
+        # TypeScript programs are only created where they can be
+        string code = "%modern\n" + (ts_available ? TsCode : "") + JsCode;
+        return Process::run(Process::getExecutablePath(), ("-l", "v8", "-e", code), {"env": env});
     }
 %endif
 
