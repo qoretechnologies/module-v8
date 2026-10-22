@@ -241,23 +241,50 @@ public:
     */
     template <typename T>
     DLLLOCAL void resetObject(v8::Global<T>& obj) {
-        {
+        if (qore_v8_forked_child()) {
+            // the program lock is not acquired in a child process created with fork(): a thread that does not
+            // exist in the child could have held it when the process was copied
+            forgetHandle(obj);
+        } else {
             AutoLocker al(m);
             if (valid) {
                 obj.Reset();
             } else {
-                // Forget the persistent slot without touching the (possibly
-                // already-disposed) isolate. V8 renamed PersistentBase::Empty()
-                // to IndirectHandleBase::Clear() mid-v8-11.x; v8-handle-base.h
-                // exists only in the new API.
-#if defined(__has_include) && __has_include(<v8-handle-base.h>)
-                obj.Clear();
-#else
-                obj.Empty();
-#endif
+                // Forget the persistent slot without touching the (possibly already-disposed) isolate
+                forgetHandle(obj);
             }
         }
         weakDeref();
+    }
+
+    //! Forgets a persistent handle without accessing its isolate
+    template <typename T>
+    DLLLOCAL static void forgetHandle(v8::Global<T>& obj) {
+        // V8 renamed PersistentBase::Empty() to IndirectHandleBase::Clear() mid-v8-11.x; v8-handle-base.h exists
+        // only in the new API
+#if defined(__has_include) && __has_include(<v8-handle-base.h>)
+        obj.Clear();
+#else
+        obj.Empty();
+#endif
+    }
+
+    //! Resets a persistent handle; in a child process created with fork(), the handle is only forgotten
+    /** see qore_v8_forked_child()
+    */
+    template <typename T>
+    DLLLOCAL static void resetHandle(v8::Global<T>& obj) {
+        if (qore_v8_forked_child()) {
+            forgetHandle(obj);
+        } else {
+            obj.Reset();
+        }
+    }
+
+    //! Raises the exception for a call into V8 in a child process created with fork()
+    DLLLOCAL static void raiseForkedChildError(ExceptionSink* xsink) {
+        xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "JavaScript code cannot be run in a child process "
+            "created with fork(): the V8 and Node.js threads of the parent process do not exist in the child");
     }
 
 protected:
@@ -326,6 +353,17 @@ protected:
     DLLLOCAL int setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tryCatch);
 
     DLLLOCAL void deleteIntern(ExceptionSink* xsink);
+
+    //! Releases the Qore references of the program in a child process created with fork()
+    /** V8 and Node.js are not accessed, and no lock is acquired; see qore_v8_forked_child()
+    */
+    DLLLOCAL void deleteInForkedChild(ExceptionSink* xsink);
+
+    //! Abandons the node environment, the isolate and the persistent handles of the program in a forked child
+    /** They are never destroyed in the child; destroying them waits for platform threads that do not exist in the
+        child and runs the event loop, whose descriptors refer to the event loop of the parent on Linux
+    */
+    DLLLOCAL void abandonInForkedChild();
 
     //! Waits for all pending platform tasks to complete before the isolate is unregistered from the platform
     /** Must be called after node::Stop() and while the node environment is still alive
@@ -399,6 +437,14 @@ private:
 class QoreV8ProgramHelper {
 public:
     DLLLOCAL QoreV8ProgramHelper(ExceptionSink* xsink, QoreV8Program* pgm, bool silent = false) {
+        // no JavaScript code can be run in a child process created with fork(); the program lock is not acquired
+        // either, as a thread that does not exist in the child could have held it when the process was copied
+        if (qore_v8_forked_child()) {
+            if (!silent) {
+                QoreV8Program::raiseForkedChildError(xsink);
+            }
+            return;
+        }
         // Acquire the mutex FIRST to check validity and increment opcount atomically.
         // This prevents deleteIntern() from destroying the isolate between our validity
         // check and V8 object creation (race condition that caused intermittent SIGSEGV
@@ -478,7 +524,11 @@ public:
     DLLLOCAL ~QoreV8ProgramHelper() {
         if (pgm) {
             bool destroy;
-            {
+            if (qore_v8_forked_child()) {
+                // the helper was created before the process was forked, by the thread that called fork() from
+                // Qore code called by JavaScript; the program lock is not acquired in the child
+                destroy = !--pgm->opcount && pgm->to_destroy;
+            } else {
                 AutoLocker al(pgm->m);
                 destroy = !--pgm->opcount && pgm->to_destroy;
             }

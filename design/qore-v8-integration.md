@@ -346,6 +346,34 @@ process was restarted. In `warn` mode the rejection is reported on stderr as an
 registers for `unhandledRejection` still run. Uncaught exceptions and `process.exit()` still end
 the program (test: `test/v8.qtest` "unhandled rejection keeps the program usable").
 
+### Child Processes Created With fork()
+
+A child process created with `fork()` runs only the thread that called `fork()`: the platform's worker threads,
+the threads that run JavaScript code and the threads that hold the locks of V8, Node.js and the module exist only
+in the parent, and on Linux the epoll descriptors of the programs' event loops refer to the parent's event loops.
+The module's fork handler (`v8_fork_child()`, registered at `QFR_MODULE_LEAF` in `v8_module_init()`) marks the
+child (`qore_v8_forked_child()`) and releases the static platform pointer without destroying the platform. In the
+child:
+
+- nothing of V8 or Node.js is torn down: the platform's destructor joined the worker threads at exit (a hang with
+  glibc and musl, an abort on macOS); `v8_module_shutdown()` returns at once; `QoreV8Program::deleteIntern()` only
+  releases the Qore references of the program (`deleteInForkedChild()`), since stopping the environment waited for
+  the parent's platform tasks and freeing it ran the event loop on the parent's descriptors; the environment, the
+  isolate and the persistent handles are abandoned (`abandonInForkedChild()`)
+- no lock of the module is acquired: the global program set and the program locks could be held by a thread of the
+  parent; persistent handles are forgotten (`forgetHandle()`) rather than reset
+- no JavaScript code can be run: `QoreV8ProgramHelper`, the event loop calls and `init()` raise
+  `JAVASCRIPT-PROGRAM-ERROR`; V8 crashed in `v8::Context::Enter()` when the parent's program was used
+
+The exit-time code of libnode itself is not safe in the child either: libuv's `uv_library_shutdown()` destructor
+joins the threads of libuv's thread pool, which the parent starts with asynchronous file system, DNS, crypto and zlib
+calls (a hang on Linux, an abort on macOS), and on macOS the destructor of Node's static `SigintWatchdogHelper`
+destroys a Mach semaphore of the parent (an abort in every child). The fork handler therefore requests that the child
+ends without running exit-time handlers with `qore_fork_child_exit_quickly()` (Qore 3.0,
+`_QORE_HAS_FORK_CHILD_QUICK_EXIT`): the child ends with `_exit()` and its exit status after Qore's own cleanup, from
+`exit()` and at the end of its main program. With an older Qore, the platform is still not destroyed, but libnode's
+exit-time code runs (test: `test/v8-fork.qtest`).
+
 ### Tracking Sets
 
 `QoreV8Program` maintains tracking sets for all allocated wrapper data:

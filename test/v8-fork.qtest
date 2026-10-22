@@ -1,0 +1,232 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires v8
+%requires QUnit
+%requires Util
+
+%try-module process
+%define NoProcess
+%endtry
+
+%exec-class V8ForkTest
+
+#! Tests child processes created with fork() by a process that runs JavaScript programs
+/** A child process created with fork() runs only the thread that called fork().  The child of a process with
+    JavaScript programs aborted or hung when it exited: the destructor of the V8 platform joined the platform's
+    worker threads, which do not exist in the child (an abort on macOS, a hang with musl), and when the child's script
+    ended, tearing down its programs ran their Node.js event loops (whose descriptors refer to the event loops of the
+    parent on Linux) and waited for the platform tasks of the parent.  Each case runs a script that creates a
+    JavaScript program and forks; the child exits, and the script waits for the child's PID and prints its exit code.
+*/
+class V8ForkTest inherits Test {
+    public {
+        #! only turns a child that never exits into a failure; no case waits for a time to pass
+        const HangGuard = 10m;
+
+        #! the source of the program of the script; startCompile() is from js-teardown.qtest
+        const JsSource = "
+globalThis.add = (a, b) => a + b;
+function app(a, b) { for (const x of b) { a.push(x); } return a; }
+function leb(n) {
+    const out = [];
+    do { let b = n & 0x7f; n >>>= 7; if (n) { b |= 0x80; } out.push(b); } while (n);
+    return out;
+}
+function section(id, bytes) { return app(app([id], leb(bytes.length)), bytes); }
+function vec(items) { const out = leb(items.length); for (const i of items) { app(out, i); } return out; }
+// returns a module with 'nfuncs' functions of type () -> i32, each summing 'nops' constants
+function makeModule(nfuncs, nops) {
+    const body = [0];
+    for (let i = 0; i < nops; ++i) { body.push(0x41, 0x01); }
+    for (let i = 1; i < nops; ++i) { body.push(0x6a); }
+    body.push(0x0b);
+    const fbody = app(leb(body.length), body);
+    const bytes = [0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00];
+    app(bytes, section(1, vec([[0x60, 0x00, 0x01, 0x7f]])));
+    app(bytes, section(3, vec(Array(nfuncs).fill([0]))));
+    const code = leb(nfuncs);
+    for (let i = 0; i < nfuncs; ++i) { app(code, fbody); }
+    app(bytes, section(10, code));
+    return new Uint8Array(bytes);
+}
+const mod = makeModule(2000, 400);
+// starts compiling the module in the platform's worker threads
+globalThis.startCompile = () => { WebAssembly.compile(mod); };
+// reads a file in the threads of the libuv thread pool; the result is set when the event loop is run
+globalThis.readFile = (path) => {
+    require('fs').readFile(path, (err, data) => { globalThis.readResult = err ? err.code : data.length; });
+};
+";
+
+        #! the script; its argument is the name of the case, and the child exits with a code that names the check that failed
+        const Script = "%%modern
+%%requires v8
+%%requires process
+
+# in milliseconds
+const HangGuard = %d;
+const Source = %y;
+
+string mode = ARGV[0];
+JavaScriptProgram js(Source, \"fork-parent.js\");
+JavaScriptObject global = js.getGlobal();
+if (mode =~ /^compile/) {
+    # the platform's worker threads compile the module when the process is copied
+    global.startCompile();
+} else if (mode =~ /^threadpool/) {
+    # the threads of the libuv thread pool are started in the parent
+    global.readFile(get_script_path());
+    js.spinEventLoop();
+    if (global.readResult !== hstat(get_script_path()).size) {
+        printf(\"thread pool read: %%y\\n\", global.readResult);
+        exit(3);
+    }
+}
+
+int pid = fork();
+if (!pid) {
+    switch (mode) {
+        case \"exit\":
+        case \"compile-exit\":
+        case \"threadpool-exit\":
+            exit(0);
+
+        case \"destroy\":
+            delete js;
+            exit(0);
+
+        case \"use\": {
+            # the program of the parent cannot be used, and no program can be created
+            code check = int sub (code c) {
+                try {
+                    c();
+                } catch (hash<ExceptionInfo> ex) {
+                    return ex.err == \"JAVASCRIPT-PROGRAM-ERROR\" && ex.desc =~ /fork\\(\\)/ ? 0 : 1;
+                }
+                return 2;
+            };
+            int rc = check(sub () { js.getGlobal(); });
+            if (rc) {
+                exit(10 + rc);
+            }
+            rc = check(sub () { global.add(1, 2); });
+            if (rc) {
+                exit(20 + rc);
+            }
+            rc = check(sub () { js.spinEventLoop(); });
+            if (rc) {
+                exit(30 + rc);
+            }
+            rc = check(sub () { JavaScriptProgram js2(\"1\", \"fork-child.js\"); });
+            if (rc) {
+                exit(40 + rc);
+            }
+            # the exit code alone does not show that the checks ran: a child that crashed in V8 could end with 0
+            printf(\"child checks: OK\\n\");
+            flush();
+            exit(0);
+        }
+    }
+    # \"end\", \"compile\", \"threadpool\": the script of the child ends, which destroys its program and unloads the
+    # module
+    return;
+}
+
+Process p(pid);
+p.detach();
+if (!p.wait(HangGuard)) {
+    kill(pid, SIGKILL);
+    printf(\"child: did not exit\\n\");
+    exit(2);
+}
+printf(\"child: %%d\\n\", p.exitCode());
+# the program can still be used in the parent
+printf(\"parent: %%d\\n\", global.add(1, 2));
+";
+    }
+
+    private {
+        #! the interpreter running this test, used to launch the scripts
+        string qore_exe;
+        #! the script file
+        string script;
+    }
+
+    constructor() : Test("v8 fork test", "1.0") {
+        qore_exe = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY ?? QORE_ARGV[0];
+        script = tmp_location() + DirSep + sprintf("v8-fork-%d.q", getpid());
+
+        addTestCase("a child that calls exit() ends", \childExit());
+        addTestCase("a child whose script ends ends", \childEnd());
+        addTestCase("a child that destroys a program ends", \childDestroy());
+        addTestCase("a child cannot run JavaScript code", \childUse());
+        addTestCase("a child copied while V8 compiles in worker threads ends", \childCompile());
+        addTestCase("a child copied after the libuv thread pool was started ends", \childThreadPool());
+
+        on_exit unlink(script);
+        {
+            File f();
+            f.open2(script, O_CREAT | O_TRUNC | O_WRONLY);
+            f.write(sprintf(Script, get_duration_milliseconds(HangGuard), JsSource));
+        }
+        set_return_value(main());
+    }
+
+    childExit() {
+        runChild("exit");
+    }
+
+    childEnd() {
+        runChild("end");
+    }
+
+    childDestroy() {
+        runChild("destroy");
+    }
+
+    childUse() {
+        runChild("use");
+    }
+
+    childCompile() {
+        runChild("compile-exit");
+        runChild("compile");
+    }
+
+    childThreadPool() {
+        runChild("threadpool-exit");
+        runChild("threadpool");
+    }
+
+    #! runs the script for the given case and checks that the child exited with code 0
+    private runChild(string mode) {
+%ifdef NoProcess
+        testSkip("no process module");
+%else
+        Process p(qore_exe, ("-b", script, mode));
+        # the script waits for its child for HangGuard
+        if (!p.wait(2 * HangGuard)) {
+            p.terminate();
+            p.wait();
+            fail(sprintf("%s: the script did not exit", mode));
+        }
+        string out = "";
+        while (*string str = p.readStdout(4096)) {
+            out += str;
+        }
+        string err = "";
+        while (*string str = p.readStderr(4096)) {
+            err += str;
+        }
+        assertEq((mode == "use" ? "child checks: OK\n" : "") + "child: 0\nparent: 3\n", out,
+            sprintf("%s; stderr: %s", mode, err));
+        assertEq(0, p.exitCode(), mode);
+%endif
+    }
+}

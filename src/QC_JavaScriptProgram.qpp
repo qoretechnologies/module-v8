@@ -28,6 +28,9 @@
 
 //! Program for embedding and executing JavaScript code
 /**
+    @note JavaScript code cannot be run in a child process created with \c fork() by a process that loaded the
+    module, since the threads of V8 and Node.js exist only in the parent: using a program of the parent or creating
+    a program there raises \c JAVASCRIPT-PROGRAM-ERROR.  The child can still exit or end its script normally
 */
 qclass JavaScriptProgram [arg=QoreV8ProgramData* jsp; ns=V8; dom=EMBEDDED_LOGIC];
 

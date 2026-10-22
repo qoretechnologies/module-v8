@@ -55,6 +55,12 @@ static void qore_promise_hook(v8::PromiseHookType type, v8::Local<v8::Promise> p
 
 QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
     //printd(5, "QoreV8Program::QoreV8Program() this: %p\n", this);
+    if (qore_v8_forked_child()) {
+        // no environment can be created in a child process created with fork(); the platform's threads do not
+        // exist in it; init() raises the exception
+        valid = false;
+        return;
+    }
     // Setup up a libuv event loop, v8::Isolate, and Node.js Environment.
     // setup common environment
     std::vector<std::string> errors;
@@ -128,6 +134,14 @@ QoreV8Program::QoreV8Program(const QoreV8Program& old, QoreProgram* qpgm) : Qore
 QoreV8Program::~QoreV8Program() {
     //printd(5, "QoreV8Program::~QoreV8Program() this: %p\n", this);
     assert(!weakRefs.reference_count());
+
+    if (qore_v8_forked_child()) {
+        // nothing is destroyed in a child process created with fork(), and the global lock is not acquired: a
+        // thread that does not exist in the child could have held it when the process was copied; the program set
+        // is not used in the child
+        abandonInForkedChild();
+        return;
+    }
 
     AutoLocker al(global_lock);
     pset_t::iterator i = pset.find(this);
@@ -365,6 +379,11 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
 }
 
 int QoreV8Program::init(ExceptionSink* xsink) {
+    if (qore_v8_forked_child()) {
+        xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "a JavaScript program cannot be created in a child process "
+            "created with fork(): the V8 and Node.js threads of the parent process do not exist in the child");
+        return -1;
+    }
     if (!valid || !isolate) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Could not initialize JavaScript program");
         return -1;
@@ -581,8 +600,56 @@ void QoreV8Program::drainPlatformTasks() {
     platform->DrainTasks(isolate);
 }
 
+void QoreV8Program::deleteInForkedChild(ExceptionSink* xsink) {
+    assert(qore_v8_forked_child());
+    // the child runs only the thread that called fork(); no lock is acquired, since another thread of the parent
+    // could have held it when the process was copied
+    if (opcount) {
+        // JavaScript code was being executed when the process was copied: by a thread that does not exist in the
+        // child, or by the thread that called fork() from Qore code called by JavaScript, which destroys the program
+        // when the call returns
+        to_destroy = true;
+        return;
+    }
+    valid = false;
+    to_destroy = false;
+    if (save_ref_callback) {
+        save_ref_callback.release()->deref(xsink);
+    }
+    // the Qore objects referenced by JavaScript are released; the persistent handles of the references are not
+    // accessed, so the references themselves are never freed
+    for (auto* ref : objectRefs) {
+        if (ref->qobj) {
+            QoreObject* qobj = ref->qobj;
+            ref->qobj = nullptr;
+            qobj->tDeref();
+        }
+    }
+    objectRefs.clear();
+    nsDataRefs.clear();
+    abandonInForkedChild();
+}
+
+void QoreV8Program::abandonInForkedChild() {
+    assert(qore_v8_forked_child());
+    // the environment, its event loop and the isolate are never freed in the child
+    node::CommonEnvironmentSetup* abandoned = setup.release();
+    (void)abandoned;
+    env = nullptr;
+    forgetHandle(ctx);
+    forgetHandle(global);
+    forgetHandle(env_object);
+    for (auto& i : classTemplateCache) {
+        forgetHandle(i.second);
+    }
+}
+
 void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
     printd(5, "QoreV8Program::deleteIntern() this: %p\n", this);
+    if (qore_v8_forked_child()) {
+        deleteInForkedChild(xsink);
+        return;
+    }
     {
         AutoLocker al(m);
         if (opcount) {
@@ -940,6 +1007,12 @@ void QoreV8Program::raiseV8Exception(ExceptionSink& xsink, v8::Isolate* isolate)
 }
 
 int QoreV8Program::checkSpinValid(ExceptionSink* xsink) {
+    if (qore_v8_forked_child()) {
+        if (xsink) {
+            raiseForkedChildError(xsink);
+        }
+        return -1;
+    }
     if (!isolate || !setup || !env) {
         if (xsink) {
             xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program was not properly initialized");

@@ -31,6 +31,38 @@
 std::unique_ptr<node::MultiIsolatePlatform> platform;
 std::shared_ptr<node::InitializationResult> init_result;
 
+//! set in a child process created with fork(); see qore_v8_forked_child()
+static bool forked_child = false;
+//! the platform in a child process created with fork(), which is never destroyed
+static node::MultiIsolatePlatform* forked_platform = nullptr;
+//! the registration of the fork handler of the module
+static QoreForkHandlerRegistration* fork_reg = nullptr;
+
+bool qore_v8_forked_child() {
+    return forked_child;
+}
+
+//! The fork handler of the module in the child process; see qore_v8_forked_child()
+/** The platform is never destroyed in the child: its destructor, which is run when the process exits, joins the
+    platform's worker threads, which do not exist in the child, so the child would wait for them forever (Linux) or
+    abort (macOS).
+
+    The exit-time code of libnode itself is not safe in the child either: libuv's uv_library_shutdown() destructor
+    joins the threads of libuv's thread pool, which exist only in the parent (a hang on Linux, an abort on macOS), and
+    on macOS the destructor of Node's static SigintWatchdogHelper destroys a Mach semaphore that the child does not
+    have (an abort in every child).  The child therefore ends without running exit-time handlers (see
+    qore_fork_child_exit_quickly()).
+
+    It takes no lock and allocates no memory, as fork handlers in the child must not
+*/
+static void v8_fork_child(void* arg) {
+    forked_child = true;
+    forked_platform = platform.release();
+#ifdef _QORE_HAS_FORK_CHILD_QUICK_EXIT
+    qore_fork_child_exit_quickly();
+#endif
+}
+
 static void v8_module_init(QoreModuleInitContext& ctx, ExceptionSink& xsink);
 static void v8_module_ns_init(QoreNamespace* rns, QoreNamespace* qns, ExceptionSink& xsink);
 static void v8_module_delete();
@@ -91,6 +123,12 @@ static sig_vec_t sig_vec = {
 
 static void v8_module_shutdown() {
     //printd(5, "v8_module_shutdown()\n");
+    if (forked_child) {
+        // V8 and Node.js are left as they are in a child process created with fork(); tearing them down would wait
+        // for threads and locks that do not exist in the child; see qore_v8_forked_child()
+        printd(1, "v8_module_shutdown(): child process created with fork(); skipping V8 teardown\n");
+        return;
+    }
     if (!QoreV8Program::shutdown()) {
         // JavaScript code is still being executed in another thread; disposing of V8 and tearing down node
         // here would destroy the isolate and the platform under running code, which crashes the process.
@@ -111,6 +149,13 @@ static void v8_module_init(QoreModuleInitContext& ctx, ExceptionSink& xsink) {
     QoreStringNode* err = v8_module_init_intern(false);
     if (err) {
         xsink.raiseException("MODULE-INIT-ERROR", err);
+        return;
+    }
+    // the handler only marks a child process created with fork(); it takes no lock
+    fork_reg = qore_register_fork_handler(QFR_MODULE_LEAF, "v8_forked_child", nullptr, nullptr, v8_fork_child,
+        nullptr);
+    if (!fork_reg) {
+        xsink.outOfMemory();
     }
 }
 
@@ -242,6 +287,8 @@ static void v8_module_delete() {
         V8NS = nullptr;
     }
     v8_module_shutdown();
+    qore_unregister_fork_handler(fork_reg);
+    fork_reg = nullptr;
 }
 
 /*

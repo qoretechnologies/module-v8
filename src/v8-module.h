@@ -58,4 +58,14 @@ DLLLOCAL extern QoreNamespace* V8NS;
 DLLLOCAL extern std::unique_ptr<node::MultiIsolatePlatform> platform;
 DLLLOCAL extern std::shared_ptr<node::InitializationResult> init_result;
 
+//! Returns true in a child process created with fork() by a process that had loaded the module
+/** A child process created with \c fork() runs only the thread that called \c fork(): the platform's worker threads,
+    the threads running JavaScript code and the threads holding the locks of V8, of Node.js and of the module do not
+    exist in it, and on Linux the descriptors of the event loops of the programs refer to the event loops of the
+    parent.  No JavaScript code can be run in the child, and nothing is torn down there: V8 and Node.js are left as
+    they are when the child exits, since tearing them down waits for threads and locks that the child does not have
+    (or changes the event loops of the parent)
+*/
+DLLLOCAL bool qore_v8_forked_child();
+
 #endif

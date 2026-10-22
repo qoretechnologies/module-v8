@@ -58,7 +58,7 @@ QoreValue QoreV8CallReference::execValue(const QoreListNode* args, ExceptionSink
 }
 
 bool QoreV8CallReference::derefImpl(ExceptionSink* xsink) {
-    parent.Reset();
+    QoreV8Program::resetHandle(parent);
     callable->deref(xsink);
     callable = nullptr;
     return ResolvedCallReferenceNode::derefImpl(xsink);
