@@ -55,7 +55,7 @@ protected:
     QoreV8Object* callable;
     v8::Global<v8::Value> parent;
 
-    DLLEXPORT virtual bool derefImpl(ExceptionSink* xsink);
+    DLLEXPORT virtual bool derefImpl(ExceptionSink* xsink) override;
 };
 
 #endif
