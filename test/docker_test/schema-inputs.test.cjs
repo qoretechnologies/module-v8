@@ -6,10 +6,13 @@ const os = require('node:os');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { test } = require('node:test');
-const { checkUpstream, fetchInputs, fromMirror, main, mirrorRequest, pinnedSources, stage,
+const { checkUpstream, fetchInputs, fromMirror, main, MAX_LISTED, MAX_REASON, mirrorRequest, pinnedSources, stage,
   updateCommands } = require('./schema-inputs.cjs');
+const apps = require('../../ts/dist/schema-cache/apps');
+const appCompatibility = require('../../ts/dist/schema-cache/app-compatibility.json');
 const { DownloadStatusError } = require('../../ts/dist/schema-cache/download');
-const { schemaNames } = require('../../ts/dist/schema-cache/hubspot');
+const hubspotSchemas = require('../../ts/dist/schema-cache/hubspot');
+const { schemaNames } = hubspotSchemas;
 const { SchemaSourceUnavailableError } = require('../../ts/dist/schema-cache/schema-errors');
 const pins = require('./schema-inputs.json');
 
@@ -202,19 +205,26 @@ test('stage writes the pinned upstream documents in the mirror layout', async ()
   }
 });
 
-/** Runs checkUpstream against fixtures; returns its status, its lines and the update commands it ran. */
-async function check({ configuration, documents, hubspot, fetchSource, statuses = [0, 0] }) {
+/**
+ * Runs checkUpstream against fixtures; returns its status, its lines, the update commands it ran and the documents
+ * that it read from the mirror. The mirror has the pinned documents (by default the upstream ones).
+ */
+async function check({ configuration, documents, pinned = documents, hubspot, fetchSource, fetchPinned,
+  statuses = [0, 0] }) {
   const lines = [];
   const commands = [];
+  const mirrored = [];
+  const readPinned = fetchPinned ?? (async source => pinned[source.id]);
   const status = await checkUpstream('/cache', {
     configuration,
     hubspotInputs: hubspot ?? (async () => Object.fromEntries(schemaNames.map(name => [name,
       { bytes: documents[`hubspot ${name}`], source: configuration.hubspot.sources[name].url }]))),
     fetchSource: fetchSource ?? (async source => documents[source.id]),
+    fetchPinned: async source => { mirrored.push(source.id); return readPinned(source); },
     runUpdate: command => { commands.push(command); return statuses[commands.length - 1]; },
     log: line => lines.push(line),
   });
-  return { status, lines, commands };
+  return { status, lines, commands, mirrored };
 }
 
 test('check-upstream passes when every upstream document has its pin and every update succeeds', async () => {
@@ -239,20 +249,28 @@ test('check-upstream reports each upstream change with the pin and the new diges
   const moved = 'https://api.hubspot.com/public/api/spec/v2/specs/release/99999/version/3';
   const hubspot = async () => Object.fromEntries(schemaNames.map(name => [name, { bytes: changed[`hubspot ${name}`],
     source: name === 'forms' ? moved : configuration.hubspot.sources[name].url }]));
-  const { status, lines } = await check({ configuration, documents: changed, hubspot, statuses: [2, 0] });
+  const { status, lines, mirrored } = await check({ configuration, documents: changed, pinned: documents, hubspot,
+    statuses: [2, 0] });
   assert.equal(status, 1);
   const review = 'review the change before updating the pin, as design/schema-cache.md describes';
   const deals = configuration.hubspot.sources.deals;
   const forms = configuration.hubspot.sources.forms;
   const v1 = configuration.apps.pipedrive.sources.v1;
+  // these synthetic documents are not OpenAPI documents, so the catalogue cannot compare their surfaces
+  const refused = 'supported surface not compared: the catalogue refuses the pinned documents:';
   assert.deepEqual(lines.filter(line => !line.startsWith('unchanged: ')), [
     `upstream changed: hubspot deals, ${deals.sha256} → ${sha256(changed['hubspot deals'])} (${deals.url}); ${review}`,
     `upstream changed: hubspot forms, ${forms.url} → ${moved} (${forms.sha256} → ${forms.sha256}); ${review}`,
     `upstream changed: pipedrive v1, ${v1.sha256} → ${sha256(changed['pipedrive v1'])} (${v1.url}); ${review}`,
+    `hubspot deals: ${refused} HUBSPOT-SCHEMA-INVALID: OpenAPI 3.0 required`,
+    `hubspot forms: ${refused} HUBSPOT-SCHEMA-INVALID: OpenAPI 3.0 required`,
+    `pipedrive: ${refused} APP-SCHEMA-INVALID: Swagger 2.0 or OpenAPI 3.0 required`,
     'update failed: qore-hubspot-schemas update exited with 2 (a schema was refused)',
     'updated: qore-app-schemas update pipedrive trello',
     `upstream check: ${schemaNames.length} unchanged, 3 changed, 0 unavailable, 1 failed`,
   ]);
+  // only documents whose bytes changed are read from the mirror; the moved forms document still has its pinned bytes
+  assert.deepEqual(mirrored, ['hubspot deals', 'pipedrive v1']);
 });
 
 test('check-upstream reports unavailable upstream services as such', async () => {
@@ -276,6 +294,179 @@ test('check-upstream reports unavailable upstream services as such', async () =>
   assert.equal(other.status, 1);
   assert.ok(other.lines.includes('check failed: trello schema: APP-SCHEMA-DOWNLOAD: https://dac-static.atlassian.com/x: '
     + 'HTTP 404'));
+});
+
+/** A synthetic OpenAPI document with the given operations, each answering with a shared record definition. */
+function openapi(server, operations) {
+  const paths = {};
+  for (const { route, method } of operations) {
+    (paths[route] ||= {})[method] = { responses: { 200: { description: 'Synthetic response', content: {
+      'application/json': { schema: { $ref: '#/components/schemas/Record' } } } } } };
+  }
+  return { openapi: '3.0.1', info: { title: 'Synthetic provider', version: '1' }, servers: [{ url: server }], paths,
+    components: { schemas: { Record: { type: 'object', properties: { id: { type: 'integer' } } } },
+      securitySchemes: { token: { type: 'apiKey', in: 'header', name: 'x-api-token' } } } };
+}
+
+/**
+ * Pins for synthetic OpenAPI documents with every supported operation of Pipedrive's two generations and of HubSpot's
+ * deals; the other documents stay opaque and unchanged. revision(change) returns the upstream documents, and the
+ * parsed ones, after change has edited a copy of the parsed pinned documents.
+ */
+function surfaceFixture() {
+  const { documents: opaque, configuration } = fixture();
+  const generations = { v1: [], v2: [] };
+  for (const { path: route, method } of apps.appContract('pipedrive').operations) {
+    const v1 = route.startsWith('/v1/');
+    generations[v1 ? 'v1' : 'v2'].push({ route: route.slice(v1 ? 3 : 7), method });
+  }
+  const parsed = {
+    'pipedrive v1': openapi('https://api.pipedrive.com/v1', generations.v1),
+    'pipedrive v2': openapi('https://api.pipedrive.com/api/v2', generations.v2),
+    'hubspot deals': openapi('https://api.hubapi.com', hubspotSchemas.hubspotContract.schemas.deals.operations
+      .map(operation => ({ route: operation.sourcePaths[0], method: operation.method }))),
+  };
+  const serialize = items => Object.fromEntries(Object.entries(items)
+    .map(([id, document]) => [id, Buffer.from(JSON.stringify(document))]));
+  const documents = { ...opaque, ...serialize(parsed) };
+  configuration.hubspot.sources.deals.sha256 = sha256(documents['hubspot deals']);
+  for (const name of ['v1', 'v2']) {
+    configuration.apps.pipedrive.sources[name].sha256 = sha256(documents[`pipedrive ${name}`]);
+  }
+  configuration.apps.pipedrive.sha256 = sha256(Buffer.from(JSON.stringify({ v1: parsed['pipedrive v1'],
+    v2: parsed['pipedrive v2'] })));
+  const revision = change => {
+    const revised = structuredClone(parsed);
+    change(revised);
+    return { upstream: { ...documents, ...serialize(revised) }, revised };
+  };
+  return { documents, configuration, parsed, revision };
+}
+
+/** The compatibility fingerprint of Pipedrive's parsed documents, as the catalogue computes it. */
+const pipedriveFingerprint = parsed => apps.schemaCompatibilityDigest(apps.normalizeSchema('pipedrive',
+  { v1: parsed['pipedrive v1'], v2: parsed['pipedrive v2'] }));
+
+/** The surface lines of a check. */
+const surfaceLines = lines => lines.filter(line => / supported surface /.test(line));
+
+test('check-upstream tells a change outside the supported surface from one in it, and still fails', async () => {
+  const { documents, configuration, parsed, revision } = surfaceFixture();
+  const fingerprint = pipedriveFingerprint(parsed);
+  // an operation that the catalogue does not support: the normalized snapshot is the same
+  const thread = revision(revised => {
+    revised['pipedrive v1'].paths['/mailbox/mailThreads/{id}'] = { get: { responses: { 200: {
+      description: 'A mail thread', content: { 'application/json': { schema: { type: 'object', properties: {
+        archived_flag: { type: 'integer', nullable: true, enum: [0, 1] } } } } } } } } };
+  });
+  let result = await check({ configuration, documents: thread.upstream, pinned: documents });
+  assert.equal(result.status, 1);
+  assert.ok(result.lines.some(line => line.startsWith('upstream changed: pipedrive v1, ')));
+  assert.deepEqual(surfaceLines(result.lines), [`pipedrive: supported surface unchanged (fingerprint ${fingerprint}); `
+    + 'the normalized snapshot is unchanged']);
+  // the pinned v2 document still has its bytes upstream, so only v1 is read from the mirror
+  assert.deepEqual(result.mirrored, ['pipedrive v1']);
+  // a definition that no supported operation references is carried into the snapshot, outside the surface
+  const definition = revision(revised => {
+    revised['pipedrive v2'].components.schemas.ProductVariationPrice = { type: 'object' };
+  });
+  result = await check({ configuration, documents: definition.upstream, pinned: documents });
+  assert.equal(result.status, 1);
+  assert.deepEqual(surfaceLines(result.lines), [`pipedrive: supported surface unchanged (fingerprint ${fingerprint}); `
+    + 'the normalized snapshot changes outside it']);
+  // a supported operation: its action identity is named, with both fingerprints
+  const lead = revision(revised => {
+    revised['pipedrive v1'].paths['/leads/{id}'].get.parameters = [{ name: 'id', in: 'path', required: true,
+      schema: { type: 'string', format: 'uuid' } }];
+  });
+  const changed = pipedriveFingerprint(lead.revised);
+  assert.notEqual(changed, fingerprint);
+  result = await check({ configuration, documents: lead.upstream, pinned: documents });
+  assert.equal(result.status, 1);
+  assert.deepEqual(surfaceLines(result.lines), [`pipedrive: supported surface CHANGED: getLead (fingerprint `
+    + `${fingerprint} → ${changed}, which the catalogue does not accept)`]);
+  // a reviewed fingerprint that the catalogue accepts is still a change from the pin
+  appCompatibility.apps.pipedrive.push(changed);
+  try {
+    result = await check({ configuration, documents: lead.upstream, pinned: documents });
+  } finally {
+    appCompatibility.apps.pipedrive.pop();
+  }
+  assert.equal(result.status, 1);
+  assert.deepEqual(surfaceLines(result.lines), [`pipedrive: supported surface CHANGED: getLead (fingerprint `
+    + `${fingerprint} → ${changed}, which the catalogue accepts)`]);
+});
+
+test('check-upstream names the supported parts that a change affects, within bounds', async () => {
+  const { documents, configuration, parsed, revision } = surfaceFixture();
+  const fingerprint = pipedriveFingerprint(parsed);
+  // a definition that every v2 operation references: the first operations are named, and the rest counted
+  const record = revision(revised => {
+    revised['pipedrive v2'].components.schemas.Record.properties.id.type = 'string';
+  });
+  let result = await check({ configuration, documents: record.upstream, pinned: documents });
+  const v2 = apps.appContract('pipedrive').operations.filter(operation => operation.path.startsWith('/api/v2/'))
+    .map(operation => operation.operationId);
+  assert.ok(v2.length > MAX_LISTED);
+  assert.deepEqual(surfaceLines(result.lines), [`pipedrive: supported surface CHANGED: `
+    + `${v2.slice(0, MAX_LISTED).join(', ')} and ${v2.length - MAX_LISTED} more (fingerprint ${fingerprint} → `
+    + `${pipedriveFingerprint(record.revised)}, which the catalogue does not accept)`]);
+  // a security scheme is covered by the fingerprint, but belongs to no operation
+  const scheme = revision(revised => {
+    revised['pipedrive v1'].components.securitySchemes.token.name = 'x-other-token';
+  });
+  result = await check({ configuration, documents: scheme.upstream, pinned: documents });
+  assert.deepEqual(surfaceLines(result.lines), [`pipedrive: supported surface CHANGED: securitySchemes (fingerprint `
+    + `${fingerprint} → ${pipedriveFingerprint(scheme.revised)}, which the catalogue does not accept)`]);
+  // a HubSpot document is its own surface, named by its actions
+  const deals = revision(revised => {
+    revised['hubspot deals'].components.schemas.Record.properties.amount = { type: 'number' };
+  });
+  result = await check({ configuration, documents: deals.upstream, pinned: documents });
+  const fingerprints = [parsed, deals.revised].map(items => hubspotSchemas.schemaCompatibilityDigest(
+    hubspotSchemas.normalizeSchema('deals', items['hubspot deals'])));
+  assert.deepEqual(surfaceLines(result.lines), [`hubspot deals: supported surface CHANGED: `
+    + `${hubspotSchemas.hubspotContract.schemas.deals.operations.map(operation => operation.action).join(', ')} `
+    + `(fingerprint ${fingerprints[0]} → ${fingerprints[1]}, which the catalogue does not accept)`]);
+});
+
+test('check-upstream reports a supported operation that upstream removed, and a surface it cannot compare', async () => {
+  const { documents, configuration, revision } = surfaceFixture();
+  const removed = revision(revised => { delete revised['pipedrive v1'].paths['/leads/{id}'].get; });
+  let result = await check({ configuration, documents: removed.upstream, pinned: documents });
+  assert.equal(result.status, 1);
+  assert.deepEqual(surfaceLines(result.lines), ['pipedrive: supported surface CHANGED: the catalogue refuses the '
+    + 'upstream documents: APP-SCHEMA-INCOMPATIBLE: pipedrive: expected exactly one get /v1/leads/{id}']);
+  // the comparison never stops the check or the update commands
+  const { upstream } = revision(revised => { revised['pipedrive v1'].info.version = '2'; });
+  const v1 = configuration.apps.pipedrive.sources.v1.sha256;
+  const missing = (url, options) => { throw new DownloadStatusError(`${options.prefix}: ${url}: HTTP 404`, 404); };
+  result = await check({ configuration, documents: upstream, fetchPinned: source => fromMirror(source, ENV, missing) });
+  assert.equal(result.status, 1);
+  assert.deepEqual(surfaceLines(result.lines), ['pipedrive: supported surface not compared: SCHEMA-INPUT-MIRROR: the '
+    + `mirror has no pipedrive v1 document with the pinned SHA-256 ${v1} (https://git.example.test/api/v4/projects/1/`
+    + `packages/generic/schema-inputs/${v1}/pipedrive-v1.json); stage and upload the reviewed document, as `
+    + 'design/schema-cache.md describes']);
+  assert.equal(result.commands.length, 2);
+  // a mirror document with other bytes is not compared
+  result = await check({ configuration, documents: upstream, pinned: upstream });
+  assert.deepEqual(surfaceLines(result.lines), ['pipedrive: supported surface not compared: SCHEMA-INPUT-MIRROR: the '
+    + `mirror's pipedrive v1 document has the SHA-256 ${sha256(upstream['pipedrive v1'])}, not the pinned ${v1}`]);
+  // the other document of the app is unavailable upstream
+  result = await check({ configuration, documents: upstream, pinned: documents, fetchSource: async source => {
+    if (source.id === 'pipedrive v2') throw new SchemaSourceUnavailableError('APP-SCHEMA-DOWNLOAD: HTTP 503');
+    return upstream[source.id];
+  } });
+  assert.equal(result.status, 1);
+  assert.deepEqual(surfaceLines(result.lines), ['pipedrive: supported surface not compared: upstream pipedrive v2 is '
+    + 'unavailable']);
+  // a long reason is cut, so that every line stays bounded
+  result = await check({ configuration, documents: upstream, fetchPinned: async () => {
+    throw new Error(`SCHEMA-INPUT-MIRROR: ${'x'.repeat(2 * MAX_REASON)}`);
+  } });
+  const [line] = surfaceLines(result.lines);
+  assert.equal(line, `pipedrive: supported surface not compared: SCHEMA-INPUT-MIRROR: ${'x'.repeat(MAX_REASON
+    - 'SCHEMA-INPUT-MIRROR: '.length)}…`);
 });
 
 test('the command line accepts only the documented commands and absolute directories', async () => {

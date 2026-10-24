@@ -60,6 +60,26 @@ with `upstream changed: <source>, <pinned SHA-256> → <new SHA-256> (<URL>)`, o
 catalogue selects another release. An upstream service that cannot be reached or does not answer is reported as
 `upstream unavailable` (exit status 69), not as a change.
 
+For every app with a changed document (each HubSpot document on its own; Pipedrive's two documents together), the
+job also reports what the change does to the generated app. It reads the pinned documents from the mirror (with the
+job token), normalizes them and the upstream documents as the catalogue does, and compares the results:
+
+- `<app>: supported surface unchanged (fingerprint <SHA-256>); the normalized snapshot is unchanged`: the change is
+  in operations and definitions that the catalogue does not use; an update installs the same schema
+- `... the normalized snapshot changes outside it`: the same fingerprint, but the installed schema differs outside
+  the supported surface (for example, a Pipedrive component that no supported operation references)
+- `<app>: supported surface CHANGED: <actions> (fingerprint <pinned> → <upstream>, which the catalogue accepts|does
+  not accept)`: the actions whose operation, parameters or referenced definitions changed, and any other covered
+  part (`servers`, `security`, `securitySchemes`, ...); at most ten names are listed, followed by `and <n> more`
+- `<app>: supported surface CHANGED: the catalogue refuses the upstream documents: <error>`, for example when upstream
+  removed a supported operation
+- `<app>: supported surface not compared: <reason>`, when the mirror lacks a pinned document or an upstream document
+  was unavailable
+
+Every reason is cut after 600 characters. The report does not change the result: a changed document fails the job
+whatever its effect, because CI qualifies exactly the pinned documents, and the report never stops the update
+commands.
+
 When upstream changes a document, compare it against the previously reviewed input before updating any pin.
 Review request and response fields, requiredness, nullability, routes, references, and authentication; even an
 additive optional field changes the supported metadata fingerprint. Add the reviewed fingerprint while retaining

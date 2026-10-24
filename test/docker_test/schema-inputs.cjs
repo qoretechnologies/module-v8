@@ -12,6 +12,9 @@
 //   schema-inputs.cjs stage DIRECTORY           fetch them from upstream into the mirror's layout, for an upload
 //   schema-inputs.cjs check-upstream DIRECTORY  compare upstream with the pins and run the update commands
 //
+// For every changed document, check-upstream also reports whether the generated app's supported surface changed: it
+// normalizes the upstream and the pinned documents (read from the mirror) as the catalogue does and compares them.
+//
 // mirror and upstream write DIRECTORY/hubspot/NAME.swagger.json (for qore-hubspot-schemas import) and
 // DIRECTORY/APP.json (for qore-app-schemas import APP). The mirror is QORE_SCHEMA_INPUT_MIRROR, read with CI_JOB_TOKEN
 // in CI or with QORE_SCHEMA_INPUT_MIRROR_TOKEN elsewhere; a token is sent only to the mirror and is never printed.
@@ -21,9 +24,13 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { downloadDocument, DownloadStatusError } = require('../../ts/dist/schema-cache/download');
 const hubspotStore = require('../../ts/dist/schema-cache/hubspot-store');
-const { MAX_SCHEMA_BYTES, schemaNames } = require('../../ts/dist/schema-cache/hubspot');
+const hubspotSchemas = require('../../ts/dist/schema-cache/hubspot');
+const { MAX_SCHEMA_BYTES, schemaNames } = hubspotSchemas;
+const hubspotCompatibility = require('../../ts/dist/schema-cache/hubspot-compatibility.json');
 const { assembleInput, downloadSource, sourceUrls } = require('../../ts/dist/schema-cache/app-store');
-const { digest, MAX_BYTES } = require('../../ts/dist/schema-cache/apps');
+const apps = require('../../ts/dist/schema-cache/apps');
+const { digest, MAX_BYTES } = apps;
+const appCompatibility = require('../../ts/dist/schema-cache/app-compatibility.json');
 const { EXIT_UNAVAILABLE, SchemaSourceUnavailableError } = require('../../ts/dist/schema-cache/schema-errors');
 const pins = require('./schema-inputs.json');
 
@@ -32,6 +39,12 @@ const SHA256 = /^[a-f0-9]{64}$/;
 const HUBSPOT_RELEASE = /^https:\/\/api\.hubspot\.com\/public\/api\/spec\/v2\/specs\/release\/\d+\/version\/3$/;
 const DIST = path.resolve(__dirname, '../../ts/dist/schema-cache');
 const REVIEW = 'review the change before updating the pin, as design/schema-cache.md describes';
+// a surface report names at most this many changed parts, and cuts a reason after this many characters
+const MAX_LISTED = 10;
+const MAX_REASON = 600;
+// the document keys besides the operations that an app's compatibility fingerprint covers (see apps.ts)
+const APP_SURFACE_KEYS = ['swagger', 'openapi', 'servers', 'host', 'basePath', 'schemes', 'consumes', 'produces',
+  'security', 'securityDefinitions'];
 
 /**
  * Returns every pinned document: its id, app, name, upstream URL, SHA-256, mirror file name and size bound. The pins
@@ -116,6 +129,169 @@ function verified(source, bytes, origin) {
       + source.sha256);
 }
 
+/** Returns a text on one line, cut after MAX_REASON characters (with an ellipsis). */
+function bounded(text) {
+  const line = String(text).replace(/\s+/g, ' ');
+  return line.length > MAX_REASON ? `${line.slice(0, MAX_REASON)}…` : line;
+}
+
+/** Returns the JSON of a value with the keys of every object in order, so that key order makes no difference. */
+function canonical(value) {
+  return JSON.stringify(value, (_key, item) => item && typeof item === 'object' && !Array.isArray(item)
+    ? Object.fromEntries(Object.keys(item).sort().map(key => [key, item[key]])) : item);
+}
+
+/** Returns the definition that a local reference (#/...) names in a document, or undefined. */
+function resolveReference(document, reference) {
+  let target = document;
+  for (const segment of reference.slice(2).split('/').map(item => item.replace(/~1/g, '/').replace(/~0/g, '~'))) {
+    if (!target || typeof target !== 'object' || !Object.hasOwn(target, segment)) return undefined;
+    target = target[segment];
+  }
+  return target;
+}
+
+/** Returns the SHA-256 of a part of a document together with every definition that it references, directly or not. */
+function closureDigest(document, value) {
+  const references = Object.create(null);
+  const queue = [value];
+  const visited = new Set();
+  for (let i = 0; i < queue.length; ++i) {
+    const item = queue[i];
+    if (!item || typeof item !== 'object' || visited.has(item)) continue;
+    visited.add(item);
+    for (const [key, child] of Object.entries(item)) {
+      if (key === '$ref' && typeof child === 'string') {
+        if (!Object.hasOwn(references, child)) {
+          references[child] = resolveReference(document, child);
+          queue.push(references[child]);
+        }
+      } else if (child && typeof child === 'object') {
+        queue.push(child);
+      }
+    }
+  }
+  return digest(canonical({ value: value ?? null, references }));
+}
+
+/**
+ * Returns the generated apps' surfaces that the pinned documents make up, as the catalogue normalizes and fingerprints
+ * them: one per HubSpot document, and one per other app with all of its documents. Each has its documents, a function
+ * that normalizes them (by source name), the fingerprint function, the supported operations, the other parts of the
+ * document that the fingerprint covers, and whether the catalogue accepts a fingerprint.
+ */
+function surfaceUnits(sources) {
+  const parse = bytes => JSON.parse(bytes.toString());
+  const units = [];
+  for (const source of sources.filter(item => item.app === 'hubspot')) {
+    units.push({
+      id: source.id,
+      sources: [source],
+      normalize: parts => hubspotSchemas.normalizeSchema(source.name, parse(parts[source.name])),
+      fingerprint: hubspotSchemas.schemaCompatibilityDigest,
+      operations: hubspotSchemas.hubspotContract.schemas[source.name].operations
+        .map(operation => ({ path: operation.path, method: operation.method, name: operation.action })),
+      surface: document => ({ servers: document.servers, security: document.security,
+        securitySchemes: document.components?.securitySchemes }),
+      accepted: fingerprint => hubspotCompatibility.schemas[source.name] === fingerprint,
+    });
+  }
+  for (const app of new Set(sources.filter(item => item.app !== 'hubspot').map(item => item.app))) {
+    units.push({
+      id: app,
+      sources: sources.filter(item => item.app === app),
+      normalize: parts => apps.normalizeSchema(app, parse(assembleInput(app, parts))),
+      fingerprint: apps.schemaCompatibilityDigest,
+      operations: apps.appContract(app).operations
+        .map(operation => ({ path: operation.path, method: operation.method, name: operation.operationId })),
+      surface: document => ({
+        ...Object.fromEntries(APP_SURFACE_KEYS.filter(key => Object.hasOwn(document, key))
+          .map(key => [key, document[key]])),
+        securitySchemes: document.components?.securitySchemes,
+      }),
+      accepted: fingerprint => appCompatibility.apps[app]?.includes(fingerprint) === true,
+    });
+  }
+  return units;
+}
+
+/** Returns the names of the operations and other covered parts that differ between two normalized documents. */
+function changedParts(unit, before, after) {
+  const part = (document, operation) => {
+    const item = document.paths?.[operation.path] ?? {};
+    return { parameters: item.parameters, servers: item.servers, operation: item[operation.method] };
+  };
+  const names = unit.operations.filter(operation => closureDigest(before, part(before, operation))
+    !== closureDigest(after, part(after, operation))).map(operation => operation.name);
+  const [previous, current] = [unit.surface(before), unit.surface(after)];
+  for (const key of new Set([...Object.keys(previous), ...Object.keys(current)])) {
+    if (closureDigest(before, previous[key]) !== closureDigest(after, current[key])) names.push(key);
+  }
+  if (!names.length) return 'covered metadata that no action owns';
+  const listed = names.slice(0, MAX_LISTED).join(', ');
+  return names.length > MAX_LISTED ? `${listed} and ${names.length - MAX_LISTED} more` : listed;
+}
+
+/**
+ * Returns one line on how the upstream documents of a unit change the supported surface of the generated app,
+ * compared with its pinned documents (both by source name).
+ */
+function surfaceChange(unit, pinned, upstream) {
+  let before;
+  try {
+    before = unit.normalize(pinned);
+  } catch (error) {
+    return `${unit.id}: supported surface not compared: the catalogue refuses the pinned documents: `
+      + bounded(error.message);
+  }
+  let after;
+  try {
+    after = unit.normalize(upstream);
+  } catch (error) {
+    return `${unit.id}: supported surface CHANGED: the catalogue refuses the upstream documents: `
+      + bounded(error.message);
+  }
+  const previous = unit.fingerprint(before);
+  const current = unit.fingerprint(after);
+  if (previous === current) {
+    return `${unit.id}: supported surface unchanged (fingerprint ${current}); the normalized snapshot `
+      + (JSON.stringify(before) === JSON.stringify(after) ? 'is unchanged' : 'changes outside it');
+  }
+  return `${unit.id}: supported surface CHANGED: ${changedParts(unit, before, after)} (fingerprint ${previous} → `
+    + `${current}, which the catalogue ${unit.accepted(current) ? 'accepts' : 'does not accept'})`;
+}
+
+/**
+ * Returns one line for every unit with a changed document: how the upstream documents change the generated app's
+ * supported surface. A pinned document is read with fetchPinned only if upstream no longer has its bytes.
+ */
+async function surfaceReport(sources, upstream, changed, fetchPinned) {
+  const lines = [];
+  for (const unit of surfaceUnits(sources)) {
+    if (!unit.sources.some(source => changed.has(source))) continue;
+    const missing = unit.sources.find(source => !upstream.has(source));
+    if (missing) {
+      lines.push(`${unit.id}: supported surface not compared: upstream ${missing.id} is unavailable`);
+      continue;
+    }
+    // the report never stops the check: a failure to compare is reported as such
+    try {
+      const pinned = {};
+      const current = {};
+      for (const source of unit.sources) {
+        const bytes = upstream.get(source);
+        current[source.name] = bytes;
+        pinned[source.name] = digest(bytes) === source.sha256 ? bytes
+          : verified(source, await fetchPinned(source), 'mirror');
+      }
+      lines.push(surfaceChange(unit, pinned, current));
+    } catch (error) {
+      lines.push(`${unit.id}: supported surface not compared: ${bounded(error?.message ?? error)}`);
+    }
+  }
+  return lines;
+}
+
 /**
  * Fetches and verifies every pinned document, one at a time, and assembles each app's input, which must have its
  * pinned SHA-256 too. Returns the documents and the app inputs; nothing is written.
@@ -194,14 +370,19 @@ function runUpdateCommand(command) {
 const UPDATE_STATUS = { 2: 'a schema was refused', 69: 'a source was unavailable', 75: 'a schema was not verified' };
 
 /**
- * Compares the upstream documents with the pins, and runs the user-facing update commands against the upstream
- * services. Returns 0 if every document is unchanged and every update succeeded, 69 if the only failures were
- * unavailable sources, and 1 otherwise.
+ * Compares the upstream documents with the pins, reports how a change affects the supported surface of the generated
+ * app (reading the pinned documents with fetchPinned, from the mirror by default), and runs the user-facing update
+ * commands against the upstream services. Returns 0 if every document is unchanged and every update succeeded, 69 if
+ * the only failures were unavailable sources, and 1 otherwise: any changed document fails the check, whatever its
+ * effect on the supported surface, because CI qualifies exactly the pinned documents.
  */
 async function checkUpstream(directory, { configuration = pins, hubspotInputs = hubspotStore.downloadInputs,
-  fetchSource = fromUpstream, runUpdate = runUpdateCommand, log = console.log } = {}) {
+  fetchSource = fromUpstream, fetchPinned = source => fromMirror(source), runUpdate = runUpdateCommand,
+  log = console.log } = {}) {
   requireDirectory(directory);
   const sources = pinnedSources(configuration);
+  const upstream = new Map();
+  const changed = new Set();
   const count = { unchanged: 0, changed: 0, unavailable: 0, failed: 0 };
   const failure = (id, error) => {
     const unavailable = error instanceof SchemaSourceUnavailableError;
@@ -229,15 +410,18 @@ async function checkUpstream(directory, { configuration = pins, hubspotInputs = 
         continue;
       }
     }
+    upstream.set(source, bytes);
     const actual = digest(bytes);
     if (actual === source.sha256 && url === source.url) {
       ++count.unchanged;
       log(`unchanged: ${source.id} ${actual}`);
     } else {
       ++count.changed;
+      changed.add(source);
       log(upstreamChanged(source, actual, url));
     }
   }
+  for (const line of await surfaceReport(sources, upstream, changed, fetchPinned)) log(line);
   for (const command of updateCommands(directory, configuration)) {
     const status = runUpdate(command);
     if (status === 0) {
@@ -270,7 +454,8 @@ async function main(args, output = console.log) {
   return 0;
 }
 
-module.exports = { checkUpstream, fetchInputs, fromMirror, main, mirrorRequest, pinnedSources, stage, updateCommands };
+module.exports = { checkUpstream, fetchInputs, fromMirror, main, MAX_LISTED, MAX_REASON, mirrorRequest, pinnedSources,
+  stage, updateCommands };
 if (require.main === module) {
   main(process.argv.slice(2)).then(status => { process.exitCode = status; }, error => {
     console.error(error.message);

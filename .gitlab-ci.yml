@@ -70,8 +70,9 @@ test-alpine:
     expire_in: 7 days
 
 # The daily schedule (QORE_SCHEMA_UPSTREAM_CHECK=1) compares the upstream schema documents with the reviewed pins in
-# test/docker_test/schema-inputs.json and runs the user-facing update commands against the upstream services. It
-# reports on the upstream services, not on a commit, so it leaves the commit's GitHub status alone.
+# test/docker_test/schema-inputs.json, reports whether a change affects the supported surface of the generated app
+# (comparing with the pinned documents in the mirror), and runs the user-facing update commands against the upstream
+# services. It reports on the upstream services, not on a commit, so it leaves the commit's GitHub status alone.
 check-upstream-schemas:
   stage: test
   image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop
