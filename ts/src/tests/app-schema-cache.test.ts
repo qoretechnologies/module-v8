@@ -37,7 +37,8 @@ for (const id of appIds) {
 
 describe('App schema cache', () => {
   let directory: string;
-  beforeEach(() => { directory = fs.mkdtempSync(path.join(os.tmpdir(), 'qore-app-schema-test-')); });
+  // the cache refuses a symlinked directory, and os.tmpdir() is one on macOS (/var -> /private/var)
+  beforeEach(() => { directory = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'qore-app-schema-test-'))); });
   afterEach(() => { fs.rmSync(directory, { recursive: true, force: true }); jest.restoreAllMocks(); delete process.env[SNAPSHOTS_ENV]; });
 
   it('Keeps every app/action identity and owned presentation without schemas or a cache', () => {

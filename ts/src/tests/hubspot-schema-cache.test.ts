@@ -35,7 +35,8 @@ function inputs(revision = 'one'): Inputs {
 
 describe('HubSpot schema snapshots', () => {
   let directory: string;
-  beforeEach(() => { directory = fs.mkdtempSync(path.join(os.tmpdir(), 'qore-hubspot-cache-')); });
+  // the cache refuses a symlinked directory, and os.tmpdir() is one on macOS (/var -> /private/var)
+  beforeEach(() => { directory = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'qore-hubspot-cache-'))); });
   afterEach(() => fs.rmSync(directory, { recursive: true, force: true }));
 
   it('Keeps user-facing action presentation independent of downloaded schemas', () => {
