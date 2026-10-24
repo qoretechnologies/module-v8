@@ -316,13 +316,15 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
     "  _qoreBoot.envCreated(env);\n" \
     "}\n"
 
-//! Bootstrap code that gives process.stdin, process.stdout and process.stderr streams that never change a pipe or
-//! socket
+//! Bootstrap code that gives process.stdin, process.stdout and process.stderr streams that never change a terminal,
+//! a pipe or a socket, or the signal handling of the process
 /** For a pipe or a stream socket, Node.js creates process.stdin, process.stdout and process.stderr as net.Socket
     streams, and libuv puts the descriptor in non-blocking mode (O_NONBLOCK) when it opens it.  The flag belongs to the
     open file description, which is shared with Qore's own I/O and with every other process that has the pipe, so
     their writes to a full pipe and their reads of an empty one failed with EAGAIN; and data that libuv had not
-    written yet when a program was destroyed was lost.
+    written yet when a program was destroyed was lost.  For a terminal, Node's process.stdout and process.stderr
+    (tty.WriteStream) install a SIGWINCH handler to follow the window size, while Qore owns the signal handling of
+    the process: it blocks signals and handles them in its signal thread.
 
     For such a descriptor (see qore_v8_create_stdio_bridge()), the streams are created here on first use:
     - process.stdout and process.stderr are Writables whose writes are synchronous and complete: they wait while the
@@ -330,13 +332,19 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
     - process.stdin is a Readable whose reads wait in the calling thread until there is input, as Qore's own reads of
       stdin do; the wait is cancellable.  Its highWaterMark is 0, so that it reads only what its consumer asks for:
       a consumer that pauses after a chunk is not left waiting for input that it did not ask for
-    and all of them leave the descriptor as it is.  Node's own streams are kept for a terminal and a file.  As with
-    Node's streams, ending or destroying a stream never closes the descriptor, which belongs to the process.
+    and all of them leave the descriptor as it is.  For a terminal, the streams have the members that code commonly
+    reads: isTTY (true), the columns and rows of process.stdout and process.stderr, read when the stream is created,
+    and the methods of tty.WriteStream that do not need its handle (getWindowSize(), getColorDepth(), hasColors() and
+    the cursor functions); the size does not follow a resize ("resize" is never emitted), and process.stdin has
+    isRaw (false) but no setRawMode(), as raw mode would change the terminal for every process that uses it.  Node's
+    own streams are kept for a file and any other descriptor.  As with Node's streams, ending or destroying a stream
+    never closes the descriptor, which belongs to the process.
 */
 #define QORE_V8_PROCESS_STDIO_BOOTSTRAP \
     "{\n" \
     "  const bridge = _qoreBoot.stdio;\n" \
     "  const { Readable, Writable } = require('stream');\n" \
+    "  const ttyProto = require('tty').WriteStream.prototype;\n" \
     "  const createWritable = (fd) => {\n" \
     "    const stream = new Writable({\n" \
     "      write(chunk, encoding, callback) {\n" \
@@ -377,13 +385,27 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
     "      enumerable: desc.enumerable,\n" \
     "      get() {\n" \
     "        if (stream !== undefined) { return stream; }\n" \
-    "        if (!bridge.isStream(fd)) {\n" \
+    "        const kind = bridge.kind(fd);\n" \
+    "        if (kind === undefined) {\n" \
     "          stream = nodeGet.call(process);\n" \
     "          return stream;\n" \
     "        }\n" \
     "        stream = create(fd);\n" \
     "        stream.fd = fd;\n" \
-    "        stream._type = 'pipe';\n" \
+    "        stream._type = kind;\n" \
+    "        if (kind === 'tty') {\n" \
+    "          stream.isTTY = true;\n" \
+    "          if (fd) {\n" \
+    "            const size = bridge.windowSize(fd);\n" \
+    "            if (size !== undefined) { stream.columns = size[0]; stream.rows = size[1]; }\n" \
+    "            for (const m of ['getWindowSize', 'getColorDepth', 'hasColors', 'cursorTo', 'moveCursor',\n" \
+    "                'clearLine', 'clearScreenDown']) {\n" \
+    "              stream[m] = ttyProto[m];\n" \
+    "            }\n" \
+    "          } else {\n" \
+    "            stream.isRaw = false;\n" \
+    "          }\n" \
+    "        }\n" \
     "        return stream;\n" \
     "      },\n" \
     "    });\n" \

@@ -42,6 +42,7 @@ class V8StdioInheritanceTest inherits Test {
         addTestCase("JavaScript output to a non-blocking pipe is complete", \nonBlockingPipeTest());
         addTestCase("JavaScript input from a stdin pipe leaves it as it is and is complete", \stdinPipeTest());
         addTestCase("JavaScript input that pauses reads only what it asks for", \stdinPauseTest());
+        addTestCase("JavaScript stdio on a terminal installs no signal handler", \terminalTest());
 
         set_return_value(main());
     }
@@ -112,6 +113,33 @@ class V8StdioInheritanceTest inherits Test {
             "%s -b %s once 2>&1", env_prefix, qore_exe, get_script_dir() + DirSep + "v8-stdin-flags.q"), \rc);
         assertEq(0, rc, summary(out));
         assertEq("before False\nonce first\nafter False\n", out);
+    }
+
+    #! JavaScript stdio on a terminal installs no SIGWINCH handler and has the terminal members
+    /** Node's process.stdout and process.stderr for a terminal (tty.WriteStream) installed a SIGWINCH handler in the
+        process (libuv's sigaction()) to follow the window size, while %Qore owns the signal handling of the process.
+        The child runs on a pty of 132 x 41 (v8-stdio-pty.py); its JavaScript program reports the terminal members of
+        the streams and reads a line from process.stdin.  Whether the process catches SIGWINCH is read from
+        /proc/PID/status, so it is checked on Linux only.
+    */
+    private terminalTest() {
+        checkPython();
+        if (system("python3 -I -c 'import os, pty; os.close(os.openpty()[0])' > /dev/null 2>&1")) {
+            testSkip("python3 cannot open a pty here");
+        }
+        int rc;
+        string out = backquote(sprintf("%spython3 -I %s 132 41 %s -b %s 2>&1", env_prefix, get_script_dir() + DirSep
+            + "v8-stdio-pty.py", qore_exe, get_script_dir() + DirSep + "v8-stdio-tty.q"), \rc);
+        assertEq(0, rc, out);
+        list<string> lines = out.split("\n");
+        assertEq(5, lines.size(), out);
+        assertEq("ready isTTY=true columns=132 rows=41 size=[132,41] depth=8 stderr=true/132 stdin=true", lines[0],
+            "the streams of a terminal have its size and colors");
+        assertEq("hello", lines[1], "the terminal echoes the input");
+        assertEq("stdin-got hello", lines[2], "process.stdin reads the terminal");
+        assertEq(PlatformOS == "Linux" ? "sigwinch-caught False" : "sigwinch-caught n/a", lines[3],
+            "the JavaScript streams install no SIGWINCH handler");
+        assertEq("exit 0", lines[4]);
     }
 
     #! Checks the output of v8-stdio-flags.q: the non-blocking state of its stdout and stderr before and after the

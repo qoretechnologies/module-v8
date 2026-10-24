@@ -350,14 +350,13 @@ descriptors at startup and their restoration at exit.
 
 The bootstrap code of every program (`QORE_V8_PROCESS_STDIO_BOOTSTRAP` in `QoreV8Program.cpp`)
 therefore replaces the `process.stdout` and `process.stderr` getters. On first use, for a pipe
-or a stream socket (`isStream()` of the bridge in `QoreV8Stdio.cpp`), the stream is a `Writable`
+or a stream socket (`kind()` of the bridge in `QoreV8Stdio.cpp`), the stream is a `Writable`
 whose writes call `write()` of the bridge: synchronous and complete, waiting while the pipe is
 full as Qore's own writes do. If another process made the description non-blocking, the bridge
 waits for the descriptor with `qore_cancellable_poll()` instead of changing the flag; the wait
 ends with an exception when the thread is cancelled or its program is interrupted. Write errors
-are Node's errno exceptions (`EPIPE`, and so on). For a terminal and a file, Node's own streams
-are used: libuv reopens a terminal (or writes it in blocking mode), and a file is written
-synchronously, so neither changes the shared description.
+are Node's errno exceptions (`EPIPE`, and so on). For a file, Node's own stream is used: it writes
+the file synchronously and does not change the shared description. Terminals are described below.
 
 `process.stdin` for a pipe or a stream socket is replaced the same way: Node's `net.Socket` put fd 0
 in non-blocking mode for the parent shell too. The replacement is a `Readable` whose `read()` calls
@@ -369,6 +368,20 @@ Qore's own reads of stdin: other callbacks of the program do not run while it wa
 chunk is not left waiting for input it did not ask for (Node's own stream, by contrast, kept the event
 loop running after such a pause, so `spinEventLoop()` did not return). A file is read by Node's own
 `fs.ReadStream` (test: `test/v8-stdio-inheritance.qtest`).
+
+A terminal is handled the same way. Node's `process.stdout` and `process.stderr` for a terminal are
+`tty.WriteStream` streams, and `getStdout()` / `getStderr()` add a `SIGWINCH` listener to follow the
+window size, so libuv installs a `SIGWINCH` handler with `sigaction()` (`uv_signal_start()`), while
+Qore owns the signal handling of the process (it blocks signals and handles them in its signal
+thread). `kind()` of the bridge reports a terminal as `"tty"`, and the streams are the same
+`Writable` and `Readable` as for a pipe, with the members that code commonly reads: `isTTY`, the
+`columns` and `rows` read with `ioctl(TIOCGWINSZ)` (`windowSize()` of the bridge) when the stream is
+created, and the `tty.WriteStream` methods that do not use its handle (`getWindowSize()`,
+`getColorDepth()`, `hasColors()`, and the cursor functions), so console colors are detected as before.
+The size does not follow a resize (no `"resize"` event), and `process.stdin` has `isRaw` (`false`)
+but no `setRawMode()`: raw mode changes the terminal for every process that uses it. Whether the
+process catches `SIGWINCH` is checked on a pty in `test/v8-stdio-inheritance.qtest`
+(`test/v8-stdio-pty.py` reads `SigCgt` from `/proc/PID/status`, so on Linux only).
 
 The process arguments include `--unhandled-rejections=warn`, and every program's environment is
 created from them (`QoreV8Program::QoreV8Program()` passes `init_result->args()` and
@@ -450,5 +463,5 @@ callback chains (Qore → JS → Qore → JS) to work correctly.
 | `src/QoreV8Environment.h` | Access to the process environment under Qore's environment lock |
 | `src/QoreV8Environment.cpp` | Atomic copy of the environment (`JavaScriptProgram::getEnvironment()`), environment bridge of `process.env` |
 | `src/QoreV8Stdio.h` | Output of programs to the stdout and stderr of the process |
-| `src/QoreV8Stdio.cpp` | Stdio bridge of `process.stdout` and `process.stderr` for pipes and sockets (`isStream()`, `write()`) |
+| `src/QoreV8Stdio.cpp` | Stdio bridge of `process.stdin`, `process.stdout` and `process.stderr` for terminals, pipes and sockets (`kind()`, `read()`, `windowSize()`, `write()`) |
 | `CMakeLists.txt` | Build configuration (new source files added) |

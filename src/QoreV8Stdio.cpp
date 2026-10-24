@@ -29,6 +29,7 @@
 #include <memory>
 
 #include <poll.h>
+#include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -71,28 +72,55 @@ int qore_v8_stdio_wait(int fd, short events, const char* operation, ExceptionSin
     return prc < 0 ? errno : 0;
 }
 
-//! isStream(fd): true if the descriptor is a pipe (FIFO) or a stream socket
-/** These are the descriptors for which Node.js creates a \c net.Socket for \c process.stdin, \c process.stdout and
-    \c process.stderr (\c guessHandleType() returns \c "PIPE" or \c "TCP"), which puts the descriptor in non-blocking
-    mode
+//! kind(fd): "tty" for a terminal, "pipe" for a pipe (FIFO) or a stream socket, or undefined for anything else
+/** For a terminal, Node.js creates \c process.stdout and \c process.stderr as \c tty.WriteStream streams, which
+    install a \c SIGWINCH handler in the process (libuv's \c uv_signal_start()) to follow the window size, and
+    \c process.stdin as a \c tty.ReadStream; for a pipe or a stream socket (\c guessHandleType() \c "PIPE" or
+    \c "TCP") it creates \c net.Socket streams, which put the descriptor in non-blocking mode.  For any other
+    descriptor (a file, a datagram socket), Node's own streams change neither.
 */
-void qore_v8_stdio_is_stream(const v8::FunctionCallbackInfo<v8::Value>& info) {
+void qore_v8_stdio_kind(const v8::FunctionCallbackInfo<v8::Value>& info) {
     int fd = qore_v8_stdio_fd(info, 0, 2);
     if (fd < 0) {
         return;
     }
-    bool rv = false;
-    struct stat st;
-    if (!fstat(fd, &st)) {
-        if (S_ISFIFO(st.st_mode)) {
-            rv = true;
-        } else if (S_ISSOCK(st.st_mode)) {
-            int type = 0;
-            socklen_t len = sizeof(type);
-            rv = !getsockopt(fd, SOL_SOCKET, SO_TYPE, &type, &len) && type == SOCK_STREAM;
-        }
+    v8::Isolate* isolate = info.GetIsolate();
+    if (isatty(fd)) {
+        info.GetReturnValue().Set(v8::String::NewFromUtf8Literal(isolate, "tty"));
+        return;
     }
-    info.GetReturnValue().Set(rv);
+    struct stat st;
+    if (fstat(fd, &st)) {
+        return;
+    }
+    bool stream = S_ISFIFO(st.st_mode);
+    if (!stream && S_ISSOCK(st.st_mode)) {
+        int type = 0;
+        socklen_t len = sizeof(type);
+        stream = !getsockopt(fd, SOL_SOCKET, SO_TYPE, &type, &len) && type == SOCK_STREAM;
+    }
+    if (stream) {
+        info.GetReturnValue().Set(v8::String::NewFromUtf8Literal(isolate, "pipe"));
+    }
+}
+
+//! windowSize(fd): the [columns, rows] of the terminal, read with ioctl(TIOCGWINSZ), or undefined if they are unknown
+void qore_v8_stdio_window_size(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    int fd = qore_v8_stdio_fd(info, 0, 2);
+    if (fd < 0) {
+        return;
+    }
+    struct winsize ws;
+    if (ioctl(fd, TIOCGWINSZ, &ws) || !ws.ws_col || !ws.ws_row) {
+        return;
+    }
+    v8::Isolate* isolate = info.GetIsolate();
+    v8::Local<v8::Context> context = isolate->GetCurrentContext();
+    v8::Local<v8::Array> rv = v8::Array::New(isolate, 2);
+    if (rv->Set(context, 0, v8::Integer::NewFromUnsigned(isolate, ws.ws_col)).FromMaybe(false)
+        && rv->Set(context, 1, v8::Integer::NewFromUnsigned(isolate, ws.ws_row)).FromMaybe(false)) {
+        info.GetReturnValue().Set(rv);
+    }
 }
 
 //! Writes all of the data to the descriptor without changing it; returns 0 for success, an errno value for an error,
@@ -237,8 +265,9 @@ v8::MaybeLocal<v8::Object> qore_v8_create_stdio_bridge(v8::Isolate* isolate, v8:
         const char* name;
         v8::FunctionCallback callback;
     } functions[] = {
-        {"isStream", qore_v8_stdio_is_stream},
+        {"kind", qore_v8_stdio_kind},
         {"read", qore_v8_stdio_read},
+        {"windowSize", qore_v8_stdio_window_size},
         {"write", qore_v8_stdio_write},
     };
 
