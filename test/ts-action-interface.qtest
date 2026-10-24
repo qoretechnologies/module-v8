@@ -79,6 +79,9 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("failed deferred action retry", \deferredActionRetryTest());
         addTestCase("app metadata protocol validation", \appMetadataProtocolTest());
         addTestCase("schema option additions", \schemaOptionAdditionsTest());
+        addTestCase("validation pattern descriptions: action options", \validationRegexDescOptionTest());
+        addTestCase("validation pattern descriptions: hash type fields", \validationRegexDescFieldTest());
+        addTestCase("validation pattern descriptions: override_options", \validationRegexDescOverrideTest());
         addTestCase("hash type element types and REST allowed values definitions", \typeAndOptionDefinitionTest());
         addTestCase("producer identity contract skew", \inventoryContractSkewTest());
 
@@ -1902,6 +1905,167 @@ app.future_metadata = true;", appSource(app)), "metadata-protocol.js", sub (Java
         assertEq(("board",), action.options.list.depends_on);
         assertEq(keys action.options,
             keys DataProviderActionCatalog::checkAppActionOptions(app, "get-pet").options);
+    }
+
+    #! Defines a dynamic app with one action in JavaScript and registers both as an action script does
+    /** The definitions cross the JavaScript to %Qore boundary as those of an action script do.
+
+        @param app the name of the app
+        @param app_attr more attributes of the app, as a JavaScript object literal
+        @param action the action without its \c app attribute, as a JavaScript object literal
+
+        @return the pool of the program that registered the app, which must be kept while the app is used
+    */
+    private JavaScriptProgramPool registerJavaScriptApp(string app, string app_attr, string action) {
+        JavaScriptProgramPool pool(sprintf("var exports = {};
+var obj = {
+    'register': function (api, app) {
+        api.registerApp(Object.assign({
+            'name': app,
+            'display_name': app,
+            'short_desc': 'validation pattern description test',
+            'desc': 'validation pattern description test',
+            'groups': ['Other'],
+            'logo': 'AA==',
+            'logo_file_name': 'test.svg',
+            'logo_mime_type': 'image/svg+xml',
+            'dynamic': true,
+        }, %s));
+        api.registerAction(Object.assign({'app': app}, %s));
+    }
+};", app_attr, action), app + ".js", sub (JavaScriptProgram pgm) {});
+        pool.getProgram().getGlobal().obj.register(TypeScriptActionInterface::Api, app);
+        # a definition that cannot be converted is reported as an initialization failure of the action
+        assertEq((), (map $1.error + ": " + $1.description, DataProviderActionCatalog::getInitializationFailures((app,))),
+            "the app and its action register");
+        return pool;
+    }
+
+    #! An action option's description of its validation pattern is in its option info and request type field
+    /** \c validation_regex_desc describes in plain words the values that \c validation_regex accepts (DataProvider
+        3.11)
+    */
+    private validationRegexDescOptionTest() {
+        string app = "RegexDescOption_" + get_random_string(8);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        JavaScriptProgramPool pool = registerJavaScriptApp(app, "{}", "{
+    'action': 'set-language',
+    'display_name': 'Set language',
+    'short_desc': 'Set the language',
+    'desc': 'Set the language',
+    'action_code': 2,
+    'api_function': function () {
+        return 1;
+    },
+    'options': {
+        'language': {
+            'type': 'string',
+            'validation_regex': '^[a-z]{2}$',
+            'validation_regex_desc': 'a two-letter language code, such as en',
+        },
+        'name': {
+            'type': 'string',
+            'validation_regex': '^.+$',
+        },
+    },
+}");
+        hash<DataProviderActionInfo> action = DataProviderActionCatalog::checkAppActionOptions(app, "set-language");
+        assertEq("^[a-z]{2}$", action.options.language.validation_regex);
+        assertEq("a two-letter language code, such as en", action.options.language.validation_regex_desc);
+        assertEq("^.+$", action.options.name.validation_regex);
+        assertNothing(action.options.name.validation_regex_desc, "a pattern without a description has none");
+
+        hash<string, AbstractDataField> fields = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx("set-language").getRequestType().getFields();
+        hash<auto> attr = fields.language.getAttributes();
+        assertEq("^[a-z]{2}$", attr.validation_regex);
+        assertEq("a two-letter language code, such as en", attr.validation_regex_desc);
+        attr = fields.name.getAttributes();
+        assertEq("^.+$", attr.validation_regex);
+        assertFalse(attr.hasKey("validation_regex_desc"), "a pattern without a description has none");
+
+        # a description that is not a string is refused when its action is registered, as such a pattern is
+        foreach string attr_name in (("validation_regex", "validation_regex_desc")) {
+            hash<auto> option = {};
+            option.type = "string";
+            option{attr_name} = 1;
+            assertThrows("RUNTIME-TYPE-ERROR", "expects type '\\*string', but got type 'integer'",
+                \TypeScriptActionInterface::registerAction(),
+                (actionWithOption(app, attr_name + "-not-a-string", option), pool));
+        }
+    }
+
+    #! A field of a hash option type describes its validation pattern in its attributes
+    private validationRegexDescFieldTest() {
+        string app = "RegexDescField_" + get_random_string(8);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        JavaScriptProgramPool pool = registerJavaScriptApp(app, "{}", "{
+    'action': 'set-address',
+    'display_name': 'Set address',
+    'short_desc': 'Set the address',
+    'desc': 'Set the address',
+    'action_code': 2,
+    'api_function': function () {
+        return 1;
+    },
+    'options': {
+        'address': {
+            'type': {
+                'type': 'hash',
+                'fields': {
+                    'country': {
+                        'type': 'string',
+                        'validation_regex': '^[A-Z]{2}$',
+                        'validation_regex_desc': 'a two-letter country code, such as CZ',
+                    },
+                },
+            },
+        },
+    },
+}");
+        AbstractDataField country = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx("set-address").getRequestType().getFields().address.getType().getFields().country;
+        foreach AbstractDataField f in ((country,
+                Serializable::deserialize(cast<Serializable>(country).serialize()))) {
+            hash<auto> attr = f.getAttributes();
+            assertEq("^[A-Z]{2}$", attr.validation_regex);
+            assertEq("a two-letter country code, such as CZ", attr.validation_regex_desc);
+        }
+    }
+
+    #! override_options set the description of a schema option's pattern and of an option that they add
+    private validationRegexDescOverrideTest() {
+        string app = "RegexDescOverride_" + get_random_string(8);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
+        chdir(get_script_dir());
+        JavaScriptProgramPool pool = registerJavaScriptApp(app, sprintf("{
+    'rest': {'url': 'https://example.invalid', 'data': 'json'},
+    'openapi': %s,
+}", make_json(getcwd() + "/PetStore.openapi3.yaml")), "{
+    'action': 'get-pet',
+    'display_name': 'Get pet',
+    'short_desc': 'Read a test pet',
+    'desc': 'Read a test pet',
+    'action_code': 2,
+    'openapi_path': '/pet/{petId}/GET',
+    'override_options': {
+        'petId': {
+            'validation_regex': '^[0-9]+$',
+            'validation_regex_desc': 'a pet number, such as 42',
+        },
+        'tag': {
+            'type': 'string',
+            'required': false,
+            'validation_regex': '^[a-z]+$',
+            'validation_regex_desc': 'a tag in lowercase letters, such as dog',
+        },
+    },
+}");
+        hash<DataProviderActionInfo> action = DataProviderActionCatalog::checkAppActionOptions(app, "get-pet");
+        assertEq("^[0-9]+$", action.options.petId.validation_regex);
+        assertEq("a pet number, such as 42", action.options.petId.validation_regex_desc);
+        assertEq("^[a-z]+$", action.options.tag.validation_regex);
+        assertEq("a tag in lowercase letters, such as dog", action.options.tag.validation_regex_desc);
     }
 
     private eagerRegistrationFailureTest() {

@@ -146,6 +146,7 @@ public class TypeScriptActionInterface {
             "element_type", "element_allowed_values", "element_allowed_values_creatable",
             "get_element_allowed_values",
             "attr", "required", "on_change", "preselected", "depends_on", "validation_regex",
+            "validation_regex_desc",
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
@@ -4117,6 +4118,9 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         }
         if ((*string str = remove type_hash.validation_regex).val()) {
             info.attr.validation_regex = str;
+        }
+        if ((*string str = remove type_hash.validation_regex_desc).val()) {
+            info.attr.validation_regex_desc = str;
         }
         if (exists (auto v = remove type_hash.on_change)) {
             info.attr.on_change = v;

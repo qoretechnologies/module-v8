@@ -150,6 +150,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - an action option, a field of a hash type and an option in \c override_options can describe in plain words the
+      values that its \c validation_regex accepts with \c validation_regex_desc (%DataProvider 3.11), for example
+      <tt>"a two-letter language code, such as en"</tt>; the description is in the option info and in the field's
+      attributes, as the pattern is.  A field or an option in \c override_options with a description was refused
+      with \c FIELD-ERROR or \c OPTION-OVERRIDE-ERROR, and the field of the action's request type had no description
     - a \c ts-proxy child process gets the process environment as it is when the child is started, read atomically
       with @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()"; it got the \c ENV
       hash, the environment of the process when it started, so variables set or removed with \c setenv() and
