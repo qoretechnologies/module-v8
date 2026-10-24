@@ -26,6 +26,7 @@
 #include "QC_JavaScriptObject.h"
 #include "QC_JavaScriptPromise.h"
 #include "QoreV8Program.h"
+#include "QoreV8Environment.h"
 
 //static std::unique_ptr<v8::Platform> platform;
 std::unique_ptr<node::MultiIsolatePlatform> platform;
@@ -189,6 +190,18 @@ static bool qore_v8_node_options_enable_warnings() {
     return false;
 }
 
+#ifdef DEBUG
+//! Sets the code that a change of \c TZ made through \c process.env calls while V8 detects the time zone again
+/** Debug builds only, for tests (see qore_v8_dbg_set_env_write_hook()).
+
+    @param hook the code to call, or no value to remove it
+*/
+static QoreValue f_dbg_env_write_hook(const QoreListNode* args, RuntimeConfig& rc, ExceptionSink* xsink) {
+    qore_v8_dbg_set_env_write_hook(get_param_value(args, 0).get<const ResolvedCallReferenceNode>(), xsink);
+    return QoreValue();
+}
+#endif
+
 static QoreStringNode* v8_module_init_intern(bool repeat) {
     if (!V8NS) {
         V8NS = new QoreNamespace("V8");
@@ -197,6 +210,11 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
         V8NS->addSystemClass(initTypeScriptProgramClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptObjectClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptPromiseClass(*V8NS));
+#ifdef DEBUG
+        V8NS->addBuiltinVariant("dbg_env_write_hook", f_dbg_env_write_hook, QCF_NO_FLAGS,
+            QDOM_PROCESS | QDOM_UNCONTROLLED_API, nothingTypeInfo, 1, codeOrNothingTypeInfo, QORE_PARAM_NO_ARG,
+            "hook");
+#endif
     }
 
     // An unhandled promise rejection is reported as a warning (with its stack) instead of being raised as an

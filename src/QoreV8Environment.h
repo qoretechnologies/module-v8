@@ -64,4 +64,15 @@ DLLLOCAL QoreHashNode* qore_v8_get_environment_hash(ExceptionSink* xsink);
 */
 DLLLOCAL v8::MaybeLocal<v8::Object> qore_v8_create_env_bridge(v8::Isolate* isolate, v8::Local<v8::Context> context);
 
+#ifdef DEBUG
+//! Sets the code that a change of \c TZ made through \c process.env calls while V8 detects the time zone again
+/** Debug builds only, for tests: the code runs in the thread that changes the variable, after the environment has been
+    changed, with the hold that the change takes.
+
+    @param hook the code to call, or nullptr to remove it
+    @param xsink for an exception raised by the destruction of the previous hook
+*/
+DLLLOCAL void qore_v8_dbg_set_env_write_hook(const ResolvedCallReferenceNode* hook, ExceptionSink* xsink);
+#endif
+
 #endif

@@ -25,6 +25,7 @@
 #include "QoreV8Environment.h"
 
 #include <cstring>
+#include <mutex>
 #include <unordered_set>
 
 #ifdef __APPLE__
@@ -68,6 +69,42 @@ QoreHashNode* qore_v8_get_environment_hash(ExceptionSink* xsink) {
     }
     return rv.release();
 }
+
+#ifdef DEBUG
+namespace {
+//! guards env_write_hook
+std::mutex env_write_hook_lock;
+//! the code that a change of the environment made through the bridge calls; see qore_v8_dbg_set_env_write_hook()
+ResolvedCallReferenceNode* env_write_hook = nullptr;
+
+//! Calls the hook of qore_v8_dbg_set_env_write_hook(), if any
+void qore_v8_dbg_env_write() {
+    ExceptionSink xsink;
+    {
+        ReferenceHolder<ResolvedCallReferenceNode> hook(&xsink);
+        {
+            std::lock_guard<std::mutex> l(env_write_hook_lock);
+            if (!env_write_hook) {
+                return;
+            }
+            hook = env_write_hook->refRefSelf();
+        }
+        ValueHolder rv(hook->execValue(nullptr, &xsink), &xsink);
+    }
+    if (xsink) {
+        printd(0, "qore_v8_dbg_env_write(): the hook raised %s\n", xsink.getExceptionErr().getTypeName());
+        xsink.clear();
+    }
+}
+}
+
+void qore_v8_dbg_set_env_write_hook(const ResolvedCallReferenceNode* hook, ExceptionSink* xsink) {
+    ReferenceHolder<ResolvedCallReferenceNode> old(xsink);
+    std::lock_guard<std::mutex> l(env_write_hook_lock);
+    old = env_write_hook;
+    env_write_hook = hook ? hook->refRefSelf() : nullptr;
+}
+#endif
 
 namespace {
 //! Returns Node's original process.env object, the first argument of every bridge function
@@ -183,6 +220,14 @@ void qore_v8_env_set(const v8::FunctionCallbackInfo<v8::Value>& info) {
     if (store->Set(context, name, info[2]).To(&rv)) {
         info.GetReturnValue().Set(rv);
     }
+#ifdef DEBUG
+    if (name->IsString()) {
+        v8::String::Utf8Value key(info.GetIsolate(), name);
+        if (*key && !strcmp(*key, "TZ")) {
+            qore_v8_dbg_env_write();
+        }
+    }
+#endif
 }
 
 //! delete(store, name): removes the variable

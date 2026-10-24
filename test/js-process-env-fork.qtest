@@ -1,0 +1,117 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%no-child-restrictions
+
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+%requires v8
+%requires QUnit
+
+%exec-class JsProcessEnvForkTest
+
+#! fork() while JavaScript code changes process.env
+/** A change of process.env made by JavaScript code ran Node's setter, and for TZ V8's detection of the time zone,
+    inside an AtomicEnvironmentSetter, which holds the environment lock that fork() waits for (in any thread, by any
+    code).  The change is now made with SystemEnvironment, which holds that lock only for the change, and the time
+    zone is detected afterwards with a hold that fork() does not wait for.
+
+    The debug hook of V8::dbg_env_write_hook() runs while V8 detects the time zone again after a change of TZ; it
+    records whether the writing thread holds the environment lock (dbg_env_lock_held() of Qore's debug builds) and,
+    if it does not, waits until this thread has created and reaped a child process with fork().  If the writing
+    thread held the lock, fork() would wait for it while the change waited for fork(), so the hook does not wait then
+    and the test fails instead of hanging.
+*/
+class JsProcessEnvForkTest inherits Test {
+    public {
+        #! the JavaScript functions used by the test
+        const Source = "
+globalThis.setTz = (tz) => { process.env.TZ = tz; return new Date(0).getHours(); };
+globalThis.restoreTz = (tz) => { if (tz === undefined || tz === null) { delete process.env.TZ; } else { process.env.TZ = tz; } };
+";
+    }
+
+    private {
+        #! the program used by the test
+        JavaScriptProgram js;
+    }
+
+    constructor() : Test("JsProcessEnvForkTest", "1.0") {
+        js = new JavaScriptProgram(Source, "process-env-fork.js");
+
+        addTestCase("fork() while JavaScript code changes TZ does not wait for the change", \forkDuringWriteTest());
+
+        set_return_value(main());
+    }
+
+    #! Calls the given JavaScript function with the remaining arguments
+    private auto call(string func) {
+        return js.getGlobal().getProperty(func).callAsFunctionArgs(NOTHING, argv);
+    }
+
+    forkDuringWriteTest() {
+        if (!Option::HAVE_LIBRARY_DEBUGGING || !Option::HAVE_FORK) {
+            testSkip("the test needs debug builds and fork()");
+        }
+        try {
+            call_function("dbg_env_lock_held");
+            call_function("V8::dbg_env_write_hook");
+        } catch (hash<ExceptionInfo> ex) {
+            testSkip(sprintf("this build has no debug hook: %s: %s", ex.err, ex.desc));
+        }
+
+        *string tz = getenv("TZ");
+        on_exit call("restoreTz", tz);
+
+        Counter in_write(1);
+        Counter forked(1);
+        bool held_in_write;
+        call_function("V8::dbg_env_write_hook", sub () {
+            held_in_write = call_function("dbg_env_lock_held");
+            in_write.dec();
+            # with the lock held, fork() would wait for it while this change waits for fork()
+            if (!held_in_write) {
+                forked.waitForZero();
+            }
+        });
+        on_exit call_function("V8::dbg_env_write_hook");
+
+        # JavaScript code in another thread changes TZ and stops in the hook while V8 detects the time zone again
+        Queue write();
+        background sub () {
+            try {
+                write.push(call("setTz", "UTC"));
+            } catch (hash<ExceptionInfo> ex) {
+                write.push(sprintf("%s: %s", ex.err, ex.desc));
+            }
+        }();
+        in_write.waitForZero();
+
+        if (!held_in_write) {
+            # the child reports through a pipe whose write end it holds until it exits, so the parent reads its report
+            # until the child has exited
+            hash<PipeInfo> pipe = File::getPipe();
+            flush();
+            int pid = fork();
+            if (!pid) {
+                pipe.read.close();
+                pipe.write.write("child");
+                Qore::exit(0);
+            }
+            pipe.write.close();
+            assertGt(0, pid, "fork() succeeded");
+            string report;
+            while (*binary data = pipe.read.readBinary(4096)) {
+                report += data.toString();
+            }
+            assertEq("child", report, "the child ran while the change was in progress");
+        }
+        forked.dec();
+
+        auto hours = write.get();
+        assertFalse(held_in_write, "the change does not hold the lock that fork() waits for while V8 code runs");
+        assertEq(0, hours, sprintf("the time zone was changed: %y", hours));
+    }
+}
