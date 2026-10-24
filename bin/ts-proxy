@@ -144,6 +144,26 @@ class TsProxy inherits TypeScriptProxy {
     #! This runs in the child
     private commandLoop() {
         while (True) {
+            @debug {
+                # TEST: close the command socket and stay running until the parent releases the child, which it does
+                # when it waits for the child to end (JavaScriptProgramProxy::waitForChildEnd()), so that the parent
+                # always sees the end of the socket while the child is running: "read" closes it after reading the
+                # next command, "unread" when the next command has arrived but before reading it (with unread data,
+                # Linux reports a reset to the parent)
+                *string mode = getenv("TS_PROXY_TEST_CLOSE_COMMAND_SOCKET");
+                if (startup_complete && mode.val()) {
+                    if (mode == "read") {
+                        getCommand();
+                    } else {
+                        s.isDataAvailable(-1);
+                    }
+                    info("TEST: closing the command socket and waiting to be released");
+                    s.close();
+                    ReadOnlyFile release(getenv("TS_PROXY_TEST_CLOSE_COMMAND_SOCKET_RELEASE"));
+                    release.read(1);
+                    exit(0);
+                }
+            }
             hash<auto> h;
             try {
                 h = getCommand(500ms);

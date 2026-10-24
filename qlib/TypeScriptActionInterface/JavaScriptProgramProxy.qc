@@ -47,6 +47,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Default time a new \c ts-proxy child process has to start; see setStartupTimeout()
         const DefaultStartupTimeout = 60s;
 
+        #! Hang guard for the end of a child whose command socket has been closed
+        /** A \c ts-proxy child closes its command socket only by ending, so its end is waited for before it is
+            restarted (see waitForChildEnd()); the wait ends when the child ends, and this limit is only reached if the
+            child hangs while ending.
+        */
+        const ChildEndTimeout = 60s;
+
         #! Environment variable that sets the startup timeout in seconds when the module is loaded
         /** @see setStartupTimeout()
         */
@@ -98,6 +105,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Current command in progress
         hash<auto> command_in_progress;
+
+        #! Whether the reply to the current command has started to arrive
+        bool reply_started;
 
         #! Event count
         #Counter event_cnt();
@@ -1144,6 +1154,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
                 if (!yaml.val()) {
                     yaml = makeSend(cmd, {"args": args});
                 }
+                reply_started = False;
                 debug("Sending command %y", LoggerUtil::getArgSummary(yaml));
                 @debug {
                     # TEST: simulate the parent command send hitting the real Qore Socket::send()
@@ -1212,6 +1223,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
             try {
                 # first read message size
                 i = s.recvi8(1s);
+                reply_started = True;
                 if (!i) {
                     throw "CMD-ERROR", sprintf("Invalid response received from proxy with PID %d", pid);
                 }
@@ -1284,8 +1296,56 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return rc ? rc.retry(ex, command_in_progress) : True;
     }
 
+    #! Returns True if the error is how the end of the child shows on its command socket
+    /** A child that ends closes its command socket: a read of the reply sees the end of the connection
+        (SOCKET-CLOSED), or, on Linux, a reset (SOCKET-RECV-ERROR with ECONNRESET) if the child had not read the
+        command, and a send sees a broken pipe or a reset (SOCKET-SEND-ERROR with EPIPE or ECONNRESET).
+    */
+    private static bool isChildEndError(hash<ExceptionInfo> ex) {
+        switch (ex.err) {
+            case "SOCKET-CLOSED":
+                return True;
+            case "SOCKET-RECV-ERROR":
+                return ex.arg == ECONNRESET;
+            case "SOCKET-SEND-ERROR":
+                return ex.arg == EPIPE || ex.arg == ECONNRESET || ex.desc =~ /Broken pipe/i;
+        }
+        return False;
+    }
+
+    #! Waits for the end of a child whose command socket has been closed before any reply arrived
+    /** A \c ts-proxy child closes its command socket only by ending, but the end of its socket is seen before the
+        child has been reaped, so Process::running() can still return True; the restart decision is made once the
+        child has ended.  Process::wait() returns when the child ends; @ref ChildEndTimeout is only a hang guard.
+
+        @return True if the child has ended
+    */
+    private bool waitForChildEnd() {
+        @debug {
+            # TEST: the test's child stays running after closing its command socket until it is released here, so
+            # that the end of the socket is always seen while the child is running
+            if ((*string release = getenv("TS_PROXY_TEST_CLOSE_COMMAND_SOCKET_RELEASE")).val()) {
+                File f();
+                f.open2(release, O_WRONLY);
+                f.write("1");
+                f.close();
+            }
+        }
+        info("The child's command socket was closed before any reply; waiting for the child to end");
+        if (proc.wait(ChildEndTimeout)) {
+            return True;
+        }
+        error("The child's command socket was closed, but the child has not ended after %y", ChildEndTimeout);
+        return False;
+    }
+
     private *bool checkRestart(*RetryCounter rc, *int restart_flags, *hash<ExceptionInfo> ex) {
         int flags = restart_flags ?? 0;
+        # the end of a child shows on its command socket before the child has been reaped; the decision to restart it
+        # is made when it has ended, with no lock held
+        if (ex && !reply_started && isChildEndError(ex) && proc && proc.running()) {
+            waitForChildEnd();
+        }
         {
             AutoLock al(m);
             if (restarting) {
@@ -1328,7 +1388,9 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
             # conditions").  Match SOCKET-SEND-ERROR only for EPIPE/broken-pipe (a genuinely dead
             # peer) - a send timeout is a distinct SOCKET-TIMEOUT error, not this - and deliberately
             # do NOT widen this to SOCKET-CLOSED: that can occur recv-side after the child has already
-            # executed the command, where a retry could re-run a non-idempotent action.
+            # executed the command, where a retry could re-run a non-idempotent action.  A child that
+            # ends before any reply arrived (SOCKET-CLOSED, or ECONNRESET on Linux) has been waited for
+            # above, so it is restarted here as not running, as a child that had already been reaped is.
             bool socket_dead = ex && (ex.err == "SOCKET-NOT-OPEN"
                 || (ex.err == "SOCKET-SEND-ERROR" && (ex.arg == EPIPE || ex.desc =~ /Broken pipe/i)));
             if (!proc.running() || socket_dead) {

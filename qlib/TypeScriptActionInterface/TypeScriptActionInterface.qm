@@ -150,6 +150,9 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - a \c ts-proxy child process that ends while the parent waits for its answer to a command is restarted and the
+      command retried: the parent saw the end of the child's command socket before the child had ended, and then
+      raised \c SOCKET-CLOSED (or \c SOCKET-RECV-ERROR with \c ECONNRESET on Linux) instead of restarting it
     - an action option, a field of a hash type and an option in \c override_options can describe in plain words the
       values that its \c validation_regex accepts with \c validation_regex_desc (%DataProvider 3.11), for example
       <tt>"a two-letter language code, such as en"</tt>; the description is in the option info and in the field's

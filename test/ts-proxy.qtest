@@ -54,6 +54,12 @@ public class TsProxyTest inherits QUnit::Test {
 
         addTestCase("proxy tests", \proxyTests());
         addTestCase("proxy restarts after child exit", \proxyUnexpectedExitTest());
+        addTestCase("a child that ends after reading a command is restarted when it has ended", sub () {
+            proxyChildEndingTest("read");
+        });
+        addTestCase("a child that ends before reading a command is restarted when it has ended", sub () {
+            proxyChildEndingTest("unread");
+        });
         addTestCase("proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
         addTestCase("proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
         addTestCase("proxy parent send error mid-command", \proxyParentSendErrorMidCommandTest());
@@ -197,6 +203,56 @@ public class TsProxyTest inherits QUnit::Test {
             ("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING));
         assertTrue(proxy.getInfo()."proxy-pid" != pid,
             "the release proxy must restart a terminated child before retrying the command");
+        assertEq(1, proxy.getInfo()."restart-count");
+    }
+
+    #! A child whose command socket is closed before any reply is restarted when it has ended, and the command retried
+    /** A child ends with its command socket, and the parent sees the end of the socket before the child has been
+        reaped: Process::running() could still report the child, so the proxy raised the socket error
+        (SOCKET-CLOSED, or SOCKET-RECV-ERROR with ECONNRESET on Linux) instead of restarting it.  The race is made
+        deterministic with the TS_PROXY_TEST_CLOSE_COMMAND_SOCKET hooks: the child closes its command socket after
+        reading the next command (\a mode \c "read") or when it has arrived (\c "unread"), and stays running until
+        the parent, waiting for the child to end, releases it through a FIFO.  The command must then be retried by a
+        new child, which reports that the app does not exist.
+
+        @param mode \c "read" or \c "unread", see above
+    */
+    private proxyChildEndingTest(string mode) {
+        skipIfNotReady();
+        skipIfDebugHooksUnavailable();
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("the child socket-close hook requires running with debugging enabled");
+        }
+
+        string release = sprintf("%s/ts-proxy-test-release-%d-%s", tmp_location(), getpid(), mode);
+        if (mkfifo(release)) {
+            throw "TEST-ERROR", sprintf("%s: %s", release, strerror());
+        }
+        on_exit unlink(release);
+        code restore_release = setenvScoped("TS_PROXY_TEST_CLOSE_COMMAND_SOCKET_RELEASE", release);
+        on_exit restore_release();
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+        JavaScriptProgramProxy proxy;
+        {
+            # only the first child gets the hook: the restarted child answers the retried command
+            code restore_mode = setenvScoped("TS_PROXY_TEST_CLOSE_COMMAND_SOCKET", mode);
+            on_exit restore_mode();
+            proxy = new JavaScriptProgramProxy();
+        }
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0);
+
+        *hash<ExceptionInfo> err = callGuarded(sub () {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        }, "the command");
+        assertEq("APP-ERROR", err.err, "the command is retried by a new child: " + get_exception_string(err));
+        assertTrue(proxy.getInfo()."proxy-pid" != pid, "the child that ended has been replaced");
         assertEq(1, proxy.getInfo()."restart-count");
     }
 

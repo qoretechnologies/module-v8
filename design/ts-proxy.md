@@ -69,6 +69,18 @@ Key behaviors:
   setup from surviving after the parent has already removed the observer.
 - If a restart fails, the failure is logged and the caller receives an error;
   the proxy is no longer stuck in the restarting state.
+- A child closes its command socket only by ending, and the parent sees the end
+  of the socket before the child has been reaped, while `Process::running()`
+  still reports it. When a command's socket fails before any reply has arrived
+  (`reply_started`) with an error that the end of a child produces
+  (`isChildEndError()`: `SOCKET-CLOSED`; `SOCKET-RECV-ERROR` with `ECONNRESET`,
+  which Linux reports when the child had not read the command; `SOCKET-SEND-ERROR`
+  with `EPIPE` or `ECONNRESET`), `checkRestart()` first waits for the child to end
+  with `Process::wait()` (`waitForChildEnd()`, no lock held), then restarts it and
+  retries the command, as for a child that had already been reaped. The wait ends
+  when the child ends; `ChildEndTimeout` (60s) is only a hang guard, after which
+  the error is raised as before. An error after the reply has started is not
+  retried this way, since the child may already have executed the command.
 
 Debug builds add `@debug()` logs and `@assert()` checks around the restart path,
 which are enabled with `qore -G`.
@@ -96,6 +108,14 @@ send to fail. Both are used for negative and corner-case tests.
 `TS_PROXY_TEST_RESTART_WAIT_FAST_PATHS` enables a `getInfo()` debug probe used
 by `test/ts-proxy.qtest` to verify that no-restart teardown commands and
 restart-owner reentry do not wait on `cond_restart`.
+
+`TS_PROXY_TEST_CLOSE_COMMAND_SOCKET` (`read` or `unread`) makes the child close
+its command socket after reading the next command, or when it has arrived but
+before reading it, and then stay running until it reads a byte from the FIFO
+named by `TS_PROXY_TEST_CLOSE_COMMAND_SOCKET_RELEASE`; the parent writes that byte
+when it waits for the child to end. The parent therefore always sees the end of
+the socket while the child is running, which makes the race between the end of
+the socket and the reaping of the child deterministic in `test/ts-proxy.qtest`.
 
 ## Child Processes Created With fork()
 
