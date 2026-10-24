@@ -29,6 +29,7 @@
     information.
 */
 
+#include <qore/QoreSandboxManager.h>
 #include "QoreV8CallReference.h"
 #include "QoreV8Object.h"
 #include "QoreV8Program.h"
@@ -43,6 +44,7 @@ QoreV8CallReference::~QoreV8CallReference() {
 }
 
 QoreValue QoreV8CallReference::execValue(const QoreListNode* args, ExceptionSink* xsink) const {
+    QoreSandboxProvenanceHelper provenance(this);
     ValueEvalRefHolder erh(xsink);
     if (args) {
         if (erh.eval(args)) {
@@ -58,6 +60,7 @@ QoreValue QoreV8CallReference::execValue(const QoreListNode* args, ExceptionSink
 }
 
 bool QoreV8CallReference::derefImpl(ExceptionSink* xsink) {
+    QoreSandboxProvenanceHelper provenance(this);
     QoreV8Program::resetHandle(parent);
     callable->deref(xsink);
     callable = nullptr;
