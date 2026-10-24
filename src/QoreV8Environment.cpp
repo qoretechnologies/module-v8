@@ -25,6 +25,7 @@
 #include "QoreV8Environment.h"
 
 #include <cstring>
+#include <ctime>
 #include <mutex>
 #include <unordered_set>
 
@@ -201,6 +202,42 @@ void qore_v8_env_descriptor(const v8::FunctionCallbackInfo<v8::Value>& info) {
     }
 }
 
+//! Sets (\a value given) or removes a variable as Node's process.env does, with the environment lock held only while
+//! the environment is changed
+/** Node's object changes the environment in RealEnvStore::Set() and RealEnvStore::Delete() (node_env_var.cc):
+    setenv() or unsetenv(), and for \c TZ, tzset() and V8's detection of the time zone
+    (DateTimeConfigurationChangeNotification()).  Called through the object, all of it ran inside an
+    AtomicEnvironmentSetter, so fork(), which waits for that lock, waited for V8 code.  Here the variable is changed
+    with SystemEnvironment, which holds the lock only for the change, and the time zone is detected afterwards with a
+    QoreEnvironmentReadLock held: tzset() and V8 read \c TZ, so the environment must not change meanwhile, but fork()
+    does not wait for that hold.  As in Node, a change that the C library refuses (an empty name or one that contains
+    '=') is ignored.
+
+    @param isolate the isolate of the calling program
+    @param name the name of the variable
+    @param value the value to set, or nullptr to remove the variable
+*/
+void qore_v8_env_change(v8::Isolate* isolate, v8::Local<v8::String> name, const v8::Local<v8::String>* value) {
+    v8::String::Utf8Value key(isolate, name);
+    if (!*key) {
+        return;
+    }
+    if (value) {
+        v8::String::Utf8Value val(isolate, *value);
+        SystemEnvironment::set(*key, *val ? *val : "", true);
+    } else {
+        SystemEnvironment::unset(*key);
+    }
+    if (!strcmp(*key, "TZ")) {
+        QoreEnvironmentReadLock env_lock;
+        tzset();
+        isolate->DateTimeConfigurationChangeNotification(v8::Isolate::TimeZoneDetection::kRedetect);
+#ifdef DEBUG
+        qore_v8_dbg_env_write();
+#endif
+    }
+}
+
 //! set(store, name, value): sets the variable; the name and value are strings
 void qore_v8_env_set(const v8::FunctionCallbackInfo<v8::Value>& info) {
     v8::Local<v8::Object> store;
@@ -208,26 +245,14 @@ void qore_v8_env_set(const v8::FunctionCallbackInfo<v8::Value>& info) {
     if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
         return;
     }
-    if (info.Length() < 3 || !info[2]->IsString()) {
+    if (info.Length() < 3 || !info[2]->IsString() || !name->IsString()) {
         info.GetIsolate()->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8Literal(info.GetIsolate(),
-            "the process environment bridge requires a string value")));
+            "the process environment bridge requires a string name and value")));
         return;
     }
-    v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
-    AtomicEnvironmentSetter env_lock;
-    // Node's setter changes the environment and, for TZ, makes V8 detect the time zone again
-    bool rv;
-    if (store->Set(context, name, info[2]).To(&rv)) {
-        info.GetReturnValue().Set(rv);
-    }
-#ifdef DEBUG
-    if (name->IsString()) {
-        v8::String::Utf8Value key(info.GetIsolate(), name);
-        if (*key && !strcmp(*key, "TZ")) {
-            qore_v8_dbg_env_write();
-        }
-    }
-#endif
+    v8::Local<v8::String> value = info[2].As<v8::String>();
+    qore_v8_env_change(info.GetIsolate(), name.As<v8::String>(), &value);
+    info.GetReturnValue().Set(true);
 }
 
 //! delete(store, name): removes the variable
@@ -237,12 +262,11 @@ void qore_v8_env_delete(const v8::FunctionCallbackInfo<v8::Value>& info) {
     if (!qore_v8_env_store(info, store) || !qore_v8_env_name(info, name)) {
         return;
     }
-    v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
-    AtomicEnvironmentSetter env_lock;
-    bool rv;
-    if (store->Delete(context, name).To(&rv)) {
-        info.GetReturnValue().Set(rv);
+    // as Node's object: a symbol is not a variable, and delete always returns true
+    if (name->IsString()) {
+        qore_v8_env_change(info.GetIsolate(), name.As<v8::String>(), nullptr);
     }
+    info.GetReturnValue().Set(true);
 }
 
 //! Reads a field of a property descriptor object created by V8 for a proxy trap (a plain object of data properties)
@@ -320,10 +344,8 @@ void qore_v8_env_define(const v8::FunctionCallbackInfo<v8::Value>& info) {
         if (!name->ToString(context).ToLocal(&key) || !value->ToString(context).ToLocal(&str)) {
             return;
         }
-        AtomicEnvironmentSetter env_lock;
-        if (store->Set(context, key, str).IsJust()) {
-            info.GetReturnValue().Set(true);
-        }
+        qore_v8_env_change(isolate, key, &str);
+        info.GetReturnValue().Set(true);
         return;
     }
     if (has_get || has_set) {

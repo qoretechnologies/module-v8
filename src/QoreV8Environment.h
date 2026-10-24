@@ -51,13 +51,15 @@ DLLLOCAL QoreHashNode* qore_v8_get_environment_hash(ExceptionSink* xsink);
     while %Qore reads the environment, or makes a copy of it for a new process, can do the same to %Qore.
 
     The bootstrap code of every program therefore replaces \c process.env with a proxy whose operations call the
-    returned functions, which perform them on Node's original \c process.env object (passed as their first
-    argument) with Qore's environment lock held: shared to read the environment (\c get, \c has, \c keys,
-    \c descriptor), exclusively to change it (\c set, \c delete, \c define).  Node's own handling, including the
-    conversion of values to strings, its errors, and the time zone change that a change of \c TZ causes, is kept,
-    and its lock is acquired by Node inside Qore's, never the other way around.  No JavaScript code runs while the
-    lock is held: the original object's operations are implemented in C++, and the proxy converts names and values
-    to strings before it calls the functions.
+    returned functions: they read the environment on Node's original \c process.env object (passed as their first
+    argument) with a QoreEnvironmentReadLock held (\c get, \c has, \c keys, \c descriptor), and change it as
+    Node's object does (\c set, \c delete, \c define): with SystemEnvironment, which holds the environment lock
+    only while the variable is changed, and for \c TZ, with V8 detecting the time zone again afterwards under a
+    QoreEnvironmentReadLock, so that fork(), which waits for the environment lock, never waits for V8 code.
+    Node's own handling of reads, and the conversion of values to strings, is kept, and Node's lock is acquired by
+    Node inside Qore's, never the other way around.  No JavaScript code runs while a lock is held: the original
+    object's operations are implemented in C++, and the proxy converts names and values to strings before it calls
+    the functions.
 
     @return an object with the functions \c get, \c has, \c keys, \c descriptor, \c set, \c delete and \c define,
     or an empty handle if an exception is pending
@@ -67,7 +69,7 @@ DLLLOCAL v8::MaybeLocal<v8::Object> qore_v8_create_env_bridge(v8::Isolate* isola
 #ifdef DEBUG
 //! Sets the code that a change of \c TZ made through \c process.env calls while V8 detects the time zone again
 /** Debug builds only, for tests: the code runs in the thread that changes the variable, after the environment has been
-    changed, with the hold that the change takes.
+    changed, with the hold that the detection of the time zone takes (a QoreEnvironmentReadLock).
 
     @param hook the code to call, or nullptr to remove it
     @param xsink for an exception raised by the destruction of the previous hook

@@ -258,8 +258,8 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
 #define QORE_V8_BOOTSTRAP_KEY "qore.v8.bootstrap"
 
 //! Bootstrap code that replaces process.env with a proxy that reads and changes the environment under Qore's lock
-/** Every operation is performed on Node's original process.env object by a function of the environment bridge (see
-    qore_v8_create_env_bridge()) with the lock held.  The proxy keeps the behavior of Node's object: a symbol
+/** Every operation is performed by a function of the environment bridge (see qore_v8_create_env_bridge()): reads on
+    Node's original process.env object with the lock held, changes as Node's object makes them.  The proxy keeps the behavior of Node's object: a symbol
     property is undefined, a name that is not a variable is looked up in the prototype chain (Object.prototype),
     names and values are converted to strings (a symbol raises TypeError), delete always returns true, and
     util.inspect() shows the variables.  Names and values are converted before the bridge is called, so that no

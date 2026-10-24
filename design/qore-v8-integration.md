@@ -58,14 +58,25 @@ code could do the same to Qore code reading the environment, or copying it for a
 The bootstrap script therefore replaces `process.env`, before any code of the program runs, with a
 proxy (`QORE_V8_PROCESS_ENV_BOOTSTRAP` in `QoreV8Program.cpp`) whose traps call the functions of the
 environment bridge (`qore_v8_create_env_bridge()` in `QoreV8Environment.cpp`, passed in the bootstrap
-data as `env`). Each function performs the operation on Node's original `process.env` object with Qore's
-lock held: shared for `get`, `has`, `keys` and `descriptor`, exclusively for `set`, `delete` and
-`define`. Node's own handling is kept: the conversion of names and values to strings and its errors
-(`ERR_INVALID_OBJECT_DEFINE_PROPERTY` for a descriptor it refuses), and the time zone change that a
-change of `TZ` causes (`tzset()` and V8's time zone detection, which run inside the exclusive lock).
+data as `env`). `get`, `has`, `keys` and `descriptor` read Node's original `process.env` object with a
+`QoreEnvironmentReadLock` held. `set`, `delete` and `define` change the environment as Node's object does
+(`RealEnvStore::Set()` and `Delete()` in `node_env_var.cc`), without calling it (`qore_v8_env_change()`):
+the variable is changed with `SystemEnvironment::set()` or `unset()`, which hold Qore's environment lock only
+for the change, and for `TZ`, `tzset()` and V8's time zone detection
+(`Isolate::DateTimeConfigurationChangeNotification()`, as Node calls it) run afterwards with a
+`QoreEnvironmentReadLock` held, since they read `TZ`. Node's own handling of names and values is kept: the
+conversion to strings and its errors (`ERR_INVALID_OBJECT_DEFINE_PROPERTY` for a descriptor it refuses), and a
+change that the C library refuses (an empty name, or one with `=`) is ignored, as Node ignores it.
 
-- **Lock order:** Qore's lock is acquired first and Node's inside it, by Node's store; Node never waits
-  for Qore's lock while it holds its own.
+- **fork() never waits for V8 code:** fork() waits for Qore's environment lock (the library's fork handlers
+  acquire it before the process is copied), and the lock is only held while a variable is changed; the
+  detection of the time zone holds the environment change lock, which fork() does not wait for. Called
+  through Node's setter inside an `AtomicEnvironmentSetter`, all of it, V8 code included, ran with the
+  environment lock held (`test/js-process-env-fork.qtest`).
+- **Lock order:** for reads, Qore's lock is acquired first and Node's inside it, by Node's store; Node never
+  waits for Qore's lock while it holds its own. Changes do not take Node's lock: Node's own reads of the
+  environment that do not go through `process.env` are not serialized with them, as with changes made by
+  Qore code.
 - **No JavaScript runs while the lock is held:** the operations of the original object are Node's C++
   interceptors; the proxy converts names and values to strings before it calls a function; a variable is
   looked up with `HasOwnProperty()` before `Get()`, so that a name that is not set is not looked up in the
