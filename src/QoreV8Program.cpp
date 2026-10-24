@@ -259,11 +259,11 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
 
 //! Bootstrap code that replaces process.env with a proxy that reads and changes the environment under Qore's lock
 /** Every operation is performed by a function of the environment bridge (see qore_v8_create_env_bridge()): reads on
-    Node's original process.env object with the lock held, changes as Node's object makes them.  The proxy keeps the behavior of Node's object: a symbol
-    property is undefined, a name that is not a variable is looked up in the prototype chain (Object.prototype),
-    names and values are converted to strings (a symbol raises TypeError), delete always returns true, and
-    util.inspect() shows the variables.  Names and values are converted before the bridge is called, so that no
-    JavaScript code runs while the lock is held.
+    Node's original process.env object with the lock held, changes as Node's object makes them.  The proxy keeps the
+    behavior of Node's object: a symbol property is undefined, a name that is not a variable is looked up in the
+    prototype chain (Object.prototype), names and values are converted to strings (a symbol raises TypeError),
+    delete always returns true, and util.inspect() shows the variables.  Names and values are converted before the
+    bridge is called, so that no JavaScript code runs while the lock is held.
 
     It is a proxy rather than an object with interceptors, as Node's own process.env is, because V8's serializer
     refuses a proxy at once ("#<Object> could not be cloned."), while it passes an object with interceptors to the
@@ -456,7 +456,8 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     // with which it passes the new process.env object to the program
     v8::Local<v8::Object> env_bridge;
     v8::Local<v8::Function> env_created;
-    // the functions with which the bootstrap code writes process.stdout and process.stderr to a pipe or socket
+    // the functions with which the bootstrap code reads process.stdin and writes process.stdout and process.stderr
+    // for a terminal, a pipe or a socket
     v8::Local<v8::Object> stdio_bridge;
     if (!qore_v8_create_env_bridge(isolate, context).ToLocal(&env_bridge)
         || !qore_v8_create_stdio_bridge(isolate, context).ToLocal(&stdio_bridge)
