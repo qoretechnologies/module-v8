@@ -732,7 +732,8 @@ public class TypeScriptAwsAppRestClient inherits TypeScriptAppRestClient {
 public class TypeScriptAwsAppRestConnection inherits TypeScriptAppRestConnection {
     public {
         #! Connection entry info
-        const ConnectionScheme = <ConnectionSchemeInfo>{
+        const ConnectionScheme = ConnectionProvider::connection_scheme_presentation(
+            "TypeScriptActionInterface", "TypeScriptAwsAppRestConnection", "en", <ConnectionSchemeInfo>{
             "options": TypeScriptAppRestConnection::ConnectionScheme.options - ("username", "password") + {
                 "region": <ConnectionOptionInfo>{
                     "display_name": "AWS Region",
@@ -805,7 +806,7 @@ public class TypeScriptAwsAppRestConnection inherits TypeScriptAppRestConnection
                     "sensitive": True,
                 },
             },
-        } + (RestConnection::ConnectionScheme - "options");
+        } + (RestConnection::ConnectionScheme - "options"));
     }
 
     #! Creates the object

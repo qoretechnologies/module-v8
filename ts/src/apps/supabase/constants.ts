@@ -28,13 +28,13 @@ export const SUPABASE_CONN_OPTIONS = {
   projectId: {
     type: 'string',
     display_name: 'Project ID',
-    short_desc: 'The ID of the project to connect to. Available in the project settings.',
+    short_desc: 'Project ID from the project settings',
     desc: 'You can find the project ID in the URL when you are in your project on Supabase or in the project settings.',
   },
   token: {
     type: 'string',
     display_name: 'API Key',
-    short_desc: 'The API key for the project to connect to. Available in the project settings.',
+    short_desc: 'Project API key from the project settings',
     desc: `To get the api key, go to Project Settings > API Keys > service_role 'secret'`,
   },
 } satisfies TCustomConnOptions;

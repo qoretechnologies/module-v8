@@ -17,9 +17,9 @@ export const ACTIVE_CAMPAIGN_APP_LOGO =
 export const ACTIVE_CAMPAIGN_CONN_OPTIONS = {
   instance_url: {
     display_name: 'Instance URL',
-    short_desc:
-      'Your ActiveCampaign account instance URL (e.g., https://<your_account>.activehosted.com)',
+    short_desc: 'Your ActiveCampaign account instance URL',
     desc:
+      `For example, \`https://<your_account>.activehosted.com\`.\n\n` +
       `To get your ActiveCampaign instance URL:\n` +
       `- Go to your ActiveCampaign account settings\n` +
       `- Go to developer settings\n` +

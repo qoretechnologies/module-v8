@@ -15,15 +15,14 @@ export const SENTRY_CONN_OPTIONS = {
   token: {
     type: 'string',
     display_name: 'Auth Token',
-    short_desc:
-      'You can create authentication tokens within Sentry: [see here](https://sentry.io/settings/account/api/auth-tokens/)',
-    desc: 'To make sure all the actions and triggers work, the token should have the most permissive scopes.',
+    short_desc: 'Your Sentry authentication token',
+    desc: 'Create a token in [Sentry settings](https://sentry.io/settings/account/api/auth-tokens/). '
+      + 'Grant the scopes required by the actions and triggers you use.',
   },
   organization: {
     type: 'string',
     display_name: 'Organization Slug',
-    short_desc:
-      'The slug of the organization you want to work with. Example: "qorus-dev" from https://qorus-dev.sentry.io/',
-    desc: 'You can find the organization slug in the URL when you are in your organization on Sentry.',
+    short_desc: 'The slug of your Sentry organization',
+    desc: 'Find the organization slug in your Sentry URL: for example, `qorus-dev` in `https://qorus-dev.sentry.io/`.',
   },
 } satisfies TCustomConnOptions;

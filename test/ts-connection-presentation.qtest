@@ -1,0 +1,61 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires RestClient
+%exec-class TypeScriptConnectionPresentationTest
+
+class TypeScriptConnectionPresentationTest inherits QUnit::Test {
+    constructor() : Test("TypeScript connection presentation", "1.0", \ARGV) {
+        addTestCase("external REST options preserve base presentation ownership", \ownership());
+        set_return_value(main());
+    }
+    private ownership() {
+        string name = "ConnectionPresentation_" + get_random_string(8);
+        hash<auto> timeout = ConnectionPresentation::openRecord(RestConnection::ConnectionScheme.options.connect_timeout);
+        remove timeout.presentation_sources;
+        timeout.default_value = 321;
+        timeout.desc = "Wait for this app's service";
+        hash<auto> app = {
+            "name": name, "presentation_source_locale": "en", "dynamic": True,
+            "display_name": "Fixture", "short_desc": "A fixture", "desc": "Fixture connection",
+            "groups": ("Other",), "logo": make_base64_string(<00>),
+            "logo_file_name": "fixture.svg", "logo_mime_type": MimeTypeSvg,
+            "rest": {"url": "https://example.invalid"},
+            "rest_modifiers": {
+                "options": {"connect_timeout": timeout, "account": {"type": "string", "display_name": "Account",
+                    "allowed_values": ({"value": "demo", "display_name": "Demo Account"},)}},
+                "messages": ({"presentation_id": "setup", "intent": "info", "title": "Setup", "content": "Configure access"},),
+            },
+        };
+        JavaScriptProgramPool pool("", "connection-presentation.js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::registerApp(app, pool);
+        on_exit TypeScriptActionInterface::deregisterDynamicApp(name);
+        hash<DataProviderAppInfo> registered = DataProviderActionCatalog::getAppEx(name);
+        hash<ConnectionSchemeInfo> scheme = ConnectionSchemeCache::getSchemeEx(registered.scheme);
+        assertEq("TypeScriptActionInterface", scheme.presentation_owner);
+        assertEq(321, scheme.options.connect_timeout.default_value);
+        assertEq(RestConnection::ConnectionScheme.options.connect_timeout.presentation_sources.display_name,
+            scheme.options.connect_timeout.presentation_sources.display_name);
+        assertEq(ConnectionPresentation::domain("TypeScriptActionInterface"),
+            scheme.options.connect_timeout.presentation_sources.desc.domain);
+        assertEq(RestConnection::ConnectionScheme.options.ping_method.presentation_sources,
+            scheme.options.ping_method.presentation_sources);
+        hash<auto> catalogs = ConnectionPresentation::buildSchemeCatalogs({"test": scheme}, "TypeScriptActionInterface");
+        hash<auto> messages = catalogs{ConnectionPresentation::domain("TypeScriptActionInterface")}.locales.root.messages;
+        assertFalse(exists messages{scheme.options.connect_timeout.presentation_sources.display_name.message_id});
+        assertTrue(exists messages{scheme.options.connect_timeout.presentation_sources.desc.message_id});
+        assertTrue(inlist("Configure access", map $1.source, messages.values()));
+        assertTrue(inlist("Demo Account", map $1.source, messages.values()));
+        ConnectionPresentationCatalog missing("ja", {"search_path": ()});
+        hash<auto> projected = missing.projectScheme(scheme);
+        assertEq("", projected.options.account.display_name);
+        assertTrue(projected.options.account.presentation_incomplete);
+        assertEq("demo", projected.options.account.allowed_values[0].value);
+        assertEq("", projected.messages[0].content);
+    }
+}

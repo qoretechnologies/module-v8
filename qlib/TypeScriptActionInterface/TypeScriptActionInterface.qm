@@ -155,6 +155,10 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       <tt>"a two-letter language code, such as en"</tt>; the description is in the option info and in the field's
       attributes, as the pattern is.  A field or an option in \c override_options with a description was refused
       with \c FIELD-ERROR or \c OPTION-OVERRIDE-ERROR, and the field of the action's request type had no description
+    - added source-owned catalogs for generated REST connection schemes, option presentation, allowed values,
+      and setup messages; custom static REST messages declare a stable `presentation_id`
+    - refreshed NetSuite's catalogs for the corrected REST schema requiredness variants, including fields previously
+      omitted from nested types
     - a \c ts-proxy child process gets the process environment as it is when the child is started, read atomically
       with @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()"; it got the \c ENV
       hash, the environment of the process when it started, so variables set or removed with \c setenv() and

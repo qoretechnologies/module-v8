@@ -1964,6 +1964,11 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                                     app.name, i.key),
                                 i.value.element_allowed_values);
                     }
+                    # A complete external option record replaces technical properties, but unchanged text
+                    # still belongs to the inherited HTTP/REST producer. Preparation validates every source.
+                    if (opts{i.key}.presentation_sources) {
+                        i.value.presentation_sources = opts{i.key}.presentation_sources;
+                    }
                     opts{i.key} = cast<hash<ConnectionOptionInfo>>(i.value);
                 }
                 if (rest_modifiers.required_options.val()) {
@@ -2075,6 +2080,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                 "auto_url": exists url,
                 "messages": messages,
             };
+            if (app0.presentation_source_locale.val()) {
+                scheme = ConnectionProvider::connection_scheme_presentation("TypeScriptActionInterface", sname,
+                    app0.presentation_source_locale, scheme);
+            }
             ConnectionSchemeCache::registerScheme(sname, scheme);
             samap{sname} = app.name;
             armap{appname} = map {$1.key: $1.value}, rest{TypeScriptAppRestOptionKeys}.pairIterator(), exists $1.value;

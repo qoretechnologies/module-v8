@@ -18,7 +18,7 @@ export const MAUTIC_LOGO =
 export const MAUTIC_CONN_OPTIONS = {
   instance_url: {
     display_name: 'Instance URL',
-    short_desc: 'Your Mautic instance URL (e.g., https://mautic.yourcompany.com)',
+    short_desc: 'Your Mautic instance URL',
     desc:
       'The URL of your Mautic installation.\n\n' +
       'Example: https://mautic.yourcompany.com\n\n' +

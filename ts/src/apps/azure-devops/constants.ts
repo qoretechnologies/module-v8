@@ -47,8 +47,8 @@ export const AZURE_DEVOPS_APP_LOGO =
 export const AZURE_DEVOPS_CONN_OPTIONS = {
   organization: {
     display_name: 'Organization',
-    short_desc:
-      'Your Azure DevOps organization name (e.g., https://dev.azure.com/<your_organization>)',
+    short_desc: 'Your Azure DevOps organization name',
+    desc: 'The organization name in `https://dev.azure.com/<your_organization>`.',
     type: 'string',
   },
 } satisfies TCustomConnOptions;

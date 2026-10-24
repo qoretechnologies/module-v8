@@ -23,7 +23,7 @@ export const BIG_ML_CONN_OPTIONS = {
   },
   username: {
     display_name: 'Username',
-    short_desc: 'The username or email address associated to your BigML account',
+    short_desc: 'BigML account username or email',
     type: 'string',
   },
 } satisfies TCustomConnOptions;

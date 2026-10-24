@@ -3,7 +3,7 @@ import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 export const ESIGNATURE_CONN_OPTIONS = {
   environment: {
     display_name: 'Environment',
-    short_desc: 'Whether to authenticate against the DocuSign demo or production environment',
+    short_desc: 'Use DocuSign demo or production authentication',
     desc:
       'Selects the DocuSign account server this connection authenticates against: the developer ' +
       'demo environment (`account-d.docusign.com`) or production (`account.docusign.com`).\n\n' +
@@ -31,7 +31,7 @@ export const ESIGNATURE_CONN_OPTIONS = {
   },
   account_id: {
     display_name: 'Default Account ID',
-    short_desc: 'The default account ID set when the connection is authorized',
+    short_desc: 'Default account ID selected during authorization',
     desc: 'The default account ID set when the connection is authorized',
     type: 'string',
   },

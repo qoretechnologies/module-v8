@@ -386,6 +386,7 @@ export class ActionsCatalogue {
             ...(app.rest_modifiers || {}),
             messages: [
               {
+                presentation_id: 'setup',
                 intent: 'info',
                 title: connectionMessageTitle,
                 content: connectionMessageContent,
