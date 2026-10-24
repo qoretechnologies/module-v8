@@ -229,6 +229,52 @@ describe('Pipedrive API migration', () => {
     expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
   });
 
+  // The revision published on 2026-10-24 changes only operations that the catalogue does not support: v1 mail
+  // threads and messages (nullable parties, drafts and timestamps; archived_flag becomes a nullable integer) and the
+  // prices of v2 product variations (typed items instead of untyped objects). The snapshot stays the same.
+  it('keeps the snapshot when only unsupported operations change', () => {
+    const archived = (revised: boolean) => revised
+      ? { type: 'integer', nullable: true, enum: [0, 1], description: 'Whether the mail thread is archived' }
+      : { allOf: [{ title: 'numberBooleanDefault0', type: 'number', default: 0, enum: [0, 1] }],
+        description: 'Whether the mail thread is archived' };
+    const thread = (revised: boolean) => ({ type: 'object', properties: { archived_flag: archived(revised),
+      snippet_sent: { type: 'string', ...(revised ? { nullable: true } : {}) } } });
+    const prices = (revised: boolean) => ({ type: 'array', items: revised
+      ? { title: 'ProductVariationPrice', allOf: [{ type: 'object', properties: { product_variation_id:
+        { type: 'integer' } } }, { title: 'BaseProductVariationPrice', type: 'object', properties: {
+        price: { type: 'number' }, currency: { type: 'string' } } }] }
+      : { type: 'object' } });
+    const response = (schema: Record<string, any>) => ({ '200': { description: 'Synthetic response',
+      content: { 'application/json': { schema } } } });
+    const withRevision = (revised: boolean) => {
+      const input = bundle();
+      input.v1.paths['/mailbox/mailThreads/{id}'] = {
+        get: { responses: response(thread(revised)) },
+        put: { requestBody: { content: { 'application/x-www-form-urlencoded': { schema: { type: 'object',
+          properties: { deal_id: { type: 'integer', ...(revised ? { nullable: true } : {}) } } } } } },
+        responses: response(thread(revised)) },
+      };
+      input.v2.paths['/products/{id}/variations'] = {
+        get: { responses: response({ type: 'object', properties: { prices: prices(revised) } }) },
+      };
+      return input;
+    };
+    const previousInput = withRevision(false);
+    const revisedInput = withRevision(true);
+    expect(revisedInput).not.toEqual(previousInput);
+    const previous = normalizeSchema('pipedrive', previousInput);
+    const doc = normalizeSchema('pipedrive', revisedInput);
+    expect(doc.paths).not.toHaveProperty(['/v1/mailbox/mailThreads/{id}']);
+    expect(doc.paths).not.toHaveProperty(['/api/v2/products/{id}/variations']);
+    expect(JSON.stringify(doc)).toBe(JSON.stringify(previous));
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).toBe(schemaCompatibilityDigest(previous));
+    // the same change in a supported operation changes the supported surface
+    const supported = structuredClone(revisedInput);
+    supported.v1.paths['/leads/{id}'].get.responses = response(thread(true));
+    expect(schemaCompatibilityDigest(normalizeSchema('pipedrive', supported))).not.toBe(reviewed);
+  });
+
   it('keeps component dictionaries separate from object prototypes', () => {
     const input = bundle();
     Object.defineProperty(input.v2.components, '__proto__', {
