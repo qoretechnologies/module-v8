@@ -121,9 +121,13 @@ node --test \
     "${MODULE_SRC_DIR}/test/docker_test/schema-inputs.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/jest-suites.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/sync-i18n-translations.test.mjs" \
-    "${MODULE_SRC_DIR}/test/docker_test/qualification-environment.test.mjs"
+    "${MODULE_SRC_DIR}/test/docker_test/qualification-environment.test.mjs" \
+    "${MODULE_SRC_DIR}/test/docker_test/check-i18n.test.mjs"
+# The job log shows the first lines of the check's report and a count for each catalog file; the complete report is
+# kept with the qualification artifacts.
 "${MODULE_SRC_DIR}/test/docker_test/check-i18n.sh" \
-    "${MODULE_SRC_DIR}/qlib/TypeScriptActionInterface/i18n"
+    "${MODULE_SRC_DIR}/qlib/TypeScriptActionInterface/i18n" \
+    "$qualification_dir/i18n-check-${CI_JOB_NAME:-local}.txt.gz"
 
 # Build the complete provider index through Qore's qualified publication path
 # using installed modules.  Keep the structured report even when qualification

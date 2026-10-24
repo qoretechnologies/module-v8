@@ -111,8 +111,19 @@ cached provider-index path, before Qore starts. This prevents developer Qorus
 settings from changing the observed release catalog. The comparison is
 semantic (parsed JSON), so message ordering does not matter.
 
+The checker reports each stale or missing message on a line of its own. When
+the message IDs of a large catalog change (NetSuite has about 22,000 messages
+in each of its 13 files), that is hundreds of thousands of lines, more than a
+CI job log holds. `check-i18n.sh` therefore writes the complete report to a
+file, which the docker test scripts keep with the qualification artifacts
+(`qualification/i18n-check-<job>.txt.gz`), and shows its first 20 lines
+(`QORE_I18N_CHECK_MAX_LINES` changes the number) and, when it has more, the
+number of lines of each kind for each catalog file. Its exit status is the
+checker's.
+
 Both container jobs also run the synchronization utility's Node unit and
-integration tests. They cover preservation, stale-entry and orphan removal, new
-domains, extra locales, malformed catalogs, locale mismatches, missing inputs,
-the command-line interface, and rejection of an unsanitized qualification
-environment.
+integration tests and the tests of `check-i18n.sh` (with a stand-in checker).
+They cover preservation, stale-entry and orphan removal, new domains, extra
+locales, malformed catalogs, locale mismatches, missing inputs, the
+command-line interface, rejection of an unsanitized qualification
+environment, and the bounded check output.
