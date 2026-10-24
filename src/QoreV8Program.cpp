@@ -316,24 +316,58 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
     "  _qoreBoot.envCreated(env);\n" \
     "}\n"
 
-//! Bootstrap code that gives process.stdout and process.stderr streams that never change a pipe or socket
-/** For a pipe or a stream socket, Node.js creates process.stdout and process.stderr as net.Socket streams, and libuv
-    puts the descriptor in non-blocking mode (O_NONBLOCK) when it opens it.  The flag belongs to the open file
-    description, which is shared with Qore's own output and with every other process that has the pipe, so their
-    writes to a full pipe failed with EAGAIN; and data that libuv had not written yet when a program was destroyed
-    was lost.
+//! Bootstrap code that gives process.stdin, process.stdout and process.stderr streams that never change a pipe or
+//! socket
+/** For a pipe or a stream socket, Node.js creates process.stdin, process.stdout and process.stderr as net.Socket
+    streams, and libuv puts the descriptor in non-blocking mode (O_NONBLOCK) when it opens it.  The flag belongs to the
+    open file description, which is shared with Qore's own I/O and with every other process that has the pipe, so
+    their writes to a full pipe and their reads of an empty one failed with EAGAIN; and data that libuv had not
+    written yet when a program was destroyed was lost.
 
-    For such a descriptor (see qore_v8_create_stdio_bridge()), the stream is created here on first use as a Writable
-    whose writes are synchronous and complete: they wait while the pipe is full, as Qore's own writes to it do, and
-    leave the descriptor as it is.  Node's own stream is kept for a terminal and a file, which Node.js writes without
-    changing the shared description (libuv reopens a terminal, and writes a file synchronously).  As with Node's
-    streams, ending or destroying the stream never closes the descriptor, which belongs to the process.
+    For such a descriptor (see qore_v8_create_stdio_bridge()), the streams are created here on first use:
+    - process.stdout and process.stderr are Writables whose writes are synchronous and complete: they wait while the
+      pipe is full, as Qore's own writes to it do
+    - process.stdin is a Readable whose reads wait in the calling thread until there is input, as Qore's own reads of
+      stdin do; the wait is cancellable.  Its highWaterMark is 0, so that it reads only what its consumer asks for:
+      a consumer that pauses after a chunk is not left waiting for input that it did not ask for
+    and all of them leave the descriptor as it is.  Node's own streams are kept for a terminal and a file.  As with
+    Node's streams, ending or destroying a stream never closes the descriptor, which belongs to the process.
 */
 #define QORE_V8_PROCESS_STDIO_BOOTSTRAP \
     "{\n" \
     "  const bridge = _qoreBoot.stdio;\n" \
-    "  const { Writable } = require('stream');\n" \
-    "  for (const [name, fd] of [['stdout', 1], ['stderr', 2]]) {\n" \
+    "  const { Readable, Writable } = require('stream');\n" \
+    "  const createWritable = (fd) => {\n" \
+    "    const stream = new Writable({\n" \
+    "      write(chunk, encoding, callback) {\n" \
+    "        try { bridge.write(fd, chunk); } catch (err) { callback(err); return; }\n" \
+    "        callback();\n" \
+    "      },\n" \
+    "      writev(chunks, callback) {\n" \
+    "        try { for (const c of chunks) { bridge.write(fd, c.chunk); } } catch (err) { callback(err); return; }\n" \
+    "        callback();\n" \
+    "      },\n" \
+    "    });\n" \
+    "    stream._isStdio = true;\n" \
+    "    stream.destroySoon = stream.destroy;\n" \
+    "    return stream;\n" \
+    "  };\n" \
+    "  const createReadable = (fd) => {\n" \
+    "    const stream = new Readable({\n" \
+    "      highWaterMark: 0,\n" \
+    "      read(size) {\n" \
+    "        let data;\n" \
+    "        try { data = bridge.read(fd, size > 0 && size < 65536 ? size : 65536); } catch (err) {\n" \
+    "          this.destroy(err);\n" \
+    "          return;\n" \
+    "        }\n" \
+    "        this.push(data === null ? null : Buffer.from(data.buffer, data.byteOffset, data.byteLength));\n" \
+    "      },\n" \
+    "    });\n" \
+    "    return stream;\n" \
+    "  };\n" \
+    "  for (const [name, fd, create] of [['stdin', 0, createReadable], ['stdout', 1, createWritable],\n" \
+    "      ['stderr', 2, createWritable]]) {\n" \
     "    const desc = Object.getOwnPropertyDescriptor(process, name);\n" \
     "    if (desc === undefined || !desc.configurable || typeof desc.get !== 'function') { continue; }\n" \
     "    const nodeGet = desc.get;\n" \
@@ -347,20 +381,9 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
     "          stream = nodeGet.call(process);\n" \
     "          return stream;\n" \
     "        }\n" \
-    "        stream = new Writable({\n" \
-    "          write(chunk, encoding, callback) {\n" \
-    "            try { bridge.write(fd, chunk); } catch (err) { callback(err); return; }\n" \
-    "            callback();\n" \
-    "          },\n" \
-    "          writev(chunks, callback) {\n" \
-    "            try { for (const c of chunks) { bridge.write(fd, c.chunk); } } catch (err) { callback(err); return; }\n" \
-    "            callback();\n" \
-    "          },\n" \
-    "        });\n" \
+    "        stream = create(fd);\n" \
     "        stream.fd = fd;\n" \
     "        stream._type = 'pipe';\n" \
-    "        stream._isStdio = true;\n" \
-    "        stream.destroySoon = stream.destroy;\n" \
     "        return stream;\n" \
     "      },\n" \
     "    });\n" \

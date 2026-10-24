@@ -54,6 +54,12 @@
       had not been written yet when a program was destroyed was lost.  For a pipe or a socket, the streams now
       write synchronously and completely, waiting while the pipe is full as %Qore's own output does, and leave the
       descriptor as it is; a terminal or a file is written by Node's own streams as before
+    - JavaScript and TypeScript input from \c process.stdin no longer makes a stdin that is a pipe or a socket
+      non-blocking, which made the reads of the parent shell or of %Qore code fail instead of waiting.  For a pipe or
+      a socket, \c process.stdin now reads in the thread that runs the program, waiting until there is input as
+      %Qore's own reads of stdin do (the wait ends when the thread is cancelled or its %Qore program is interrupted),
+      and reads only what its consumer asks for; other callbacks of the program do not run while it waits.  A file
+      is read by Node's own stream as before
     - an exception raised by JavaScript code never contains the variables of the process environment:
       <tt>v8.serialize(process.env)</tt>, or of a value containing \c process.env, raised an error whose message
       (and so the description of the \c JAVASCRIPT-EXCEPTION) listed every variable, which could put secrets in

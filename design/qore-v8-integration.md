@@ -357,8 +357,18 @@ waits for the descriptor with `qore_cancellable_poll()` instead of changing the 
 ends with an exception when the thread is cancelled or its program is interrupted. Write errors
 are Node's errno exceptions (`EPIPE`, and so on). For a terminal and a file, Node's own streams
 are used: libuv reopens a terminal (or writes it in blocking mode), and a file is written
-synchronously, so neither changes the shared description. `process.stdin` is not replaced (test:
-`test/v8-stdio-inheritance.qtest`).
+synchronously, so neither changes the shared description.
+
+`process.stdin` for a pipe or a stream socket is replaced the same way: Node's `net.Socket` put fd 0
+in non-blocking mode for the parent shell too. The replacement is a `Readable` whose `read()` calls
+`read()` of the bridge, which waits for input with `qore_cancellable_poll()` and calls `read(2)` only
+when there is data or the end has been reached, so a wait ends when the thread is cancelled or its
+program is interrupted, and the descriptor's flags are never changed. Reads are synchronous, like
+Qore's own reads of stdin: other callbacks of the program do not run while it waits for input. Its
+`highWaterMark` is 0, so it reads only what its consumer asks for: a consumer that pauses after a
+chunk is not left waiting for input it did not ask for (Node's own stream, by contrast, kept the event
+loop running after such a pause, so `spinEventLoop()` did not return). A file is read by Node's own
+`fs.ReadStream` (test: `test/v8-stdio-inheritance.qtest`).
 
 The process arguments include `--unhandled-rejections=warn`, and every program's environment is
 created from them (`QoreV8Program::QoreV8Program()` passes `init_result->args()` and

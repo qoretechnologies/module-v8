@@ -1,5 +1,5 @@
 /* -*- mode: c++; indent-tabs-mode: nil -*- */
-/** @file QoreV8Stdio.cpp output of JavaScript programs to the stdout and stderr of the process */
+/** @file QoreV8Stdio.cpp input and output of JavaScript programs with the stdio of the process */
 /*
     QoreV8Stdio.cpp
 
@@ -35,23 +35,49 @@
 
 namespace {
 //! Returns the stdio descriptor that is the first argument, or -1 with a JavaScript exception thrown
-int qore_v8_stdio_fd(const v8::FunctionCallbackInfo<v8::Value>& info) {
+/** @param min the lowest descriptor accepted
+    @param max the highest descriptor accepted
+*/
+int qore_v8_stdio_fd(const v8::FunctionCallbackInfo<v8::Value>& info, int min, int max) {
     v8::Isolate* isolate = info.GetIsolate();
     int32_t fd;
-    if (info.Length() < 1 || !info[0]->IsInt32() || ((fd = info[0].As<v8::Int32>()->Value()) != 1 && fd != 2)) {
+    if (info.Length() < 1 || !info[0]->IsInt32() || (fd = info[0].As<v8::Int32>()->Value()) < min || fd > max) {
         isolate->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8Literal(isolate,
-            "the stdio bridge requires the descriptor 1 or 2")));
+            "the stdio bridge was given a descriptor that it does not handle")));
         return -1;
     }
     return fd;
 }
 
+//! Waits until the descriptor is ready for the given events; returns 0 if it is ready, an errno value for an
+//! error, or -1 if an exception has been raised on the exception sink
+/** The wait ends at once if the thread is cancelled or its %Qore program is interrupted.  POLLHUP and POLLERR count
+    as ready: the next read(2) or write(2) reports the end or the error.
+*/
+int qore_v8_stdio_wait(int fd, short events, const char* operation, ExceptionSink& xsink) {
+    struct pollfd pfd = {fd, events, 0};
+#ifdef _QORE_HAS_CANCELLABLE_POLL
+    int prc = qore_cancellable_poll(&pfd, 1, -1, &xsink, operation);
+    if (prc == QORE_POLL_CANCELLED) {
+        return -1;
+    }
+#else
+    // libqore before 3.0 has no cancellation of blocking waits
+    int prc;
+    do {
+        prc = poll(&pfd, 1, -1);
+    } while (prc < 0 && errno == EINTR);
+#endif
+    return prc < 0 ? errno : 0;
+}
+
 //! isStream(fd): true if the descriptor is a pipe (FIFO) or a stream socket
-/** These are the descriptors for which Node.js creates a \c net.Socket for \c process.stdout and \c process.stderr
-    (\c guessHandleType() returns \c "PIPE" or \c "TCP"), which puts the descriptor in non-blocking mode
+/** These are the descriptors for which Node.js creates a \c net.Socket for \c process.stdin, \c process.stdout and
+    \c process.stderr (\c guessHandleType() returns \c "PIPE" or \c "TCP"), which puts the descriptor in non-blocking
+    mode
 */
 void qore_v8_stdio_is_stream(const v8::FunctionCallbackInfo<v8::Value>& info) {
-    int fd = qore_v8_stdio_fd(info);
+    int fd = qore_v8_stdio_fd(info, 0, 2);
     if (fd < 0) {
         return;
     }
@@ -99,30 +125,68 @@ int qore_v8_stdio_write_all(int fd, const char* data, size_t len, ExceptionSink&
         }
         // the description is non-blocking: another process made it so; wait until the descriptor can be written
         // without changing the flag
-        struct pollfd pfd = {fd, POLLOUT, 0};
-#ifdef _QORE_HAS_CANCELLABLE_POLL
-        int prc = qore_cancellable_poll(&pfd, 1, -1, &xsink, "JavaScript output to stdout or stderr");
-        if (prc == QORE_POLL_CANCELLED) {
-            return -1;
+        if ((err = qore_v8_stdio_wait(fd, POLLOUT, "JavaScript output to stdout or stderr", xsink))) {
+            return err;
         }
-#else
-        // libqore before 3.0 has no cancellation of blocking waits
-        int prc;
-        do {
-            prc = poll(&pfd, 1, -1);
-        } while (prc < 0 && errno == EINTR);
-#endif
-        if (prc < 0) {
-            return errno;
-        }
-        // POLLERR or POLLHUP: the next write(2) reports the error
     }
     return 0;
 }
 
+//! read(fd, size): reads up to size bytes from the descriptor, waiting until it has data; returns a Uint8Array with
+//! at least one byte, or null at the end of the input
+/** The wait for data is a cancellable poll(2) (it ends with an exception if the thread is cancelled or its %Qore
+    program is interrupted); read(2) is called only when the descriptor has data or has reached its end, so it does
+    not wait, and the descriptor's flags are never changed.
+*/
+void qore_v8_stdio_read(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    int fd = qore_v8_stdio_fd(info, 0, 0);
+    if (fd < 0) {
+        return;
+    }
+    v8::Isolate* isolate = info.GetIsolate();
+    int32_t size;
+    if (info.Length() < 2 || !info[1]->IsInt32() || (size = info[1].As<v8::Int32>()->Value()) < 1) {
+        isolate->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8Literal(isolate,
+            "the stdio bridge reads a positive number of bytes")));
+        return;
+    }
+
+    std::shared_ptr<v8::BackingStore> store = v8::ArrayBuffer::NewBackingStore(isolate, static_cast<size_t>(size));
+    ExceptionSink xsink;
+    ssize_t rc;
+    while (true) {
+        int err = qore_v8_stdio_wait(fd, POLLIN, "JavaScript input from stdin", xsink);
+        if (err < 0) {
+            assert(xsink);
+            QoreV8Program::raiseV8Exception(xsink, isolate);
+            return;
+        }
+        if (err) {
+            isolate->ThrowException(node::ErrnoException(isolate, err, "poll"));
+            return;
+        }
+        rc = ::read(fd, store->Data(), static_cast<size_t>(size));
+        if (rc >= 0) {
+            break;
+        }
+        err = errno;
+        // EAGAIN: the data was read by another reader of the description first; wait again
+        if (err != EINTR && err != EAGAIN && err != EWOULDBLOCK) {
+            isolate->ThrowException(node::ErrnoException(isolate, err, "read"));
+            return;
+        }
+    }
+    if (!rc) {
+        info.GetReturnValue().SetNull();
+        return;
+    }
+    v8::Local<v8::ArrayBuffer> buf = v8::ArrayBuffer::New(isolate, store);
+    info.GetReturnValue().Set(v8::Uint8Array::New(buf, 0, static_cast<size_t>(rc)));
+}
+
 //! write(fd, data): writes all of the data (a Uint8Array or a string, written as UTF-8) to the descriptor
 void qore_v8_stdio_write(const v8::FunctionCallbackInfo<v8::Value>& info) {
-    int fd = qore_v8_stdio_fd(info);
+    int fd = qore_v8_stdio_fd(info, 1, 2);
     if (fd < 0) {
         return;
     }
@@ -174,6 +238,7 @@ v8::MaybeLocal<v8::Object> qore_v8_create_stdio_bridge(v8::Isolate* isolate, v8:
         v8::FunctionCallback callback;
     } functions[] = {
         {"isStream", qore_v8_stdio_is_stream},
+        {"read", qore_v8_stdio_read},
         {"write", qore_v8_stdio_write},
     };
 

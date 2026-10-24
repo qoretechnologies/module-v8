@@ -1,5 +1,5 @@
 /* -*- mode: c++; indent-tabs-mode: nil -*- */
-/** @file QoreV8Stdio.h output of JavaScript programs to the stdout and stderr of the process */
+/** @file QoreV8Stdio.h input and output of JavaScript programs with the stdio of the process */
 /*
     QoreV8Stdio.h
 
@@ -27,26 +27,32 @@
 
 #include "v8-module.h"
 
-//! Returns the functions with which the bootstrap code of a program writes \c process.stdout and \c process.stderr
-//! to a pipe or a socket without changing it
-/** For a stdout or stderr that is a pipe or a stream socket, Node.js creates \c process.stdout and
-    \c process.stderr as \c net.Socket streams; libuv's \c uv_pipe_open() and \c uv_tcp_open() put the descriptor in
-    non-blocking mode (\c O_NONBLOCK).  That flag belongs to the open file description, which the descriptor shares
-    with the embedding process's own writes and with every other process that has the pipe (a parent shell, a CI
-    runner), so their writes to a full pipe failed with \c EAGAIN instead of waiting.
+//! Returns the functions with which the bootstrap code of a program reads \c process.stdin and writes
+//! \c process.stdout and \c process.stderr for a pipe or a socket without changing it
+/** For a stdin, stdout or stderr that is a pipe or a stream socket, Node.js creates \c process.stdin,
+    \c process.stdout and \c process.stderr as \c net.Socket streams; libuv's \c uv_pipe_open() and
+    \c uv_tcp_open() put the descriptor in non-blocking mode (\c O_NONBLOCK).  That flag belongs to the open file
+    description, which the descriptor shares with the embedding process's own I/O and with every other process that
+    has the pipe (a parent shell, a CI runner), so their writes to a full pipe failed with \c EAGAIN instead of
+    waiting, and their reads of an empty one failed instead of waiting.
 
-    The bootstrap code of every program therefore creates these two streams itself for such a descriptor, writing
-    with the returned functions, which never change the descriptor:
-    - <tt>isStream(fd)</tt>: \c true if the descriptor is a pipe (FIFO) or a stream socket, for which Node.js would
-      create a \c net.Socket; Node's own streams are kept for a terminal, a file, and any other descriptor, as they
-      do not change the shared description
-    - <tt>write(fd, data)</tt>: writes all of \a data (a \c Uint8Array or a string, written as UTF-8) to the
-      descriptor, waiting until the pipe can take more if it is full; if another process made the description
-      non-blocking, it waits for the descriptor to become writable without changing the flag.  The wait ends with
-      an exception if the thread is cancelled or its %Qore program is interrupted; an error writing raises the
-      Node.js errno exception (for example with \c code \c "EPIPE")
+    The bootstrap code of every program therefore creates these streams itself for such a descriptor, with the
+    returned functions, which never change the descriptor:
+    - <tt>isStream(fd)</tt>: \c true if the descriptor (0, 1 or 2) is a pipe (FIFO) or a stream socket, for which
+      Node.js would create a \c net.Socket; Node's own streams are kept for a terminal, a file, and any other
+      descriptor
+    - <tt>read(fd, size)</tt>: reads up to \a size bytes from stdin (\a fd 0), waiting until it has data; returns a
+      \c Uint8Array with at least one byte, or \c null at the end of the input.  The wait is a cancellable
+      \c poll(2), and \c read(2) is called only when there is data or the end has been reached
+    - <tt>write(fd, data)</tt>: writes all of \a data (a \c Uint8Array or a string, written as UTF-8) to stdout or
+      stderr (\a fd 1 or 2), waiting until the pipe can take more if it is full; if another process made the
+      description non-blocking, it waits for the descriptor to become writable without changing the flag
 
-    @return an object with the functions \c isStream and \c write, or an empty handle if an exception is pending
+    A wait ends with an exception if the thread is cancelled or its %Qore program is interrupted; an error reading
+    or writing raises the Node.js errno exception (for example with \c code \c "EPIPE").
+
+    @return an object with the functions \c isStream, \c read and \c write, or an empty handle if an exception is
+    pending
 */
 DLLLOCAL v8::MaybeLocal<v8::Object> qore_v8_create_stdio_bridge(v8::Isolate* isolate, v8::Local<v8::Context> context);
 

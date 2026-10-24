@@ -40,6 +40,8 @@ class V8StdioInheritanceTest inherits Test {
         addTestCase("JavaScript output leaves the stdio file descriptions of the process as they are",
             \stdioDescriptionsTest());
         addTestCase("JavaScript output to a non-blocking pipe is complete", \nonBlockingPipeTest());
+        addTestCase("JavaScript input from a stdin pipe leaves it as it is and is complete", \stdinPipeTest());
+        addTestCase("JavaScript input that pauses reads only what it asks for", \stdinPauseTest());
 
         set_return_value(main());
     }
@@ -76,6 +78,42 @@ class V8StdioInheritanceTest inherits Test {
         checkOutput(out, "True", size);
     }
 
+    #! JavaScript input from process.stdin leaves a stdin pipe blocking and reads all of it
+    /** Node's process.stdin for a pipe made it non-blocking for every process that has it, as for stdout: a read of
+        the empty pipe by the parent shell or by %Qore code failed with EAGAIN instead of waiting.  The child reads its
+        stdin, a pipe from \c cat, with JavaScript until the end, and reports the size and SHA-256 of what it read.
+    */
+    private stdinPipeTest() {
+        checkPython();
+        string input = tmp_location() + DirSep + sprintf("v8-stdin-%d.in", getpid());
+        on_exit unlink(input);
+        # 1 MB of lines, more than a pipe holds
+        string data = strmul("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\n", 16384);
+        writeFile(input, data);
+
+        int rc;
+        string out = backquote(sprintf("cat %s | %s%s -b %s 2>&1", input, env_prefix, qore_exe,
+            get_script_dir() + DirSep + "v8-stdin-flags.q"), \rc);
+        assertEq(0, rc, summary(out));
+        assertEq(sprintf("before False\n%d %s\nafter False\n", data.size(), SHA256(data)), out,
+            "the JavaScript input is complete and leaves the description of stdin blocking");
+    }
+
+    #! A JavaScript consumer of process.stdin that pauses after a chunk is not left waiting for more input
+    /** The stdin stream reads synchronously; it must read only what its consumer asks for.  python3 writes one line
+        to the child's stdin and keeps the pipe open until the child has ended, so a read of more input would wait
+        forever (the 10-minute limit of the wait is only a hang guard).
+    */
+    private stdinPauseTest() {
+        checkPython();
+        int rc;
+        string out = backquote(sprintf("%spython3 -I -c \"import subprocess, sys; p = subprocess.Popen(sys.argv[1:], "
+            "stdin=subprocess.PIPE); p.stdin.write(b'first\\n'); p.stdin.flush(); sys.exit(p.wait(timeout=600))\" "
+            "%s -b %s once 2>&1", env_prefix, qore_exe, get_script_dir() + DirSep + "v8-stdin-flags.q"), \rc);
+        assertEq(0, rc, summary(out));
+        assertEq("before False\nonce first\nafter False\n", out);
+    }
+
     #! Checks the output of v8-stdio-flags.q: the non-blocking state of its stdout and stderr before and after the
     #! JavaScript output, and the JavaScript output, complete and in order
     private checkOutput(string out, string nonblocking, int size) {
@@ -98,7 +136,7 @@ class V8StdioInheritanceTest inherits Test {
     #! Skips the test case unless python3 is available to read the flags of the descriptors
     private checkPython() {
         if (system("python3 -I -c 1 > /dev/null 2>&1")) {
-            testSkip("python3 is needed to read the flags of the stdout and stderr descriptors");
+            testSkip("python3 is needed to read the flags of the stdio descriptors");
         }
     }
 
