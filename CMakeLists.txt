@@ -148,6 +148,7 @@ set(CPP_SRC
     src/QoreV8NamespaceWrapper.cpp
     src/QoreV8ClassWrapper.cpp
     src/QoreV8Environment.cpp
+    src/QoreV8Stdio.cpp
 )
 
 set(QMOD

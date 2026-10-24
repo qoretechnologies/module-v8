@@ -217,7 +217,10 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
     }
     // NOTE: stdio inheritance must stay enabled; otherwise node marks the stdio file descriptors of the embedding
     // process close-on-exec, so all child processes started by Qore afterwards (ex: with system() or backquote())
-    // are started without stdin, stdout, and stderr unless they are explicitly redirected
+    // are started without stdin, stdout, and stderr unless they are explicitly redirected.  No flag here keeps
+    // Node.js from making a stdout or stderr pipe non-blocking (kNoStdioInitialization only skips its checks at
+    // startup and the restoration at exit); the bootstrap code of each program replaces process.stdout and
+    // process.stderr for pipes and sockets instead (see QORE_V8_PROCESS_STDIO_BOOTSTRAP in QoreV8Program.cpp)
     {
         // Node.js reads the environment when it initializes the process (NODE_OPTIONS, OpenSSL and ICU settings)
         QoreEnvironmentReadLock env_lock;

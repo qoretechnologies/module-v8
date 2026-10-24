@@ -37,8 +37,69 @@ class V8StdioInheritanceTest inherits Test {
         }
 
         addTestCase("child processes inherit stdio", \stdioInheritance());
+        addTestCase("JavaScript output leaves the stdio file descriptions of the process as they are",
+            \stdioDescriptionsTest());
+        addTestCase("JavaScript output to a non-blocking pipe is complete", \nonBlockingPipeTest());
 
         set_return_value(main());
+    }
+
+    #! JavaScript output to process.stdout and process.stderr leaves stdout and stderr blocking
+    /** The open file description of an inherited pipe is shared with every process that has it: Node's
+        process.stdout and process.stderr for a pipe made it non-blocking (O_NONBLOCK) for all of them, so a write
+        by %Qore code (or by the parent shell, or the CI runner) to a full pipe failed with EAGAIN instead of waiting.
+        The child's stdout and stderr are both the pipe that the test reads; the JavaScript output must reach it
+        complete and in order.
+    */
+    private stdioDescriptionsTest() {
+        checkPython();
+        int rc;
+        int size = 1024 * 1024;
+        string out = backquote(sprintf("%s%s -b %s %d 2>&1", env_prefix, qore_exe, get_script_dir() + DirSep
+            + "v8-stdio-flags.q", size), \rc);
+        assertEq(0, rc, summary(out));
+        checkOutput(out, "False", size);
+    }
+
+    #! JavaScript output to a pipe that another process made non-blocking reaches the pipe complete
+    /** The JavaScript streams of a pipe write to it directly and wait when it is full; the pipe stays non-blocking,
+        as the process that made it so set it.
+    */
+    private nonBlockingPipeTest() {
+        checkPython();
+        int rc;
+        int size = 4 * 1024 * 1024;
+        string out = backquote(sprintf("%spython3 -I -c \"import fcntl, os, sys; fcntl.fcntl(1, fcntl.F_SETFL, "
+            "fcntl.fcntl(1, fcntl.F_GETFL) | os.O_NONBLOCK); os.execvp(sys.argv[1], sys.argv[1:])\" %s -b %s %d 2>&1",
+            env_prefix, qore_exe, get_script_dir() + DirSep + "v8-stdio-flags.q", size), \rc);
+        assertEq(0, rc, summary(out));
+        checkOutput(out, "True", size);
+    }
+
+    #! Checks the output of v8-stdio-flags.q: the non-blocking state of its stdout and stderr before and after the
+    #! JavaScript output, and the JavaScript output, complete and in order
+    private checkOutput(string out, string nonblocking, int size) {
+        assertTrue(out =~ /\n$/, "the output ends with a newline");
+        list<string> lines = out.split("\n");
+        assertEq(7, lines.size(), summary(out));
+        assertEq(sprintf("before %s %s", nonblocking, nonblocking), lines[0]);
+        assertEq(("js-stdout", "js-stderr", "js-console-log", "js-console-error"), lines[1..4]);
+        assertEq(size, lines[5].size(), "the bytes written in one call reach the pipe");
+        assertTrue(lines[5] =~ /^x+$/, "the bytes written in one call reach the pipe in order");
+        assertEq(sprintf("after %s %s", nonblocking, nonblocking), lines[6],
+            "the JavaScript output does not change the descriptions of stdout and stderr");
+    }
+
+    #! Returns the output of the child, shortened if it is long
+    private static string summary(string out) {
+        return out.size() > 2000 ? out.substr(0, 1000) + "..." + out.substr(-1000) : out;
+    }
+
+    #! Skips the test case unless python3 is available to read the flags of the descriptors
+    private checkPython() {
+        if (system("python3 -I -c 1 > /dev/null 2>&1")) {
+            testSkip("python3 is needed to read the flags of the stdout and stderr descriptors");
+        }
     }
 
     stdioInheritance() {

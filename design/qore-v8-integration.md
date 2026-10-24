@@ -334,6 +334,32 @@ marks the embedding process's stdio file descriptors close-on-exec. Every child 
 started afterwards (`system()`, `backquote()`, and so on) then ran without stdin, stdout and
 stderr unless they were explicitly redirected.
 
+### process.stdout and process.stderr
+
+For a stdout or stderr that is a pipe or a stream socket, Node.js creates `process.stdout` and
+`process.stderr` on first use as `net.Socket` streams (`createWritableStdioStream()` in
+`lib/internal/bootstrap/switches/is_main_thread.js`), and libuv's `uv_pipe_open()` /
+`uv_tcp_open()` put the descriptor in non-blocking mode (`O_NONBLOCK`). That flag belongs to the
+open file description, which the descriptor shares with Qore's own output and with every other
+process that has the pipe (the parent shell, a CI runner, Qorus's process tree): their writes to
+a full pipe failed with `EAGAIN` (Qore's `FILE-WRITE-ERROR: ... Resource temporarily
+unavailable` in module-v8 pipeline 61462), and data that libuv had queued when a program was
+destroyed was lost. Node.js restores the flag only when the process exits. No process
+initialization flag prevents it: `kNoStdioInitialization` only skips Node's checks of the stdio
+descriptors at startup and their restoration at exit.
+
+The bootstrap code of every program (`QORE_V8_PROCESS_STDIO_BOOTSTRAP` in `QoreV8Program.cpp`)
+therefore replaces the `process.stdout` and `process.stderr` getters. On first use, for a pipe
+or a stream socket (`isStream()` of the bridge in `QoreV8Stdio.cpp`), the stream is a `Writable`
+whose writes call `write()` of the bridge: synchronous and complete, waiting while the pipe is
+full as Qore's own writes do. If another process made the description non-blocking, the bridge
+waits for the descriptor with `qore_cancellable_poll()` instead of changing the flag; the wait
+ends with an exception when the thread is cancelled or its program is interrupted. Write errors
+are Node's errno exceptions (`EPIPE`, and so on). For a terminal and a file, Node's own streams
+are used: libuv reopens a terminal (or writes it in blocking mode), and a file is written
+synchronously, so neither changes the shared description. `process.stdin` is not replaced (test:
+`test/v8-stdio-inheritance.qtest`).
+
 The process arguments include `--unhandled-rejections=warn`, and every program's environment is
 created from them (`QoreV8Program::QoreV8Program()` passes `init_result->args()` and
 `exec_args()`). An embedded program has no process of its own to end: Node's default mode raises an
@@ -413,4 +439,6 @@ callback chains (Qore → JS → Qore → JS) to work correctly.
 | `src/QoreV8Program.cpp` | Program init (qore global injection), cleanup, value conversion |
 | `src/QoreV8Environment.h` | Access to the process environment under Qore's environment lock |
 | `src/QoreV8Environment.cpp` | Atomic copy of the environment (`JavaScriptProgram::getEnvironment()`), environment bridge of `process.env` |
+| `src/QoreV8Stdio.h` | Output of programs to the stdout and stderr of the process |
+| `src/QoreV8Stdio.cpp` | Stdio bridge of `process.stdout` and `process.stderr` for pipes and sockets (`isStream()`, `write()`) |
 | `CMakeLists.txt` | Build configuration (new source files added) |

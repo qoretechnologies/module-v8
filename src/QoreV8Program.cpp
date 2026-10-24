@@ -29,6 +29,7 @@
 #include "QoreV8NamespaceWrapper.h"
 #include "QoreV8ClassWrapper.h"
 #include "QoreV8Environment.h"
+#include "QoreV8Stdio.h"
 
 #include <uv.h>
 
@@ -315,6 +316,57 @@ bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
     "  _qoreBoot.envCreated(env);\n" \
     "}\n"
 
+//! Bootstrap code that gives process.stdout and process.stderr streams that never change a pipe or socket
+/** For a pipe or a stream socket, Node.js creates process.stdout and process.stderr as net.Socket streams, and libuv
+    puts the descriptor in non-blocking mode (O_NONBLOCK) when it opens it.  The flag belongs to the open file
+    description, which is shared with Qore's own output and with every other process that has the pipe, so their
+    writes to a full pipe failed with EAGAIN; and data that libuv had not written yet when a program was destroyed
+    was lost.
+
+    For such a descriptor (see qore_v8_create_stdio_bridge()), the stream is created here on first use as a Writable
+    whose writes are synchronous and complete: they wait while the pipe is full, as Qore's own writes to it do, and
+    leave the descriptor as it is.  Node's own stream is kept for a terminal and a file, which Node.js writes without
+    changing the shared description (libuv reopens a terminal, and writes a file synchronously).  As with Node's
+    streams, ending or destroying the stream never closes the descriptor, which belongs to the process.
+*/
+#define QORE_V8_PROCESS_STDIO_BOOTSTRAP \
+    "{\n" \
+    "  const bridge = _qoreBoot.stdio;\n" \
+    "  const { Writable } = require('stream');\n" \
+    "  for (const [name, fd] of [['stdout', 1], ['stderr', 2]]) {\n" \
+    "    const desc = Object.getOwnPropertyDescriptor(process, name);\n" \
+    "    if (desc === undefined || !desc.configurable || typeof desc.get !== 'function') { continue; }\n" \
+    "    const nodeGet = desc.get;\n" \
+    "    let stream;\n" \
+    "    Object.defineProperty(process, name, {\n" \
+    "      configurable: true,\n" \
+    "      enumerable: desc.enumerable,\n" \
+    "      get() {\n" \
+    "        if (stream !== undefined) { return stream; }\n" \
+    "        if (!bridge.isStream(fd)) {\n" \
+    "          stream = nodeGet.call(process);\n" \
+    "          return stream;\n" \
+    "        }\n" \
+    "        stream = new Writable({\n" \
+    "          write(chunk, encoding, callback) {\n" \
+    "            try { bridge.write(fd, chunk); } catch (err) { callback(err); return; }\n" \
+    "            callback();\n" \
+    "          },\n" \
+    "          writev(chunks, callback) {\n" \
+    "            try { for (const c of chunks) { bridge.write(fd, c.chunk); } } catch (err) { callback(err); return; }\n" \
+    "            callback();\n" \
+    "          },\n" \
+    "        });\n" \
+    "        stream.fd = fd;\n" \
+    "        stream._type = 'pipe';\n" \
+    "        stream._isStdio = true;\n" \
+    "        stream.destroySoon = stream.destroy;\n" \
+    "        return stream;\n" \
+    "      },\n" \
+    "    });\n" \
+    "  }\n" \
+    "}\n"
+
 //! Returns a JavaScript string for the given UTF-8 string, or an empty handle if it is too long or cannot be created
 static v8::MaybeLocal<v8::String> qore_v8_utf8_string(v8::Isolate* isolate, const QoreString& str) {
     assert(str.getEncoding() == QCS_UTF8);
@@ -359,7 +411,10 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     // with which it passes the new process.env object to the program
     v8::Local<v8::Object> env_bridge;
     v8::Local<v8::Function> env_created;
+    // the functions with which the bootstrap code writes process.stdout and process.stderr to a pipe or socket
+    v8::Local<v8::Object> stdio_bridge;
     if (!qore_v8_create_env_bridge(isolate, context).ToLocal(&env_bridge)
+        || !qore_v8_create_stdio_bridge(isolate, context).ToLocal(&stdio_bridge)
         || !v8::Function::New(context, qore_v8_env_created, v8::External::New(isolate, this)).ToLocal(&env_created)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "source"),
             source_str).FromMaybe(false)
@@ -369,6 +424,8 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
             env_bridge).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "envCreated"),
             env_created).FromMaybe(false)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "stdio"),
+            stdio_bridge).FromMaybe(false)
         || !context->Global()->DefineOwnProperty(context, key, data, v8::DontEnum).FromMaybe(false)) {
         if (!checkException(xsink, tryCatch)) {
             xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "cannot pass the source to the JavaScript program");
@@ -452,6 +509,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             "const _qoreBoot = globalThis[_qoreBootKey];\n"
             "delete globalThis[_qoreBootKey];\n"
             QORE_V8_PROCESS_ENV_BOOTSTRAP
+            QORE_V8_PROCESS_STDIO_BOOTSTRAP
             "const publicRequire = require('module').createRequire("
             "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
         if (transpile_ts) {

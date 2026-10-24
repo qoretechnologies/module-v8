@@ -46,6 +46,14 @@
       JavaScript code could do the same to %Qore code reading the environment or starting a process.
       \c process.env behaves as before, except that <tt>structuredClone(process.env)</tt> raises
       \c DataCloneError; clone a copy instead (<tt>structuredClone({...process.env})</tt>)
+    - JavaScript and TypeScript output to \c process.stdout and \c process.stderr (including \c console.log() and
+      \c console.error()) no longer makes a stdout or stderr that is a pipe or a socket non-blocking: Node.js put
+      the descriptor in non-blocking mode, and this mode is shared with %Qore's own output and with every other
+      process that has the pipe, such as the parent shell or a CI runner, so their writes to a full pipe failed
+      (for example %Qore with <tt>FILE-WRITE-ERROR: ... Resource temporarily unavailable</tt>), and output that
+      had not been written yet when a program was destroyed was lost.  For a pipe or a socket, the streams now
+      write synchronously and completely, waiting while the pipe is full as %Qore's own output does, and leave the
+      descriptor as it is; a terminal or a file is written by Node's own streams as before
     - an exception raised by JavaScript code never contains the variables of the process environment:
       <tt>v8.serialize(process.env)</tt>, or of a value containing \c process.env, raised an error whose message
       (and so the description of the \c JAVASCRIPT-EXCEPTION) listed every variable, which could put secrets in
