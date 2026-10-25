@@ -48,7 +48,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
 
     private {
         #! Dynamic child data providers
-        static hash<string, TypeScriptActionAppDataProvider> childMap;
+        static hash<string, TypeScriptActionAppDataProvider> childMap = {};
     }
 
     #! Creates the data provider

@@ -31,7 +31,7 @@ class TypeScriptActionInterfacePriv {
         static JavaScriptProgramPool master;
 
         #! Static storage for JavaScriptProgramPool objects for app / actions, to ensure they do not go out of scope
-        static hash<string, JavaScriptProgramPool> pstore;
+        static hash<string, JavaScriptProgramPool> pstore = {};
 
         #! True when static JavaScript action initialization has already run
         static bool initialized;

@@ -240,39 +240,39 @@ public class TypeScriptActionInterface {
         static *string app_base_dir;
 
         #! App map for delayed initialization: app -> info
-        static hash<string, hash<AppInfo>> appmap;
+        static hash<string, hash<AppInfo>> appmap = {};
 
         #! App map after app initialization: app -> info
-        static hash<string, hash<AppInfo>> initialized_appmap;
+        static hash<string, hash<AppInfo>> initialized_appmap = {};
 
         #! Apps whose identity and connection are registered, including those waiting for schemas
-        static hash<string, bool> app_connection_registered;
+        static hash<string, bool> app_connection_registered = {};
 
         #! Last schema availability error; individual map operations are atomic in the Qore runtime
-        static hash<string, hash<ExceptionInfo>> app_schema_error_map;
+        static hash<string, hash<ExceptionInfo>> app_schema_error_map = {};
 
         const AppMetadataKeys = map $1.getName(), TypedHash::forName("DataProviderAppInfo").getMembers();
 
         #! Init map for apps already initialized
-        static hash<string, bool> initmap;
+        static hash<string, bool> initmap = {};
 
         #! Action map for delayed initialization: app -> action -> info
-        static hash<string, hash<string, hash<ActionInfo>>> actionmap;
+        static hash<string, hash<string, hash<ActionInfo>>> actionmap = {};
 
         #! Lightweight producer inventory: app -> action -> True
         /** An app key with an empty action map still represents the app. This map is populated before schema
             materialization so failed action registration remains detectable by discovery qualification.
         */
-        static hash<string, hash<string, bool>> discovery_inventory_map;
+        static hash<string, hash<string, bool>> discovery_inventory_map = {};
 
         #! Apps whose complete inventory batch is waiting for its matching app registration
         /** This distinguishes current catalogue batches from the per-record fallback used by older scripts, so a
             dynamic replacement preserves only a newly published complete batch.
         */
-        static hash<string, bool> discovery_inventory_batch_map;
+        static hash<string, bool> discovery_inventory_batch_map = {};
 
         #! Source-load failures that prevent a complete producer inventory from being published
-        static hash<string, hash<ExceptionInfo>> discovery_inventory_failure_map;
+        static hash<string, hash<ExceptionInfo>> discovery_inventory_failure_map = {};
 
         #! Action script sources that registered an app without publishing its identity batch first
         /** Such a script predates registerDiscoveryInventory() in this module; its apps still work, but
@@ -280,85 +280,85 @@ public class TypeScriptActionInterface {
 
             @see getIncompleteInventorySources()
         */
-        static hash<string, bool> incomplete_inventory_source_map;
+        static hash<string, bool> incomplete_inventory_source_map = {};
 
         #! Leaf lock guarding the lightweight producer inventory
         static Mutex discovery_inventory_lock();
 
         #! Maps from scheme names to apps
-        static hash<string, string> samap;
+        static hash<string, string> samap = {};
 
         #! Maps from app names to REST getOptions
-        static hash<string, hash<auto>> armap;
+        static hash<string, hash<auto>> armap = {};
 
         #! Maps from app names to REST schemas (Swagger 2.0 or OpenAPI 3.0/3.1)
-        static hash<string, AbstractRestSchemaValidator> app_schema_map;
+        static hash<string, AbstractRestSchemaValidator> app_schema_map = {};
 
         #! Maps from app names to RestSchemaDataProvider objects
-        static hash<string, RestSchemaDataProvider> app_schema_dp;
+        static hash<string, RestSchemaDataProvider> app_schema_dp = {};
 
         #! Maps from app and schema names to REST schemas (Swagger 2.0 or OpenAPI 3.0/3.1)
-        static hash<string, hash<string, AbstractRestSchemaValidator>> app_schema_schema_map;
+        static hash<string, hash<string, AbstractRestSchemaValidator>> app_schema_schema_map = {};
 
         #! Maps from app and schema names to RestSchemaDataProvider objects
-        static hash<string, hash<string, RestSchemaDataProvider>> app_schema_schema_dp;
+        static hash<string, hash<string, RestSchemaDataProvider>> app_schema_schema_dp = {};
 
         #! Maps from lower-case app names to Google app definitions
-        static hash<string, hash<GoogleAppInfo>> google_app_map;
+        static hash<string, hash<GoogleAppInfo>> google_app_map = {};
 
         #! Maps from app names to REST template options; app -> option -> True
-        static hash<string, hash<string, bool>> atmap;
+        static hash<string, hash<string, bool>> atmap = {};
 
         #! Maps from app names to default URL
-        static hash<string, string> aumap;
+        static hash<string, string> aumap = {};
 
         #! Maps from app names to connection post-auth functions
-        static hash<string, hash<AsyncCallInfo>> app_post_auth_map;
+        static hash<string, hash<AsyncCallInfo>> app_post_auth_map = {};
 
         #! Maps from app names to connection post-auth-code functions
-        static hash<string, hash<AsyncCallInfo>> app_post_auth_code_map;
+        static hash<string, hash<AsyncCallInfo>> app_post_auth_code_map = {};
 
         #! Maps from app names to connection update info
-        static hash<string, hash<auto>> app_conn_update_map;
+        static hash<string, hash<auto>> app_conn_update_map = {};
 
         #! Maps from app names to connection -> REST schema path option maps
-        static hash<string, hash<string, string>> app_conn_opt_map;
+        static hash<string, hash<string, string>> app_conn_opt_map = {};
 
         #! Maps from app names to URL option names
-        static hash<string, string> app_url_option_map;
+        static hash<string, string> app_url_option_map = {};
 
         #! Flag AWS apps
-        static hash<string, bool> aws_app_map;
+        static hash<string, bool> aws_app_map = {};
 
         #! Maps from app names to include_response_headers flag (default: True)
-        static hash<string, bool> app_include_response_headers_map;
+        static hash<string, bool> app_include_response_headers_map = {};
 
         #! Connection map for testing
-        static hash<string, TypeScriptAppRestConnection> cmap;
+        static hash<string, TypeScriptAppRestConnection> cmap = {};
 
         #! Actions supporting events; app -> action -> subtype
-        static hash<string, hash<string, string>> emap;
+        static hash<string, hash<string, string>> emap = {};
 
         #! Actions supporting record search; app -> action -> True
-        static hash<string, hash<string, bool>> smap;
+        static hash<string, hash<string, bool>> smap = {};
 
         #! Actions supporting record creation; app -> action -> True
-        static hash<string, hash<string, bool>> crmap;
+        static hash<string, hash<string, bool>> crmap = {};
 
         #! Actions supporting record updates; app -> action -> True
-        static hash<string, hash<string, bool>> updmap;
+        static hash<string, hash<string, bool>> updmap = {};
 
         #! Actions supporting record upserts; app -> action -> True
-        static hash<string, hash<string, bool>> upsmap;
+        static hash<string, hash<string, bool>> upsmap = {};
 
         #! Actions supporting record deletes; app -> action -> True
-        static hash<string, hash<string, bool>> dmap;
+        static hash<string, hash<string, bool>> dmap = {};
 
         #! Global async call map
-        static hash<string, hash<AsyncCallInfo>> acmap;
+        static hash<string, hash<AsyncCallInfo>> acmap = {};
 
         #! Maps lower-case app names to camel case names
-        static hash<string, string> appcasemap;
+        static hash<string, string> appcasemap = {};
 
         #! Server lock
         static Mutex sm();
@@ -369,7 +369,7 @@ public class TypeScriptActionInterface {
             being initialized by the mapped TID; the entry is removed and @ref app_init_cond broadcast
             on completion (success or failure).
         */
-        static hash<string, int> app_init_inprogress;
+        static hash<string, int> app_init_inprogress = {};
 
         #! Lock guarding @ref app_init_inprogress and @ref app_init_cond (a short-held leaf lock)
         static Mutex app_init_lock();

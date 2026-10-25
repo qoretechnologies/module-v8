@@ -146,10 +146,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         static Mutex global_lock;
 
         #! New socket map; proxy unique hash -> queue
-        #static hash<string, Queue> qmap;
+        #static hash<string, Queue> qmap = {};
 
         #! Child map; proxy unique hash -> proxy
-        static hash<string, JavaScriptProgramProxy> cmap;
+        static hash<string, JavaScriptProgramProxy> cmap = {};
 
         #! Master listener TID
         static int master_listener_tid;
@@ -170,7 +170,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         static ReadOnlyFile sem_read;
 
         #! Semaphore descriptor info
-        static hash<SocketPollInfo> sem_info;
+        static hash<SocketPollInfo> sem_info();
 
         #! Restart flag: do not restart event
         const RF_NO_EVENT   = (1 << 0);

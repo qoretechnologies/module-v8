@@ -95,13 +95,13 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         *hash<AsyncCallInfo> response_data_converter;
 
         #! Global request type info per action for dynamic types: app-action -> type info
-        static hash<string, hash<TypeProviderInfo>> grtmap;
+        static hash<string, hash<TypeProviderInfo>> grtmap = {};
 
         #! Info on flattened request types: request key -> top-level key -> actual location
-        static hash<string, *hash<string, list<string>>> reqmap;
+        static hash<string, *hash<string, list<string>>> reqmap = {};
 
         #! Reverse map for flattened request types: request key -> dotted location -> top-level key
-        static hash<string, *hash<string, string>> rreqmap;
+        static hash<string, *hash<string, string>> rreqmap = {};
 
         #! Mutex for global request type info
         static Mutex gtlock();

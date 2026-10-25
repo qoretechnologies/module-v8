@@ -47,10 +47,10 @@ public class JavaScriptProgramPool {
         code init;
 
         # maps program unique hashes to holders
-        static hash<string, JavaScriptProgramPool> pmap;
+        static hash<string, JavaScriptProgramPool> pmap = {};
 
         # indicates the first program unique hash for each holder
-        static hash<string, bool> firstmap;
+        static hash<string, bool> firstmap = {};
 
         #! Mutex to serialize chdir() calls during program creation (chdir is process-global)
         static Mutex chdir_mutex();
