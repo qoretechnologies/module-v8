@@ -109,12 +109,21 @@
     {
       "app": "Pipedrive",
       "distributed": false,
-      "repository_qualification_input": "ts/src/schemas/pipedrive.swagger.json",
-      "qualification_input_sha256": "c89f96966334a3e3a95a81591bb58b0732353b5eccd0165db4291a9e875c7039",
-      "primary_source": "https://github.com/pipedrive/client-nodejs",
-      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "qualification_inputs": [
+        {
+          "url": "https://developers.pipedrive.com/docs/api/v1/openapi.json",
+          "sha256": "340565547fc7d533de45b7a3ee919f90eb53d965d4ecd6600e2e3c4fdb59efb4"
+        },
+        {
+          "url": "https://developers.pipedrive.com/docs/api/v2/openapi.json",
+          "sha256": "f626b037e4786586170f58f34fedae7e1cbcc816dc615dbb252cfd09f14ef274"
+        }
+      ],
+      "qualification_input_sha256": "32a0661e0df06fdcb2ddade98c26939201126fd3ea7f6489de0b815b900edd22",
+      "primary_source": "https://developers.pipedrive.com/docs/api/v1",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. CI qualifies the upstream v1 and v2 documents pinned in test/docker_test/schema-inputs.json, read from the private mirror by their pins; the combined input pin covers both. No schema document is in the repository; the previous redistribution assessment below concerns a removed repository file and is not a package license grant.",
       "previous_assessment": {
-        "file": "ts/src/schemas/pipedrive.swagger.json",
+        "file": "ts/src/schemas/pipedrive.swagger.json (removed)",
         "sha256": "c89f96966334a3e3a95a81591bb58b0732353b5eccd0165db4291a9e875c7039",
         "license": null,
         "finding": "MIT official SDK found; no proof yet that its grant covers this bundled JSON",
@@ -124,12 +133,17 @@
     {
       "app": "Trello",
       "distributed": false,
-      "repository_qualification_input": "ts/src/schemas/trello.swagger.json",
-      "qualification_input_sha256": "2c7e3e06d907946a8ea86a5fbab6f8d36e0cdaf61a59699ff9db1c9de48c85f4",
+      "qualification_inputs": [
+        {
+          "url": "https://dac-static.atlassian.com/cloud/trello/swagger.v3.json",
+          "sha256": "b07c97d06e93f7caff661a307e86f2b58c1f97591614ac8179f8e31bda27334b"
+        }
+      ],
+      "qualification_input_sha256": "b07c97d06e93f7caff661a307e86f2b58c1f97591614ac8179f8e31bda27334b",
       "primary_source": "https://developer.atlassian.com/cloud/trello/rest/",
-      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. Existing repository input is retained for CI qualification; its previous redistribution assessment is not a package license grant.",
+      "finding": "Excluded by Debian export and build/payload checks. Runtime uses explicitly imported/downloaded, compatible private snapshots. CI qualifies the upstream OpenAPI 3 document pinned in test/docker_test/schema-inputs.json, read from the private mirror by its pin. No schema document is in the repository; the previous redistribution assessment below concerns a removed repository file and is not a package license grant.",
       "previous_assessment": {
-        "file": "ts/src/schemas/trello.swagger.json",
+        "file": "ts/src/schemas/trello.swagger.json (removed)",
         "sha256": "2c7e3e06d907946a8ea86a5fbab6f8d36e0cdaf61a59699ff9db1c9de48c85f4",
         "license": null,
         "finding": "official specification is downloadable for SDK generation; exact redistribution terms unresolved",
