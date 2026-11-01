@@ -73,11 +73,15 @@ test-alpine:
 # test/docker_test/schema-inputs.json, reports whether a change affects the supported surface of the generated app
 # (comparing with the pinned documents in the mirror), and runs the user-facing update commands against the upstream
 # services. It reports on the upstream services, not on a commit, so it leaves the commit's GitHub status alone.
+# An upstream service that cannot be reached is not a change: like a test with an unavailable external HTTP
+# dependency, it ends the job with a warning (exit status 69), while a change or any other failure fails it.
 check-upstream-schemas:
   stage: test
   image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule" && $QORE_SCHEMA_UPSTREAM_CHECK == "1"
+  allow_failure:
+    exit_codes: [69]
   before_script: []
   script:
     - test/docker_test/test-ubuntu.sh --check-upstream-schemas

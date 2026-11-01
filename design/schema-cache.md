@@ -58,7 +58,10 @@ its live catalogue), compares it with its pin, and runs the user-facing `qore-hu
 `qore-app-schemas update pipedrive trello` against the upstream services. A document that changed fails the job
 with `upstream changed: <source>, <pinned SHA-256> → <new SHA-256> (<URL>)`, or the old and new URL if HubSpot's
 catalogue selects another release. An upstream service that cannot be reached or does not answer is reported as
-`upstream unavailable` (exit status 69), not as a change.
+`upstream unavailable` (exit status 69), not as a change. The job accepts exit status 69 (`allow_failure:
+exit_codes`), so an unavailable service ends it with a warning and the pipeline passes, as a test with an
+unavailable external HTTP dependency is skipped; the next scheduled run checks the service again. A changed
+document or any other failure still fails the job, even when another service is unavailable at the same time.
 
 For every app with a changed document (each HubSpot document on its own; Pipedrive's two documents together), the
 job also reports what the change does to the generated app. It reads the pinned documents from the mirror (with the

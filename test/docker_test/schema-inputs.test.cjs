@@ -294,6 +294,12 @@ test('check-upstream reports unavailable upstream services as such', async () =>
   assert.equal(other.status, 1);
   assert.ok(other.lines.includes('check failed: trello schema: APP-SCHEMA-DOWNLOAD: https://dac-static.atlassian.com/x: '
     + 'HTTP 404'));
+  // CI accepts status 69 only, so a changed document still fails while another source is unavailable
+  const trello = Buffer.from(JSON.stringify({ fixture: 'trello schema', revision: 'two' }));
+  const mixed = await check({ configuration, documents: { ...documents, 'trello schema': trello },
+    pinned: documents, hubspot: async () => { throw unavailable; }, statuses: [69, 0] });
+  assert.equal(mixed.status, 1);
+  assert.ok(mixed.lines.includes('upstream check: 2 unchanged, 1 changed, 2 unavailable, 0 failed'));
 });
 
 /** A synthetic OpenAPI document with the given operations, each answering with a shared record definition. */
