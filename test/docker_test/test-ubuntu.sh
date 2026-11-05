@@ -148,8 +148,10 @@ chown -R qore:qore ${MODULE_SRC_DIR}
 chown -R qore:qore "$hubspot_cache" "$app_schema_cache"
 
 # run the tests
-export QORE_MODULE_DIR=${MODULE_SRC_DIR}/qlib:${QORE_MODULE_DIR}
+export QORE_MODULE_DIR=${MODULE_SRC_DIR}/qlib:${MODULE_SRC_DIR}/build:${QORE_MODULE_DIR}
 cd ${MODULE_SRC_DIR}
+# the tests must load the modules that this job built, not the copies that the image already has
+${MODULE_SRC_DIR}/test/docker_test/check-loaded-modules.sh ${MODULE_SRC_DIR}/build gosu qore:qore
 for test in test/*.qtest; do
     if [ "$test" = test/hubspot-oauth.qtest ] || [ "$test" = test/ts-app-initialization.qtest ]; then
         # These fixtures register their own local apps; do not preload the live catalog.
@@ -159,3 +161,6 @@ for test in test/*.qtest; do
         gosu qore:qore qore --enable-debug "$test" -vv
     fi
 done
+
+# ... and they still do once the tests have run
+${MODULE_SRC_DIR}/test/docker_test/check-loaded-modules.sh ${MODULE_SRC_DIR}/build gosu qore:qore
