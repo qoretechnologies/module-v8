@@ -139,6 +139,14 @@ public class TypeScriptActionInterface {
         #! Set if server mode is active
         static JavaScriptThreadProcessPool server;
 
+        #! The actions an option names as the one that creates its values, by app (qorus#683)
+        /** Recorded as each app's options are read; see @ref actionSucceeded()
+        */
+        static hash<string, hash<string, bool>> creating_actions;
+
+        #! Guards @ref creating_actions
+        static Mutex creating_actions_lock();
+
         const TypeKeys = (
             "name", "display_name", "short_desc", "desc", "example_value", "default_value",
             "type", "allowed_values", "allowed_values_creatable",
@@ -3585,6 +3593,13 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             if (fctx.dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
+            # read defensively: a malformed descriptor must not stop the app's actions from registering
+            if (i.value.metadata.typeCode() == NT_HASH && i.value.metadata.create_action.typeCode() == NT_HASH) {
+                auto creator = i.value.metadata.create_action.action;
+                if (creator.typeCode() == NT_STRING && creator.val()) {
+                    TypeScriptActionInterface::registerCreatingAction(app.name, creator);
+                }
+            }
             if ((*list<auto> deps = i.value.depends_on)
                 && (hash<auto> dh = map {$1: True}, deps)
                 && (*hash<auto> missing = (dh - keys opts))) {
@@ -3594,6 +3609,36 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             map fctx.depmap{i.key}{$1} = True, i.value.depends_on;
         }
         return rv;
+    }
+
+    #! Records that an option of an app names an action as the one that creates its values (qorus#683)
+    /** @param app the app
+        @param action the action the option names in its \c metadata.create_action
+    */
+    static registerCreatingAction(string app, string action) {
+        creating_actions_lock.lock();
+        on_exit creating_actions_lock.unlock();
+        creating_actions{app}{action} = True;
+    }
+
+    #! Called after an app action has run successfully
+    /** When an option names the action as the one that creates its values, the app's cached choices are dropped:
+        the value just created, a Slack channel created from a channel option for example, would otherwise be
+        missing from them until the cache expires.
+
+        @param app the app
+        @param action the action that ran
+    */
+    static actionSucceeded(string app, string action) {
+        bool creates;
+        {
+            creating_actions_lock.lock();
+            on_exit creating_actions_lock.unlock();
+            creates = creating_actions{app}{action} ?? False;
+        }
+        if (creates) {
+            TypeScriptActionDataProviderBase::clearAppCache(app);
+        }
     }
 
     #! Sort options based on depends_on

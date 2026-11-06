@@ -1,5 +1,6 @@
 import {
   IQoreAllowedValue,
+  IQoreOptionMetadata,
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
@@ -7,6 +8,18 @@ import { slackClient } from '../client';
 import { SlackError } from '../constants';
 import { TSlackChannel } from '../response-types';
 import { getCachedAllowedValues } from './allowed-values-cache';
+
+/**
+ * Metadata for an option that takes a channel: the channel can be created from the option form with
+ * create_channel, whose response carries the new channel (qorus#683)
+ */
+export const SLACK_CREATE_CHANNEL_METADATA = {
+  create_action: {
+    action: 'create_channel',
+    value_field: 'channel.id',
+    display_name_field: 'channel.name',
+  },
+} satisfies IQoreOptionMetadata;
 
 /**
  * Fetch Slack channels for dropdown options
