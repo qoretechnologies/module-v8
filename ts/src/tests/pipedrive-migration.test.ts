@@ -275,6 +275,55 @@ describe('Pipedrive API migration', () => {
     expect(schemaCompatibilityDigest(normalizeSchema('pipedrive', supported))).not.toBe(reviewed);
   });
 
+  // The 2026-11-06 revision adds optional nullable marketing fields to deal creation and updates;
+  // origin_id is accepted only when creating a deal.
+  it('preserves optional nullable deal marketing fields without changing responses or routes', () => {
+    const input = bundle();
+    const fields = {
+      channel: { type: 'integer', nullable: true, description: 'Synthetic marketing channel' },
+      channel_id: { type: 'string', nullable: true, description: 'Synthetic channel identifier' },
+      origin_id: { type: 'string', nullable: true, description: 'Synthetic origin identifier' },
+    };
+    for (const [route, method] of [['/deals', 'post'], ['/deals/{id}', 'patch']]) {
+      input.v2.paths[route][method].requestBody = { content: { 'application/json': { schema: {
+        type: 'object', properties: { title: { type: 'string' } },
+        ...(method === 'post' ? { required: ['title'] } : {}),
+      } } } };
+    }
+    const previous = normalizeSchema('pipedrive', input);
+    for (const [route, method] of [['/deals', 'post'], ['/deals/{id}', 'patch']]) {
+      Object.assign(input.v2.paths[route][method].requestBody.content['application/json'].schema.properties,
+        method === 'post' ? fields : { channel: fields.channel, channel_id: fields.channel_id });
+    }
+    const original = structuredClone(input);
+    const doc = normalizeSchema('pipedrive', input);
+    expect(input).toEqual(original);
+    expect(Object.keys(doc.paths)).toEqual(Object.keys(previous.paths));
+    for (const [route, method] of [['/api/v2/deals', 'post'], ['/api/v2/deals/{id}', 'patch']]) {
+      const operation = doc.paths[route][method];
+      const schema = operation.requestBody.content['application/json'].schema;
+      expect(schema.properties.channel).toEqual(fields.channel);
+      expect(schema.properties.channel_id).toEqual(fields.channel_id);
+      expect(schema.required).toEqual(method === 'post' ? ['title'] : undefined);
+      expect(schema.properties.origin_id).toEqual(method === 'post' ? fields.origin_id : undefined);
+      expect(operation.responses).toEqual(previous.paths[route][method].responses);
+      expect(operation.security).toEqual(previous.paths[route][method].security);
+      expect(operation.operationId).toBe(previous.paths[route][method].operationId);
+    }
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).not.toBe(schemaCompatibilityDigest(previous));
+    for (const change of [
+      (schema: Record<string, any>) => { schema.properties.channel.type = 'string'; },
+      (schema: Record<string, any>) => { schema.properties.channel_id.nullable = false; },
+      (schema: Record<string, any>) => { schema.required.push('origin_id'); },
+      (schema: Record<string, any>) => { delete schema.properties.origin_id; },
+    ]) {
+      const changed = structuredClone(doc);
+      change(changed.paths['/api/v2/deals'].post.requestBody.content['application/json'].schema);
+      expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
+    }
+  });
+
   it('keeps component dictionaries separate from object prototypes', () => {
     const input = bundle();
     Object.defineProperty(input.v2.components, '__proto__', {

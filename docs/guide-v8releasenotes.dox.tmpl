@@ -107,6 +107,9 @@
       action, which the API rejects unless the title is quoted
     - the Pipedrive app requests only the OAuth2 scopes its actions, record operations and triggers use;
       \c mail:full, \c recents:read, \c phone-integration and \c goals:read are no longer requested
+    - accept the reviewed Pipedrive schema revision of 2026-11-06: deal creation and updates accept optional,
+      nullable \c channel (integer) and \c channel_id (string), and creation also accepts optional, nullable
+      \c origin_id (string); retain the previous compatible revisions and refresh CI's source and bundle checksums
     - accept the reviewed Pipedrive schema revision that documents the \c limit bounds (1 to 500) of the v2 list
       operations, which the catalogue's client already enforces; retain the previous compatible revisions and
       refresh CI's exact v2 source and bundle checksums
