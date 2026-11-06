@@ -103,6 +103,7 @@ for (const [id,dir] of Object.entries(JSON.parse(process.env.QORE_APP_SCHEMA_SNA
 node --test \
     "${MODULE_SRC_DIR}/test/docker_test/schema-inputs.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/jest-suites.test.cjs" \
+    "${MODULE_SRC_DIR}/test/docker_test/load-test-variables.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/sync-i18n-translations.test.mjs" \
     "${MODULE_SRC_DIR}/test/docker_test/qualification-environment.test.mjs" \
     "${MODULE_SRC_DIR}/test/docker_test/check-i18n.test.mjs"
