@@ -198,7 +198,7 @@ BinaryNode* QoreV8Program::createSnapshot(ExceptionSink* xsink, const QoreString
 static void js_oom(v8::Isolate* isolate, void* data) {
     size_t current_heap_limit = reinterpret_cast<size_t>(data);
     ExceptionSink xsink;
-    xsink.raiseException("JAVASCRIPT-OUT-OF-MEMORY", "JavaScript heap limit (" QLLD ") exceeded", current_heap_limit);
+    xsink.raiseException("JAVASCRIPT-OUT-OF-MEMORY", "JavaScript heap limit (%zu) exceeded", current_heap_limit);
     QoreV8Program::raiseV8Exception(xsink, isolate);
 }
 

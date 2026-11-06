@@ -337,7 +337,7 @@ QoreListNode* QoreV8Object::toList(QoreV8ProgramHelper& v8h, v8::Local<v8::Value
         int64 ix = qk->getAsBigInt();
         if (ix > max_array_element) {
             xsink->raiseException("JAVASCRIPT-ARRAY-ERROR", "The JavaScript object references array element "
-                "%d which is above the max element limit (%d) supported in Qore", ix, max_array_element);
+                QLLD " which is above the max element limit (%d) supported in Qore", ix, max_array_element);
             return nullptr;
         }
         QoreValue& elem = l->getEntryReference(ix);
