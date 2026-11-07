@@ -16,7 +16,32 @@ class TypeScriptDataCacheTest inherits QUnit::Test {
         addTestCase("only completed successes expire by age", \expiration());
         addTestCase("concurrent readers receive a success", sub () { concurrentReaders(False); });
         addTestCase("concurrent readers receive an error", sub () { concurrentReaders(True); });
+        addTestCase("an app's entries are dropped after it creates a value", \clearApp());
         set_return_value(main());
+    }
+
+    #! A channel created from a channel option must be in the next lookup's choices (qorus#683)
+    clearApp() {
+        TypeScriptActionInterface::TypeScriptDataCache cache();
+        bool created;
+        TypeScriptActionInterface::CacheEntry channels = cache.get("slack-channels", \created, "Slack");
+        channels.setValue(({"value": "C1"},));
+        cache.get("slack-users", \created, "Slack").setValue(({"value": "U1"},));
+        cache.get("zoom-meetings", \created, "Zoom").setValue(({"value": "M1"},));
+        TypeScriptActionInterface::CacheEntry untagged = cache.get("untagged", \created);
+        untagged.setValue(());
+
+        cache.clearApp("Slack");
+
+        cache.get("slack-channels", \created, "Slack");
+        assertTrue(created, "the app's channels are looked up again");
+        cache.get("slack-users", \created, "Slack");
+        assertTrue(created, "and so is everything else of the app");
+        cache.get("zoom-meetings", \created, "Zoom");
+        assertFalse(created, "another app's entries stay");
+        cache.get("untagged", \created);
+        assertFalse(created, "and so does an entry with no app");
+        assertEq(({"value": "C1"},), channels.getValue(), "a reader holding the dropped entry keeps its value");
     }
 
     canceledEntry() {

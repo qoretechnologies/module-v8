@@ -7,6 +7,7 @@ import { slackClient } from '../apps/slack/client';
 import {
   clearSlackAllowedValuesCache,
   getCachedAllowedValues,
+  invalidateSlackAllowedValues,
 } from '../apps/slack/helpers/allowed-values-cache';
 import { getSlackArchivedChannelsAllowedValues } from '../apps/slack/helpers/get-archived-channels-allowed-values';
 import { getSlackChannelsAllowedValues } from '../apps/slack/helpers/get-channels-allowed-values';
@@ -36,6 +37,27 @@ describe('Slack allowed-values short-TTL cache', () => {
       expect(fetcher).toHaveBeenCalledTimes(1);
       expect(first).toEqual([av('C1'), av('C2')]);
       expect(second).toEqual(first);
+    });
+
+    it('looks up again after the entry is invalidated, and only that entry', async () => {
+      const channels = jest
+        .fn()
+        .mockResolvedValueOnce([av('C1')])
+        .mockResolvedValueOnce([av('C1'), av('C2')]);
+      const users = jest.fn().mockResolvedValue([av('U1')]);
+      await getCachedAllowedValues('channels', 'token-a', channels);
+      await getCachedAllowedValues('users', 'token-a', users);
+
+      // a channel was created: its picker has to show it
+      invalidateSlackAllowedValues('channels', 'token-a');
+
+      expect(await getCachedAllowedValues('channels', 'token-a', channels)).toEqual([
+        av('C1'),
+        av('C2'),
+      ]);
+      expect(channels).toHaveBeenCalledTimes(2);
+      await getCachedAllowedValues('users', 'token-a', users);
+      expect(users).toHaveBeenCalledTimes(1);
     });
 
     it('isolates entries by kind for the same token', async () => {

@@ -6,7 +6,11 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { slackClient } from '../client';
 import { SLACK_APP_NAME, SlackError } from '../constants';
-import { getSlackChannelsAllowedValues, processMessageTimestamp } from '../helpers';
+import {
+  getSlackChannelsAllowedValues,
+  processMessageTimestamp,
+  SLACK_CREATE_CHANNEL_METADATA,
+} from '../helpers';
 import { SlackSendMessageResponseType } from '../response-types';
 
 const action = 'send_message';
@@ -17,6 +21,7 @@ const options = {
     required: true,
     allowed_values_creatable: true,
     get_allowed_values: getSlackChannelsAllowedValues,
+    metadata: SLACK_CREATE_CHANNEL_METADATA,
   },
   text: {
     type: 'string',

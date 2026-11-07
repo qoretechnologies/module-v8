@@ -7,7 +7,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { SLACK_API_URL, SLACK_APP_NAME, SlackError } from '../constants';
-import { getSlackChannelsAllowedValues } from '../helpers';
+import { getSlackChannelsAllowedValues, SLACK_CREATE_CHANNEL_METADATA } from '../helpers';
 import { SlackUploadFileResponseType } from '../response-types';
 
 const action = 'upload_file';
@@ -18,6 +18,7 @@ const options = {
     required: true,
     allowed_values_creatable: true,
     get_allowed_values: getSlackChannelsAllowedValues,
+    metadata: SLACK_CREATE_CHANNEL_METADATA,
   },
   file: {
     type: 'file',

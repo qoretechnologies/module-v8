@@ -137,8 +137,19 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return map {$1: True}, keys dvmap;
     }
 
+    #! Drops an app's cached allowed values and other reference data; see TypeScriptDataCache::clearApp()
+    /** @param app the app whose cached values are dropped
+    */
+    static clearAppCache(string app) {
+        cache.clearApp(app);
+    }
+
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
-        return getAsyncValueArgs(self, api, argv);
+        auto rv = getAsyncValueArgs(self, api, argv);
+        if (api.type == "api_function" && api.action) {
+            TypeScriptActionInterface::actionSucceeded(api.app, api.action);
+        }
+        return rv;
     }
 
     auto getAsyncValueWithCache(hash<AsyncCallInfo> api, *hash<auto> cache_opts, ...) {
@@ -164,7 +175,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         string key = TypeScriptActionDataProviderBase::getKey(api.label, cache_opts);
 
         bool new_entry;
-        CacheEntry entry = cache.get(key, \new_entry);
+        CacheEntry entry = cache.get(key, \new_entry, api.app);
         if (new_entry) {
             on_error entry.cancel($1);
             TSAI::debug("Executing; cache key: %y", key);
@@ -753,7 +764,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             string key = TypeScriptActionDataProviderBase::getKey("rest-" + type, action_opts);
 
             bool new_entry;
-            CacheEntry entry = cache.get(key, \new_entry);
+            CacheEntry entry = cache.get(key, \new_entry, app);
             if (new_entry) {
                 on_error entry.cancel($1);
 

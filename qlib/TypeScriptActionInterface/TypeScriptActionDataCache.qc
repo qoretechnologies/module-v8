@@ -98,11 +98,14 @@ public class TypeScriptDataCache {
     private {
         Mutex global();
         hash<string, CacheEntry> cache;
+        #! The app each entry was looked up for, so an app's entries can be dropped; see clearApp()
+        hash<string, string> key_apps;
     }
 
     #! Returns a shared pending or successful cache entry, replacing failed or expired entries
     /** @param key cache key identifying the lookup and its connection/options
         @param new_entry set to True if the caller must perform the lookup, otherwise False
+        @param app the app the lookup is for, so @ref clearApp() can drop it
         @return the entry whose value all callers for this lookup share
 
         @par Example
@@ -116,7 +119,7 @@ if (created) {
 return entry.getValue();
         @endcode
     */
-    CacheEntry get(string key, reference<bool> new_entry) {
+    CacheEntry get(string key, reference<bool> new_entry, *string app) {
         global.lock();
         on_exit global.unlock();
 
@@ -125,14 +128,41 @@ return entry.getValue();
         if (entry) {
             return entry;
         }
+        if (app) {
+            key_apps{key} = app;
+        }
         return cache{key} = new CacheEntry();
+    }
+
+    #! Drops every cached value of an app, so its next lookups are made again
+    /** For an app that has just created a value its cached choices would otherwise leave out for up to
+        @ref MaxAge, such as a channel created from a channel option (qorus#683).  A lookup in flight keeps its
+        callers; the next caller starts a new one.
+
+        @param app the app whose cached values are dropped
+    */
+    clearApp(string app) {
+        global.lock();
+        on_exit global.unlock();
+
+        foreach string key in (keys key_apps) {
+            if (key_apps{key} == app) {
+                remove cache{key};
+                remove key_apps{key};
+            }
+        }
     }
 
     private *CacheEntry getIntern(string key) {
         # expire all outdated entries
         {
             date cutoff = now_us() - MaxAge;
-            map remove cache{$1.key}, cache.pairIterator(), $1.value.isExpired(cutoff);
+            foreach string expired in (keys cache) {
+                if (cache{expired}.isExpired(cutoff)) {
+                    remove cache{expired};
+                    remove key_apps{expired};
+                }
+            }
         }
 
         *CacheEntry entry = cache{key};
