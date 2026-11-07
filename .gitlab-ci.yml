@@ -27,6 +27,8 @@ variables:
 tree-already-tested:
   stage: .pre
   image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop
+  # An optimization only: if the preflight itself fails, the platform jobs still run their full suites
+  allow_failure: true
   before_script: []
   variables:
     GIT_DEPTH: "3"

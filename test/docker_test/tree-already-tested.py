@@ -21,6 +21,21 @@ from urllib.request import Request, urlopen
 REQUIRED_JOBS = frozenset(("test-ubuntu", "test-alpine"))
 
 
+def ran_suites(job):
+    """Whether a platform job ran its suites rather than reusing earlier evidence.
+
+    A job that ran the suites uploads its qualification report as an "archive"
+    artifact; a job that skipped them (tree-tested-skip.sh) has only its log. Taking
+    a skipped pipeline as evidence would link GitHub to a pipeline without reports,
+    so only a pipeline whose jobs ran the suites qualifies. Expired artifacts
+    retain the full pipeline.
+    """
+    artifacts = job.get("artifacts")
+    return isinstance(artifacts, list) and any(
+        isinstance(artifact, dict) and artifact.get("file_type") == "archive"
+        for artifact in artifacts)
+
+
 class EvidenceUnavailable(Exception):
     """No trustworthy evidence is available; this is not a reason to skip tests."""
 
@@ -107,7 +122,8 @@ def find_evidence(env, api):
                              and job.get("name") in REQUIRED_JOBS]
             if (len(platform_jobs) == len(REQUIRED_JOBS)
                     and {job["name"] for job in platform_jobs} == REQUIRED_JOBS
-                    and all(job.get("status") == "success" for job in platform_jobs)):
+                    and all(job.get("status") == "success" and ran_suites(job)
+                            for job in platform_jobs)):
                 return pipeline_id, commit, tree
     return None
 

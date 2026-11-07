@@ -105,8 +105,13 @@ class TreeTestedTest(unittest.TestCase):
     def success(self, sha=None, pipeline_id=100):
         sha = sha or self.head
         self.responses[sha] = [dict(id=pipeline_id, project_id=83, sha=sha, status="success")]
-        self.job_responses[pipeline_id] = [dict(name=name, status="success")
+        self.job_responses[pipeline_id] = [dict(name=name, status="success", artifacts=self.ran())
                                             for name in ("test-ubuntu", "test-alpine")]
+
+    @staticmethod
+    def ran():
+        return [dict(file_type="archive", filename="artifacts.zip"),
+                dict(file_type="trace", filename="job.log")]
 
     def respond(self, path, headers):
         parsed = urlsplit(path)
@@ -257,19 +262,44 @@ class TreeTestedTest(unittest.TestCase):
 
     def test_incomplete_or_nonpassing_platform_jobs(self):
         self.success()
-        for jobs in ([], [{"name": "test-ubuntu", "status": "success"}],
-                     [{"name": ["test-ubuntu"], "status": "success"}],
-                     [{"name": "lint", "status": "success"}],
-                     [{"name": "test-ubuntu", "status": "success"}] * 2,
-                     [{"name": "test-ubuntu", "status": "success"},
-                      {"name": "test-alpine", "status": "skipped"}],
-                     [{"name": "test-ubuntu", "status": "failed"},
-                      {"name": "test-alpine", "status": "success"}],
-                     {"name": "test-ubuntu", "status": "success"}):
+        ran = self.ran()
+        for jobs in ([], [{"name": "test-ubuntu", "status": "success", "artifacts": ran}],
+                     [{"name": ["test-ubuntu"], "status": "success", "artifacts": ran}],
+                     [{"name": "lint", "status": "success", "artifacts": ran}],
+                     [{"name": "test-ubuntu", "status": "success", "artifacts": ran}] * 2,
+                     [{"name": "test-ubuntu", "status": "success", "artifacts": ran},
+                      {"name": "test-alpine", "status": "skipped", "artifacts": ran}],
+                     [{"name": "test-ubuntu", "status": "failed", "artifacts": ran},
+                      {"name": "test-alpine", "status": "success", "artifacts": ran}],
+                     {"name": "test-ubuntu", "status": "success", "artifacts": ran}):
             with self.subTest(jobs=jobs):
                 self.job_responses[100] = jobs
                 report, _ = self.run_check()
                 self.assert_full(report)
+
+    def test_pipeline_that_reused_evidence_is_not_evidence(self):
+        # A develop pipeline that skipped its suites has successful platform jobs with
+        # only their logs; it must not become the evidence (and the link) for another.
+        self.success()
+        for artifacts in ([dict(file_type="trace", filename="job.log")], [], None, "archive",
+                          [None, "archive", {"file_type": ["archive"]}],
+                          [{"file_type": "metadata"}, {"file_type": "dotenv"}]):
+            with self.subTest(artifacts=artifacts):
+                self.job_responses[100] = [dict(name="test-ubuntu", status="success", artifacts=self.ran()),
+                                           dict(name="test-alpine", status="success", artifacts=artifacts)]
+                report, _ = self.run_check()
+                self.assert_full(report)
+
+    def test_full_pipeline_behind_a_lightweight_one_is_evidence(self):
+        # The newest successful pipeline reused evidence; the older one ran the suites.
+        self.success()
+        self.responses[self.head].insert(0, dict(id=150, project_id=83, sha=self.head, status="success"))
+        self.job_responses[150] = [dict(name=name, status="success",
+                                        artifacts=[dict(file_type="trace", filename="job.log")])
+                                   for name in ("test-ubuntu", "test-alpine")]
+        report, requests = self.run_check()
+        self.assertEqual("100", report["QORE_TREE_TESTED_IN"])
+        self.assertEqual(3, len(requests))
 
     def test_job_api_failure_runs_full(self):
         self.success()
