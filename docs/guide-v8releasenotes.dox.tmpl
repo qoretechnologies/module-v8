@@ -34,6 +34,8 @@
       instead of downloading them from the upstream services; every document is checked against its own pin, and a
       daily scheduled check compares the upstream documents with the pins and runs the update commands against the
       upstream services
+    - CI no longer repeats the platform tests for a push to \c develop whose identical tree already passed both
+      platform jobs (such as the merge of a tested pull request); \c QORE_CI_FORCE_FULL=1 forces the full tests
     - fixed creating @ref V8::JavaScriptProgram "JavaScriptProgram" and @ref V8::TypeScriptProgram
       "TypeScriptProgram" objects in multiple threads at the same time: a program could run the source of another
       program created at the same time, and on Alpine Linux (musl) the process could crash later at random, for
@@ -107,6 +109,13 @@
       action, which the API rejects unless the title is quoted
     - the Pipedrive app requests only the OAuth2 scopes its actions, record operations and triggers use;
       \c mail:full, \c recents:read, \c phone-integration and \c goals:read are no longer requested
+    - accept the reviewed Pipedrive schema revision of 2026-11-07: deal creation no longer accepts \c is_deleted,
+      and deal updates accept it only as \c false, to restore a deleted deal; retain the previous compatible
+      revisions and refresh CI's source and bundle checksums
+    - fixed Pipedrive deal record creation and updates to follow the deal deletion contract: creating a deal with
+      \c is_deleted set to \c True or updating one with \c is_deleted set to \c True now raises an error (delete
+      the record instead), \c is_deleted set to \c False is no longer sent when creating a deal, and every record
+      in a create batch is validated before the first is sent
     - accept the reviewed Pipedrive schema revision of 2026-11-06: deal creation and updates accept optional,
       nullable \c channel (integer) and \c channel_id (string), and creation also accepts optional, nullable
       \c origin_id (string); retain the previous compatible revisions and refresh CI's source and bundle checksums

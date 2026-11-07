@@ -18,7 +18,10 @@ export const PipedriveDealFields = {
   stage_id: { type: 'int', desc: 'The ID of the deal stage' },
   value: { type: 'number', desc: 'The value of the deal' },
   currency: { type: 'string', desc: 'The currency associated with the deal' },
-  is_deleted: { type: 'bool', desc: 'Whether the deal is deleted or not' },
+  is_deleted: {
+    type: 'bool',
+    desc: 'Whether the deal is deleted or not; a deal cannot be created deleted, and an update accepts only `false`, to restore a deleted deal',
+  },
   is_archived: { type: 'bool', desc: 'Whether the deal is archived or not' },
   archive_time: {
     type: 'string',
