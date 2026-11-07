@@ -49,10 +49,43 @@ export function pipedriveTablePath(table: unknown): string {
   return usePipedriveV1Endpoint(table) ? `v1/${table}` : table;
 }
 
+export type TPipedriveRecordOperation = 'create' | 'update';
+
+/**
+ * Applies the v2 deal deletion contract: a deal cannot be created deleted (false, the state of every new deal, is
+ * omitted because creation no longer accepts the field), and an update accepts only false, to restore a deleted deal.
+ */
+function pipedriveDealDeletion(body: Record<string, unknown>, operation: TPipedriveRecordOperation): void {
+  if (!Object.hasOwn(body, 'is_deleted')) {
+    return;
+  }
+  const value = body.is_deleted;
+  // The field is not nullable; an absent value (as in column-format records) is not sent.
+  if (value === undefined || value === null) {
+    delete body.is_deleted;
+    return;
+  }
+  if (typeof value !== 'boolean') {
+    throw new PipedriveError('is_deleted must be a boolean');
+  }
+  if (value) {
+    throw new PipedriveError(operation === 'create'
+      ? 'A Pipedrive deal cannot be created as deleted (is_deleted must be false or omitted)'
+      : 'is_deleted can only be set to false, to restore a deleted Pipedrive deal; delete the record to delete it');
+  }
+  if (operation === 'create') {
+    delete body.is_deleted;
+  }
+}
+
 /** v2 nests custom values; v1 leads and notes retain their flat payloads. */
-export function pipedriveRecordBody(table: string, record: Record<string, unknown>): Record<string, unknown> {
+export function pipedriveRecordBody(table: string, record: Record<string, unknown>,
+    operation: TPipedriveRecordOperation): Record<string, unknown> {
   pipedriveTablePath(table);
   const { custom_fields, ...body } = record;
+  if (table === 'deals') {
+    pipedriveDealDeletion(body, operation);
+  }
   const custom: Record<string, unknown> = {};
   if (custom_fields !== undefined) {
     if (!custom_fields || typeof custom_fields !== 'object' || Array.isArray(custom_fields)) {

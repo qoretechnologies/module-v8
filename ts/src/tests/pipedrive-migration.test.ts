@@ -324,6 +324,87 @@ describe('Pipedrive API migration', () => {
     }
   });
 
+  // The 2026-11-07 revision removes is_deleted from deal creation and documents that an update accepts only false.
+  it('drops is_deleted from deal creation and keeps it, redescribed, for updates', () => {
+    const input = bundle();
+    const isDeleted = { description: 'Whether the deal is deleted or not', type: 'boolean' };
+    for (const [route, method] of [['/deals', 'post'], ['/deals/{id}', 'patch']]) {
+      input.v2.paths[route][method].requestBody = { content: { 'application/json': { schema: {
+        type: 'object', properties: { title: { type: 'string' }, is_deleted: { ...isDeleted } },
+        ...(method === 'post' ? { required: ['title'] } : {}),
+      } } } };
+    }
+    const previous = normalizeSchema('pipedrive', input);
+    const restore = 'Only used to restore a previously deleted deal. The only accepted value is `false`; omit the field '
+      + 'otherwise.';
+    delete input.v2.paths['/deals'].post.requestBody.content['application/json'].schema.properties.is_deleted;
+    input.v2.paths['/deals/{id}'].patch.requestBody.content['application/json'].schema.properties.is_deleted
+      .description = restore;
+    const original = structuredClone(input);
+    const doc = normalizeSchema('pipedrive', input);
+    expect(input).toEqual(original);
+    expect(Object.keys(doc.paths)).toEqual(Object.keys(previous.paths));
+    const create = doc.paths['/api/v2/deals'].post;
+    const update = doc.paths['/api/v2/deals/{id}'].patch;
+    const createSchema = create.requestBody.content['application/json'].schema;
+    const updateSchema = update.requestBody.content['application/json'].schema;
+    expect(Object.hasOwn(createSchema.properties, 'is_deleted')).toBe(false);
+    expect(createSchema.properties.title).toEqual({ type: 'string' });
+    expect(createSchema.required).toEqual(['title']);
+    expect(updateSchema.properties.is_deleted).toEqual({ type: 'boolean', description: restore });
+    expect(updateSchema.required).toBeUndefined();
+    for (const [route, method] of [['/api/v2/deals', 'post'], ['/api/v2/deals/{id}', 'patch']]) {
+      expect(doc.paths[route][method].responses).toEqual(previous.paths[route][method].responses);
+      expect(doc.paths[route][method].security).toEqual(previous.paths[route][method].security);
+    }
+    // Both the removal and the description are part of the reviewed surface.
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).not.toBe(schemaCompatibilityDigest(previous));
+    const redescribedOnly = structuredClone(previous);
+    redescribedOnly.paths['/api/v2/deals/{id}'].patch.requestBody.content['application/json'].schema.properties
+      .is_deleted.description = restore;
+    expect(schemaCompatibilityDigest(redescribedOnly)).not.toBe(reviewed);
+    expect(schemaCompatibilityDigest(redescribedOnly)).not.toBe(schemaCompatibilityDigest(previous));
+    const readded = structuredClone(doc);
+    readded.paths['/api/v2/deals'].post.requestBody.content['application/json'].schema.properties.is_deleted = isDeleted;
+    expect(schemaCompatibilityDigest(readded)).not.toBe(reviewed);
+  });
+
+  it('applies the deal deletion contract to record bodies', () => {
+    expect(pipedriveRecordBody('deals', { title: 'Deal', is_deleted: false }, 'create')).toEqual({ title: 'Deal' });
+    expect(pipedriveRecordBody('deals', { title: 'Deal', is_deleted: null }, 'create')).toEqual({ title: 'Deal' });
+    expect(pipedriveRecordBody('deals', { title: 'Deal', is_deleted: undefined }, 'update')).toEqual({ title: 'Deal' });
+    expect(pipedriveRecordBody('deals', { is_deleted: false }, 'update')).toEqual({ is_deleted: false });
+    expect(() => pipedriveRecordBody('deals', { title: 'Deal', is_deleted: true }, 'create'))
+      .toThrow(/cannot be created as deleted/);
+    expect(() => pipedriveRecordBody('deals', { is_deleted: true }, 'update')).toThrow(/only be set to false/);
+    expect(() => pipedriveRecordBody('deals', { is_deleted: 'false' }, 'update')).toThrow(/must be a boolean/);
+    expect(() => pipedriveRecordBody('deals', { is_deleted: 0 }, 'create')).toThrow(/must be a boolean/);
+    // The contract is specific to deals; other tables pass the field through unchanged.
+    expect(pipedriveRecordBody('persons', { name: 'P', is_deleted: true }, 'create')).toEqual({ name: 'P', is_deleted: true });
+    const record = { title: 'Deal', is_deleted: false };
+    pipedriveRecordBody('deals', record, 'create');
+    expect(record).toEqual({ title: 'Deal', is_deleted: false });
+  });
+
+  it('validates every deal record before creating any and follows the deletion contract on update', async () => {
+    const post = jest.spyOn(QorusRequest, 'post').mockResolvedValue({ data: { data: { id: 1, title: 'A' } } });
+    await expect(createPipedriveRecords(ctx, { title: ['A', 'B'], is_deleted: [false, true] }, { table: 'deals' }))
+      .rejects.toThrow(/cannot be created as deleted/);
+    expect(post).not.toHaveBeenCalled();
+    expect(await createPipedriveRecords(ctx, { title: ['A'], is_deleted: [false] }, { table: 'deals' }))
+      .toEqual({ id: [1], title: ['A'] });
+    expect(post.mock.calls[0][0]).toMatchObject({ path: '/api/v2/deals', data: { title: 'A' } });
+    expect(Object.hasOwn(post.mock.calls[0][0].data as object, 'is_deleted')).toBe(false);
+    const patch = jest.spyOn(QorusRequest, 'patch').mockResolvedValue({ data: { data: { id: 1 } } });
+    await expect(updatePipedriveRecords(ctx, { is_deleted: true }, undefined, { table: 'deals' }))
+      .rejects.toThrow(/only be set to false/);
+    expect(patch).not.toHaveBeenCalled();
+    jest.spyOn(QorusRequest, 'get').mockResolvedValue(reply([{ id: 1 }]));
+    await updatePipedriveRecords(ctx, { is_deleted: false }, undefined, { table: 'deals' });
+    expect(patch.mock.calls[0][0]).toMatchObject({ path: '/api/v2/deals/1', data: { is_deleted: false } });
+  });
+
   it('keeps component dictionaries separate from object prototypes', () => {
     const input = bundle();
     Object.defineProperty(input.v2.components, '__proto__', {
@@ -453,10 +534,10 @@ describe('Pipedrive API migration', () => {
 
   it('routes v1 creates and updates correctly and preserves per-record v2 custom fields', async () => {
     const custom = 'a'.repeat(40);
-    expect(pipedriveRecordBody('deals', { title: 'Deal', [custom]: 2 })).toEqual({ title: 'Deal', custom_fields: { [custom]: 2 } });
-    expect(pipedriveRecordBody('leads', { custom_fields: { [custom]: 2 } })).toEqual({ [custom]: 2 });
+    expect(pipedriveRecordBody('deals', { title: 'Deal', [custom]: 2 }, 'create')).toEqual({ title: 'Deal', custom_fields: { [custom]: 2 } });
+    expect(pipedriveRecordBody('leads', { custom_fields: { [custom]: 2 } }, 'create')).toEqual({ [custom]: 2 });
     expect(() => pipedriveTablePath('../deals')).toThrow(/supported/);
-    expect(() => pipedriveRecordBody('deals', { custom_fields: [] })).toThrow(/object/);
+    expect(() => pipedriveRecordBody('deals', { custom_fields: [] }, 'update')).toThrow(/object/);
     const post = jest.spyOn(QorusRequest, 'post').mockResolvedValue({ data: { data: { id: 1 } } });
     await createPipedriveRecords(ctx, { title: ['Lead'] }, { table: 'leads' });
     expect(post.mock.calls[0][0]).toMatchObject({ path: '/v1/leads', data: { title: 'Lead' } });

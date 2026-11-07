@@ -31,16 +31,18 @@ export const createPipedriveRecords: TQoreCreateRecordsFunction = async (
   }
 
   const path = pipedriveTablePath(table);
+  // Validate every record before the first request, so that an invalid record cannot leave a partial batch.
+  const bodies = recordsArray.map((record) => pipedriveRecordBody(table, record, 'create'));
 
   try {
     const responses: Record<string, any>[] = [];
 
-    for (const record of recordsArray) {
+    for (const body of bodies) {
       try {
         const response = await pipedriveApiClient<Record<string, any>>({
           token,
           method: 'POST',
-          body: pipedriveRecordBody(table, record),
+          body,
           object: 'data',
           path,
         });

@@ -100,6 +100,8 @@ for (const [id,dir] of Object.entries(JSON.parse(process.env.QORE_APP_SCHEMA_SNA
 # catalogue has a current source-owned native i18n entry, and that no catalog
 # survives for an app that has been removed from the catalogue. Run this only
 # after rebuilding dist/index.js so the base image cannot hide source drift.
+# CI tree reuse: the develop skip decision and its GitHub status
+python3 "${MODULE_SRC_DIR}/test/docker_test/test_tree_tested.py"
 node --test \
     "${MODULE_SRC_DIR}/test/docker_test/schema-inputs.test.cjs" \
     "${MODULE_SRC_DIR}/test/docker_test/jest-suites.test.cjs" \

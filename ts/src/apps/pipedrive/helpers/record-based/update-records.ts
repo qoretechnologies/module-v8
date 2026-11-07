@@ -45,7 +45,7 @@ export const updatePipedriveRecords: TQoreUpdateRecordsFunction = async (
   }
 
   pipedriveTablePath(tableName);
-  const updateBody = pipedriveRecordBody(tableName, fields);
+  const updateBody = pipedriveRecordBody(tableName, fields, 'update');
   let filterId: number | undefined;
 
   try {

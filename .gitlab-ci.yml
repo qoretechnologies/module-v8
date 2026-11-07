@@ -6,6 +6,8 @@ default:
     - k8s
     - amd64
   before_script:
+    # A push to develop whose identical tree already passed both platform jobs publishes success and skips the job
+    - . test/docker_test/tree-tested-skip.sh
     - |
         curl "https://api.github.com/repos/qoretechnologies/${REPO_NAME}/statuses/${CI_COMMIT_SHA}" \
         -X POST --oauth2-bearer ${GITHUB_ACCESS_TOKEN} -H "Content-Type: application/json" \
@@ -19,10 +21,30 @@ variables:
   # registry) with the job token, each by the SHA-256 pinned in test/docker_test/schema-inputs.json
   QORE_SCHEMA_INPUT_MIRROR: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/schema-inputs"
 
+# Reuse successful tests only for a push to develop with an identical Git tree (for example the merge of a pull request
+# whose branch pipeline passed). Missing or incomplete API evidence retains both full platform jobs; set
+# QORE_CI_FORCE_FULL=1 to run them regardless. Scheduled pipelines are never eligible.
+tree-already-tested:
+  stage: .pre
+  image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop
+  before_script: []
+  variables:
+    GIT_DEPTH: "3"
+    # Only the tree hash is compared, and submodule commits are part of it
+    GIT_SUBMODULE_STRATEGY: none
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop" && $CI_PIPELINE_SOURCE == "push" && $QORE_CI_FORCE_FULL != "1"'
+  script:
+    - python3 test/docker_test/tree-already-tested.py
+  artifacts:
+    reports:
+      dotenv: tree-tested.env
+
 test-ubuntu:
   stage: test
   rules:
     - if: $CI_PIPELINE_SOURCE != "schedule"
+  needs: [{job: tree-already-tested, optional: true}]
   # The base-image pipeline publishes branch tags; untagged digests are not retained.
   image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop
   script:
@@ -48,6 +70,7 @@ test-alpine:
   stage: test
   rules:
     - if: $CI_PIPELINE_SOURCE != "schedule"
+  needs: [{job: tree-already-tested, optional: true}]
   # Follow the published Alpine branch tag as well, rather than an unretained digest.
   image: $CI_REGISTRY/infrastructure/qore-test-base/qore-test-base:develop-alpine
   script:
