@@ -280,8 +280,13 @@ jobs:
       # Builds the module from this branch over the image's copy, rebuilds the TypeScript
       # dist so the Qore tests exercise this branch's catalogue, and runs every
       # test/*.qtest as an unprivileged user. This is the script GitLab CI runs, so the two
-      # pipelines share one sequence instead of maintaining two that drift apart.
+      # pipelines share one sequence instead of maintaining two that drift apart. The script
+      # reads its pinned schema documents from the GitLab mirror: GitLab CI uses its job token,
+      # and this job has a read-only token for that project.
       - name: Build and test module-v8
+        env:
+          QORE_SCHEMA_INPUT_MIRROR: https://git.qoretechnologies.com/api/v4/projects/174/packages/generic/schema-inputs
+          QORE_SCHEMA_INPUT_MIRROR_TOKEN: ${{ secrets.QORE_SCHEMA_INPUT_MIRROR_TOKEN }}
         run: test/docker_test/test-ubuntu.sh
 
       # Test catalogue actions made with schema
