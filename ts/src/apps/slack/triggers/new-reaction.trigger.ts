@@ -8,7 +8,7 @@ import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { slackClient } from '../client';
 import { SLACK_APP_NAME, SlackError } from '../constants';
-import { getSlackChannelsAllowedValues } from '../helpers';
+import { getSlackChannelsAllowedValues, SLACK_CREATE_CHANNEL_METADATA } from '../helpers';
 
 const action = 'new_reaction';
 
@@ -22,6 +22,7 @@ const options = {
     required: false,
     allowed_values_creatable: true,
     get_allowed_values: getSlackChannelsAllowedValues,
+    metadata: SLACK_CREATE_CHANNEL_METADATA,
   },
 } satisfies TQoreOptions;
 

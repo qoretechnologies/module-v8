@@ -12,6 +12,10 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - an app option can name the action that creates its values in \c metadata.create_action (\c action,
+      \c value_field and the optional \c display_name_field), so a value can be created from the option's form; the
+      Slack channel options name \c create_channel.  When such an action succeeds, the app's cached allowed values
+      and other reference data are dropped, so the new value is offered at once rather than when the cache expires
     - the time limits of TypeScript app calls and of \c ts-proxy child process startup take effect as documented:
       each call of an app's or action's function (such as an API, record or webhook function) fails after 30
       minutes by default, so long API and AI actions can complete, while a call that never answers no longer

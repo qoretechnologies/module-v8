@@ -6,6 +6,7 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { slackClient } from '../client';
 import { SLACK_APP_NAME, SlackError } from '../constants';
+import { invalidateSlackAllowedValues } from '../helpers';
 import { SlackCreateChannelResponseType } from '../response-types';
 
 const action = 'create_channel';
@@ -47,6 +48,9 @@ const CreateChannel = QoreAppCreator.createLocalizedAction<typeof options>({
         },
         { token }
       );
+
+      // the channel options offer to create a channel with this action: the next lookup has to include it
+      invalidateSlackAllowedValues('channels', token);
 
       return result;
     } catch (error) {

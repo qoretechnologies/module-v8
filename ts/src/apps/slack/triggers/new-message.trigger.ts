@@ -9,7 +9,7 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { slackClient } from '../client';
 import { SLACK_APP_NAME, SlackError } from '../constants';
-import { getSlackChannelsAllowedValues } from '../helpers';
+import { getSlackChannelsAllowedValues, SLACK_CREATE_CHANNEL_METADATA } from '../helpers';
 import { TSlackMessage } from '../response-types';
 
 const action = 'new_message';
@@ -20,6 +20,7 @@ const options = {
     required: true,
     allowed_values_creatable: true,
     get_allowed_values: getSlackChannelsAllowedValues,
+    metadata: SLACK_CREATE_CHANNEL_METADATA,
   },
 } satisfies TQoreOptions;
 

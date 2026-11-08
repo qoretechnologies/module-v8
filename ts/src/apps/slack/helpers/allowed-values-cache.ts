@@ -63,6 +63,17 @@ export const getCachedAllowedValues = async (
 };
 
 /**
+ * Drop the cached allowed-values of one kind for a connection, so the next lookup is made again: a channel just
+ * created would otherwise be missing from the channel picker until the entry expires.
+ *
+ * @param kind discriminator for the lookup type (e.g. 'channels')
+ * @param token the Slack connection token identifying the workspace
+ */
+export const invalidateSlackAllowedValues = (kind: string, token: string): void => {
+  cache.delete(`${kind}:${token}`);
+};
+
+/**
  * Clear the allowed-values cache. Useful for testing.
  */
 export const clearSlackAllowedValuesCache = (): void => {
