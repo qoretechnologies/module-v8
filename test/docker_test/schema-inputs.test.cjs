@@ -12,6 +12,7 @@ const apps = require('../../ts/dist/schema-cache/apps');
 const appCompatibility = require('../../ts/dist/schema-cache/app-compatibility.json');
 const { DownloadStatusError } = require('../../ts/dist/schema-cache/download');
 const hubspotSchemas = require('../../ts/dist/schema-cache/hubspot');
+const hubspotCompatibility = require('../../ts/dist/schema-cache/hubspot-compatibility.json');
 const { schemaNames } = hubspotSchemas;
 const { SchemaSourceUnavailableError } = require('../../ts/dist/schema-cache/schema-errors');
 const pins = require('./schema-inputs.json');
@@ -434,6 +435,25 @@ test('check-upstream names the supported parts that a change affects, within bou
   assert.deepEqual(surfaceLines(result.lines), [`hubspot deals: supported surface CHANGED: `
     + `${hubspotSchemas.hubspotContract.schemas.deals.operations.map(operation => operation.action).join(', ')} `
     + `(fingerprint ${fingerprints[0]} → ${fingerprints[1]}, which the catalogue does not accept)`]);
+  // More than one reviewed HubSpot revision can be accepted; a changed input still fails the pin check.
+  const saved = hubspotCompatibility.schemas.deals;
+  try {
+    hubspotCompatibility.schemas.deals = fingerprints;
+    result = await check({ configuration, documents: deals.upstream, pinned: documents });
+    assert.equal(result.status, 1);
+    assert.deepEqual(surfaceLines(result.lines), [`hubspot deals: supported surface CHANGED: `
+      + `${hubspotSchemas.hubspotContract.schemas.deals.operations.map(operation => operation.action).join(', ')} `
+      + `(fingerprint ${fingerprints[0]} → ${fingerprints[1]}, which the catalogue accepts)`]);
+    const previous = structuredClone(configuration);
+    previous.hubspot.sources.deals.sha256 = sha256(deals.upstream['hubspot deals']);
+    result = await check({ configuration: previous, documents, pinned: deals.upstream });
+    assert.equal(result.status, 1);
+    assert.deepEqual(surfaceLines(result.lines), [`hubspot deals: supported surface CHANGED: `
+      + `${hubspotSchemas.hubspotContract.schemas.deals.operations.map(operation => operation.action).join(', ')} `
+      + `(fingerprint ${fingerprints[1]} → ${fingerprints[0]}, which the catalogue accepts)`]);
+  } finally {
+    hubspotCompatibility.schemas.deals = saved;
+  }
 });
 
 test('check-upstream reports a supported operation that upstream removed, and a surface it cannot compare', async () => {
