@@ -11,6 +11,7 @@ import {
   activateSnapshot, activeSnapshot, download, Inputs, installSnapshot, selectDownloads, withCacheLock,
 } from '../schema-cache/hubspot-store';
 import { EXIT_REFUSED, exitStatus, SchemaRefusedError } from '../schema-cache/schema-errors';
+import compatibility from '../schema-cache/hubspot-compatibility.json';
 
 // Qore-owned minimal fixtures. No upstream document, descriptions or data types are embedded.
 function inputs(revision = 'one'): Inputs {
@@ -120,6 +121,58 @@ describe('HubSpot schema snapshots', () => {
     expect(refused).toBeInstanceOf(SchemaRefusedError);
     expect(exitStatus(refused)).toBe(EXIT_REFUSED);
     expect(activeSnapshot(directory)).toBe(first);
+  });
+
+  it('Retains reviewed Lists descriptions and permits both revisions while refusing further changes', async () => {
+    const previous = inputs();
+    const updated = inputs();
+    const document = JSON.parse(updated.lists.bytes.toString());
+    document.components.schemas.Result.description = 'Synthetic list result';
+    document.components.schemas.Result.properties.id.description = 'Synthetic list identifier';
+    updated.lists.bytes = Buffer.from(JSON.stringify(document));
+    const fingerprint = (name: string, input: Inputs) =>
+      schemaCompatibilityDigest(normalizeSchema(name, JSON.parse(input[name].bytes.toString())));
+    const before = fingerprint('lists', previous);
+    const after = fingerprint('lists', updated);
+    expect(after).not.toBe(before);
+    const normalized = normalizeSchema('lists', document);
+    expect(normalized.components.schemas.Result).toEqual(document.components.schemas.Result);
+    expect(Object.values<any>(normalized.paths).flatMap(methods => Object.values<any>(methods))
+      .map(operation => operation.operationId).sort())
+      .toEqual(hubspotContract.schemas.lists.operations.map(operation => operation.action).sort());
+
+    const saved = compatibility.schemas;
+    try {
+      // Approve only the synthetic fixtures; downloaded documents never enter this regression suite.
+      compatibility.schemas = Object.fromEntries(schemaNames.map(name => [name, [fingerprint(name, previous)]])) as
+        typeof compatibility.schemas;
+      compatibility.schemas.lists.push(after);
+      const qualify = async (snapshot: string) => { verifySchemaCompatibility(snapshot); };
+      const first = await installSnapshot(directory, previous, qualify);
+      const second = await installSnapshot(directory, updated, qualify);
+      expect(second).not.toBe(first);
+      expect(activeSnapshot(directory)).toBe(second);
+
+      for (const mutate of [
+        (doc: typeof document) => { doc.components.schemas.Result.description = 'Unreviewed description'; },
+        (doc: typeof document) => { doc.components.schemas.Result.properties.id.type = 'integer'; },
+        (doc: typeof document) => { doc.components.schemas.Result.required = ['id']; },
+      ]) {
+        const unreviewed = inputs();
+        const changed = structuredClone(document);
+        mutate(changed);
+        unreviewed.lists.bytes = Buffer.from(JSON.stringify(changed));
+        await expect(installSnapshot(directory, unreviewed, qualify)).rejects.toThrow(/metadata changed/);
+        expect(activeSnapshot(directory)).toBe(second);
+      }
+      // Rolling back to an older, still reviewed revision continues to qualify.
+      verifySchemaCompatibility(first);
+      activateSnapshot(directory, first);
+      expect(activeSnapshot(directory)).toBe(first);
+      expect(await installSnapshot(directory, previous, qualify)).toBe(first);
+    } finally {
+      compatibility.schemas = saved;
+    }
   });
 
   it('Exits with the refused status for schemas the catalogue has not reviewed', async () => {

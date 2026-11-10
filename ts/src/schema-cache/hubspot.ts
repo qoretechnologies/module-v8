@@ -133,17 +133,17 @@ export function schemaCompatibilityDigest(document: JsonObject): string {
 
 /** Reject unreviewed changes before the CLI qualifies or activates a candidate snapshot. */
 export function verifySchemaCompatibility(directory: string): void {
-  const expected = compatibility.schemas as Record<string, string>;
+  const expected: Record<string, string[]> = compatibility.schemas;
   if (compatibility.version !== 1 || JSON.stringify(Object.keys(expected).sort()) !== JSON.stringify(schemaNames)) {
     throw new SchemaRefusedError('HUBSPOT-SCHEMA-INCOMPATIBLE: incomplete catalogue compatibility inventory');
   }
   for (const name of schemaNames) {
     const document = JSON.parse(readFile(path.join(directory, `${name}.json`)).toString());
     const actual = schemaCompatibilityDigest(document);
-    if (actual !== expected[name]) {
+    if (!expected[name].includes(actual)) {
       throw new SchemaRefusedError(`HUBSPOT-SCHEMA-INCOMPATIBLE: ${name}: supported operation metadata changed `
-        + `(expected ${expected[name]}, received ${actual}). Update the app catalogue before using these schemas; `
-        + 'the active snapshot has not been changed.');
+        + `(expected one of ${expected[name].join(', ')}, received ${actual}). `
+        + 'Update the app catalogue before using these schemas; the active snapshot has not been changed.');
     }
   }
 }

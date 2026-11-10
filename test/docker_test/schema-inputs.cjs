@@ -193,7 +193,7 @@ function surfaceUnits(sources) {
         .map(operation => ({ path: operation.path, method: operation.method, name: operation.action })),
       surface: document => ({ servers: document.servers, security: document.security,
         securitySchemes: document.components?.securitySchemes }),
-      accepted: fingerprint => hubspotCompatibility.schemas[source.name] === fingerprint,
+      accepted: fingerprint => hubspotCompatibility.schemas[source.name].includes(fingerprint),
     });
   }
   for (const app of new Set(sources.filter(item => item.app !== 'hubspot').map(item => item.app))) {

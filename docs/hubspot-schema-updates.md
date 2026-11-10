@@ -8,8 +8,8 @@ owns its supported action inventory and English action presentation in
 `ts/src/schema-cache/hubspot-contract.json`. A downloaded operation cannot rename
 an action or silently add an action to that inventory.
 
-`hubspot-compatibility.json` contains SHA-256 fingerprints of the normalized
-operations and their transitive local references. Inputs, outputs, validation
+`hubspot-compatibility.json` contains a list of reviewed SHA-256 fingerprints per
+schema, covering the normalized operations and their transitive local references. Inputs, outputs, validation
 constraints, required fields, choices and presentation participate in the
 fingerprint. Object key order, document-level publication metadata and unused
 endpoints do not. The compatibility file participates in the snapshot's contract
@@ -33,7 +33,10 @@ When an upstream change affects supported operations:
 3. Build the catalogue. Use the exported `normalizeSchema(name, document)` and
    `schemaCompatibilityDigest(normalized)` functions from
    `ts/dist/schema-cache/hubspot.js` to calculate proposed fingerprints for the
-   reviewed documents. Update the compatibility file and rebuild. Never replace
+   reviewed documents. Add each fingerprint to its schema's list, retaining previous
+   compatible revisions, and rebuild. For example, a description-only Lists revision
+   can coexist with the previous fingerprint; both can be imported and qualified,
+   while further unreviewed descriptions still fail. Never replace
    fingerprints automatically as part of `update`, package builds or CI.
 4. Import the candidate with `qore-hubspot-schemas import DIRECTORY` using the
    matching installed native module. Pin its snapshot for the following checks.
