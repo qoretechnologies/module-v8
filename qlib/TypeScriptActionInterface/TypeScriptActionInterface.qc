@@ -2181,11 +2181,11 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             *list<auto> paths, *hash<auto> type_overrides) {
         # Hash both inputs to keep the basename bounded even for long snapshot locations.
         # Allowed paths form a set; JSON preserves boundaries even when paths contain commas.
-        hash<string, bool> path_set;
+        hash<string, bool> path_set = {};
         foreach string path in (paths) {
             path_set{path} = True;
         }
-        list<string> canonical_paths = sort(keys path_set) ?? ();
+        list<string> canonical_paths = sort(keys path_set);
         string filename = sprintf("schema-%s.yaml", make_json((schema_loc, canonical_paths)).toSHA256());
         bool store_in_cache;
         *string schema_source = TypeScriptActionInterface::getCachedSchema(\store_in_cache, filename);
