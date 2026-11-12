@@ -303,6 +303,14 @@ static void v8_module_delete() {
         qore_v8_pgm = nullptr;
     }
     */
+#ifdef DEBUG
+    {
+        // the debug hook is a Qore value held in a C++ static: it must be released before the types are freed, not
+        // by the static destructors (see "Releasing Module State at Shutdown" in the Qore module guide)
+        ExceptionSink xsink;
+        qore_v8_dbg_set_env_write_hook(nullptr, &xsink);
+    }
+#endif
     if (V8NS) {
         delete V8NS;
         V8NS = nullptr;
