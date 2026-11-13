@@ -54,6 +54,27 @@ describe('HubSpot schema snapshots', () => {
       .toMatchObject({ display_name: 'Retrieve Companies', short_desc: 'Retrieve companies' });
   });
 
+  it('Ships a complete, well-formed reviewed fingerprint inventory', () => {
+    expect(compatibility.version).toBe(1);
+    expect(Object.keys(compatibility.schemas).sort()).toEqual([...schemaNames].sort());
+    for (const name of schemaNames) {
+      const fingerprints: string[] = (compatibility.schemas as Record<string, string[]>)[name];
+      expect(Array.isArray(fingerprints)).toBe(true);
+      expect(fingerprints.length).toBeGreaterThan(0);
+      for (const fingerprint of fingerprints) {
+        expect(fingerprint).toMatch(/^[a-f0-9]{64}$/);
+      }
+      // a duplicated entry would hide a mistyped or missing reviewed revision
+      expect(new Set(fingerprints).size).toBe(fingerprints.length);
+    }
+    // the Lists revisions of 2026-11-10 and 2026-11-13 only add filter descriptions; all three remain accepted
+    expect(compatibility.schemas.lists).toEqual([
+      'c4da456dbe194f398623c2ddbe17c5ca872062492952733706121193d2ab7d85',
+      '40635eb2278899ad8ae6773832aed448febe56a03d8585ad5b77a158424ac4a9',
+      '27a94fc244bac5a0eaacebbd339c8f004e83db71439da74d7d250d7b132b33f8',
+    ]);
+  });
+
   it('Rejects a named pipe without blocking while opening an offline input', () => {
     const filename = path.join(directory, 'pipe');
     execFileSync('mkfifo', [filename]);
