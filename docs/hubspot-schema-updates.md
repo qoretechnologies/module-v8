@@ -54,6 +54,11 @@ When an upstream change affects supported operations:
    [schema-cache.md](../design/schema-cache.md#ci-schema-inputs) describes.
 7. Release the catalogue contract, action changes and translations together.
    Operators can then update their cache and restart applications deliberately.
+   Keep one release-note entry per app per unreleased version in
+   `docs/guide-v8releasenotes.dox.tmpl`: when a later revision of the same app's
+   schema is reviewed before the release, update that entry (its revision dates
+   and summary of changes) instead of adding another. Entries of released
+   versions are not changed; the next version's section gets a new entry.
 
 CI imports the pinned documents from its private mirror before provider
 materialization; it never downloads them from HubSpot. It keeps the
