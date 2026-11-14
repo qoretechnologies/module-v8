@@ -23,7 +23,7 @@
 */
 
 # minimum required Qore version
-%requires qore >= 2.0
+%requires qore >= 3.0
 %modern
 # allow the weak reference operator (:=)
 %allow-weak-references
@@ -71,6 +71,10 @@ module TypeScriptActionInterface {
         # initialize apps with deferred action initialization
         TypeScriptActionInterfacePriv::init();
     };
+    # THREAD_CONTROL: the module starts its own background tasks
+    # PROCESS_CONTROL: its init registers data provider factory (process-wide registrations)
+    # (a Program restricted like a Qorus interface can load the module only when it declares them; Qore #5803)
+    domains = "THREAD_CONTROL,PROCESS_CONTROL";
 }
 
 %ifdef QoreDebug
