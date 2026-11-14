@@ -476,14 +476,14 @@ TypeScriptActionInterface::setCallTimeout(1h);
     }
 
     #! Register one or more dynamic apps from a JavaScript file
-    static *list<string> registerDynamicAppsFromJavaScript(string base_dir, data fdata, *bool replace) {
+    static *list<string> registerDynamicAppsFromJavaScript(string base_dir, data fdata, *bool replace) [dom=PROCESS_CONTROL] {
         *list<string> rv = TypeScriptActionInterfacePriv::processDynamicJavaScriptAppFile(base_dir, fdata, replace);
         map initApp($1), rv;
         return rv;
     }
 
     #! Deregister a dynamic app given the app name
-    static deregisterDynamicApp(string name) {
+    static deregisterDynamicApp(string name) [dom=PROCESS_CONTROL] {
         TypeScriptActionInterface::deregisterDynamicAppIntern(name);
     }
 
@@ -722,7 +722,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         @since %TypeScriptActionInterface 1.1
     */
-    static registerDiscoveryInventory(list<auto> identities) {
+    static registerDiscoveryInventory(list<auto> identities) [dom=PROCESS_CONTROL] {
         if (_pool_clone_mode) {
             return;
         }
@@ -830,7 +830,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         e.g. before the index has ever been built — the caller then falls back to a
         full load)
     */
-    static int registerPendingAppsFromIndex(string apps_dir) {
+    static int registerPendingAppsFromIndex(string apps_dir) [dom=PROCESS_CONTROL] {
         # The app directory name is not derivable from the app name (e.g. dir
         # "active-directory" -> app "AzureActiveDirectory", "esignature" ->
         # "DocuSignESignature"), so use the directory <-> app-name map written by a
@@ -930,7 +930,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     #! Start the process server to run JavaScript code in dedicated processes
     /** @return True if the server was started
     */
-    static bool startServer() {
+    static bool startServer() [dom=PROCESS_CONTROL] {
         sm.lock();
         on_exit sm.unlock();
 
@@ -953,7 +953,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     #! Shuts the server down if it's running
-    static shutdownServer(*int signal) {
+    static shutdownServer(*int signal) [dom=PROCESS_CONTROL] {
         sm.lock();
         on_exit sm.unlock();
 
@@ -1135,7 +1135,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         return rv;
     }
 
-    static registerApp(JavaScriptObject app) {
+    static registerApp(JavaScriptObject app) [dom=PROCESS_CONTROL] {
         JavaScriptProgram pgm = app.getProgram();
         JavaScriptProgramPool pool;
         bool first;
@@ -1163,7 +1163,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
     }
 
-    static registerExistingApp(JavaScriptObject app) {
+    static registerExistingApp(JavaScriptObject app) [dom=PROCESS_CONTROL] {
         JavaScriptProgram pgm = app.getProgram();
         JavaScriptProgramPool pool;
         bool first;
@@ -1191,7 +1191,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
     }
 
-    static registerAction(JavaScriptObject action) {
+    static registerAction(JavaScriptObject action) [dom=PROCESS_CONTROL] {
         JavaScriptProgram pgm = action.getProgram();
         JavaScriptProgramPool pool;
         bool first;
@@ -1235,7 +1235,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
     }
 
-    static registerApp(hash<auto> app, JavaScriptProgramPool pool) {
+    static registerApp(hash<auto> app, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
         if (app.name.typeCode() != NT_STRING || !app.name.val()) {
             throw "APP-ERROR", sprintf(
                 "App name %y is invalid; must be a non-empty string", app.name);
@@ -1475,7 +1475,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         TSAI::debug("Registered TypeScript app %y", app.name);
     }
 
-    static registerExistingApp(hash<auto> app, JavaScriptProgramPool pool) {
+    static registerExistingApp(hash<auto> app, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
         if (app.name.typeCode() != NT_STRING || !app.name.val()) {
             throw "APP-ERROR", sprintf("App name %y is invalid; must be a non-empty string", app.name);
         }
@@ -2287,7 +2287,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         return schema_source;
     }
 
-    static registerRecordBasedActions(hash<AppInfo> info) {
+    static registerRecordBasedActions(hash<AppInfo> info) [dom=PROCESS_CONTROL] {
         int cnt;
         # option function map; type -> function map
         hash<string, hash<string, hash<auto>>> ofmap;
@@ -2443,14 +2443,14 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     # Used by external code to add child data providers to an app
-    static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
+    static registerAppChildDataProvider(string app, AbstractDataProvider prov) [dom=PROCESS_CONTROL] {
         initApp(app);
         TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
         parent.registerChild(prov.getName(), prov);
     }
 
     # Used by external code to add child data providers to an app
-    static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) {
+    static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) [dom=PROCESS_CONTROL] {
         try {
             registerAppChildDataProvider(app, prov);
             return True;
@@ -2461,7 +2461,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     # Used by external code to revert adding child data providers to an app
-    static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
+    static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) [dom=PROCESS_CONTROL] {
         TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
         return parent.deregisterChild(child);
     }
@@ -2515,7 +2515,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         store_in_cache = True;
     }
 
-    static registerAction(hash<auto> action, JavaScriptProgramPool pool) {
+    static registerAction(hash<auto> action, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
         if (action.app.typeCode() != NT_STRING || !action.app.val()
                 || action.action.typeCode() != NT_STRING
                 || !action.action.val()) {
@@ -4507,13 +4507,13 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         return app_conn_update_map{app.lwr()};
     }
 
-    static setupConsoleLogger(LoggerLevel level = LoggerLevel::LevelInfo) {
+    static setupConsoleLogger(LoggerLevel level = LoggerLevel::LevelInfo) [dom=PROCESS_CONTROL] {
         Logger logger("qore-ts-api-console", level);
         logger.addAppender(new StdoutAppender());
         DataProvider::setGlobalLogger(logger);
     }
 
-    static registerLogger(LoggerInterface logger) {
+    static registerLogger(LoggerInterface logger) [dom=PROCESS_CONTROL] {
         DataProvider::setGlobalLogger(logger);
     }
 
@@ -4529,7 +4529,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         webhook, and a context object for destroying the webhook, respectively
         @param destroy a callable value taking the hash returned by the \a create callback
     */
-    static registerWebhookCreateDestroyApis(code create, code destroy) {
+    static registerWebhookCreateDestroyApis(code create, code destroy) [dom=PROCESS_CONTROL] {
         if (WebhookCreate) {
             throw "WEBHOOK-API-ERROR", "There are already webhook creation and deletion APIs in place";
         }
