@@ -28,12 +28,13 @@ class RestrictedProgramLoadTest inherits QUnit::Test {
         #! modules that are not meant for restricted Programs (CLI tools and REPLs that control the process on purpose)
         const Exempt = ();
 
-        #! the child script: loads the module named by the first argument in a restricted Program
+        #! the child script: loads the module named by the first argument in a restricted Program and parses the code of the
+        #! second argument there, if any
         const ChildScript = "%new-style
 %strict-args
 Program p(PO_NO_PROCESS_CONTROL | PO_NO_THREAD_CONTROL);
 try {
-    p.parse(\"%requires \" + ARGV[0] + \"\\n\", \"restricted\");
+    p.parse(\"%requires \" + ARGV[0] + \"\\n\" + (ARGV[1] ?? \"\") + \"\\n\", \"restricted\");
     printf(\"loaded\\n\");
 } catch (hash<ExceptionInfo> ex) {
     printf(\"%s: %s\\n\", ex.err, ex.desc);
@@ -46,6 +47,7 @@ try {
         qlib_dir = realpath(get_script_dir() + "/../qlib");
         addTestCase("every user module of the repository loads in a restricted Program", \testRestrictedLoad());
         addTestCase("a module that uses a restricted domain without declaring it is refused", \testUndeclaredRefused());
+        addTestCase("a restricted Program is refused the registration APIs of the module", \testTaggedApisRefused());
         set_return_value(main());
     }
 
@@ -69,7 +71,7 @@ try {
 
     #! runs the child script for a module and returns its standard output (the child prints the result and any
     #! exception itself; standard error, where a JVM or another tool can print notes, is not part of the result)
-    private string load(string mod) {
+    private string load(string mod, *string code) {
         TmpDir tmp("qore-restricted-load-");
         string script = tmp.path + "/restricted.q";
         File f();
@@ -78,7 +80,8 @@ try {
         f.close();
         *string env_dir = ENV.QORE_MODULE_DIR;
         string mod_dir = env_dir ? qlib_dir + ":" + env_dir : qlib_dir;
-        string cmd = sprintf("QORE_MODULE_DIR='%s' %s -b %s '%s' 2>/dev/null", mod_dir, qore_bin, script, mod);
+        string cmd = sprintf("QORE_MODULE_DIR='%s' %s -b %s '%s' %s 2>/dev/null", mod_dir, qore_bin, script, mod,
+            code ? "'" + replace(code, "'", "'\\''") + "'" : "");
         return backquote(cmd);
     }
 
@@ -99,6 +102,23 @@ try {
             # the result is the last line: a note that a tool prints to standard output before it is no failure
             assertEq("loaded", lastLine(out), sprintf("%s: %s", mod, out));
         }
+    }
+
+    #! the module declares PROCESS_CONTROL for its own code, so its public APIs with a process-wide effect declare it
+    #! too: a restricted caller is refused at the API
+    testTaggedApisRefused() {
+        string pre = "TypeScriptActionInterface::TypeScriptActionInterface::";
+        foreach string code in (
+            "sub f(hash<auto> h, TypeScriptActionInterface::JavaScriptProgramPool p) { " + pre + "registerApp(h, p); }",
+            pre + "registerWebhookCreateDestroyApis(sub (hash<auto> h) {}, sub (hash<auto> h) {});",
+            pre + "deregisterDynamicApp(\"x\");",
+            pre + "startServer();",
+        ) {
+            string out = load("TypeScriptActionInterface", code);
+            assertRegex("^PARSE-EXCEPTION: .*functional domain: PROCESS_CONTROL", out, code);
+        }
+        # the module itself still loads in the restricted Program
+        assertEq("loaded", lastLine(load("TypeScriptActionInterface")));
     }
 
     testUndeclaredRefused() {
