@@ -2172,7 +2172,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         @note Path order and duplicates share a cache entry. Legacy cache filenames are ignored and regenerated.
         Validator options and type overrides are applied on every load and are not part of the cached source.
         @par Example
-        @code
+        @code{.py}
 AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("Mailchimp",
     "/opt/qorus/app-schemas/mailchimp/schema.json", NOTHING, ("/lists:GET",), NOTHING);
         @endcode

@@ -4,17 +4,7 @@
 
     @tableofcontents
 
-    @section v8_build_compatibility Node.js Build Compatibility
-
-    - GNU and Clang builds use Node's documented C++ aliasing setting for its inline V8 callbacks.
-    - Documentation imports the packaged DataProvider and ConnectionProvider indexes and corrects
-      stale reference targets and misplaced parameter documentation. Packaging can enable
-      \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
-
     @section v8_2_2 v8 Module Version 2.2
-    - accept the reviewed HubSpot Lists schema revisions of 2026-11-10 and 2026-11-13, which add descriptions to
-      filter definitions used by \c create_list and \c get_list; retain the previous compatible revisions for
-      imports and qualification, and refresh CI's source checksum
     - an app option can name the action that creates its values in \c metadata.create_action (\c action,
       \c value_field and the optional \c display_name_field), so a value can be created from the option's form; the
       Slack channel options name \c create_channel.  When such an action succeeds, the app's cached allowed values
@@ -29,14 +19,6 @@
       hours.  A new \c ts-proxy child process has 60 seconds to start by default (it had over 5 hours) and is
       terminated if it has not started by then; change this with \c JavaScriptProgramProxy::setStartupTimeout()
       or the \c QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS environment variable
-    - \c qore-app-schemas and \c qore-hubspot-schemas exit with the new status 69 when a schema source cannot be
-      reached or does not answer (the connection failed or closed before the response was complete, no complete
-      response arrived within 30 seconds, or the source answered HTTP 408, 429 or 5xx); the message names the URL, the
-      error code or HTTP status and the \c Retry-After value that the source sent.  Any other HTTP status remains exit
-      status 1; an update of several apps exits with 2 if any schema was refused, otherwise with the status that
-      every failure has, and 1 for different ones.  Every schema download
-      now opens a connection of its own, so a server closing a connection that an earlier download left open no
-      longer fails the next download with \c "socket hang up"; nothing is retried
     - CI qualifies the HubSpot, Pipedrive and Trello schema documents that it pins by SHA-256 from a private mirror
       instead of downloading them from the upstream services; every document is checked against its own pin, and a
       daily scheduled check compares the upstream documents with the pins and runs the update commands against the
@@ -81,10 +63,6 @@
       (and so the description of the \c JAVASCRIPT-EXCEPTION) listed every variable, which could put secrets in
       logs; it now raises an error that the object could not be cloned.  An exception value that is or contains
       \c process.env has the string \c "<process.env>" in its place in the exception argument
-    - a @ref V8::TypeScriptProgram "TypeScriptProgram" no longer prints "ExperimentalWarning: stripTypeScriptTypes is
-      an experimental feature and might change at any time" on stderr: experimental feature warnings are not printed
-      unless \c NODE_OPTIONS enables warnings (\c --warnings or \c --trace-warnings); listeners of the
-      \c warning event still receive them, and other warnings are printed as before
     - a child process created with \c fork() by a process that loaded the module no longer hangs (on Linux) or
       crashes (on macOS) when it exits or when its script ends: V8 and Node.js are not torn down in the child, since
       their threads exist only in the parent, and with %Qore 3.0 the child ends without running exit-time handlers,
@@ -108,39 +86,8 @@
       option, to return and search the values as stored (the default), as the sheet displays them, or the formulas
       of formula cells, and a \c date_render option, to return dates as serial numbers (the default) or as the sheet
       displays them
-    - fixed the Google Sheets \c find_spreadsheet_rows action leaving out the last column of every row and
-      searching the column before the one named by the \c header search option (the first column was searched
-      correctly only by chance); the \c new_spreadsheet_row trigger also left out the last column and read at most
-      26 columns
-    - fixed Google Sheets ranges for sheet titles with spaces, punctuation or quotes in the \c find_spreadsheet_rows
-      action, which the API rejects unless the title is quoted
     - the Pipedrive app requests only the OAuth2 scopes its actions, record operations and triggers use;
       \c mail:full, \c recents:read, \c phone-integration and \c goals:read are no longer requested
-    - accept the reviewed Pipedrive schema revision of 2026-11-07: deal creation no longer accepts \c is_deleted,
-      and deal updates accept it only as \c false, to restore a deleted deal; retain the previous compatible
-      revisions and refresh CI's source and bundle checksums
-    - fixed Pipedrive deal record creation and updates to follow the deal deletion contract: creating a deal with
-      \c is_deleted set to \c True or updating one with \c is_deleted set to \c True now raises an error (delete
-      the record instead), \c is_deleted set to \c False is no longer sent when creating a deal, and every record
-      in a create batch is validated before the first is sent
-    - accept the reviewed Pipedrive schema revision of 2026-11-06: deal creation and updates accept optional,
-      nullable \c channel (integer) and \c channel_id (string), and creation also accepts optional, nullable
-      \c origin_id (string); retain the previous compatible revisions and refresh CI's source and bundle checksums
-    - accept the reviewed Pipedrive schema revision that documents the \c limit bounds (1 to 500) of the v2 list
-      operations, which the catalogue's client already enforces; retain the previous compatible revisions and
-      refresh CI's exact v2 source and bundle checksums
-    - accept the reviewed Pipedrive schema revision of 2026-10-11: the \c ids of the v2 activity, deal,
-      organization and person list operations are integers, as the records' ids are; the \c sort of the v1 lead list
-      accepts every field that it documents, including \c label_ids, \c value, \c source_name, \c visible_to and
-      custom fields, instead of nine enumerated ones; and the deal of a note is declared as an object directly, with
-      the same nullable title; retain the previous compatible revisions and refresh CI's exact source and bundle
-      checksums
-    - added local HubSpot generic-call coverage for error status policies, percent-encoded contact email
-      paths, and JSON array membership bodies; these behaviors require the corresponding shared
-      %Qore RestClientDataProvider fix, and retain HubSpot CMS authorization checks
-      (<a href="https://github.com/qoretechnologies/qorus/issues/626">qorus issue 626</a>)
-    - accept the reviewed Pipedrive schema revision adding optional, nullable \c archive_reason to lead
-      updates and responses; retain the previous compatible revision and refresh CI's exact source checksums
     - an unhandled promise rejection no longer ends a JavaScript program: it is reported as a Node.js
       \c UnhandledPromiseRejectionWarning, with the rejection's stack, on standard error, and the program stays
       usable.  Before, Node's default raised it as an uncaught exception, which ended the program's environment and
@@ -175,7 +122,6 @@
       which over-runs until no active handles remain, so a lingering keep-alive socket stalled delivery until it
       idled out even though the response had already arrived; the loop is now pumped with \c UV_RUN_ONCE while
       waiting on a Promise and \c UV_RUN_NOWAIT for best-effort drains
-      (<a href="https://github.com/qoretechnologies/qorus/issues/343">qorus issue 343</a>)
     - added the @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
       concurrent in-process JavaScript execution without IPC overhead
       (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)
@@ -186,11 +132,7 @@
     - added direct pool injection via
       @ref TypeScriptActionInterface::TypeScriptActionInterface::setInProcessServer()
       "TypeScriptActionInterface::setInProcessServer()"
-    - added clone-mode closure capture mechanism using thread-local
-      \c PoolCloneModeHelper to create
-      pool programs without modifying global state
 
-    @section v8_2_1 v8 Module Version 2.1
     - added the @ref V8::TypeScriptProgram "TypeScriptProgram" class for runtime TypeScript transpilation and
       execution using Node.js's built-in \c stripTypeScriptTypes() API
     - supports type stripping, interfaces, enums (including const enums), typed classes with inheritance,
@@ -200,28 +142,26 @@
     - fixed a memory leak in \c QoreV8ProgramData::deref() where tracked V8 resources were not cleaned up
       when a constructor failed
 
-    @section v8_2_0 v8 Module Version 2.0
     - added the \c qore global object for transparent access to %Qore APIs from JavaScript
     - JavaScript code can now access %Qore namespaces, classes, functions, constants, and enums
     - class wrapping supports constructors, instance methods, static methods, and inheritance
     - public data members of wrapped %Qore objects can be read, written, and enumerated from JavaScript
     - %Qore exceptions propagate as catchable JavaScript errors
 
-    @section v8_1_0_4 v8 Module Version 1.0.4
     - improved ts-proxy restart robustness and shutdown handling to avoid deadlocks
     - handled EPIPE and closed sockets more gracefully in ts-proxy communications
 
     @section v8_1_0_3 v8 Module Version 1.0.3
     - fixed a bug returning action option info for Swagger-based actions
-      (<a href="https://github.com/qorelanguage/qore/issues/4956">issue 4956</a>)
+      (<a href="https://github.com/qoretechnologies/qore/issues/4956">issue 4956</a>)
 
     @section v8_1_0_2 v8 Module Version 1.0.2
     - fixed a bug returning reference data in action providers
-      (<a href="https://github.com/qorelanguage/qore/issues/4955">issue 4955</a>)
+      (<a href="https://github.com/qoretechnologies/qore/issues/4955">issue 4955</a>)
 
     @section v8_1_0_1 v8 Module Version 1.0.1
     - fixed a bug retrieving dynamic types in the \c ts-proxy process
-      (<a href="https://github.com/qorelanguage/qore/issues/4938">issue 4938</a>)
+      (<a href="https://github.com/qoretechnologies/qore/issues/4938">issue 4938</a>)
 
     @section v8_1_0 v8 Module Version 1.0
     - initial release

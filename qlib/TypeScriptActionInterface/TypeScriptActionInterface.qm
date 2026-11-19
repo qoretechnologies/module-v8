@@ -126,6 +126,18 @@ public sub ASSERT(*softbool b) {}
     If loading a Slack channel selector fails with \c missing_scope, correct the connection's permissions and
     request its choices again. The failed lookup does not prevent a fresh request for the next ten minutes.
 
+    @section typescriptactioninterfacecatalogs Schema-Backed Apps and Connections
+
+    Install matching versions of the Qore module and the JavaScript distribution. Catalogue protocol 2
+    detects incompatible installations before registration. Apps without their required schemas report
+    <tt>APP-SCHEMAS-UNAVAILABLE</tt>. Their identity and connection scheme remain available.
+    The <tt>qore-app-schemas</tt> tool manages the schemas used by the installed distribution.
+
+    Generated REST connections publish localized option labels and allowed values. An action field can
+    use <tt>metadata.create_action</tt> to identify an action that creates one of its values.
+    REST clients retain their owning connection when copied. Use
+    <tt>TypeScriptAppRestClient::introspectOAuth2Token()</tt> when the app supports token introspection.
+
     @section typescriptactioninterface_time_limits Time Limits
 
     Each call of an app's or action's function, such as an action's API function, a record operation, or a webhook
@@ -151,176 +163,26 @@ TypeScriptActionInterface::setCallTimeout(1h);
 JavaScriptProgramProxy::setStartupTimeout(2m);
     @endcode
 
-    @section TypeScriptActionInterface_relnotes Release Notes
+    @anchor TypeScriptActionInterface_relnotes
 
-    Generic API calls preserve the app-specific synchronous client's authentication and request policies,
-    including HubSpot CMS grant checks and AWS request signing, for both app roots and child providers.
+    @subpage typescriptactioninterfacereleasenotes
+*/
 
-    @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
-    - a \c ts-proxy child process that ends while the parent waits for its answer to a command is restarted and the
-      command retried: the parent saw the end of the child's command socket before the child had ended, and then
-      raised \c SOCKET-CLOSED (or \c SOCKET-RECV-ERROR with \c ECONNRESET on Linux) instead of restarting it
-    - an action option, a field of a hash type and an option in \c override_options can describe in plain words the
-      values that its \c validation_regex accepts with \c validation_regex_desc (%DataProvider 3.11), for example
-      <tt>"a two-letter language code, such as en"</tt>; the description is in the option info and in the field's
-      attributes, as the pattern is.  A field or an option in \c override_options with a description was refused
-      with \c FIELD-ERROR or \c OPTION-OVERRIDE-ERROR, and the field of the action's request type had no description
-    - added source-owned catalogs for generated REST connection schemes, option presentation, allowed values,
-      and setup messages; custom static REST messages declare a stable `presentation_id`
-    - refreshed NetSuite's catalogs for the corrected REST schema requiredness variants, including fields previously
-      omitted from nested types
-    - a \c ts-proxy child process gets the process environment as it is when the child is started, read atomically
-      with @ref V8::JavaScriptProgram::getEnvironment() "JavaScriptProgram::getEnvironment()"; it got the \c ENV
-      hash, the environment of the process when it started, so variables set or removed with \c setenv() and
-      \c unsetenv() since then were missing in the child, or still set.  \c QORE_V8_CACHE_DIR,
-      \c QORE_V8_DISABLE_CACHE, \c TS_PROXY_LOGDIR, \c QORE_TYPESCRIPT_ACTION_VERBOSE and
-      \c QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS are read from the current environment as well
-    - the time limits of calls and of \c ts-proxy child process startup take effect as documented (see
-      @ref typescriptactioninterface_time_limits):
-      - each call of an app's or action's function has a 30-minute limit by default, which
-        @ref TypeScriptActionInterface::TypeScriptActionInterface::setCallTimeout()
-        "TypeScriptActionInterface::setCallTimeout()" or the \c QORE_TYPESCRIPT_CALL_TIMEOUT_SECS environment
-        variable changes and an app's or action's \c io_timeout_secs overrides; a call that never answered waited
-        over 8 hours, and a call run in a \c ts-proxy child process failed after 90 seconds
-      - event functions have no time limit; event sources stopped after just over 8 hours
-      - a new \c ts-proxy child process has 60 seconds to start by default, which
-        @ref TypeScriptActionInterface::JavaScriptProgramProxy::setStartupTimeout()
-        "JavaScriptProgramProxy::setStartupTimeout()" or the \c QORE_TYPESCRIPT_PROXY_STARTUP_TIMEOUT_SECS
-        environment variable changes; a child that never started blocked the action for over 5 hours, and is now
-        terminated
-    - added @ref TypeScriptActionInterface::JavaScriptInProcessPool::setWaitObserver()
-      "JavaScriptInProcessPool::setWaitObserver()", which reports each thread that has to wait for a program because
-      the pool has reached its maximum size
-    - every program of an action script gets its own script's file name and directory in \c __filename and
-      \c __dirname; they were read from environment variables shared by all programs, so a program created while
-      a program of another script was being created in another thread could get the other script's location
-    - a dynamic app uploaded as JavaScript is refused with \c APP-ERROR unless its name is a single path component
-      made of the characters the action catalogue accepts (\c A-Z, \c a-z, \c 0-9, \c _ and \c -); the name is used
-      as the name of the app's directory below the custom apps directory, and a name containing a path separator or
-      \c ".." was used unchecked; see @ref TypeScriptActionInterface::TypeScriptActionInterface::checkDynamicAppName()
-      "TypeScriptActionInterface::checkDynamicAppName()"
-    - a \c hash type with an element type and no fields gets the element type for all of its fields; it raised
-      \c TYPE-ERROR because the element type was not passed on
-    - an option whose \c rest_get_allowed_values or \c rest_get_element_allowed_values definition lacks
-      \c method, \c path or \c values is rejected with \c TYPESCRIPT-ACTION-ERROR when its action is registered;
-      it was accepted, and its allowed values could not be retrieved
-    - Zoom: the New Meeting Summary trigger lists the user's own summaries (\c /users/me/meeting_summaries, which
-      the app's scopes cover) instead of the account-wide listing, which needs an admin scope a user-managed app
-      cannot hold, so the trigger never fired; the started, ended and summary triggers report every instance of a
-      recurring or personal-meeting-room meeting instead of the first one only, and trigger state stored under the
-      old key is discarded rather than replayed as new events; the webinar choices carry the integer webinar ID,
-      which every webinar endpoint accepts, instead of the instance UUID that Update, Delete and the registrant
-      endpoints reject; \c from is sent in the formats Zoom documents, a failed Zoom lookup names its HTTP status,
-      and the template lookups honor the user the action names
-      (<a href="https://github.com/qoretechnologies/qorus/issues/658">qorus issue 658</a>)
-    - Extend reference-data failure propagation across TypeScript app integrations, including shared pagination,
-      SDK lookups, nested metadata retrieval, and record schemas. Remove exception-suppressing returns from
-      HubSpot and Magento cleanup blocks; failed requests no longer appear as cacheable empty or partial data.
-      Correct QuickBooks page-count handling and empty-page termination, Calendly continuation handling, Figma
-      next-page query preservation and unpaginated responses, and PayPal's final-page boundary.
-    - Slack channel and user lookups now report failures instead of showing empty or incomplete choices, and
-      respect rate-limit retry delays. Failed reference data lookups can be retried immediately without waiting
-      for cached errors to expire
-      (<a href="https://github.com/qoretechnologies/qorus/issues/651">qorus issue 651</a>).
-    - Bulk app initialization retains each app's failure and continues registering the remaining apps;
-      direct app/action initialization still raises the original error. HubSpot's
-      \c HUBSPOT-SCHEMAS-UNAVAILABLE error now preserves its identity, connection scheme, and OAuth2 metadata
-      just like \c APP-SCHEMAS-UNAVAILABLE, while its actions retain the schema error and remediation.
-    - schema cache filenames use a fixed-length SHA-256 digest of the schema location and canonical allowed-path
-      set, so long snapshot locations no longer exceed filesystem filename limits. Path order and duplicates
-      share one entry, and paths containing commas cannot collide with multiple separate paths. Old cache
-      filenames are ignored and entries are regenerated on first use; see \c design/schema-cache.md.
-    - schema-backed requests preserve percent-encoded path/query values without encoding them twice;
-      requests containing only path variables pass an empty object to request conversion callbacks
-    - Apps reporting \c APP-SCHEMAS-UNAVAILABLE now register their identity, REST connection scheme, and OAuth2
-      metadata while retaining structured failures for deferred actions. A synchronous \c schema_metadata callback
-      refreshes failed snapshot selections on retry; successfully selected snapshots remain pinned until restart.
-      TypeScriptActionInterface::getAppSchemaError() exposes the last schema error without blocking connections.
-      Other initialization errors still fail app registration. Failed app and action initializations retain their
-      pending metadata and can be retried in the same process.
-    - removed a stale Zoom webinar-update \c template_id override that synthesized an untyped option absent
-      from the supported Meetings schema and prevented snapshot qualification
-    - Catalogue protocol 2 detects incompatible Qore module and JS dist installations before registration. Unknown
-      app metadata keys produce an actionable \c TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR before typed-hash conversion.
-      See \c design/producer-schema-boundary.md and the \c qore-app-schemas manual for deployment details.
-    - REST connections accept narrowly typed option hashes, including header-only authentication options.
-      Internally added options no longer fail when their value type differs from the caller's options.
-    - Fixed adding schema-backed action options with dependencies: option overrides now read the dependency
-      list from the option value instead of the iterator record. This supports Trello's additional board/list
-      selectors when materializing its current OpenAPI 3 actions.
-    - the TypeScript app catalogue settings (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT and
-      \c QORE_TYPESCRIPT_ACTION_SCRIPTS) are read from the process environment when the module is initialized, so a
-      process can decide not to load the catalogue after it has started, such as a data provider index worker that
-      indexes other providers
-    - fields do not run their dynamic type or default value callbacks while static metadata is read (see
-      \c DataProvider::DataProviderStaticMetadataHelper), so building the data provider index no longer runs them
-      without a context, which failed for apps such as Brevo
-    - added a versioned TypeScript provider-schema boundary with exact absent/empty/null handling, structurally scoped
-      \c AllowedValueInfo conversion, and a lightweight app/action identity inventory for qualified provider-index
-      discovery; raw payload hashes containing a \c value member remain opaque, and source failures before identity
-      publication remain structural qualification failures until the exact source succeeds
-    - a revision mismatch between this module and the TypeScript action script it loads no longer fails
-      obscurely in either direction: the action catalogue asserts the registration API it requires before
-      registering anything, naming exactly what an older module does not provide, and this module reports an
-      action script that predates \c registerDiscoveryInventory() and therefore leaves qualified discovery
-      with no exact inventory for its apps. The latter is reported once per action script and retained by
-      TypeScriptActionInterface::getIncompleteInventorySources(); such scripts keep working unchanged
-    - fixed TypeScriptActionInterface::registerDiscoveryInventory() to accept an app-only identity batch, as
-      published for an app with no actions; it previously failed with a runtime type error
-    - HubSpot requests optional CMS page and domain-read scopes without adding required CRM installation
-      permissions. Its synchronous REST client verifies current token grants before CMS calls and reports
-      actionable capability and account-entitlement errors. Existing connections need reauthorization to
-      expand their grant; see \c docs/hubspot-cms-oauth.md for deployment and recovery instructions
-      (<a href="https://github.com/qoretechnologies/qore/issues/5443">issue 5443</a>)
-    - added generic \c TypeScriptAppRestClient::introspectOAuth2Token() for direct or signed
-      alternate-service token metadata requests without changing token state. HubSpot CMS checks use
-      this API; alternate services must implement the operation described in
-      \c docs/oauth2-token-introspection.md
-    - copied TypeScript REST clients preserve their owning connection, specialized client behavior,
-      and the alternate OAuth endpoint signer and signature header
-    - fixed the source-owned provider i18n catalogs shipped in
-      \c qlib/TypeScriptActionInterface/i18n to contain exactly the apps and actions registered by
-      this module. Catalog generation is scoped to the technical source owner, so installed or
-      transitive provider modules cannot add their presentation strings; source-tree validation also
-      rejects missing and orphaned catalog domains. Because this module's apps are registered
-      \a pending and initialized on demand, correct owner scoping requires the \c DataProvider 3.7
-      fix for modules loaded from a deferred app initialization; without it the \c WebSockets app
-      (\c WebSocketClient) and the Slack \c watch-messages action (Qorus \c QorusSlackServices) are
-      attributed to this module wherever they are installed. Catalogs can be regenerated
-      deterministically with \c test/docker_test/update-i18n.sh
-    - added lazy, on-demand app loading: instead of eagerly loading every app (and its SDK) when the
-      module is loaded, apps are registered \a pending from the data provider index and each app's
-      implementation is loaded only on first use (via the catalogue, connection scheme, or data
-      provider tree); this is transparent to API users and significantly reduces the memory used by
-      the @ref typescriptproxyintro "ts-proxy" layer. A directory&lt;-&gt;app-name map (\c ts-app-dirs.yaml)
-      is written next to the app directory during a full load (e.g. \c "qctl update-index") and read at
-      runtime to register apps pending from the index; if it is unavailable the module falls back to a
-      full load
-    - fixed a race where a command could fail with a fatal \c SOCKET-NOT-OPEN error when the command
-      IPC socket to the @ref typescriptproxyintro "ts-proxy" child was closed while the child process was
-      still running (more likely under load, such as the lazy-load latency of a first app call): the
-      proxy now restarts the child and retries the command instead of surfacing the socket error to
-      the caller
-    - added @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
-      concurrent in-process JavaScript execution without IPC overhead
-      (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)
-    - added @ref TypeScriptActionInterface::InProcessProgramInfo "InProcessProgramInfo" hashdecl
-    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::startInProcessServerOnDemand()
-      "TypeScriptActionInterface::startInProcessServerOnDemand()" for lazy pool creation with
-      configurable maximum pool size
-    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::setInProcessServer()
-      "TypeScriptActionInterface::setInProcessServer()" for direct pool injection
-    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::checkInProcessServer()
-      "TypeScriptActionInterface::checkInProcessServer()" for pool access with double-checked locking
-    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::shutdownInProcessServer()
-      "TypeScriptActionInterface::shutdownInProcessServer()" for safe pool shutdown
-    - added clone-mode closure capture mechanism using thread-local
-      @ref Priv::PoolCloneModeHelper "PoolCloneModeHelper" to create
-      pool programs without modifying global state
-    - added static chdir mutex in
-      @ref TypeScriptActionInterface::JavaScriptProgramPool "JavaScriptProgramPool" to prevent
-      concurrent chdir() races during program creation
+/** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes
 
-    @subsection TypeScriptActionInterface_v1_0 TypeScriptActionInterface v1.0
+    @section typescriptactioninterfaceupcoming Upcoming release
+    - Action execution supports a shared in-process pool alongside the existing child-process proxy.
+      See @ref TypeScriptActionInterface::JavaScriptInProcessPool.
+    - Apps can use localized connection metadata, schema-backed REST actions and OAuth token introspection.
+      See @ref typescriptactioninterfacecatalogs for the provider and deployment contracts.
+    - Child-process proxies recover from a closed command socket, inherit the environment at startup,
+      and enforce startup and call deadlines. See @ref typescriptactioninterface_time_limits.
+    - Reference-data failures propagate their provider error. Failed authorization and connection errors
+      can be handled by callers. See @ref typescriptactioninterface_reference_data.
+
+    @section TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - Added support for Google apps.
+
+    @section TypeScriptActionInterface_v1_0 TypeScriptActionInterface v1.0
     - initial release
 */
