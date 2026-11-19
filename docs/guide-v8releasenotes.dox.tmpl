@@ -12,6 +12,10 @@
       \c QORE_V8_STRICT_DOCS to fail documentation generation on warnings.
 
     @section v8_2_2 v8 Module Version 2.2
+    - the example custom app ("Testing External App", \c External-app) is no longer built or shipped, so it no
+      longer appears in every installation's app catalogue; the example of the custom app format is kept unbuilt in
+      \c ts/examples/customApps.  A build or a \c CUSTOM_APPS_DIR without a custom apps folder loads no custom apps
+      instead of failing
     - accept the reviewed HubSpot Lists schema revisions of 2026-11-10 and 2026-11-13, which add descriptions to
       filter definitions used by \c create_list and \c get_list; retain the previous compatible revisions for
       imports and qualification, and refresh CI's source checksum

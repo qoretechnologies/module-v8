@@ -177,6 +177,10 @@ const CUSTOM_APPS: Record<string, TQoreAppWithActions> = {};
 const appsDir = path.resolve(path.join(__dirname, '..', 'customApps'));
 
 const importIndexFilesFromDir = (dir: string) => {
+  // a build or a CUSTOM_APPS_DIR with no custom apps has no such folder; that is no apps, not an error
+  if (!fs.existsSync(dir)) {
+    return;
+  }
   fs.readdirSync(dir).forEach((subDir) => {
     const fullPath = path.join(dir, subDir);
     const indexPath = path.join(fullPath, 'index.js');

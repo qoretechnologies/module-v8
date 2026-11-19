@@ -91,7 +91,6 @@ describe('Qorus Apps Catalogue tests', () => {
     expect(actionsCatalogue.apps).toHaveProperty('zendesk');
     expect(actionsCatalogue.apps).toHaveProperty('asana');
     expect(actionsCatalogue.apps).toHaveProperty('esignature');
-    expect(actionsCatalogue.apps).toHaveProperty('example');
 
     const allErrors: string[] = [];
 
@@ -191,6 +190,57 @@ describe('Qorus Apps Catalogue tests', () => {
       throw new Error(
         `Found ${allErrors.length} locale validation error(s):\n${allErrors.join('\n')}`
       );
+    }
+  });
+
+  it('Ships no example or test custom app', () => {
+    const catalogue = new ActionsCatalogue();
+    catalogue.initializeCatalogue();
+
+    // every installation lists what src/customApps holds; the example of the format lives unbuilt in ts/examples
+    const names = Object.values(catalogue.apps).map((app) => app.name);
+    expect(names).not.toContain('External-app');
+    expect(names.filter((name) => /test|example/i.test(name))).toEqual([]);
+  });
+
+  it('Registers the custom apps a CUSTOM_APPS_DIR holds', () => {
+    const previous = process.env.CUSTOM_APPS_DIR;
+    // the example of the custom app format: built and shipped by nothing, loaded here as a user's folder would be
+    process.env.CUSTOM_APPS_DIR = join(__dirname, '..', '..', 'examples', 'customApps');
+    try {
+      jest.isolateModules(() => {
+        const catalogueModule = require('../ActionsCatalogue') as typeof import('../ActionsCatalogue');
+        const catalogue = new catalogueModule.ActionsCatalogue();
+        catalogue.initializeCatalogue();
+        expect(catalogue.apps).toHaveProperty('example');
+        expect(catalogue.apps.example.name).toBe('External-app');
+        expect(catalogue.apps.example.actions.map((action) => action.action)).toContain('custom-action');
+        expect(
+          (catalogue.apps.example as unknown as { presentation_source_locale?: string }).presentation_source_locale
+        ).toBeTruthy();
+      });
+    } finally {
+      if (previous === undefined) {
+        delete process.env.CUSTOM_APPS_DIR;
+      } else {
+        process.env.CUSTOM_APPS_DIR = previous;
+      }
+    }
+  });
+
+  it('Treats a missing custom apps folder as no custom apps', () => {
+    const previous = process.env.CUSTOM_APPS_DIR;
+    process.env.CUSTOM_APPS_DIR = join(__dirname, 'no-such-custom-apps-folder');
+    try {
+      jest.isolateModules(() => {
+        expect(() => require('../ActionsCatalogue')).not.toThrow();
+      });
+    } finally {
+      if (previous === undefined) {
+        delete process.env.CUSTOM_APPS_DIR;
+      } else {
+        process.env.CUSTOM_APPS_DIR = previous;
+      }
     }
   });
 
