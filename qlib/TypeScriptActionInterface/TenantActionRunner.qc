@@ -61,6 +61,9 @@ public hashdecl TsTenantLimits {
 
     #! the maximum time limit of a call
     timeout max_timeout = 30m;
+
+    #! the maximum number of records that a record action reads or writes in a call
+    int max_records = 10000;
 }
 
 #! Runs the TypeScript actions of the module's apps for callers that a sandbox governs (qoretechnologies/qore#6845)
@@ -259,15 +262,24 @@ public class TenantActionRunner {
         return info + {"tenant_available": True};
     }
 
-    #! Runs an API action for a tenant and returns its response as plain data
+    #! Runs an API or record action for a tenant and returns its response as plain data
     /** @param ctx the context of the call
         @param app the app
         @param action the action
-        @param request the request of the action
-        @param request_options the request options
+        @param request the request of the action; for a record action, a hash with:
+        - \c table: the table (required)
+        - \c where: the search criteria (\c search, \c search-single, \c update and \c delete)
+        - \c set: the fields to set (\c update; required)
+        - \c records: a record or a list of records (\c create and \c upsert; required)
+        - \c options: the options of the operation
+        @param request_options the request options of an API action
 
-        @return the response, as plain data; a hash response can have the key \c connection_update with token fields
-        that the action refreshed, which the caller applies to its connection itself
+        @return the response, as plain data; a hash response of an API action can have the key \c connection_update
+        with token fields that the action refreshed, which the caller applies to its connection itself; for a record
+        action: the list of records found (\c search), the record found or nothing (\c search-single), the records
+        created (\c create), the result of each record (\c upsert), or the number of records changed (\c update and
+        \c delete); a record action reads or writes at most the tenant's limit of records (\c TS-TENANT-LIMIT with
+        <tt>limit: "records"</tt>)
 
         @throw TS-TENANT-ERROR the context is invalid, or the app or the action is unknown
         @throw TS-TENANT-TIMEOUT the call's time limit expired
@@ -279,9 +291,68 @@ public class TenantActionRunner {
     static auto exec(hash<TsTenantContext> ctx, string app, string action, auto request, *hash<auto> request_options) {
         TenantActionRunner::checkContext(ctx);
         hash<auto> info = TenantActionRunner::getAction(app, action);
-        string key = sprintf("app-%s-%s-api_function", info.app, info.action);
-        return TenantActionRunner::run(ctx, info.app, key, (request, request_options,
-            TenantActionRunner::getDataContext(ctx)));
+        switch (info.action_code) {
+            case DPAT_API:
+                return TenantActionRunner::run(ctx, info.app, {
+                    "key": sprintf("app-%s-%s-api_function", info.app, info.action),
+                    "args": (request, request_options, TenantActionRunner::getDataContext(ctx)),
+                });
+            case DPAT_FIND:
+            case DPAT_FIND_SINGLE:
+            case DPAT_CREATE:
+            case DPAT_UPDATE:
+            case DPAT_UPSERT:
+            case DPAT_DELETE:
+                return TenantActionRunner::run(ctx, info.app, {
+                    "record": TenantActionRunner::getRecordRequest(info.action_code, request),
+                });
+        }
+        throw ErrorContext, sprintf("action %y of app %y is not an API or record action", action, app);
+    }
+
+    #! Validates the request of a record action; returns it as the plain data of the call
+    private:internal static hash<auto> getRecordRequest(int code, auto request) {
+        if (request.typeCode() != NT_HASH || request.table.typeCode() != NT_STRING || !request.table.val()) {
+            throw ErrorContext, "the request of a record action is a hash with the table (\"table\")";
+        }
+        hash<auto> rv = {
+            "code": code,
+            "table": request.table,
+            "options": request.options,
+        };
+        foreach string k in ("where", "set", "records", "options") {
+            if (exists request{k} && request{k}.typeCode() != NT_HASH && (k != "records"
+                || request{k}.typeCode() != NT_LIST)) {
+                throw ErrorContext, sprintf("the request's %y of a record action must be a hash", k);
+            }
+        }
+        switch (code) {
+            case DPAT_FIND:
+            case DPAT_FIND_SINGLE:
+            case DPAT_DELETE:
+                rv.where = request.where;
+                break;
+            case DPAT_UPDATE:
+                if (!request.set) {
+                    throw ErrorContext, "the request of an update gives the fields to set (\"set\")";
+                }
+                rv.set = request.set;
+                rv.where = request.where;
+                break;
+            case DPAT_CREATE:
+            case DPAT_UPSERT:
+                if (!request.records) {
+                    throw ErrorContext, "the request gives the records (\"records\": a hash or a list of hashes)";
+                }
+                rv.records = request.records.typeCode() == NT_HASH ? (request.records,) : request.records;
+                foreach auto r in (rv.records) {
+                    if (r.typeCode() != NT_HASH) {
+                        throw ErrorContext, "each record is a hash";
+                    }
+                }
+                break;
+        }
+        return rv;
     }
 
     #! Raises TS-TENANT-ERROR if the calling code is sandboxed
@@ -326,7 +397,7 @@ public class TenantActionRunner {
     }
 
     #! Runs a call of a tenant's program for an app
-    private:internal static auto run(hash<TsTenantContext> ctx, string app, string key, list<auto> args) {
+    private:internal static auto run(hash<TsTenantContext> ctx, string app, hash<auto> work) {
         # the calling code's sandbox, which governs the requests that the program makes for it
         V8::SandboxCapture capture();
         hash<TsTenantLimits> lim;
@@ -354,19 +425,37 @@ public class TenantActionRunner {
         bool discard = False;
         on_exit TenantActionRunner::releaseProgram(ctx.tenant, app, pgm, discard);
 
-        *code call = pgm.call_map{key};
-        if (!call) {
-            throw ErrorContext, sprintf("app %y has no such action function (%y)", app, key);
-        }
-        hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(key);
-        api.async_call = call;
-        api.label = sprintf("tenant call: %s", key);
         # the time limit in milliseconds: the caller's, else the action's, capped by the maximum
-        int to_ms = ctx.timeout ?? (api.to ? api.to.durationMilliseconds() : lim.max_timeout);
-        if (to_ms > lim.max_timeout) {
-            to_ms = lim.max_timeout;
+        int to_ms;
+        if (work.key) {
+            *code call = pgm.call_map{work.key};
+            if (!call) {
+                throw ErrorContext, sprintf("app %y has no such action function (%y)", app, work.key);
+            }
+            hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(work.key);
+            api.async_call = call;
+            api.label = sprintf("tenant call: %s", work.key);
+            to_ms = ctx.timeout ?? (api.to ? api.to.durationMilliseconds() : lim.max_timeout);
+            if (to_ms > lim.max_timeout) {
+                to_ms = lim.max_timeout;
+            }
+            api.to = milliseconds(to_ms);
+            work.api = api;
+        } else {
+            to_ms = ctx.timeout ?? lim.max_timeout;
+            if (to_ms > lim.max_timeout) {
+                to_ms = lim.max_timeout;
+            }
+            # a new hash: the caller's literal can have a typed value type
+            work = {
+                "record": work.record,
+                "app": app,
+                "pool": catalogue_pool ?? TypeScriptActionInterfacePriv::getMaster(),
+                "calls": pgm.call_map,
+                "dctx": TenantActionRunner::getDataContext(ctx),
+                "max_records": lim.max_records,
+            };
         }
-        api.to = milliseconds(to_ms);
 
         # the state of the call that the bridge uses on this thread
         _tenant_call = {
@@ -375,7 +464,7 @@ public class TenantActionRunner {
             "capture": capture,
         };
         on_exit remove _tenant_call;
-        hash<auto> rv = call_function(exec_call, pgm.pgm, api, args, to_ms, lim.heap_limit);
+        hash<auto> rv = call_function(exec_call, pgm.pgm, work, to_ms, lim.heap_limit);
         if (rv.terminated) {
             discard = True;
             if (rv.over_heap) {
@@ -385,6 +474,9 @@ public class TenantActionRunner {
             throw ErrorTimeout, sprintf("the call exceeded its time limit of %dms", to_ms), {"timeout_ms": to_ms};
         }
         if (rv.error) {
+            if (rv.error.err == ErrorLimit) {
+                throw rv.error.err, rv.error.desc, rv.error.arg;
+            }
             TenantActionRunner::rethrowMapped(app, rv.error);
         }
         return rv.result;
@@ -393,8 +485,8 @@ public class TenantActionRunner {
     #! Runs a call in a tenant's program, with the time limit and the heap cap; runs as trusted code (see init())
     /** The watchdog thread is started here, so that it inherits no sandbox of the caller; the result is plain data
     */
-    private:internal static hash<auto> execCall(V8::JavaScriptProgram js, hash<AsyncCallInfo> api, list<auto> args,
-            int to_ms, int heap_limit) {
+    private:internal static hash<auto> execCall(V8::JavaScriptProgram js, hash<auto> work, int to_ms,
+            int heap_limit) {
         Counter done(1);
         date deadline = now_us() + milliseconds(to_ms);
         background sub () {
@@ -408,13 +500,68 @@ public class TenantActionRunner {
         }();
         on_exit done.dec();
         try {
-            auto rv = TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, api, args);
+            auto rv = work.record
+                ? TenantActionRunner::execRecord(work)
+                : TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, work.api, work.args);
             return {"result": TenantActionRunner::plainData(rv)};
         } catch (hash<ExceptionInfo> ex) {
             if (js.isTerminated()) {
                 return {"terminated": True, "over_heap": js.isOverHeap()};
             }
             return {"error": ex};
+        }
+    }
+
+    #! Runs a record action with the provider code; every call of the app is made in the tenant's own program
+    private:internal static auto execRecord(hash<auto> work) {
+        # the app's record functions as the catalogue registered them; no call of the app is made here
+        TypeScriptActionInterface::initApp(work.app);
+        hash<AppInfo> appinfo = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(work.app);
+        hash<auto> req = work.record;
+        int max = work.max_records;
+
+        _ts_tenant_calls = work.calls;
+        on_exit remove _ts_tenant_calls;
+
+        hash<string, hash<string, hash<auto>>> ofmap;
+        hash<DataProviderInfo> info = TypeScriptActionRecordBasedDataProvider::getDataProviderInfo(appinfo, \ofmap);
+        TenantRecordProvider prov(req.table, info, new ActionFunctionContext(work.app, "tables", work.pool), work.dctx);
+        switch (req.code) {
+            case DPAT_FIND: {
+                list<hash<auto>> rv = ();
+                AbstractDataProviderRecordIterator i = prov.tenantSearch(req.where, req.options);
+                while (i.next()) {
+                    if (rv.size() == max) {
+                        throw ErrorLimit, sprintf("the search returns more than %d records", max),
+                            {"limit": "records", "max": max};
+                    }
+                    rv += i.getValue();
+                }
+                return rv;
+            }
+            case DPAT_FIND_SINGLE: {
+                AbstractDataProviderRecordIterator i = prov.tenantSearch(req.where, req.options);
+                return i.next() ? i.getValue() : NOTHING;
+            }
+            case DPAT_CREATE: {
+                TenantActionRunner::checkRecordCount(req.records, max);
+                return map prov.createRecord($1, req.options), req.records;
+            }
+            case DPAT_UPSERT: {
+                TenantActionRunner::checkRecordCount(req.records, max);
+                return map prov.upsertRecord($1, req.options), req.records;
+            }
+            case DPAT_UPDATE:
+                return prov.updateRecords(req.set, req.where, req.options);
+            case DPAT_DELETE:
+                return prov.deleteRecords(req.where, req.options);
+        }
+    }
+
+    private:internal static checkRecordCount(list<auto> records, int max) {
+        if (records.size() > max) {
+            throw ErrorLimit, sprintf("the request has %d records; the limit is %d", records.size(), max),
+                {"limit": "records", "max": max};
         }
     }
 
@@ -630,6 +777,40 @@ public class TenantActionRunner {
             return (host,);
         }
         return map $1.address, getaddrinfo(host) ?? ();
+    }
+}
+
+#! The record provider of a tenant's record action (module-internal): the tenant's own context, the direct path only
+class TenantRecordProvider inherits TypeScriptActionRecordBasedDataProvider {
+    private:internal {
+        hash<DataContextInfo> dctx;
+    }
+
+    constructor(string table, hash<DataProviderInfo> info, ActionFunctionContext fctx, hash<DataContextInfo> dctx)
+            : TypeScriptActionRecordBasedDataProvider(table, info, NOTHING, fctx) {
+        self.dctx = dctx;
+    }
+
+    #! The tenant's own connection options and options, never a connection of the host
+    *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
+        hash<DataContextInfo> rv = dctx;
+        rv.opts = dctx.opts + action_opts;
+        return rv;
+    }
+
+    #! Searches with the app's search function in the tenant's program; no pool or server is used
+    AbstractDataProviderRecordIterator tenantSearch(*hash<auto> where_cond, *hash<auto> search_options) {
+        if (!search_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support searching", getName());
+        }
+        search_options.table = name;
+        hash<DataContextInfo> cctx = getCallContextInfo({"table": name});
+        *hash<DataProviderExpression> exp = cast<*hash<DataProviderExpression>>(getSearchExpression(where_cond,
+            search_options));
+        *code get_records = getAsyncValue(search_records, cctx, info.expressions ? convertExpression(exp) : NOTHING,
+            info.expressions ? search_options : NOTHING);
+        return new TypeScriptBulkRecordInterface(1000, self, get_records, cctx, info.expressions ? NOTHING : exp,
+            search_options).getRecordIterator();
     }
 }
 }

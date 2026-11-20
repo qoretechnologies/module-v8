@@ -49,5 +49,82 @@ exports.actionsCatalogue = {
         api.registerAction(action("spin", async () => { for (;;) {} }));
         // an error whose stack must not reach the caller
         api.registerAction(action("throw", async (obj, opts, ctx) => { throw new Error('boom'); }));
+
+        // a record-based app: the table "items" is kept in the program's globals, so each tenant has its own
+        const items = () => (globalThis.__items = globalThis.__items || []);
+        const checkTable = (opts) => { if (opts.table !== 'items') { throw new Error('unknown table ' + opts.table); } };
+        // the search expressions of the app: "&&" and "=="
+        const argValue = (a, r) => (a && a.field !== undefined) ? r[a.field] : (a ? a.value : undefined);
+        const matches = (exp, r) => {
+            if (!exp) { return true; }
+            if (exp.exp === '&&') { return exp.args.every((e) => matches(e, r)); }
+            if (exp.exp === '==') { return argValue(exp.args[0], r) == argValue(exp.args[1], r); }
+            throw new Error('unknown expression ' + exp.exp);
+        };
+        const opDef = (name, args, varargs) => ({
+            "type": "operator", "subtype": "logic-operator", "name": name, "display_name": name, "short_desc": name,
+            "desc": name, "symbol": name, "roles": ["search"], "args": args, "varargs": varargs, "return_type": "bool",
+        });
+        api.registerApp({
+            "name": "tenant-records",
+            "display_name": "Tenant Records",
+            "short_desc": "Tenant records",
+            "desc": "Tenant records",
+            "groups": ["Other"],
+            "logo": "PHN2Zy8+",
+            "logo_file_name": "test.svg",
+            "logo_mime_type": "image/svg+xml",
+            "get_table_list": async (ctx) => ["items"],
+            "get_record_type": async (ctx, table) => ({
+                "type": "hash",
+                "fields": {
+                    "id": {"type": "int", "display_name": "ID", "short_desc": "ID", "desc": "ID", "example_value": 1, "required": true},
+                    "name": {"type": "string", "display_name": "Name", "short_desc": "Name", "desc": "Name", "example_value": "a", "required": true},
+                    "url": {"type": "*string", "display_name": "URL", "short_desc": "URL", "desc": "the connection URL of the tenant", "example_value": "x", "required": false},
+                },
+            }),
+            "expressions": {
+                "&&": opDef("&&", [{"type_code": "any", "type": "bool"}], true),
+                "==": opDef("==", [{"type_code": "any", "type": "any"}, {"type_code": "any", "type": "any"}], false),
+            },
+            "search_records": async (ctx, where, opts) => {
+                checkTable(opts);
+                let done = false;
+                const found = items().filter((r) => matches(where, r));
+                return (ctx2, block_size) => {
+                    if (done || !found.length) { return; }
+                    done = true;
+                    return {
+                        "id": found.map((r) => r.id),
+                        "name": found.map((r) => r.name),
+                        "url": found.map((r) => ctx && ctx.conn_opts ? ctx.conn_opts.url : null),
+                    };
+                };
+            },
+            "create_records": async (ctx, recs, opts) => {
+                checkTable(opts);
+                for (let i = 0; i < recs.id.length; ++i) { items().push({"id": recs.id[i], "name": recs.name[i]}); }
+            },
+            "update_records": async (ctx, set, where, opts) => {
+                checkTable(opts);
+                items().forEach((r) => Object.assign(r, set));
+                return items().length;
+            },
+            "upsert_records": async (ctx, recs, opts) => {
+                checkTable(opts);
+                const rv = [];
+                for (let i = 0; i < recs.id.length; ++i) {
+                    const r = items().find((x) => x.id === recs.id[i]);
+                    if (r) { r.name = recs.name[i]; rv.push('updated'); } else { items().push({"id": recs.id[i], "name": recs.name[i]}); rv.push('inserted'); }
+                }
+                return rv;
+            },
+            "delete_records": async (ctx, where, opts) => {
+                checkTable(opts);
+                const n = items().length;
+                globalThis.__items = [];
+                return n;
+            },
+        });
     },
 };

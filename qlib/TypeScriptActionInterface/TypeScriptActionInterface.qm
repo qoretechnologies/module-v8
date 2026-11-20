@@ -172,8 +172,8 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
 
     @section typescriptactioninterface_tenants Running Actions for Tenants
 
-    @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner" runs the API actions of the module's apps
-    for callers that a sandbox governs (tenants), with plain data only (qoretechnologies/qore#6845):
+    @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner" runs the API and record actions of the
+    module's apps for callers that a sandbox governs (tenants), with plain data only (qoretechnologies/qore#6845):
     - the caller gives a @ref TypeScriptActionInterface::TsTenantContext "TsTenantContext": the tenant (the isolation
       key of the call; required), its own resolved connection options, and the action's options and time limit; it
       never gives a Program, a connection or a provider object
@@ -195,8 +195,8 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
 /** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes
 
     @section typescriptactioninterfaceupcoming Upcoming release
-    - @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner": the API actions of the apps for
-      tenants that a sandbox governs, in restricted programs of their own, with plain data, the network only through
+    - @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner": the API and record actions of the apps
+      for tenants that a sandbox governs, in restricted programs of their own, with plain data, the network only through
       the tenant's sandbox, and time, memory and concurrency limits; see @ref typescriptactioninterface_tenants
       (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>)
     - Action execution supports a shared in-process pool alongside the existing child-process proxy.

@@ -33,9 +33,9 @@ class TenantActionRunnerTest inherits QUnit::Test {
         #! the tenant's code: each function returns the result, or the error code and its args
         const TenantSource = "%modern
 %requires TypeScriptActionInterface
-hash<auto> sub run(hash<auto> ctx, string action, auto req) {
+hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
     try {
-        return {\"result\": TypeScriptActionInterface::TenantActionRunner::exec(cast<hash<TypeScriptActionInterface::TsTenantContext>>(ctx), \"tenant-test\", action, req)};
+        return {\"result\": TypeScriptActionInterface::TenantActionRunner::exec(cast<hash<TypeScriptActionInterface::TsTenantContext>>(ctx), app ?? \"tenant-test\", action, req)};
     } catch (hash<ExceptionInfo> ex) {
         return {\"err\": ex.err, \"desc\": ex.desc, \"arg\": ex.arg};
     }
@@ -67,6 +67,8 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req) {
         addTestCase("a host name that resolves to a private address is refused", \egressDnsTest());
         addTestCase("a redirect to a denied address is refused at the hop", \egressRedirectTest());
         addTestCase("the host's hook can only refuse more", \egressHookTest());
+        addTestCase("record actions run in the tenant's program", \recordTest());
+        addTestCase("record actions have a record limit", \recordLimitTest());
         # last: the app is refused for every tenant once an action needs a builtin that tenants do not get
         addTestCase("a builtin that tenants do not get", \unsupportedTest());
         set_return_value(main());
@@ -128,9 +130,9 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req) {
         return p;
     }
 
-    private hash<auto> run(Program p, string tenant, string action, auto req, *hash<auto> ctx) {
+    private hash<auto> run(Program p, string tenant, string action, auto req, *hash<auto> ctx, *string app) {
         return p.callFunction("run", {"tenant": tenant, "conn_opts": {"url": "https://api.example.com"}} + ctx,
-            action, req);
+            action, req, app);
     }
 
     runTest() {
@@ -223,6 +225,41 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req) {
         p = tenant(netSandbox(True));
         rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)});
         assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    private hash<auto> rec(Program p, string tenant, string action, hash<auto> req) {
+        return run(p, tenant, action, req, NOTHING, "tenant-records");
+    }
+
+    recordTest() {
+        Program p = tenant();
+        hash<auto> rv = rec(p, "r1", "create", {"table": "items", "records": ({"id": 1, "name": "a"}, {"id": 2,
+            "name": "b"})});
+        assertNothing(rv.err, sprintf("%y", rv));
+        assertEq(({"id": 1, "name": "a"}, {"id": 2, "name": "b"}), rv.result);
+        # the app filters with the converted search expression; the tenant's own connection options
+        rv = rec(p, "r1", "search", {"table": "items", "where": {"name": "b"}});
+        assertEq(({"id": 2, "name": "b", "url": "https://api.example.com"},), rv.result, sprintf("%y", rv));
+        assertEq({"id": 1, "name": "a", "url": "https://api.example.com"},
+            rec(p, "r1", "search-single", {"table": "items", "where": {"id": 1}}).result);
+        assertEq(("updated", "inserted"), rec(p, "r1", "upsert", {"table": "items", "records": ({"id": 2,
+            "name": "c"}, {"id": 3, "name": "d"})}).result);
+        assertEq(3, rec(p, "r1", "update", {"table": "items", "set": {"name": "x"}}).result);
+        # another tenant does not see the records of r1
+        assertEq((), rec(p, "r2", "search", {"table": "items"}).result);
+        assertEq(3, rec(p, "r1", "delete", {"table": "items"}).result);
+        assertEq((), rec(p, "r1", "search", {"table": "items"}).result);
+        # an invalid request
+        assertEq("TS-TENANT-ERROR", rec(p, "r1", "search", {}).err);
+        assertEq("TS-TENANT-ACTION-ERROR", rec(p, "r1", "search", {"table": "other"}).err);
+    }
+
+    recordLimitTest() {
+        Program p = tenant();
+        list<hash<auto>> recs = map ("id": $1, "name": "n"), xrange(10001);
+        hash<auto> rv = rec(p, "r3", "create", {"table": "items", "records": recs});
+        assertEq("TS-TENANT-LIMIT", rv.err, sprintf("%y", rv.err));
+        assertEq({"limit": "records", "max": 10000}, rv.arg);
     }
 
     timeoutTest() {
