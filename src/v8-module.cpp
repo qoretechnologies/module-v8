@@ -25,6 +25,7 @@
 #include "QC_TypeScriptProgram.h"
 #include "QC_JavaScriptObject.h"
 #include "QC_JavaScriptPromise.h"
+#include "QC_SandboxCapture.h"
 #include "QoreV8Program.h"
 #include "QoreV8Environment.h"
 
@@ -210,6 +211,7 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
         V8NS->addSystemClass(initTypeScriptProgramClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptObjectClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptPromiseClass(*V8NS));
+        V8NS->addSystemClass(initSandboxCaptureClass(*V8NS));
 #ifdef DEBUG
         V8NS->addBuiltinVariant("dbg_env_write_hook", f_dbg_env_write_hook, QCF_NO_FLAGS,
             QDOM_PROCESS | QDOM_UNCONTROLLED_API, nothingTypeInfo, 1, codeOrNothingTypeInfo, QORE_PARAM_NO_ARG,

@@ -84,6 +84,19 @@ public class JavaScriptProgramPool {
         }
     }
 
+    #! Maps a program that runs the pool's code but that another component created to the pool
+    /** For the restricted programs of tenants (TenantActionRunner, qoretechnologies/qore#6845): the apps that the
+        program registers are mapped to the pool, as those of the pool's own programs are
+    */
+    mapProgram(JavaScriptProgram pgm) {
+        pmap{pgm.uniqueHash()} = self;
+    }
+
+    #! Removes the mapping of a program made with mapProgram(), by the program's unique hash
+    static unmapProgram(string id) {
+        remove pmap{id};
+    }
+
     static bool isFirst(JavaScriptProgram pgm) {
         return firstmap{pgm.uniqueHash()} ?? False;
     }

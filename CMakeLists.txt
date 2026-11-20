@@ -135,6 +135,7 @@ set(QPP_SRC
     src/QC_TypeScriptProgram.qpp
     src/QC_JavaScriptObject.qpp
     src/QC_JavaScriptPromise.qpp
+    src/QC_SandboxCapture.qpp
 )
 
 set(CPP_SRC

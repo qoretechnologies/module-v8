@@ -1,0 +1,238 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%no-child-restrictions
+
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires HttpServer
+
+%exec-class TenantActionRunnerTest
+
+#! the local server of the egress tests
+class EgressHandler inherits AbstractHttpRequestHandler {
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        if (hdr.path =~ /redirect-private/) {
+            return makeResponse(302, "", {"Location": "http://10.255.255.1/secret"});
+        }
+        return makeResponse(200, "hello", {"Content-Type": MimeTypeText});
+    }
+}
+
+#! TenantActionRunner runs TypeScript actions for tenants (qoretechnologies/qore#6845)
+/** A sandboxed tenant runs an action with plain data; the action runs in a restricted program of the tenant's own,
+    built and sealed before the call, which reaches the network only through the bridge under the tenant's sandbox.
+*/
+class TenantActionRunnerTest inherits QUnit::Test {
+    public {
+        #! the tenant's code: each function returns the result, or the error code and its args
+        const TenantSource = "%modern
+%requires TypeScriptActionInterface
+hash<auto> sub run(hash<auto> ctx, string action, auto req) {
+    try {
+        return {\"result\": TypeScriptActionInterface::TenantActionRunner::exec(cast<hash<TypeScriptActionInterface::TsTenantContext>>(ctx), \"tenant-test\", action, req)};
+    } catch (hash<ExceptionInfo> ex) {
+        return {\"err\": ex.err, \"desc\": ex.desc, \"arg\": ex.arg};
+    }
+}
+";
+
+        const App = "tenant-test";
+    }
+
+    private {
+        static JavaScriptProgramPool catalogue_pool;
+
+        #! the calls of the host's egress meter
+        static list<hash<auto>> metered = ();
+        static Mutex meter_lock();
+
+        HttpServer server;
+        int port;
+    }
+
+    constructor() : QUnit::Test("TenantActionRunner", "1.0", \ARGV) {
+        addTestCase("a sandboxed tenant runs an action with plain data", \runTest());
+        addTestCase("invalid contexts and unknown actions", \contextTest());
+        addTestCase("tenants do not share programs", \isolationTest());
+        addTestCase("errors carry no stack", \errorTest());
+        addTestCase("the time limit", \timeoutTest());
+        addTestCase("a request through the tenant's own sandbox", \egressAllowedTest());
+        addTestCase("a private address is refused (fetch and axios)", \egressPrivateTest());
+        addTestCase("a host name that resolves to a private address is refused", \egressDnsTest());
+        addTestCase("a redirect to a denied address is refused at the hop", \egressRedirectTest());
+        addTestCase("the host's hook can only refuse more", \egressHookTest());
+        # last: the app is refused for every tenant once an action needs a builtin that tenants do not get
+        addTestCase("a builtin that tenants do not get", \unsupportedTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        string script = get_script_dir() + "/tenant-catalogue.js";
+        # the app is registered in the catalog as the module registers apps (a pool of the catalogue)
+        # the catalogue only registers here; the runner's programs get the module's full default code
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\n" + ReadOnlyFile::readTextFile(script), script,
+            sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            });
+        *list<string> roots = (get_script_dir(),);
+        if (*string nm = ENV.QORE_V8_TEST_NODE_MODULES) {
+            roots += nm;
+        }
+        TenantActionRunner::setCatalogue(script, roots, catalogue_pool);
+
+        # the host's hook refuses any path with "hook-deny"; the meter records the calls
+        TenantActionRunner::setEgressPolicy(bool sub (string tenant, *string connection, hash<UrlInfo> url,
+                list<string> ips) {
+            return (url.path ?? "") !~ /hook-deny/;
+        });
+        TenantActionRunner::setEgressMeter(sub (string tenant, *string connection, int bytes_out, int bytes_in) {
+            AutoLock al(meter_lock);
+            metered += {"tenant": tenant, "connection": connection, "out": bytes_out, "in": bytes_in};
+        });
+
+        server = new HttpServer(<HttpServerOptionInfo>{});
+        server.setDefaultHandler("egress", new EgressHandler());
+        port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
+    }
+
+    globalTearDown() {
+        if (server) {
+            server.stop();
+        }
+    }
+
+    #! a sandbox that allows the network, optionally with a denied range
+    private SandboxManager netSandbox(*bool block_private, *string denied_range) {
+        SandboxManager sm();
+        sm.setNetworkDefaultPolicy(True);
+        if (block_private) {
+            sm.blockPrivateNetworks();
+        }
+        if (denied_range) {
+            sm.addNetworkDeniedIPRange(denied_range);
+        }
+        return sm;
+    }
+
+    #! returns a tenant's Program, governed by a sandbox
+    private Program tenant(*SandboxManager sm) {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "tenant");
+        p.setSandboxManager(sm ?? new SandboxManager());
+        return p;
+    }
+
+    private hash<auto> run(Program p, string tenant, string action, auto req, *hash<auto> ctx) {
+        return p.callFunction("run", {"tenant": tenant, "conn_opts": {"url": "https://api.example.com"}} + ctx,
+            action, req);
+    }
+
+    runTest() {
+        Program p = tenant();
+        hash<auto> rv = run(p, "a", "echo", {"x": 1});
+        assertEq({"req": {"x": 1}, "url": "https://api.example.com"}, rv.result, sprintf("%y", rv));
+    }
+
+    contextTest() {
+        Program p = tenant();
+        assertEq("TS-TENANT-ERROR", run(p, "", "echo", 1).err);
+        assertEq("TS-TENANT-ERROR", run(p, "a", "no-such-action", 1).err);
+    }
+
+    isolationTest() {
+        Program p = tenant();
+        assertEq({"v": 42}, run(p, "a", "set-global", {"v": 42}).result);
+        assertEq({"v": 42}, run(p, "a", "get-global", NOTHING).result);
+        # another tenant's program does not have tenant a's global
+        assertEq({"v": NOTHING}, run(p, "b", "get-global", NOTHING).result);
+    }
+
+    unsupportedTest() {
+        Program p = tenant();
+        hash<auto> info = TenantActionRunner::getActionInfo(<TsTenantContext>{"tenant": "a"}, App, "echo");
+        assertTrue(info.tenant_available);
+        # fs is a builtin of the load phase: the program is sealed before the tenant's first call, so it is refused
+        hash<auto> rv = run(p, "a", "need-fs", NOTHING);
+        assertEq("TS-TENANT-APP-UNSUPPORTED", rv.err, sprintf("%y", rv));
+        assertEq({"app": App, "builtin": "fs"}, rv.arg);
+        # the app is now marked unavailable for tenants, and refused for every tenant
+        info = TenantActionRunner::getActionInfo(<TsTenantContext>{"tenant": "a"}, App, "echo");
+        assertFalse(info.tenant_available);
+        assertEq("fs", info.tenant_unsupported_builtin);
+        assertEq("TS-TENANT-APP-UNSUPPORTED", run(p, "z", "echo", NOTHING).err);
+    }
+
+    errorTest() {
+        Program p = tenant();
+        hash<auto> rv = run(p, "c", "throw", NOTHING);
+        assertEq("TS-TENANT-ACTION-ERROR", rv.err, sprintf("%y", rv));
+        assertEq("boom", rv.desc);
+        assertNothing(rv.arg);
+    }
+
+    egressAllowedTest() {
+        Program p = tenant(netSandbox());
+        hash<auto> rv = run(p, "e", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)},
+            {"connection": "conn-e"});
+        assertEq({"status": 200, "body": "hello"}, rv.result, sprintf("%y", rv));
+        # the meter got the request, with no credentials
+        AutoLock al(meter_lock);
+        *hash<auto> m = (select metered, $1.tenant == "e")[0];
+        assertEq("conn-e", m.connection);
+        assertEq(5, m."in");
+    }
+
+    egressPrivateTest() {
+        Program p = tenant(netSandbox(True));
+        string url = sprintf("http://127.0.0.1:%d/hello", port);
+        hash<auto> rv = run(p, "f", "fetch-url", {"url": url});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+        rv = run(p, "f", "axios-url", {"url": url});
+        if (rv.result.skip) {
+            testSkip("axios is not available (QORE_V8_TEST_NODE_MODULES)");
+        }
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    egressDnsTest() {
+        Program p = tenant(netSandbox(True));
+        # localhost resolves to a loopback address: the address connected to is checked
+        hash<auto> rv = run(p, "g", "fetch-url", {"url": sprintf("http://localhost:%d/hello", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    egressRedirectTest() {
+        # the first hop (127.0.0.1) is allowed, the redirect to 10.255.255.1 is not
+        Program p = tenant(netSandbox(False, "10.0.0.0/8"));
+        hash<auto> rv = run(p, "h", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/redirect-private", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    egressHookTest() {
+        # the sandbox allows it; the hook refuses it
+        Program p = tenant(netSandbox());
+        hash<auto> rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hook-deny", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+        # the hook allows it; the sandbox refuses it
+        p = tenant(netSandbox(True));
+        rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    timeoutTest() {
+        Program p = tenant();
+        # the tenant's program is built by its first call; the time limit is timed on a call that finds it built
+        assertEq({"req": NOTHING, "url": "https://api.example.com"}, run(p, "d", "echo", NOTHING).result);
+        date start = now_us();
+        hash<auto> rv = run(p, "d", "spin", NOTHING, {"timeout": 500});
+        assertEq("TS-TENANT-TIMEOUT", rv.err, sprintf("%y", rv));
+        assertEq({"timeout_ms": 500}, rv.arg);
+        assertLt(10s, now_us() - start);
+    }
+}

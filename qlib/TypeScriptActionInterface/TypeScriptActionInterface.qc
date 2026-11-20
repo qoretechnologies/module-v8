@@ -126,6 +126,12 @@ const RestGetAllowedValuesRequiredKeys = {
 
 #! Interface class
 public class TypeScriptActionInterface {
+    private:internal {
+        #! the directory of each app's implementation, recorded when the app is registered from the index; restricted
+        #! programs for tenants load an app from it (TenantActionRunner, qoretechnologies/qore#6845)
+        static hash<string, string> app_load_paths;
+    }
+
     public {
         static hash<string, code> Api = TypeScriptActionInterface::getInterface();
 
@@ -876,6 +882,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                 "cwd": dirname(apps_dir),
                 "pending_path": apps_dir + DirSep + dname,
             };
+            app_load_paths{name} = apps_dir + DirSep + dname;
             appcasemap{appname} = name;
             ConnectionSchemeCache::registerPendingScheme(info.scheme, sub () {
                 TypeScriptActionInterface::initApp(name);
@@ -4347,6 +4354,15 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         int protocol = TypeScriptActionInterface::getCatalogueProtocolVersion();
         @endcode
     */
+    #! Returns the directory of the implementation of an app registered from the index, if any
+    /** @param app the name of the app
+
+        @return the directory, or @ref nothing if the app was not registered from the index
+    */
+    static *string getAppLoadPath(string app) {
+        return app_load_paths{app};
+    }
+
     static int getCatalogueProtocolVersion() {
         return CatalogueProtocolVersion;
     }

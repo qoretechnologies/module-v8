@@ -212,6 +212,15 @@ const _qoreR = (() => {
                 if (up === d) break;
                 d = up;
             }
+            // a root that is a node_modules directory serves bare names, as NODE_PATH does
+            if (!found) {
+                for (const r of roots) {
+                    if (path.basename(r) === 'node_modules') {
+                        const c = tryFile(path.join(r, id));
+                        if (c) { found = c; break; }
+                    }
+                }
+            }
         }
         if (!found) {
             const err = new Error(`Cannot find module '${id}'`);

@@ -201,6 +201,11 @@ function setenv(vr, value) {
             + DefaultCode;
     }
 
+    #! Returns the master pool, if any
+    static *JavaScriptProgramPool getMaster() {
+        return master;
+    }
+
     #! Creates a pool and returns the pool if created
     static *JavaScriptProgramPool createPool(string path, string cwd, code init) {
         try {
