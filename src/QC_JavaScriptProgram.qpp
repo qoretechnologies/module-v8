@@ -104,7 +104,8 @@ nothing JavaScriptProgram::terminate() {
 
 //! Requests a check of the program's heap; can be called from any thread
 /** The check is made in the thread that runs the program's code, at its next interrupt point: if the heap in use
-    exceeds \a cap bytes, the code is terminated as by terminate(), and isOverHeap() returns @ref True
+    exceeds \a cap bytes also after a garbage collection (the cap applies to live data, not to garbage that the
+    collector did not reclaim yet), the code is terminated as by terminate(), and isOverHeap() returns @ref True
 
     @param cap the heap cap in bytes
 
@@ -112,6 +113,20 @@ nothing JavaScriptProgram::terminate() {
 */
 nothing JavaScriptProgram::requestHeapCheck(int cap) {
     jsp->requestHeapCheck(cap);
+}
+
+//! Checks the program's heap now, in the calling thread, and returns @ref True if it was over the cap
+/** As requestHeapCheck(), but synchronous: the check waits until no code of the program runs.  A heap over \a cap
+    bytes after a garbage collection terminates the program, as by terminate().
+
+    @param cap the heap cap in bytes
+
+    @return @ref True if the heap was over the cap, and the program was terminated
+
+    @since v8 2.2
+*/
+bool JavaScriptProgram::checkHeap(int cap) {
+    return jsp->checkHeap(xsink, cap);
 }
 
 //! Returns @ref True if the program was terminated
@@ -126,6 +141,13 @@ bool JavaScriptProgram::isTerminated() [flags=CONSTANT] {
 */
 bool JavaScriptProgram::isOverHeap() [flags=CONSTANT] {
     return jsp->isOverHeap();
+}
+
+//! Returns the heap in use, after a garbage collection, that a heap check found over the cap, or 0
+/** @since v8 2.2
+*/
+int JavaScriptProgram::getOverHeapSize() [flags=CONSTANT] {
+    return jsp->getOverHeapSize();
 }
 
 //! Returns @ref True if the program is restricted

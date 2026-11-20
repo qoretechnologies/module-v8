@@ -83,6 +83,9 @@ public:
     //! Requests a check of the program's heap from any thread: if it exceeds the cap, the code is terminated
     DLLLOCAL void requestHeapCheck(int64 cap);
 
+    //! Checks the heap of the program now, when no code of it runs; returns true if it was over the cap
+    DLLLOCAL bool checkHeap(ExceptionSink* xsink, int64 cap);
+
     //! Returns true if the program was terminated (terminate(), or a heap check that found the cap exceeded)
     DLLLOCAL bool isTerminated() const {
         return terminated.load();
@@ -99,8 +102,14 @@ public:
     }
 
     //! Marks the program as having exceeded its heap cap
-    DLLLOCAL void setOverHeap() {
+    DLLLOCAL void setOverHeap(int64 used) {
+        over_heap_size.store(used);
         over_heap.store(true);
+    }
+
+    //! Returns the heap in use that a heap check found over the cap, after a collection, or 0
+    DLLLOCAL int64 getOverHeapSize() const {
+        return over_heap_size.load();
     }
 
     //! Returns the host bridge of a restricted program, or nullptr
@@ -391,6 +400,7 @@ protected:
     std::atomic<bool> terminated{false};
     //! set when a heap check found the cap exceeded
     std::atomic<bool> over_heap{false};
+    std::atomic<int64> over_heap_size{0};
     //! the heap cap of the pending heap check, in bytes
     std::atomic<int64> heap_check_cap{0};
 

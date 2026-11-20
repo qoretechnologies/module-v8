@@ -55,6 +55,12 @@ exports.t = {
     ownPath: () => path.basename(__filename),
     spin: () => { for (;;) {} },
     grow: () => { const a = []; for (;;) { a.push(new Array(100000).fill(1)); } },
+    // about 96MB of heap that is garbage at once: collected only by a major collection
+    garbage: () => { let a = new Array(12000000).fill(1.5); const n = a.length; a = null; return n; },
+    // keeps about 96MB of live data
+    keep: () => { globalThis.__kept = new Array(12000000).fill(1.5); return globalThis.__kept.length; },
+    // runs JavaScript, so that a pending interrupt (a heap check) is served
+    busy: () => { let x = 0; for (let i = 0; i < 20000000; ++i) { x += i; } return x; },
     fetchJson: () => fetch('https://api.example.com/v1/items?x=1', {method: 'POST', headers: {'X-Test': 'a'}, body: JSON.stringify({q: 1})}).then((r) => r.json().then((j) => r.status + ':' + JSON.stringify(j))),
     fetchError: () => fetch('http://10.0.0.1/').then(() => 'fetched', (e) => 'rejected: ' + e.message),
     httpGet: () => new Promise((resolve) => { const https = require('https'); https.get('https://api.example.com/v2/thing', {headers: {Accept: 'text/plain'}}, (res) => { let d = ''; res.on('data', (c) => d += c); res.on('end', () => resolve(res.statusCode + ':' + res.headers['content-type'] + ':' + d)); }).on('error', (e) => resolve('error: ' + e.message)); }),
@@ -112,6 +118,7 @@ exports.t = {
         addTestCase("nothing reachable leads to Node's loader or the real process", \walkTest());
         addTestCase("a call is terminated from another thread", \terminateTest());
         addTestCase("a heap check terminates a call over its cap", \heapTest());
+        addTestCase("a heap check counts live data, not garbage", \heapGarbageTest());
         set_return_value(main());
     }
 
@@ -321,6 +328,25 @@ exports.t = {
         assertThrows("JAVASCRIPT-EXCEPTION", \call(), (p, "grow"));
         assertTrue(p.isOverHeap());
         assertTrue(p.isTerminated());
+    }
+
+    heapGarbageTest() {
+        # garbage over the cap: the check collects it first, and the program goes on
+        V8::JavaScriptProgram p = restricted();
+        p.seal();
+        assertEq(12000000, call(p, "garbage"));
+        assertFalse(p.checkHeap(64 * 1024 * 1024));
+        assertFalse(p.isOverHeap());
+        assertFalse(p.isTerminated());
+        assertEq(199999990000000, call(p, "busy"));
+        # live data over the cap: the program is terminated, and the size after the collection is given
+        V8::JavaScriptProgram q = restricted();
+        q.seal();
+        assertEq(12000000, call(q, "keep"));
+        assertTrue(q.checkHeap(64 * 1024 * 1024));
+        assertTrue(q.isOverHeap());
+        assertTrue(q.isTerminated());
+        assertGt(64 * 1024 * 1024, q.getOverHeapSize());
     }
 
     unrestrictedTest() {

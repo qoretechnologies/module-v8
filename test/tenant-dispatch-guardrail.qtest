@@ -52,6 +52,10 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
                 "*hash<auto> ctx = call_function(resolver, conn);": "the host's tenant context resolver",
                 "hash<auto> rv = call_function(exec_call, pgm.pgm, work, to_ms, lim.heap_limit);": "the trusted call",
                 "return call_function(build, app);": "the trusted build",
+                "hash<auto> pgm = call_function(build, app);": "the trusted build of the compatibility probe",
+                "TenantEventSource src = call_function(events_call, ctx.tenant, info.app, pgm, lim.max_queued_events,":
+                    "the trusted start of an event source",
+                "call_function(stop_call, src);": "the trusted stop of an event source",
                 "JavaScriptObject catalogue = pgm.getGlobal().exports.actionsCatalogue;": "the load of a tenant's program",
                 "call_function(egress_meter, call.tenant, call.connection, bytes_out, bytes_in);": "the host's meter",
                 "if (!call_function(egress_policy, call.tenant, call.connection, ui, ips)) {": "the host's hook",

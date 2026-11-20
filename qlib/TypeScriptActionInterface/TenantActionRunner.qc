@@ -64,6 +64,14 @@ public hashdecl TsTenantLimits {
 
     #! the maximum number of records that a record action reads or writes in a call
     int max_records = 10000;
+
+    #! the maximum number of event sources that a tenant runs at a time
+    int max_event_sources = 4;
+
+    #! the maximum number of events that an event source queues until they are polled
+    /** On overflow the source is stopped and the next poll raises \c TS-TENANT-LIMIT: events are never dropped
+    */
+    int max_queued_events = 1000;
 }
 
 #! Runs the TypeScript actions of the module's apps for callers that a sandbox governs (qoretechnologies/qore#6845)
@@ -115,6 +123,18 @@ public class TenantActionRunner {
         #! runs a call in a tenant's program as trusted code; created when the module is initialized
         static code exec_call;
 
+        #! starts a tenant's event source as trusted code; created when the module is initialized
+        static code events_call;
+
+        #! stops a tenant's event source as trusted code (its program is terminated, its thread can be cancelled);
+        #! created when the module is initialized
+        static code stop_call;
+
+
+
+        #! the event sources, by subscription ID
+        static hash<string, TenantEventSource> sources = {};
+
         #! guards the state below
         static Mutex lock();
 
@@ -162,6 +182,13 @@ public class TenantActionRunner {
         # a call runs as trusted code too: the program is the module's, and the caller's sandbox governs only the
         # requests that the program makes through the bridge (captured when the call enters)
         exec_call = SandboxManager::createTrustedBuildCall(\TenantActionRunner::execCall());
+        # an event source's thread is started as trusted code too, so that it inherits no sandbox of the caller
+        events_call = SandboxManager::createTrustedBuildCall(\TenantActionRunner::startEventThread());
+        stop_call = SandboxManager::createTrustedBuildCall(\TenantActionRunner::stopSource());
+        # every event source stops before the library waits for the threads of the process when it ends: an event
+        # function runs until it is stopped, and its thread would keep the process from ending
+        register_exit_hook(\TenantActionRunner::exitHook());
+
         # the app directories of the catalogue's distribution, read once, as trusted code
         if ((*string script = getenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT")).val()) {
             TenantActionRunner::readAppDirs(script);
@@ -493,6 +520,299 @@ public class TenantActionRunner {
         return rv;
     }
 
+    #! Starts an event source of a tenant: the app's event function, which runs until it is stopped
+    /** The function runs in a restricted program of the tenant's own, held for the subscription, on a thread of the
+        runner, with no time limit and with the tenant's heap cap; its requests go through the bridge under the
+        calling code's sandbox, captured here.  Its events are queued until they are polled with pollEvents().
+
+        CPU: each program has its own isolate, and the function runs on its own thread; an event source counts
+        toward the tenant's limit of concurrent calls (\c max_concurrent) while it runs, so that a tenant's spinning
+        functions occupy at most that many threads, and a tenant's functions never hold an isolate of another
+        tenant's programs.
+
+        @param ctx the context of the subscription; the subscription belongs to its tenant
+        @param app the app
+        @param action the event action
+        @param options the options of the event function
+        @param checkpoint the state that the host stored last, which the function's \c checkpoint.get() returns
+
+        @return the subscription ID
+
+        @throw TS-TENANT-ERROR the context is invalid, the action is unknown or not an event action of a function
+        (webhook events are not available to tenants)
+        @throw TS-TENANT-LIMIT the tenant runs its limit of event sources or of concurrent calls
+        @throw TS-TENANT-APP-UNSUPPORTED the app needs a builtin of Node.js that tenants do not get
+    */
+    static string startEvents(hash<TsTenantContext> ctx, string app, string action, *hash<auto> options,
+            auto checkpoint) {
+        TenantActionRunner::checkContext(ctx);
+        hash<auto> info = TenantActionRunner::getAction(app, action);
+        if (info.action_code != DPAT_EVENT) {
+            throw ErrorContext, sprintf("action %y of app %y is not an event action", action, app);
+        }
+        V8::SandboxCapture capture();
+        TenantActionRunner::checkCallerDomain(capture, ctx);
+        string key = sprintf("app-%s-%s-event_function", info.app, info.action);
+        hash<TsTenantLimits> lim;
+        {
+            AutoLock al(lock);
+            if (*string builtin = unsupported{info.app}) {
+                throw ErrorUnsupported, sprintf("app %y cannot run for tenants: it needs %y", info.app, builtin),
+                    {"app": info.app, "builtin": builtin};
+            }
+            lim = limits;
+            int n = (select sources.iterator(), $1.tenant == ctx.tenant).size();
+            if (n >= lim.max_event_sources) {
+                throw ErrorLimit, sprintf("the tenant runs %d event sources already, its limit", n),
+                    {"limit": "event_sources", "max": lim.max_event_sources};
+            }
+            if (running{ctx.tenant} >= lim.max_concurrent) {
+                throw ErrorLimit, sprintf("the tenant runs %d calls already, its limit", running{ctx.tenant}),
+                    {"limit": "concurrency", "max": lim.max_concurrent};
+            }
+            ++running{ctx.tenant};
+        }
+        bool started;
+        on_exit if (!started) {
+            TenantActionRunner::releaseConcurrency(ctx.tenant);
+        }
+        hash<auto> pgm = TenantActionRunner::getProgram(ctx.tenant, info.app);
+        on_exit if (!started) {
+            TenantActionRunner::releaseProgram(ctx.tenant, info.app, pgm, True);
+        }
+        if (!pgm.call_map{key}) {
+            throw ErrorContext, sprintf("action %y of app %y has no event function (webhook events are not "
+                "available to tenants)", action, app);
+        }
+        hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(key);
+        api.async_call = pgm.call_map{key};
+        api.label = sprintf("tenant events: %s", key);
+        string id = UUID::get();
+        hash<DataContextInfo> dctx = TenantActionRunner::getDataContext(ctx);
+        dctx.opts = options;
+        # the source is created in the trusted call: an object that is created while sandboxed code is on the stack
+        # carries its sandbox, and every method of the object would run under it
+        TenantEventSource src = call_function(events_call, ctx.tenant, info.app, pgm, lim.max_queued_events,
+            lim.heap_limit, checkpoint, api, dctx, {
+                "tenant": ctx.tenant,
+                "connection": ctx.connection,
+                "capture": capture,
+            });
+        {
+            AutoLock al(lock);
+            sources{id} = src;
+        }
+        started = True;
+        return id;
+    }
+
+    #! Returns the events of a subscription that are queued, oldest first
+    /** @param ctx the context of the call; the subscription must belong to its tenant
+        @param id the subscription ID
+        @param max the maximum number of events to return
+        @param wait how long to wait for an event when none is queued (none: no wait)
+
+        @return a hash with \c events (a list of plain-data events), \c running (if the function still runs) and
+        \c checkpoint, if the function set a state since the previous poll
+
+        @throw TS-TENANT-ERROR the context is invalid, or the subscription is unknown for the tenant
+        @throw TS-TENANT-LIMIT the source queued its limit of events and was stopped (once, after its events)
+        @throw TS-TENANT-ACTION-ERROR, TS-TENANT-EGRESS-DENIED, TS-TENANT-APP-UNSUPPORTED the function failed (once,
+        after its events)
+    */
+    static hash<auto> pollEvents(hash<TsTenantContext> ctx, string id, int max = 100, *timeout wait) {
+        TenantActionRunner::checkContext(ctx);
+        return TenantActionRunner::getSource(ctx, id).poll(max, wait);
+    }
+
+    #! Stops a subscription: ends the event function, waits for it, and frees its program
+    /** The function is ended whether or not it cooperates: its program is terminated, and its thread is cancelled
+        if it waits in a request of the bridge
+
+        @throw TS-TENANT-ERROR the context is invalid, or the subscription is unknown for the tenant
+    */
+    static stopEvents(hash<TsTenantContext> ctx, string id) {
+        TenantActionRunner::checkContext(ctx);
+        TenantEventSource src = TenantActionRunner::getSource(ctx, id);
+        {
+            AutoLock al(lock);
+            remove sources{id};
+        }
+        call_function(stop_call, src);
+    }
+
+    #! Stops an event source; runs as trusted code (see init())
+    private:internal static stopSource(TenantEventSource src) {
+        src.stop();
+    }
+
+    #! The exit hook of the runner: stops every event source (see init())
+    private:internal static exitHook() {
+        TenantActionRunner::shutdown();
+    }
+
+    #! Stops every event source and frees its program; called when the module is unloaded
+    static shutdown() [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("shutdown");
+        hash<string, TenantEventSource> all;
+        {
+            AutoLock al(lock);
+            all = remove sources;
+            sources = {};
+        }
+        map $1.stop(), all.iterator();
+    }
+
+
+    #! Returns the subscription of a tenant, or raises TS-TENANT-ERROR as for an unknown ID
+    private:internal static TenantEventSource getSource(hash<TsTenantContext> ctx, string id) {
+        AutoLock al(lock);
+        *TenantEventSource src = sources{id};
+        if (!src || src.tenant != ctx.tenant) {
+            throw ErrorContext, sprintf("unknown subscription %y", id);
+        }
+        return src;
+    }
+
+    #! Releases a call of a tenant's concurrency limit
+    static releaseConcurrency(string tenant) [dom=PROCESS_CONTROL] {
+        AutoLock al(lock);
+        if (!--running{tenant}) {
+            remove running{tenant};
+        }
+    }
+
+    #! Releases the program of an event source; it is discarded
+    static releaseEventProgram(string tenant, string app, hash<auto> pgm) [dom=PROCESS_CONTROL] {
+        TenantActionRunner::releaseProgram(tenant, app, pgm, True);
+    }
+
+    #! Creates an event source and starts its thread; runs as trusted code (see init())
+    private:internal static TenantEventSource startEventThread(string tenant, string app, hash<auto> pgm,
+            int max_queued, int heap_limit, auto checkpoint, hash<AsyncCallInfo> api, hash<DataContextInfo> dctx,
+            hash<auto> call) {
+        TenantEventSource src(tenant, app, pgm, max_queued, heap_limit, TenantActionRunner::plainData(checkpoint));
+        src.start(api, dctx, call);
+        return src;
+    }
+
+
+    #! Checks the isolation domain of a sandboxed caller (qoretechnologies/qore#6536)
+    private:internal static checkCallerDomain(V8::SandboxCapture capture, hash<TsTenantContext> ctx) {
+        # the tenant of a sandboxed caller is its sandbox's isolation domain: a caller with no domain, or with the
+        # domain of another tenant, is refused
+        if (capture.isSandboxed() && V8::SandboxCapture::hasIsolationDomains()) {
+            *string domain = capture.getIsolationDomain();
+            if (!domain) {
+                throw ErrorContext, "the sandbox of the calling code has no isolation domain";
+            }
+            if (domain != ctx.tenant) {
+                throw ErrorContext, "the tenant of the call is not the isolation domain of the calling code's "
+                    "sandbox";
+            }
+        }
+    }
+
+    #! Maps an exception of an event function to the defined error, as an exception hash
+    static hash<ExceptionInfo> mapError(string app, hash<ExceptionInfo> ex) [dom=PROCESS_CONTROL] {
+        try {
+            TenantActionRunner::rethrowMapped(app, ex);
+        } catch (hash<ExceptionInfo> mapped) {
+            return mapped;
+        }
+        return ex;
+    }
+
+    #! Probes which apps tenants can run; for the host, when its catalogue is built
+    /** Each app is loaded in a restricted program, in a trusted build, as for a tenant's first call: an app that
+        needs a builtin of Node.js that tenants do not get while it loads is marked unavailable for tenants
+        (getActionInfo() reports it; its calls are refused with \c TS-TENANT-APP-UNSUPPORTED), so that the host
+        knows it up front; the app's sources are also scanned for the builtins that a restricted program refuses
+        once it is sealed, which a call of the app can need
+
+        @param apps the apps to probe; if not given, every app of the catalogues
+
+        @return a hash by app: \c available (if tenants can run the app), \c builtin (the builtin that the load
+        needs, if refused), \c error (another error of the load, if any) and \c runtime_builtins (the refused
+        builtins that the app's sources use, which a call of the app can need, if any)
+
+        @throw TS-TENANT-ERROR the calling code is sandboxed
+    */
+    static hash<string, hash<auto>> probeApps(*softlist<string> apps) [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("probeApps");
+        hash<string, hash<auto>> rv = {};
+        foreach string app in (apps ?? TypeScriptActionInterface::getCatalogueAppNames()) {
+            # mixed value types: not inferred from a literal
+            hash<auto> r = {};
+            r.available = True;
+            try {
+                hash<auto> pgm = call_function(build, app);
+                JavaScriptProgramPool::unmapProgram(pgm.id);
+            } catch (hash<ExceptionInfo> ex) {
+                hash<ExceptionInfo> mapped = TenantActionRunner::mapError(app, ex);
+                r.available = False;
+                if (mapped.err == ErrorUnsupported) {
+                    r.builtin = mapped.arg.builtin;
+                } else {
+                    r.error = sprintf("%s: %s", mapped.err, mapped.desc);
+                }
+            }
+            if (*list<string> l = TenantActionRunner::scanRuntimeBuiltins(app)) {
+                r.runtime_builtins = l;
+            }
+            rv{app} = r;
+        }
+        return rv;
+    }
+
+    #! the builtins of Node.js that a sealed restricted program refuses
+    const RefusedBuiltins = ("fs", "fs/promises", "child_process", "net", "tls", "dns", "dns/promises", "dgram",
+        "cluster", "worker_threads", "vm", "v8", "inspector", "repl", "readline", "module", "wasi", "trace_events",
+        "sqlite");
+
+    #! Returns the refused builtins that the sources of an app require
+    private:internal static *list<string> scanRuntimeBuiltins(string app) {
+        *hash<auto> src = TenantActionRunner::getSource(app);
+        if (!src) {
+            return;
+        }
+        list<string> files = ();
+        if (src.master) {
+            if (*string dir = TenantActionRunner::getAppDir(app)) {
+                files = TenantActionRunner::listJsFiles(dir);
+            }
+        } else {
+            files = (src.script,);
+        }
+        hash<string, bool> found;
+        foreach string file in (files) {
+            string text = ReadOnlyFile::readTextFile(file);
+            foreach string name in (regex_extract(text, "require\\(\\s*['\"](?:node:)?([a-z_/0-9]+)['\"]\\s*\\)",
+                    RE_Global) ?? ()) {
+                if (RefusedBuiltins.contains(name)) {
+                    found{name} = True;
+                }
+            }
+        }
+        return found ? sort(keys found) : NOTHING;
+    }
+
+    #! Returns the JavaScript files under a directory, without its node_modules
+    private:internal static list<string> listJsFiles(string dir) {
+        list<string> rv = ();
+        Dir d();
+        if (!d.chdir(dir)) {
+            return rv;
+        }
+        rv += map dir + DirSep + $1, d.listFiles("\\.js$") ?? ();
+        foreach string subdir in (d.listDirs() ?? ()) {
+            if (subdir != "node_modules") {
+                rv += TenantActionRunner::listJsFiles(dir + DirSep + subdir);
+            }
+        }
+        return rv;
+    }
+
     #! Raises TS-TENANT-ERROR if the calling code is sandboxed
     private:internal static checkTrusted(string what) {
         if (SandboxManager::isSandboxed()) {
@@ -538,18 +858,7 @@ public class TenantActionRunner {
     private:internal static auto run(hash<TsTenantContext> ctx, string app, hash<auto> work) {
         # the calling code's sandbox, which governs the requests that the program makes for it
         V8::SandboxCapture capture();
-        # the tenant of a sandboxed caller is its sandbox's isolation domain (qoretechnologies/qore#6536): a caller
-        # with no domain, or with the domain of another tenant, is refused
-        if (capture.isSandboxed() && V8::SandboxCapture::hasIsolationDomains()) {
-            *string domain = capture.getIsolationDomain();
-            if (!domain) {
-                throw ErrorContext, "the sandbox of the calling code has no isolation domain";
-            }
-            if (domain != ctx.tenant) {
-                throw ErrorContext, "the tenant of the call is not the isolation domain of the calling code's "
-                    "sandbox";
-            }
-        }
+        TenantActionRunner::checkCallerDomain(capture, ctx);
         hash<TsTenantLimits> lim;
         {
             AutoLock al(lock);
@@ -774,7 +1083,8 @@ public class TenantActionRunner {
     }
 
     #! Returns a copy of a value with plain data only
-    static private:internal auto plainData(auto v) {
+    #! Returns a value as plain data: no object, closure or call reference (a pure conversion)
+    static auto plainData(auto v) {
         switch (v.typeCode()) {
             case NT_HASH: return map {$1.key: TenantActionRunner::plainData($1.value)}, v.pairIterator();
             case NT_LIST: return map TenantActionRunner::plainData($1), v;
@@ -902,12 +1212,11 @@ public class TenantActionRunner {
             # the app's action functions are captured in the program's own map; no global state is changed
             PoolCloneModeHelper clone_helper();
             JavaScriptObject catalogue = pgm.getGlobal().exports.actionsCatalogue;
-            if (load_path && catalogue.getPropertyList().contains("loadAppFromPath")) {
+            # the catalogue's methods can be on its prototype: they are called, not looked up in its own properties
+            if (load_path) {
                 catalogue.loadAppFromPath(TypeScriptActionInterface::Api, load_path);
-            } else if (catalogue.getPropertyList().contains("registerAppActions")) {
-                catalogue.registerAppActions(TypeScriptActionInterface::Api);
             } else {
-                throw ErrorContext, sprintf("the catalogue cannot load app %y", app);
+                catalogue.registerAppActions(TypeScriptActionInterface::Api);
             }
             calls = PoolCloneModeHelper::getClosures() ?? {};
         }
@@ -959,9 +1268,27 @@ public class TenantActionRunner {
             });
             hash<auto> info;
             hash<auto> resp;
+            # an event source's request can be cancelled by its stop (see TenantEventSource::stop())
+            *TenantEventSource src = call.src;
+            if (src && !src.enterRequest()) {
+                throw ErrorContext, "the event source was stopped";
+            }
             try {
                 resp = hc.send(body, method, ui.path ?? "/", headers, False, \info);
+                if (src) {
+                    src.leaveRequest();
+                }
             } catch (hash<ExceptionInfo> ex) {
+                if (src) {
+                    # the stop's cancellation request is cleared at once, before any other wait of the thread
+                    if (ex.err == "THREAD-CANCELLED") {
+                        clear_thread_cancel();
+                    }
+                    src.leaveRequest();
+                    if (ex.err == "THREAD-CANCELLED") {
+                        throw ErrorContext, "the event source was stopped";
+                    }
+                }
                 if (ex.err == "NETWORK-ACCESS-DENIED") {
                     throw ErrorEgress, "the sandbox's network policy refused the request";
                 }
@@ -1005,6 +1332,229 @@ public class TenantActionRunner {
             return (host,);
         }
         return map $1.address, getaddrinfo(host) ?? ();
+    }
+}
+
+#! An event source of a tenant (module-internal): the app's event function, run on a thread of the runner
+class TenantEventSource {
+    public {
+        string tenant;
+        string app;
+    }
+
+    private:internal {
+        hash<auto> pgm;
+        int max_queued;
+        int heap_limit;
+        auto checkpoint;
+        bool checkpoint_new = False;
+        Mutex m();
+        Condition cond();
+        list<hash<auto>> events = ();
+        bool running = False;
+        bool stop_flag = False;
+        bool in_request = False;
+        *hash<ExceptionInfo> error;
+        Counter done();
+        int tid;
+    }
+
+    constructor(string tenant, string app, hash<auto> pgm, int max_queued, int heap_limit, auto checkpoint) {
+        self.tenant = tenant;
+        self.app = app;
+        self.pgm = pgm;
+        self.max_queued = max_queued;
+        self.heap_limit = heap_limit;
+        self.checkpoint = checkpoint;
+    }
+
+    #! Starts the function's thread and its heap watchdog; called as trusted code
+    start(hash<AsyncCallInfo> api, hash<DataContextInfo> dctx, hash<auto> call) {
+        running = True;
+        done.inc();
+        V8::JavaScriptProgram js = pgm.pgm;
+        Counter started(1);
+        tid = background run(api, dctx, call, started);
+        started.waitForZero();
+        # the heap cap: there is no time limit
+        background sub () {
+            while (done.waitForZero(100ms)) {
+                js.requestHeapCheck(heap_limit);
+                if (js.isOverHeap()) {
+                    m.lock();
+                    on_exit m.unlock();
+                    if (!error) {
+                        error = TenantEventSource::heapError(app, tenant, heap_limit, js.getOverHeapSize());
+                    }
+                    break;
+                }
+            }
+        }();
+    }
+
+    private:internal run(hash<AsyncCallInfo> api, hash<DataContextInfo> dctx, hash<auto> call, Counter started) {
+        _tenant_call = call;
+        on_exit cleanup();
+        started.dec();
+        try {
+            runFunction(api, dctx, call);
+        } catch (hash<ExceptionInfo> ex) {
+            V8::JavaScriptProgram js = pgm.pgm;
+            m.lock();
+            on_exit m.unlock();
+            # a stop or an overflow ends the function itself: only another error is reported; a heap check that
+            # terminated the program is reported as the memory limit, whether or not the watchdog saw it first
+            if (!stop_flag && !error) {
+                error = js.isOverHeap()
+                    ? TenantEventSource::heapError(app, tenant, heap_limit, js.getOverHeapSize())
+                    : TenantActionRunner::mapError(app, ex);
+            }
+        }
+    }
+
+    #! The cleanup of the function's thread
+    /** A stop cancels the thread only while it waits in a request of the bridge, which clears the request itself
+        (see enterRequest()), so no cancellation request is pending here
+    */
+    private:internal cleanup() {
+        remove _tenant_call;
+        m.lock();
+        running = False;
+        cond.broadcast();
+        m.unlock();
+        TenantActionRunner::releaseConcurrency(tenant);
+        TenantActionRunner::releaseEventProgram(tenant, app, pgm);
+        done.dec();
+    }
+
+    #! Called by the bridge before a request of the function: returns False if the source is stopped
+    bool enterRequest() {
+        m.lock();
+        on_exit m.unlock();
+        if (stop_flag) {
+            return False;
+        }
+        in_request = True;
+        return True;
+    }
+
+    #! Called by the bridge after a request of the function
+    leaveRequest() {
+        m.lock();
+        on_exit m.unlock();
+        in_request = False;
+    }
+
+    #! Runs the event function; called in the thread's trusted call
+    runFunction(hash<AsyncCallInfo> api, hash<DataContextInfo> dctx, hash<auto> call) {
+        _tenant_call = call;
+        _tenant_call.src = self;
+        on_exit remove _tenant_call;
+        {
+            TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, api, (dctx,
+                sub (auto o) {
+                    emit(o);
+                },
+                bool sub () {
+                    return stop_flag;
+                },
+                {
+                    "get": auto sub () {
+                        return checkpoint;
+                    },
+                    "set": sub (auto state) {
+                        if (state instanceof JavaScriptObject) {
+                            state = cast<JavaScriptObject>(state).toData();
+                        }
+                        m.lock();
+                        on_exit m.unlock();
+                        checkpoint = TenantActionRunner::plainData(state);
+                        checkpoint_new = True;
+                        cond.broadcast();
+                    },
+                },
+            ));
+        }
+    }
+
+    #! Returns the error of an event function that exceeded the tenant's memory limit, and logs it
+    static hash<ExceptionInfo> heapError(string app, string tenant, int heap_limit, int used) {
+        TSAI::error("tenant %y: the event function of app %y used %d bytes of heap after a collection, over the cap "
+            "of %d bytes; it is stopped", tenant, app, used, heap_limit);
+        return <ExceptionInfo>{"err": TenantActionRunner::ErrorLimit,
+            "desc": "the event function exceeded the tenant's memory limit",
+            "arg": {"limit": "memory", "max": heap_limit}};
+    }
+
+    #! Queues an event; on overflow, stops the source and records the error
+    private:internal emit(auto o) {
+        if (o instanceof JavaScriptObject) {
+            o = cast<JavaScriptObject>(o).toData();
+        }
+        m.lock();
+        on_exit m.unlock();
+        if (stop_flag) {
+            return;
+        }
+        if (o.typeCode() != NT_HASH) {
+            throw "INVALID-EVENT-DATA", sprintf("an event must be an object; got %y", o.fullType());
+        }
+        if (events.size() >= max_queued) {
+            error = <ExceptionInfo>{"err": TenantActionRunner::ErrorLimit,
+                "desc": sprintf("the event source queued %d events, its limit, and was stopped", max_queued),
+                "arg": {"limit": "events", "max": max_queued}};
+            stop_flag = True;
+            V8::JavaScriptProgram js = pgm.pgm;
+            js.terminate();
+            cond.broadcast();
+            return;
+        }
+        events += TenantActionRunner::plainData(o);
+        cond.broadcast();
+    }
+
+    hash<auto> poll(int max, *timeout wait) {
+        m.lock();
+        on_exit m.unlock();
+        if (!events && !checkpoint_new && !error && running && wait) {
+            cond.wait(m, wait);
+        }
+        list<hash<auto>> rv = extract events, 0, max;
+        # the error comes after the source's events: only when none is queued
+        if (!rv && !events && error) {
+            hash<ExceptionInfo> ex = remove error;
+            throw ex.err, ex.desc, ex.arg;
+        }
+        hash<auto> h = {
+            "events": rv,
+            "running": running,
+        };
+        if (checkpoint_new) {
+            h.checkpoint = checkpoint;
+            checkpoint_new = False;
+        }
+        return h;
+    }
+
+    #! Ends the function whether or not it cooperates, and waits for its thread
+    /** A function that runs JavaScript is terminated; one that waits in a request of the bridge is cancelled, once,
+        under the lock that the request leaves under, so that the cancellation reaches only the request
+    */
+    stop() {
+        {
+            m.lock();
+            on_exit m.unlock();
+            if (!stop_flag) {
+                stop_flag = True;
+                V8::JavaScriptProgram js = pgm.pgm;
+                js.terminate();
+                if (in_request && tid) {
+                    cancel_thread(tid, "the tenant's event source was stopped");
+                }
+            }
+            cond.broadcast();
+        }
+        done.waitForZero();
     }
 }
 

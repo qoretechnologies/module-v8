@@ -74,6 +74,10 @@ module TypeScriptActionInterface {
         # the runner of tenants' calls: its trusted build capability is created now, before any tenant code runs
         TenantActionRunner::init();
     };
+    # every tenant's event source is stopped and its program freed when the module is unloaded
+    del = sub () {
+        TenantActionRunner::shutdown();
+    };
     # THREAD_CONTROL: the module starts its own background tasks
     # PROCESS_CONTROL: its init registers data provider factory (process-wide registrations)
     # (a Program restricted like a Qorus interface can load the module only when it declares them; Qore #5803)
@@ -201,7 +205,16 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       or refused if there is none; the pools and proxies of the full runtime refuse sandboxed code, and a connection
       update in a response goes to the host's handler
       (@ref TypeScriptActionInterface::TenantActionRunner::setConnectionUpdateHandler()
-      "setConnectionUpdateHandler()"); events are not available to sandboxed code yet
+      "setConnectionUpdateHandler()")
+    - the event actions of the apps run for tenants as event sources whose events the host pulls:
+      @ref TypeScriptActionInterface::TenantActionRunner::startEvents() "startEvents()" runs the app's event function in
+      a restricted program of the tenant's own until
+      @ref TypeScriptActionInterface::TenantActionRunner::stopEvents() "stopEvents()" ends it, whether or not it
+      cooperates (its program is terminated, and a request that it waits in is cancelled);
+      @ref TypeScriptActionInterface::TenantActionRunner::pollEvents() "pollEvents()" returns its queued events and
+      its checkpoint; a subscription belongs to its tenant; a source that queues its limit of events is stopped and
+      reported, never dropping events; every source stops when the process ends (an exit hook) or the module is
+      unloaded; webhook events and the event data providers are not available to sandboxed code
 */
 
 /** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes
@@ -210,7 +223,8 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     - @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner": the API and record actions of the apps
       for tenants that a sandbox governs, in restricted programs of their own, with plain data, the network only through
       the tenant's sandbox, and time, memory and concurrency limits; see @ref typescriptactioninterface_tenants
-      (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>)
+      (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>); their event actions run as
+      event sources whose events the host pulls
     - Action execution supports a shared in-process pool alongside the existing child-process proxy.
       See @ref TypeScriptActionInterface::JavaScriptInProcessPool.
     - Apps can use localized connection metadata, schema-backed REST actions and OAuth token introspection.

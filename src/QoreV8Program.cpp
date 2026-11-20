@@ -175,15 +175,39 @@ void QoreV8Program::terminate() {
     }
 }
 
+//! Checks the heap of the program against a cap, on a thread that holds the program's isolate
+/** The heap in use counts garbage that was not collected yet: a program whose collector lags behind (a slow machine,
+    valgrind) would be over its cap with live data far below it; the cap applies to the live data, so a heap over the
+    cap is collected and checked again.  A program over its cap is terminated.
+*/
+static bool qore_v8_check_heap(v8::Isolate* isolate, QoreV8Program* pgm, int64 cap) {
+    v8::HeapStatistics hs;
+    isolate->GetHeapStatistics(&hs);
+    if (static_cast<int64>(hs.used_heap_size()) <= cap) {
+        return false;
+    }
+    isolate->LowMemoryNotification();
+    isolate->GetHeapStatistics(&hs);
+    if (static_cast<int64>(hs.used_heap_size()) <= cap) {
+        return false;
+    }
+    pgm->setOverHeap(static_cast<int64>(hs.used_heap_size()));
+    pgm->terminate();
+    return true;
+}
+
 //! Checks the heap of the program, in an interrupt on the thread that runs its code
 static void qore_v8_heap_check(v8::Isolate* isolate, void* data) {
     QoreV8Program* pgm = static_cast<QoreV8Program*>(data);
-    v8::HeapStatistics hs;
-    isolate->GetHeapStatistics(&hs);
-    if (static_cast<int64>(hs.used_heap_size()) > pgm->getHeapCheckCap()) {
-        pgm->setOverHeap();
-        pgm->terminate();
+    qore_v8_check_heap(isolate, pgm, pgm->getHeapCheckCap());
+}
+
+bool QoreV8Program::checkHeap(ExceptionSink* xsink, int64 cap) {
+    QoreV8ProgramHelper v8h(xsink, this);
+    if (*xsink) {
+        return false;
     }
+    return qore_v8_check_heap(isolate, this, cap);
 }
 
 void QoreV8Program::requestHeapCheck(int64 cap) {

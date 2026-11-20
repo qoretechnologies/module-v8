@@ -185,6 +185,38 @@ exports.actionsCatalogue = {
                     "get_dynamic_type": async (ctx) => ({"type": "hash", "fields": {["f_" + where()]: opt("f", {})}})},
             },
         });
+        // event actions: each runs until it is stopped
+        const eventAction = (name, fn) => ({
+            "app": "tenant-test",
+            "action": name,
+            "display_name": name,
+            "short_desc": name,
+            "desc": name,
+            "action_code": 1,
+            "event_function": fn,
+            "event_info": {"desc": name, "type": {"type": "hash", "fields": {"n": {"type": "int", "display_name": "n", "short_desc": "n", "desc": "n"}}}},
+        });
+        // waits until the source is stopped, without running JavaScript in the meantime
+        const idle = async (isStopped) => { while (!isStopped()) { await new Promise((r) => setTimeout(r, 10)); } };
+        // emits opts.count events from the stored checkpoint on, and sets the checkpoint after each
+        api.registerAction(eventAction("ticks", async (ctx, emit, isStopped, checkpoint) => {
+            let n = checkpoint.get() || 0;
+            const end = n + ctx.opts.count;
+            for (; n < end && !isStopped(); ) {
+                emit({"n": n, "where": where()});
+                checkpoint.set(++n);
+            }
+            await idle(isStopped);
+        }));
+        // never cooperates
+        api.registerAction(eventAction("spin-events", async (ctx, emit) => { emit({"n": 0}); for (;;) {} }));
+        // waits in a request of the bridge that is never answered
+        api.registerAction(eventAction("blocked-events", async (ctx, emit) => { emit({"n": 0}); await fetch(ctx.opts.url); }));
+        // keeps growing its live data
+        api.registerAction(eventAction("hog-events", async (ctx, emit) => { emit({"n": 0}); const a = []; for (;;) { a.push(new Array(100000).fill(1)); } }));
+        // fails after one event
+        api.registerAction(eventAction("throw-events", async (ctx, emit) => { emit({"n": 0}); throw new Error('ev-boom'); }));
+
         // a response with a connection update (refreshed token fields)
         api.registerAction({
             "app": "tenant-conn",

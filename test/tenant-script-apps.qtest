@@ -24,7 +24,7 @@ class TenantScriptAppsTest inherits QUnit::Test {
     scriptAppsTest() {
         string dir = get_script_dir();
         # the child inherits the environment, with the script and no master catalogue
-        setenv("QORE_TYPESCRIPT_ACTION_SCRIPTS", dir + "/tenant-catalogue.js");
+        setenv("QORE_TYPESCRIPT_ACTION_SCRIPTS", dir + "/tenant-catalogue.js:" + dir + "/tenant-vm-catalogue.js");
         unsetenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT");
         on_exit unsetenv("QORE_TYPESCRIPT_ACTION_SCRIPTS");
         # the interpreter: this one, unless this test runs as an executable that qcc compiled
@@ -39,5 +39,12 @@ class TenantScriptAppsTest inherits QUnit::Test {
         assertEq(({"id": 1, "name": "a"},), rv.create.result, sprintf("%y", rv.create));
         assertEq(({"id": 1, "name": "a", "url": "https://script.example.com"},), rv.search.result,
             sprintf("%y", rv.search));
+        # the probe: the app that needs vm while it loads is unavailable up front; the other app loads, and its
+        # sources use the builtins that its actions need-fs and need-vm need
+        assertEq({"available": False, "builtin": "vm", "runtime_builtins": ("vm",)}, rv.probe."tenant-vm-app",
+            sprintf("%y", rv.probe));
+        # child_process: the where() marker of the test catalogue
+        assertEq({"available": True, "runtime_builtins": ("child_process", "fs", "vm")}, rv.probe."tenant-test");
+        assertEq({"tenant_available": False, "tenant_unsupported_builtin": "vm"}, rv.vm_info);
     }
 }

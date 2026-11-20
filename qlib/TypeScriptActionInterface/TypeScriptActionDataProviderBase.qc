@@ -350,9 +350,22 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 }).doCatch(sub (auto e) {
                     push_val("exception caught", e);
                 });
-                # wait for the IO in the background - this will only complete when the I/O is complete
+                # wait for the IO in the background - this will only complete when the I/O is complete; if the wait
+                # fails (the program was terminated: a time limit, or a stop of an event function), no callback runs,
+                # and the error is the result, so that the call does not wait forever
                 background sub () {
-                    v.wait();
+                    try {
+                        v.wait();
+                    } catch (hash<ExceptionInfo> ex) {
+                        q.push({
+                            "where": "wait",
+                            "err": {
+                                "name": ex.err,
+                                "message": ex.desc,
+                                "errstr": sprintf("%s: %s", ex.err, ex.desc),
+                            },
+                        });
+                    }
                 }();
                 TSAI::debug("Waiting for result");
                 # this will return a value as soon as the first value is ready

@@ -29,4 +29,7 @@ hash<auto> rv = {
     "create": p.callFunction("run", "tenant-records", "create", {"table": "items", "records": {"id": 1, "name": "a"}}),
     "search": p.callFunction("run", "tenant-records", "search", {"table": "items"}),
 };
+# the host probes the apps when it builds its catalogue
+rv.probe = TenantActionRunner::probeApps(("tenant-test", "tenant-vm-app"));
+rv.vm_info = TypeScriptActionInterface::TenantActionRunner::getActionInfo(<TsTenantContext>{"tenant": "s"}, "tenant-vm-app", "run"){"tenant_available", "tenant_unsupported_builtin"};
 printf("%s\n", make_json(rv));

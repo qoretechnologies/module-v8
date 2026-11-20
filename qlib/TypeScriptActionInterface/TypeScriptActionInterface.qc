@@ -4370,6 +4370,11 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         return app_load_paths{app};
     }
 
+    #! Records the directory of the implementation of an app that the master catalogue loaded
+    static recordAppLoadPath(string app, string path) [dom=PROCESS_CONTROL] {
+        app_load_paths{app} = path;
+    }
+
     #! Returns the pool of the catalogue that registered an app, if any
     /** @param app the name of the app
 
@@ -4377,6 +4382,11 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static *JavaScriptProgramPool getAppPool(string app) [dom=PROCESS_CONTROL] {
         return app_pools{app};
+    }
+
+    #! Returns the names of the apps that a catalogue registered, or that are registered from the index
+    static list<string> getCatalogueAppNames() [dom=PROCESS_CONTROL] {
+        return sort(keys (app_pools + app_load_paths));
     }
 
     static int getCatalogueProtocolVersion() {
