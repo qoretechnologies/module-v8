@@ -9,6 +9,10 @@
       program is refused at run time to code under a sandbox that does not allow uncontrolled APIs, as its scripts
       have file, process and network access that no sandbox controls; see @ref v8sandboxing
       (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>)
+    - restricted programs, for running the module's trusted code for callers that a sandbox governs: a loader of the
+      module's own, no access to Qore, the host's environment or Node.js's file, process and network builtins once the
+      program is sealed, the network only through a host bridge, and termination and heap checks from another thread;
+      see @ref v8restricted (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>)
     - an app option can name the action that creates its values in \c metadata.create_action (\c action,
       \c value_field and the optional \c display_name_field), so a value can be created from the option's form; the
       Slack channel options name \c create_channel.  When such an action succeeds, the app's cached allowed values

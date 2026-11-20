@@ -189,7 +189,18 @@ set(QORE_DOX_TMPL_SRC
 )
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/images")
 
+# the bootstrap of restricted programs, embedded in the module (qoretechnologies/qore#6845)
+set(RESTRICTED_BOOTSTRAP_H ${CMAKE_CURRENT_BINARY_DIR}/include/restricted-bootstrap.js.h)
+add_custom_command(OUTPUT ${RESTRICTED_BOOTSTRAP_H}
+    COMMAND ${CMAKE_COMMAND} -DINPUT=${CMAKE_SOURCE_DIR}/src/restricted-bootstrap.js
+        -DOUTPUT=${RESTRICTED_BOOTSTRAP_H} -DNAME=QORE_V8_RESTRICTED_BOOTSTRAP
+        -P ${CMAKE_SOURCE_DIR}/cmake/EmbedJavaScript.cmake
+    DEPENDS ${CMAKE_SOURCE_DIR}/src/restricted-bootstrap.js ${CMAKE_SOURCE_DIR}/cmake/EmbedJavaScript.cmake
+    COMMENT "Embedding the restricted program bootstrap")
+set_source_files_properties(src/QoreV8Program.cpp PROPERTIES OBJECT_DEPENDS ${RESTRICTED_BOOTSTRAP_H})
+
 add_library(${module_name} MODULE ${CPP_SRC} ${QPP_SOURCES})
+target_sources(${module_name} PRIVATE ${RESTRICTED_BOOTSTRAP_H})
 # Node's common.gypi applies this to C++ consumers too. Public V8 callback
 # headers access pointer values through integer slots; strict alias analysis is
 # invalid for those inline definitions (PropertyCallbackInfo::GetIsolate).

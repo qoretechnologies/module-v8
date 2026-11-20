@@ -51,6 +51,90 @@ JavaScriptProgram::constructor(string source_code, string source_label) [flags=N
     self->setPrivate(CID_JAVASCRIPTPROGRAM, jsp.release());
 }
 
+//! Creates the object with options and parses and runs the given source code
+/** @param source_code the JavaScript source to parse and compile
+    @param source_label the label or file name of the source
+    @param opts the options of the program:
+    - \c typescript: @ref True to transpile the source from TypeScript
+    - \c restricted: @ref True for a restricted program: one that runs trusted code for callers that a sandbox
+      governs (see @ref v8sandboxing).  Its code is loaded only from the directories of \c roots, it gets no access
+      to %Qore's namespaces, to the host's environment or to its output, \c import() is refused, and, once it is
+      sealed with seal(), it reaches no file, process or network: the builtins of Node.js that would are refused,
+      and the network is reached only through \c bridge
+    - \c roots: for a restricted program, the directories whose files its code may load (a list of strings)
+    - \c bridge: for a restricted program, the code that makes its network requests for it
+
+    @throw JAVASCRIPT-PROGRAM-ERROR an option is invalid, or the program cannot be created
+
+    @since v8 2.2
+*/
+JavaScriptProgram::constructor(string source_code, string source_label, hash<auto> opts) [flags=NAMED_ARGS] {
+    ReferenceHolder<QoreV8ProgramData> jsp(new QoreV8ProgramData(*source_code, *source_label, *opts, xsink),
+        xsink);
+    if (*xsink) {
+        return;
+    }
+
+    jsp->setObject(self);
+    self->setPrivate(CID_JAVASCRIPTPROGRAM, jsp.release());
+}
+
+//! Seals a restricted program
+/** Ends the load phase of a restricted program: the builtins of Node.js that reach files, processes or the network,
+    which its code could use while it loaded, are revoked, also through references that the code kept, and no file is
+    loaded any more.  A restricted program is sealed before it runs code for a caller that a sandbox governs.
+
+    @throw JAVASCRIPT-PROGRAM-ERROR the program is not restricted
+
+    @since v8 2.2
+*/
+nothing JavaScriptProgram::seal() {
+    jsp->seal(xsink);
+}
+
+//! Terminates the JavaScript code that runs in the program; can be called from any thread
+/** The code that runs ends with an exception, and the program cannot be used any more: a caller that enforces a
+    time limit on a call terminates the program and discards it
+
+    @since v8 2.2
+*/
+nothing JavaScriptProgram::terminate() {
+    jsp->terminate();
+}
+
+//! Requests a check of the program's heap; can be called from any thread
+/** The check is made in the thread that runs the program's code, at its next interrupt point: if the heap in use
+    exceeds \a cap bytes, the code is terminated as by terminate(), and isOverHeap() returns @ref True
+
+    @param cap the heap cap in bytes
+
+    @since v8 2.2
+*/
+nothing JavaScriptProgram::requestHeapCheck(int cap) {
+    jsp->requestHeapCheck(cap);
+}
+
+//! Returns @ref True if the program was terminated
+/** @since v8 2.2
+*/
+bool JavaScriptProgram::isTerminated() [flags=CONSTANT] {
+    return jsp->isTerminated();
+}
+
+//! Returns @ref True if a heap check found the program's heap over its cap
+/** @since v8 2.2
+*/
+bool JavaScriptProgram::isOverHeap() [flags=CONSTANT] {
+    return jsp->isOverHeap();
+}
+
+//! Returns @ref True if the program is restricted
+/** @since v8 2.2
+*/
+bool JavaScriptProgram::isRestricted() [flags=CONSTANT] {
+    return jsp->isRestricted();
+}
+
 //! Destroys the JavaScript program and invalidates the object
 /**
 */
