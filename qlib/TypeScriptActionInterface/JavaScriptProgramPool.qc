@@ -64,6 +64,14 @@ public class JavaScriptProgramPool {
         createProgram(True);
     }
 
+    #! Returns the absolute path of the pool's script
+    /** The program is created in the script's directory (TypeScriptActionInterfacePriv::createPool()), which is
+        \c cwd
+    */
+    string getScriptPath() {
+        return absolute_path(path) ? path : cwd + DirSep + basename(path);
+    }
+
     #! Returns the JavaScript program
     JavaScriptProgram getProgram() {
         return pgm;
@@ -88,12 +96,12 @@ public class JavaScriptProgramPool {
     /** For the restricted programs of tenants (TenantActionRunner, qoretechnologies/qore#6845): the apps that the
         program registers are mapped to the pool, as those of the pool's own programs are
     */
-    mapProgram(JavaScriptProgram pgm) {
+    mapProgram(JavaScriptProgram pgm) [dom=PROCESS_CONTROL] {
         pmap{pgm.uniqueHash()} = self;
     }
 
     #! Removes the mapping of a program made with mapProgram(), by the program's unique hash
-    static unmapProgram(string id) {
+    static unmapProgram(string id) [dom=PROCESS_CONTROL] {
         remove pmap{id};
     }
 

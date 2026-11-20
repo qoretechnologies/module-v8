@@ -173,6 +173,7 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
         @return the program info for the calling thread
     */
     hash<InProcessProgramInfo> get() {
+        TenantActionRunner::refuseSandboxed("the in-process pool");
         int tid = gettid();
 
         m.lock();

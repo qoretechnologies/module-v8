@@ -238,8 +238,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             "table": name,
         });
         where_cond = cast<*hash<DataProviderExpression>>(getSearchExpression(where_cond, search_options));
-        if (TSAI::checkInProcessServer()) {
-            # in-process pool uses the same path as direct execution
+        if (SandboxManager::isSandboxed() || TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution; a sandboxed caller's calls are dispatched to the
+            # tenant runner (TenantActionRunner::dispatch())
             *code get_records = getAsyncValue(search_records, cctx,
                 info.expressions ? convertExpression(where_cond) : NOTHING,
                 info.expressions ? search_options : NOTHING);
@@ -276,8 +277,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             "table": name,
         });
         where_cond = processSearchParameters(where_cond, search_options);
-        if (TSAI::checkInProcessServer()) {
-            # in-process pool uses the same path as direct execution
+        if (SandboxManager::isSandboxed() || TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution; a sandboxed caller's calls are dispatched to the
+            # tenant runner (TenantActionRunner::dispatch())
             *code get_records = getAsyncValue(search_records, cctx,
                 info.expressions ? convertExpression(where_cond) : NOTHING,
                 info.expressions ? search_options : NOTHING);

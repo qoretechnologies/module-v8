@@ -308,6 +308,9 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         m.lock();
         on_exit m.unlock();
 
+        # events are not available to sandboxed code yet (qoretechnologies/qore#6845 P4)
+        TenantActionRunner::refuseSandboxed("an event data provider");
+
         if (TSAI::checkInProcessServer()) {
             # in-process pool uses the direct event thread path
             info("Starting in-process event thread for data provider %y for connection %y options %y", name,

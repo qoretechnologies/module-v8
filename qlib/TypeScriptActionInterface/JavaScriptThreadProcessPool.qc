@@ -71,6 +71,7 @@ public class JavaScriptThreadProcessPool {
 
     #! Acquires a proxy for an API call
     JavaScriptProgramProxy get(*code setup) {
+        TenantActionRunner::refuseSandboxed("the process pool");
         int tid = gettid();
         # the unique proxy key
         *string pkey;
@@ -117,6 +118,7 @@ public class JavaScriptThreadProcessPool {
 
     *hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,
             *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options) {
+        TenantActionRunner::refuseSandboxed("the process pool");
         JavaScriptProgramProxy proxy;
         {
             AutoLock al(m);
@@ -167,6 +169,7 @@ public class JavaScriptThreadProcessPool {
     #! Sets up a proxy as an event data source
     JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key,
             *hash<DataContextInfo> options) {
+        TenantActionRunner::refuseSandboxed("the process pool");
         JavaScriptProgramProxy proxy;
         string pkey;
         {

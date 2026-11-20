@@ -190,6 +190,18 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     - an app that needs a builtin of Node.js that tenants do not get is refused for tenants
       (\c TS-TENANT-APP-UNSUPPORTED), and
       @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports it unavailable
+    - the apps of the master catalogue and of the scripts of \c QORE_TYPESCRIPT_ACTION_SCRIPTS run for tenants with no
+      call of the host: the module records the catalogue that registered each app
+    - sandboxed code that uses the module's data providers and connections directly (actions, records, allowed
+      values, dependent options, dynamic types, the OAuth hooks of a connection) reaches an app's code only through
+      the runner: every call of the module into an app's code for sandboxed code is made by
+      @ref TypeScriptActionInterface::TenantActionRunner::dispatch() "dispatch()", in the tenant's own program, with
+      the tenant context that the host's resolver returns for the connection
+      (@ref TypeScriptActionInterface::TenantActionRunner::setTenantContextResolver() "setTenantContextResolver()"),
+      or refused if there is none; the pools and proxies of the full runtime refuse sandboxed code, and a connection
+      update in a response goes to the host's handler
+      (@ref TypeScriptActionInterface::TenantActionRunner::setConnectionUpdateHandler()
+      "setConnectionUpdateHandler()"); events are not available to sandboxed code yet
 */
 
 /** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes

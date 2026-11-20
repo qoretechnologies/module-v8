@@ -349,6 +349,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
 
     *hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,
             *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options) {
+        TenantActionRunner::refuseSandboxed("a program proxy");
         ASSERT(!event && !search_id);
         search_id = id;
         on_error remove search_id;
@@ -378,6 +379,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     *hash<auto> getRecords(string id) {
+        TenantActionRunner::refuseSandboxed("a program proxy");
         if (search_id != id) {
             throw "SEARCH-ERROR", sprintf("Search %y was interrupted due to a proxy restart", id);
         }
@@ -394,6 +396,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     # Called with the global lock held
     setupEventSource(TypeScriptActionEventDataProvider observable, string app, string action, string key,
             *hash<DataContextInfo> options) {
+        TenantActionRunner::refuseSandboxed("a program proxy");
         ASSERT(!event && !search_id);
         /*
         if (event) {
@@ -750,6 +753,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
+        TenantActionRunner::refuseSandboxed("a program proxy");
         list<auto> args += (api.app, api.action, api.key);
         if (argv) {
             args += argv;

@@ -168,7 +168,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             "use_cache: %y _ts_no_io: %y", api.label, LoggerUtil::getArgSummary(args), LoggerUtil::getArgSummary(cache_opts),
             use_cache, _ts_no_io);
         # a tenant's call never uses the cache: its entries are shared by all callers
-        if (_ts_no_io || _ts_tenant_calls || (!cache_opts && !use_cache)) {
+        if (_ts_no_io || _ts_tenant_calls || SandboxManager::isSandboxed() || (!cache_opts && !use_cache)) {
             TSAI::debug("Executing; no cache");
             return TypeScriptActionDataProviderBase::execAsyncValueArgs(logger, api, args);
         }
@@ -244,6 +244,12 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         date start = now_us();
         on_exit TSAI::debug("perf: %y get async value: %y (args: %y)", api.label, now_us() - start, args);
         on_error TSAI::error("%s", get_exception_string($1));
+
+        # sandboxed code: the call is made by TenantActionRunner, in the tenant's own program, or refused; this is the
+        # module's single path into an app's code for sandboxed code (see TenantActionRunner::dispatch())
+        if (!_ts_tenant_calls && SandboxManager::isSandboxed()) {
+            return TenantActionRunner::dispatch(logger, api, args);
+        }
 
         # a tenant's call: only the functions of the tenant's own program run (TenantActionRunner)
         if (_ts_tenant_calls) {

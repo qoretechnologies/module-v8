@@ -48,6 +48,34 @@ bool SandboxCapture::isSandboxed() [flags=CONSTANT] {
     return cap->capture.isSandboxed();
 }
 
+//! Returns the isolation domain (tenant) of the captured sandbox, if any
+/** @return the isolation domain of the captured sandbox, or @ref nothing if no sandbox was captured, if it has no
+    domain, or if the %Qore library has no isolation domains (see hasIsolationDomains())
+*/
+*string SandboxCapture::getIsolationDomain() [flags=RET_VALUE_ONLY] {
+#ifdef QORE_V8_HAVE_ISOLATION_DOMAIN
+    ReferenceHolder<QoreSandboxManager> sm(cap->capture.getPolicyManagerRef(), xsink);
+    if (!sm) {
+        return QoreValue();
+    }
+    std::string domain = sm->getIsolationDomain();
+    return domain.empty() ? QoreValue() : QoreValue(new QoreStringNode(domain));
+#else
+    return QoreValue();
+#endif
+}
+
+//! Returns @ref True if the %Qore library that the module was built with has isolation domains
+/**
+*/
+static bool SandboxCapture::hasIsolationDomains() [flags=CONSTANT] {
+#ifdef QORE_V8_HAVE_ISOLATION_DOMAIN
+    return true;
+#else
+    return false;
+#endif
+}
+
 //! Calls the given code under the captured sandbox and returns its result
 /** @param call the code to call
     @param ... the arguments of the call

@@ -209,6 +209,18 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(${module_name} PRIVATE -fno-strict-aliasing)
 endif()
 target_compile_definitions(${module_name} PRIVATE QORE_TYPESCRIPT_MODULE="${QORE_TYPESCRIPT_MODULE}")
+# the isolation domains of sandboxes (qoretechnologies/qore#6536): TenantActionRunner checks that a sandboxed
+# caller's domain is the tenant of its call (qoretechnologies/qore#6845)
+if (EXISTS "${QORE_INCLUDE_DIR}/qore/QoreSandboxManager.h")
+    file(READ "${QORE_INCLUDE_DIR}/qore/QoreSandboxManager.h" _qore_sandbox_header)
+    if (_qore_sandbox_header MATCHES "std::string getIsolationDomain\\(\\) const"
+        AND _qore_sandbox_header MATCHES "getPolicyManagerRef\\(\\) const")
+        target_compile_definitions(${module_name} PRIVATE QORE_V8_HAVE_ISOLATION_DOMAIN)
+        message(STATUS "Qore sandbox isolation domains: yes")
+    else()
+        message(STATUS "Qore sandbox isolation domains: no")
+    endif()
+endif()
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 #include_directories(${Python3_INCLUDE_DIRS})

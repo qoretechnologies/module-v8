@@ -134,6 +134,12 @@ public class TenantActionRunner {
         static *code egress_policy;
         static *code egress_meter;
 
+        #! the host's resolver of a connection's tenant context (setTenantContextResolver())
+        static *code context_resolver;
+
+        #! the host's handler of the connection updates of tenants' calls (setConnectionUpdateHandler())
+        static *code update_handler;
+
         #! the limits
         static hash<TsTenantLimits> limits = <TsTenantLimits>{};
 
@@ -232,6 +238,138 @@ public class TenantActionRunner {
             throw ErrorContext, "the egress meter is set already";
         }
         egress_meter = meter;
+    }
+
+    #! Sets the host's resolver of the tenant context of a connection that sandboxed code uses
+    /** Every call of the module into an app's code for sandboxed code (a data provider of a connection, its options,
+        types and allowed values, and its connection's OAuth hooks) is made by the runner, in the tenant's own
+        program, with the context that the resolver returns for the connection; the module decides itself whether the
+        calling code is sandboxed.  The resolver is called as <tt>resolve(AbstractConnection conn)</tt> and returns a
+        @ref TypeScriptActionInterface::TsTenantContext "TsTenantContext" hash, or @ref nothing, in which case the call
+        is refused, as it is when no resolver is set: the call never runs outside the runner.
+
+        @throw TS-TENANT-ERROR the resolver is set already, or the calling code is sandboxed
+    */
+    static setTenantContextResolver(code resolver) [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("setTenantContextResolver");
+        AutoLock al(lock);
+        if (context_resolver) {
+            throw ErrorContext, "the tenant context resolver is set already";
+        }
+        context_resolver = resolver;
+    }
+
+    #! Sets the host's handler of the connection updates of tenants' calls
+    /** When the response of an app's call for sandboxed code has the key \c connection_update (token fields that
+        the app refreshed), the module calls the handler on the calling thread as
+        <tt>handler(AbstractConnection conn, hash<auto> update)</tt> with the plain update, and removes the key from
+        the response; if no handler is set, the call fails with \c TS-TENANT-ERROR: an update is never dropped.
+
+        @throw TS-TENANT-ERROR the handler is set already, or the calling code is sandboxed
+    */
+    static setConnectionUpdateHandler(code handler) [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("setConnectionUpdateHandler");
+        AutoLock al(lock);
+        if (update_handler) {
+            throw ErrorContext, "the connection update handler is set already";
+        }
+        update_handler = handler;
+    }
+
+    #! Makes a call of the module into an app's code for sandboxed code: the module's single entry for it
+    /** Called by TypeScriptActionDataProviderBase::execAsyncValueArgs() for every call when the calling code is
+        sandboxed; the call is made by the runner in the tenant's own program, with the tenant context that the host's
+        resolver returns for the connection of the call, or refused (\c TS-TENANT-ERROR)
+
+        @param src the object that makes the call: a data provider or a connection of the module, or its REST client
+        @param api the call
+        @param args the arguments of the call
+    */
+    static auto dispatch(*object src, hash<AsyncCallInfo> api, *softlist<auto> args) [dom=PROCESS_CONTROL] {
+        # the records function that a search returned: the runner's own closure over the records it read
+        if (api.type == "get_records") {
+            return call_function_args(api.async_call, args);
+        }
+        if (api.unlimited) {
+            throw ErrorContext, sprintf("%s: events are not available to sandboxed code", api.label);
+        }
+        *AbstractConnection conn = TenantActionRunner::getCallConnection(src);
+        if (!conn) {
+            throw ErrorContext, sprintf("%s: the call of sandboxed code has no connection", api.label);
+        }
+        *code resolver;
+        {
+            AutoLock al(lock);
+            resolver = context_resolver;
+        }
+        if (!resolver) {
+            throw ErrorContext, sprintf("%s: no tenant context resolver is set for calls of sandboxed code",
+                api.label);
+        }
+        *hash<auto> ctx = call_function(resolver, conn);
+        if (!ctx) {
+            throw ErrorContext, sprintf("%s: connection %y has no tenant context", api.label, conn.name);
+        }
+        hash<TsTenantContext> tctx = cast<hash<TsTenantContext>>(ctx);
+        TenantActionRunner::checkContext(tctx);
+        bool search = api.type == "search_records";
+        auto rv = TenantActionRunner::run(tctx, api.app, {
+            "key": api.key,
+            "args": args,
+            "drain": search,
+        });
+        if (search) {
+            # the records were read in the call; the bulk interface reads them from this closure
+            list<auto> blocks = rv ?? ();
+            return auto sub (auto cctx, auto block_size) {
+                return shift blocks;
+            };
+        }
+        if (rv.typeCode() == NT_HASH && rv.hasKey("connection_update")) {
+            TenantActionRunner::applyConnectionUpdate(conn, remove rv.connection_update);
+        }
+        return rv;
+    }
+
+    #! Refuses sandboxed code: the module's pools and proxies run an app's code in the full runtime
+    /** Sandboxed code reaches an app's code only through dispatch(); the pools and proxies refuse it, also when it
+        uses them directly
+    */
+    static refuseSandboxed(string what) {
+        if (SandboxManager::isSandboxed()) {
+            throw ErrorContext, sprintf("%s cannot be used by sandboxed code; its calls are made by the tenant "
+                "runner", what);
+        }
+    }
+
+    #! Returns the connection of a call
+    private:internal static *AbstractConnection getCallConnection(*object src) {
+        if (src instanceof AbstractConnection) {
+            return src;
+        }
+        if (src instanceof TypeScriptActionDataProviderBase) {
+            return cast<TypeScriptActionDataProviderBase>(src).getConnection() ?? _thread_conn;
+        }
+        if (src instanceof TypeScriptAppRestClient) {
+            return cast<TypeScriptAppRestClient>(src).getAppConnection();
+        }
+        return _thread_conn;
+    }
+
+    #! Gives a connection update to the host's handler, or refuses it if no handler is set
+    private:internal static applyConnectionUpdate(AbstractConnection conn, auto update) {
+        *code handler;
+        {
+            AutoLock al(lock);
+            handler = update_handler;
+        }
+        if (!handler) {
+            throw ErrorContext, sprintf("the call returned a connection update for connection %y, but no connection "
+                "update handler is set", conn.name);
+        }
+        if (update.typeCode() == NT_HASH && update) {
+            call_function(handler, conn, update);
+        }
     }
 
     #! Sets the limits of the tenants' calls
@@ -377,7 +515,7 @@ public class TenantActionRunner {
         } catch (hash<ExceptionInfo> ex) {
             throw ErrorContext, sprintf("unknown app %y or action %y", app, action);
         }
-        if (!info || (!catalogue_script && !TenantActionRunner::getAppDir(info.app))) {
+        if (!info || !TenantActionRunner::getSource(info.app)) {
             throw ErrorContext, sprintf("app %y is not a TypeScript app that tenants can run", app);
         }
         # plain data only
@@ -400,6 +538,18 @@ public class TenantActionRunner {
     private:internal static auto run(hash<TsTenantContext> ctx, string app, hash<auto> work) {
         # the calling code's sandbox, which governs the requests that the program makes for it
         V8::SandboxCapture capture();
+        # the tenant of a sandboxed caller is its sandbox's isolation domain (qoretechnologies/qore#6536): a caller
+        # with no domain, or with the domain of another tenant, is refused
+        if (capture.isSandboxed() && V8::SandboxCapture::hasIsolationDomains()) {
+            *string domain = capture.getIsolationDomain();
+            if (!domain) {
+                throw ErrorContext, "the sandbox of the calling code has no isolation domain";
+            }
+            if (domain != ctx.tenant) {
+                throw ErrorContext, "the tenant of the call is not the isolation domain of the calling code's "
+                    "sandbox";
+            }
+        }
         hash<TsTenantLimits> lim;
         {
             AutoLock al(lock);
@@ -440,7 +590,12 @@ public class TenantActionRunner {
                 to_ms = lim.max_timeout;
             }
             api.to = milliseconds(to_ms);
-            work.api = api;
+            work = {
+                "api": api,
+                "args": work.args,
+                "drain": work.drain,
+                "max_records": lim.max_records,
+            };
         } else {
             to_ms = ctx.timeout ?? lim.max_timeout;
             if (to_ms > lim.max_timeout) {
@@ -450,7 +605,7 @@ public class TenantActionRunner {
             work = {
                 "record": work.record,
                 "app": app,
-                "pool": catalogue_pool ?? TypeScriptActionInterfacePriv::getMaster(),
+                "pool": TenantActionRunner::getSource(app).pool,
                 "calls": pgm.call_map,
                 "dctx": TenantActionRunner::getDataContext(ctx),
                 "max_records": lim.max_records,
@@ -503,6 +658,9 @@ public class TenantActionRunner {
             auto rv = work.record
                 ? TenantActionRunner::execRecord(work)
                 : TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, work.api, work.args);
+            if (work.drain) {
+                rv = TenantActionRunner::drainRecords(work, rv);
+            }
             return {"result": TenantActionRunner::plainData(rv)};
         } catch (hash<ExceptionInfo> ex) {
             if (js.isTerminated()) {
@@ -556,6 +714,32 @@ public class TenantActionRunner {
             case DPAT_DELETE:
                 return prov.deleteRecords(req.where, req.options);
         }
+    }
+
+    #! Reads the records of a search function's result in the call: the function of the tenant's program never leaves
+    private:internal static list<auto> drainRecords(hash<auto> work, auto get_records) {
+        list<auto> blocks = ();
+        if (!get_records.callp()) {
+            return blocks;
+        }
+        hash<AsyncCallInfo> api = cast<hash<AsyncCallInfo>>(work.api);
+        api.type = "get_records";
+        api.label += " (records)";
+        api.async_call = get_records;
+        int count = 0;
+        while (True) {
+            auto block = TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, api, (work.args[0], 1000));
+            if (block.typeCode() != NT_HASH || !block.firstValue().lsize()) {
+                break;
+            }
+            count += block.firstValue().lsize();
+            if (count > work.max_records) {
+                throw ErrorLimit, sprintf("the search returns more than %d records", work.max_records),
+                    {"limit": "records", "max": work.max_records};
+            }
+            blocks += block;
+        }
+        return blocks;
     }
 
     private:internal static checkRecordCount(list<auto> records, int max) {
@@ -645,26 +829,70 @@ public class TenantActionRunner {
         idle{tenant}{app} += pgm;
     }
 
+    #! Returns the catalogue of an app: its pool, its script and the directories that its programs may load from
+    /** The catalogue given with setCatalogue(), else the catalogue that registered the app: the master catalogue
+        (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT) or a script of \c QORE_TYPESCRIPT_ACTION_SCRIPTS
+    */
+    private:internal static *hash<auto> getSource(string app) {
+        *JavaScriptProgramPool pool = TypeScriptActionInterface::getAppPool(app);
+        if (catalogue_pool && (!pool || pool == catalogue_pool)) {
+            return {
+                "pool": catalogue_pool,
+                "script": catalogue_script,
+                "roots": catalogue_roots ?? (dirname(dirname(catalogue_script)),),
+                "master": False,
+            };
+        }
+        *JavaScriptProgramPool master = TypeScriptActionInterfacePriv::getMaster();
+        # an app registered from the index has no pool until it is loaded: it is the master catalogue's
+        if (!pool && master && TypeScriptActionInterface::getAppLoadPath(app)) {
+            pool = master;
+        }
+        if (!pool) {
+            return;
+        }
+        string script = pool.getScriptPath();
+        string dir = dirname(script);
+        if (pool == master) {
+            # the catalogue's directory: its distribution and its node_modules
+            return {"pool": pool, "script": script, "roots": (dirname(dir),), "master": True};
+        }
+        # a script app: its directory, and the node_modules directories above it (see getScriptRoots())
+        return {"pool": pool, "script": script, "master": False};
+    }
+
+    #! Returns the directories that the programs of a script app may load: its directory, and the node_modules
+    #! directories above it, as Node.js resolves them; reads the file system, so it runs in the trusted build only
+    private:internal static list<string> getScriptRoots(string dir) {
+        list<string> roots = (dir,);
+        for (string d = dirname(dir); ; d = dirname(d)) {
+            if (is_dir(d + DirSep + "node_modules")) {
+                roots += d + DirSep + "node_modules";
+            }
+            if (d == dirname(d)) {
+                break;
+            }
+        }
+        return roots;
+    }
+
     #! Builds and seals a restricted program for an app; runs as trusted code (see init())
     private:internal static hash<auto> buildProgram(string app) {
-        *string script = catalogue_script ?? getenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT");
-        if (!script.val()) {
-            throw ErrorContext, "no TypeScript catalogue is configured";
+        *hash<auto> src = TenantActionRunner::getSource(app);
+        if (!src) {
+            throw ErrorContext, sprintf("no TypeScript catalogue registered app %y", app);
         }
-        *string load_path = TenantActionRunner::getAppDir(app);
+        string script = src.script;
+        JavaScriptProgramPool pool = src.pool;
+        *string load_path = src.master ? TenantActionRunner::getAppDir(app) : NOTHING;
         string dir = dirname(script);
         string source = TypeScriptActionInterfacePriv::getDefaultCode(script, dir)
             + ReadOnlyFile::readTextFile(script);
         V8::JavaScriptProgram pgm(source, script, {
             "restricted": True,
-            # the catalogue's directory: its distribution and its node_modules
-            "roots": catalogue_roots ?? (dirname(dir),),
+            "roots": src.roots ?? TenantActionRunner::getScriptRoots(dir),
             "bridge": \TenantActionRunner::bridge(),
         });
-        *JavaScriptProgramPool pool = catalogue_pool ?? TypeScriptActionInterfacePriv::getMaster();
-        if (!pool) {
-            throw ErrorContext, "no TypeScript catalogue is loaded";
-        }
         # the apps that the program registers are mapped to the pool that registered the catalogue
         pool.mapProgram(pgm);
         string id = pgm.uniqueHash();

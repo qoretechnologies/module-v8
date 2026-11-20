@@ -130,6 +130,10 @@ public class TypeScriptActionInterface {
         #! the directory of each app's implementation, recorded when the app is registered from the index; restricted
         #! programs for tenants load an app from it (TenantActionRunner, qoretechnologies/qore#6845)
         static hash<string, string> app_load_paths;
+
+        #! the pool of the catalogue that registered each app (the master catalogue or a script of
+        #! QORE_TYPESCRIPT_ACTION_SCRIPTS); restricted programs for tenants load the app from its catalogue
+        static hash<string, JavaScriptProgramPool> app_pools;
     }
 
     public {
@@ -527,6 +531,7 @@ TypeScriptActionInterface::setCallTimeout(1h);
         remove initmap{name};
         remove appmap{name};
         remove initialized_appmap{name};
+        remove app_pools{name};
         remove app_connection_registered{name};
         remove app_schema_error_map{name};
         remove actionmap{name};
@@ -1252,6 +1257,8 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         if (_pool_clone_mode) {
             TypeScriptActionInterface::normalizeProviderSchemaVersion(\app,
                 "app", app.name);
+        } else {
+            app_pools{app.name} = pool;
         }
 
         if (!_pool_clone_mode) {
@@ -4361,6 +4368,15 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static *string getAppLoadPath(string app) {
         return app_load_paths{app};
+    }
+
+    #! Returns the pool of the catalogue that registered an app, if any
+    /** @param app the name of the app
+
+        @return the pool, or @ref nothing if no catalogue registered the app
+    */
+    static *JavaScriptProgramPool getAppPool(string app) [dom=PROCESS_CONTROL] {
+        return app_pools{app};
     }
 
     static int getCatalogueProtocolVersion() {

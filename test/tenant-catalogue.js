@@ -11,6 +11,16 @@ try {
 } catch (e) {
 }
 
+// where a function runs: a restricted program refuses child_process, the full runtime of the catalogue does not
+const where = () => {
+    try {
+        require('child_process');
+        return 'full';
+    } catch (e) {
+        return 'restricted';
+    }
+};
+
 const action = (name, fn) => ({
     "app": "tenant-test",
     "action": name,
@@ -65,15 +75,7 @@ exports.actionsCatalogue = {
             "type": "operator", "subtype": "logic-operator", "name": name, "display_name": name, "short_desc": name,
             "desc": name, "symbol": name, "roles": ["search"], "args": args, "varargs": varargs, "return_type": "bool",
         });
-        api.registerApp({
-            "name": "tenant-records",
-            "display_name": "Tenant Records",
-            "short_desc": "Tenant records",
-            "desc": "Tenant records",
-            "groups": ["Other"],
-            "logo": "PHN2Zy8+",
-            "logo_file_name": "test.svg",
-            "logo_mime_type": "image/svg+xml",
+        const recordFns = {
             "get_table_list": async (ctx) => ["items"],
             "get_record_type": async (ctx, table) => ({
                 "type": "hash",
@@ -125,6 +127,73 @@ exports.actionsCatalogue = {
                 globalThis.__items = [];
                 return n;
             },
+        };
+        api.registerApp({
+            "name": "tenant-records",
+            "display_name": "Tenant Records",
+            "short_desc": "Tenant records",
+            "desc": "Tenant records",
+            "groups": ["Other"],
+            "logo": "PHN2Zy8+",
+            "logo_file_name": "test.svg",
+            "logo_mime_type": "image/svg+xml",
+            ...recordFns,
+        });
+
+        // an app with a connection: each kind of call that a data provider or a connection makes for its caller
+        const opt = (name, extra) => Object.assign({"type": "string", "display_name": name, "short_desc": name, "desc": name}, extra);
+        api.registerApp({
+            "name": "tenant-conn",
+            "display_name": "Tenant Connection",
+            "short_desc": "Tenant connection",
+            "desc": "Tenant connection",
+            "groups": ["Other"],
+            "logo": "PHN2Zy8+",
+            "logo_file_name": "test.svg",
+            "logo_mime_type": "image/svg+xml",
+            "rest": {
+                "data": "json",
+                "url": "tsrest-tenant-conn://conn.example.com",
+            },
+            "rest_modifiers": {
+                "options": {
+                    "marker": opt("marker", {}),
+                },
+                // the OAuth hook
+                "set_options_post_auth": async (ctx) => ({"marker": where()}),
+            },
+            ...recordFns,
+        });
+        api.registerAction({
+            "app": "tenant-conn",
+            "action": "info",
+            "display_name": "info",
+            "short_desc": "info",
+            "desc": "info",
+            "action_code": 2,
+            "api_function": async (obj, opts, ctx) => ({"where": where(), "url": ctx && ctx.conn_opts ? ctx.conn_opts.url : null}),
+            "options": {
+                // an allowed value
+                "choice": opt("choice", {"get_allowed_values": async (ctx) => [{"display_name": "w", "short_desc": "w", "desc": "w", "value": where()}]}),
+                // a dependent option
+                "key": opt("key", {
+                    "allowed_values": [{"display_name": "A", "short_desc": "A", "desc": "A", "value": "A"}],
+                    "get_dependent_options": async (ctx) => ({["dep_" + where()]: opt("dep", {})}),
+                }),
+                // a dynamic type
+                "dyn": {"type": "hash", "display_name": "dyn", "short_desc": "dyn", "desc": "dyn",
+                    "get_dynamic_type": async (ctx) => ({"type": "hash", "fields": {["f_" + where()]: opt("f", {})}})},
+            },
+        });
+        // a response with a connection update (refreshed token fields)
+        api.registerAction({
+            "app": "tenant-conn",
+            "action": "refresh",
+            "display_name": "refresh",
+            "short_desc": "refresh",
+            "desc": "refresh",
+            "action_code": 2,
+            "api_function": async (obj, opts, ctx) => ({"ok": true, "connection_update": {"token": "new-" + where()}}),
         });
     },
 };

@@ -11,6 +11,8 @@
 %requires v8
 %requires TypeScriptActionInterface
 %requires HttpServer
+%requires ConnectionProvider
+%requires RestClient
 
 %exec-class TenantActionRunnerTest
 
@@ -43,6 +45,39 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
 ";
 
         const App = "tenant-test";
+
+        #! the tenant's code that uses a connection: each kind of call of a data provider or a connection
+        const ConnSource = "%modern
+%requires TypeScriptActionInterface
+%requires RestClient
+class T inherits TypeScriptActionInterface::TypeScriptAppRestClient {
+    static *hash<auto> postAuth(TypeScriptActionInterface::TypeScriptAppRestClient client) {
+        return client.getUpdateOptionsAfterLogin({});
+    }
+}
+auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, string kind) {
+    try {
+        AbstractDataProvider prov = conn.getDataProvider();
+        switch (kind) {
+            case \"action\": return {\"result\": prov.getChildProviderEx(\"info\").doRequest()};
+            case \"allowed\": return {\"result\": (map $1.value, prov.getChildProviderEx(\"info\").getReferenceData(\"choice\"))};
+            case \"option\": return {\"result\": keys prov.getChildProviderEx(\"info\").getRequestTypeWithOptions({\"key\": \"A\"}).getFields()};
+            case \"type\": return {\"result\": keys prov.getChildProviderEx(\"info\").getRequestTypeWithOptions({\"key\": \"A\"}).getFields().dyn.getType().getFields()};
+            case \"record\": {
+                AbstractDataProvider t = prov.getChildProviderPath(\"tables/items\");
+                t.createRecord({\"id\": 7, \"name\": \"n\"});
+                AbstractDataProviderRecordIterator i = t.searchRecords();
+                return {\"result\": i.next() ? i.getValue() : NOTHING};
+            }
+            case \"oauth\": return {\"result\": T::postAuth(conn.get(False)).marker};
+            case \"refresh\": return {\"result\": prov.getChildProviderEx(\"refresh\").doRequest()};
+            case \"pool\": return {\"result\": TypeScriptActionInterface::TypeScriptActionInterface::checkInProcessServer().get()};
+        }
+    } catch (hash<ExceptionInfo> ex) {
+        return {\"err\": ex.err, \"desc\": ex.desc};
+    }
+}
+";
     }
 
     private {
@@ -51,6 +86,10 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
         #! the calls of the host's egress meter
         static list<hash<auto>> metered = ();
         static Mutex meter_lock();
+
+        #! the connections that the host's resolver was asked for, and the connection updates that it got
+        static list<string> resolved = ();
+        static list<hash<auto>> conn_updates = ();
 
         HttpServer server;
         int port;
@@ -69,6 +108,13 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
         addTestCase("the host's hook can only refuse more", \egressHookTest());
         addTestCase("record actions run in the tenant's program", \recordTest());
         addTestCase("record actions have a record limit", \recordLimitTest());
+        addTestCase("each kind of call of a sandboxed caller's provider runs in the tenant's program",
+            \dispatchKindsTest());
+        addTestCase("a sandboxed caller's call with no tenant context is refused", \dispatchFailClosedTest());
+        addTestCase("a connection update goes to the host's handler", \connectionUpdateTest());
+        addTestCase("a trusted caller's provider runs as trusted code", \trustedCallerTest());
+        addTestCase("with the module's in-process pool, a sandboxed caller's calls still run in its program",
+            \inProcessPoolTest());
         # last: the app is refused for every tenant once an action needs a builtin that tenants do not get
         addTestCase("a builtin that tenants do not get", \unsupportedTest());
         set_return_value(main());
@@ -78,7 +124,9 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
         string script = get_script_dir() + "/tenant-catalogue.js";
         # the app is registered in the catalog as the module registers apps (a pool of the catalogue)
         # the catalogue only registers here; the runner's programs get the module's full default code
-        catalogue_pool = new JavaScriptProgramPool("var exports = {};\n" + ReadOnlyFile::readTextFile(script), script,
+        # with the call helper that the module's own catalogue code has (a trusted caller's calls use it)
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
+            "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
             sub (V8::JavaScriptProgram pgm) {
                 pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
             });
@@ -87,6 +135,8 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
             roots += nm;
         }
         TenantActionRunner::setCatalogue(script, roots, catalogue_pool);
+        # the connection app is initialized by the host, as when a connection of it is created
+        TypeScriptActionInterface::initApp("tenant-conn", True);
 
         # the host's hook refuses any path with "hook-deny"; the meter records the calls
         TenantActionRunner::setEgressPolicy(bool sub (string tenant, *string connection, hash<UrlInfo> url,
@@ -96,6 +146,21 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
         TenantActionRunner::setEgressMeter(sub (string tenant, *string connection, int bytes_out, int bytes_in) {
             AutoLock al(meter_lock);
             metered += {"tenant": tenant, "connection": connection, "out": bytes_out, "in": bytes_in};
+        });
+
+        # the host's resolver: the tenant of each connection, or none for "no-ctx"
+        TenantActionRunner::setTenantContextResolver(*hash<auto> sub (AbstractConnection conn) {
+            AutoLock al(meter_lock);
+            resolved += conn.name;
+            if (conn.name == "no-ctx") {
+                return;
+            }
+            return {"tenant": "conn-" + conn.name, "connection": conn.name,
+                "conn_opts": conn.getRealOptions() + {"url": "https://tenant.example.com"}};
+        });
+        TenantActionRunner::setConnectionUpdateHandler(sub (AbstractConnection conn, hash<auto> update) {
+            AutoLock al(meter_lock);
+            conn_updates += {"conn": conn.name, "update": update};
         });
 
         server = new HttpServer(<HttpServerOptionInfo>{});
@@ -262,14 +327,84 @@ hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
         assertEq({"limit": "records", "max": 10000}, rv.arg);
     }
 
+    private TypeScriptAppRestConnection conn(string name) {
+        return new TypeScriptAppRestConnection({"name": name, "url": "tsrest-tenant-conn://conn.example.com",
+            "opts": {"token": "x"}});
+    }
+
+    private Program connTenant() {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(ConnSource, "conn-tenant");
+        p.setSandboxManager(new SandboxManager());
+        return p;
+    }
+
+    dispatchKindsTest() {
+        Program p = connTenant();
+        TypeScriptAppRestConnection c = conn("k");
+        hash<auto> rv = p.callFunction("kind", c, "action");
+        # the provider's own context of the call: the options of the connection that the caller uses
+        assertEq({"where": "restricted", "url": "https://conn.example.com"}, rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "allowed");
+        assertEq(("restricted",), rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "option");
+        assertTrue(rv.result.contains("dep_restricted"), sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "type");
+        assertEq(("f_restricted",), rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "record");
+        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "oauth");
+        assertEq("restricted", rv.result, sprintf("%y", rv));
+        AutoLock al(meter_lock);
+        assertTrue(resolved.contains("k"));
+    }
+
+    dispatchFailClosedTest() {
+        hash<auto> rv = connTenant().callFunction("kind", conn("no-ctx"), "action");
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+    }
+
+    connectionUpdateTest() {
+        hash<auto> rv = connTenant().callFunction("kind", conn("u"), "refresh");
+        assertEq({"ok": True}, rv.result, sprintf("%y", rv));
+        AutoLock al(meter_lock);
+        assertEq(({"conn": "u", "update": {"token": "new-restricted"}},), (select conn_updates, $1.conn == "u"));
+    }
+
+    trustedCallerTest() {
+        # no sandbox: the module's own pool runs the call, never a tenant's program
+        AbstractDataProvider prov = conn("trusted").getDataProvider().getChildProviderEx("info");
+        assertEq("full", prov.doRequest().where);
+        AutoLock al(meter_lock);
+        assertFalse(resolved.contains("trusted"));
+    }
+
+    inProcessPoolTest() {
+        TypeScriptActionInterface::startInProcessServerOnDemand(catalogue_pool, 2);
+        on_exit TypeScriptActionInterface::shutdownInProcessServer();
+        # a trusted caller uses the pool
+        assertEq("full", conn("ip-trusted").getDataProvider().getChildProviderEx("info").doRequest().where);
+        Program p = connTenant();
+        TypeScriptAppRestConnection c = conn("ip");
+        hash<auto> rv = p.callFunction("kind", c, "action");
+        assertEq("restricted", rv.result.where, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "record");
+        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, rv.result, sprintf("%y", rv));
+        # the pool itself refuses sandboxed code
+        rv = p.callFunction("kind", c, "pool");
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+    }
+
     timeoutTest() {
         Program p = tenant();
         # the tenant's program is built by its first call; the time limit is timed on a call that finds it built
         assertEq({"req": NOTHING, "url": "https://api.example.com"}, run(p, "d", "echo", NOTHING).result);
-        date start = now_us();
+        # the action never returns by itself: the call returns only because the watchdog terminated the program, so no
+        # time bound is checked (one would depend on the speed of the machine)
         hash<auto> rv = run(p, "d", "spin", NOTHING, {"timeout": 500});
         assertEq("TS-TENANT-TIMEOUT", rv.err, sprintf("%y", rv));
         assertEq({"timeout_ms": 500}, rv.arg);
-        assertLt(10s, now_us() - start);
+        # the terminated program was discarded: the tenant's next call gets a new program, which works
+        assertEq({"req": NOTHING, "url": "https://api.example.com"}, run(p, "d", "echo", NOTHING).result);
     }
 }

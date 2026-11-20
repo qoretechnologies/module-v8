@@ -1,0 +1,43 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%no-child-restrictions
+
+%requires QUnit
+%requires json
+
+%exec-class TenantScriptAppsTest
+
+#! The apps of a QORE_TYPESCRIPT_ACTION_SCRIPTS script run for tenants with no call of the host (qoretechnologies/qore#6845)
+/** The module records the catalogue that registered each app at its initialization, and builds the restricted
+    programs of the app's tenants from it; the child process starts with the script in the environment, as the
+    module reads it when it is initialized
+*/
+class TenantScriptAppsTest inherits QUnit::Test {
+    constructor() : QUnit::Test("TenantScriptApps", "1.0", \ARGV) {
+        addTestCase("script apps run for tenants", \scriptAppsTest());
+        set_return_value(main());
+    }
+
+    scriptAppsTest() {
+        string dir = get_script_dir();
+        # the child inherits the environment, with the script and no master catalogue
+        setenv("QORE_TYPESCRIPT_ACTION_SCRIPTS", dir + "/tenant-catalogue.js");
+        unsetenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT");
+        on_exit unsetenv("QORE_TYPESCRIPT_ACTION_SCRIPTS");
+        # the interpreter: this one, unless this test runs as an executable that qcc compiled
+        string qore = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY
+            ?? (basename(QORE_ARGV[0]) =~ /^qore/ ? QORE_ARGV[0] : "qore");
+        int rc;
+        string out = backquote(sprintf("%s -b %s 2>&1", qore, dir + "/tenant-script-apps-child.q"), \rc);
+        string err = out;
+        assertEq(0, rc, out);
+        *hash<auto> rv = parse_json((out =~ x/^(\{.*\})$/m)[0] ?? "null");
+        assertEq({"req": {"x": 1}, "url": "https://script.example.com"}, rv.echo.result, sprintf("%y %s", rv, err));
+        assertEq(({"id": 1, "name": "a"},), rv.create.result, sprintf("%y", rv.create));
+        assertEq(({"id": 1, "name": "a", "url": "https://script.example.com"},), rv.search.result,
+            sprintf("%y", rv.search));
+    }
+}
