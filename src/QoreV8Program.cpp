@@ -31,6 +31,8 @@
 #include "QoreV8Environment.h"
 #include "QoreV8Stdio.h"
 
+#include <qore/QoreSandboxManager.h>
+
 #include <uv.h>
 
 #include <vector>
@@ -481,7 +483,28 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     return 0;
 }
 
+//! Returns true if the calling code is refused the runtime: its scripts have file, process and network access that no
+//! sandbox sees (Fixes qoretechnologies/qore#6845)
+/** As every method of the classes of the module (\c UNCONTROLLED_API), a program is refused to code that a sandbox
+    governs unless the sandbox allows uncontrolled APIs (\c SandboxManager::setUncontrolledApiPolicy()); this check
+    also covers a program that the module's own code creates for its caller
+*/
+static bool qore_v8_refuses_caller() {
+#ifdef _QORE_HAS_SANDBOX_UNCONTROLLED_API_POLICY
+    return !qore_sandbox_allows_uncontrolled_apis(QoreSandboxManagerHelper::Policy);
+#else
+    QoreSandboxManagerHelper governing(QoreSandboxManagerHelper::Policy);
+    return static_cast<bool>(governing);
+#endif
+}
+
 int QoreV8Program::init(ExceptionSink* xsink) {
+    if (qore_v8_refuses_caller()) {
+        xsink->raiseException("INVALID-FUNCTION-ACCESS", "the sandbox that governs the calling code does not allow "
+            "uncontrolled APIs, which a JavaScript program is: its code has file, process and network access that no "
+            "sandbox controls (see SandboxManager::setUncontrolledApiPolicy())");
+        return -1;
+    }
     if (qore_v8_forked_child()) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "a JavaScript program cannot be created in a child process "
             "created with fork(): the V8 and Node.js threads of the parent process do not exist in the child");

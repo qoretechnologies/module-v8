@@ -21,6 +21,17 @@
     - @ref V8::TypeScriptProgram "TypeScriptProgram"
     - @ref V8::JavaScriptObject "JavaScriptObject"
 
+    @section v8sandboxing Sandboxing
+
+    JavaScript and TypeScript code run by this module has file, process and network access through Node.js, which no
+    %Qore sandbox sees or controls.  The classes of the module are therefore uncontrolled APIs (functional domains
+    \c EMBEDDED_LOGIC and \c UNCONTROLLED_API): code that a sandbox governs can neither create a program nor run
+    JavaScript code through an object of the module unless the sandbox allows uncontrolled APIs
+    (\c SandboxManager::setUncontrolledApiPolicy()), and gets \c INVALID-FUNCTION-ACCESS.  This also holds when
+    trusted code that the sandboxed code calls creates the program for it, unless the trusted code does so under a
+    system-policy barrier (\c SandboxManager::createSystemPolicyCall()).  A host must never allow uncontrolled APIs to
+    code that it does not trust, as such code can then reach anything in the process.
+
     @section v8qlibmodules Qore User Modules
 
     - @ref typescriptactioninterfaceintro "TypeScriptActionInterface" — an API for Qore DataProvider app actions in TypeScript
