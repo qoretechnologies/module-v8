@@ -8,6 +8,7 @@
 
 %requires QUnit
 %requires Util
+%requires FsUtil
 %try-module process
 %define MISSING_EXTERNAL_MODULE
 %endtry
@@ -124,6 +125,8 @@ JavaScriptProgramProxy::shutdown();
         hash<auto> env;
         #! why the cases are skipped
         *string skip_reason;
+        #! the log directory of the ts-proxy children of the scripts
+        TmpDir log_dir;
     }
 
     constructor() : Test("ts-proxy fork test", "1.0") {
@@ -181,9 +184,12 @@ JavaScriptProgramProxy::shutdown();
         }
         # the scripts load the TypeScript modules of this tree
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        # the ts-proxy children log to a directory of this test, whatever the environment has
+        log_dir = new TmpDir("ts-proxy-fork-log-");
         env = JavaScriptProgram::getEnvironment() + {
             "PATH": path,
             "QORE_MODULE_DIR": module_dir + ":" + (getenv("QORE_MODULE_DIR") ?? ""),
+            "TS_PROXY_LOGDIR": log_dir.path,
         };
 %endif
     }
