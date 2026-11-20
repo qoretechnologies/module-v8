@@ -24,7 +24,8 @@ class TenantScriptAppsTest inherits QUnit::Test {
     scriptAppsTest() {
         string dir = get_script_dir();
         # the child inherits the environment, with the script and no master catalogue
-        setenv("QORE_TYPESCRIPT_ACTION_SCRIPTS", dir + "/tenant-catalogue.js:" + dir + "/tenant-vm-catalogue.js");
+        setenv("QORE_TYPESCRIPT_ACTION_SCRIPTS", dir + "/tenant-catalogue.js:" + dir + "/tenant-vm-catalogue.js:" + dir
+            + "/tenant-graph/catalogue.js");
         unsetenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT");
         on_exit unsetenv("QORE_TYPESCRIPT_ACTION_SCRIPTS");
         # the interpreter: this one, unless this test runs as an executable that qcc compiled
@@ -39,12 +40,27 @@ class TenantScriptAppsTest inherits QUnit::Test {
         assertEq(({"id": 1, "name": "a"},), rv.create.result, sprintf("%y", rv.create));
         assertEq(({"id": 1, "name": "a", "url": "https://script.example.com"},), rv.search.result,
             sprintf("%y", rv.search));
-        # the probe: the app that needs vm while it loads is unavailable up front; the other app loads, and its
-        # sources use the builtins that its actions need-fs and need-vm need
-        assertEq({"available": False, "builtin": "vm", "runtime_builtins": ("vm",)}, rv.probe."tenant-vm-app",
-            sprintf("%y", rv.probe));
-        # child_process: the where() marker of the test catalogue
-        assertEq({"available": True, "runtime_builtins": ("child_process", "fs", "vm")}, rv.probe."tenant-test");
+        # the probe: the app that needs vm while it loads is unavailable up front
+        assertEq(False, rv.probe."tenant-vm-app".available, sprintf("%y", rv.probe));
+        assertEq("vm", rv.probe."tenant-vm-app".builtin);
+        # an app whose shared code requires refused builtins in functions is unavailable as a whole (the test app,
+        # all of whose actions are in one file, requires child_process, fs and vm lazily)
+        assertEq(False, rv.probe."tenant-test".available);
+        assertEq("child_process", rv.probe."tenant-test".builtin);
+        assertEq(("child_process", "fs", "vm"), rv.probe."tenant-test".runtime_builtins);
+        # actions that are files of their own: only the action whose package requires fs lazily is unavailable; the
+        # package that requires fs at its top is reported only
+        hash<auto> g = rv.probe."tenant-graph";
+        assertEq(True, g.available, sprintf("%y", g));
+        assertEq({"lazy": {"builtin": "fs", "package": "lazy-dep"}}, g.unavailable_actions);
+        assertEq((("package": "top-dep", "builtin": "fs", "lazy": False),), g.builtin_sources.actions.plain);
+        assertEq({"plain": "top-dep"}, rv.graph_plain_before.result, sprintf("%y", rv.graph_plain_before));
+        assertEq({"plain": "top-dep"}, rv.graph_plain.result, sprintf("%y", rv.graph_plain));
+        assertEq("TS-TENANT-APP-UNSUPPORTED", rv.graph_lazy.err, sprintf("%y", rv.graph_lazy));
+        assertEq({"app": "tenant-graph", "action": "lazy", "builtin": "fs", "package": "lazy-dep"}, rv.graph_lazy.arg);
+        assertEq({"tenant_available": False, "tenant_unsupported_builtin": "fs",
+            "tenant_unsupported_package": "lazy-dep"}, rv.graph_lazy_info);
+        assertEq({"tenant_available": True}, rv.graph_plain_info);
         assertEq({"tenant_available": False, "tenant_unsupported_builtin": "vm"}, rv.vm_info);
     }
 }

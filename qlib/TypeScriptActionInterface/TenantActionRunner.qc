@@ -150,6 +150,9 @@ public class TenantActionRunner {
         #! the apps that tenants cannot run: app -> the builtin that they need
         static hash<string, string> unsupported;
 
+        #! the actions that tenants cannot run, found by probeApps(): app -> action -> {builtin, package}
+        static hash<string, hash<string, hash<auto>>> unsupported_actions;
+
         #! the host's egress hook and meter; set once by trusted code
         static *code egress_policy;
         static *code egress_meter;
@@ -421,8 +424,12 @@ public class TenantActionRunner {
         TenantActionRunner::checkContext(ctx);
         hash<auto> info = TenantActionRunner::getAction(app, action);
         AutoLock al(lock);
-        if (*string builtin = unsupported{app}) {
+        if (*string builtin = unsupported{info.app}) {
             return info + {"tenant_available": False, "tenant_unsupported_builtin": builtin};
+        }
+        if (*hash<auto> h = unsupported_actions{info.app}{info.action}) {
+            return info + {"tenant_available": False, "tenant_unsupported_builtin": h.builtin,
+                "tenant_unsupported_package": h.package};
         }
         return info + {"tenant_available": True};
     }
@@ -456,6 +463,7 @@ public class TenantActionRunner {
     static auto exec(hash<TsTenantContext> ctx, string app, string action, auto request, *hash<auto> request_options) {
         TenantActionRunner::checkContext(ctx);
         hash<auto> info = TenantActionRunner::getAction(app, action);
+        TenantActionRunner::checkActionSupported(info);
         switch (info.action_code) {
             case DPAT_API:
                 return TenantActionRunner::run(ctx, info.app, {
@@ -473,6 +481,16 @@ public class TenantActionRunner {
                 });
         }
         throw ErrorContext, sprintf("action %y of app %y is not an API or record action", action, app);
+    }
+
+    #! Refuses an action that probeApps() found to need a builtin that tenants do not get
+    private:internal static checkActionSupported(hash<auto> info) {
+        AutoLock al(lock);
+        if (*hash<auto> h = unsupported_actions{info.app}{info.action}) {
+            throw ErrorUnsupported, sprintf("action %y of app %y cannot run for tenants: it needs %y (package %y)",
+                info.action, info.app, h.builtin, h.package),
+                {"app": info.app, "action": info.action, "builtin": h.builtin, "package": h.package};
+        }
     }
 
     #! Validates the request of a record action; returns it as the plain data of the call
@@ -547,6 +565,7 @@ public class TenantActionRunner {
             auto checkpoint) {
         TenantActionRunner::checkContext(ctx);
         hash<auto> info = TenantActionRunner::getAction(app, action);
+        TenantActionRunner::checkActionSupported(info);
         if (info.action_code != DPAT_EVENT) {
             throw ErrorContext, sprintf("action %y of app %y is not an event action", action, app);
         }
@@ -732,15 +751,27 @@ public class TenantActionRunner {
 
         @param apps the apps to probe; if not given, every app of the catalogues
 
-        @return a hash by app: \c available (if tenants can run the app), \c builtin (the builtin that the load
-        needs, if refused), \c error (another error of the load, if any) and \c runtime_builtins (the refused
-        builtins that the app's sources use, which a call of the app can need, if any)
+        The app's sources and the packages that they depend on are scanned too (see scanBuiltins()): a builtin that
+        a function requires (lazily) is refused when the function runs, after the seal, so the app is marked
+        unavailable when its shared code requires one, and otherwise each action whose own code does is marked
+        unavailable (getActionInfo() reports it, and its calls are refused with \c TS-TENANT-APP-UNSUPPORTED); a
+        builtin that a source requires at its top is required before the seal, and is only reported.  The runtime
+        refusal of a builtin stays the backstop.
+
+        @return a hash by app: \c available (if tenants can run the app), \c builtin and \c package (the builtin
+        that the load or the shared code needs, and the package that requires it, if refused), \c error (another
+        error of the load, if any), \c unavailable_actions (the actions that tenants cannot run: action ->
+        \c builtin and \c package), \c runtime_builtins (the refused builtins that the app or its packages
+        require, anywhere) and \c builtin_sources (the findings: \c shared and \c actions, each a list of
+        \c package, \c builtin and \c lazy)
 
         @throw TS-TENANT-ERROR the calling code is sandboxed
     */
     static hash<string, hash<auto>> probeApps(*softlist<string> apps) [dom=PROCESS_CONTROL] {
         TenantActionRunner::checkTrusted("probeApps");
         hash<string, hash<auto>> rv = {};
+        V8::JavaScriptProgram scanner(replace(ScannerSource, "%REFUSED%", make_json(RefusedBuiltins)),
+            "qore-tenant-scan.js");
         foreach string app in (apps ?? TypeScriptActionInterface::getCatalogueAppNames()) {
             # mixed value types: not inferred from a literal
             hash<auto> r = {};
@@ -757,8 +788,37 @@ public class TenantActionRunner {
                     r.error = sprintf("%s: %s", mapped.err, mapped.desc);
                 }
             }
-            if (*list<string> l = TenantActionRunner::scanRuntimeBuiltins(app)) {
-                r.runtime_builtins = l;
+            hash<auto> scan = TenantActionRunner::scanBuiltins(scanner, app);
+            list<hash<auto>> all = scan.shared;
+            map all += $1, scan.actions.iterator();
+            if (all) {
+                r.runtime_builtins = sort(keys (map {$1.builtin: True}, all));
+                r.builtin_sources = scan;
+            }
+            # a builtin that a function requires lazily is refused when the function runs: the app is unavailable if
+            # its shared code requires one, else each action whose own code does (qoretechnologies/qore#6932);
+            # requires at the top of a source run before the seal, and are reported only
+            *hash<auto> shared_lazy = (sort((select scan.shared, $1.lazy), int sub (hash<auto> a, hash<auto> b) {
+                return a.builtin <=> b.builtin;
+            }))[0];
+            if (r.available && shared_lazy) {
+                r.available = False;
+                r.builtin = shared_lazy.builtin;
+                r.package = shared_lazy.package;
+                AutoLock al(lock);
+                unsupported{app} = shared_lazy.builtin;
+            } else if (r.available) {
+                foreach hash<auto> i in (scan.actions.pairIterator()) {
+                    *hash<auto> lazy = (sort((select i.value, $1.lazy), int sub (hash<auto> a, hash<auto> b) {
+                        return a.builtin <=> b.builtin;
+                    }))[0];
+                    if (!lazy) {
+                        continue;
+                    }
+                    r.unavailable_actions{i.key} = {"builtin": lazy.builtin, "package": lazy.package};
+                    AutoLock al(lock);
+                    unsupported_actions{app}{i.key} = {"builtin": lazy.builtin, "package": lazy.package};
+                }
             }
             rv{app} = r;
         }
@@ -770,48 +830,224 @@ public class TenantActionRunner {
         "cluster", "worker_threads", "vm", "v8", "inspector", "repl", "readline", "module", "wasi", "trace_events",
         "sqlite");
 
-    #! Returns the refused builtins that the sources of an app require
-    private:internal static *list<string> scanRuntimeBuiltins(string app) {
-        *hash<auto> src = TenantActionRunner::getSource(app);
-        if (!src) {
-            return;
-        }
-        list<string> files = ();
-        if (src.master) {
-            if (*string dir = TenantActionRunner::getAppDir(app)) {
-                files = TenantActionRunner::listJsFiles(dir);
-            }
-        } else {
-            files = (src.script,);
-        }
-        hash<string, bool> found;
-        foreach string file in (files) {
-            string text = ReadOnlyFile::readTextFile(file);
-            foreach string name in (regex_extract(text, "require\\(\\s*['\"](?:node:)?([a-z_/0-9]+)['\"]\\s*\\)",
-                    RE_Global) ?? ()) {
-                if (RefusedBuiltins.contains(name)) {
-                    found{name} = True;
-                }
-            }
-        }
-        return found ? sort(keys found) : NOTHING;
-    }
+    #! Scans an app and the packages that it depends on for the builtins that a sealed restricted program refuses
+    /** The app's sources and, transitively, the packages that they require from node_modules directories (as Node.js
+        resolves them) are scanned for the builtins of Node.js that a sealed restricted program refuses, with whether
+        each is required in a function (\c lazy: when the function runs, after the seal) or at the top of a source
+        (when it loads, before the seal) (qoretechnologies/qore#6932).  The app's shared code (its entry, without its
+        action and trigger files) and each action (the closure of its file) are scanned apart, so that a finding can
+        be attributed to the actions that reach it.  The scanner runs in a program of the full runtime, with the
+        probe's trust.
 
-    #! Returns the JavaScript files under a directory, without its node_modules
-    private:internal static list<string> listJsFiles(string dir) {
-        list<string> rv = ();
-        Dir d();
-        if (!d.chdir(dir)) {
+        @return a hash: \c shared (the findings of the shared code) and \c actions (the findings by action); a
+        finding is a hash: \c package (empty for the app's own sources), \c builtin and \c lazy
+    */
+    private:internal static hash<auto> scanBuiltins(V8::JavaScriptProgram scanner, string app) {
+        *hash<auto> src = TenantActionRunner::getSource(app);
+        hash<auto> rv = {"shared": (), "actions": {}};
+        if (!src) {
             return rv;
         }
-        rv += map dir + DirSep + $1, d.listFiles("\\.js$") ?? ();
-        foreach string subdir in (d.listDirs() ?? ()) {
-            if (subdir != "node_modules") {
-                rv += TenantActionRunner::listJsFiles(dir + DirSep + subdir);
+        string entry;
+        string root;
+        if (src.master) {
+            *string dir = TenantActionRunner::getAppDir(app);
+            if (!dir) {
+                return rv;
             }
+            entry = dir;
+            # the catalogue's distribution: its node_modules are resolved up to its directory
+            root = dirname(dirname(src.script));
+        } else {
+            entry = src.script;
+            root = "/";
         }
+        hash<auto> h = parse_json(scanner.getGlobal().getProperty("qoreTenantScan").callAsFunctionArgs(NOTHING,
+            (entry, root)));
+        code to_finding = hash<auto> sub (list<auto> f) {
+            return {"package": f[0], "builtin": f[1], "lazy": f[2]};
+        };
+        rv.shared = map to_finding($1), h.shared;
+        rv.actions = map {$1.key: (map to_finding($1), $1.value)}, (h.actions ?? {}).pairIterator();
         return rv;
     }
+
+    #! the scanner of probeApps(): JavaScript of the full runtime that reads the sources (see scanBuiltins())
+    const ScannerSource = '(function () {
+const fs = require("fs");
+const path = require("path");
+const REFUSED = new Set(%REFUSED%);
+const OTHER = new Set(["assert", "assert/strict", "buffer", "events", "stream", "stream/promises", "stream/web",
+    "string_decoder", "url", "util", "util/types", "querystring", "punycode", "zlib", "crypto", "path", "path/posix",
+    "timers", "timers/promises", "perf_hooks", "async_hooks", "diagnostics_channel", "http", "https", "http2", "os",
+    "process", "tty"]);
+const REQ = /require\(\s*["\x27](?:node:)?([^"\x27]+)["\x27]\s*\)/y;
+// the require() calls of a source, with whether each is in a function (lazy: run after the seal) or at the top
+function scan(text, out) {
+    let depth = 0;
+    for (let i = 0, n = text.length; i < n; ++i) {
+        const c = text.charCodeAt(i);
+        if (c === 34 || c === 39 || c === 96) {
+            for (++i; i < n && text.charCodeAt(i) !== c; ++i) {
+                if (text.charCodeAt(i) === 92) {
+                    ++i;
+                }
+            }
+        } else if (c === 47 && text.charCodeAt(i + 1) === 47) {
+            const e = text.indexOf("\n", i);
+            i = e < 0 ? n : e;
+        } else if (c === 47 && text.charCodeAt(i + 1) === 42) {
+            const e = text.indexOf("*/", i + 2);
+            i = e < 0 ? n : e + 1;
+        } else if (c === 123) {
+            ++depth;
+        } else if (c === 125) {
+            if (depth) {
+                --depth;
+            }
+        } else if (c === 114 && text.startsWith("require(", i)) {
+            REQ.lastIndex = i;
+            const m = REQ.exec(text);
+            if (m) {
+                out.push([m[1], depth > 0]);
+            }
+        }
+    }
+}
+function resolve(pkg, start, root) {
+    for (let d = start; ; d = path.dirname(d)) {
+        const c = path.join(d, "node_modules", pkg);
+        try {
+            if (fs.statSync(c).isDirectory()) {
+                return c;
+            }
+        } catch (e) {
+        }
+        if (d === root || d === path.dirname(d)) {
+            return null;
+        }
+    }
+}
+function resolveFile(base) {
+    for (const c of [base, base + ".js", base + ".cjs", path.join(base, "index.js")]) {
+        try {
+            if (fs.statSync(c).isFile()) {
+                return c;
+            }
+        } catch (e) {
+        }
+    }
+    return null;
+}
+// the file of the entry of a package, or of a subpath of it
+function packageFile(dir, sub) {
+    if (sub) {
+        return resolveFile(path.join(dir, sub));
+    }
+    let main = "index.js";
+    try {
+        const pj = JSON.parse(fs.readFileSync(path.join(dir, "package.json"), "utf8"));
+        if (typeof pj.main === "string" && pj.main) {
+            main = pj.main;
+        }
+    } catch (e) {
+    }
+    return resolveFile(path.join(dir, main)) || resolveFile(path.join(dir, "index"));
+}
+// the modules that a file requires and the refused builtins that it requires: {deps: [file], refused: [[name, lazy]]}
+function fileInfo(f, root, memo) {
+    let info = memo.get(f);
+    if (info) {
+        return info;
+    }
+    info = {deps: [], refused: [], pkg: ""};
+    memo.set(f, info);
+    const nm = f.lastIndexOf(path.sep + "node_modules" + path.sep);
+    if (nm >= 0) {
+        const rest = f.slice(nm + 14).split(path.sep);
+        info.pkg = rest[0].startsWith("@") ? rest[0] + "/" + rest[1] : rest[0];
+    }
+    let text;
+    try {
+        text = fs.readFileSync(f, "utf8");
+    } catch (e) {
+        return info;
+    }
+    info.text = text;
+    const reqs = [];
+    scan(text, reqs);
+    for (const [name, lazy] of reqs) {
+        if (REFUSED.has(name)) {
+            info.refused.push([name, lazy]);
+        } else if (name.startsWith(".") || name.startsWith("/")) {
+            const r = resolveFile(path.resolve(path.dirname(f), name));
+            if (r) {
+                info.deps.push(r);
+            }
+        } else if (!OTHER.has(name)) {
+            const parts = name.split("/");
+            const n = name.startsWith("@") ? 2 : 1;
+            const dir = resolve(parts.slice(0, n).join("/"), path.dirname(f), root);
+            const r = dir && packageFile(dir, parts.slice(n).join("/"));
+            if (r) {
+                info.deps.push(r);
+            }
+        }
+    }
+    return info;
+}
+const ACTION_FILE = /\.(action|trigger)\.c?js$/;
+// the refused builtins in the modules that a module reaches: [package, builtin, lazy]; action files are not followed
+// when skip_actions is set, and are collected in actions instead
+function closure(start, root, memo, skip_actions, actions) {
+    const found = new Map();
+    const seen = new Set([start]);
+    const queue = [start];
+    while (queue.length) {
+        const info = fileInfo(queue.pop(), root, memo);
+        for (const [name, lazy] of info.refused) {
+            const key = info.pkg + "\u0000" + name;
+            const old = found.get(key);
+            found.set(key, [info.pkg, name, (old && old[2]) || lazy]);
+        }
+        for (const d of info.deps) {
+            if (seen.has(d)) {
+                continue;
+            }
+            seen.add(d);
+            if (skip_actions && ACTION_FILE.test(d) && d.indexOf(path.sep + "node_modules" + path.sep) < 0) {
+                actions.push(d);
+                continue;
+            }
+            queue.push(d);
+        }
+    }
+    return Array.from(found.values());
+}
+// the findings of an app: those of its shared code (its entry, without its actions), and those of each action
+globalThis.qoreTenantScan = function (entry, root) {
+    const memo = new Map();
+    const action_files = [];
+    let start = entry;
+    try {
+        if (fs.statSync(entry).isDirectory()) {
+            start = path.join(entry, "index.js");
+        }
+    } catch (e) {
+        return JSON.stringify({shared: [], actions: {}});
+    }
+    const shared = closure(start, root, memo, true, action_files);
+    const actions = {};
+    for (const af of action_files) {
+        const info = fileInfo(af, root, memo);
+        const m = /\bconst action\s*=\s*["\x27]([^"\x27]+)["\x27]/.exec(info.text || "");
+        const name = m ? m[1] : path.basename(af).replace(ACTION_FILE, "");
+        actions[name] = closure(af, root, memo, false, null);
+    }
+    return JSON.stringify({shared: shared, actions: actions});
+};
+})();
+';
 
     #! Raises TS-TENANT-ERROR if the calling code is sandboxed
     private:internal static checkTrusted(string what) {

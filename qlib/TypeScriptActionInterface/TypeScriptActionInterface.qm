@@ -215,6 +215,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       its checkpoint; a subscription belongs to its tenant; a source that queues its limit of events is stopped and
       reported, never dropping events; every source stops when the process ends (an exit hook) or the module is
       unloaded; webhook events and the event data providers are not available to sandboxed code
+    - the host can learn up front which apps and actions tenants can run, when it builds its catalogue, with
+      @ref TypeScriptActionInterface::TenantActionRunner::probeApps() "probeApps()": each app is loaded in a
+      restricted program, and the module graph of the app and of the packages that it requires is scanned for the
+      builtins of Node.js that tenants do not get; one that a function requires (when it runs, after the seal) makes
+      the app unavailable if its shared code reaches it, and otherwise each action whose own code reaches it;
+      @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports both
 */
 
 /** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes

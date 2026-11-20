@@ -53,6 +53,8 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
                 "hash<auto> rv = call_function(exec_call, pgm.pgm, work, to_ms, lim.heap_limit);": "the trusted call",
                 "return call_function(build, app);": "the trusted build",
                 "hash<auto> pgm = call_function(build, app);": "the trusted build of the compatibility probe",
+                "hash<auto> h = parse_json(scanner.getGlobal().getProperty(\"qoreTenantScan\").callAsFunctionArgs(NOTHING,":
+                    "the probe's own scanner of the app's sources, which runs no code of the app",
                 "TenantEventSource src = call_function(events_call, ctx.tenant, info.app, pgm, lim.max_queued_events,":
                     "the trusted start of an event source",
                 "call_function(stop_call, src);": "the trusted stop of an event source",
