@@ -103,7 +103,7 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
     source = source_code;
     label = source_label;
 
-    init(xsink);
+    initProgram(xsink);
 }
 
 QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& source_label,
@@ -115,7 +115,7 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
     label = source_label;
     this->transpile_ts = transpile_ts;
 
-    init(xsink);
+    initProgram(xsink);
 }
 
 QoreV8Program::QoreV8Program(ExceptionSink* xsink, const QoreV8Program& old, QoreObject* self) : QoreV8Program() {
@@ -123,7 +123,7 @@ QoreV8Program::QoreV8Program(ExceptionSink* xsink, const QoreV8Program& old, Qor
     label = old.label;
     transpile_ts = old.transpile_ts;
 
-    if (!init(xsink)) {
+    if (!initProgram(xsink)) {
         this->self = self;
     }
 }
@@ -481,7 +481,7 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     return 0;
 }
 
-int QoreV8Program::init(ExceptionSink* xsink) {
+int QoreV8Program::initProgram(ExceptionSink* xsink) {
     if (qore_v8_forked_child()) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "a JavaScript program cannot be created in a child process "
             "created with fork(): the V8 and Node.js threads of the parent process do not exist in the child");
