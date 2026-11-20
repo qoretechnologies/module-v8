@@ -191,6 +191,15 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             global_lock.lock();
             on_exit global_lock.unlock();
             remove cmap{uh};
+            # the destructor is not run for an object whose constructor fails: when it was the only proxy, the master
+            # listener that its startup started is stopped here, or its thread keeps the process from exiting
+            if (!cmap && master_path.val()) {
+                if (master) {
+                    stopMasterListener();
+                } else {
+                    remove master_path;
+                }
+            }
         }
 
         startChildProcess();

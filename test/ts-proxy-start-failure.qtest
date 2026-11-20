@@ -1,0 +1,159 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires QUnit
+%requires Util
+%requires FsUtil
+%try-module process
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module uuid
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%try-module json
+%define MISSING_EXTERNAL_MODULE
+%endtry
+%requires v8
+
+%exec-class TsProxyStartFailureTest
+
+#! Tests a TypeScript proxy whose \c ts-proxy child process cannot start, and the log directory of the child
+/** The first proxy of a process starts the master listener thread; when its \c ts-proxy child exited before it
+    started, the constructor failed and left the master listener running, as the destructor of an object whose
+    constructor fails is not run, and the process never exited.  A \c ts-proxy child whose log directory
+    (\c TS_PROXY_LOGDIR) did not exist exited before it started.  Each case runs a script that creates a proxy with
+    a given log directory.
+*/
+class TsProxyStartFailureTest inherits Test {
+    public {
+        #! only turns a script that never exits into a failure; no case waits for a time to pass
+        const HangGuard = 10m;
+
+        #! the script; its startup timeout is HangGuard
+        const Script = "%modern
+%requires process
+%requires Logger
+%requires TypeScriptActionInterface
+%requires v8
+
+Logger logger(\"null\", LoggerLevel::getLevelFatal());
+logger.addAppender(new LoggerAppenderNull());
+DataProvider::setGlobalLogger(logger);
+JavaScriptProgramProxy::init(new Mutex());
+JavaScriptProgramProxy::setStartupTimeout(10m);
+
+try {
+    JavaScriptProgramProxy p();
+    printf(\"proxy: started\\n\");
+    # stops the proxy and the master listener
+    JavaScriptProgramProxy::shutdown();
+} catch (hash<ExceptionInfo> ex) {
+    # a proxy that failed to start leaves nothing to stop: the script ends without calling shutdown()
+    printf(\"proxy: %s\\n\", ex.err);
+}
+";
+    }
+
+    private {
+        #! the interpreter running this test, used to launch the scripts
+        string qore_exe;
+        #! the temporary directory of the test
+        TmpDir tmp;
+        #! the script file
+        string script;
+        #! the environment of the scripts
+        hash<auto> env;
+        #! why the cases are skipped
+        *string skip_reason;
+    }
+
+    constructor() : Test("ts-proxy start failure test", "1.0") {
+        qore_exe = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY ?? QORE_ARGV[0];
+        tmp = new TmpDir("ts-proxy-start-failure-");
+        script = tmp.path + DirSep + "start.q";
+        checkEnvironment();
+
+        addTestCase("a proxy whose child exits before it starts fails, and the process exits",
+            \childStartFailure());
+        addTestCase("a child creates its log directory", \logDirCreated());
+
+        {
+            File f();
+            f.open2(script, O_CREAT | O_TRUNC | O_WRONLY);
+            f.write(Script);
+        }
+        set_return_value(main());
+    }
+
+    childStartFailure() {
+        # the log directory is under a regular file and cannot be created: the child exits before it starts
+        string file = tmp.path + DirSep + "file";
+        {
+            File f();
+            f.open2(file, O_CREAT | O_TRUNC | O_WRONLY);
+        }
+        runScript(file + DirSep + "log", "proxy: CHILD-ERROR\n");
+    }
+
+    logDirCreated() {
+        string logdir = tmp.path + DirSep + "new" + DirSep + "log";
+        runScript(logdir, "proxy: started\n");
+        assertTrue(is_dir(logdir));
+    }
+
+    private checkEnvironment() {
+%ifdef MISSING_EXTERNAL_MODULE
+        skip_reason = "the process, uuid or json module is missing";
+%else
+        string local_bin = sprintf("%s/../bin", get_script_dir());
+        string path = getenv("PATH") ?? "";
+        if (hstat(local_bin)) {
+            path = local_bin + ":" + path;
+        }
+        if (!(select path.split(":"), $1.val() && is_executable($1 + DirSep + "ts-proxy"))) {
+            skip_reason = "the ts-proxy program cannot be found";
+            return;
+        }
+        # the scripts load the TypeScript modules of this tree
+        string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        env = JavaScriptProgram::getEnvironment() + {
+            "PATH": path,
+            "QORE_MODULE_DIR": module_dir + ":" + (getenv("QORE_MODULE_DIR") ?? ""),
+        };
+%endif
+    }
+
+    #! runs the script with the given log directory and checks its result line and that it exited
+    private runScript(string logdir, string expected) {
+%ifdef MISSING_EXTERNAL_MODULE
+        testSkip(skip_reason);
+%else
+        if (skip_reason) {
+            testSkip(skip_reason);
+        }
+        Process p(qore_exe, ("-b", script), {"env": env + {"TS_PROXY_LOGDIR": logdir}});
+        if (!p.wait(HangGuard)) {
+            p.terminate();
+            p.wait();
+            fail("the script did not exit");
+        }
+        string all = "";
+        while (*string str = p.readStdout(4096)) {
+            all += str;
+        }
+        # the result line of the script; the TypeScript action interface can log other lines to stdout
+        string out = (map $1 + "\n", all.split("\n"), $1 =~ /^proxy: /).join("");
+        string err = "";
+        while (*string str = p.readStderr(4096)) {
+            err += str;
+        }
+        assertEq(expected, out, sprintf("stdout: %s; stderr: %s", all, err));
+        assertEq(0, p.exitCode());
+%endif
+    }
+}
