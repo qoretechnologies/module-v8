@@ -25,7 +25,13 @@
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
 #! JavaScript program proxy class
-/** A proxy belongs to the process that created it: in a child process created with \c fork(), the \c ts-proxy
+/** Each proxy runs its JavaScript and TypeScript code in a \c ts-proxy child process.  The first proxy of a process
+    starts a master listener thread, which accepts the connections of the child processes; the last proxy stops it
+    when it is destroyed.  A proxy is destroyed when its last reference is released or when it is deleted, which stops
+    its child process; a proxy with a registered event source is kept until its event source is released.
+    shutdown() destroys every proxy of the process and stops the master listener explicitly.
+
+    A proxy belongs to the process that created it: in a child process created with \c fork(), the \c ts-proxy
     process, the listener threads and the sockets of a proxy made in the parent belong to the parent.  Destroying such
     a proxy in the child stops nothing of the parent, and using it raises \c TS-PROXY-ERROR; a proxy created in the
     child starts its own master listener
@@ -121,6 +127,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Event socket exit flag
         bool es_exit;
 
+        #! Serializes the start of the event listener with the destruction of the object; see startEventListener()
+        Mutex es_lock();
+
+        #! Set when the object is being destroyed: no event listener is started for it any more
+        bool es_closed;
+
         #! File to signal the event listener thread
         File es_sem_write;
 
@@ -145,11 +157,26 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         */
         static Mutex global_lock;
 
-        #! New socket map; proxy unique hash -> queue
-        #static hash<string, Queue> qmap = {};
+        #! Startup queue map; proxy unique hash -> the proxy's command queue
+        /** The master listener sends the startup confirmation of a child process on the queue of its proxy; it does
+            not use the proxy itself, which can be destroyed by another thread at any time
+        */
+        static hash<string, Queue> qmap = {};
 
-        #! Child map; proxy unique hash -> proxy
+        #! Proxy map; proxy unique hash -> proxy, as a weak reference
+        /** The map does not keep a proxy alive: a proxy is destroyed when its last reference is released, and its
+            destructor removes it.  shutdown() destroys the proxies in the map.  Changed with the global lock held
+        */
         static hash<string, JavaScriptProgramProxy> cmap = {};
+
+        #! Test hook called by removeProxy() in debug mode with the key of the proxy removed; see removeProxy()
+        static *code test_remove_hook;
+
+        #! Event proxy map; proxy unique hash -> proxy with a registered event source
+        /** A strong reference: a proxy with a registered event source is kept while its event source is registered,
+            and the master listener starts its event listener when its child process connects for the event source
+        */
+        static hash<string, JavaScriptProgramProxy> emap = {};
 
         #! Master listener TID
         static int master_listener_tid;
@@ -185,21 +212,55 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         {
             global_lock.lock();
             on_exit global_lock.unlock();
-            cmap{uh} = self;
+            # a weak reference: the map does not keep the object alive
+            cmap{uh} := self;
+            qmap{uh} = cmdq;
         }
         on_error {
             global_lock.lock();
             on_exit global_lock.unlock();
             remove cmap{uh};
+            remove qmap{uh};
+            # the destructor is not run for an object whose constructor fails: when it was the only proxy, the master
+            # listener that its startup started is stopped here, or its thread keeps the process from exiting
+            stopUnusedMasterListenerLocked();
         }
 
         startChildProcess();
     }
 
     destructor() {
+        string uh = self.uniqueHash();
         if (inheritedByFork()) {
+            # the lock is not acquired: a thread of the parent could have held it when the process was copied
+            remove cmap{uh};
+            remove qmap{uh};
             abandonInForkedChild();
             return;
+        }
+        # the object is removed from the maps, and the master listener is stopped when it was the last proxy, also
+        # when stopping its child process fails
+        on_exit {
+            if (gettid() == master_listener_tid && master_pid == getpid()) {
+                # the master listener thread released the last reference, which it took to start the event listener
+                # of the object: it cannot wait for itself to stop, and must not wait for the global lock, which a
+                # thread waiting for it to confirm the startup of a child process can hold
+                try {
+                    background removeProxy(uh);
+                } catch (hash<ExceptionInfo> ex) {
+                    TSAI::error("Cannot remove proxy %y in a thread of its own: %s", uh, get_exception_string(ex));
+                }
+            } else {
+                removeProxy(uh);
+            }
+        }
+        # the master listener no longer finds the object for an event connection (it is only there when it is being
+        # deleted explicitly, as it keeps the object alive), and no event listener is started for it from now on
+        remove emap{uh};
+        {
+            es_lock.lock();
+            on_exit es_lock.unlock();
+            es_closed = True;
         }
         {
             m.lock();
@@ -221,20 +282,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             }
         }
         stopEventListener();
-
-        string uh = self.uniqueHash();
-        bool lck = !global_lock.lockOwner();
-        if (lck) {
-            global_lock.lock();
-        }
-        on_exit if (lck) {
-            global_lock.unlock();
-        }
-
-        remove cmap{uh};
-        if (!cmap) {
-            stopMasterListener();
-        }
     }
 
     hash<auto> getInfo() {
@@ -282,9 +329,45 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         remove sem_read;
         remove sem_write;
         remove sem_info;
+        remove master_listener_tid;
         TSAI::info("Shut down master listener on %y", master_path);
         unlink(master_path);
         remove master_path;
+    }
+
+    #! Removes a destroyed proxy, and stops the master listener if no proxy remains
+    private static removeProxy(string uh) {
+        {
+            bool lck = !global_lock.lockOwner();
+            if (lck) {
+                global_lock.lock();
+            }
+            on_exit if (lck) {
+                global_lock.unlock();
+            }
+
+            remove cmap{uh};
+            remove qmap{uh};
+            stopUnusedMasterListenerLocked();
+        }
+        @debug {
+            # TEST: tells a test that the proxy has been removed (see test/ts-proxy-lifetime.qc)
+            *code hook = test_remove_hook;
+            if (hook) {
+                hook(uh);
+            }
+        }
+    }
+
+    #! Stops the master listener if no proxy remains; called with the global lock held
+    private static stopUnusedMasterListenerLocked() {
+        if (!cmap && master_path.val()) {
+            if (master) {
+                stopMasterListener();
+            } else {
+                remove master_path;
+            }
+        }
     }
 
     static init(Mutex m) {
@@ -321,6 +404,15 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return startup_timeout;
     }
 
+    #! Destroys every proxy of the process and stops the master listener
+    /** This stops the \c ts-proxy child processes of the proxies; a proxy used afterwards raises
+        \c OBJECT-ALREADY-DELETED.  A proxy is also destroyed when its last reference is released, and the last one
+        stops the master listener, so calling this is only needed to stop proxies that are still referenced, such as
+        those with a registered event source.
+
+        In a child process created with \c fork(), this abandons the proxies and the master listener of the parent
+        and stops nothing of the parent.
+    */
     static shutdown() {
         if (master_pid && master_pid != getpid()) {
             # the lock is not acquired in a child process created with fork(): a thread of the parent could have
@@ -332,15 +424,23 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         on_exit global_lock.unlock();
 
         int size = cmap.size();
-        map delete cmap{$1}, keys cmap;
-        TSAI::info("Shut down %d client%s", size, size == 1 ? "" : "s");
-        if (!cmap && master_path.val()) {
-            if (master) {
-                stopMasterListener();
-            } else {
-                remove master_path;
+        foreach string uh in (keys cmap) {
+            # a strong reference to the proxy, which is still in the map, as its destructor removes it with the lock
+            # held
+            *JavaScriptProgramProxy proxy = cmap{uh};
+            # the proxy can be destroyed by the last proxy reference (its destructor runs in another thread)
+            remove cmap{uh};
+            try {
+                delete proxy;
+            } catch (hash<ExceptionInfo> ex) {
+                # the proxy's destructor is running in another thread, which completes it
+                if (ex.err != "DOUBLE-DELETE-EXCEPTION") {
+                    rethrow;
+                }
             }
         }
+        TSAI::info("Shut down %d client%s", size, size == 1 ? "" : "s");
+        stopUnusedMasterListenerLocked();
     }
 
     bool supportsEvent(string key) {
@@ -414,6 +514,8 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         #event_cnt.inc();
         #on_error event_cnt.dec();
 
+        # the proxy is kept while it has an event source; the master listener starts its event listener
+        emap{self.uniqueHash()} = self;
         on_error removeEventSource(ekey);
         setupEventSourceIntern();
     }
@@ -444,7 +546,16 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
+    #! Starts the event listener for the event connection of the child process; called by the master listener
     startEventListener(Socket event_socket, hash<auto> v) {
+        # the destructor sets es_closed with the lock held before it stops the event listener, so a listener is never
+        # started after it has been stopped by the destructor
+        es_lock.lock();
+        on_exit es_lock.unlock();
+        if (es_closed) {
+            info("Ignoring the event connection of PID %d: the proxy is being destroyed", v.pid);
+            return;
+        }
         if (es_tid) {
             stopEventListener();
         }
@@ -619,6 +730,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
             remove event.omap{ekey};
             if (!event.omap) {
                 remove event;
+                remove emap{self.uniqueHash()};
                 stop = True;
             }
         }
@@ -667,6 +779,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
             if (!event.omap) {
                 info("Releasing event %y", key);
                 remove event;
+                remove emap{self.uniqueHash()};
                 stop = True;
             }
         }
@@ -829,15 +942,17 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
                             v.cmd.fullType());
                         continue;
                     }
-                    # get proxy from key
-                    *JavaScriptProgramProxy proxy = cmap{v.pkey};
-                    if (!proxy) {
-                        TSAI::error("Proxy connection: invalid proxy key %y; known keys: %y; ignoring message: %y",
-                            v.pkey, keys cmap, v);
-                        continue;
-                    }
-
+                    # the proxies are not used here, except for an event connection: a proxy can be destroyed by
+                    # another thread at any time, but not while it is in the event proxy map, which keeps it alive
                     if (v.cmd == CC_EVENT_START) {
+                        *JavaScriptProgramProxy proxy = emap{v.pkey};
+                        if (!proxy) {
+                            TSAI::error("Proxy connection: no proxy with an event source for key %y; known keys: %y; "
+                                "ignoring message: %y", v.pkey, keys emap, v);
+                            continue;
+                        }
+                        # the reference taken here can be the last one of the proxy when this returns, so the
+                        # destructor can run in this thread (see removeProxy())
                         proxy.startEventListener(s0, v);
                         continue;
                     }
@@ -846,15 +961,22 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
                             v.cmd);
                         continue;
                     }
-                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(),
-                        LoggerUtil::getArgSummary(v), proxy.uniqueHash());
+                    # the command queue of the proxy
+                    *Queue q = qmap{v.pkey};
+                    if (!q) {
+                        TSAI::error("Proxy connection: invalid proxy key %y; known keys: %y; ignoring message: %y",
+                            v.pkey, keys qmap, v);
+                        continue;
+                    }
+                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", v.pid, LoggerUtil::getArgSummary(v),
+                        v.pkey);
                     hash<auto> msg = {
                         "cmd": CC_OK,
                         "socket": s0,
                     };
                     TSAI::info("Received startup confirmation message for proxy PID %d; sending notification on msg "
-                        "queue", proxy.proc.id());
-                    proxy.cmdq.push(msg);
+                        "queue", v.pid);
+                    q.push(msg);
                 } catch (hash<ExceptionInfo> ex) {
                     TSAI::error("Proxy connection: error processing request: %s", get_exception_string(ex));
                 }
@@ -909,9 +1031,32 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     */
     private static abandonInheritedMaster() {
         if (cmap) {
-            # the proxies made in the parent are removed; a proxy that this process is creating stays
+            # the proxies made in the parent are removed; a proxy that this process is creating stays.  The weak
+            # references of the map are removed rather than copied, as a copy would hold strong references
             int pid = getpid();
-            cmap = map {$1.key: $1.value}, cmap.pairIterator(), $1.value.owner_pid == pid;
+            foreach string uh in (keys cmap) {
+                bool parent;
+                try {
+                    parent = cmap{uh}.owner_pid != pid;
+                } catch (hash<ExceptionInfo> ex) {
+                    # a proxy of the parent destroyed in this process
+                    parent = True;
+                }
+                if (parent) {
+                    remove cmap{uh};
+                    remove qmap{uh};
+                }
+            }
+        }
+        # the proxies of the parent with an event source are released, which abandons them when they are destroyed
+        # (see abandonInForkedChild()); the map holds strong references
+        {
+            int pid = getpid();
+            foreach string uh in (keys emap) {
+                if (emap{uh}.owner_pid != pid) {
+                    remove emap{uh};
+                }
+            }
         }
         remove master;
         remove master_path;

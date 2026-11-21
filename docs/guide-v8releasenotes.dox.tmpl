@@ -81,6 +81,10 @@
       TypeScript action interface reads (\c QORE_V8_CACHE_DIR, \c QORE_V8_DISABLE_CACHE, \c TS_PROXY_LOGDIR,
       \c QORE_TYPESCRIPT_ACTION_VERBOSE and \c QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS) are also read from the current
       environment
+    - a TypeScript proxy (\c JavaScriptProgramProxy) is destroyed when its last reference is released and the last
+      one stops the master listener, so a script whose proxies go out of scope or whose first proxy fails to start
+      ends without calling \c JavaScriptProgramProxy::shutdown(); a \c ts-proxy child process creates a missing
+      \c TS_PROXY_LOGDIR directory instead of exiting before it starts
     - the Google Sheets \c find_spreadsheet_rows action takes a \c header_row option, the row of the column headers
       for sheets with titles or notes above the table (rows are read and searched below it), a \c value_render
       option, to return and search the values as stored (the default), as the sheet displays them, or the formulas

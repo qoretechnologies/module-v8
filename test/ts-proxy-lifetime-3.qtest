@@ -1,0 +1,17 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%include ts-proxy-lifetime.qc
+
+%exec-class TsProxyLifetimePart3
+
+#! runs part 3 of 4 of the cases of TsProxyLifetimeTest (see ts-proxy-lifetime.qc)
+class TsProxyLifetimePart3 inherits TsProxyLifetimeTest {
+    constructor() : TsProxyLifetimeTest("ts-proxy lifetime test, part 3", 3) {
+    }
+}

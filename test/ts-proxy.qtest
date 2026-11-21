@@ -41,9 +41,14 @@ public class TsProxyTest inherits QUnit::Test {
         Logger logger;
         bool env_ready = False;
         string skip_reason;
+        #! the log directory of the ts-proxy children
+        TmpDir log_dir;
     }
 
     constructor() : Test("TsProxyTest", "1.0") {
+        # the ts-proxy children log to a directory of this test, whatever the environment has
+        log_dir = new TmpDir("ts-proxy-log-");
+        setenv("TS_PROXY_LOGDIR", log_dir.path);
         setupLogger();
         checkEnvironment();
         # Every case starts at least one child and sends it commands, and a child that starts or answers slowly is
@@ -687,6 +692,8 @@ public class TsProxyTest inherits QUnit::Test {
         env.QORE_TYPESCRIPT_ACTION_SCRIPTS = script;
         env{TypeScriptActionInterface::CallTimeoutEnv} = "2";
         env.PATH = getenv("PATH");
+        # ENV is the environment of this process when it started
+        env.TS_PROXY_LOGDIR = log_dir.path;
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
         env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
         string code = sprintf("%%modern
@@ -772,6 +779,8 @@ printf(\"RESULT: %%s\\n\", make_json(rv));
         env.TS_PROXY_ENV_CHANGED = "value when the process started";
         env.TS_PROXY_ENV_REMOVED = "value when the process started";
         env.PATH = getenv("PATH");
+        # ENV is the environment of this process when it started
+        env.TS_PROXY_LOGDIR = log_dir.path;
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
         env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
         string code = sprintf("%%modern
