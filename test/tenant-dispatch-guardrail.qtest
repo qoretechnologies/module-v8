@@ -61,6 +61,8 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
                 "JavaScriptObject catalogue = pgm.getGlobal().exports.actionsCatalogue;": "the load of a tenant's program",
                 "call_function(egress_meter, call.tenant, call.connection, bytes_out, bytes_in);": "the host's meter",
                 "if (!call_function(egress_policy, call.tenant, call.connection, ui, ips)) {": "the host's hook",
+                "V8::SandboxCapture capture = call_function(host_sandbox, tctx,":
+                    "the host's sandbox for the tenant calls of trusted code, which takes its capture",
             },
         };
 
@@ -152,8 +154,15 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
         assertLt(pool, disp);
         assertLt(server, disp);
         assertLt(direct, disp);
-        assertRegex("if \\(!_ts_tenant_calls && SandboxManager::isSandboxed\\(\\)\\) \\{\\s*$",
-            src.substr(start, disp - start).split("\n")[-2]);
+        list<string> before = src.substr(start, disp - start).split("\n");
+        assertRegex("if \\(SandboxManager::isSandboxed\\(\\)\\) \\{\\s*$", before[-2]);
+        assertRegex("if \\(!_ts_tenant_calls\\) \\{\\s*$", before[-3]);
+        # then trusted code's calls for a tenant's connection, before any call is made in the full runtime
+        int trusted = src.find("auto rv = TenantActionRunner::dispatchTrusted(logger, api, args, \\tenant);", start);
+        assertGt(disp, trusted);
+        assertLt(pool, trusted);
+        assertLt(server, trusted);
+        assertLt(direct, trusted);
     }
 
     serverBranchTest() {
