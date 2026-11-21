@@ -36,6 +36,11 @@ class TypeScriptActionInterfacePriv {
         #! True when static JavaScript action initialization has already run
         static bool initialized;
 
+        #! The module's logger, taken by trusted code: the host's global logger, or the module's own console logger
+        /** DataProvider gives sandboxed callers no global logger (qoretechnologies/qore#6746); see getLogger()
+        */
+        static *LoggerInterface logger;
+
         #! Default code in each JavaScriptProgram object, after the script's file name and directory
         /** @see getDefaultCode()
         */
@@ -101,13 +106,35 @@ function setenv(vr, value) {
         return seconds(secs.toInt());
     }
 
+    #! Returns the module's logger
+    /** Trusted code gets the process's global logger, which the host may set after the module's initialization, and
+        keeps it for sandboxed callers, which DataProvider gives none (qoretechnologies/qore#6746); a sandboxed caller
+        gets the logger that trusted code took last.
+    */
+    static *LoggerInterface getLogger() {
+        if (!SandboxManager::isSandboxed()) {
+            if (*LoggerInterface global_logger = DataProvider::getGlobalLogger()) {
+                logger = global_logger;
+                return global_logger;
+            }
+        }
+        return logger;
+    }
+
     static init() {
         if (initialized) {
             return;
         }
         initialized = True;
 
-        if (!DataProvider::getGlobalLogger()) {
+        # the module's logger is taken here, at the module's initialization: a sandboxed caller gets no global
+        # logger from DataProvider and cannot set one (qoretechnologies/qore#6746), so the logger is never looked
+        # up for the first time while serving sandboxed code
+        bool sandboxed = SandboxManager::isSandboxed();
+        *LoggerInterface global_logger = sandboxed ? NOTHING : DataProvider::getGlobalLogger();
+        if (global_logger) {
+            logger = global_logger;
+        } else {
             LoggerLevel ll;
             if (getenv("QORE_TYPESCRIPT_ACTION_VERBOSE")) {
                 #ll = LoggerLevel::LevelInfo;
@@ -115,9 +142,13 @@ function setenv(vr, value) {
             } else {
                 ll = LoggerLevel::LevelWarn;
             }
-            Logger logger("console", ll);
-            logger.addAppender(new StdoutAppender());
-            DataProvider::setGlobalLogger(logger);
+            Logger console("console", ll);
+            console.addAppender(new StdoutAppender());
+            logger = console;
+            # only trusted code sets the process's global logger
+            if (!sandboxed) {
+                DataProvider::setGlobalLogger(console);
+            }
         }
 
         {

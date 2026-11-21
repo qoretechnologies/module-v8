@@ -3346,7 +3346,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             return;
         }
         root = new TypeScriptActionRootDataProvider();
-        root.setLogger(DataProvider::getGlobalLogger());
+        root.setLogger(TypeScriptActionInterfacePriv::getLogger());
     }
 
     static *bool getOptionAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
@@ -4928,7 +4928,7 @@ namespace TSAI {
 # private class with convenience methods
 class TSAI inherits TypeScriptActionInterface {
     static debug(string fmt, ...) {
-        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(LoggerLevel::LevelDebug, fmt, argv);
         } else {
             stdout.vprintf(fmt + "\n", argv);
@@ -4936,7 +4936,7 @@ class TSAI inherits TypeScriptActionInterface {
     }
 
     static info(string fmt, ...) {
-        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(LoggerLevel::LevelInfo, fmt, argv);
         } else {
             stdout.vprintf(fmt + "\n", argv);
@@ -4944,7 +4944,7 @@ class TSAI inherits TypeScriptActionInterface {
     }
 
     static warn(string fmt, ...) {
-        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(LoggerLevel::LevelWarn, fmt, argv);
         } else {
             stderr.vprintf(fmt + "\n", argv);
@@ -4952,7 +4952,7 @@ class TSAI inherits TypeScriptActionInterface {
     }
 
     static error(string fmt, ...) {
-        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(LoggerLevel::LevelError, fmt, argv);
         } else {
             stderr.vprintf(fmt + "\n", argv);
@@ -4960,7 +4960,7 @@ class TSAI inherits TypeScriptActionInterface {
     }
 
     static fatal(string fmt, ...) {
-        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(LoggerLevel::LevelFatal, fmt, argv);
         } else {
             stderr.vprintf(fmt + "\n", argv);
@@ -4968,7 +4968,7 @@ class TSAI inherits TypeScriptActionInterface {
     }
 
     static logArgs(Logger::LoggerLevel level, string fmt, *list<auto> args) {
-        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(level, fmt, args);
         } else {
             stderr.vprintf(fmt + "\n", args);

@@ -87,7 +87,7 @@ public class JavaScriptProgramPool {
     }
 
     info(string fmt, ...) {
-        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(Qore::Logger::LoggerLevel::LevelInfo, fmt, argv);
         }
     }
