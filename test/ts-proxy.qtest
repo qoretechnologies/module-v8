@@ -185,6 +185,18 @@ public class TsProxyTest inherits QUnit::Test {
 
     # Fault-injection hooks are removed when the release qmod is compiled.
     # --enable-debug only enables hooks in source parsed by the current process.
+    #! skips a case whose fault is injected by @debug code when debugging is not enabled (qoretechnologies/qore#6889)
+    private skipIfDebuggingDisabled() {
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("the fault is injected by debug code, which requires running with debugging enabled "
+                "(--enable-debug)");
+        }
+    }
+
     private skipIfDebugHooksUnavailable() {
         if (get_module_hash().TypeScriptActionInterface.filename.endsWith(".qmod")) {
             testSkip("fault injection requires TypeScriptActionInterface source with --enable-debug");
@@ -501,6 +513,7 @@ public class TsProxyTest inherits QUnit::Test {
     private proxyRestartErrorHandlingTest() {
         skipIfNotReady();
         skipIfDebugHooksUnavailable();
+        skipIfDebuggingDisabled();
 
         JavaScriptProgramProxy::init(new Mutex());
         on_exit JavaScriptProgramProxy::shutdown();
@@ -626,6 +639,7 @@ public class TsProxyTest inherits QUnit::Test {
     private proxyStartupTimeoutTest() {
         skipIfNotReady();
         skipIfDebugHooksUnavailable();
+        skipIfDebuggingDisabled();
 
         JavaScriptProgramProxy::init(new Mutex());
         on_exit JavaScriptProgramProxy::shutdown();
