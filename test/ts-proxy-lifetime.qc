@@ -1,10 +1,9 @@
-#!/usr/bin/env qore
 # -*- mode: qore; indent-tabs-mode: nil -*-
 # Copyright 2026 Qore Technologies, s.r.o.
 # SPDX-License-Identifier: MIT
 
-%modern
-%prepend-module-path "${SCRIPT_DIR}/../qlib"
+# The cases of the ts-proxy-lifetime-<n>.qtest tests: each runs one part of them, so that each takes a short time, and
+# together they run every case (see addPartCase())
 
 %requires QUnit
 %requires Util
@@ -24,8 +23,6 @@
 %endif
 %requires v8
 
-%exec-class TsProxyLifetimeTest
-
 #! Tests the lifetime of TypeScript proxies, of their \c ts-proxy child processes and of the master listener
 /** The first proxy of a process starts the master listener thread, and the last one stops it when it is destroyed;
     while the thread runs, the process does not exit when its script ends.  The proxy map of the class held a strong
@@ -35,7 +32,8 @@
     run, and a \c ts-proxy child whose log directory (\c TS_PROXY_LOGDIR) did not exist exited before it started.
 
     The cases that check that a process exits run a script for each case (see runScript()); the others run in this
-    process, which only exits at the end if no master listener is left running.
+    process, which only exits at the end if no master listener is left running.  Each ts-proxy-lifetime-<n>.qtest
+    test runs the cases of one part (see addPartCase()).
 */
 class TsProxyLifetimeTest inherits Test {
     public {
@@ -135,9 +133,12 @@ switch (mode) {
         hash<auto> env;
         #! why the cases are skipped
         *string skip_reason;
+        #! the part of the cases that this test runs (see addPartCase())
+        int part;
     }
 
-    constructor() : Test("ts-proxy lifetime test", "1.0") {
+    constructor(string name, int part) : Test(name, "1.0") {
+        self.part = part;
         qore_exe = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY ?? QORE_ARGV[0];
         tmp = new TmpDir("ts-proxy-lifetime-");
 %ifndef MISSING_EXTERNAL_MODULE
@@ -152,14 +153,19 @@ switch (mode) {
         setenv("TS_PROXY_LOGDIR", tmp.path + DirSep + "log");
         checkEnvironment();
 
-        addTestCase("a proxy that goes out of scope ends, and the process exits", \scopeExit());
-        addTestCase("the last of several proxies stops the master listener", \severalProxies());
-        addTestCase("a proxy destroyed by shutdown() goes out of scope, and the process exits", \shutdownThenScope());
-        addTestCase("a proxy whose child exits before it starts fails, and the process exits",
+        addPartCase(1, "a proxy that goes out of scope ends, and the process exits", \scopeExit());
+        addPartCase(1, "the last of several proxies stops the master listener", \severalProxies());
+        addPartCase(2, "a proxy destroyed by shutdown() goes out of scope, and the process exits",
+            \shutdownThenScope());
+        addPartCase(2, "a proxy whose child exits before it starts fails, and the process exits",
             \childStartFailure());
-        addTestCase("a child creates its log directory", \logDirCreated());
-        addTestCase("a proxy destroyed while the master listener serves others", \destroyedWhileListening());
-        addTestCase("shutdown() while a proxy is being destroyed in another thread", \shutdownDuringDestruction());
+        addPartCase(2, "a child creates its log directory", \logDirCreated());
+        addPartCase(3, "a proxy destroyed while the master listener serves others", \destroyedWhileListening());
+        addPartCase(3, "shutdown() while a proxy is being destroyed in another thread", \shutdownDuringDestruction());
+        addPartCase(4, "the master listener thread releases the last reference of the only proxy",
+            \listenerReleasesOnlyProxy());
+        addPartCase(4, "the master listener thread releases the last reference of a proxy while others remain",
+            \listenerReleasesWithOthers());
 
         {
             File f();
@@ -167,6 +173,13 @@ switch (mode) {
             f.write(Script);
         }
         set_return_value(main());
+    }
+
+    #! adds a case if it is in the part that this test runs: each case is in one part, and each part is a test
+    private addPartCase(int case_part, string name, code call, *softlist<auto> args) {
+        if (case_part == part) {
+            addTestCase(name, call, args);
+        }
     }
 
     scopeExit() {
@@ -277,6 +290,96 @@ switch (mode) {
 %endif
     }
 
+    listenerReleasesOnlyProxy() {
+        listenerRelease(False);
+    }
+
+    listenerReleasesWithOthers() {
+        listenerRelease(True);
+    }
+
+    #! the master listener thread releases the last reference of a proxy, so the proxy's destructor runs in that thread
+    /** The thread cannot wait for itself to stop or for the global lock, so the proxy is removed in another thread,
+        which stops the master listener if no other proxy remains.  The thread holds the reference while it starts the
+        event listener of a proxy with an event source: ListenerReleaseProxy sends the event connection of its child
+        itself, and waits in startEventListener() until every other reference has been released.
+
+        @param others if another proxy remains, which the master listener keeps serving
+    */
+    private listenerRelease(bool others) {
+%ifdef MISSING_EXTERNAL_MODULE
+        testSkip(skip_reason);
+%else
+        skipIfNotReady();
+        if (!ListenerReleaseProxy::debugHooks()) {
+            testSkip("the test hook of the proxy removal needs debugging enabled (--enable-debug)");
+        }
+        JavaScriptProgramProxy::init(new Mutex());
+
+        *JavaScriptProgramProxy other;
+        string answer;
+        if (others) {
+            other = new JavaScriptProgramProxy();
+            answer = command(other);
+        }
+
+        Counter in_listener(1);
+        Counter release(1);
+        Queue destroyed();
+        Queue removed();
+        ListenerReleaseProxy::setRemoveHook(sub (string uh) {
+            removed.push({"uh": uh, "tid": gettid()});
+        });
+        on_exit ListenerReleaseProxy::setRemoveHook();
+        bool released;
+        # the master listener thread is released if the case fails before it releases it
+        on_exit if (!released) {
+            release.dec();
+        }
+
+        int pid;
+        string uh;
+        int listener_tid;
+        {
+            ListenerReleaseProxy p(in_listener, release, destroyed);
+            pid = p.getInfo()."proxy-pid";
+            uh = p.uniqueHash();
+            listener_tid = ListenerReleaseProxy::getListenerTid();
+            if (!others) {
+                answer = command(p);
+            }
+            p.connectEvent();
+            if (in_listener.waitForZero(HangGuard)) {
+                fail("the master listener did not start the event listener of the proxy");
+            }
+            # the master listener thread holds a reference to the proxy; the other ones are released
+            p.unpin();
+        }
+        # the master listener thread releases the last reference
+        released = True;
+        release.dec();
+
+        hash<auto> d = destroyed.get(HangGuard);
+        assertEq(listener_tid, d.tid, "the master listener thread destroyed the proxy");
+        hash<auto> r = removed.get(HangGuard);
+        assertEq(uh, r.uh);
+        assertNeq(listener_tid, r.tid, "the proxy was removed in another thread");
+        assertFalse(Process::checkPid(pid), "the child of the proxy has ended");
+        if (others) {
+            # the master listener still runs, serves the other proxy and starts new children
+            assertEq(listener_tid, ListenerReleaseProxy::getListenerTid());
+            assertEq(answer, command(other));
+            JavaScriptProgramProxy p3();
+            assertEq(answer, command(p3));
+        } else {
+            assertTrue(ListenerReleaseProxy::waitListenerStopped(HangGuard), "the master listener stopped");
+            # a new master listener is started for a new proxy
+            JavaScriptProgramProxy p3();
+            assertEq(answer, command(p3));
+        }
+%endif
+    }
+
     private skipIfNotReady() {
         if (skip_reason) {
             testSkip(skip_reason);
@@ -373,6 +476,73 @@ class LatchedProxy inherits JavaScriptProgramProxy {
     destructor() {
         entered.dec();
         release.waitForZero();
+    }
+}
+
+#! a proxy for which the master listener thread holds the last reference
+/** Like the proxy of an event source, the object is in the event proxy map of JavaScriptProgramProxy, and it sends
+    the event connection of its child itself; the master listener thread, which takes a strong reference to the object
+    from the map for the connection, waits in startEventListener() until it is released
+*/
+class ListenerReleaseProxy inherits JavaScriptProgramProxy {
+    private {
+        Counter in_listener;
+        Counter release;
+        Queue destroyed;
+    }
+
+    constructor(Counter in_listener, Counter release, Queue destroyed) {
+        self.in_listener = in_listener;
+        self.release = release;
+        self.destroyed = destroyed;
+    }
+
+    #! tells the test the thread that destroys the object; runs before the destructor of JavaScriptProgramProxy
+    destructor() {
+        destroyed.push({"tid": gettid()});
+    }
+
+    #! called by the master listener thread with its reference to the object; no event listener is started
+    startEventListener(Socket event_socket, hash<auto> v) {
+        in_listener.dec();
+        release.waitForZero();
+    }
+
+    #! adds the object to the event proxy map, as for an event source, and sends the event connection of its child
+    connectEvent() {
+        string uh = self.uniqueHash();
+        emap{uh} = self;
+        Socket sock();
+        sock.connectUNIX(master_path);
+        sendString(sock, makeSend(TypeScriptProxy::CC_EVENT_START, {"pkey": uh, "pid": getpid()}));
+    }
+
+    #! removes the object from the event proxy map, as when its event source is released
+    unpin() {
+        remove emap{self.uniqueHash()};
+    }
+
+    #! sets the hook that the removal of a proxy calls in debug mode
+    static setRemoveHook(*code hook) {
+        test_remove_hook = hook;
+    }
+
+    static int getListenerTid() {
+        return master_listener_tid;
+    }
+
+    #! returns True if the master listener thread has stopped within the given time
+    static bool waitListenerStopped(timeout limit) {
+        return !master_listener_cnt.waitForZero(limit);
+    }
+
+    #! returns True if the debug hooks of the module are active
+    static bool debugHooks() {
+        bool rv;
+        @debug {
+            rv = True;
+        }
+        return rv;
     }
 }
 %endif

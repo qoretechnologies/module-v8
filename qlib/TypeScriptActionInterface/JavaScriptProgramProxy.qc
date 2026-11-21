@@ -169,6 +169,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         */
         static hash<string, JavaScriptProgramProxy> cmap = {};
 
+        #! Test hook called by removeProxy() in debug mode with the key of the proxy removed; see removeProxy()
+        static *code test_remove_hook;
+
         #! Event proxy map; proxy unique hash -> proxy with a registered event source
         /** A strong reference: a proxy with a registered event source is kept while its event source is registered,
             and the master listener starts its event listener when its child process connects for the event source
@@ -334,17 +337,26 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     #! Removes a destroyed proxy, and stops the master listener if no proxy remains
     private static removeProxy(string uh) {
-        bool lck = !global_lock.lockOwner();
-        if (lck) {
-            global_lock.lock();
-        }
-        on_exit if (lck) {
-            global_lock.unlock();
-        }
+        {
+            bool lck = !global_lock.lockOwner();
+            if (lck) {
+                global_lock.lock();
+            }
+            on_exit if (lck) {
+                global_lock.unlock();
+            }
 
-        remove cmap{uh};
-        remove qmap{uh};
-        stopUnusedMasterListenerLocked();
+            remove cmap{uh};
+            remove qmap{uh};
+            stopUnusedMasterListenerLocked();
+        }
+        @debug {
+            # TEST: tells a test that the proxy has been removed (see test/ts-proxy-lifetime.qc)
+            *code hook = test_remove_hook;
+            if (hook) {
+                hook(uh);
+            }
+        }
     }
 
     #! Stops the master listener if no proxy remains; called with the global lock held
