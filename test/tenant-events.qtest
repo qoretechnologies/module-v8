@@ -1,0 +1,279 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%no-child-restrictions
+
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires HttpServer
+
+%exec-class TenantEventsTest
+
+#! the local server: a request to /block arrives and is never answered until the test ends
+class BlockingHandler inherits AbstractHttpRequestHandler {
+    public {
+        Queue arrived();
+        Counter release(1);
+    }
+
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        if (hdr.path =~ /block/) {
+            arrived.push(True);
+            release.waitForZero();
+        }
+        return makeResponse(200, "ok", {"Content-Type": MimeTypeText});
+    }
+}
+
+#! The event sources of tenants: events are pulled (qoretechnologies/qore#6845)
+/** The app's event function runs in a restricted program of the tenant's own until it is stopped; stopping always
+    ends it, whether it runs JavaScript or waits in a request of the bridge; every source stops when the runner is
+    shut down
+*/
+class TenantEventsTest inherits QUnit::Test {
+    public {
+        #! a deadlock guard only: every wait ends on an event of the test
+        const HangGuard = 5m;
+
+        const App = "tenant-test";
+
+        #! a sandboxed tenant's code
+        const TenantSource = "%modern
+%requires TypeScriptActionInterface
+hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
+    try {
+        hash<TypeScriptActionInterface::TsTenantContext> c = cast<hash<TypeScriptActionInterface::TsTenantContext>>(ctx);
+        switch (what) {
+            case \"start\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::startEvents(c, args[0], args[1], args[2], args[3])};
+            case \"poll\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::pollEvents(c, args[0], args[1], args[2])};
+            case \"stop\": TypeScriptActionInterface::TenantActionRunner::stopEvents(c, args[0]); return {};
+            case \"exec\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::exec(c, args[0], args[1], args[2])};
+        }
+    } catch (hash<ExceptionInfo> ex) {
+        return {\"err\": ex.err, \"desc\": ex.desc, \"arg\": ex.arg};
+    }
+}
+";
+    }
+
+    private {
+        static JavaScriptProgramPool catalogue_pool;
+        HttpServer server;
+        BlockingHandler handler();
+        int port;
+        Program tp;
+    }
+
+    constructor() : QUnit::Test("TenantEvents", "1.0", \ARGV) {
+        addTestCase("events are pulled with the function's checkpoint", \ticksTest());
+        addTestCase("a subscription belongs to its tenant", \ownerTest());
+        addTestCase("a failed function's error comes after its events", \errorTest());
+        addTestCase("a source that queues its limit of events is stopped and reported", \overflowTest());
+        addTestCase("a source over the memory limit is stopped and reported", \heapTest());
+        addTestCase("a function in a busy loop is stopped", \spinStopTest());
+        addTestCase("a function waiting in a request of the bridge is stopped", \blockedStopTest());
+        addTestCase("a spinning tenant does not block another tenant's calls", \fairnessTest());
+        addTestCase("a tenant runs at most its limit of event sources", \sourceLimitTest());
+        addTestCase("shutting the runner down stops every source", \shutdownTest());
+        addTestCase("the module's unload stops every source", \unloadTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        string script = get_script_dir() + "/tenant-catalogue.js";
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\n" + ReadOnlyFile::readTextFile(script), script,
+            sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            });
+        *list<string> roots = (get_script_dir(),);
+        if (*string nm = ENV.QORE_V8_TEST_NODE_MODULES) {
+            roots += nm;
+        }
+        TenantActionRunner::setCatalogue(script, roots, catalogue_pool);
+        server = new HttpServer(<HttpServerOptionInfo>{});
+        server.setDefaultHandler("events", handler);
+        port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
+        tp = new Program(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        tp.parse(TenantSource, "tenant");
+        SandboxManager sm();
+        sm.setNetworkDefaultPolicy(True);
+        tp.setSandboxManager(sm);
+    }
+
+    globalTearDown() {
+        handler.release.dec();
+        if (server) {
+            server.stop();
+        }
+    }
+
+    private hash<auto> call(string what, string tenant, *list<auto> args) {
+        return tp.callFunction("call", what, {"tenant": tenant, "conn_opts": {"url": "https://api.example.com"}},
+            args);
+    }
+
+    private string start(string tenant, string action, *hash<auto> opts, auto checkpoint) {
+        hash<auto> rv = call("start", tenant, (App, action, opts, checkpoint));
+        if (rv.err) {
+            throw rv.err, rv.desc, rv.arg;
+        }
+        return rv.result;
+    }
+
+    #! polls until n events arrived or the source ended
+    private hash<auto> pollFor(string tenant, string id, int n) {
+        hash<auto> rv = {};
+        rv.events = ();
+        date deadline = now_us() + HangGuard;
+        while (rv.events.size() < n && now_us() < deadline) {
+            hash<auto> r = call("poll", tenant, (id, n - rv.events.size(), HangGuard));
+            if (r.err) {
+                return rv + {"err": r.err, "desc": r.desc, "arg": r.arg};
+            }
+            rv.events += r.result.events;
+            if (exists r.result.checkpoint) {
+                rv.checkpoint = r.result.checkpoint;
+            }
+            rv.running = r.result.running;
+            if (!r.result.running && !r.result.events) {
+                break;
+            }
+        }
+        return rv;
+    }
+
+    ticksTest() {
+        string id = start("a", "ticks", {"count": 3});
+        hash<auto> rv = pollFor("a", id, 3);
+        assertEq((0, 1, 2), (map $1.n, rv.events), sprintf("%y", rv));
+        assertEq("restricted", rv.events[0].where);
+        # the function sets the checkpoint after each event: a poll wakes up for a new checkpoint too
+        auto cp = rv.checkpoint;
+        while (cp != 3) {
+            hash<auto> r = call("poll", "a", (id, 10, HangGuard));
+            # the source runs until it is stopped: an error or its end fails the case, never a loop
+            assertNothing(r.err, sprintf("%y", r));
+            assertTrue(r.result.running || exists r.result.checkpoint, sprintf("%y", r));
+            if (r.err || (!r.result.running && !exists r.result.checkpoint)) {
+                break;
+            }
+            if (exists r.result.checkpoint) {
+                cp = r.result.checkpoint;
+            }
+        }
+        assertEq(3, cp);
+        assertEq({}, call("stop", "a", (id,)));
+        # resumed from the stored checkpoint
+        id = start("a", "ticks", {"count": 2}, 3);
+        assertEq((3, 4), (map $1.n, pollFor("a", id, 2).events));
+        call("stop", "a", (id,));
+        assertEq("TS-TENANT-ERROR", call("poll", "a", (id,)).err);
+    }
+
+    ownerTest() {
+        string id = start("a", "ticks", {"count": 0});
+        on_exit call("stop", "a", (id,));
+        assertEq("TS-TENANT-ERROR", call("poll", "b", (id,)).err);
+        assertEq("TS-TENANT-ERROR", call("stop", "b", (id,)).err);
+        assertTrue(call("poll", "a", (id,)).result.running);
+    }
+
+    errorTest() {
+        string id = start("c", "throw-events");
+        on_exit call("stop", "c", (id,));
+        hash<auto> rv = pollFor("c", id, 2);
+        assertEq((0,), (map $1.n, rv.events), sprintf("%y", rv));
+        assertEq("TS-TENANT-ACTION-ERROR", rv.err);
+        assertEq("ev-boom", rv.desc);
+    }
+
+    overflowTest() {
+        TenantActionRunner::setTenantLimits(<TsTenantLimits>{"max_queued_events": 5});
+        on_exit TenantActionRunner::setTenantLimits(<TsTenantLimits>{});
+        string id = start("d", "ticks", {"count": 10});
+        on_exit call("stop", "d", (id,));
+        # the source stops itself at its limit: wait for its end, then read its events and its error
+        while (call("poll", "d", (id, 0, HangGuard)).result.running) {
+        }
+        hash<auto> rv = pollFor("d", id, 6);
+        assertEq((0, 1, 2, 3, 4), (map $1.n, rv.events), sprintf("%y", rv));
+        assertEq("TS-TENANT-LIMIT", rv.err);
+        assertEq({"limit": "events", "max": 5}, rv.arg);
+    }
+
+    heapTest() {
+        TenantActionRunner::setTenantLimits(<TsTenantLimits>{"heap_limit": 64 * 1024 * 1024});
+        on_exit TenantActionRunner::setTenantLimits(<TsTenantLimits>{});
+        string id = start("k", "hog-events");
+        on_exit call("stop", "k", (id,));
+        # the function grows its live data until the watchdog's heap check stops it: the error is the memory limit,
+        # whether the watchdog or the function's thread records it first
+        hash<auto> rv = pollFor("k", id, 2);
+        assertEq((0,), (map $1.n, rv.events), sprintf("%y", rv));
+        assertEq("TS-TENANT-LIMIT", rv.err, sprintf("%y", rv));
+        assertEq({"limit": "memory", "max": 64 * 1024 * 1024}, rv.arg);
+    }
+
+    spinStopTest() {
+        string id = start("e", "spin-events");
+        # the function emitted its event and spins
+        assertEq((0,), (map $1.n, pollFor("e", id, 1).events));
+        assertEq({}, call("stop", "e", (id,)));
+        # the tenant's next call works
+        assertEq({"req": NOTHING, "url": "https://api.example.com"}, call("exec", "e", (App, "echo", NOTHING)).result);
+    }
+
+    blockedStopTest() {
+        string id = start("f", "blocked-events", {"url": sprintf("http://127.0.0.1:%d/block", port)});
+        # the function waits in the request: the server got it and does not answer
+        assertTrue(handler.arrived.get(HangGuard));
+        assertEq({}, call("stop", "f", (id,)));
+        assertEq({"req": NOTHING, "url": "https://api.example.com"}, call("exec", "f", (App, "echo", NOTHING)).result);
+    }
+
+    fairnessTest() {
+        string id = start("g", "spin-events");
+        on_exit call("stop", "g", (id,));
+        assertEq((0,), (map $1.n, pollFor("g", id, 1).events));
+        # another tenant's call runs while g's function spins
+        assertEq({"req": {"x": 1}, "url": "https://api.example.com"}, call("exec", "h", (App, "echo", {"x": 1})).result);
+        hash<auto> pr = call("poll", "g", (id,));
+        assertTrue(pr.result.running, sprintf("%y", pr));
+    }
+
+    sourceLimitTest() {
+        # each source holds a program of its own: the programs per app are not the limit here
+        TenantActionRunner::setTenantLimits(<TsTenantLimits>{"max_programs": 8});
+        on_exit TenantActionRunner::setTenantLimits(<TsTenantLimits>{});
+        list<string> ids = map start("i", "ticks", {"count": 0}), xrange(4);
+        on_exit map call("stop", "i", ($1,)), ids;
+        hash<auto> rv = call("start", "i", (App, "ticks", {"count": 0}));
+        assertEq("TS-TENANT-LIMIT", rv.err, sprintf("%y", rv));
+        assertEq({"limit": "event_sources", "max": 4}, rv.arg);
+    }
+
+    shutdownTest() {
+        string a = start("j", "ticks", {"count": 0});
+        string b = start("j", "spin-events");
+        assertEq((0,), (map $1.n, pollFor("j", b, 1).events));
+        TenantActionRunner::shutdown();
+        assertEq("TS-TENANT-ERROR", call("poll", "j", (a,)).err);
+        assertEq("TS-TENANT-ERROR", call("poll", "j", (b,)).err);
+        # the tenant's calls still work
+        assertEq({"req": NOTHING, "url": "https://api.example.com"}, call("exec", "j", (App, "echo", NOTHING)).result);
+    }
+
+    unloadTest() {
+        # a child process starts sources and ends normally: the module's unload stops them, so the process ends
+        string qore = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY
+            ?? (basename(QORE_ARGV[0]) =~ /^qore/ ? QORE_ARGV[0] : "qore");
+        int rc;
+        string out = backquote(sprintf("%s -b %s 2>&1", qore, get_script_dir() + "/tenant-events-child.q"), \rc);
+        assertEq(0, rc, out);
+        assertTrue(out =~ /^started 2$/m, out);
+    }
+}

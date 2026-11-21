@@ -1,0 +1,66 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%no-child-restrictions
+
+%requires QUnit
+%requires json
+
+%exec-class TenantScriptAppsTest
+
+#! The apps of a QORE_TYPESCRIPT_ACTION_SCRIPTS script run for tenants with no call of the host (qoretechnologies/qore#6845)
+/** The module records the catalogue that registered each app at its initialization, and builds the restricted
+    programs of the app's tenants from it; the child process starts with the script in the environment, as the
+    module reads it when it is initialized
+*/
+class TenantScriptAppsTest inherits QUnit::Test {
+    constructor() : QUnit::Test("TenantScriptApps", "1.0", \ARGV) {
+        addTestCase("script apps run for tenants", \scriptAppsTest());
+        set_return_value(main());
+    }
+
+    scriptAppsTest() {
+        string dir = get_script_dir();
+        # the child inherits the environment, with the script and no master catalogue
+        setenv("QORE_TYPESCRIPT_ACTION_SCRIPTS", dir + "/tenant-catalogue.js:" + dir + "/tenant-vm-catalogue.js:" + dir
+            + "/tenant-graph/catalogue.js");
+        unsetenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT");
+        on_exit unsetenv("QORE_TYPESCRIPT_ACTION_SCRIPTS");
+        # the interpreter: this one, unless this test runs as an executable that qcc compiled
+        string qore = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY
+            ?? (basename(QORE_ARGV[0]) =~ /^qore/ ? QORE_ARGV[0] : "qore");
+        int rc;
+        string out = backquote(sprintf("%s -b %s 2>&1", qore, dir + "/tenant-script-apps-child.q"), \rc);
+        string err = out;
+        assertEq(0, rc, out);
+        *hash<auto> rv = parse_json((out =~ x/^(\{.*\})$/m)[0] ?? "null");
+        assertEq({"req": {"x": 1}, "url": "https://script.example.com"}, rv.echo.result, sprintf("%y %s", rv, err));
+        assertEq(({"id": 1, "name": "a"},), rv.create.result, sprintf("%y", rv.create));
+        assertEq(({"id": 1, "name": "a", "url": "https://script.example.com"},), rv.search.result,
+            sprintf("%y", rv.search));
+        # the probe: the app that needs vm while it loads is unavailable up front
+        assertEq(False, rv.probe."tenant-vm-app".available, sprintf("%y", rv.probe));
+        assertEq("vm", rv.probe."tenant-vm-app".builtin);
+        # an app whose shared code requires refused builtins in functions is unavailable as a whole (the test app,
+        # all of whose actions are in one file, requires child_process, fs and vm lazily)
+        assertEq(False, rv.probe."tenant-test".available);
+        assertEq("child_process", rv.probe."tenant-test".builtin);
+        assertEq(("child_process", "fs", "vm"), rv.probe."tenant-test".runtime_builtins);
+        # actions that are files of their own: only the action whose package requires fs lazily is unavailable; the
+        # package that requires fs at its top is reported only
+        hash<auto> g = rv.probe."tenant-graph";
+        assertEq(True, g.available, sprintf("%y", g));
+        assertEq({"lazy": {"builtin": "fs", "package": "lazy-dep"}}, g.unavailable_actions);
+        assertEq((("package": "top-dep", "builtin": "fs", "lazy": False),), g.builtin_sources.actions.plain);
+        assertEq({"plain": "top-dep"}, rv.graph_plain_before.result, sprintf("%y", rv.graph_plain_before));
+        assertEq({"plain": "top-dep"}, rv.graph_plain.result, sprintf("%y", rv.graph_plain));
+        assertEq("TS-TENANT-APP-UNSUPPORTED", rv.graph_lazy.err, sprintf("%y", rv.graph_lazy));
+        assertEq({"app": "tenant-graph", "action": "lazy", "builtin": "fs", "package": "lazy-dep"}, rv.graph_lazy.arg);
+        assertEq({"tenant_available": False, "tenant_unsupported_builtin": "fs",
+            "tenant_unsupported_package": "lazy-dep"}, rv.graph_lazy_info);
+        assertEq({"tenant_available": True}, rv.graph_plain_info);
+        assertEq({"tenant_available": False, "tenant_unsupported_builtin": "vm"}, rv.vm_info);
+    }
+}

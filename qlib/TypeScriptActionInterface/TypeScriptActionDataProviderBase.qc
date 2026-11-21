@@ -167,7 +167,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         TSAI::debug("TypeScriptActionDataProviderBase::getAsyncValueArgs(): api: %y args: %y cache_opts: %y "
             "use_cache: %y _ts_no_io: %y", api.label, LoggerUtil::getArgSummary(args), LoggerUtil::getArgSummary(cache_opts),
             use_cache, _ts_no_io);
-        if (_ts_no_io || (!cache_opts && !use_cache)) {
+        # a tenant's call never uses the cache: its entries are shared by all callers
+        if (_ts_no_io || _ts_tenant_calls || SandboxManager::isSandboxed() || (!cache_opts && !use_cache)) {
             TSAI::debug("Executing; no cache");
             return TypeScriptActionDataProviderBase::execAsyncValueArgs(logger, api, args);
         }
@@ -243,6 +244,23 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         date start = now_us();
         on_exit TSAI::debug("perf: %y get async value: %y (args: %y)", api.label, now_us() - start, args);
         on_error TSAI::error("%s", get_exception_string($1));
+
+        # sandboxed code: the call is made by TenantActionRunner, in the tenant's own program, or refused; this is the
+        # module's single path into an app's code for sandboxed code (see TenantActionRunner::dispatch())
+        if (!_ts_tenant_calls && SandboxManager::isSandboxed()) {
+            return TenantActionRunner::dispatch(logger, api, args);
+        }
+
+        # a tenant's call: only the functions of the tenant's own program run (TenantActionRunner)
+        if (_ts_tenant_calls) {
+            if (*code c = _ts_tenant_calls{api.key}) {
+                api.async_call = c;
+            } else if (api.type != "get_records") {
+                # a get_records() function is returned by the tenant's own search function
+                throw "TS-TENANT-ERROR", sprintf("the tenant's program has no function %y", api.key);
+            }
+            return execAsyncValueDirect(logger, api, args);
+        }
 
         # check in-process pool first (no IPC overhead)
         if (*JavaScriptInProcessPool ip = TSAI::checkInProcessServer()) {
@@ -332,9 +350,22 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 }).doCatch(sub (auto e) {
                     push_val("exception caught", e);
                 });
-                # wait for the IO in the background - this will only complete when the I/O is complete
+                # wait for the IO in the background - this will only complete when the I/O is complete; if the wait
+                # fails (the program was terminated: a time limit, or a stop of an event function), no callback runs,
+                # and the error is the result, so that the call does not wait forever
                 background sub () {
-                    v.wait();
+                    try {
+                        v.wait();
+                    } catch (hash<ExceptionInfo> ex) {
+                        q.push({
+                            "where": "wait",
+                            "err": {
+                                "name": ex.err,
+                                "message": ex.desc,
+                                "errstr": sprintf("%s: %s", ex.err, ex.desc),
+                            },
+                        });
+                    }
                 }();
                 TSAI::debug("Waiting for result");
                 # this will return a value as soon as the first value is ready
@@ -1038,6 +1069,11 @@ hashdecl DynamicTypeInfo {
 }
 
 thread_local *bool _ts_no_io;
+
+#! the functions of a tenant's program, by call key, while TenantActionRunner runs a record action for the tenant
+/** Every call of the provider code is made with the tenant's own function; module-internal
+*/
+thread_local *hash<string, code> _ts_tenant_calls;
 class NoIoHelper {
     private {
         *bool old_no_io;

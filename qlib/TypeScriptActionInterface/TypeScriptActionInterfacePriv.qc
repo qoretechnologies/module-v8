@@ -201,6 +201,11 @@ function setenv(vr, value) {
             + DefaultCode;
     }
 
+    #! Returns the master pool, if any
+    static *JavaScriptProgramPool getMaster() {
+        return master;
+    }
+
     #! Creates a pool and returns the pool if created
     static *JavaScriptProgramPool createPool(string path, string cwd, code init) {
         try {
@@ -265,6 +270,9 @@ function setenv(vr, value) {
                 *string name = loadAppFromPath(app_path);
                 if (name.val()) {
                     dirmap{dname} = name;
+                    # restricted programs for tenants load the app from its directory, as for an app registered
+                    # from the index (TenantActionRunner, qoretechnologies/qore#6845)
+                    TypeScriptActionInterface::recordAppLoadPath(name, app_path);
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Failed to load app from %y: %s: %s", app_path, ex.err, ex.desc);

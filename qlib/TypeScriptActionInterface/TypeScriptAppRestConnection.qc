@@ -136,6 +136,11 @@ hash<auto> metadata = client.introspectOAuth2Token(
         }
     }
 
+    #! Returns the connection of the client
+    TypeScriptAppRestConnection getAppConnection() {
+        return conn;
+    }
+
     #! Copies a client whose constructor also requires the TypeScript connection
     private AbstractRestClient copySelf(hash<auto> opts) {
         RestClient copy = cast<RestClient>(Class::getClass(self).newObject(conn, opts, True));

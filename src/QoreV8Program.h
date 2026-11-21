@@ -35,6 +35,7 @@
 
 #include "v8-module.h"
 
+#include <atomic>
 #include <set>
 #include <map>
 #include <vector>
@@ -59,6 +60,62 @@ public:
 
     DLLLOCAL QoreV8Program(const QoreString& source_code, const QoreString& source_label,
         bool transpile_ts, ExceptionSink* xsink);
+
+    //! Creates a program with options; see JavaScriptProgram::constructor(string, string, hash<auto>)
+    /** A restricted program (option \c restricted; qoretechnologies/qore#6845) is built by restricted-bootstrap.js:
+        its code loads only the files under the option \c roots, reaches no file, process or network once it is
+        sealed (seal()), and reaches the network only through the option \c bridge
+    */
+    DLLLOCAL QoreV8Program(const QoreString& source_code, const QoreString& source_label, const QoreHashNode& opts,
+        ExceptionSink* xsink);
+
+    //! Seals a restricted program: the builtins of its load phase are revoked, and no file is loaded any more
+    DLLLOCAL int seal(ExceptionSink* xsink);
+
+    //! Returns true if the program is restricted
+    DLLLOCAL bool isRestricted() const {
+        return restricted;
+    }
+
+    //! Terminates the JavaScript code that runs in the program, from any thread; the program cannot be used any more
+    DLLLOCAL void terminate();
+
+    //! Requests a check of the program's heap from any thread: if it exceeds the cap, the code is terminated
+    DLLLOCAL void requestHeapCheck(int64 cap);
+
+    //! Checks the heap of the program now, when no code of it runs; returns true if it was over the cap
+    DLLLOCAL bool checkHeap(ExceptionSink* xsink, int64 cap);
+
+    //! Returns true if the program was terminated (terminate(), or a heap check that found the cap exceeded)
+    DLLLOCAL bool isTerminated() const {
+        return terminated.load();
+    }
+
+    //! Returns true if a heap check found the cap exceeded
+    DLLLOCAL bool isOverHeap() const {
+        return over_heap.load();
+    }
+
+    //! Returns the cap of the pending heap check, in bytes
+    DLLLOCAL int64 getHeapCheckCap() const {
+        return heap_check_cap.load();
+    }
+
+    //! Marks the program as having exceeded its heap cap
+    DLLLOCAL void setOverHeap(int64 used) {
+        over_heap_size.store(used);
+        over_heap.store(true);
+    }
+
+    //! Returns the heap in use that a heap check found over the cap, after a collection, or 0
+    DLLLOCAL int64 getOverHeapSize() const {
+        return over_heap_size.load();
+    }
+
+    //! Returns the host bridge of a restricted program, or nullptr
+    DLLLOCAL const ResolvedCallReferenceNode* getRestrictedBridge() const {
+        return restricted_bridge;
+    }
 
     DLLLOCAL QoreV8Program(const QoreV8Program& old, QoreProgram* qpgm);
 
@@ -333,6 +390,20 @@ protected:
     bool fatal_error = false;
     bool transpile_ts = false;
 
+    //! true for a restricted program (qoretechnologies/qore#6845)
+    bool restricted = false;
+    //! the directories whose files a restricted program may load
+    std::vector<std::string> restricted_roots;
+    //! the host bridge of a restricted program's network requests (referenced), or nullptr
+    ResolvedCallReferenceNode* restricted_bridge = nullptr;
+    //! set when the program's code is terminated, from another thread (qoretechnologies/qore#6845)
+    std::atomic<bool> terminated{false};
+    //! set when a heap check found the cap exceeded
+    std::atomic<bool> over_heap{false};
+    std::atomic<int64> over_heap_size{0};
+    //! the heap cap of the pending heap check, in bytes
+    std::atomic<int64> heap_check_cap{0};
+
     static QoreThreadLock global_lock;
     typedef std::set<QoreV8Program*> pset_t;
     static pset_t pset;
@@ -351,6 +422,10 @@ protected:
         @return 0 for OK, -1 if an exception was raised
     */
     DLLLOCAL int setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tryCatch);
+
+    //! Adds the data of a restricted program to its bootstrap data: its roots and its host bridge (qore#6845)
+    DLLLOCAL int setRestrictedBootstrapData(ExceptionSink* xsink, v8::Local<v8::Context> context,
+        v8::Local<v8::Object> data);
 
     DLLLOCAL void deleteIntern(ExceptionSink* xsink);
 
@@ -405,6 +480,11 @@ public:
     DLLLOCAL QoreV8ProgramData(const QoreString& source_code, const QoreString& source_label,
             bool transpile_ts, ExceptionSink* xsink)
             : QoreV8Program(source_code, source_label, transpile_ts, xsink) {
+    }
+
+    DLLLOCAL QoreV8ProgramData(const QoreString& source_code, const QoreString& source_label,
+            const QoreHashNode& opts, ExceptionSink* xsink)
+            : QoreV8Program(source_code, source_label, opts, xsink) {
     }
 
     DLLLOCAL QoreV8ProgramData(ExceptionSink* xsink, const QoreV8ProgramData& old, QoreObject* self)
@@ -463,6 +543,13 @@ public:
                     xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
                         "The given JavaScriptProgram has been destroyed "
                         "and can no longer be accessed");
+                }
+                return;
+            }
+            if (pgm->terminated.load()) {
+                if (!silent) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScriptProgram was terminated and can "
+                        "no longer be used");
                 }
                 return;
             }

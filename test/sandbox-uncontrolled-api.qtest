@@ -1,0 +1,94 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%no-child-restrictions
+
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+
+%exec-class SandboxUncontrolledApiTest
+
+#! The JavaScript runtime is an uncontrolled API (qoretechnologies/qore#6845)
+/** The scripts of a JavaScript or TypeScript program have file, process and network access (Node.js) that no sandbox
+    sees.  Code that a sandbox governs can therefore neither create a program nor run JavaScript code through an object
+    of the module, unless the sandbox allows uncontrolled APIs (SandboxManager::setUncontrolledApiPolicy()); this holds
+    as well when trusted code that the sandboxed code calls creates the program, unless trusted code does so under a
+    system-policy barrier.  Before the change, the classes were tagged only EMBEDDED_LOGIC, so a sandboxed tenant that
+    was allowed embedded logic got a full runtime.
+*/
+class SandboxUncontrolledApiTest inherits QUnit::Test {
+    public {
+        #! the tenant's code: each function returns the error code of the attempt, or "ran"
+        const TenantSource = "%modern
+%requires v8
+string sub attempt(code c) {
+    try {
+        c();
+        return \"ran\";
+    } catch (hash<ExceptionInfo> ex) {
+        return ex.err;
+    }
+}
+string sub createJs() { return attempt(sub () { new V8::JavaScriptProgram(\"1 + 1\", \"tenant.js\"); }); }
+string sub createTs() { return attempt(sub () { new V8::TypeScriptProgram(\"let x: number = 1;\", \"tenant.ts\"); }); }
+string sub callObject(object o) { return attempt(sub () { o.callAsFunctionArgs(NOTHING, ()); }); }
+string sub useProgram(object p) { return attempt(sub () { p.getGlobal(); }); }
+string sub callHost(code c) { return attempt(c); }
+";
+    }
+
+    constructor() : QUnit::Test("SandboxUncontrolledApi", "1.0", \ARGV) {
+        addTestCase("sandboxed code cannot create a program", \createTest());
+        addTestCase("sandboxed code cannot run JavaScript through an object or a program", \useTest());
+        addTestCase("trusted code that sandboxed code calls cannot create one for it", \hostTest());
+        addTestCase("a sandbox that allows uncontrolled APIs", \allowedTest());
+        set_return_value(main());
+    }
+
+    private Program tenant(*bool allow_uncontrolled) {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "tenant");
+        SandboxManager sm();
+        if (allow_uncontrolled) {
+            sm.setUncontrolledApiPolicy(True);
+        }
+        p.setSandboxManager(sm);
+        return p;
+    }
+
+    createTest() {
+        Program p = tenant();
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("createJs"));
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("createTs"));
+    }
+
+    useTest() {
+        # objects of a program that the host created and gives the tenant
+        V8::JavaScriptProgram host("function f() { return 1; }", "host.js");
+        object fn = host.getGlobal().getProperty("f");
+        assertEq(1, fn.callAsFunctionArgs(NOTHING, ()));
+        Program p = tenant();
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("callObject", fn));
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("useProgram", host));
+    }
+
+    hostTest() {
+        Program p = tenant();
+        # trusted code that the tenant calls: the tenant is on the call stack
+        code create = sub () { new V8::JavaScriptProgram("1 + 1", "host-for-tenant.js"); };
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("callHost", create));
+        # under a system-policy barrier, trusted code decides for itself
+        code barrier = SandboxManager::createSystemPolicyCall(create);
+        assertEq("ran", p.callFunction("callHost", barrier));
+    }
+
+    allowedTest() {
+        Program p = tenant(True);
+        assertEq("ran", p.callFunction("createJs"));
+        assertEq("ran", p.callFunction("createTs"));
+    }
+}

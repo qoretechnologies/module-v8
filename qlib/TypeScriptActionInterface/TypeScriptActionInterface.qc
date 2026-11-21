@@ -126,6 +126,16 @@ const RestGetAllowedValuesRequiredKeys = {
 
 #! Interface class
 public class TypeScriptActionInterface {
+    private:internal {
+        #! the directory of each app's implementation, recorded when the app is registered from the index; restricted
+        #! programs for tenants load an app from it (TenantActionRunner, qoretechnologies/qore#6845)
+        static hash<string, string> app_load_paths;
+
+        #! the pool of the catalogue that registered each app (the master catalogue or a script of
+        #! QORE_TYPESCRIPT_ACTION_SCRIPTS); restricted programs for tenants load the app from its catalogue
+        static hash<string, JavaScriptProgramPool> app_pools;
+    }
+
     public {
         static hash<string, code> Api = TypeScriptActionInterface::getInterface();
 
@@ -521,6 +531,7 @@ TypeScriptActionInterface::setCallTimeout(1h);
         remove initmap{name};
         remove appmap{name};
         remove initialized_appmap{name};
+        remove app_pools{name};
         remove app_connection_registered{name};
         remove app_schema_error_map{name};
         remove actionmap{name};
@@ -876,6 +887,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                 "cwd": dirname(apps_dir),
                 "pending_path": apps_dir + DirSep + dname,
             };
+            app_load_paths{name} = apps_dir + DirSep + dname;
             appcasemap{appname} = name;
             ConnectionSchemeCache::registerPendingScheme(info.scheme, sub () {
                 TypeScriptActionInterface::initApp(name);
@@ -1245,6 +1257,8 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         if (_pool_clone_mode) {
             TypeScriptActionInterface::normalizeProviderSchemaVersion(\app,
                 "app", app.name);
+        } else {
+            app_pools{app.name} = pool;
         }
 
         if (!_pool_clone_mode) {
@@ -4347,6 +4361,34 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         int protocol = TypeScriptActionInterface::getCatalogueProtocolVersion();
         @endcode
     */
+    #! Returns the directory of the implementation of an app registered from the index, if any
+    /** @param app the name of the app
+
+        @return the directory, or @ref nothing if the app was not registered from the index
+    */
+    static *string getAppLoadPath(string app) {
+        return app_load_paths{app};
+    }
+
+    #! Records the directory of the implementation of an app that the master catalogue loaded
+    static recordAppLoadPath(string app, string path) [dom=PROCESS_CONTROL] {
+        app_load_paths{app} = path;
+    }
+
+    #! Returns the pool of the catalogue that registered an app, if any
+    /** @param app the name of the app
+
+        @return the pool, or @ref nothing if no catalogue registered the app
+    */
+    static *JavaScriptProgramPool getAppPool(string app) [dom=PROCESS_CONTROL] {
+        return app_pools{app};
+    }
+
+    #! Returns the names of the apps that a catalogue registered, or that are registered from the index
+    static list<string> getCatalogueAppNames() [dom=PROCESS_CONTROL] {
+        return sort(keys (app_pools + app_load_paths));
+    }
+
     static int getCatalogueProtocolVersion() {
         return CatalogueProtocolVersion;
     }

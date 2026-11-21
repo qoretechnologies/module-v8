@@ -30,6 +30,9 @@
 #include "QoreV8ClassWrapper.h"
 #include "QoreV8Environment.h"
 #include "QoreV8Stdio.h"
+#include "restricted-bootstrap.js.h"
+
+#include <qore/QoreSandboxManager.h>
 
 #include <uv.h>
 
@@ -107,6 +110,146 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
 }
 
 QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& source_label,
+        const QoreHashNode& opts, ExceptionSink* xsink) : QoreV8Program() {
+    assert(source_code.getEncoding() == QCS_UTF8);
+    assert(source_label.getEncoding() == QCS_UTF8);
+
+    source = source_code;
+    label = source_label;
+    transpile_ts = opts.getKeyValue("typescript").getAsBool();
+    restricted = opts.getKeyValue("restricted").getAsBool();
+    if (restricted) {
+        if (transpile_ts) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "a restricted program cannot transpile TypeScript");
+            valid = false;
+            return;
+        }
+        QoreValue roots = opts.getKeyValue("roots");
+        if (roots.getType() != NT_LIST || !roots.get<const QoreListNode>()->size()) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "a restricted program needs the directories whose "
+                "files it may load in the option \"roots\" (a list of strings)");
+            valid = false;
+            return;
+        }
+        ConstListIterator li(roots.get<const QoreListNode>());
+        while (li.next()) {
+            QoreValue v = li.getValue();
+            if (v.getType() != NT_STRING || v.get<const QoreStringNode>()->empty()) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "the option \"roots\" must be a list of "
+                    "directory names");
+                valid = false;
+                return;
+            }
+            TempEncodingHelper root(v.get<const QoreStringNode>(), QCS_UTF8, xsink);
+            if (!root) {
+                valid = false;
+                return;
+            }
+            restricted_roots.push_back(root->c_str());
+        }
+        QoreValue bridge = opts.getKeyValue("bridge");
+        if (!bridge.isNothing()) {
+            const ResolvedCallReferenceNode* call = bridge.getType() == NT_FUNCREF
+                || bridge.getType() == NT_RUNTIME_CLOSURE
+                ? bridge.get<const ResolvedCallReferenceNode>() : nullptr;
+            if (!call) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "the option \"bridge\" must be a call reference "
+                    "or a closure");
+                valid = false;
+                return;
+            }
+            restricted_bridge = call->refRefSelf();
+        }
+    }
+
+    init(xsink);
+}
+
+void QoreV8Program::terminate() {
+    // the code that runs in the program ends with a termination exception; the program is not used again
+    // the flag is checked by every entry into the program (QoreV8ProgramHelper); valid is not changed here, as it is
+    // guarded by the program's lock, which the thread that runs the code can hold
+    terminated.store(true);
+    if (isolate) {
+        isolate->TerminateExecution();
+    }
+}
+
+//! Checks the heap of the program against a cap, on a thread that holds the program's isolate
+/** The heap in use counts garbage that was not collected yet: a program whose collector lags behind (a slow machine,
+    valgrind) would be over its cap with live data far below it; the cap applies to the live data, so a heap over the
+    cap is collected and checked again.  A program over its cap is terminated.
+*/
+static bool qore_v8_check_heap(v8::Isolate* isolate, QoreV8Program* pgm, int64 cap) {
+    v8::HeapStatistics hs;
+    isolate->GetHeapStatistics(&hs);
+    if (static_cast<int64>(hs.used_heap_size()) <= cap) {
+        return false;
+    }
+    isolate->LowMemoryNotification();
+    isolate->GetHeapStatistics(&hs);
+    if (static_cast<int64>(hs.used_heap_size()) <= cap) {
+        return false;
+    }
+    pgm->setOverHeap(static_cast<int64>(hs.used_heap_size()));
+    pgm->terminate();
+    return true;
+}
+
+//! Checks the heap of the program, in an interrupt on the thread that runs its code
+static void qore_v8_heap_check(v8::Isolate* isolate, void* data) {
+    QoreV8Program* pgm = static_cast<QoreV8Program*>(data);
+    qore_v8_check_heap(isolate, pgm, pgm->getHeapCheckCap());
+}
+
+bool QoreV8Program::checkHeap(ExceptionSink* xsink, int64 cap) {
+    QoreV8ProgramHelper v8h(xsink, this);
+    if (*xsink) {
+        return false;
+    }
+    return qore_v8_check_heap(isolate, this, cap);
+}
+
+void QoreV8Program::requestHeapCheck(int64 cap) {
+    if (!isolate || cap <= 0) {
+        return;
+    }
+    heap_check_cap.store(cap);
+    isolate->RequestInterrupt(qore_v8_heap_check, this);
+}
+
+int QoreV8Program::seal(ExceptionSink* xsink) {
+    if (!restricted) {
+        xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "only a restricted program can be sealed");
+        return -1;
+    }
+    if (!isolate) {
+        xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program was not properly initialized");
+        return -1;
+    }
+    QoreV8ProgramHelper v8h(xsink, this);
+    if (*xsink) {
+        return -1;
+    }
+    v8::Local<v8::Context> context = v8h.getContext();
+    v8::TryCatch tryCatch(isolate);
+    v8::Local<v8::Value> control;
+    v8::Local<v8::Symbol> key = v8::Symbol::For(isolate,
+        v8::String::NewFromUtf8Literal(isolate, "qore.restricted.control"));
+    v8::Local<v8::Value> seal_fn;
+    if (!context->Global()->Get(context, key).ToLocal(&control) || !control->IsObject()
+        || !control.As<v8::Object>()->Get(context, v8::String::NewFromUtf8Literal(isolate, "seal")).ToLocal(&seal_fn)
+        || !seal_fn->IsFunction()
+        || seal_fn.As<v8::Function>()->Call(context, control, 0, nullptr).IsEmpty()) {
+        if (!checkException(xsink, tryCatch)) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "the restricted program cannot be sealed");
+        }
+        return -1;
+    }
+    return 0;
+}
+
+QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& source_label,
         bool transpile_ts, ExceptionSink* xsink) : QoreV8Program() {
     assert(source_code.getEncoding() == QCS_UTF8);
     assert(source_label.getEncoding() == QCS_UTF8);
@@ -122,6 +265,10 @@ QoreV8Program::QoreV8Program(ExceptionSink* xsink, const QoreV8Program& old, Qor
     source = old.source;
     label = old.label;
     transpile_ts = old.transpile_ts;
+    // a copy of a restricted program is restricted as well (qoretechnologies/qore#6845)
+    restricted = old.restricted;
+    restricted_roots = old.restricted_roots;
+    restricted_bridge = old.restricted_bridge ? old.restricted_bridge->refRefSelf() : nullptr;
 
     if (!init(xsink)) {
         this->self = self;
@@ -472,8 +619,9 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
             env_created).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "stdio"),
             stdio_bridge).FromMaybe(false)
+        || (restricted && setRestrictedBootstrapData(xsink, context, data))
         || !context->Global()->DefineOwnProperty(context, key, data, v8::DontEnum).FromMaybe(false)) {
-        if (!checkException(xsink, tryCatch)) {
+        if (!*xsink && !checkException(xsink, tryCatch)) {
             xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "cannot pass the source to the JavaScript program");
         }
         return -1;
@@ -481,7 +629,135 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     return 0;
 }
 
+//! Refuses a dynamic import() in a restricted program: it would load any module of the runtime (qore#6845)
+static v8::MaybeLocal<v8::Promise> qore_v8_restricted_import(v8::Local<v8::Context> context,
+        v8::Local<v8::Data> host_defined_options, v8::Local<v8::Value> resource_name, v8::Local<v8::String> specifier,
+        v8::Local<v8::FixedArray> import_attributes) {
+    v8::Isolate* isolate = v8::Isolate::GetCurrent();
+    v8::Local<v8::Promise::Resolver> resolver;
+    if (!v8::Promise::Resolver::New(context).ToLocal(&resolver)) {
+        return v8::MaybeLocal<v8::Promise>();
+    }
+    v8::Local<v8::Value> err = v8::Exception::Error(v8::String::NewFromUtf8Literal(isolate,
+        "QORE_TENANT_DENIED_BUILTIN: import() is not available in a restricted program"));
+    if (resolver->Reject(context, err).IsNothing()) {
+        return v8::MaybeLocal<v8::Promise>();
+    }
+    return resolver->GetPromise();
+}
+
+//! bridge(json): calls the host bridge of a restricted program with a JSON string and returns its JSON string
+/** Only a string crosses: the host bridge gets no JavaScript object, and the program gets no Qore value; a Qore
+    exception is raised in JavaScript as the string "ERR: desc" (see QoreV8Program::raiseV8Exception())
+*/
+static void qore_v8_restricted_bridge(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Isolate* isolate = info.GetIsolate();
+    ExceptionSink xsink;
+    QoreV8Program* pgm = info.Data()->IsExternal()
+        ? static_cast<QoreV8Program*>(info.Data().As<v8::External>()->Value()) : nullptr;
+    const ResolvedCallReferenceNode* bridge = pgm ? pgm->getRestrictedBridge() : nullptr;
+    if (!bridge) {
+        xsink.raiseException("JAVASCRIPT-PROGRAM-ERROR", "the restricted program has no network bridge");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
+    if (info.Length() != 1 || !info[0]->IsString()) {
+        xsink.raiseException("JAVASCRIPT-PROGRAM-ERROR", "the network bridge takes one string");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
+    v8::String::Utf8Value json(isolate, info[0]);
+    if (!*json) {
+        xsink.raiseException("JAVASCRIPT-PROGRAM-ERROR", "the network bridge's argument cannot be read");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
+    ReferenceHolder<QoreListNode> args(new QoreListNode(autoTypeInfo), &xsink);
+    args->push(new QoreStringNode(*json, json.length(), QCS_UTF8), &xsink);
+    ValueHolder rv(bridge->execValue(*args, &xsink), &xsink);
+    if (xsink) {
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
+    if (rv->getType() != NT_STRING) {
+        xsink.raiseException("JAVASCRIPT-PROGRAM-ERROR", "the network bridge must return a string");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
+    TempEncodingHelper str(rv->get<const QoreStringNode>(), QCS_UTF8, &xsink);
+    if (!str) {
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
+    v8::Local<v8::String> out;
+    if (!v8::String::NewFromUtf8(isolate, str->c_str(), v8::NewStringType::kNormal, static_cast<int>(str->size()))
+            .ToLocal(&out)) {
+        return;
+    }
+    info.GetReturnValue().Set(out);
+}
+
+//! lockImports(): installs the refusal of dynamic import() (the bootstrap's first statement, after Node's own setup)
+static void qore_v8_restricted_lock_imports(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    info.GetIsolate()->SetHostImportModuleDynamicallyCallback(qore_v8_restricted_import);
+}
+
+int QoreV8Program::setRestrictedBootstrapData(ExceptionSink* xsink, v8::Local<v8::Context> context,
+        v8::Local<v8::Object> data) {
+    v8::Local<v8::Function> lock_imports;
+    if (!v8::Function::New(context, qore_v8_restricted_lock_imports).ToLocal(&lock_imports)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "lockImports"), lock_imports)
+            .FromMaybe(false)) {
+        return -1;
+    }
+    // the directories whose files the program may load
+    v8::Local<v8::Array> roots = v8::Array::New(isolate, static_cast<int>(restricted_roots.size()));
+    for (size_t i = 0; i < restricted_roots.size(); ++i) {
+        v8::Local<v8::String> root;
+        if (!v8::String::NewFromUtf8(isolate, restricted_roots[i].c_str()).ToLocal(&root)
+            || !roots->Set(context, static_cast<uint32_t>(i), root).FromMaybe(false)) {
+            return -1;
+        }
+    }
+    if (!data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "roots"), roots)
+            .FromMaybe(false)) {
+        return -1;
+    }
+    // the host bridge of network requests: a function that calls the Qore code that the module gave, which the
+    // program holds for its lifetime
+    if (restricted_bridge) {
+        v8::Local<v8::Function> bridge;
+        if (!v8::Function::New(context, qore_v8_restricted_bridge, v8::External::New(isolate, this)).ToLocal(&bridge)
+            || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "bridge"), bridge)
+                .FromMaybe(false)) {
+            return -1;
+        }
+    }
+    return 0;
+}
+
+//! Returns true if the calling code is refused the runtime: its scripts have file, process and network access that no
+//! sandbox sees (Fixes qoretechnologies/qore#6845)
+/** As every method of the classes of the module (\c UNCONTROLLED_API), a program is refused to code that a sandbox
+    governs unless the sandbox allows uncontrolled APIs (\c SandboxManager::setUncontrolledApiPolicy()); this check
+    also covers a program that the module's own code creates for its caller
+*/
+static bool qore_v8_refuses_caller() {
+#ifdef _QORE_HAS_SANDBOX_UNCONTROLLED_API_POLICY
+    return !qore_sandbox_allows_uncontrolled_apis(QoreSandboxManagerHelper::Policy);
+#else
+    QoreSandboxManagerHelper governing(QoreSandboxManagerHelper::Policy);
+    return static_cast<bool>(governing);
+#endif
+}
+
 int QoreV8Program::init(ExceptionSink* xsink) {
+    if (qore_v8_refuses_caller()) {
+        xsink->raiseException("INVALID-FUNCTION-ACCESS", "the sandbox that governs the calling code does not allow "
+            "uncontrolled APIs, which a JavaScript program is: its code has file, process and network access that no "
+            "sandbox controls (see SandboxManager::setUncontrolledApiPolicy())");
+        return -1;
+    }
     if (qore_v8_forked_child()) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "a JavaScript program cannot be created in a child process "
             "created with fork(): the V8 and Node.js threads of the parent process do not exist in the child");
@@ -527,7 +803,8 @@ int QoreV8Program::init(ExceptionSink* xsink) {
 
         // Inject the 'qore' global object for accessing Qore namespaces, classes, functions, and constants
         // This must happen before LoadEnvironment() which executes the user's code
-        {
+        // a restricted program gets no access to Qore's namespaces (qoretechnologies/qore#6845)
+        if (!restricted) {
             v8::Local<v8::Context> context = setup->context();
             const QoreNamespace* rootNS = qpgm->getRootNS();
             if (rootNS) {
@@ -553,76 +830,87 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // the bootstrap data is removed from the global object before any other code is run
         QoreStringMaker envstr("const _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
             "const _qoreBoot = globalThis[_qoreBootKey];\n"
-            "delete globalThis[_qoreBootKey];\n"
-            QORE_V8_PROCESS_ENV_BOOTSTRAP
-            QORE_V8_PROCESS_STDIO_BOOTSTRAP
-            "const publicRequire = require('module').createRequire("
-            "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
-        if (transpile_ts) {
-            v8::Local<v8::String> compiler_name, compiler_json;
-            if (!v8::String::NewFromUtf8(isolate, QORE_TYPESCRIPT_MODULE).ToLocal(&compiler_name)
-                    || !v8::JSON::Stringify(setup->context(), compiler_name).ToLocal(&compiler_json)) {
-                if (!checkException(xsink, tryCatch)) {
-                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Cannot encode the TypeScript compiler path");
-                }
-                valid = false;
-                ctx.Reset();
-                global.Reset();
-                env_object.Reset();
-                return -1;
-            }
-            v8::String::Utf8Value compiler_source(isolate, compiler_json);
-            if (!*compiler_source) {
-                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Cannot convert the TypeScript compiler path");
-                valid = false;
-                ctx.Reset();
-                global.Reset();
-                env_object.Reset();
-                return -1;
-            }
-            envstr.concat("const _tsModule = ");
-            envstr.concat(*compiler_source);
-            envstr.concat(";\n");
-            envstr.concat(
-                "const _tsStrip = require('module').stripTypeScriptTypes;\n"
-                "let _tsSource;\n"
-                "if (typeof _tsStrip === 'function' && process.features.typescript !== false) {\n"
-                "  _tsSource = _tsStrip(_qoreBoot.source, { mode: 'transform' });\n"
-                "} else {\n"
-                // Debian/Ubuntu build Node without Amaro. Use their separately packaged compiler;
-                // preserve script/module semantics and report syntax errors before executing any code.
-                "  let _ts;\n"
-                "  try { _ts = publicRequire(_tsModule); } catch (err) {\n"
-                "    if (err.code !== 'MODULE_NOT_FOUND' || "
-                    "!err.message.startsWith(\"Cannot find module '\" + _tsModule + \"'\")) throw err;\n"
-                "    throw new Error('QORE_TYPESCRIPT_UNAVAILABLE: install the typescript package "
-                    "or use Node.js with built-in TypeScript support');\n"
-                "  }\n"
-                "  const result = _ts.transpileModule(_qoreBoot.source, {\n"
-                // The source label belongs to the VM stack trace; it must not select TypeScript's
-                // JSON, declaration-file, or JavaScript parser modes based on a filename suffix.
-                "    fileName: 'qore-typescript-input.ts', reportDiagnostics: true,\n"
-                "    compilerOptions: { target: _ts.ScriptTarget.ESNext, module: _ts.ModuleKind.ESNext }\n"
-                "  });\n"
-                "  const errors = (result.diagnostics || []).filter(d => d.category === _ts.DiagnosticCategory.Error);\n"
-                "  if (errors.length) {\n"
-                "    throw new SyntaxError(errors.map(d => _ts.flattenDiagnosticMessageText(d.messageText, '\\n'))"
-                    ".join('\\n'));\n"
-                "  }\n"
-                "  _tsSource = result.outputText;\n"
-                "}\n"
-                "publicRequire('node:vm').runInThisContext(_tsSource, {\n"
-                "  'filename': _qoreBoot.filename\n"
-                "});"
-            );
+            "delete globalThis[_qoreBootKey];\n");
+        if (restricted) {
+            // the program is built by restricted-bootstrap.js: it gets neither the host's environment nor its stdio
+            envstr.concat(QORE_V8_RESTRICTED_BOOTSTRAP);
         } else {
             envstr.concat(
-                "publicRequire('node:vm').runInThisContext(_qoreBoot.source, {\n"
-                "  'filename': _qoreBoot.filename\n"
-                "});"
-            );
+                QORE_V8_PROCESS_ENV_BOOTSTRAP
+                QORE_V8_PROCESS_STDIO_BOOTSTRAP
+                "const publicRequire = require('module').createRequire("
+                "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
+            if (transpile_ts) {
+                v8::Local<v8::String> compiler_name, compiler_json;
+                if (!v8::String::NewFromUtf8(isolate, QORE_TYPESCRIPT_MODULE).ToLocal(&compiler_name)
+                        || !v8::JSON::Stringify(setup->context(), compiler_name).ToLocal(&compiler_json)) {
+                    if (!checkException(xsink, tryCatch)) {
+                        xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Cannot encode the TypeScript compiler path");
+                    }
+                    valid = false;
+                    ctx.Reset();
+                    global.Reset();
+                    env_object.Reset();
+                    return -1;
+                }
+                v8::String::Utf8Value compiler_source(isolate, compiler_json);
+                if (!*compiler_source) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Cannot convert the TypeScript compiler path");
+                    valid = false;
+                    ctx.Reset();
+                    global.Reset();
+                    env_object.Reset();
+                    return -1;
+                }
+                envstr.concat("const _tsModule = ");
+                envstr.concat(*compiler_source);
+                envstr.concat(";\n");
+                envstr.concat(
+                    "const _tsStrip = require('module').stripTypeScriptTypes;\n"
+                    "let _tsSource;\n"
+                    "if (typeof _tsStrip === 'function' && process.features.typescript !== false) {\n"
+                    "  _tsSource = _tsStrip(_qoreBoot.source, { mode: 'transform' });\n"
+                    "} else {\n"
+                    // Debian/Ubuntu build Node without Amaro. Use their separately packaged compiler;
+                    // preserve script/module semantics and report syntax errors before executing any code.
+                    "  let _ts;\n"
+                    "  try { _ts = publicRequire(_tsModule); } catch (err) {\n"
+                    "    if (err.code !== 'MODULE_NOT_FOUND' || "
+                        "!err.message.startsWith(\"Cannot find module '\" + _tsModule + \"'\")) throw err;\n"
+                    "    throw new Error('QORE_TYPESCRIPT_UNAVAILABLE: install the typescript package "
+                        "or use Node.js with built-in TypeScript support');\n"
+                    "  }\n"
+                    "  const result = _ts.transpileModule(_qoreBoot.source, {\n"
+                    // The source label belongs to the VM stack trace; it must not select TypeScript's
+                    // JSON, declaration-file, or JavaScript parser modes based on a filename suffix.
+                    "    fileName: 'qore-typescript-input.ts', reportDiagnostics: true,\n"
+                    "    compilerOptions: { target: _ts.ScriptTarget.ESNext, module: _ts.ModuleKind.ESNext }\n"
+                    "  });\n"
+                    "  const errors = (result.diagnostics || [])"
+                    ".filter(d => d.category === _ts.DiagnosticCategory.Error);\n"
+                    "  if (errors.length) {\n"
+                    "    throw new SyntaxError(errors.map(d => _ts.flattenDiagnosticMessageText(d.messageText, '\\n'))"
+                        ".join('\\n'));\n"
+                    "  }\n"
+                    "  _tsSource = result.outputText;\n"
+                    "}\n"
+                    "publicRequire('node:vm').runInThisContext(_tsSource, {\n"
+                    "  'filename': _qoreBoot.filename\n"
+                    "});"
+                );
+            } else {
+                envstr.concat(
+                    "publicRequire('node:vm').runInThisContext(_qoreBoot.source, {\n"
+                    "  'filename': _qoreBoot.filename\n"
+                    "});"
+                );
+            }
         }
         v8::MaybeLocal<v8::Value> loadenv_ret = node::LoadEnvironment(env, envstr.c_str());
+        if (restricted) {
+            // also after the load, should Node have installed its callback again
+            isolate->SetHostImportModuleDynamicallyCallback(qore_v8_restricted_import);
+        }
         if (loadenv_ret.IsEmpty()) {
             // Call checkException() while valid is still true so we can properly convert the exception
             if (!checkException(xsink, tryCatch)) {
@@ -770,6 +1058,10 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
         }
         if (save_ref_callback) {
             save_ref_callback.release()->deref(xsink);
+        }
+        if (restricted_bridge) {
+            restricted_bridge->deref(xsink);
+            restricted_bridge = nullptr;
         }
     }
     if (env) {
