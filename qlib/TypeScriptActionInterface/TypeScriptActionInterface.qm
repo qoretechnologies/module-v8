@@ -234,6 +234,9 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     - a call of trusted code for a tenant's connection (a host's REST handler, flow or test engine) also runs in the
       tenant's program: the host's tenant context resolver is asked for the connection of every call, and decides
       from the connection, not from the calling thread
+    - the host gives the runner its hooks before the module is loaded, with
+      <tt>DataProvider::setModuleHostHooks("TypeScriptActionInterface", ...)</tt>, so that a module loaded lazily has
+      them too
     - Action execution supports a shared in-process pool alongside the existing child-process proxy.
       See @ref TypeScriptActionInterface::JavaScriptInProcessPool.
     - Apps can use localized connection metadata, schema-backed REST actions and OAuth token introspection.

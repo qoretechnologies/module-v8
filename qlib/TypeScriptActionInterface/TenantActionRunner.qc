@@ -104,6 +104,9 @@ public class TenantActionRunner {
     public {
         #! the error codes of the runner
         const ErrorContext = "TS-TENANT-ERROR";
+
+        #! The name the host gives its hooks for this module under (DataProvider::setModuleHostHooks())
+        const HostHooksModule = "TypeScriptActionInterface";
         const ErrorTimeout = "TS-TENANT-TIMEOUT";
         const ErrorEgress = "TS-TENANT-EGRESS-DENIED";
         const ErrorLimit = "TS-TENANT-LIMIT";
@@ -199,6 +202,38 @@ public class TenantActionRunner {
         # the app directories of the catalogue's distribution, read once, as trusted code
         if ((*string script = getenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT")).val()) {
             TenantActionRunner::readAppDirs(script);
+        }
+
+        # the hooks the host set before the module was loaded (qoretechnologies/qore#6845): a host that loads the module
+        # lazily, in whichever thread first asks for an app, cannot set them after loading it
+        TenantActionRunner::setHostHooks(DataProvider::getModuleHostHooks(HostHooksModule));
+    }
+
+    #! Sets the host's hooks given in the DataProvider registry (DataProvider::setModuleHostHooks())
+    /** The keys are those of the setters: \c tenant_context_resolver (setTenantContextResolver()),
+        \c connection_update_handler (setConnectionUpdateHandler()), \c egress_policy (setEgressPolicy()),
+        \c egress_meter (setEgressMeter()), \c tenant_limits (setTenantLimits()) and
+        \c trusted_call_sandbox (setTrustedCallSandbox()); each one given is set as its setter
+        sets it, and any other key is refused, so that a misspelled hook is never silently missing
+    */
+    private:internal static setHostHooks(*hash<auto> hooks) {
+        if (!hooks) {
+            return;
+        }
+        foreach hash<auto> i in (hooks.pairIterator()) {
+            switch (i.key) {
+                case "tenant_context_resolver": TenantActionRunner::setTenantContextResolver(i.value); break;
+                case "connection_update_handler": TenantActionRunner::setConnectionUpdateHandler(i.value); break;
+                case "egress_policy": TenantActionRunner::setEgressPolicy(i.value); break;
+                case "egress_meter": TenantActionRunner::setEgressMeter(i.value); break;
+                case "tenant_limits": TenantActionRunner::setTenantLimits(i.value); break;
+                case "trusted_call_sandbox": TenantActionRunner::setTrustedCallSandbox(i.value); break;
+                default:
+                    throw ErrorContext, sprintf("unknown host hook %y given for module %y; known: "
+                        "tenant_context_resolver, connection_update_handler, egress_policy, egress_meter, tenant_limits, "
+                        "trusted_call_sandbox",
+                        i.key, HostHooksModule);
+            }
         }
     }
 

@@ -1,0 +1,53 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# The runner takes the hooks the host set before the module was loaded (DataProvider::setModuleHostHooks(),
+# qoretechnologies/qore#6845): a host that loads the module lazily cannot set them after loading it
+%modern
+%no-child-restrictions
+%requires qore >= 3.0
+%requires QUnit
+%requires DataProvider
+%exec-class TenantHostHooksTest
+
+class TenantHostHooksTest inherits QUnit::Test {
+    constructor() : Test("TenantHostHooksTest", "1.0") {
+        # set before the module is loaded, as a host does at startup
+        DataProvider::setModuleHostHooks("TypeScriptActionInterface", {
+            "tenant_context_resolver": *hash<auto> sub (object conn) { return NOTHING; },
+            "connection_update_handler": sub (object conn, hash<auto> update) {},
+            "egress_meter": sub (string tenant, *string connection, int bytes_out, int bytes_in) {},
+        });
+        load_module("TypeScriptActionInterface");
+        addTestCase("the runner takes the hooks the host set before the module was loaded", \registryHooks());
+        addTestCase("an unknown hook fails the module's initialization", \unknownHook());
+        set_return_value(main());
+    }
+
+    registryHooks() {
+        Class cls = Class::forName("TypeScriptActionInterface::TenantActionRunner");
+        # each one is set: the setters are set-once
+        foreach string setter in (("setTenantContextResolver", "setConnectionUpdateHandler", "setEgressMeter")) {
+            assertThrows("TS-TENANT-ERROR", "set already", \cls.findStaticMethod(setter).method.getVariants()[0].call(),
+                (sub () {},), setter);
+        }
+        # one not given is still open to its setter
+        cls.findStaticMethod("setEgressPolicy").method.getVariants()[0].call(
+            bool sub (string tenant, *string connection, hash<auto> url, list<string> ips) { return True; });
+    }
+
+    unknownHook() {
+        # a module initializes once per process: the misspelled hook is given to a new one
+        string script = "%modern\n%requires DataProvider\n"
+            + "DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", {\"tenant_resolver\": sub () {}});\n"
+            + "try { load_module(\"TypeScriptActionInterface\"); print(\"loaded\"); }\n"
+            + "catch (hash<ExceptionInfo> ex) { printf(\"%s: %s\", ex.err, ex.desc); }\n";
+        string out = backquote("qore -e " + quote(script) + " 2>&1");
+        assertRegex("^TS-TENANT-ERROR: unknown host hook \"tenant_resolver\"", out);
+    }
+
+    private static string quote(string value) {
+        return "'" + replace(value, "'", "'\"'\"'") + "'";
+    }
+}
