@@ -1,0 +1,61 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# A host that has given the runner no hooks (as when the module is loaded after the host's startup): trusted code's
+# call for a connection that the host marked as a sandboxed caller's is refused, never run as trusted code
+# (qoretechnologies/qore#6845); the hooks are set once per process, so this process sets none
+%modern
+%no-child-restrictions
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires ConnectionProvider
+%requires RestClient
+%exec-class TenantNoHooksTest
+
+class TenantNoHooksTest inherits QUnit::Test {
+    private {
+        JavaScriptProgramPool catalogue_pool;
+    }
+
+    constructor() : QUnit::Test("TenantNoHooks", "1.0", \ARGV) {
+        addTestCase("a sandboxed caller's connection is refused without a resolver", \markedTest());
+        addTestCase("the host's own connection runs as trusted code", \unmarkedTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        string script = get_script_dir() + "/tenant-catalogue.js";
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
+            "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
+            sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            });
+        TenantActionRunner::setCatalogue(script, (get_script_dir(),), catalogue_pool);
+        TypeScriptActionInterface::initApp("tenant-conn", True);
+    }
+
+    private TypeScriptAppRestConnection conn(string name) {
+        return new TypeScriptAppRestConnection({"name": name, "url": "tsrest-tenant-conn://conn.example.com",
+            "opts": {"token": "x"}});
+    }
+
+    markedTest() {
+        TypeScriptAppRestConnection c = conn("marked");
+        c.internal_info.sandboxed = True;
+        AbstractDataProvider info = c.getDataProvider().getChildProviderEx("info");
+        assertThrows("TS-TENANT-HOOK-MISSING", "no tenant context resolver", \info.doRequest());
+        try {
+            info.doRequest();
+        } catch (hash<ExceptionInfo> ex) {
+            assertEq({"hook": "tenant_context_resolver"}, ex.arg);
+        }
+    }
+
+    unmarkedTest() {
+        # no resolver and no mark: the host's own connection, as before
+        assertEq("full", conn("host").getDataProvider().getChildProviderEx("info").doRequest().where);
+    }
+}

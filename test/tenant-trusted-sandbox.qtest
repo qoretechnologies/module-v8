@@ -1,0 +1,120 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# Trusted code's calls for a tenant's connection make their requests under the sandbox the host gives
+# (TenantActionRunner::setTrustedCallSandbox(), qoretechnologies/qore#6845); the hook is set once per process, so the
+# module's own sandbox, used without it, is tested in tenant-action-runner.qtest
+%modern
+%no-child-restrictions
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires HttpServer
+%requires ConnectionProvider
+%requires RestClient
+%exec-class TenantTrustedSandboxTest
+
+class HelloHandler inherits AbstractHttpRequestHandler {
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        return makeResponse(200, "hello", {"Content-Type": MimeTypeText});
+    }
+}
+
+class TenantTrustedSandboxTest inherits QUnit::Test {
+    private {
+        JavaScriptProgramPool catalogue_pool;
+        HttpServer server;
+        int port;
+        # the host's sandbox: it allows the local test server, which the module's own sandbox refuses
+        Program host_pgm;
+        list<string> sandboxed_for = ();
+        Mutex m();
+    }
+
+    constructor() : QUnit::Test("TenantTrustedSandbox", "1.0", \ARGV) {
+        addTestCase("the host's sandbox governs the requests of trusted code's tenant calls", \hostSandboxTest());
+        addTestCase("the hook is set once and refused to sandboxed code", \setOnceTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        string script = get_script_dir() + "/tenant-catalogue.js";
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
+            "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
+            sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            });
+        TenantActionRunner::setCatalogue(script, (get_script_dir(),), catalogue_pool);
+        TypeScriptActionInterface::initApp("tenant-conn", True);
+
+        # every connection is a tenant's
+        TenantActionRunner::setTenantContextResolver(*hash<auto> sub (AbstractConnection conn) {
+            return {"tenant": "t-" + conn.name, "connection": conn.name,
+                "conn_opts": conn.getRealOptions() + {"url": "https://tenant.example.com"}};
+        });
+
+        host_pgm = new Program(PO_NEW_STYLE);
+        host_pgm.parse("auto sub run(code c) { return call_function(c); }", "host-sandbox");
+        {
+            # the host's policy: the network, but not the range that the test refuses
+            SandboxManager sm();
+            sm.setNetworkDefaultPolicy(True);
+            sm.addNetworkDeniedIPRange("10.0.0.0/8");
+            host_pgm.setSandboxManager(sm);
+        }
+        TenantActionRunner::setTrustedCallSandbox(auto sub (hash<TsTenantContext> ctx, code call) {
+            {
+                AutoLock al(m);
+                sandboxed_for += ctx.tenant;
+            }
+            return host_pgm.callFunction("run", call);
+        });
+
+        server = new HttpServer(<HttpServerOptionInfo>{});
+        server.setDefaultHandler("hello", new HelloHandler());
+        port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
+    }
+
+    globalTearDown() {
+        if (server) {
+            server.stop();
+        }
+    }
+
+    hostSandboxTest() {
+        TypeScriptAppRestConnection c({"name": "h", "url": "tsrest-tenant-conn://conn.example.com",
+            "opts": {"token": "x"}});
+        AbstractDataProvider fetch = c.getDataProvider().getChildProviderEx("fetch");
+        # the local server: the host's sandbox allows it (the module's own would refuse it)
+        assertEq({"status": 200}, fetch.doRequest({"url": sprintf("http://127.0.0.1:%d/", port)}));
+        # the host's denied range is refused
+        assertThrows("TS-TENANT-EGRESS-DENIED", \fetch.doRequest(), {"url": "http://10.1.2.3/"});
+        # each kind of call runs in the tenant's program, as the tenant's own calls do
+        AbstractDataProvider prov = c.getDataProvider();
+        assertEq({"where": "restricted", "url": "https://conn.example.com"},
+            prov.getChildProviderEx("info").doRequest());
+        assertEq(("restricted",), (map $1.value, prov.getChildProviderEx("info").getReferenceData("choice")));
+        assertTrue((keys prov.getChildProviderEx("info").getRequestTypeWithOptions({"key": "A"}).getFields())
+            .contains("dep_restricted"));
+        AbstractDataProvider t = prov.getChildProviderPath("tables/items");
+        t.createRecord({"id": 7, "name": "n"});
+        AbstractDataProviderRecordIterator i = t.searchRecords();
+        assertTrue(i.next());
+        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, i.getValue());
+        AutoLock al(m);
+        assertTrue(sandboxed_for.contains("t-h"), "the hook got the tenant's context");
+    }
+
+    setOnceTest() {
+        assertThrows("TS-TENANT-ERROR", "set already", \TenantActionRunner::setTrustedCallSandbox(),
+            (sub (hash<TsTenantContext> ctx, code call) {},));
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse("%requires TypeScriptActionInterface\nauto sub t() { try { "
+            "TypeScriptActionInterface::TenantActionRunner::setTrustedCallSandbox(sub (hash<auto> ctx, code c) {}); "
+            "} catch (hash<ExceptionInfo> ex) { return ex.err; } }", "sandboxed");
+        p.setSandboxManager(new SandboxManager());
+        assertEq("TS-TENANT-ERROR", p.callFunction("t"));
+    }
+}

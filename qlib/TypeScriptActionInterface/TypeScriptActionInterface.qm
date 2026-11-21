@@ -231,6 +231,9 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       the tenant's sandbox, and time, memory and concurrency limits; see @ref typescriptactioninterface_tenants
       (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>); their event actions run as
       event sources whose events the host pulls
+    - a call of trusted code for a tenant's connection (a host's REST handler, flow or test engine) also runs in the
+      tenant's program: the host's tenant context resolver is asked for the connection of every call, and decides
+      from the connection, not from the calling thread
     - Action execution supports a shared in-process pool alongside the existing child-process proxy.
       See @ref TypeScriptActionInterface::JavaScriptInProcessPool.
     - Apps can use localized connection metadata, schema-backed REST actions and OAuth token introspection.

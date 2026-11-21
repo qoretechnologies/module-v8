@@ -247,8 +247,17 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         # sandboxed code: the call is made by TenantActionRunner, in the tenant's own program, or refused; this is the
         # module's single path into an app's code for sandboxed code (see TenantActionRunner::dispatch())
-        if (!_ts_tenant_calls && SandboxManager::isSandboxed()) {
-            return TenantActionRunner::dispatch(logger, api, args);
+        if (!_ts_tenant_calls) {
+            if (SandboxManager::isSandboxed()) {
+                return TenantActionRunner::dispatch(logger, api, args);
+            }
+            # trusted code's call for a tenant's connection: the host's resolver decides from the connection, so that
+            # a host's trusted threads cannot run a tenant's call in the full runtime
+            bool tenant;
+            auto rv = TenantActionRunner::dispatchTrusted(logger, api, args, \tenant);
+            if (tenant) {
+                return rv;
+            }
         }
 
         # a tenant's call: only the functions of the tenant's own program run (TenantActionRunner)
