@@ -1480,11 +1480,20 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
                 f.close();
             }
         }
+        date timeout = ChildEndTimeout;
+        @debug {
+            # TEST: the TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR* hooks raise a broken pipe while the child runs and does
+            # not end, so the wait only ends at the hang guard; their tests set a short one
+            *string child_end_timeout_ms = getenv("TS_PROXY_TEST_CHILD_END_TIMEOUT_MS");
+            if (child_end_timeout_ms.val() && child_end_timeout_ms.toInt() > 0) {
+                timeout = child_end_timeout_ms.toInt() * 1ms;
+            }
+        }
         info("The child's command socket was closed before any reply; waiting for the child to end");
-        if (proc.wait(ChildEndTimeout)) {
+        if (proc.wait(timeout)) {
             return True;
         }
-        error("The child's command socket was closed, but the child has not ended after %y", ChildEndTimeout);
+        error("The child's command socket was closed, but the child has not ended after %y", timeout);
         return False;
     }
 
