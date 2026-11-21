@@ -74,20 +74,20 @@ public class TsProxyTest inherits QUnit::Test {
         addPartCase(2, "a child that ends after reading a command is restarted when it has ended", sub () {
             proxyChildEndingTest("read");
         });
-        addPartCase(3, "a child that ends before reading a command is restarted when it has ended", sub () {
+        addPartCase(2, "a child that ends before reading a command is restarted when it has ended", sub () {
             proxyChildEndingTest("unread");
         });
-        addPartCase(1, "proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
+        addPartCase(3, "proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
         addPartCase(4, "proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
-        addPartCase(4, "proxy parent send error mid-command", \proxyParentSendErrorMidCommandTest());
-        addPartCase(5, "proxy parent send error bounded restart", \proxyParentSendErrorBoundedRestartTest());
+        addPartCase(5, "proxy parent send error mid-command", \proxyParentSendErrorMidCommandTest());
+        addPartCase(6, "proxy parent send error bounded restart", \proxyParentSendErrorBoundedRestartTest());
         addPartCase(3, "proxy restart error handling", \proxyRestartErrorHandlingTest());
         addPartCase(5, "proxy restart wait fast paths", \proxyRestartWaitFastPathTest());
-        addPartCase(6, "proxy send error handling", \proxySendErrorHandlingTest());
+        addPartCase(7, "proxy send error handling", \proxySendErrorHandlingTest());
         addPartCase(5, "proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
         addPartCase(2, "a child that never starts fails at the startup timeout", \proxyStartupTimeoutTest());
         addPartCase(6, "a call that never answers fails at the call time limit", \proxyCallTimeoutTest());
-        addPartCase(6, "a child gets the environment as it is when the child starts", \proxyEnvironmentTest());
+        addPartCase(4, "a child gets the environment as it is when the child starts", \proxyEnvironmentTest());
 
         set_return_value(main());
     }

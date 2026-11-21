@@ -137,9 +137,9 @@ JavaScriptProgramProxy::shutdown();
 
         addPartCase(1, "a child whose script ends ends, and the parent's proxy still works", \childEnd());
         addPartCase(2, "a child that destroys the parent's proxy ends", \childDelete());
-        addPartCase(1, "a child that shuts the proxies down ends", \childShutdown());
-        addPartCase(2, "a child cannot use the parent's proxy", \childUse());
-        addPartCase(3, "a child starts its own master listener", \childNew());
+        addPartCase(3, "a child that shuts the proxies down ends", \childShutdown());
+        addPartCase(3, "a child cannot use the parent's proxy", \childUse());
+        addPartCase(4, "a child starts its own master listener", \childNew());
 
         on_exit unlink(script);
         {
