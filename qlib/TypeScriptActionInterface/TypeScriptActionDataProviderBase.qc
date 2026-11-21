@@ -160,7 +160,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }, True);
     }
 
-    static auto getAsyncValueArgs(*LoggerInterface logger = DataProvider::getGlobalLogger(), hash<AsyncCallInfo> api,
+    static auto getAsyncValueArgs(*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger(), hash<AsyncCallInfo> api,
             *softlist<auto> args, *hash<auto> cache_opts, *bool use_cache) {
         on_error rethrow $1.err, sprintf("%s (context: %s)", $1.desc, api.label);
 

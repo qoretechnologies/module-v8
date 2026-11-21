@@ -1,0 +1,39 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# The module's logger is taken by trusted code, never looked up for the first time while serving sandboxed code:
+# DataProvider gives sandboxed callers no global logger and refuses to let them set one (qoretechnologies/qore#6746).
+# Here the module is loaded first by a program that a sandbox governs, as when a tenant's code is the first to use it:
+# its initialization must not fail, must leave the host's logger in place, and its root provider must log with it.
+%modern
+%no-child-restrictions
+%requires qore >= 3.0
+%requires QUnit
+%requires DataProvider
+%exec-class SandboxedFirstUseLoggerTest
+
+class SandboxedFirstUseLoggerTest inherits QUnit::Test {
+    private {
+        # the host's logger, set before the module is loaded
+        Logger host_logger("host", LoggerLevel::LevelInfo);
+    }
+
+    constructor() : QUnit::Test("SandboxedFirstUseLogger", "1.0", \ARGV) {
+        addTestCase("a module loaded first by sandboxed code keeps the host's logger", \firstUseTest());
+        set_return_value(main());
+    }
+
+    firstUseTest() {
+        DataProvider::setGlobalLogger(host_logger);
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.setSandboxManager(new SandboxManager());
+        # the module's first load and initialization, for code that a sandbox governs
+        p.parse("%requires TypeScriptActionInterface\n"
+            "object sub root() { return TypeScriptActionInterface::TypeScriptActionInterface::root; }", "tenant");
+        # the module did not replace the host's logger
+        assertTrue(DataProvider::getGlobalLogger() == host_logger, "the host's logger is kept");
+        # its root provider, created at that initialization, logs with the host's logger
+        assertTrue(p.callFunction("root").isLogger(host_logger), "the root provider has the host's logger");
+    }
+}

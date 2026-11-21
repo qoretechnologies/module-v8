@@ -298,7 +298,7 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
         hash<AsyncCallInfo> pooled_api = api;
         pooled_api.async_call = pooled_call;
 
-        return TypeScriptActionDataProviderBase::execAsyncValueDirect(DataProvider::getGlobalLogger(),
+        return TypeScriptActionDataProviderBase::execAsyncValueDirect(TypeScriptActionInterfacePriv::getLogger(),
             pooled_api, args);
     }
 
