@@ -113,6 +113,8 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         addTestCase("a sandboxed caller's call with no tenant context is refused", \dispatchFailClosedTest());
         addTestCase("a connection update goes to the host's handler", \connectionUpdateTest());
         addTestCase("a trusted caller's provider runs as trusted code", \trustedCallerTest());
+        addTestCase("a trusted caller's call for a tenant's connection runs in the tenant's program",
+            \trustedTenantConnectionTest());
         addTestCase("with the module's in-process pool, a sandboxed caller's calls still run in its program",
             \inProcessPoolTest());
         # last: the app is refused for every tenant once an action needs a builtin that tenants do not get
@@ -148,11 +150,12 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
             metered += {"tenant": tenant, "connection": connection, "out": bytes_out, "in": bytes_in};
         });
 
-        # the host's resolver: the tenant of each connection, or none for "no-ctx"
+        # the host's resolver: the tenant of each connection, or none for "no-ctx" and the host's own (trusted)
+        # connections
         TenantActionRunner::setTenantContextResolver(*hash<auto> sub (AbstractConnection conn) {
             AutoLock al(meter_lock);
             resolved += conn.name;
-            if (conn.name == "no-ctx") {
+            if (conn.name == "no-ctx" || conn.name =~ /trusted/) {
                 return;
             }
             return {"tenant": "conn-" + conn.name, "connection": conn.name,
@@ -372,11 +375,35 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     trustedCallerTest() {
-        # no sandbox: the module's own pool runs the call, never a tenant's program
+        # no sandbox, and a connection that the host's resolver gives no tenant: the module's own pool runs the call,
+        # never a tenant's program
         AbstractDataProvider prov = conn("trusted").getDataProvider().getChildProviderEx("info");
         assertEq("full", prov.doRequest().where);
         AutoLock al(meter_lock);
-        assertFalse(resolved.contains("trusted"));
+        assertTrue(resolved.contains("trusted"), "the host decides from the connection");
+    }
+
+    trustedTenantConnectionTest() {
+        # trusted code (a host's REST handler, flow or test engine) calls for a connection that the host's resolver
+        # gives a tenant: each kind of call runs in the tenant's own program, as the tenant's own calls do
+        # (dispatchKindsTest()), whatever the calling thread
+        TypeScriptAppRestConnection c = conn("host-thread");
+        AbstractDataProvider prov = c.getDataProvider();
+        assertEq({"where": "restricted", "url": "https://conn.example.com"},
+            prov.getChildProviderEx("info").doRequest());
+        assertEq(("restricted",), (map $1.value, prov.getChildProviderEx("info").getReferenceData("choice")));
+        assertTrue((keys prov.getChildProviderEx("info").getRequestTypeWithOptions({"key": "A"}).getFields())
+            .contains("dep_restricted"));
+        AbstractDataProvider t = prov.getChildProviderPath("tables/items");
+        t.createRecord({"id": 7, "name": "n"});
+        AbstractDataProviderRecordIterator i = t.searchRecords();
+        assertTrue(i.next());
+        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, i.getValue());
+        # its requests are made under the module's own sandbox (no host sandbox is set): no private address
+        AbstractDataProvider fetch = prov.getChildProviderEx("fetch");
+        assertThrows("TS-TENANT-EGRESS-DENIED", \fetch.doRequest(), {"url": "http://127.0.0.1:9/"});
+        AutoLock al(meter_lock);
+        assertTrue(resolved.contains("host-thread"));
     }
 
     inProcessPoolTest() {

@@ -185,6 +185,17 @@ exports.actionsCatalogue = {
                     "get_dynamic_type": async (ctx) => ({"type": "hash", "fields": {["f_" + where()]: opt("f", {})}})},
             },
         });
+        // a request for the connection's caller (trusted code's tenant calls: TenantActionRunner::dispatchTrusted())
+        api.registerAction({
+            "app": "tenant-conn",
+            "action": "fetch",
+            "display_name": "fetch",
+            "short_desc": "fetch",
+            "desc": "fetch",
+            "action_code": 2,
+            "api_function": async (obj, opts) => { const r = await fetch((obj && obj.url) || opts.url); return {"status": r.status}; },
+            "options": {"url": opt("url", {})},
+        });
         // event actions: each runs until it is stopped
         const eventAction = (name, fn) => ({
             "app": "tenant-test",
