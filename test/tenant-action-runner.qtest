@@ -385,23 +385,17 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
 
     trustedTenantConnectionTest() {
         # trusted code (a host's REST handler, flow or test engine) calls for a connection that the host's resolver
-        # gives a tenant: each kind of call runs in the tenant's own program, as the tenant's own calls do
-        # (dispatchKindsTest()), whatever the calling thread
+        # gives a tenant: this host has given no sandbox for such calls, so the call is refused rather than made
+        # with no sandbox (the calls themselves: tenant-trusted-sandbox.qtest)
         TypeScriptAppRestConnection c = conn("host-thread");
-        AbstractDataProvider prov = c.getDataProvider();
-        assertEq({"where": "restricted", "url": "https://conn.example.com"},
-            prov.getChildProviderEx("info").doRequest());
-        assertEq(("restricted",), (map $1.value, prov.getChildProviderEx("info").getReferenceData("choice")));
-        assertTrue((keys prov.getChildProviderEx("info").getRequestTypeWithOptions({"key": "A"}).getFields())
-            .contains("dep_restricted"));
-        AbstractDataProvider t = prov.getChildProviderPath("tables/items");
-        t.createRecord({"id": 7, "name": "n"});
-        AbstractDataProviderRecordIterator i = t.searchRecords();
-        assertTrue(i.next());
-        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, i.getValue());
-        # its requests are made under the module's own sandbox (no host sandbox is set): no private address
-        AbstractDataProvider fetch = prov.getChildProviderEx("fetch");
-        assertThrows("TS-TENANT-EGRESS-DENIED", \fetch.doRequest(), {"url": "http://127.0.0.1:9/"});
+        AbstractDataProvider info = c.getDataProvider().getChildProviderEx("info");
+        assertThrows("TS-TENANT-HOOK-MISSING", "no sandbox for the tenant calls of trusted code", \info.doRequest());
+        # a connection that its host marked as a sandboxed caller's, which the resolver gives no context: refused,
+        # never run as trusted code
+        TypeScriptAppRestConnection marked = conn("trusted-marked");
+        marked.internal_info.sandboxed = True;
+        assertThrows("TS-TENANT-ERROR", "gives it no tenant context",
+            \marked.getDataProvider().getChildProviderEx("info").doRequest());
         AutoLock al(meter_lock);
         assertTrue(resolved.contains("host-thread"));
     }

@@ -91,8 +91,18 @@ class TenantTrustedSandboxTest inherits QUnit::Test {
         assertEq({"status": 200}, fetch.doRequest({"url": sprintf("http://127.0.0.1:%d/", port)}));
         # the host's denied range is refused
         assertThrows("TS-TENANT-EGRESS-DENIED", \fetch.doRequest(), {"url": "http://10.1.2.3/"});
-        # still in the tenant's program
-        assertEq("restricted", c.getDataProvider().getChildProviderEx("info").doRequest().where);
+        # each kind of call runs in the tenant's program, as the tenant's own calls do
+        AbstractDataProvider prov = c.getDataProvider();
+        assertEq({"where": "restricted", "url": "https://conn.example.com"},
+            prov.getChildProviderEx("info").doRequest());
+        assertEq(("restricted",), (map $1.value, prov.getChildProviderEx("info").getReferenceData("choice")));
+        assertTrue((keys prov.getChildProviderEx("info").getRequestTypeWithOptions({"key": "A"}).getFields())
+            .contains("dep_restricted"));
+        AbstractDataProvider t = prov.getChildProviderPath("tables/items");
+        t.createRecord({"id": 7, "name": "n"});
+        AbstractDataProviderRecordIterator i = t.searchRecords();
+        assertTrue(i.next());
+        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, i.getValue());
         AutoLock al(m);
         assertTrue(sandboxed_for.contains("t-h"), "the hook got the tenant's context");
     }

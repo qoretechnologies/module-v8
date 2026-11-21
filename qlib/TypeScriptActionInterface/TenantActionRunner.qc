@@ -94,7 +94,8 @@ public hashdecl TsTenantLimits {
     \c TS-TENANT-TIMEOUT (the call's time limit; the program is discarded), \c TS-TENANT-EGRESS-DENIED (a request
     refused by the sandbox or by the host's hook), \c TS-TENANT-LIMIT (the concurrency or memory limit),
     \c TS-TENANT-APP-UNSUPPORTED (the app needs a builtin of Node.js that tenants do not get; the args are a hash with
-    \c app and \c builtin) and \c TS-TENANT-ACTION-ERROR (an error of the action); their args are plain data and never
+    \c app and \c builtin), \c TS-TENANT-HOOK-MISSING (a tenant's call that the host has not given the hooks for: the
+    args are a hash with \c hook) and \c TS-TENANT-ACTION-ERROR (an error of the action); their args are plain data and never
     contain credentials or request headers.
 
     @since TypeScriptActionInterface 2.2
@@ -108,6 +109,7 @@ public class TenantActionRunner {
         const ErrorLimit = "TS-TENANT-LIMIT";
         const ErrorUnsupported = "TS-TENANT-APP-UNSUPPORTED";
         const ErrorAction = "TS-TENANT-ACTION-ERROR";
+        const ErrorHookMissing = "TS-TENANT-HOOK-MISSING";
 
         #! the maximum number of redirects that the bridge follows for a request
         const MaxRedirects = 10;
@@ -158,8 +160,6 @@ public class TenantActionRunner {
         static *code egress_meter;
         #! the host's sandbox for the tenant calls of trusted code; set once by trusted code
         static *code trusted_call_sandbox;
-        #! the module's own sandbox for the tenant calls of trusted code when the host gives none
-        static Program default_sandbox_pgm;
 
         #! the host's resolver of a connection's tenant context (setTenantContextResolver())
         static *code context_resolver;
@@ -186,17 +186,6 @@ public class TenantActionRunner {
     #! Initializes the runner; called when the module is initialized, as trusted code
     static init() {
         build = SandboxManager::createTrustedBuildCall(\TenantActionRunner::buildProgram());
-        # the module's own sandbox for the tenant calls of trusted code, made here as trusted code: a Program made on
-        # a sandboxed thread would keep that thread's sandbox
-        default_sandbox_pgm = new Program(PO_NEW_STYLE | PO_STRICT_ARGS | PO_REQUIRE_TYPES);
-        default_sandbox_pgm.parse("auto sub run(code c) { return call_function(c); }", "tenant-trusted-call-sandbox");
-        {
-            # public addresses only: no private, local or internal address
-            SandboxManager sm();
-            sm.setNetworkDefaultPolicy(True);
-            sm.blockPrivateNetworks();
-            default_sandbox_pgm.setSandboxManager(sm);
-        }
         # a call runs as trusted code too: the program is the module's, and the caller's sandbox governs only the
         # requests that the program makes through the bridge (captured when the call enters)
         exec_call = SandboxManager::createTrustedBuildCall(\TenantActionRunner::execCall());
@@ -274,8 +263,8 @@ public class TenantActionRunner {
     /** A host makes calls for a tenant's connection from its own trusted threads (dispatchTrusted()); the requests
         of such a call are made under the sandbox that the host gives here, as a sandboxed caller's are made under its
         own.  The hook is called as <tt>run(hash<TsTenantContext> ctx, code call)</tt> on the calling thread, and calls
-        \a call under the host's sandbox for the tenant, returning what it returns.  Without it, the module's own
-        sandbox is used, which reaches public addresses only (no private, local or internal address).
+        \a call under the host's sandbox for the tenant, returning what it returns.  Without it, a tenant's call of
+        trusted code is refused (\c TS-TENANT-HOOK-MISSING): it never makes requests that no sandbox governs.
 
         @throw TS-TENANT-ERROR the hook is set already, or the calling code is sandboxed
     */
@@ -388,7 +377,14 @@ public class TenantActionRunner {
         make calls for a tenant's connection from its own trusted threads (a REST handler, a test engine, a flow
         engine), which no sandbox governs.  The host's resolver decides from the connection alone: a tenant context
         means the connection is a tenant's, and the call is made by the runner in the tenant's own program, whatever
-        the calling thread; without a resolver, a connection, or a context, the call is trusted and made as before.
+        the calling thread, with its requests under the host's sandbox for it (setTrustedCallSandbox()); without a
+        connection, or for a connection that the resolver gives no context, the call is trusted and made as before.
+
+        The call fails closed: a connection that its host marked as a sandboxed caller's (\c internal_info.sandboxed)
+        never runs trusted.  Its call is refused (\c TS-TENANT-HOOK-MISSING) when no resolver is set, as when the
+        host has not given its hooks to a module loaded after its startup; it is refused (\c TS-TENANT-ERROR) when the
+        resolver gives it no context.  A tenant's call is refused (\c TS-TENANT-HOOK-MISSING) when the host has given
+        no sandbox for the tenant calls of trusted code.
 
         @param src the object that makes the call: a data provider or a connection of the module, or its REST client
         @param api the call
@@ -405,20 +401,33 @@ public class TenantActionRunner {
         if (api.type == "get_records") {
             return;
         }
+        *AbstractConnection conn = TenantActionRunner::getCallConnection(src);
+        if (!conn) {
+            return;
+        }
+        # a connection that its host marked as a sandboxed caller's: never run as trusted code
+        bool marked = conn.internal_info.sandboxed.toBool();
         *code resolver;
         {
             AutoLock al(lock);
             resolver = context_resolver;
         }
         if (!resolver) {
-            return;
-        }
-        *AbstractConnection conn = TenantActionRunner::getCallConnection(src);
-        if (!conn) {
+            if (marked) {
+                tenant = True;
+                throw ErrorHookMissing, sprintf("%s: connection %y belongs to a sandboxed caller, but the host has set "
+                    "no tenant context resolver (TenantActionRunner::setTenantContextResolver()); the call is refused",
+                    api.label, conn.name), {"hook": "tenant_context_resolver"};
+            }
             return;
         }
         *hash<auto> ctx = call_function(resolver, conn);
         if (!ctx) {
+            if (marked) {
+                tenant = True;
+                throw ErrorContext, sprintf("%s: connection %y belongs to a sandboxed caller, but the host's resolver "
+                    "gives it no tenant context; the call is refused", api.label, conn.name);
+            }
             return;
         }
         tenant = True;
@@ -428,16 +437,19 @@ public class TenantActionRunner {
         }
         hash<TsTenantContext> tctx = cast<hash<TsTenantContext>>(ctx);
         TenantActionRunner::checkContext(tctx);
-        # the requests of the call are made under a sandbox: the host's for the tenant, or the module's own
-        code take = V8::SandboxCapture sub () { return new V8::SandboxCapture(); };
+        # the requests of the call are made under the host's sandbox for the tenant
         *code host_sandbox;
         {
             AutoLock al(lock);
             host_sandbox = trusted_call_sandbox;
         }
-        V8::SandboxCapture capture = host_sandbox
-            ? call_function(host_sandbox, tctx, take)
-            : default_sandbox_pgm.callFunction("run", take);
+        if (!host_sandbox) {
+            throw ErrorHookMissing, sprintf("%s: connection %y is a tenant's, but the host has set no sandbox for the "
+                "tenant calls of trusted code (TenantActionRunner::setTrustedCallSandbox()); the call is refused",
+                api.label, conn.name), {"hook": "trusted_call_sandbox"};
+        }
+        V8::SandboxCapture capture = call_function(host_sandbox, tctx,
+            V8::SandboxCapture sub () { return new V8::SandboxCapture(); });
         if (!capture.isSandboxed()) {
             throw ErrorContext, sprintf("%s: the host's sandbox for the tenant calls of trusted code governs "
                 "nothing", api.label);
