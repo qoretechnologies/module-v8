@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: MIT
 # Synthetic Discovery schema: test method semantics without contacting Google.
 class GoogleDiscoveryFixture inherits GoogleDataProviderBase {
-    # runs once when a test starts, before any reader of the cache; the cache's lock is internal to the base class
+    # publishes the document through the base class: its caches are private to it (Qore #6838)
     static seed() {
-        info_map{"qore-fixture-gmail"} = {
+        registerSchemaInfo("qore-fixture-gmail", {
             "schemas": {},
             "resources": {"users": {"resources": {"messages": {"methods": {
                 "send": {"httpMethod": "POST", "path": "users/{userId}/messages/send",
@@ -15,6 +15,6 @@ class GoogleDiscoveryFixture inherits GoogleDataProviderBase {
                         "id": {"type": "string", "location": "path", "required": True},
                     }},
             }}}}},
-        };
+        });
     }
 }
