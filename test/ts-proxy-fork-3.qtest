@@ -1,0 +1,17 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%include ts-proxy-fork.qc
+
+%exec-class TsProxyForkPart3
+
+#! runs part 3 of 4 of the cases of TsProxyForkTest (see ts-proxy-fork.qc)
+class TsProxyForkPart3 inherits TsProxyForkTest {
+    constructor() : TsProxyForkTest("ts-proxy fork test, part 3", 3) {
+    }
+}
