@@ -73,6 +73,7 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
     constructor() : QUnit::Test("TenantEvents", "1.0", \ARGV) {
         addTestCase("events are pulled with the function's checkpoint", \ticksTest());
         addTestCase("a subscription belongs to its tenant", \ownerTest());
+        addTestCase("a sandboxed caller cannot start another tenant's events", \startDomainTest());
         addTestCase("a failed function's error comes after its events", \errorTest());
         addTestCase("a source that queues its limit of events is stopped and reported", \overflowTest());
         addTestCase("a source over the memory limit is stopped and reported", \heapTest());
@@ -196,6 +197,17 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         assertEq("TS-TENANT-ERROR", call("poll", "b", (id,)).err);
         assertEq("TS-TENANT-ERROR", call("stop", "b", (id,)).err);
         assertTrue(call("poll", "a", (id,)).result.running);
+    }
+
+    startDomainTest() {
+        if (!V8::SandboxCapture::hasIsolationDomains()) {
+            testSkip("this Qore has no isolation domains");
+        }
+        # a caller in tenant a's isolation domain asks for tenant b: refused before any source starts
+        hash<auto> rv = tenantProgram("a").callFunction("call", "start", {"tenant": "b", "conn_opts":
+            {"url": "https://api.example.com"}}, (App, "ticks", {"count": 0}, NOTHING));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
     }
 
     errorTest() {

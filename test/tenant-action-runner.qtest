@@ -235,6 +235,8 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         assertEq({"v": 42}, run(p, "a", "get-global", NOTHING).result);
         # another tenant, in its own program and isolation domain, does not have tenant a's global
         assertEq({"v": NOTHING}, run(tenant("b"), "b", "get-global", NOTHING).result);
+        # the runner keeps a tenant's state by its tenant, not by the calling program: another caller of tenant a has it
+        assertEq({"v": 42}, run(tenant("a"), "a", "get-global", NOTHING).result);
     }
 
     callerDomainTest() {
@@ -346,6 +348,8 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         assertEq(3, rec(p, "r1", "update", {"table": "items", "set": {"name": "x"}}).result);
         # another tenant, in its own program and isolation domain, does not see the records of r1
         assertEq((), rec(tenant("r2"), "r2", "search", {"table": "items"}).result);
+        # the records are r1's, not the calling program's: another caller of tenant r1 sees them
+        assertEq(3, rec(tenant("r1"), "r1", "search", {"table": "items"}).result.size());
         assertEq(3, rec(p, "r1", "delete", {"table": "items"}).result);
         assertEq((), rec(p, "r1", "search", {"table": "items"}).result);
         # an invalid request
