@@ -35,6 +35,10 @@ class TenantHostHooksTest inherits QUnit::Test {
             assertThrows("TS-TENANT-ERROR", "set already", \cls.findStaticMethod(setter).method.getVariants()[0].call(),
                 (sub () {},), setter);
         }
+        # the limits given are applied, the others keep their defaults
+        hash<auto> limits = cls.findStaticMethod("getTenantLimits").method.getVariants()[0].call();
+        assertEq(3, limits.max_concurrent, "the registry's limit is applied");
+        assertEq(2, limits.max_programs, "a limit not given keeps its default");
         # one not given is still open to its setter
         cls.findStaticMethod("setEgressPolicy").method.getVariants()[0].call(
             bool sub (string tenant, *string connection, hash<auto> url, list<string> ips) { return True; });
@@ -56,6 +60,12 @@ class TenantHostHooksTest inherits QUnit::Test {
         out = loadWithHooks("{\"tenant_limits\": 4}");
         assertRegex("^TS-TENANT-ERROR: host hook \"tenant_limits\" given for module \"TypeScriptActionInterface\" "
             "must be a hash", out);
+        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
+        # a misspelled limit is refused too, as the module's error, before any hook is set
+        out = loadWithHooks("{\"tenant_context_resolver\": sub () {}, \"tenant_limits\": {\"max_concurent\": 3}}");
+        assertRegex("^TS-TENANT-ERROR: host hook \"tenant_limits\" given for module \"TypeScriptActionInterface\" "
+            "is not valid", out);
+        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
     }
 
     #! Loads the module in a new process with the given hooks; returns the error, and whether its factory exists

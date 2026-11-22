@@ -219,23 +219,32 @@ public class TenantActionRunner {
 
         @note hooks that the host sets after the module was loaded are not read: the host sets them before anything
         loads the module (or calls the setters after loading it)
+        @note for the module's initialization only: called again, the hooks set already are refused
 
         @throw TS-TENANT-ERROR an unknown key, or a value of the wrong type
     */
     static applyHostHooks() [dom=PROCESS_CONTROL] {
         TenantActionRunner::checkTrusted("applyHostHooks");
         *hash<auto> hooks = DataProvider::getModuleHostHooks(HostHooksModule);
-        TenantActionRunner::checkHostHooks(hooks);
-        TenantActionRunner::setHostHooks(hooks);
+        TenantActionRunner::setHostHooks(TenantActionRunner::checkHostHooks(hooks));
     }
 
     #! Validates the whole hash of host hooks before any is set
-    private:internal static checkHostHooks(*hash<auto> hooks) {
+    /** @return the hooks, with \c tenant_limits converted to its hashdecl
+    */
+    private:internal static *hash<auto> checkHostHooks(*hash<auto> hooks) {
         foreach hash<auto> i in (hooks.pairIterator()) {
             if (i.key == "tenant_limits") {
                 if (i.value.typeCode() != NT_HASH) {
                     throw ErrorContext, sprintf("host hook %y given for module %y must be a hash; got %y",
                         i.key, HostHooksModule, i.value.type());
+                }
+                # its keys and values too: a misspelled limit is refused before any hook is set
+                try {
+                    hooks.tenant_limits = cast<hash<TsTenantLimits>>(i.value);
+                } catch (hash<ExceptionInfo> ex) {
+                    throw ErrorContext, sprintf("host hook %y given for module %y is not valid: %s: %s", i.key,
+                        HostHooksModule, ex.err, ex.desc);
                 }
                 continue;
             }
@@ -248,6 +257,7 @@ public class TenantActionRunner {
                     i.key, HostHooksModule, i.value.type());
             }
         }
+        return hooks;
     }
 
     #! Sets the host's hooks given in the DataProvider registry (DataProvider::setModuleHostHooks())
@@ -265,7 +275,7 @@ public class TenantActionRunner {
                 case "connection_update_handler": TenantActionRunner::setConnectionUpdateHandler(i.value); break;
                 case "egress_policy": TenantActionRunner::setEgressPolicy(i.value); break;
                 case "egress_meter": TenantActionRunner::setEgressMeter(i.value); break;
-                case "tenant_limits": TenantActionRunner::setTenantLimits(cast<hash<TsTenantLimits>>(i.value)); break;
+                case "tenant_limits": TenantActionRunner::setTenantLimits(i.value); break;
                 case "trusted_call_sandbox": TenantActionRunner::setTrustedCallSandbox(i.value); break;
             }
         }
@@ -589,6 +599,15 @@ public class TenantActionRunner {
         if (update.typeCode() == NT_HASH && update) {
             call_function(handler, conn, update);
         }
+    }
+
+    #! Returns the limits of the tenants' calls
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed
+    */
+    static hash<TsTenantLimits> getTenantLimits() [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("getTenantLimits");
+        AutoLock al(lock);
+        return limits;
     }
 
     #! Sets the limits of the tenants' calls
