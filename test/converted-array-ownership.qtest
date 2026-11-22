@@ -1,0 +1,140 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# MIT License
+%modern
+%requires v8
+%requires QUnit
+%exec-class ConvertedArrayOwnershipTest
+
+class SavedObject {
+    public { auto graph; }
+    private { Counter destroyed; }
+    constructor(Counter counter) { destroyed = counter; }
+    destructor() { destroyed.inc(); }
+}
+
+class ConvertedArrayOwnershipTest inherits QUnit::Test {
+    constructor() : Test("ConvertedArrayOwnershipTest", "1.0", \ARGV) {
+        addTestCase("the live thread-data hash tracks the saved object list", \savedObjectCycle());
+        addTestCase("deep arrays convert own canonical indices", \arrayKeys());
+        addTestCase("out-of-range arrays are refused before evaluating elements", \arrayBounds());
+        addTestCase("a deep array writer exposes its converted leaf to the collector", \objectCycle());
+        addTestCase("saving an object preserves other owners of the previous list", \saveListAlias());
+        set_return_value(main());
+    }
+
+    private arrayKeys() {
+        JavaScriptProgram js("const v8 = require('node:v8');
+            globalThis.handles = () => v8.getHeapStatistics().used_global_handles_size;
+            const a = [() => 42];
+            a[3] = 'last';
+            for (const key of ['alias', '1.5', '01', '-01']) {
+                Object.defineProperty(a, key, {enumerable: true, get() { throw Error(key); }});
+            }
+            const proto = Object.create(Array.prototype);
+            proto.name = 1;
+            proto[1] = 'inherited';
+            Object.setPrototypeOf(a, proto);
+            globalThis.envelope = {a};", "array-keys.js");
+        auto envelope = js.getGlobal().envelope;
+        {
+            list<auto> a = envelope.toData().a;
+            assertEq(4, a.size());
+            assertEq(42, a[0]());
+            assertEq(NOTHING, a[1]);
+            assertEq(NOTHING, a[2]);
+            assertEq("last", a[3]);
+        }
+        code handles = js.getGlobal().handles.toData();
+        int before = handles();
+        for (int i = 0; i < 16; ++i) {
+            envelope.toData();
+        }
+        assertEq(before, handles(), "discarding deep-converted functions releases their V8 handles");
+    }
+
+    private arrayBounds() {
+        JavaScriptProgram js("const negative = [];
+            Object.defineProperty(negative, '-1', {enumerable: true, get() { throw Error('negative getter'); }});
+            globalThis.neg = {items: negative};
+            const large = [];
+            large[50000001] = 1;
+            let reads = 0;
+            Object.defineProperty(large, '0', {enumerable: true, get() { ++reads; return Symbol(); }});
+            globalThis.big = {items: large};
+            globalThis.shallow = () => large;
+            globalThis.reads = () => reads;", "array-bounds.js");
+        auto global = js.getGlobal();
+        assertThrows("JAVASCRIPT-ARRAY-ERROR", sub () { global.neg.toData(); });
+        assertThrows("JAVASCRIPT-ARRAY-ERROR", sub () { global.big.toData(); });
+        assertThrows("JAVASCRIPT-ARRAY-ERROR", sub () { global.shallow.toData()(); });
+        assertEq(0, global.reads.toData()(), "both length guards run before any getter");
+    }
+
+    private bool scanProbes() {
+        try {
+            call_function("V8::dbg_thread_data_needs_scan");
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err != "NO-FUNCTION") {
+                rethrow;
+            }
+            return False;
+        }
+        return True;
+    }
+
+    private savedObjectCycle() {
+        JavaScriptProgram js("globalThis.save = value => { globalThis.held = value; };", "saved-object.js");
+        code save = js.getGlobal().save.toData();
+        Counter destroyed();
+        {
+            save_thread_data({"_v8_save": "converted_objects", "converted_objects": ()});
+            on_exit remove_thread_data("_v8_save", "converted_objects");
+            SavedObject owner(destroyed);
+            bool probes = scanProbes();
+            if (probes) {
+                assertFalse(call_function("V8::dbg_thread_data_needs_scan"), "no scannable thread data yet");
+            }
+            save(owner);
+            if (probes) {
+                assertTrue(call_function("V8::dbg_thread_data_needs_scan"), "the original hash now needs a scan");
+            }
+            owner.graph = get_all_thread_data();
+            assertTrue(owner.graph.converted_objects[0] === owner);
+            remove_thread_data("converted_objects");
+            assertEq(0, destroyed.getCount());
+        }
+        assertEq(1, destroyed.getCount(), "the saved reference in the copied thread-data hash was scanned");
+    }
+
+    private saveListAlias() {
+        JavaScriptProgram js("globalThis.save = value => {};", "save-list.js");
+        code save = js.getGlobal().save.toData();
+        list<auto> previous = ();
+        save_thread_data({"_v8_save": "aliased_objects", "aliased_objects": previous});
+        on_exit remove_thread_data("_v8_save", "aliased_objects");
+        Counter obj();
+        save(obj);
+        assertEq(0, previous.size());
+        assertTrue(get_thread_data("aliased_objects")[0] === obj);
+    }
+
+    private objectCycle() {
+        if (!scanProbes()) {
+            testSkip("the deep writer probe requires a Debug module-v8 build");
+        }
+        JavaScriptProgram js("", "deep-leaf.js");
+        Counter destroyed();
+        {
+            list<auto> items;
+            {
+                SavedObject owner(destroyed);
+                items = call_function("V8::dbg_array_with_leaf", js, owner);
+                assertTrue(items[0] === owner);
+                owner.graph = items;
+            }
+            assertEq(0, destroyed.getCount(), "the list still has an external owner");
+        }
+        assertEq(1, destroyed.getCount(), "the cycle was collected after the last list root dropped");
+    }
+}

@@ -1169,24 +1169,26 @@ int QoreV8Program::saveQoreReferenceDefault(const QoreValue& rv, ExceptionSink& 
         domain_name = domain_storage.c_str();
     }
 
-    QoreValue kv = data->getKeyValue(domain_name);
-    // ignore operation if domain exists but is not a list
+    HashAssignmentHelper slot(*data, domain_name);
+    QoreValue kv = slot.get();
+    // Ignore an explicitly disabled (non-list) save domain.
     if (!kv || kv.getType() == NT_LIST) {
-        QoreListNode* list;
-        ReferenceHolder<QoreListNode> list_holder(&xsink);
-        if (!kv) {
-            // we need to assign list in data *after* we prepend the object to the list
-            // in order to manage object counts
+        // Detach before changing the list: prepending the first object can change the
+        // hash slot from non-scannable to scannable. Other owners keep their old list.
+        ReferenceHolder<QoreListNode> list(slot.swap(QoreValue(), &xsink).get<QoreListNode>(), &xsink);
+        ReferenceHolder<QoreListNode> previous(&xsink);
+        if (!list) {
             list = new QoreListNode(autoTypeInfo);
-            list_holder = list;
-        } else {
-            list = kv.get<QoreListNode>();
+        } else if (!list->is_unique()) {
+            previous = list.release();
+            list = previous->copy();
         }
-
-        // prepend to list to ensure FILO destruction order
+        // Prepend for FILO destruction order and republish even if the prepend failed.
         list->splice(0, 0, rv, &xsink);
-        if (!xsink && list_holder) {
-            data->setKeyValue(domain_name, list_holder.release(), &xsink);
+        slot.assign(list.release(), &xsink);
+        // release the list that other owners kept before the check: its destructors can raise an exception too
+        if (previous) {
+            previous.release()->deref(&xsink);
         }
         if (xsink) {
             raiseV8Exception(xsink, isolate);
@@ -1316,6 +1318,9 @@ QoreValue QoreV8Program::getQoreValue(ExceptionSink* xsink, v8::Local<v8::Value>
 
     if (val->IsArray()) {
         v8::Local<v8::Array> array = v8::Local<v8::Array>::Cast(val);
+        if (!qore_v8_check_array_length(array->Length(), xsink)) {
+            return QoreValue();
+        }
         ReferenceHolder<QoreListNode> rv(new QoreListNode(autoTypeInfo), xsink);
         for (uint32_t i = 0, e = array->Length(); i < e; ++i) {
             v8::MaybeLocal<v8::Value> val = array->Get(context, i);
