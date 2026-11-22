@@ -65,7 +65,9 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         HttpServer server;
         BlockingHandler handler();
         int port;
-        Program tp;
+        #! each tenant's own Program, governed by a sandbox whose isolation domain is the tenant
+        hash<string, Program> tenant_programs = {};
+        Mutex tenant_programs_lock();
     }
 
     constructor() : QUnit::Test("TenantEvents", "1.0", \ARGV) {
@@ -97,11 +99,24 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         server = new HttpServer(<HttpServerOptionInfo>{});
         server.setDefaultHandler("events", handler);
         port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
-        tp = new Program(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
-        tp.parse(TenantSource, "tenant");
+    }
+
+    #! Returns the tenant's own Program: with a Qore that has isolation domains, the runner refuses a sandboxed
+    #! caller whose sandbox has no domain or another tenant's, as a host gives each tenant's sandbox its domain
+    private Program tenantProgram(string tenant) {
+        AutoLock al(tenant_programs_lock);
+        if (*Program p = tenant_programs{tenant}) {
+            return p;
+        }
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "tenant");
         SandboxManager sm();
         sm.setNetworkDefaultPolicy(True);
-        tp.setSandboxManager(sm);
+        if (V8::SandboxCapture::hasIsolationDomains()) {
+            call_object_method(sm, "setIsolationDomain", tenant);
+        }
+        p.setSandboxManager(sm);
+        return tenant_programs{tenant} = p;
     }
 
     globalTearDown() {
@@ -112,7 +127,8 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
     }
 
     private hash<auto> call(string what, string tenant, *list<auto> args) {
-        return tp.callFunction("call", what, {"tenant": tenant, "conn_opts": {"url": "https://api.example.com"}},
+        return tenantProgram(tenant).callFunction("call", what, {"tenant": tenant, "conn_opts":
+            {"url": "https://api.example.com"}},
             args);
     }
 

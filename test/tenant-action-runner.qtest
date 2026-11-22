@@ -99,6 +99,8 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         addTestCase("a sandboxed tenant runs an action with plain data", \runTest());
         addTestCase("invalid contexts and unknown actions", \contextTest());
         addTestCase("tenants do not share programs", \isolationTest());
+        addTestCase("a sandboxed caller with no isolation domain, or another tenant's, is refused",
+            \callerDomainTest());
         addTestCase("errors carry no stack", \errorTest());
         addTestCase("the time limit", \timeoutTest());
         addTestCase("a request through the tenant's own sandbox", \egressAllowedTest());
@@ -190,12 +192,24 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         return sm;
     }
 
-    #! returns a tenant's Program, governed by a sandbox
-    private Program tenant(*SandboxManager sm) {
+    #! returns a tenant's Program, governed by a sandbox whose isolation domain is the tenant
+    /** With a Qore that has isolation domains, the runner refuses a sandboxed caller whose sandbox has no domain or
+        another tenant's (TenantActionRunner::checkCallerDomain()), as a host gives each tenant's sandbox its domain
+    */
+    private Program tenant(string domain, *SandboxManager sm) {
         Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
         p.parse(TenantSource, "tenant");
-        p.setSandboxManager(sm ?? new SandboxManager());
+        p.setSandboxManager(TenantActionRunnerTest::domainSandbox(domain, sm));
         return p;
+    }
+
+    #! Gives a sandbox the tenant's isolation domain, if this Qore has isolation domains
+    static SandboxManager domainSandbox(string domain, *SandboxManager sm) {
+        sm = sm ?? new SandboxManager();
+        if (V8::SandboxCapture::hasIsolationDomains()) {
+            call_object_method(sm, "setIsolationDomain", domain);
+        }
+        return sm;
     }
 
     private hash<auto> run(Program p, string tenant, string action, auto req, *hash<auto> ctx, *string app) {
@@ -204,27 +218,44 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     runTest() {
-        Program p = tenant();
+        Program p = tenant("a");
         hash<auto> rv = run(p, "a", "echo", {"x": 1});
         assertEq({"req": {"x": 1}, "url": "https://api.example.com"}, rv.result, sprintf("%y", rv));
     }
 
     contextTest() {
-        Program p = tenant();
+        Program p = tenant("a");
         assertEq("TS-TENANT-ERROR", run(p, "", "echo", 1).err);
         assertEq("TS-TENANT-ERROR", run(p, "a", "no-such-action", 1).err);
     }
 
     isolationTest() {
-        Program p = tenant();
+        Program p = tenant("a");
         assertEq({"v": 42}, run(p, "a", "set-global", {"v": 42}).result);
         assertEq({"v": 42}, run(p, "a", "get-global", NOTHING).result);
-        # another tenant's program does not have tenant a's global
-        assertEq({"v": NOTHING}, run(p, "b", "get-global", NOTHING).result);
+        # another tenant, in its own program and isolation domain, does not have tenant a's global
+        assertEq({"v": NOTHING}, run(tenant("b"), "b", "get-global", NOTHING).result);
+    }
+
+    callerDomainTest() {
+        if (!V8::SandboxCapture::hasIsolationDomains()) {
+            testSkip("this Qore has no isolation domains");
+        }
+        # a sandbox with no isolation domain: refused, fail closed
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "no-domain");
+        p.setSandboxManager(new SandboxManager());
+        hash<auto> rv = run(p, "a", "echo", {"x": 1});
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("no isolation domain", rv.desc);
+        # the isolation domain of another tenant: refused
+        rv = run(tenant("a"), "b", "echo", {"x": 1});
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
     }
 
     unsupportedTest() {
-        Program p = tenant();
+        Program p = tenant("a");
         hash<auto> info = TenantActionRunner::getActionInfo(<TsTenantContext>{"tenant": "a"}, App, "echo");
         assertTrue(info.tenant_available);
         # fs is a builtin of the load phase: the program is sealed before the tenant's first call, so it is refused
@@ -235,11 +266,11 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         info = TenantActionRunner::getActionInfo(<TsTenantContext>{"tenant": "a"}, App, "echo");
         assertFalse(info.tenant_available);
         assertEq("fs", info.tenant_unsupported_builtin);
-        assertEq("TS-TENANT-APP-UNSUPPORTED", run(p, "z", "echo", NOTHING).err);
+        assertEq("TS-TENANT-APP-UNSUPPORTED", run(tenant("z"), "z", "echo", NOTHING).err);
     }
 
     errorTest() {
-        Program p = tenant();
+        Program p = tenant("c");
         hash<auto> rv = run(p, "c", "throw", NOTHING);
         assertEq("TS-TENANT-ACTION-ERROR", rv.err, sprintf("%y", rv));
         assertEq("boom", rv.desc);
@@ -247,7 +278,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     egressAllowedTest() {
-        Program p = tenant(netSandbox());
+        Program p = tenant("e", netSandbox());
         hash<auto> rv = run(p, "e", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)},
             {"connection": "conn-e"});
         assertEq({"status": 200, "body": "hello"}, rv.result, sprintf("%y", rv));
@@ -259,7 +290,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     egressPrivateTest() {
-        Program p = tenant(netSandbox(True));
+        Program p = tenant("f", netSandbox(True));
         string url = sprintf("http://127.0.0.1:%d/hello", port);
         hash<auto> rv = run(p, "f", "fetch-url", {"url": url});
         assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
@@ -271,7 +302,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     egressDnsTest() {
-        Program p = tenant(netSandbox(True));
+        Program p = tenant("g", netSandbox(True));
         # localhost resolves to a loopback address: the address connected to is checked
         hash<auto> rv = run(p, "g", "fetch-url", {"url": sprintf("http://localhost:%d/hello", port)});
         assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
@@ -279,18 +310,18 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
 
     egressRedirectTest() {
         # the first hop (127.0.0.1) is allowed, the redirect to 10.255.255.1 is not
-        Program p = tenant(netSandbox(False, "10.0.0.0/8"));
+        Program p = tenant("h", netSandbox(False, "10.0.0.0/8"));
         hash<auto> rv = run(p, "h", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/redirect-private", port)});
         assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
     }
 
     egressHookTest() {
         # the sandbox allows it; the hook refuses it
-        Program p = tenant(netSandbox());
+        Program p = tenant("i", netSandbox());
         hash<auto> rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hook-deny", port)});
         assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
         # the hook allows it; the sandbox refuses it
-        p = tenant(netSandbox(True));
+        p = tenant("i", netSandbox(True));
         rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)});
         assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
     }
@@ -300,7 +331,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     recordTest() {
-        Program p = tenant();
+        Program p = tenant("r1");
         hash<auto> rv = rec(p, "r1", "create", {"table": "items", "records": ({"id": 1, "name": "a"}, {"id": 2,
             "name": "b"})});
         assertNothing(rv.err, sprintf("%y", rv));
@@ -313,8 +344,8 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         assertEq(("updated", "inserted"), rec(p, "r1", "upsert", {"table": "items", "records": ({"id": 2,
             "name": "c"}, {"id": 3, "name": "d"})}).result);
         assertEq(3, rec(p, "r1", "update", {"table": "items", "set": {"name": "x"}}).result);
-        # another tenant does not see the records of r1
-        assertEq((), rec(p, "r2", "search", {"table": "items"}).result);
+        # another tenant, in its own program and isolation domain, does not see the records of r1
+        assertEq((), rec(tenant("r2"), "r2", "search", {"table": "items"}).result);
         assertEq(3, rec(p, "r1", "delete", {"table": "items"}).result);
         assertEq((), rec(p, "r1", "search", {"table": "items"}).result);
         # an invalid request
@@ -323,7 +354,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     recordLimitTest() {
-        Program p = tenant();
+        Program p = tenant("r3");
         list<hash<auto>> recs = map ("id": $1, "name": "n"), xrange(10001);
         hash<auto> rv = rec(p, "r3", "create", {"table": "items", "records": recs});
         assertEq("TS-TENANT-LIMIT", rv.err, sprintf("%y", rv.err));
@@ -335,15 +366,16 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
             "opts": {"token": "x"}});
     }
 
-    private Program connTenant() {
+    #! returns the Program of the tenant that the host's resolver gives a connection: "conn-" + its name
+    private Program connTenant(string conn_name) {
         Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
         p.parse(ConnSource, "conn-tenant");
-        p.setSandboxManager(new SandboxManager());
+        p.setSandboxManager(TenantActionRunnerTest::domainSandbox("conn-" + conn_name));
         return p;
     }
 
     dispatchKindsTest() {
-        Program p = connTenant();
+        Program p = connTenant("k");
         TypeScriptAppRestConnection c = conn("k");
         hash<auto> rv = p.callFunction("kind", c, "action");
         # the provider's own context of the call: the options of the connection that the caller uses
@@ -363,12 +395,12 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     dispatchFailClosedTest() {
-        hash<auto> rv = connTenant().callFunction("kind", conn("no-ctx"), "action");
+        hash<auto> rv = connTenant("no-ctx").callFunction("kind", conn("no-ctx"), "action");
         assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
     }
 
     connectionUpdateTest() {
-        hash<auto> rv = connTenant().callFunction("kind", conn("u"), "refresh");
+        hash<auto> rv = connTenant("u").callFunction("kind", conn("u"), "refresh");
         assertEq({"ok": True}, rv.result, sprintf("%y", rv));
         AutoLock al(meter_lock);
         assertEq(({"conn": "u", "update": {"token": "new-restricted"}},), (select conn_updates, $1.conn == "u"));
@@ -405,7 +437,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         on_exit TypeScriptActionInterface::shutdownInProcessServer();
         # a trusted caller uses the pool
         assertEq("full", conn("ip-trusted").getDataProvider().getChildProviderEx("info").doRequest().where);
-        Program p = connTenant();
+        Program p = connTenant("ip");
         TypeScriptAppRestConnection c = conn("ip");
         hash<auto> rv = p.callFunction("kind", c, "action");
         assertEq("restricted", rv.result.where, sprintf("%y", rv));
@@ -417,7 +449,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
     }
 
     timeoutTest() {
-        Program p = tenant();
+        Program p = tenant("d");
         # the tenant's program is built by its first call; the time limit is timed on a call that finds it built
         assertEq({"req": NOTHING, "url": "https://api.example.com"}, run(p, "d", "echo", NOTHING).result);
         # the action never returns by itself: the call returns only because the watchdog terminated the program, so no
