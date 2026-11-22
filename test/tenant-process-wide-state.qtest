@@ -266,17 +266,23 @@ class TenantProcessWideStateTest inherits QUnit::Test {
             "TypeScriptActionDataProviderBase::getAsyncValueWithCache": "calls of sandboxed code are made by the "
                 "tenant runner, without the shared cache",
             "TypeScriptActionApiDataProvider::constructor": "the caller's own provider",
-            "TypeScriptActionApiDataProvider::copy": "a copy for a sandboxed caller has types of its own",
-            "TypeScriptActionApiDataProvider::makeNormalizedRequest": "a request of the caller's own provider",
+            "TypeScriptActionApiDataProvider::copy": "a copy for a sandboxed caller has types of its own and no "
+                "post-processing reference (also for a schema-only action, which has no call)",
+            "TypeScriptActionApiDataProvider::makeNormalizedRequest": "a request with the caller's own copy and "
+                "connection; the call of sandboxed code is made by the tenant runner",
             "TypeScriptActionApiDataProvider::tryGetActionOptionsWithOptions": "sandboxed callers get copies of the "
                 "types",
             "TypeScriptActionApiDataProvider::getActionOptionsWithOptions": "sandboxed callers get copies of the "
                 "types",
-            "TypeScriptActionApiWithSchemaDataProvider::constructor": "the caller's own provider; the global type "
-                "map is changed only by trusted code",
-            "TypeScriptActionApiWithSchemaDataProvider::doRequest": "a request of the caller's own provider",
-            "TypeScriptActionApiWithSchemaDataProvider::makeNormalizedRequest": "a request of the caller's own "
-                "provider",
+            "TypeScriptActionApiWithSchemaDataProvider::constructor": "the caller's own provider: for sandboxed "
+                "code it keeps its request-key maps and request type check setting to itself and changes no "
+                "process-wide map or shared schema request provider",
+            "TypeScriptActionApiWithSchemaDataProvider::doRequest": "a request with the caller's own copy and "
+                "connection: its REST client is given to the shared schema request provider with the call, never "
+                "stored on it",
+            "TypeScriptActionApiWithSchemaDataProvider::makeNormalizedRequest": "a request with the caller's own "
+                "copy and connection: its REST client is given to the shared schema request provider with the "
+                "call, never stored on it",
             "TypeScriptActionApiWithSchemaDataProvider::init": "initializes the caller's own provider",
             "TypeScriptActionApiWithSchemaDataProvider::tryGetActionOptionsFromRequestTypeWithData": "options of "
                 "the caller's own provider",
@@ -356,6 +362,188 @@ class TenantProcessWideStateTest inherits QUnit::Test {
         #! The static members of the public classes that are not private:internal and are safe: class::member ->
         #! the reason; every other static member of a public class must be private:internal
         const MemberAllowList = {};
+
+        #! The reasons of the plain private methods and members that a tenant's subclass can reach
+        const RImpl = "implements a private method of its DataProvider, ConnectionProvider or RestClient base class "
+            "on the caller's own object (tenants get copies of the module's providers and create their own "
+            "connections and clients)";
+        const RPure = "pure: works on its arguments";
+        const ROwnMethod = "works on the caller's own object; process-wide state only through the module's checked "
+            "or internal accessors";
+        const RProxyLog = "implements the abstract logging methods of TypeScriptProxy; tenants cannot create or get "
+            "a proxy (its constructor and the pools refuse them)";
+        const RGuarded = "refuses sandboxed code (TsaiProcessState::checkHostScope())";
+        const RConfig = "returns the REST options of an app for the caller's own connection; their secrets are "
+            "qoretechnologies/qore#7185 item B";
+        const RCtor = "a constructor for subclasses: creates the caller's own object";
+        const ROwnMember = "state of the caller's own object; a copy for a sandboxed caller has no host logger, pool "
+            "or post-processing reference and has types of its own";
+        const RConn = "state of the caller's own connection or client";
+
+        #! The plain private methods of the public classes that a tenant's subclass can call: "class::method" -> the
+        #! reason; every other private method must be private:internal (qoretechnologies/qore#7185)
+        const PrivateMethodAllowList = {
+            "JavaScriptProgramProxy::debug": RProxyLog,
+            "JavaScriptProgramProxy::error": RProxyLog,
+            "JavaScriptProgramProxy::fatal": RProxyLog,
+            "JavaScriptProgramProxy::info": RProxyLog,
+            "JavaScriptProgramProxy::testConnectEventProxy": RGuarded,
+            "JavaScriptProgramProxy::testDisconnectEventProxy": RGuarded,
+            "TypeScriptActionApiDataProvider::constructor": RCtor,
+            "TypeScriptActionApiDataProvider::doRequestImpl": RImpl,
+            "TypeScriptActionApiDataProvider::getRequestTypeImpl": RImpl,
+            "TypeScriptActionApiDataProvider::getRequestTypeWithDataImpl": RImpl,
+            "TypeScriptActionApiDataProvider::getRequestTypeWithOptionsImpl": RImpl,
+            "TypeScriptActionApiDataProvider::getResponseTypeImpl": RImpl,
+            "TypeScriptActionApiDataProvider::getResponseTypeWithDataImpl": RImpl,
+            "TypeScriptActionApiDataProvider::getStaticInfoImpl": RImpl,
+            "TypeScriptActionApiWithSchemaDataProvider::checkRequestType": ROwnMethod,
+            "TypeScriptActionApiWithSchemaDataProvider::createRequestType": ROwnMethod,
+            "TypeScriptActionApiWithSchemaDataProvider::createRequestTypeIntern": ROwnMethod,
+            "TypeScriptActionApiWithSchemaDataProvider::createResponseType": ROwnMethod,
+            "TypeScriptActionApiWithSchemaDataProvider::doRequestImpl": RImpl,
+            "TypeScriptActionApiWithSchemaDataProvider::getRequestTypeImpl": RImpl,
+            "TypeScriptActionApiWithSchemaDataProvider::getResponseTypeImpl": RImpl,
+            "TypeScriptActionApiWithSchemaDataProvider::getStaticInfoImpl": RImpl,
+            "TypeScriptActionApiWithSchemaDataProvider::makeSchemaRequest": ROwnMethod,
+            "TypeScriptActionApiWithSchemaDataProvider::overrideOptionType": ROwnMethod,
+            "TypeScriptActionApiWithSchemaDataProvider::overrideOptions": ROwnMethod,
+            "TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue": RPure,
+            "TypeScriptActionApiWithSchemaDataProvider::fixOptimizedValue": RPure,
+            "TypeScriptActionDataProviderBase::checkRestClient": ROwnMethod,
+            "TypeScriptActionDataProviderBase::checkUpdateRestOptions": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getActionOptionsWithOptionsCached": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getActionOptionsWithOptionsIntern": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getAttributeIntern": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getAttributes": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getDynamicDataType": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getDynamicOptionTypeIntern": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getDynamicTypeIntern": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getElementReferenceDataImpl": RImpl,
+            "TypeScriptActionDataProviderBase::getReferenceDataImpl": RImpl,
+            "TypeScriptActionDataProviderBase::getReferenceDataIntern": ROwnMethod,
+            "TypeScriptActionDataProviderBase::getReferenceDataValueImpl": RImpl,
+            "TypeScriptActionDataProviderBase::getRestClientForGenericCallImpl": RImpl,
+            "TypeScriptActionDataProviderBase::getAllowedValues": RPure,
+            "TypeScriptActionDataProviderBase::getCacheKey": RPure,
+            "TypeScriptActionDataProviderBase::getKey": RPure,
+            "TypeScriptActionDataProviderBase::tryGetActionOptionsWithOptionsImpl": RImpl,
+            "TypeScriptActionDataProviderFactory::getClassImpl": RImpl,
+            "TypeScriptActionDataProviderFactory::getInfoImpl": RImpl,
+            "TypeScriptActionDataProviderFactory::getProviderInfoImpl": RImpl,
+            "TypeScriptActionEventDataProvider::getCheckpointApi": ROwnMethod,
+            "TypeScriptActionEventDataProvider::getStaticInfoImpl": RImpl,
+            "TypeScriptActionEventDataProvider::pollOnce": ROwnMethod,
+            "TypeScriptActionEventDataProvider::restoreCheckpoint": ROwnMethod,
+            "TypeScriptActionEventDataProvider::startEvent": ROwnMethod,
+            "TypeScriptActionEventDataProvider::startEventThread": ROwnMethod,
+            "TypeScriptActionEventDataProviderBase::checkEventType": ROwnMethod,
+            "TypeScriptActionEventDataProviderBase::getEventInfoWithOptionsImpl": RImpl,
+            "TypeScriptActionEventDataProviderBase::getEventTypesImpl": RImpl,
+            "TypeScriptActionEventDataProviderBase::getExampleEventDataImpl": RImpl,
+            "TypeScriptActionFactory::getClassImpl": RImpl,
+            "TypeScriptActionFactory::getInfoImpl": RImpl,
+            "TypeScriptActionFactory::getProviderInfoImpl": RImpl,
+            "TypeScriptActionGoogleApiDataProvider::checkRestClient": ROwnMethod,
+            "TypeScriptActionGoogleApiDataProvider::doRequestImpl": RImpl,
+            "TypeScriptActionGoogleApiDataProvider::getRequestTypeImpl": RImpl,
+            "TypeScriptActionGoogleApiDataProvider::getResponseTypeImpl": RImpl,
+            "TypeScriptActionGoogleApiDataProvider::getStaticInfoImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::checkRecordTypeIntern": ROwnMethod,
+            "TypeScriptActionRecordBasedDataProvider::convertExpression": ROwnMethod,
+            "TypeScriptActionRecordBasedDataProvider::createRecordImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::createRecordsBulkImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::deleteRecordsImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::getCreateRecordTypeWithOptionsImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::getRecordTypeImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::getRecordTypeWithOptionsImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::getStaticInfoImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::getTableList": ROwnMethod,
+            "TypeScriptActionRecordBasedDataProvider::getUpdateRecordTypeWithOptionsImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::searchRecordsCall": ROwnMethod,
+            "TypeScriptActionRecordBasedDataProvider::searchRecordsImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::searchSingleRecordImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::getDataProviderOption": RPure,
+            "TypeScriptActionRecordBasedDataProvider::getExpression": RPure,
+            "TypeScriptActionRecordBasedDataProvider::getRole": RPure,
+            "TypeScriptActionRecordBasedDataProvider::makeBulk": RPure,
+            "TypeScriptActionRecordBasedDataProvider::supportsSearchRecords": ROwnMethod,
+            "TypeScriptActionRecordBasedDataProvider::updateOptionIntern": ROwnMethod,
+            "TypeScriptActionRecordBasedDataProvider::updateRecordsImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::upsertRecordImpl": RImpl,
+            "TypeScriptActionRecordBasedDataProvider::upsertRecordsBulkImpl": RImpl,
+            "TypeScriptActionTablesDataProvider::getChildProviderImpl": RImpl,
+            "TypeScriptActionTablesDataProvider::getChildProviderNamesImpl": RImpl,
+            "TypeScriptActionTablesDataProvider::getStaticInfoImpl": RImpl,
+            "TypeScriptActionWebhookEventDataProvider::callback": ROwnMethod,
+            "TypeScriptActionWebhookEventDataProvider::getStaticInfoImpl": RImpl,
+            "TypeScriptActionWebhookEventDataProvider::stop": ROwnMethod,
+            "TypeScriptAppRestClient::copySelf": ROwnMethod,
+            "TypeScriptAppRestClient::getUpdateOptionsAfterLogin": ROwnMethod,
+            "TypeScriptAppRestClient::makePostAuthCall": ROwnMethod,
+            "TypeScriptAppRestConnection::getConnectionSchemeInfoImpl": RImpl,
+            "TypeScriptAppRestConnection::getImpl": RImpl,
+            "TypeScriptAppRestConnection::getPingPath": ROwnMethod,
+            "TypeScriptAppRestConnection::getUrlOptionIntern": ROwnMethod,
+            "TypeScriptAppRestConnection::makePostAuthCall": ROwnMethod,
+            "TypeScriptAppRestConnection::processOAuth2TokenResponseImpl": RImpl,
+            "TypeScriptAppRestConnection::setChildCapabilities": ROwnMethod,
+            "TypeScriptAppRestConnection::setupTs": ROwnMethod,
+            "TypeScriptAppRestConnection::getConfig": RConfig,
+            "TypeScriptAppRestConnection::validateOptions": ROwnMethod,
+            "TypeScriptAwsAppRestClient::getCanonicalSignature": ROwnMethod,
+            "TypeScriptAwsAppRestClient::getRequestString": ROwnMethod,
+            "TypeScriptAwsAppRestClient::signRequest": ROwnMethod,
+            "TypeScriptAwsAppRestConnection::getImpl": RImpl,
+            "TypeScriptHubspotRestClient::sendAndDecodeResponse": ROwnMethod,
+            "TypeScriptHubspotRestClient::signRequest": ROwnMethod,
+            "TypeScriptHubspotRestClient::throwCmsForbidden": RPure,
+        };
+
+        #! The plain private instance members of the public classes that a tenant's subclass can read:
+        #! "class::member" -> the reason; every other private member must be private:internal
+        const PrivateMemberAllowList = {
+            "TypeScriptActionApiDataProvider::api": ROwnMember,
+            "TypeScriptActionApiDataProvider::request_type_info": ROwnMember,
+            "TypeScriptActionApiDataProvider::response_type_info": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::action_save": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::conn_opt_map": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::ignore_options_save": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::include_response_headers": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::independent_path_vars": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::override_options_save": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::path_vars": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::query_set": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::request_key": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::request_type_done": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::res_only_body": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::response_type_done": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::rest_schema": ROwnMember,
+            "TypeScriptActionApiWithSchemaDataProvider::schema_path": ROwnMember,
+            "TypeScriptActionDataProviderBase::conn": ROwnMember,
+            "TypeScriptActionDataProviderBase::docache": ROwnMember,
+            "TypeScriptActionDataProviderBase::dtcache": ROwnMember,
+            "TypeScriptActionDataProviderBase::name": ROwnMember,
+            "TypeScriptActionDataProviderBase::rest": ROwnMember,
+            "TypeScriptActionEventDataProviderBase::event_id": ROwnMember,
+            "TypeScriptActionEventDataProviderBase::event_info": ROwnMember,
+            "TypeScriptActionEventDataProviderBase::event_type_info": ROwnMember,
+            "TypeScriptActionEventDataProviderBase::get_example_event_data": ROwnMember,
+            "TypeScriptActionRecordBasedDataProvider::ofmap": ROwnMember,
+            "TypeScriptActionRecordBasedDataProvider::option_map": ROwnMember,
+            "TypeScriptActionRecordBasedDataProvider::record_type": ROwnMember,
+            "TypeScriptAppRestClient::conn": RConn,
+            "TypeScriptAppRestConnection::app": RConn,
+            "TypeScriptAppRestConnection::appname": RConn,
+            "TypeScriptAppRestConnection::cache": RConn,
+            "TypeScriptAppRestConnection::cmap": RConn,
+            "TypeScriptAppRestConnection::info": RConn,
+            "TypeScriptAppRestConnection::m": RConn,
+            "TypeScriptAppRestConnection::pmap": RConn,
+            "TypeScriptAppRestConnection::scheme": RConn,
+            "TypeScriptAppRestConnection::url_template_options": RConn,
+            "TypeScriptAppRestConnection::wmap": RConn,
+        };
 
         #! The errors with which the module refuses sandboxed code
         const RefusalErrors = {
@@ -797,6 +985,30 @@ class TenantProcessWideStateTest inherits QUnit::Test {
             }
         }
         assertEq((map {$1: True}, keys MemberAllowList) ?? {}, members);
+        # every plain private method and member of a public class, which a tenant's subclass can reach, is
+        # private:internal or allowed for a reason
+        hash<string, bool> private_methods = {};
+        hash<string, bool> private_members = {};
+        foreach Class cls in (new Namespace("TypeScriptActionInterface").getClasses()) {
+            string cname = cls.getName();
+            foreach AbstractMethod m in (cls.getMethods() + cls.getStaticMethods()) {
+                if (m.getClass().getName() != cname) {
+                    continue;
+                }
+                foreach AbstractMethodVariant v in (m.getVariants()) {
+                    if (v.getAccessModifierString() == "private") {
+                        private_methods{cname + "::" + m.getName()} = True;
+                    }
+                }
+            }
+            foreach AbstractClassMember mem in (cls.getMembers()) {
+                if (mem.getAccessModifierString() == "private") {
+                    private_members{cname + "::" + mem.getName()} = True;
+                }
+            }
+        }
+        assertEq((map {$1: True}, keys PrivateMethodAllowList), private_methods);
+        assertEq((map {$1: True}, keys PrivateMemberAllowList), private_members);
 %endif
     }
 

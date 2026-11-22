@@ -80,7 +80,10 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         if (!SandboxManager::isProcessWideRegistrationAllowed()) {
             request_type_info.type = TsaiProcessState::typeForCaller(request_type_info.type);
             response_type_info.type = TsaiProcessState::typeForCaller(response_type_info.type);
-            api.post_processing = NOTHING;
+            # a schema-only action (or a Google API action without a function) has no call
+            if (api) {
+                api.post_processing = NOTHING;
+            }
             if (request_type_info.get_dynamic_type) {
                 request_type_info.get_dynamic_type.post_processing = NOTHING;
             }

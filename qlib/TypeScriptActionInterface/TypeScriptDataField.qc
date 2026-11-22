@@ -25,18 +25,29 @@
 public namespace TypeScriptActionInterface {
 #! The TypeScript data field class
 public class TypeScriptDataField inherits DataProvider::QoreDataField {
+    # the provider that the field was created for, whose calls a lookup of the field's call keys finds; a weak
+    # reference, as the provider holds the types that hold the field (qoretechnologies/qore#7185)
+    private:internal {
+        *ActionFunctionContext fctx;
+    }
+
     #! Creates the field from the argument
     constructor(hash<auto> h, *ActionFunctionContext fctx) : QoreDataField(h) {
+        if (fctx) {
+            self.fctx := fctx;
+        }
     }
 
     #! Returns the type of the field
     AbstractDataProviderType getType() {
         # static metadata, such as the data provider index, never depends on a call context
         if (attr.dynamic_type && !DataProviderStaticMetadataHelper::get()) {
-            hash<AsyncCallInfo> call = TsaiProcessState::getCall(attr.dynamic_type);
+            *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
+            # the call of the provider in context or of the provider that the field was created for, as a call
+            # registered for a sandboxed caller is kept in its own provider (qoretechnologies/qore#7185)
+            hash<AsyncCallInfo> call = TsaiProcessState::findCall(prov ?? fctx, attr.dynamic_type);
             try {
                 auto res;
-                *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
                 if (prov) {
                     res = prov.getAsyncValueWithCache(call, {
                         "prov": prov.uniqueHash(),
@@ -78,9 +89,10 @@ AbstractDataProviderType declared_type = field.getDeclaredType();
     auto getDefaultValue() {
         # static metadata, such as the data provider index, never depends on a call context
         if (attr.get_default_value.val() && !DataProviderStaticMetadataHelper::get()) {
-            hash<AsyncCallInfo> call = TsaiProcessState::getCall(attr.get_default_value);
+            *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
+            # see getType()
+            hash<AsyncCallInfo> call = TsaiProcessState::findCall(prov ?? fctx, attr.get_default_value);
             try {
-                *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
                 if (prov) {
                     return prov.getAsyncValueWithCache(call, {
                         "prov": prov.uniqueHash(),

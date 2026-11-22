@@ -19,6 +19,16 @@ exports.actionsCatalogue = {
             "logo_file_name": "test.svg",
             "logo_mime_type": "image/svg+xml",
         });
+        // an error with a second line and a long text, which the host's log must not get as it is
+        api.registerAction({
+            "app": "tenant-scope",
+            "action": "throw-lines",
+            "display_name": "throw-lines",
+            "short_desc": "throw-lines",
+            "desc": "throw-lines",
+            "action_code": 2,
+            "api_function": async () => { throw new Error("tenant-line-1\ninjected-line-2 " + "x".repeat(3000)); },
+        });
         // registers an app identity with the interface kept from the registration
         api.registerAction({
             "app": "tenant-scope",

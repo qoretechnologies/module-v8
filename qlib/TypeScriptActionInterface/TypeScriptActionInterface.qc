@@ -1771,6 +1771,11 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     private:internal static bool initAppUnchecked(string app, *bool do_actions, *string dynamic_path) {
         CatalogueRegistrationHelper crh();
+        # the error of an initialization that fails for a sandboxed caller, as when its sandbox refuses the files of
+        # the app, can name the host's paths: the caller gets the error code only (qoretechnologies/qore#7185)
+        on_error if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            rethrow $1.err, sprintf("app %y could not be initialized for the calling code", app);
+        }
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
@@ -5172,16 +5177,14 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             if (attr.default_ref_data) {
                 # a call registered for a sandboxed caller is kept in its own provider (see
                 # TsaiProcessState::registerAsyncCallArgs()), so the call is looked up there first
-                *hash<AsyncCallInfo> call = (map $1, prov.dvmap.iterator(), $1.key == attr.get_default_value)[0];
+                *hash<AsyncCallInfo> call;
                 try {
-                    if (!call) {
-                        call = TsaiProcessState::getCall(attr.get_default_value);
-                    }
+                    call = TsaiProcessState::findCall(prov, attr.get_default_value);
                     auto v = prov.getAsyncValue(call, prov.getCallContextInfo(req));
                     f.setDefaultValue(v);
                 } catch (hash<ExceptionInfo> ex) {
-                    TSAI::error("Failed to retrieve default value for field %y: %y: %s", f.getName(), call.label,
-                        get_exception_string(ex));
+                    TSAI::error("Failed to retrieve default value for field %y: %y: %s", f.getName(),
+                        call.label ?? attr.get_default_value, get_exception_string(ex));
                 }
                 f.replaceAttributes(attr - "default_ref_data");
             }
@@ -5414,50 +5417,56 @@ class TSAI inherits TypeScriptActionInterface {
     }
 
     static debug(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelDebug, fmt, argv);
-        } else {
-            stdout.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelDebug, fmt, argv, stdout);
     }
 
     static info(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelInfo, fmt, argv);
-        } else {
-            stdout.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelInfo, fmt, argv, stdout);
     }
 
     static warn(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelWarn, fmt, argv);
-        } else {
-            stderr.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelWarn, fmt, argv, stderr);
     }
 
     static error(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelError, fmt, argv);
-        } else {
-            stderr.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelError, fmt, argv, stderr);
     }
 
     static fatal(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelFatal, fmt, argv);
-        } else {
-            stderr.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelFatal, fmt, argv, stderr);
     }
 
     static logArgs(Logger::LoggerLevel level, string fmt, *list<auto> args) {
+        TSAI::logIntern(level, fmt, args, stderr);
+    }
+
+    #! Maximum length of a message of a tenant's call in the host's log; see logIntern()
+    const MaxTenantMessage = 512;
+
+    #! Returns True if the current code serves a tenant: sandboxed code, or a tenant's call in its own program
+    static bool forTenant() {
+        return _ts_tenant_calls || _tenant_call || !SandboxManager::isProcessWideRegistrationAllowed() ? True : False;
+    }
+
+    #! Logs a message with the module's logger
+    /** A message logged while serving a tenant can hold text that the tenant controls (its errors, field names and
+        call stacks): only its first line goes to the host's log, bounded and marked as a tenant's, so that a tenant
+        can neither flood the host's log nor write lines of its own to it (qoretechnologies/qore#7185)
+    */
+    static logIntern(Logger::LoggerLevel level, string fmt, *list<auto> args, File out) {
+        if (TSAI::forTenant()) {
+            string msg = vsprintf(fmt, args);
+            msg = (msg =~ x/^([^\r\n]*)/)[0] ?? "";
+            if (msg.length() > MaxTenantMessage) {
+                msg = msg.substr(0, MaxTenantMessage) + "...";
+            }
+            fmt = "tenant call: %s";
+            args = (msg,);
+        }
         if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(level, fmt, args);
         } else {
-            stderr.vprintf(fmt + "\n", args);
+            out.vprintf(fmt + "\n", args);
         }
     }
 }

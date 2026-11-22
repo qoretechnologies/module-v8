@@ -29,7 +29,7 @@ public class TypeScriptBulkRecordProxyInterface inherits AbstractDataProviderBul
     public {
     }
 
-    private {
+    private:internal {
         TypeScriptActionRecordBasedDataProvider prov;
         string id;
         *JavaScriptProgramProxy proxy;

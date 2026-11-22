@@ -860,6 +860,26 @@ class TsaiProcessState {
         };
     }
 
+    #! Returns a call: from the maps of the given provider first, then from the process-wide call map
+    /** A call registered for a sandboxed caller is kept in the caller's own provider (see registerAsyncCallArgs()),
+        so a lookup of its key resolves it there (qoretechnologies/qore#7185)
+
+        @throw ASYNC-CALL-ERROR no call with the given key is registered
+    */
+    static hash<AsyncCallInfo> findCall(*ActionFunctionContext fctx, string key) {
+        if (fctx) {
+            foreach *hash<string, hash<AsyncCallInfo>> calls in ((fctx.omap, fctx.eomap, fctx.dmap, fctx.drmap,
+                    fctx.dtmap, fctx.dvmap)) {
+                foreach hash<AsyncCallInfo> call in (calls.iterator()) {
+                    if (call.key == key) {
+                        return call;
+                    }
+                }
+            }
+        }
+        return TsaiProcessState::getCall(key);
+    }
+
     #! Returns a registered call; the module's own code uses it to make the call, also for sandboxed callers
     /** @throw ASYNC-CALL-ERROR no call with the given key is registered
     */

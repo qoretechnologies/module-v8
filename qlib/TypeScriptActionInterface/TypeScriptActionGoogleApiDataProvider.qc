@@ -39,7 +39,7 @@ public class TypeScriptActionGoogleApiDataProvider inherits TypeScriptActionApiD
         });
     }
 
-    private {
+    private:internal {
         GoogleApiDataProvider google_api;
     }
 

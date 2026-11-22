@@ -21,18 +21,45 @@
 %requires RestClient
 %requires json
 %requires HttpServer
+%requires Logger
 %exec-class TenantHostScopeTest
 
 #! The local REST server of the reference data: each request gets a value of its own
+/** The requests of the REST schema app: \c /echo returns the request's \c Authorization header, \c /items an item
+*/
 class ValuesHandler inherits AbstractHttpRequestHandler {
     public {
         static Counter requests();
     }
 
     hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        if (hdr.path =~ /^\/?echo/) {
+            return makeResponse(200, make_json({"auth": hdr.authorization ?? ""}), {"Content-Type": MimeTypeJson});
+        }
+        if (hdr.path =~ /^\/?(items|check)/) {
+            return makeResponse(200, make_json({"id": "x"}), {"Content-Type": MimeTypeJson});
+        }
         ValuesHandler::requests.inc();
         string value = sprintf("v%d", ValuesHandler::requests.getCount());
         return makeResponse(200, make_json({"values": (value,)}), {"Content-Type": MimeTypeJson});
+    }
+}
+
+#! Keeps the messages logged
+class CaptureAppender inherits LoggerAppenderWithLayout {
+    public {
+        list<string> lines = ();
+        Mutex m();
+    }
+
+    constructor() : LoggerAppenderWithLayout("capture", new LoggerLayoutPattern("%m")) {
+    }
+
+    processEventImpl(int type, auto params) {
+        if (type == EVENT_LOG) {
+            AutoLock al(m);
+            lines += params;
+        }
     }
 }
 
@@ -81,6 +108,17 @@ class TenantHostScopeTest inherits QUnit::Test {
 
         #! The REST app of the reference data
         string rest_app;
+
+        #! The app with a REST schema, served by the local server
+        string schema_app;
+
+        #! An app registered for initialization on demand
+        string pending_app;
+
+        #! The latches of the concurrent requests: the first request's conversion waits until the second request
+        #! has been made
+        Counter first_in(1);
+        Counter second_done(1);
     }
 
     constructor() : QUnit::Test("TenantHostScope", "1.0", \ARGV) {
@@ -91,6 +129,13 @@ class TenantHostScopeTest inherits QUnit::Test {
         addTestCase("REST reference data are cached per connection and never for tenants", \restCacheTest());
         addTestCase("a tenant's program registers only while it is built", \cloneApiTest());
         addTestCase("a Program without PROCESS_CONTROL cannot parse the host-scoped entry points", \parseTest());
+        addTestCase("a tenant's copy of a schema-only action works", \schemaOnlyCopyTest());
+        addTestCase("concurrent schema requests use their own connection's client", \concurrentClientTest());
+        addTestCase("a provider that a tenant builds changes no process-wide map or schema provider",
+            \tenantBuiltProviderTest());
+        addTestCase("the error of an app's initialization for a tenant names no host path", \initErrorTest());
+        addTestCase("the host's log does not get a tenant's text as it is", \logTest());
+        addTestCase("the calls that a tenant registers are found in its own provider", \localLookupTest());
         set_return_value(main());
     }
 
@@ -126,9 +171,7 @@ class TenantHostScopeTest inherits QUnit::Test {
             map unlink(dir + DirSep + $1), ("openssl.cnf", "key.pem", "cert.pem", "schema.json");
             rmdir(dir);
         }
-        if (rest_app) {
-            TypeScriptActionInterface::deregisterDynamicApp(rest_app);
-        }
+        map TypeScriptActionInterface::deregisterDynamicApp($1), (rest_app, schema_app, pending_app), $1;
     }
 
     typeCopyTest() {
@@ -344,6 +387,12 @@ class TenantHostScopeTest inherits QUnit::Test {
         throw "TEST-ERROR", "the unknown call was found";
     }
 
+    #! Logs with the module's logger as trusted code, so that the module takes the process's global logger
+    static logTrusted() {
+        TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, <AsyncCallInfo>{"app": "x", "type": "t",
+            "label": "qore-test-7185-log", "async_call": sub () {}});
+    }
+
     #! Returns the first reference value of the REST app's action for the connection
     private string getValue(TypeScriptAppRestConnection conn) {
         return TypeScriptActionInterface::getDataProvider(rest_app.lwr(), conn).getChildProviderEx("pick")
@@ -396,14 +445,209 @@ class TenantHostScopeTest inherits QUnit::Test {
             },
         }, pool);
         TypeScriptActionInterface::initApp(rest_app, True);
+
+        # an app with a REST schema: a schema-only action, an action whose request type has a body, and an echo of
+        # the request's credentials whose request conversion is latched
+        File f();
+        f.open2(dir + DirSep + "schema.json", O_CREAT | O_EXCL | O_WRONLY, 0600);
+        hash<auto> object_response = {"200": {"description": "ok", "content": {"application/json": {"schema": {
+            "type": "object", "properties": {"id": {"type": "string"}, "auth": {"type": "string"}}}}}}};
+        f.write(make_json({"openapi": "3.0.3", "info": {"title": "Host scope schema", "version": "1"},
+            "servers": ({"url": url},), "paths": {
+                "/items": {"get": {"responses": object_response}},
+                "/echo": {"get": {"responses": object_response}},
+                "/check": {"post": {"requestBody": {"required": True, "content": {"application/json": {"schema": {
+                    "type": "object", "required": ("n",), "properties": {"n": {"type": "integer"}}}}}},
+                    "responses": object_response}},
+            }}));
+        f.close();
+        schema_app = "HostScopeSchema_" + get_random_string(8);
+        JavaScriptProgramPool schema_pool("var exports = {};", "host-scope-schema.js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::registerApp({"name": schema_app, "display_name": "Host scope schema",
+            "short_desc": "Host scope schema", "desc": "A local REST schema app.", "groups": ("Other",),
+            "logo": make_base64_string(<00>), "logo_file_name": "test.svg", "logo_mime_type": "image/svg+xml",
+            "dynamic": True, "rest": {"url": url, "data": "json"}, "openapi": dir + DirSep + "schema.json"},
+            schema_pool);
+        TypeScriptActionInterface::registerAction({"app": schema_app, "action": "list-items",
+            "display_name": "List items", "short_desc": "List items", "desc": "Lists the items.",
+            "action_code": DPAT_API, "openapi_path": "/items/GET"}, schema_pool);
+        TypeScriptActionInterface::registerAction({"app": schema_app, "action": "echo",
+            "display_name": "Echo", "short_desc": "Echo", "desc": "Echoes the credentials.",
+            "action_code": DPAT_API, "openapi_path": "/echo/GET",
+            "request_data_converter": auto sub (auto req, *hash<auto> ctx) {
+                if (ctx.conn_name == "qore-test-7185-echo-first") {
+                    # the first request waits here, after its connection's client was taken, until the second
+                    # request has been made
+                    first_in.dec();
+                    second_done.waitForZero();
+                }
+                return req;
+            }}, schema_pool);
+        TypeScriptActionInterface::initApp(schema_app, True);
+
+    }
+
+    #! Returns a connection of the REST schema app
+    private TypeScriptAppRestConnection getSchemaConnection(string name, string token) {
+        return new TypeScriptAppRestConnection({"name": name, "url": "tsrest-" + schema_app.lwr() + "://",
+            "opts": {"token": token, "ssl_verify_cert": False}});
+    }
+
+    schemaOnlyCopyTest() {
+        # a tenant's own connection and a copy of the schema-only action's provider (it has no call)
+        string rv = TenantHostScopeTest::tenant("tenant-a", "TypeScriptActionInterface::TypeScriptAppRestConnection "
+            "c({\"name\": \"t\", \"url\": \"tsrest-" + schema_app.lwr() + "://\", \"opts\": {\"token\": \"t\", "
+            "\"ssl_verify_cert\": False}}); auto ch = TypeScriptActionInterface::TypeScriptActionInterface::"
+            "getDataProvider(\"" + schema_app.lwr() + "\", c).getChildProviderEx(\"list-items\"); "
+            "return ch.getName() + \"/\" + ch.getRequestType().getName();").callFunction("t");
+        assertRegex("^list-items/", rv);
+    }
+
+    concurrentClientTest() {
+        # two connections with their own credentials make requests of the same API path; the first request is held
+        # after it took its connection's client until the second request has been made
+        TypeScriptAppRestConnection first = getSchemaConnection("qore-test-7185-echo-first", "token-first");
+        TypeScriptAppRestConnection second = getSchemaConnection("qore-test-7185-echo-second", "token-second");
+        AbstractDataProvider first_prov = TypeScriptActionInterface::getDataProvider(schema_app.lwr(), first)
+            .getChildProviderEx("echo");
+        AbstractDataProvider second_prov = TypeScriptActionInterface::getDataProvider(schema_app.lwr(), second)
+            .getChildProviderEx("echo");
+        Queue q();
+        background sub () {
+            try {
+                q.push(first_prov.doRequest());
+            } catch (hash<ExceptionInfo> ex) {
+                q.push(ex);
+                # the first request's conversion was not reached
+                first_in.dec();
+            }
+        }();
+        first_in.waitForZero();
+        auto second_rv;
+        {
+            on_exit second_done.dec();
+            second_rv = second_prov.doRequest();
+        }
+        auto first_rv = q.get();
+        assertEq("Bearer token-second", second_rv.auth ?? second_rv.body.auth, "the second request's credentials");
+        assertEq("Bearer token-first", first_rv.auth ?? first_rv.body.auth, "the first request's credentials");
+    }
+
+    tenantBuiltProviderTest() {
+        # the shared schema request provider of the path, and the process-wide request-key map
+        AbstractDataProvider shared = TypeScriptActionInterface::getSchemaDataProvider(schema_app)
+            .getChildProviderPath("check/POST");
+        Class ws = Class::forName("TypeScriptActionInterface::TypeScriptActionApiWithSchemaDataProvider");
+        Class rp = Class::getClass(shared);
+        assertFalse(rp.getNormalMember("disable_request_type_check").getValue(shared) ? True : False);
+        # the request key of a provider built with a provider of the app that is not an action's
+        string key = schema_app + "-none";
+        assertFalse(ws.getStaticMember("reqmap").getValue().hasKey(key));
+
+        # a tenant builds a provider of the path, with a provider of the
+        # app of its own (whose request key has no type cached)
+        assertEq("built", TenantHostScopeTest::tenant("tenant-a", "hash<auto> act = {}; act.app = \"" + schema_app
+            + "\"; act.action = \"tenant-check\"; F fctx(\"" + schema_app + "\"); try { "
+            "new TypeScriptActionInterface::TypeScriptActionApiWithSchemaDataProvider(\\act, \"check/POST\", NOTHING, "
+            "NOTHING, NOTHING, NOTHING, NOTHING, NOTHING, fctx); } catch (hash<ExceptionInfo> ex) { return ex.err "
+            "+ \": \" + ex.desc; } return \"built\";\n}\nclass F inherits "
+            "TypeScriptActionInterface::TypeScriptActionDataProviderBase {\nconstructor(string app) : "
+            "TypeScriptActionDataProviderBase(\"x\", app) { io_timeout = 30s; }\n"
+            "private hash<DataProviderInfo> getStaticInfoImpl() { "
+            "return <DataProviderInfo>{\"name\": \"x\"}; }").callFunction("t"));
+
+        # the shared request provider and the process-wide map are unchanged
+        assertFalse(rp.getNormalMember("disable_request_type_check").getValue(shared) ? True : False,
+            "the shared request provider's type check");
+        assertFalse(ws.getStaticMember("reqmap").getValue().hasKey(key), "the process-wide request-key map");
+    }
+
+    initErrorTest() {
+        # an app whose initialization fails, as its schema file is missing: it stays pending, and is initialized
+        # again on demand
+        pending_app = "HostScopePending_" + get_random_string(8);
+        on_exit {
+            TypeScriptActionInterface::deregisterDynamicApp(pending_app);
+            remove pending_app;
+        }
+        try {
+            TypeScriptActionInterface::registerApp({"name": pending_app, "display_name": "Host scope pending",
+                "short_desc": "Host scope pending", "desc": "A pending app.", "groups": ("Other",),
+                "logo": make_base64_string(<00>), "logo_file_name": "test.svg", "logo_mime_type": "image/svg+xml",
+                "dynamic": True, "rest": {"url": url, "data": "json"},
+                "openapi": dir + DirSep + "missing-schema.json"},
+                new JavaScriptProgramPool("var exports = {};", "host-scope-pending.js",
+                    sub (JavaScriptProgram pgm) {}));
+        } catch (hash<ExceptionInfo> ex) {
+            # the initialization when the app is registered, if the catalog makes it at once
+        }
+        # a tenant uses the app, whose initialization fails with an error that names a host path
+        assertTrue((TypeScriptActionInterface::getPendingApps() ?? ()).contains(pending_app.lwr()),
+            "the app is pending");
+        SandboxManager sm();
+        string rv = TenantHostScopeTest::tenant("tenant-a", "try { TypeScriptActionInterface::TypeScriptActionInterface"
+            "::getAppDataProvider(\"" + pending_app + "\"); return \"initialized\"; } catch (hash<ExceptionInfo> ex) "
+            "{ return ex.err + \": \" + ex.desc; }", NOTHING, sm).callFunction("t");
+        assertTrue(rv != "initialized", rv);
+        assertEq(-1, rv.find(getcwd()), "the error names no host path: " + rv);
+        assertEq(-1, rv.find(dir), "the error names no host path: " + rv);
+    }
+
+    logTest() {
+        # the host's logger, which the module takes when trusted code logs
+        *LoggerInterface old = DataProvider::getGlobalLogger();
+        Logger host("host", LoggerLevel::LevelDebug);
+        CaptureAppender capture();
+        capture.open();
+        host.addAppender(capture);
+        DataProvider::setGlobalLogger(host);
+        on_exit {
+            if (old) {
+                DataProvider::setGlobalLogger(old);
+            }
+            # the module takes the logger again
+            TenantHostScopeTest::logTrusted();
+        }
+        TenantHostScopeTest::logTrusted();
+
+        # a tenant's action fails with an error that has a second line and a long text
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(Modules + "hash<auto> sub t() { try { return TypeScriptActionInterface::TenantActionRunner::exec("
+            "<TypeScriptActionInterface::TsTenantContext>{\"tenant\": \"tenant-scope-log\"}, \"tenant-scope\", "
+            "\"throw-lines\", {}); } catch (hash<ExceptionInfo> ex) { return {\"err\": ex.err}; } }\n", "tenant");
+        SandboxManager sm();
+        if (V8::SandboxCapture::hasIsolationDomains()) {
+            call_object_method(sm, "setIsolationDomain", "tenant-scope-log");
+        }
+        p.setSandboxManager(sm);
+        hash<auto> rv = p.callFunction("t");
+        assertTrue(exists rv.err, sprintf("%y", rv));
+
+        list<string> lines;
+        {
+            AutoLock al(capture.m);
+            lines = capture.lines;
+        }
+        assertTrue(lines.size() > 0, "the host's log gets the failure");
+        assertEq((), (map $1, lines, $1.find("injected-line-2") >= 0) ?? (), "the tenant's second line");
+        assertEq((), (map $1.length(), lines, $1.length() > 1024) ?? (), "the length of the tenant's text");
+    }
+
+    localLookupTest() {
+        # a tenant builds a field with a dynamic type function for its own provider, and reads its type
+        string rv = TenantHostScopeTest::tenant("tenant-a", TenantChild + "auto f = TypeScriptActionInterface::"
+            "TypeScriptActionInterface::getField(\"tenant-path\", \"g\", {\"type\": \"string\", "
+            "\"get_dynamic_type\": hash<auto> sub () { return {\"type\": \"string\"}; }}, ch); "
+            "return f.getType().getName();").callFunction("t");
+        assertTrue(rv !~ /ERROR/, rv);
     }
 
     #! Returns a tenant with a sandbox of its own whose \c t() function runs the given code
     static Program tenant(string name, string body, *hash<auto> unused, *SandboxManager sm) {
         Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
-        # the body can declare a class after its function
-        p.parse(Modules + "auto sub t_intern() { " + body + " }\nauto sub t() { try { return t_intern(); } "
-            "catch (hash<ExceptionInfo> ex) { return ex.err; } }\n", name);
+        # the body can declare a class after its function; \c a is the argument hash of the caller
+        p.parse(Modules + "auto sub t_intern(*hash<auto> a) { " + body + " }\nauto sub t(*hash<auto> a) { try { "
+            "return t_intern(a); } catch (hash<ExceptionInfo> ex) { return ex.err; } }\n", name);
         p.setSandboxManager(sm ?? new SandboxManager());
         return p;
     }

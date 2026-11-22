@@ -35,7 +35,7 @@ public class TypeScriptBulkRecordInterface inherits AbstractDataProviderBulkReco
         *hash<AsyncCallInfo> get_records;
     }
 
-    private {
+    private:internal {
         TypeScriptActionRecordBasedDataProvider prov;
         *hash<DataContextInfo> cctx;
         *hash<DataProviderExpression> where_exp;
