@@ -18,10 +18,13 @@ class TenantHostHooksTest inherits QUnit::Test {
             "tenant_context_resolver": *hash<auto> sub (object conn) { return NOTHING; },
             "connection_update_handler": sub (object conn, hash<auto> update) {},
             "egress_meter": sub (string tenant, *string connection, int bytes_out, int bytes_in) {},
+            # a plain hash: the host cannot build the module's hashdecl before the module exists
+            "tenant_limits": {"max_concurrent": 3},
         });
         load_module("TypeScriptActionInterface");
         addTestCase("the runner takes the hooks the host set before the module was loaded", \registryHooks());
         addTestCase("an unknown hook fails the module's initialization", \unknownHook());
+        addTestCase("a hook that is not code fails the module's initialization", \notCodeHook());
         set_return_value(main());
     }
 
@@ -39,12 +42,30 @@ class TenantHostHooksTest inherits QUnit::Test {
 
     unknownHook() {
         # a module initializes once per process: the misspelled hook is given to a new one
-        string script = "%modern\n%requires DataProvider\n"
-            + "DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", {\"tenant_resolver\": sub () {}});\n"
-            + "try { load_module(\"TypeScriptActionInterface\"); print(\"loaded\"); }\n"
-            + "catch (hash<ExceptionInfo> ex) { printf(\"%s: %s\", ex.err, ex.desc); }\n";
-        string out = backquote("qore -e " + quote(script) + " 2>&1");
+        string out = loadWithHooks("{\"tenant_context_resolver\": sub () {}, \"tenant_resolver\": sub () {}}");
         assertRegex("^TS-TENANT-ERROR: unknown host hook \"tenant_resolver\"", out);
+        # the hooks are validated before the module registers anything
+        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
+    }
+
+    notCodeHook() {
+        string out = loadWithHooks("{\"egress_policy\": \"allow\"}");
+        assertRegex("^TS-TENANT-ERROR: host hook \"egress_policy\" given for module \"TypeScriptActionInterface\" "
+            "must be callable code", out);
+        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
+        out = loadWithHooks("{\"tenant_limits\": 4}");
+        assertRegex("^TS-TENANT-ERROR: host hook \"tenant_limits\" given for module \"TypeScriptActionInterface\" "
+            "must be a hash", out);
+    }
+
+    #! Loads the module in a new process with the given hooks; returns the error, and whether its factory exists
+    private static string loadWithHooks(string hooks) {
+        string script = "%modern\n%requires DataProvider\n"
+            + "DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", " + hooks + ");\n"
+            + "try { load_module(\"TypeScriptActionInterface\"); print(\"loaded\"); }\n"
+            + "catch (hash<ExceptionInfo> ex) { printf(\"%s: %s\", ex.err, ex.desc); }\n"
+            + "printf(\"\\nfactory registered: %y\", inlist(\"ts-actions\", DataProvider::listFactories()));\n";
+        return trim(backquote("qore -e " + quote(script) + " 2>&1"));
     }
 
     private static string quote(string value) {

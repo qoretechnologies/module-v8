@@ -28,7 +28,8 @@
 # allow the weak reference operator (:=)
 %allow-weak-references
 
-%requires(reexport) DataProvider >= 3.8
+# 3.12: DataProvider::getModuleHostHooks()
+%requires(reexport) DataProvider >= 3.12
 %requires(reexport) TypeScriptProxy
 %requires ConnectionProvider
 %requires ProviderIndexUtil
@@ -57,6 +58,11 @@ module TypeScriptActionInterface {
     url = "http://qore.org";
     license = "MIT";
     init = sub () {
+        # the hooks the host set before the module was loaded are validated and applied first, before anything is
+        # registered: a hook that is misspelled or not callable leaves no factory, app or hook behind
+        # (qoretechnologies/qore#6845)
+        TenantActionRunner::applyHostHooks();
+
         # Publish a lightweight exact identity inventory for qualified index discovery.
         DataProviderActionCatalog::registerDiscoveryInventoryProvider(
             TypeScriptActionInterface::DiscoveryInventoryProviderName,
