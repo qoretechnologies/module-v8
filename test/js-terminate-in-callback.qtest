@@ -88,6 +88,7 @@ result(\"survived\");
 Mutex counts();
 int live = 0;
 int deleted = 0;
+list<string> other = ();
 for (int i = 0; i < 50; ++i) {
     V8::JavaScriptProgram pgm(\"globalThis.f = () => 1;\", \"terminate-destroyed\");
     Counter ready(2);
@@ -105,12 +106,13 @@ for (int i = 0; i < 50; ++i) {
             ++live;
             counts.unlock();
         } catch (hash<ExceptionInfo> ex) {
-            # the program was destroyed first
-            if (ex.err != \"OBJECT-INCOMPATIBLE\") {
-                rethrow;
-            }
             counts.lock();
-            ++deleted;
+            # the program was destroyed first
+            if (ex.err == \"OBJECT-INCOMPATIBLE\") {
+                ++deleted;
+            } else {
+                other += sprintf(\"%s: %s\", ex.err, ex.desc);
+            }
             counts.unlock();
         }
     }();
@@ -121,9 +123,10 @@ for (int i = 0; i < 50; ++i) {
     done.waitForZero();
 }
 result(\"runs: %d\", live + deleted);
+result(\"other errors: %y\", other);
 result(\"survived\");
 ");
-        assertEq(("runs: 50", "survived"), out);
+        assertEq(("runs: 50", "other errors: []", "survived"), out);
     }
 
     #! Runs the code in a new process; returns its result lines
