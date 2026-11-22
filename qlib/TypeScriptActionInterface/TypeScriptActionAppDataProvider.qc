@@ -44,8 +44,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         #! The name of this app
         string name;
 
-        #! connection for the action
-        AbstractConnection conn;
+        #! connection for the action: only a RestConnection is ever set (setConnectionIntern())
+        RestConnection conn;
 
         #! Dynamic child data providers; only maintained in the parent
         hash<string, TypeScriptActionDataProviderBase> childMap;
@@ -95,14 +95,25 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         TypeScriptActionAppDataProvider rv = copy();
         # the parent is always the process-wide provider, which holds the children
         rv.parent = parent.parent ?? parent;
+        if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            # a sandboxed caller's copy logs with its own connection's logger, never with the host's
+            # (qoretechnologies/qore#7185)
+            rv.setLogger();
+        }
         rv.setConnectionIntern(conn);
         return rv;
     }
 
     #! Returns a copy for a caller that must not change the process-wide provider (qoretechnologies/qore#6749)
+    /** A copy for code that is sandboxed or acts for sandboxed code has no logger: the logger of the process-wide
+        provider is the host's (qoretechnologies/qore#7185)
+    */
     TypeScriptActionAppDataProvider copyForCaller() {
         TypeScriptActionAppDataProvider rv = copy();
         rv.parent = parent ?? self;
+        if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            rv.setLogger();
+        }
         return rv;
     }
 
@@ -156,7 +167,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     */
     registerChild(string pathname, DataProvider::AbstractDataProvider prov) {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register a child of the provider of a TypeScript app");
+        TsaiProcessState::checkHostScope("register a child of the provider of a TypeScript app");
         registerChildIntern(pathname, prov);
     }
 
@@ -200,7 +211,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
             registerChildMethod.call(pathname, AbstractDataProvider sub (string name, RestConnection conn) {
                 TypeScriptActionDataProviderBase child = childMap{name}.copy();
                 child.setConnection(conn);
-                if (!child.getLogger() && logger) {
+                # the host's logger is not given to sandboxed callers (qoretechnologies/qore#7185)
+                if (!child.getLogger() && logger && SandboxManager::isProcessWideRegistrationAllowed()) {
                     child.setLogger(logger);
                 }
                 return child;
@@ -214,13 +226,13 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     */
     *AbstractDataProvider deregisterChild(string child) {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("deregister a child of the provider of a TypeScript app");
+        TsaiProcessState::checkHostScope("deregister a child of the provider of a TypeScript app");
         return remove childMap{child};
     }
 
     #! Return data provider summary info
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
-        TypeScriptActionInterface::checkAppActions(name);
+        TsaiProcessState::Internal.checkAppActions(name);
         *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         *RestConnection conn_save = _thread_conn;
         _thread_conn = conn;
@@ -240,7 +252,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     */
     registerGoogleAppActions(string app, hash<GoogleAppInfo> google_app) {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register the actions of a TypeScript Google app");
+        TsaiProcessState::checkHostScope("register the actions of a TypeScript Google app");
         registerGoogleAppActionsIntern(app, google_app);
     }
 
@@ -326,7 +338,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     /** @return a list of child data provider names, if any
     */
     private *list<string> getChildProviderNamesImpl() {
-        TypeScriptActionInterface::checkAppActions(name);
+        TsaiProcessState::Internal.checkAppActions(name);
         *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         *list<string> rv = keys childMap;
         if (google_api_provider && (*list<string> l = google_api_provider.getChildProviderNames())) {
@@ -341,7 +353,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         @see getChildProviderEx()
     */
     private *AbstractDataProvider getChildProviderImpl(string name) {
-        TypeScriptActionInterface::checkAppActions(self.name);
+        TsaiProcessState::Internal.checkAppActions(self.name);
         *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         if (*TypeScriptActionDataProviderBase prov = childMap{name}) {
             if (!self.childMap) {
@@ -351,7 +363,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
                     prov.setConnection(conn);
                 }
             }
-            if (!prov.getLogger() && logger) {
+            # the host's logger is not given to sandboxed callers (qoretechnologies/qore#7185)
+            if (!prov.getLogger() && logger && SandboxManager::isProcessWideRegistrationAllowed()) {
                 prov.setLogger(logger);
             }
             return prov;
@@ -359,7 +372,10 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         if (google_api_provider && (*AbstractDataProvider p = google_api_provider.getChildProvider(name))
             && (p instanceof GoogleDataProviderBase)) {
             p = p.copy();
-            if (!p.getLogger() && logger) {
+            if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+                # the host's logger is not given to sandboxed callers (qoretechnologies/qore#7185)
+                p.setLogger(conn ? conn.getLogger() : NOTHING);
+            } else if (!p.getLogger() && logger) {
                 p.setLogger(logger);
             }
             if (conn) {

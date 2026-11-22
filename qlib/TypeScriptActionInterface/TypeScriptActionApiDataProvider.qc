@@ -72,6 +72,27 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         }
     }
 
+    #! Copies the object
+    /** A copy made by code that is sandboxed or acts for sandboxed code has its own request and response types and no
+        post-processing references (qoretechnologies/qore#7185)
+    */
+    copy() {
+        if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            request_type_info.type = TsaiProcessState::typeForCaller(request_type_info.type);
+            response_type_info.type = TsaiProcessState::typeForCaller(response_type_info.type);
+            # a schema-only action (or a Google API action without a function) has no call
+            if (api) {
+                api.post_processing = NOTHING;
+            }
+            if (request_type_info.get_dynamic_type) {
+                request_type_info.get_dynamic_type.post_processing = NOTHING;
+            }
+            if (response_type_info.get_dynamic_type) {
+                response_type_info.get_dynamic_type.post_processing = NOTHING;
+            }
+        }
+    }
+
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
         return doRequest(req, request_options);
@@ -93,16 +114,16 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             TSAI::debug("tryGetActionOptionsWithOptions() @%s/%s new_opts: %y type: %y", app, self.action,
                 keys new_opts,
                 (map {$1.key: $1.value.type ? $1.value.type.getName() : "n/a"}, new_opts.pairIterator()));
-            return action.options + new_opts;
+            return TsaiProcessState::optionsForCaller(action.options + new_opts);
         }
-        return action.options;
+        return TsaiProcessState::optionsForCaller(action.options);
     }
 
     #! Returns a data type for the given base type and request / option data
     *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptions(hash<auto> options) {
         if ((*AbstractDataProviderType rv = getRequestTypeWithDataImpl(options))
             && (*hash<auto> fields = rv.getFields())) {
-            return DataProviderActionCatalog::getActionOptionFromFields(fields);
+            return TsaiProcessState::optionsForCaller(DataProviderActionCatalog::getActionOptionFromFields(fields));
         }
     }
 
@@ -120,7 +141,7 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
     /** @return the request type for this provider
     */
     private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
-        return getDynamicTypeIntern("request", \request_type_info, NOTHING, dtmap);
+        return TsaiProcessState::typeForCaller(getDynamicTypeIntern("request", \request_type_info, NOTHING, dtmap));
     }
 
     #! Returns the description of a successful request message in the context of the given option data
@@ -131,7 +152,7 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         @throw INVALID-OPERATION the data provider does not support the request API
     */
     private *AbstractDataProviderType getRequestTypeWithOptionsImpl(*hash<auto> options) {
-        return getRequestTypeWithDataImpl(options);
+        return TsaiProcessState::typeForCaller(getRequestTypeWithDataImpl(options));
     }
 
     #! Returns the description of a successful request message with call data, if any
@@ -157,14 +178,14 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             throw "DATA-PROVIDER-REQUEST-TYPE-ERROR", sprintf("Request data has type %y; expecting \"hash\"",
                 req.fullType());
         }
-        return getDynamicDataType(PC_GET_REQUEST_TYPE, rt, req);
+        return TsaiProcessState::typeForCaller(getDynamicDataType(PC_GET_REQUEST_TYPE, rt, req));
     }
 
     #! Returns the description of a response message, if this object represents a response message
     /** @return the response type for this response message
     */
     private *DataProvider::AbstractDataProviderType getResponseTypeImpl() {
-        return getDynamicTypeIntern("response", \response_type_info);
+        return TsaiProcessState::typeForCaller(getDynamicTypeIntern("response", \response_type_info));
     }
 
     #! Returns the description of a successful response message with call data, if any
@@ -191,7 +212,7 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             throw "DATA-PROVIDER-RESPONSE-TYPE-ERROR", sprintf("Response data has type %y; expecting \"hash\"",
                 req.fullType());
         }
-        return getDynamicDataType(PC_GET_RESPONSE_TYPE, rt, req);
+        return TsaiProcessState::typeForCaller(getDynamicDataType(PC_GET_RESPONSE_TYPE, rt, req));
     }
 
     #! Returns data provider static info

@@ -30,7 +30,9 @@ public class JavaScriptThreadProcessPool {
         const MinProcesses = 1;
     }
 
-    private {
+    # the lock is shared by every pool and proxy of the process, and the maps hold the proxies of every caller: not
+    # visible to a subclass (qoretechnologies/qore#7185)
+    private:internal {
         # atomic lock
         static Mutex m();
 
@@ -49,10 +51,11 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Creates the object
-    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the pool's processes run the calls of trusted code
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the pool's
+        processes run the calls of trusted code
     */
-    constructor() {
-        TenantActionRunner::refuseSandboxed("the process pool");
+    constructor() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use the TypeScript action process pool");
         JavaScriptProgramProxy::init(m);
 
         # start 3 processes in parallel
@@ -73,8 +76,10 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Acquires a proxy for an API call
-    JavaScriptProgramProxy get(*code setup) {
-        TenantActionRunner::refuseSandboxed("the process pool");
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code
+    */
+    JavaScriptProgramProxy get(*code setup) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use the TypeScript action process pool");
         int tid = gettid();
         # the unique proxy key
         *string pkey;
@@ -103,14 +108,17 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Releases a proxy for an API call
-    release(JavaScriptProgramProxy p) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code
+    */
+    release(JavaScriptProgramProxy p) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use the TypeScript action process pool");
         m.lock();
         on_exit m.unlock();
 
         releaseIntern(p);
     }
 
-    private releaseIntern(JavaScriptProgramProxy p) {
+    private:internal releaseIntern(JavaScriptProgramProxy p) {
         string pkey = p.uniqueHash();
         hash<ProxyCacheInfo> info = remove amap{pkey};
         remove tmap{info.tid};
@@ -119,9 +127,12 @@ public class JavaScriptThreadProcessPool {
         imap{pkey} = info;
     }
 
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code
+    */
     *hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,
-            *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options) {
-        TenantActionRunner::refuseSandboxed("the process pool");
+            *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options)
+            [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use the TypeScript action process pool");
         JavaScriptProgramProxy proxy;
         {
             AutoLock al(m);
@@ -146,12 +157,16 @@ public class JavaScriptThreadProcessPool {
             proxy = info.p;
         }
         on_error {
-            release(remove proxy);
+            m.lock();
+            on_exit m.unlock();
+            releaseIntern(remove proxy);
         }
         *hash<auto> rv = proxy.searchRecords(app, id, conn_name, conn_opts, block_size, where_cond, search_options,
             options);
         if (!rv.firstValue().lsize()) {
-            release(remove proxy);
+            m.lock();
+            on_exit m.unlock();
+            releaseIntern(remove proxy);
         }
         return {
             "rv": rv,
@@ -160,7 +175,10 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Releases a search
-    releaseSearch(JavaScriptProgramProxy proxy, string id) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code
+    */
+    releaseSearch(JavaScriptProgramProxy proxy, string id) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use the TypeScript action process pool");
         proxy.releaseSearch(id);
         AutoLock al(m);
         string pkey = proxy.uniqueHash();
@@ -170,9 +188,11 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Sets up a proxy as an event data source
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code
+    */
     JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key,
-            *hash<DataContextInfo> options) {
-        TenantActionRunner::refuseSandboxed("the process pool");
+            *hash<DataContextInfo> options) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use the TypeScript action process pool");
         JavaScriptProgramProxy proxy;
         string pkey;
         {
@@ -218,7 +238,11 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Releases a proxy as an event source
-    releaseEventSource(JavaScriptProgramProxy proxy, Observable observable, string key, *bool in_listener) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code
+    */
+    releaseEventSource(JavaScriptProgramProxy proxy, Observable observable, string key, *bool in_listener)
+            [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use the TypeScript action process pool");
         AutoLock al(m);
 
         on_exit {
@@ -232,7 +256,7 @@ public class JavaScriptThreadProcessPool {
         proxy.releaseEventSourceLocked(observable, key, in_listener);
     }
 
-    private preallocate(Queue q, int num) {
+    private:internal preallocate(Queue q, int num) {
         try {
             int tid = gettid();
             m.lock();
@@ -248,7 +272,7 @@ public class JavaScriptThreadProcessPool {
         q.push();
     }
 
-    private hash<ProxyCacheInfo> getProxyIntern(int tid, reference<string> pkey) {
+    private:internal hash<ProxyCacheInfo> getProxyIntern(int tid, reference<string> pkey) {
         # do not create the proxy object with the lock locked; each thread will need its own object in any case
         m.unlock();
         on_exit m.lock();

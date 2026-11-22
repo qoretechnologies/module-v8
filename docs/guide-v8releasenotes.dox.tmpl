@@ -32,6 +32,24 @@
       or give out a catalogue's source or registration interface refuse sandboxed code, and so do the functions of the
       apps' calls that the providers hold
       (<a href="https://github.com/qoretechnologies/qore/issues/6749">issue 6749</a>)
+    - more of the process-wide state of
+      @ref TypeScriptActionInterface::TypeScriptActionInterface "TypeScriptActionInterface" is out of reach of
+      sandboxed code: the state of the program proxies, the program, in-process and thread process pools and the
+      providers is no longer visible to subclasses; every method that reads the host's configuration, paths or
+      objects or changes process-wide state (also the initialization of the module and of its apps, the pending apps,
+      the discovery inventory, schema errors and the app base directory, the time limits, the reference data cache,
+      the apps' REST schema providers, and the methods of the program pools and proxies) raises
+      \c SANDBOX-REGISTRATION-ERROR for code that is sandboxed or acts for sandboxed code and requires the
+      \c PROCESS_CONTROL functional domain; sandboxed code gets copies of the apps' providers with types of their own
+      and without the host's logger, a call that it registers stays in its own provider, the apps' calls no longer
+      hold their catalogue's program pool, REST reference data are cached per connection and never for sandboxed
+      callers, the interface that a tenant's program registers its apps with works only while the program is built,
+      and the module's initialization runs once
+      (<a href="https://github.com/qoretechnologies/qore/issues/7185">issue 7185</a>)
+    - requests of the actions of apps with REST schemas that run at the same time with different connections each
+      use their own connection's REST client and credentials; a request could be made with the client of another
+      connection that made a request of the same API path at the same time
+      (<a href="https://github.com/qoretechnologies/qore/issues/7185">issue 7185</a>)
     - an app option can name the action that creates its values in \c metadata.create_action (\c action,
       \c value_field and the optional \c display_name_field), so a value can be created from the option's form; the
       Slack channel options name \c create_channel.  When such an action succeeds, the app's cached allowed values

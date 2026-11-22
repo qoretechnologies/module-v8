@@ -82,9 +82,10 @@ class SandboxedFirstUseLoggerTest inherits QUnit::Test {
         tenant.setSandboxManager(new SandboxManager());
         assertEq("TS-TENANT-ERROR", tenant.callFunction("call", c), "the call is refused");
 
-        # the module's message about the call, logged while it served the tenant's code, reached the host's logger
+        # the module's message about the call, logged while it served the tenant's code, reached the host's logger,
+        # marked as a tenant's call (qoretechnologies/qore#7185)
         AutoLock al(capture.m);
-        list<string> perf = select capture.lines, $1 =~ /^perf: .*info/;
+        list<string> perf = select capture.lines, $1 =~ /^tenant call: perf: .*info/;
         assertTrue(perf.size() > 0, "the module logged the tenant's call to the host's logger");
     }
 }

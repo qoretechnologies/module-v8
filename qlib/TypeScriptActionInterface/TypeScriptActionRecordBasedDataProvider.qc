@@ -209,7 +209,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         if (!record_type) {
             checkRecordTypeIntern();
         }
-        return record_type;
+        return TsaiProcessState::fieldsForCaller(record_type);
     }
 
     #! Returns the description of the record type in the context of the given options
@@ -218,7 +218,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         if (!record_type) {
             checkRecordTypeIntern(options);
         }
-        return record_type;
+        return TsaiProcessState::fieldsForCaller(record_type);
     }
 
     #! Returns the description of the record type for creating records in the context of the given options
@@ -227,7 +227,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         if (!record_type) {
             checkRecordTypeIntern(options);
         }
-        return record_type;
+        return TsaiProcessState::fieldsForCaller(record_type);
     }
 
     #! Returns the description of the record type for updating records in the context of the given options
@@ -236,7 +236,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         if (!record_type) {
             checkRecordTypeIntern(options);
         }
-        return record_type;
+        return TsaiProcessState::fieldsForCaller(record_type);
     }
 
     #! Returns an iterator for zero or more records matching the search options

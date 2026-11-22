@@ -72,7 +72,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         string search_id;
     }
 
-    private {
+    # the state of the proxies is not readable by subclasses: it holds the process-wide lock, the proxies of every
+    # caller, their command queues and the master listener (qoretechnologies/qore#7185)
+    private:internal {
         #! The process that created the object; see inheritedByFork()
         int owner_pid = getpid();
 
@@ -141,7 +143,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Semaphore descriptor info for the event listener thread
         hash<SocketPollInfo> es_sem_info;
+    }
 
+    # the state that every proxy of the process shares: not visible to a subclass, as the objects it holds (the
+    # socket to the master process, the queues and proxies of every caller, the locks) could be used through their
+    # methods by the subclass of a tenant (qoretechnologies/qore#7185)
+    private:internal {
         #! Time a new child process has to start; see setStartupTimeout()
         static date startup_timeout = TypeScriptActionInterfacePriv::getEnvTimeout(StartupTimeoutEnv,
             DefaultStartupTimeout);
@@ -198,7 +205,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Semaphore descriptor info
         static hash<SocketPollInfo> sem_info();
+    }
 
+    private {
         #! Restart flag: do not restart event
         const RF_NO_EVENT   = (1 << 0);
 
@@ -207,7 +216,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Creates the object
-    constructor() : TypeScriptProxy(True) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: a proxy is
+        registered in the process-wide proxy map and starts a child process that runs the host's catalogues
+    */
+    constructor() [dom=PROCESS_CONTROL] : TypeScriptProxy(True) {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("create a TypeScript action program proxy");
         string uh = self.uniqueHash();
         {
             global_lock.lock();
@@ -284,7 +298,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         stopEventListener();
     }
 
-    hash<auto> getInfo() {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    hash<auto> getInfo() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         hash<auto> rv = {
             "proxy-pid": proc.id(),
             "restart-count": restart_count,
@@ -336,7 +354,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Removes a destroyed proxy, and stops the master listener if no proxy remains
-    private static removeProxy(string uh) {
+    static private:internal removeProxy(string uh) {
         {
             bool lck = !global_lock.lockOwner();
             if (lck) {
@@ -360,7 +378,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Stops the master listener if no proxy remains; called with the global lock held
-    private static stopUnusedMasterListenerLocked() {
+    static private:internal stopUnusedMasterListenerLocked() {
         if (!cmap && master_path.val()) {
             if (master) {
                 stopMasterListener();
@@ -373,9 +391,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the lock is that
         of every proxy of the process
     */
-    static init(Mutex m) {
+    static init(Mutex m) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("set the lock of the TypeScript action proxies");
+        TsaiProcessState::checkHostScope("set the lock of the TypeScript action proxies");
         JavaScriptProgramProxy::global_lock = m;
     }
 
@@ -397,7 +415,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     */
     static setStartupTimeout(date limit) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("set the startup timeout of the TypeScript action proxies");
+        TsaiProcessState::checkHostScope("set the startup timeout of the TypeScript action proxies");
         if (limit < 1s) {
             throw "STARTUP-TIMEOUT-ERROR", sprintf("the startup timeout must be at least one second; got %y", limit);
         }
@@ -405,10 +423,63 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     #! Returns the time a new \c ts-proxy child process has to start
-    /** @see setStartupTimeout()
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the timeout is the
+        host's configuration
+
+        @see setStartupTimeout()
     */
-    static date getStartupTimeout() {
+    static date getStartupTimeout() [dom=PROCESS_CONTROL] {
+        # the host's configuration (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the startup timeout of the TypeScript action proxies");
         return startup_timeout;
+    }
+
+    #! Sets the code that the removal of a proxy calls in debug mode with the key of the proxy (for tests)
+    /** @param hook the code to call, or @ref nothing to remove it
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    static setTestRemoveHook(*code hook) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("set the test hook of the TypeScript action proxies");
+        test_remove_hook = hook;
+    }
+
+    #! Returns the TID of the master listener thread (for tests)
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    static int getTestMasterListenerTid() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("get the master listener of the TypeScript action proxies");
+        return master_listener_tid;
+    }
+
+    #! Returns @ref True if the master listener thread has stopped within the given time (for tests)
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    static bool testWaitMasterListenerStopped(timeout limit) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("wait for the master listener of the TypeScript action proxies");
+        return !master_listener_cnt.waitForZero(limit);
+    }
+
+    #! Adds the object to the event proxy map and connects to the master listener as the child of an event source
+    #! does (for tests)
+    /** @return the socket of the event connection, on which the caller sends its \c CC_EVENT_START message
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    private Socket testConnectEventProxy() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("register a TypeScript action proxy for events");
+        emap{self.uniqueHash()} = self;
+        Socket sock();
+        sock.connectUNIX(master_path);
+        return sock;
+    }
+
+    #! Removes the object from the event proxy map (for tests)
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    private testDisconnectEventProxy() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("deregister a TypeScript action proxy for events");
+        remove emap{self.uniqueHash()};
     }
 
     #! Destroys every proxy of the process and stops the master listener
@@ -422,7 +493,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     */
     static shutdown() [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("shut down the TypeScript action proxies");
+        TsaiProcessState::checkHostScope("shut down the TypeScript action proxies");
         if (master_pid && master_pid != getpid()) {
             # the lock is not acquired in a child process created with fork(): a thread of the parent could have
             # held it when the process was copied
@@ -452,13 +523,21 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         stopUnusedMasterListenerLocked();
     }
 
-    bool supportsEvent(string key) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    bool supportsEvent(string key) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         return event.key == key ? True : False;
     }
 
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
     *hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,
-            *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options) {
-        TenantActionRunner::refuseSandboxed("a program proxy");
+            *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options)
+            [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         ASSERT(!event && !search_id);
         search_id = id;
         on_error remove search_id;
@@ -474,7 +553,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return rv;
     }
 
-    releaseSearch(string id) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    releaseSearch(string id) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         ASSERT(!event);
         if (search_id) {
             ASSERT(search_id == id);
@@ -487,8 +570,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
-    *hash<auto> getRecords(string id) {
-        TenantActionRunner::refuseSandboxed("a program proxy");
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    *hash<auto> getRecords(string id) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         if (search_id != id) {
             throw "SEARCH-ERROR", sprintf("Search %y was interrupted due to a proxy restart", id);
         }
@@ -503,9 +589,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     # Called with the global lock held
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
     setupEventSource(TypeScriptActionEventDataProvider observable, string app, string action, string key,
-            *hash<DataContextInfo> options) {
-        TenantActionRunner::refuseSandboxed("a program proxy");
+            *hash<DataContextInfo> options) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         ASSERT(!event && !search_id);
         /*
         if (event) {
@@ -532,7 +621,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         setupEventSourceIntern();
     }
 
-    private setupEventSourceIntern(*int restart_flags) {
+    private:internal setupEventSourceIntern(*int restart_flags) {
         *hash<EventSourceInfo> current_event = event;
         if (!current_event) {
             info("Skipping event source setup for PID %d; event source was released", proc.id());
@@ -549,7 +638,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         info("Event source for @%s/%s %y ready", current_event.app, current_event.action, current_event.key);
     }
 
-    private stopEventListener() {
+    private:internal stopEventListener() {
         if (es_tid) {
             es_exit = True;
             es_sem_write.write(".");
@@ -559,7 +648,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     #! Starts the event listener for the event connection of the child process; called by the master listener
-    startEventListener(Socket event_socket, hash<auto> v) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    startEventListener(Socket event_socket, hash<auto> v) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         # the destructor sets es_closed with the lock held before it stops the event listener, so a listener is never
         # started after it has been stopped by the destructor
         es_lock.lock();
@@ -585,7 +678,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         es_tid = background eventListenerThread(event_socket);
     }
 
-    private eventListenerThread(Socket event_socket) {
+    private:internal eventListenerThread(Socket event_socket) {
         hash<auto> einfo;
         on_exit {
             remove es_exit;
@@ -733,7 +826,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
-    private removeEventSource(string ekey) {
+    private:internal removeEventSource(string ekey) {
         bool stop;
         {
             global_lock.lock();
@@ -754,7 +847,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     #! Add an additional observable to the event source; called with the global lock held
-    addEventSourceLocked(TypeScriptActionEventDataProvider observable, string key) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    addEventSourceLocked(TypeScriptActionEventDataProvider observable, string key) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         if (!event) {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
@@ -770,7 +867,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     #! Called with the global lock held
-    releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key, *bool in_listener) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key, *bool in_listener)
+            [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         if (!event) {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
@@ -824,7 +926,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         #    keys event.omap);
     }
 
-    private bool cancelRestartForEventRelease(string key) {
+    private:internal bool cancelRestartForEventRelease(string key) {
         AutoLock al(m);
         if (!restarting) {
             return False;
@@ -833,7 +935,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return True;
     }
 
-    private abortRestartLocked(string reason) {
+    private:internal abortRestartLocked(string reason) {
         error("Aborting restarted child during %s", reason);
         try {
             proc.terminate();
@@ -851,7 +953,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
-    private bool testRetryWhileRestarting(int tid, int flags) {
+    private:internal bool testRetryWhileRestarting(int tid, int flags) {
         {
             AutoLock al(m);
             restarting = True;
@@ -874,8 +976,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return retryIntern(ex, rc, flags) ? True : False;
     }
 
-    auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
-        TenantActionRunner::refuseSandboxed("a program proxy");
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    auto getAsyncValue(hash<AsyncCallInfo> api, ...) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         list<auto> args += (api.app, api.action, api.key);
         if (argv) {
             args += argv;
@@ -883,7 +988,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         # the child applies the call's time limit itself and reports a call that exceeds it, so the parent waits
         # longer, by the time it allows any other command, to detect a child that does not answer at all.  Event
         # functions, which have no limit, are never sent this way; they are started with PC_SETUP_EVENT
-        date limit = api.to ?? TypeScriptActionInterface::getCallTimeout();
+        date limit = api.to ?? TsaiProcessState::Internal.getCallTimeout();
         auto rv;
         try {
             rv = sendCommandArgs(limit, PC_CALL, args, limit + DefaultRequestTimeout);
@@ -901,8 +1006,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return rv;
     }
 
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
     *HashDataType getDynamicType(string cmd, string app, string action, *string conn_name, *hash<auto> conn_opts,
-            auto req) {
+            auto req) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         *binary bin = sendCommandArgs(NOTHING, cmd, (app, action, conn_name, conn_opts, req));
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
         debug("getDynamicType(app %y action %y req %y conn_opts: %y): %y", app, action,
@@ -911,8 +1020,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return rv;
     }
 
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
     *hash<string, hash<ActionOptionInfo>> getDynamicOptions(string app, string action, *string conn_name,
-            *hash<auto> conn_opts, auto req) {
+            *hash<auto> conn_opts, auto req) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         *binary bin = sendCommandArgs(NOTHING, PC_GET_DYNAMIC_OPTIONS, (app, action, conn_name, conn_opts, req));
         *hash<string, hash<ActionOptionInfo>> rv = bin ? Serializable::deserialize(bin) : NOTHING;
         debug("getDynamicOptions(app %y action %y req %y): %y", app, action, LoggerUtil::getArgSummary(req),
@@ -920,7 +1033,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return rv;
     }
 
-    private static masterListenerThread(Counter c) {
+    static private:internal masterListenerThread(Counter c) {
         TSAI::info("Master listener thread started");
         c.dec();
         on_exit {
@@ -1002,7 +1115,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         the child process of the parent has none of the parent's threads, and the protocol streams and the child
         process are the parent's
     */
-    private bool inheritedByFork() {
+    private:internal bool inheritedByFork() {
         return owner_pid != getpid();
     }
 
@@ -1012,7 +1125,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
 
         @throw TS-PROXY-ERROR the object was made in a parent of this process
     */
-    private checkNotInherited() {
+    private:internal checkNotInherited() {
         if (inheritedByFork()) {
             throw "TS-PROXY-ERROR", sprintf("this TypeScript proxy was made by the parent process (PID %d) and cannot "
                 "be used in a child process created with fork() (PID %d)", owner_pid, getpid());
@@ -1025,7 +1138,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         process was copied.  The sockets and files of the object are closed in this process only when the object's
         members are destroyed.
     */
-    private abandonInForkedChild() {
+    private:internal abandonInForkedChild() {
         if (proc) {
             # the object must not stop the parent's child process when it is destroyed
             try {
@@ -1042,7 +1155,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         parent: the socket is closed in this process only, and its file is not removed.  The proxies made in the
         parent are abandoned by their destructors (see abandonInForkedChild()).  The lock is not acquired.
     */
-    private static abandonInheritedMaster() {
+    static private:internal abandonInheritedMaster() {
         if (cmap) {
             # the proxies made in the parent are removed; a proxy that this process is creating stays.  The weak
             # references of the map are removed rather than copied, as a copy would hold strong references
@@ -1083,7 +1196,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         remove master_pid;
     }
 
-    private stopChildProcess() {
+    private:internal stopChildProcess() {
         # send shutdown command
         try {
             sendCommandOneWayStop(PC_EXIT);
@@ -1110,7 +1223,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     #! Sends a command from the parent to the child without a response
-    private sendCommandOneWayStop(string cmd, *list<auto> args) {
+    private:internal sendCommandOneWayStop(string cmd, *list<auto> args) {
         string yaml = makeSend(cmd, {"args": args});
         while (True) {
             try {
@@ -1129,7 +1242,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
-    private killChild() {
+    private:internal killChild() {
         try {
             proc.terminate();
             info("Forced child to terminate");
@@ -1140,12 +1253,12 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         logChildOutput(True);
     }
 
-    private static *bool isSocketClosedError(hash<ExceptionInfo> ex) {
+    static private:internal *bool isSocketClosedError(hash<ExceptionInfo> ex) {
         return ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED" || ex.err == "EPIPE" || ex.desc =~ /EPIPE/;
     }
 
     #! Starts the child process
-    private startChildProcess() {
+    private:internal startChildProcess() {
         checkStartMasterListener();
         list<string> args = (
             sprintf("-s=%s", master_path),
@@ -1166,8 +1279,8 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         };
         # the child applies the same time limit to the calls it runs; it takes whole seconds
         env{TypeScriptActionInterface::CallTimeoutEnv} =
-            string((TypeScriptActionInterface::getCallTimeout().durationMilliseconds() + 999) / 1000);
-        date startup_limit = getStartupTimeout();
+            string((TsaiProcessState::Internal.getCallTimeout().durationMilliseconds() + 999) / 1000);
+        date startup_limit = startup_timeout;
         string cmd = "ts-proxy";
         @debug {
             # When running with --enable-debug, spawn child via qore interpreter
@@ -1223,7 +1336,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         info("Child process ready");
     }
 
-    static private checkStartMasterListener() {
+    static private:internal checkStartMasterListener() {
         global_lock.lock();
         on_exit global_lock.unlock();
 
@@ -1280,7 +1393,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     #! Sends a command from the parent to the child with a response
-    private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
+    private:internal auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
             date response_timeout = DefaultRequestTimeout, *bool no_restart_event, *int restart_flags) {
         @debug {
             *string response_timeout_ms = getenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
@@ -1354,7 +1467,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     #! Wait for a command when the listener is active
-    hash<auto> waitForResponse(date to = DefaultIoTimeout) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    hash<auto> waitForResponse(date to = DefaultIoTimeout) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         int pid = proc.id();
         auto v;
         date start = now_us();
@@ -1419,7 +1536,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return v;
     }
 
-    string recv(int size, *date to) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the proxies run
+        the calls of trusted code in a child process with the host's catalogues
+    */
+    string recv(int size, *date to) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action program proxy");
         string str;
         date start = now_us();
         while (True) {
@@ -1444,7 +1565,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
-    private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *int restart_flags) {
+    private:internal *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *int restart_flags) {
         if (checkRestart(rc, restart_flags, ex)) {
             return True;
         }
@@ -1459,7 +1580,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         (SOCKET-CLOSED), or, on Linux, a reset (SOCKET-RECV-ERROR with ECONNRESET) if the child had not read the
         command, and a send sees a broken pipe or a reset (SOCKET-SEND-ERROR with EPIPE or ECONNRESET).
     */
-    private static bool isChildEndError(hash<ExceptionInfo> ex) {
+    static private:internal bool isChildEndError(hash<ExceptionInfo> ex) {
         switch (ex.err) {
             case "SOCKET-CLOSED":
                 return True;
@@ -1478,7 +1599,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
 
         @return True if the child has ended
     */
-    private bool waitForChildEnd() {
+    private:internal bool waitForChildEnd() {
         @debug {
             # TEST: the test's child stays running after closing its command socket until it is released here, so
             # that the end of the socket is always seen while the child is running
@@ -1506,7 +1627,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         return False;
     }
 
-    private *bool checkRestart(*RetryCounter rc, *int restart_flags, *hash<ExceptionInfo> ex) {
+    private:internal *bool checkRestart(*RetryCounter rc, *int restart_flags, *hash<ExceptionInfo> ex) {
         int flags = restart_flags ?? 0;
         # the end of a child shows on its command socket before the child has been reaped; the decision to restart it
         # is made when it has ended, with no lock held
@@ -1614,7 +1735,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     }
 
     # Called with no locks held
-    private restartProcessIntern(*bool no_restart_event) {
+    private:internal restartProcessIntern(*bool no_restart_event) {
         @debug {
             # read the process environment like the other test hooks; the ENV hash does not see setenv()
             if (getenv("TS_PROXY_TEST_FORCE_RESTART_ERROR").val()) {
@@ -1660,7 +1781,7 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         }
     }
 
-    private *hash<auto> logChildOutput(*bool always_output) {
+    private:internal *hash<auto> logChildOutput(*bool always_output) {
         *string str = proc.readStdout(64 * 1024, 0s);
         hash<auto> rv;
         if (str) {

@@ -46,8 +46,6 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! REST schema path
         string schema_path;
 
-        #! API data provider
-        RestSchemaRequestDataProvider prov;
 
         #! Path vars
         *hash<string, bool> path_vars;
@@ -87,7 +85,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
         #! Request key for static request info
         string request_key;
+    }
 
+    # the provider of the schema is process-wide, and the type and request information that every caller shares is
+    # not visible to a subclass, which could use the lock or read the information of other callers
+    # (qoretechnologies/qore#7185)
+    private:internal {
+        #! API data provider
+        RestSchemaRequestDataProvider prov;
 
         #! Global request type info per action for dynamic types: app-action -> type info
         static hash<string, hash<TypeProviderInfo>> grtmap = {};
@@ -100,6 +105,23 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
         #! Mutex for global request type info
         static Mutex gtlock();
+
+        #! The request-key maps of this provider: top-level key -> actual location
+        /** The process-wide maps (@ref reqmap, @ref rreqmap) are changed only by trusted code and the module's
+            registration of the app; a provider created or completed for a sandboxed caller keeps its maps here
+            (qoretechnologies/qore#7185)
+        */
+        *hash<string, list<string>> own_reqmap;
+
+        #! The reverse request-key map of this provider: dotted location -> top-level key; see @ref own_reqmap
+        *hash<string, string> own_rreqmap;
+
+        #! True if @ref prov is this provider's own copy of the shared schema request provider
+        /** The request provider of an API path is shared by every provider of the path; a provider that needs a
+            setting of its own (the request type check) uses a copy, which shares the schema and its types
+            (qoretechnologies/qore#7185)
+        */
+        bool own_prov;
     }
 
     # the calls of the app are not readable by subclasses (qoretechnologies/qore#6749)
@@ -138,6 +160,20 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             override_options_save = override_options;
             # remove options, as they will be processed on demand
             action -= "options";
+            # an operation that declares no content type is given JSON when the action is registered, by trusted
+            # code or the module's registration of the app, not later for a caller: the operation is shared
+            # (qoretechnologies/qore#7185)
+            if (TsaiProcessState::canChangeProcessState()) {
+                try {
+                    checkDataProviderIntern();
+                    if (!prov.getConsumes()) {
+                        prov.setConsumes(MimeTypeJson);
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    # an invalid schema path is reported when the request type is created
+                    TSAI::debug("app %y action %y: %s: %s", action.app, action.action, ex.err, ex.desc);
+                }
+            }
             action.get_dynamic_options = sub (reference<hash<DataProviderActionInfo>> info) {
                 if (!request_type_done) {
                     NoIoHelper nih();
@@ -162,11 +198,15 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     "`get_dynamic_request_type()` function in the same action", action.app, action.action);
             }
             request_type_done = True;
-            string key = sprintf("%s-%s", action.app, action.action);
-            grtmap{key} = <TypeProviderInfo>{
-                "type": request_type,
-                "prov": self,
-            };
+            # the global map is changed only by the module's registration of the app or by trusted code
+            # (qoretechnologies/qore#7185)
+            if (TsaiProcessState::canChangeProcessState()) {
+                string key = sprintf("%s-%s", action.app, action.action);
+                grtmap{key} = <TypeProviderInfo>{
+                    "type": request_type,
+                    "prov": self,
+                };
+            }
             request_type_info.type = request_type;
         } else if (!override_options && !action.options) {
             NoIoHelper nih();
@@ -283,12 +323,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             NoIoHelper nih();
             createRequestType();
         }
-        if (reqmap{request_key} && req) {
+        if ((*hash<string, list<string>> rm = getReqMap()) && req) {
             hash<auto> req0;
             map req0{$1.key} = $1.value, (
-                map findNormalizedValue(req, $1.value, $1.key), reqmap{request_key}.pairIterator()
+                map findNormalizedValue(req, $1.value, $1.key), rm.pairIterator()
             ), $1;
-            map remove req{$1[0]}, reqmap{request_key}.iterator();
+            map remove req{$1[0]}, rm.iterator();
             map req0{$1.key} = $1.value, req.pairIterator(), !exists req0{$1.key};
             req = req0;
         }
@@ -339,7 +379,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         *hash<string, AbstractDataField> fields = type.getFields();
         foreach hash<auto> i in (override_options_save.pairIterator()) {
             # find option to update
-            string k = rreqmap{request_key}{i.key} ?? i.key;
+            string k = own_rreqmap{i.key} ?? rreqmap{request_key}{i.key} ?? i.key;
             list<string> l = k.split(".");
             string key = l[0];
 
@@ -365,11 +405,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
                 if (prov.getName() != "GET") {
-                    reqmap{request_key}{key} = ("body",);
-                    rreqmap{request_key}{"body." + key} = key;
+                    setReqMap(key, ("body",));
                 } else {
-                    reqmap{request_key}{key} = ("query",);
-                    rreqmap{request_key}{"query." + key} = key;
+                    setReqMap(key, ("query",));
                 }
             } else {
                 on_error rethrow $1.err, sprintf("%s (while overriding existing option %y in %y for type %y)",
@@ -408,7 +446,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         if (!request_type_done) {
             createRequestType();
         }
-        return request_type_info.type;
+        return TsaiProcessState::typeForCaller(request_type_info.type);
     }
 
     #! Returns the response type for this API
@@ -418,7 +456,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         if (!response_type_done) {
             createResponseType();
         }
-        return response_type_info.type;
+        return TsaiProcessState::typeForCaller(response_type_info.type);
     }
 
     #! Creates the request type for this API
@@ -428,7 +466,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
         request_type_done = True;
 
-        checkDataProvider();
+        checkDataProviderIntern();
 
         # get type key
         request_key = sprintf("%s-%s", app, action);
@@ -448,7 +486,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     #! Checks the request type and merges any reference data maps from the source provider if found
     private *bool checkRequestType(string key) {
         if (grtmap{key}) {
-            request_type_info.type = grtmap{key}.type;
+            request_type_info.type = TsaiProcessState::typeForCaller(grtmap{key}.type);
+            # the request provider of the provider that created the type: with its request type check setting
+            if (*RestSchemaRequestDataProvider p
+                = cast<TypeScriptActionApiWithSchemaDataProvider>(grtmap{key}.prov).prov) {
+                prov = p;
+            }
             map omap{$1.key} = $1.value, grtmap{key}.prov.omap.pairIterator(), !omap{$1.key};
             map romap{$1.key} = $1.value, grtmap{key}.prov.romap.pairIterator(), !romap{$1.key};
             return True;
@@ -465,7 +508,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             fields -= ignore_options_save;
             request_type_info.type = request_type_info.type.copyWithFields(fields);
             # disable the request type check
-            prov.disableRequestTypeCheck();
+            disableRequestTypeCheck();
         }
 
         if (fields) {
@@ -483,8 +526,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 } else if (fields) {
                     map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
                 }
-                map reqmap{request_key}{$1} = l, keys fields;
-                map rreqmap{request_key}{l.join(".") + ("." + $1)} = $1, keys fields;
+                map setReqMap($1, l), keys fields;
             };
             bool stop;
             # process body args
@@ -578,11 +620,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     "request type %y", action_save.app, action_save.action, request_type_info.type.getName());
             }
             do_not_cache = overrideOptions(cast<HashDataType>(request_type_info.type));
-            # Set JSON as accepted content type if not already set
-            if (!prov.getConsumes()) {
+            # Set JSON as accepted content type if not already set; the operation is shared, so it is changed only by
+            # trusted code or the module's registration of the app (see the constructor)
+            if (!prov.getConsumes() && TsaiProcessState::canChangeProcessState()) {
                 prov.setConsumes(MimeTypeJson);
             }
-            prov.disableRequestTypeCheck();
+            disableRequestTypeCheck();
         }
 
         if (request_type_info.type && (fields = request_type_info.type.getFields())) {
@@ -607,7 +650,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
         }
 
-        if (!do_not_cache) {
+        # the global map is changed only by the module's registration of the app or by trusted code: a sandboxed
+        # caller's copy keeps its type (qoretechnologies/qore#7185)
+        if (!do_not_cache && TsaiProcessState::canChangeProcessState()) {
             grtmap{request_key} = <TypeProviderInfo>{
                 "type": request_type_info.type,
                 "prov": self,
@@ -621,7 +666,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             return;
         }
         response_type_done = True;
-        checkDataProvider();
+        checkDataProviderIntern();
         response_type_info.type = prov.getResponseType();
         # If include_response_headers is False, unwrap the body even when headers field is present
         # This allows apps to opt-out of the {body, headers} wrapper when the OpenAPI schema defines response headers
@@ -632,12 +677,23 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
     }
 
-    AbstractDataProvider checkDataProvider() {
+    #! Returns the request provider of the API's REST schema
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the provider is
+        that of the process-wide REST schema provider of the app
+    */
+    AbstractDataProvider checkDataProvider() [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the REST schema provider of a TypeScript action");
+        return checkDataProviderIntern();
+    }
+
+    #! Returns the request provider of the API's REST schema, for the module's own code
+    private:internal AbstractDataProvider checkDataProviderIntern() {
         if (!prov) {
             on_error rethrow $1.err, sprintf("Error setting data provider from app %y action %y: %s (REST schema "
                 "path: %y)", app, action, $1.desc, schema_path);
 
-            AbstractDataProvider p = TypeScriptActionInterface::getSchemaDataProvider(app, rest_schema)
+            AbstractDataProvider p = TsaiProcessState::Internal.getSchemaDataProvider(app, rest_schema)
                 .getChildProviderPath(schema_path);
             if (!(p instanceof RestSchemaRequestDataProvider)) {
                 throw "ACTION-ERROR", sprintf("App %y action %y: REST schema path %y is not an API endpoint (%s -> %y)", app,
@@ -705,7 +761,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     path_vars{$1.value};
             }
         }
-        map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap{request_key}.pairIterator(),
+        map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), getReqMap().pairIterator(),
             req.hasKey($1.key);
         return getAsyncValue(api, req, request_options, getCallContextInfo());
     }
@@ -717,11 +773,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         @return the response to the request
     */
     private auto makeSchemaRequest(auto req, *hash<auto> request_options) {
-        checkDataProvider();
-        # *always* replace the RestClient with each call; it can have outdated auth info
-        prov.setRestClient(rest = conn.get());
+        checkDataProviderIntern();
+        # a new client of the connection for each call, as it can have outdated auth info; it is given to the
+        # schema's request provider with the call, which is shared by every provider and connection of the API path
+        # and is never changed for a call, so that concurrent calls cannot use each other's client and credentials
+        # (qoretechnologies/qore#7185)
+        RestClient client = conn.get();
         if (req && req.typeCode() == NT_HASH) {
-            checkUpdateRestOptions(rest, req);
+            checkUpdateRestOptions(client, req);
         }
         if (exists (*string base_path = conn.orig_opts.openapi_base_path ?? conn.orig_opts.swagger_base_path)) {
             request_options.base_path = base_path;
@@ -739,10 +798,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
 
         hash<auto> req0 = {};
-        debug("Action options for action %y: %y reqmap: %y", getName(), LoggerUtil::getArgSummary(req),
-            reqmap{request_key});
-        map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap{request_key}.pairIterator(),
-            req.hasKey($1.key);
+        *hash<string, list<string>> rm = getReqMap();
+        debug("Action options for action %y: %y reqmap: %y", getName(), LoggerUtil::getArgSummary(req), rm);
+        map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), rm.pairIterator(), req.hasKey($1.key);
         map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
         req = req0;
         debug("REST request for action %y: %y", getName(), LoggerUtil::getArgSummary(req));
@@ -758,9 +816,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         {
             # The schema provider encodes path variables and query values. The request's freshly acquired
             # synchronous client must send those octets unchanged; restore its policy even on failure.
-            bool encoded = rest.setPreEncodedUrls(True);
-            on_exit rest.setPreEncodedUrls(encoded);
-            rv = prov.doRequest(req, request_options +
+            bool encoded = client.setPreEncodedUrls(True);
+            on_exit client.setPreEncodedUrls(encoded);
+            rv = prov.doRequest(req, request_options + {"rest_client": client} +
                 (response_data_converter
                     ? {"include_response_headers": True}
                     : NOTHING
@@ -775,6 +833,34 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             debug("REST response for action after conversion %y: %y", getName(), LoggerUtil::getArgSummary(rv));
         }
         return res_only_body ? rv.body : rv;
+    }
+
+    #! Returns the request-key map of the provider: its own, or the process-wide map of its request key
+    private:internal *hash<string, list<string>> getReqMap() {
+        return own_reqmap ?? reqmap{request_key};
+    }
+
+    #! Records where a top-level key of the request is: in the provider's own maps, and in the process-wide maps
+    #! when trusted code or the module's registration of the app creates the request type (qoretechnologies/qore#7185)
+    private:internal setReqMap(string key, list<string> l) {
+        own_reqmap{key} = l;
+        own_rreqmap{l.join(".") + "." + key} = key;
+        if (TsaiProcessState::canChangeProcessState()) {
+            reqmap{request_key}{key} = l;
+            rreqmap{request_key}{l.join(".") + "." + key} = key;
+        }
+    }
+
+    #! Disables the request type check of the provider's request provider, with a copy of its own
+    /** The request provider of the API path is shared; the copy shares its schema and types
+        (qoretechnologies/qore#7185)
+    */
+    private:internal disableRequestTypeCheck() {
+        if (!own_prov) {
+            prov = cast<RestSchemaRequestDataProvider>(prov.copy());
+            own_prov = True;
+        }
+        prov.disableRequestTypeCheck();
     }
 
     #! Moves a value in an optimized position to the standard position of the request hash

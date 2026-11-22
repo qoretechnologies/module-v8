@@ -35,7 +35,7 @@ public class TypeScriptBulkRecordInterface inherits AbstractDataProviderBulkReco
         *hash<AsyncCallInfo> get_records;
     }
 
-    private {
+    private:internal {
         TypeScriptActionRecordBasedDataProvider prov;
         *hash<DataContextInfo> cctx;
         *hash<DataProviderExpression> where_exp;
@@ -55,7 +55,6 @@ public class TypeScriptBulkRecordInterface inherits AbstractDataProviderBulkReco
                 "action": prov.action,
                 "type": "get_records",
                 "label": sprintf("get_records() for @%s/%s", prov.app, prov.action),
-                "pool": prov.pool,
                 "async_call": get_records_code,
                 "to": seconds(TypeScriptActionInterface::DefaultIoTimeoutSecs),
             };

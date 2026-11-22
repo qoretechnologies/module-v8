@@ -96,11 +96,12 @@ public class JavaScriptInProcessPool {
     /** @param pool the JavaScriptProgramPool used to create new programs
         @param max_size optional maximum number of programs in the pool; NOTHING = unlimited
 
-        @throw TS-TENANT-ERROR the calling code is sandboxed: the programs of the pool run the catalogue that trusted
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the programs of
+        the pool run the catalogue that trusted
         code loaded
     */
-    constructor(JavaScriptProgramPool pool, *int max_size) {
-        TenantActionRunner::refuseSandboxed("the in-process pool");
+    constructor(JavaScriptProgramPool pool, *int max_size) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action in-process pool");
         self.pool = pool;
         self.max_size = max_size;
 
@@ -123,11 +124,12 @@ public class JavaScriptInProcessPool {
         After calling shutdown(), any thread blocked in get() will throw POOL-SHUTDOWN,
         and new calls to get() will also throw POOL-SHUTDOWN.
 
-        @throw TS-TENANT-ERROR the calling code is sandboxed: the pool runs the calls of trusted code, and the
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the pool runs the
+        calls of trusted code, and the
         module's in-process server is process-wide
     */
-    shutdown() {
-        TenantActionRunner::refuseSandboxed("the in-process pool");
+    shutdown() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action in-process pool");
         shutdownIntern();
     }
 
@@ -160,7 +162,8 @@ public class JavaScriptInProcessPool {
 
         @param observer the callback, or @ref nothing to remove it
 
-        @throw TS-TENANT-ERROR the calling code is sandboxed: the callback runs in the threads of trusted code
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the callback
+        runs in the threads of trusted code
 
         @par Example:
         @code{.py}
@@ -169,8 +172,8 @@ Counter waiting(2);
 pool.setWaitObserver(sub (int count) { waiting.dec(); });
         @endcode
     */
-    setWaitObserver(*code<nothing(int)> observer) {
-        TenantActionRunner::refuseSandboxed("the in-process pool");
+    setWaitObserver(*code<nothing(int)> observer) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action in-process pool");
         m.lock();
         on_exit m.unlock();
 
@@ -178,8 +181,12 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
     }
 
     #! Returns a unique hash for the pool (for DataProvider shutdown handler registration)
-    string uniqueHash() {
-        return pool.uniqueHash() + "-inprocess";
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the pool runs
+        the calls of trusted code
+    */
+    string uniqueHash() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action in-process pool");
+        return TsaiProcessState::Internal.poolUniqueHash(pool) + "-inprocess";
     }
 
     #! Acquires a program for the calling thread
@@ -189,8 +196,8 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
 
         @return the program info for the calling thread
     */
-    hash<InProcessProgramInfo> get() {
-        TenantActionRunner::refuseSandboxed("the in-process pool");
+    hash<InProcessProgramInfo> get() [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action in-process pool");
         int tid = gettid();
 
         m.lock();
@@ -268,7 +275,11 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
 
         @param info the program info returned by get()
     */
-    release(hash<InProcessProgramInfo> info) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the pool runs
+        the calls of trusted code, and a program released by another caller would be given to others while in use
+    */
+    release(hash<InProcessProgramInfo> info) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action in-process pool");
         m.lock();
         on_exit m.unlock();
 
@@ -300,7 +311,11 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
 
         @return the result of the call
     */
-    auto execCall(hash<AsyncCallInfo> api, *softlist<auto> args) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the pool runs
+        the calls of trusted code in the full runtime
+    */
+    auto execCall(hash<AsyncCallInfo> api, *softlist<auto> args) [dom=PROCESS_CONTROL] {
+        TsaiProcessState::checkHostScope("use a TypeScript action in-process pool");
         hash<InProcessProgramInfo> info = get();
         on_exit release(info);
 

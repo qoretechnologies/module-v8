@@ -73,7 +73,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         hash<AsyncCallInfo> event;
     }
 
-    private {
+    private:internal {
 
         Mutex m();
         Condition cond();

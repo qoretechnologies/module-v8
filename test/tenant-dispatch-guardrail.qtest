@@ -33,11 +33,14 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
             "TypeScriptActionInterfacePriv.qc": {
                 # the trusted load of the catalogues at the module's initialization
                 "return Promise.race([promise, pendingState]).then(": "JavaScript source of the default code",
-                "JavaScriptObject global = master.getProgram().getGlobal();": "the load of the master catalogue",
+                "JavaScriptObject global = TsaiProcessState::Internal.poolGetProgram(master).getGlobal();":
+                    "the load of the master catalogue",
                 "JavaScriptObject global = pgm.getGlobal();": "the registration of a catalogue's apps",
                 "auto v = pgm.getGlobal().exports.qtester.run(": "the catalogue tests",
                 "v.then(sub (auto val) {": "the catalogue tests",
-                # the guard of the functions of the calls (qoretechnologies/qore#6749): it refuses sandboxed code first
+                # the guard of the functions of the calls (qoretechnologies/qore#6749): it refuses sandboxed code first;
+                # the same line is the call of the interface of tenants' programs, which refuses calls outside clone
+                # mode first (qoretechnologies/qore#7185)
                 "return call_function_args(c, argv);": "the guarded function of an app's call",
             },
             "TypeScriptActionInterface.qc": {
@@ -70,15 +73,28 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
 
         #! the methods of the pools and proxies of the full runtime that refuse sandboxed code
         const Gated = {
-            "JavaScriptInProcessPool.qc": ("hash<InProcessProgramInfo> get() {",),
-            "JavaScriptThreadProcessPool.qc": ("JavaScriptProgramProxy get(*code setup) {",
+            "JavaScriptInProcessPool.qc": ("hash<InProcessProgramInfo> get() [dom=PROCESS_CONTROL] {",
+                "auto execCall(hash<AsyncCallInfo> api, *softlist<auto> args) [dom=PROCESS_CONTROL] {",
+                "release(hash<InProcessProgramInfo> info) [dom=PROCESS_CONTROL] {"),
+            "JavaScriptThreadProcessPool.qc": ("JavaScriptProgramProxy get(*code setup) [dom=PROCESS_CONTROL] {",
                 "*hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,",
                 "JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key,"),
             "JavaScriptProgramProxy.qc": (
                 "*hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,",
-                "*hash<auto> getRecords(string id) {",
+                "*hash<auto> getRecords(string id) [dom=PROCESS_CONTROL] {",
                 "setupEventSource(TypeScriptActionEventDataProvider observable, string app, string action, string key,",
-                "auto getAsyncValue(hash<AsyncCallInfo> api, ...) {"),
+                "auto getAsyncValue(hash<AsyncCallInfo> api, ...) [dom=PROCESS_CONTROL] {",
+                "*hash<string, hash<ActionOptionInfo>> getDynamicOptions(string app, string action, *string conn_name,",
+                "*HashDataType getDynamicType(string cmd, string app, string action, *string conn_name, "
+                    "*hash<auto> conn_opts,",
+                "constructor() [dom=PROCESS_CONTROL] : TypeScriptProxy(True) {"),
+            "JavaScriptProgramPool.qc": ("JavaScriptProgram getProgram() [dom=PROCESS_CONTROL] {",
+                "string getScriptPath() [dom=PROCESS_CONTROL] {",
+                "string getPath() [dom=PROCESS_CONTROL] {",
+                "string getCwd() [dom=PROCESS_CONTROL] {",
+                "string getSource() [dom=PROCESS_CONTROL] {",
+                "JavaScriptProgram createProgramForPool() [dom=PROCESS_CONTROL] {",
+                "constructor(string source, string path, code init) [dom=PROCESS_CONTROL] {"),
         };
     }
 
@@ -131,10 +147,11 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
                     }
                 }
                 assertGt(-1, n, sprintf("%s: %s", i.key, sig));
-                # the gate is the first statement of the method
+                # the gate is the first statement of the method: the module's central guard
+                # (qoretechnologies/qore#7185), or the tenant runner's check of sandboxed code
                 bool found;
                 for (int j = n + 1; j < n + 4 && j < l.size(); ++j) {
-                    if (l[j] =~ /TenantActionRunner::refuseSandboxed\(/) {
+                    if (l[j] =~ /TsaiProcessState::checkHostScope\(|TenantActionRunner::refuseSandboxed\(/) {
                         found = True;
                         break;
                     }

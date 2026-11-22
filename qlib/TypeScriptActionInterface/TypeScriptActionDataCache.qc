@@ -95,7 +95,7 @@ public class TypeScriptDataCache {
         const MaxAge = 10m;
     }
 
-    private {
+    private:internal {
         Mutex global();
         hash<string, CacheEntry> cache;
         #! The app each entry was looked up for, so an app's entries can be dropped; see clearApp()
@@ -153,7 +153,7 @@ return entry.getValue();
         }
     }
 
-    private *CacheEntry getIntern(string key) {
+    private:internal *CacheEntry getIntern(string key) {
         # expire all outdated entries
         {
             date cutoff = now_us() - MaxAge;

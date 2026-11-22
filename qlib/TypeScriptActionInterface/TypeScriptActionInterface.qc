@@ -42,7 +42,10 @@ public hashdecl AsyncCallInfo {
     string label;
 
     #! Javascript program pool
-    JavaScriptProgramPool pool;
+    /** Not set by the module: the calls that it registers do not hold the pool of the catalogue that registered them,
+        which is process-wide (qoretechnologies/qore#7185)
+    */
+    *JavaScriptProgramPool pool;
 
     #! Call to make
     code async_call;
@@ -136,6 +139,12 @@ public class TypeScriptActionInterface {
         #! The root data provider of the apps; see getRoot()
         static TypeScriptActionRootDataProvider root;
 
+        #! Set when init() has run: the module's static initialization runs once (qoretechnologies/qore#7185)
+        static bool init_done;
+
+        #! Guards @ref init_done
+        static Mutex init_lock();
+
         #! The webhook creation API; see registerWebhookCreateDestroyApis()
         static code WebhookCreate;
         #! The webhook deletion API; see registerWebhookCreateDestroyApis()
@@ -169,6 +178,14 @@ public class TypeScriptActionInterface {
             "getOptionFunctions": \TypeScriptActionInterface::getOptionFunctionsUnchecked(),
             "actionSucceeded": \TypeScriptActionInterface::actionSucceededUnchecked(),
             "getDynamicAppPath": \TypeScriptActionInterface::getDynamicAppPathUnchecked(),
+            "init": \TypeScriptActionInterface::initUnchecked(),
+            "getCallTimeout": \TypeScriptActionInterface::getCallTimeoutUnchecked(),
+            "getPendingApps": \TypeScriptActionInterface::getPendingAppsUnchecked(),
+            "getPendingAppSummaryInfo": \TypeScriptActionInterface::getPendingAppSummaryInfoUnchecked(),
+            "getDiscoveryInventory": \TypeScriptActionInterface::getDiscoveryInventoryUnchecked(),
+            "initApp": \TypeScriptActionInterface::initAppUnchecked(),
+            "checkAppActions": \TypeScriptActionInterface::checkAppActionsUnchecked(),
+            "getSchemaDataProvider": \TypeScriptActionInterface::getSchemaDataProviderUnchecked(),
         });
     }
 
@@ -425,7 +442,7 @@ TypeScriptActionInterface::setCallTimeout(1h);
     */
     static setCallTimeout(date limit) [dom=PROCESS_CONTROL] {
         # process-wide: it applies to the calls of every caller (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("set the call time limit of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("set the call time limit of the TypeScript action interface");
         if (limit < 1s) {
             throw "CALL-TIMEOUT-ERROR", sprintf("the call time limit must be at least one second; got %y", limit);
         }
@@ -433,9 +450,19 @@ TypeScriptActionInterface::setCallTimeout(1h);
     }
 
     #! Returns the time limit for calls of app and action functions
-    /** @see setCallTimeout()
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the limit is the
+        host's configuration
+
+        @see setCallTimeout()
     */
-    static date getCallTimeout() {
+    static date getCallTimeout() [dom=PROCESS_CONTROL] {
+        # the host's configuration (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the call time limit of the TypeScript action interface");
+        return call_timeout;
+    }
+
+    #! The unchecked implementation of getCallTimeout(), for the module's own code
+    private:internal static date getCallTimeoutUnchecked() {
         return call_timeout;
     }
 
@@ -461,8 +488,38 @@ TypeScriptActionInterface::setCallTimeout(1h);
     }
 
     #! Performs static initialization of the module
-    static init() {
-        TypeScriptActionInterface::checkRoot();
+    /** The module registers the unchecked initialization as its static initializer, which DataProvider runs on the
+        calling thread when the module is loaded, also by code that a sandbox governs; it runs once, so a further
+        call by trusted code does not apply the DataProvider options to the servers' on-demand settings again
+        (undoing disableServerOnDemand() or disableInProcessServerOnDemand()) or initialize every app again
+        (qoretechnologies/qore#7185).  A failed initialization runs again at the next call.
+
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the
+        initialization starts the process-wide servers on demand and initializes every app
+    */
+    static init() [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("initialize the TypeScript action interface");
+        TypeScriptActionInterface::initUnchecked();
+    }
+
+    #! The unchecked implementation of init(), for the module's own code: the module's static initializer
+    private:internal static initUnchecked() {
+        {
+            init_lock.lock();
+            on_exit init_lock.unlock();
+            if (init_done) {
+                return;
+            }
+            init_done = True;
+        }
+        # DataProvider keeps a failed initializer for its next check, so a failed initialization runs again
+        on_error {
+            init_lock.lock();
+            on_exit init_lock.unlock();
+            init_done = False;
+        }
+        TypeScriptActionInterface::checkRootUnchecked();
 
         int opts = DataProvider::getOptions();
         if (opts & DPO_EnableServers) {
@@ -478,16 +535,16 @@ TypeScriptActionInterface::setCallTimeout(1h);
     #! Register one or more dynamic apps from a JavaScript file
     static *list<string> registerDynamicAppsFromJavaScript(string base_dir, data fdata, *bool replace) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register dynamic apps in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register dynamic apps in the TypeScript action interface");
         *list<string> rv = TypeScriptActionInterfacePriv::processDynamicJavaScriptAppFile(base_dir, fdata, replace);
-        map initApp($1), rv;
+        map TypeScriptActionInterface::initAppUnchecked($1), rv;
         return rv;
     }
 
     #! Deregister a dynamic app given the app name
     static deregisterDynamicApp(string name) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("deregister a dynamic app of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("deregister a dynamic app of the TypeScript action interface");
         TypeScriptActionInterface::deregisterDynamicAppIntern(name);
     }
 
@@ -562,7 +619,7 @@ TypeScriptActionInterface::setCallTimeout(1h);
     */
     static initAllApps(bool do_actions = True) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("initialize all apps of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("initialize all apps of the TypeScript action interface");
         TypeScriptActionInterface::initAllAppsUnchecked(do_actions);
     }
 
@@ -570,7 +627,7 @@ TypeScriptActionInterface::setCallTimeout(1h);
     private:internal static initAllAppsUnchecked(bool do_actions = True) {
         foreach string app in (keys appmap) {
             try {
-                TypeScriptActionInterface::initApp(app, do_actions);
+                TypeScriptActionInterface::initAppUnchecked(app, do_actions);
             } catch (hash<ExceptionInfo> ex) {
                 # Action initialization already retains the exact action failure; do not mark a successfully
                 # initialized app as failed. Also cover errors before registerAppIntern(), such as lazy loads.
@@ -583,7 +640,17 @@ TypeScriptActionInterface::setCallTimeout(1h);
     }
 
     #! Returns a list of all pending apps
-    static *list<string> getPendingApps() {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the apps are those
+        that the host's catalogues registered; the module's root data provider lists them for every caller
+    */
+    static *list<string> getPendingApps() [dom=PROCESS_CONTROL] {
+        # the host's catalogue (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the pending apps of the TypeScript action interface");
+        return TypeScriptActionInterface::getPendingAppsUnchecked();
+    }
+
+    #! The unchecked implementation of getPendingApps(), for the module's own code
+    private:internal static *list<string> getPendingAppsUnchecked() {
         return map $1.lwr(), keys appmap;
     }
 
@@ -601,10 +668,20 @@ if (!inventory) {
 }
         @endcode
 
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the inventory and
+        its source failures are those of the host's catalogues
+
         @since %TypeScriptActionInterface 1.1
     */
     static list<hash<DataProviderDiscoveryExpectedIdentityInfo>>
-            getDiscoveryInventory() {
+            getDiscoveryInventory() [dom=PROCESS_CONTROL] {
+        # the host's catalogues (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the discovery inventory of the TypeScript action interface");
+        return TypeScriptActionInterface::getDiscoveryInventoryUnchecked();
+    }
+
+    #! The unchecked implementation of getDiscoveryInventory(), for the module's own code
+    private:internal static list<hash<DataProviderDiscoveryExpectedIdentityInfo>> getDiscoveryInventoryUnchecked() {
         list<hash<DataProviderDiscoveryExpectedIdentityInfo>> rv
             = new list<hash<DataProviderDiscoveryExpectedIdentityInfo>>();
         AutoLock al(discovery_inventory_lock);
@@ -665,7 +742,7 @@ try {
     static reportDiscoverySourceFailure(string source,
             hash<ExceptionInfo> ex) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("report a discovery source failure of the TypeScript action "
+        TsaiProcessState::checkHostScope("report a discovery source failure of the TypeScript action "
             "interface");
         TypeScriptActionInterface::reportDiscoverySourceFailureUnchecked(source, ex);
     }
@@ -696,7 +773,7 @@ TypeScriptActionInterface::clearDiscoverySourceFailure(source);
     */
     static clearDiscoverySourceFailure(string source) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("clear a discovery source failure of the TypeScript action "
+        TsaiProcessState::checkHostScope("clear a discovery source failure of the TypeScript action "
             "interface");
         TypeScriptActionInterface::clearDiscoverySourceFailureUnchecked(source);
     }
@@ -724,9 +801,14 @@ TypeScriptActionInterface::clearDiscoverySourceFailure(source);
         @return the action script paths seen registering an app without a complete identity batch, sorted; an
             empty list when every registration observed the current producer contract
 
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code: the sources are paths of
+        the host (qoretechnologies/qore#7185)
+
         @since %TypeScriptActionInterface 1.1
     */
-    static list<string> getIncompleteInventorySources() {
+    static list<string> getIncompleteInventorySources() [dom=PROCESS_CONTROL] {
+        # the host's paths (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the incomplete inventory sources of the TypeScript action interface");
         AutoLock al(discovery_inventory_lock);
         return sort(keys incomplete_inventory_source_map);
     }
@@ -753,7 +835,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static registerDiscoveryInventory(list<auto> identities) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register the discovery inventory of the TypeScript action "
+        TsaiProcessState::checkHostScope("register the discovery inventory of the TypeScript action "
             "interface");
         TypeScriptActionInterface::registerDiscoveryInventoryUnchecked(identities);
     }
@@ -827,7 +909,17 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     #! Returns summary info for pending (not-yet-initialized) apps from metadata
-    static *list<hash<DataProviderSummaryInfo>> getPendingAppSummaryInfo() {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the apps are those
+        that the host's catalogues registered; the module's root data provider lists them for every caller
+    */
+    static *list<hash<DataProviderSummaryInfo>> getPendingAppSummaryInfo() [dom=PROCESS_CONTROL] {
+        # the host's catalogue (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the pending apps of the TypeScript action interface");
+        return TypeScriptActionInterface::getPendingAppSummaryInfoUnchecked();
+    }
+
+    #! The unchecked implementation of getPendingAppSummaryInfo(), for the module's own code
+    private:internal static *list<hash<DataProviderSummaryInfo>> getPendingAppSummaryInfoUnchecked() {
         return map <DataProviderSummaryInfo>{
             "name": $1.value.app.name.lwr(),
             "display_name": $1.value.app.display_name,
@@ -844,7 +936,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static setAppBaseDir(*string dir) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("set the app base directory of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("set the app base directory of the TypeScript action interface");
         TypeScriptActionInterface::setAppBaseDirUnchecked(dir);
     }
 
@@ -854,7 +946,17 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     #! Returns the base directory used to resolve paths in app definitions relative to the app catalogue
-    static string getAppBaseDir() {
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code: the directory is a path
+        of the host
+    */
+    static string getAppBaseDir() [dom=PROCESS_CONTROL] {
+        # the host's configuration (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the app base directory of the TypeScript action interface");
+        return TypeScriptActionInterface::getAppBaseDirUnchecked();
+    }
+
+    #! The unchecked implementation of getAppBaseDir(), for the module's own code
+    private:internal static string getAppBaseDirUnchecked() {
         return app_base_dir ?? getcwd();
     }
 
@@ -876,7 +978,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static int registerPendingAppsFromIndex(string apps_dir) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register the pending apps of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register the pending apps of the TypeScript action interface");
         return TypeScriptActionInterface::registerPendingAppsFromIndexUnchecked(apps_dir);
     }
 
@@ -930,10 +1032,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             TsaiProcessState::app_load_paths{name} = apps_dir + DirSep + dname;
             appcasemap{appname} = name;
             ConnectionSchemeCache::registerPendingScheme(info.scheme, sub () {
-                TypeScriptActionInterface::initApp(name);
+                TypeScriptActionInterface::initAppUnchecked(name);
             });
             DataProviderActionCatalog::registerPendingApp(name, sub () {
-                TypeScriptActionInterface::initApp(name);
+                TypeScriptActionInterface::initAppUnchecked(name);
             }, TypeScriptActionInterface::getModulePath());
             ++count;
         }
@@ -946,7 +1048,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static startServerOnDemand() [dom=PROCESS_CONTROL] {
         # the server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("start the TypeScript action process server on demand");
+        TsaiProcessState::checkHostScope("start the TypeScript action process server on demand");
         TsaiProcessState::sm.lock();
         on_exit TsaiProcessState::sm.unlock();
 
@@ -959,7 +1061,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static disableServerOnDemand() [dom=PROCESS_CONTROL] {
         # the server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("disable the TypeScript action process server on demand");
+        TsaiProcessState::checkHostScope("disable the TypeScript action process server on demand");
         TsaiProcessState::sm.lock();
         on_exit TsaiProcessState::sm.unlock();
 
@@ -967,7 +1069,14 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     #! Starts the server if it has not been started
-    static bool checkServer() {
+    /** @return True if the server is running
+
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the server is
+        process-wide and runs the calls of every caller
+    */
+    static bool checkServer() [dom=PROCESS_CONTROL] {
+        # the server is process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("start the TypeScript action process server");
         return TsaiProcessState::checkServer();
     }
 
@@ -979,7 +1088,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static bool startServer() [dom=PROCESS_CONTROL] {
         # the server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("start the TypeScript action process server");
+        TsaiProcessState::checkHostScope("start the TypeScript action process server");
         TsaiProcessState::sm.lock();
         on_exit TsaiProcessState::sm.unlock();
 
@@ -997,7 +1106,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static shutdownServer(*int signal) [dom=PROCESS_CONTROL] {
         # the server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("shut down the TypeScript action process server");
+        TsaiProcessState::checkHostScope("shut down the TypeScript action process server");
         TsaiProcessState::shutdownServer(signal);
     }
 
@@ -1007,7 +1116,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static *JavaScriptProgramPool getFirstPool() [dom=PROCESS_CONTROL] {
         # the pools of the catalogues are process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the first program pool of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("get the first program pool of the TypeScript action interface");
         return TypeScriptActionInterfacePriv::getFirstPool();
     }
 
@@ -1020,7 +1129,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static startInProcessServerOnDemand(*JavaScriptProgramPool pool, *int max_size) [dom=PROCESS_CONTROL] {
         # the in-process server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("start the TypeScript action in-process server on demand");
+        TsaiProcessState::checkHostScope("start the TypeScript action in-process server on demand");
         TsaiProcessState::sm.lock();
         on_exit TsaiProcessState::sm.unlock();
 
@@ -1046,7 +1155,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static setInProcessServer(JavaScriptInProcessPool ip) [dom=PROCESS_CONTROL] {
         # the in-process server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("set the TypeScript action in-process server");
+        TsaiProcessState::checkHostScope("set the TypeScript action in-process server");
         TsaiProcessState::sm.lock();
         on_exit TsaiProcessState::sm.unlock();
 
@@ -1059,7 +1168,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static disableInProcessServerOnDemand() [dom=PROCESS_CONTROL] {
         # the in-process server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("disable the TypeScript action in-process server on demand");
+        TsaiProcessState::checkHostScope("disable the TypeScript action in-process server on demand");
         TsaiProcessState::sm.lock();
         on_exit TsaiProcessState::sm.unlock();
 
@@ -1079,7 +1188,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static *JavaScriptInProcessPool checkInProcessServer() [dom=PROCESS_CONTROL] {
         # the in-process server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the TypeScript action in-process server");
+        TsaiProcessState::checkHostScope("get the TypeScript action in-process server");
         return TsaiProcessState::checkInProcessServer();
     }
 
@@ -1094,7 +1203,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static shutdownInProcessServer(*int signal) [dom=PROCESS_CONTROL] {
         # the in-process server is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("shut down the TypeScript action in-process server");
+        TsaiProcessState::checkHostScope("shut down the TypeScript action in-process server");
         TsaiProcessState::shutdownInProcessServer(signal);
     }
 
@@ -1123,9 +1232,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the call map is
         process-wide, and its calls are made for every caller
     */
-    static string registerAsyncCall(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, ...) {
+    static string registerAsyncCall(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, ...)
+            [dom=PROCESS_CONTROL] {
         # the call map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register a call in the TypeScript action call map");
+        TsaiProcessState::checkHostScope("register a call in the TypeScript action call map");
         return TsaiProcessState::registerAsyncCallArgs(ignore_dup, \call, argv);
     }
 
@@ -1138,9 +1248,9 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the call map is
         process-wide, and its calls are made for every caller
     */
-    static string registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
+    static string registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) [dom=PROCESS_CONTROL] {
         # the call map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register a call in the TypeScript action call map");
+        TsaiProcessState::checkHostScope("register a call in the TypeScript action call map");
         return TsaiProcessState::registerAsyncCallArgs(False, \call, argv);
     }
 
@@ -1153,9 +1263,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the call map is
         process-wide, and its calls are made for every caller
     */
-    static string registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
+    static string registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args)
+            [dom=PROCESS_CONTROL] {
         # the call map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register a call in the TypeScript action call map");
+        TsaiProcessState::checkHostScope("register a call in the TypeScript action call map");
         return TsaiProcessState::registerAsyncCallArgs(False, \call, args);
     }
 
@@ -1171,13 +1282,13 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     */
     static hash<AsyncCallInfo> getCall(string key) [dom=PROCESS_CONTROL] {
         # the call map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get a call from the TypeScript action call map");
+        TsaiProcessState::checkHostScope("get a call from the TypeScript action call map");
         return TsaiProcessState::getCall(key);
     }
 
     static registerApp(JavaScriptObject app) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an app in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register an app in the TypeScript action interface");
         TypeScriptActionInterface::registerAppUnchecked(app);
     }
 
@@ -1189,7 +1300,9 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         on_error TSAI::error("TypeScriptActionInterface: error registering app %y: %s", app.name,
             get_exception_string($1));
         try {
-            pool = JavaScriptProgramPool::getPool(pgm, \first);
+            hash<auto> pool_info = TsaiProcessState::Internal.poolGetPoolInfo(pgm);
+            pool = pool_info.pool;
+            first = pool_info.first;
         } catch (hash<ExceptionInfo> ex) {
             TypeScriptActionInterface::reportProducerRegistrationFailure(
                 "app", app.name, NOTHING, ex);
@@ -1212,7 +1325,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
     static registerExistingApp(JavaScriptObject app) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an existing app in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register an existing app in the TypeScript action interface");
         TypeScriptActionInterface::registerExistingAppUnchecked(app);
     }
 
@@ -1224,7 +1337,9 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         on_error TSAI::error("TypeScriptActionInterface: error registering existing app %y: %s", app.name,
             get_exception_string($1));
         try {
-            pool = JavaScriptProgramPool::getPool(pgm, \first);
+            hash<auto> pool_info = TsaiProcessState::Internal.poolGetPoolInfo(pgm);
+            pool = pool_info.pool;
+            first = pool_info.first;
         } catch (hash<ExceptionInfo> ex) {
             TypeScriptActionInterface::reportProducerRegistrationFailure(
                 "app", app.name, NOTHING, ex);
@@ -1247,7 +1362,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
     static registerAction(JavaScriptObject action) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an action in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register an action in the TypeScript action interface");
         TypeScriptActionInterface::registerActionUnchecked(action);
     }
 
@@ -1259,7 +1374,9 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         on_error TSAI::error("TypeScriptActionInterface: error registering app %y action %y: %s", action.app,
             action.action, get_exception_string($1));
         try {
-            pool = JavaScriptProgramPool::getPool(pgm, \first);
+            hash<auto> pool_info = TsaiProcessState::Internal.poolGetPoolInfo(pgm);
+            pool = pool_info.pool;
+            first = pool_info.first;
         } catch (hash<ExceptionInfo> ex) {
             TypeScriptActionInterface::reportProducerRegistrationFailure(
                 "action", action.app, action.action, ex);
@@ -1298,7 +1415,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
     static registerApp(hash<auto> app, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an app in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register an app in the TypeScript action interface");
         TypeScriptActionInterface::registerAppUnchecked(app, pool);
     }
 
@@ -1504,7 +1621,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         appmap{app.name} = <AppInfo>{
             "app": app,
             "schema_metadata": schema_metadata,
-            "cwd": TypeScriptActionInterface::getAppBaseDir(),
+            "cwd": TypeScriptActionInterface::getAppBaseDirUnchecked(),
 
             "get_table_list": get_table_list,
             "begin_transaction": begin_transaction,
@@ -1534,11 +1651,11 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             if (app.rest) {
                 string sname = "tsrest-" + appname;
                 ConnectionSchemeCache::registerPendingScheme(sname, sub () {
-                    TypeScriptActionInterface::initApp(app.name);
+                    TypeScriptActionInterface::initAppUnchecked(app.name);
                 });
             }
             DataProviderActionCatalog::registerPendingApp(app.name, sub () {
-                TypeScriptActionInterface::initApp(app.name);
+                TypeScriptActionInterface::initAppUnchecked(app.name);
             }, TypeScriptActionInterface::getModulePath());
         }
         TSAI::info("Registered TypeScript app %y -> %y", app.name, app.info);
@@ -1547,7 +1664,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
     static registerExistingApp(hash<auto> app, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an existing app in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register an existing app in the TypeScript action interface");
         TypeScriptActionInterface::registerExistingAppUnchecked(app, pool);
     }
 
@@ -1591,7 +1708,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         hash<AppInfo> info = <AppInfo>{
             "app": app,
-            "cwd": TypeScriptActionInterface::getAppBaseDir(),
+            "cwd": TypeScriptActionInterface::getAppBaseDirUnchecked(),
             "pool": pool,
         };
 
@@ -1599,12 +1716,26 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         # must register the app immediately
         appmap{app.name} = info;
-        TypeScriptActionInterface::initApp(app.name);
+        TypeScriptActionInterface::initAppUnchecked(app.name);
         TSAI::debug("Registered existing app %y", app.name);
     }
 
-    static bool initAppAction(string app, string action) {
-        TypeScriptActionInterface::initApp(app);
+    #! Initializes an action of an app
+    /** @return True if the action was initialized here
+
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the action is
+        registered in the process-wide registries; the module initializes it on demand for every caller
+    */
+    static bool initAppAction(string app, string action) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("initialize an action of the TypeScript action interface");
+        return TypeScriptActionInterface::initAppActionUnchecked(app, action);
+    }
+
+    #! The unchecked implementation of initAppAction(), for the module's own code
+    private:internal static bool initAppActionUnchecked(string app, string action) {
+        CatalogueRegistrationHelper crh();
+        TypeScriptActionInterface::initAppUnchecked(app);
         app = appcasemap{app} ?? app;
         TypeScriptActionInterface::checkAppSchemaError(app);
         if (*hash<ActionInfo> info = remove actionmap{app}{action}) {
@@ -1618,7 +1749,33 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         return False;
     }
 
-    static bool initApp(string app, *bool do_actions, *string dynamic_path) {
+    #! Initializes an app
+    /** @param app the app
+        @param do_actions also initialize the app's actions
+        @param dynamic_path the directory of a dynamic app to load if the app is not registered
+
+        @return True if the app was initialized here
+
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the app is
+        registered in the process-wide registries; the module initializes an app on demand for every caller
+    */
+    static bool initApp(string app, *bool do_actions, *string dynamic_path) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("initialize an app of the TypeScript action interface");
+        return TypeScriptActionInterface::initAppUnchecked(app, do_actions, dynamic_path);
+    }
+
+    #! The unchecked implementation of initApp(), for the module's own code
+    /** The registration of the app is the module's own, also when it runs for a sandboxed caller that uses the app
+        first (see CatalogueRegistrationHelper)
+    */
+    private:internal static bool initAppUnchecked(string app, *bool do_actions, *string dynamic_path) {
+        CatalogueRegistrationHelper crh();
+        # the error of an initialization that fails for a sandboxed caller, as when its sandbox refuses the files of
+        # the app, can name the host's paths: the caller gets the error code only (qoretechnologies/qore#7185)
+        on_error if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            rethrow $1.err, sprintf("app %y could not be initialized for the calling code", app);
+        }
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
@@ -1678,7 +1835,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
     static hash<AppInfo> getInitializedRecordBasedAppInfo(string app) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the registration of an app of the TypeScript action "
+        TsaiProcessState::checkHostScope("get the registration of an app of the TypeScript action "
             "interface");
         return TypeScriptActionInterface::getInitializedRecordBasedAppInfoUnchecked(app);
     }
@@ -1787,7 +1944,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         remove appmap{info.app.name};
 
         if (do_actions) {
-            TypeScriptActionInterface::checkAppActions(info.app.name);
+            TypeScriptActionInterface::checkAppActionsUnchecked(info.app.name);
         }
         return True;
     }
@@ -1803,20 +1960,31 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         remove appmap{info.app.name};
 
         if (do_actions) {
-            TypeScriptActionInterface::checkAppActions(info.app.name);
+            TypeScriptActionInterface::checkAppActionsUnchecked(info.app.name);
         }
         return True;
     }
 
     #! Initialize all actions for the given app
-    static checkAppActions(string app) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the actions are
+        registered in the process-wide registries; the module initializes them on demand for every caller
+    */
+    static checkAppActions(string app) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("initialize the actions of an app of the TypeScript action interface");
+        TypeScriptActionInterface::checkAppActionsUnchecked(app);
+    }
+
+    #! The unchecked implementation of checkAppActions(), for the module's own code
+    private:internal static checkAppActionsUnchecked(string app) {
+        CatalogueRegistrationHelper crh();
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
-        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppUnchecked(app);
         TypeScriptActionInterface::checkAppSchemaError(app);
         foreach string action in (keys actionmap{app}) {
-            TypeScriptActionInterface::initAppAction(app, action);
+            TypeScriptActionInterface::initAppActionUnchecked(app, action);
         }
     }
 
@@ -1835,8 +2003,14 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         @code{.py}
         auto error = TypeScriptActionInterface::getAppSchemaError("trello");
         @endcode
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code: the error, with its call
+        stack and source locations, was raised by the host's load of the app (qoretechnologies/qore#7185); a sandboxed
+        caller gets the error's code and description when it uses the app's actions
     */
-    static *hash<ExceptionInfo> getAppSchemaError(string app) {
+    static *hash<ExceptionInfo> getAppSchemaError(string app) [dom=PROCESS_CONTROL] {
+        # the host's error (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the schema error of a TypeScript app");
         return app_schema_error_map{appcasemap{app} ?? app};
     }
 
@@ -1901,7 +2075,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                 throw "APP-ERROR", "Invalid 'openapi_schema_map' property; this property "
                     "cannot be given if `openapi` is provided";
             }
-            schema = TypeScriptActionInterface::getRestSchema(appname, openapi_loc, remove app.openapi_options,
+            schema = TypeScriptActionInterface::getRestSchemaUnchecked(appname, openapi_loc, remove app.openapi_options,
                 remove app.openapi_paths, remove app.openapi_type_overrides);
         # Handle schema map
         } else if (*hash<auto> smap = remove app.openapi_schema_map) {
@@ -1927,7 +2101,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                     throw "APP-ERROR", sprintf("Schema map entry %y must have an 'openapi' key",
                         i.key);
                 }
-                schema_schema_map{i.key} = TypeScriptActionInterface::getRestSchema(appname, schema_loc,
+                schema_schema_map{i.key} = TypeScriptActionInterface::getRestSchemaUnchecked(appname, schema_loc,
                     remove i.value.openapi_options ?? schema_options,
                     remove i.value.openapi_paths, remove i.value.openapi_type_overrides);
             }
@@ -2098,7 +2272,6 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                         "app": app.name,
                         "type": "post_auth",
                         "label": sprintf("REST post-auth option function for app %y", app.name),
-                        "pool": pool,
                         "async_call": rest_modifiers.set_options_post_auth,
                         "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
                     };
@@ -2114,7 +2287,6 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                         "app": app.name,
                         "type": "post_auth_code",
                         "label": sprintf("REST post-auth-code option function for app %y", app.name),
-                        "pool": pool,
                         "async_call": rest_modifiers.set_options_post_auth_code,
                         "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
                     };
@@ -2137,7 +2309,6 @@ TypeScriptActionInterface::registerDiscoveryInventory((
                             "app": app.name,
                             "type": "conn_update",
                             "label": sprintf("REST connection update option function for app %y", app.name),
-                            "pool": pool,
                             "async_call": rest_modifiers.connection_update_option."code",
                             "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
                         },
@@ -2212,7 +2383,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         DataProviderActionCatalog::registerApp(cast<hash<DataProviderAppInfo>>(app0));
 
         TypeScriptActionAppDataProvider prov(appname);
-        TypeScriptActionInterface::checkRoot();
+        TypeScriptActionInterface::checkRootUnchecked();
         TsaiProcessState::Internal.rootRegisterChild(appname, prov);
 
         if (google_app) {
@@ -2239,7 +2410,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         string appname = app.name.lwr();
         TypeScriptActionAppDataProvider prov(appname, app."root_provider" ?? app."module");
-        TypeScriptActionInterface::checkRoot();
+        TypeScriptActionInterface::checkRootUnchecked();
         TsaiProcessState::Internal.rootRegisterChild(appname, prov);
     }
 
@@ -2261,9 +2432,21 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("Mailchimp",
     "/opt/qorus/app-schemas/mailchimp/schema.json", NOTHING, ("/lists:GET",), NOTHING);
         @endcode
+
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the schema is read
+        from a host location and cached in the process-wide schema cache
     */
     static AbstractRestSchemaValidator getRestSchema(string appname, string schema_loc, *hash<auto> schema_opts,
-            *list<auto> paths, *hash<auto> type_overrides) {
+            *list<auto> paths, *hash<auto> type_overrides) [dom=PROCESS_CONTROL] {
+        # host files and the process-wide cache (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("load a REST schema for the TypeScript action interface");
+        return TypeScriptActionInterface::getRestSchemaUnchecked(appname, schema_loc, schema_opts, paths,
+            type_overrides);
+    }
+
+    #! The unchecked implementation of getRestSchema(), for the module's own code
+    private:internal static AbstractRestSchemaValidator getRestSchemaUnchecked(string appname, string schema_loc,
+            *hash<auto> schema_opts, *list<auto> paths, *hash<auto> type_overrides) {
         # Hash both inputs to keep the basename bounded even for long snapshot locations.
         # Allowed paths form a set; JSON preserves boundaries even when paths contain commas.
         hash<string, bool> path_set = {};
@@ -2531,9 +2714,9 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     # Used by external code to add child data providers to an app
     static registerAppChildDataProvider(string app, AbstractDataProvider prov) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register a child provider of an app of the TypeScript action "
+        TsaiProcessState::checkHostScope("register a child provider of an app of the TypeScript action "
             "interface");
-        initApp(app);
+        TypeScriptActionInterface::initAppUnchecked(app);
         TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getSharedAppDataProvider(app);
         TsaiProcessState::Internal.appRegisterChild(parent, prov.getName(), prov);
     }
@@ -2541,7 +2724,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     # Used by external code to add child data providers to an app
     static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register a child provider of an app of the TypeScript action "
+        TsaiProcessState::checkHostScope("register a child provider of an app of the TypeScript action "
             "interface");
         try {
             registerAppChildDataProvider(app, prov);
@@ -2555,7 +2738,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     # Used by external code to revert adding child data providers to an app
     static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("deregister a child provider of an app of the TypeScript action "
+        TsaiProcessState::checkHostScope("deregister a child provider of an app of the TypeScript action "
             "interface");
         TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getSharedAppDataProvider(app);
         return TsaiProcessState::Internal.appDeregisterChild(parent, child);
@@ -2612,7 +2795,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
 
     static registerAction(hash<auto> action, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an action in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register an action in the TypeScript action interface");
         TypeScriptActionInterface::registerActionUnchecked(action, pool);
     }
 
@@ -2656,7 +2839,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             "pool": pool,
         };
         DataProviderActionCatalog::registerPendingAppAction(action.app, action.action, sub () {
-            TypeScriptActionInterface::initAppAction(action.app, action.action);
+            TypeScriptActionInterface::initAppActionUnchecked(action.app, action.action);
         });
     }
 
@@ -2783,7 +2966,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "get_dynamic_type",
                 "label": sprintf("Dynamic option type function for app %y action %y", action.app, action.action),
-                "pool": pool,
                 "async_call": c,
                 "to": call_timeout,
                 "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
@@ -2835,7 +3017,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "webhook_register",
                 "label": sprintf("Webhook registration function for app %y action %y", app.name, action.action),
-                "pool": pool,
                 "async_call": webhook_register_code,
                 "to": call_timeout,
             };
@@ -2852,7 +3033,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "webhook_deregister",
                 "label": sprintf("Webhook deregistration function for app %y action %y", app.name, action.action),
-                "pool": pool,
                 "async_call": webhook_deregister_code,
                 "to": call_timeout,
             };
@@ -2927,7 +3107,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "event_function",
                 "label": sprintf("Async event function for app %y action %y", app.name, action.action),
-                "pool": pool,
                 "async_call": event_function,
                 # an event function runs until its events are stopped
                 "unlimited": True,
@@ -2974,7 +3153,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "app": name,
                     "type": "post_auth",
                     "label": sprintf("clone: post_auth for app %y", name),
-                    "pool": pool,
                     "async_call": rest_modifiers.set_options_post_auth,
                     "to": seconds(rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
                 };
@@ -2985,7 +3163,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "app": name,
                     "type": "post_auth_code",
                     "label": sprintf("clone: post_auth_code for app %y", name),
-                    "pool": pool,
                     "async_call": rest_modifiers.set_options_post_auth_code,
                     "to": seconds(rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
                 };
@@ -2997,7 +3174,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "app": name,
                     "type": "conn_update",
                     "label": sprintf("clone: conn_update for app %y", name),
-                    "pool": pool,
                     "async_call": rest_modifiers.connection_update_option."code",
                     "to": seconds(rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
                 };
@@ -3029,7 +3205,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": act,
                 "type": "api_function",
                 "label": sprintf("clone: API function for app %y action %y", app, act),
-                "pool": pool,
                 "async_call": action.api_function,
                 "to": call_timeout,
             };
@@ -3045,7 +3220,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "action": act,
                     "type": "api_function",
                     "label": sprintf("clone: %s for app %y action %y", attr, app, act),
-                    "pool": pool,
                     "async_call": action{attr},
                     "to": call_timeout,
                 };
@@ -3065,7 +3239,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": act,
                 "type": "event_function",
                 "label": sprintf("clone: event function for app %y action %y", app, act),
-                "pool": pool,
                 "async_call": action.event_function,
                 # an event function runs until its events are stopped
                 "unlimited": True,
@@ -3081,7 +3254,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "action": act,
                     "type": attr,
                     "label": sprintf("clone: %s for app %y action %y", attr, app, act),
-                    "pool": pool,
                     "async_call": action{attr},
                     "to": call_timeout,
                 };
@@ -3105,7 +3277,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                             "type": opt_attr,
                             "label": sprintf("clone: %s for app %y action %y option %y",
                                 opt_attr, app, act, i.key),
-                            "pool": pool,
                             "async_call": i.value{opt_attr},
                             "to": call_timeout,
                         };
@@ -3122,7 +3293,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                             "type": dep_attr,
                             "label": sprintf("clone: %s for app %y action %y option %y",
                                 dep_attr, app, act, i.key),
-                            "pool": pool,
                             "async_call": i.value{dep_attr},
                             "to": call_timeout,
                         };
@@ -3157,7 +3327,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             "app": app,
             "type": key,
             "label": sprintf("%s %s function", get_desc(), type),
-            "pool": pool,
             "async_call": callable,
             "to": call_timeout,
         };
@@ -3224,7 +3393,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "action": action.action,
                     "type": "api_function",
                     "label": sprintf("API function for app %y action %y", app.name, action.action),
-                    "pool": pool,
                     "async_call": api_function,
                     "to": call_timeout,
                 };
@@ -3245,7 +3413,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "api_function",
                 "label": sprintf("Request type function for app %y action %y", app.name, action.action),
-                "pool": pool,
                 "async_call": js_api,
                 "to": call_timeout,
             };
@@ -3266,7 +3433,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "api_function",
                 "label": sprintf("Response type function for app %y action %y", app.name, action.action),
-                "pool": pool,
                 "async_call": js_api,
                 "to": call_timeout,
             };
@@ -3286,7 +3452,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "api_function",
                 "label": sprintf("Request type function for app %y action %y", app.name, action.action),
-                "pool": pool,
                 "async_call": js_api,
                 "to": call_timeout,
             };
@@ -3306,7 +3471,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "action": action.action,
                 "type": "api_function",
                 "label": sprintf("Request type function for app %y action %y", app.name, action.action),
-                "pool": pool,
                 "async_call": js_api,
                 "to": call_timeout,
             };
@@ -3417,7 +3581,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             # route pending-app initialization through initApp() so it is serialized by the per-app
             # in-progress marker; calling initAppIntern() directly here would bypass the marker and
             # race a concurrent initApp() for the same app
-            TypeScriptActionInterface::initApp(app);
+            TypeScriptActionInterface::initAppUnchecked(app);
         }
         string appname = app.lwr();
         # the provider itself, also if the root provider gave a copy (to sandboxed code)
@@ -3425,18 +3589,29 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     static TypeScriptActionAppDataProvider getDataProvider(string app, TypeScriptAppRestConnection conn) {
-        TypeScriptActionInterface::checkRoot();
+        TypeScriptActionInterface::checkRootUnchecked();
         TypeScriptActionAppDataProvider parent = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
         return parent.copyWithParent(parent, conn);
     }
 
     static TypeScriptActionAppDataProvider getDataProvider(string app, RestConnection conn) {
-        TypeScriptActionInterface::checkRoot();
+        TypeScriptActionInterface::checkRootUnchecked();
         TypeScriptActionAppDataProvider parent = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
         return parent.copyWithParent(parent, conn);
     }
 
-    static checkRoot() {
+    #! Creates the root data provider of the apps if it does not exist
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the provider is
+        process-wide
+    */
+    static checkRoot() [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("create the root data provider of the TypeScript action interface");
+        TypeScriptActionInterface::checkRootUnchecked();
+    }
+
+    #! The unchecked implementation of checkRoot(), for the module's own code
+    private:internal static checkRootUnchecked() {
         if (root) {
             return;
         }
@@ -3454,7 +3629,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     static *bool getOptionAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an option function in the TypeScript action call map");
+        TsaiProcessState::checkHostScope("register an option function in the TypeScript action call map");
         return TypeScriptActionInterface::getOptionAllowedValuesFunctionUnchecked(\action, fctx, key, \h, io_timeout,
                 keep_field_functions);
     }
@@ -3478,7 +3653,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "type": "get_allowed_values",
                 "label": sprintf("Reference data function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": fctx.pool,
                 "async_call": get_allowed_values,
                 "to": io_timeout,
             };
@@ -3495,7 +3669,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     static *bool getOptionElementAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an option function in the TypeScript action call map");
+        TsaiProcessState::checkHostScope("register an option function in the TypeScript action call map");
         return TypeScriptActionInterface::getOptionElementAllowedValuesFunctionUnchecked(\action, fctx, key, \h,
                 io_timeout, keep_field_functions);
     }
@@ -3519,7 +3693,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "type": "get_element_allowed_values",
                 "label": sprintf("Element reference data function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": fctx.pool,
                 "async_call": get_element_allowed_values,
                 "to": io_timeout,
             };
@@ -3536,7 +3709,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     static *bool getOptionDefaultValueFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an option function in the TypeScript action call map");
+        TsaiProcessState::checkHostScope("register an option function in the TypeScript action call map");
         return TypeScriptActionInterface::getOptionDefaultValueFunctionUnchecked(\action, fctx, key, \h, io_timeout,
                 keep_field_functions);
     }
@@ -3560,7 +3733,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "type": "get_default_value",
                 "label": sprintf("Default value data function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": fctx.pool,
                 "async_call": get_default_value,
                 "to": io_timeout,
             };
@@ -3578,7 +3750,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     static *bool getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *bool keep_field_functions) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register the option functions in the TypeScript action call map");
+        TsaiProcessState::checkHostScope("register the option functions in the TypeScript action call map");
         return TypeScriptActionInterface::getOptionFunctionsUnchecked(\action, fctx, key, \h, keep_field_functions);
     }
 
@@ -3671,7 +3843,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "type": "get_dependent_options",
                 "label": sprintf("Dependent option function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": fctx.pool,
                 "async_call": get_dependent_options,
                 "to": io_timeout,
             };
@@ -3693,7 +3864,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "type": "get_dependent_response_options",
                 "label": sprintf("Dependent response option function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": fctx.pool,
                 "async_call": get_dependent_response_options,
                 "to": io_timeout,
             };
@@ -3714,7 +3884,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 "type": "get_dynamic_type",
                 "label": sprintf("Dynamic option type function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": fctx.pool,
                 "async_call": get_dynamic_type,
                 "to": io_timeout,
                 "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
@@ -3773,7 +3942,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static registerCreatingAction(string app, string action) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register a creating action in the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register a creating action in the TypeScript action interface");
         TypeScriptActionInterface::registerCreatingActionUnchecked(app, action);
     }
 
@@ -3794,7 +3963,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static actionSucceeded(string app, string action) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("report a successful action to the TypeScript action interface");
+        TsaiProcessState::checkHostScope("report a successful action to the TypeScript action interface");
         TypeScriptActionInterface::actionSucceededUnchecked(app, action);
     }
 
@@ -3807,7 +3976,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             creates = creating_actions{app}{action} ?? False;
         }
         if (creates) {
-            TypeScriptActionDataProviderBase::clearAppCache(app);
+            TsaiProcessState::Internal.clearAppCache(app);
         }
     }
 
@@ -3936,7 +4105,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         if (TypeScriptActionInterface::hasDiscoveryInventoryBatch(app_data.name)) {
             return;
         }
-        TypeScriptActionInterface::reportMissingDiscoveryInventoryBatch(app_data.name, pool.getPath());
+        TypeScriptActionInterface::reportMissingDiscoveryInventoryBatch(app_data.name,
+            TsaiProcessState::Internal.poolGetPath(pool));
     }
 
     #! Returns whether a complete identity batch is waiting for \a app, leaving the marker in place
@@ -3966,7 +4136,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         }
         # logged outside the inventory lock: the logger is not in this lock's order
         TSAI::warn("TypeScriptActionInterface: action script %y registered app %y without publishing a "
-            "complete producer identity batch first; it predates the registerDiscoveryInventoryUnchecked() API in "
+            "complete producer identity batch first; it predates the registerDiscoveryInventory() API in "
             "this module, so qualified discovery has no exact inventory for its apps; rebuild the action "
             "script from the same source revision as this module", source, app);
     }
@@ -4392,7 +4562,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "type": "get_allowed_values",
                     "label": sprintf("Reference data function for app %y action %y option %y", fctx.app, fctx.action,
                         key),
-                    "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
                 };
@@ -4418,7 +4587,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "type": "get_element_allowed_values",
                     "label": sprintf("Element reference data function for app %y action %y option %y", fctx.app,
                         fctx.action, key),
-                    "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
                 };
@@ -4444,7 +4612,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "type": "get_dynamic_type",
                     "label": sprintf("Dynamic type function for app %y action %y option %y", fctx.app, fctx.action,
                         key),
-                    "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
                     "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
@@ -4465,7 +4632,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "type": "get_dependent_options",
                     "label": sprintf("Dependent option function for app %y action %y option %y", fctx.app,
                         fctx.action, key),
-                    "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
                 };
@@ -4483,7 +4649,6 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                     "type": "get_default_value",
                     "label": sprintf("Default value data function for app %y action %y option %y", fctx.app,
                         fctx.action, key),
-                    "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
                     "info": {
@@ -4527,7 +4692,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static *string getAppLoadPath(string app) [dom=PROCESS_CONTROL] {
         # the paths are those of the host's catalogue (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the load path of an app of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("get the load path of an app of the TypeScript action interface");
         return TsaiProcessState::app_load_paths{app};
     }
 
@@ -4537,7 +4702,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static recordAppLoadPath(string app, string path) [dom=PROCESS_CONTROL] {
         # the paths are process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("record the load path of an app of the TypeScript action "
+        TsaiProcessState::checkHostScope("record the load path of an app of the TypeScript action "
             "interface");
         TsaiProcessState::app_load_paths{app} = path;
     }
@@ -4552,7 +4717,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static *JavaScriptProgramPool getAppPool(string app) [dom=PROCESS_CONTROL] {
         # the pools hold the host's catalogues (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the program pool of an app of the TypeScript action "
+        TsaiProcessState::checkHostScope("get the program pool of an app of the TypeScript action "
             "interface");
         return TsaiProcessState::app_pools{app};
     }
@@ -4563,7 +4728,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static list<string> getCatalogueAppNames() [dom=PROCESS_CONTROL] {
         # the catalogues are the host's (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the names of the catalogue apps of the TypeScript "
+        TsaiProcessState::checkHostScope("get the names of the catalogue apps of the TypeScript "
             "action interface");
         return TsaiProcessState::getCatalogueAppNames();
     }
@@ -4585,7 +4750,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static hash<string, code> getInterface() [dom=PROCESS_CONTROL] {
         # its calls register in the process-wide registries of the module (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the registration interface of the TypeScript action "
+        TsaiProcessState::checkHostScope("get the registration interface of the TypeScript action "
             "interface");
         return TsaiProcessState::Api;
     }
@@ -4600,7 +4765,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static hash<string, code> getTestInterface() [dom=PROCESS_CONTROL] {
         # its calls use the process-wide registries of the module (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the test interface of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("get the test interface of the TypeScript action interface");
         return TsaiProcessState::TestApi;
     }
 
@@ -4615,14 +4780,19 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static TypeScriptActionRootDataProvider getRoot() [dom=PROCESS_CONTROL] {
         # the provider is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the root data provider of the TypeScript action "
+        TsaiProcessState::checkHostScope("get the root data provider of the TypeScript action "
             "interface");
-        TypeScriptActionInterface::checkRoot();
+        TypeScriptActionInterface::checkRootUnchecked();
         return root;
     }
 
     #! Creates a connection for the given app
-    static string createConnection(string app, JavaScriptObject opts) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the connections
+        created with createConnection() are process-wide (qoretechnologies/qore#7185)
+    */
+    static string createConnection(string app, JavaScriptObject opts) [dom=PROCESS_CONTROL] {
+        # the connection map is process-wide; refused before the options are read (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("create a connection in the TypeScript action connection map");
         return TypeScriptActionInterface::createConnection(app, opts.toData());
     }
 
@@ -4632,9 +4802,9 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         created with createConnection() are process-wide and hold the options, including the credentials, that
         trusted code gave them
     */
-    static string createConnection(string app, *hash<auto> opts) {
+    static string createConnection(string app, *hash<auto> opts) [dom=PROCESS_CONTROL] {
         # the connection map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("create a connection in the TypeScript action connection map");
+        TsaiProcessState::checkHostScope("create a connection in the TypeScript action connection map");
         hash<auto> config;
         if (opts) {
             map config{$1.key} = $1.value, opts.pairIterator();
@@ -4661,9 +4831,9 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         created with createConnection() are process-wide and hold the options, including the credentials, that
         trusted code gave them
     */
-    static AbstractConnection getConnection(string name) {
+    static AbstractConnection getConnection(string name) [dom=PROCESS_CONTROL] {
         # the connection map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get a connection from the TypeScript action connection map");
+        TsaiProcessState::checkHostScope("get a connection from the TypeScript action connection map");
         if (*AbstractConnection rv = cmap{name}) {
             return rv;
         }
@@ -4671,8 +4841,13 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     #! Executes the given app action with the given arguments
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the connections
+        created with createConnection() are process-wide (qoretechnologies/qore#7185)
+    */
     static auto execAppAction(string app, string action, string connection, *JavaScriptObject opts,
-            *JavaScriptObject request_options, *bool silent) {
+            *JavaScriptObject request_options, *bool silent) [dom=PROCESS_CONTROL] {
+        # the connection map is process-wide; refused before the options are read (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("execute an action with a TypeScript action test connection");
         on_error if (!silent) {
             printf("%s\n", get_exception_string($1));
         }
@@ -4687,9 +4862,9 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
         trusted code gave them
     */
     static auto execAppActionIntern(string app, string action, string connection, auto req,
-            *hash<auto> request_options) {
+            *hash<auto> request_options) [dom=PROCESS_CONTROL] {
         # the connection map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("use a connection of the TypeScript action connection map");
+        TsaiProcessState::checkHostScope("use a connection of the TypeScript action connection map");
         *TypeScriptAppRestConnection conn = cmap{connection};
         if (!conn) {
             throw "TYPESCRIPT-ACTION-ERROR", sprintf("Unknown connection %y; known connections: %y",
@@ -4748,7 +4923,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
 
     static *string getDynamicAppPath(*string app) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the path of a dynamic app of the TypeScript action "
+        TsaiProcessState::checkHostScope("get the path of a dynamic app of the TypeScript action "
             "interface");
         return TypeScriptActionInterface::getDynamicAppPathUnchecked(app);
     }
@@ -4775,7 +4950,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static *hash<AsyncCallInfo> getPostAuthCall(string app) [dom=PROCESS_CONTROL] {
         # the call map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get a post-auth call from the TypeScript action call map");
+        TsaiProcessState::checkHostScope("get a post-auth call from the TypeScript action call map");
         return TsaiProcessState::getPostAuthCall(app);
     }
 
@@ -4786,7 +4961,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static *hash<AsyncCallInfo> getPostAuthCodeCall(string app) [dom=PROCESS_CONTROL] {
         # the call map is process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get a post-auth-code call from the TypeScript action call map");
+        TsaiProcessState::checkHostScope("get a post-auth-code call from the TypeScript action call map");
         return TsaiProcessState::getPostAuthCodeCall(app);
     }
 
@@ -4807,14 +4982,14 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static *hash<auto> getConnectionUpdateOptions(string app) [dom=PROCESS_CONTROL] {
         # the options hold a process-wide call (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("get the connection update options of an app of the "
+        TsaiProcessState::checkHostScope("get the connection update options of an app of the "
             "TypeScript action interface");
         return TsaiProcessState::getConnectionUpdateOptions(app);
     }
 
     static setupConsoleLogger(LoggerLevel level = LoggerLevel::LevelInfo) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("set the logger of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("set the logger of the TypeScript action interface");
         Logger logger("qore-ts-api-console", level);
         logger.addAppender(new StdoutAppender());
         DataProvider::setGlobalLogger(logger);
@@ -4822,7 +4997,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
 
     static registerLogger(LoggerInterface logger) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("set the logger of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("set the logger of the TypeScript action interface");
         DataProvider::setGlobalLogger(logger);
     }
 
@@ -4840,7 +5015,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static registerWebhookCreateDestroyApis(code create, code destroy) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register the webhook APIs of the TypeScript action interface");
+        TsaiProcessState::checkHostScope("register the webhook APIs of the TypeScript action interface");
         if (WebhookCreate) {
             throw "WEBHOOK-API-ERROR", "There are already webhook creation and deletion APIs in place";
         }
@@ -4864,7 +5039,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static hash<auto> createWebhook(hash<auto> h) [dom=PROCESS_CONTROL] {
         # the webhook API is the host's (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("create a webhook with the host's webhook API");
+        TsaiProcessState::checkHostScope("create a webhook with the host's webhook API");
         if (!WebhookCreate) {
             throw "WEBHOOK-API-ERROR", "Cannot create a webhook; there is no webhook creation API in place";
         }
@@ -4877,7 +5052,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static deleteWebhook(hash<auto> info) [dom=PROCESS_CONTROL] {
         # the webhook API is the host's (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("delete a webhook with the host's webhook API");
+        TsaiProcessState::checkHostScope("delete a webhook with the host's webhook API");
         if (!WebhookDelete) {
             throw "WEBHOOK-API-ERROR", "Cannot delete a webhook; there is no webhook deletion API in place";
         }
@@ -4885,23 +5060,41 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     #! Returns a REST schema data provider for the given app (supports Swagger 2.0 and OpenAPI 3.0/3.1)
-    static RestSchemaDataProvider getSchemaDataProvider(string app, *string schema_name) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the provider that
+        the module keeps for the app is shared by every caller (its REST client, logger and debug collector can be
+        set), and so is the app's schema, which any provider of it gives out with \c getSchema()
+        (qoretechnologies/qore#7185); the module's own providers use the schema for sandboxed callers
+    */
+    static RestSchemaDataProvider getSchemaDataProvider(string app, *string schema_name) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("get the REST schema data provider of a TypeScript app");
+        return TypeScriptActionInterface::getSchemaDataProviderUnchecked(app, schema_name);
+    }
+
+    #! Returns the schema of an app
+    private:internal static AbstractRestSchemaValidator getAppSchema(string app, *string schema_name) {
+        string appname = app.lwr();
+        *AbstractRestSchemaValidator schema = exists schema_name
+            ? app_schema_schema_map{appname}{schema_name}
+            : app_schema_map{appname};
+        if (!schema) {
+            if (exists schema_name) {
+                throw "APP-ERROR", sprintf("App %y has no REST schema %y", app, schema_name);
+            } else {
+                throw "APP-ERROR", sprintf("App %y has no REST schema", app);
+            }
+        }
+        return schema;
+    }
+
+    #! The unchecked implementation of getSchemaDataProvider(), for the module's own code: the shared provider
+    private:internal static RestSchemaDataProvider getSchemaDataProviderUnchecked(string app, *string schema_name) {
         string appname = app.lwr();
         *RestSchemaDataProvider rv = exists schema_name
             ? app_schema_schema_dp{appname}{schema_name}
             : app_schema_dp{appname};
         if (!rv) {
-            *AbstractRestSchemaValidator schema = exists schema_name
-                ? app_schema_schema_map{appname}{schema_name}
-                : app_schema_map{appname};
-            if (!schema) {
-                if (exists schema_name) {
-                    throw "APP-ERROR", sprintf("App %y has no REST schema %y", app, schema_name);
-                } else {
-                    throw "APP-ERROR", sprintf("App %y has no REST schema", app);
-                }
-            }
-            rv = new RestSchemaDataProvider(schema);
+            rv = new RestSchemaDataProvider(TypeScriptActionInterface::getAppSchema(app, schema_name));
             if (exists schema_name) {
                 app_schema_schema_dp{appname}{schema_name} = rv;
             } else {
@@ -4982,13 +5175,16 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
                 f.replaceAttributes(attr - "element_ref_data");
             }
             if (attr.default_ref_data) {
-                hash<AsyncCallInfo> call = TsaiProcessState::getCall(attr.get_default_value);
+                # a call registered for a sandboxed caller is kept in its own provider (see
+                # TsaiProcessState::registerAsyncCallArgs()), so the call is looked up there first
+                *hash<AsyncCallInfo> call;
                 try {
+                    call = TsaiProcessState::findCall(prov, attr.get_default_value);
                     auto v = prov.getAsyncValue(call, prov.getCallContextInfo(req));
                     f.setDefaultValue(v);
                 } catch (hash<ExceptionInfo> ex) {
-                    TSAI::error("Failed to retrieve default value for field %y: %y: %s", f.getName(), call.label,
-                        get_exception_string(ex));
+                    TSAI::error("Failed to retrieve default value for field %y: %y: %s", f.getName(),
+                        call.label ?? attr.get_default_value, get_exception_string(ex));
                 }
                 f.replaceAttributes(attr - "default_ref_data");
             }
@@ -5213,62 +5409,79 @@ class TSAI inherits TypeScriptActionInterface {
         return TsaiProcessState::checkInProcessServer();
     }
 
+    #! Returns True if the process server runs, starting it on demand, for the module's own code
+    /** The public TypeScriptActionInterface::checkServer() refuses sandboxed code
+    */
+    static bool checkServer() {
+        return TsaiProcessState::checkServer();
+    }
+
     static debug(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelDebug, fmt, argv);
-        } else {
-            stdout.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelDebug, fmt, argv, stdout);
     }
 
     static info(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelInfo, fmt, argv);
-        } else {
-            stdout.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelInfo, fmt, argv, stdout);
     }
 
     static warn(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelWarn, fmt, argv);
-        } else {
-            stderr.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelWarn, fmt, argv, stderr);
     }
 
     static error(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelError, fmt, argv);
-        } else {
-            stderr.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelError, fmt, argv, stderr);
     }
 
     static fatal(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
-            logger.logArgs(LoggerLevel::LevelFatal, fmt, argv);
-        } else {
-            stderr.vprintf(fmt + "\n", argv);
-        }
+        TSAI::logIntern(LoggerLevel::LevelFatal, fmt, argv, stderr);
     }
 
     static logArgs(Logger::LoggerLevel level, string fmt, *list<auto> args) {
+        TSAI::logIntern(level, fmt, args, stderr);
+    }
+
+    #! Maximum length of a message of a tenant's call in the host's log; see logIntern()
+    const MaxTenantMessage = 512;
+
+    #! Returns True if the current code serves a tenant: sandboxed code, or a tenant's call in its own program
+    static bool forTenant() {
+        return _ts_tenant_calls || _tenant_call || !SandboxManager::isProcessWideRegistrationAllowed() ? True : False;
+    }
+
+    #! Logs a message with the module's logger
+    /** A message logged while serving a tenant can hold text that the tenant controls (its errors, field names and
+        call stacks): only its first line goes to the host's log, bounded and marked as a tenant's, so that a tenant
+        can neither flood the host's log nor write lines of its own to it (qoretechnologies/qore#7185)
+    */
+    static logIntern(Logger::LoggerLevel level, string fmt, *list<auto> args, File out) {
+        if (TSAI::forTenant()) {
+            string msg = vsprintf(fmt, args);
+            msg = (msg =~ x/^([^\r\n]*)/)[0] ?? "";
+            if (msg.length() > MaxTenantMessage) {
+                msg = msg.substr(0, MaxTenantMessage) + "...";
+            }
+            fmt = "tenant call: %s";
+            args = (msg,);
+        }
         if (*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger()) {
             logger.logArgs(level, fmt, args);
         } else {
-            stderr.vprintf(fmt + "\n", args);
+            out.vprintf(fmt + "\n", args);
         }
     }
 }
 
 class ActionFunctionContext {
+    # the pool of the catalogue is process-wide; it is not readable by the code that has a provider
+    # (qoretechnologies/qore#7185)
+    private:internal {
+        # the program pool for JS execution
+        *JavaScriptProgramPool pool;
+    }
+
     public {
         string app;
         string action;
-
-        # the program pool for JS execution
-        JavaScriptProgramPool pool;
 
         # maps from options to "get_allowed_values" code
         *hash<string, hash<AsyncCallInfo>> omap;

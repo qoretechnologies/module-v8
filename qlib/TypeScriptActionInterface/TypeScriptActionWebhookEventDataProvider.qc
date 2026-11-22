@@ -41,7 +41,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *hash<AsyncCallInfo> format_event_data;
     }
 
-    private {
+    private:internal {
         string method;
         *int webhook_auth;
         *list<auto> webhook_perms;
