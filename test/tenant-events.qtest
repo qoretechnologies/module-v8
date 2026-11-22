@@ -52,6 +52,8 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
             case \"poll\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::pollEvents(c, args[0], args[1], args[2])};
             case \"stop\": TypeScriptActionInterface::TenantActionRunner::stopEvents(c, args[0]); return {};
             case \"exec\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::exec(c, args[0], args[1], args[2])};
+            case \"info\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::getActionInfo(c, args[0], args[1])};
+            case \"release\": TypeScriptActionInterface::TenantActionRunner::releaseConcurrency(args[0]); return {\"result\": True};
         }
     } catch (hash<ExceptionInfo> ex) {
         return {\"err\": ex.err, \"desc\": ex.desc, \"arg\": ex.arg};
@@ -74,6 +76,9 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         addTestCase("events are pulled with the function's checkpoint", \ticksTest());
         addTestCase("a subscription belongs to its tenant", \ownerTest());
         addTestCase("a sandboxed caller cannot start another tenant's events", \startDomainTest());
+        addTestCase("a sandboxed caller cannot poll, stop or inspect another tenant's source, even with its ID",
+            \sourceDomainTest());
+        addTestCase("a sandboxed caller cannot release a tenant's call", \releaseTest());
         addTestCase("a failed function's error comes after its events", \errorTest());
         addTestCase("a source that queues its limit of events is stopped and reported", \overflowTest());
         addTestCase("a source over the memory limit is stopped and reported", \heapTest());
@@ -208,6 +213,39 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
             {"url": "https://api.example.com"}}, (App, "ticks", {"count": 0}, NOTHING));
         assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
         assertRegex("not the isolation domain", rv.desc);
+    }
+
+    #! qoretechnologies/qore#7227
+    sourceDomainTest() {
+        if (!V8::SandboxCapture::hasIsolationDomains()) {
+            testSkip("this Qore has no isolation domains");
+        }
+        string id = start("m", "ticks", {"count": 0});
+        on_exit call("stop", "m", (id,));
+        # a caller in tenant n's isolation domain names tenant m and m's source: refused
+        Program other = tenantProgram("n");
+        hash<auto> m_ctx = {"tenant": "m", "conn_opts": {"url": "https://api.example.com"}};
+        hash<auto> rv = other.callFunction("call", "poll", m_ctx, (id,));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+        rv = other.callFunction("call", "stop", m_ctx, (id,));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+        rv = other.callFunction("call", "info", m_ctx, (App, "ticks"));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+        # the owner still can: the source is running, and its action's information is returned
+        assertTrue(call("poll", "m", (id,)).result.running, "the refused stop did not stop the source");
+        assertEq(True, call("info", "m", (App, "ticks")).result.tenant_available);
+    }
+
+    #! qoretechnologies/qore#7227: only the runner itself releases a tenant's call (its concurrency limit)
+    releaseTest() {
+        hash<auto> rv = call("release", "o", ("o",));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("sandboxed", rv.desc);
+        rv = call("release", "o", ("p",));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
     }
 
     errorTest() {

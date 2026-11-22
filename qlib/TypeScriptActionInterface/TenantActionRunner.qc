@@ -542,6 +542,8 @@ public class TenantActionRunner {
     */
     static hash<auto> getActionInfo(hash<TsTenantContext> ctx, string app, string action) {
         TenantActionRunner::checkContext(ctx);
+        # a sandboxed caller asks only for its own tenant (qoretechnologies/qore#7227)
+        TenantActionRunner::checkCallerDomain(new V8::SandboxCapture(), ctx);
         hash<auto> info = TenantActionRunner::getAction(app, action);
         AutoLock al(lock);
         if (*string builtin = unsupported{info.app}) {
@@ -713,7 +715,7 @@ public class TenantActionRunner {
         }
         bool started;
         on_exit if (!started) {
-            TenantActionRunner::releaseConcurrency(ctx.tenant);
+            TenantActionRunner::releaseConcurrencyIntern(ctx.tenant);
         }
         hash<auto> pgm = TenantActionRunner::getProgram(ctx.tenant, info.app);
         on_exit if (!started) {
@@ -761,6 +763,9 @@ public class TenantActionRunner {
     */
     static hash<auto> pollEvents(hash<TsTenantContext> ctx, string id, int max = 100, *timeout wait) {
         TenantActionRunner::checkContext(ctx);
+        # a source's ID is no authorization: a sandboxed caller polls only its own tenant's sources
+        # (qoretechnologies/qore#7227)
+        TenantActionRunner::checkCallerDomain(new V8::SandboxCapture(), ctx);
         return TenantActionRunner::getSource(ctx, id).poll(max, wait);
     }
 
@@ -772,6 +777,9 @@ public class TenantActionRunner {
     */
     static stopEvents(hash<TsTenantContext> ctx, string id) {
         TenantActionRunner::checkContext(ctx);
+        # a source's ID is no authorization: a sandboxed caller stops only its own tenant's sources
+        # (qoretechnologies/qore#7227)
+        TenantActionRunner::checkCallerDomain(new V8::SandboxCapture(), ctx);
         TenantEventSource src = TenantActionRunner::getSource(ctx, id);
         {
             AutoLock al(lock);
@@ -813,16 +821,31 @@ public class TenantActionRunner {
         return src;
     }
 
-    #! Releases a call of a tenant's concurrency limit
+    #! Releases a call of a tenant's concurrency limit; for the module's event sources (trusted code only)
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed: only the runner releases a tenant's calls
+        (qoretechnologies/qore#7227)
+    */
     static releaseConcurrency(string tenant) [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("releaseConcurrency");
+        TenantActionRunner::releaseConcurrencyIntern(tenant);
+    }
+
+    #! Releases a call of a tenant's concurrency limit; never below none
+    private:internal static releaseConcurrencyIntern(string tenant) {
         AutoLock al(lock);
+        if (!running{tenant}) {
+            return;
+        }
         if (!--running{tenant}) {
             remove running{tenant};
         }
     }
 
-    #! Releases the program of an event source; it is discarded
+    #! Releases the program of an event source; it is discarded; for the module's event sources (trusted code only)
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed (qoretechnologies/qore#7227)
+    */
     static releaseEventProgram(string tenant, string app, hash<auto> pgm) [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("releaseEventProgram");
         TenantActionRunner::releaseProgram(tenant, app, pgm, True);
     }
 
