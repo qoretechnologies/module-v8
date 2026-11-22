@@ -413,7 +413,11 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             # completion is driven by the background v.wait() call below.  This must not block: spinOnce() does a
             # single non-blocking pass (UV_RUN_NOWAIT) - running the loop to completion here would stall for the
             # upstream keep-alive idle timeout (~15s) when the connection is left open after the response
-            on_exit js.spinOnce();
+            # a terminated program (the call was stopped or timed out) is not spun again: it refuses every entry, and
+            # the error that ended the wait is the one reported (qoretechnologies/qore#7284)
+            on_exit if (!js.isTerminated()) {
+                js.spinOnce();
+            }
 
             try {
                 v = v.then(sub (auto val) {

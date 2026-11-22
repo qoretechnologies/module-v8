@@ -85,16 +85,34 @@ result(\"survived\");
     #! terminate() and the program's destruction in two threads: the environment is stopped at most once safely
     terminateWhileDestroyed() {
         list<string> out = runChild("
+Mutex counts();
+int live = 0;
+int deleted = 0;
 for (int i = 0; i < 50; ++i) {
     V8::JavaScriptProgram pgm(\"globalThis.f = () => 1;\", \"terminate-destroyed\");
     Counter ready(2);
     Counter go(1);
     Counter done(1);
+    # the thread's own reference: the deletion below destroys the program, whatever references it
+    V8::JavaScriptProgram mine = pgm;
     background sub () {
         on_exit done.dec();
         ready.dec();
         go.waitForZero();
-        pgm.terminate();
+        try {
+            mine.terminate();
+            counts.lock();
+            ++live;
+            counts.unlock();
+        } catch (hash<ExceptionInfo> ex) {
+            # the program was destroyed first
+            if (ex.err != \"OBJECT-INCOMPATIBLE\") {
+                rethrow;
+            }
+            counts.lock();
+            ++deleted;
+            counts.unlock();
+        }
     }();
     ready.dec();
     ready.waitForZero();
@@ -102,9 +120,10 @@ for (int i = 0; i < 50; ++i) {
     delete pgm;
     done.waitForZero();
 }
+result(\"runs: %d\", live + deleted);
 result(\"survived\");
 ");
-        assertEq(("survived",), out);
+        assertEq(("runs: 50", "survived"), out);
     }
 
     #! Runs the code in a new process; returns its result lines

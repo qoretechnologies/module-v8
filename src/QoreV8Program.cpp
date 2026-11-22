@@ -170,15 +170,17 @@ void QoreV8Program::terminate() {
     // the flag is checked by every entry into the program (QoreV8ProgramHelper); valid is not changed here, as it is
     // guarded by the program's lock, which the thread that runs the code can hold
     terminated.store(true);
-    {
+    // a forked child does not stop the environment it abandons, and takes no lock that another thread of the parent
+    // could have held when the process was copied
+    if (!qore_v8_forked_child()) {
         std::lock_guard<std::mutex> guard(env_lock);
         if (env) {
-            // the environment is stopped, not only the isolate: node::Stop() first marks the environment as unable
-            // to call into JavaScript, then terminates the isolate.  Code terminated inside a callback of the
-            // event loop (a timer, an I/O callback) leaves before its callback's async context is popped; a callback
-            // scope of an environment that can still call into JavaScript then finds the async-context stack
-            // corrupted and exits the process (qoretechnologies/qore#7284), while one of a stopped environment
-            // closes without the check.  node::Stop() may be called from any thread
+            // the environment is stopped, not only the isolate: node::Stop() first marks the environment as
+            // stopping, then terminates the isolate.  Code terminated inside a callback of the event loop (a timer,
+            // an I/O callback) leaves before its callback's async context is popped; the callback scope of an
+            // environment that is not stopping then finds the async-context stack corrupted and exits the process
+            // (qoretechnologies/qore#7284), while one of a stopping environment closes without the check.
+            // node::Stop() may be called from any thread
             node::Stop(env);
             return;
         }
@@ -1040,10 +1042,9 @@ void QoreV8Program::abandonInForkedChild() {
     // the environment, its event loop and the isolate are never freed in the child
     node::CommonEnvironmentSetup* abandoned = setup.release();
     (void)abandoned;
-    {
-        std::lock_guard<std::mutex> guard(env_lock);
-        env = nullptr;
-    }
+    // no lock is acquired (as for the program's lock above): another thread of the parent could have held the
+    // environment's lock in terminate() when the process was copied
+    env = nullptr;
     forgetHandle(ctx);
     forgetHandle(global);
     forgetHandle(env_object);
