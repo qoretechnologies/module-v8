@@ -161,6 +161,14 @@ public:
     //! Checks if a JavaScript exception has been thrown and throws the corresponding Qore exception
     DLLLOCAL int checkException(ExceptionSink* xsink, const v8::TryCatch& tryCatch) const;
 
+    //! Records an exception thrown and not caught in a callback of the event loop; the first one is kept
+    DLLLOCAL void setUncaughtError(v8::Local<v8::Value> err);
+
+    //! Raises the recorded uncaught exception, if any, as a Qore exception; returns -1 if there was one
+    /** Called by the thread that holds the isolate, with the program's context entered
+    */
+    DLLLOCAL int raiseUncaughtError(ExceptionSink* xsink);
+
     //! Sets the program's process.env object, which its bootstrap code creates
     DLLLOCAL void setEnvObject(v8::Local<v8::Object> obj) {
         env_object.Reset(isolate, obj);
@@ -357,6 +365,9 @@ protected:
     v8::Global<v8::Context> ctx;
     //! the program's process.env object; see isRedactedEnv()
     v8::Global<v8::Object> env_object;
+    //! the first exception thrown and not caught in a callback of the program's event loop, until the Qore code that runs
+    //! the loop gets it (qoretechnologies/qore#7332)
+    v8::Global<v8::Value> uncaught_error;
     //! the number of JavaScript exceptions being converted to Qore values (all in the thread holding the isolate)
     mutable int exception_conversions = 0;
 

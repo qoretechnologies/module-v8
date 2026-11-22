@@ -584,6 +584,42 @@ static v8::MaybeLocal<v8::String> qore_v8_utf8_string(v8::Isolate* isolate, cons
 }
 
 //! envCreated(env): passes the program's new process.env object to the program (the data of the function)
+//! Records an exception thrown and not caught in a callback of the program's event loop (qoretechnologies/qore#7332)
+/** Called by the program's \c uncaughtException listener (see the bootstrap code): without a listener, Node.js ends the
+    host process for such an exception
+*/
+static void qore_v8_uncaught_exception(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    if (info.Length() < 1 || !info.Data()->IsExternal()) {
+        return;
+    }
+    static_cast<QoreV8Program*>(info.Data().As<v8::External>()->Value())->setUncaughtError(info[0]);
+}
+
+void QoreV8Program::setUncaughtError(v8::Local<v8::Value> err) {
+    // the first one is kept: it is the cause of what follows
+    if (uncaught_error.IsEmpty()) {
+        uncaught_error.Reset(isolate, err);
+    }
+}
+
+int QoreV8Program::raiseUncaughtError(ExceptionSink* xsink) {
+    if (uncaught_error.IsEmpty()) {
+        return 0;
+    }
+    v8::Local<v8::Value> err = uncaught_error.Get(isolate);
+    uncaught_error.Reset();
+    if (xsink) {
+        // the exception is raised again under a TryCatch so that it is converted as any JavaScript exception is
+        v8::TryCatch tryCatch(isolate);
+        isolate->ThrowException(err);
+        if (!checkException(xsink, tryCatch)) {
+            xsink->raiseException("JAVASCRIPT-EXCEPTION", "an exception was thrown and not caught in a callback of "
+                "the program's event loop");
+        }
+    }
+    return -1;
+}
+
 static void qore_v8_env_created(const v8::FunctionCallbackInfo<v8::Value>& info) {
     if (info.Length() < 1 || !info[0]->IsObject() || !info.Data()->IsExternal()) {
         return;
@@ -618,12 +654,15 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     // with which it passes the new process.env object to the program
     v8::Local<v8::Object> env_bridge;
     v8::Local<v8::Function> env_created;
+    // the function with which the program's uncaughtException listener records an uncaught exception
+    v8::Local<v8::Function> uncaught;
     // the functions with which the bootstrap code reads process.stdin and writes process.stdout and process.stderr
     // for a terminal, a pipe or a socket
     v8::Local<v8::Object> stdio_bridge;
     if (!qore_v8_create_env_bridge(isolate, context).ToLocal(&env_bridge)
         || !qore_v8_create_stdio_bridge(isolate, context).ToLocal(&stdio_bridge)
         || !v8::Function::New(context, qore_v8_env_created, v8::External::New(isolate, this)).ToLocal(&env_created)
+        || !v8::Function::New(context, qore_v8_uncaught_exception, v8::External::New(isolate, this)).ToLocal(&uncaught)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "source"),
             source_str).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "filename"),
@@ -634,6 +673,8 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
             env_created).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "stdio"),
             stdio_bridge).FromMaybe(false)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "uncaught"),
+            uncaught).FromMaybe(false)
         || (restricted && setRestrictedBootstrapData(xsink, context, data))
         || !context->Global()->DefineOwnProperty(context, key, data, v8::DontEnum).FromMaybe(false)) {
         if (!*xsink && !checkException(xsink, tryCatch)) {
@@ -845,7 +886,22 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // the bootstrap data is removed from the global object before any other code is run
         QoreStringMaker envstr("const _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
             "const _qoreBoot = globalThis[_qoreBootKey];\n"
-            "delete globalThis[_qoreBootKey];\n");
+            "delete globalThis[_qoreBootKey];\n"
+            // an exception thrown and not caught in a callback of the event loop (a timer, an I/O callback) would
+            // end the host process: without a listener, Node.js exits.  It is reported as a warning and raised to the
+            // Qore code that runs the event loop, unless the program handles it with its own listener; the listener
+            // is installed on the real process object before any code of the program runs, as a restricted program
+            // gets a minimal process instead (qoretechnologies/qore#7332)
+            "{\n"
+            "  const _qoreProcess = process;\n"
+            "  const _qoreUncaught = _qoreBoot.uncaught;\n"
+            "  _qoreProcess.on('uncaughtException', (err) => {\n"
+            "    if (_qoreProcess.listenerCount('uncaughtException') === 1) {\n"
+            "      _qoreUncaught(err);\n"
+            "      _qoreProcess.emitWarning(err instanceof Error ? err : new Error(String(err)));\n"
+            "    }\n"
+            "  });\n"
+            "}\n");
         if (restricted) {
             // the program is built by restricted-bootstrap.js: it gets neither the host's environment nor its stdio
             envstr.concat(QORE_V8_RESTRICTED_BOOTSTRAP);
@@ -1048,6 +1104,7 @@ void QoreV8Program::abandonInForkedChild() {
     forgetHandle(ctx);
     forgetHandle(global);
     forgetHandle(env_object);
+    forgetHandle(uncaught_error);
     for (auto& i : classTemplateCache) {
         forgetHandle(i.second);
     }
@@ -1135,6 +1192,7 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
     ctx.Reset();
     global.Reset();
     env_object.Reset();
+    uncaught_error.Reset();
 }
 
 int QoreV8Program::saveQoreReference(const QoreValue& rv, ExceptionSink& xsink) {
@@ -1518,6 +1576,8 @@ int QoreV8Program::spinOnce(ExceptionSink* xsink, bool wait) {
         if (xsink && tryCatch.HasCaught()) {
             checkException(xsink, tryCatch);
             rv = -1;
+        } else if (raiseUncaughtError(xsink)) {
+            rv = -1;
         }
     }
 
@@ -1542,6 +1602,8 @@ int QoreV8Program::spinEventLoop(ExceptionSink* xsink) {
 
         if (xsink && tryCatch.HasCaught()) {
             checkException(xsink, tryCatch);
+            rv = -1;
+        } else if (raiseUncaughtError(xsink)) {
             rv = -1;
         }
     }

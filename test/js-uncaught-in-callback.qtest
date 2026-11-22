@@ -1,0 +1,147 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires v8
+%requires QUnit
+
+%exec-class JsUncaughtInCallbackTest
+
+#! Tests an exception thrown and not caught in a callback of a program's event loop (qoretechnologies/qore#7332)
+/** Without a listener, Node.js ends the host process for such an exception: one program's timer that threw ended the
+    process that every other program, tenant and app shared.  The exception is now raised to the Qore code that runs the
+    event loop and reported as a warning, and the process survives.  Each case runs in a new process, since the defect
+    ends the process.
+*/
+class JsUncaughtInCallbackTest inherits Test {
+    public {
+        #! the code that a child process runs first: it prints its results on lines that start with "RESULT: "
+        const ChildPrelude = "%modern
+%requires v8
+sub result(string fmt) { vprintf(\"RESULT: \" + fmt + \"\\n\", argv); }
+# runs the program's event loop until it raises an exception or the limit of passes; returns the exception's code
+*string sub spin_until_error(V8::JavaScriptProgram pgm, reference<*string> desc) {
+    for (int i = 0; i < 200; ++i) {
+        try {
+            pgm.spinOnce();
+        } catch (hash<ExceptionInfo> ex) {
+            desc = ex.desc;
+            return ex.err;
+        }
+        usleep(5ms);
+    }
+}
+";
+    }
+
+    constructor() : Test("js uncaught in callback test", "1.0") {
+        addTestCase("a timer's uncaught exception is raised to the code that runs the loop",
+            \timerThrows());
+        addTestCase("a Qore callback's exception in a timer is raised to the code that runs the loop",
+            \qoreCallbackThrows());
+        addTestCase("a Promise waited for gets the uncaught exception of a timer", \promiseWaitGetsIt());
+        addTestCase("a program that handles its uncaught exceptions keeps doing so", \programHandlesIt());
+        addTestCase("a restricted program's timer that throws does not end the process", \restrictedTimerThrows());
+
+        set_return_value(main());
+    }
+
+    timerThrows() {
+        string out;
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.f = () => 42; setTimeout(() => { throw new Error('thrown in a timer'); }, 0);\",
+    \"uncaught-timer\");
+*string desc;
+result(\"error: %y\", spin_until_error(pgm, \\desc));
+result(\"described: %y\", desc =~ /thrown in a timer/);
+# the program is still usable: the exception ended only its callback
+result(\"call: %y\", pgm.getGlobal().f());
+result(\"survived\");
+", \out);
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "described: True", "call: 42", "survived"), results);
+        assertRegex("thrown in a timer", out, "the exception is reported as a warning");
+    }
+
+    qoreCallbackThrows() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.start = (cb) => { setTimeout(() => { cb(); }, 0); };\", \"uncaught-qore\");
+code cb = sub () { throw \"TEST-ERROR\", \"thrown by a Qore callback in a timer\"; };
+pgm.getGlobal().start(cb);
+*string desc;
+result(\"error: %y\", spin_until_error(pgm, \\desc));
+result(\"described: %y\", desc =~ /thrown by a Qore callback in a timer/);
+result(\"survived\");
+");
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "described: True", "survived"), results);
+    }
+
+    promiseWaitGetsIt() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.run = () => new Promise((resolve) => {
+    setTimeout(() => { throw new Error('thrown while a Promise was waited for'); }, 0);
+    setTimeout(() => resolve(1), 1000);
+});\", \"uncaught-wait\");
+auto p = pgm.getGlobal().run();
+try {
+    p.wait();
+    result(\"wait: no error\");
+} catch (hash<ExceptionInfo> ex) {
+    result(\"wait: %s: %y\", ex.err, ex.desc =~ /thrown while a Promise was waited for/);
+}
+result(\"survived\");
+");
+        assertEq(("wait: JAVASCRIPT-EXCEPTION: True", "survived"), results);
+    }
+
+    programHandlesIt() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.handled = [];
+process.on('uncaughtException', (err) => { globalThis.handled.push(err.message); });
+setTimeout(() => { throw new Error('handled by the program'); }, 0);\", \"uncaught-handled\");
+*string desc;
+result(\"error: %y\", spin_until_error(pgm, \\desc));
+result(\"handled: %y\", pgm.getGlobal().handled);
+result(\"survived\");
+");
+        assertEq(("error: null", "handled: [\"handled by the program\"]", "survived"), results);
+    }
+
+    restrictedTimerThrows() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.f = () => 7; setTimeout(() => { throw new Error('thrown in a restricted timer'); }, 0);\",
+    \"uncaught-restricted\", {\"restricted\": True, \"roots\": (\"/tmp\",)});
+*string desc;
+result(\"error: %y\", spin_until_error(pgm, \\desc));
+result(\"described: %y\", desc =~ /thrown in a restricted timer/);
+result(\"call: %y\", pgm.getGlobal().f());
+result(\"survived\");
+");
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "described: True", "call: 7", "survived"), results);
+    }
+
+    #! Runs the code in a new process; returns its result lines, and its whole output in @p out
+    private list<string> runChild(string body, *reference<string> out) {
+        # the interpreter: this one, unless this test runs as an executable that qcc compiled
+        string qore = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY
+            ?? (basename(QORE_ARGV[0]) =~ /^qore/ ? QORE_ARGV[0] : "qore");
+        int rc;
+        string output = backquote(sprintf("%s -b -e %s 2>&1", qore, quote(ChildPrelude + body)), \rc);
+        out = output;
+        assertEq(0, rc, output);
+        assertFalse(output =~ /async hook stack has become corrupted/, output);
+        list<string> rv = ();
+        foreach string line in (output.split("\n")) {
+            if (line =~ /^RESULT: /) {
+                rv += line.substr(8);
+            }
+        }
+        return rv;
+    }
+
+    private static string quote(string value) {
+        return "'" + replace(value, "'", "'\"'\"'") + "'";
+    }
+}
