@@ -70,6 +70,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         #! Gives the unchecked implementations of the checked methods to the module's own code
         static bool internal_set = TsaiProcessState::setInternal({
             "execAsyncValueDirect": \TypeScriptActionDataProviderBase::execAsyncValueDirectUnchecked(),
+            "clearAppCache": \TypeScriptActionDataProviderBase::clearAppCacheUnchecked(),
         });
     }
 
@@ -148,9 +149,21 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Drops an app's cached allowed values and other reference data; see TypeScriptDataCache::clearApp()
-    /** @param app the app whose cached values are dropped
+    /** The cache is shared by every caller of the process, so code that is sandboxed or acts for sandboxed code
+        cannot drop it
+
+        @param app the app whose cached values are dropped
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
     */
-    static clearAppCache(string app) {
+    static clearAppCache(string app) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        SandboxManager::checkProcessWideRegistration("drop the cached reference data of a TypeScript app");
+        TypeScriptActionDataProviderBase::clearAppCacheUnchecked(app);
+    }
+
+    #! The unchecked implementation of clearAppCache(), for the module's own code
+    private:internal static clearAppCacheUnchecked(string app) {
         cache.clearApp(app);
     }
 

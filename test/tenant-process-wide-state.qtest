@@ -18,6 +18,15 @@
 %requires TypeScriptActionInterface
 %requires ConnectionProvider
 %requires RestClient
+%requires FsUtil
+%requires RestSchemaDataProvider
+%requires json
+
+# the reflection module is in the Qore repository: the test of the public API's classification needs it
+%try-module reflection
+%define NoReflection
+%endtry
+
 %exec-class TenantProcessWideStateTest
 
 class TenantProcessWideStateTest inherits QUnit::Test {
@@ -160,6 +169,148 @@ class TenantProcessWideStateTest inherits QUnit::Test {
                 "return p.api; }",
             "execAppActionIntern": "return sprintf(\"%y\", TypeScriptActionInterface::execAppActionIntern(\"" + HostApp
                 + "\", \"action\", \"" + HostApp + "\", NOTHING));",
+            # the host's paths and errors (qoretechnologies/qore#7185)
+            "getAppBaseDir": "return TypeScriptActionInterface::getAppBaseDir();",
+            "getIncompleteInventorySources": "return sprintf(\"%y\", "
+                "TypeScriptActionInterface::getIncompleteInventorySources());",
+            "getAppSchemaError": "return sprintf(\"%y\", TypeScriptActionInterface::getAppSchemaError(\""
+                + CatalogueApp + "\"));",
+            # the cache of reference data that every caller shares (qoretechnologies/qore#7185)
+            "clearAppCache": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::clearAppCache(\""
+                + CatalogueApp + "\"); return \"cleared\";",
+        };
+
+        #! The public static methods that sandboxed code may call: "class::method" -> the reason
+        /** Every other public static method of the classes of the module must refuse sandboxed code (see
+            classificationTest()): a method added later is refused or added here with its reason
+            (qoretechnologies/qore#7185)
+        */
+        const AllowedStatics = {
+            # the tenant API of the tenant runner: it runs the tenant's calls in a program of the tenant's own
+            "TenantActionRunner::dispatch": "runs a call for the tenant whose context the host resolves",
+            "TenantActionRunner::exec": "runs an action in the tenant's own program",
+            "TenantActionRunner::getActionInfo": "the tenant's view of an action, from the tenant's own program",
+            "TenantActionRunner::startEvents": "starts an event source of the tenant's own",
+            "TenantActionRunner::pollEvents": "polls an event source of the tenant's own",
+            "TenantActionRunner::stopEvents": "stops an event source of the tenant's own",
+            "TenantActionRunner::mapError": "converts its argument",
+            "TenantActionRunner::plainData": "converts its argument",
+            # programs and pools that the caller has already
+            "JavaScriptProgramPool::getPool": "returns the pool of a program that the caller has; the pool refuses "
+                "sandboxed code",
+            "JavaScriptProgramPool::isFirst": "tells whether a program that the caller has is the first of its pool",
+            # settings that are not secrets
+            "JavaScriptProgramProxy::getStartupTimeout": "the time a child process has to start",
+            "TypeScriptActionInterface::getCallTimeout": "the time limit of a call",
+            "TypeScriptActionInterface::checkServer": "tells whether the process server runs",
+            "TypeScriptActionInterface::getCatalogueProtocolVersion": "a constant",
+            # what the catalogue publishes to every caller
+            "TypeScriptActionInterface::getPendingApps": "the names of the apps of the catalogue",
+            "TypeScriptActionInterface::getPendingAppSummaryInfo": "the descriptions of the apps of the catalogue",
+            "TypeScriptActionInterface::getDiscoveryInventory": "the identities of the apps and actions of the "
+                "catalogue",
+            "TypeScriptActionInterface::appSupportsEvents": "a property of an app of the catalogue",
+            "TypeScriptActionInterface::appSupportsRecords": "a property of an app of the catalogue",
+            "TypeScriptActionInterface::getUrlOptionForApp": "a property of an app of the catalogue",
+            "TypeScriptActionInterface::getUrlTemplateOptions": "a property of an app of the catalogue",
+            "TypeScriptActionInterface::getRestConfig": "the REST options of an app of the catalogue; their secrets "
+                "are qoretechnologies/qore#7185 item B",
+            # providers and schemas of the caller's own
+            "TypeScriptActionInterface::getAppDataProvider": "sandboxed code gets a copy of the app's provider "
+                "(qoretechnologies/qore#6749)",
+            "TypeScriptActionInterface::getCamelCaseAppName": "the name of an app of the catalogue; the error lists "
+                "the apps only for trusted code (qoretechnologies/qore#6749)",
+            "TypeScriptActionInterface::getDataProvider": "a copy of an app's provider with the caller's own "
+                "connection",
+            "TypeScriptActionInterface::getSchemaDataProvider": "sandboxed code gets a provider of its own",
+            "TypeScriptActionInterface::getRestSchema": "loads a schema from a location that the caller gives, under "
+                "the caller's sandbox",
+            "TypeScriptActionRecordBasedDataProvider::getDataProviderInfo": "builds the information from its "
+                "arguments, of a type that only the module can create",
+            # the initialization of the apps that the host registered, which the module makes for any caller
+            "TypeScriptActionInterface::init": "runs once (qoretechnologies/qore#7185)",
+            "TypeScriptActionInterface::initApp": "initializes an app that the host registered, on demand",
+            "TypeScriptActionInterface::initAppAction": "initializes an action that the host registered, on demand",
+            "TypeScriptActionInterface::checkAppActions": "initializes the actions that the host registered, on "
+                "demand",
+            "TypeScriptActionInterface::checkRoot": "creates the root provider once",
+            # the creation of types and fields from the arguments; the calls that they register refuse sandboxed
+            # code (registerAsyncCall())
+            "TypeScriptActionInterface::getType": "creates a type from its arguments",
+            "TypeScriptActionInterface::getField": "creates a field from its arguments",
+            "TypeScriptActionInterface::getFieldHash": "creates a field from its arguments",
+            "TypeScriptActionInterface::getGoogleType": "creates a type from its arguments",
+            "TypeScriptActionInterface::getHashType": "creates a type from its arguments",
+            "TypeScriptActionInterface::getHashTypeIntern": "creates a type from its arguments",
+            "TypeScriptActionInterface::getListType": "creates a type from its arguments",
+            "TypeScriptActionInterface::getModifiedType": "creates a type from its arguments",
+            "TypeScriptActionInterface::getOptionHashInfo": "creates option information from its arguments",
+            "TypeScriptActionInterface::getOptionInfo": "creates option information from its arguments",
+            "TypeScriptActionInterface::resolveDynamicType": "resolves a type of a provider that the caller has",
+            "TypeScriptActionApiWithSchemaDataProvider::overrideOptionType": "changes a type that the caller gives",
+            # helpers that work on their arguments only
+            "TypeScriptActionInterface::addReference": "works on its arguments",
+            "TypeScriptActionInterface::scanType": "works on its arguments",
+            "TypeScriptActionInterface::checkFieldDependencies": "works on its arguments",
+            "TypeScriptActionInterface::checkDynamicAppName": "works on its arguments",
+            "TypeScriptActionInterface::sortOptions": "works on its arguments",
+            "TypeScriptActionInterface::processUrl": "works on its arguments",
+            "TypeScriptActionDataProviderBase::getKeyValue": "works on its arguments",
+            "TypeScriptActionDataProviderBase::processError": "works on its arguments",
+            "TypeScriptActionDataProviderBase::stripNonSerializableData": "works on its arguments",
+            "TypeScriptHubspotRestClient::getCmsScope": "works on its arguments",
+        };
+
+        #! The errors with which the module refuses sandboxed code
+        const RefusalErrors = {
+            "SANDBOX-REGISTRATION-ERROR": True,
+            "TS-TENANT-ERROR": True,
+        };
+
+        #! The argument expressions of the calls of classificationTest() by parameter type
+        /** \c a is the argument hash of the cases (see args())
+        */
+        const ArgExprs = {
+            "string": "\"qore-test-7185\"", "*string": "\"qore-test-7185\"", "softstring": "\"x\"",
+            "bool": "False", "*bool": "False", "int": "1", "*int": "1", "softint": "1", "date": "7s",
+            "*date": "7s", "timeout": "1", "*timeout": "1", "data": "\"x\"", "auto": "NOTHING", "any": "NOTHING",
+            "hash<auto>": "{}", "*hash<auto>": "{}", "list<auto>": "()", "*list<auto>": "()",
+            "*softlist<auto>": "()", "*softlist<string>": "()", "list<string>": "()", "*list<string>": "()",
+            "code": "sub () {}", "*code": "sub () {}", "hash<string, bool>": "{}",
+            "hash<string, hash<string, hash<auto>>>": "{}", "*object": "NOTHING",
+            "hash<ExceptionInfo>": "<ExceptionInfo>{\"err\": \"X\", \"desc\": \"x\"}",
+            "hash<AsyncCallInfo>": "<AsyncCallInfo>{\"app\": \"x\", \"type\": \"t\", \"label\": \"l\", "
+                "\"pool\": a.pool, \"async_call\": sub () {}}",
+            "hash<TsTenantContext>": "<TsTenantContext>{\"tenant\": \"qore-test-7185\"}",
+            "hash<TsTenantLimits>": "<TsTenantLimits>{}",
+            "hash<NameDescInfo>": "<NameDescInfo>{\"name\": \"x\", \"desc\": \"x\"}",
+            "hash<AppInfo>": "a.appinfo",
+            "hash<DataProviderAppInfo>": "a.app",
+            "object<JavaScriptProgramPool>": "a.pool", "*object<JavaScriptProgramPool>": "a.pool",
+            "object<JavaScriptInProcessPool>": "a.ip", "object<JavaScriptProgram>": "a.program",
+            "object<JavaScriptObject>": "a.jsobj", "*object<JavaScriptObject>": "a.jsobj",
+            "object<Mutex>": "new Mutex()", "object<LoggerInterface>": "new Logger()",
+            "*object<LoggerInterface>": "new Logger()", "object<LoggerLevel>": "Logger::LoggerLevel::getLevelInfo()",
+            "LoggerLevel": "Logger::LoggerLevel::getLevelInfo()",
+            "object<AbstractDataProvider>": "a.record_prov", "object<TypeScriptActionDataProviderBase>": "a.record_prov",
+            "object<ActionFunctionContext>": "a.record_prov", "*object<ActionFunctionContext>": "NOTHING",
+            "object<TypeScriptAppRestConnection>": "a.conn", "object<RestConnection>": "a.conn",
+            "object<HashDataType>": "new HashDataType()", "object<AbstractDataProviderType>": "new HashDataType()",
+            "*object<AbstractRestSchemaValidator>": "NOTHING",
+        };
+
+        #! The static members of the module's classes that hold state every caller shares (qoretechnologies/qore#7185)
+        /** class -> members; a subclass that a tenant declares must not be able to name them: the objects they hold
+            (the socket to the master process, the queues of the replies to every caller, the proxies of every
+            caller, the locks) can be used through their methods even though Qore refuses sandboxed code a change of
+            the member
+        */
+        const SharedStatics = {
+            "JavaScriptProgramProxy": ("startup_timeout", "master_path", "master", "global_lock", "qmap", "cmap",
+                "test_remove_hook", "emap", "master_listener_tid", "master_listener_cnt", "master_listener_stop",
+                "master_pid", "sem_write", "sem_read", "sem_info"),
+            "TypeScriptActionApiWithSchemaDataProvider": ("grtmap", "reqmap", "rreqmap", "gtlock"),
+            "JavaScriptThreadProcessPool": ("m",),
         };
 
         #! The error codes of the cases that are not SANDBOX-REGISTRATION-ERROR
@@ -253,6 +404,15 @@ class TenantProcessWideStateTest inherits QUnit::Test {
 
         #! A record provider of the host's connection to the catalogue's app
         AbstractDataProvider record_prov;
+
+        #! The host's connection to the catalogue's app
+        TypeScriptAppRestConnection host_conn;
+
+        #! The app with a REST schema
+        string schema_app;
+
+        #! The directory of the app's schema
+        TmpDir schema_dir("qore-test-7185-");
     }
 
     constructor() : QUnit::Test("TenantProcessWideState", "1.0", \ARGV) {
@@ -261,6 +421,10 @@ class TenantProcessWideStateTest inherits QUnit::Test {
         addTestCase("tenants get working copies of the providers of the apps", \copyTest());
         addTestCase("the host's state is unchanged by the tenants", \hostStateTest());
         addTestCase("trusted code uses the public API", \trustedTest());
+        addTestCase("every public static method refuses sandboxed code or is allowed for a reason",
+            \classificationTest());
+        addTestCase("tenants get schema providers of their own", \schemaProviderTest());
+        addTestCase("the module's initialization runs once", \initOnceTest());
         set_return_value(main());
     }
 
@@ -277,7 +441,7 @@ class TenantProcessWideStateTest inherits QUnit::Test {
         TypeScriptActionInterface::initApp(CatalogueApp, True);
         TypeScriptActionInterface::initApp(CatalogueRecordApp, True);
         old_base_dir = TypeScriptActionInterface::getAppBaseDir();
-        TypeScriptAppRestConnection host_conn({"name": "qore-test-6749", "url": "tsrest-" + CatalogueApp
+        host_conn = new TypeScriptAppRestConnection({"name": "qore-test-6749", "url": "tsrest-" + CatalogueApp
             + "://conn.example.com", "opts": {"token": "x"}});
         record_prov = host_conn.getDataProvider().getChildProviderPath("tables/items");
 
@@ -294,6 +458,21 @@ class TenantProcessWideStateTest inherits QUnit::Test {
             "async_call": sub () {},
         };
         assertEq(HostCallKey, TypeScriptActionInterface::registerAsyncCall(\call, "app", HostApp));
+        # an app with a REST schema
+        schema_app = "qore-test-7185-schema-" + get_random_string(8);
+        string schema_file = schema_dir.path + DirSep + "schema.json";
+        File f();
+        f.open2(schema_file, O_CREAT | O_EXCL | O_WRONLY, 0600);
+        f.write(make_json({"openapi": "3.0.3", "info": {"title": "Schema fixture", "version": "1"},
+            "paths": {"/items": {"get": {"responses": {"200": {"description": "ok"}}}}}}));
+        f.close();
+        TypeScriptActionInterface::registerApp({"name": schema_app, "display_name": "Schema fixture",
+            "short_desc": "Schema fixture", "desc": "Schema fixture.", "groups": ("Other",),
+            "logo": make_base64_string(<00>), "logo_file_name": "test.svg", "logo_mime_type": "image/svg+xml",
+            "dynamic": True, "rest": {"url": "https://schema.example.com", "data": "json"}, "openapi": schema_file},
+            pool);
+        TypeScriptActionInterface::initApp(schema_app);
+
         # the host's webhook API, which is set once per process
         TypeScriptActionInterface::registerWebhookCreateDestroyApis(hash<auto> sub (hash<auto> h) {
             webhook_calls += "create";
@@ -304,6 +483,9 @@ class TenantProcessWideStateTest inherits QUnit::Test {
     }
 
     globalTearDown() {
+        if (schema_app) {
+            TypeScriptActionInterface::deregisterDynamicApp(schema_app);
+        }
         TypeScriptActionInterface::setCallTimeout(old_timeout);
         TypeScriptActionInterface::setAppBaseDir(old_base_dir == getcwd() ? NOTHING : old_base_dir);
         JavaScriptProgramProxy::setStartupTimeout(old_startup_timeout);
@@ -350,7 +532,14 @@ class TenantProcessWideStateTest inherits QUnit::Test {
 
     directTest() {
         hash<auto> all;
-        foreach hash<auto> i in (DirectCases.pairIterator()) {
+        hash<auto> cases = DirectCases;
+        foreach hash<auto> i in (SharedStatics.pairIterator()) {
+            foreach string member in (i.value) {
+                cases{i.key + "::" + member} = "return X::get();\n}\nclass X inherits TypeScriptActionInterface::"
+                    + i.key + " {\nstatic string get() { return sprintf(\"%y\", " + member + ".typeCode()); }";
+            }
+        }
+        foreach hash<auto> i in (cases.pairIterator()) {
             hash<auto> results = {};
             foreach string name in ("tenant-a", "tenant-b") {
                 try {
@@ -364,7 +553,7 @@ class TenantProcessWideStateTest inherits QUnit::Test {
         # the state is not public: no code that imports the module can name it, and the members of an object are not
         # visible outside its class
         hash<auto> expected;
-        foreach string k in (keys DirectCases) {
+        foreach string k in (keys cases) {
             string err = k =~ /of an object/ ? "not readable" : "PARSE-EXCEPTION";
             expected{k} = {"tenant-a": err, "tenant-b": err};
         }
@@ -459,6 +648,111 @@ class TenantProcessWideStateTest inherits QUnit::Test {
         TypeScriptActionInterface::disableServerOnDemand();
     }
 
+    classificationTest() {
+%ifdef NoReflection
+        testSkip("the reflection module is not available");
+%else
+        hash<string, string> results = {};
+        hash<string, bool> methods = {};
+        foreach Class c in (new Namespace("TypeScriptActionInterface").getClasses()) {
+            foreach AbstractMethod m in (c.getStaticMethods()) {
+                foreach AbstractMethodVariant v in (m.getVariants()) {
+                    if (v.getAccessModifierString() != "public") {
+                        continue;
+                    }
+                    string name = c.getName() + "::" + m.getName();
+                    methods{name} = True;
+                    if (AllowedStatics{name}) {
+                        continue;
+                    }
+                    list<string> types = map $1.getName(), v.getParamTypes();
+                    string call = TenantProcessWideStateTest::callSource(c.getName(), m.getName(), types);
+                    string key = sprintf("%s(%s)", name, (foldl $1 + ", " + $2, types) ?? "");
+                    string rv;
+                    try {
+                        rv = TenantProcessWideStateTest::tenant("tenant-a", call).callFunction("t", args());
+                    } catch (hash<ExceptionInfo> ex) {
+                        rv = sprintf("%s: %s", ex.err, ex.desc);
+                    }
+                    results{key} = RefusalErrors{rv} ? "refused" : rv;
+                }
+            }
+        }
+        # every variant that is not allowed is refused
+        hash<string, string> expected = map {$1: "refused"}, keys results;
+        assertEq(expected, results);
+        # the allowed methods exist: the list names no method that has been removed or renamed
+        assertEq((), (map $1, keys AllowedStatics, !methods{$1}));
+%endif
+    }
+
+    schemaProviderTest() {
+        # the host's provider is shared; each tenant gets one of its own, whose settings do not reach the host's
+        RestSchemaDataProvider host = TypeScriptActionInterface::getSchemaDataProvider(schema_app);
+        assertTrue(host == TypeScriptActionInterface::getSchemaDataProvider(schema_app));
+        hash<auto> results = {};
+        foreach string name in ("tenant-a", "tenant-b") {
+            results{name} = TenantProcessWideStateTest::tenant(name, "RestSchemaDataProvider p = "
+                "TypeScriptActionInterface::getSchemaDataProvider(\"" + schema_app + "\"); "
+                "p.setRestClient(new RestClient({\"url\": \"https://tenant.example.com\"}, True)); "
+                "return p.uniqueHash() + \"/\" + (p.getChildProviderNames() ?? ()).join(\",\");",
+                NOTHING, "%requires RestSchemaDataProvider\n%requires RestClient\n").callFunction("t", args());
+        }
+        assertEq(("items",), host.getChildProviderNames());
+        foreach hash<auto> i in (results.pairIterator()) {
+            list<string> l = i.value.split("/");
+            # a provider of the app's schema (with the generic API call child of a new provider)
+            assertTrue(l[1].split(",").contains("items"), i.key + ": " + l[1]);
+            assertTrue(l[0] != host.uniqueHash(), i.key + ": a provider of its own");
+        }
+        # the tenants' REST clients did not reach the host's provider
+        assertTrue(host == TypeScriptActionInterface::getSchemaDataProvider(schema_app));
+        assertNothing(host.tryGetRestClient(), "the host's provider has no REST client");
+    }
+
+    initOnceTest() {
+        # with the in-process server enabled on demand by the DataProvider options and then disabled by the host, a
+        # further initialization by a tenant or by trusted code does not enable it again
+        int old_opts = DataProvider::getOptions();
+        on_exit {
+            DataProvider::setOptions(old_opts);
+            TypeScriptActionInterface::disableInProcessServerOnDemand();
+            TypeScriptActionInterface::setInProcessServer(host_ip);
+        }
+        DataProvider::setOptions(old_opts | DPO_EnableInProcessServers);
+        TypeScriptActionInterface::disableInProcessServerOnDemand();
+        # no server, so that one would be started on demand
+        TypeScriptActionInterface::shutdownInProcessServer();
+        assertNothing(TypeScriptActionInterface::checkInProcessServer());
+
+        assertEq("ran", TenantProcessWideStateTest::tenant("tenant-a", "TypeScriptActionInterface::init(); "
+            "return \"ran\";").callFunction("t", args()));
+        TypeScriptActionInterface::init();
+        assertNothing(TypeScriptActionInterface::checkInProcessServer(), "the server is not started on demand");
+    }
+
+    #! Returns the source of a case that calls a public static method with arguments of the given types
+    static string callSource(string cls, string method, list<string> types) {
+        list<string> pre = ();
+        list<string> args = ();
+        foreach string t in (types) {
+            if (*string vt = (t =~ x/^reference<(.*)>$/)[0]) {
+                *string init = ArgExprs{vt};
+                pre += sprintf("%s r%d%s;", vt, $#, init ? " = " + init : "");
+                args += sprintf("\\r%d", $#);
+            } else {
+                *string arg = ArgExprs{t};
+                if (!arg) {
+                    throw "TEST-ERROR", sprintf("%s::%s(): no argument for type %y; add it to ArgExprs", cls, method,
+                        t);
+                }
+                args += arg;
+            }
+        }
+        return (foldl $1 + " " + $2, pre) + sprintf(" TypeScriptActionInterface::%s::%s(%s); return \"ran\";", cls,
+            method, (foldl $1 + ", " + $2, args) ?? "");
+    }
+
     #! Returns True if the program of the host's catalogue is mapped to its pool
     private bool catalogueMapped() {
         try {
@@ -472,22 +766,26 @@ class TenantProcessWideStateTest inherits QUnit::Test {
     #! Returns the argument hash of the cases
     private hash<auto> args() {
         return {"pool": pool, "ip": tenant_ip, "host_ip": host_ip,
-            "catalogue_id": catalogue_pool.uniqueHash(), "record_prov": record_prov};
+            "catalogue_id": catalogue_pool.uniqueHash(), "record_prov": record_prov,
+            "program": catalogue_pool.getProgram(), "jsobj": catalogue_pool.getProgram().getGlobal(),
+            "conn": host_conn,
+            "appinfo": TypeScriptActionInterface::getInitializedRecordBasedAppInfo(CatalogueRecordApp),
+            "app": DataProviderActionCatalog::getAppEx(CatalogueApp)};
     }
 
     #! Returns the source of a Program whose \c run() function runs the given case and returns its result or error
-    static string runSource(string body) {
-        return Modules + "string sub run_intern(hash<auto> a) { " + body + " }\n"
+    static string runSource(string body, *string modules) {
+        return Modules + (modules ?? "") + "%requires Logger\n" + "string sub run_intern(hash<auto> a) { " + body + " }\n"
             "string sub run(hash<auto> a) { try { return run_intern(a); } catch (hash<ExceptionInfo> ex) { "
             "return ex.err; } }\n";
     }
 
     #! Returns a tenant with a sandbox of its own whose \c t() function runs the given case
-    private static Program tenant(string name, string body, *bool bg) {
+    private static Program tenant(string name, string body, *bool bg, *string modules) {
         string src = bg
             ? "string sub t(hash<auto> a) { Queue q(); background q.push(run(a)); return q.get(); }\n"
             : "string sub t(hash<auto> a) { return run(a); }\n";
-        return TenantProcessWideStateTest::program(name, runSource(body) + src);
+        return TenantProcessWideStateTest::program(name, runSource(body, modules) + src);
     }
 
     #! Returns a Program with a sandbox of its own

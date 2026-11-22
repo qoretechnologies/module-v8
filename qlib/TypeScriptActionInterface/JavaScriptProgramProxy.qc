@@ -141,7 +141,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Semaphore descriptor info for the event listener thread
         hash<SocketPollInfo> es_sem_info;
+    }
 
+    # the state that every proxy of the process shares: not visible to a subclass, as the objects it holds (the
+    # socket to the master process, the queues and proxies of every caller, the locks) could be used through their
+    # methods by the subclass of a tenant (qoretechnologies/qore#7185)
+    private:internal {
         #! Time a new child process has to start; see setStartupTimeout()
         static date startup_timeout = TypeScriptActionInterfacePriv::getEnvTimeout(StartupTimeoutEnv,
             DefaultStartupTimeout);
@@ -198,7 +203,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Semaphore descriptor info
         static hash<SocketPollInfo> sem_info();
+    }
 
+    private {
         #! Restart flag: do not restart event
         const RF_NO_EVENT   = (1 << 0);
 
@@ -409,6 +416,53 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     */
     static date getStartupTimeout() {
         return startup_timeout;
+    }
+
+    #! Sets the code that the removal of a proxy calls in debug mode with the key of the proxy (for tests)
+    /** @param hook the code to call, or @ref nothing to remove it
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    static setTestRemoveHook(*code hook) [dom=PROCESS_CONTROL] {
+        SandboxManager::checkProcessWideRegistration("set the test hook of the TypeScript action proxies");
+        test_remove_hook = hook;
+    }
+
+    #! Returns the TID of the master listener thread (for tests)
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    static int getTestMasterListenerTid() [dom=PROCESS_CONTROL] {
+        SandboxManager::checkProcessWideRegistration("get the master listener of the TypeScript action proxies");
+        return master_listener_tid;
+    }
+
+    #! Returns @ref True if the master listener thread has stopped within the given time (for tests)
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    static bool testWaitMasterListenerStopped(timeout limit) [dom=PROCESS_CONTROL] {
+        SandboxManager::checkProcessWideRegistration("wait for the master listener of the TypeScript action proxies");
+        return !master_listener_cnt.waitForZero(limit);
+    }
+
+    #! Adds the object to the event proxy map and connects to the master listener as the child of an event source does (for tests)
+    /** @return the socket of the event connection, on which the caller sends its \c CC_EVENT_START message
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    private Socket testConnectEventProxy() [dom=PROCESS_CONTROL] {
+        SandboxManager::checkProcessWideRegistration("register a TypeScript action proxy for events");
+        emap{self.uniqueHash()} = self;
+        Socket sock();
+        sock.connectUNIX(master_path);
+        return sock;
+    }
+
+    #! Removes the object from the event proxy map (for tests)
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    private testDisconnectEventProxy() [dom=PROCESS_CONTROL] {
+        SandboxManager::checkProcessWideRegistration("deregister a TypeScript action proxy for events");
+        remove emap{self.uniqueHash()};
     }
 
     #! Destroys every proxy of the process and stops the master listener

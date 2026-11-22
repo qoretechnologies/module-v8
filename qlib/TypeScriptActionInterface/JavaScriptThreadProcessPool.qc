@@ -30,7 +30,9 @@ public class JavaScriptThreadProcessPool {
         const MinProcesses = 1;
     }
 
-    private {
+    # the lock is shared by every pool and proxy of the process, and the maps hold the proxies of every caller: not
+    # visible to a subclass (qoretechnologies/qore#7185)
+    private:internal {
         # atomic lock
         static Mutex m();
 

@@ -136,6 +136,12 @@ public class TypeScriptActionInterface {
         #! The root data provider of the apps; see getRoot()
         static TypeScriptActionRootDataProvider root;
 
+        #! Set when init() has run: the module's static initialization runs once (qoretechnologies/qore#7185)
+        static bool init_done;
+
+        #! Guards @ref init_done
+        static Mutex init_lock();
+
         #! The webhook creation API; see registerWebhookCreateDestroyApis()
         static code WebhookCreate;
         #! The webhook deletion API; see registerWebhookCreateDestroyApis()
@@ -169,6 +175,7 @@ public class TypeScriptActionInterface {
             "getOptionFunctions": \TypeScriptActionInterface::getOptionFunctionsUnchecked(),
             "actionSucceeded": \TypeScriptActionInterface::actionSucceededUnchecked(),
             "getDynamicAppPath": \TypeScriptActionInterface::getDynamicAppPathUnchecked(),
+            "getSchemaDataProvider": \TypeScriptActionInterface::getSchemaDataProviderUnchecked(),
         });
     }
 
@@ -461,7 +468,27 @@ TypeScriptActionInterface::setCallTimeout(1h);
     }
 
     #! Performs static initialization of the module
+    /** Runs once: the module registers it as its static initializer, which DataProvider runs at once on the calling
+        thread when the module is loaded by code that a sandbox governs; any further call does nothing, so other code,
+        also sandboxed code, cannot use it to apply the DataProvider options to the servers' on-demand settings again
+        (undoing disableServerOnDemand() or disableInProcessServerOnDemand()) or to initialize every app again
+        (qoretechnologies/qore#7185).  A failed initialization runs again at the next call.
+    */
     static init() {
+        {
+            init_lock.lock();
+            on_exit init_lock.unlock();
+            if (init_done) {
+                return;
+            }
+            init_done = True;
+        }
+        # DataProvider keeps a failed initializer for its next check, so a failed initialization runs again
+        on_error {
+            init_lock.lock();
+            on_exit init_lock.unlock();
+            init_done = False;
+        }
         TypeScriptActionInterface::checkRoot();
 
         int opts = DataProvider::getOptions();
@@ -724,9 +751,15 @@ TypeScriptActionInterface::clearDiscoverySourceFailure(source);
         @return the action script paths seen registering an app without a complete identity batch, sorted; an
             empty list when every registration observed the current producer contract
 
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code: the sources are paths of
+        the host (qoretechnologies/qore#7185)
+
         @since %TypeScriptActionInterface 1.1
     */
-    static list<string> getIncompleteInventorySources() {
+    static list<string> getIncompleteInventorySources() [dom=PROCESS_CONTROL] {
+        # the host's paths (qoretechnologies/qore#7185)
+        SandboxManager::checkProcessWideRegistration("get the incomplete inventory sources of the TypeScript action "
+            "interface");
         AutoLock al(discovery_inventory_lock);
         return sort(keys incomplete_inventory_source_map);
     }
@@ -854,7 +887,17 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     #! Returns the base directory used to resolve paths in app definitions relative to the app catalogue
-    static string getAppBaseDir() {
+    /** @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code: the directory is a path
+        of the host
+    */
+    static string getAppBaseDir() [dom=PROCESS_CONTROL] {
+        # the host's configuration (qoretechnologies/qore#7185)
+        SandboxManager::checkProcessWideRegistration("get the app base directory of the TypeScript action interface");
+        return TypeScriptActionInterface::getAppBaseDirUnchecked();
+    }
+
+    #! The unchecked implementation of getAppBaseDir(), for the module's own code
+    private:internal static string getAppBaseDirUnchecked() {
         return app_base_dir ?? getcwd();
     }
 
@@ -1504,7 +1547,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         appmap{app.name} = <AppInfo>{
             "app": app,
             "schema_metadata": schema_metadata,
-            "cwd": TypeScriptActionInterface::getAppBaseDir(),
+            "cwd": TypeScriptActionInterface::getAppBaseDirUnchecked(),
 
             "get_table_list": get_table_list,
             "begin_transaction": begin_transaction,
@@ -1591,7 +1634,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         hash<AppInfo> info = <AppInfo>{
             "app": app,
-            "cwd": TypeScriptActionInterface::getAppBaseDir(),
+            "cwd": TypeScriptActionInterface::getAppBaseDirUnchecked(),
             "pool": pool,
         };
 
@@ -1835,8 +1878,14 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         @code{.py}
         auto error = TypeScriptActionInterface::getAppSchemaError("trello");
         @endcode
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code: the error, with its call
+        stack and source locations, was raised by the host's load of the app (qoretechnologies/qore#7185); a sandboxed
+        caller gets the error's code and description when it uses the app's actions
     */
-    static *hash<ExceptionInfo> getAppSchemaError(string app) {
+    static *hash<ExceptionInfo> getAppSchemaError(string app) [dom=PROCESS_CONTROL] {
+        # the host's error (qoretechnologies/qore#7185)
+        SandboxManager::checkProcessWideRegistration("get the schema error of a TypeScript app");
         return app_schema_error_map{appcasemap{app} ?? app};
     }
 
@@ -3807,7 +3856,7 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             creates = creating_actions{app}{action} ?? False;
         }
         if (creates) {
-            TypeScriptActionDataProviderBase::clearAppCache(app);
+            TsaiProcessState::Internal.clearAppCache(app);
         }
     }
 
@@ -4622,7 +4671,12 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     #! Creates a connection for the given app
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the connections
+        created with createConnection() are process-wide (qoretechnologies/qore#7185)
+    */
     static string createConnection(string app, JavaScriptObject opts) {
+        # the connection map is process-wide; refused before the options are read (qoretechnologies/qore#7185)
+        SandboxManager::checkProcessWideRegistration("create a connection in the TypeScript action connection map");
         return TypeScriptActionInterface::createConnection(app, opts.toData());
     }
 
@@ -4671,8 +4725,13 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     #! Executes the given app action with the given arguments
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the connections
+        created with createConnection() are process-wide (qoretechnologies/qore#7185)
+    */
     static auto execAppAction(string app, string action, string connection, *JavaScriptObject opts,
             *JavaScriptObject request_options, *bool silent) {
+        # the connection map is process-wide; refused before the options are read (qoretechnologies/qore#7185)
+        SandboxManager::checkProcessWideRegistration("execute an action with a TypeScript action test connection");
         on_error if (!silent) {
             printf("%s\n", get_exception_string($1));
         }
@@ -4885,23 +4944,41 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     }
 
     #! Returns a REST schema data provider for the given app (supports Swagger 2.0 and OpenAPI 3.0/3.1)
+    /** Code that is sandboxed or acts for sandboxed code gets a provider of its own: the provider that the module
+        keeps for the app is shared by every caller, and its REST client, logger and debug collector can be set
+        (qoretechnologies/qore#7185)
+    */
     static RestSchemaDataProvider getSchemaDataProvider(string app, *string schema_name) {
+        if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            return new RestSchemaDataProvider(TypeScriptActionInterface::getAppSchema(app, schema_name));
+        }
+        return TypeScriptActionInterface::getSchemaDataProviderUnchecked(app, schema_name);
+    }
+
+    #! Returns the schema of an app
+    private:internal static AbstractRestSchemaValidator getAppSchema(string app, *string schema_name) {
+        string appname = app.lwr();
+        *AbstractRestSchemaValidator schema = exists schema_name
+            ? app_schema_schema_map{appname}{schema_name}
+            : app_schema_map{appname};
+        if (!schema) {
+            if (exists schema_name) {
+                throw "APP-ERROR", sprintf("App %y has no REST schema %y", app, schema_name);
+            } else {
+                throw "APP-ERROR", sprintf("App %y has no REST schema", app);
+            }
+        }
+        return schema;
+    }
+
+    #! The unchecked implementation of getSchemaDataProvider(), for the module's own code: the shared provider
+    private:internal static RestSchemaDataProvider getSchemaDataProviderUnchecked(string app, *string schema_name) {
         string appname = app.lwr();
         *RestSchemaDataProvider rv = exists schema_name
             ? app_schema_schema_dp{appname}{schema_name}
             : app_schema_dp{appname};
         if (!rv) {
-            *AbstractRestSchemaValidator schema = exists schema_name
-                ? app_schema_schema_map{appname}{schema_name}
-                : app_schema_map{appname};
-            if (!schema) {
-                if (exists schema_name) {
-                    throw "APP-ERROR", sprintf("App %y has no REST schema %y", app, schema_name);
-                } else {
-                    throw "APP-ERROR", sprintf("App %y has no REST schema", app);
-                }
-            }
-            rv = new RestSchemaDataProvider(schema);
+            rv = new RestSchemaDataProvider(TypeScriptActionInterface::getAppSchema(app, schema_name));
             if (exists schema_name) {
                 app_schema_schema_dp{appname}{schema_name} = rv;
             } else {

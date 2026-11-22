@@ -87,8 +87,11 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
         #! Request key for static request info
         string request_key;
+    }
 
-
+    # the type and request information that every caller shares: not visible to a subclass, which could use the lock
+    # or read the information of other callers (qoretechnologies/qore#7185)
+    private:internal {
         #! Global request type info per action for dynamic types: app-action -> type info
         static hash<string, hash<TypeProviderInfo>> grtmap = {};
 
@@ -637,7 +640,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             on_error rethrow $1.err, sprintf("Error setting data provider from app %y action %y: %s (REST schema "
                 "path: %y)", app, action, $1.desc, schema_path);
 
-            AbstractDataProvider p = TypeScriptActionInterface::getSchemaDataProvider(app, rest_schema)
+            AbstractDataProvider p = TsaiProcessState::Internal.getSchemaDataProvider(app, rest_schema)
                 .getChildProviderPath(schema_path);
             if (!(p instanceof RestSchemaRequestDataProvider)) {
                 throw "ACTION-ERROR", sprintf("App %y action %y: REST schema path %y is not an API endpoint (%s -> %y)", app,

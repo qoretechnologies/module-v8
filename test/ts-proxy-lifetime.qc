@@ -510,30 +510,27 @@ class ListenerReleaseProxy inherits JavaScriptProgramProxy {
 
     #! adds the object to the event proxy map, as for an event source, and sends the event connection of its child
     connectEvent() {
-        string uh = self.uniqueHash();
-        emap{uh} = self;
-        Socket sock();
-        sock.connectUNIX(master_path);
-        sendString(sock, makeSend(TypeScriptProxy::CC_EVENT_START, {"pkey": uh, "pid": getpid()}));
+        Socket sock = testConnectEventProxy();
+        sendString(sock, makeSend(TypeScriptProxy::CC_EVENT_START, {"pkey": self.uniqueHash(), "pid": getpid()}));
     }
 
     #! removes the object from the event proxy map, as when its event source is released
     unpin() {
-        remove emap{self.uniqueHash()};
+        testDisconnectEventProxy();
     }
 
     #! sets the hook that the removal of a proxy calls in debug mode
     static setRemoveHook(*code hook) {
-        test_remove_hook = hook;
+        JavaScriptProgramProxy::setTestRemoveHook(hook);
     }
 
     static int getListenerTid() {
-        return master_listener_tid;
+        return JavaScriptProgramProxy::getTestMasterListenerTid();
     }
 
     #! returns True if the master listener thread has stopped within the given time
     static bool waitListenerStopped(timeout limit) {
-        return !master_listener_cnt.waitForZero(limit);
+        return JavaScriptProgramProxy::testWaitMasterListenerStopped(limit);
     }
 
     #! returns True if the debug hooks of the module are active
