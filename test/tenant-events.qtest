@@ -52,6 +52,15 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
             case \"poll\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::pollEvents(c, args[0], args[1], args[2])};
             case \"stop\": TypeScriptActionInterface::TenantActionRunner::stopEvents(c, args[0]); return {};
             case \"exec\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::exec(c, args[0], args[1], args[2])};
+            case \"info\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::getActionInfo(c, args[0], args[1])};
+            case \"release\": TypeScriptActionInterface::TenantActionRunner::releaseConcurrency(args[0]); return {\"result\": True};
+            case \"release-program\": TypeScriptActionInterface::TenantActionRunner::releaseEventProgram(args[0], args[1], {}); return {\"result\": True};
+            case \"dispatch-trusted\": {
+                bool t;
+                return {\"result\": TypeScriptActionInterface::TenantActionRunner::dispatchTrusted(NOTHING,
+                    <TypeScriptActionInterface::AsyncCallInfo>{\"key\": \"k\", \"app\": args[0], \"type\": \"api\", \"label\": \"x\"},
+                    NOTHING, \\t)};
+            }
         }
     } catch (hash<ExceptionInfo> ex) {
         return {\"err\": ex.err, \"desc\": ex.desc, \"arg\": ex.arg};
@@ -65,12 +74,21 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         HttpServer server;
         BlockingHandler handler();
         int port;
-        Program tp;
+        #! each tenant's own Program, governed by a sandbox whose isolation domain is the tenant
+        hash<string, Program> tenant_programs = {};
+        Mutex tenant_programs_lock();
     }
 
     constructor() : QUnit::Test("TenantEvents", "1.0", \ARGV) {
         addTestCase("events are pulled with the function's checkpoint", \ticksTest());
         addTestCase("a subscription belongs to its tenant", \ownerTest());
+        addTestCase("a sandboxed caller cannot start another tenant's events", \startDomainTest());
+        addTestCase("a sandboxed caller cannot poll, stop or inspect another tenant's source, even with its ID",
+            \sourceDomainTest());
+        addTestCase("a sandboxed caller cannot release a tenant's call", \releaseTest());
+        addTestCase("a sandboxed caller with no isolation domain cannot poll, stop or inspect a source",
+            \noDomainSourceTest());
+        addTestCase("a sandboxed caller cannot dispatch a call as trusted code", \dispatchTrustedTest());
         addTestCase("a failed function's error comes after its events", \errorTest());
         addTestCase("a source that queues its limit of events is stopped and reported", \overflowTest());
         addTestCase("a source over the memory limit is stopped and reported", \heapTest());
@@ -97,11 +115,24 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         server = new HttpServer(<HttpServerOptionInfo>{});
         server.setDefaultHandler("events", handler);
         port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
-        tp = new Program(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
-        tp.parse(TenantSource, "tenant");
+    }
+
+    #! Returns the tenant's own Program: with a Qore that has isolation domains, the runner refuses a sandboxed
+    #! caller whose sandbox has no domain or another tenant's, as a host gives each tenant's sandbox its domain
+    private Program tenantProgram(string tenant) {
+        AutoLock al(tenant_programs_lock);
+        if (*Program p = tenant_programs{tenant}) {
+            return p;
+        }
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "tenant");
         SandboxManager sm();
         sm.setNetworkDefaultPolicy(True);
-        tp.setSandboxManager(sm);
+        if (V8::SandboxCapture::hasIsolationDomains()) {
+            call_object_method(sm, "setIsolationDomain", tenant);
+        }
+        p.setSandboxManager(sm);
+        return tenant_programs{tenant} = p;
     }
 
     globalTearDown() {
@@ -112,7 +143,8 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
     }
 
     private hash<auto> call(string what, string tenant, *list<auto> args) {
-        return tp.callFunction("call", what, {"tenant": tenant, "conn_opts": {"url": "https://api.example.com"}},
+        return tenantProgram(tenant).callFunction("call", what, {"tenant": tenant, "conn_opts":
+            {"url": "https://api.example.com"}},
             args);
     }
 
@@ -180,6 +212,79 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         assertEq("TS-TENANT-ERROR", call("poll", "b", (id,)).err);
         assertEq("TS-TENANT-ERROR", call("stop", "b", (id,)).err);
         assertTrue(call("poll", "a", (id,)).result.running);
+    }
+
+    startDomainTest() {
+        if (!V8::SandboxCapture::hasIsolationDomains()) {
+            testSkip("this Qore has no isolation domains");
+        }
+        # a caller in tenant a's isolation domain asks for tenant b: refused before any source starts
+        hash<auto> rv = tenantProgram("a").callFunction("call", "start", {"tenant": "b", "conn_opts":
+            {"url": "https://api.example.com"}}, (App, "ticks", {"count": 0}, NOTHING));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+    }
+
+    #! qoretechnologies/qore#7227
+    sourceDomainTest() {
+        if (!V8::SandboxCapture::hasIsolationDomains()) {
+            testSkip("this Qore has no isolation domains");
+        }
+        string id = start("m", "ticks", {"count": 0});
+        on_exit call("stop", "m", (id,));
+        # a caller in tenant n's isolation domain names tenant m and m's source: refused
+        Program other = tenantProgram("n");
+        hash<auto> m_ctx = {"tenant": "m", "conn_opts": {"url": "https://api.example.com"}};
+        hash<auto> rv = other.callFunction("call", "poll", m_ctx, (id,));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+        rv = other.callFunction("call", "stop", m_ctx, (id,));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+        rv = other.callFunction("call", "info", m_ctx, (App, "ticks"));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+        # the owner still can: the source is running, and its action's information is returned
+        assertTrue(call("poll", "m", (id,)).result.running, "the refused stop did not stop the source");
+        assertEq(True, call("info", "m", (App, "ticks")).result.tenant_available);
+    }
+
+    #! qoretechnologies/qore#7227: only the runner itself releases a tenant's call (its concurrency limit)
+    releaseTest() {
+        hash<auto> rv = call("release", "o", ("o",));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("sandboxed", rv.desc);
+        rv = call("release", "o", ("p",));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        rv = call("release-program", "o", ("p", App));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("sandboxed", rv.desc);
+    }
+
+    #! qoretechnologies/qore#7227: a sandbox with no isolation domain is refused, fail closed
+    noDomainSourceTest() {
+        if (!V8::SandboxCapture::hasIsolationDomains()) {
+            testSkip("this Qore has no isolation domains");
+        }
+        string id = start("q", "ticks", {"count": 0});
+        on_exit call("stop", "q", (id,));
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "no-domain");
+        p.setSandboxManager(new SandboxManager());
+        hash<auto> q_ctx = {"tenant": "q", "conn_opts": {"url": "https://api.example.com"}};
+        foreach list<auto> c in (("poll", (id,)), ("stop", (id,)), ("info", (App, "ticks"))) {
+            hash<auto> rv = p.callFunction("call", c[0], q_ctx, c[1]);
+            assertEq("TS-TENANT-ERROR", rv.err, c[0] + sprintf(": %y", rv));
+            assertRegex("no isolation domain", rv.desc, c[0]);
+        }
+        assertTrue(call("poll", "q", (id,)).result.running, "the refused stop did not stop the source");
+    }
+
+    #! qoretechnologies/qore#7227: dispatchTrusted() runs a call under the host's sandbox, for trusted code only
+    dispatchTrustedTest() {
+        hash<auto> rv = call("dispatch-trusted", "r", (App,));
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("sandboxed", rv.desc);
     }
 
     errorTest() {
