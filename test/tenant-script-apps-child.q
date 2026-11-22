@@ -23,12 +23,17 @@ hash<auto> sub run(string app, string action, auto req) {
 
 Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
 p.parse(TenantSource, "tenant");
-p.setSandboxManager(new SandboxManager());
-hash<auto> rv = {
-    "echo": p.callFunction("run", "tenant-test", "echo", {"x": 1}),
-    "create": p.callFunction("run", "tenant-records", "create", {"table": "items", "records": {"id": 1, "name": "a"}}),
-    "search": p.callFunction("run", "tenant-records", "search", {"table": "items"}),
-};
+# the tenant's sandbox has its isolation domain, as a host gives it (with a Qore that has isolation domains)
+SandboxManager sm();
+if (V8::SandboxCapture::hasIsolationDomains()) {
+    call_object_method(sm, "setIsolationDomain", "s");
+}
+p.setSandboxManager(sm);
+# assigned member by member: a literal's inferred value type would refuse the later members
+hash<auto> rv = {};
+rv.echo = p.callFunction("run", "tenant-test", "echo", {"x": 1});
+rv.create = p.callFunction("run", "tenant-records", "create", {"table": "items", "records": {"id": 1, "name": "a"}});
+rv.search = p.callFunction("run", "tenant-records", "search", {"table": "items"});
 # the host probes the apps when it builds its catalogue
 # the plain action of tenant-graph runs before the probe, which then refuses the lazy one
 rv.graph_plain_before = p.callFunction("run", "tenant-graph", "plain", NOTHING);
