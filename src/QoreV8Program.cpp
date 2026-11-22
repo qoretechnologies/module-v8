@@ -1176,10 +1176,12 @@ int QoreV8Program::saveQoreReferenceDefault(const QoreValue& rv, ExceptionSink& 
         // Detach before changing the list: prepending the first object can change the
         // hash slot from non-scannable to scannable. Other owners keep their old list.
         ReferenceHolder<QoreListNode> list(slot.swap(QoreValue(), &xsink).get<QoreListNode>(), &xsink);
+        ReferenceHolder<QoreListNode> previous(&xsink);
         if (!list) {
             list = new QoreListNode(autoTypeInfo);
         } else if (!list->is_unique()) {
-            list = list->copy();
+            previous = list.release();
+            list = previous->copy();
         }
         // Prepend for FILO destruction order and republish even if the prepend failed.
         list->splice(0, 0, rv, &xsink);
@@ -1312,6 +1314,9 @@ QoreValue QoreV8Program::getQoreValue(ExceptionSink* xsink, v8::Local<v8::Value>
 
     if (val->IsArray()) {
         v8::Local<v8::Array> array = v8::Local<v8::Array>::Cast(val);
+        if (!qore_v8_check_array_length(array->Length(), xsink)) {
+            return QoreValue();
+        }
         ReferenceHolder<QoreListNode> rv(new QoreListNode(autoTypeInfo), xsink);
         for (uint32_t i = 0, e = array->Length(); i < e; ++i) {
             v8::MaybeLocal<v8::Value> val = array->Get(context, i);

@@ -13,46 +13,74 @@ class SavedObject {
     destructor() { destroyed.inc(); }
 }
 
-class ConvertedArrayOwner {
-    private {
-        hash<auto> retained;
-        Counter destroyed;
-    }
-
-    constructor(list<auto> items, Counter counter) {
-        destroyed = counter;
-        retained = {"elements": items};
-        items[0].back = self;
-    }
-
-    destructor() { destroyed.inc(); }
-}
-
 class ConvertedArrayOwnershipTest inherits QUnit::Test {
     constructor() : Test("ConvertedArrayOwnershipTest", "1.0", \ARGV) {
-        addTestCase("replacing a converted slot releases its JavaScript handle", \replacedSlot());
-        addTestCase("a Qore cycle through a converted array and object is collected", \objectCycle());
-        addTestCase("a cycle through the default reference-save list is collected", \savedObjectCycle());
+        addTestCase("the live thread-data hash tracks the saved object list", \savedObjectCycle());
+        addTestCase("deep arrays convert own canonical indices", \arrayKeys());
+        addTestCase("out-of-range arrays are refused before evaluating elements", \arrayBounds());
+        addTestCase("a deep array writer exposes its converted leaf to the collector", \objectCycle());
         addTestCase("saving an object preserves other owners of the previous list", \saveListAlias());
         set_return_value(main());
     }
 
-    private replacedSlot() {
+    private arrayKeys() {
         JavaScriptProgram js("const v8 = require('node:v8');
             globalThis.handles = () => v8.getHeapStatistics().used_global_handles_size;
-            const a = [() => a];
-            a.alias = 42;
+            const a = [() => 42];
             a[3] = 'last';
-            globalThis.envelope = {a};", "converted-array.js");
+            for (const key of ['alias', '1.5', '01', '-01']) {
+                Object.defineProperty(a, key, {enumerable: true, get() { throw Error(key); }});
+            }
+            const proto = Object.create(Array.prototype);
+            proto.name = 1;
+            proto[1] = 'inherited';
+            Object.setPrototypeOf(a, proto);
+            globalThis.envelope = {a};", "array-keys.js");
         auto envelope = js.getGlobal().envelope;
+        {
+            list<auto> a = envelope.toData().a;
+            assertEq(4, a.size());
+            assertEq(42, a[0]());
+            assertEq(NOTHING, a[1]);
+            assertEq(NOTHING, a[2]);
+            assertEq("last", a[3]);
+        }
         code handles = js.getGlobal().handles.toData();
-        # The named property maps to slot zero after the callable has been stored there.
-        assertEq((42, NOTHING, NOTHING, "last"), envelope.toData().a);
         int before = handles();
         for (int i = 0; i < 16; ++i) {
             envelope.toData();
         }
-        assertEq(before, handles(), "every discarded callable released its persistent V8 handle");
+        assertEq(before, handles(), "discarding deep-converted functions releases their V8 handles");
+    }
+
+    private arrayBounds() {
+        JavaScriptProgram js("const negative = [];
+            Object.defineProperty(negative, '-1', {enumerable: true, get() { throw Error('negative getter'); }});
+            globalThis.neg = {items: negative};
+            const large = [];
+            large[50000001] = 1;
+            let reads = 0;
+            Object.defineProperty(large, '0', {enumerable: true, get() { ++reads; return Symbol(); }});
+            globalThis.big = {items: large};
+            globalThis.shallow = () => large;
+            globalThis.reads = () => reads;", "array-bounds.js");
+        auto global = js.getGlobal();
+        assertThrows("JAVASCRIPT-ARRAY-ERROR", sub () { global.neg.toData(); });
+        assertThrows("JAVASCRIPT-ARRAY-ERROR", sub () { global.big.toData(); });
+        assertThrows("JAVASCRIPT-ARRAY-ERROR", sub () { global.shallow.toData()(); });
+        assertEq(0, global.reads.toData()(), "both length guards run before any getter");
+    }
+
+    private bool scanProbes() {
+        try {
+            call_function("V8::dbg_thread_data_needs_scan");
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err != "NO-FUNCTION") {
+                rethrow;
+            }
+            return False;
+        }
+        return True;
     }
 
     private savedObjectCycle() {
@@ -63,7 +91,14 @@ class ConvertedArrayOwnershipTest inherits QUnit::Test {
             save_thread_data({"_v8_save": "converted_objects", "converted_objects": ()});
             on_exit remove_thread_data("_v8_save", "converted_objects");
             SavedObject owner(destroyed);
+            bool probes = scanProbes();
+            if (probes) {
+                assertFalse(call_function("V8::dbg_thread_data_needs_scan"), "no scannable thread data yet");
+            }
             save(owner);
+            if (probes) {
+                assertTrue(call_function("V8::dbg_thread_data_needs_scan"), "the original hash now needs a scan");
+            }
             owner.graph = get_all_thread_data();
             assertTrue(owner.graph.converted_objects[0] === owner);
             remove_thread_data("converted_objects");
@@ -85,13 +120,21 @@ class ConvertedArrayOwnershipTest inherits QUnit::Test {
     }
 
     private objectCycle() {
-        JavaScriptProgram js("globalThis.items = [{}];", "converted-cycle.js");
+        if (!scanProbes()) {
+            testSkip("the deep writer probe requires a Debug module-v8 build");
+        }
+        JavaScriptProgram js("", "deep-leaf.js");
         Counter destroyed();
         {
-            auto items = js.getGlobal().items;
-            new ConvertedArrayOwner(items, destroyed);
-            assertEq(0, destroyed.getCount(), "the converted list still has an external owner");
+            list<auto> items;
+            {
+                SavedObject owner(destroyed);
+                items = call_function("V8::dbg_array_with_leaf", js, owner);
+                assertTrue(items[0] === owner);
+                owner.graph = items;
+            }
+            assertEq(0, destroyed.getCount(), "the list still has an external owner");
         }
-        assertEq(1, destroyed.getCount(), "the last external reference to the list was dropped");
+        assertEq(1, destroyed.getCount(), "the cycle was collected after the last list root dropped");
     }
 }

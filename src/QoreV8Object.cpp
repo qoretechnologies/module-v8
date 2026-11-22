@@ -47,6 +47,88 @@ QoreObject* QoreV8Object::getReferencedProgram() {
     return pgm->getReferencedObject();
 }
 
+static constexpr uint32_t max_array_element = 50000000;
+
+bool qore_v8_check_array_length(uint32_t length, ExceptionSink* xsink) {
+    if (length <= max_array_element + 1) {
+        return true;
+    }
+    xsink->raiseException("JAVASCRIPT-ARRAY-ERROR", "JavaScript array length %u exceeds the supported maximum of %u",
+        length, max_array_element + 1);
+    return false;
+}
+
+static bool is_negative_index(v8::Isolate* isolate, v8::Local<v8::Value> key) {
+    v8::String::Utf8Value name(isolate, key);
+    if (name.length() < 2 || (*name)[0] != '-' || (*name)[1] < '1' || (*name)[1] > '9') {
+        return false;
+    }
+    for (int i = 2; i < name.length(); ++i) {
+        if ((*name)[i] < '0' || (*name)[i] > '9') {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Convert own enumerable array indices. Named properties are not Qore list entries;
+// in particular, do not run getters on names that will be ignored.
+template <typename Convert>
+static QoreListNode* toList(QoreV8ProgramHelper& v8h, v8::Local<v8::Array> array, Convert convert) {
+    ExceptionSink* xsink = v8h.getExceptionSink();
+    if (!qore_v8_check_array_length(array->Length(), xsink)) {
+        return nullptr;
+    }
+    auto context = v8h.getContext();
+    v8::Local<v8::Array> props;
+    if (!array->GetOwnPropertyNames(context, static_cast<v8::PropertyFilter>(v8::ONLY_ENUMERABLE | v8::SKIP_SYMBOLS),
+            v8::KeyConversionMode::kKeepNumbers).ToLocal(&props)) {
+        v8h.checkException();
+        return nullptr;
+    }
+    ReferenceHolder<QoreListNode> list(new QoreListNode(autoTypeInfo), xsink);
+    for (uint32_t i = 0, n = props->Length(); i < n; ++i) {
+        v8::Local<v8::Value> key;
+        if (!props->Get(context, i).ToLocal(&key)) {
+            v8h.checkException();
+            return nullptr;
+        }
+        if (!key->IsUint32()) {
+            if (key->IsString() && is_negative_index(v8h.getIsolate(), key)) {
+                xsink->raiseException("JAVASCRIPT-ARRAY-ERROR", "Negative array indices cannot be converted to a Qore list");
+                return nullptr;
+            }
+            continue;
+        }
+        uint32_t index = key.As<v8::Uint32>()->Value();
+        if (index > max_array_element) {
+            xsink->raiseException("JAVASCRIPT-ARRAY-ERROR", "JavaScript array index %u exceeds the supported maximum of %u",
+                index, max_array_element);
+            return nullptr;
+        }
+        v8::Local<v8::Value> value;
+        if (!array->Get(context, key).ToLocal(&value)) {
+            v8h.checkException();
+            return nullptr;
+        }
+        ValueHolder item(convert(value), xsink);
+        if (*xsink || list->setEntry(index, item.release(), xsink)) {
+            return nullptr;
+        }
+    }
+    return list.release();
+}
+
+#ifdef DEBUG
+// The current deep converter produces plain data and native JS call references. Exercise
+// its actual writer with a scannable converted leaf without changing the public conversion.
+QoreListNode* qore_v8_dbg_array_with_leaf(QoreV8ProgramHelper& v8h, QoreValue leaf) {
+    v8::Local<v8::Value> value = v8::True(v8h.getIsolate());
+    return toList(v8h, v8::Array::New(v8h.getIsolate(), &value, 1),
+        [&](v8::Local<v8::Value>) { return leaf.refSelf(); });
+}
+#endif
+
 AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h) const {
     // check for valid helper to avoid crashes with null isolate
     if (!v8h) {
@@ -85,25 +167,6 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::V
     v8::Isolate* isolate = v8h.getIsolate();
     v8::EscapableHandleScope handle_scope(isolate);
 
-    v8::MaybeLocal<v8::Array> maybe_props = obj->GetPropertyNames(v8h.getContext());
-    if (maybe_props.IsEmpty()) {
-        if (v8h.checkException()) {
-            return nullptr;
-        }
-        return new QoreHashNode(autoTypeInfo);
-    }
-
-    v8::Local<v8::Array> props = maybe_props.ToLocalChecked();
-    // check the first prop; if it's an integer, then it's an array
-    uint32_t len = props->Length();
-    if (!len) {
-        if (obj->IsArray()) {
-            return new QoreListNode(autoTypeInfo);
-        } else {
-            return new QoreHashNode(autoTypeInfo);
-        }
-    }
-
     {
         v8::MaybeLocal<v8::Set> v = objset.Add(v8h.getContext(), obj);
         if (v.IsEmpty()) {
@@ -115,9 +178,21 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::V
     ReferenceHolder<AbstractQoreNode> rv(v8h.getExceptionSink());
 
     if (obj->IsArray()) {
-        rv = toList(v8h, parent, objset, handle_scope.Escape(props), len);
+        rv = toList(v8h, obj.As<v8::Array>(), [&](v8::Local<v8::Value> value) -> QoreValue {
+            if (value->IsObject()) {
+                ReferenceHolder<QoreV8Object> tmp(new QoreV8Object(v8h.getProgram(), value.As<v8::Object>()),
+                    v8h.getExceptionSink());
+                return tmp->toData(v8h, parent, objset);
+            }
+            return v8h.getProgram()->getQoreValue(v8h.getExceptionSink(), value);
+        });
     } else {
-        rv = toHash(v8h, parent, objset, handle_scope.Escape(props), len);
+        v8::Local<v8::Array> props;
+        if (obj->GetPropertyNames(v8h.getContext()).ToLocal(&props)) {
+            rv = toHash(v8h, parent, objset, props, props->Length());
+        } else if (!v8h.checkException()) {
+            rv = new QoreHashNode(autoTypeInfo);
+        }
     }
 
     {
@@ -307,59 +382,6 @@ QoreHashNode* QoreV8Object::toHash(QoreV8ProgramHelper& v8h, v8::Local<v8::Value
         assert(!*xsink);
     }
     return h.release();
-}
-
-constexpr int max_array_element = 50000000;
-
-QoreListNode* QoreV8Object::toList(QoreV8ProgramHelper& v8h, v8::Local<v8::Value> parent, v8::Set& objset,
-        v8::Local<v8::Array> props, uint32_t len) const {
-    ExceptionSink* xsink = v8h.getExceptionSink();
-    v8::Local<v8::Object> obj = get();
-
-    ReferenceHolder<QoreListNode> l(new QoreListNode(autoTypeInfo), xsink);
-
-    for (uint32_t i = 0, e = len; i < e; ++i) {
-        v8::MaybeLocal<v8::Value> key = props->Get(v8h.getContext(), i);
-        if (key.IsEmpty()) {
-            if (v8h.checkException()) {
-                return nullptr;
-            }
-            continue;
-        }
-        v8::Local<v8::Value> k = key.ToLocalChecked();
-        ValueHolder qk(v8h.getProgram()->getQoreValue(xsink, k), xsink);
-        if (*xsink) {
-            if (v8h.checkException()) {
-                return nullptr;
-            }
-            continue;
-        }
-        int64 ix = qk->getAsBigInt();
-        if (ix < 0 || ix > max_array_element) {
-            xsink->raiseException("JAVASCRIPT-ARRAY-ERROR", "The JavaScript object references array element "
-                QLLD " outside the supported range 0 through %d", ix, max_array_element);
-            return nullptr;
-        }
-        ValueHolder elem(xsink);
-        v8::MaybeLocal<v8::Value> value = obj->Get(v8h.getContext(), k);
-        if (value.IsEmpty()) {
-            if (v8h.checkException()) {
-                return nullptr;
-            }
-        } else {
-            v8::Local<v8::Value> v = value.ToLocalChecked();
-            if (v->IsObject()) {
-                ReferenceHolder<QoreV8Object> tmp(new QoreV8Object(v8h.getProgram(), v.As<v8::Object>()), xsink);
-                elem = tmp->toData(v8h, parent, objset);
-            } else {
-                elem = v8h.getProgram()->getQoreValue(xsink, v);
-            }
-        }
-        if (*xsink || l->setEntry(ix, elem.release(), xsink)) {
-            return nullptr;
-        }
-    }
-    return l.release();
 }
 
 bool QoreV8Object::isCallable(QoreV8ProgramHelper& v8h) const {
