@@ -1,0 +1,97 @@
+#!/usr/bin/env qore
+# Copyright 2026 Qore Technologies, s.r.o.
+# MIT License
+%modern
+%requires v8
+%requires QUnit
+%exec-class ConvertedArrayOwnershipTest
+
+class SavedObject {
+    public { auto graph; }
+    private { Counter destroyed; }
+    constructor(Counter counter) { destroyed = counter; }
+    destructor() { destroyed.inc(); }
+}
+
+class ConvertedArrayOwner {
+    private {
+        hash<auto> retained;
+        Counter destroyed;
+    }
+
+    constructor(list<auto> items, Counter counter) {
+        destroyed = counter;
+        retained = {"elements": items};
+        items[0].back = self;
+    }
+
+    destructor() { destroyed.inc(); }
+}
+
+class ConvertedArrayOwnershipTest inherits QUnit::Test {
+    constructor() : Test("ConvertedArrayOwnershipTest", "1.0", \ARGV) {
+        addTestCase("replacing a converted slot releases its JavaScript handle", \replacedSlot());
+        addTestCase("a Qore cycle through a converted array and object is collected", \objectCycle());
+        addTestCase("a cycle through the default reference-save list is collected", \savedObjectCycle());
+        addTestCase("saving an object preserves other owners of the previous list", \saveListAlias());
+        set_return_value(main());
+    }
+
+    private replacedSlot() {
+        JavaScriptProgram js("const v8 = require('node:v8');
+            globalThis.handles = () => v8.getHeapStatistics().used_global_handles_size;
+            const a = [() => a];
+            a.alias = 42;
+            a[3] = 'last';
+            globalThis.envelope = {a};", "converted-array.js");
+        auto envelope = js.getGlobal().envelope;
+        code handles = js.getGlobal().handles.toData();
+        # The named property maps to slot zero after the callable has been stored there.
+        assertEq((42, NOTHING, NOTHING, "last"), envelope.toData().a);
+        int before = handles();
+        for (int i = 0; i < 16; ++i) {
+            envelope.toData();
+        }
+        assertEq(before, handles(), "every discarded callable released its persistent V8 handle");
+    }
+
+    private savedObjectCycle() {
+        JavaScriptProgram js("globalThis.save = value => { globalThis.held = value; };", "saved-object.js");
+        code save = js.getGlobal().save.toData();
+        Counter destroyed();
+        {
+            save_thread_data({"_v8_save": "converted_objects", "converted_objects": ()});
+            on_exit remove_thread_data("_v8_save", "converted_objects");
+            SavedObject owner(destroyed);
+            save(owner);
+            owner.graph = get_all_thread_data();
+            assertTrue(owner.graph.converted_objects[0] === owner);
+            remove_thread_data("converted_objects");
+            assertEq(0, destroyed.getCount());
+        }
+        assertEq(1, destroyed.getCount(), "the saved reference in the copied thread-data hash was scanned");
+    }
+
+    private saveListAlias() {
+        JavaScriptProgram js("globalThis.save = value => {};", "save-list.js");
+        code save = js.getGlobal().save.toData();
+        list<auto> previous = ();
+        save_thread_data({"_v8_save": "aliased_objects", "aliased_objects": previous});
+        on_exit remove_thread_data("_v8_save", "aliased_objects");
+        Counter obj();
+        save(obj);
+        assertEq(0, previous.size());
+        assertTrue(get_thread_data("aliased_objects")[0] === obj);
+    }
+
+    private objectCycle() {
+        JavaScriptProgram js("globalThis.items = [{}];", "converted-cycle.js");
+        Counter destroyed();
+        {
+            auto items = js.getGlobal().items;
+            new ConvertedArrayOwner(items, destroyed);
+            assertEq(0, destroyed.getCount(), "the converted list still has an external owner");
+        }
+        assertEq(1, destroyed.getCount(), "the last external reference to the list was dropped");
+    }
+}

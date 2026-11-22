@@ -1169,25 +1169,21 @@ int QoreV8Program::saveQoreReferenceDefault(const QoreValue& rv, ExceptionSink& 
         domain_name = domain_storage.c_str();
     }
 
-    QoreValue kv = data->getKeyValue(domain_name);
-    // ignore operation if domain exists but is not a list
+    HashAssignmentHelper slot(*data, domain_name);
+    QoreValue kv = slot.get();
+    // Ignore an explicitly disabled (non-list) save domain.
     if (!kv || kv.getType() == NT_LIST) {
-        QoreListNode* list;
-        ReferenceHolder<QoreListNode> list_holder(&xsink);
-        if (!kv) {
-            // we need to assign list in data *after* we prepend the object to the list
-            // in order to manage object counts
+        // Detach before changing the list: prepending the first object can change the
+        // hash slot from non-scannable to scannable. Other owners keep their old list.
+        ReferenceHolder<QoreListNode> list(slot.swap(QoreValue(), &xsink).get<QoreListNode>(), &xsink);
+        if (!list) {
             list = new QoreListNode(autoTypeInfo);
-            list_holder = list;
-        } else {
-            list = kv.get<QoreListNode>();
+        } else if (!list->is_unique()) {
+            list = list->copy();
         }
-
-        // prepend to list to ensure FILO destruction order
+        // Prepend for FILO destruction order and republish even if the prepend failed.
         list->splice(0, 0, rv, &xsink);
-        if (!xsink && list_holder) {
-            data->setKeyValue(domain_name, list_holder.release(), &xsink);
-        }
+        slot.assign(list.release(), &xsink);
         if (xsink) {
             raiseV8Exception(xsink, isolate);
             return -1;

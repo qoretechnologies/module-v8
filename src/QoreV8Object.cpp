@@ -335,45 +335,29 @@ QoreListNode* QoreV8Object::toList(QoreV8ProgramHelper& v8h, v8::Local<v8::Value
             continue;
         }
         int64 ix = qk->getAsBigInt();
-        if (ix > max_array_element) {
+        if (ix < 0 || ix > max_array_element) {
             xsink->raiseException("JAVASCRIPT-ARRAY-ERROR", "The JavaScript object references array element "
-                QLLD " which is above the max element limit (%d) supported in Qore", ix, max_array_element);
+                QLLD " outside the supported range 0 through %d", ix, max_array_element);
             return nullptr;
         }
-        QoreValue& elem = l->getEntryReference(ix);
-
+        ValueHolder elem(xsink);
         v8::MaybeLocal<v8::Value> value = obj->Get(v8h.getContext(), k);
         if (value.IsEmpty()) {
             if (v8h.checkException()) {
                 return nullptr;
             }
-            elem = QoreValue();
-            assert(!*xsink);
-            continue;
-        }
-        v8::Local<v8::Value> v = value.ToLocalChecked();
-        if (v->IsObject()) {
-            v8::MaybeLocal<v8::Object> o = v->ToObject(v8h.getContext());
-            if (o.IsEmpty()) {
-                if (v8h.checkException()) {
-                    return nullptr;
-                }
-                continue;
+        } else {
+            v8::Local<v8::Value> v = value.ToLocalChecked();
+            if (v->IsObject()) {
+                ReferenceHolder<QoreV8Object> tmp(new QoreV8Object(v8h.getProgram(), v.As<v8::Object>()), xsink);
+                elem = tmp->toData(v8h, parent, objset);
+            } else {
+                elem = v8h.getProgram()->getQoreValue(xsink, v);
             }
-            v8::Local<v8::Object> obj = o.ToLocalChecked();
-            ReferenceHolder<QoreV8Object> tmp(new QoreV8Object(v8h.getProgram(), obj), xsink);
-            ReferenceHolder<AbstractQoreNode> h0(tmp->toData(v8h, parent, objset), xsink);
-            if (*xsink) {
-                return nullptr;
-            }
-            elem = h0.release();
-            continue;
         }
-        ValueHolder qv(v8h.getProgram()->getQoreValue(xsink, v), xsink);
-        if (*xsink) {
+        if (*xsink || l->setEntry(ix, elem.release(), xsink)) {
             return nullptr;
         }
-        elem = qv.release();
     }
     return l.release();
 }
