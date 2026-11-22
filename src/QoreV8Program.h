@@ -36,6 +36,7 @@
 #include "v8-module.h"
 
 #include <atomic>
+#include <mutex>
 #include <set>
 #include <map>
 #include <vector>
@@ -398,6 +399,9 @@ protected:
     ResolvedCallReferenceNode* restricted_bridge = nullptr;
     //! set when the program's code is terminated, from another thread (qoretechnologies/qore#6845)
     std::atomic<bool> terminated{false};
+    //! guards the environment pointer between terminate(), which another thread calls, and deleteIntern(), which
+    //! clears it before the environment is stopped and freed (qoretechnologies/qore#7284)
+    std::mutex env_lock;
     //! set when a heap check found the cap exceeded
     std::atomic<bool> over_heap{false};
     std::atomic<int64> over_heap_size{0};

@@ -170,6 +170,19 @@ void QoreV8Program::terminate() {
     // the flag is checked by every entry into the program (QoreV8ProgramHelper); valid is not changed here, as it is
     // guarded by the program's lock, which the thread that runs the code can hold
     terminated.store(true);
+    {
+        std::lock_guard<std::mutex> guard(env_lock);
+        if (env) {
+            // the environment is stopped, not only the isolate: node::Stop() first marks the environment as unable
+            // to call into JavaScript, then terminates the isolate.  Code terminated inside a callback of the
+            // event loop (a timer, an I/O callback) leaves before its callback's async context is popped; a callback
+            // scope of an environment that can still call into JavaScript then finds the async-context stack
+            // corrupted and exits the process (qoretechnologies/qore#7284), while one of a stopped environment
+            // closes without the check.  node::Stop() may be called from any thread
+            node::Stop(env);
+            return;
+        }
+    }
     if (isolate) {
         isolate->TerminateExecution();
     }
@@ -1027,7 +1040,10 @@ void QoreV8Program::abandonInForkedChild() {
     // the environment, its event loop and the isolate are never freed in the child
     node::CommonEnvironmentSetup* abandoned = setup.release();
     (void)abandoned;
-    env = nullptr;
+    {
+        std::lock_guard<std::mutex> guard(env_lock);
+        env = nullptr;
+    }
     forgetHandle(ctx);
     forgetHandle(global);
     forgetHandle(env_object);
@@ -1064,10 +1080,16 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
             restricted_bridge = nullptr;
         }
     }
-    if (env) {
-        node::Stop(env);
-        drainPlatformTasks();
+    // the environment is taken under its lock, so that terminate() in another thread never stops one being freed
+    node::Environment* stop_env;
+    {
+        std::lock_guard<std::mutex> guard(env_lock);
+        stop_env = env;
         env = nullptr;
+    }
+    if (stop_env) {
+        node::Stop(stop_env);
+        drainPlatformTasks();
     }
 
     // Clean up tracked object references (deref QoreObjects wrapped by JS)
@@ -1437,6 +1459,16 @@ int QoreV8Program::checkSpinValid(ExceptionSink* xsink) {
                 xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
                     "The given JavaScriptProgram has been destroyed and can no longer be accessed");
             }
+        }
+        return -1;
+    }
+    // a terminated program is not used again (as for every other entry into it, QoreV8ProgramHelper): a caller that
+    // waits for a Promise by spinning the event loop gets an error instead of spinning a stopped environment for a
+    // Promise that never settles (qoretechnologies/qore#7284)
+    if (terminated.load()) {
+        if (xsink) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScriptProgram was terminated and can no "
+                "longer be used");
         }
         return -1;
     }
