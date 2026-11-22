@@ -28,7 +28,8 @@
 # allow the weak reference operator (:=)
 %allow-weak-references
 
-%requires(reexport) DataProvider >= 3.8
+# 3.12: DataProvider::getModuleHostHooks()
+%requires(reexport) DataProvider >= 3.12
 %requires(reexport) TypeScriptProxy
 %requires ConnectionProvider
 %requires ProviderIndexUtil
@@ -57,6 +58,11 @@ module TypeScriptActionInterface {
     url = "http://qore.org";
     license = "MIT";
     init = sub () {
+        # the hooks the host set before the module was loaded are validated and applied first, before anything is
+        # registered: a hook that is misspelled or not callable leaves no factory, app or hook behind
+        # (qoretechnologies/qore#6845)
+        TenantActionRunner::applyHostHooks();
+
         # Publish a lightweight exact identity inventory for qualified index discovery.
         DataProviderActionCatalog::registerDiscoveryInventoryProvider(
             TypeScriptActionInterface::DiscoveryInventoryProviderName,
@@ -191,6 +197,16 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       with @ref TypeScriptActionInterface::TenantActionRunner::setEgressMeter() "setEgressMeter()"
     - a call has a time limit, a heap cap and a limit of concurrent calls per tenant
       (@ref TypeScriptActionInterface::TenantActionRunner::setTenantLimits() "setTenantLimits()")
+    - the host gives the runner its hooks and limits before anything loads the module, with
+      <tt>DataProvider::setModuleHostHooks("TypeScriptActionInterface", ...)</tt> (keys \c tenant_context_resolver,
+      \c connection_update_handler, \c egress_policy, \c egress_meter, \c trusted_call_sandbox and
+      \c tenant_limits, a plain hash of
+      @ref TypeScriptActionInterface::TsTenantLimits "TsTenantLimits"): the module's initialization applies them, so
+      that a module loaded lazily, in whichever thread first asks for an app, has them too; an unknown key, a value of
+      the wrong type or a limit that is not greater than 0 fails the initialization.  The host sets them at its
+      startup even if it gives none (<tt>{}</tt>): the module's entry of the registry can be set once, and other
+      trusted code that set it first would give hooks the host did not choose.  Any trusted code can read the
+      registry's hooks (<tt>DataProvider::getModuleHostHooks()</tt>)
     - an app that needs a builtin of Node.js that tenants do not get is refused for tenants
       (\c TS-TENANT-APP-UNSUPPORTED), and
       @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports it unavailable
@@ -234,6 +250,9 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     - a call of trusted code for a tenant's connection (a host's REST handler, flow or test engine) also runs in the
       tenant's program: the host's tenant context resolver is asked for the connection of every call, and decides
       from the connection, not from the calling thread
+    - the host gives the runner its hooks before the module is loaded, with
+      <tt>DataProvider::setModuleHostHooks("TypeScriptActionInterface", ...)</tt>, so that a module loaded lazily has
+      them too
     - Action execution supports a shared in-process pool alongside the existing child-process proxy.
       See @ref TypeScriptActionInterface::JavaScriptInProcessPool.
     - Apps can use localized connection metadata, schema-backed REST actions and OAuth token introspection.

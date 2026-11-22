@@ -60,6 +60,8 @@ public hashdecl TsTenantLimits {
     int max_programs = 2;
 
     #! the maximum time limit of a call
+    /** An integer is a number of milliseconds (\c 30 is 30 milliseconds; \c 30s is 30 seconds)
+    */
     timeout max_timeout = 30m;
 
     #! the maximum number of records that a record action reads or writes in a call
@@ -110,6 +112,15 @@ public class TenantActionRunner {
         const ErrorUnsupported = "TS-TENANT-APP-UNSUPPORTED";
         const ErrorAction = "TS-TENANT-ACTION-ERROR";
         const ErrorHookMissing = "TS-TENANT-HOOK-MISSING";
+
+        #! The name the host gives its hooks for this module under (DataProvider::setModuleHostHooks())
+        const HostHooksModule = "TypeScriptActionInterface";
+
+        #! The host hooks that are code, by key, with their setters (DataProvider::setModuleHostHooks())
+        const CodeHostHooks = (
+            "tenant_context_resolver", "connection_update_handler", "egress_policy", "egress_meter",
+            "trusted_call_sandbox",
+        );
 
         #! the maximum number of redirects that the bridge follows for a request
         const MaxRedirects = 10;
@@ -170,6 +181,9 @@ public class TenantActionRunner {
         #! the limits
         static hash<TsTenantLimits> limits = <TsTenantLimits>{};
 
+        #! whether applyHostHooks() ran: the host's hooks are applied once, by the module's initialization
+        static bool host_hooks_applied;
+
         #! the catalogue script that tenants' programs run, if not QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT
         static *string catalogue_script;
 
@@ -199,6 +213,115 @@ public class TenantActionRunner {
         # the app directories of the catalogue's distribution, read once, as trusted code
         if ((*string script = getenv("QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT")).val()) {
             TenantActionRunner::readAppDirs(script);
+        }
+    }
+
+    #! Applies the hooks the host set before the module was loaded (qoretechnologies/qore#6845)
+    /** Called first by the module's initialization, before it registers anything: a host that loads the module
+        lazily, in whichever thread first asks for an app, cannot set them after loading it, and a hook that is
+        misspelled or not callable fails the module's initialization before any of its factories or apps exist, and
+        before any hook is set.
+
+        @note hooks that the host sets after the module was loaded are not read: the host sets them before anything
+        loads the module (or calls the setters after loading it)
+        @note for the module's initialization only: called again, it throws before it sets anything
+
+        @throw TS-TENANT-ERROR an unknown key, a value of the wrong type, a limit that is not greater than 0, or the
+        hooks were applied already
+    */
+    static applyHostHooks() [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("applyHostHooks");
+        {
+            AutoLock al(lock);
+            if (host_hooks_applied) {
+                throw ErrorContext, sprintf("the host hooks of module %y were applied already, by the module's "
+                    "initialization", HostHooksModule);
+            }
+            host_hooks_applied = True;
+        }
+        *hash<auto> hooks = DataProvider::getModuleHostHooks(HostHooksModule);
+        *hash<TsTenantLimits> host_limits;
+        *hash<auto> code_hooks = TenantActionRunner::checkHostHooks(hooks, \host_limits);
+        TenantActionRunner::setHostHooks(code_hooks, host_limits);
+    }
+
+    #! Validates the whole hash of host hooks before any is set
+    /** The host's hash is not changed: its values may share one type, which the hash keeps (a hash with only
+        \c tenant_limits, whose limits are all integers, is a <tt>hash<string, hash<string, int>></tt>)
+
+        @param hooks the host's hooks
+        @param host_limits set to the \c tenant_limits given, converted to its hashdecl and validated
+
+        @return the code hooks given
+    */
+    private:internal static *hash<auto> checkHostHooks(*hash<auto> hooks,
+            reference<*hash<TsTenantLimits>> host_limits) {
+        hash<auto> code_hooks = {};
+        foreach hash<auto> i in (hooks.pairIterator()) {
+            if (i.key == "tenant_limits") {
+                if (i.value.typeCode() != NT_HASH) {
+                    throw ErrorContext, sprintf("host hook %y given for module %y must be a hash; got %y",
+                        i.key, HostHooksModule, i.value.type());
+                }
+                # its keys and values too: a misspelled limit is refused before any hook is set
+                hash<TsTenantLimits> lim;
+                try {
+                    lim = cast<hash<TsTenantLimits>>(i.value);
+                } catch (hash<ExceptionInfo> ex) {
+                    throw ErrorContext, sprintf("host hook %y given for module %y is not valid: %s: %s", i.key,
+                        HostHooksModule, ex.err, ex.desc);
+                }
+                TenantActionRunner::checkLimits(lim);
+                host_limits = lim;
+                continue;
+            }
+            if (!inlist(i.key, CodeHostHooks)) {
+                throw ErrorContext, sprintf("unknown host hook %y given for module %y; known: %y", i.key,
+                    HostHooksModule, CodeHostHooks + ("tenant_limits",));
+            }
+            if (!i.value.callp()) {
+                throw ErrorContext, sprintf("host hook %y given for module %y must be callable code; got %y",
+                    i.key, HostHooksModule, i.value.type());
+            }
+            code_hooks{i.key} = i.value;
+        }
+        return code_hooks;
+    }
+
+    #! Sets the host's hooks given in the DataProvider registry (DataProvider::setModuleHostHooks())
+    /** The keys are those of the setters: \c tenant_context_resolver (setTenantContextResolver()),
+        \c connection_update_handler (setConnectionUpdateHandler()), \c egress_policy (setEgressPolicy()),
+        \c egress_meter (setEgressMeter()), \c tenant_limits (setTenantLimits()) and
+        \c trusted_call_sandbox (setTrustedCallSandbox()); each one given is set as its setter sets it: the code hooks
+        once, while \c tenant_limits, as setTenantLimits() does, can be replaced later by trusted code.  checkHostHooks()
+        validated them before.  The limits are set last, after every code hook.
+    */
+    private:internal static setHostHooks(*hash<auto> code_hooks, *hash<TsTenantLimits> host_limits) {
+        foreach hash<auto> i in (code_hooks.pairIterator()) {
+            switch (i.key) {
+                case "tenant_context_resolver": TenantActionRunner::setTenantContextResolver(i.value); break;
+                case "connection_update_handler": TenantActionRunner::setConnectionUpdateHandler(i.value); break;
+                case "egress_policy": TenantActionRunner::setEgressPolicy(i.value); break;
+                case "egress_meter": TenantActionRunner::setEgressMeter(i.value); break;
+                case "trusted_call_sandbox": TenantActionRunner::setTrustedCallSandbox(i.value); break;
+            }
+        }
+        if (host_limits) {
+            TenantActionRunner::setTenantLimits(host_limits);
+        }
+    }
+
+    #! Refuses a limit that is not greater than 0
+    /** A limit of 0 or less would remove a cap (a heap cap of 0 is none) or refuse every call; a host that wants a
+        limit's default leaves it out
+
+        @throw TS-TENANT-ERROR a limit is not greater than 0
+    */
+    private:internal static checkLimits(hash<TsTenantLimits> lim) {
+        foreach hash<auto> i in (lim.pairIterator()) {
+            if (i.value <= 0) {
+                throw ErrorContext, sprintf("tenant limit %y must be greater than 0; got %y", i.key, i.value);
+            }
         }
     }
 
@@ -525,11 +648,23 @@ public class TenantActionRunner {
         }
     }
 
-    #! Sets the limits of the tenants' calls
+    #! Returns the limits of the tenants' calls
     /** @throw TS-TENANT-ERROR the calling code is sandboxed
+    */
+    static hash<TsTenantLimits> getTenantLimits() [dom=PROCESS_CONTROL] {
+        TenantActionRunner::checkTrusted("getTenantLimits");
+        AutoLock al(lock);
+        return limits;
+    }
+
+    #! Sets the limits of the tenants' calls
+    /** Unlike the hooks, the limits can be set again by trusted code: the last limits set apply
+
+        @throw TS-TENANT-ERROR the calling code is sandboxed, or a limit is not greater than 0
     */
     static setTenantLimits(hash<TsTenantLimits> new_limits) [dom=PROCESS_CONTROL] {
         TenantActionRunner::checkTrusted("setTenantLimits");
+        TenantActionRunner::checkLimits(new_limits);
         AutoLock al(lock);
         limits = new_limits;
     }
