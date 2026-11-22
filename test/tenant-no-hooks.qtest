@@ -31,7 +31,7 @@ class TenantNoHooksTest inherits QUnit::Test {
         catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
             "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
             sub (V8::JavaScriptProgram pgm) {
-                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
             });
         TenantActionRunner::setCatalogue(script, (get_script_dir(),), catalogue_pool);
         TypeScriptActionInterface::initApp("tenant-conn", True);

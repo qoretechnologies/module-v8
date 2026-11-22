@@ -59,8 +59,18 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         #! dependent option cache; opt val key -> option info
         hash<string, *hash<string, hash<ActionOptionInfo>>> docache;
 
+    }
+
+    # the cache holds the values that every caller of the module looked up; it is not readable by subclasses
+    # (qoretechnologies/qore#6749)
+    private:internal {
         #! Data cache for retrieving allowed values
         static TypeScriptDataCache cache();
+
+        #! Gives the unchecked implementations of the checked methods to the module's own code
+        static bool internal_set = TsaiProcessState::setInternal({
+            "execAsyncValueDirect": \TypeScriptActionDataProviderBase::execAsyncValueDirectUnchecked(),
+        });
     }
 
     #! Creates the object from the arguments
@@ -147,7 +157,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
         auto rv = getAsyncValueArgs(self, api, argv);
         if (api.type == "api_function" && api.action) {
-            TypeScriptActionInterface::actionSucceeded(api.app, api.action);
+            TsaiProcessState::Internal.actionSucceeded(api.app, api.action);
         }
         return rv;
     }
@@ -268,7 +278,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 # a get_records() function is returned by the tenant's own search function
                 throw "TS-TENANT-ERROR", sprintf("the tenant's program has no function %y", api.key);
             }
-            return execAsyncValueDirect(logger, api, args);
+            return execAsyncValueDirectUnchecked(logger, api, args);
         }
 
         # check in-process pool first (no IPC overhead)
@@ -279,13 +289,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         # handle the call with a remote process
         if (TSAI::checkServer()) {
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, LoggerUtil::getArgSummary(args));
-            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            JavaScriptProgramProxy proxy = TsaiProcessState::server.get();
             TSAI::info("%y: proxy (%y) acquired for %y", api.label, proxy.getInfo(), api.key);
-            on_exit TypeScriptActionInterface::server.release(proxy);
+            on_exit TsaiProcessState::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }
 
-        return execAsyncValueDirect(logger, api, args);
+        return execAsyncValueDirectUnchecked(logger, api, args);
     }
 
     #! Executes the async call directly (no pool/server dispatch)
@@ -298,7 +308,17 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         @return the result of the call
     */
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the call would run in the process-wide program of the
+        app's catalogue; the module makes the calls of sandboxed code in the tenant's own program
+    */
     static auto execAsyncValueDirect(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
+        TenantActionRunner::refuseSandboxed("the direct call of an app's function");
+        return TypeScriptActionDataProviderBase::execAsyncValueDirectUnchecked(logger, api, args);
+    }
+
+    #! The unchecked implementation of execAsyncValueDirect(), for the module's own code
+    private:internal static auto execAsyncValueDirectUnchecked(*LoggerInterface logger, hash<AsyncCallInfo> api,
+            *softlist<auto> args) {
         if (_ts_no_io) {
             return;
         }
@@ -546,7 +566,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     #! Returns call context info
     *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
         *RestConnection conn = self.conn ?? _thread_conn;
-        *string dynamic_path = TypeScriptActionInterface::getDynamicAppPath(conn ? conn.getAppName() : app);
+        *string dynamic_path = TsaiProcessState::Internal.getDynamicAppPath(conn ? conn.getAppName() : app);
         if (conn) {
             return <DataContextInfo>{
                 "conn_name": conn.name,
@@ -588,9 +608,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             }, slice, options);
         } else if (TSAI::checkServer()) {
             TSAI::debug("Starting proxy for app %y action %y: plain dynamic type with args: %y", app, action, options);
-            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            JavaScriptProgramProxy proxy = TsaiProcessState::server.get();
             TSAI::debug("Proxy started for app %y action %y: plain dynamic type with args", app, action);
-            on_exit TypeScriptActionInterface::server.release(proxy);
+            on_exit TsaiProcessState::server.release(proxy);
             rv = proxy.getDynamicOptions(app, action, conn.name, conn.getRealOptions(), options);
         } else {
             TSAI::debug("getActionOptionsWithOptions() exec options: %y slice: %y", options, keys slice);
@@ -635,9 +655,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         } else if (TSAI::checkServer()) {
             TSAI::debug("Starting proxy for app %y action %y: dynamic type with args: %y", app, action,
                 LoggerUtil::getArgSummary(req));
-            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            JavaScriptProgramProxy proxy = TsaiProcessState::server.get();
             TSAI::debug("Proxy started for app %y action %y: dynamic type with args", app, action);
-            on_exit TypeScriptActionInterface::server.release(proxy);
+            on_exit TsaiProcessState::server.release(proxy);
             type = proxy.getDynamicType(cmd, app, action, conn.name, conn.getRealOptions(), req);
         } else {
             type = getDynamicOptionTypeIntern(rt, slice, req);
@@ -692,9 +712,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             }
             info("Got %y = %y", i.key, LoggerUtil::getArgSummary(res));
             foreach hash<auto> j in (res.pairIterator()) {
-                TypeScriptActionInterface::getOptionAllowedValuesFunction(\action, self, j.key, \j.value);
-                TypeScriptActionInterface::getOptionElementAllowedValuesFunction(\action, self, j.key, \j.value);
-                TypeScriptActionInterface::getOptionDefaultValueFunction(\action, self, j.key, \j.value);
+                TsaiProcessState::Internal.getOptionAllowedValuesFunction(\action, self, j.key, \j.value);
+                TsaiProcessState::Internal.getOptionElementAllowedValuesFunction(\action, self, j.key, \j.value);
+                TsaiProcessState::Internal.getOptionDefaultValueFunction(\action, self, j.key, \j.value);
                 rv{j.key} = TypeScriptActionInterface::getOptionInfo("option", j.value, self, True);
                 if (j.value.ref_data) {
                     rv{j.key}.allowed_values = getReferenceDataSafe(j.value.ref_data, options);
@@ -1049,7 +1069,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     private checkUpdateRestOptions(RestClient rest, hash<auto> action_opts) {
-        if ((*hash<auto> cuo = TypeScriptActionInterface::getConnectionUpdateOptions(conn.getAppName()))
+        if ((*hash<auto> cuo = TsaiProcessState::getConnectionUpdateOptions(conn.getAppName()))
             && (exists (auto v = action_opts{cuo.option}))) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
             debug("Retrieving connection update data with JS for data provider %y option: %s = %y arg: %y",

@@ -45,8 +45,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         );
     }
 
-    private {
-        hash<string, AbstractDataField> record_type;
+    # the calls of the app hold its functions and the pool of its catalogue, which are process-wide: they are not
+    # readable by subclasses, which use getTableList() and searchRecordsCall() (qoretechnologies/qore#6749)
+    private:internal {
         hash<AsyncCallInfo> get_table_list;
         hash<AsyncCallInfo> get_record_type;
 
@@ -58,6 +59,10 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         *hash<AsyncCallInfo> update_records;
         *hash<AsyncCallInfo> upsert_records;
         *hash<AsyncCallInfo> delete_records;
+    }
+
+    private {
+        hash<string, AbstractDataField> record_type;
 
         *hash<string, *hash<string, hash<DataProviderOptionInfo>>> option_map;
 
@@ -68,13 +73,28 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         const ArgInfoMembers = map $1.getName(), DataProviderArgInfoTypedHash.getMembers();
     }
 
+    #! Returns the table list of the app, through the module's call path
+    private auto getTableList(hash<DataContextInfo> cctx) {
+        return getAsyncValue(get_table_list, cctx);
+    }
+
+    #! Returns True if the app can search records
+    private bool supportsSearchRecords() {
+        return exists search_records;
+    }
+
+    #! Calls the app's search function through the module's call path and returns its result
+    private auto searchRecordsCall(hash<DataContextInfo> cctx, auto arg0, auto arg1) {
+        return getAsyncValue(search_records, cctx, arg0, arg1);
+    }
+
     #! Creates the object from the arguments
     constructor(string name, hash<DataProviderInfo> info, *hash<string, hash<string, hash<auto>>> ofmap,
             ActionFunctionContext fctx, *RestConnection conn) : TypeScriptActionDataProviderBase(name, fctx) {
         info.name = name;
         info.desc = sprintf("Record-based data provider for app `%s` table `%s`", app, name);
         self.info = info;
-        hash<AppInfo> appinfo = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(fctx.app);
+        hash<AppInfo> appinfo = TsaiProcessState::Internal.getInitializedRecordBasedAppInfo(fctx.app);
         get_table_list = appinfo.get_table_list;
         get_record_type = appinfo.get_record_type;
         begin_transaction = appinfo.begin_transaction;
@@ -125,7 +145,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     private updateOptionIntern(string type, string option, hash<auto> fmap, reference<hash<auto>> action) {
         type += "_options";
         string key = type + "_" + option;
-        if (TypeScriptActionInterface::getOptionFunctions(\action, self, key, \fmap)) {
+        if (TsaiProcessState::Internal.getOptionFunctions(\action, self, key, \fmap)) {
             if (omap{key} || romap{key}) {
                 info{type}{option}.ref_data = key;
             }

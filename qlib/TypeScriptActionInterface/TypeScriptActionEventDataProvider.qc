@@ -68,8 +68,12 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         const UnusedPollInterval = 60;
     }
 
-    private {
+    # the call of the app is not readable by subclasses (qoretechnologies/qore#6749)
+    private:internal {
         hash<AsyncCallInfo> event;
+    }
+
+    private {
 
         Mutex m();
         Condition cond();
@@ -286,7 +290,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         on_exit m.unlock();
 
         if (*JavaScriptProgramProxy proxy = remove self.proxy) {
-            TSAI::server.releaseEventSource(proxy, self, event.key, in_listener);
+            TsaiProcessState::server.releaseEventSource(proxy, self, event.key, in_listener);
             running = False;
             return;
         }
@@ -326,7 +330,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
                 event_options);
             running = True;
             on_error running = False;
-            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key,
+            proxy = TsaiProcessState::server.setupEventSource(self, event.app, event.action, event.key,
                 getCallContextInfo(event_options));
         } else {
             info("Starting event thread for data provider %y for connection %y options %y", name, conn.name,

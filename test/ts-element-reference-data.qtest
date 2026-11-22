@@ -76,7 +76,7 @@ async function runWithTimeout(promise, delay) {
 }\n" + File::readTextFile("example.js"), "example.js",
             sub (JavaScriptProgram pgm) {});
         JavaScriptObject obj = pool.getProgram().getGlobal().exports;
-        obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+        obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
         # registers the app's connection scheme and REST options
         TypeScriptActionInterface::initApp("js-test");
 

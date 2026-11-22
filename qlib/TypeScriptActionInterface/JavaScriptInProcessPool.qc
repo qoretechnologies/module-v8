@@ -56,7 +56,8 @@ public class JavaScriptInProcessPool {
         const MinPrograms = 1;
     }
 
-    private {
+    # not readable by subclasses: the pool runs the calls of trusted code (qoretechnologies/qore#6749)
+    private:internal {
         #! Pool mutex
         Mutex m();
 
@@ -94,8 +95,12 @@ public class JavaScriptInProcessPool {
     #! Creates the pool with at least MinPrograms pre-allocated
     /** @param pool the JavaScriptProgramPool used to create new programs
         @param max_size optional maximum number of programs in the pool; NOTHING = unlimited
+
+        @throw TS-TENANT-ERROR the calling code is sandboxed: the programs of the pool run the catalogue that trusted
+        code loaded
     */
     constructor(JavaScriptProgramPool pool, *int max_size) {
+        TenantActionRunner::refuseSandboxed("the in-process pool");
         self.pool = pool;
         self.max_size = max_size;
 
@@ -110,15 +115,24 @@ public class JavaScriptInProcessPool {
 
     #! Shuts down the pool and deletes all programs
     destructor() {
-        shutdown();
+        shutdownIntern();
     }
 
     #! Signals shutdown and wakes all waiting threads
     /** Can be called while threads are still executing methods on this object.
         After calling shutdown(), any thread blocked in get() will throw POOL-SHUTDOWN,
         and new calls to get() will also throw POOL-SHUTDOWN.
+
+        @throw TS-TENANT-ERROR the calling code is sandboxed: the pool runs the calls of trusted code, and the
+        module's in-process server is process-wide
     */
     shutdown() {
+        TenantActionRunner::refuseSandboxed("the in-process pool");
+        shutdownIntern();
+    }
+
+    #! Signals shutdown and wakes all waiting threads
+    private:internal shutdownIntern() {
         m.lock();
         on_exit m.unlock();
 
@@ -146,6 +160,8 @@ public class JavaScriptInProcessPool {
 
         @param observer the callback, or @ref nothing to remove it
 
+        @throw TS-TENANT-ERROR the calling code is sandboxed: the callback runs in the threads of trusted code
+
         @par Example:
         @code{.py}
 # detect when two threads are waiting for a program
@@ -154,6 +170,7 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
         @endcode
     */
     setWaitObserver(*code<nothing(int)> observer) {
+        TenantActionRunner::refuseSandboxed("the in-process pool");
         m.lock();
         on_exit m.unlock();
 
@@ -259,7 +276,7 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
     }
 
     #! Releases a program back to the idle pool (must be called with mutex locked)
-    private releaseIntern(hash<InProcessProgramInfo> info) {
+    private:internal releaseIntern(hash<InProcessProgramInfo> info) {
         string pkey = info.id;
         if (!amap{pkey}) {
             return;
@@ -298,12 +315,12 @@ pool.setWaitObserver(sub (int count) { waiting.dec(); });
         hash<AsyncCallInfo> pooled_api = api;
         pooled_api.async_call = pooled_call;
 
-        return TypeScriptActionDataProviderBase::execAsyncValueDirect(TypeScriptActionInterfacePriv::getLogger(),
+        return TsaiProcessState::Internal.execAsyncValueDirect(TypeScriptActionInterfacePriv::getLogger(),
             pooled_api, args);
     }
 
     #! Creates a new program with closures captured via clone mode
-    private hash<InProcessProgramInfo> createProgramIntern() {
+    private:internal hash<InProcessProgramInfo> createProgramIntern() {
         TSAI::info("JavaScriptInProcessPool: creating new program");
         date start = now_us();
 

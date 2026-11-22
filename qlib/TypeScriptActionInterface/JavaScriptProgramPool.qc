@@ -32,7 +32,9 @@ public namespace TypeScriptActionInterface {
 public class JavaScriptProgramPool {
     public {}
 
-    private {
+    # the state of a pool is not readable by subclasses: the pools hold the catalogues that trusted code loaded
+    # (qoretechnologies/qore#6749)
+    private:internal {
         # JavaScript source
         string source;
         # JavaScript source path
@@ -54,6 +56,12 @@ public class JavaScriptProgramPool {
 
         #! Mutex to serialize chdir() calls during program creation (chdir is process-global)
         static Mutex chdir_mutex();
+
+        #! Gives the unchecked implementations of the checked methods to the module's own code
+        static bool internal_set = TsaiProcessState::setInternal({
+            "poolMapProgram": \JavaScriptProgramPool::mapProgramInternal(),
+            "poolUnmapProgram": \JavaScriptProgramPool::unmapProgramInternal(),
+        });
     }
 
     #! Creates the object and the JavaScript program
@@ -82,8 +90,15 @@ public class JavaScriptProgramPool {
         return pgm.uniqueHash();
     }
 
+    #! Gives the module's registration interface to the given catalogue object
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the interface
+        changes the process-wide registries of the module
+    */
     registerAppActions(object obj) {
-        obj.registerAppActions(TypeScriptActionInterface::Api);
+        # the interface registers in the process-wide registries of the module (qoretechnologies/qore#6749)
+        SandboxManager::checkProcessWideRegistration("give the registration interface of the TypeScript action "
+            "interface to an object");
+        obj.registerAppActions(TsaiProcessState::Api);
     }
 
     info(string fmt, ...) {
@@ -96,12 +111,32 @@ public class JavaScriptProgramPool {
     /** For the restricted programs of tenants (TenantActionRunner, qoretechnologies/qore#6845): the apps that the
         program registers are mapped to the pool, as those of the pool's own programs are
     */
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the map is
+        process-wide
+    */
     mapProgram(JavaScriptProgram pgm) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#6749)
+        SandboxManager::checkProcessWideRegistration("map a program to a TypeScript action program pool");
         pmap{pgm.uniqueHash()} = self;
     }
 
     #! Removes the mapping of a program made with mapProgram(), by the program's unique hash
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the map is
+        process-wide
+    */
     static unmapProgram(string id) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#6749)
+        SandboxManager::checkProcessWideRegistration("unmap a program from a TypeScript action program pool");
+        remove pmap{id};
+    }
+
+    #! Maps a program to a pool, for the module's own code
+    private:internal static mapProgramInternal(JavaScriptProgramPool pool, JavaScriptProgram pgm) {
+        pmap{pgm.uniqueHash()} = pool;
+    }
+
+    #! Unmaps a program, for the module's own code
+    private:internal static unmapProgramInternal(string id) {
         remove pmap{id};
     }
 
@@ -120,7 +155,11 @@ public class JavaScriptProgramPool {
     }
 
     #! Returns the JavaScript source code
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the source is that of a catalogue that trusted code
+        loaded
+    */
     string getSource() {
+        TenantActionRunner::refuseSandboxed("the source of a program pool");
         return source;
     }
 
@@ -135,7 +174,10 @@ public class JavaScriptProgramPool {
     }
 
     #! Returns the initialization code
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the code is that of trusted code
+    */
     code getInit() {
+        TenantActionRunner::refuseSandboxed("the initialization code of a program pool");
         return init;
     }
 
@@ -144,8 +186,11 @@ public class JavaScriptProgramPool {
         without modifying global state.
 
         @return a new JavaScriptProgram with the same source and init code
+
+        @throw TS-TENANT-ERROR the calling code is sandboxed: the program runs the catalogue that trusted code loaded
     */
     JavaScriptProgram createProgramForPool() {
+        TenantActionRunner::refuseSandboxed("a program pool");
         # serialize chdir() calls — chdir is process-global and concurrent calls race
         chdir_mutex.lock();
         on_exit chdir_mutex.unlock();
@@ -165,7 +210,7 @@ public class JavaScriptProgramPool {
         return new_pgm;
     }
 
-    private createProgram(*bool first) {
+    private:internal createProgram(*bool first) {
         # serialize chdir() calls — chdir is process-global and concurrent calls race
         chdir_mutex.lock();
         on_exit chdir_mutex.unlock();

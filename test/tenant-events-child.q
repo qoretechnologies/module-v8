@@ -11,7 +11,7 @@
 
 string script = get_script_dir() + "/tenant-catalogue.js";
 JavaScriptProgramPool pool("var exports = {};\n" + ReadOnlyFile::readTextFile(script), script, sub (V8::JavaScriptProgram pgm) {
-    pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+    pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
 });
 TenantActionRunner::setCatalogue(script, (get_script_dir(),), pool);
 hash<TsTenantContext> ctx = <TsTenantContext>{"tenant": "u"};

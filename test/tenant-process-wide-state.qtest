@@ -1,0 +1,508 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# The process-wide state of TypeScriptActionInterface is not readable or changeable by sandboxed code
+# (qoretechnologies/qore#6749): the interfaces of the catalogues, the registries of apps, actions, calls and child
+# providers, the providers of the apps, the program pools and app paths of the catalogues, the in-process and process
+# servers and their settings, the test connections, the logger, the webhook APIs and the call time limit are shared by
+# the code of every Program, also that of other tenants.  Two tenants with sandboxes of their own, a background thread
+# of a tenant, trusted code that a tenant calls under a system-policy barrier and a Program that a tenant creates can
+# neither read the state (through the public API, directly or through a subclass) nor change it; trusted code still
+# can.
+%modern
+%no-child-restrictions
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires ConnectionProvider
+%requires RestClient
+%exec-class TenantProcessWideStateTest
+
+class TenantProcessWideStateTest inherits QUnit::Test {
+    public {
+        #! The modules that the Programs of the test require
+        const Modules = "%new-style\n%requires v8\n%requires TypeScriptActionInterface\n";
+
+        #! The app of the host's call in the call map
+        const HostApp = "qore-test-6749-host";
+
+        #! The key of the host's call in the call map
+        const HostCallKey = "app-" + HostApp + "-host_function";
+
+        #! An app of the host's catalogue (test/tenant-catalogue.js)
+        const CatalogueApp = "tenant-conn";
+
+        #! A record-based app of the host's catalogue
+        const CatalogueRecordApp = "tenant-records";
+
+        #! A tenant's own connection to the catalogue's app
+        const TenantConn = "TypeScriptActionInterface::TypeScriptAppRestConnection c({\"name\": \"t\", "
+            "\"url\": \"tsrest-" + CatalogueApp + "://conn.example.com\", \"opts\": {\"app\": \"" + CatalogueApp
+            + "\"}}); ";
+
+        #! Calls the function \c f and returns \c "guarded" if the module's guard refused it
+        const CallGuarded = "try { f.async_call({}, {}, {}); return \"ran\"; } catch (hash<ExceptionInfo> ex) { "
+            "if (ex.desc =~ /function of an app's call/) { return \"guarded\"; } rethrow; }";
+
+        #! The app load path that the tenants try to record
+        const TenantApp = "qore-test-6749-tenant";
+
+        #! The calls of the public API that give out or change process-wide state: name -> code returning a string
+        /** Each runs with the argument hash \c a: \c pool (the host's program pool), \c ip (an in-process pool) and
+            \c host_ip (the host's in-process server); the code of a case can declare a class after its function
+        */
+        const ApiCases = {
+            "getInterface": "return TypeScriptActionInterface::getInterface().size() ? \"got it\" : \"empty\";",
+            "getTestInterface": "return TypeScriptActionInterface::getTestInterface().size() ? \"got it\" "
+                ": \"empty\";",
+            "getRoot": "return TypeScriptActionInterface::getRoot().getName();",
+            "getCall": "return TypeScriptActionInterface::getCall(\"" + HostCallKey + "\").label;",
+            "registerAsyncCall": "hash<AsyncCallInfo> c = <AsyncCallInfo>{\"app\": \"" + HostApp + "\", "
+                "\"type\": \"host_function\", \"label\": \"tenant\", \"pool\": a.pool, \"async_call\": sub () {}}; "
+                "return TypeScriptActionInterface::registerAsyncCall(\\c, \"app\", \"" + HostApp + "\");",
+            "registerAsyncCallArgs": "hash<AsyncCallInfo> c = <AsyncCallInfo>{\"app\": \"" + HostApp + "\", "
+                "\"type\": \"host_function\", \"label\": \"tenant\", \"pool\": a.pool, \"async_call\": sub () {}}; "
+                "return TypeScriptActionInterface::registerAsyncCallArgs(\\c, (\"app\", \"" + HostApp + "\"));",
+            "setInProcessServer": "TypeScriptActionInterface::setInProcessServer(a.ip); return \"set\";",
+            "startInProcessServerOnDemand": "TypeScriptActionInterface::startInProcessServerOnDemand(a.pool, 1); "
+                "return \"set\";",
+            "disableInProcessServerOnDemand": "TypeScriptActionInterface::disableInProcessServerOnDemand(); "
+                "return \"set\";",
+            "startServerOnDemand": "TypeScriptActionInterface::startServerOnDemand(); return \"set\";",
+            "disableServerOnDemand": "TypeScriptActionInterface::disableServerOnDemand(); return \"set\";",
+            "setCallTimeout": "TypeScriptActionInterface::setCallTimeout(7s); return \"set\";",
+            "shutdownInProcessServer": "TypeScriptActionInterface::shutdownInProcessServer(); return \"set\";",
+            "createConnection": "return TypeScriptActionInterface::createConnection(\"" + HostApp + "\", {});",
+            "getConnection": "return TypeScriptActionInterface::getConnection(\"" + HostApp + "\").name;",
+            "checkInProcessServer": "return TypeScriptActionInterface::checkInProcessServer().uniqueHash();",
+            "in-process server shutdown": "a.host_ip.shutdown(); return \"shut\";",
+            "in-process server setWaitObserver": "a.host_ip.setWaitObserver(sub (int c) {}); return \"set\";",
+            "getPostAuthCall": "return sprintf(\"%y\", TypeScriptActionInterface::getPostAuthCall(\""
+                + HostApp + "\"));",
+            "getPostAuthCodeCall": "return sprintf(\"%y\", TypeScriptActionInterface::getPostAuthCodeCall(\""
+                + HostApp + "\"));",
+            "getConnectionUpdateOptions": "return sprintf(\"%y\", "
+                "TypeScriptActionInterface::getConnectionUpdateOptions(\"" + HostApp + "\"));",
+            "getAppPool": "return sprintf(\"%y\", TypeScriptActionInterface::getAppPool(\"" + HostApp + "\"));",
+            "getFirstPool": "return TypeScriptActionInterface::getFirstPool().getPath();",
+            "getAppLoadPath": "return sprintf(\"%y\", TypeScriptActionInterface::getAppLoadPath(\"" + HostApp
+                + "\"));",
+            "recordAppLoadPath": "TypeScriptActionInterface::recordAppLoadPath(\"" + TenantApp + "\", "
+                "\"/tmp/tenant\"); return \"set\";",
+            "getCatalogueAppNames": "return sprintf(\"%y\", TypeScriptActionInterface::getCatalogueAppNames());",
+            "pool registerAppActions": "a.pool.registerAppActions(new Catalogue()); return sprintf(\"%y\", "
+                "keys Catalogue::api);\n}\nclass Catalogue {\npublic { static *hash<auto> api; }\n"
+                "registerAppActions(hash<auto> api) { Catalogue::api = api; }",
+            "pool getSource": "return a.pool.getSource();",
+            "pool getInit": "return sprintf(\"%y\", a.pool.getInit());",
+            "startServer": "return sprintf(\"%y\", TypeScriptActionInterface::startServer());",
+            "shutdownServer": "TypeScriptActionInterface::shutdownServer(); return \"shut\";",
+            "createWebhook": "return sprintf(\"%y\", TypeScriptActionInterface::createWebhook({}));",
+            "deleteWebhook": "TypeScriptActionInterface::deleteWebhook({}); return \"deleted\";",
+            # the errors of the lookups of apps list the registered apps only for trusted code
+            "getCamelCaseAppName error": "try { TypeScriptActionInterface::getCamelCaseAppName(\"zzz\"); "
+                "return \"found\"; } catch (hash<ExceptionInfo> ex) { if (ex.desc =~ /known/) { return \"listed\"; } "
+                "rethrow; }",
+            "getRestConfig error": "try { TypeScriptActionInterface::getRestConfig(\"zzz\"); return \"found\"; } "
+                "catch (hash<ExceptionInfo> ex) { if (ex.desc =~ /registered:/) { return \"listed\"; } rethrow; }",
+            "getInitializedRecordBasedAppInfo": "return sprintf(\"%y\", keys "
+                "TypeScriptActionInterface::getInitializedRecordBasedAppInfo(\"" + CatalogueRecordApp + "\"));",
+            "app provider deregisterChild": "auto p = TypeScriptActionInterface::getAppDataProvider(\""
+                + CatalogueApp + "\"); p.deregisterChild(\"info\"); return \"removed\";",
+            "registerAppChildDataProvider": "TypeScriptActionInterface::registerAppChildDataProvider(\""
+                + CatalogueApp + "\", a.record_prov); return \"registered\";",
+            "deregisterAppChildDataProvider": "TypeScriptActionInterface::deregisterAppChildDataProvider(\""
+                + CatalogueApp + "\", \"fetch\"); return \"removed\";",
+            "deregisterDynamicApp": "TypeScriptActionInterface::deregisterDynamicApp(\"" + CatalogueApp + "\"); "
+                "return \"removed\";",
+            "registerDiscoveryInventory": "TypeScriptActionInterface::registerDiscoveryInventory(()); "
+                "return \"registered\";",
+            "registerPendingAppsFromIndex": "return sprintf(\"%y\", "
+                "TypeScriptActionInterface::registerPendingAppsFromIndex(\"/nonexistent-qore-test-6749\"));",
+            "initAllApps": "TypeScriptActionInterface::initAllApps(False); return \"initialized\";",
+            "setAppBaseDir": "TypeScriptActionInterface::setAppBaseDir(\"/tmp/tenant\"); return \"set\";",
+            "reportDiscoverySourceFailure": "TypeScriptActionInterface::reportDiscoverySourceFailure(\"" + TenantApp
+                + "\", <ExceptionInfo>{\"err\": \"X\", \"desc\": \"x\"}); return \"reported\";",
+            "clearDiscoverySourceFailure": "TypeScriptActionInterface::clearDiscoverySourceFailure(\"" + TenantApp
+                + "\"); return \"cleared\";",
+            "actionSucceeded": "TypeScriptActionInterface::actionSucceeded(\"" + CatalogueApp + "\", \"info\"); "
+                "return \"reported\";",
+            "getDynamicAppPath": "return sprintf(\"%y\", TypeScriptActionInterface::getDynamicAppPath(\""
+                + CatalogueApp + "\"));",
+            "setupConsoleLogger": "TypeScriptActionInterface::setupConsoleLogger(); return \"set\";",
+            "registerWebhookCreateDestroyApis": "TypeScriptActionInterface::registerWebhookCreateDestroyApis("
+                "sub (hash<auto> h) {}, sub (hash<auto> h) {}); return \"set\";",
+            "pool mapProgram": "a.pool.mapProgram(a.pool.getProgram()); return \"mapped\";",
+            "pool unmapProgram": "TypeScriptActionInterface::JavaScriptProgramPool::unmapProgram("
+                "a.catalogue_id); return \"unmapped\";",
+            "pool createProgramForPool": "a.pool.createProgramForPool(); return \"created\";",
+            "new in-process pool": "new TypeScriptActionInterface::JavaScriptInProcessPool(a.pool, 1); "
+                "return \"created\";",
+            "execAsyncValueDirect": "return sprintf(\"%y\", TypeScriptActionInterface::"
+                "TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, <AsyncCallInfo>{\"app\": \"x\", "
+                "\"type\": \"t\", \"label\": \"l\", \"pool\": a.pool, \"async_call\": string sub () { "
+                "return \"ran\"; }}));",
+            "proxy setStartupTimeout": "TypeScriptActionInterface::JavaScriptProgramProxy::setStartupTimeout(7s); "
+                "return \"set\";",
+            "proxy shutdown": "TypeScriptActionInterface::JavaScriptProgramProxy::shutdown(); return \"shut\";",
+            "proxy init": "TypeScriptActionInterface::JavaScriptProgramProxy::init(new Mutex()); return \"set\";",
+            "runner releaseConcurrency": "TypeScriptActionInterface::TenantActionRunner::releaseConcurrency(\""
+                + TenantApp + "\"); return \"released\";",
+            # the functions of the calls that a provider of the tenant's own connection holds
+            "provider call function": TenantConn + "auto ch = c.getDataProvider().getChildProviderEx(\"info\"); "
+                "hash<auto> f = (ch.dtmap ?? ch.omap ?? ch.dvmap).firstValue(); " + CallGuarded,
+            "api call function": TenantConn + "auto ch = c.getDataProvider().getChildProviderEx(\"info\"); "
+                "hash<auto> f = A::steal(ch); " + CallGuarded + "\n}\n"
+                "class A inherits TypeScriptActionInterface::TypeScriptActionApiDataProvider {\n"
+                "static hash<auto> steal(TypeScriptActionInterface::TypeScriptActionApiDataProvider p) { "
+                "return p.api; }",
+            "execAppActionIntern": "return sprintf(\"%y\", TypeScriptActionInterface::execAppActionIntern(\"" + HostApp
+                + "\", \"action\", \"" + HostApp + "\", NOTHING));",
+        };
+
+        #! The error codes of the cases that are not SANDBOX-REGISTRATION-ERROR
+        const OtherErrors = {
+            # the in-process and program pools refuse sandboxed code as their other methods do
+            "in-process server shutdown": "TS-TENANT-ERROR",
+            "in-process server setWaitObserver": "TS-TENANT-ERROR",
+            "pool getSource": "TS-TENANT-ERROR",
+            "pool getInit": "TS-TENANT-ERROR",
+            "pool createProgramForPool": "TS-TENANT-ERROR",
+            # the function of a call refuses sandboxed code
+            "provider call function": "guarded",
+            "api call function": "guarded",
+            "new in-process pool": "TS-TENANT-ERROR",
+            "execAsyncValueDirect": "TS-TENANT-ERROR",
+            "runner releaseConcurrency": "TS-TENANT-ERROR",
+            # an app that is not registered
+            "getCamelCaseAppName error": "APP-ERROR",
+            "getRestConfig error": "TYPESCRIPT-APP-ERROR",
+        };
+
+        #! Direct reads of the process-wide state: name -> code returning a string
+        const DirectCases = {
+            "Api": "return sprintf(\"%y\", keys TypeScriptActionInterface::Api);",
+            "TestApi": "return sprintf(\"%y\", keys TypeScriptActionInterface::TestApi);",
+            "root": "return sprintf(\"%y\", TypeScriptActionInterface::root.typeCode());",
+            "server": "return sprintf(\"%y\", TypeScriptActionInterface::server.typeCode());",
+            "WebhookCreate": "return sprintf(\"%y\", TypeScriptActionInterface::WebhookCreate.typeCode());",
+            "creating_actions": "return sprintf(\"%y\", TypeScriptActionInterface::creating_actions.typeCode());",
+            "acmap": "return X::get();\n}\nclass X inherits TypeScriptActionInterface::TypeScriptActionInterface {\n"
+                "static string get() { return sprintf(\"%y\", keys acmap); }",
+            "appmap": "return X::get();\n}\nclass X inherits TypeScriptActionInterface::TypeScriptActionInterface {\n"
+                "static string get() { return sprintf(\"%y\", keys appmap); }",
+            "appcasemap": "return X::get();\n}\n"
+                "class X inherits TypeScriptActionInterface::TypeScriptActionInterface {\n"
+                "static string get() { return sprintf(\"%y\", keys appcasemap); }",
+            "private method": "return X::get();\n}\n"
+                "class X inherits TypeScriptActionInterface::TypeScriptActionInterface {\n"
+                "static string get() { return sprintf(\"%y\", getModulePath()); }",
+            # the private state of the other classes of the module, through a subclass
+            "program pool map": "return X::get();\n}\n"
+                "class X inherits TypeScriptActionInterface::JavaScriptProgramPool {\n"
+                "static string get() { return sprintf(\"%y\", keys pmap); }",
+            "data cache": "return X::get();\n}\n"
+                "class X inherits TypeScriptActionInterface::TypeScriptActionDataProviderBase {\n"
+                "static string get() { return sprintf(\"%y\", cache.typeCode()); }",
+            # the members of objects that the tenant has, through a subclass
+            "record provider calls of an object": "return Y::peek(a.record_prov);\n}\n"
+                "class Y inherits TypeScriptActionInterface::TypeScriptActionRecordBasedDataProvider {\n"
+                "static string peek(TypeScriptActionInterface::TypeScriptActionRecordBasedDataProvider p) { "
+                "return exists p.get_table_list ? \"read\" : \"not readable\"; }",
+            "in-process pool state of an object": "return Y::peek(a.host_ip);\n}\n"
+                "class Y inherits TypeScriptActionInterface::JavaScriptInProcessPool {\n"
+                "static string peek(TypeScriptActionInterface::JavaScriptInProcessPool p) { "
+                "return exists p.imap ? \"read\" : \"not readable\"; }",
+            "connection calls of an object": TenantConn + "return Y::peek(c);\n}\n"
+                "class Y inherits TypeScriptActionInterface::TypeScriptAppRestConnection {\n"
+                "static string peek(TypeScriptActionInterface::TypeScriptAppRestConnection c) { "
+                "return exists c.post_auth ? \"read\" : \"not readable\"; }",
+            "program pool state of an object": "return Y::peek(a.pool);\n}\n"
+                "class Y inherits TypeScriptActionInterface::JavaScriptProgramPool {\n"
+                "static string peek(TypeScriptActionInterface::JavaScriptProgramPool p) { "
+                "return exists p.init ? \"read\" : \"not readable\"; }",
+        };
+    }
+
+    private {
+        #! The host's program pool
+        JavaScriptProgramPool pool;
+
+        #! The host's in-process server
+        JavaScriptInProcessPool host_ip;
+
+        #! The in-process pool that the tenants try to set
+        JavaScriptInProcessPool tenant_ip;
+
+        #! The call time limit before the test
+        date old_timeout;
+
+        #! The startup timeout of the proxies before the test
+        date old_startup_timeout = JavaScriptProgramProxy::getStartupTimeout();
+
+        #! The calls of the host's webhook API
+        list<string> webhook_calls = ();
+
+        #! The program pool of the host's catalogue
+        JavaScriptProgramPool catalogue_pool;
+
+        #! The app base directory before the test
+        string old_base_dir;
+
+        #! A record provider of the host's connection to the catalogue's app
+        AbstractDataProvider record_prov;
+    }
+
+    constructor() : QUnit::Test("TenantProcessWideState", "1.0", \ARGV) {
+        addTestCase("tenants cannot use the public API of the process-wide state", \apiTest());
+        addTestCase("tenants cannot read the process-wide state directly", \directTest());
+        addTestCase("tenants get working copies of the providers of the apps", \copyTest());
+        addTestCase("the host's state is unchanged by the tenants", \hostStateTest());
+        addTestCase("trusted code uses the public API", \trustedTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        # the host's catalogue
+        string script = get_script_dir() + "/tenant-catalogue.js";
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
+            "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
+            sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
+                    TypeScriptActionInterface::getInterface());
+            });
+        TenantActionRunner::setCatalogue(script, (get_script_dir(),), catalogue_pool);
+        TypeScriptActionInterface::initApp(CatalogueApp, True);
+        TypeScriptActionInterface::initApp(CatalogueRecordApp, True);
+        old_base_dir = TypeScriptActionInterface::getAppBaseDir();
+        TypeScriptAppRestConnection host_conn({"name": "qore-test-6749", "url": "tsrest-" + CatalogueApp
+            + "://conn.example.com", "opts": {"token": "x"}});
+        record_prov = host_conn.getDataProvider().getChildProviderPath("tables/items");
+
+        pool = new JavaScriptProgramPool("", "qore-test-6749.js", sub (V8::JavaScriptProgram pgm) {});
+        host_ip = new JavaScriptInProcessPool(pool, 1);
+        tenant_ip = new JavaScriptInProcessPool(pool, 1);
+        old_timeout = TypeScriptActionInterface::getCallTimeout();
+        TypeScriptActionInterface::setInProcessServer(host_ip);
+        hash<AsyncCallInfo> call = <AsyncCallInfo>{
+            "app": HostApp,
+            "type": "host_function",
+            "label": "host",
+            "pool": pool,
+            "async_call": sub () {},
+        };
+        assertEq(HostCallKey, TypeScriptActionInterface::registerAsyncCall(\call, "app", HostApp));
+        # the host's webhook API, which is set once per process
+        TypeScriptActionInterface::registerWebhookCreateDestroyApis(hash<auto> sub (hash<auto> h) {
+            webhook_calls += "create";
+            return {"url": "https://host.example.com/hook", "ctx": "c"};
+        }, sub (hash<auto> info) {
+            webhook_calls += "delete";
+        });
+    }
+
+    globalTearDown() {
+        TypeScriptActionInterface::setCallTimeout(old_timeout);
+        TypeScriptActionInterface::setAppBaseDir(old_base_dir == getcwd() ? NOTHING : old_base_dir);
+        JavaScriptProgramProxy::setStartupTimeout(old_startup_timeout);
+        TypeScriptActionInterface::disableServerOnDemand();
+        TypeScriptActionInterface::disableInProcessServerOnDemand();
+        TypeScriptActionInterface::shutdownInProcessServer();
+        TypeScriptActionInterface::shutdownServer();
+    }
+
+    apiTest() {
+        hash<auto> all;
+        hash<auto> all_expected;
+        foreach hash<auto> i in (ApiCases.pairIterator()) {
+            hash<auto> results = {};
+            try {
+                # two tenants with sandboxes of their own
+                foreach string name in ("tenant-a", "tenant-b") {
+                    results{name} = TenantProcessWideStateTest::tenant(name, i.value).callFunction("t", args());
+                }
+                # a background thread of a tenant
+                results.background = TenantProcessWideStateTest::tenant("tenant-bg", i.value, True)
+                    .callFunction("t", args());
+                # trusted code that a tenant calls under a system-policy barrier
+                Program trusted = TenantProcessWideStateTest::trusted(i.value);
+                code cap = trusted.callFunction("cap", args());
+                Program tenant_c = TenantProcessWideStateTest::program("tenant-c",
+                    "auto sub t(code c) { return c(); }", True);
+                results.barrier = tenant_c.callFunction("t", cap);
+                # a Program that a tenant creates, called later by trusted code
+                Program tenant_d = TenantProcessWideStateTest::program("tenant-d", "Program sub t(string src) { "
+                    "Program p(PO_NEW_STYLE); p.parse(src, \"child\"); return p; }", True);
+                Program child = tenant_d.callFunction("t", TenantProcessWideStateTest::runSource(i.value));
+                results.child = child.callFunction("run", args());
+            } catch (hash<ExceptionInfo> ex) {
+                results.error = sprintf("%s: %s", ex.err, ex.desc);
+            }
+
+            all{i.key} = results;
+            all_expected{i.key} = map {$1: OtherErrors{i.key} ?? "SANDBOX-REGISTRATION-ERROR"},
+                ("tenant-a", "tenant-b", "background", "barrier", "child");
+        }
+        assertEq(all_expected, all);
+    }
+
+    directTest() {
+        hash<auto> all;
+        foreach hash<auto> i in (DirectCases.pairIterator()) {
+            hash<auto> results = {};
+            foreach string name in ("tenant-a", "tenant-b") {
+                try {
+                    results{name} = TenantProcessWideStateTest::tenant(name, i.value).callFunction("t", args());
+                } catch (hash<ExceptionInfo> ex) {
+                    results{name} = ex.err;
+                }
+            }
+            all{i.key} = results;
+        }
+        # the state is not public: no code that imports the module can name it, and the members of an object are not
+        # visible outside its class
+        hash<auto> expected;
+        foreach string k in (keys DirectCases) {
+            string err = k =~ /of an object/ ? "not readable" : "PARSE-EXCEPTION";
+            expected{k} = {"tenant-a": err, "tenant-b": err};
+        }
+        assertEq(expected, all);
+    }
+
+    copyTest() {
+        # the copy of an app's provider that a tenant gets, without and with a connection of its own, gives working
+        # children
+        hash<auto> results = {};
+        foreach string name in ("tenant-a", "tenant-b") {
+            results{name} = TenantProcessWideStateTest::tenant(name, "auto p = TypeScriptActionInterface::"
+                "getAppDataProvider(\"" + CatalogueApp + "\"); auto ch = p.getChildProviderEx(\"info\"); "
+                "string rv = ch.getName() + \"/\" + (p.getChildProviderNames() ?? ()).size().toString(); "
+                + TenantConn + "auto cch = c.getDataProvider().getChildProviderEx(\"info\"); "
+                "return rv + \"/\" + cch.getName();").callFunction("t", args());
+        }
+        int n = (TypeScriptActionInterface::getAppDataProvider(CatalogueApp).getChildProviderNames() ?? ()).size();
+        assertEq({"tenant-a": "info/" + n + "/info", "tenant-b": "info/" + n + "/info"}, results);
+    }
+
+    hostStateTest() {
+        # the host's in-process server, call time limit and call are kept
+        string pool_state;
+        try {
+            hash<auto> info = host_ip.get();
+            host_ip.release(info);
+            pool_state = "running";
+        } catch (hash<ExceptionInfo> ex) {
+            pool_state = ex.err;
+        }
+        assertEq({
+            "in-process server": True,
+            "in-process server state": "running",
+            "call time limit": old_timeout,
+            "call": "host",
+            "tenant app load path": NOTHING,
+            "webhook calls": (),
+            "app children": True,
+            "app base dir": old_base_dir,
+            "catalogue program mapped": True,
+            "proxy startup timeout": old_startup_timeout,
+        }, {
+            "in-process server": TypeScriptActionInterface::checkInProcessServer() == host_ip,
+            "in-process server state": pool_state,
+            "call time limit": TypeScriptActionInterface::getCallTimeout(),
+            "call": TypeScriptActionInterface::getCall(HostCallKey).label,
+            "tenant app load path": TypeScriptActionInterface::getAppLoadPath(TenantApp),
+            "webhook calls": webhook_calls,
+            "app children": (TypeScriptActionInterface::getAppDataProvider(CatalogueApp).getChildProviderNames()
+                ?? ()).contains("info"),
+            "app base dir": TypeScriptActionInterface::getAppBaseDir(),
+            "catalogue program mapped": catalogueMapped(),
+            "proxy startup timeout": JavaScriptProgramProxy::getStartupTimeout(),
+        });
+    }
+
+    trustedTest() {
+        # trusted code in the host's Program and in a trusted Program
+        hash<auto> expected = {
+            "getInterface": "got it",
+            "getTestInterface": "got it",
+            "getRoot": "ts-root",
+            "getCall": "host",
+        };
+        foreach hash<auto> i in (expected.pairIterator()) {
+            Program trusted = TenantProcessWideStateTest::trusted(ApiCases{i.key});
+            assertEq(i.value, trusted.callFunction("run", args()), i.key);
+        }
+        assertEq(5, TypeScriptActionInterface::getInterface().size());
+        assertEq(2, TypeScriptActionInterface::getInterface().getCatalogueProtocolVersion());
+        assertEq(2, TypeScriptActionInterface::getTestInterface().size());
+        assertEq("host", TypeScriptActionInterface::getCall(HostCallKey).label);
+        assertTrue(TypeScriptActionInterface::checkInProcessServer() == host_ip);
+        assertEq("list", TypeScriptActionInterface::getCatalogueAppNames().type());
+        assertEq("https://host.example.com/hook", TypeScriptActionInterface::createWebhook({}).url);
+        TypeScriptActionInterface::deleteWebhook({});
+        assertEq(("create", "delete"), webhook_calls);
+        assertNothing(TypeScriptActionInterface::getPostAuthCall(HostApp));
+        assertNothing(TypeScriptActionInterface::getConnectionUpdateOptions(HostApp));
+
+        # and changes the settings
+        TypeScriptActionInterface::setCallTimeout(9s);
+        assertEq(9s, TypeScriptActionInterface::getCallTimeout());
+        TypeScriptActionInterface::setCallTimeout(old_timeout);
+        TypeScriptActionInterface::setInProcessServer(tenant_ip);
+        assertTrue(TypeScriptActionInterface::checkInProcessServer() == tenant_ip);
+        TypeScriptActionInterface::setInProcessServer(host_ip);
+        TypeScriptActionInterface::startInProcessServerOnDemand(pool, 1);
+        TypeScriptActionInterface::disableInProcessServerOnDemand();
+        TypeScriptActionInterface::startServerOnDemand();
+        TypeScriptActionInterface::disableServerOnDemand();
+    }
+
+    #! Returns True if the program of the host's catalogue is mapped to its pool
+    private bool catalogueMapped() {
+        try {
+            bool first;
+            return JavaScriptProgramPool::getPool(catalogue_pool.getProgram(), \first) == catalogue_pool;
+        } catch (hash<ExceptionInfo> ex) {
+            return False;
+        }
+    }
+
+    #! Returns the argument hash of the cases
+    private hash<auto> args() {
+        return {"pool": pool, "ip": tenant_ip, "host_ip": host_ip,
+            "catalogue_id": catalogue_pool.uniqueHash(), "record_prov": record_prov};
+    }
+
+    #! Returns the source of a Program whose \c run() function runs the given case and returns its result or error
+    static string runSource(string body) {
+        return Modules + "string sub run_intern(hash<auto> a) { " + body + " }\n"
+            "string sub run(hash<auto> a) { try { return run_intern(a); } catch (hash<ExceptionInfo> ex) { "
+            "return ex.err; } }\n";
+    }
+
+    #! Returns a tenant with a sandbox of its own whose \c t() function runs the given case
+    private static Program tenant(string name, string body, *bool bg) {
+        string src = bg
+            ? "string sub t(hash<auto> a) { Queue q(); background q.push(run(a)); return q.get(); }\n"
+            : "string sub t(hash<auto> a) { return run(a); }\n";
+        return TenantProcessWideStateTest::program(name, runSource(body) + src);
+    }
+
+    #! Returns a Program with a sandbox of its own
+    private static Program program(string name, string src, *bool add_modules) {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse((add_modules ? Modules : "") + src, name);
+        p.setSandboxManager(new SandboxManager());
+        return p;
+    }
+
+    #! Returns a trusted Program that runs the given case in \c run() and gives it under a policy barrier in \c cap()
+    private static Program trusted(string body) {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(runSource(body) + "code sub cap(hash<auto> a) { return SandboxManager::createSystemPolicyCall("
+            "string sub () { return run(a); }); }\n", "trusted");
+        return p;
+    }
+}
