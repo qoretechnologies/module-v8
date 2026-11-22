@@ -1186,6 +1186,10 @@ int QoreV8Program::saveQoreReferenceDefault(const QoreValue& rv, ExceptionSink& 
         // Prepend for FILO destruction order and republish even if the prepend failed.
         list->splice(0, 0, rv, &xsink);
         slot.assign(list.release(), &xsink);
+        // release the list that other owners kept before the check: its destructors can raise an exception too
+        if (previous) {
+            previous.release()->deref(&xsink);
+        }
         if (xsink) {
             raiseV8Exception(xsink, isolate);
             return -1;

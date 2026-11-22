@@ -63,7 +63,7 @@ static bool is_negative_index(v8::Isolate* isolate, v8::Local<v8::Value> key) {
     if (name.length() < 2 || (*name)[0] != '-' || (*name)[1] < '1' || (*name)[1] > '9') {
         return false;
     }
-    for (int i = 2; i < name.length(); ++i) {
+    for (size_t i = 2; i < static_cast<size_t>(name.length()); ++i) {
         if ((*name)[i] < '0' || (*name)[i] > '9') {
             return false;
         }

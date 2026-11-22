@@ -65,7 +65,7 @@ const QoreProgramLocation& QoreV8StackLocationHelper::getLocation() const {
     }
     checkInit();
     assert((unsigned)current < size());
-    printd(0, "QoreV8StackLocationHelper::getLocation() %s:%d (%s)\n", stack_loc[current].getFile().c_str(),
+    printd(0, "QoreV8StackLocationHelper::getLocation() %s:%d\n", stack_loc[current].getFile().c_str(),
         stack_loc[current].getStartLine());
     return stack_loc[current].get();
 }
