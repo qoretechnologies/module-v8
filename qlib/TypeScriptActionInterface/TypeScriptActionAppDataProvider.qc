@@ -44,8 +44,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         #! The name of this app
         string name;
 
-        #! connection for the action
-        AbstractConnection conn;
+        #! connection for the action: only a RestConnection is ever set (setConnectionIntern())
+        RestConnection conn;
 
         #! Dynamic child data providers; only maintained in the parent
         hash<string, TypeScriptActionDataProviderBase> childMap;
