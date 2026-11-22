@@ -395,6 +395,9 @@ public class TenantActionRunner {
     */
     static auto dispatchTrusted(*object src, hash<AsyncCallInfo> api, *softlist<auto> args, reference<bool> tenant)
             [dom=PROCESS_CONTROL] {
+        # for trusted code only: it runs the call under the host's sandbox for the connection's tenant, with no
+        # caller's isolation domain to check, so sandboxed code is refused (qoretechnologies/qore#7227)
+        TenantActionRunner::checkTrusted("dispatchTrusted");
         tenant = False;
         # the records function that a search returned is called as it is: the runner's closure if the search was a
         # tenant's
@@ -1804,14 +1807,15 @@ class TenantEventSource {
         (see enterRequest()), so no cancellation request is pending here
     */
     private:internal cleanup() {
+        # a stop waits for done: it is released whatever the releases raise
+        on_exit done.dec();
+        on_exit TenantActionRunner::releaseEventProgram(tenant, app, pgm);
+        on_exit TenantActionRunner::releaseConcurrency(tenant);
         remove _tenant_call;
         m.lock();
         running = False;
         cond.broadcast();
         m.unlock();
-        TenantActionRunner::releaseConcurrency(tenant);
-        TenantActionRunner::releaseEventProgram(tenant, app, pgm);
-        done.dec();
     }
 
     #! Called by the bridge before a request of the function: returns False if the source is stopped
