@@ -49,7 +49,10 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Creates the object
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the pool's processes run the calls of trusted code
+    */
     constructor() {
+        TenantActionRunner::refuseSandboxed("the process pool");
         JavaScriptProgramProxy::init(m);
 
         # start 3 processes in parallel

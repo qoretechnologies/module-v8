@@ -133,6 +133,12 @@ public class TenantActionRunner {
         #! builds a tenant's program for an app as trusted code; created when the module is initialized
         static code build;
 
+        #! Gives the unchecked implementations of the checked methods to the module's own code
+        static bool internal_set = TsaiProcessState::setInternal({
+            "runnerReleaseConcurrency": \TenantActionRunner::releaseConcurrencyInternal(),
+            "runnerReleaseEventProgram": \TenantActionRunner::releaseEventProgramInternal(),
+        });
+
         #! runs a call in a tenant's program as trusted code; created when the module is initialized
         static code exec_call;
 
@@ -198,7 +204,12 @@ public class TenantActionRunner {
     }
 
     #! Initializes the runner; called when the module is initialized, as trusted code
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code (the module's own
+        initialization is not refused): the runner's trusted calls serve every tenant
+    */
     static init() {
+        # process-wide (qoretechnologies/qore#6749)
+        SandboxManager::checkProcessWideRegistration("initialize the tenant action runner");
         build = SandboxManager::createTrustedBuildCall(\TenantActionRunner::buildProgram());
         # a call runs as trusted code too: the program is the module's, and the caller's sandbox governs only the
         # requests that the program makes through the bridge (captured when the call enters)
@@ -363,7 +374,7 @@ public class TenantActionRunner {
 
     #! Returns the directory of an app, if the catalogue loads apps from directories
     private:internal static *string getAppDir(string app) {
-        return TypeScriptActionInterface::getAppLoadPath(app) ?? app_dirs{app};
+        return TsaiProcessState::app_load_paths{app} ?? app_dirs{app};
     }
 
     #! Sets the host's egress hook: it can only refuse more than the caller's sandbox does
@@ -853,7 +864,7 @@ public class TenantActionRunner {
         }
         bool started;
         on_exit if (!started) {
-            TenantActionRunner::releaseConcurrencyIntern(ctx.tenant);
+            TenantActionRunner::releaseConcurrencyInternal(ctx.tenant);
         }
         hash<auto> pgm = TenantActionRunner::getProgram(ctx.tenant, info.app);
         on_exit if (!started) {
@@ -863,7 +874,7 @@ public class TenantActionRunner {
             throw ErrorContext, sprintf("action %y of app %y has no event function (webhook events are not "
                 "available to tenants)", action, app);
         }
-        hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(key);
+        hash<AsyncCallInfo> api = TsaiProcessState::getCall(key);
         api.async_call = pgm.call_map{key};
         api.label = sprintf("tenant events: %s", key);
         string id = UUID::get();
@@ -959,17 +970,17 @@ public class TenantActionRunner {
         return src;
     }
 
-    #! Releases a call of a tenant's concurrency limit; for the module's event sources (trusted code only)
-    /** @throw TS-TENANT-ERROR the calling code is sandboxed: only the runner releases a tenant's calls
-        (qoretechnologies/qore#7227)
+    #! Releases a call of a tenant's concurrency limit (trusted code only)
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the limits are those of every tenant, and only the runner
+        releases a tenant's calls (qoretechnologies/qore#7227)
     */
     static releaseConcurrency(string tenant) [dom=PROCESS_CONTROL] {
         TenantActionRunner::checkTrusted("releaseConcurrency");
-        TenantActionRunner::releaseConcurrencyIntern(tenant);
+        TenantActionRunner::releaseConcurrencyInternal(tenant);
     }
 
-    #! Releases a call of a tenant's concurrency limit; never below none
-    private:internal static releaseConcurrencyIntern(string tenant) {
+    #! Releases a call of a tenant's concurrency limit, for the module's own code; never below none
+    private:internal static releaseConcurrencyInternal(string tenant) {
         AutoLock al(lock);
         if (!running{tenant}) {
             return;
@@ -979,11 +990,17 @@ public class TenantActionRunner {
         }
     }
 
-    #! Releases the program of an event source; it is discarded; for the module's event sources (trusted code only)
-    /** @throw TS-TENANT-ERROR the calling code is sandboxed (qoretechnologies/qore#7227)
+    #! Releases the program of an event source; it is discarded (trusted code only)
+    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the programs are those of every tenant
+        (qoretechnologies/qore#7227)
     */
     static releaseEventProgram(string tenant, string app, hash<auto> pgm) [dom=PROCESS_CONTROL] {
         TenantActionRunner::checkTrusted("releaseEventProgram");
+        TenantActionRunner::releaseProgram(tenant, app, pgm, True);
+    }
+
+    #! Releases the program of an event source, for the module's own code
+    private:internal static releaseEventProgramInternal(string tenant, string app, hash<auto> pgm) {
         TenantActionRunner::releaseProgram(tenant, app, pgm, True);
     }
 
@@ -1053,13 +1070,13 @@ public class TenantActionRunner {
         hash<string, hash<auto>> rv = {};
         V8::JavaScriptProgram scanner(replace(ScannerSource, "%REFUSED%", make_json(RefusedBuiltins)),
             "qore-tenant-scan.js");
-        foreach string app in (apps ?? TypeScriptActionInterface::getCatalogueAppNames()) {
+        foreach string app in (apps ?? TsaiProcessState::getCatalogueAppNames()) {
             # mixed value types: not inferred from a literal
             hash<auto> r = {};
             r.available = True;
             try {
                 hash<auto> pgm = call_function(build, app);
-                JavaScriptProgramPool::unmapProgram(pgm.id);
+                TsaiProcessState::Internal.poolUnmapProgram(pgm.id);
             } catch (hash<ExceptionInfo> ex) {
                 hash<ExceptionInfo> mapped = TenantActionRunner::mapError(app, ex);
                 r.available = False;
@@ -1416,7 +1433,7 @@ globalThis.qoreTenantScan = function (entry, root) {
             if (!call) {
                 throw ErrorContext, sprintf("app %y has no such action function (%y)", app, work.key);
             }
-            hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(work.key);
+            hash<AsyncCallInfo> api = TsaiProcessState::getCall(work.key);
             api.async_call = call;
             api.label = sprintf("tenant call: %s", work.key);
             to_ms = ctx.timeout ?? (api.to ? api.to.durationMilliseconds() : lim.max_timeout);
@@ -1491,7 +1508,7 @@ globalThis.qoreTenantScan = function (entry, root) {
         try {
             auto rv = work.record
                 ? TenantActionRunner::execRecord(work)
-                : TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, work.api, work.args);
+                : TsaiProcessState::Internal.execAsyncValueDirect(NOTHING, work.api, work.args);
             if (work.drain) {
                 rv = TenantActionRunner::drainRecords(work, rv);
             }
@@ -1508,7 +1525,7 @@ globalThis.qoreTenantScan = function (entry, root) {
     private:internal static auto execRecord(hash<auto> work) {
         # the app's record functions as the catalogue registered them; no call of the app is made here
         TypeScriptActionInterface::initApp(work.app);
-        hash<AppInfo> appinfo = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(work.app);
+        hash<AppInfo> appinfo = TsaiProcessState::Internal.getInitializedRecordBasedAppInfo(work.app);
         hash<auto> req = work.record;
         int max = work.max_records;
 
@@ -1562,7 +1579,7 @@ globalThis.qoreTenantScan = function (entry, root) {
         api.async_call = get_records;
         int count = 0;
         while (True) {
-            auto block = TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, api, (work.args[0], 1000));
+            auto block = TsaiProcessState::Internal.execAsyncValueDirect(NOTHING, api, (work.args[0], 1000));
             if (block.typeCode() != NT_HASH || !block.firstValue().lsize()) {
                 break;
             }
@@ -1658,7 +1675,7 @@ globalThis.qoreTenantScan = function (entry, root) {
         AutoLock al(lock);
         if (discard) {
             --count{tenant}{app};
-            JavaScriptProgramPool::unmapProgram(pgm.id);
+            TsaiProcessState::Internal.poolUnmapProgram(pgm.id);
             return;
         }
         idle{tenant}{app} += pgm;
@@ -1669,7 +1686,7 @@ globalThis.qoreTenantScan = function (entry, root) {
         (\c QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT) or a script of \c QORE_TYPESCRIPT_ACTION_SCRIPTS
     */
     private:internal static *hash<auto> getSource(string app) {
-        *JavaScriptProgramPool pool = TypeScriptActionInterface::getAppPool(app);
+        *JavaScriptProgramPool pool = TsaiProcessState::app_pools{app};
         if (catalogue_pool && (!pool || pool == catalogue_pool)) {
             return {
                 "pool": catalogue_pool,
@@ -1680,7 +1697,7 @@ globalThis.qoreTenantScan = function (entry, root) {
         }
         *JavaScriptProgramPool master = TypeScriptActionInterfacePriv::getMaster();
         # an app registered from the index has no pool until it is loaded: it is the master catalogue's
-        if (!pool && master && TypeScriptActionInterface::getAppLoadPath(app)) {
+        if (!pool && master && TsaiProcessState::app_load_paths{app}) {
             pool = master;
         }
         if (!pool) {
@@ -1729,9 +1746,9 @@ globalThis.qoreTenantScan = function (entry, root) {
             "bridge": \TenantActionRunner::bridge(),
         });
         # the apps that the program registers are mapped to the pool that registered the catalogue
-        pool.mapProgram(pgm);
+        TsaiProcessState::Internal.poolMapProgram(pool, pgm);
         string id = pgm.uniqueHash();
-        on_error JavaScriptProgramPool::unmapProgram(id);
+        on_error TsaiProcessState::Internal.poolUnmapProgram(id);
         hash<string, code> calls;
         {
             # the app's action functions are captured in the program's own map; no global state is changed
@@ -1739,9 +1756,9 @@ globalThis.qoreTenantScan = function (entry, root) {
             JavaScriptObject catalogue = pgm.getGlobal().exports.actionsCatalogue;
             # the catalogue's methods can be on its prototype: they are called, not looked up in its own properties
             if (load_path) {
-                catalogue.loadAppFromPath(TypeScriptActionInterface::Api, load_path);
+                catalogue.loadAppFromPath(TsaiProcessState::Api, load_path);
             } else {
-                catalogue.registerAppActions(TypeScriptActionInterface::Api);
+                catalogue.registerAppActions(TsaiProcessState::Api);
             }
             calls = PoolCloneModeHelper::getClosures() ?? {};
         }
@@ -1942,10 +1959,11 @@ class TenantEventSource {
         (see enterRequest()), so no cancellation request is pending here
     */
     private:internal cleanup() {
-        # a stop waits for done: it is released whatever the releases raise
+        # a stop waits for done: it is released whatever the releases raise; the module's own releases, which are
+        # not checked as the public ones are
         on_exit done.dec();
-        on_exit TenantActionRunner::releaseEventProgram(tenant, app, pgm);
-        on_exit TenantActionRunner::releaseConcurrency(tenant);
+        on_exit TsaiProcessState::Internal.runnerReleaseEventProgram(tenant, app, pgm);
+        on_exit TsaiProcessState::Internal.runnerReleaseConcurrency(tenant);
         remove _tenant_call;
         m.lock();
         running = False;
@@ -1977,7 +1995,7 @@ class TenantEventSource {
         _tenant_call.src = self;
         on_exit remove _tenant_call;
         {
-            TypeScriptActionDataProviderBase::execAsyncValueDirect(NOTHING, api, (dctx,
+            TsaiProcessState::Internal.execAsyncValueDirect(NOTHING, api, (dctx,
                 sub (auto o) {
                     emit(o);
                 },
@@ -2104,14 +2122,14 @@ class TenantRecordProvider inherits TypeScriptActionRecordBasedDataProvider {
 
     #! Searches with the app's search function in the tenant's program; no pool or server is used
     AbstractDataProviderRecordIterator tenantSearch(*hash<auto> where_cond, *hash<auto> search_options) {
-        if (!search_records) {
+        if (!supportsSearchRecords()) {
             throw "INVALID-OPERATION", sprintf("Data provider %y does not support searching", getName());
         }
         search_options.table = name;
         hash<DataContextInfo> cctx = getCallContextInfo({"table": name});
         *hash<DataProviderExpression> exp = cast<*hash<DataProviderExpression>>(getSearchExpression(where_cond,
             search_options));
-        *code get_records = getAsyncValue(search_records, cctx, info.expressions ? convertExpression(exp) : NOTHING,
+        *code get_records = searchRecordsCall(cctx, info.expressions ? convertExpression(exp) : NOTHING,
             info.expressions ? search_options : NOTHING);
         return new TypeScriptBulkRecordInterface(1000, self, get_records, cctx, info.expressions ? NOTHING : exp,
             search_options).getRecordIterator();

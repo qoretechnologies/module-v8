@@ -166,8 +166,8 @@ function setenv(vr, value) {
                 # directory (ex: "schemas/asana.swagger.json"), so apps registered from the catalogue must resolve
                 # such paths relative to that directory and not to the current working directory of this process,
                 # which is arbitrary (ex: "qctl update-index" run from any directory)
-                TypeScriptActionInterface::setAppBaseDir(dirname(script_path));
-                on_exit TypeScriptActionInterface::setAppBaseDir();
+                TsaiProcessState::Internal.setAppBaseDir(dirname(script_path));
+                on_exit TsaiProcessState::Internal.setAppBaseDir();
 
                 *JavaScriptProgramPool master = createPool(script_path, cwd,
                     \TypeScriptActionInterfacePriv::registerApp());
@@ -189,7 +189,7 @@ function setenv(vr, value) {
                     # apps pending from the data index; if that yields nothing (no index
                     # or dir map yet) fall back to a full load.
                     if ((DataProvider::getOptions() & DPO_DisableOnDemandInitialization)
-                        || !TypeScriptActionInterface::registerPendingAppsFromIndex(apps_dir)) {
+                        || !TsaiProcessState::Internal.registerPendingAppsFromIndex(apps_dir)) {
                         TypeScriptActionInterfacePriv::loadAllAppsFromDir(apps_dir);
                     }
                 }
@@ -214,7 +214,7 @@ function setenv(vr, value) {
 
         int opts = DataProvider::getOptions();
         if (opts & DPO_DisableOnDemandInitialization) {
-            TypeScriptActionInterface::initAllApps(opts & DPO_EnableOnDemandActions ? False : True);
+            TsaiProcessState::Internal.initAllApps(opts & DPO_EnableOnDemandActions ? False : True);
         }
     }
 
@@ -249,10 +249,10 @@ function setenv(vr, value) {
             }
             JavaScriptProgramPool pool(getDefaultCode(path, dir) + File::readTextFile(basename(path)), path, init);
             pstore{pool.uniqueHash()} = pool;
-            TypeScriptActionInterface::clearDiscoverySourceFailure(path);
+            TsaiProcessState::Internal.clearDiscoverySourceFailure(path);
             return pool;
         } catch (hash<ExceptionInfo> ex) {
-            TypeScriptActionInterface::reportDiscoverySourceFailure(path, ex);
+            TsaiProcessState::Internal.reportDiscoverySourceFailure(path, ex);
             TSAI::error("Error loading TypeScript action script %y: %s", path, get_exception_string(ex));
         }
     }
@@ -268,7 +268,7 @@ function setenv(vr, value) {
         }
         JavaScriptObject global = master.getProgram().getGlobal();
         # the JS catalogue returns the loaded app's name
-        return global.exports.actionsCatalogue.loadAppFromPath(TypeScriptActionInterface::Api, app_path);
+        return global.exports.actionsCatalogue.loadAppFromPath(TsaiProcessState::Api, app_path);
     }
 
     #! Eagerly load and register every curated app under the given directory
@@ -303,7 +303,7 @@ function setenv(vr, value) {
                     dirmap{dname} = name;
                     # restricted programs for tenants load the app from its directory, as for an app registered
                     # from the index (TenantActionRunner, qoretechnologies/qore#6845)
-                    TypeScriptActionInterface::recordAppLoadPath(name, app_path);
+                    TsaiProcessState::app_load_paths{name} = app_path;
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Failed to load app from %y: %s: %s", app_path, ex.err, ex.desc);
@@ -354,7 +354,7 @@ function setenv(vr, value) {
             #global.setenv("CUSTOM_APPS_DIR", base_dir);
             # call the master app's dynamic registration method
             global.exports.actionsCatalogue.registerCustomApp(
-                TypeScriptActionInterface::Api, dir
+                TsaiProcessState::Api, dir
             );
             rv = DynamicAppContextHelper::getApps();
             if (rv.size() > 1) {
@@ -400,13 +400,13 @@ function setenv(vr, value) {
                 "'exports'; known properties: %y", global.exports.getPropertyList());
         }
         global.exports.actionsCatalogue.registerAppActions(
-            TypeScriptActionInterface::Api
+            TsaiProcessState::Api
         );
     }
 
     static private runTests(JavaScriptProgram pgm) {
         auto v = pgm.getGlobal().exports.qtester.run(
-            TypeScriptActionInterface::TestApi
+            TsaiProcessState::TestApi
         );
         auto rv;
         if (v instanceof JavaScriptPromise) {
@@ -419,6 +419,304 @@ function setenv(vr, value) {
         } else {
             rv = v;
         }
+    }
+}
+#! The process-wide state of the module that its own code uses for every caller
+/** The class is not public: code that imports the module cannot name it, so sandboxed code can neither read nor
+    change the state, which holds the host's configuration and the calls of the apps that trusted code registered
+    (qoretechnologies/qore#6749).  The public API of
+    @ref TypeScriptActionInterface::TypeScriptActionInterface "TypeScriptActionInterface" that gives the state out
+    refuses code that is sandboxed or acts for sandboxed code; the module's own code, which serves sandboxed callers
+    too, uses this class.
+*/
+class TsaiProcessState {
+    public {
+        #! The interface that the JavaScript app catalogues register their apps with
+        /** @see TypeScriptActionInterface::getInterface()
+        */
+        /** Its calls are the unchecked implementations of the module (see setInternal()): a catalogue's
+            registrations are made by trusted code, also when an app is loaded on demand for any caller
+        */
+        static hash<string, code> Api;
+
+        #! The unchecked implementations of the module's checked public methods, for the module's own code
+        /** Set by the classes that declare them, with call references to their \c private:internal methods, when
+            the module is loaded (see setInternal()); the public methods refuse code that is sandboxed or acts for
+            sandboxed code (qoretechnologies/qore#6749)
+        */
+        static hash<string, code> Internal;
+
+        #! The interface that the JavaScript app tests use
+        /** @see TypeScriptActionInterface::getTestInterface()
+        */
+        static hash<string, code> TestApi = {
+            "createConnection": \TypeScriptActionInterface::TypeScriptActionInterface::createConnection(),
+            "execAppAction": \TypeScriptActionInterface::TypeScriptActionInterface::execAppAction(),
+        };
+
+        #! Set if server mode is active
+        static JavaScriptThreadProcessPool server;
+
+        #! On-demand server flag
+        static bool on_demand;
+
+        #! In-process pool for concurrent access without IPC overhead
+        static JavaScriptInProcessPool in_process_server;
+
+        #! In-process on-demand flag
+        static bool in_process_on_demand;
+
+        #! Optional pool for on-demand in-process server creation
+        static *JavaScriptProgramPool in_process_on_demand_pool;
+
+        #! Optional maximum pool size for on-demand in-process server creation
+        static *int in_process_max_size;
+
+        #! Server lock
+        static Mutex sm();
+
+        #! Global async call map: call key -> call
+        static hash<string, hash<AsyncCallInfo>> acmap = {};
+
+        #! The functions of the calls in @ref acmap as the apps gave them: call key -> function
+        /** The calls in @ref acmap and in the providers have guarded functions (see guardCall()); this map tells a
+            reused function from a new one
+        */
+        static hash<string, code> acmap_raw = {};
+
+        #! Maps from app names to connection post-auth functions
+        static hash<string, hash<AsyncCallInfo>> app_post_auth_map = {};
+
+        #! Maps from app names to connection post-auth-code functions
+        static hash<string, hash<AsyncCallInfo>> app_post_auth_code_map = {};
+
+        #! Maps from app names to connection update info
+        static hash<string, hash<auto>> app_conn_update_map = {};
+
+        #! the directory of each app's implementation, recorded when the app is registered from the index;
+        #! restricted programs for tenants load an app from it (TenantActionRunner, qoretechnologies/qore#6845)
+        static hash<string, string> app_load_paths;
+
+        #! the pool of the catalogue that registered each app (the master catalogue or a script of
+        #! QORE_TYPESCRIPT_ACTION_SCRIPTS); restricted programs for tenants load the app from its catalogue
+        static hash<string, JavaScriptProgramPool> app_pools;
+    }
+
+    #! Adds unchecked implementations to @ref Internal; called by the classes that declare them
+    /** @return True, for the static member that the caller initializes with the call
+    */
+    static bool setInternal(hash<string, code> h) {
+        Internal += h;
+        if (Internal.registerApp && !Api) {
+            Api = {
+                "getCatalogueProtocolVersion":
+                    \TypeScriptActionInterface::TypeScriptActionInterface::getCatalogueProtocolVersion(),
+                "registerDiscoveryInventory": Internal.registerDiscoveryInventory,
+                "registerApp": Internal.registerApp,
+                "registerExistingApp": Internal.registerExistingApp,
+                "registerAction": Internal.registerAction,
+            };
+        }
+        return True;
+    }
+
+    #! Starts the process server if it has not been started and it starts on demand
+    static bool checkServer() {
+        if (server) {
+            return True;
+        }
+        if (!on_demand) {
+            return False;
+        }
+
+        # lock and check everything again in case of contention
+        sm.lock();
+        on_exit sm.unlock();
+        if (server) {
+            return True;
+        }
+        if (on_demand) {
+            TsaiProcessState::startServerIntern();
+            return True;
+        }
+
+        return False;
+    }
+
+    #! Starts the process server; must be called with the server lock held
+    static startServerIntern() {
+        server = new JavaScriptThreadProcessPool();
+        # the handlers are the module's own, so that they also run when no trusted code is on the stack
+        set_signal_handler(SIGTERM, \TsaiProcessState::shutdownServer());
+        set_signal_handler(SIGINT, \TsaiProcessState::shutdownServer());
+        set_signal_handler(SIGHUP, \TsaiProcessState::shutdownServer());
+        set_signal_handler(SIGUSR2, \TsaiProcessState::shutdownServer());
+
+        DataProvider::registerShutdownHandler(server.uniqueHash(), \TsaiProcessState::shutdownServer());
+    }
+
+    #! Shuts the process server down if it's running
+    static shutdownServer(*int signal) {
+        sm.lock();
+        on_exit sm.unlock();
+
+        *JavaScriptThreadProcessPool srv = remove server;
+        if (!srv) {
+            return;
+        }
+
+        DataProvider::deregisterShutdownHandler(srv.uniqueHash());
+        delete srv;
+    }
+
+    #! Returns the in-process pool if active, starting it on demand if configured
+    /** Uses double-checked locking: first checks without the mutex for the fast path,
+        then acquires the mutex and checks again to avoid races during lazy creation.
+    */
+    static *JavaScriptInProcessPool checkInProcessServer() {
+        if (in_process_server) {
+            return in_process_server;
+        }
+        if (!in_process_on_demand) {
+            return;
+        }
+
+        # lock and check everything again in case of contention
+        sm.lock();
+        on_exit sm.unlock();
+        if (in_process_server) {
+            return in_process_server;
+        }
+        if (in_process_on_demand) {
+            TsaiProcessState::startInProcessServerIntern();
+            return in_process_server;
+        }
+    }
+
+    #! Starts the in-process server using registered program pools; must be called with the server lock held
+    static startInProcessServerIntern() {
+        # use the on-demand pool if set, otherwise find the first registered pool
+        *JavaScriptProgramPool pool = in_process_on_demand_pool ?? TypeScriptActionInterfacePriv::getFirstPool();
+        if (!pool) {
+            throw "IN-PROCESS-SERVER-ERROR", "Cannot start in-process server: no JavaScriptProgramPool available";
+        }
+
+        in_process_server = new JavaScriptInProcessPool(pool, in_process_max_size);
+        DataProvider::registerShutdownHandler(in_process_server.uniqueHash(),
+            \TsaiProcessState::shutdownInProcessServer());
+    }
+
+    #! Shuts the in-process server down if it's running
+    /** Calls shutdown() on the pool (which wakes waiting threads and sets the shutdown flag)
+        rather than deleting the pool immediately, since concurrent threads may still be
+        executing against the pool.
+    */
+    static shutdownInProcessServer(*int signal) {
+        sm.lock();
+        on_exit sm.unlock();
+
+        *JavaScriptInProcessPool ip = remove in_process_server;
+        if (!ip) {
+            return;
+        }
+
+        DataProvider::deregisterShutdownHandler(ip.uniqueHash());
+        ip.shutdown();
+    }
+
+    #! Returns the connection post-auth function of an app, if any
+    static *hash<AsyncCallInfo> getPostAuthCall(string app) {
+        return app_post_auth_map{app.lwr()};
+    }
+
+    #! Returns the connection post-auth-code function of an app, if any
+    static *hash<AsyncCallInfo> getPostAuthCodeCall(string app) {
+        return app_post_auth_code_map{app.lwr()};
+    }
+
+    #! Returns the connection update options of an app, if any
+    static *hash<auto> getConnectionUpdateOptions(string app) {
+        return app_conn_update_map{app.lwr()};
+    }
+
+    #! Returns the names of the apps that a catalogue registered, or that are registered from the index
+    static list<string> getCatalogueAppNames() {
+        return sort(keys (app_pools + app_load_paths)) ?? ();
+    }
+
+    #! Registers a call in the call map; the module's own code uses it as it registers apps and actions
+    static string registerAsyncCall(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, ...) {
+        return TsaiProcessState::registerAsyncCallArgs(ignore_dup, \call, argv);
+    }
+
+    #! Registers a call in the call map; the module's own code uses it as it registers apps and actions
+    static string registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
+        return TsaiProcessState::registerAsyncCallArgs(False, \call, argv);
+    }
+
+    #! Registers a call in the call map; the module's own code uses it as it registers apps and actions
+    /** @param ignore_dup if True, an \c ASYNC-CALL-ERROR raised while registering the call is ignored
+        @param call the call; its \c key is set to the key of the call
+        @param args the elements of the key of the call
+
+        @return the key of the call
+    */
+    static string registerAsyncCallArgs(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, list<auto> args) {
+        string key;
+        try {
+            key = (foldl $1 + "-" + $2, args) + sprintf("-%s", call.type);
+            # in pool clone mode, capture closures without modifying global state
+            if (_pool_clone_mode) {
+                call.key = key;
+                _pool_clone_closures{key} = call.async_call;
+                return key;
+            }
+            if (acmap{key} && ((acmap{key} - ("key", "async_call")) == (call - ("key", "async_call")))
+                && (acmap_raw{key} == call.async_call || acmap{key}.async_call == call.async_call)) {
+                # function is being reused
+                call.key = key;
+                call.async_call = acmap{key}.async_call;
+                return key;
+            }
+            # function is being replaced
+            call.key = key;
+            acmap_raw{key} = call.async_call;
+            call.async_call = TsaiProcessState::guardCall(call.async_call);
+            acmap{key} = call;
+        } catch (hash<ExceptionInfo> ex) {
+            if (!ignore_dup || (ex.err != "ASYNC-CALL-ERROR")) {
+                rethrow;
+            }
+        }
+        return key;
+    }
+
+    #! Returns the function of an app's call as the module keeps it: it refuses code that is sandboxed
+    /** The function of a call runs the app's code in the process-wide program of its catalogue; the module makes the
+        calls of sandboxed code in the tenant's own program (TenantActionRunner), never with this function, so a
+        function that sandboxed code gets hold of, from a call hash of a provider for example, cannot run the app's code
+        for it (qoretechnologies/qore#6749)
+    */
+    static code guardCall(code c) {
+        return auto sub (...) {
+            TenantActionRunner::refuseSandboxed("the function of an app's call");
+            return call_function_args(c, argv);
+        };
+    }
+
+    #! Returns a registered call; the module's own code uses it to make the call, also for sandboxed callers
+    /** @throw ASYNC-CALL-ERROR no call with the given key is registered
+    */
+    static hash<AsyncCallInfo> getCall(string key) {
+        *hash<AsyncCallInfo> rv = acmap{key};
+        if (!rv) {
+            # the keys of the call map are shown only to trusted code (qoretechnologies/qore#6749)
+            if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+                throw "ASYNC-CALL-ERROR", sprintf("Unknown call %y", key);
+            }
+            throw "ASYNC-CALL-ERROR", sprintf("Unknown call %y; known calls: %y", key, keys acmap);
+        }
+        return rv;
     }
 }
 }

@@ -132,7 +132,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
             "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
             sub (V8::JavaScriptProgram pgm) {
-                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
             });
         *list<string> roots = (get_script_dir(),);
         if (*string nm = ENV.QORE_V8_TEST_NODE_MODULES) {
@@ -447,9 +447,9 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         assertEq("restricted", rv.result.where, sprintf("%y", rv));
         rv = p.callFunction("kind", c, "record");
         assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, rv.result, sprintf("%y", rv));
-        # the pool itself refuses sandboxed code
+        # the in-process server is not given to sandboxed code (qoretechnologies/qore#6749)
         rv = p.callFunction("kind", c, "pool");
-        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertEq("SANDBOX-REGISTRATION-ERROR", rv.err, sprintf("%y", rv));
     }
 
     timeoutTest() {

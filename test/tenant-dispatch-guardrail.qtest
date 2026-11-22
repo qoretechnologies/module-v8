@@ -37,6 +37,8 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
                 "JavaScriptObject global = pgm.getGlobal();": "the registration of a catalogue's apps",
                 "auto v = pgm.getGlobal().exports.qtester.run(": "the catalogue tests",
                 "v.then(sub (auto val) {": "the catalogue tests",
+                # the guard of the functions of the calls (qoretechnologies/qore#6749): it refuses sandboxed code first
+                "return call_function_args(c, argv);": "the guarded function of an app's call",
             },
             "TypeScriptActionInterface.qc": {
                 # an app's initialization; an app's code refuses sandboxed callers (UNCONTROLLED_API)
@@ -149,7 +151,7 @@ class TenantDispatchGuardrailTest inherits QUnit::Test {
         int disp = src.find("return TenantActionRunner::dispatch(logger, api, args);", start);
         int pool = src.find("TSAI::checkInProcessServer()", start);
         int server = src.find("TSAI::checkServer()", start);
-        int direct = src.find("return execAsyncValueDirect(logger, api, args);", start);
+        int direct = src.find("return execAsyncValueDirectUnchecked(logger, api, args);", start);
         assertGt(-1, disp);
         assertLt(pool, disp);
         assertLt(server, disp);

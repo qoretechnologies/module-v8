@@ -301,7 +301,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         return rv;
     }
 
-    static stopMasterListener() {
+    private:internal static stopMasterListener() {
         if (master_pid != getpid()) {
             abandonInheritedMaster();
             return;
@@ -370,7 +370,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
     }
 
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the lock is that
+        of every proxy of the process
+    */
     static init(Mutex m) {
+        # process-wide (qoretechnologies/qore#6749)
+        SandboxManager::checkProcessWideRegistration("set the lock of the TypeScript action proxies");
         JavaScriptProgramProxy::global_lock = m;
     }
 
@@ -390,7 +395,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 JavaScriptProgramProxy::setStartupTimeout(2m);
         @endcode
     */
-    static setStartupTimeout(date limit) {
+    static setStartupTimeout(date limit) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#6749)
+        SandboxManager::checkProcessWideRegistration("set the startup timeout of the TypeScript action proxies");
         if (limit < 1s) {
             throw "STARTUP-TIMEOUT-ERROR", sprintf("the startup timeout must be at least one second; got %y", limit);
         }
@@ -413,7 +420,9 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
         In a child process created with \c fork(), this abandons the proxies and the master listener of the parent
         and stops nothing of the parent.
     */
-    static shutdown() {
+    static shutdown() [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#6749)
+        SandboxManager::checkProcessWideRegistration("shut down the TypeScript action proxies");
         if (master_pid && master_pid != getpid()) {
             # the lock is not acquired in a child process created with fork(): a thread of the parent could have
             # held it when the process was copied

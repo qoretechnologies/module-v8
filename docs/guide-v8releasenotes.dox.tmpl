@@ -20,6 +20,18 @@
       module's own, no access to Qore, the host's environment or Node.js's file, process and network builtins once the
       program is sealed, the network only through a host bridge, and termination and heap checks from another thread;
       see @ref v8restricted (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>)
+    - the process-wide state of @ref TypeScriptActionInterface::TypeScriptActionInterface "TypeScriptActionInterface"
+      is no longer readable or changeable by sandboxed code: its static members and internal helper methods are no
+      longer public (trusted code uses \c getInterface(), \c getTestInterface() and \c getRoot() instead of \c Api,
+      \c TestApi and \c root); the methods that give out or change process-wide state (the registrations of apps,
+      actions, child providers and the discovery inventory, the call map, the test connections, the catalogues'
+      program pools and app paths, the in-process and process servers and their settings, the call time limit, the
+      logger and the webhook APIs) raise \c SANDBOX-REGISTRATION-ERROR for code that is sandboxed or acts for
+      sandboxed code and require the \c PROCESS_CONTROL functional domain; sandboxed code gets its own copy of an app's
+      data provider, the operations of the program, in-process and process pools that load, map or create programs
+      or give out a catalogue's source or registration interface refuse sandboxed code, and so do the functions of the
+      apps' calls that the providers hold
+      (<a href="https://github.com/qoretechnologies/qore/issues/6749">issue 6749</a>)
     - an app option can name the action that creates its values in \c metadata.create_action (\c action,
       \c value_field and the optional \c display_name_field), so a value can be created from the option's form; the
       Slack channel options name \c create_channel.  When such an action succeeds, the app's cached allowed values

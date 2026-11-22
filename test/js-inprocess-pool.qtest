@@ -125,7 +125,7 @@ async function runWithTimeout(promise, delay) {
         test_pool = new JavaScriptProgramPool(source, "example.js",
             sub (JavaScriptProgram pgm) {
                 JavaScriptObject global = pgm.getGlobal();
-                global.exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+                global.exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
             });
     }
 

@@ -28,6 +28,10 @@ public namespace TypeScriptActionInterface {
 public class TypeScriptAppRestClient inherits RestClient {
     private {
         TypeScriptAppRestConnection conn;
+    }
+
+    # the calls of the app are not readable by subclasses (qoretechnologies/qore#6749)
+    private:internal {
         *hash<AsyncCallInfo> post_auth;
         *hash<AsyncCallInfo> post_auth_code;
     }
@@ -36,8 +40,8 @@ public class TypeScriptAppRestClient inherits RestClient {
     constructor(TypeScriptAppRestConnection conn, hash<auto> opts, *softbool do_not_connect)
             : RestClient(opts, True) {
         self.conn := conn;
-        post_auth = TypeScriptActionInterface::getPostAuthCall(conn.getAppName());
-        post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(conn.getAppName());
+        post_auth = TsaiProcessState::getPostAuthCall(conn.getAppName());
+        post_auth_code = TsaiProcessState::getPostAuthCodeCall(conn.getAppName());
 
         if (!do_not_connect) {
             checkLogin();
@@ -210,14 +214,18 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         string appname;
         hash<ConnectionSchemeInfo> info;
         *hash<string, bool> url_template_options;
-        *hash<AsyncCallInfo> post_auth;
-        *hash<AsyncCallInfo> post_auth_code;
 
         transient Mutex m();
         transient hash<string, Condition> cmap;
         transient hash<string, int> wmap;
         transient hash<string, bool> pmap;
         hash<auto> cache;
+    }
+
+    # the calls of the app are not readable by subclasses (qoretechnologies/qore#6749)
+    private:internal {
+        *hash<AsyncCallInfo> post_auth;
+        *hash<AsyncCallInfo> post_auth_code;
     }
 
     #! Creates the object
@@ -239,8 +247,8 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 "url": url,
                 "opts": options,
             }), attributes) {
-        post_auth = TypeScriptActionInterface::getPostAuthCall(app);
-        post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(app);
+        post_auth = TsaiProcessState::getPostAuthCall(app);
+        post_auth_code = TsaiProcessState::getPostAuthCodeCall(app);
     }
 
     #! creates the TypeScriptAppRestConnection object
@@ -263,8 +271,8 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     */
     constructor(hash<auto> config, *hash<auto> attr)
             : RestConnection(TypeScriptAppRestConnection::getConfig(config), attr) {
-        post_auth = TypeScriptActionInterface::getPostAuthCall(app);
-        post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(app);
+        post_auth = TsaiProcessState::getPostAuthCall(app);
+        post_auth_code = TsaiProcessState::getPostAuthCodeCall(app);
     }
 
     #! Gets or sets a cached value
@@ -481,7 +489,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         if (!grant_type.val() || grant_type == "none") {
             string appname = config.opts.app;
             string conn_scheme = "tsrest-" + appname.lwr() + "://";
-            if (*hash<AsyncCallInfo> post_auth = TypeScriptActionInterface::getPostAuthCall(appname)) {
+            if (*hash<AsyncCallInfo> post_auth = TsaiProcessState::getPostAuthCall(appname)) {
                 try {
                     *hash<auto> new_opts = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, post_auth, {
                         "conn_name": config.name,
@@ -504,7 +512,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                         appname, ex.err, ex.desc);
                 }
             }
-            if (*hash<AsyncCallInfo> post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(appname)) {
+            if (*hash<AsyncCallInfo> post_auth_code = TsaiProcessState::getPostAuthCodeCall(appname)) {
                 try {
                     *hash<auto> new_opts = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING,
                             post_auth_code, {

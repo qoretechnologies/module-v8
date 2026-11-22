@@ -88,11 +88,6 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! Request key for static request info
         string request_key;
 
-        #! Code to convert the request data given by the user to the request data required by the API
-        *hash<AsyncCallInfo> request_data_converter;
-
-        #! Code to convert the response data provided by the API to the response data for the user
-        *hash<AsyncCallInfo> response_data_converter;
 
         #! Global request type info per action for dynamic types: app-action -> type info
         static hash<string, hash<TypeProviderInfo>> grtmap = {};
@@ -105,6 +100,15 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
         #! Mutex for global request type info
         static Mutex gtlock();
+    }
+
+    # the calls of the app are not readable by subclasses (qoretechnologies/qore#6749)
+    private:internal {
+        #! Code to convert the request data given by the user to the request data required by the API
+        *hash<AsyncCallInfo> request_data_converter;
+
+        #! Code to convert the response data provided by the API to the response data for the user
+        *hash<AsyncCallInfo> response_data_converter;
     }
 
     #! Creates the object from the arguments
@@ -344,7 +348,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 on_error rethrow $1.err, sprintf("%s (while add new field %y in %y for type %y; existing fields: %y)",
                     $1.desc, key, i.key, type.getName(), keys fields);
 
-                if (TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True)
+                if (TsaiProcessState::Internal.getOptionFunctions(\action_save, self, i.key, \i.value, True)
                     && !do_not_cache) {
                     do_not_cache = True;
                 }
@@ -376,7 +380,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                         "expecting \"QoreDataField\"", action_save.app, action_save.action, key, f.className());
                 }
                 if (l.size() == 1) {
-                    if (TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True)
+                    if (TsaiProcessState::Internal.getOptionFunctions(\action_save, self, i.key, \i.value, True)
                         && !do_not_cache) {
                         do_not_cache = True;
                     }

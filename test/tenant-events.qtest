@@ -105,7 +105,7 @@ hash<auto> sub call(string what, hash<auto> ctx, *list<auto> args) {
         string script = get_script_dir() + "/tenant-catalogue.js";
         catalogue_pool = new JavaScriptProgramPool("var exports = {};\n" + ReadOnlyFile::readTextFile(script), script,
             sub (V8::JavaScriptProgram pgm) {
-                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
             });
         *list<string> roots = (get_script_dir(),);
         if (*string nm = ENV.QORE_V8_TEST_NODE_MODULES) {
