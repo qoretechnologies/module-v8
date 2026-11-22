@@ -9,7 +9,8 @@
       sources and actions (\c TenantActionRunner::pollEvents(), \c stopEvents() and \c getActionInfo()) is refused
       to sandboxed code whose isolation domain is another tenant's, as running them already was; an event source's
       identifier no longer suffices.  Releasing a tenant's call (\c releaseConcurrency(),
-      \c releaseEventProgram()) is refused to sandboxed code
+      \c releaseEventProgram()) and \c dispatchTrusted() are refused to sandboxed code.  A host that calls these
+      from sandboxed code gives that code's sandbox the tenant's isolation domain, or calls them as trusted code
       (<a href="https://github.com/qoretechnologies/qore/issues/7227">issue 7227</a>)
     - the classes of the module are uncontrolled APIs (\c UNCONTROLLED_API in addition to \c EMBEDDED_LOGIC), and a
       program is refused at run time to code under a sandbox that does not allow uncontrolled APIs, as its scripts
