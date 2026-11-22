@@ -90,6 +90,34 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         self.name = name;
     }
 
+    #! Copies the object
+    /** A copy made by code that is sandboxed or acts for sandboxed code keeps nothing of the host's: it has no
+        logger but that of its connection, its calls have no post-processing reference, and the types in its caches
+        are its own (qoretechnologies/qore#7185)
+    */
+    copy() {
+        if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            sanitizeForCaller();
+        }
+    }
+
+    #! Removes what is the host's from a copy for a sandboxed caller; see copy()
+    private:internal sanitizeForCaller() {
+        setLogger(conn ? conn.getLogger() : NOTHING);
+        omap = TsaiProcessState::callsForCaller(omap);
+        eomap = TsaiProcessState::callsForCaller(eomap);
+        dmap = TsaiProcessState::callsForCaller(dmap);
+        drmap = TsaiProcessState::callsForCaller(drmap);
+        dtmap = TsaiProcessState::callsForCaller(dtmap);
+        dvmap = TsaiProcessState::callsForCaller(dvmap);
+        foreach string k in (keys dtcache) {
+            dtcache{k} = TsaiProcessState::typeForCaller(dtcache{k});
+        }
+        foreach string k in (keys docache) {
+            docache{k} = TsaiProcessState::optionsForCaller(docache{k});
+        }
+    }
+
     #! Sets the connection
     setConnection(RestConnection conn) {
         self.conn = conn;
@@ -158,7 +186,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     */
     static clearAppCache(string app) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#7185)
-        SandboxManager::checkProcessWideRegistration("drop the cached reference data of a TypeScript app");
+        TsaiProcessState::checkHostScope("drop the cached reference data of a TypeScript app");
         TypeScriptActionDataProviderBase::clearAppCacheUnchecked(app);
     }
 
@@ -321,11 +349,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         @return the result of the call
     */
-    /** @throw TS-TENANT-ERROR the calling code is sandboxed: the call would run in the process-wide program of the
-        app's catalogue; the module makes the calls of sandboxed code in the tenant's own program
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the call would run
+        in the process-wide program of the app's catalogue; the module makes the calls of sandboxed code in the
+        tenant's own program
     */
-    static auto execAsyncValueDirect(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
-        TenantActionRunner::refuseSandboxed("the direct call of an app's function");
+    static auto execAsyncValueDirect(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args)
+            [dom=PROCESS_CONTROL] {
+        # the full runtime (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("make a direct call of an app's function");
         return TypeScriptActionDataProviderBase::execAsyncValueDirectUnchecked(logger, api, args);
     }
 
@@ -354,7 +385,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             # an unlimited call (an event function) runs until its events are stopped
             if (!api.unlimited) {
                 code run = js.getGlobal().runWithTimeout.toData();
-                int ms = (api.to ?? TypeScriptActionInterface::getCallTimeout()).durationMilliseconds();
+                int ms = (api.to ?? TsaiProcessState::Internal.getCallTimeout()).durationMilliseconds();
                 TSAI::debug("%y: running Promise with async timeout: %dms", api.label, ms);
                 v = run(v, ms);
             }
@@ -577,9 +608,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns call context info
+    /** The directory of a dynamic app is a host path: it is not given to code that is sandboxed or acts for sandboxed
+        code, whose calls run in the tenant's own program (qoretechnologies/qore#7185)
+    */
     *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
         *RestConnection conn = self.conn ?? _thread_conn;
-        *string dynamic_path = TsaiProcessState::Internal.getDynamicAppPath(conn ? conn.getAppName() : app);
+        *string dynamic_path = SandboxManager::isProcessWideRegistrationAllowed()
+            ? TsaiProcessState::Internal.getDynamicAppPath(conn ? conn.getAppName() : app)
+            : NOTHING;
         if (conn) {
             return <DataContextInfo>{
                 "conn_name": conn.name,
@@ -598,7 +634,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns a data type for the given base type and request / option data
+    /** A sandboxed caller gets copies of the types of the options (qoretechnologies/qore#7185)
+    */
     *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptions(hash<auto> options) {
+        return TsaiProcessState::optionsForCaller(getActionOptionsWithOptionsCached(options));
+    }
+
+    #! Returns a data type for the given base type and request / option data, with the types of the cache
+    private *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptionsCached(hash<auto> options) {
         *hash<auto> slice = dmap{keys options};
         if (!slice) {
             TSAI::debug("getActionOptionsWithOptions() options: %y dmap: %y no data in slice", options, keys dmap);
@@ -834,21 +877,36 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     $1.value.typeCode() == NT_STRING;
             }
 
-            string key = TypeScriptActionDataProviderBase::getKey("rest-" + type, action_opts);
-
-            bool new_entry;
-            CacheEntry entry = cache.get(key, \new_entry, app);
-            if (new_entry) {
-                on_error entry.cancel($1);
-
+            hash<auto> resp;
+            # the values are read with the credentials of the connection: they are cached per connection, and never
+            # for a sandboxed caller or a tenant's call, as the cache is shared by every caller
+            # (qoretechnologies/qore#7185)
+            if (_ts_no_io || _ts_tenant_calls || SandboxManager::isSandboxed()
+                || !SandboxManager::isProcessWideRegistrationAllowed()) {
                 hash<auto> info;
                 debug("Retrieving %sreference data with REST for data provider %y type %y: %s %s", rtype, getName(),
                     type, ref_rest.method, path);
                 on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
-                entry.setValue(rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
-                    ref_rest.headers));
+                resp = rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING, ref_rest.headers);
+            } else {
+                string key = TypeScriptActionDataProviderBase::getKey("rest-" + type, action_opts + {
+                    "conn": conn ? conn.getRealOptions() + {"url": conn.real_url, "name": conn.name} : NOTHING,
+                });
+
+                bool new_entry;
+                CacheEntry entry = cache.get(key, \new_entry, app);
+                if (new_entry) {
+                    on_error entry.cancel($1);
+
+                    hash<auto> info;
+                    debug("Retrieving %sreference data with REST for data provider %y type %y: %s %s", rtype,
+                        getName(), type, ref_rest.method, path);
+                    on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
+                    entry.setValue(rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
+                        ref_rest.headers));
+                }
+                resp = entry.getValue();
             }
-            hash<auto> resp = entry.getValue();
 
             debug("Got %sreference data with REST for data provider %y type %y: %y", rtype, getName(), type,
                 LoggerUtil::getArgSummary(resp));

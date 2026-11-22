@@ -248,7 +248,7 @@ function setenv(vr, value) {
                 chdir(cwd);
             }
             JavaScriptProgramPool pool(getDefaultCode(path, dir) + File::readTextFile(basename(path)), path, init);
-            pstore{pool.uniqueHash()} = pool;
+            pstore{TsaiProcessState::Internal.poolUniqueHash(pool)} = pool;
             TsaiProcessState::Internal.clearDiscoverySourceFailure(path);
             return pool;
         } catch (hash<ExceptionInfo> ex) {
@@ -266,7 +266,7 @@ function setenv(vr, value) {
             throw "APP-REGISTRATION-ERROR", sprintf("Cannot load pending app from %y: no master "
                 "catalogue is loaded", app_path);
         }
-        JavaScriptObject global = master.getProgram().getGlobal();
+        JavaScriptObject global = TsaiProcessState::Internal.poolGetProgram(master).getGlobal();
         # the JS catalogue returns the loaded app's name
         return global.exports.actionsCatalogue.loadAppFromPath(TsaiProcessState::Api, app_path);
     }
@@ -292,7 +292,7 @@ function setenv(vr, value) {
         # load only the catalogue's curated NEW_APPS directories, not every
         # subdirectory under apps/ (which can include unrelated or work-in-progress
         # apps that are deliberately excluded from the catalogue)
-        JavaScriptObject global = master.getProgram().getGlobal();
+        JavaScriptObject global = TsaiProcessState::Internal.poolGetProgram(master).getGlobal();
         *list<auto> dirs = global.exports.actionsCatalogue.getNewAppDirs();
         hash<string, string> dirmap;
         foreach string dname in (dirs) {
@@ -350,7 +350,7 @@ function setenv(vr, value) {
             on_error remove_path(dir);
 
             DynamicAppContextHelper dach(base_dir, replace);
-            JavaScriptObject global = master.getProgram().getGlobal();
+            JavaScriptObject global = TsaiProcessState::Internal.poolGetProgram(master).getGlobal();
             #global.setenv("CUSTOM_APPS_DIR", base_dir);
             # call the master app's dynamic registration method
             global.exports.actionsCatalogue.registerCustomApp(
@@ -439,6 +439,13 @@ class TsaiProcessState {
         */
         static hash<string, code> Api;
 
+        #! The interface given to the restricted programs of tenants (TenantActionRunner::buildProgram())
+        /** Its calls register only while the program is built, in pool clone mode, where they capture the program's
+            own functions and change no process-wide state; a call made outside clone mode, by catalogue code that
+            kept the interface, is refused (qoretechnologies/qore#7185)
+        */
+        static hash<string, code> CloneApi;
+
         #! The unchecked implementations of the module's checked public methods, for the module's own code
         /** Set by the classes that declare them, with call references to their \c private:internal methods, when
             the module is loaded (see setInternal()); the public methods refuse code that is sandboxed or acts for
@@ -516,8 +523,148 @@ class TsaiProcessState {
                 "registerExistingApp": Internal.registerExistingApp,
                 "registerAction": Internal.registerAction,
             };
+            CloneApi = map {$1.key: $1.key == "getCatalogueProtocolVersion"
+                ? $1.value
+                : TsaiProcessState::cloneOnly($1.key, $1.value)}, Api.pairIterator();
         }
         return True;
+    }
+
+    #! The single guard of the host-scoped entry points of the module (qoretechnologies/qore#7185)
+    /** Every public method that reads the host's configuration, paths or objects or that changes process-wide state
+        (the registries, servers, pools, proxies, caches, time limits, base directories, discovery state, webhook
+        APIs, the logger and the initialization of the module) calls it first, before it uses its arguments.  It fails
+        closed: code that is sandboxed or acts for sandboxed code is refused, also when its sandbox cannot be
+        resolved; the initialization of the module itself is not refused.
+
+        @param what what the caller tried to do, for the exception; it names no host path, app or object
+
+        @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code
+    */
+    static checkHostScope(string what) {
+        SandboxManager::checkProcessWideRegistration(what);
+    }
+
+    #! Returns True if the module may change its process-wide state for the current code
+    /** For trusted code, and for the module's own registration of the apps of its catalogues, also when an app is
+        initialized on demand for a sandboxed caller (see CatalogueRegistrationHelper); code that serves a sandboxed
+        caller otherwise keeps what it creates in the caller's own objects
+    */
+    static bool canChangeProcessState() {
+        return CatalogueRegistrationHelper::get() || SandboxManager::isProcessWideRegistrationAllowed();
+    }
+
+    #! Returns a call of the interface of tenants' programs that is refused outside pool clone mode
+    static code cloneOnly(string name, code c) {
+        return auto sub (...) {
+            if (!_pool_clone_mode) {
+                throw "TS-TENANT-ERROR", sprintf("%s(): the interface of a tenant's program registers only while "
+                    "the program is built", name);
+            }
+            return call_function_args(c, argv);
+        };
+    }
+
+    #! Returns the type for the calling code: a deep copy for code that is sandboxed or acts for sandboxed code
+    /** The types of the process-wide providers are shared by every caller; a sandboxed caller that changes the type
+        it gets (ex: \c addField()) changes only its own copy (qoretechnologies/qore#7185)
+    */
+    static *AbstractDataProviderType typeForCaller(*AbstractDataProviderType t) {
+        if (!t || SandboxManager::isProcessWideRegistrationAllowed()) {
+            return t;
+        }
+        hash<string, AbstractDataProviderType> done = {};
+        return TsaiProcessState::copyType(t, \done);
+    }
+
+    #! Returns the fields for the calling code: deep copies for code that is sandboxed or acts for sandboxed code
+    static *hash<string, AbstractDataField> fieldsForCaller(*hash<string, AbstractDataField> fields) {
+        if (!fields || SandboxManager::isProcessWideRegistrationAllowed()) {
+            return fields;
+        }
+        hash<string, AbstractDataProviderType> done = {};
+        return map {$1.key: TsaiProcessState::copyField($1.value, \done)}, fields.pairIterator();
+    }
+
+    #! Returns action options for the calling code: with deep copies of their types for sandboxed code
+    static *hash<string, hash<ActionOptionInfo>> optionsForCaller(*hash<string, hash<ActionOptionInfo>> opts) {
+        if (!opts || SandboxManager::isProcessWideRegistrationAllowed()) {
+            return opts;
+        }
+        hash<string, AbstractDataProviderType> done = {};
+        foreach string k in (keys opts) {
+            if (opts{k}.type) {
+                opts{k}.type = TsaiProcessState::copyType(opts{k}.type, \done);
+            }
+        }
+        return opts;
+    }
+
+    #! Returns message (event) infos for the calling code: with deep copies of their types for sandboxed code
+    static hash<DataProviderMessageInfo> messageForCaller(hash<DataProviderMessageInfo> info) {
+        if (!info.type || SandboxManager::isProcessWideRegistrationAllowed()) {
+            return info;
+        }
+        hash<string, AbstractDataProviderType> done = {};
+        info.type = TsaiProcessState::copyType(info.type, \done);
+        return info;
+    }
+
+    #! Returns the calls of a provider's copy for a sandboxed caller: without post-processing references
+    /** The post-processing of a call is applied by the module's own code where the call is made; the reference is a
+        call of the module's internal code (qoretechnologies/qore#7185)
+    */
+    static *hash<string, hash<AsyncCallInfo>> callsForCaller(*hash<string, hash<AsyncCallInfo>> calls) {
+        foreach string k in (keys calls) {
+            calls{k}.post_processing = NOTHING;
+            calls{k}.pool = NOTHING;
+        }
+        return calls;
+    }
+
+    #! Returns a deep copy of a type: its fields, their types, and the element and other field types
+    /** @param t the type to copy
+        @param done the copies made so far, by the unique hash of the type copied, so that a type that refers to
+        itself is copied once
+    */
+    static AbstractDataProviderType copyType(AbstractDataProviderType t,
+            reference<hash<string, AbstractDataProviderType>> done) {
+        string uh = t.uniqueHash();
+        if (*AbstractDataProviderType rv = done{uh}) {
+            return rv;
+        }
+        AbstractDataProviderType rv = t.copy();
+        done{uh} = rv;
+        if (rv instanceof HashDataType) {
+            HashDataType ht = cast<HashDataType>(rv);
+            if (*hash<string, AbstractDataField> fields = ht.getFields()) {
+                ht.setFields(map {$1.key: TsaiProcessState::copyField($1.value, \done)}, fields.pairIterator());
+            }
+            if (*AbstractDataProviderType ot = ht.getDefaultOtherFieldType()) {
+                ht.setDefaultOtherFieldType(TsaiProcessState::copyType(ot, \done));
+            }
+        } else if (rv instanceof ListDataType) {
+            ListDataType lt = cast<ListDataType>(rv);
+            if (*AbstractDataProviderType et = lt.getElementType()) {
+                lt.updateElementType(TsaiProcessState::copyType(et, \done), True);
+            }
+        }
+        return rv;
+    }
+
+    #! Returns a copy of a field with a deep copy of its type
+    /** The declared type of a TypeScript field is copied: its dynamic type is resolved when the copy's type is read,
+        with the call context of the caller
+    */
+    static AbstractDataField copyField(AbstractDataField f, reference<hash<string, AbstractDataProviderType>> done) {
+        AbstractDataField rv = f.copy();
+        if (rv instanceof QoreDataField) {
+            AbstractDataProviderType ft = (rv instanceof TypeScriptDataField)
+                ? cast<TypeScriptDataField>(rv).getDeclaredType()
+                : rv.getType();
+            cast<QoreDataField>(rv).updateFieldType(TsaiProcessState::copyType(ft, \done));
+        }
+        return rv;
     }
 
     #! Starts the process server if it has not been started and it starts on demand
@@ -671,6 +818,15 @@ class TsaiProcessState {
                 _pool_clone_closures{key} = call.async_call;
                 return key;
             }
+            # code that serves a sandboxed caller, outside the module's registration of its catalogues' apps (as for
+            # a dynamic option or type that a tenant's call returned, or a type that a tenant builds with its own
+            # copy of a provider), keeps the call in the caller's own provider: the process-wide call map is changed
+            # only by trusted code (qoretechnologies/qore#7185)
+            if (!TsaiProcessState::canChangeProcessState()) {
+                call.key = key;
+                call.async_call = TsaiProcessState::guardCall(call.async_call);
+                return key;
+            }
             if (acmap{key} && ((acmap{key} - ("key", "async_call")) == (call - ("key", "async_call")))
                 && (acmap_raw{key} == call.async_call || acmap{key}.async_call == call.async_call)) {
                 # function is being reused
@@ -812,6 +968,34 @@ class DynamicAppContextHelper {
 
 #! Thread-local flag for pool clone mode
 thread_local *bool _pool_clone_mode;
+
+#! Thread-local flag: the module registers the apps of its catalogues (see CatalogueRegistrationHelper)
+thread_local *bool _tsai_catalogue_registration;
+
+#! Marks the module's registration of the apps of its catalogues in the current thread
+/** An app is initialized on demand for the first caller that uses it, also for a sandboxed caller; its registration
+    is made by the module's own code with the catalogue's code, and changes the process-wide registries for every
+    caller (TsaiProcessState::canChangeProcessState()).  The class is not public: code that imports the module cannot
+    create it (qoretechnologies/qore#7185).
+*/
+class CatalogueRegistrationHelper {
+    private {
+        *bool old;
+    }
+
+    constructor() {
+        old = _tsai_catalogue_registration;
+        _tsai_catalogue_registration = True;
+    }
+
+    destructor() {
+        _tsai_catalogue_registration = old;
+    }
+
+    static *bool get() {
+        return _tsai_catalogue_registration;
+    }
+}
 #! Thread-local storage for closures captured during pool clone mode
 thread_local *hash<string, code> _pool_clone_closures;
 

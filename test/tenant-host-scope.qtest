@@ -1,0 +1,410 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# A sandboxed tenant gets nothing of the host's from TypeScriptActionInterface (qoretechnologies/qore#7185): the
+# providers that it gets are copies with types, calls and loggers of their own, it cannot read the program pools, the
+# call map or the module's process-wide statics, the calls that it registers stay in its own provider, the reference
+# data of a REST lookup are cached per connection and never for a sandboxed caller, the interface that a tenant's
+# program registers with works only while the program is built, and a Program restricted with PO_NO_PROCESS_CONTROL
+# cannot even parse a call of the host-scoped entry points.  The classification of the whole public API is in
+# tenant-process-wide-state.qtest.
+# test-platform: macos - TLS connections to a local HTTPS server and the restricted programs of the tenant runner
+%modern
+%no-child-restrictions
+%requires qore >= 3.0
+%requires QUnit
+%requires reflection
+%requires v8
+%requires TypeScriptActionInterface
+%requires ConnectionProvider
+%requires RestClient
+%requires json
+%requires HttpServer
+%exec-class TenantHostScopeTest
+
+#! The local REST server of the reference data: each request gets a value of its own
+class ValuesHandler inherits AbstractHttpRequestHandler {
+    public {
+        static Counter requests();
+    }
+
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        ValuesHandler::requests.inc();
+        string value = sprintf("v%d", ValuesHandler::requests.getCount());
+        return makeResponse(200, make_json({"values": (value,)}), {"Content-Type": MimeTypeJson});
+    }
+}
+
+class TenantHostScopeTest inherits QUnit::Test {
+    public {
+        #! The modules that the tenant Programs of the test require
+        const Modules = "%new-style\n%requires v8\n%requires TypeScriptActionInterface\n%requires RestClient\n";
+
+        #! An app of the host's catalogue (test/tenant-catalogue.js)
+        const CatalogueApp = "tenant-conn";
+
+        #! A tenant's own connection to the catalogue's app
+        const TenantConn = "TypeScriptActionInterface::TypeScriptAppRestConnection c({\"name\": \"t\", "
+            "\"url\": \"tsrest-" + CatalogueApp + "://conn.example.com\", \"opts\": {\"app\": \"" + CatalogueApp
+            + "\"}}); ";
+
+        #! The tenant's child provider of the catalogue's action
+        const TenantChild = TenantConn + "auto ch = c.getDataProvider().getChildProviderEx(\"info\"); ";
+
+        #! Reads of the state of the module through a subclass: name -> code; each must fail to parse
+        const SubclassCases = {
+            "proxy private static method": "X::get();\n}\nclass X inherits "
+                "TypeScriptActionInterface::JavaScriptProgramProxy {\nstatic get() { removeProxy(\"x\"); }",
+            "factory class": "X::get();\n}\nclass X inherits TypeScriptActionInterface::TypeScriptActionFactory {\n"
+                "static get() { auto x = cls; }",
+            "library factory class": "X::get();\n}\nclass X inherits "
+                "TypeScriptActionInterface::TypeScriptActionDataProviderFactory {\nstatic get() { auto x = cls; }",
+            "provider pool": "X::get(NOTHING);\n}\nclass X inherits "
+                "TypeScriptActionInterface::TypeScriptActionDataProviderBase {\n"
+                "static get(*TypeScriptActionInterface::TypeScriptActionDataProviderBase p) { auto x = p.pool; }",
+        };
+    }
+
+    private {
+        #! The host's catalogue pool
+        JavaScriptProgramPool catalogue_pool;
+
+        #! The HTTPS server of the reference data
+        HttpServer server;
+
+        #! The URL of the server
+        string url;
+
+        #! The directory of the server's key and certificate
+        string dir;
+
+        #! The REST app of the reference data
+        string rest_app;
+    }
+
+    constructor() : QUnit::Test("TenantHostScope", "1.0", \ARGV) {
+        addTestCase("tenants' copies of a provider have types of their own", \typeCopyTest());
+        addTestCase("tenants' copies hold no pool, post-processing reference or host logger", \copyContentTest());
+        addTestCase("tenants cannot read the module's state through a subclass", \subclassTest());
+        addTestCase("a call that a tenant registers stays in its own provider", \localCallTest());
+        addTestCase("REST reference data are cached per connection and never for tenants", \restCacheTest());
+        addTestCase("a tenant's program registers only while it is built", \cloneApiTest());
+        addTestCase("a Program without PROCESS_CONTROL cannot parse the host-scoped entry points", \parseTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        string script = get_script_dir() + "/tenant-catalogue.js";
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
+            "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
+            sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
+                    TypeScriptActionInterface::getInterface());
+            });
+        TypeScriptActionInterface::initApp(CatalogueApp, True);
+
+        # the tenant runner's catalogue: its code keeps the interface it registers with
+        string scope_script = get_script_dir() + "/tenant-host-scope-catalogue.js";
+        JavaScriptProgramPool scope_pool("var exports = {};\nasync function runWithTimeout(p, d) { "
+            "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(scope_script),
+            scope_script, sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
+                    TypeScriptActionInterface::getInterface());
+            });
+        TenantActionRunner::setCatalogue(scope_script, (get_script_dir(),), scope_pool);
+        TypeScriptActionInterface::initApp("tenant-scope", True);
+
+        setUpRestApp();
+    }
+
+    globalTearDown() {
+        if (server) {
+            server.stop();
+        }
+        if (dir) {
+            map unlink(dir + DirSep + $1), ("openssl.cnf", "key.pem", "cert.pem", "schema.json");
+            rmdir(dir);
+        }
+        if (rest_app) {
+            TypeScriptActionInterface::deregisterDynamicApp(rest_app);
+        }
+    }
+
+    typeCopyTest() {
+        # a tenant adds a field to the request type that it gets, from its own connection's provider and from the
+        # app's provider, and through a subclass reading the type of its copy
+        hash<string, string> cases = {
+            "connection provider": TenantChild + "HashDataType t = ch.getRequestType(); "
+                "t.addField(new QoreDataField(\"tenant_a\", \"x\", StringType)); return \"added\";",
+            "app provider": "auto ch = TypeScriptActionInterface::getAppDataProvider(\"" + CatalogueApp + "\")"
+                ".getChildProviderEx(\"info\"); HashDataType t = ch.getRequestType(); "
+                "t.addField(new QoreDataField(\"tenant_b\", \"x\", StringType)); return \"added\";",
+            "copy's member": TenantChild + "return A::add(ch);\n}\n"
+                "class A inherits TypeScriptActionInterface::TypeScriptActionApiDataProvider {\n"
+                "static string add(TypeScriptActionInterface::TypeScriptActionApiDataProvider p) { "
+                "*HashDataType t = p.request_type_info.type; if (!t) { return \"added\"; } "
+                "t.addField(new QoreDataField(\"tenant_d\", \"x\", StringType)); return \"added\"; }",
+        };
+        foreach hash<auto> i in (cases.pairIterator()) {
+            assertEq("added", TenantHostScopeTest::tenant("tenant-a", i.value).callFunction("t"), i.key);
+        }
+        # the host's types are unchanged
+        TypeScriptAppRestConnection host_conn({"name": "qore-test-7185-host", "url": "tsrest-" + CatalogueApp
+            + "://conn.example.com", "opts": {"token": "x"}});
+        list<string> injected = ("tenant_a", "tenant_b", "tenant_d");
+        AbstractDataProvider host_child = TypeScriptActionInterface::getAppDataProvider(CatalogueApp)
+            .getChildProviderEx("info");
+        assertEq((), (map $1, keys host_child.getRequestType().getFields(), injected.contains($1)) ?? (),
+            "app provider");
+        AbstractDataProvider conn_child = host_conn.getDataProvider().getChildProviderEx("info");
+        assertEq((), (map $1, keys conn_child.getRequestType().getFields(), injected.contains($1)) ?? (),
+            "connection provider");
+        # and the tenant's copy works
+        assertEq("dyn", TenantHostScopeTest::tenant("tenant-b", TenantChild + "return (keys ch.getRequestType()"
+            ".getFields()).contains(\"dyn\") ? \"dyn\" : \"missing\";").callFunction("t"));
+    }
+
+    copyContentTest() {
+        hash<string, string> cases = {
+            "pool of a call": TenantChild + "hash<auto> f = (ch.dtmap ?? ch.omap ?? ch.dvmap).firstValue(); "
+                "return exists f.pool ? \"pool\" : \"no pool\";",
+            "post-processing of a call": TenantChild + "foreach hash<auto> f in (ch.dtmap.iterator()) { "
+                "if (f.post_processing) { return \"post-processing\"; } } return \"none\";",
+            "logger of a child of the app provider": "return TypeScriptActionInterface::getAppDataProvider(\""
+                + CatalogueApp + "\").getChildProviderEx(\"info\").getLogger() ? \"logger\" : \"none\";",
+            "logger of a child of the connection provider": TenantChild + "return ch.getLogger() ? \"logger\" : "
+                "\"none\";",
+        };
+        hash<string, string> expected = {
+            "pool of a call": "no pool",
+            "post-processing of a call": "none",
+            "logger of a child of the app provider": "none",
+            "logger of a child of the connection provider": "none",
+        };
+        hash<string, string> results = map {$1.key: TenantHostScopeTest::tenant("tenant-a", $1.value)
+            .callFunction("t")}, cases.pairIterator();
+        assertEq(expected, results);
+        # the host's own provider still has its logger
+        assertTrue(exists TypeScriptActionInterface::getAppDataProvider(CatalogueApp).getChildProviderEx("info")
+            .getLogger());
+    }
+
+    subclassTest() {
+        hash<string, string> results = {};
+        foreach hash<auto> i in (SubclassCases.pairIterator()) {
+            try {
+                Program p = TenantHostScopeTest::tenant("tenant-a", i.value + "\n");
+                p.callFunction("t");
+                results{i.key} = "parsed";
+            } catch (hash<ExceptionInfo> ex) {
+                results{i.key} = ex.err;
+            }
+        }
+        assertEq((map {$1: "PARSE-EXCEPTION"}, keys SubclassCases), results);
+    }
+
+    localCallTest() {
+        string before = TenantHostScopeTest::getCallKeys();
+        # a tenant builds a field with a function for its own provider
+        assertEq("built", TenantHostScopeTest::tenant("tenant-a", TenantChild + "TypeScriptActionInterface::"
+            "getField(\"tenant-path\", \"f\", {\"type\": \"string\", \"get_allowed_values\": list<auto> sub () "
+            "{ return (); }}, ch); return \"built\";").callFunction("t"));
+        # the process-wide call map is unchanged
+        assertEq(before, TenantHostScopeTest::getCallKeys());
+    }
+
+    restCacheTest() {
+        TypeScriptAppRestConnection conn_a = getRestConnection("qore-test-7185-a", "token-a");
+        TypeScriptAppRestConnection conn_b = getRestConnection("qore-test-7185-b", "token-b");
+        string first = getValue(conn_a);
+        # another connection gets its own value; the same connection gets its cached value
+        string second = getValue(conn_b);
+        assertTrue(first != second, "another connection is not served the values of the first");
+        assertEq(first, getValue(conn_a), "a connection's values are cached");
+        # a tenant with the same credentials does not get the cached value, and does not change the cache
+        SandboxManager sm();
+        sm.setNetworkDefaultPolicy(True);
+        Program p = TenantHostScopeTest::tenant("tenant-a", "TypeScriptActionInterface::TypeScriptAppRestConnection "
+            "c({\"name\": \"qore-test-7185-a\", \"url\": \"tsrest-" + rest_app.lwr() + "://\", \"opts\": "
+            "{\"token\": \"token-a\", \"ssl_verify_cert\": False}}); "
+            "return (TypeScriptActionInterface::TypeScriptActionInterface::getDataProvider(\"" + rest_app.lwr()
+            + "\", c).getChildProviderEx(\"pick\").getReferenceData(\"opt\") ?? ())[0].value;", NOTHING, sm);
+        string tenant_value = p.callFunction("t");
+        assertTrue(tenant_value != first, "a tenant is not served the host's cached values");
+        assertEq(first, getValue(conn_a), "the tenant's lookup does not change the cache");
+    }
+
+    cloneApiTest() {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(Modules + "hash<auto> sub t() { return TypeScriptActionInterface::TenantActionRunner::exec("
+            "<TypeScriptActionInterface::TsTenantContext>{\"tenant\": \"tenant-scope-a\"}, \"tenant-scope\", "
+            "\"late-register\", {}); }\n", "tenant");
+        SandboxManager sm();
+        if (V8::SandboxCapture::hasIsolationDomains()) {
+            call_object_method(sm, "setIsolationDomain", "tenant-scope-a");
+        }
+        p.setSandboxManager(sm);
+        hash<auto> rv = p.callFunction("t");
+        assertEq("refused", rv.result, sprintf("%y", rv));
+        assertEq((), (map $1.app, TypeScriptActionInterface::getDiscoveryInventory(), $1.app == "tenant-scope-late")
+            ?? ());
+    }
+
+    parseTest() {
+        # the host-scoped entry points declare PROCESS_CONTROL: a Program without it cannot parse their calls
+        list<string> calls = ();
+        foreach Class cls in (Namespace::forName("TypeScriptActionInterface").getClasses()) {
+            string cname = "TypeScriptActionInterface::" + cls.getName();
+            foreach AbstractMethod m in (cls.getMethods() + cls.getStaticMethods()) {
+                if (m.getClass().getName() != cls.getName()) {
+                    continue;
+                }
+                foreach AbstractMethodVariant v in (m.getVariants()) {
+                    if (v.getAccessModifierString() != "public"
+                        || !v.getDomainStringList().contains("PROCESS_CONTROL")) {
+                        continue;
+                    }
+                    # typed variables as the arguments: the call is only parsed
+                    list<string> decls = ();
+                    list<string> args = ();
+                    foreach string t in (map $1.getName(), v.getParamTypes()) {
+                        t = regex_subst(t, "object<([^>]*)>", "$1", RE_Global);
+                        t = regex_subst(t, "(^|[<*, ])::", "$1", RE_Global);
+                        if (t =~ /^reference/) {
+                            *string inner = (t =~ x/^reference<(.*)>$/)[0];
+                            decls += sprintf("%s a%d;", inner ?? "auto", $#);
+                            args += sprintf("\\a%d", $#);
+                        } else {
+                            decls += sprintf("%s a%d;", t, $#);
+                            args += sprintf("a%d", $#);
+                        }
+                    }
+                    string call;
+                    if (m instanceof ConstructorMethod) {
+                        call = sprintf("new %s(%s);", cname, args.join(", "));
+                    } else if (m instanceof StaticMethod) {
+                        call = sprintf("%s::%s(%s);", cname, m.getName(), args.join(", "));
+                    } else {
+                        # a variable of the class: the method is resolved when the call is parsed
+                        call = sprintf("%s o; o.%s(%s);", cname, m.getName(), args.join(", "));
+                    }
+                    calls += decls.join(" ") + " " + call;
+                }
+            }
+        }
+        assertTrue(calls.size() > 100, "the host-scoped entry points declare PROCESS_CONTROL");
+        calls += (
+            "hash<TypeScriptActionInterface::AsyncCallInfo> c; TypeScriptActionInterface::TypeScriptActionInterface::"
+                "registerAsyncCall(\\c, \"x\");",
+            "hash<TypeScriptActionInterface::AsyncCallInfo> c; TypeScriptActionInterface::TypeScriptActionInterface::"
+                "registerAsyncCallArgs(\\c, ());",
+            "TypeScriptActionInterface::TypeScriptActionInterface::createConnection(\"x\", {});",
+            "TypeScriptActionInterface::TypeScriptActionInterface::getConnection(\"x\");",
+            "TypeScriptActionInterface::TypeScriptActionInterface::execAppActionIntern(\"a\", \"b\", \"c\", "
+                "NOTHING);",
+            "TypeScriptActionInterface::JavaScriptProgramProxy::init(new Mutex());",
+            "TypeScriptActionInterface::TenantActionRunner::init();",
+            "TypeScriptActionInterface::TypeScriptActionInterface::init();",
+            "TypeScriptActionInterface::TypeScriptActionInterface::getCallTimeout();",
+            "TypeScriptActionInterface::TypeScriptActionInterface::initApp(\"x\");",
+            "TypeScriptActionInterface::TypeScriptActionInterface::getPendingApps();",
+            "TypeScriptActionInterface::JavaScriptProgramProxy::getStartupTimeout();",
+            "TypeScriptActionInterface::JavaScriptProgramPool p; p.getProgram();",
+            "TypeScriptActionInterface::JavaScriptProgramPool p; p.registerAppActions(new Mutex());",
+            "TypeScriptActionInterface::JavaScriptInProcessPool p; hash<TypeScriptActionInterface::"
+                "InProcessProgramInfo> i; p.release(i);",
+        );
+        # a call of an entry point that does not need PROCESS_CONTROL parses
+        assertEq("parsed", TenantHostScopeTest::parseRestricted("TypeScriptActionInterface::"
+            "TypeScriptActionInterface::getCatalogueProtocolVersion();"));
+        hash<string, string> results = map {$1: TenantHostScopeTest::parseRestricted($1)}, calls;
+        assertEq((map {$1: "PARSE-EXCEPTION"}, calls), results);
+    }
+
+    #! Parses a call in a Program restricted with PO_NO_PROCESS_CONTROL; returns \c "parsed" or the error
+    static string parseRestricted(string call) {
+        Program p(PO_NEW_STYLE | PO_NO_PROCESS_CONTROL | PO_NO_CHILD_PO_RESTRICTIONS);
+        try {
+            p.parse("%requires v8\n%requires TypeScriptActionInterface\n%requires RestClient\nsub t() { "
+                + call + " }\n", "restricted");
+            return "parsed";
+        } catch (hash<ExceptionInfo> ex) {
+            return ex.err;
+        }
+    }
+
+    #! Returns the keys of the process-wide call map, as trusted code sees them in the error of an unknown call
+    static string getCallKeys() {
+        try {
+            TypeScriptActionInterface::getCall("qore-test-7185-unknown-call");
+        } catch (hash<ExceptionInfo> ex) {
+            return ex.desc;
+        }
+        throw "TEST-ERROR", "the unknown call was found";
+    }
+
+    #! Returns the first reference value of the REST app's action for the connection
+    private string getValue(TypeScriptAppRestConnection conn) {
+        return TypeScriptActionInterface::getDataProvider(rest_app.lwr(), conn).getChildProviderEx("pick")
+            .getReferenceData("opt")[0].value;
+    }
+
+    #! Returns a connection of the REST app
+    private TypeScriptAppRestConnection getRestConnection(string name, string token) {
+        return new TypeScriptAppRestConnection({"name": name, "url": "tsrest-" + rest_app.lwr() + "://",
+            "opts": {"token": token, "ssl_verify_cert": False}});
+    }
+
+    #! Registers the REST app of the reference data, served by a local HTTPS server
+    private setUpRestApp() {
+        dir = tmp_location() + DirSep + "ts-host-scope-" + get_random_string(8);
+        mkdir(dir);
+        File cnf();
+        cnf.open2(dir + DirSep + "openssl.cnf", O_CREAT | O_WRONLY | O_TRUNC);
+        cnf.write("[req]\ndistinguished_name = dn\n[dn]\n");
+        cnf.close();
+        int rc = system(sprintf("openssl req -config %s -x509 -newkey rsa:2048 -keyout %s -out %s -days 1 -nodes "
+            "-subj /CN=localhost 2>/dev/null", dir + DirSep + "openssl.cnf", dir + DirSep + "key.pem",
+            dir + DirSep + "cert.pem"));
+        assertEq(0, rc, "openssl creates the server's key and certificate");
+        SSLPrivateKey key(ReadOnlyFile::readTextFile(dir + DirSep + "key.pem"));
+        SSLCertificate cert(ReadOnlyFile::readTextFile(dir + DirSep + "cert.pem"));
+        server = new HttpServer();
+        server.setDefaultHandler("values", new ValuesHandler());
+        int port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0,
+            "key": key, "cert": cert, "enable_h3": False}).port;
+        url = sprintf("https://127.0.0.1:%d", port);
+
+        rest_app = "HostScopeRest_" + get_random_string(8);
+        JavaScriptProgramPool pool("var exports = {};", "host-scope-rest.js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::registerApp({"name": rest_app, "display_name": "Host scope REST",
+            "short_desc": "Host scope REST", "desc": "A local REST app.", "groups": ("Other",),
+            "logo": make_base64_string(<00>), "logo_file_name": "test.svg", "logo_mime_type": "image/svg+xml",
+            "dynamic": True, "rest": {"url": url, "data": "json"}}, pool);
+        TypeScriptActionInterface::registerAction({"app": rest_app, "action": "pick", "display_name": "Pick",
+            "short_desc": "Pick", "desc": "Picks a value.", "action_code": DPAT_API,
+            "api_function": sub () {},
+            "options": {
+                "opt": {
+                    "type": "string",
+                    "display_name": "opt",
+                    "short_desc": "opt",
+                    "desc": "opt",
+                    "rest_get_allowed_values": {"method": "GET", "path": "/values", "values": "body.values"},
+                },
+            },
+        }, pool);
+        TypeScriptActionInterface::initApp(rest_app, True);
+    }
+
+    #! Returns a tenant with a sandbox of its own whose \c t() function runs the given code
+    static Program tenant(string name, string body, *hash<auto> unused, *SandboxManager sm) {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        # the body can declare a class after its function
+        p.parse(Modules + "auto sub t_intern() { " + body + " }\nauto sub t() { try { return t_intern(); } "
+            "catch (hash<ExceptionInfo> ex) { return ex.err; } }\n", name);
+        p.setSandboxManager(sm ?? new SandboxManager());
+        return p;
+    }
+}

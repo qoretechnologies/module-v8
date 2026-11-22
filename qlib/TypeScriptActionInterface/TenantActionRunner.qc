@@ -207,9 +207,9 @@ public class TenantActionRunner {
     /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code (the module's own
         initialization is not refused): the runner's trusted calls serve every tenant
     */
-    static init() {
+    static init() [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("initialize the tenant action runner");
+        TsaiProcessState::checkHostScope("initialize the tenant action runner");
         build = SandboxManager::createTrustedBuildCall(\TenantActionRunner::buildProgram());
         # a call runs as trusted code too: the program is the module's, and the caller's sandbox governs only the
         # requests that the program makes through the bridge (captured when the call enters)
@@ -1524,7 +1524,7 @@ globalThis.qoreTenantScan = function (entry, root) {
     #! Runs a record action with the provider code; every call of the app is made in the tenant's own program
     private:internal static auto execRecord(hash<auto> work) {
         # the app's record functions as the catalogue registered them; no call of the app is made here
-        TypeScriptActionInterface::initApp(work.app);
+        TsaiProcessState::Internal.initApp(work.app);
         hash<AppInfo> appinfo = TsaiProcessState::Internal.getInitializedRecordBasedAppInfo(work.app);
         hash<auto> req = work.record;
         int max = work.max_records;
@@ -1703,7 +1703,7 @@ globalThis.qoreTenantScan = function (entry, root) {
         if (!pool) {
             return;
         }
-        string script = pool.getScriptPath();
+        string script = TsaiProcessState::Internal.poolScriptPath(pool);
         string dir = dirname(script);
         if (pool == master) {
             # the catalogue's directory: its distribution and its node_modules
@@ -1755,10 +1755,12 @@ globalThis.qoreTenantScan = function (entry, root) {
             PoolCloneModeHelper clone_helper();
             JavaScriptObject catalogue = pgm.getGlobal().exports.actionsCatalogue;
             # the catalogue's methods can be on its prototype: they are called, not looked up in its own properties
+            # the interface registers only while the program is built: catalogue code that keeps it cannot change the
+            # process-wide registries later (qoretechnologies/qore#7185)
             if (load_path) {
-                catalogue.loadAppFromPath(TsaiProcessState::Api, load_path);
+                catalogue.loadAppFromPath(TsaiProcessState::CloneApi, load_path);
             } else {
-                catalogue.registerAppActions(TsaiProcessState::Api);
+                catalogue.registerAppActions(TsaiProcessState::CloneApi);
             }
             calls = PoolCloneModeHelper::getClosures() ?? {};
         }

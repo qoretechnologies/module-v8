@@ -66,10 +66,11 @@ module TypeScriptActionInterface {
         # Publish a lightweight exact identity inventory for qualified index discovery.
         DataProviderActionCatalog::registerDiscoveryInventoryProvider(
             TypeScriptActionInterface::DiscoveryInventoryProviderName,
-            \TypeScriptActionInterface::getDiscoveryInventory());
+            TypeScriptActionInterfacePriv::TsaiProcessState::Internal.getDiscoveryInventory);
 
         # Register the module's initializer
-        DataProvider::registerStaticInitializer(\TypeScriptActionInterface::init());
+        # the unchecked initializer: static initialization can run when sandboxed code uses a provider first
+        DataProvider::registerStaticInitializer(TypeScriptActionInterfacePriv::TsaiProcessState::Internal.init);
 
         # Register the data provider factory
         DataProvider::registerFactory(new TypeScriptActionDataProviderFactory());

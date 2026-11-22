@@ -73,7 +73,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
     */
     registerChild(string pathname, TypeScriptActionAppDataProvider prov) {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("register an app in the root TypeScript app provider");
+        TsaiProcessState::checkHostScope("register an app in the root TypeScript app provider");
         TypeScriptActionRootDataProvider::registerChildInternal(pathname, prov);
     }
 
@@ -83,7 +83,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
     */
     deregisterChild(string pathname) {
         # process-wide (qoretechnologies/qore#6749)
-        SandboxManager::checkProcessWideRegistration("deregister an app in the root TypeScript app provider");
+        TsaiProcessState::checkHostScope("deregister an app in the root TypeScript app provider");
         remove childMap{pathname};
     }
 
@@ -107,7 +107,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
             map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
                 childMap.iterator();
         # Also return summary info for pending (not-yet-initialized) apps from metadata
-        rv += TypeScriptActionInterface::getPendingAppSummaryInfo();
+        rv += TsaiProcessState::Internal.getPendingAppSummaryInfo();
         return rv;
     }
 
@@ -116,7 +116,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
     */
     private *list<string> getChildProviderNamesImpl() {
         *list<string> rv = keys childMap;
-        rv += TypeScriptActionInterface::getPendingApps();
+        rv += TsaiProcessState::Internal.getPendingApps();
         return rv;
     }
 
@@ -126,7 +126,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
         @see getChildProviderEx()
     */
     private *TypeScriptActionAppDataProvider getChildProviderImpl(string name) {
-        TypeScriptActionInterface::initApp(name);
+        TsaiProcessState::Internal.initApp(name);
         *TypeScriptActionAppDataProvider rv = childMap{name};
         # the provider of an app is process-wide: code that is sandboxed or acts for sandboxed code gets a copy
         # (qoretechnologies/qore#6749)

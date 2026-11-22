@@ -503,7 +503,7 @@ class ListenerReleaseProxy inherits JavaScriptProgramProxy {
     }
 
     #! called by the master listener thread with its reference to the object; no event listener is started
-    startEventListener(Socket event_socket, hash<auto> v) {
+    startEventListener(Socket event_socket, hash<auto> v) [dom=PROCESS_CONTROL] {
         in_listener.dec();
         release.waitForZero();
     }

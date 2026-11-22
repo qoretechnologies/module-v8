@@ -75,9 +75,10 @@ public class TypeScriptActionGoogleApiDataProvider inherits TypeScriptActionApiD
     */
     private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
         if (request_type_info.get_dynamic_type || request_type_info.type) {
-            return getDynamicTypeIntern("request", \request_type_info, NOTHING, dtmap);
+            return TsaiProcessState::typeForCaller(getDynamicTypeIntern("request", \request_type_info, NOTHING,
+                dtmap));
         }
-        return google_api.getRequestType();
+        return TsaiProcessState::typeForCaller(google_api.getRequestType());
     }
 
     #! Returns the description of a response message, if this object represents a response message
@@ -85,9 +86,9 @@ public class TypeScriptActionGoogleApiDataProvider inherits TypeScriptActionApiD
     */
     private *DataProvider::AbstractDataProviderType getResponseTypeImpl() {
         if (response_type_info.get_dynamic_type || response_type_info.type) {
-            return getDynamicTypeIntern("response", \response_type_info);
+            return TsaiProcessState::typeForCaller(getDynamicTypeIntern("response", \response_type_info));
         }
-        return google_api.getResponseType();
+        return TsaiProcessState::typeForCaller(google_api.getResponseType());
     }
 
     #! Returns data provider static info
