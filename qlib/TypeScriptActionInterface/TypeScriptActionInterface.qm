@@ -197,6 +197,16 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       with @ref TypeScriptActionInterface::TenantActionRunner::setEgressMeter() "setEgressMeter()"
     - a call has a time limit, a heap cap and a limit of concurrent calls per tenant
       (@ref TypeScriptActionInterface::TenantActionRunner::setTenantLimits() "setTenantLimits()")
+    - the host gives the runner its hooks and limits before anything loads the module, with
+      <tt>DataProvider::setModuleHostHooks("TypeScriptActionInterface", ...)</tt> (keys \c tenant_context_resolver,
+      \c connection_update_handler, \c egress_policy, \c egress_meter, \c trusted_call_sandbox and
+      \c tenant_limits, a plain hash of
+      @ref TypeScriptActionInterface::TsTenantLimits "TsTenantLimits"): the module's initialization applies them, so
+      that a module loaded lazily, in whichever thread first asks for an app, has them too; an unknown key, a value of
+      the wrong type or a limit that is not greater than 0 fails the initialization.  The host sets them at its
+      startup even if it gives none (<tt>{}</tt>): the module's entry of the registry can be set once, and other
+      trusted code that set it first would give hooks the host did not choose.  Any trusted code can read the
+      registry's hooks (<tt>DataProvider::getModuleHostHooks()</tt>)
     - an app that needs a builtin of Node.js that tenants do not get is refused for tenants
       (\c TS-TENANT-APP-UNSUPPORTED), and
       @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports it unavailable

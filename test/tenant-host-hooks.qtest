@@ -12,6 +12,63 @@
 %exec-class TenantHostHooksTest
 
 class TenantHostHooksTest inherits QUnit::Test {
+    public {
+        #! the code hooks, by key, with the setter that each one sets
+        const HookSetters = {
+            "tenant_context_resolver": "setTenantContextResolver",
+            "connection_update_handler": "setConnectionUpdateHandler",
+            "egress_policy": "setEgressPolicy",
+            "egress_meter": "setEgressMeter",
+            "trusted_call_sandbox": "setTrustedCallSandbox",
+        };
+
+        #! the code that a child process runs first: it prints its results on lines that start with "RESULT: "
+        const ChildPrelude = "%modern
+%requires DataProvider
+sub result(string fmt) { vprintf(\"RESULT: \" + fmt + \"\\n\", argv); }
+# the setters that refuse a new hook, because the hook is set already
+list<string> sub setters_set() {
+    Class cls = Class::forName(\"TypeScriptActionInterface::TenantActionRunner\");
+    list<string> rv = ();
+    foreach string setter in ((\"setConnectionUpdateHandler\", \"setEgressMeter\", \"setEgressPolicy\",
+            \"setTenantContextResolver\", \"setTrustedCallSandbox\")) {
+        try {
+            cls.findStaticMethod(setter).method.getVariants()[0].call(sub () {});
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.desc =~ /set already/) {
+                rv += setter;
+            }
+        }
+    }
+    return rv;
+}
+hash<auto> sub limits() {
+    return Class::forName(\"TypeScriptActionInterface::TenantActionRunner\").findStaticMethod(\"getTenantLimits\")
+        .method.getVariants()[0].call();
+}
+";
+
+        #! code that calls the runner's host methods: sandboxed, or trusted (this test loads the module at runtime)
+        const RunnerSource = "%modern
+%requires TypeScriptActionInterface
+hash<auto> sub call(string what, *hash<auto> arg) {
+    try {
+        switch (what) {
+            case \"get-limits\": return {\"result\": TypeScriptActionInterface::TenantActionRunner::getTenantLimits()};
+            case \"set-limits\":
+                TypeScriptActionInterface::TenantActionRunner::setTenantLimits(
+                    cast<hash<TypeScriptActionInterface::TsTenantLimits>>(arg));
+                return {};
+            case \"apply\": TypeScriptActionInterface::TenantActionRunner::applyHostHooks(); return {};
+        }
+        throw \"TEST-ERROR\", what;
+    } catch (hash<ExceptionInfo> ex) {
+        return {\"err\": ex.err, \"desc\": ex.desc};
+    }
+}
+";
+    }
+
     constructor() : Test("TenantHostHooksTest", "1.0") {
         # set before the module is loaded, as a host does at startup
         DataProvider::setModuleHostHooks("TypeScriptActionInterface", {
@@ -23,8 +80,15 @@ class TenantHostHooksTest inherits QUnit::Test {
         });
         load_module("TypeScriptActionInterface");
         addTestCase("the runner takes the hooks the host set before the module was loaded", \registryHooks());
+        addTestCase("each hook sets the runner's own hook of its key", \hookMapping());
+        addTestCase("limits given alone, all of one type, are applied", \limitsOnly());
+        addTestCase("the hooks are applied once, by the module's initialization", \appliedOnce());
+        addTestCase("a limit that is not greater than 0 is refused", \limitNotPositive());
+        addTestCase("a limit of the wrong type is refused", \limitWrongType());
         addTestCase("an unknown hook fails the module's initialization", \unknownHook());
         addTestCase("a hook that is not code fails the module's initialization", \notCodeHook());
+        addTestCase("sandboxed code can neither read the limits nor apply the hooks", \sandboxedCaller());
+        addTestCase("a module loaded lazily by sandboxed code takes the host's hooks", \lazyLoadBySandboxedCode());
         set_return_value(main());
     }
 
@@ -44,38 +108,163 @@ class TenantHostHooksTest inherits QUnit::Test {
             bool sub (string tenant, *string connection, hash<auto> url, list<string> ips) { return True; });
     }
 
+    #! each key sets its own hook and no other: a key given alone leaves exactly its setter refusing
+    hookMapping() {
+        foreach hash<auto> i in (HookSetters.pairIterator()) {
+            list<string> out = runChild("DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", {\""
+                + i.key + "\": sub () {}});\n"
+                + "load_module(\"TypeScriptActionInterface\");\n"
+                + "result(\"%s\", setters_set().join(\",\"));\n");
+            assertEq((i.value,), out, i.key);
+        }
+        # none given: every setter is open
+        list<string> out = runChild("load_module(\"TypeScriptActionInterface\");\n"
+            + "result(\"[%s]\", setters_set().join(\",\"));\n");
+        assertEq(("[]",), out);
+    }
+
+    #! a hash with only integer limits keeps that type: the runner does not write into the host's hash
+    limitsOnly() {
+        list<string> out = runChild("DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", "
+            + "{\"tenant_limits\": {\"max_concurrent\": 3, \"max_programs\": 5}});\n"
+            + "load_module(\"TypeScriptActionInterface\");\n"
+            + "hash<auto> l = limits();\n"
+            + "result(\"%d %d %d\", l.max_concurrent, l.max_programs, l.max_records);\n"
+            + "result(\"%s\", setters_set().join(\",\"));\n");
+        assertEq(("3 5 10000", ""), out);
+    }
+
+    appliedOnce() {
+        Program p = runnerProgram();
+        assertEq({}, p.callFunction("call", "set-limits", {"max_concurrent": 7}));
+        on_exit p.callFunction("call", "set-limits", {"max_concurrent": 3});
+        hash<auto> rv = p.callFunction("call", "apply");
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("applied already", rv.desc);
+        # nothing was set again: the limits that trusted code set after the initialization stay
+        assertEq(7, p.callFunction("call", "get-limits").result.max_concurrent);
+    }
+
+    limitNotPositive() {
+        foreach string lim in ("{\"heap_limit\": 0}", "{\"max_timeout\": 0}", "{\"max_concurrent\": -1}") {
+            list<string> out = runChild("DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", "
+                + "{\"tenant_context_resolver\": sub () {}, \"tenant_limits\": " + lim + "});\n"
+                + "try { load_module(\"TypeScriptActionInterface\"); result(\"loaded\"); }\n"
+                + "catch (hash<ExceptionInfo> ex) { result(\"%s: %s\", ex.err, ex.desc); }\n"
+                + "result(\"factory registered: %y\", inlist(\"ts-actions\", DataProvider::listFactories()));\n");
+            assertEq(2, out.size(), sprintf("%s: %y", lim, out));
+            assertRegex("^TS-TENANT-ERROR: tenant limit \"[a-z_]+\" must be greater than 0", out[0], lim);
+            assertEq("factory registered: False", out[1], lim);
+        }
+        # the setter refuses it too, and the limits stay as they were
+        Program p = runnerProgram();
+        foreach hash<auto> lim in ({"heap_limit": 0}, {"max_timeout": 0}, {"max_queued_events": -5}) {
+            hash<auto> rv = p.callFunction("call", "set-limits", lim);
+            assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y: %y", lim, rv));
+            assertRegex("must be greater than 0", rv.desc, sprintf("%y", lim));
+        }
+        hash<auto> limits = p.callFunction("call", "get-limits").result;
+        assertEq(3, limits.max_concurrent);
+        assertEq(256 * 1024 * 1024, limits.heap_limit);
+    }
+
+    limitWrongType() {
+        list<string> out = runChild("DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", "
+            + "{\"tenant_limits\": {\"max_concurrent\": \"3\"}});\n"
+            + "try { load_module(\"TypeScriptActionInterface\"); result(\"loaded\"); }\n"
+            + "catch (hash<ExceptionInfo> ex) { result(\"%s: %s\", ex.err, ex.desc); }\n");
+        assertEq(1, out.size(), sprintf("%y", out));
+        assertRegex("^TS-TENANT-ERROR: host hook \"tenant_limits\" given for module \"TypeScriptActionInterface\" "
+            "is not valid", out[0]);
+    }
+
     unknownHook() {
         # a module initializes once per process: the misspelled hook is given to a new one
-        string out = loadWithHooks("{\"tenant_context_resolver\": sub () {}, \"tenant_resolver\": sub () {}}");
-        assertRegex("^TS-TENANT-ERROR: unknown host hook \"tenant_resolver\"", out);
+        list<string> out = loadWithHooks("{\"tenant_context_resolver\": sub () {}, \"tenant_resolver\": sub () {}}");
+        assertRegex("^TS-TENANT-ERROR: unknown host hook \"tenant_resolver\"", out[0]);
         # the hooks are validated before the module registers anything
-        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
+        assertEq("factory registered: False", out[1], "the failed initialization leaves no factory behind");
     }
 
     notCodeHook() {
-        string out = loadWithHooks("{\"egress_policy\": \"allow\"}");
+        list<string> out = loadWithHooks("{\"egress_policy\": \"allow\"}");
         assertRegex("^TS-TENANT-ERROR: host hook \"egress_policy\" given for module \"TypeScriptActionInterface\" "
-            "must be callable code", out);
-        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
+            "must be callable code", out[0]);
+        assertEq("factory registered: False", out[1], "the failed initialization leaves no factory behind");
         out = loadWithHooks("{\"tenant_limits\": 4}");
         assertRegex("^TS-TENANT-ERROR: host hook \"tenant_limits\" given for module \"TypeScriptActionInterface\" "
-            "must be a hash", out);
-        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
+            "must be a hash", out[0]);
+        assertEq("factory registered: False", out[1], "the failed initialization leaves no factory behind");
         # a misspelled limit is refused too, as the module's error, before any hook is set
         out = loadWithHooks("{\"tenant_context_resolver\": sub () {}, \"tenant_limits\": {\"max_concurent\": 3}}");
         assertRegex("^TS-TENANT-ERROR: host hook \"tenant_limits\" given for module \"TypeScriptActionInterface\" "
-            "is not valid", out);
-        assertRegex("factory registered: False$", out, "the failed initialization leaves no factory behind");
+            "is not valid", out[0]);
+        assertEq("factory registered: False", out[1], "the failed initialization leaves no factory behind");
+    }
+
+    sandboxedCaller() {
+        Program p = runnerProgram();
+        p.setSandboxManager(new SandboxManager());
+        foreach string what in ("get-limits", "apply") {
+            hash<auto> rv = p.callFunction("call", what);
+            assertEq("TS-TENANT-ERROR", rv.err, sprintf("%s: %y", what, rv));
+            assertRegex("cannot be called by sandboxed code", rv.desc, what);
+        }
+    }
+
+    #! the case the registry exists for: sandboxed code asks for the module's factory first, which loads the module;
+    #! its initialization runs as the module's own code, not the sandboxed caller's, and takes the host's hooks
+    lazyLoadBySandboxedCode() {
+        list<string> out = runChild("DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", "
+            + "{\"egress_meter\": sub () {}, \"tenant_limits\": {\"max_concurrent\": 6}});\n"
+            + "Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);\n"
+            + "p.parse(\"%modern\\n%requires DataProvider\\n"
+                + "bool sub f() { return exists DataProvider::getFactory(\\\"ts-actions\\\"); }\", \"tenant\");\n"
+            + "p.setSandboxManager(new SandboxManager());\n"
+            + "result(\"factory: %y\", p.callFunction(\"f\"));\n"
+            # the module is initialized already: this only imports it here, to read what its initialization set
+            + "load_module(\"TypeScriptActionInterface\");\n"
+            + "result(\"%s %d\", setters_set().join(\",\"), limits().max_concurrent);\n");
+        assertEq(("factory: True", "setEgressMeter 6"), out);
+    }
+
+    #! Returns a new Program with the code that calls the runner's host methods
+    private Program runnerProgram() {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(RunnerSource, "runner");
+        return p;
     }
 
     #! Loads the module in a new process with the given hooks; returns the error, and whether its factory exists
-    private static string loadWithHooks(string hooks) {
-        string script = "%modern\n%requires DataProvider\n"
-            + "DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", " + hooks + ");\n"
-            + "try { load_module(\"TypeScriptActionInterface\"); print(\"loaded\"); }\n"
-            + "catch (hash<ExceptionInfo> ex) { printf(\"%s: %s\", ex.err, ex.desc); }\n"
-            + "printf(\"\\nfactory registered: %y\", inlist(\"ts-actions\", DataProvider::listFactories()));\n";
-        return trim(backquote("qore -e " + quote(script) + " 2>&1"));
+    private list<string> loadWithHooks(string hooks) {
+        list<string> out = runChild("DataProvider::setModuleHostHooks(\"TypeScriptActionInterface\", " + hooks
+            + ");\n"
+            + "try { load_module(\"TypeScriptActionInterface\"); result(\"loaded\"); }\n"
+            + "catch (hash<ExceptionInfo> ex) { result(\"%s: %s\", ex.err, ex.desc); }\n"
+            + "result(\"factory registered: %y\", inlist(\"ts-actions\", DataProvider::listFactories()));\n");
+        assertEq(2, out.size(), sprintf("%s: %y", hooks, out));
+        return out;
+    }
+
+    #! Runs the code in a new process (a module initializes once per process); returns its result lines
+    private list<string> runChild(string body) {
+        # the interpreter: this one, unless this test runs as an executable that qcc compiled
+        string qore = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY
+            ?? (basename(QORE_ARGV[0]) =~ /^qore/ ? QORE_ARGV[0] : "qore");
+        int rc;
+        string out = backquote(sprintf("%s -b -e %s 2>&1", qore, quote(ChildPrelude + body)), \rc);
+        assertEq(0, rc, out);
+        # only the result lines: anything else that the process writes is diagnostics
+        list<string> rv = ();
+        foreach string line in (out.split("\n")) {
+            if (line =~ /^RESULT: /) {
+                rv += line.substr(8);
+            }
+        }
+        if (!rv) {
+            printf("child output: %s\n", out);
+        }
+        return rv;
     }
 
     private static string quote(string value) {
