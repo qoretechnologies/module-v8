@@ -4901,7 +4901,15 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
             throw "TYPESCRIPT-APP-ERROR", sprintf("Cannot find any REST options for app %y (apps with REST options "
                 "registered: %y)", app, keys armap);
         }
-        config.opts = (map {$1.key: $1.value}, opts.pairIterator(), exists $1.value) + config.opts;
+        *hash<auto> conn_opts = config.opts;
+        config.opts = (map {$1.key: $1.value}, opts.pairIterator(), exists $1.value) + conn_opts;
+        # an app's token arguments are the provider's own, and a connection's are added to them key by key instead
+        # of replacing them as a whole: Qorus writes "oauth2_app" into a connection's token arguments for a client
+        # whose secret it does not hold, and with that the app's (Shopify's "expiring") were never sent
+        # (qoretechnologies/qorus#1125).  A connection's value of the same key still wins
+        if (opts.oauth2_token_args.typeCode() == NT_HASH && conn_opts.oauth2_token_args.typeCode() == NT_HASH) {
+            config.opts.oauth2_token_args = opts.oauth2_token_args + conn_opts.oauth2_token_args;
+        }
         if (*hash<string, bool> url_template_options = atmap{appname}) {
             if (config.url.val()) {
                 config.url = TypeScriptActionInterface::processUrl(config.url, config.opts, url_template_options);

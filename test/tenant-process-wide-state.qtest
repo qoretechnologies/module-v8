@@ -346,6 +346,7 @@ class TenantProcessWideStateTest inherits QUnit::Test {
             "TypeScriptAppRestClient::constructor": "the caller's own client",
             "TypeScriptAppRestClient::getOAuth2Options": "the caller's own client",
             "TypeScriptAppRestClient::introspectOAuth2Token": "a request of the caller's own client",
+            "TypeScriptAppRestClient::gotOAuth2LoginInfo": "a token answer for the caller's own client",
             "TypeScriptAppRestClient::getAppConnection": "the caller's own client",
             "TypeScriptAwsAppRestClient::constructor": "the caller's own client",
             "TypeScriptAwsAppRestClient::getSignature": "signs the caller's own request",

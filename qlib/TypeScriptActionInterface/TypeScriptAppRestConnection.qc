@@ -49,6 +49,24 @@ public class TypeScriptAppRestClient inherits RestClient {
         }
     }
 
+    #! Called when OAuth2 login information has been received
+    /** @param h the OAuth2 login response hash
+        @param refresh used to distinguish an initial login from a token refresh
+
+        A token answer that names no token type is taken as a token of the type the client already uses, a bearer
+        token unless the connection says otherwise.  RFC 6749 requires \c token_type in the answer, and
+        \c RestClient refuses an answer without one with \c REST-LOGIN-ERROR, but a provider can leave it out:
+        Shopify's token answers have none, so an expiring Shopify token could be used until its first refresh and
+        not after it (qoretechnologies/qorus#1125).  An answer nested under \c OAuth is left as it is.
+    */
+    hash<auto> gotOAuth2LoginInfo(hash<auto> h, *bool refresh) {
+        if (!h.OAuth && !exists h.token_type && h.access_token.typeCode() == NT_STRING) {
+            string type = getTokenType();
+            h.token_type = type.val() ? type : "Bearer";
+        }
+        return RestClient::gotOAuth2LoginInfo(h, refresh);
+    }
+
     #! Return OAuth2 options
     /** @return a hash of OAuth2 options
     */

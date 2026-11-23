@@ -277,6 +277,13 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       and enforce startup and call deadlines. See @ref typescriptactioninterface_time_limits.
     - Reference-data failures propagate their provider error. Failed authorization and connection errors
       can be handled by callers. See @ref typescriptactioninterface_reference_data.
+    - An app's OAuth2 token arguments (\c oauth2_token_args in its REST options) go with a connection's own
+      instead of being replaced by them, so an argument of the provider's that the app declares, such as Shopify's
+      \c expiring, is sent for a connection whose token arguments Qorus has added to
+      (qoretechnologies/qorus#1125).
+    - A token answer that names no token type is taken as a token of the type the client uses instead of being
+      refused with \c REST-LOGIN-ERROR, so an expiring Shopify token can be refreshed
+      (qoretechnologies/qorus#1125).
 
     @section TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
     - Added support for Google apps.

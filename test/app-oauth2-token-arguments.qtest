@@ -1,0 +1,207 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# An app's OAuth2 token arguments and a provider's token answer without a token type (qoretechnologies/qorus#1125).
+# The token arguments that an app declares in its REST options go with a connection's own instead of being replaced
+# by them: Qorus writes "oauth2_app" into a connection's token arguments for a client whose secret it does not hold,
+# and with that the Shopify app's "expiring" was never sent.  And a token answer that names no token type, as
+# Shopify's does not, is taken as a token of the type the client already uses: RestClient refuses such an answer,
+# so an expiring Shopify token could not be refreshed.
+%modern
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires ConnectionProvider
+%requires RestClient
+%requires Mime
+%requires json
+%requires HttpServer
+%exec-class AppOAuth2TokenArgumentsTest
+
+#! The local provider: a token endpoint that answers as Shopify's does, and a resource that repeats the credential
+class TokenFixtureHandler inherits AbstractHttpRequestHandler {
+    public {
+        #! the form arguments of every token request, in the order received
+        static list<hash<auto>> token_requests = ();
+        static Mutex m();
+    }
+
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        if (hdr.path =~ /^\/?token/) {
+            hash<auto> args = mime_parse_form_urlencoded_string(body);
+            int n;
+            {
+                AutoLock al(m);
+                token_requests += args;
+                n = token_requests.size();
+            }
+            # the five fields of a Shopify token answer, and no "token_type"; "typed" asks for an answer with one
+            hash<auto> answer = {
+                "access_token": "access-" + n,
+                "scope": "read_products",
+                "expires_in": 3600,
+                "refresh_token": "refresh-" + n,
+                "refresh_token_expires_in": 7776000,
+            };
+            if (hdr.path =~ /typed/) {
+                answer.token_type = "bearer";
+            }
+            return makeResponse(200, make_json(answer), {"Content-Type": MimeTypeJson});
+        }
+        if (hdr.path =~ /^\/?whoami/) {
+            return makeResponse(200, make_json({"authorization": hdr.authorization ?? ""}),
+                {"Content-Type": MimeTypeJson});
+        }
+        return makeResponse(404, make_json({"error": "no such path"}), {"Content-Type": MimeTypeJson});
+    }
+
+    #! Returns the token requests received so far and forgets them
+    static list<hash<auto>> takeTokenRequests() {
+        AutoLock al(m);
+        list<hash<auto>> rv = token_requests;
+        token_requests = ();
+        return rv;
+    }
+}
+
+class AppOAuth2TokenArgumentsTest inherits QUnit::Test {
+    private {
+        HttpServer server;
+        #! the plain listener, of the token endpoint
+        string url;
+        #! the TLS listener, of the app's REST server
+        string rest_url;
+        #! an app that declares a token argument of its provider, and one that declares none
+        const ArgsApp = "OAuth2TokenArgsFixture";
+        const PlainApp = "OAuth2NoTokenArgsFixture";
+    }
+
+    constructor() : Test("an app's OAuth2 token arguments and a token answer without a token type", "1.0") {
+        addTestCase("an app's token arguments go with a connection's own", \tokenArgumentsTest());
+        addTestCase("a refresh sends both, and takes an answer that names no token type", \refreshTest());
+        addTestCase("an answer that names its token type keeps it", \typedAnswerTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        server = new HttpServer();
+        server.setDefaultHandler("fixture", new TokenFixtureHandler());
+        int port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
+        url = sprintf("http://127.0.0.1:%d", port);
+        # an app's connection uses HTTPS; the certificate exists only in this process
+        string pem = backquote("openssl req -config /dev/null -x509 -newkey rsa:2048 -keyout /dev/stdout "
+            "-out /dev/stdout -days 1 -nodes -subj /CN=localhost 2>/dev/null");
+        SSLPrivateKey key((pem =~ x/(-----BEGIN PRIVATE KEY-----[\s\S]+?-----END PRIVATE KEY-----)/)[0]);
+        SSLCertificate cert((pem =~ x/(-----BEGIN CERTIFICATE-----[\s\S]+?-----END CERTIFICATE-----)/)[0]);
+        port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0,
+            "key": key, "cert": cert, "enable_h3": False}).port;
+        rest_url = sprintf("https://127.0.0.1:%d", port);
+
+        registerApp(ArgsApp, {"oauth2_token_args": {"expiring": 1}});
+        registerApp(PlainApp);
+    }
+
+    globalTearDown() {
+        delete server;
+    }
+
+    #! Registers a local OAuth2 app with the given REST options beside the ones every app here has
+    private registerApp(string app, *hash<auto> rest) {
+        JavaScriptProgramPool pool("var exports = {};", app + ".js", sub (JavaScriptProgram pgm) {});
+        TypeScriptActionInterface::registerApp({"name": app, "display_name": app, "short_desc": app,
+            "desc": "A local OAuth2 app.", "groups": ("Other",), "logo": make_base64_string(<00>),
+            "logo_file_name": "test.svg", "logo_mime_type": "image/svg+xml", "dynamic": True,
+            "rest": {
+                "url": rest_url,
+                "data": "json",
+                "oauth2_grant_type": "authorization_code",
+                "oauth2_auth_url": url + "/authorize",
+                "oauth2_token_url": url + "/token",
+            } + rest}, pool);
+        TypeScriptActionInterface::initApp(app, True);
+    }
+
+    #! Returns a connection of the app with a client of its own, beside the given options
+    private TypeScriptAppRestConnection connection(string app, *hash<auto> opts) {
+        return new TypeScriptAppRestConnection({"name": "token-args-" + get_random_string(6),
+            "url": "tsrest-" + app.lwr() + "://", "opts": {
+                "token": "first-token",
+                "oauth2_client_id": "fixture-client",
+                "oauth2_client_secret": "fixture-secret",
+                "oauth2_redirect_url": "https://callback.example.test/oauth",
+                "ssl_verify_cert": False,
+            } + opts});
+    }
+
+    #! The app's arguments are the provider's own, and a connection's are added to them key by key
+    tokenArgumentsTest() {
+        # a connection with none of its own has the app's
+        assertEq({"expiring": 1}, connection(ArgsApp).getConnectionOptions().oauth2_token_args);
+        # as Qorus makes a connection for a client whose secret it does not hold: its app's name is added, and
+        # the app's argument stays
+        assertEq({"expiring": 1, "oauth2_app": "Shopify"}, connection(ArgsApp, {
+            "oauth2_token_args": {"oauth2_app": "Shopify"},
+        }).getConnectionOptions().oauth2_token_args);
+        # a connection's value of the same key wins
+        assertEq({"expiring": 0, "oauth2_app": "Shopify"}, connection(ArgsApp, {
+            "oauth2_token_args": {"expiring": 0, "oauth2_app": "Shopify"},
+        }).getConnectionOptions().oauth2_token_args);
+        # an app that declares none leaves a connection's as they are, and a connection with none has none
+        assertEq({"oauth2_app": "Other"}, connection(PlainApp, {
+            "oauth2_token_args": {"oauth2_app": "Other"},
+        }).getConnectionOptions().oauth2_token_args);
+        assertNothing(connection(PlainApp).getConnectionOptions().oauth2_token_args);
+    }
+
+    #! A token that has expired is refreshed with the app's and the connection's arguments, and the answer, which
+    #! names no token type, gives the token of the next request
+    refreshTest() {
+        TokenFixtureHandler::takeTokenRequests();
+        TypeScriptAppRestConnection conn = connection(ArgsApp, {
+            "oauth2_token_args": {"oauth2_app": "Shopify"},
+            "oauth2_refresh_token": "first-refresh-token",
+            "oauth2_token_expiry": now_us() - 1s,
+        });
+        # what the client reports for the connection to keep, as Qorus stores it
+        hash<auto> kept;
+        TypeScriptAppRestClient client(conn, conn.getRealOptions() + {"url": rest_url,
+            "update_options": sub (hash<auto> new_opts) {
+                kept += new_opts;
+            }}, True);
+        string authorization = client.restGet("/whoami").body.authorization;
+        list<hash<auto>> requests = TokenFixtureHandler::takeTokenRequests();
+        assertEq(1, requests.size(), "one token request");
+        assertEq({
+            "grant_type": "refresh_token",
+            "refresh_token": "first-refresh-token",
+            "client_id": "fixture-client",
+            "client_secret": "fixture-secret",
+            "expiring": "1",
+            "oauth2_app": "Shopify",
+        }, requests[0]);
+        assertEq("access-1", client.getToken(), "the answer's token is the client's");
+        assertEq("Bearer", client.getTokenType(), "of the type the client used before");
+        assertEq("Bearer access-1", authorization, "and the request after the refresh carries it");
+        # the connection is given the new pair, the replaced refresh token with it, and an expiry in the future
+        assertEq(("access-1", "refresh-1"), (kept.token, kept.oauth2_refresh_token));
+        assertTrue(kept.oauth2_token_expiry > now_us(), "the new token's expiry is kept");
+    }
+
+    #! An answer that names its token type is passed on as it is
+    typedAnswerTest() {
+        TokenFixtureHandler::takeTokenRequests();
+        TypeScriptAppRestConnection conn = connection(PlainApp, {
+            "oauth2_token_url": url + "/token/typed",
+            "oauth2_refresh_token": "first-refresh-token",
+            "oauth2_token_expiry": now_us() - 1s,
+        });
+        RestClient client = conn.get(False);
+        string authorization = client.restGet("/whoami").body.authorization;
+        assertEq(1, TokenFixtureHandler::takeTokenRequests().size(), "one token request");
+        assertEq("access-1", client.getToken());
+        assertEq("bearer", client.getTokenType().lwr(), "the answer's own type");
+        assertRegex("^[Bb]earer access-1$", authorization);
+    }
+}
