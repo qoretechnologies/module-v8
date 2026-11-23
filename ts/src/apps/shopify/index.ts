@@ -49,6 +49,14 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://{{shop}}.myshopify.com/admin/oauth/authorize',
       oauth2_token_url: 'https://{{shop}}.myshopify.com/admin/oauth/access_token',
       oauth2_scopes: SHOPIFY_SCOPES,
+      // Shopify answers the code exchange with a non-expiring offline token unless the request asks
+      // for an expiring one, and it is retiring non-expiring tokens for public apps: an app still
+      // using them takes no new installs from 2027-01-01 and has its Admin API requests refused from
+      // 2027-04-01. With `expiring=1` the exchange returns a one-hour access token and a refresh
+      // token that changes on every refresh.
+      oauth2_token_args: {
+        expiring: 1,
+      },
       // the ping must ride the same version as the actions; hardcoding it left the connection test
       // calling a version sunset since 2024 while every action used the pinned one.
       //
