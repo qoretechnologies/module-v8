@@ -1,5 +1,14 @@
-import { readFileSync } from 'fs';
+import {
+  chmodSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  symlinkSync,
+  writeFileSync,
+} from 'fs';
 import { forEach } from 'lodash';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import {
   ActionsCatalogue, actionsCatalogue, assertQoreApi, CATALOGUE_PROTOCOL_VERSION, IQoreApi,
@@ -193,14 +202,42 @@ describe('Qorus Apps Catalogue tests', () => {
     }
   });
 
-  it('Ships no example or test custom app', () => {
-    const catalogue = new ActionsCatalogue();
-    catalogue.initializeCatalogue();
+  /** Runs `check` with CUSTOM_APPS_DIR set to `dir`, or unset, and on a freshly loaded catalogue module. */
+  const withCustomAppsDir = (dir: string | undefined, check: () => void) => {
+    const previous = process.env.CUSTOM_APPS_DIR;
+    if (dir === undefined) {
+      delete process.env.CUSTOM_APPS_DIR;
+    } else {
+      process.env.CUSTOM_APPS_DIR = dir;
+    }
+    try {
+      jest.isolateModules(check);
+    } finally {
+      if (previous === undefined) {
+        delete process.env.CUSTOM_APPS_DIR;
+      } else {
+        process.env.CUSTOM_APPS_DIR = previous;
+      }
+    }
+  };
 
-    // every installation lists what src/customApps holds; the example of the format lives unbuilt in ts/examples
-    const names = Object.values(catalogue.apps).map((app) => app.name);
-    expect(names).not.toContain('External-app');
-    expect(names.filter((name) => /test|example/i.test(name))).toEqual([]);
+  const freshCatalogue = () => {
+    const catalogueModule = require('../ActionsCatalogue') as typeof import('../ActionsCatalogue');
+    const catalogue = new catalogueModule.ActionsCatalogue();
+    catalogue.initializeCatalogue();
+    return catalogue;
+  };
+
+  it('Ships no example or test custom app', () => {
+    // a builder's own CUSTOM_APPS_DIR is not what the package ships
+    withCustomAppsDir(undefined, () => {
+      const catalogue = freshCatalogue();
+
+      // every installation lists what src/customApps holds; the example of the format lives unbuilt in ts/examples
+      const names = Object.values(catalogue.apps).map((app) => app.name);
+      expect(names).not.toContain('External-app');
+      expect(names.filter((name) => /test|example/i.test(name))).toEqual([]);
+    });
   });
 
   it('Registers the custom apps a CUSTOM_APPS_DIR holds', () => {
@@ -228,20 +265,62 @@ describe('Qorus Apps Catalogue tests', () => {
     }
   });
 
-  it('Treats a missing custom apps folder as no custom apps', () => {
-    const previous = process.env.CUSTOM_APPS_DIR;
-    process.env.CUSTOM_APPS_DIR = join(__dirname, 'no-such-custom-apps-folder');
-    try {
-      jest.isolateModules(() => {
-        expect(() => require('../ActionsCatalogue')).not.toThrow();
+  it('Treats a missing custom apps folder as no custom apps, and keeps the built-in apps', () => {
+    withCustomAppsDir(join(__dirname, 'no-such-custom-apps-folder'), () => {
+      const catalogue = freshCatalogue();
+      // initializeCatalogue() registers the custom apps; the built-in ones load on demand
+      expect(Object.keys(catalogue.apps)).toEqual([]);
+      catalogue.loadAllNewApps();
+      expect(catalogue.apps).toHaveProperty('zendesk');
+    });
+  });
+
+  describe('A custom apps folder that cannot be read is an error, not "no apps"', () => {
+    let root: string;
+
+    beforeEach(() => {
+      root = mkdtempSync(join(tmpdir(), 'custom-apps-'));
+    });
+
+    afterEach(() => {
+      rmSync(root, { recursive: true, force: true });
+    });
+
+    const expectLoadFails = (dir: string, code: string) => {
+      withCustomAppsDir(dir, () => {
+        expect(() => require('../ActionsCatalogue')).toThrow(expect.objectContaining({ code }));
       });
-    } finally {
-      if (previous === undefined) {
-        delete process.env.CUSTOM_APPS_DIR;
-      } else {
-        process.env.CUSTOM_APPS_DIR = previous;
+    };
+
+    it('reports a dangling symlink', () => {
+      const link = join(root, 'apps');
+      symlinkSync(join(root, 'removed-release'), link);
+      expectLoadFails(link, 'ENOENT');
+    });
+
+    it('reports a path below a file', () => {
+      const file = join(root, 'file');
+      writeFileSync(file, '');
+      expectLoadFails(join(file, 'apps'), 'ENOTDIR');
+    });
+
+    it('reports a file where the folder should be', () => {
+      const file = join(root, 'file');
+      writeFileSync(file, '');
+      expectLoadFails(file, 'ENOTDIR');
+    });
+
+    // root reads through any permission
+    (process.getuid?.() === 0 ? it.skip : it)('reports a parent it may not search', () => {
+      const apps = join(root, 'parent', 'apps');
+      mkdirSync(apps, { recursive: true });
+      chmodSync(join(root, 'parent'), 0o000);
+      try {
+        expectLoadFails(apps, 'EACCES');
+      } finally {
+        chmodSync(join(root, 'parent'), 0o700);
       }
-    }
+    });
   });
 
   it('Should have valid app-level groups in all locale files', () => {
