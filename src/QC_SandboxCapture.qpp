@@ -1,0 +1,95 @@
+/* -*- mode: c++; indent-tabs-mode: nil -*- */
+/** @file QC_SandboxCapture.qpp defines the %Qore SandboxCapture class (qoretechnologies/qore#6845) */
+/*
+    Copyright 2026 Qore Technologies, s.r.o.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+    documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of
+    the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+    THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+*/
+
+#include "QC_SandboxCapture.h"
+
+//! The sandbox that governs the code that creates the object, to govern work done for that code later
+/** Module code that does work for its caller on a path where the caller's sandbox does not govern it by itself (for
+    example the network requests that a restricted JavaScript program makes through its host bridge, which run in a
+    trusted build) captures the caller's sandbox when the caller enters it, and runs the work under it with call():
+    the sandbox's network and filesystem policy then applies to the work as to the caller's own code.
+
+    A capture can only add restrictions: it captures the sandbox that governs the code that creates it, and call()
+    refuses to run when no sandbox was captured, so that it never runs code with less than the governing sandbox of
+    the code that calls it.
+
+    @since v8 2.2
+*/
+qclass SandboxCapture [arg=QoreV8SandboxCapture* cap; ns=V8];
+
+//! Captures the sandbox that governs the calling code
+/**
+*/
+SandboxCapture::constructor() {
+    self->setPrivate(CID_SANDBOXCAPTURE, new QoreV8SandboxCapture);
+}
+
+//! Returns @ref True if a sandbox governed the code that created the object
+/**
+*/
+bool SandboxCapture::isSandboxed() [flags=CONSTANT] {
+    return cap->capture.isSandboxed();
+}
+
+//! Returns the isolation domain (tenant) of the captured sandbox, if any
+/** @return the isolation domain of the captured sandbox, or @ref nothing if no sandbox was captured, if it has no
+    domain, or if the %Qore library has no isolation domains (see hasIsolationDomains())
+*/
+*string SandboxCapture::getIsolationDomain() [flags=RET_VALUE_ONLY] {
+#ifdef QORE_V8_HAVE_ISOLATION_DOMAIN
+    ReferenceHolder<QoreSandboxManager> sm(cap->capture.getPolicyManagerRef(), xsink);
+    if (!sm) {
+        return QoreValue();
+    }
+    std::string domain = sm->getIsolationDomain();
+    return domain.empty() ? QoreValue() : QoreValue(new QoreStringNode(domain));
+#else
+    return QoreValue();
+#endif
+}
+
+//! Returns @ref True if the %Qore library that the module was built with has isolation domains
+/**
+*/
+static bool SandboxCapture::hasIsolationDomains() [flags=CONSTANT] {
+#ifdef QORE_V8_HAVE_ISOLATION_DOMAIN
+    return true;
+#else
+    return false;
+#endif
+}
+
+//! Calls the given code under the captured sandbox and returns its result
+/** @param call the code to call
+    @param ... the arguments of the call
+
+    @return the result of the call
+
+    @throw SANDBOX-CAPTURE-ERROR no sandbox was captured
+*/
+auto SandboxCapture::call(code call, ...) {
+    if (!cap->capture.isSandboxed()) {
+        xsink->raiseException("SANDBOX-CAPTURE-ERROR", "no sandbox was captured: the code must be called directly");
+        return QoreValue();
+    }
+    ReferenceHolder<QoreListNode> call_args(args->size() > 1 ? args->copyListFrom(1) : nullptr, xsink);
+    QoreSandboxCaptureHelper helper(cap->capture);
+    return call->execValue(*call_args, xsink);
+}

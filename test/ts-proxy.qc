@@ -1,8 +1,9 @@
-#!/usr/bin/env qore
 # -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
 
-%modern
-%prepend-module-path "${SCRIPT_DIR}/../qlib"
+# The cases of the ts-proxy-<n>.qtest tests: each runs one part of them, so that each takes a short time, and together
+# they run every case (see addPartCase())
 
 %requires QUnit
 %requires FsUtil
@@ -20,10 +21,11 @@
 %endif
 %requires v8
 
-%exec-class TsProxyTest
-
 %ifndef MISSING_EXTERNAL_MODULE
 
+#! Tests TypeScript proxies and their \c ts-proxy child processes
+/** Each ts-proxy-<n>.qtest test runs the cases of one part (see addPartCase()).
+*/
 public class TsProxyTest inherits QUnit::Test {
     public {
         #! Safety ceiling for waiting on a proxy operation that must return
@@ -35,15 +37,30 @@ public class TsProxyTest inherits QUnit::Test {
 
         #! the environment variable that sets the time the parent waits for a command's response
         const ResponseTimeoutVar = "TS_PROXY_TEST_RESPONSE_TIMEOUT_MS";
+
+        #! the environment variable that sets the time the parent waits for a child to end when its command socket
+        #! breaks
+        /** The parent-send error cases inject a broken pipe while the child runs and does not end, so each wait ends
+            at this time instead of the proxy's hang guard (60s)
+        */
+        const ChildEndTimeoutVar = "TS_PROXY_TEST_CHILD_END_TIMEOUT_MS";
     }
 
     private {
         Logger logger;
         bool env_ready = False;
         string skip_reason;
+        #! the log directory of the ts-proxy children
+        TmpDir log_dir;
+        #! the part of the cases that this test runs (see addPartCase())
+        int part;
     }
 
-    constructor() : Test("TsProxyTest", "1.0") {
+    constructor(string name, int part) : Test(name, "1.0") {
+        self.part = part;
+        # the ts-proxy children log to a directory of this test, whatever the environment has
+        log_dir = new TmpDir("ts-proxy-log-");
+        setenv("TS_PROXY_LOGDIR", log_dir.path);
         setupLogger();
         checkEnvironment();
         # Every case starts at least one child and sends it commands, and a child that starts or answers slowly is
@@ -52,27 +69,34 @@ public class TsProxyTest inherits QUnit::Test {
         JavaScriptProgramProxy::setStartupTimeout(HangGuard);
         setenv(ResponseTimeoutVar, string(get_duration_milliseconds(HangGuard)));
 
-        addTestCase("proxy tests", \proxyTests());
-        addTestCase("proxy restarts after child exit", \proxyUnexpectedExitTest());
-        addTestCase("a child that ends after reading a command is restarted when it has ended", sub () {
+        addPartCase(1, "proxy tests", \proxyTests());
+        addPartCase(1, "proxy restarts after child exit", \proxyUnexpectedExitTest());
+        addPartCase(2, "a child that ends after reading a command is restarted when it has ended", sub () {
             proxyChildEndingTest("read");
         });
-        addTestCase("a child that ends before reading a command is restarted when it has ended", sub () {
+        addPartCase(2, "a child that ends before reading a command is restarted when it has ended", sub () {
             proxyChildEndingTest("unread");
         });
-        addTestCase("proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
-        addTestCase("proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
-        addTestCase("proxy parent send error mid-command", \proxyParentSendErrorMidCommandTest());
-        addTestCase("proxy parent send error bounded restart", \proxyParentSendErrorBoundedRestartTest());
-        addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
-        addTestCase("proxy restart wait fast paths", \proxyRestartWaitFastPathTest());
-        addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
-        addTestCase("proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
-        addTestCase("a child that never starts fails at the startup timeout", \proxyStartupTimeoutTest());
-        addTestCase("a call that never answers fails at the call time limit", \proxyCallTimeoutTest());
-        addTestCase("a child gets the environment as it is when the child starts", \proxyEnvironmentTest());
+        addPartCase(3, "proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
+        addPartCase(4, "proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
+        addPartCase(5, "proxy parent send error mid-command", \proxyParentSendErrorMidCommandTest());
+        addPartCase(6, "proxy parent send error bounded restart", \proxyParentSendErrorBoundedRestartTest());
+        addPartCase(3, "proxy restart error handling", \proxyRestartErrorHandlingTest());
+        addPartCase(5, "proxy restart wait fast paths", \proxyRestartWaitFastPathTest());
+        addPartCase(7, "proxy send error handling", \proxySendErrorHandlingTest());
+        addPartCase(5, "proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
+        addPartCase(2, "a child that never starts fails at the startup timeout", \proxyStartupTimeoutTest());
+        addPartCase(6, "a call that never answers fails at the call time limit", \proxyCallTimeoutTest());
+        addPartCase(4, "a child gets the environment as it is when the child starts", \proxyEnvironmentTest());
 
         set_return_value(main());
+    }
+
+    #! adds a case if it is in the part that this test runs: each case is in one part, and each part is a test
+    private addPartCase(int case_part, string name, code call, *softlist<auto> args) {
+        if (case_part == part) {
+            addTestCase(name, call, args);
+        }
     }
 
     private setupLogger() {
@@ -185,6 +209,18 @@ public class TsProxyTest inherits QUnit::Test {
 
     # Fault-injection hooks are removed when the release qmod is compiled.
     # --enable-debug only enables hooks in source parsed by the current process.
+    #! skips a case whose fault is injected by @debug code when debugging is not enabled (qoretechnologies/qore#6889)
+    private skipIfDebuggingDisabled() {
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("the fault is injected by debug code, which requires running with debugging enabled "
+                "(--enable-debug)");
+        }
+    }
+
     private skipIfDebugHooksUnavailable() {
         if (get_module_hash().TypeScriptActionInterface.filename.endsWith(".qmod")) {
             testSkip("fault injection requires TypeScriptActionInterface source with --enable-debug");
@@ -437,6 +473,9 @@ public class TsProxyTest inherits QUnit::Test {
         # so the call must NOT surface a fatal socket error and the child must have been restarted.
         setenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR", "1");
         on_exit unsetenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR");
+        # the child does not end, so the wait for its end only ends at its time limit
+        code<nothing()> restore_child_end = setenvScoped(ChildEndTimeoutVar, "1000");
+        on_exit restore_child_end();
 
         *string sock_err;
         try {
@@ -482,6 +521,9 @@ public class TsProxyTest inherits QUnit::Test {
         # RetryCounter::MaxRestarts restarts, terminating with the (send-side) socket error.
         setenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR_ALWAYS", "1");
         on_exit unsetenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR_ALWAYS");
+        # the children do not end, so each wait for the end of one only ends at its time limit
+        code<nothing()> restore_child_end = setenvScoped(ChildEndTimeoutVar, "1000");
+        on_exit restore_child_end();
 
         *string sock_err;
         try {
@@ -501,6 +543,7 @@ public class TsProxyTest inherits QUnit::Test {
     private proxyRestartErrorHandlingTest() {
         skipIfNotReady();
         skipIfDebugHooksUnavailable();
+        skipIfDebuggingDisabled();
 
         JavaScriptProgramProxy::init(new Mutex());
         on_exit JavaScriptProgramProxy::shutdown();
@@ -626,6 +669,7 @@ public class TsProxyTest inherits QUnit::Test {
     private proxyStartupTimeoutTest() {
         skipIfNotReady();
         skipIfDebugHooksUnavailable();
+        skipIfDebuggingDisabled();
 
         JavaScriptProgramProxy::init(new Mutex());
         on_exit JavaScriptProgramProxy::shutdown();
@@ -673,6 +717,8 @@ public class TsProxyTest inherits QUnit::Test {
         env.QORE_TYPESCRIPT_ACTION_SCRIPTS = script;
         env{TypeScriptActionInterface::CallTimeoutEnv} = "2";
         env.PATH = getenv("PATH");
+        # ENV is the environment of this process when it started
+        env.TS_PROXY_LOGDIR = log_dir.path;
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
         env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
         string code = sprintf("%%modern
@@ -758,6 +804,8 @@ printf(\"RESULT: %%s\\n\", make_json(rv));
         env.TS_PROXY_ENV_CHANGED = "value when the process started";
         env.TS_PROXY_ENV_REMOVED = "value when the process started";
         env.PATH = getenv("PATH");
+        # ENV is the environment of this process when it started
+        env.TS_PROXY_LOGDIR = log_dir.path;
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
         env.QORE_MODULE_DIR = module_dir + ":" + (ENV.QORE_MODULE_DIR ?? "");
         string code = sprintf("%%modern
@@ -802,7 +850,7 @@ printf(\"RESULT: %%s\\n\", make_json(proxy.getAsyncValue(api)));
 
 %else
 class TsProxyTest inherits QUnit::Test {
-    constructor() : Test("External module dependencies", "1.0", \ARGV) {
+    constructor(string name, int part) : Test(name, "1.0", \ARGV) {
         addTestCase("process/uuid dependencies", sub() {
             testSkip("process or uuid module is unavailable");
         });

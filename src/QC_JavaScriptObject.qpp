@@ -28,7 +28,7 @@
 //! Object for embedding and executing JavaScript code
 /**
 */
-qclass JavaScriptObject [arg=QoreV8Object* o; ns=V8];
+qclass JavaScriptObject [arg=QoreV8Object* o; ns=V8; dom=EMBEDDED_LOGIC,UNCONTROLLED_API];
 
 //! Creates the object
 /** @param program the JavaScriptProgram where the object will be created from

@@ -7,7 +7,7 @@ how the integration works on the TypeScript side and what to do (or not do)
 in TypeScript apps.
 
 For the full design, see
-[`qore/design/generic-api-call-action.md`](../../qore/design/generic-api-call-action.md).
+[`qore/design/generic-api-call-action.md`](https://github.com/qoretechnologies/qore/blob/develop/design/generic-api-call-action.md).
 
 ## How it works
 

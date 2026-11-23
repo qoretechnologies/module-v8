@@ -1,13 +1,13 @@
-#!/usr/bin/env qore
 # -*- mode: qore; indent-tabs-mode: nil -*-
 # Copyright 2026 Qore Technologies, s.r.o.
 # SPDX-License-Identifier: MIT
 
-%modern
-%prepend-module-path "${SCRIPT_DIR}/../qlib"
+# The cases of the ts-proxy-fork-<n>.qtest tests: each runs one part of them, so that each takes a short time, and
+# together they run every case (see addPartCase())
 
 %requires QUnit
 %requires Util
+%requires FsUtil
 %try-module process
 %define MISSING_EXTERNAL_MODULE
 %endtry
@@ -19,8 +19,6 @@
 %endtry
 %requires v8
 
-%exec-class TsProxyForkTest
-
 #! Tests TypeScript proxies in child processes created with fork()
 /** A child process created with fork() has none of the parent's threads.  When the script of a child of a process
     with a TypeScript proxy ended, the proxy's destructor stopped the parent's \c ts-proxy child process, and the last
@@ -29,6 +27,7 @@
     used the parent's master listener, which ignored the child's \c ts-proxy process.  Each case runs a script that
     creates a proxy and forks; the script waits for the child's PID and prints the child's exit code, and then checks
     that its own proxy still uses the same \c ts-proxy process and that its master listener still starts new ones.
+    Each ts-proxy-fork-<n>.qtest test runs the cases of one part (see addPartCase()).
 */
 class TsProxyForkTest inherits Test {
     public {
@@ -124,18 +123,23 @@ JavaScriptProgramProxy::shutdown();
         hash<auto> env;
         #! why the cases are skipped
         *string skip_reason;
+        #! the log directory of the ts-proxy children of the scripts
+        TmpDir log_dir;
+        #! the part of the cases that this test runs (see addPartCase())
+        int part;
     }
 
-    constructor() : Test("ts-proxy fork test", "1.0") {
+    constructor(string name, int part) : Test(name, "1.0") {
+        self.part = part;
         qore_exe = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY ?? QORE_ARGV[0];
         script = tmp_location() + DirSep + sprintf("ts-proxy-fork-%d.q", getpid());
         checkEnvironment();
 
-        addTestCase("a child whose script ends ends, and the parent's proxy still works", \childEnd());
-        addTestCase("a child that destroys the parent's proxy ends", \childDelete());
-        addTestCase("a child that shuts the proxies down ends", \childShutdown());
-        addTestCase("a child cannot use the parent's proxy", \childUse());
-        addTestCase("a child starts its own master listener", \childNew());
+        addPartCase(1, "a child whose script ends ends, and the parent's proxy still works", \childEnd());
+        addPartCase(2, "a child that destroys the parent's proxy ends", \childDelete());
+        addPartCase(3, "a child that shuts the proxies down ends", \childShutdown());
+        addPartCase(3, "a child cannot use the parent's proxy", \childUse());
+        addPartCase(4, "a child starts its own master listener", \childNew());
 
         on_exit unlink(script);
         {
@@ -144,6 +148,13 @@ JavaScriptProgramProxy::shutdown();
             f.write(sprintf(Script, get_duration_milliseconds(HangGuard)));
         }
         set_return_value(main());
+    }
+
+    #! adds a case if it is in the part that this test runs: each case is in one part, and each part is a test
+    private addPartCase(int case_part, string name, code call, *softlist<auto> args) {
+        if (case_part == part) {
+            addTestCase(name, call, args);
+        }
     }
 
     childEnd() {
@@ -181,9 +192,12 @@ JavaScriptProgramProxy::shutdown();
         }
         # the scripts load the TypeScript modules of this tree
         string module_dir = ENV.QORE_V8_TEST_QMOD_DIR ?? (get_script_dir() + "/../qlib");
+        # the ts-proxy children log to a directory of this test, whatever the environment has
+        log_dir = new TmpDir("ts-proxy-fork-log-");
         env = JavaScriptProgram::getEnvironment() + {
             "PATH": path,
             "QORE_MODULE_DIR": module_dir + ":" + (getenv("QORE_MODULE_DIR") ?? ""),
+            "TS_PROXY_LOGDIR": log_dir.path,
         };
 %endif
     }

@@ -26,6 +26,9 @@ class ProvenanceTest inherits QUnit::Test {
         sandbox.parse("code sub make(object runtime, code reader) { return runtime.getGlobal().make(reader).toData(); }", "foreign-callback-factory");
         SandboxManager sm();
         sm.setFilesystemDefaultPolicy(False);
+        # the sandboxed code uses the JavaScript runtime itself, which a sandbox allows only explicitly
+        # (qoretechnologies/qore#6845: the v8 module's APIs are uncontrolled APIs)
+        sm.setUncontrolledApiPolicy(True);
         sandbox.setSandboxManager(sm);
         code trusted = runtime.getGlobal().make(reader).toData();
         code restricted = sandbox.callFunction("make", runtime, reader);

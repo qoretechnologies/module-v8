@@ -57,7 +57,7 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
     /** @return a list of child data provider names, if any
     */
     private *list<string> getChildProviderNamesImpl() {
-        auto rv = getAsyncValue(get_table_list, getCallContextInfo());
+        auto rv = getTableList(getCallContextInfo());
         if (!rv) {
             return;
         }

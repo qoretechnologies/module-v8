@@ -1,0 +1,217 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%no-child-restrictions
+
+%requires QUnit
+
+%exec-class TenantDispatchGuardrailTest
+
+#! The module's single path into an app's code for sandboxed code (qoretechnologies/qore#6845)
+/** Sandboxed code reaches an app's code only through TypeScriptActionDataProviderBase::execAsyncValueArgs(), which
+    gives its calls to TenantActionRunner::dispatch(); this test fails when the module calls an app's code anywhere
+    else, or when a pool or proxy of the full runtime stops refusing sandboxed code.  A new site must be reviewed: it
+    is listed in Allowed only if it cannot run an app's code for sandboxed code (the trusted load of a catalogue, the
+    runner's own trusted calls), or it must go through execAsyncValueArgs().
+*/
+class TenantDispatchGuardrailTest inherits QUnit::Test {
+    public {
+        #! the calls into JavaScript code, or into code that a caller gives
+        const CallPattern = "call_function(_args)?\\(|\\.getGlobal\\(\\)|\\.then\\(|schema_metadata\\(\\)|"
+            "\\.callFunction\\(|\\.callMethod";
+
+        #! the reviewed sites, by file: the exact text of the line, trimmed
+        const Allowed = {
+            "TypeScriptActionDataProviderBase.qc": {
+                # the one call of an app's function, after the dispatch of sandboxed code
+                "v = call_function_args(api.async_call, args);": "the call of execAsyncValueDirect()",
+                "code run = js.getGlobal().runWithTimeout.toData();": "the time limit of that call",
+                "v = v.then(sub (auto val) {": "the result of that call",
+            },
+            "TypeScriptActionInterfacePriv.qc": {
+                # the trusted load of the catalogues at the module's initialization
+                "return Promise.race([promise, pendingState]).then(": "JavaScript source of the default code",
+                "JavaScriptObject global = TsaiProcessState::Internal.poolGetProgram(master).getGlobal();":
+                    "the load of the master catalogue",
+                "JavaScriptObject global = pgm.getGlobal();": "the registration of a catalogue's apps",
+                "auto v = pgm.getGlobal().exports.qtester.run(": "the catalogue tests",
+                "v.then(sub (auto val) {": "the catalogue tests",
+                # the guard of the functions of the calls (qoretechnologies/qore#6749): it refuses sandboxed code first;
+                # the same line is the call of the interface of tenants' programs, which refuses calls outside clone
+                # mode first (qoretechnologies/qore#7185)
+                "return call_function_args(c, argv);": "the guarded function of an app's call",
+            },
+            "TypeScriptActionInterface.qc": {
+                # an app's initialization; an app's code refuses sandboxed callers (UNCONTROLLED_API)
+                "auto metadata = info.schema_metadata();": "the schema metadata of an app's initialization",
+            },
+            "TypeScriptAppRestConnection.qc": {
+                "cache{key} = call_function_args(get, argv);": "the caller's own code",
+            },
+            "TenantActionRunner.qc": {
+                # the runner's own trusted calls and the host's hooks
+                "return call_function_args(api.async_call, args);": "the runner's own closure over a search's records",
+                "call_function(handler, conn, update);": "the host's connection update handler",
+                "*hash<auto> ctx = call_function(resolver, conn);": "the host's tenant context resolver",
+                "hash<auto> rv = call_function(exec_call, pgm.pgm, work, to_ms, lim.heap_limit);": "the trusted call",
+                "return call_function(build, app);": "the trusted build",
+                "hash<auto> pgm = call_function(build, app);": "the trusted build of the compatibility probe",
+                "hash<auto> h = parse_json(scanner.getGlobal().getProperty(\"qoreTenantScan\").callAsFunctionArgs(NOTHING,":
+                    "the probe's own scanner of the app's sources, which runs no code of the app",
+                "TenantEventSource src = call_function(events_call, ctx.tenant, info.app, pgm, lim.max_queued_events,":
+                    "the trusted start of an event source",
+                "call_function(stop_call, src);": "the trusted stop of an event source",
+                "JavaScriptObject catalogue = pgm.getGlobal().exports.actionsCatalogue;": "the load of a tenant's program",
+                "call_function(egress_meter, call.tenant, call.connection, bytes_out, bytes_in);": "the host's meter",
+                "if (!call_function(egress_policy, call.tenant, call.connection, ui, ips)) {": "the host's hook",
+                "V8::SandboxCapture capture = call_function(host_sandbox, tctx,":
+                    "the host's sandbox for the tenant calls of trusted code, which takes its capture",
+            },
+        };
+
+        #! the methods of the pools and proxies of the full runtime that refuse sandboxed code
+        const Gated = {
+            "JavaScriptInProcessPool.qc": ("hash<InProcessProgramInfo> get() [dom=PROCESS_CONTROL] {",
+                "auto execCall(hash<AsyncCallInfo> api, *softlist<auto> args) [dom=PROCESS_CONTROL] {",
+                "release(hash<InProcessProgramInfo> info) [dom=PROCESS_CONTROL] {"),
+            "JavaScriptThreadProcessPool.qc": ("JavaScriptProgramProxy get(*code setup) [dom=PROCESS_CONTROL] {",
+                "*hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,",
+                "JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key,"),
+            "JavaScriptProgramProxy.qc": (
+                "*hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,",
+                "*hash<auto> getRecords(string id) [dom=PROCESS_CONTROL] {",
+                "setupEventSource(TypeScriptActionEventDataProvider observable, string app, string action, string key,",
+                "auto getAsyncValue(hash<AsyncCallInfo> api, ...) [dom=PROCESS_CONTROL] {",
+                "*hash<string, hash<ActionOptionInfo>> getDynamicOptions(string app, string action, *string conn_name,",
+                "*HashDataType getDynamicType(string cmd, string app, string action, *string conn_name, "
+                    "*hash<auto> conn_opts,",
+                "constructor() [dom=PROCESS_CONTROL] : TypeScriptProxy(True) {"),
+            "JavaScriptProgramPool.qc": ("JavaScriptProgram getProgram() [dom=PROCESS_CONTROL] {",
+                "string getScriptPath() [dom=PROCESS_CONTROL] {",
+                "string getPath() [dom=PROCESS_CONTROL] {",
+                "string getCwd() [dom=PROCESS_CONTROL] {",
+                "string getSource() [dom=PROCESS_CONTROL] {",
+                "JavaScriptProgram createProgramForPool() [dom=PROCESS_CONTROL] {",
+                "constructor(string source, string path, code init) [dom=PROCESS_CONTROL] {"),
+        };
+    }
+
+    private {
+        string dir = get_script_dir() + "/../qlib/TypeScriptActionInterface";
+    }
+
+    constructor() : QUnit::Test("TenantDispatchGuardrail", "1.0", \ARGV) {
+        addTestCase("calls into an app's code are made only at the reviewed sites", \sitesTest());
+        addTestCase("the pools and proxies of the full runtime refuse sandboxed code", \gatedTest());
+        addTestCase("the module's call path dispatches sandboxed code first", \dispatchTest());
+        addTestCase("the full runtime's server branches are taken only for code that is not sandboxed",
+            \serverBranchTest());
+        set_return_value(main());
+    }
+
+    private list<string> lines(string file) {
+        return ReadOnlyFile::readTextFile(dir + "/" + file).split("\n");
+    }
+
+    sitesTest() {
+        list<string> unreviewed = ();
+        foreach string file in (glob(dir + "/*.q[cm]")) {
+            string name = basename(file);
+            foreach string line in (lines(name)) {
+                string t = trim(line);
+                if (t =~ /^#/ || t =~ /^\*/ || t =~ /^\/\*\*/) {
+                    continue;
+                }
+                if (!regex(t, CallPattern)) {
+                    continue;
+                }
+                if (!Allowed{name}{t}) {
+                    unreviewed += sprintf("%s:%d: %s", name, $# + 1, t);
+                }
+            }
+        }
+        assertEq((), unreviewed);
+    }
+
+    gatedTest() {
+        foreach hash<auto> i in (Gated.pairIterator()) {
+            list<string> l = lines(i.key);
+            foreach string sig in (i.value) {
+                int n = -1;
+                foreach string line in (l) {
+                    if (trim(line) == sig) {
+                        n = $#;
+                        break;
+                    }
+                }
+                assertGt(-1, n, sprintf("%s: %s", i.key, sig));
+                # the gate is the first statement of the method: the module's central guard
+                # (qoretechnologies/qore#7185), or the tenant runner's check of sandboxed code
+                bool found;
+                for (int j = n + 1; j < n + 4 && j < l.size(); ++j) {
+                    if (l[j] =~ /TsaiProcessState::checkHostScope\(|TenantActionRunner::refuseSandboxed\(/) {
+                        found = True;
+                        break;
+                    }
+                }
+                assertTrue(found, sprintf("%s: %s has no gate", i.key, sig));
+            }
+        }
+    }
+
+    dispatchTest() {
+        string src = ReadOnlyFile::readTextFile(dir + "/TypeScriptActionDataProviderBase.qc");
+        int start = src.find("static auto execAsyncValueArgs(");
+        assertGt(-1, start);
+        int disp = src.find("return TenantActionRunner::dispatch(logger, api, args);", start);
+        int pool = src.find("TSAI::checkInProcessServer()", start);
+        int server = src.find("TSAI::checkServer()", start);
+        int direct = src.find("return execAsyncValueDirectUnchecked(logger, api, args);", start);
+        assertGt(-1, disp);
+        assertLt(pool, disp);
+        assertLt(server, disp);
+        assertLt(direct, disp);
+        list<string> before = src.substr(start, disp - start).split("\n");
+        assertRegex("if \\(SandboxManager::isSandboxed\\(\\)\\) \\{\\s*$", before[-2]);
+        assertRegex("if \\(!_ts_tenant_calls\\) \\{\\s*$", before[-3]);
+        # then trusted code's calls for a tenant's connection, before any call is made in the full runtime
+        int trusted = src.find("auto rv = TenantActionRunner::dispatchTrusted(logger, api, args, \\tenant);", start);
+        assertGt(disp, trusted);
+        assertLt(pool, trusted);
+        assertLt(server, trusted);
+        assertLt(direct, trusted);
+    }
+
+    serverBranchTest() {
+        list<string> unguarded = ();
+        foreach string file in (glob(dir + "/*.qc")) {
+            string name = basename(file);
+            if (name == "TypeScriptActionDataProviderBase.qc" || name == "TypeScriptActionInterface.qc") {
+                continue;
+            }
+            list<string> l = lines(name);
+            foreach string line in (l) {
+                if (line !~ /TSAI::check(InProcess)?Server\(\)/) {
+                    continue;
+                }
+                # the condition takes the sandbox first, or the method refused sandboxed code before
+                if (line =~ /SandboxManager::isSandboxed\(\) \|\|/ || line =~ /else if \(TSAI::checkServer\(\)\)/) {
+                    continue;
+                }
+                bool gated;
+                for (int j = $#; j >= 0 && j > $# - 12; --j) {
+                    if (l[j] =~ /TenantActionRunner::refuseSandboxed\(/) {
+                        gated = True;
+                        break;
+                    }
+                }
+                if (!gated) {
+                    unguarded += sprintf("%s:%d: %s", name, $# + 1, trim(line));
+                }
+            }
+        }
+        assertEq((), unguarded);
+    }
+}

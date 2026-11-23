@@ -135,6 +135,7 @@ set(QPP_SRC
     src/QC_TypeScriptProgram.qpp
     src/QC_JavaScriptObject.qpp
     src/QC_JavaScriptPromise.qpp
+    src/QC_SandboxCapture.qpp
 )
 
 set(CPP_SRC
@@ -189,7 +190,18 @@ set(QORE_DOX_TMPL_SRC
 )
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/images")
 
+# the bootstrap of restricted programs, embedded in the module (qoretechnologies/qore#6845)
+set(RESTRICTED_BOOTSTRAP_H ${CMAKE_CURRENT_BINARY_DIR}/include/restricted-bootstrap.js.h)
+add_custom_command(OUTPUT ${RESTRICTED_BOOTSTRAP_H}
+    COMMAND ${CMAKE_COMMAND} -DINPUT=${CMAKE_SOURCE_DIR}/src/restricted-bootstrap.js
+        -DOUTPUT=${RESTRICTED_BOOTSTRAP_H} -DNAME=QORE_V8_RESTRICTED_BOOTSTRAP
+        -P ${CMAKE_SOURCE_DIR}/cmake/EmbedJavaScript.cmake
+    DEPENDS ${CMAKE_SOURCE_DIR}/src/restricted-bootstrap.js ${CMAKE_SOURCE_DIR}/cmake/EmbedJavaScript.cmake
+    COMMENT "Embedding the restricted program bootstrap")
+set_source_files_properties(src/QoreV8Program.cpp PROPERTIES OBJECT_DEPENDS ${RESTRICTED_BOOTSTRAP_H})
+
 add_library(${module_name} MODULE ${CPP_SRC} ${QPP_SOURCES})
+target_sources(${module_name} PRIVATE ${RESTRICTED_BOOTSTRAP_H})
 # Node's common.gypi applies this to C++ consumers too. Public V8 callback
 # headers access pointer values through integer slots; strict alias analysis is
 # invalid for those inline definitions (PropertyCallbackInfo::GetIsolate).
@@ -197,6 +209,18 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(${module_name} PRIVATE -fno-strict-aliasing)
 endif()
 target_compile_definitions(${module_name} PRIVATE QORE_TYPESCRIPT_MODULE="${QORE_TYPESCRIPT_MODULE}")
+# the isolation domains of sandboxes (qoretechnologies/qore#6536): TenantActionRunner checks that a sandboxed
+# caller's domain is the tenant of its call (qoretechnologies/qore#6845)
+if (EXISTS "${QORE_INCLUDE_DIR}/qore/QoreSandboxManager.h")
+    file(READ "${QORE_INCLUDE_DIR}/qore/QoreSandboxManager.h" _qore_sandbox_header)
+    if (_qore_sandbox_header MATCHES "std::string getIsolationDomain\\(\\) const"
+        AND _qore_sandbox_header MATCHES "getPolicyManagerRef\\(\\) const")
+        target_compile_definitions(${module_name} PRIVATE QORE_V8_HAVE_ISOLATION_DOMAIN)
+        message(STATUS "Qore sandbox isolation domains: yes")
+    else()
+        message(STATUS "Qore sandbox isolation domains: no")
+    endif()
+endif()
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 #include_directories(${Python3_INCLUDE_DIRS})

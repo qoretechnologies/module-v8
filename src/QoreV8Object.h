@@ -43,6 +43,12 @@
 class QoreV8Program;
 class QoreV8ProgramHelper;
 
+// The largest supported index is inclusive; an empty array has no last index.
+DLLLOCAL bool qore_v8_check_array_length(uint32_t length, ExceptionSink* xsink);
+#ifdef DEBUG
+DLLLOCAL QoreListNode* qore_v8_dbg_array_with_leaf(QoreV8ProgramHelper& v8h, QoreValue leaf);
+#endif
+
 class QoreV8Object : public AbstractPrivateData {
 friend class QoreV8CallReference;
 public:
@@ -102,9 +108,6 @@ protected:
     DLLLOCAL AbstractQoreNode* toData(QoreV8ProgramHelper& v8h, v8::Local<v8::Value> parent, v8::Set& objset) const;
 
     DLLLOCAL QoreHashNode* toHash(QoreV8ProgramHelper& v8h, v8::Local<v8::Value> parent, v8::Set& objset,
-            v8::Local<v8::Array> props, uint32_t len) const;
-
-    DLLLOCAL QoreListNode* toList(QoreV8ProgramHelper& v8h, v8::Local<v8::Value> parent, v8::Set& objset,
             v8::Local<v8::Array> props, uint32_t len) const;
 
     QoreV8Program* pgm;

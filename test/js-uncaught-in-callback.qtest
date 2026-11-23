@@ -1,0 +1,240 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires v8
+%requires QUnit
+
+%exec-class JsUncaughtInCallbackTest
+
+#! Tests an exception thrown and not caught in a callback of a program's event loop (qoretechnologies/qore#7332)
+/** Without a listener, Node.js ends the host process for such an exception: one program's timer that threw ended the
+    process that every other program, tenant and app shared.  The exception is now raised to the Qore code that runs the
+    event loop and the process survives, whatever was thrown.  Each case runs in a new process, since the defect ends
+    the process.
+*/
+class JsUncaughtInCallbackTest inherits Test {
+    public {
+        #! the code that a child process runs first: it prints its results on lines that start with "RESULT: "
+        const ChildPrelude = "%modern
+%requires v8
+sub result(string fmt) { vprintf(\"RESULT: \" + fmt + \"\\n\", argv); }
+# runs the program's event loop until no callback is left; returns the code of the exception it raised, if any
+*string sub run_loop(V8::JavaScriptProgram pgm, reference<*string> desc) {
+    try {
+        pgm.spinEventLoop();
+    } catch (hash<ExceptionInfo> ex) {
+        desc = ex.desc;
+        return ex.err;
+    }
+}
+";
+
+        #! the text of the warning that reports a trusted program's uncaught exception
+        const WarningText = "an exception was thrown and not caught in a callback of the event loop";
+
+        #! values whose conversion or inspection runs code that throws
+        const HostileThrows = {
+            "an object without a prototype": "throw Object.create(null);",
+            "an Error whose name getter throws":
+                "class E extends Error { get name() { throw new Error('the name getter threw'); } } throw new E('x');",
+            "a revoked Proxy": "const r = Proxy.revocable({}, {}); r.revoke(); throw r.proxy;",
+        };
+    }
+
+    constructor() : Test("js uncaught in callback test", "1.0") {
+        addTestCase("a timer's uncaught exception is raised to the code that runs the loop", \timerThrows());
+        addTestCase("a Qore callback's exception in a timer is raised to the code that runs the loop",
+            \qoreCallbackThrows());
+        addTestCase("a Promise waited for gets the uncaught exception of a timer", \promiseWaitGetsIt());
+        addTestCase("an exception thrown in a microtask while a Promise is waited for is raised there",
+            \microtaskThrows());
+        addTestCase("the first of two uncaught exceptions is raised", \firstIsKept());
+        addTestCase("a program that handles its uncaught exceptions keeps doing so", \programHandlesIt());
+        addTestCase("whatever is thrown, the process survives", \hostileValues());
+        addTestCase("a restricted program's timer that throws does not end the process", \restrictedTimerThrows());
+        addTestCase("a restricted program cannot reach the process object through the listener",
+            \restrictedCannotReachProcess());
+
+        set_return_value(main());
+    }
+
+    timerThrows() {
+        string out;
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.f = () => 42; setTimeout(() => { throw new Error('thrown in a timer'); }, 0);\",
+    \"uncaught-timer\");
+*string desc;
+result(\"error: %y\", run_loop(pgm, \\desc));
+result(\"described: %y\", desc =~ /thrown in a timer/);
+# the program is still usable: the exception ended only its callback
+result(\"call: %y\", pgm.getGlobal().f());
+result(\"survived\");
+", \out);
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "described: True", "call: 42", "survived"), results);
+        assertRegex(WarningText, out, "a trusted program's exception is reported as a warning");
+    }
+
+    qoreCallbackThrows() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.start = (cb) => { setTimeout(() => { cb(); }, 0); };\", \"uncaught-qore\");
+code cb = sub () { throw \"TEST-ERROR\", \"thrown by a Qore callback in a timer\"; };
+pgm.getGlobal().start(cb);
+*string desc;
+result(\"error: %y\", run_loop(pgm, \\desc));
+result(\"described: %y\", desc =~ /thrown by a Qore callback in a timer/);
+result(\"survived\");
+");
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "described: True", "survived"), results);
+    }
+
+    promiseWaitGetsIt() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.run = () => new Promise((resolve) => {
+    setTimeout(() => { throw new Error('thrown while a Promise was waited for'); }, 0);
+    setTimeout(() => resolve(1), 1000);
+});\", \"uncaught-wait\");
+auto p = pgm.getGlobal().run();
+try {
+    p.wait();
+    result(\"wait: no error\");
+} catch (hash<ExceptionInfo> ex) {
+    result(\"wait: %s: %y\", ex.err, ex.desc =~ /thrown while a Promise was waited for/);
+}
+result(\"survived\");
+");
+        assertEq(("wait: JAVASCRIPT-EXCEPTION: True", "survived"), results);
+    }
+
+    #! an exception of a microtask that runs after the Promise settled is raised by the wait, not by a later spin
+    microtaskThrows() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.run = () => new Promise((resolve) => {
+    setTimeout(() => { resolve(1); queueMicrotask(() => { throw new Error('thrown in a microtask'); }); }, 0);
+});\", \"uncaught-microtask\");
+auto p = pgm.getGlobal().run();
+try {
+    p.wait();
+    result(\"wait: no error\");
+} catch (hash<ExceptionInfo> ex) {
+    result(\"wait: %s: %y\", ex.err, ex.desc =~ /thrown in a microtask/);
+}
+# nothing is left for a later, unrelated spin
+*string desc;
+result(\"later: %y\", run_loop(pgm, \\desc));
+result(\"survived\");
+");
+        assertEq(("wait: JAVASCRIPT-EXCEPTION: True", "later: null", "survived"), results);
+    }
+
+    firstIsKept() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"setTimeout(() => { throw new Error('the first'); }, 0);
+setTimeout(() => { throw new Error('the second'); }, 0);\", \"uncaught-two\");
+*string desc;
+result(\"error: %y\", run_loop(pgm, \\desc));
+result(\"first: %y\", desc =~ /the first/);
+result(\"survived\");
+");
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "first: True", "survived"), results);
+    }
+
+    programHandlesIt() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.handled = [];
+process.on('uncaughtException', (err) => { globalThis.handled.push(err.message); });
+setTimeout(() => { throw new Error('handled by the program'); }, 0);\", \"uncaught-handled\");
+*string desc;
+result(\"error: %y\", run_loop(pgm, \\desc));
+result(\"handled: %y\", pgm.getGlobal().handled);
+result(\"survived\");
+");
+        assertEq(("error: null", "handled: [\"handled by the program\"]", "survived"), results);
+    }
+
+    #! a thrown value whose conversion or inspection throws neither ends the process nor escapes as a listener error
+    hostileValues() {
+        foreach hash<auto> i in (HostileThrows.pairIterator()) {
+            foreach bool restricted in ((False, True)) {
+                string label = sprintf("%s%s", i.key, restricted ? " (restricted)" : "");
+                list<string> results = runChild(sprintf("
+V8::JavaScriptProgram pgm(%y, \"uncaught-hostile\"%s);
+*string desc;
+result(\"error: %%y\", run_loop(pgm, \\desc));
+result(\"survived\");
+", "setTimeout(() => { " + i.value + " }, 0);",
+                    restricted ? ", {\"restricted\": True, \"roots\": (\"/tmp\",)}" : ""));
+                assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "survived"), results, label);
+            }
+        }
+    }
+
+    restrictedTimerThrows() {
+        string out;
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.f = () => 7; setTimeout(() => { throw new Error('thrown in a restricted timer'); }, 0);\",
+    \"uncaught-restricted\", {\"restricted\": True, \"roots\": (\"/tmp\",)});
+*string desc;
+result(\"error: %y\", run_loop(pgm, \\desc));
+result(\"described: %y\", desc =~ /thrown in a restricted timer/);
+result(\"call: %y\", pgm.getGlobal().f());
+result(\"survived\");
+", \out);
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "described: True", "call: 7", "survived"), results);
+        # a restricted program's output is dropped: neither its error (the results print no text of it) nor a warning
+        # about it reaches the host's output
+        assertNRegex("thrown in a restricted timer", out, "the restricted program's error is not printed");
+        assertNRegex(WarningText, out, "a restricted program's exception is not reported on the host's output");
+    }
+
+    #! the listener runs no code of the program, and its frames are strict: their receiver is never revealed
+    restrictedCannotReachProcess() {
+        list<string> results = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.found = [];
+const probe = (v) => {
+    Error.prepareStackTrace = (e, cs) => cs;
+    const frames = new Error().stack;
+    Error.prepareStackTrace = undefined;
+    for (const f of frames) {
+        const t = f.getThis();
+        if (t && typeof t === 'object' && typeof t.binding === 'function') { globalThis.found.push('process'); }
+    }
+    return false;
+};
+Object.defineProperty(Error, Symbol.hasInstance, { value: probe });
+Object.defineProperty(Object.prototype, 'toString', { value: function () { probe(); return 'x'; } });
+setTimeout(() => { throw {}; }, 0);\", \"uncaught-probe\", {\"restricted\": True, \"roots\": (\"/tmp\",)});
+*string desc;
+result(\"error: %y\", run_loop(pgm, \\desc));
+result(\"found: %y\", pgm.getGlobal().found);
+result(\"survived\");
+");
+        assertEq(("error: \"JAVASCRIPT-EXCEPTION\"", "found: []", "survived"), results);
+    }
+
+    #! Runs the code in a new process; returns its result lines, and its whole output in @p out
+    private list<string> runChild(string body, *reference<string> out) {
+        # the interpreter: this one, unless this test runs as an executable that qcc compiled
+        string qore = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY
+            ?? (basename(QORE_ARGV[0]) =~ /^qore/ ? QORE_ARGV[0] : "qore");
+        int rc;
+        string output = backquote(sprintf("%s -b -e %s 2>&1", qore, quote(ChildPrelude + body)), \rc);
+        out = output;
+        assertEq(0, rc, output);
+        assertFalse(output =~ /async hook stack has become corrupted/, output);
+        list<string> rv = ();
+        foreach string line in (output.split("\n")) {
+            if (line =~ /^RESULT: /) {
+                rv += line.substr(8);
+            }
+        }
+        return rv;
+    }
+
+    private static string quote(string value) {
+        return "'" + replace(value, "'", "'\"'\"'") + "'";
+    }
+}

@@ -55,6 +55,11 @@ int QoreV8Promise::wait(QoreV8ProgramHelper& v8h) {
             return -1;
         }
         isolate->PerformMicrotaskCheckpoint();
+        // an exception thrown and not caught in a microtask is raised here, not by a later, unrelated spin
+        // (qoretechnologies/qore#7332)
+        if (v8h.getProgram()->raiseUncaughtError(v8h.getExceptionSink())) {
+            return -1;
+        }
     }
     return 0;
 }

@@ -1,0 +1,91 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# The module's logger is taken by trusted code, never looked up while serving sandboxed code: DataProvider gives code
+# that acts for a sandboxed caller no global logger and refuses to let it set one (qoretechnologies/qore#6746).  The
+# module's messages for a tenant's call still go to the host's logger, and its initialization keeps the host's logger.
+%modern
+%no-child-restrictions
+%requires qore >= 3.0
+%requires QUnit
+%requires DataProvider
+%exec-class SandboxedFirstUseLoggerTest
+
+#! keeps the messages logged to it
+class CaptureAppender inherits LoggerAppenderWithLayout {
+    public {
+        list<string> lines = ();
+        Mutex m();
+    }
+
+    constructor() : LoggerAppenderWithLayout("capture", new LoggerLayoutPattern("%m")) {
+    }
+
+    processEventImpl(int type, auto params) {
+        if (type == EVENT_LOG) {
+            AutoLock al(m);
+            lines += params;
+        }
+    }
+}
+
+class SandboxedFirstUseLoggerTest inherits QUnit::Test {
+    private {
+        # the host's logger, set before the module is loaded
+        Logger host_logger("host", LoggerLevel::LevelDebug);
+        CaptureAppender capture();
+        object catalogue_pool;
+    }
+
+    constructor() : QUnit::Test("SandboxedFirstUseLogger", "1.0", \ARGV) {
+        addTestCase("the module's messages for a tenant's call go to the host's logger", \tenantCallTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        capture.open();
+        host_logger.addAppender(capture);
+        DataProvider::setGlobalLogger(host_logger);
+        # the host loads the module at startup, as trusted code
+        load_module("TypeScriptActionInterface");
+    }
+
+    tenantCallTest() {
+        # the module did not replace the host's logger
+        assertTrue(DataProvider::getGlobalLogger() == host_logger, "the host's logger is kept");
+
+        Program host(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        host.parse("%requires v8\n%requires TypeScriptActionInterface\n"
+            "object sub setup(string dir) {\n"
+            "    string script = dir + \"/tenant-catalogue.js\";\n"
+            "    object pool = new JavaScriptProgramPool(\"var exports = {};\\nasync function runWithTimeout(p, d) { \"\n"
+            "        \"return await (typeof p === 'function' ? p() : p); }\\n\" + ReadOnlyFile::readTextFile(script), script,\n"
+            "        sub (V8::JavaScriptProgram pgm) {\n"
+            "            pgm.getGlobal().exports.actionsCatalogue.registerAppActions(\n"
+            "                TypeScriptActionInterface::getInterface());\n"
+            "        });\n"
+            "    TenantActionRunner::setCatalogue(script, (dir,), pool);\n"
+            "    TypeScriptActionInterface::initApp(\"tenant-conn\", True);\n"
+            "    return pool;\n"
+            "}\n"
+            "object sub conn() { return new TypeScriptAppRestConnection({\"name\": \"c\", "
+            "\"url\": \"tsrest-tenant-conn://conn.example.com\", \"opts\": {\"token\": \"x\"}}); }", "host");
+        catalogue_pool = host.callFunction("setup", get_script_dir());
+        object c = host.callFunction("conn");
+
+        # a tenant's call: the host gives the runner no resolver here, so it is refused, after the module logged it
+        Program tenant(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        tenant.parse("%requires TypeScriptActionInterface\n"
+            "*string sub call(object c) { try { c.getDataProvider().getChildProviderEx(\"info\").doRequest(); } "
+            "catch (hash<ExceptionInfo> ex) { return ex.err; } }", "tenant");
+        tenant.setSandboxManager(new SandboxManager());
+        assertEq("TS-TENANT-ERROR", tenant.callFunction("call", c), "the call is refused");
+
+        # the module's message about the call, logged while it served the tenant's code, reached the host's logger,
+        # marked as a tenant's call (qoretechnologies/qore#7185)
+        AutoLock al(capture.m);
+        list<string> perf = select capture.lines, $1 =~ /^tenant call: perf: .*info/;
+        assertTrue(perf.size() > 0, "the module logged the tenant's call to the host's logger");
+    }
+}

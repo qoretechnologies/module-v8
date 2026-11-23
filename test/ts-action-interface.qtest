@@ -150,7 +150,7 @@ async function runWithTimeout(promise, delay) {
             sub (JavaScriptProgram pgm) {});
         JavaScriptObject obj = pool.getProgram().getGlobal().exports;
 
-        obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+        obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
     }
 
     private jsEventExtensionTest() {
@@ -666,23 +666,23 @@ async function runWithTimeout(promise, delay) {
 }\n" + File::readTextFile("test.js"), "test.js",
             sub (JavaScriptProgram pgm) {});
         code<auto(hash<string, code>, *hash<auto>)> run = pool.getProgram().getGlobal().exports.qtester.toData().run;
-        assertThrows("JAVASCRIPT-EXCEPTION", "authorization_code", run, TypeScriptActionInterface::TestApi);
+        assertThrows("JAVASCRIPT-EXCEPTION", "authorization_code", run, TypeScriptActionInterface::getTestInterface());
         # Both the original body wrapper and flattened action options must reach the OAuth check
         # when the Pet body and the additional dynamic option satisfy the action's request type.
         hash<auto> pet = {"id": 123, "name": "Rex", "photoUrls": ()};
         hash<auto> dynamic_option = {"new0": {"new1": {"a": "Fixture"}}};
         assertThrows("JAVASCRIPT-EXCEPTION", "authorization_code", run,
-            (TypeScriptActionInterface::TestApi, pet + dynamic_option));
+            (TypeScriptActionInterface::getTestInterface(), pet + dynamic_option));
         # Invalid requests must fail validation before an OAuth error can hide the problem.
         assertThrows("JAVASCRIPT-EXCEPTION", "required field \"new0\" is absent", run,
-            (TypeScriptActionInterface::TestApi, {"body": pet}));
+            (TypeScriptActionInterface::getTestInterface(), {"body": pet}));
         assertThrows("JAVASCRIPT-EXCEPTION", "required field \"photoUrls\" is absent", run,
-            (TypeScriptActionInterface::TestApi, {"body": pet - "photoUrls"} + dynamic_option));
+            (TypeScriptActionInterface::getTestInterface(), {"body": pet - "photoUrls"} + dynamic_option));
         assertThrows("JAVASCRIPT-EXCEPTION", "required field \"name\" is absent", run,
-            (TypeScriptActionInterface::TestApi, {"body": pet - "name"} + dynamic_option));
+            (TypeScriptActionInterface::getTestInterface(), {"body": pet - "name"} + dynamic_option));
         # The dynamic object's child is optional; an empty object still reaches authentication.
         assertThrows("JAVASCRIPT-EXCEPTION", "authorization_code", run,
-            (TypeScriptActionInterface::TestApi, {"body": pet, "new0": {"new1": {}}}));
+            (TypeScriptActionInterface::getTestInterface(), {"body": pet, "new0": {"new1": {}}}));
     }
 
     public {
@@ -742,7 +742,7 @@ async function runWithTimeout(promise, delay) {
     }
 };
 ", app, app, app, app), "call-limit.js", sub (JavaScriptProgram pgm) {
-            pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
         });
 
         date old_limit = TypeScriptActionInterface::getCallTimeout();
@@ -804,7 +804,7 @@ async function runWithTimeout(promise, delay) {
     }
 };
 ", app, app), "bad-limit.js", sub (JavaScriptProgram pgm) {
-                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
             });
             AbstractDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
                 .getChildProviderEx("bad-limit");
@@ -894,7 +894,7 @@ var obj = {
         }
     }
 };", "test.js", sub (JavaScriptProgram pgm) {
-            pgm.getGlobal().obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            pgm.getGlobal().obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
         });
 
         JavaScriptObject obj = pool.getProgram().getGlobal().getProperty("obj");
@@ -1584,7 +1584,7 @@ var obj = {
 %s        }
     }
 };", body), path, sub (JavaScriptProgram pgm) {
-            pgm.getGlobal().obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            pgm.getGlobal().obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
         });
     }
 
@@ -1706,8 +1706,8 @@ app.schema_metadata = () => ready ? {} : {
     private existingAppRetryTest() {
         string app = "ExistingRetry_" + get_random_string(8);
         JavaScriptProgramPool pool("", "existing-retry.js", sub (JavaScriptProgram pgm) {});
-        TypeScriptActionInterface::root.registerChild(app.lwr(),
-            TypeScriptActionInterface::getAppDataProvider("js-test"));
+        object root = TypeScriptActionInterface::getRoot();
+        root.registerChild(app.lwr(), TypeScriptActionInterface::getAppDataProvider("js-test"));
         on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
         assertThrows("TYPESCRIPT-CHILD-ERROR", "already registered", sub () {
             TypeScriptActionInterface::registerExistingApp({"name": app, "module": "DiscordDataProvider"}, pool);
@@ -1715,7 +1715,7 @@ app.schema_metadata = () => ready ? {} : {
         assertThrows("TYPESCRIPT-CHILD-ERROR", "already registered", sub () {
             TypeScriptActionInterface::initApp(app);
         });
-        TypeScriptActionInterface::root.deregisterChild(app.lwr());
+        root.deregisterChild(app.lwr());
         assertTrue(TypeScriptActionInterface::initApp(app));
         assertEq(app.lwr(), TypeScriptActionInterface::getAppDataProvider(app).getName());
         assertFalse(TypeScriptActionInterface::initApp(app));
@@ -1752,7 +1752,7 @@ app.future_metadata = true;", appSource(app)), "metadata-protocol.js", sub (Java
             TypeScriptActionInterface::registerApp(pgm.getGlobal().app);
         });
         on_exit TypeScriptActionInterface::deregisterDynamicApp(app);
-        assertEq(2, TypeScriptActionInterface::Api.getCatalogueProtocolVersion());
+        assertEq(2, TypeScriptActionInterface::getInterface().getCatalogueProtocolVersion());
         assertThrows("TYPESCRIPT-CATALOGUE-PROTOCOL-ERROR", "future_metadata", sub () {
             TypeScriptActionInterface::initApp(app);
         });
@@ -1934,7 +1934,7 @@ var obj = {
         api.registerAction(Object.assign({'app': app}, %s));
     }
 };", app_attr, action), app + ".js", sub (JavaScriptProgram pgm) {});
-        pool.getProgram().getGlobal().obj.register(TypeScriptActionInterface::Api, app);
+        pool.getProgram().getGlobal().obj.register(TypeScriptActionInterface::getInterface(), app);
         # a definition that cannot be converted is reported as an initialization failure of the action
         assertEq((), (map $1.error + ": " + $1.description, DataProviderActionCatalog::getInitializationFailures((app,))),
             "the app and its action register");

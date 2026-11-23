@@ -33,10 +33,16 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         };
     }
 
-    private {
-        string method;
+    # the calls of the app are not readable by subclasses (qoretechnologies/qore#6749)
+    private:internal {
         hash<AsyncCallInfo> webhook_register;
         hash<AsyncCallInfo> webhook_deregister;
+        #! Optional async function to transform or filter webhook event data
+        *hash<AsyncCallInfo> format_event_data;
+    }
+
+    private:internal {
+        string method;
         *int webhook_auth;
         *list<auto> webhook_perms;
         *string webhook_event_loc;
@@ -47,8 +53,6 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *string webhook_confirmation_url_loc;
         *string webhook_confirmation_method;
         *string webhook_assume_json;
-        #! Optional async function to transform or filter webhook event data
-        *hash<AsyncCallInfo> format_event_data;
 
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;

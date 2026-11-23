@@ -59,8 +59,19 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         #! dependent option cache; opt val key -> option info
         hash<string, *hash<string, hash<ActionOptionInfo>>> docache;
 
+    }
+
+    # the cache holds the values that every caller of the module looked up; it is not readable by subclasses
+    # (qoretechnologies/qore#6749)
+    private:internal {
         #! Data cache for retrieving allowed values
         static TypeScriptDataCache cache();
+
+        #! Gives the unchecked implementations of the checked methods to the module's own code
+        static bool internal_set = TsaiProcessState::setInternal({
+            "execAsyncValueDirect": \TypeScriptActionDataProviderBase::execAsyncValueDirectUnchecked(),
+            "clearAppCache": \TypeScriptActionDataProviderBase::clearAppCacheUnchecked(),
+        });
     }
 
     #! Creates the object from the arguments
@@ -77,6 +88,34 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     #! Creates the object from the arguments
     constructor(string name, ActionFunctionContext fctx) : ActionFunctionContext(fctx) {
         self.name = name;
+    }
+
+    #! Copies the object
+    /** A copy made by code that is sandboxed or acts for sandboxed code keeps nothing of the host's: it has no
+        logger but that of its connection, its calls have no post-processing reference, and the types in its caches
+        are its own (qoretechnologies/qore#7185)
+    */
+    copy() {
+        if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            sanitizeForCaller();
+        }
+    }
+
+    #! Removes what is the host's from a copy for a sandboxed caller; see copy()
+    private:internal sanitizeForCaller() {
+        setLogger(conn ? conn.getLogger() : NOTHING);
+        omap = TsaiProcessState::callsForCaller(omap);
+        eomap = TsaiProcessState::callsForCaller(eomap);
+        dmap = TsaiProcessState::callsForCaller(dmap);
+        drmap = TsaiProcessState::callsForCaller(drmap);
+        dtmap = TsaiProcessState::callsForCaller(dtmap);
+        dvmap = TsaiProcessState::callsForCaller(dvmap);
+        foreach string k in (keys dtcache) {
+            dtcache{k} = TsaiProcessState::typeForCaller(dtcache{k});
+        }
+        foreach string k in (keys docache) {
+            docache{k} = TsaiProcessState::optionsForCaller(docache{k});
+        }
     }
 
     #! Sets the connection
@@ -138,16 +177,28 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Drops an app's cached allowed values and other reference data; see TypeScriptDataCache::clearApp()
-    /** @param app the app whose cached values are dropped
+    /** The cache is shared by every caller of the process, so code that is sandboxed or acts for sandboxed code
+        cannot drop it
+
+        @param app the app whose cached values are dropped
+
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
     */
-    static clearAppCache(string app) {
+    static clearAppCache(string app) [dom=PROCESS_CONTROL] {
+        # process-wide (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("drop the cached reference data of a TypeScript app");
+        TypeScriptActionDataProviderBase::clearAppCacheUnchecked(app);
+    }
+
+    #! The unchecked implementation of clearAppCache(), for the module's own code
+    private:internal static clearAppCacheUnchecked(string app) {
         cache.clearApp(app);
     }
 
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
         auto rv = getAsyncValueArgs(self, api, argv);
         if (api.type == "api_function" && api.action) {
-            TypeScriptActionInterface::actionSucceeded(api.app, api.action);
+            TsaiProcessState::Internal.actionSucceeded(api.app, api.action);
         }
         return rv;
     }
@@ -160,14 +211,15 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }, True);
     }
 
-    static auto getAsyncValueArgs(*LoggerInterface logger = DataProvider::getGlobalLogger(), hash<AsyncCallInfo> api,
+    static auto getAsyncValueArgs(*LoggerInterface logger = TypeScriptActionInterfacePriv::getLogger(), hash<AsyncCallInfo> api,
             *softlist<auto> args, *hash<auto> cache_opts, *bool use_cache) {
         on_error rethrow $1.err, sprintf("%s (context: %s)", $1.desc, api.label);
 
         TSAI::debug("TypeScriptActionDataProviderBase::getAsyncValueArgs(): api: %y args: %y cache_opts: %y "
             "use_cache: %y _ts_no_io: %y", api.label, LoggerUtil::getArgSummary(args), LoggerUtil::getArgSummary(cache_opts),
             use_cache, _ts_no_io);
-        if (_ts_no_io || (!cache_opts && !use_cache)) {
+        # a tenant's call never uses the cache: its entries are shared by all callers
+        if (_ts_no_io || _ts_tenant_calls || SandboxManager::isSandboxed() || (!cache_opts && !use_cache)) {
             TSAI::debug("Executing; no cache");
             return TypeScriptActionDataProviderBase::execAsyncValueArgs(logger, api, args);
         }
@@ -244,6 +296,32 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         on_exit TSAI::debug("perf: %y get async value: %y (args: %y)", api.label, now_us() - start, args);
         on_error TSAI::error("%s", get_exception_string($1));
 
+        # sandboxed code: the call is made by TenantActionRunner, in the tenant's own program, or refused; this is the
+        # module's single path into an app's code for sandboxed code (see TenantActionRunner::dispatch())
+        if (!_ts_tenant_calls) {
+            if (SandboxManager::isSandboxed()) {
+                return TenantActionRunner::dispatch(logger, api, args);
+            }
+            # trusted code's call for a tenant's connection: the host's resolver decides from the connection, so that
+            # a host's trusted threads cannot run a tenant's call in the full runtime
+            bool tenant;
+            auto rv = TenantActionRunner::dispatchTrusted(logger, api, args, \tenant);
+            if (tenant) {
+                return rv;
+            }
+        }
+
+        # a tenant's call: only the functions of the tenant's own program run (TenantActionRunner)
+        if (_ts_tenant_calls) {
+            if (*code c = _ts_tenant_calls{api.key}) {
+                api.async_call = c;
+            } else if (api.type != "get_records") {
+                # a get_records() function is returned by the tenant's own search function
+                throw "TS-TENANT-ERROR", sprintf("the tenant's program has no function %y", api.key);
+            }
+            return execAsyncValueDirectUnchecked(logger, api, args);
+        }
+
         # check in-process pool first (no IPC overhead)
         if (*JavaScriptInProcessPool ip = TSAI::checkInProcessServer()) {
             return ip.execCall(api, args);
@@ -252,13 +330,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         # handle the call with a remote process
         if (TSAI::checkServer()) {
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, LoggerUtil::getArgSummary(args));
-            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            JavaScriptProgramProxy proxy = TsaiProcessState::server.get();
             TSAI::info("%y: proxy (%y) acquired for %y", api.label, proxy.getInfo(), api.key);
-            on_exit TypeScriptActionInterface::server.release(proxy);
+            on_exit TsaiProcessState::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }
 
-        return execAsyncValueDirect(logger, api, args);
+        return execAsyncValueDirectUnchecked(logger, api, args);
     }
 
     #! Executes the async call directly (no pool/server dispatch)
@@ -271,7 +349,20 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         @return the result of the call
     */
-    static auto execAsyncValueDirect(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the call would run
+        in the process-wide program of the app's catalogue; the module makes the calls of sandboxed code in the
+        tenant's own program
+    */
+    static auto execAsyncValueDirect(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args)
+            [dom=PROCESS_CONTROL] {
+        # the full runtime (qoretechnologies/qore#7185)
+        TsaiProcessState::checkHostScope("make a direct call of an app's function");
+        return TypeScriptActionDataProviderBase::execAsyncValueDirectUnchecked(logger, api, args);
+    }
+
+    #! The unchecked implementation of execAsyncValueDirect(), for the module's own code
+    private:internal static auto execAsyncValueDirectUnchecked(*LoggerInterface logger, hash<AsyncCallInfo> api,
+            *softlist<auto> args) {
         if (_ts_no_io) {
             return;
         }
@@ -294,7 +385,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             # an unlimited call (an event function) runs until its events are stopped
             if (!api.unlimited) {
                 code run = js.getGlobal().runWithTimeout.toData();
-                int ms = (api.to ?? TypeScriptActionInterface::getCallTimeout()).durationMilliseconds();
+                int ms = (api.to ?? TsaiProcessState::Internal.getCallTimeout()).durationMilliseconds();
                 TSAI::debug("%y: running Promise with async timeout: %dms", api.label, ms);
                 v = run(v, ms);
             }
@@ -322,7 +413,11 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             # completion is driven by the background v.wait() call below.  This must not block: spinOnce() does a
             # single non-blocking pass (UV_RUN_NOWAIT) - running the loop to completion here would stall for the
             # upstream keep-alive idle timeout (~15s) when the connection is left open after the response
-            on_exit js.spinOnce();
+            # a terminated program (the call was stopped or timed out) is not spun again: it refuses every entry, and
+            # the error that ended the wait is the one reported (qoretechnologies/qore#7284)
+            on_exit if (!js.isTerminated()) {
+                js.spinOnce();
+            }
 
             try {
                 v = v.then(sub (auto val) {
@@ -332,9 +427,22 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 }).doCatch(sub (auto e) {
                     push_val("exception caught", e);
                 });
-                # wait for the IO in the background - this will only complete when the I/O is complete
+                # wait for the IO in the background - this will only complete when the I/O is complete; if the wait
+                # fails (the program was terminated: a time limit, or a stop of an event function), no callback runs,
+                # and the error is the result, so that the call does not wait forever
                 background sub () {
-                    v.wait();
+                    try {
+                        v.wait();
+                    } catch (hash<ExceptionInfo> ex) {
+                        q.push({
+                            "where": "wait",
+                            "err": {
+                                "name": ex.err,
+                                "message": ex.desc,
+                                "errstr": sprintf("%s: %s", ex.err, ex.desc),
+                            },
+                        });
+                    }
                 }();
                 TSAI::debug("Waiting for result");
                 # this will return a value as soon as the first value is ready
@@ -504,9 +612,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns call context info
+    /** The directory of a dynamic app is a host path: it is not given to code that is sandboxed or acts for sandboxed
+        code, whose calls run in the tenant's own program (qoretechnologies/qore#7185)
+    */
     *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
         *RestConnection conn = self.conn ?? _thread_conn;
-        *string dynamic_path = TypeScriptActionInterface::getDynamicAppPath(conn ? conn.getAppName() : app);
+        *string dynamic_path = SandboxManager::isProcessWideRegistrationAllowed()
+            ? TsaiProcessState::Internal.getDynamicAppPath(conn ? conn.getAppName() : app)
+            : NOTHING;
         if (conn) {
             return <DataContextInfo>{
                 "conn_name": conn.name,
@@ -525,7 +638,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns a data type for the given base type and request / option data
+    /** A sandboxed caller gets copies of the types of the options (qoretechnologies/qore#7185)
+    */
     *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptions(hash<auto> options) {
+        return TsaiProcessState::optionsForCaller(getActionOptionsWithOptionsCached(options));
+    }
+
+    #! Returns a data type for the given base type and request / option data, with the types of the cache
+    private *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptionsCached(hash<auto> options) {
         *hash<auto> slice = dmap{keys options};
         if (!slice) {
             TSAI::debug("getActionOptionsWithOptions() options: %y dmap: %y no data in slice", options, keys dmap);
@@ -548,9 +668,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             }, slice, options);
         } else if (TSAI::checkServer()) {
             TSAI::debug("Starting proxy for app %y action %y: plain dynamic type with args: %y", app, action, options);
-            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            JavaScriptProgramProxy proxy = TsaiProcessState::server.get();
             TSAI::debug("Proxy started for app %y action %y: plain dynamic type with args", app, action);
-            on_exit TypeScriptActionInterface::server.release(proxy);
+            on_exit TsaiProcessState::server.release(proxy);
             rv = proxy.getDynamicOptions(app, action, conn.name, conn.getRealOptions(), options);
         } else {
             TSAI::debug("getActionOptionsWithOptions() exec options: %y slice: %y", options, keys slice);
@@ -595,9 +715,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         } else if (TSAI::checkServer()) {
             TSAI::debug("Starting proxy for app %y action %y: dynamic type with args: %y", app, action,
                 LoggerUtil::getArgSummary(req));
-            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            JavaScriptProgramProxy proxy = TsaiProcessState::server.get();
             TSAI::debug("Proxy started for app %y action %y: dynamic type with args", app, action);
-            on_exit TypeScriptActionInterface::server.release(proxy);
+            on_exit TsaiProcessState::server.release(proxy);
             type = proxy.getDynamicType(cmd, app, action, conn.name, conn.getRealOptions(), req);
         } else {
             type = getDynamicOptionTypeIntern(rt, slice, req);
@@ -652,9 +772,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             }
             info("Got %y = %y", i.key, LoggerUtil::getArgSummary(res));
             foreach hash<auto> j in (res.pairIterator()) {
-                TypeScriptActionInterface::getOptionAllowedValuesFunction(\action, self, j.key, \j.value);
-                TypeScriptActionInterface::getOptionElementAllowedValuesFunction(\action, self, j.key, \j.value);
-                TypeScriptActionInterface::getOptionDefaultValueFunction(\action, self, j.key, \j.value);
+                TsaiProcessState::Internal.getOptionAllowedValuesFunction(\action, self, j.key, \j.value);
+                TsaiProcessState::Internal.getOptionElementAllowedValuesFunction(\action, self, j.key, \j.value);
+                TsaiProcessState::Internal.getOptionDefaultValueFunction(\action, self, j.key, \j.value);
                 rv{j.key} = TypeScriptActionInterface::getOptionInfo("option", j.value, self, True);
                 if (j.value.ref_data) {
                     rv{j.key}.allowed_values = getReferenceDataSafe(j.value.ref_data, options);
@@ -761,21 +881,36 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     $1.value.typeCode() == NT_STRING;
             }
 
-            string key = TypeScriptActionDataProviderBase::getKey("rest-" + type, action_opts);
-
-            bool new_entry;
-            CacheEntry entry = cache.get(key, \new_entry, app);
-            if (new_entry) {
-                on_error entry.cancel($1);
-
+            hash<auto> resp;
+            # the values are read with the credentials of the connection: they are cached per connection, and never
+            # for a sandboxed caller or a tenant's call, as the cache is shared by every caller
+            # (qoretechnologies/qore#7185)
+            if (_ts_no_io || _ts_tenant_calls || SandboxManager::isSandboxed()
+                || !SandboxManager::isProcessWideRegistrationAllowed()) {
                 hash<auto> info;
                 debug("Retrieving %sreference data with REST for data provider %y type %y: %s %s", rtype, getName(),
                     type, ref_rest.method, path);
                 on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
-                entry.setValue(rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
-                    ref_rest.headers));
+                resp = rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING, ref_rest.headers);
+            } else {
+                string key = TypeScriptActionDataProviderBase::getKey("rest-" + type, action_opts + {
+                    "conn": conn ? conn.getRealOptions() + {"url": conn.real_url, "name": conn.name} : NOTHING,
+                });
+
+                bool new_entry;
+                CacheEntry entry = cache.get(key, \new_entry, app);
+                if (new_entry) {
+                    on_error entry.cancel($1);
+
+                    hash<auto> info;
+                    debug("Retrieving %sreference data with REST for data provider %y type %y: %s %s", rtype,
+                        getName(), type, ref_rest.method, path);
+                    on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
+                    entry.setValue(rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
+                        ref_rest.headers));
+                }
+                resp = entry.getValue();
             }
-            hash<auto> resp = entry.getValue();
 
             debug("Got %sreference data with REST for data provider %y type %y: %y", rtype, getName(), type,
                 LoggerUtil::getArgSummary(resp));
@@ -1009,7 +1144,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     private checkUpdateRestOptions(RestClient rest, hash<auto> action_opts) {
-        if ((*hash<auto> cuo = TypeScriptActionInterface::getConnectionUpdateOptions(conn.getAppName()))
+        if ((*hash<auto> cuo = TsaiProcessState::getConnectionUpdateOptions(conn.getAppName()))
             && (exists (auto v = action_opts{cuo.option}))) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
             debug("Retrieving connection update data with JS for data provider %y option: %s = %y arg: %y",
@@ -1038,6 +1173,11 @@ hashdecl DynamicTypeInfo {
 }
 
 thread_local *bool _ts_no_io;
+
+#! the functions of a tenant's program, by call key, while TenantActionRunner runs a record action for the tenant
+/** Every call of the provider code is made with the tenant's own function; module-internal
+*/
+thread_local *hash<string, code> _ts_tenant_calls;
 class NoIoHelper {
     private {
         *bool old_no_io;

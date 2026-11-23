@@ -1,0 +1,467 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%no-child-restrictions
+
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires HttpServer
+%requires ConnectionProvider
+%requires RestClient
+
+%exec-class TenantActionRunnerTest
+
+#! the local server of the egress tests
+class EgressHandler inherits AbstractHttpRequestHandler {
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        if (hdr.path =~ /redirect-private/) {
+            return makeResponse(302, "", {"Location": "http://10.255.255.1/secret"});
+        }
+        return makeResponse(200, "hello", {"Content-Type": MimeTypeText});
+    }
+}
+
+#! TenantActionRunner runs TypeScript actions for tenants (qoretechnologies/qore#6845)
+/** A sandboxed tenant runs an action with plain data; the action runs in a restricted program of the tenant's own,
+    built and sealed before the call, which reaches the network only through the bridge under the tenant's sandbox.
+*/
+class TenantActionRunnerTest inherits QUnit::Test {
+    public {
+        #! the tenant's code: each function returns the result, or the error code and its args
+        const TenantSource = "%modern
+%requires TypeScriptActionInterface
+hash<auto> sub run(hash<auto> ctx, string action, auto req, *string app) {
+    try {
+        return {\"result\": TypeScriptActionInterface::TenantActionRunner::exec(cast<hash<TypeScriptActionInterface::TsTenantContext>>(ctx), app ?? \"tenant-test\", action, req)};
+    } catch (hash<ExceptionInfo> ex) {
+        return {\"err\": ex.err, \"desc\": ex.desc, \"arg\": ex.arg};
+    }
+}
+";
+
+        const App = "tenant-test";
+
+        #! the tenant's code that uses a connection: each kind of call of a data provider or a connection
+        const ConnSource = "%modern
+%requires TypeScriptActionInterface
+%requires RestClient
+class T inherits TypeScriptActionInterface::TypeScriptAppRestClient {
+    static *hash<auto> postAuth(TypeScriptActionInterface::TypeScriptAppRestClient client) {
+        return client.getUpdateOptionsAfterLogin({});
+    }
+}
+auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, string kind) {
+    try {
+        AbstractDataProvider prov = conn.getDataProvider();
+        switch (kind) {
+            case \"action\": return {\"result\": prov.getChildProviderEx(\"info\").doRequest()};
+            case \"allowed\": return {\"result\": (map $1.value, prov.getChildProviderEx(\"info\").getReferenceData(\"choice\"))};
+            case \"option\": return {\"result\": keys prov.getChildProviderEx(\"info\").getRequestTypeWithOptions({\"key\": \"A\"}).getFields()};
+            case \"type\": return {\"result\": keys prov.getChildProviderEx(\"info\").getRequestTypeWithOptions({\"key\": \"A\"}).getFields().dyn.getType().getFields()};
+            case \"record\": {
+                AbstractDataProvider t = prov.getChildProviderPath(\"tables/items\");
+                t.createRecord({\"id\": 7, \"name\": \"n\"});
+                AbstractDataProviderRecordIterator i = t.searchRecords();
+                return {\"result\": i.next() ? i.getValue() : NOTHING};
+            }
+            case \"oauth\": return {\"result\": T::postAuth(conn.get(False)).marker};
+            case \"refresh\": return {\"result\": prov.getChildProviderEx(\"refresh\").doRequest()};
+            case \"pool\": return {\"result\": TypeScriptActionInterface::TypeScriptActionInterface::checkInProcessServer().get()};
+        }
+    } catch (hash<ExceptionInfo> ex) {
+        return {\"err\": ex.err, \"desc\": ex.desc};
+    }
+}
+";
+    }
+
+    private {
+        static JavaScriptProgramPool catalogue_pool;
+
+        #! the calls of the host's egress meter
+        static list<hash<auto>> metered = ();
+        static Mutex meter_lock();
+
+        #! the connections that the host's resolver was asked for, and the connection updates that it got
+        static list<string> resolved = ();
+        static list<hash<auto>> conn_updates = ();
+
+        HttpServer server;
+        int port;
+    }
+
+    constructor() : QUnit::Test("TenantActionRunner", "1.0", \ARGV) {
+        addTestCase("a sandboxed tenant runs an action with plain data", \runTest());
+        addTestCase("invalid contexts and unknown actions", \contextTest());
+        addTestCase("tenants do not share programs", \isolationTest());
+        addTestCase("a sandboxed caller with no isolation domain, or another tenant's, is refused",
+            \callerDomainTest());
+        addTestCase("errors carry no stack", \errorTest());
+        addTestCase("the time limit", \timeoutTest());
+        addTestCase("a request through the tenant's own sandbox", \egressAllowedTest());
+        addTestCase("a private address is refused (fetch and axios)", \egressPrivateTest());
+        addTestCase("a host name that resolves to a private address is refused", \egressDnsTest());
+        addTestCase("a redirect to a denied address is refused at the hop", \egressRedirectTest());
+        addTestCase("the host's hook can only refuse more", \egressHookTest());
+        addTestCase("record actions run in the tenant's program", \recordTest());
+        addTestCase("record actions have a record limit", \recordLimitTest());
+        addTestCase("each kind of call of a sandboxed caller's provider runs in the tenant's program",
+            \dispatchKindsTest());
+        addTestCase("a sandboxed caller's call with no tenant context is refused", \dispatchFailClosedTest());
+        addTestCase("a connection update goes to the host's handler", \connectionUpdateTest());
+        addTestCase("a trusted caller's provider runs as trusted code", \trustedCallerTest());
+        addTestCase("a trusted caller's call for a tenant's connection runs in the tenant's program",
+            \trustedTenantConnectionTest());
+        addTestCase("with the module's in-process pool, a sandboxed caller's calls still run in its program",
+            \inProcessPoolTest());
+        # last: the app is refused for every tenant once an action needs a builtin that tenants do not get
+        addTestCase("a builtin that tenants do not get", \unsupportedTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        string script = get_script_dir() + "/tenant-catalogue.js";
+        # the app is registered in the catalog as the module registers apps (a pool of the catalogue)
+        # the catalogue only registers here; the runner's programs get the module's full default code
+        # with the call helper that the module's own catalogue code has (a trusted caller's calls use it)
+        catalogue_pool = new JavaScriptProgramPool("var exports = {};\nasync function runWithTimeout(p, d) { "
+            "return await (typeof p === 'function' ? p() : p); }\n" + ReadOnlyFile::readTextFile(script), script,
+            sub (V8::JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::getInterface());
+            });
+        *list<string> roots = (get_script_dir(),);
+        if (*string nm = ENV.QORE_V8_TEST_NODE_MODULES) {
+            roots += nm;
+        }
+        TenantActionRunner::setCatalogue(script, roots, catalogue_pool);
+        # the connection app is initialized by the host, as when a connection of it is created
+        TypeScriptActionInterface::initApp("tenant-conn", True);
+
+        # the host's hook refuses any path with "hook-deny"; the meter records the calls
+        TenantActionRunner::setEgressPolicy(bool sub (string tenant, *string connection, hash<UrlInfo> url,
+                list<string> ips) {
+            return (url.path ?? "") !~ /hook-deny/;
+        });
+        TenantActionRunner::setEgressMeter(sub (string tenant, *string connection, int bytes_out, int bytes_in) {
+            AutoLock al(meter_lock);
+            metered += {"tenant": tenant, "connection": connection, "out": bytes_out, "in": bytes_in};
+        });
+
+        # the host's resolver: the tenant of each connection, or none for "no-ctx" and the host's own (trusted)
+        # connections
+        TenantActionRunner::setTenantContextResolver(*hash<auto> sub (AbstractConnection conn) {
+            AutoLock al(meter_lock);
+            resolved += conn.name;
+            if (conn.name == "no-ctx" || conn.name =~ /trusted/) {
+                return;
+            }
+            return {"tenant": "conn-" + conn.name, "connection": conn.name,
+                "conn_opts": conn.getRealOptions() + {"url": "https://tenant.example.com"}};
+        });
+        TenantActionRunner::setConnectionUpdateHandler(sub (AbstractConnection conn, hash<auto> update) {
+            AutoLock al(meter_lock);
+            conn_updates += {"conn": conn.name, "update": update};
+        });
+
+        server = new HttpServer(<HttpServerOptionInfo>{});
+        server.setDefaultHandler("egress", new EgressHandler());
+        port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
+    }
+
+    globalTearDown() {
+        if (server) {
+            server.stop();
+        }
+    }
+
+    #! a sandbox that allows the network, optionally with a denied range
+    private SandboxManager netSandbox(*bool block_private, *string denied_range) {
+        SandboxManager sm();
+        sm.setNetworkDefaultPolicy(True);
+        if (block_private) {
+            sm.blockPrivateNetworks();
+        }
+        if (denied_range) {
+            sm.addNetworkDeniedIPRange(denied_range);
+        }
+        return sm;
+    }
+
+    #! returns a tenant's Program, governed by a sandbox whose isolation domain is the tenant
+    /** With a Qore that has isolation domains, the runner refuses a sandboxed caller whose sandbox has no domain or
+        another tenant's (TenantActionRunner::checkCallerDomain()), as a host gives each tenant's sandbox its domain
+    */
+    private Program tenant(string domain, *SandboxManager sm) {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "tenant");
+        p.setSandboxManager(TenantActionRunnerTest::domainSandbox(domain, sm));
+        return p;
+    }
+
+    #! Gives a sandbox the tenant's isolation domain, if this Qore has isolation domains
+    static SandboxManager domainSandbox(string domain, *SandboxManager sm) {
+        sm = sm ?? new SandboxManager();
+        if (V8::SandboxCapture::hasIsolationDomains()) {
+            call_object_method(sm, "setIsolationDomain", domain);
+        }
+        return sm;
+    }
+
+    private hash<auto> run(Program p, string tenant, string action, auto req, *hash<auto> ctx, *string app) {
+        return p.callFunction("run", {"tenant": tenant, "conn_opts": {"url": "https://api.example.com"}} + ctx,
+            action, req, app);
+    }
+
+    runTest() {
+        Program p = tenant("a");
+        hash<auto> rv = run(p, "a", "echo", {"x": 1});
+        assertEq({"req": {"x": 1}, "url": "https://api.example.com"}, rv.result, sprintf("%y", rv));
+    }
+
+    contextTest() {
+        Program p = tenant("a");
+        assertEq("TS-TENANT-ERROR", run(p, "", "echo", 1).err);
+        assertEq("TS-TENANT-ERROR", run(p, "a", "no-such-action", 1).err);
+    }
+
+    isolationTest() {
+        Program p = tenant("a");
+        assertEq({"v": 42}, run(p, "a", "set-global", {"v": 42}).result);
+        assertEq({"v": 42}, run(p, "a", "get-global", NOTHING).result);
+        # another tenant, in its own program and isolation domain, does not have tenant a's global
+        assertEq({"v": NOTHING}, run(tenant("b"), "b", "get-global", NOTHING).result);
+        # the runner keeps a tenant's state by its tenant, not by the calling program: another caller of tenant a has it
+        assertEq({"v": 42}, run(tenant("a"), "a", "get-global", NOTHING).result);
+    }
+
+    callerDomainTest() {
+        if (!V8::SandboxCapture::hasIsolationDomains()) {
+            testSkip("this Qore has no isolation domains");
+        }
+        # a sandbox with no isolation domain: refused, fail closed
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(TenantSource, "no-domain");
+        p.setSandboxManager(new SandboxManager());
+        hash<auto> rv = run(p, "a", "echo", {"x": 1});
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("no isolation domain", rv.desc);
+        # the isolation domain of another tenant: refused
+        rv = run(tenant("a"), "b", "echo", {"x": 1});
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+        assertRegex("not the isolation domain", rv.desc);
+    }
+
+    unsupportedTest() {
+        Program p = tenant("a");
+        hash<auto> info = TenantActionRunner::getActionInfo(<TsTenantContext>{"tenant": "a"}, App, "echo");
+        assertTrue(info.tenant_available);
+        # fs is a builtin of the load phase: the program is sealed before the tenant's first call, so it is refused
+        hash<auto> rv = run(p, "a", "need-fs", NOTHING);
+        assertEq("TS-TENANT-APP-UNSUPPORTED", rv.err, sprintf("%y", rv));
+        assertEq({"app": App, "builtin": "fs"}, rv.arg);
+        # the app is now marked unavailable for tenants, and refused for every tenant
+        info = TenantActionRunner::getActionInfo(<TsTenantContext>{"tenant": "a"}, App, "echo");
+        assertFalse(info.tenant_available);
+        assertEq("fs", info.tenant_unsupported_builtin);
+        assertEq("TS-TENANT-APP-UNSUPPORTED", run(tenant("z"), "z", "echo", NOTHING).err);
+    }
+
+    errorTest() {
+        Program p = tenant("c");
+        hash<auto> rv = run(p, "c", "throw", NOTHING);
+        assertEq("TS-TENANT-ACTION-ERROR", rv.err, sprintf("%y", rv));
+        assertEq("boom", rv.desc);
+        assertNothing(rv.arg);
+    }
+
+    egressAllowedTest() {
+        Program p = tenant("e", netSandbox());
+        hash<auto> rv = run(p, "e", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)},
+            {"connection": "conn-e"});
+        assertEq({"status": 200, "body": "hello"}, rv.result, sprintf("%y", rv));
+        # the meter got the request, with no credentials
+        AutoLock al(meter_lock);
+        *hash<auto> m = (select metered, $1.tenant == "e")[0];
+        assertEq("conn-e", m.connection);
+        assertEq(5, m."in");
+    }
+
+    egressPrivateTest() {
+        Program p = tenant("f", netSandbox(True));
+        string url = sprintf("http://127.0.0.1:%d/hello", port);
+        hash<auto> rv = run(p, "f", "fetch-url", {"url": url});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+        rv = run(p, "f", "axios-url", {"url": url});
+        if (rv.result.skip) {
+            testSkip("axios is not available (QORE_V8_TEST_NODE_MODULES)");
+        }
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    egressDnsTest() {
+        Program p = tenant("g", netSandbox(True));
+        # localhost resolves to a loopback address: the address connected to is checked
+        hash<auto> rv = run(p, "g", "fetch-url", {"url": sprintf("http://localhost:%d/hello", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    egressRedirectTest() {
+        # the first hop (127.0.0.1) is allowed, the redirect to 10.255.255.1 is not
+        Program p = tenant("h", netSandbox(False, "10.0.0.0/8"));
+        hash<auto> rv = run(p, "h", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/redirect-private", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    egressHookTest() {
+        # the sandbox allows it; the hook refuses it
+        Program p = tenant("i", netSandbox());
+        hash<auto> rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hook-deny", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+        # the hook allows it; the sandbox refuses it
+        p = tenant("i", netSandbox(True));
+        rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    private hash<auto> rec(Program p, string tenant, string action, hash<auto> req) {
+        return run(p, tenant, action, req, NOTHING, "tenant-records");
+    }
+
+    recordTest() {
+        Program p = tenant("r1");
+        hash<auto> rv = rec(p, "r1", "create", {"table": "items", "records": ({"id": 1, "name": "a"}, {"id": 2,
+            "name": "b"})});
+        assertNothing(rv.err, sprintf("%y", rv));
+        assertEq(({"id": 1, "name": "a"}, {"id": 2, "name": "b"}), rv.result);
+        # the app filters with the converted search expression; the tenant's own connection options
+        rv = rec(p, "r1", "search", {"table": "items", "where": {"name": "b"}});
+        assertEq(({"id": 2, "name": "b", "url": "https://api.example.com"},), rv.result, sprintf("%y", rv));
+        assertEq({"id": 1, "name": "a", "url": "https://api.example.com"},
+            rec(p, "r1", "search-single", {"table": "items", "where": {"id": 1}}).result);
+        assertEq(("updated", "inserted"), rec(p, "r1", "upsert", {"table": "items", "records": ({"id": 2,
+            "name": "c"}, {"id": 3, "name": "d"})}).result);
+        assertEq(3, rec(p, "r1", "update", {"table": "items", "set": {"name": "x"}}).result);
+        # another tenant, in its own program and isolation domain, does not see the records of r1
+        assertEq((), rec(tenant("r2"), "r2", "search", {"table": "items"}).result);
+        # the records are r1's, not the calling program's: another caller of tenant r1 sees them
+        assertEq(3, rec(tenant("r1"), "r1", "search", {"table": "items"}).result.size());
+        assertEq(3, rec(p, "r1", "delete", {"table": "items"}).result);
+        assertEq((), rec(p, "r1", "search", {"table": "items"}).result);
+        # an invalid request
+        assertEq("TS-TENANT-ERROR", rec(p, "r1", "search", {}).err);
+        assertEq("TS-TENANT-ACTION-ERROR", rec(p, "r1", "search", {"table": "other"}).err);
+    }
+
+    recordLimitTest() {
+        Program p = tenant("r3");
+        list<hash<auto>> recs = map ("id": $1, "name": "n"), xrange(10001);
+        hash<auto> rv = rec(p, "r3", "create", {"table": "items", "records": recs});
+        assertEq("TS-TENANT-LIMIT", rv.err, sprintf("%y", rv.err));
+        assertEq({"limit": "records", "max": 10000}, rv.arg);
+    }
+
+    private TypeScriptAppRestConnection conn(string name) {
+        return new TypeScriptAppRestConnection({"name": name, "url": "tsrest-tenant-conn://conn.example.com",
+            "opts": {"token": "x"}});
+    }
+
+    #! returns the Program of the tenant that the host's resolver gives a connection: "conn-" + its name
+    private Program connTenant(string conn_name) {
+        Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
+        p.parse(ConnSource, "conn-tenant");
+        p.setSandboxManager(TenantActionRunnerTest::domainSandbox("conn-" + conn_name));
+        return p;
+    }
+
+    dispatchKindsTest() {
+        Program p = connTenant("k");
+        TypeScriptAppRestConnection c = conn("k");
+        hash<auto> rv = p.callFunction("kind", c, "action");
+        # the provider's own context of the call: the options of the connection that the caller uses
+        assertEq({"where": "restricted", "url": "https://conn.example.com"}, rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "allowed");
+        assertEq(("restricted",), rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "option");
+        assertTrue(rv.result.contains("dep_restricted"), sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "type");
+        assertEq(("f_restricted",), rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "record");
+        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, rv.result, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "oauth");
+        assertEq("restricted", rv.result, sprintf("%y", rv));
+        AutoLock al(meter_lock);
+        assertTrue(resolved.contains("k"));
+    }
+
+    dispatchFailClosedTest() {
+        hash<auto> rv = connTenant("no-ctx").callFunction("kind", conn("no-ctx"), "action");
+        assertEq("TS-TENANT-ERROR", rv.err, sprintf("%y", rv));
+    }
+
+    connectionUpdateTest() {
+        hash<auto> rv = connTenant("u").callFunction("kind", conn("u"), "refresh");
+        assertEq({"ok": True}, rv.result, sprintf("%y", rv));
+        AutoLock al(meter_lock);
+        assertEq(({"conn": "u", "update": {"token": "new-restricted"}},), (select conn_updates, $1.conn == "u"));
+    }
+
+    trustedCallerTest() {
+        # no sandbox, and a connection that the host's resolver gives no tenant: the module's own pool runs the call,
+        # never a tenant's program
+        AbstractDataProvider prov = conn("trusted").getDataProvider().getChildProviderEx("info");
+        assertEq("full", prov.doRequest().where);
+        AutoLock al(meter_lock);
+        assertTrue(resolved.contains("trusted"), "the host decides from the connection");
+    }
+
+    trustedTenantConnectionTest() {
+        # trusted code (a host's REST handler, flow or test engine) calls for a connection that the host's resolver
+        # gives a tenant: this host has given no sandbox for such calls, so the call is refused rather than made
+        # with no sandbox (the calls themselves: tenant-trusted-sandbox.qtest)
+        TypeScriptAppRestConnection c = conn("host-thread");
+        AbstractDataProvider info = c.getDataProvider().getChildProviderEx("info");
+        assertThrows("TS-TENANT-HOOK-MISSING", "no sandbox for the tenant calls of trusted code", \info.doRequest());
+        # a connection that its host marked as a sandboxed caller's, which the resolver gives no context: refused,
+        # never run as trusted code
+        TypeScriptAppRestConnection marked = conn("trusted-marked");
+        marked.internal_info.sandboxed = True;
+        assertThrows("TS-TENANT-ERROR", "gives it no tenant context",
+            \marked.getDataProvider().getChildProviderEx("info").doRequest());
+        AutoLock al(meter_lock);
+        assertTrue(resolved.contains("host-thread"));
+    }
+
+    inProcessPoolTest() {
+        TypeScriptActionInterface::startInProcessServerOnDemand(catalogue_pool, 2);
+        on_exit TypeScriptActionInterface::shutdownInProcessServer();
+        # a trusted caller uses the pool
+        assertEq("full", conn("ip-trusted").getDataProvider().getChildProviderEx("info").doRequest().where);
+        Program p = connTenant("ip");
+        TypeScriptAppRestConnection c = conn("ip");
+        hash<auto> rv = p.callFunction("kind", c, "action");
+        assertEq("restricted", rv.result.where, sprintf("%y", rv));
+        rv = p.callFunction("kind", c, "record");
+        assertEq({"id": 7, "name": "n", "url": "https://conn.example.com"}, rv.result, sprintf("%y", rv));
+        # the in-process server is not given to sandboxed code (qoretechnologies/qore#6749)
+        rv = p.callFunction("kind", c, "pool");
+        assertEq("SANDBOX-REGISTRATION-ERROR", rv.err, sprintf("%y", rv));
+    }
+
+    timeoutTest() {
+        Program p = tenant("d");
+        # the tenant's program is built by its first call; the time limit is timed on a call that finds it built
+        assertEq({"req": NOTHING, "url": "https://api.example.com"}, run(p, "d", "echo", NOTHING).result);
+        # the action never returns by itself: the call returns only because the watchdog terminated the program, so no
+        # time bound is checked (one would depend on the speed of the machine)
+        hash<auto> rv = run(p, "d", "spin", NOTHING, {"timeout": 500});
+        assertEq("TS-TENANT-TIMEOUT", rv.err, sprintf("%y", rv));
+        assertEq({"timeout_ms": 500}, rv.arg);
+        # the terminated program was discarded: the tenant's next call gets a new program, which works
+        assertEq({"req": NOTHING, "url": "https://api.example.com"}, run(p, "d", "echo", NOTHING).result);
+    }
+}

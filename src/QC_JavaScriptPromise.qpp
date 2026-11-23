@@ -77,6 +77,7 @@ const Rejected = qore(QoreValue(v8::Promise::PromiseState::kRejected));
 qclass JavaScriptPromise [
     arg=QoreV8Promise* p;
     ns=V8;
+    dom=EMBEDDED_LOGIC,UNCONTROLLED_API;
     vparent=JavaScriptObject;
     internal_members=auto promise_refs;
 ];

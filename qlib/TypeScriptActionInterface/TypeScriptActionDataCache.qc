@@ -95,7 +95,7 @@ public class TypeScriptDataCache {
         const MaxAge = 10m;
     }
 
-    private {
+    private:internal {
         Mutex global();
         hash<string, CacheEntry> cache;
         #! The app each entry was looked up for, so an app's entries can be dropped; see clearApp()
@@ -136,7 +136,7 @@ return entry.getValue();
 
     #! Drops every cached value of an app, so its next lookups are made again
     /** For an app that has just created a value its cached choices would otherwise leave out for up to
-        @ref MaxAge, such as a channel created from a channel option (qorus#683).  A lookup in flight keeps its
+        \c MaxAge, such as a channel created from a channel option (qorus#683).  A lookup in flight keeps its
         callers; the next caller starts a new one.
 
         @param app the app whose cached values are dropped
@@ -153,7 +153,7 @@ return entry.getValue();
         }
     }
 
-    private *CacheEntry getIntern(string key) {
+    private:internal *CacheEntry getIntern(string key) {
         # expire all outdated entries
         {
             date cutoff = now_us() - MaxAge;

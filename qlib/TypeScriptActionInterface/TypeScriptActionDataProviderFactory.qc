@@ -26,7 +26,8 @@
 public namespace TypeScriptActionInterface {
 #! The TypeScript action library data provider factory
 public class TypeScriptActionDataProviderFactory inherits AbstractDataProviderFactory {
-    private {
+    # the class of the root data provider, which is not public (qoretechnologies/qore#7185)
+    private:internal {
         #! Data provider type info
         static Class cls = new Class("TypeScriptActionRootDataProvider");
 
