@@ -1,0 +1,259 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+#
+# A Shopify connection with an expiring offline token (qoretechnologies/qorus#1125), with the connection metadata
+# the catalogue ships (ts/src/apps/shopify/rest.ts, compiled) against a local server that answers as Shopify does:
+# token answers with five fields and no "token_type", and an Admin API that takes the token in
+# "X-Shopify-Access-Token" only.  The connection asks for an expiring token beside the token arguments Qorus adds,
+# takes the answer of the code exchange and of a refresh, and after each of them the catalogue's post-auth-code hook
+# gives the connection Shopify's header for the new token, so the ping of the connection as it is then stored passes.
+#
+# Run with QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT, QORE_TYPESCRIPT_ACTION_SCRIPTS and
+# QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS unset, as test/hubspot-oauth.qtest: the app is registered from the compiled
+# metadata here, and an installed catalogue would register it too.
+%modern
+%requires qore >= 3.0
+%requires QUnit
+%requires v8
+%requires TypeScriptActionInterface
+%requires ConnectionProvider
+%requires RestClient
+%requires Mime
+%requires json
+%requires HttpServer
+%exec-class ShopifyOAuthTest
+
+#! The local Shopify: the token endpoint and the one Admin API resource the connection's ping reads
+class ShopifyFixtureHandler inherits AbstractHttpRequestHandler {
+    public {
+        #! the form arguments of every token request, in the order received
+        static list<hash<auto>> token_requests = ();
+        #! the value of X-Shopify-Access-Token of every Admin API request, in the order received
+        static list<auto> admin_tokens = ();
+        #! the access tokens the Admin API accepts: the one a connection starts with, and every one issued
+        static hash<string, bool> valid = {"first-token": True};
+        static int issued = 0;
+        static Mutex m();
+    }
+
+    hash<HttpResponseInfo> handleRequest(hash<auto> cx, hash<auto> hdr, *data body) {
+        if (hdr.path =~ /^\/?admin\/oauth\/access_token/) {
+            hash<auto> args = mime_parse_form_urlencoded_string(body);
+            int n;
+            {
+                AutoLock al(m);
+                token_requests += args;
+                n = ++issued;
+                valid{"access-" + n} = True;
+            }
+            # as Shopify answers the code exchange and a refresh: no "token_type"
+            return makeResponse(200, make_json({
+                "access_token": "access-" + n,
+                "scope": "read_products",
+                "expires_in": 3600,
+                "refresh_token": "refresh-" + n,
+                "refresh_token_expires_in": 7776000,
+            }), {"Content-Type": MimeTypeJson});
+        }
+        if (hdr.path =~ /^\/?admin\/api\/[0-9]{4}-[0-9]{2}\/shop\.json/) {
+            *string token = hdr."x-shopify-access-token";
+            bool ok;
+            {
+                AutoLock al(m);
+                admin_tokens += token;
+                ok = token.val() && valid{token};
+            }
+            # Shopify does not read the token from Authorization: without its own header the request is refused
+            if (!ok) {
+                return makeResponse(401, make_json({"errors": "[API] Invalid API key or access token "
+                    "(unrecognized login or wrong password)"}), {"Content-Type": MimeTypeJson});
+            }
+            return makeResponse(200, make_json({"shop": {"myshopify_domain": "fixture.myshopify.com"}}),
+                {"Content-Type": MimeTypeJson});
+        }
+        return makeResponse(404, make_json({"errors": "Not Found"}), {"Content-Type": MimeTypeJson});
+    }
+
+    #! Forgets the requests received and every token issued
+    static reset() {
+        AutoLock al(m);
+        token_requests = ();
+        admin_tokens = ();
+        valid = {"first-token": True};
+        issued = 0;
+    }
+}
+
+class ShopifyOAuthTest inherits QUnit::Test {
+    private {
+        HttpServer server;
+        #! the plain listener, of the token endpoint
+        string url;
+        #! the TLS listener, of the Admin API
+        string rest_url;
+        JavaScriptProgramPool pool;
+
+        #! the compiled connection metadata of the catalogue's Shopify app
+        const Metadata = "/../ts/dist/apps/shopify/rest.js";
+    }
+
+    constructor() : Test("Shopify expiring offline token", "1.0") {
+        if (!hstat(get_script_dir() + Metadata)) {
+            addTestCase("Shopify catalog fixture", sub () {
+                testSkip("build the matching TypeScript catalog to run the Shopify OAuth fixture");
+            });
+            set_return_value(main());
+            return;
+        }
+        addTestCase("the catalogue's connection asks for an expiring token beside Qorus's token arguments",
+            \settingsTest());
+        addTestCase("the answer of the code exchange gives the connection its token and Shopify's header for it",
+            \exchangeAnswerTest());
+        addTestCase("a refresh in the token's last minutes gives the connection the new pair and its header",
+            \refreshTest());
+        addTestCase("a ping with a token Shopify does not accept fails", \refusedPingTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        if (!hstat(get_script_dir() + Metadata)) {
+            return;
+        }
+        server = new HttpServer();
+        server.setDefaultHandler("fixture", new ShopifyFixtureHandler());
+        int port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0}).port;
+        url = sprintf("http://127.0.0.1:%d", port);
+        # an app's connection uses HTTPS; the certificate exists only in this process
+        string pem = backquote("openssl req -config /dev/null -x509 -newkey rsa:2048 -keyout /dev/stdout "
+            "-out /dev/stdout -days 1 -nodes -subj /CN=localhost 2>/dev/null");
+        SSLPrivateKey key((pem =~ x/(-----BEGIN PRIVATE KEY-----[\s\S]+?-----END PRIVATE KEY-----)/)[0]);
+        SSLCertificate cert((pem =~ x/(-----BEGIN CERTIFICATE-----[\s\S]+?-----END CERTIFICATE-----)/)[0]);
+        port = server.addListener(<HttpListenerOptionInfo>{"node": "127.0.0.1", "service": 0,
+            "key": key, "cert": cert, "enable_h3": False}).port;
+        rest_url = sprintf("https://127.0.0.1:%d", port);
+
+        # the app as the catalogue registers it, with its REST options and its post-auth-code hook, and only its
+        # three URLs moved to the local server
+        string script = "var exports = {};\n"
+            "async function runWithTimeout(p, d) { return await (typeof p === 'function' ? p() : p); }\n"
+            "const metadata = require(" + make_json(realpath(get_script_dir() + "/../ts/dist/apps/shopify"))
+            + " + '/rest');\n"
+            "exports.actionsCatalogue = {registerAppActions: function(api) {\n"
+            "    api.registerApp({name: metadata.SHOPIFY_APP_NAME, display_name: 'Shopify',\n"
+            "        short_desc: 'Shopify fixture', desc: 'Local Shopify fixture', groups: ['Other'],\n"
+            "        logo: 'PHN2Zy8+', logo_file_name: 'fixture.svg', logo_mime_type: 'image/svg+xml',\n"
+            "        rest: Object.assign({}, metadata.getShopifyRestOptions(), {\n"
+            "            url: " + make_json(rest_url) + ",\n"
+            "            oauth2_auth_url: " + make_json(url + "/admin/oauth/authorize") + ",\n"
+            "            oauth2_token_url: " + make_json(url + "/admin/oauth/access_token") + "}),\n"
+            "        rest_modifiers: metadata.getShopifyRestModifiers()});\n"
+            "}};\n";
+        pool = new JavaScriptProgramPool(script, get_script_dir() + "/../ts/shopify-oauth-fixture.js",
+            sub (JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
+                    TypeScriptActionInterface::getInterface());
+            });
+        TypeScriptActionInterface::initApp("Shopify", True);
+    }
+
+    globalTearDown() {
+        delete server;
+    }
+
+    #! Returns a connection as Qorus makes one with a client whose secret it does not hold, beside the options
+    private TypeScriptAppRestConnection connection(*hash<auto> opts) {
+        return new TypeScriptAppRestConnection({"name": "shopify-fixture-" + get_random_string(6),
+            "url": "tsrest-shopify://", "opts": {
+                "shop": "fixture",
+                "oauth2_client_id": "fixture-client",
+                "oauth2_client_secret": "fixture-secret",
+                "oauth2_redirect_url": "https://callback.example.test/oauth",
+                "oauth2_token_args": {"oauth2_app": "Shopify"},
+                "ssl_verify_cert": False,
+            } + opts});
+    }
+
+    #! Returns a client of the connection that adds what it reports for the connection to keep to the hash
+    private TypeScriptAppRestClient client(TypeScriptAppRestConnection conn, reference<hash<auto>> kept) {
+        return new TypeScriptAppRestClient(conn, conn.getRealOptions() + {"url": rest_url,
+            "update_options": sub (hash<auto> new_opts) {
+                kept += new_opts;
+            }}, True);
+    }
+
+    settingsTest() {
+        hash<auto> opts = connection().getConnectionOptions();
+        assertEq({"expiring": 1, "oauth2_app": "Shopify"}, opts.oauth2_token_args);
+        assertEq(url + "/admin/oauth/access_token", opts.oauth2_token_url);
+        assertRegex("^/admin/api/[0-9]{4}-[0-9]{2}/shop\\.json$", opts.ping_path);
+    }
+
+    exchangeAnswerTest() {
+        ShopifyFixtureHandler::reset();
+        hash<auto> kept;
+        # the client holds its connection weakly: the connection stays in scope for as long as the client is used
+        TypeScriptAppRestConnection conn = connection();
+        TypeScriptAppRestClient c = client(conn, \kept);
+        # the answer of a code exchange with expiring=1, as Shopify gave it on 2026-11-23
+        c.gotOAuth2LoginInfo({
+            "access_token": "access-from-code",
+            "scope": "read_products",
+            "expires_in": 3599,
+            "refresh_token": "refresh-from-code",
+            "refresh_token_expires_in": 7775999,
+        });
+        assertEq(("access-from-code", "refresh-from-code"), (kept.token, kept.oauth2_refresh_token));
+        assertTrue(kept.oauth2_token_expiry > now_us() + 50m, "the token's expiry is kept");
+        # the catalogue's hook, in JavaScript, with the token of the answer
+        assertEq({"X-Shopify-Access-Token": "access-from-code"}, kept.ping_headers);
+    }
+
+    refreshTest() {
+        ShopifyFixtureHandler::reset();
+        # two minutes before its token runs out: inside the ten minutes in which the client refreshes
+        hash<auto> stored = {
+            "token": "first-token",
+            "ping_headers": {"X-Shopify-Access-Token": "first-token"},
+            "oauth2_refresh_token": "first-refresh-token",
+            "oauth2_token_expiry": now_us() + 2m,
+        };
+        TypeScriptAppRestConnection conn = connection(stored);
+        hash<auto> kept;
+        TypeScriptAppRestClient c = client(conn, \kept);
+        hash<auto> opts = conn.getConnectionOptions();
+        # the connection's ping, with the header of the token it has
+        hash<auto> info;
+        c.get(opts.ping_path, NOTHING, \info, opts.ping_headers);
+        assertEq(200, info."response-code", "the token it had is still good for this request");
+        assertEq(({
+            "grant_type": "refresh_token",
+            "refresh_token": "first-refresh-token",
+            "client_id": "fixture-client",
+            "client_secret": "fixture-secret",
+            "expiring": "1",
+            "oauth2_app": "Shopify",
+        },), ShopifyFixtureHandler::token_requests, "one refresh, with the app's argument and Qorus's");
+        assertEq(("access-1", "refresh-1"), (kept.token, kept.oauth2_refresh_token));
+        assertTrue(kept.oauth2_token_expiry > now_us() + 50m, "the new token's expiry is kept");
+        assertEq({"X-Shopify-Access-Token": "access-1"}, kept.ping_headers);
+
+        # the connection as it is stored after that: its ping carries the new token in Shopify's header, and no
+        # further token request is made
+        ShopifyFixtureHandler::admin_tokens = ();
+        hash<auto> ping = connection(stored + kept).ping();
+        assertTrue(ping.ok, sprintf("%y", ping - "opts"));
+        assertEq(("access-1",), ShopifyFixtureHandler::admin_tokens);
+        assertEq(1, ShopifyFixtureHandler::token_requests.size());
+    }
+
+    refusedPingTest() {
+        ShopifyFixtureHandler::reset();
+        hash<auto> ping = connection({
+            "token": "a-token-never-issued",
+            "ping_headers": {"X-Shopify-Access-Token": "a-token-never-issued"},
+        }).ping();
+        assertFalse(ping.ok);
+        assertEq(("a-token-never-issued",), ShopifyFixtureHandler::admin_tokens);
+    }
+}
