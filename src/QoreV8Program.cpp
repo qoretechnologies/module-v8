@@ -884,24 +884,42 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // instead of the internal-only `require` function.
 
         // the bootstrap data is removed from the global object before any other code is run
-        QoreStringMaker envstr("const _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
+        // a restricted program's bootstrap is strict from its first line: restricted-bootstrap.js declares itself
+        // strict, but its directive follows this prefix, so it was never a directive (qoretechnologies/qore#7332)
+        QoreStringMaker envstr("%sconst _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
             "const _qoreBoot = globalThis[_qoreBootKey];\n"
-            "delete globalThis[_qoreBootKey];\n"
-            // an exception thrown and not caught in a callback of the event loop (a timer, an I/O callback) would
-            // end the host process: without a listener, Node.js exits.  It is reported as a warning and raised to the
-            // Qore code that runs the event loop, unless the program handles it with its own listener; the listener
-            // is installed on the real process object before any code of the program runs, as a restricted program
-            // gets a minimal process instead (qoretechnologies/qore#7332)
-            "{\n"
+            "delete globalThis[_qoreBootKey];\n", restricted ? "'use strict';\n" : "");
+        // an exception thrown and not caught in a callback of the event loop (a timer, an I/O callback) would end the
+        // host process: without a listener, Node.js exits.  It is recorded, and raised to the Qore code that runs the
+        // event loop, unless the program handles it with its own listener (qoretechnologies/qore#7332).  The listener
+        // is installed on the real process object before any code of the program runs, as a restricted program gets
+        // a minimal process instead.  It runs no code of the program: it neither converts nor inspects the thrown
+        // value (which could run the program's code and throw, and a throw in the listener ends the process), it is
+        // strict, so that no stack trace of the program's code reveals the process object as its receiver, and a
+        // failure in it is ignored.  A trusted program's exception is reported by a warning with a fixed text; a
+        // restricted program's output is dropped, so it reports none
+        envstr.concat(
+            "(function () {\n"
+            "  'use strict';\n"
             "  const _qoreProcess = process;\n"
             "  const _qoreUncaught = _qoreBoot.uncaught;\n"
-            "  _qoreProcess.on('uncaughtException', (err) => {\n"
-            "    if (_qoreProcess.listenerCount('uncaughtException') === 1) {\n"
-            "      _qoreUncaught(err);\n"
-            "      _qoreProcess.emitWarning(err instanceof Error ? err : new Error(String(err)));\n"
+            "  const _qoreWarn = ");
+        envstr.concat(restricted ? "false" : "true");
+        envstr.concat(";\n"
+            "  _qoreProcess.on('uncaughtException', function (err) {\n"
+            "    'use strict';\n"
+            "    try {\n"
+            "      if (_qoreProcess.listenerCount('uncaughtException') === 1) {\n"
+            "        _qoreUncaught(err);\n"
+            "        if (_qoreWarn) {\n"
+            "          _qoreProcess.emitWarning('an exception was thrown and not caught in a callback of the event "
+                "loop; it is raised to the code that runs the loop');\n"
+            "        }\n"
+            "      }\n"
+            "    } catch (e) {\n"
             "    }\n"
             "  });\n"
-            "}\n");
+            "})();\n");
         if (restricted) {
             // the program is built by restricted-bootstrap.js: it gets neither the host's environment nor its stdio
             envstr.concat(QORE_V8_RESTRICTED_BOOTSTRAP);
