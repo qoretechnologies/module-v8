@@ -170,6 +170,21 @@ void QoreV8Program::terminate() {
     // the flag is checked by every entry into the program (QoreV8ProgramHelper); valid is not changed here, as it is
     // guarded by the program's lock, which the thread that runs the code can hold
     terminated.store(true);
+    // a forked child does not stop the environment it abandons, and takes no lock that another thread of the parent
+    // could have held when the process was copied
+    if (!qore_v8_forked_child()) {
+        std::lock_guard<std::mutex> guard(env_lock);
+        if (env) {
+            // the environment is stopped, not only the isolate: node::Stop() first marks the environment as
+            // stopping, then terminates the isolate.  Code terminated inside a callback of the event loop (a timer,
+            // an I/O callback) leaves before its callback's async context is popped; the callback scope of an
+            // environment that is not stopping then finds the async-context stack corrupted and exits the process
+            // (qoretechnologies/qore#7284), while one of a stopping environment closes without the check.
+            // node::Stop() may be called from any thread
+            node::Stop(env);
+            return;
+        }
+    }
     if (isolate) {
         isolate->TerminateExecution();
     }
@@ -569,6 +584,42 @@ static v8::MaybeLocal<v8::String> qore_v8_utf8_string(v8::Isolate* isolate, cons
 }
 
 //! envCreated(env): passes the program's new process.env object to the program (the data of the function)
+//! Records an exception thrown and not caught in a callback of the program's event loop (qoretechnologies/qore#7332)
+/** Called by the program's \c uncaughtException listener (see the bootstrap code): without a listener, Node.js ends the
+    host process for such an exception
+*/
+static void qore_v8_uncaught_exception(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    if (info.Length() < 1 || !info.Data()->IsExternal()) {
+        return;
+    }
+    static_cast<QoreV8Program*>(info.Data().As<v8::External>()->Value())->setUncaughtError(info[0]);
+}
+
+void QoreV8Program::setUncaughtError(v8::Local<v8::Value> err) {
+    // the first one is kept: it is the cause of what follows
+    if (uncaught_error.IsEmpty()) {
+        uncaught_error.Reset(isolate, err);
+    }
+}
+
+int QoreV8Program::raiseUncaughtError(ExceptionSink* xsink) {
+    if (uncaught_error.IsEmpty()) {
+        return 0;
+    }
+    v8::Local<v8::Value> err = uncaught_error.Get(isolate);
+    uncaught_error.Reset();
+    if (xsink) {
+        // the exception is raised again under a TryCatch so that it is converted as any JavaScript exception is
+        v8::TryCatch tryCatch(isolate);
+        isolate->ThrowException(err);
+        if (!checkException(xsink, tryCatch)) {
+            xsink->raiseException("JAVASCRIPT-EXCEPTION", "an exception was thrown and not caught in a callback of "
+                "the program's event loop");
+        }
+    }
+    return -1;
+}
+
 static void qore_v8_env_created(const v8::FunctionCallbackInfo<v8::Value>& info) {
     if (info.Length() < 1 || !info[0]->IsObject() || !info.Data()->IsExternal()) {
         return;
@@ -603,12 +654,15 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
     // with which it passes the new process.env object to the program
     v8::Local<v8::Object> env_bridge;
     v8::Local<v8::Function> env_created;
+    // the function with which the program's uncaughtException listener records an uncaught exception
+    v8::Local<v8::Function> uncaught;
     // the functions with which the bootstrap code reads process.stdin and writes process.stdout and process.stderr
     // for a terminal, a pipe or a socket
     v8::Local<v8::Object> stdio_bridge;
     if (!qore_v8_create_env_bridge(isolate, context).ToLocal(&env_bridge)
         || !qore_v8_create_stdio_bridge(isolate, context).ToLocal(&stdio_bridge)
         || !v8::Function::New(context, qore_v8_env_created, v8::External::New(isolate, this)).ToLocal(&env_created)
+        || !v8::Function::New(context, qore_v8_uncaught_exception, v8::External::New(isolate, this)).ToLocal(&uncaught)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "source"),
             source_str).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "filename"),
@@ -619,6 +673,8 @@ int QoreV8Program::setBootstrapData(ExceptionSink* xsink, const v8::TryCatch& tr
             env_created).FromMaybe(false)
         || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "stdio"),
             stdio_bridge).FromMaybe(false)
+        || !data->CreateDataProperty(context, v8::String::NewFromUtf8Literal(isolate, "uncaught"),
+            uncaught).FromMaybe(false)
         || (restricted && setRestrictedBootstrapData(xsink, context, data))
         || !context->Global()->DefineOwnProperty(context, key, data, v8::DontEnum).FromMaybe(false)) {
         if (!*xsink && !checkException(xsink, tryCatch)) {
@@ -828,9 +884,42 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // instead of the internal-only `require` function.
 
         // the bootstrap data is removed from the global object before any other code is run
-        QoreStringMaker envstr("const _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
+        // a restricted program's bootstrap is strict from its first line: restricted-bootstrap.js declares itself
+        // strict, but its directive follows this prefix, so it was never a directive (qoretechnologies/qore#7332)
+        QoreStringMaker envstr("%sconst _qoreBootKey = Symbol.for('" QORE_V8_BOOTSTRAP_KEY "');\n"
             "const _qoreBoot = globalThis[_qoreBootKey];\n"
-            "delete globalThis[_qoreBootKey];\n");
+            "delete globalThis[_qoreBootKey];\n", restricted ? "'use strict';\n" : "");
+        // an exception thrown and not caught in a callback of the event loop (a timer, an I/O callback) would end the
+        // host process: without a listener, Node.js exits.  It is recorded, and raised to the Qore code that runs the
+        // event loop, unless the program handles it with its own listener (qoretechnologies/qore#7332).  The listener
+        // is installed on the real process object before any code of the program runs, as a restricted program gets
+        // a minimal process instead.  It runs no code of the program: it neither converts nor inspects the thrown
+        // value (which could run the program's code and throw, and a throw in the listener ends the process), it is
+        // strict, so that no stack trace of the program's code reveals the process object as its receiver, and a
+        // failure in it is ignored.  A trusted program's exception is reported by a warning with a fixed text; a
+        // restricted program's output is dropped, so it reports none
+        envstr.concat(
+            "(function () {\n"
+            "  'use strict';\n"
+            "  const _qoreProcess = process;\n"
+            "  const _qoreUncaught = _qoreBoot.uncaught;\n"
+            "  const _qoreWarn = ");
+        envstr.concat(restricted ? "false" : "true");
+        envstr.concat(";\n"
+            "  _qoreProcess.on('uncaughtException', function (err) {\n"
+            "    'use strict';\n"
+            "    try {\n"
+            "      if (_qoreProcess.listenerCount('uncaughtException') === 1) {\n"
+            "        _qoreUncaught(err);\n"
+            "        if (_qoreWarn) {\n"
+            "          _qoreProcess.emitWarning('an exception was thrown and not caught in a callback of the event "
+                "loop; it is raised to the code that runs the loop');\n"
+            "        }\n"
+            "      }\n"
+            "    } catch (e) {\n"
+            "    }\n"
+            "  });\n"
+            "})();\n");
         if (restricted) {
             // the program is built by restricted-bootstrap.js: it gets neither the host's environment nor its stdio
             envstr.concat(QORE_V8_RESTRICTED_BOOTSTRAP);
@@ -1027,10 +1116,13 @@ void QoreV8Program::abandonInForkedChild() {
     // the environment, its event loop and the isolate are never freed in the child
     node::CommonEnvironmentSetup* abandoned = setup.release();
     (void)abandoned;
+    // no lock is acquired (as for the program's lock above): another thread of the parent could have held the
+    // environment's lock in terminate() when the process was copied
     env = nullptr;
     forgetHandle(ctx);
     forgetHandle(global);
     forgetHandle(env_object);
+    forgetHandle(uncaught_error);
     for (auto& i : classTemplateCache) {
         forgetHandle(i.second);
     }
@@ -1064,10 +1156,16 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
             restricted_bridge = nullptr;
         }
     }
-    if (env) {
-        node::Stop(env);
-        drainPlatformTasks();
+    // the environment is taken under its lock, so that terminate() in another thread never stops one being freed
+    node::Environment* stop_env;
+    {
+        std::lock_guard<std::mutex> guard(env_lock);
+        stop_env = env;
         env = nullptr;
+    }
+    if (stop_env) {
+        node::Stop(stop_env);
+        drainPlatformTasks();
     }
 
     // Clean up tracked object references (deref QoreObjects wrapped by JS)
@@ -1112,6 +1210,7 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
     ctx.Reset();
     global.Reset();
     env_object.Reset();
+    uncaught_error.Reset();
 }
 
 int QoreV8Program::saveQoreReference(const QoreValue& rv, ExceptionSink& xsink) {
@@ -1440,6 +1539,16 @@ int QoreV8Program::checkSpinValid(ExceptionSink* xsink) {
         }
         return -1;
     }
+    // a terminated program is not used again (as for every other entry into it, QoreV8ProgramHelper): a caller that
+    // waits for a Promise by spinning the event loop gets an error instead of spinning a stopped environment for a
+    // Promise that never settles (qoretechnologies/qore#7284)
+    if (terminated.load()) {
+        if (xsink) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScriptProgram was terminated and can no "
+                "longer be used");
+        }
+        return -1;
+    }
     ++opcount;
     return 0;
 }
@@ -1485,6 +1594,8 @@ int QoreV8Program::spinOnce(ExceptionSink* xsink, bool wait) {
         if (xsink && tryCatch.HasCaught()) {
             checkException(xsink, tryCatch);
             rv = -1;
+        } else if (raiseUncaughtError(xsink)) {
+            rv = -1;
         }
     }
 
@@ -1509,6 +1620,8 @@ int QoreV8Program::spinEventLoop(ExceptionSink* xsink) {
 
         if (xsink && tryCatch.HasCaught()) {
             checkException(xsink, tryCatch);
+            rv = -1;
+        } else if (raiseUncaughtError(xsink)) {
             rv = -1;
         }
     }
