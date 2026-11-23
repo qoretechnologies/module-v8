@@ -845,10 +845,13 @@ class TenantProcessWideStateTest inherits QUnit::Test {
             all{i.key} = results;
         }
         # the state is not public: no code that imports the module can name it, and the members of an object are not
-        # visible outside its class
+        # visible outside its class.  A subclass that reads such a member through a variable of the class's type is
+        # refused when it is parsed by a Qore with qore#7258; a Qore before that parses it, and the member is not
+        # there when the code runs
+        bool parse_refusal = TenantProcessWideStateTest::parseRefusesBaseTypedRead();
         hash<auto> expected;
         foreach string k in (keys cases) {
-            string err = k =~ /of an object/ ? "not readable" : "PARSE-EXCEPTION";
+            string err = k =~ /of an object/ && !parse_refusal ? "not readable" : "PARSE-EXCEPTION";
             expected{k} = {"tenant-a": err, "tenant-b": err};
         }
         assertEq(expected, all);
@@ -1207,6 +1210,22 @@ class TenantProcessWideStateTest inherits QUnit::Test {
             "conn": host_conn,
             "appinfo": TypeScriptActionInterface::getInitializedRecordBasedAppInfo(CatalogueRecordApp),
             "app": DataProviderActionCatalog::getAppEx(CatalogueApp), "objects": objects};
+    }
+
+    #! True if this Qore refuses a subclass's read of a private:internal member of its base class through a variable
+    #! of the base class's type when it parses the read (qore#7258), False if it parses the read
+    private static bool parseRefusesBaseTypedRead() {
+        Program p(PO_NEW_STYLE);
+        try {
+            p.parse("class Base { private:internal { int m = 1; } }\n"
+                "class Sub inherits Base { static bool peek(Base b) { return exists b.m; } }\n", "base-typed-read");
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err != "PARSE-EXCEPTION") {
+                rethrow;
+            }
+            return True;
+        }
+        return False;
     }
 
     #! Returns the source of a Program whose \c run() function runs the given case and returns its result or error
