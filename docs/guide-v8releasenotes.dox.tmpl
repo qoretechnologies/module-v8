@@ -50,6 +50,10 @@
       use their own connection's REST client and credentials; a request could be made with the client of another
       connection that made a request of the same API path at the same time
       (<a href="https://github.com/qoretechnologies/qore/issues/7185">issue 7185</a>)
+    - the example custom app ("Testing External App", \c External-app) is no longer built or shipped, so it no
+      longer appears in every installation's app catalogue; the example of the custom app format is kept unbuilt in
+      \c ts/examples/customApps in the source repository.  A build or a \c CUSTOM_APPS_DIR without a custom apps folder loads no custom apps
+      instead of failing
     - an app option can name the action that creates its values in \c metadata.create_action (\c action,
       \c value_field and the optional \c display_name_field), so a value can be created from the option's form; the
       Slack channel options name \c create_channel.  When such an action succeeds, the app's cached allowed values
