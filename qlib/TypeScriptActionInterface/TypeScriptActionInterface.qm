@@ -277,6 +277,32 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       and enforce startup and call deadlines. See @ref typescriptactioninterface_time_limits.
     - Reference-data failures propagate their provider error. Failed authorization and connection errors
       can be handled by callers. See @ref typescriptactioninterface_reference_data.
+    - An app's OAuth2 token arguments (\c oauth2_token_args in its REST options) go with a connection's own
+      instead of being replaced by them, so an argument of the provider's that the app declares, such as Shopify's
+      \c expiring, is sent for a connection whose token arguments Qorus has added to
+      (qoretechnologies/qorus#1125).
+    - A token answer that names no token type is taken as a token of the type the client uses instead of being
+      refused with \c REST-LOGIN-ERROR, so an expiring Shopify token can be refreshed
+      (qoretechnologies/qorus#1125).
+    - The ping of an app's connection uses a client of the module,
+      @ref TypeScriptActionInterface::TypeScriptAppRestClientIo "TypeScriptAppRestClientIo", which does not refuse
+      a token answer that names no token type with \c OAUTH2-ERROR.  The ping is what refreshes the token of a
+      monitored connection, so a connection with an expiring Shopify token was down from the token's last ten
+      minutes on (qoretechnologies/qorus#1125).
+    - An OAuth2 app can name the header of its token with \c token_api_key_header.  The client of its
+      connections' ping sends every token it gets in that header, and
+      @ref TypeScriptActionInterface::TypeScriptAppRestClient "TypeScriptAppRestClient" keeps the token as an OAuth2
+      token, refreshes it, and sets the header when it sends a request (a polling or streaming request that makes
+      the refresh itself still carries the header of the token before).  A header of that name among a
+      connection's \c ping_headers is dropped when the connection is built.  The Shopify app names its
+      header this way instead of copying the token into \c ping_headers with a post-auth-code function: the ping
+      replaces a token on a thread where such a function cannot be called, so the copy stayed that of the token
+      before (qoretechnologies/qorus#1125).
+    - The messages about a token answer and about the options an app's post-auth call adds name the fields and the
+      options and no longer print their values, the \c INFO messages of a call through the child process no
+      longer print its arguments or its answer, and the error for a call that cannot be serialized names its
+      arguments only: they put a connection's access token and refresh token into the host's log
+      (qoretechnologies/qorus#1125).
 
     @section TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
     - Added support for Google apps.

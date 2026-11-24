@@ -1526,7 +1526,9 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
                 throw "CMD-ERROR", sprintf("Expecting \"cmd\" as a string; got %y", v.cmd.fullType());
             }
 
-            info("Received from PID %d: %y", pid, v);
+            # the command only: an answer can hold a connection's token, as the answer of a post-auth call can;
+            # the answers are in the module's debug messages
+            info("Received from PID %d: %y", pid, v.cmd);
             break;
         }
         if (v.cmd == CC_ERR) {

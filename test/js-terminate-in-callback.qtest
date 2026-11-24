@@ -107,8 +107,9 @@ for (int i = 0; i < 50; ++i) {
             counts.unlock();
         } catch (hash<ExceptionInfo> ex) {
             counts.lock();
-            # the program was destroyed first
-            if (ex.err == \"OBJECT-INCOMPATIBLE\") {
+            # the program was destroyed first: the call came while it was being destroyed (OBJECT-INCOMPATIBLE) or
+            # after that (OBJECT-ALREADY-DELETED), which is where a thread that is scheduled late arrives
+            if (ex.err == \"OBJECT-INCOMPATIBLE\" || ex.err == \"OBJECT-ALREADY-DELETED\") {
                 ++deleted;
             } else {
                 other += sprintf(\"%s: %s\", ex.err, ex.desc);
