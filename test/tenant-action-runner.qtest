@@ -22,6 +22,13 @@ class EgressHandler inherits AbstractHttpRequestHandler {
         if (hdr.path =~ /redirect-private/) {
             return makeResponse(302, "", {"Location": "http://10.255.255.1/secret"});
         }
+        # a 307 redirect keeps the method and the body: the request is sent again to the location
+        if (hdr.path =~ /redirect-307-private/) {
+            return makeResponse(307, "", {"Location": "http://10.255.255.1/secret"});
+        }
+        if (hdr.path =~ /redirect-307/) {
+            return makeResponse(307, "", {"Location": "/hello"});
+        }
         return makeResponse(200, "hello", {"Content-Type": MimeTypeText});
     }
 }
@@ -119,6 +126,7 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
             \trustedTenantConnectionTest());
         addTestCase("with the module's in-process pool, a sandboxed caller's calls still run in its program",
             \inProcessPoolTest());
+        addTestCase("the meter gets the bytes that were sent: none for a refused request", \egressMeterTest());
         # last: the app is refused for every tenant once an action needs a builtin that tenants do not get
         addTestCase("a builtin that tenants do not get", \unsupportedTest());
         set_return_value(main());
@@ -326,6 +334,50 @@ auto sub kind(TypeScriptActionInterface::TypeScriptAppRestConnection conn, strin
         p = tenant("i", netSandbox(True));
         rv = run(p, "i", "fetch-url", {"url": sprintf("http://127.0.0.1:%d/hello", port)});
         assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+    }
+
+    #! returns the meter's records of a tenant
+    private list<hash<auto>> meteredFor(string tenant) {
+        AutoLock al(meter_lock);
+        return (select metered, $1.tenant == tenant) ?? ();
+    }
+
+    #! the meter gets the bytes that left the host: none for a request that the host or the sandbox refused
+    /** (qoretechnologies/qore#7359) A request that is refused sends nothing, so it is metered as 0 bytes out (David,
+        2026-11-23: a refused attempt is not egress); a body that a 307 redirect sends again counts for each request
+        that sent it, and the hops sent before a refused one count.
+    */
+    egressMeterTest() {
+        string body = "0123456789";
+        string url = sprintf("http://127.0.0.1:%d/hello", port);
+
+        # an allowed request: the body out, the response in
+        hash<auto> rv = run(tenant("m1", netSandbox()), "m1", "post-url", {"url": url, "body": body});
+        assertEq({"status": 200, "body": "hello"}, rv.result, sprintf("%y", rv));
+        assertEq(({"out": 10, "in": 5},), (map $1{"out", "in"}, meteredFor("m1")), "allowed");
+
+        # the host's egress policy refuses it
+        rv = run(tenant("m2", netSandbox()), "m2", "post-url", {"url": sprintf("http://127.0.0.1:%d/hook-deny", port),
+            "body": body});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+        assertEq(({"out": 0, "in": 0},), (map $1{"out", "in"}, meteredFor("m2")), "refused by the egress policy");
+
+        # the caller's sandbox refuses it (a private address)
+        rv = run(tenant("m3", netSandbox(True)), "m3", "post-url", {"url": url, "body": body});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+        assertEq(({"out": 0, "in": 0},), (map $1{"out", "in"}, meteredFor("m3")), "refused by the sandbox");
+
+        # a 307 redirect: the body is sent to both locations
+        rv = run(tenant("m4", netSandbox()), "m4", "post-url", {"url": sprintf("http://127.0.0.1:%d/redirect-307",
+            port), "body": body});
+        assertEq({"status": 200, "body": "hello"}, rv.result, sprintf("%y", rv));
+        assertEq(({"out": 20, "in": 5},), (map $1{"out", "in"}, meteredFor("m4")), "a 307 redirect");
+
+        # a 307 redirect to a refused location: only the first request was sent
+        rv = run(tenant("m5", netSandbox(False, "10.0.0.0/8")), "m5", "post-url",
+            {"url": sprintf("http://127.0.0.1:%d/redirect-307-private", port), "body": body});
+        assertEq("TS-TENANT-EGRESS-DENIED", rv.err, sprintf("%y", rv));
+        assertEq(({"out": 10, "in": 0},), (map $1{"out", "in"}, meteredFor("m5")), "a redirect to a refused location");
     }
 
     private hash<auto> rec(Program p, string tenant, string action, hash<auto> req) {
