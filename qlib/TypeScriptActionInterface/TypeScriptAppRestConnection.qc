@@ -28,6 +28,9 @@ public namespace TypeScriptActionInterface {
 public class TypeScriptAppRestClient inherits RestClient {
     private {
         TypeScriptAppRestConnection conn;
+
+        #! The header in which the token of an OAuth2 connection is sent beside \c Authorization, if it has one
+        *string token_header;
     }
 
     # the calls of the app are not readable by subclasses (qoretechnologies/qore#6749)
@@ -38,15 +41,50 @@ public class TypeScriptAppRestClient inherits RestClient {
 
     #! calls the base class HTTPClient constructor and optionally connects to the REST server
     constructor(TypeScriptAppRestConnection conn, hash<auto> opts, *softbool do_not_connect)
-            : RestClient(opts, True) {
+            : RestClient(TypeScriptAppRestClient::getRestClientOptions(opts), True) {
         self.conn := conn;
         post_auth = TsaiProcessState::getPostAuthCall(conn.getAppName());
         post_auth_code = TsaiProcessState::getPostAuthCodeCall(conn.getAppName());
+        if (TypeScriptAppRestClient::hasOAuth2TokenHeader(opts)) {
+            token_header = opts.token_api_key_header;
+            # the header that carries the token is a credential, as it is for RestClient when it is given the option
+            addSensitiveHeaders(token_header);
+        }
 
         if (!do_not_connect) {
             checkLogin();
             connect();
         }
+    }
+
+    #! Sends the client's token in the token header of an OAuth2 connection
+    /** Called for a request when it is sent, also when it is sent again after a refresh or a refusal, so the
+        header has the token the client holds at that moment (see getRestClientOptions()).  \c RestClient signs a
+        polling or a streaming request once: if such a request makes the refresh, it still carries the header of
+        the token before.
+
+        A subclass that signs requests itself calls this method first.
+    */
+    private signRequest(string method, *string path, *data body, reference<hash<auto>> hdr) {
+        if (token_header && (*string token = getToken())) {
+            hdr{token_header} = token;
+        }
+    }
+
+    #! Returns @ref True if the options are those of an OAuth2 connection whose token is sent in a header of its own
+    private static bool hasOAuth2TokenHeader(hash<auto> opts) {
+        return opts.token_api_key_header.val() && opts.oauth2_grant_type.val() && opts.oauth2_grant_type != "none";
+    }
+
+    #! Returns the options for the \c RestClient constructor
+    /** \c RestClient takes a token that comes with \c token_api_key_header as an API key: it sends it in that
+        header and keeps no token, refresh token or expiry, so it could not refresh the token of an OAuth2
+        connection.  For such a connection the option is kept from it; the token is then kept as an OAuth2 token,
+        and signRequest() sends it in the header as well.  \c RestClientIo, the client of the connection's ping,
+        does both by itself.
+    */
+    private static hash<auto> getRestClientOptions(hash<auto> opts) {
+        return TypeScriptAppRestClient::hasOAuth2TokenHeader(opts) ? opts - "token_api_key_header" : opts;
     }
 
     #! Called when OAuth2 login information has been received
@@ -165,6 +203,10 @@ hash<auto> metadata = client.introspectOAuth2Token(
 
     #! Copies a client whose constructor also requires the TypeScript connection
     private AbstractRestClient copySelf(hash<auto> opts) {
+        if (token_header) {
+            # not among the options that RestClient saved: getRestClientOptions() kept it from it
+            opts.token_api_key_header = token_header;
+        }
         RestClient copy = cast<RestClient>(Class::getClass(self).newObject(conn, opts, True));
         if (alt_token_signer) {
             copy.setAltTokenSigner(alt_token_signer, alt_token_signer_header);
@@ -218,6 +260,45 @@ hash<auto> metadata = client.introspectOAuth2Token(
             setURL(AbstractConnection::getRealUrl(config.url, conn.getConnectionSchemeInfo(), conn.getType()));
         }
         return rv;
+    }
+}
+
+#! Asynchronous REST client class for apps provided by the TypeScript API
+/** The client of the connection's ping (@ref TypeScriptAppRestConnection::getAsyncImpl()).  A monitored connection
+    is pinged far more often than it is used otherwise, so this is the client that refreshes its token.
+
+    @since TypeScriptActionInterface 1.1
+*/
+public class TypeScriptAppRestClientIo inherits RestClientIo::RestClientIo {
+    #! Creates the client
+    /** @param opts the client's options, as @ref TypeScriptAppRestConnection::getConnectionOptions() returns them
+        @param shared_mgr an optional connection manager to share, as for \c RestClientIo
+
+        @throw RESTCLIENTIO-ERROR if the \c url option is missing or invalid
+    */
+    constructor(hash<auto> opts, *HttpClientIo::HttpClientConnectionManager shared_mgr)
+            : RestClientIo(opts, shared_mgr) {
+    }
+
+    #! Called when a token answer has been received
+    /** @param h the token answer
+
+        A token answer that names no token type is taken as a token of the type the client already uses, as
+        @ref TypeScriptAppRestClient::gotOAuth2LoginInfo() takes it: \c RestClientIo refuses one with
+        \c OAUTH2-ERROR, so the ping of a connection with an expiring Shopify token failed from the token's last
+        ten minutes on, and the connection never got another token (qoretechnologies/qorus#1125).
+
+        An app's post-auth calls are not made here, as @ref TypeScriptAppRestClient makes them: they ask the app's
+        JavaScript with blocking I/O, which Qore refuses on the thread that runs a monitored connection's ping
+        (\c SOCKET-SYNC-ON-IO-THREAD-ERROR).  An option that has to follow the token cannot come from such a call;
+        the Shopify app names the header of its token with \c token_api_key_header instead, which this client's
+        base class sends with every token it gets.
+    */
+    private hash<auto> gotOAuth2LoginInfo(hash<auto> h) {
+        if (!h.OAuth && !exists h.token_type && h.access_token.typeCode() == NT_STRING) {
+            h.token_type = getTokenType();
+        }
+        return RestClientIo::gotOAuth2LoginInfo(h);
     }
 }
 
@@ -416,7 +497,17 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     private hash<auto> validateOptions(hash<auto> options, bool check_required = True) {
         scheme = "tsrest-" + options.app;
         setupTs(options.app);
-        return RestConnection::validateOptions(options - "app", check_required);
+        hash<auto> rv = RestConnection::validateOptions(options - "app", check_required);
+        # The clients send the connection's token in the header that "token_api_key_header" names.  A header of
+        # that name among the ping's headers would be sent in its place, with the token of the time it was stored:
+        # the Shopify app kept its token's header there until it named it with the option
+        # (qoretechnologies/qorus#1125).
+        if (rv.token_api_key_header.val() && rv.ping_headers.typeCode() == NT_HASH) {
+            string token_header = rv.token_api_key_header.lwr();
+            rv.ping_headers = (map {$1.key: $1.value}, rv.ping_headers.pairIterator(),
+                $1.key.lwr() != token_header) ?? {};
+        }
+        return rv;
     }
 
     #! Set up the generic object from the app config
@@ -438,6 +529,18 @@ public class TypeScriptAppRestConnection inherits RestConnection {
             return new TypeScriptHubspotRestClient(self, getConnectionOptions(), !connect);
         }
         return new TypeScriptAppRestClient(self, getConnectionOptions(), !connect);
+    }
+
+    #! Returns the asynchronous client of the connection, which its ping uses
+    /** @param connect ignored: the client connects with its first request
+        @param rtopts runtime options for the client
+
+        @return a @ref TypeScriptAppRestClientIo object
+
+        @since TypeScriptActionInterface 1.1
+    */
+    private object getAsyncImpl(bool connect = True, *hash<auto> rtopts) {
+        return new TypeScriptAppRestClientIo(getConnectionOptions(rtopts));
     }
 
     #! Returns the ConnectionSchemeInfo hash for this object
@@ -621,6 +724,7 @@ public class TypeScriptAwsAppRestClient inherits TypeScriptAppRestClient {
 
     #! Signs requests before sending
     private signRequest(string method, *string path, *data body, reference<hash<auto>> hdr) {
+        TypeScriptAppRestClient::signRequest(method, path, body, \hdr);
         # get request time
         date gmtime = Qore::gmtime();
         # get credential scope

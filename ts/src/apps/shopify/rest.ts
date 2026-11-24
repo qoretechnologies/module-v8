@@ -1,11 +1,6 @@
 // Copyright 2026 Qore Technologies, s.r.o.
-import type { TQoreAppWithActions, TQoreMappedOptions } from '@qoretechnologies/ts-toolkit';
-import {
-  SHOPIFY_API_VERSION,
-  SHOPIFY_CONN_OPTIONS,
-  SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS,
-  SHOPIFY_SCOPES,
-} from './constants';
+import type { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { SHOPIFY_API_VERSION, SHOPIFY_CONN_OPTIONS, SHOPIFY_SCOPES } from './constants';
 
 export { SHOPIFY_APP_NAME } from './constants';
 
@@ -26,6 +21,10 @@ export const getShopifyRestOptions = () =>
     oauth2_token_args: {
       expiring: 1,
     },
+    // Shopify takes the access token in this header, not in `Authorization`. The connection's
+    // clients send the token they hold in it, so the header follows a token that a refresh
+    // replaced, also in the request that made the refresh.
+    token_api_key_header: 'X-Shopify-Access-Token',
     // the ping must ride the same version as the actions; hardcoding it left the connection test
     // calling a version sunset since 2024 while every action used the pinned one.
     //
@@ -42,33 +41,16 @@ export const getShopifyRestOptions = () =>
   }) satisfies TQoreAppWithActions['rest'];
 
 /**
- * The connection's own options and the hook that keeps Shopify's token header in step with the
- * token.
+ * The connection's own options.
  *
- * Shopify takes the access token in `X-Shopify-Access-Token`, not in `Authorization`, so the ping
- * carries it in `ping_headers`. The hook runs after the code exchange and after every refresh, with
- * the new token: an expiring token is replaced every hour, and a ping that kept the header of the
- * token before it would be refused once that token ran out.
+ * There is no function that puts the token into the ping's headers after the code exchange, as
+ * there was while the token never changed: a connection is pinged on a thread on which such a
+ * function cannot be called, and that ping is what replaces an expiring token, so a header kept
+ * that way stayed that of the token before. `token_api_key_header` above replaces it.
  */
 export const getShopifyRestModifiers = () =>
   ({
     options: SHOPIFY_CONN_OPTIONS,
     required_options: 'shop',
     url_template_options: ['shop'],
-    set_options_post_auth_code: (
-      context
-    ): TQoreMappedOptions<typeof SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS> => {
-      const token = context?.conn_opts?.token;
-      if (!token) {
-        return {
-          ping_headers: {},
-        };
-      }
-
-      return {
-        ping_headers: {
-          'X-Shopify-Access-Token': token,
-        },
-      };
-    },
   }) satisfies TQoreAppWithActions['rest_modifiers'];

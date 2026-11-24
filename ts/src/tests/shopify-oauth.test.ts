@@ -10,13 +10,12 @@ describe('Shopify OAuth token request', () => {
     expect(Object.keys(app.rest_modifiers)).toEqual(Object.keys(getShopifyRestModifiers()));
   });
 
-  it("puts the token in Shopify's own header after the code exchange and after a refresh", () => {
-    // the hook is given the connection's options with the token of the answer it follows
-    const hook = app.rest_modifiers.set_options_post_auth_code;
-    expect(hook({ conn_opts: { token: 'the-new-token' } } as any)).toEqual({
-      ping_headers: { 'X-Shopify-Access-Token': 'the-new-token' },
-    });
-    expect(hook({ conn_opts: {} } as any)).toEqual({ ping_headers: {} });
+  it("has the connection's clients send the token in Shopify's own header", () => {
+    expect(app.rest.token_api_key_header).toBe('X-Shopify-Access-Token');
+    // and no function that copies the token into the ping's headers: a refresh made by the
+    // connection's ping could not call it, so the copy stayed that of the token before
+    expect(app.rest_modifiers).not.toHaveProperty('set_options_post_auth_code');
+    expect(app.rest_modifiers).not.toHaveProperty('set_options_post_auth');
   });
 
   it('asks the code exchange for an expiring offline token', () => {

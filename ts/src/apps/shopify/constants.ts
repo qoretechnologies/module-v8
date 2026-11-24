@@ -11,12 +11,6 @@ export const SHOPIFY_CONN_OPTIONS = {
   },
 } satisfies TCustomConnOptions;
 
-export const SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS = {
-  ping_headers: {
-    type: 'hash',
-  },
-} satisfies TCustomConnOptions;
-
 // the current stable version; Shopify supports each stable release for at least 12
 // months (2026-07 is supported until 2027-07-16). Do not pin a release candidate here: a
 // candidate becomes available on the previous stable release date and may contain

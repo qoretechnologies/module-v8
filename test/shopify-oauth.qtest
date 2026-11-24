@@ -6,8 +6,9 @@
 # the catalogue ships (ts/src/apps/shopify/rest.ts, compiled) against a local server that answers as Shopify does:
 # token answers with five fields and no "token_type", and an Admin API that takes the token in
 # "X-Shopify-Access-Token" only.  The connection asks for an expiring token beside the token arguments Qorus adds,
-# takes the answer of the code exchange and of a refresh, and after each of them the catalogue's post-auth-code hook
-# gives the connection Shopify's header for the new token, so the ping of the connection as it is then stored passes.
+# both of its clients take the answer of a refresh and send the new token in Shopify's header, in the request that
+# made the refresh too, and its ping, which is what refreshes the token of a connection that Qorus monitors, does so
+# for a token in its last minutes and for one that has run out.
 #
 # Run with QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT, QORE_TYPESCRIPT_ACTION_SCRIPTS and
 # QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS unset, as test/hubspot-oauth.qtest: the app is registered from the compiled
@@ -75,6 +76,12 @@ class ShopifyFixtureHandler inherits AbstractHttpRequestHandler {
         return makeResponse(404, make_json({"errors": "Not Found"}), {"Content-Type": MimeTypeJson});
     }
 
+    #! Makes the Admin API accept a token that the token endpoint did not issue
+    static accept(string token) {
+        AutoLock al(m);
+        valid{token} = True;
+    }
+
     #! Forgets the requests received and every token issued
     static reset() {
         AutoLock al(m);
@@ -108,10 +115,18 @@ class ShopifyOAuthTest inherits QUnit::Test {
         }
         addTestCase("the catalogue's connection asks for an expiring token beside Qorus's token arguments",
             \settingsTest());
-        addTestCase("the answer of the code exchange gives the connection its token and Shopify's header for it",
+        addTestCase("the connection's client sends the token of the code exchange in Shopify's header",
             \exchangeAnswerTest());
-        addTestCase("a refresh in the token's last minutes gives the connection the new pair and its header",
+        addTestCase("the connection's client refreshes a token in its last minutes and sends the new one",
             \refreshTest());
+        addTestCase("a copy of the connection's client for another URL sends the token in Shopify's header too",
+            \clientCopyTest());
+        addTestCase("the ping of Qorus's connection monitor refreshes a token in its last minutes",
+            \monitorPingRefreshTest());
+        addTestCase("the connection's blocking ping refreshes a token in its last minutes", \pingRefreshTest());
+        addTestCase("the ping of a connection whose token has run out refreshes it and passes",
+            \expiredTokenPingTest());
+        addTestCase("a header of the token that was stored with the ping's headers is dropped", \storedHeaderTest());
         addTestCase("a ping with a token Shopify does not accept fails", \refusedPingTest());
         set_return_value(main());
     }
@@ -133,7 +148,7 @@ class ShopifyOAuthTest inherits QUnit::Test {
             "key": key, "cert": cert, "enable_h3": False}).port;
         rest_url = sprintf("https://127.0.0.1:%d", port);
 
-        # the app as the catalogue registers it, with its REST options and its post-auth-code hook, and only its
+        # the app as the catalogue registers it, with its REST options and its connection options, and only its
         # three URLs moved to the local server
         string script = "var exports = {};\n"
             "async function runWithTimeout(p, d) { return await (typeof p === 'function' ? p() : p); }\n"
@@ -182,15 +197,83 @@ class ShopifyOAuthTest inherits QUnit::Test {
             }}, True);
     }
 
+    #! Drives the connection's ping as Qorus's connection monitor runs it (PollingConnectionMonitor)
+    /** The monitor's thread refuses blocking I/O (SOCKET-SYNC-ON-IO-THREAD-ERROR), which this thread does not, so
+        a call of the app's JavaScript in that ping would pass here and fail there
+    */
+    private drivePing(TypeScriptAppRestConnection conn) {
+        AbstractPollOperation op = conn.startPollConnect();
+        date deadline = now_us() + 30s;
+        while (*hash<SocketPollInfo> info = op.continuePoll()) {
+            while (!Socket::poll((info,), 1s)) {
+                if (now_us() > deadline) {
+                    throw "PING-TIMEOUT", sprintf("the ping did not end; state: %s", op.getState());
+                }
+            }
+        }
+        assertTrue(op.goalReached());
+    }
+
+    #! The stored options of a connection two minutes before its token runs out: inside the ten in which it is refreshed
+    private hash<auto> expiringOptions() {
+        return {
+            "token": "first-token",
+            "oauth2_refresh_token": "first-refresh-token",
+            "oauth2_token_expiry": now_us() + 2m,
+        };
+    }
+
+    #! Returns a connection with the options that keeps what it reports in the hash
+    /** Qorus gives a connection the code that saves the options it reports (QorusUserConnections::setUpdateOptions());
+        the hash stands for that here
+    */
+    private TypeScriptAppRestConnection reportingConnection(hash<auto> stored, reference<hash<auto>> kept) {
+        TypeScriptAppRestConnection conn = connection(stored);
+        conn.setUpdateOptionsCode(sub (hash<auto> new_opts) {
+            kept += new_opts;
+        });
+        return conn;
+    }
+
+    #! Asserts the one refresh of a request of a connection with the stored options, and the connection after it
+    /** @param stored the options of the connection that made the request
+        @param kept what was reported for the connection to keep
+    */
+    private assertRefreshed(hash<auto> stored, hash<auto> kept) {
+        assertEq(({
+            "grant_type": "refresh_token",
+            "refresh_token": "first-refresh-token",
+            "client_id": "fixture-client",
+            "client_secret": "fixture-secret",
+            "expiring": "1",
+            "oauth2_app": "Shopify",
+        },), ShopifyFixtureHandler::token_requests, "one refresh, with the app's argument and Qorus's");
+        assertEq(("access-1", "refresh-1"), (kept.token, kept.oauth2_refresh_token));
+        assertTrue(kept.oauth2_token_expiry > now_us() + 50m, "the new token's expiry is kept");
+        assertFalse(kept.hasKey("ping_headers"), "the token is not copied into the ping's headers");
+        # the request that made the refresh carried the new token in Shopify's header
+        assertEq(("access-1",), ShopifyFixtureHandler::admin_tokens);
+
+        # Qorus saves what was reported and builds the connection anew (QorusUserConnections::reportOptions()): its
+        # ping carries the new token and makes no further token request
+        ShopifyFixtureHandler::admin_tokens = ();
+        hash<auto> ping = connection(stored + kept).ping();
+        assertTrue(ping.ok, sprintf("%y", ping - "opts"));
+        assertEq(("access-1",), ShopifyFixtureHandler::admin_tokens);
+        assertEq(1, ShopifyFixtureHandler::token_requests.size());
+    }
+
     settingsTest() {
         hash<auto> opts = connection().getConnectionOptions();
         assertEq({"expiring": 1, "oauth2_app": "Shopify"}, opts.oauth2_token_args);
         assertEq(url + "/admin/oauth/access_token", opts.oauth2_token_url);
         assertRegex("^/admin/api/[0-9]{4}-[0-9]{2}/shop\\.json$", opts.ping_path);
+        assertEq("X-Shopify-Access-Token", opts.token_api_key_header);
     }
 
     exchangeAnswerTest() {
         ShopifyFixtureHandler::reset();
+        ShopifyFixtureHandler::accept("access-from-code");
         hash<auto> kept;
         # the client holds its connection weakly: the connection stays in scope for as long as the client is used
         TypeScriptAppRestConnection conn = connection();
@@ -205,54 +288,96 @@ class ShopifyOAuthTest inherits QUnit::Test {
         });
         assertEq(("access-from-code", "refresh-from-code"), (kept.token, kept.oauth2_refresh_token));
         assertTrue(kept.oauth2_token_expiry > now_us() + 50m, "the token's expiry is kept");
-        # the catalogue's hook, in JavaScript, with the token of the answer
-        assertEq({"X-Shopify-Access-Token": "access-from-code"}, kept.ping_headers);
+        assertFalse(kept.hasKey("ping_headers"), "the token is not copied into the ping's headers");
+        # the client's next request carries the token in Shopify's header
+        hash<auto> info;
+        c.get(conn.getConnectionOptions().ping_path, NOTHING, \info);
+        assertEq(200, info."response-code");
+        assertEq(("access-from-code",), ShopifyFixtureHandler::admin_tokens);
     }
 
+    #! The client that the connection gives out for requests other than its ping (TypeScriptAppRestClient)
     refreshTest() {
         ShopifyFixtureHandler::reset();
-        # two minutes before its token runs out: inside the ten minutes in which the client refreshes
-        hash<auto> stored = {
-            "token": "first-token",
-            "ping_headers": {"X-Shopify-Access-Token": "first-token"},
-            "oauth2_refresh_token": "first-refresh-token",
-            "oauth2_token_expiry": now_us() + 2m,
-        };
+        hash<auto> stored = expiringOptions();
         TypeScriptAppRestConnection conn = connection(stored);
         hash<auto> kept;
         TypeScriptAppRestClient c = client(conn, \kept);
-        hash<auto> opts = conn.getConnectionOptions();
-        # the connection's ping, with the header of the token it has
         hash<auto> info;
-        c.get(opts.ping_path, NOTHING, \info, opts.ping_headers);
-        assertEq(200, info."response-code", "the token it had is still good for this request");
-        assertEq(({
-            "grant_type": "refresh_token",
-            "refresh_token": "first-refresh-token",
-            "client_id": "fixture-client",
-            "client_secret": "fixture-secret",
-            "expiring": "1",
-            "oauth2_app": "Shopify",
-        },), ShopifyFixtureHandler::token_requests, "one refresh, with the app's argument and Qorus's");
-        assertEq(("access-1", "refresh-1"), (kept.token, kept.oauth2_refresh_token));
-        assertTrue(kept.oauth2_token_expiry > now_us() + 50m, "the new token's expiry is kept");
-        assertEq({"X-Shopify-Access-Token": "access-1"}, kept.ping_headers);
+        c.get(conn.getConnectionOptions().ping_path, NOTHING, \info);
+        assertEq(200, info."response-code");
+        assertRefreshed(stored, kept);
+    }
 
-        # the connection as it is stored after that: its ping carries the new token in Shopify's header, and no
-        # further token request is made
-        ShopifyFixtureHandler::admin_tokens = ();
-        hash<auto> ping = connection(stored + kept).ping();
+    #! A copy of the client for another URL, as RestClient makes one for an absolute ping path
+    /** The copy is created from the options that RestClient saved, which lack the token header's option
+    */
+    clientCopyTest() {
+        ShopifyFixtureHandler::reset();
+        TypeScriptAppRestConnection conn = connection({"token": "first-token"});
+        hash<auto> kept;
+        RestClient copy = cast<RestClient>(client(conn, \kept).copyWithUrl(rest_url));
+        hash<auto> info;
+        copy.get(conn.getConnectionOptions().ping_path, NOTHING, \info);
+        assertEq(200, info."response-code");
+        assertEq(("first-token",), ShopifyFixtureHandler::admin_tokens);
+    }
+
+    #! The ping as Qorus's connection monitor runs it: the connection's asynchronous client takes the token answer
+    /** On a Qorus (build 7b7659f5) this ping refused Shopify's answer for its missing "token_type" once a minute
+        from ten minutes before the first token ran out, and the connection was down from then on
+        (qoretechnologies/qorus#1125)
+    */
+    monitorPingRefreshTest() {
+        ShopifyFixtureHandler::reset();
+        hash<auto> stored = expiringOptions();
+        hash<auto> kept;
+        drivePing(reportingConnection(stored, \kept));
+        assertRefreshed(stored, kept);
+    }
+
+    pingRefreshTest() {
+        ShopifyFixtureHandler::reset();
+        hash<auto> stored = expiringOptions();
+        hash<auto> kept;
+        hash<auto> ping = reportingConnection(stored, \kept).ping();
         assertTrue(ping.ok, sprintf("%y", ping - "opts"));
-        assertEq(("access-1",), ShopifyFixtureHandler::admin_tokens);
-        assertEq(1, ShopifyFixtureHandler::token_requests.size());
+        assertRefreshed(stored, kept);
+    }
+
+    #! A connection that was not pinged while its token ran out: Qorus was down, or the connection was disabled
+    /** The token is refreshed before the ping's request, and that request must carry the new one: the local Shopify
+        refuses the token that ran out, as Shopify does
+    */
+    expiredTokenPingTest() {
+        ShopifyFixtureHandler::reset();
+        hash<auto> stored = expiringOptions() + {
+            "token": "a-token-that-ran-out",
+            "oauth2_token_expiry": now_us() - 5m,
+        };
+        hash<auto> kept;
+        drivePing(reportingConnection(stored, \kept));
+        assertRefreshed(stored, kept);
+    }
+
+    #! A connection as an earlier version of the app left it: the token's header among the ping's headers
+    /** That header would be sent in place of the client's own, with the token of the time it was stored
+    */
+    storedHeaderTest() {
+        ShopifyFixtureHandler::reset();
+        TypeScriptAppRestConnection conn = connection({
+            "token": "first-token",
+            "ping_headers": {"X-Shopify-Access-Token": "a-token-from-before", "X-Fixture": "kept"},
+        });
+        assertEq({"X-Fixture": "kept"}, conn.getRealOptions().ping_headers);
+        hash<auto> ping = conn.ping();
+        assertTrue(ping.ok, sprintf("%y", ping - "opts"));
+        assertEq(("first-token",), ShopifyFixtureHandler::admin_tokens);
     }
 
     refusedPingTest() {
         ShopifyFixtureHandler::reset();
-        hash<auto> ping = connection({
-            "token": "a-token-never-issued",
-            "ping_headers": {"X-Shopify-Access-Token": "a-token-never-issued"},
-        }).ping();
+        hash<auto> ping = connection({"token": "a-token-never-issued"}).ping();
         assertFalse(ping.ok);
         assertEq(("a-token-never-issued",), ShopifyFixtureHandler::admin_tokens);
     }
