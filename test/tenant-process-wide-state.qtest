@@ -847,18 +847,33 @@ class TenantProcessWideStateTest inherits QUnit::Test {
                     results{name} = TenantProcessWideStateTest::tenant(name, i.value).callFunction("t", args());
                 } catch (hash<ExceptionInfo> ex) {
                     results{name} = ex.err;
+                    # the refusal of an access to a member that is private to its class names its reason; no other
+                    # parse error is taken for it below
+                    if (ex.err == "PARSE-EXCEPTION"
+                        && ex.desc =~ /^illegal access to private member '[^']+' of class '[^']+'/) {
+                        results{name} = "PRIVATE-MEMBER-REFUSED";
+                    }
                 }
             }
             all{i.key} = results;
         }
         # the state is not public: no code that imports the module can name it, and the members of an object are not
-        # visible outside its class.  A subclass that reads such a member through a variable of the class's type is
-        # refused when it is parsed by a Qore with qore#7258; a Qore before that parses it, and the member is not
-        # there when the code runs
-        bool parse_refusal = TenantProcessWideStateTest::parseRefusesBaseTypedRead();
+        # visible outside its class.  A subclass that reads a private:internal member of its base class through a
+        # variable of the base class's type is refused when it is parsed (qore#7258); it was parsed before, and
+        # answered "not readable" when it ran.  Both refuse the access; any other result, such as a parse error for
+        # another reason, does not.
         hash<auto> expected;
         foreach string k in (keys cases) {
-            string err = k =~ /of an object/ && !parse_refusal ? "not readable" : "PARSE-EXCEPTION";
+            if (k =~ /of an object/) {
+                hash<auto> got = all{k};
+                foreach string name in ("tenant-a", "tenant-b") {
+                    if (got{name} == "PRIVATE-MEMBER-REFUSED") {
+                        got{name} = "not readable";
+                    }
+                }
+                all{k} = got;
+            }
+            string err = k =~ /of an object/ ? "not readable" : "PARSE-EXCEPTION";
             expected{k} = {"tenant-a": err, "tenant-b": err};
         }
         assertEq(expected, all);
@@ -1217,22 +1232,6 @@ class TenantProcessWideStateTest inherits QUnit::Test {
             "conn": host_conn,
             "appinfo": TypeScriptActionInterface::getInitializedRecordBasedAppInfo(CatalogueRecordApp),
             "app": DataProviderActionCatalog::getAppEx(CatalogueApp), "objects": objects};
-    }
-
-    #! True if this Qore refuses a subclass's read of a private:internal member of its base class through a variable
-    #! of the base class's type when it parses the read (qore#7258), False if it parses the read
-    private static bool parseRefusesBaseTypedRead() {
-        Program p(PO_NEW_STYLE);
-        try {
-            p.parse("class Base { private:internal { int m = 1; } }\n"
-                "class Sub inherits Base { static bool peek(Base b) { return exists b.m; } }\n", "base-typed-read");
-        } catch (hash<ExceptionInfo> ex) {
-            if (ex.err != "PARSE-EXCEPTION") {
-                rethrow;
-            }
-            return True;
-        }
-        return False;
     }
 
     #! Returns the source of a Program whose \c run() function runs the given case and returns its result or error
