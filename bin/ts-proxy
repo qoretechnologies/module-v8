@@ -133,6 +133,10 @@ class TsProxy inherits TypeScriptProxy {
         logger.addAppender(new StdoutAppender());
 
         if (opts.logdir.val()) {
+            # the directory is created when it does not exist; one that cannot be created ends the process below
+            if (!is_dir(opts.logdir)) {
+                mkdir(opts.logdir, 0755, True);
+            }
             string fn = sprintf("%s/ts-proxy-%d.log", opts.logdir, getpid());
             LoggerAppenderFileRotate lafr("ts-proxy",
                 new LoggerLayoutPattern("%d{YYYY-MM-DD HH:mm:SS.xx} T%t [%p]: %m%n"), fn);

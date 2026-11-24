@@ -48,6 +48,19 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         return event_id;
     }
 
+    #! Copies the object
+    /** A copy made by code that is sandboxed or acts for sandboxed code has its own event type and no
+        post-processing references (qoretechnologies/qore#7185)
+    */
+    copy() {
+        if (!SandboxManager::isProcessWideRegistrationAllowed()) {
+            event_info = TsaiProcessState::messageForCaller(event_info);
+            if (get_example_event_data) {
+                get_example_event_data.post_processing = NOTHING;
+            }
+        }
+    }
+
     #! Returns a hash of all supported event types
     /** @return a hash of all supported event types
 
@@ -61,7 +74,7 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
             event_info.type = getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type, options);
         }
         return {
-            event_id: event_info,
+            event_id: TsaiProcessState::messageForCaller(event_info),
         };
     }
 
@@ -79,9 +92,12 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
             throw "INVALID-EVENT", sprintf("Provider %y (type %y) does not support event %y; supported event: %y",
                 getName(), self.className(), event_id, self.event_id);
         }
-        hash<DataProviderMessageInfo> event_info = self.event_info;
+        # a sandboxed caller's type is its own copy, also before its dynamic values are resolved in it
+        # (qoretechnologies/qore#7185)
+        hash<DataProviderMessageInfo> event_info = TsaiProcessState::messageForCaller(self.event_info);
         if (dmap && options.typeCode() == NT_HASH) {
-            event_info.type = getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type, options);
+            event_info.type = TsaiProcessState::typeForCaller(getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type,
+                options));
             TypeScriptActionInterface::resolveDynamicType(self, options, event_info.type);
         }
         return event_info;

@@ -41,6 +41,7 @@ string scope = TypeScriptHubspotRestClient::getCmsScope("GET", "/cms/v3/domains"
 
     #! Checks the grant on the token about to be sent, including after automatic refresh
     private signRequest(string method, *string path, *data body, reference<hash<auto>> hdr) {
+        TypeScriptAppRestClient::signRequest(method, path, body, \hdr);
         *string scope = getCmsScope(method, path ?? "/");
         if (!scope) {
             return;

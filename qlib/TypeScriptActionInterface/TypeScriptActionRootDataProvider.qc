@@ -49,6 +49,12 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
     private {
         #! Dynamic child data providers
         static hash<string, TypeScriptActionAppDataProvider> childMap = {};
+
+        #! Gives the unchecked implementations of the checked methods to the module's own code
+        static bool internal_set = TsaiProcessState::setInternal({
+            "rootRegisterChild": \TypeScriptActionRootDataProvider::registerChildInternal(),
+            "rootDeregisterChild": \TypeScriptActionRootDataProvider::deregisterChildInternal(),
+        });
     }
 
     #! Creates the data provider
@@ -62,15 +68,35 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
     }
 
     #! Register a new child data provider
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the children are
+        process-wide
+    */
     registerChild(string pathname, TypeScriptActionAppDataProvider prov) {
+        # process-wide (qoretechnologies/qore#6749)
+        TsaiProcessState::checkHostScope("register an app in the root TypeScript app provider");
+        TypeScriptActionRootDataProvider::registerChildInternal(pathname, prov);
+    }
+
+    #! Deregister a child data provider
+    /** @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the children are
+        process-wide
+    */
+    deregisterChild(string pathname) {
+        # process-wide (qoretechnologies/qore#6749)
+        TsaiProcessState::checkHostScope("deregister an app in the root TypeScript app provider");
+        remove childMap{pathname};
+    }
+
+    #! Registers a child for the module's own code
+    private:internal static registerChildInternal(string pathname, TypeScriptActionAppDataProvider prov) {
         if (childMap{pathname}) {
             throw "TYPESCRIPT-CHILD-ERROR", sprintf("child %y already registered", pathname);
         }
         childMap{pathname} = prov;
     }
 
-    #! Deregister a child data provider
-    deregisterChild(string pathname) {
+    #! Deregisters a child for the module's own code
+    private:internal static deregisterChildInternal(string pathname) {
         remove childMap{pathname};
     }
 
@@ -81,7 +107,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
             map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
                 childMap.iterator();
         # Also return summary info for pending (not-yet-initialized) apps from metadata
-        rv += TypeScriptActionInterface::getPendingAppSummaryInfo();
+        rv += TsaiProcessState::Internal.getPendingAppSummaryInfo();
         return rv;
     }
 
@@ -90,7 +116,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
     */
     private *list<string> getChildProviderNamesImpl() {
         *list<string> rv = keys childMap;
-        rv += TypeScriptActionInterface::getPendingApps();
+        rv += TsaiProcessState::Internal.getPendingApps();
         return rv;
     }
 
@@ -100,8 +126,14 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
         @see getChildProviderEx()
     */
     private *TypeScriptActionAppDataProvider getChildProviderImpl(string name) {
-        TypeScriptActionInterface::initApp(name);
-        return childMap{name};
+        TsaiProcessState::Internal.initApp(name);
+        *TypeScriptActionAppDataProvider rv = childMap{name};
+        # the provider of an app is process-wide: code that is sandboxed or acts for sandboxed code gets a copy
+        # (qoretechnologies/qore#6749)
+        if (rv && !SandboxManager::isProcessWideRegistrationAllowed()) {
+            return rv.copyForCaller();
+        }
+        return rv;
     }
 
     #! Returns data provider static info

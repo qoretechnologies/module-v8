@@ -1,0 +1,154 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+
+%requires v8
+%requires QUnit
+
+%exec-class JsTerminateInCallbackTest
+
+#! Tests terminating a program while its event loop runs a callback (qoretechnologies/qore#7284)
+/** Terminating only the isolate left a callback of the event loop (a timer) before its async context was popped;
+    the callback scope of the still-running environment then found the async-context stack corrupted, and Node.js
+    exited the whole process ("async hook stack has become corrupted").  A tenant's event source stopped while its
+    function ran a timer callback ended the host process.  Each case runs in a new process, since the defect ends
+    the process.
+*/
+class JsTerminateInCallbackTest inherits Test {
+    public {
+        #! the code that a child process runs first: it prints its results on lines that start with "RESULT: "
+        const ChildPrelude = "%modern
+%requires v8
+sub result(string fmt) { vprintf(\"RESULT: \" + fmt + \"\\n\", argv); }
+";
+    }
+
+    constructor() : Test("js terminate in callback test", "1.0") {
+        addTestCase("a program terminated inside a timer callback ends without ending the process",
+            \terminateInTimerCallback());
+        addTestCase("a program terminated while it runs no code is not used again", \terminateIdle());
+        addTestCase("a program terminated while it is destroyed", \terminateWhileDestroyed());
+
+        set_return_value(main());
+    }
+
+    #! The case of the defect: the timer callback signals a latch, then runs until it is terminated
+    terminateInTimerCallback() {
+        list<string> out = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.start = (latch) => { setTimeout(() => { latch(); while (true) {} }, 0); };\",
+    \"terminate-in-callback\");
+Counter in_callback(1);
+code latch = sub () { in_callback.dec(); };
+pgm.getGlobal().start(latch);
+# another thread terminates the program once its timer callback runs
+background sub () {
+    in_callback.waitForZero();
+    pgm.terminate();
+}();
+# this thread runs the event loop until the callback ran and was terminated
+while (in_callback.getCount() || !pgm.isTerminated()) {
+    pgm.spinOnce();
+}
+result(\"terminated: %y\", pgm.isTerminated());
+# a terminated program is not used again
+try {
+    pgm.spinOnce();
+    result(\"spin after terminate: no error\");
+} catch (hash<ExceptionInfo> ex) {
+    result(\"spin after terminate: error\");
+}
+result(\"survived\");
+");
+        assertEq(("terminated: True", "spin after terminate: error", "survived"), out);
+    }
+
+    #! A program terminated when no code runs in it
+    terminateIdle() {
+        list<string> out = runChild("
+V8::JavaScriptProgram pgm(\"globalThis.f = () => 1;\", \"terminate-idle\");
+pgm.terminate();
+result(\"terminated: %y\", pgm.isTerminated());
+try {
+    pgm.getGlobal().f();
+    result(\"call after terminate: no error\");
+} catch (hash<ExceptionInfo> ex) {
+    result(\"call after terminate: error\");
+}
+result(\"survived\");
+");
+        assertEq(("terminated: True", "call after terminate: error", "survived"), out);
+    }
+
+    #! terminate() and the program's destruction in two threads: the environment is stopped at most once safely
+    terminateWhileDestroyed() {
+        list<string> out = runChild("
+Mutex counts();
+int live = 0;
+int deleted = 0;
+list<string> other = ();
+for (int i = 0; i < 50; ++i) {
+    V8::JavaScriptProgram pgm(\"globalThis.f = () => 1;\", \"terminate-destroyed\");
+    Counter ready(2);
+    Counter go(1);
+    Counter done(1);
+    # the thread's own reference: the deletion below destroys the program, whatever references it
+    V8::JavaScriptProgram mine = pgm;
+    background sub () {
+        on_exit done.dec();
+        ready.dec();
+        go.waitForZero();
+        try {
+            mine.terminate();
+            counts.lock();
+            ++live;
+            counts.unlock();
+        } catch (hash<ExceptionInfo> ex) {
+            counts.lock();
+            # the program was destroyed first: the call came while it was being destroyed (OBJECT-INCOMPATIBLE) or
+            # after that (OBJECT-ALREADY-DELETED), which is where a thread that is scheduled late arrives
+            if (ex.err == \"OBJECT-INCOMPATIBLE\" || ex.err == \"OBJECT-ALREADY-DELETED\") {
+                ++deleted;
+            } else {
+                other += sprintf(\"%s: %s\", ex.err, ex.desc);
+            }
+            counts.unlock();
+        }
+    }();
+    ready.dec();
+    ready.waitForZero();
+    go.dec();
+    delete pgm;
+    done.waitForZero();
+}
+result(\"runs: %d\", live + deleted);
+result(\"other errors: %y\", other);
+result(\"survived\");
+");
+        assertEq(("runs: 50", "other errors: []", "survived"), out);
+    }
+
+    #! Runs the code in a new process; returns its result lines
+    private list<string> runChild(string body) {
+        # the interpreter: this one, unless this test runs as an executable that qcc compiled
+        string qore = ENV.QORE_EXECUTABLE ?? ENV.QORE_BINARY
+            ?? (basename(QORE_ARGV[0]) =~ /^qore/ ? QORE_ARGV[0] : "qore");
+        int rc;
+        string out = backquote(sprintf("%s -b -e %s 2>&1", qore, quote(ChildPrelude + body)), \rc);
+        assertEq(0, rc, out);
+        assertFalse(out =~ /async hook stack has become corrupted/, out);
+        list<string> rv = ();
+        foreach string line in (out.split("\n")) {
+            if (line =~ /^RESULT: /) {
+                rv += line.substr(8);
+            }
+        }
+        return rv;
+    }
+
+    private static string quote(string value) {
+        return "'" + replace(value, "'", "'\"'\"'") + "'";
+    }
+}

@@ -28,7 +28,8 @@
 # allow the weak reference operator (:=)
 %allow-weak-references
 
-%requires(reexport) DataProvider >= 3.8
+# 3.12: DataProvider::getModuleHostHooks()
+%requires(reexport) DataProvider >= 3.12
 %requires(reexport) TypeScriptProxy
 %requires ConnectionProvider
 %requires ProviderIndexUtil
@@ -57,19 +58,32 @@ module TypeScriptActionInterface {
     url = "http://qore.org";
     license = "MIT";
     init = sub () {
+        # the hooks the host set before the module was loaded are validated and applied first, before anything is
+        # registered: a hook that is misspelled or not callable leaves no factory, app or hook behind
+        # (qoretechnologies/qore#6845)
+        TenantActionRunner::applyHostHooks();
+
         # Publish a lightweight exact identity inventory for qualified index discovery.
         DataProviderActionCatalog::registerDiscoveryInventoryProvider(
             TypeScriptActionInterface::DiscoveryInventoryProviderName,
-            \TypeScriptActionInterface::getDiscoveryInventory());
+            TypeScriptActionInterfacePriv::TsaiProcessState::Internal.getDiscoveryInventory);
 
         # Register the module's initializer
-        DataProvider::registerStaticInitializer(\TypeScriptActionInterface::init());
+        # the unchecked initializer: static initialization can run when sandboxed code uses a provider first
+        DataProvider::registerStaticInitializer(TypeScriptActionInterfacePriv::TsaiProcessState::Internal.init);
 
         # Register the data provider factory
         DataProvider::registerFactory(new TypeScriptActionDataProviderFactory());
 
         # initialize apps with deferred action initialization
         TypeScriptActionInterfacePriv::init();
+
+        # the runner of tenants' calls: its trusted build capability is created now, before any tenant code runs
+        TenantActionRunner::init();
+    };
+    # every tenant's event source is stopped and its program freed when the module is unloaded
+    del = sub () {
+        TenantActionRunner::shutdown();
     };
     # THREAD_CONTROL: the module starts its own background tasks
     # PROCESS_CONTROL: its init registers data provider factory (process-wide registrations)
@@ -166,11 +180,95 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     @anchor TypeScriptActionInterface_relnotes
 
     @subpage typescriptactioninterfacereleasenotes
+
+    @section typescriptactioninterface_tenants Running Actions for Tenants
+
+    @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner" runs the API and record actions of the
+    module's apps for callers that a sandbox governs (tenants), with plain data only (qoretechnologies/qore#6845):
+    - the caller gives a @ref TypeScriptActionInterface::TsTenantContext "TsTenantContext": the tenant (the isolation
+      key of the call; required), its own resolved connection options, and the action's options and time limit; it
+      never gives a Program, a connection or a provider object
+    - the app runs in a restricted program of the tenant's own (see the v8 module's restricted programs), which the
+      module builds and seals in a trusted build before the program runs anything for the tenant: the program
+      reaches no file, process or raw socket, and no program, global or cache is shared between tenants
+    - the program reaches the network only through the host bridge, which makes each request under the calling
+      code's own sandbox, so that its network policy applies to every address that a request connects to, after
+      resolution and for each redirect; the host can refuse more with
+      @ref TypeScriptActionInterface::TenantActionRunner::setEgressPolicy() "setEgressPolicy()" and meter the bytes
+      with @ref TypeScriptActionInterface::TenantActionRunner::setEgressMeter() "setEgressMeter()"
+    - a call has a time limit, a heap cap and a limit of concurrent calls per tenant
+      (@ref TypeScriptActionInterface::TenantActionRunner::setTenantLimits() "setTenantLimits()")
+    - the host gives the runner its hooks and limits before anything loads the module, with
+      <tt>DataProvider::setModuleHostHooks("TypeScriptActionInterface", ...)</tt> (keys \c tenant_context_resolver,
+      \c connection_update_handler, \c egress_policy, \c egress_meter, \c trusted_call_sandbox and
+      \c tenant_limits, a plain hash of
+      @ref TypeScriptActionInterface::TsTenantLimits "TsTenantLimits"): the module's initialization applies them, so
+      that a module loaded lazily, in whichever thread first asks for an app, has them too; an unknown key, a value of
+      the wrong type or a limit that is not greater than 0 fails the initialization.  The host sets them at its
+      startup even if it gives none (<tt>{}</tt>): the module's entry of the registry can be set once, and other
+      trusted code that set it first would give hooks the host did not choose.  Any trusted code can read the
+      registry's hooks (<tt>DataProvider::getModuleHostHooks()</tt>)
+    - an app that needs a builtin of Node.js that tenants do not get is refused for tenants
+      (\c TS-TENANT-APP-UNSUPPORTED), and
+      @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports it unavailable
+    - the apps of the master catalogue and of the scripts of \c QORE_TYPESCRIPT_ACTION_SCRIPTS run for tenants with no
+      call of the host: the module records the catalogue that registered each app
+    - sandboxed code that uses the module's data providers and connections directly (actions, records, allowed
+      values, dependent options, dynamic types, the OAuth hooks of a connection) reaches an app's code only through
+      the runner: every call of the module into an app's code for sandboxed code is made by
+      @ref TypeScriptActionInterface::TenantActionRunner::dispatch() "dispatch()", in the tenant's own program, with
+      the tenant context that the host's resolver returns for the connection
+      (@ref TypeScriptActionInterface::TenantActionRunner::setTenantContextResolver() "setTenantContextResolver()"),
+      or refused if there is none; the pools and proxies of the full runtime refuse sandboxed code, and a connection
+      update in a response goes to the host's handler
+      (@ref TypeScriptActionInterface::TenantActionRunner::setConnectionUpdateHandler()
+      "setConnectionUpdateHandler()")
+    - the event actions of the apps run for tenants as event sources whose events the host pulls:
+      @ref TypeScriptActionInterface::TenantActionRunner::startEvents() "startEvents()" runs the app's event function in
+      a restricted program of the tenant's own until
+      @ref TypeScriptActionInterface::TenantActionRunner::stopEvents() "stopEvents()" ends it, whether or not it
+      cooperates (its program is terminated, and a request that it waits in is cancelled);
+      @ref TypeScriptActionInterface::TenantActionRunner::pollEvents() "pollEvents()" returns its queued events and
+      its checkpoint; a subscription belongs to its tenant; a source that queues its limit of events is stopped and
+      reported, never dropping events; every source stops when the process ends (an exit hook) or the module is
+      unloaded; webhook events and the event data providers are not available to sandboxed code
+    - the host can learn up front which apps and actions tenants can run, when it builds its catalogue, with
+      @ref TypeScriptActionInterface::TenantActionRunner::probeApps() "probeApps()": each app is loaded in a
+      restricted program, and the module graph of the app and of the packages that it requires is scanned for the
+      builtins of Node.js that tenants do not get; one that a function requires (when it runs, after the seal) makes
+      the app unavailable if its shared code reaches it, and otherwise each action whose own code reaches it;
+      @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports both
 */
 
 /** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes
 
     @section typescriptactioninterfaceupcoming Upcoming release
+    - @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner": the API and record actions of the apps
+      for tenants that a sandbox governs, in restricted programs of their own, with plain data, the network only through
+      the tenant's sandbox, and time, memory and concurrency limits; see @ref typescriptactioninterface_tenants
+      (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>); their event actions run as
+      event sources whose events the host pulls
+    - a call of trusted code for a tenant's connection (a host's REST handler, flow or test engine) also runs in the
+      tenant's program: the host's tenant context resolver is asked for the connection of every call, and decides
+      from the connection, not from the calling thread
+    - the host gives the runner its hooks before the module is loaded, with
+      <tt>DataProvider::setModuleHostHooks("TypeScriptActionInterface", ...)</tt>, so that a module loaded lazily has
+      them too
+    - the process-wide state of @ref TypeScriptActionInterface::TypeScriptActionInterface "TypeScriptActionInterface"
+      is not readable or changeable by sandboxed code: its static members and internal helper methods are no longer
+      public (trusted code uses
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::getInterface() "getInterface()",
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::getTestInterface() "getTestInterface()" and
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::getRoot() "getRoot()"); the methods that give out or
+      change process-wide state (the registrations of apps, actions, child providers and the discovery inventory,
+      the call map, the test connections, the catalogues' program pools and app paths, the in-process and process
+      servers and their settings, the call time limit, the logger and the webhook APIs) raise
+      \c SANDBOX-REGISTRATION-ERROR for code that is sandboxed or acts for sandboxed code and require the
+      \c PROCESS_CONTROL functional domain; sandboxed code gets its own copy of an app's data provider, the
+      operations of the program, in-process and process pools that load, map or create programs or give out a
+      catalogue's source or registration interface refuse sandboxed code, and so do the functions of the apps' calls
+      that the providers hold
+      (<a href="https://github.com/qoretechnologies/qore/issues/6749">issue 6749</a>)
     - Action execution supports a shared in-process pool alongside the existing child-process proxy.
       See @ref TypeScriptActionInterface::JavaScriptInProcessPool.
     - Apps can use localized connection metadata, schema-backed REST actions and OAuth token introspection.
@@ -179,6 +277,32 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       and enforce startup and call deadlines. See @ref typescriptactioninterface_time_limits.
     - Reference-data failures propagate their provider error. Failed authorization and connection errors
       can be handled by callers. See @ref typescriptactioninterface_reference_data.
+    - An app's OAuth2 token arguments (\c oauth2_token_args in its REST options) go with a connection's own
+      instead of being replaced by them, so an argument of the provider's that the app declares, such as Shopify's
+      \c expiring, is sent for a connection whose token arguments Qorus has added to
+      (qoretechnologies/qorus#1125).
+    - A token answer that names no token type is taken as a token of the type the client uses instead of being
+      refused with \c REST-LOGIN-ERROR, so an expiring Shopify token can be refreshed
+      (qoretechnologies/qorus#1125).
+    - The ping of an app's connection uses a client of the module,
+      @ref TypeScriptActionInterface::TypeScriptAppRestClientIo "TypeScriptAppRestClientIo", which does not refuse
+      a token answer that names no token type with \c OAUTH2-ERROR.  The ping is what refreshes the token of a
+      monitored connection, so a connection with an expiring Shopify token was down from the token's last ten
+      minutes on (qoretechnologies/qorus#1125).
+    - An OAuth2 app can name the header of its token with \c token_api_key_header.  The client of its
+      connections' ping sends every token it gets in that header, and
+      @ref TypeScriptActionInterface::TypeScriptAppRestClient "TypeScriptAppRestClient" keeps the token as an OAuth2
+      token, refreshes it, and sets the header when it sends a request (a polling or streaming request that makes
+      the refresh itself still carries the header of the token before).  A header of that name among a
+      connection's \c ping_headers is dropped when the connection is built.  The Shopify app names its
+      header this way instead of copying the token into \c ping_headers with a post-auth-code function: the ping
+      replaces a token on a thread where such a function cannot be called, so the copy stayed that of the token
+      before (qoretechnologies/qorus#1125).
+    - The messages about a token answer and about the options an app's post-auth call adds name the fields and the
+      options and no longer print their values, the \c INFO messages of a call through the child process no
+      longer print its arguments or its answer, and the error for a call that cannot be serialized names its
+      arguments only: they put a connection's access token and refresh token into the host's log
+      (qoretechnologies/qorus#1125).
 
     @section TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
     - Added support for Google apps.

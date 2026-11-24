@@ -32,7 +32,7 @@
 
     All methods from @ref JavaScriptProgram are inherited and work identically.
 */
-qclass TypeScriptProgram [arg=QoreV8ProgramData* jsp; ns=V8; dom=EMBEDDED_LOGIC;
+qclass TypeScriptProgram [arg=QoreV8ProgramData* jsp; ns=V8; dom=EMBEDDED_LOGIC,UNCONTROLLED_API;
     vparent=JavaScriptProgram];
 
 //! Creates the object, transpiles the TypeScript source to JavaScript, and executes it

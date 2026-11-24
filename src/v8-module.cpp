@@ -25,6 +25,7 @@
 #include "QC_TypeScriptProgram.h"
 #include "QC_JavaScriptObject.h"
 #include "QC_JavaScriptPromise.h"
+#include "QC_SandboxCapture.h"
 #include "QoreV8Program.h"
 #include "QoreV8Environment.h"
 
@@ -191,6 +192,27 @@ static bool qore_v8_node_options_enable_warnings() {
 }
 
 #ifdef DEBUG
+// Read the scan predicate on the live thread-data hash; the public Qore getter returns a
+// copy with freshly counted entries and cannot diagnose a stale count in the source.
+static QoreValue f_dbg_thread_data_needs_scan(const QoreListNode*, RuntimeConfig&, ExceptionSink*) {
+    return AbstractScannablePrivateData::needsScan(getProgram()->getThreadData());
+}
+
+// Supply a scannable Qore element to the deep converter's list writer in the test isolate.
+static QoreValue f_dbg_array_with_leaf(const QoreListNode* args, RuntimeConfig&, ExceptionSink* xsink) {
+    const QoreObject* js = get_param_value(args, 0).get<const QoreObject>();
+    ReferenceHolder<QoreV8ProgramData> pgm(static_cast<QoreV8ProgramData*>(
+        js->getReferencedPrivateData(CID_JAVASCRIPTPROGRAM, xsink)), xsink);
+    if (!pgm) {
+        if (!*xsink) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The test JavaScript program has been deleted");
+        }
+        return QoreValue();
+    }
+    QoreV8ProgramHelper v8h(xsink, *pgm);
+    return v8h ? qore_v8_dbg_array_with_leaf(v8h, get_param_value(args, 1)) : nullptr;
+}
+
 //! Sets the code that a change of \c TZ made through \c process.env calls while V8 detects the time zone again
 /** Debug builds only, for tests (see qore_v8_dbg_set_env_write_hook()).
 
@@ -210,7 +232,13 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
         V8NS->addSystemClass(initTypeScriptProgramClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptObjectClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptPromiseClass(*V8NS));
+        V8NS->addSystemClass(initSandboxCaptureClass(*V8NS));
 #ifdef DEBUG
+        V8NS->addBuiltinVariant("dbg_thread_data_needs_scan", f_dbg_thread_data_needs_scan, QCF_NO_FLAGS,
+            QDOM_THREAD_CONTROL | QDOM_UNCONTROLLED_API, boolTypeInfo, 0);
+        V8NS->addBuiltinVariant("dbg_array_with_leaf", f_dbg_array_with_leaf, QCF_NO_FLAGS,
+            QDOM_EMBEDDED_LOGIC | QDOM_UNCONTROLLED_API, listTypeInfo, 2,
+            QC_JAVASCRIPTPROGRAM->getTypeInfo(), QORE_PARAM_NO_ARG, "js", objectTypeInfo, QORE_PARAM_NO_ARG, "leaf");
         V8NS->addBuiltinVariant("dbg_env_write_hook", f_dbg_env_write_hook, QCF_NO_FLAGS,
             QDOM_PROCESS | QDOM_UNCONTROLLED_API, nothingTypeInfo, 1, codeOrNothingTypeInfo, QORE_PARAM_NO_ARG,
             "hook");

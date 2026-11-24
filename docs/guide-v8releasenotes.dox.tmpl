@@ -5,6 +5,55 @@
     @tableofcontents
 
     @section v8_2_2 v8 Module Version 2.2
+    - security: with a %Qore library that has isolation domains, reading, stopping or inspecting a tenant's event
+      sources and actions (\c TenantActionRunner::pollEvents(), \c stopEvents() and \c getActionInfo()) is refused
+      to sandboxed code whose isolation domain is another tenant's, as running them already was; an event source's
+      identifier no longer suffices.  Releasing a tenant's call (\c releaseConcurrency(),
+      \c releaseEventProgram()) and \c dispatchTrusted() are refused to sandboxed code.  A host that calls these
+      from sandboxed code gives that code's sandbox the tenant's isolation domain, or calls them as trusted code
+      (<a href="https://github.com/qoretechnologies/qore/issues/7227">issue 7227</a>)
+    - the classes of the module are uncontrolled APIs (\c UNCONTROLLED_API in addition to \c EMBEDDED_LOGIC), and a
+      program is refused at run time to code under a sandbox that does not allow uncontrolled APIs, as its scripts
+      have file, process and network access that no sandbox controls; see @ref v8sandboxing
+      (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>)
+    - restricted programs, for running the module's trusted code for callers that a sandbox governs: a loader of the
+      module's own, no access to Qore, the host's environment or Node.js's file, process and network builtins once the
+      program is sealed, the network only through a host bridge, and termination and heap checks from another thread;
+      see @ref v8restricted (<a href="https://github.com/qoretechnologies/qore/issues/6845">issue 6845</a>)
+    - the process-wide state of @ref TypeScriptActionInterface::TypeScriptActionInterface "TypeScriptActionInterface"
+      is no longer readable or changeable by sandboxed code: its static members and internal helper methods are no
+      longer public (trusted code uses \c getInterface(), \c getTestInterface() and \c getRoot() instead of \c Api,
+      \c TestApi and \c root); the methods that give out or change process-wide state (the registrations of apps,
+      actions, child providers and the discovery inventory, the call map, the test connections, the catalogues'
+      program pools and app paths, the in-process and process servers and their settings, the call time limit, the
+      logger and the webhook APIs) raise \c SANDBOX-REGISTRATION-ERROR for code that is sandboxed or acts for
+      sandboxed code and require the \c PROCESS_CONTROL functional domain; sandboxed code gets its own copy of an app's
+      data provider, the operations of the program, in-process and process pools that load, map or create programs
+      or give out a catalogue's source or registration interface refuse sandboxed code, and so do the functions of the
+      apps' calls that the providers hold
+      (<a href="https://github.com/qoretechnologies/qore/issues/6749">issue 6749</a>)
+    - more of the process-wide state of
+      @ref TypeScriptActionInterface::TypeScriptActionInterface "TypeScriptActionInterface" is out of reach of
+      sandboxed code: the state of the program proxies, the program, in-process and thread process pools and the
+      providers is no longer visible to subclasses; every method that reads the host's configuration, paths or
+      objects or changes process-wide state (also the initialization of the module and of its apps, the pending apps,
+      the discovery inventory, schema errors and the app base directory, the time limits, the reference data cache,
+      the apps' REST schema providers, and the methods of the program pools and proxies) raises
+      \c SANDBOX-REGISTRATION-ERROR for code that is sandboxed or acts for sandboxed code and requires the
+      \c PROCESS_CONTROL functional domain; sandboxed code gets copies of the apps' providers with types of their own
+      and without the host's logger, a call that it registers stays in its own provider, the apps' calls no longer
+      hold their catalogue's program pool, REST reference data are cached per connection and never for sandboxed
+      callers, the interface that a tenant's program registers its apps with works only while the program is built,
+      and the module's initialization runs once
+      (<a href="https://github.com/qoretechnologies/qore/issues/7185">issue 7185</a>)
+    - requests of the actions of apps with REST schemas that run at the same time with different connections each
+      use their own connection's REST client and credentials; a request could be made with the client of another
+      connection that made a request of the same API path at the same time
+      (<a href="https://github.com/qoretechnologies/qore/issues/7185">issue 7185</a>)
+    - the example custom app ("Testing External App", \c External-app) is no longer built or shipped, so it no
+      longer appears in every installation's app catalogue; the example of the custom app format is kept unbuilt in
+      \c ts/examples/customApps in the source repository.  A build or a \c CUSTOM_APPS_DIR without a custom apps folder loads no custom apps
+      instead of failing
     - an app option can name the action that creates its values in \c metadata.create_action (\c action,
       \c value_field and the optional \c display_name_field), so a value can be created from the option's form; the
       Slack channel options name \c create_channel.  When such an action succeeds, the app's cached allowed values
@@ -81,6 +130,10 @@
       TypeScript action interface reads (\c QORE_V8_CACHE_DIR, \c QORE_V8_DISABLE_CACHE, \c TS_PROXY_LOGDIR,
       \c QORE_TYPESCRIPT_ACTION_VERBOSE and \c QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS) are also read from the current
       environment
+    - a TypeScript proxy (\c JavaScriptProgramProxy) is destroyed when its last reference is released and the last
+      one stops the master listener, so a script whose proxies go out of scope or whose first proxy fails to start
+      ends without calling \c JavaScriptProgramProxy::shutdown(); a \c ts-proxy child process creates a missing
+      \c TS_PROXY_LOGDIR directory instead of exiting before it starts
     - the Google Sheets \c find_spreadsheet_rows action takes a \c header_row option, the row of the column headers
       for sheets with titles or notes above the table (rows are read and searched below it), a \c value_render
       option, to return and search the values as stored (the default), as the sheet displays them, or the formulas

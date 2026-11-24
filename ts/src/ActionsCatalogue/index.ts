@@ -176,8 +176,32 @@ const CUSTOM_APPS: Record<string, TQoreAppWithActions> = {};
 /* Get all the default exports from the folders inside this folder */
 const appsDir = path.resolve(path.join(__dirname, '..', 'customApps'));
 
+/** Whether nothing at all is at this path: a dangling link is something, and a path that cannot be read is an error. */
+const isAbsent = (target: string): boolean => {
+  try {
+    fs.lstatSync(target);
+    return false;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') {
+      return true;
+    }
+    throw err;
+  }
+};
+
 const importIndexFilesFromDir = (dir: string) => {
-  fs.readdirSync(dir).forEach((subDir) => {
+  let entries: string[];
+  try {
+    entries = fs.readdirSync(dir);
+  } catch (err) {
+    // a build or a CUSTOM_APPS_DIR with no custom apps has no such folder; that is no apps. Any other failure to read
+    // it is reported, so that a customer's apps do not silently disappear
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT' && isAbsent(dir)) {
+      return;
+    }
+    throw err;
+  }
+  entries.forEach((subDir) => {
     const fullPath = path.join(dir, subDir);
     const indexPath = path.join(fullPath, 'index.js');
 

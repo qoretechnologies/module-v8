@@ -1,19 +1,9 @@
-import {
-  TQoreAppWithActions,
-  TQoreMappedOptions,
-  TQoreRecordBasedApp,
-} from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import {
-  SHOPIFY_API_VERSION,
-  SHOPIFY_APP_LOGO,
-  SHOPIFY_APP_NAME,
-  SHOPIFY_CONN_OPTIONS,
-  SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS,
-  SHOPIFY_SCOPES,
-} from './constants';
+import { SHOPIFY_APP_LOGO, SHOPIFY_APP_NAME } from './constants';
+import { getShopifyRestModifiers, getShopifyRestOptions } from './rest';
 
 import * as SHOPIFY_ACTIONS from './actions';
 import * as SHOPIFY_TRIGGERS from './triggers';
@@ -42,48 +32,8 @@ export default (locale: Locales) =>
     logo_file_name: 'logo.svg',
     logo_mime_type: 'image/svg+xml',
 
-    rest: {
-      url: 'https://{{shop}}.myshopify.com',
-      data: 'json',
-      oauth2_grant_type: 'authorization_code',
-      oauth2_auth_url: 'https://{{shop}}.myshopify.com/admin/oauth/authorize',
-      oauth2_token_url: 'https://{{shop}}.myshopify.com/admin/oauth/access_token',
-      oauth2_scopes: SHOPIFY_SCOPES,
-      // the ping must ride the same version as the actions; hardcoding it left the connection test
-      // calling a version sunset since 2024 while every action used the pinned one.
-      //
-      // This is the application's only remaining REST call — everything else is GraphQL — and it
-      // stays REST deliberately. The REST Admin API has been legacy since 2024-10-01 and Shopify
-      // removes resources in waves (the first, `products/count.json`, in October 2025), but `shop`
-      // is in no announced wave and the version pinned here is supported to 2027-07-16. Moving the
-      // ping to `graphql.json` would cost more than it buys: GraphQL answers an unauthorised or
-      // under-scoped request with `200 OK` and an ACCESS_DENIED body, so a status-code ping would
-      // report healthy for exactly the credential failures it exists to catch. Revisit if `shop`
-      // is named in a wave, and then assert the body rather than the status.
-      ping_path: `/admin/api/${SHOPIFY_API_VERSION}/shop.json`,
-      ping_method: 'GET',
-    },
-    rest_modifiers: {
-      options: SHOPIFY_CONN_OPTIONS,
-      required_options: 'shop',
-      url_template_options: ['shop'],
-      set_options_post_auth_code: (
-        context
-      ): TQoreMappedOptions<typeof SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS> => {
-        const token = context?.conn_opts?.token;
-        if (!token) {
-          return {
-            ping_headers: {},
-          };
-        }
-
-        return {
-          ping_headers: {
-            'X-Shopify-Access-Token': token,
-          },
-        };
-      },
-    },
+    rest: getShopifyRestOptions(),
+    rest_modifiers: getShopifyRestModifiers(),
 
     // Record-based helpers
     get_table_list: getShopifyTableList,

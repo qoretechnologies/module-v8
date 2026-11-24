@@ -1,0 +1,358 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+
+%modern
+
+%requires qore >= 3.0
+%requires QUnit
+%requires FsUtil
+%requires v8
+%requires json
+
+%exec-class RestrictedProgramTest
+
+#! A restricted JavaScript program (qoretechnologies/qore#6845)
+/** A restricted program runs the module's trusted code for callers that a sandbox governs: its code loads only the
+    files of its roots, gets neither Qore's namespaces nor the host's environment, cannot import(), and, once it is
+    sealed, reaches no file, process or network, also through references that its code kept from its load phase or
+    through the prototypes of what it holds.
+*/
+class RestrictedProgramTest inherits QUnit::Test {
+    public {
+        #! the main module of the program: it keeps references to fs in every form while it loads
+        const MainSource = "
+var exports = {};
+const fs = require('fs');
+const { readFileSync } = require('fs');
+const ReadStreamProto = fs.ReadStream.prototype;
+const path = require('path');
+const lib = require('./lib');
+const tryIt = (f) => { try { const r = f(); return 'ok: ' + (typeof r === 'string' ? r : typeof r); } catch (e) { return 'err: ' + (e.code || e.name) + ': ' + e.message; } };
+exports.t = {
+    loadPhaseRead: () => tryIt(() => fs.readFileSync(__filename, 'utf8').length.toString()),
+    keptModule: () => tryIt(() => fs.readFileSync('/etc/hostname', 'utf8')),
+    keptFunction: () => tryIt(() => readFileSync('/etc/hostname', 'utf8')),
+    keptPrototype: () => tryIt(() => ReadStreamProto.open),
+    requireFs: () => tryIt(() => require('fs')),
+    requireChildProcess: () => tryIt(() => require('child_process')),
+    requireNet: () => tryIt(() => require('net')),
+    requireVm: () => tryIt(() => require('vm')),
+    requireModule: () => tryIt(() => require('module')),
+    requireUtil: () => tryIt(() => typeof require('util').format),
+    requireOutside: () => tryIt(() => require('/etc/passwd')),
+    lib: () => tryIt(() => lib.name),
+    qoreGlobal: () => typeof globalThis.qore,
+    globalRequire: () => typeof globalThis.require,
+    processEnvKeys: () => Object.keys(process.env).length.toString(),
+    processBinding: () => typeof process.binding,
+    functionEscape: () => tryIt(() => new Function('return typeof process.binding + \"/\" + typeof require + \"/\" + typeof fetch')()),
+    moduleConstructor: () => String(lib.mod.constructor),
+    moduleLoad: () => tryIt(() => typeof Object.getPrototypeOf(lib.mod)),
+    requireCache: () => Object.keys(require.cache).length.toString(),
+    dynamicImport: () => import('fs').then(() => 'imported', (e) => 'refused: ' + e.message),
+    ownPath: () => path.basename(__filename),
+    spin: () => { for (;;) {} },
+    grow: () => { const a = []; for (;;) { a.push(new Array(100000).fill(1)); } },
+    // about 96MB of heap that is garbage at once: collected only by a major collection
+    garbage: () => { let a = new Array(12000000).fill(1.5); const n = a.length; a = null; return n; },
+    // keeps about 96MB of live data
+    keep: () => { globalThis.__kept = new Array(12000000).fill(1.5); return globalThis.__kept.length; },
+    // runs JavaScript, so that a pending interrupt (a heap check) is served
+    busy: () => { let x = 0; for (let i = 0; i < 20000000; ++i) { x += i; } return x; },
+    fetchJson: () => fetch('https://api.example.com/v1/items?x=1', {method: 'POST', headers: {'X-Test': 'a'}, body: JSON.stringify({q: 1})}).then((r) => r.json().then((j) => r.status + ':' + JSON.stringify(j))),
+    fetchError: () => fetch('http://10.0.0.1/').then(() => 'fetched', (e) => 'rejected: ' + e.message),
+    httpGet: () => new Promise((resolve) => { const https = require('https'); https.get('https://api.example.com/v2/thing', {headers: {Accept: 'text/plain'}}, (res) => { let d = ''; res.on('data', (c) => d += c); res.on('end', () => resolve(res.statusCode + ':' + res.headers['content-type'] + ':' + d)); }).on('error', (e) => resolve('error: ' + e.message)); }),
+    axiosGet: () => { let axios; try { axios = require('axios'); } catch (e) { return Promise.resolve('no axios: ' + e.message); } return axios.get('https://api.example.com/v3/data', {headers: {Authorization: 'Bearer t'}}).then((r) => r.status + ':' + JSON.stringify(r.data), (e) => 'axios error: ' + e.message); },
+    walk: () => {
+        // every object and function reachable from the shims and the allowed builtins, through prototypes and
+        // properties: none may be Node's module loader or the real process object
+        const seen = new Set();
+        const found = [];
+        const visit = (v, d, where) => {
+            if (v === null || (typeof v !== 'object' && typeof v !== 'function') || seen.has(v) || d > 4) return;
+            seen.add(v);
+            let keys = [];
+            try { keys = Reflect.ownKeys(v); } catch (e) { return; }
+            if (keys.includes('_load') && keys.includes('createRequire')) found.push('Module at ' + where);
+            if (keys.includes('binding') && keys.includes('dlopen')) found.push('process at ' + where);
+            try { visit(Object.getPrototypeOf(v), d + 1, where + '.__proto__'); } catch (e) {}
+            for (const k of keys) {
+                let x;
+                try { const desc = Object.getOwnPropertyDescriptor(v, k); x = desc && ('value' in desc ? desc.value : desc.get); } catch (e) { continue; }
+                visit(x, d + 1, where + '.' + String(k));
+            }
+        };
+        const roots = {fetch, Headers, Request, Response, http: require('http'), https: require('https'), agent: new (require('https').Agent)(), module: lib.mod, require, util: require('util'), events: require('events'), stream: require('stream'), crypto: require('crypto'), zlib: require('zlib'), url: require('url'), buffer: require('buffer'), globalThis};
+        for (const k of Object.keys(roots)) visit(roots[k], 0, k);
+        return found.length ? found.join('; ') : 'clean';
+    },
+    callsites: () => {
+        const prev = Error.prepareStackTrace;
+        // only the program's own non-strict functions are given: the loader and Node's internals are strict
+        Error.prepareStackTrace = (e, s) => s.map((c) => c.getFunction()).filter((f) => typeof f === 'function').map((f) => f.name || '?').join(',');
+        const n = new Error().stack;
+        Error.prepareStackTrace = prev;
+        return String(n);
+    },
+};
+";
+
+        const LibSource = "exports.name = 'lib'; exports.mod = module;";
+    }
+
+    private {
+        string dir;
+    }
+
+    constructor() : QUnit::Test("restricted-program", "1.0", \ARGV) {
+        addTestCase("before the seal, the load phase may use fs", \loadPhaseTest());
+        addTestCase("after the seal, kept references to fs are refused", \sealedTest());
+        addTestCase("no host access whether sealed or not", \hostAccessTest());
+        addTestCase("dynamic import() is refused", \importTest());
+        addTestCase("a copy of a restricted program is restricted", \copyTest());
+        addTestCase("an unrestricted program is unchanged", \unrestrictedTest());
+        addTestCase("the network is reached only through the bridge", \bridgeTest());
+        addTestCase("axios goes through the bridge", \axiosTest());
+        addTestCase("nothing reachable leads to Node's loader or the real process", \walkTest());
+        addTestCase("a call is terminated from another thread", \terminateTest());
+        addTestCase("a heap check terminates a call over its cap", \heapTest());
+        addTestCase("a heap check counts live data, not garbage", \heapGarbageTest());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        dir = make_tmp_dir("v8-restricted-");
+        File f();
+        f.open2(dir + "/main.js", O_CREAT | O_WRONLY | O_TRUNC);
+        f.write(MainSource);
+        f.close();
+        f.open2(dir + "/lib.js", O_CREAT | O_WRONLY | O_TRUNC);
+        f.write(LibSource);
+        f.close();
+    }
+
+    globalTearDown() {
+        if (dir) {
+            remove_tree(dir);
+        }
+    }
+
+    private V8::JavaScriptProgram restricted(*code bridge, *list<string> extra_roots) {
+        hash<auto> opts = {"restricted": True, "roots": (dir,) + (extra_roots ?? ())};
+        if (bridge) {
+            opts.bridge = bridge;
+        }
+        # the main source runs as a global script, with the prefix that the module's own main script has
+        string src = sprintf("const __filename = %s;\n", make_json(dir + "/main.js")) + MainSource;
+        return new V8::JavaScriptProgram(src, dir + "/main.js", opts);
+    }
+
+    #! waits for a promise of the program and returns its result, as the module's dispatch does: the promise's
+    #! callbacks give the result, while a background thread runs the program's event loop until it settles (a request
+    #! of the http shims is sent from a callback of the loop)
+    private auto await(V8::JavaScriptProgram p, auto v) {
+        if (!(v instanceof V8::JavaScriptPromise)) {
+            return v;
+        }
+        Queue q();
+        v.then(sub (auto val) { q.push({"val": val}); }, sub (auto e) { q.push({"err": e}); });
+        background sub () {
+            try {
+                v.wait();
+            } catch (hash<ExceptionInfo> ex) {
+                q.push({"err": ex.desc});
+            }
+        }();
+        hash<auto> r = q.get(30000);
+        return exists r.val ? r.val : r.err;
+    }
+
+    private auto call(V8::JavaScriptProgram p, string name) {
+        auto f = p.getGlobal().getProperty("exports").getProperty("t").getProperty(name);
+        return f.callAsFunctionArgs(NOTHING, ());
+    }
+
+    loadPhaseTest() {
+        V8::JavaScriptProgram p = restricted();
+        assertTrue(p.isRestricted());
+        assertRegex("^ok: [0-9]+$", call(p, "loadPhaseRead"));
+        assertEq("ok: lib", call(p, "lib"));
+    }
+
+    sealedTest() {
+        V8::JavaScriptProgram p = restricted();
+        p.seal();
+        foreach string name in (("loadPhaseRead", "keptModule", "keptFunction", "keptPrototype", "requireFs",
+                "requireChildProcess", "requireNet", "requireVm", "requireModule")) {
+            assertRegex("^err: QORE_TENANT_DENIED_BUILTIN: ", call(p, name), name);
+        }
+        # what the program loaded still works; the allowed builtins too
+        assertEq("ok: lib", call(p, "lib"));
+        assertEq("ok: function", call(p, "requireUtil"));
+        assertEq("main.js", call(p, "ownPath"));
+    }
+
+    hostAccessTest() {
+        foreach bool sealed in ((False, True)) {
+            V8::JavaScriptProgram p = restricted();
+            if (sealed) {
+                p.seal();
+            }
+            string label = sealed ? "sealed" : "not sealed";
+            assertEq("undefined", call(p, "qoreGlobal"), label);
+            # the global require() is the loader's own
+            assertEq("function", call(p, "globalRequire"), label);
+            assertEq("0", call(p, "processEnvKeys"), label);
+            assertEq("undefined", call(p, "processBinding"), label);
+            # fetch is the bridge's shim
+            assertEq("ok: undefined/function/function", call(p, "functionEscape"), label);
+            assertEq("undefined", call(p, "moduleConstructor"), label);
+            assertEq("ok: object", call(p, "moduleLoad"), label);
+            assertEq("0", call(p, "requireCache"), label);
+            assertRegex("^err: QORE_TENANT_DENIED_BUILTIN: ", call(p, "requireOutside"), label);
+        }
+    }
+
+    importTest() {
+        V8::JavaScriptProgram p = restricted();
+        p.seal();
+        V8::JavaScriptPromise promise = call(p, "dynamicImport");
+        promise.wait();
+        assertRegex("^refused: QORE_TENANT_DENIED_BUILTIN", promise.getResult());
+    }
+
+    copyTest() {
+        V8::JavaScriptProgram p = restricted();
+        V8::JavaScriptProgram c = p.copy();
+        assertTrue(c.isRestricted());
+        assertEq("undefined", call(c, "qoreGlobal"));
+    }
+
+    bridgeTest() {
+        list<hash<auto>> requests = ();
+        code bridge = string sub (string json) {
+            hash<auto> req = parse_json(json);
+            requests += req;
+            if (req.url =~ /10\.0\.0\.1/) {
+                throw "NETWORK-ACCESS-DENIED", "denied by the test's policy";
+            }
+            if (req.url =~ /v2/) {
+                return make_json({"status": 200, "headers": {"Content-Type": "text/plain"},
+                    "body_b64": make_base64_string("hi")});
+            }
+            return make_json({"status": 201, "headers": {"Content-Type": "application/json"},
+                "body_b64": make_base64_string("{\"ok\":true}")});
+        };
+        V8::JavaScriptProgram p = restricted(bridge);
+        p.seal();
+        assertEq("201:{\"ok\":true}", await(p, call(p, "fetchJson")));
+        assertEq("POST", requests[0].method);
+        assertEq("https://api.example.com/v1/items?x=1", requests[0].url);
+        assertEq("a", requests[0].headers."x-test");
+        assertEq("{\"q\":1}", binary_to_string(parse_base64_string(requests[0].body_b64)));
+        assertRegex("^rejected: .*NETWORK-ACCESS-DENIED", await(p, call(p, "fetchError")));
+        assertEq("200:text/plain:hi", await(p, call(p, "httpGet")));
+        assertEq("GET", requests[2].method);
+        # with no bridge, the network is refused
+        V8::JavaScriptProgram q = restricted();
+        q.seal();
+        assertRegex("^rejected: QORE_TENANT_DENIED_BUILTIN", await(q, call(q, "fetchError")));
+    }
+
+    axiosTest() {
+        *string nm = ENV.QORE_V8_TEST_NODE_MODULES;
+        if (!nm || !is_dir(nm + "/axios")) {
+            testSkip("set QORE_V8_TEST_NODE_MODULES to a node_modules directory with axios");
+        }
+        list<hash<auto>> requests = ();
+        code bridge = string sub (string json) {
+            hash<auto> req = parse_json(json);
+            requests += req;
+            return make_json({"status": 200, "headers": {"Content-Type": "application/json"},
+                "body_b64": make_base64_string("{\"n\":3}")});
+        };
+        # axios is found in the node_modules of the main module's directory
+        string main_dir = dirname(nm);
+        # axios is required while the program loads, as the apps do: no file is loaded once it is sealed
+        string src = "var exports = {}; const axios = require('axios'); exports.t = {axiosGet: () => axios.get('https://api.example.com/v3/data', "
+            "{headers: {Authorization: 'Bearer t'}}).then((r) => r.status + ':' + JSON.stringify(r.data), "
+            "(e) => 'axios error: ' + e.message)};";
+        V8::JavaScriptProgram p = new V8::JavaScriptProgram(src, main_dir + "/qore-restricted-main.js",
+            {"restricted": True, "roots": (dir, nm), "bridge": bridge});
+        p.seal();
+        assertEq("200:{\"n\":3}", await(p, call(p, "axiosGet")));
+        assertEq("https://api.example.com/v3/data", requests[0].url);
+        assertEq("Bearer t", requests[0].headers.authorization);
+    }
+
+    walkTest() {
+        foreach bool sealed in ((False, True)) {
+            V8::JavaScriptProgram p = restricted();
+            if (sealed) {
+                p.seal();
+            }
+            assertEq("clean", call(p, "walk"), sealed ? "sealed" : "not sealed");
+            assertEq("callsites", call(p, "callsites"), sealed ? "sealed" : "not sealed");
+        }
+    }
+
+    terminateTest() {
+        V8::JavaScriptProgram p = restricted();
+        p.seal();
+        background sub () {
+            usleep(300ms);
+            p.terminate();
+        }();
+        date start = now_us();
+        assertThrows("JAVASCRIPT-EXCEPTION", \call(), (p, "spin"));
+        assertLt(10s, now_us() - start);
+        assertTrue(p.isTerminated());
+        assertFalse(p.isOverHeap());
+        # the program cannot be used any more
+        assertThrows("JAVASCRIPT-PROGRAM-ERROR", \call(), (p, "ownPath"));
+    }
+
+    heapTest() {
+        V8::JavaScriptProgram p = restricted();
+        p.seal();
+        Counter done(1);
+        background sub () {
+            # waitForZero() returns non-zero when it times out: a check every 50ms until the call has ended
+            while (done.waitForZero(50ms)) {
+                p.requestHeapCheck(64 * 1024 * 1024);
+            }
+        }();
+        on_exit done.dec();
+        assertThrows("JAVASCRIPT-EXCEPTION", \call(), (p, "grow"));
+        assertTrue(p.isOverHeap());
+        assertTrue(p.isTerminated());
+    }
+
+    heapGarbageTest() {
+        # garbage over the cap: the check collects it first, and the program goes on
+        V8::JavaScriptProgram p = restricted();
+        p.seal();
+        assertEq(12000000, call(p, "garbage"));
+        assertFalse(p.checkHeap(64 * 1024 * 1024));
+        assertFalse(p.isOverHeap());
+        assertFalse(p.isTerminated());
+        assertEq(199999990000000, call(p, "busy"));
+        # live data over the cap: the program is terminated, and the size after the collection is given
+        V8::JavaScriptProgram q = restricted();
+        q.seal();
+        assertEq(12000000, call(q, "keep"));
+        assertTrue(q.checkHeap(64 * 1024 * 1024));
+        assertTrue(q.isOverHeap());
+        assertTrue(q.isTerminated());
+        assertGt(64 * 1024 * 1024, q.getOverHeapSize());
+    }
+
+    unrestrictedTest() {
+        V8::JavaScriptProgram p("globalThis.t = () => typeof qore + '/' + typeof require;", "plain.js");
+        assertFalse(p.isRestricted());
+        assertEq("object/function", p.getGlobal().getProperty("t").callAsFunctionArgs(NOTHING, ()));
+        assertThrows("JAVASCRIPT-PROGRAM-ERROR", \p.seal());
+    }
+}

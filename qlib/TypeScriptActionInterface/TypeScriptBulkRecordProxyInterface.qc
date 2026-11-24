@@ -29,7 +29,7 @@ public class TypeScriptBulkRecordProxyInterface inherits AbstractDataProviderBul
     public {
     }
 
-    private {
+    private:internal {
         TypeScriptActionRecordBasedDataProvider prov;
         string id;
         *JavaScriptProgramProxy proxy;
@@ -45,8 +45,8 @@ public class TypeScriptBulkRecordProxyInterface inherits AbstractDataProviderBul
         self.prov = prov;
         # generate unique request ID
         id = UUID::get();
-        hash<auto> rv = TSAI::server.searchRecords(prov.app, id, conn_name, conn_opts, block_size, where_cond,
-            search_options, options);
+        hash<auto> rv = TsaiProcessState::server.searchRecords(prov.app, id, conn_name, conn_opts, block_size,
+            where_cond, search_options, options);
         first_block = rv.rv;
         proxy = rv.proxy;
         have_first_block = True;
@@ -55,7 +55,7 @@ public class TypeScriptBulkRecordProxyInterface inherits AbstractDataProviderBul
     destructor() {
         if (proxy) {
             TSAI::info("Releasing search %y", id);
-            TSAI::server.releaseSearch(proxy, id);
+            TsaiProcessState::server.releaseSearch(proxy, id);
         }
     }
 

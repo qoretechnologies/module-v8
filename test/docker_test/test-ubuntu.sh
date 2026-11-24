@@ -156,7 +156,8 @@ cd ${MODULE_SRC_DIR}
 # the tests must load the modules that this job built, not the copies that the image already has
 ${MODULE_SRC_DIR}/test/docker_test/check-loaded-modules.sh ${MODULE_SRC_DIR}/build gosu qore:qore
 for test in test/*.qtest; do
-    if [ "$test" = test/hubspot-oauth.qtest ] || [ "$test" = test/ts-app-initialization.qtest ]; then
+    if [ "$test" = test/hubspot-oauth.qtest ] || [ "$test" = test/shopify-oauth.qtest ] \
+        || [ "$test" = test/ts-app-initialization.qtest ]; then
         # These fixtures register their own local apps; do not preload the live catalog.
         gosu qore:qore env -u QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT -u QORE_TYPESCRIPT_ACTION_SCRIPTS \
             -u QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS qore --enable-debug "$test" -vv
