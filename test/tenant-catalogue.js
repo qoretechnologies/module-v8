@@ -50,6 +50,7 @@ exports.actionsCatalogue = {
         api.registerAction(action("get-global", async () => ({"v": globalThis.__tenantValue === undefined ? null : globalThis.__tenantValue})));
         // network requests through the bridge
         api.registerAction(action("fetch-url", async (obj) => { const r = await fetch(obj.url); return {"status": r.status, "body": await r.text()}; }));
+        api.registerAction(action("post-url", async (obj) => { const r = await fetch(obj.url, {"method": "POST", "body": obj.body}); return {"status": r.status, "body": await r.text()}; }));
         api.registerAction(action("axios-url", async (obj) => { if (!axios) { return {"skip": true}; } const r = await axios.get(obj.url, {"responseType": "text"}); return {"status": r.status, "body": r.data}; }));
         // a builtin that tenants do not get
         api.registerAction(action("need-vm", async () => { require('vm'); return {}; }));

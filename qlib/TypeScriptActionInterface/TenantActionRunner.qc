@@ -415,6 +415,12 @@ public class TenantActionRunner {
     /** The meter is called as <tt>meter(string tenant, *string connection, int bytes_out, int bytes_in)</tt> after each
         request that the bridge made for a tenant, on the calling thread; never from JavaScript.
 
+        \c bytes_out is the size of the request bodies that were sent: a body counts for each request that sent it
+        (also when a 307 or 308 redirect sends it again), once the connection of the request is open, and a request
+        that the host's egress policy or the caller's sandbox refuses, or whose connection cannot be made, sends
+        nothing and counts 0 (qoretechnologies/qore#7359); \c bytes_in is the size of the body of the response that
+        was returned (the bodies of redirect responses are not counted).
+
         @throw TS-TENANT-ERROR the meter is set already, or the calling code is sandboxed
     */
     static setEgressMeter(code meter) [dom=PROCESS_CONTROL] {
@@ -1791,8 +1797,11 @@ globalThis.qoreTenantScan = function (entry, root) {
         string method = req.method ?? "GET";
         *binary body = req.body_b64 ? parse_base64_string(req.body_b64) : NOTHING;
         hash<auto> headers = req.headers ?? {};
-        int bytes_out = body ? body.size() : 0;
-        int bytes_in;
+        # the bytes sent (the body of each request whose connection was opened) and received (the body of the
+        # response returned); both start at 0, as the meter is called with integers also when the request is refused
+        # before either is counted (qore#7359)
+        int bytes_out = 0;
+        int bytes_in = 0;
         on_exit if (call && egress_meter) {
             call_function(egress_meter, call.tenant, call.connection, bytes_out, bytes_in);
         }
@@ -1818,6 +1827,9 @@ globalThis.qoreTenantScan = function (entry, root) {
                 throw ErrorContext, "the event source was stopped";
             }
             try {
+                # a request that the sandbox refuses, or whose connection fails, sends nothing
+                hc.connect();
+                bytes_out += body ? body.size() : 0;
                 resp = hc.send(body, method, ui.path ?? "/", headers, False, \info);
                 if (src) {
                     src.leaveRequest();
