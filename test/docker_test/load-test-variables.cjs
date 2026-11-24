@@ -76,7 +76,8 @@ function main(env = process.env, { output = console.log, append = fs.appendFileS
   const dropsOutputs = 'The runner masks each line by itself, so those characters show as *** in this job\'s log and '
     + 'a job output that holds one, such as the test summary for the notification, is dropped';
   if (punctuationLines(env.TEST_VARIABLES)) {
-    output('::warning::TEST_VARIABLES is stored on several lines, some of them only punctuation such as "{". '
+    // the message names no such character: it would be masked in the message too
+    output('::warning::TEST_VARIABLES is stored on several lines, some of them only punctuation, such as a brace. '
       + `${dropsOutputs}. Store the secret as one line of JSON`);
   }
   const structured = Object.keys(values).filter(name => leaves(values[name]).some(punctuationLines));

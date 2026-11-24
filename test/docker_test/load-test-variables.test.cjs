@@ -100,7 +100,7 @@ test('a secret stored as indented JSON is reported: the runner masks its braces 
   assert.match(warnings[0].line,
     /^::warning::TEST_VARIABLES is stored on several lines, some of them only punctuation/);
   assert.match(warnings[0].line, /Store the secret as one line of JSON$/);
-  assert.doesNotMatch(warnings[0].line, /alpha-secret|[\r\n]/);
+  assert.doesNotMatch(warnings[0].line, /alpha-secret|[\r\n{}]/, 'no value, one line, and no character that is masked');
   // and it is loaded all the same
   assert.deepEqual(masks(events), ['alpha-secret']);
   assert.deepEqual(exported(events), { A_TOKEN: 'alpha-secret' });
