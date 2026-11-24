@@ -43,6 +43,11 @@ function maskCommands(value) {
   return [...texts].filter(text => text.trim()).map(text => `::add-mask::${escape(text)}`);
 }
 
+/** Returns how many lines of a text hold no letter and no digit, blank lines aside: "{" is one, "}," another. */
+function punctuationLines(text) {
+  return text.split(/\r\n|\r|\n/).filter(line => line.trim() && !/[\p{L}\p{N}]/u.test(line)).length;
+}
+
 /** Returns a value as the text of an environment variable; a missing value is empty, as fromJson() left it. */
 function asText(value) {
   if (value === null || value === undefined) return '';
@@ -63,6 +68,22 @@ function main(env = process.env, { output = console.log, append = fs.appendFileS
     return 0;
   }
   const values = parse(env.TEST_VARIABLES);
+  // The runner masks every line of a secret, and of a value masked below, by itself (actions/runner, "Also add each
+  // individual line"). A line that is only punctuation, such as the "{" of a secret stored as indented JSON, then
+  // masks that character in every line of the job's log, and the runner drops a job output that holds a masked
+  // value: the unit tests' summary is JSON, so the notification gets none. Nothing here can undo such a mask, so the
+  // job says what causes it.
+  const dropsOutputs = 'The runner masks each line by itself, so those characters show as *** in this job\'s log and '
+    + 'a job output that holds one, such as the test summary for the notification, is dropped';
+  if (punctuationLines(env.TEST_VARIABLES)) {
+    output('::warning::TEST_VARIABLES is stored on several lines, some of them only punctuation such as "{". '
+      + `${dropsOutputs}. Store the secret as one line of JSON`);
+  }
+  const structured = Object.keys(values).filter(name => leaves(values[name]).some(punctuationLines));
+  if (structured.length) {
+    output(`::warning::In TEST_VARIABLES, ${structured.join(', ')} ${structured.length > 1 ? 'have' : 'has'} a value `
+      + `with a line that is only punctuation. ${dropsOutputs}`);
+  }
   // every value of the secret, listed or not, and all of them before the first export
   const masked = new Set(leaves(values));
   for (const value of masked) maskCommands(value).forEach(command => output(command));
@@ -71,7 +92,7 @@ function main(env = process.env, { output = console.log, append = fs.appendFileS
   return 0;
 }
 
-module.exports = { asText, envEntry, leaves, main, maskCommands, parse };
+module.exports = { asText, envEntry, leaves, main, maskCommands, parse, punctuationLines };
 if (require.main === module) {
   try {
     process.exitCode = main();
