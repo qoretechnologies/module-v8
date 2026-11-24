@@ -329,7 +329,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         # handle the call with a remote process
         if (TSAI::checkServer()) {
-            TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, LoggerUtil::getArgSummary(args));
+            # without the arguments: they hold the options of a connection, its secret and tokens among them, and
+            # the length of a summary is no protection; the arguments are in the module's debug messages
+            TSAI::info("%y: acquiring proxy for %y", api.label, api.key);
             JavaScriptProgramProxy proxy = TsaiProcessState::server.get();
             TSAI::info("%y: proxy (%y) acquired for %y", api.label, proxy.getInfo(), api.key);
             on_exit TsaiProcessState::server.release(proxy);

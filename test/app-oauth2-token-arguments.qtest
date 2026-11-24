@@ -7,7 +7,8 @@
 # by them: Qorus writes "oauth2_app" into a connection's token arguments for a client whose secret it does not hold,
 # and with that the Shopify app's "expiring" was never sent.  And a token answer that names no token type, as
 # Shopify's does not, is taken as a token of the type the client already uses: RestClient refuses such an answer,
-# so an expiring Shopify token could not be refreshed.
+# so an expiring Shopify token could not be refreshed.  And the messages about a token answer name its fields and the
+# options an app's post-auth function adds: with their values a connection's tokens were in the host's log.
 %modern
 %requires qore >= 3.0
 %requires QUnit
@@ -18,7 +19,26 @@
 %requires Mime
 %requires json
 %requires HttpServer
+%requires Logger
 %exec-class AppOAuth2TokenArgumentsTest
+
+#! Keeps the messages logged to it
+class CaptureAppender inherits LoggerAppenderWithLayout {
+    public {
+        list<string> lines = ();
+        Mutex m();
+    }
+
+    constructor() : LoggerAppenderWithLayout("capture", new LoggerLayoutPattern("%m")) {
+    }
+
+    processEventImpl(int type, auto params) {
+        if (type == EVENT_LOG) {
+            AutoLock al(m);
+            lines += params;
+        }
+    }
+}
 
 #! The local provider: a token endpoint that answers as Shopify's does, and a resource that repeats the credential
 class TokenFixtureHandler inherits AbstractHttpRequestHandler {
@@ -76,12 +96,17 @@ class AppOAuth2TokenArgumentsTest inherits QUnit::Test {
         #! an app that declares a token argument of its provider, and one that declares none
         const ArgsApp = "OAuth2TokenArgsFixture";
         const PlainApp = "OAuth2NoTokenArgsFixture";
+        #! an app with a post-auth-code function, which puts the token it is given into a header of the ping
+        const HookApp = "OAuth2PostAuthFixture";
+        #! the program of HookApp's function
+        JavaScriptProgramPool hook_pool;
     }
 
     constructor() : Test("an app's OAuth2 token arguments and a token answer without a token type", "1.0") {
         addTestCase("an app's token arguments go with a connection's own", \tokenArgumentsTest());
         addTestCase("a refresh sends both, and takes an answer that names no token type", \refreshTest());
         addTestCase("an answer that names its token type keeps it", \typedAnswerTest());
+        addTestCase("a token answer is logged by the names of its fields and of the options added", \answerLogTest());
         set_return_value(main());
     }
 
@@ -101,6 +126,31 @@ class AppOAuth2TokenArgumentsTest inherits QUnit::Test {
 
         registerApp(ArgsApp, {"oauth2_token_args": {"expiring": 1}});
         registerApp(PlainApp);
+        registerHookApp();
+    }
+
+    #! Registers HookApp from JavaScript, as a catalogue registers an app with a post-auth-code function
+    private registerHookApp() {
+        string script = "var exports = {};\n"
+            "async function runWithTimeout(p, d) { return await (typeof p === 'function' ? p() : p); }\n"
+            "exports.actionsCatalogue = {registerAppActions: function(api) {\n"
+            "    api.registerApp({name: " + make_json(HookApp) + ", display_name: 'Post-auth fixture',\n"
+            "        short_desc: 'Post-auth fixture', desc: 'A local OAuth2 app.', groups: ['Other'],\n"
+            "        logo: 'PHN2Zy8+', logo_file_name: 'fixture.svg', logo_mime_type: 'image/svg+xml',\n"
+            "        rest: {url: " + make_json(rest_url) + ", data: 'json',\n"
+            "            oauth2_grant_type: 'authorization_code',\n"
+            "            oauth2_auth_url: " + make_json(url + "/authorize") + ",\n"
+            "            oauth2_token_url: " + make_json(url + "/token") + "},\n"
+            "        rest_modifiers: {set_options_post_auth_code: function(context) {\n"
+            "            return {ping_headers: {'X-Fixture-Token': context.conn_opts.token}};\n"
+            "        }}});\n"
+            "}};\n";
+        hook_pool = new JavaScriptProgramPool(script, get_script_dir() + "/../ts/post-auth-fixture.js",
+            sub (JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
+                    TypeScriptActionInterface::getInterface());
+            });
+        TypeScriptActionInterface::initApp(HookApp, True);
     }
 
     globalTearDown() {
@@ -203,5 +253,40 @@ class AppOAuth2TokenArgumentsTest inherits QUnit::Test {
         assertEq("access-1", client.getToken());
         assertEq("bearer", client.getTokenType().lwr(), "the answer's own type");
         assertRegex("^[Bb]earer access-1$", authorization);
+    }
+
+    #! The messages about a token answer name its fields and the options taken from it; none prints a value
+    /** On a Qorus (build 7b7659f5) the messages of a code exchange put the connection's access token and its
+        refresh token into the server's log at INFO (qoretechnologies/qorus#1125)
+    */
+    answerLogTest() {
+        CaptureAppender capture();
+        capture.open();
+        Logger logger("token-args-fixture", LoggerLevel::getLevelDebug());
+        logger.addAppender(capture);
+        hash<auto> answer = {
+            "access_token": "access-from-code",
+            "scope": "read_products",
+            "expires_in": 3599,
+            "refresh_token": "refresh-from-code",
+            "refresh_token_expires_in": 7775999,
+        };
+        TypeScriptAppRestConnection conn = connection(HookApp);
+        conn.setLogger(logger);
+        # as Qorus hands a connection the answer of the code exchange: the app's function is given the token
+        assertEq({"X-Fixture-Token": "access-from-code"}, conn.processOAuth2TokenResponse(answer).ping_headers);
+        # and as the connection's client takes an answer
+        hash<auto> kept;
+        TypeScriptAppRestClient client(conn, conn.getRealOptions() + {"url": rest_url, "logger": logger,
+            "update_options": sub (hash<auto> new_opts) {
+                kept += new_opts;
+            }}, True);
+        client.gotOAuth2LoginInfo(answer);
+        assertEq({"X-Fixture-Token": "access-from-code"}, kept.ping_headers);
+
+        list<string> lines = capture.lines;
+        # one message of each about the options that the function added, with their names
+        assertEq(2, (select lines, $1 =~ /adding options: .*ping_headers/).size(), sprintf("%y", lines));
+        assertEq((), (select lines, $1 =~ /(access|refresh)-from-code/), "no message has a token");
     }
 }

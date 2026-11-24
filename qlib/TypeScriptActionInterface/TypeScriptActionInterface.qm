@@ -284,6 +284,11 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
     - A token answer that names no token type is taken as a token of the type the client uses instead of being
       refused with \c REST-LOGIN-ERROR, so an expiring Shopify token can be refreshed
       (qoretechnologies/qorus#1125).
+    - The messages about a token answer and about the options an app's post-auth call adds name the fields and the
+      options and no longer print their values, the \c INFO messages of a call through the child process no
+      longer print its arguments or its answer, and the error for a call that cannot be serialized names its
+      arguments only: they put a connection's access token and refresh token into the host's log
+      (qoretechnologies/qorus#1125).
 
     @section TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
     - Added support for Google apps.
