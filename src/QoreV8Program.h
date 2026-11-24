@@ -52,7 +52,13 @@ struct QoreV8MethodData;
 struct QoreV8FunctionData;
 struct QoreV8MemberHandlerData;
 
+#ifdef _QORE_HAS_PROGRAM_EXTERNAL_DATA_EX
+// the external data of a Program reports the errors of its copy and of its release in an ExceptionSink
+// (qoretechnologies/qore#6919)
+class QoreV8Program : public AbstractQoreProgramExternalDataEx {
+#else
 class QoreV8Program : public AbstractQoreProgramExternalData {
+#endif
     friend class QoreV8ProgramHelper;
     friend class QoreV8ProgramOperationHelper;
     friend class QoreV8Object;
@@ -124,6 +130,19 @@ public:
 
     DLLLOCAL ~QoreV8Program();
 
+#ifdef _QORE_HAS_PROGRAM_EXTERNAL_DATA_EX
+    using AbstractQoreProgramExternalDataEx::copy;
+    using AbstractQoreProgramExternalDataEx::doDeref;
+
+    //! Releases the program; errors are raised in \a xsink, and the program is released anyway
+    /** Also called for a copy whose creation failed, or for which initProgram() was never called
+    */
+    DLLLOCAL void doDeref(ExceptionSink* xsink) override {
+        printd(5, "QoreV8Program::doDeref() this: %p\n", this);
+        deleteIntern(xsink);
+        weakDeref();
+    }
+#else
     DLLLOCAL virtual void doDeref() {
         printd(5, "QoreV8Program::doDeref() this: %p\n", this);
         ExceptionSink xsink;
@@ -133,6 +152,7 @@ public:
         }
         weakDeref();
     }
+#endif
 
     DLLLOCAL void destructor(ExceptionSink* xsink) {
         deleteIntern(xsink);
@@ -144,9 +164,32 @@ public:
         return (bool)opcount;
     }
 
+#ifdef _QORE_HAS_PROGRAM_EXTERNAL_DATA_EX
+    //! Returns the program of a child Program; an error creating its environment fails the creation of the child
+    DLLLOCAL AbstractQoreProgramExternalData* copy(QoreProgram* pgm, ExceptionSink* xsink) const override {
+        QoreV8Program* rv;
+        try {
+            rv = new QoreV8Program(*this, pgm);
+        } catch (AbstractException& e) {
+            // a C++ exception must not leave the copy
+            e.convert(xsink);
+            return nullptr;
+        }
+        if (!rv->valid) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", qore_v8_forked_child()
+                ? "a JavaScript program cannot be created in a child process created with fork(): the V8 and "
+                    "Node.js threads of the parent process do not exist in the child"
+                : "cannot create the JavaScript environment of the child Program");
+            rv->doDeref(xsink);
+            return nullptr;
+        }
+        return rv;
+    }
+#else
     DLLLOCAL virtual AbstractQoreProgramExternalData* copy(QoreProgram* pgm) const {
         return new QoreV8Program(*this, pgm);
     }
+#endif
 
     //! Returns a Qore value for the given V8 value
     DLLLOCAL QoreValue getQoreValue(ExceptionSink* xsink, v8::Local<v8::Value> val);
@@ -428,7 +471,8 @@ protected:
     //! protected constructor
     DLLLOCAL QoreV8Program();
 
-    DLLLOCAL int init(ExceptionSink* xsink);
+    //! Creates the program's environment and runs its code; not AbstractQoreProgramExternalDataEx::init()
+    DLLLOCAL int initProgram(ExceptionSink* xsink);
 
     //! Passes the source and its label to the bootstrap code in the program's own context
     /** Must be called with the program's context entered; the bootstrap code removes the data before it runs any

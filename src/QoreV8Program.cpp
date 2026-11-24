@@ -61,7 +61,7 @@ QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
     //printd(5, "QoreV8Program::QoreV8Program() this: %p\n", this);
     if (qore_v8_forked_child()) {
         // no environment can be created in a child process created with fork(); the platform's threads do not
-        // exist in it; init() raises the exception
+        // exist in it; initProgram() raises the exception
         valid = false;
         return;
     }
@@ -79,7 +79,7 @@ QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
         for (const std::string& err : errors) {
             fprintf(stderr, "v8 module init error: %s: %s\n", init_result->args()[0].c_str(), err.c_str());
         }
-        valid = false;  // Mark as invalid so init() will fail gracefully
+        valid = false;  // Mark as invalid so initProgram() will fail gracefully
         return;
     }
 
@@ -106,7 +106,7 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
     source = source_code;
     label = source_label;
 
-    init(xsink);
+    initProgram(xsink);
 }
 
 QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& source_label,
@@ -162,7 +162,7 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
         }
     }
 
-    init(xsink);
+    initProgram(xsink);
 }
 
 void QoreV8Program::terminate() {
@@ -273,7 +273,7 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
     label = source_label;
     this->transpile_ts = transpile_ts;
 
-    init(xsink);
+    initProgram(xsink);
 }
 
 QoreV8Program::QoreV8Program(ExceptionSink* xsink, const QoreV8Program& old, QoreObject* self) : QoreV8Program() {
@@ -285,7 +285,7 @@ QoreV8Program::QoreV8Program(ExceptionSink* xsink, const QoreV8Program& old, Qor
     restricted_roots = old.restricted_roots;
     restricted_bridge = old.restricted_bridge ? old.restricted_bridge->refRefSelf() : nullptr;
 
-    if (!init(xsink)) {
+    if (!initProgram(xsink)) {
         this->self = self;
     }
 }
@@ -807,7 +807,7 @@ static bool qore_v8_refuses_caller() {
 #endif
 }
 
-int QoreV8Program::init(ExceptionSink* xsink) {
+int QoreV8Program::initProgram(ExceptionSink* xsink) {
     if (qore_v8_refuses_caller()) {
         xsink->raiseException("INVALID-FUNCTION-ACCESS", "the sandbox that governs the calling code does not allow "
             "uncontrolled APIs, which a JavaScript program is: its code has file, process and network access that no "
