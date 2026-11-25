@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { test } = require('node:test');
-const { envEntry, leaves, main, maskCommands, parse } = require('./load-test-variables.cjs');
+const { envEntry, leaves, main, maskCommands, parse, punctuationLines } = require('./load-test-variables.cjs');
 const { names } = require('./test-variables.json');
 
 const WORKFLOWS = path.resolve(__dirname, '../../.github/workflows');
@@ -90,6 +90,50 @@ test('numbers are masked, booleans are not, and nested values are found', () => 
 test('a blank value has no mask, which the runner would reject', () => {
   assert.deepEqual(maskCommands('   '), []);
   assert.deepEqual(maskCommands('one\n\ntwo'), ['::add-mask::one%0A%0Atwo', '::add-mask::one', '::add-mask::two']);
+});
+
+test('a secret stored as indented JSON is reported: the runner masks its braces and drops such outputs', () => {
+  const events = run(JSON.stringify({ A_TOKEN: 'alpha-secret' }, null, 2), ['A_TOKEN']);
+  const warnings = events.filter(event => event.line?.startsWith('::warning::'));
+  assert.equal(warnings.length, 1);
+  assert.equal(events[0], warnings[0], 'before anything else');
+  assert.match(warnings[0].line,
+    /^::warning::TEST_VARIABLES is stored on several lines, some of them only punctuation/);
+  assert.match(warnings[0].line, /Store the secret as one line of JSON$/);
+  assert.doesNotMatch(warnings[0].line, /alpha-secret|[\r\n{}]/, 'no value, one line, and no character that is masked');
+  // and it is loaded all the same
+  assert.deepEqual(masks(events), ['alpha-secret']);
+  assert.deepEqual(exported(events), { A_TOKEN: 'alpha-secret' });
+});
+
+test('a secret on one line, or on several that all hold text, is not reported', () => {
+  for (const secret of ['{"A_TOKEN":"alpha-secret"}', '{"A_TOKEN":"alpha-secret",\n\n "B_TOKEN":"beta-secret"}\n']) {
+    assert.deepEqual(run(secret, ['A_TOKEN']).filter(event => event.line?.startsWith('::warning::')), []);
+  }
+});
+
+test('a value with a line of punctuation only is reported by the name of its variable', () => {
+  const events = run(JSON.stringify({
+    KEY_FILE: '{\n  "private": "nested-secret"\n}',
+    DEEP: { list: ['plain-secret', '[\r\ninner-secret\r\n]'] },
+    PEM: '-----BEGIN KEY-----\nabc\n-----END KEY-----',
+    PLAIN: 'one-secret',
+  }), ['KEY_FILE', 'PLAIN']);
+  const warnings = events.filter(event => event.line?.startsWith('::warning::')).map(event => event.line);
+  assert.equal(warnings.length, 1);
+  assert.match(warnings[0],
+    /^::warning::In TEST_VARIABLES, KEY_FILE, DEEP have a value with a line that is only punctuation\. /);
+  assert.doesNotMatch(warnings[0], /secret"|nested-secret|inner-secret|plain-secret|one-secret|PEM|PLAIN/);
+  const one = run(JSON.stringify({ KEY_FILE: '{\n"a": 1\n}' }), []);
+  assert.match(one.find(event => event.line?.startsWith('::warning::')).line,
+    /^::warning::In TEST_VARIABLES, KEY_FILE has a value /);
+});
+
+test('a line counts as punctuation only when it holds no letter and no digit', () => {
+  assert.equal(punctuationLines('{\n  "a": "b",\n  },\n]\n\n   \n}'), 4);
+  assert.equal(punctuationLines('{"a":"b"}'), 0);
+  assert.equal(punctuationLines('é\n7\n-----BEGIN-----'), 0);
+  assert.equal(punctuationLines(''), 0);
 });
 
 test('a secret that does not parse is refused without quoting it', () => {
