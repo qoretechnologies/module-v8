@@ -535,7 +535,7 @@ class ListenerReleaseProxy inherits JavaScriptProgramProxy {
 
     #! returns True if the debug hooks of the module are active
     static bool debugHooks() {
-        bool rv;
+        bool rv = False;
         @debug {
             rv = True;
         }
