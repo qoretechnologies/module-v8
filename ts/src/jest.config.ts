@@ -3,6 +3,8 @@ import { Config } from 'jest';
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  // gets the live Shopify suites their token for the run; does nothing without their credentials
+  globalSetup: '<rootDir>/tests/global-setup.ts',
   maxWorkers: '50%',
   coverageReporters: ['json-summary', 'text', 'lcov'],
   testTimeout: 60000,
