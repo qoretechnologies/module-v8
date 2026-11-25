@@ -9,6 +9,7 @@ import { createPipedriveRecords } from '../apps/pipedrive/helpers/record-based/c
 import { updatePipedriveRecords } from '../apps/pipedrive/helpers/record-based/update-records';
 import { getPipedrivePersonRecordType } from '../apps/pipedrive/helpers/record-based/get-person-record-type';
 import { getPipedriveAttendeeAllowedValues } from '../apps/pipedrive/helpers/get-attendee-allowed-values';
+import appCompatibility from '../schema-cache/app-compatibility.json';
 
 function bundle(): Record<string, any> {
   return Object.fromEntries(['v1', 'v2'].map(version => {
@@ -322,6 +323,89 @@ describe('Pipedrive API migration', () => {
       change(changed.paths['/api/v2/deals'].post.requestBody.content['application/json'].schema);
       expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
     }
+  });
+
+  // The 2026-11-25 revision adds optional email tracking consent enums to person requests and responses, and to the
+  // include_fields values of the person read operations.
+  it('preserves optional person email tracking consent enums without changing requirements or routes', () => {
+    const input = bundle();
+    const consent = ['no_preference_set', 'consent_given', 'consent_declined'];
+    const field = (description: string) => ({ type: 'string', description, enum: [...consent] });
+    const includeFields = (values: string[]) => ({ name: 'include_fields', in: 'query', required: false,
+      schema: { type: 'array', items: { type: 'string', enum: values } }, style: 'form', explode: false });
+    const people = [['/persons', 'get'], ['/persons', 'post'], ['/persons/{id}', 'get'], ['/persons/{id}', 'patch']];
+    for (const [route, method] of people) {
+      const op = input.v2.paths[route][method];
+      op.responses['200'].content['application/json'].schema = { type: 'object', properties: {
+        data: { type: 'object', properties: { name: { type: 'string' } } } } };
+      if (method === 'post' || method === 'patch') {
+        op.requestBody = { content: { 'application/json': { schema: {
+          type: 'object', properties: { name: { type: 'string' } },
+          ...(method === 'post' ? { required: ['name'] } : {}),
+        } } } };
+      } else {
+        op.parameters = [includeFields(['marketing_status', 'smart_bcc_email'])];
+      }
+    }
+    const previous = normalizeSchema('pipedrive', input);
+    for (const [route, method] of people) {
+      const op = input.v2.paths[route][method];
+      Object.assign(op.responses['200'].content['application/json'].schema.properties.data.properties,
+        { track_open: field('Synthetic open tracking consent'), track_click: field('Synthetic click tracking consent') });
+      if (method === 'post' || method === 'patch') {
+        Object.assign(op.requestBody.content['application/json'].schema.properties,
+          { track_open: field('Synthetic open consent'), track_click: field('Synthetic click consent') });
+      } else {
+        op.parameters = [includeFields(['marketing_status', 'track_open', 'track_click', 'smart_bcc_email'])];
+      }
+    }
+    const original = structuredClone(input);
+    const doc = normalizeSchema('pipedrive', input);
+    expect(input).toEqual(original);
+    expect(Object.keys(doc.paths)).toEqual(Object.keys(previous.paths));
+    for (const [route, method] of people) {
+      const path = '/api/v2' + route;
+      const operation = doc.paths[path][method];
+      const prior = previous.paths[path][method];
+      const data = operation.responses['200'].content['application/json'].schema.properties.data;
+      for (const name of ['track_open', 'track_click']) {
+        expect(data.properties[name]).toMatchObject({ type: 'string', enum: consent });
+        expect(data.required ?? []).not.toContain(name);
+      }
+      if (method === 'post' || method === 'patch') {
+        const schema = operation.requestBody.content['application/json'].schema;
+        for (const name of ['track_open', 'track_click']) {
+          expect(schema.properties[name]).toMatchObject({ type: 'string', enum: consent });
+        }
+        expect(schema.required).toEqual(method === 'post' ? ['name'] : undefined);
+      } else {
+        expect(operation.parameters.find((p: Record<string, any>) => p.name === 'include_fields').schema.items.enum)
+          .toEqual(['marketing_status', 'track_open', 'track_click', 'smart_bcc_email']);
+      }
+      expect(operation.security).toEqual(prior.security);
+      expect(operation.operationId).toBe(prior.operationId);
+    }
+    const reviewed = schemaCompatibilityDigest(doc);
+    expect(reviewed).not.toBe(schemaCompatibilityDigest(previous));
+    for (const change of [
+      (schema: Record<string, any>) => { schema.properties.track_open.enum.pop(); },
+      (schema: Record<string, any>) => { schema.properties.track_click.type = 'integer'; },
+      (schema: Record<string, any>) => { schema.required.push('track_open'); },
+      (schema: Record<string, any>) => { delete schema.properties.track_click; },
+    ]) {
+      const changed = structuredClone(doc);
+      change(changed.paths['/api/v2/persons'].post.requestBody.content['application/json'].schema);
+      expect(schemaCompatibilityDigest(changed)).not.toBe(reviewed);
+    }
+  });
+
+  it('accepts every reviewed Pipedrive revision, including the person email tracking consent revision', () => {
+    const fingerprints: string[] = appCompatibility.apps.pipedrive;
+    expect(new Set(fingerprints).size).toBe(fingerprints.length);
+    expect(fingerprints.slice(-2)).toEqual([
+      'b29d71d36f0cee57536aef6a19bff1010dc790bedfbca53fdf34682857b3204a',
+      '730c22b78f883201baed647ce2b79792ee9d3956956184328d06a415005b3497',
+    ]);
   });
 
   // The 2026-11-07 revision removes is_deleted from deal creation and documents that an update accepts only false.

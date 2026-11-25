@@ -73,6 +73,11 @@ describe('HubSpot schema snapshots', () => {
       '40635eb2278899ad8ae6773832aed448febe56a03d8585ad5b77a158424ac4a9',
       '27a94fc244bac5a0eaacebbd339c8f004e83db71439da74d7d250d7b132b33f8',
     ]);
+    // the Forms revision of 2026-11-25 only adds get_forms query parameter descriptions; both remain accepted
+    expect(compatibility.schemas.forms).toEqual([
+      '07d177d24f26b9dae1597bd86890ce16a0ca791206a25a568ca8ec029971449b',
+      '5a9e312967141de2461dc0f6e34f5710aeba1c2b32e694104f81f34b375fa510',
+    ]);
   });
 
   it('Rejects a named pipe without blocking while opening an offline input', () => {
