@@ -822,6 +822,15 @@ class TenantProcessWideStateTest inherits QUnit::Test {
                 results.child = child.callFunction("run", args());
             } catch (hash<ExceptionInfo> ex) {
                 results.error = sprintf("%s: %s", ex.err, ex.desc);
+                # a class of the Program that a tenant creates reads a private member of a class of this module
+                # (trusted code): it is refused when the Program is parsed (qore#7258), where it was parsed before
+                # and refused by the guard of the call when it ran ("guarded").  Both refuse the call, in a case that
+                # expects the refusal; any other error, and the cases that expect another result, do not match.
+                if (!exists results.child && OtherErrors{i.key} == "guarded" && ex.err == "PARSE-EXCEPTION"
+                    && ex.desc =~ /^illegal access to private member '[^']+' of class '[^']+' in class '[^']+': a class declared by sandboxed code cannot use the private declarations of a class declared by trusted code/) {
+                    results.child = "guarded";
+                    delete results.error;
+                }
             }
 
             all{i.key} = results;
