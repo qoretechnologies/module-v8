@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Baserow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
-          "message": "HTTP method"
+          "source": "HTTP Method",
+          "message": "HTTP Method"
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QmFzZXJvdw.action.c2VhcmNo.display_name": {
-          "source": "Search records",
-          "message": "Search records"
+          "source": "Search Records",
+          "message": "Search Records"
         },
         "app.QmFzZXJvdw.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Baserow\"",

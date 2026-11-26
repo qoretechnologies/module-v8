@@ -28,7 +28,7 @@
           "message": "Realice una llamada personalizada a la API HTTP / REST a **Mailchimp** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta del URI (relativa a la URL base de la API de la conexión), los parámetros de consulta opcionales, los encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para los endpoints que aún no estén expuestos como acciones de primer nivel en esta aplicación."
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Método HTTP"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Buscar registros"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "El nombre de la tabla"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
-          "source": "Get campaigns",
+          "source": "Get Campaigns",
           "message": "Obtener campañas"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Obtiene todas las campañas de correo electrónico de su cuenta de Mailchimp con sus detalles, incluidos el estado, la configuración y las métricas de rendimiento."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
-          "source": "Create campaign",
+          "source": "Create Campaign",
           "message": "Crear campaña"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Crea una nueva campaña de correo electrónico en Mailchimp con la configuración, el contenido y las opciones de segmentación de audiencia especificadas."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
-          "source": "Send campaign",
+          "source": "Send Campaign",
           "message": "Enviar campaña"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Envía una campaña de correo electrónico creada previamente a su audiencia objetivo de inmediato o la programa para su entrega posterior."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
-          "source": "Create audience",
+          "source": "Create Audience",
           "message": "Crear audiencia"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Crea una nueva audiencia (lista de correo) en Mailchimp con la configuración y las opciones especificadas."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
-          "source": "Search tags by name",
+          "source": "Search Tags by Name",
           "message": "Buscar etiquetas por nombre"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Busca etiquetas de suscriptores por nombre para ayudar a organizar y segmentar a los miembros de su audiencia."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
-          "source": "Get audience members",
+          "source": "Get Audience Members",
           "message": "Obtener miembros de la audiencia"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Obtiene todos los miembros (suscriptores) de una audiencia específica con su información de contacto y detalles de suscripción."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
-          "source": "Add audience member",
+          "source": "Add Audience Member",
           "message": "Agregar miembro de la audiencia"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Agrega un nuevo suscriptor a una audiencia específica con su información de contacto y preferencias de suscripción."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Get audience member",
+          "source": "Get Audience Member",
           "message": "Obtener miembro de la audiencia"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Obtiene información detallada sobre un miembro (suscriptor) específico de una audiencia, incluidos sus datos de perfil y actividad."
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Update audience member",
+          "source": "Update Audience Member",
           "message": "Actualizar miembro de la audiencia"
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Actualiza la información y las preferencias de suscripción de un miembro existente en una audiencia."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Remove audience member",
+          "source": "Remove Audience Member",
           "message": "Eliminar miembro de la audiencia"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Elimina a un suscriptor de una audiencia mientras conserva sus datos para fines de cumplimiento."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
-          "source": "Add member tags",
+          "source": "Add Member Tags",
           "message": "Agregar etiquetas de miembro"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Agrega una o más etiquetas a los miembros de la audiencia para una mejor segmentación y organización."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
-          "source": "Add member events",
+          "source": "Add Member Events",
           "message": "Agregar eventos de miembro"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Registra eventos personalizados para los miembros de la audiencia para realizar un seguimiento de su comportamiento e interacciones con su marca."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
-          "source": "Add member note",
+          "source": "Add Member Note",
           "message": "Agregar nota de miembro"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Agrega una nota a un miembro específico de la audiencia para el seguimiento interno y la gestión de relaciones con clientes."
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
-          "source": "Update member note",
+          "source": "Update Member Note",
           "message": "Actualizar nota de miembro"
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Actualiza una nota existente adjunta a un miembro de la audiencia con nueva información o correcciones."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
-          "source": "Delete member note",
+          "source": "Delete Member Note",
           "message": "Eliminar nota de miembro"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Elimina permanentemente una nota del perfil de un miembro de la audiencia."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
-          "source": "Permanently delete member",
+          "source": "Permanently Delete Member",
           "message": "Eliminar miembro permanentemente"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Elimina permanentemente a un miembro de la audiencia y todos sus datos asociados de Mailchimp. Esta acción no se puede deshacer."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
-          "source": "Get campaign reports",
+          "source": "Get Campaign Reports",
           "message": "Obtener informes de campaña"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Restringe la respuesta a las campañas enviadas después de la hora establecida. Utiliza el formato de hora ISO 8601: 2015-10-21T15:41:36+00:00."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
-          "source": "Get campaign report",
+          "source": "Get Campaign Report",
           "message": "Obtener informe de campaña"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Obtiene métricas de rendimiento y análisis detallados para una campaña de correo electrónico específica."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
-          "source": "Get campaign click details",
+          "source": "Get Campaign Click Details",
           "message": "Obtener detalles de clics de campaña"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Obtiene información detallada sobre los clics en una campaña específica, incluyendo qué enlaces se pulsaron y quién lo hizo."
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
-          "source": "Get store customer",
+          "source": "Get Store Customer",
           "message": "Obtener cliente de la tienda"
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Obtiene información detallada sobre un cliente específico de su tienda de comercio electrónico conectada."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
-          "source": "Search campaigns",
+          "source": "Search Campaigns",
           "message": "Buscar campañas"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
@@ -856,7 +856,7 @@
           "message": "La consulta de búsqueda utilizada para filtrar los resultados."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
-          "source": "Search audience members",
+          "source": "Search Audience Members",
           "message": "Buscar miembros de la audiencia"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {

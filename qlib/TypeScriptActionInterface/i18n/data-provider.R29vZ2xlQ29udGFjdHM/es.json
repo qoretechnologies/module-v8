@@ -28,7 +28,7 @@
           "message": "Realice una llamada HTTP / REST API personalizada a **Google Contacts** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para puntos de enlace que aún no estén expuestos como acciones de primer nivel en esta aplicación."
         },
         "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Método HTTP"
         },
         "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
-          "source": "Search contacts",
+          "source": "Search Contacts",
           "message": "Buscar contactos"
         },
         "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {

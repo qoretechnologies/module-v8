@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Mailchimp** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL rozhraní API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci k dispozici jako prvotřídní akce."
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metoda HTTP"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Vyhledat záznamy"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Název tabulky"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
-          "source": "Get campaigns",
+          "source": "Get Campaigns",
           "message": "Získat kampaně"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Načte všechny e-mailové kampaně z vašeho účtu Mailchimp včetně jejich podrobností, jako je stav, nastavení a metriky výkonu."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
-          "source": "Create campaign",
+          "source": "Create Campaign",
           "message": "Vytvořit kampaň"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vytvoří novou e-mailovou kampaň v Mailchimpu se zadaným nastavením, obsahem a možnostmi cílení na publikum."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
-          "source": "Send campaign",
+          "source": "Send Campaign",
           "message": "Odeslat kampaň"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Odešle dříve vytvořenou e-mailovou kampaň jejímu cílovému publiku okamžitě nebo ji naplánuje na pozdější doručení."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
-          "source": "Create audience",
+          "source": "Create Audience",
           "message": "Vytvořit publikum"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Vytvoří v aplikaci Mailchimp nové publikum (e-mailový seznam) se zadaným nastavením a možnostmi konfigurace."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
-          "source": "Search tags by name",
+          "source": "Search Tags by Name",
           "message": "Hledat štítky podle názvu"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Vyhledává štítky odběratelů podle názvu, což pomáhá organizovat a segmentovat členy vašeho publika."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
-          "source": "Get audience members",
+          "source": "Get Audience Members",
           "message": "Získat členy publika"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Načte všechny členy (odběratele) z konkrétního publika včetně jejich kontaktních údajů a podrobností o odběru."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
-          "source": "Add audience member",
+          "source": "Add Audience Member",
           "message": "Přidat člena publika"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Přidá do konkrétního publika nového odběratele s jeho kontaktními údaji a předvolbami odběru."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Get audience member",
+          "source": "Get Audience Member",
           "message": "Získat člena publika"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Načte podrobné informace o konkrétním členovi (odběrateli) z publika včetně údajů z jeho profilu a aktivit."
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Update audience member",
+          "source": "Update Audience Member",
           "message": "Aktualizovat člena publika"
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Aktualizuje informace a předvolby odběru existujícího člena v publiku."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Remove audience member",
+          "source": "Remove Audience Member",
           "message": "Odebrat člena publika"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Odebere odběratele z publika a zároveň zachová jeho data pro účely dodržování předpisů."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
-          "source": "Add member tags",
+          "source": "Add Member Tags",
           "message": "Přidat štítky člena"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Přidá jeden nebo více štítků členům publika pro lepší segmentaci a organizaci."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
-          "source": "Add member events",
+          "source": "Add Member Events",
           "message": "Přidat události člena"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Zaznamenává vlastní události pro členy publika za účelem sledování jejich chování a interakcí s vaší značkou."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
-          "source": "Add member note",
+          "source": "Add Member Note",
           "message": "Přidat poznámku k členovi"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Přidá poznámku ke konkrétnímu členovi publika pro interní sledování a řízení vztahů se zákazníky."
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
-          "source": "Update member note",
+          "source": "Update Member Note",
           "message": "Aktualizovat poznámku člena"
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Aktualizuje existující poznámku přiřazenou ke členovi publika o nové informace nebo opravy."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
-          "source": "Delete member note",
+          "source": "Delete Member Note",
           "message": "Smazat poznámku člena"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Trvale odebere poznámku z profilu člena publika."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
-          "source": "Permanently delete member",
+          "source": "Permanently Delete Member",
           "message": "Trvale smazat člena"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Trvale odebere člena publika a všechna jeho související data z Mailchimpu. Tuto akci nelze vzít zpět."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
-          "source": "Get campaign reports",
+          "source": "Get Campaign Reports",
           "message": "Získat přehledy kampaní"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Omezí odpověď na kampaně odeslané po nastaveném čase. Používá formát času ISO 8601: 2015-10-21T15:41:36+00:00."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
-          "source": "Get campaign report",
+          "source": "Get Campaign Report",
           "message": "Získat přehled kampaně"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Získá podrobné metriky výkonu a analýzy pro konkrétní e-mailovou kampaň."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
-          "source": "Get campaign click details",
+          "source": "Get Campaign Click Details",
           "message": "Získat podrobnosti o kliknutích kampaně"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Získá podrobné informace o kliknutích v konkrétní kampani včetně toho, na které odkazy bylo kliknuto a kým."
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
-          "source": "Get store customer",
+          "source": "Get Store Customer",
           "message": "Získat zákazníka obchodu"
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Načte podrobné informace o konkrétním zákazníkovi z vašeho připojeného e-commerce obchodu."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
-          "source": "Search campaigns",
+          "source": "Search Campaigns",
           "message": "Vyhledat kampaně"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Vyhledávací dotaz použitý k filtrování výsledků."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
-          "source": "Search audience members",
+          "source": "Search Audience Members",
           "message": "Hledat členy publika"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {

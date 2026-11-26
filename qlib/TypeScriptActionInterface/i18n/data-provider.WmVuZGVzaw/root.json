@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Zendesk** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
-          "message": "HTTP method"
+          "source": "HTTP Method",
+          "message": "HTTP Method"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
-          "source": "Search records",
-          "message": "Search records"
+          "source": "Search Records",
+          "message": "Search Records"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Zendesk\"",
@@ -496,8 +496,8 @@
           "message": "URI path variable \"attachment_id\""
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
-          "source": "List groups",
-          "message": "List groups"
+          "source": "List Groups",
+          "message": "List Groups"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
           "source": "List Groups",
@@ -520,8 +520,8 @@
           "message": "Whether to exclude deleted entities"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
-          "source": "Create group",
-          "message": "Create group"
+          "source": "Create Group",
+          "message": "Create Group"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
           "source": "Create Group",
@@ -532,8 +532,8 @@
           "message": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
-          "source": "Delete group",
-          "message": "Delete group"
+          "source": "Delete Group",
+          "message": "Delete Group"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
           "source": "Delete Group",
@@ -556,8 +556,8 @@
           "message": "#### Allowed For\n\n* Admins\n* Agents\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
-          "source": "Update group",
-          "message": "Update group"
+          "source": "Update Group",
+          "message": "Update Group"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
           "source": "Update Group",
@@ -664,8 +664,8 @@
           "message": "Returns a specific metric, or the metrics of a specific ticket.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents\n"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
-          "source": "List tickets",
-          "message": "List tickets"
+          "source": "List Tickets",
+          "message": "List Tickets"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
           "source": "List Tickets",
@@ -688,8 +688,8 @@
           "message": "Lists tickets by external id. External ids don't have to be unique for each ticket. As a result, the request may return multiple tickets with the same external id."
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
-          "source": "Create ticket",
-          "message": "Create ticket"
+          "source": "Create Ticket",
+          "message": "Create Ticket"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
           "source": "Create Ticket",
@@ -712,8 +712,8 @@
           "message": "Returns an approximate count of tickets in the account. If the count exceeds 100,000, it is updated every 24 hours.\n\n`ccd` lists tickets that the specified user is cc'd on.\n\nThe `count[refreshed_at]` property is a timestamp that indicates when the count was last updated.\n\n**Note**: When the count exceeds 100,000, `count[refreshed_at]` may occasionally be null.\nThis indicates that the count is being updated in the background, and `count[value]` is limited to 100,000 until the update is complete.\n\n#### Allowed For\n* Agents"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
-          "source": "Delete ticket",
-          "message": "Delete ticket"
+          "source": "Delete Ticket",
+          "message": "Delete Ticket"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
           "source": "Delete Ticket",
@@ -736,8 +736,8 @@
           "message": "Returns a number of ticket properties though not the ticket comments. To get the comments, use [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Allowed For\n* Agents"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
-          "source": "Update ticket",
-          "message": "Update ticket"
+          "source": "Update Ticket",
+          "message": "Update Ticket"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
           "source": "Update Ticket",
@@ -772,8 +772,8 @@
           "message": "URI path variable \"token\""
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
-          "source": "List users",
-          "message": "List users"
+          "source": "List Users",
+          "message": "List Users"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
           "source": "List Users",
@@ -784,8 +784,8 @@
           "message": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins, Agents and Light Agents\n"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
-          "source": "Create user",
-          "message": "Create user"
+          "source": "Create User",
+          "message": "Create User"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
           "source": "Create User",
@@ -796,8 +796,8 @@
           "message": "Create user"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
-          "source": "Delete user",
-          "message": "Delete user"
+          "source": "Delete User",
+          "message": "Delete User"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
           "source": "Delete User",
@@ -820,8 +820,8 @@
           "message": "#### Allowed For\n\n* Agents\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
-          "source": "Update user",
-          "message": "Update user"
+          "source": "Update User",
+          "message": "Update User"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {
           "source": "Update User",

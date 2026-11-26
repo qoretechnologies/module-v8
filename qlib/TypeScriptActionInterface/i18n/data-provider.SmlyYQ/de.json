@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Jira** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTP-Methode"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Datensätze suchen"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Der Tabellenname"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get announcement banner",
+          "source": "Get Announcement Banner",
           "message": "Ankündigungsbanner abrufen"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Ruft die aktuelle Ankündigungsbanner-Konfiguration für die Jira-Instanz ab"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set announcement banner",
+          "source": "Set Announcement Banner",
           "message": "Ankündigungsbanner festlegen"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Aktualisiert die Konfiguration des Ankündigungsbanners für die Jira-Instanz"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get fields",
+          "source": "Get Fields",
           "message": "Felder abrufen"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Gibt alle Felder (sowohl System- als auch benutzerdefinierte Felder) in der Jira-Instanz zurück"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create custom field",
+          "source": "Create Custom Field",
           "message": "Benutzerdefiniertes Feld erstellen"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Erstellt ein neues benutzerdefiniertes Feld in der Jira-Instanz"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update custom field",
+          "source": "Update Custom Field",
           "message": "Benutzerdefiniertes Feld aktualisieren"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Aktualisiert den Namen und die Beschreibung eines benutzerdefinierten Felds"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash custom field",
+          "source": "Trash Custom Field",
           "message": "Benutzerdefiniertes Feld in Papierkorb verschieben"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Verschiebt ein benutzerdefiniertes Feld in den Papierkorb. Das benutzerdefinierte Feld kann innerhalb von 60 Tagen aus dem Papierkorb wiederhergestellt werden"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create issue",
+          "source": "Create Issue",
           "message": "Vorgang erstellen"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Erstellt einen neuen Vorgang in einem Jira-Projekt"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete issue",
+          "source": "Delete Issue",
           "message": "Vorgang löschen"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Löscht einen Vorgang aus einem Jira-Projekt"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get issue",
+          "source": "Get Issue",
           "message": "Vorgang abrufen"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Ruft die Details eines bestimmten Vorgangs anhand seiner ID oder seines Schlüssels ab"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit issue",
+          "source": "Edit Issue",
           "message": "Vorgang bearbeiten"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Aktualisiert die Felder eines bestehenden Vorgangs"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get comments",
+          "source": "Get Comments",
           "message": "Kommentare abrufen"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Ruft alle Kommentare für einen bestimmten Vorgang ab"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add comment",
+          "source": "Add Comment",
           "message": "Kommentar hinzufügen"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Fügt einem bestimmten Vorgang einen neuen Kommentar hinzu"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete comment",
+          "source": "Delete Comment",
           "message": "Kommentar löschen"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Löscht einen bestimmten Kommentar aus einem Vorgang"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get comment",
+          "source": "Get Comment",
           "message": "Kommentar abrufen"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Ruft einen bestimmten Kommentar anhand seiner ID ab"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update comment",
+          "source": "Update Comment",
           "message": "Kommentar aktualisieren"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Aktualisiert einen bestehenden Kommentar zu einem Vorgang"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get issue worklogs",
+          "source": "Get Issue Worklogs",
           "message": "Vorgangs-Arbeitsprotokolle abrufen"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Ruft alle Arbeitsprotokolle für einen bestimmten Vorgang ab"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add worklog",
+          "source": "Add Worklog",
           "message": "Arbeitsprotokoll hinzufügen"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Fügt einem bestimmten Vorgang einen neuen Arbeitsprotokolleintrag hinzu"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete worklog",
+          "source": "Delete Worklog",
           "message": "Arbeitsprotokoll löschen"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Löscht einen bestimmten Arbeitsprotokolleintrag aus einem Vorgang"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get worklog",
+          "source": "Get Worklog",
           "message": "Arbeitsprotokoll abrufen"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Ruft einen bestimmten Arbeitsprotokolleintrag anhand seiner ID ab"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update worklog",
+          "source": "Update Worklog",
           "message": "Arbeitsprotokoll aktualisieren"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Aktualisiert einen bestehenden Arbeitsprotokolleintrag zu einem Vorgang"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get all projects",
+          "source": "Get All Projects",
           "message": "Alle Projekte abrufen"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Eine Liste der Projekteigenschaften, die für das Projekt zurückgegeben werden sollen. Dieser Parameter akzeptiert eine kommagetrennte Liste."
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create project",
+          "source": "Create Project",
           "message": "Projekt erstellen"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Erstellt ein neues Projekt in Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete project",
+          "source": "Delete Project",
           "message": "Projekt löschen"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Löscht ein Projekt aus Jira"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get project",
+          "source": "Get Project",
           "message": "Projekt abrufen"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Ruft die Details eines bestimmten Projekts anhand seiner ID oder seines Schlüssels ab"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update project",
+          "source": "Update Project",
           "message": "Projekt aktualisieren"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Aktualisiert die Details eines bestehenden Projekts"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search issues",
+          "source": "Search Issues",
           "message": "Vorgänge suchen"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {

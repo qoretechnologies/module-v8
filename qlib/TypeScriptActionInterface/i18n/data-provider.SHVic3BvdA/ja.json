@@ -28,7 +28,7 @@
           "message": "設定された接続の認証情報を使用して、**HubSpot** へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTPメソッド"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.SHVic3BvdA.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "レコードの検索"
         },
         "app.SHVic3BvdA.action.c2VhcmNo.short_desc": {
@@ -568,7 +568,7 @@
           "message": "ID（`companyId`）または一意のプロパティ値（`idProperty`）によって会社を更新します。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティはエラーになります。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.display_name": {
-          "source": "List contacts",
+          "source": "List Contacts",
           "message": "連絡先一覧"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "コンタクトのページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.display_name": {
-          "source": "Create contact",
+          "source": "Create Contact",
           "message": "コンタクトを作成"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "指定されたプロパティでコンタクトを作成し、ID を含むオブジェクトのコピーを返します。標準コンタクトの作成に関するドキュメントと例が提供されています。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.display_name": {
-          "source": "Search contacts",
+          "source": "Search Contacts",
           "message": "連絡先を検索"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.short_desc": {
@@ -604,7 +604,7 @@
           "message": "特定の条件に基づいてコンタクトを検索"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Delete contact",
+          "source": "Delete Contact",
           "message": "連絡先を削除"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "`contactId` で識別されるオブジェクトをごみ箱に移動します。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Retrieve contact",
+          "source": "Retrieve Contact",
           "message": "コンタクトを取得"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "`contactId` によって識別されるオブジェクトを読み取ります。`contactId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.display_name": {
-          "source": "Update contact",
+          "source": "Update Contact",
           "message": "連絡先を更新"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.short_desc": {
@@ -640,7 +640,7 @@
           "message": "`contactId` で識別されるオブジェクトの部分更新を実行します。`contactId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.display_name": {
-          "source": "List custom objects",
+          "source": "List Custom Objects",
           "message": "カスタムオブジェクトを一覧表示"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "オブジェクトのページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.display_name": {
-          "source": "Create custom object",
+          "source": "Create Custom Object",
           "message": "カスタムオブジェクトを作成"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Post-crm-v3-objects-object type-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search custom objects",
+          "source": "Search Custom Objects",
           "message": "カスタムオブジェクトの検索"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
@@ -688,7 +688,7 @@
           "message": "特定の条件に基づいてカスタムオブジェクトを検索"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete custom object",
+          "source": "Delete Custom Object",
           "message": "カスタムオブジェクトを削除"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.short_desc": {
@@ -700,7 +700,7 @@
           "message": "`objectId` で識別されるオブジェクトをごみ箱に移動します。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve custom object",
+          "source": "Retrieve Custom Object",
           "message": "カスタムオブジェクトを取得"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.short_desc": {
@@ -712,7 +712,7 @@
           "message": "`objectId` によって識別されるオブジェクトを読み取ります。`objectId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.display_name": {
-          "source": "Update custom object",
+          "source": "Update Custom Object",
           "message": "カスタムオブジェクトを更新"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.short_desc": {
@@ -724,7 +724,7 @@
           "message": "`objectId` で識別されるオブジェクトの部分更新を実行します。`objectId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.display_name": {
-          "source": "List deals",
+          "source": "List Deals",
           "message": "商談一覧"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.short_desc": {
@@ -736,7 +736,7 @@
           "message": "取引のページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.display_name": {
-          "source": "Create deal",
+          "source": "Create Deal",
           "message": "案件を作成"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Post-crm-v3-objects-deals-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search deals",
+          "source": "Search Deals",
           "message": "取引の検索"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -772,7 +772,7 @@
           "message": "特定の条件に基づいて取引を検索"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.display_name": {
-          "source": "Delete a deal",
+          "source": "Delete a Deal",
           "message": "取引を削除"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.short_desc": {
@@ -784,7 +784,7 @@
           "message": "`dealId` で識別されるオブジェクトをごみ箱に移動します。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve deal",
+          "source": "Retrieve Deal",
           "message": "取引を取得"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.short_desc": {
@@ -796,7 +796,7 @@
           "message": "`dealId` によって識別されるオブジェクトを読み取ります。`dealId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.display_name": {
-          "source": "Update deal",
+          "source": "Update Deal",
           "message": "案件を更新"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.short_desc": {
@@ -808,7 +808,7 @@
           "message": "`dealId` で識別されるオブジェクトの部分更新を実行します。`dealId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.display_name": {
-          "source": "List leads",
+          "source": "List Leads",
           "message": "リードを一覧表示"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.short_desc": {
@@ -820,7 +820,7 @@
           "message": "リードのページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.display_name": {
-          "source": "Create lead",
+          "source": "Create Lead",
           "message": "リードを作成"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.short_desc": {
@@ -844,7 +844,7 @@
           "message": "`leadsId` または必要に応じて `idProperty` クエリパラメータで指定された一意のプロパティ値によって識別されるレコードを作成または更新します。`leadsId` はデフォルトで内部オブジェクト ID を参照し、`idProperty` クエリパラメータはオブジェクトに対して値が一意であるプロパティを参照します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search leads",
+          "source": "Search Leads",
           "message": "リードを検索"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -856,7 +856,7 @@
           "message": "特定の条件に基づいてリードを検索"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete lead",
+          "source": "Delete Lead",
           "message": "リードを削除"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "`leadsId` で識別されるオブジェクトをごみ箱に移動します。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve lead",
+          "source": "Retrieve Lead",
           "message": "リードを取得"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.short_desc": {
@@ -880,7 +880,7 @@
           "message": "`leadsId` によって識別されるオブジェクトを読み取ります。`leadsId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.display_name": {
-          "source": "Update lead",
+          "source": "Update Lead",
           "message": "リードを更新"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "`leadsId`、またはオプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値によって識別されるオブジェクトの部分更新を実行します。`leadsId` はデフォルトで内部オブジェクトIDを参照し、`idProperty` クエリパラメータはオブジェクトに対して一意の値を持つプロパティを参照します。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティはエラーになります。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.display_name": {
-          "source": "List products",
+          "source": "List Products",
           "message": "商品一覧"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.short_desc": {
@@ -904,7 +904,7 @@
           "message": "商品のページを読み取ります。返される内容は `properties` クエリパラメータで制御します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.display_name": {
-          "source": "Create product",
+          "source": "Create Product",
           "message": "商品を作成"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "`idProperty` クエリパラメータで指定された一意のプロパティ値によって識別されるレコードを作成または更新します。`idProperty` クエリパラメータは、オブジェクトに対して値が一意であるプロパティを参照します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search products",
+          "source": "Search Products",
           "message": "商品の検索"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -940,7 +940,7 @@
           "message": "特定の条件に基づいて商品を検索"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.display_name": {
-          "source": "Delete product",
+          "source": "Delete Product",
           "message": "製品を削除"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.short_desc": {
@@ -952,7 +952,7 @@
           "message": "`productId` で識別されるオブジェクトをごみ箱に移動します。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve product",
+          "source": "Retrieve Product",
           "message": "商品を取得"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.short_desc": {
@@ -964,7 +964,7 @@
           "message": "`productId` で識別されるオブジェクトを読み取ります。`productId` はデフォルトで内部オブジェクトIDを指しますが、`idProperty` クエリパラメータで指定された一意のプロパティ値を指定することもできます。返される内容は `properties` クエリパラメータで制御します。"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.display_name": {
-          "source": "Update product",
+          "source": "Update Product",
           "message": "製品を更新"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "`productId` で識別されるオブジェクトの部分更新を実行します。`productId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティはエラーになります。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.display_name": {
-          "source": "List tickets",
+          "source": "List Tickets",
           "message": "チケット一覧"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "チケットのページを読み取ります。返される内容は `properties` クエリパラメータで制御します。"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.display_name": {
-          "source": "Create ticket",
+          "source": "Create Ticket",
           "message": "チケットを作成"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Post-crm-v3-objects-tickets-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search tickets",
+          "source": "Search Tickets",
           "message": "チケットの検索"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "特定の条件に基づいてチケットを検索"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete ticket",
+          "source": "Delete Ticket",
           "message": "チケットを削除"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "`ticketId` で識別されるオブジェクトをごみ箱に移動します。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve ticket",
+          "source": "Retrieve Ticket",
           "message": "チケットを取得"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "`ticketId` で識別されるオブジェクトを読み取ります。`ticketId` はデフォルトで内部オブジェクトIDを指しますが、`idProperty` クエリパラメータで指定された一意のプロパティ値を指定することもできます。返される内容は `properties` クエリパラメータで制御します。"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.display_name": {
-          "source": "Update ticket",
+          "source": "Update Ticket",
           "message": "チケットを更新"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "`ticketId` で識別されるオブジェクトの部分更新を実行します。`ticketId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.display_name": {
-          "source": "List users",
+          "source": "List Users",
           "message": "ユーザー一覧"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Post-crm-v3-objects-users-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.display_name": {
-          "source": "Search users",
+          "source": "Search Users",
           "message": "ユーザーの検索"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "特定の条件に基づいてユーザーを検索"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.display_name": {
-          "source": "Retrieve user",
+          "source": "Retrieve User",
           "message": "ユーザーを取得"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "`userId` で識別されるオブジェクトを読み取ります。`userId` はデフォルトで内部オブジェクトIDを指しますが、`idProperty` クエリパラメータで指定された一意のプロパティ値を指定することもできます。返される内容は `properties` クエリパラメータで制御します。"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.display_name": {
-          "source": "Update user",
+          "source": "Update User",
           "message": "ユーザーを更新"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "`userId` で識別されるオブジェクトの部分更新を実行します。`userId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create list",
+          "source": "Create List",
           "message": "リストを作成"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "指定された設定とプロパティを使用して HubSpot CRM に新しいリストを作成します。"
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.display_name": {
-          "source": "Search lists",
+          "source": "Search Lists",
           "message": "リストを検索"
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "指定された条件やフィルターに基づいてHubSpotリストを検索して取得します。"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete list",
+          "source": "Delete List",
           "message": "リストを削除"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "指定されたリストをIDによってHubSpot CRMから完全に削除します。"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.display_name": {
-          "source": "Get list",
+          "source": "Get List",
           "message": "リストを取得"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "一意の識別子を使用して、特定のHubSpotリストに関する詳細情報を取得します。"
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.display_name": {
-          "source": "Add list records",
+          "source": "Add List Records",
           "message": "リストレコードを追加"
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "ソース HubSpot リストのすべてのメンバーをターゲットリストに追加し、メンバーシップを事実上コピーします。"
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.display_name": {
-          "source": "Remove list records",
+          "source": "Remove List Records",
           "message": "リストレコードを削除"
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "既存のHubSpotリストメンバーシップから指定されたレコードを削除します。"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.display_name": {
-          "source": "List forms",
+          "source": "List Forms",
           "message": "フォーム一覧"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "HubSpotアカウント内のマーケティングフォーム定義のリストを返します。オプションでフォームタイプ（ネイティブHubSpot、キャプチャ、ポップアップフロー、またはブログコメント）およびアーカイブステータスでフィルタリングできます。"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create form",
+          "source": "Create Form",
           "message": "フォームを作成"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "ライフサイクルステージ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -1608,7 +1608,7 @@
           "message": "スパム対策の CAPTCHA を有効にするかどうかを指定します。"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.Y3JlYXRlZEF0.display_name": {
-          "source": "Created at",
+          "source": "Created At",
           "message": "作成日時"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZGlzcGxheU9wdGlvbnM.display_name": {
@@ -1656,7 +1656,7 @@
           "message": "フォームの背景の幅です。割合（例：「100%」）またはピクセル値（例：「600px」）を指定します。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.display_name": {
-          "source": "Font family",
+          "source": "Font Family",
           "message": "フォントファミリー"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.short_desc": {
@@ -2076,7 +2076,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2240,7 +2240,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.short_desc": {
@@ -2292,7 +2292,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2368,7 +2368,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.short_desc": {
@@ -2544,7 +2544,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2616,7 +2616,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.short_desc": {
@@ -2668,7 +2668,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2768,7 +2768,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.short_desc": {
@@ -2820,7 +2820,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2880,7 +2880,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.short_desc": {
@@ -2932,7 +2932,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3052,7 +3052,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.short_desc": {
@@ -3104,7 +3104,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3188,7 +3188,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.short_desc": {
@@ -3240,7 +3240,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3324,7 +3324,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.short_desc": {
@@ -3376,7 +3376,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3460,7 +3460,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.short_desc": {
@@ -3512,7 +3512,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3568,7 +3568,7 @@
           "message": "フィールドに関する補足説明です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.short_desc": {
@@ -3620,7 +3620,7 @@
           "message": "API のリクエストとレスポンスでフィールドを識別する内部 API 名です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3660,7 +3660,7 @@
           "message": "利用者のフィールド入力を補助する追加テキストです。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "フィールドタイプ"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.short_desc": {
@@ -3712,7 +3712,7 @@
           "message": "オブジェクトタイプ ID との組み合わせで一意となるフィールド識別子です。"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "オブジェクトタイプID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3776,7 +3776,7 @@
           "message": "無料メールサービスをブロックするかどうかを指定します。"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.display_name": {
-          "source": "Group type",
+          "source": "Group Type",
           "message": "グループタイプ"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.short_desc": {
@@ -3840,7 +3840,7 @@
           "message": "HubSpot"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal consent options",
+          "source": "Legal Consent Options",
           "message": "法的同意オプション"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.union.TGVnYWxDb25zZW50T3B0aW9uc05vbmUjOTg5OTE2YTM4YTU1ZjJmZTcyZjM2NDE4ZDcwMmUxY2U4MWM4ZGJmM2EyNDFmNjJmMDE4Y2Q1YWNmYTk4Y2YwNQ.field.dHlwZQ.display_name": {
@@ -4092,11 +4092,11 @@
           "message": "名前"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.dXBkYXRlZEF0.display_name": {
-          "source": "Updated at",
+          "source": "Updated At",
           "message": "更新日時"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.display_name": {
-          "source": "Archive form",
+          "source": "Archive Form",
           "message": "フォームをアーカイブ"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.short_desc": {
@@ -4108,7 +4108,7 @@
           "message": "HubSpot フォーム定義をアーカイブします。新しい送信は受け付けられなくなります。定義はアーカイブから3か月後に完全に削除されます。"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get form",
+          "source": "Get Form",
           "message": "フォームの取得"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.short_desc": {
@@ -4120,7 +4120,7 @@
           "message": "指定されたフォームIDの完全なフォーム定義（すべてのフィールドグループ、設定、表示オプション、法的同意設定を含む）を返します。"
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.display_name": {
-          "source": "Update form",
+          "source": "Update Form",
           "message": "フォームを更新"
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.short_desc": {
@@ -4132,7 +4132,7 @@
           "message": "その他の構成に影響を与えることなく、HubSpotフォーム定義の1つ以上のコンポーネントを更新します。"
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.display_name": {
-          "source": "Replace form",
+          "source": "Replace Form",
           "message": "フォームを置換"
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.short_desc": {

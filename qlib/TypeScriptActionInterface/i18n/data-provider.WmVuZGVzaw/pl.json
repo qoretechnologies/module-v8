@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Zendesk**, korzystając z uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako bezpośrednie akcje w tej aplikacji."
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metoda HTTP"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Wyszukaj rekordy"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Zmienna ścieżki URI \"attachment_id\""
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
-          "source": "List groups",
+          "source": "List Groups",
           "message": "Wyświetl grupy"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Czy wykluczyć usunięte jednostki"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
-          "source": "Create group",
+          "source": "Create Group",
           "message": "Utwórz grupę"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "#### Dozwolone dla\n\n* Administratorzy\n* Agenci przypisani do roli niestandardowej z uprawnieniami do zarządzania grupami (tylko Enterprise)\n"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
-          "source": "Delete group",
+          "source": "Delete Group",
           "message": "Usuń grupę"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
@@ -556,7 +556,7 @@
           "message": "#### Dozwolone dla\n\n* Administratorzy\n* Agenci\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
-          "source": "Update group",
+          "source": "Update Group",
           "message": "Zaktualizuj grupę"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Zwraca określoną metrykę lub metryki określonego zgłoszenia.\n\n#### Paginacja\n\n- Paginacja kursorowa (zalecana)\n- Paginacja oparta na przesunięciu (offset)\n\nZobacz [Pagination](-api-reference-introduction-pagination-).\n\nZwraca maksymalnie 100 rekordów na stronę.\n\n#### Dozwolone dla\n\n* Agenci\n"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
-          "source": "List tickets",
+          "source": "List Tickets",
           "message": "Wyświetl listę zgłoszeń"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Wyświetla listę zgłoszeń według identyfikatora zewnętrznego. Zewnętrzne identyfikatory nie muszą być unikalne dla każdego zgłoszenia. W rezultacie żądanie może zwrócić wiele zgłoszeń o tym samym identyfikatorze zewnętrznym."
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
-          "source": "Create ticket",
+          "source": "Create Ticket",
           "message": "Utwórz zgłoszenie"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Zwraca przybliżoną liczbę zgłoszeń na koncie. Jeśli liczba przekracza 100 000, jest aktualizowana co 24 godziny.\n\n`ccd` wyświetla zgłoszenia, w których określony użytkownik znajduje się w DW.\n\nWłaściwość `count[refreshed_at]` jest znacznikiem czasu wskazującym, kiedy liczba była ostatnio aktualizowana.\n\n**Uwaga**: gdy liczba przekracza 100 000, `count[refreshed_at]` może sporadycznie mieć wartość null.\nWskazuje to, że liczba jest aktualizowana w tle, a `count[value]` jest ograniczona do 100 000 do czasu zakończenia aktualizacji.\n\n#### Dozwolone dla\n* Agenci"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
-          "source": "Delete ticket",
+          "source": "Delete Ticket",
           "message": "Usuń zgłoszenie"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Zwraca szereg właściwości zgłoszenia, ale bez komentarzy zgłoszenia. Aby pobrać komentarze, użyj [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Dozwolone dla\n* Agenci"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
-          "source": "Update ticket",
+          "source": "Update Ticket",
           "message": "Zaktualizuj zgłoszenie"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Zmienna ścieżki URI \"token\""
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
-          "source": "List users",
+          "source": "List Users",
           "message": "Lista użytkowników"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
@@ -784,7 +784,7 @@
           "message": "#### Paginacja\n\n* Paginacja kursorowa (zalecana)\n* Paginacja oparta na przesunięciu (offset)\n\nZobacz [Pagination](-api-reference-introduction-pagination-).\n\nZwraca maksymalnie 100 rekordów na stronę.\n\n#### Dozwolone dla\n\n* Administratorzy, agenci i agenci pomocniczy (Light Agents)\n"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
-          "source": "Create user",
+          "source": "Create User",
           "message": "Utwórz użytkownika"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Utwórz użytkownika"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
-          "source": "Delete user",
+          "source": "Delete User",
           "message": "Usuń użytkownika"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "#### Dozwolone dla\n\n* Agenci\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
-          "source": "Update user",
+          "source": "Update User",
           "message": "Zaktualizuj użytkownika"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {

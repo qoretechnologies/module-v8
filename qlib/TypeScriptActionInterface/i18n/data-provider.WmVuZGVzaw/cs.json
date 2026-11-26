@@ -28,7 +28,7 @@
           "message": "Provede vlastní volání HTTP / REST API do **Zendesk** s využitím autentizace nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní vůči základní adrese URL API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci ještě nejsou k dispozici jako samostatné akce."
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metoda HTTP"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Vyhledat záznamy"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Proměnná cesty URI \"attachment_id\""
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
-          "source": "List groups",
+          "source": "List Groups",
           "message": "Seznam skupin"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Zda vyloučit smazané entity"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
-          "source": "Create group",
+          "source": "Create Group",
           "message": "Vytvořit skupinu"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "#### Povoleno pro\n\n* Administrátory\n* Agenty přiřazené k vlastní roli s oprávněním spravovat skupiny (pouze Enterprise)\n"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
-          "source": "Delete group",
+          "source": "Delete Group",
           "message": "Smazat skupinu"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
@@ -556,7 +556,7 @@
           "message": "#### Povoleno pro\n\n* Administrátory\n* Agenty\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
-          "source": "Update group",
+          "source": "Update Group",
           "message": "Aktualizovat skupinu"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Vrací konkrétní metriku nebo metriky konkrétního tiketu.\n\n#### Stránkování\n\n- Stránkování pomocí kurzoru (doporučeno)\n- Stránkování pomocí offsetu\n\nViz [Stránkování](-api-reference-introduction-pagination-).\n\nVrací maximálně 100 záznamů na stránku.\n\n#### Povoleno pro\n\n* Agenty\n"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
-          "source": "List tickets",
+          "source": "List Tickets",
           "message": "Vypsat tikety"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Vypíše tikety podle externího ID. Externí ID nemusí být pro každý tiket jedinečné. V důsledku toho může požadavek vrátit více tiketů se stejným externím ID."
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
-          "source": "Create ticket",
+          "source": "Create Ticket",
           "message": "Vytvořit ticket"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Vrací přibližný počet tiketů v účtu. Pokud počet překročí 100 000, je aktualizován každých 24 hodin.\n\n`ccd` vypisuje tikety, na kterých je zadaný uživatel v kopii (CC).\n\nVlastnost `count[refreshed_at]` je časové razítko, které udává, kdy byl počet naposledy aktualizován.\n\n**Poznámka**: Pokud počet překročí 100 000, může být `count[refreshed_at]` občas null.\nTo značí, že počet je aktualizován na pozadí, a `count[value]` je omezen na 100 000, dokud se aktualizace nedokončí.\n\n#### Povoleno pro\n* Agenty"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
-          "source": "Delete ticket",
+          "source": "Delete Ticket",
           "message": "Smazat tiket"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Vrací řadu vlastností tiketu, nikoli však komentáře tiketu. Chcete-li získat komentáře, použijte [Vypsat komentáře](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Povoleno pro\n* Agenty"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
-          "source": "Update ticket",
+          "source": "Update Ticket",
           "message": "Aktualizovat tiket"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Proměnná cesty URI „token“"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
-          "source": "List users",
+          "source": "List Users",
           "message": "Seznam uživatelů"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
@@ -784,7 +784,7 @@
           "message": "#### Stránkování\n\n* Stránkování pomocí kurzoru (doporučeno)\n* Stránkování pomocí offsetu\n\nViz [Stránkování](-api-reference-introduction-pagination-).\n\nVrací maximálně 100 záznamů na stránku.\n\n#### Povoleno pro\n\n* Administrátory, agenty a pomocné agenty (Light Agents)\n"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
-          "source": "Create user",
+          "source": "Create User",
           "message": "Vytvořit uživatele"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Vytvořit uživatele"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
-          "source": "Delete user",
+          "source": "Delete User",
           "message": "Smazat uživatele"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "#### Povoleno pro\n\n* Agenty\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
-          "source": "Update user",
+          "source": "Update User",
           "message": "Aktualizovat uživatele"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Pipedrive** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki oraz treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi oraz treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako bezpośrednie akcje w tej aplikacji."
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metoda HTTP"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Wyszukaj rekordy"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Dodaje nową szansę sprzedaży. Wszystkie szanse sprzedaży utworzone za pośrednictwem Pipedrive API będą miały `origin` ustawione na `API`. Pamiętaj, że wraz z żądaniem możesz przekazać dodatkowe pola niestandardowe, które nie zostały tutaj opisane. Te pola niestandardowe różnią się dla każdego konta Pipedrive i można je rozpoznać po długich haszach jako kluczach. Aby sprawdzić, które pola niestandardowe istnieją, pobierz dealFields i poszukaj wartości `key`. Więcej informacji można znaleźć w samouczku dotyczącym <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">dodawania szansy sprzedaży<-a>."
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
-          "source": "Delete a deal",
+          "source": "Delete a Deal",
           "message": "Usuń transakcję"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Aktualizuje właściwości osoby. Więcej informacji zawiera samouczek dotyczący <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">aktualizowania osoby<-a>.<br>Jeśli firma korzysta z [produktu Campaigns](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), ten punkt końcowy będzie również akceptować i zwracać pole `data.marketing_status`."
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
-          "source": "Get all projects",
+          "source": "Get All Projects",
           "message": "Pobierz wszystkie projekty"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {

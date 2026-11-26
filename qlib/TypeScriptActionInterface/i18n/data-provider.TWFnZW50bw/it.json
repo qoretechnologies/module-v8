@@ -28,7 +28,7 @@
           "message": "Esegue una chiamata API HTTP / REST personalizzata a **Magento** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello in questa app."
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metodo HTTP"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Recupera informazioni dettagliate su un account cliente utilizzando l'ID cliente. Restituisce tutti gli attributi del cliente inclusi dati sull'indirizzo, stato dell'account e attributi personalizzati."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Update customer",
+          "source": "Update Customer",
           "message": "Aggiorna cliente"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Aggiorna le informazioni cliente per un account esistente. Questo endpoint consente la modifica di informazioni personali, indirizzi, attributi personalizzati e altri dettagli dell'account. L'ID cliente deve essere incluso nella richiesta."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
-          "source": "Delete customer",
+          "source": "Delete Customer",
           "message": "Elimina cliente"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Elimina definitivamente un account cliente dal sistema. Questa operazione non può essere annullata e rimuoverà tutti i dati cliente associati all'ID specificato, inclusi indirizzi e riferimenti alla cronologia degli ordini."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List customers",
+          "source": "List Customers",
           "message": "Elenca clienti"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Restituisce un elenco di account cliente che corrispondono ai criteri di ricerca specificati. I risultati possono essere filtrati, ordinati e impaginati. Utilizza i parametri dei criteri di ricerca per restringere i risultati per e-mail, nome, data di creazione o altri attributi del cliente."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
-          "source": "Create customer account",
+          "source": "Create Customer Account",
           "message": "Crea account cliente"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Crea un nuovo account cliente con le informazioni fornite. I campi obbligatori includono e-mail, password e nome/cognome. I dettagli facoltativi includono indirizzi, data di nascita e attributi personalizzati. In caso di esito positivo restituisce l'ID del cliente appena creato."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
-          "source": "Create product",
+          "source": "Create Product",
           "message": "Crea prodotto"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Crea un nuovo prodotto nel catalogo con attributi, prezzi e informazioni di inventario specificati. I prodotti possono essere semplici, configurabili, a pacchetto, raggruppati, virtuali o scaricabili. È inoltre possibile definire voci della galleria multimediale, prezzi a scaglioni e opzioni personalizzate."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
-          "source": "List products",
+          "source": "List Products",
           "message": "Elenca prodotti"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Restituisce una raccolta di prodotti che corrispondono ai criteri di ricerca specificati. I risultati possono essere filtrati in base ad attributi come nome, SKU, prezzo e stato. Supporta impaginazione, ordinamento e inclusione di attributi personalizzati nella risposta."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
-          "source": "Update product",
+          "source": "Update Product",
           "message": "Aggiorna Prodotto"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Aggiorna un prodotto esistente nel catalogo. Può modificare qualsiasi attributo del prodotto inclusi nome, prezzo, descrizione, immagini, inventario e assegnazioni di categoria. Lo SKU o l'ID del prodotto deve essere specificato nella richiesta."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
-          "source": "Delete product",
+          "source": "Delete Product",
           "message": "Elimina prodotto"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Rimuove definitivamente un prodotto dal catalogo tramite ID o SKU. Questa operazione non può essere annullata e potrebbe influire sugli ordini e sui carrelli esistenti che fanno riferimento al prodotto eliminato."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
-          "source": "Get product details",
+          "source": "Get Product Details",
           "message": "Recupera dettagli prodotto"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Recupera informazioni complete su un prodotto specifico tramite SKU o ID. La risposta include tutti gli attributi del prodotto, le immagini, le informazioni sui prezzi, lo stato dell'inventario e le assegnazioni di categoria. Parametri aggiuntivi possono controllare quali dati vengono inclusi."
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List shopping carts",
+          "source": "List Shopping Carts",
           "message": "Elenca carrelli"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Restituisce una raccolta di carrelli attivi che corrispondono ai criteri di ricerca specificati. I risultati possono essere filtrati per ID cliente, data di creazione e stato del carrello. Ogni carrello include articoli, coupon applicati e informazioni di spedizione/fatturazione se disponibili."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
-          "source": "Get order details",
+          "source": "Get Order Details",
           "message": "Recupera dettagli ordine"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Recupera informazioni complete su uno specifico ordine in base all'ID. Include gli articoli dell'ordine, gli indirizzi di fatturazione e spedizione, le informazioni di pagamento, gli sconti applicati e la cronologia dello stato dell'ordine. Utile per l'elaborazione degli ordini e le richieste del servizio clienti."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List orders",
+          "source": "List Orders",
           "message": "Elenca ordini"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Restituisce una raccolta di ordini che corrispondono ai criteri di ricerca specificati. I risultati possono essere filtrati per cliente, stato, intervallo di date e importo totale. Supporta la paginazione e l'ordinamento per consultare in modo efficiente volumi elevati di ordini."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Create order",
+          "source": "Create Order",
           "message": "Crea ordine"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Esegue operazioni di persistenza per un ordine specificato. Salva i dati dell'ordine nel database, inclusi i dati del cliente, le voci, i dettagli di pagamento, le informazioni di spedizione e altri metadati pertinenti dell'ordine."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
-          "source": "Add order comment",
+          "source": "Add Order Comment",
           "message": "Aggiungi commento all'ordine"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Aggiunge un commento alla cronologia dell'ordine. I commenti possono essere interni (visibili solo agli amministratori) o visibili al cliente. A ogni commento viene associata una data/ora e l'autore. Utile per documentare le fasi di elaborazione dell'ordine e le comunicazioni con i clienti."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
-          "source": "Get order comments",
+          "source": "Get Order Comments",
           "message": "Recupera commenti ordine"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Restituisce la cronologia completa dei commenti per un ordine specifico. I risultati includono il testo del commento, la data/ora, le informazioni sull'autore e lo stato di visibilità (visibile al cliente o solo per l'amministratore). I commenti vengono restituiti in ordine cronologico."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List invoices",
+          "source": "List Invoices",
           "message": "Elenca fatture"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Restituisce un elenco di fatture in base ai criteri di ricerca specificati. I risultati possono essere filtrati per ID ordine, cliente, data e importo. Ciascuna fattura include voci, informazioni di pagamento e dettagli dell'ordine correlato. Supporta impaginazione e ordinamento."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
-          "source": "Create invoice",
+          "source": "Create Invoice",
           "message": "Crea fattura"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Crea un nuovo record di fattura per un ordine esistente, documentando la transazione finanziaria e la richiesta di pagamento. Consente di specificare le voci da fatturare, i dettagli di pagamento e i commenti che compariranno sulla fattura del cliente."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List shipments",
+          "source": "List Shipments",
           "message": "Elenca spedizioni"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Restituisce un elenco di spedizioni in base ai criteri di ricerca specificati. I risultati possono essere filtrati per ID ordine, cliente, data di creazione e informazioni di tracciamento. Ogni spedizione include gli articoli spediti, le quantità, i codici di tracciamento e le informazioni sul corriere."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
-          "source": "Create shipment",
+          "source": "Create Shipment",
           "message": "Crea spedizione"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Crea un nuovo record di spedizione per un ordine esistente, consentendo di documentare e monitorare l'invio fisico degli articoli dell'ordine al cliente. Include opzioni per specificare i numeri di tracciamento, i corrieri di spedizione e gli articoli spediti con le relative quantità."
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List payment transactions",
+          "source": "List Payment Transactions",
           "message": "Elenca transazioni di pagamento"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {

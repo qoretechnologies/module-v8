@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **HubSpot** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API daného pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metóda HTTP"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.SHVic3BvdA.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Vyhľadať záznamy"
         },
         "app.SHVic3BvdA.action.c2VhcmNo.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Aktualizovať spoločnosť podľa ID (`companyId`) alebo jedinečnej hodnoty vlastnosti (`idProperty`). Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené iba na čítanie a neexistujúce vlastnosti spôsobia chybu. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.display_name": {
-          "source": "List contacts",
+          "source": "List Contacts",
           "message": "Zoznam kontaktov"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Načítať stránku kontaktov. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.display_name": {
-          "source": "Create contact",
+          "source": "Create Contact",
           "message": "Vytvoriť kontakt"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Vytvoriť kontakt so zadanými vlastnosťami a vrátiť kópiu objektu vrátane ID. K dispozícii je dokumentácia a príklady na vytváranie štandardných kontaktov."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.display_name": {
-          "source": "Search contacts",
+          "source": "Search Contacts",
           "message": "Vyhľadať kontakty"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Vyhľadávať kontakty na základe špecifických kritérií"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Delete contact",
+          "source": "Delete Contact",
           "message": "Vymazať kontakt"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Presunúť objekt identifikovaný pomocou `contactId` do koša."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Retrieve contact",
+          "source": "Retrieve Contact",
           "message": "Získať kontakt"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Načítať objekt identifikovaný pomocou `contactId`. `contactId` predvolene odkazuje na interné ID objektu alebo voliteľne na akúkoľvek jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.display_name": {
-          "source": "Update contact",
+          "source": "Update Contact",
           "message": "Aktualizovať kontakt"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Vykonať čiastočnú aktualizáciu objektu identifikovaného pomocou `contactId`. `contactId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti špecifikovanú parametrom dopytu `idProperty`. Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené iba na čítanie a neexistujúce vlastnosti budú ignorované. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.display_name": {
-          "source": "List custom objects",
+          "source": "List Custom Objects",
           "message": "Zoznam vlastných objektov"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Načítať stránku objektov. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.display_name": {
-          "source": "Create custom object",
+          "source": "Create Custom Object",
           "message": "Vytvoriť vlastný objekt"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Post-crm-v3-objects-object type-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search custom objects",
+          "source": "Search Custom Objects",
           "message": "Vyhľadať vlastné objekty"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Vyhľadávať vlastné objekty na základe špecifických kritérií"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete custom object",
+          "source": "Delete Custom Object",
           "message": "Odstrániť vlastný objekt"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Presunúť objekt identifikovaný pomocou `objectId` do koša."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve custom object",
+          "source": "Retrieve Custom Object",
           "message": "Získať vlastný objekt"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Načítať objekt identifikovaný pomocou `objectId`. `objectId` predvolene odkazuje na interné ID objektu alebo voliteľne na akúkoľvek jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.display_name": {
-          "source": "Update custom object",
+          "source": "Update Custom Object",
           "message": "Aktualizovať vlastný objekt"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Vykonajte čiastočnú aktualizáciu objektu identifikovaného pomocou `objectId`. `objectId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené len na čítanie a neexistujúce vlastnosti budú ignorované. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.display_name": {
-          "source": "List deals",
+          "source": "List Deals",
           "message": "Zoznam obchodných prípadov"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Načítať stránku obchodov. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.display_name": {
-          "source": "Create deal",
+          "source": "Create Deal",
           "message": "Vytvoriť obchodný prípad"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Post-crm-v3-objects-deals-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search deals",
+          "source": "Search Deals",
           "message": "Vyhľadať obchody"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Vyhľadávať obchody na základe špecifických kritérií"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.display_name": {
-          "source": "Delete a deal",
+          "source": "Delete a Deal",
           "message": "Odstrániť obchod"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Presunúť objekt identifikovaný pomocou `dealId` do koša."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve deal",
+          "source": "Retrieve Deal",
           "message": "Získať obchod"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Načítať objekt identifikovaný pomocou `dealId`. `dealId` predvolene odkazuje na interné ID objektu alebo voliteľne na akúkoľvek jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.display_name": {
-          "source": "Update deal",
+          "source": "Update Deal",
           "message": "Aktualizovať obchod"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Vykonajte čiastočnú aktualizáciu objektu identifikovaného pomocou `dealId`. `dealId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené len na čítanie a neexistujúce vlastnosti budú ignorované. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.display_name": {
-          "source": "List leads",
+          "source": "List Leads",
           "message": "Zoznam potenciálnych zákazníkov"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Načítať stránku potenciálnych zákazníkov. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.display_name": {
-          "source": "Create lead",
+          "source": "Create Lead",
           "message": "Vytvoriť záujemcu"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Vytvoriť alebo aktualizovať záznamy identifikované pomocou `leadsId` alebo voliteľne jedinečnej hodnoty vlastnosti špecifikovanej parametrom dopytu `idProperty`. `leadsId` predvolene odkazuje na interné ID objektu a parameter dopytu `idProperty` odkazuje na vlastnosť, ktorej hodnoty sú pre daný objekt jedinečné."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search leads",
+          "source": "Search Leads",
           "message": "Vyhľadať leady"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Vyhľadávať potenciálnych zákazníkov na základe špecifických kritérií"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete lead",
+          "source": "Delete Lead",
           "message": "Vymazať záujemcu"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Presunúť objekt identifikovaný pomocou `leadsId` do koša."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve lead",
+          "source": "Retrieve Lead",
           "message": "Získať potenciálneho zákazníka"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Načítať objekt identifikovaný pomocou `leadsId`. `leadsId` predvolene odkazuje na interné ID objektu alebo voliteľne na akúkoľvek jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.display_name": {
-          "source": "Update lead",
+          "source": "Update Lead",
           "message": "Aktualizovať záujemcu"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Vykonajte čiastočnú aktualizáciu objektu identifikovaného pomocou `leadsId`alebo voliteľne jedinečnou hodnotou vlastnosti podľa parametra dopytu `idProperty`. `leadsId` predvolene odkazuje na interné ID objektu a parameter dopytu `idProperty` odkazuje na vlastnosť, ktorej hodnoty sú pre daný objekt jedinečné. Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené len na čítanie a neexistujúce vlastnosti spôsobia chybu. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.display_name": {
-          "source": "List products",
+          "source": "List Products",
           "message": "Zoznam produktov"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Načítať stránku produktov. To, čo sa vráti, môžete riadiť pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.display_name": {
-          "source": "Create product",
+          "source": "Create Product",
           "message": "Vytvoriť produkt"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Vytvoriť alebo aktualizovať záznamy identifikované jedinečnou hodnotou vlastnosti špecifikovanou parametrom dopytu `idProperty`. Parameter dopytu `idProperty` odkazuje na vlastnosť, ktorej hodnoty sú pre daný objekt jedinečné."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search products",
+          "source": "Search Products",
           "message": "Vyhľadať produkty"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Vyhľadávať produkty na základe špecifických kritérií"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.display_name": {
-          "source": "Delete product",
+          "source": "Delete Product",
           "message": "Odstrániť produkt"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Presunúť objekt identifikovaný pomocou `productId` do koša."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve product",
+          "source": "Retrieve Product",
           "message": "Získať produkt"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Načítať objekt identifikovaný pomocou `productId`. `productId` predvolene odkazuje na interné ID objektu alebo voliteľne na akúkoľvek jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Ovládajte, čo sa vráti, pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.display_name": {
-          "source": "Update product",
+          "source": "Update Product",
           "message": "Aktualizovať produkt"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Vykonajte čiastočnú aktualizáciu objektu identifikovaného pomocou `productId`. `productId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené len na čítanie a neexistujúce vlastnosti spôsobia chybu. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.display_name": {
-          "source": "List tickets",
+          "source": "List Tickets",
           "message": "Zoznam tiketov"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Načítať stránku tiketov. To, čo sa vráti, môžete riadiť pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.display_name": {
-          "source": "Create ticket",
+          "source": "Create Ticket",
           "message": "Vytvoriť tiket"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Post-crm-v3-objects-tickets-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search tickets",
+          "source": "Search Tickets",
           "message": "Vyhľadať tikety"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Vyhľadávať tikety na základe špecifických kritérií"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete ticket",
+          "source": "Delete Ticket",
           "message": "Odstrániť tiket"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Presunúť objekt identifikovaný pomocou `ticketId` do koša."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve ticket",
+          "source": "Retrieve Ticket",
           "message": "Získať tiket"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Načítať objekt identifikovaný pomocou `ticketId`. `ticketId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti podľa určenia v parametri dopytu `idProperty`. To, čo sa vráti, môžete riadiť pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.display_name": {
-          "source": "Update ticket",
+          "source": "Update Ticket",
           "message": "Aktualizovať tiket"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Vykonajte čiastočnú aktualizáciu objektu identifikovaného pomocou `ticketId`. `ticketId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené len na čítanie a neexistujúce vlastnosti budú ignorované. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.display_name": {
-          "source": "List users",
+          "source": "List Users",
           "message": "Zoznam používateľov"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Post-crm-v3-objects-users-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.display_name": {
-          "source": "Search users",
+          "source": "Search Users",
           "message": "Vyhľadať používateľov"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Vyhľadávať používateľov na základe špecifických kritérií"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.display_name": {
-          "source": "Retrieve user",
+          "source": "Retrieve User",
           "message": "Získať používateľa"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Načítať objekt identifikovaný pomocou `userId`. `userId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti podľa určenia v parametri dopytu `idProperty`. To, čo sa vráti, môžete riadiť pomocou parametra dopytu `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.display_name": {
-          "source": "Update user",
+          "source": "Update User",
           "message": "Aktualizovať používateľa"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Vykonajte čiastočnú aktualizáciu objektu identifikovaného pomocou `userId`. `userId` predvolene odkazuje na interné ID objektu, prípadne na ľubovoľnú jedinečnú hodnotu vlastnosti podľa parametra dopytu `idProperty`. Poskytnuté hodnoty vlastností budú prepísané. Vlastnosti určené len na čítanie a neexistujúce vlastnosti budú ignorované. Hodnoty vlastností možno vymazať odovzdaním prázdneho reťazca."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create list",
+          "source": "Create List",
           "message": "Vytvoriť zoznam"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Vytvorí nový zoznam v HubSpot CRM so zadanou konfiguráciou a vlastnosťami."
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.display_name": {
-          "source": "Search lists",
+          "source": "Search Lists",
           "message": "Vyhľadať zoznamy"
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Vyhľadať a načítať zoznamy HubSpot na základe zadaných kritérií a filtrov."
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete list",
+          "source": "Delete List",
           "message": "Vymazať zoznam"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Natrvalo odstráni zadaný zoznam z HubSpot CRM podľa jeho ID."
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.display_name": {
-          "source": "Get list",
+          "source": "Get List",
           "message": "Získať zoznam"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Získa podrobné informácie o konkrétnom zozname HubSpot pomocou jeho jedinečného identifikátora."
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.display_name": {
-          "source": "Add list records",
+          "source": "Add List Records",
           "message": "Pridať záznamy zoznamu"
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Pridá všetkých členov zo zdrojového zoznamu HubSpot do cieľového zoznamu, čím efektívne skopíruje členstvo."
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.display_name": {
-          "source": "Remove list records",
+          "source": "Remove List Records",
           "message": "Odstrániť záznamy zo zoznamu"
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Odstráni zadané záznamy z existujúceho členstva v zozname HubSpot."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.display_name": {
-          "source": "List forms",
+          "source": "List Forms",
           "message": "Zoznam formulárov"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Vráti zoznam definícií marketingových formulárov vo vašom účte HubSpot, voliteľne filtrovaný podľa typu formulára (natívny HubSpot, zachytený, vyskakovací tok alebo komentár k blogu) a stavu archivácie."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create form",
+          "source": "Create Form",
           "message": "Vytvoriť formulár"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "Fázy životného cyklu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -1608,7 +1608,7 @@
           "message": "Určuje, či je zapnutá ochrana CAPTCHA proti spamu."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.Y3JlYXRlZEF0.display_name": {
-          "source": "Created at",
+          "source": "Created At",
           "message": "Vytvorené"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZGlzcGxheU9wdGlvbnM.display_name": {
@@ -1656,7 +1656,7 @@
           "message": "Šírka pozadia formulára v percentách (napríklad „100%“) alebo pixeloch (napríklad „600px“)."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.display_name": {
-          "source": "Font family",
+          "source": "Font Family",
           "message": "Rodina písiem"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.short_desc": {
@@ -2076,7 +2076,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2240,7 +2240,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.short_desc": {
@@ -2292,7 +2292,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2368,7 +2368,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.short_desc": {
@@ -2544,7 +2544,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2616,7 +2616,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.short_desc": {
@@ -2668,7 +2668,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2768,7 +2768,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.short_desc": {
@@ -2820,7 +2820,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2880,7 +2880,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.short_desc": {
@@ -2932,7 +2932,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3052,7 +3052,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.short_desc": {
@@ -3104,7 +3104,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3188,7 +3188,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.short_desc": {
@@ -3240,7 +3240,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3324,7 +3324,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.short_desc": {
@@ -3376,7 +3376,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3460,7 +3460,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.short_desc": {
@@ -3512,7 +3512,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3568,7 +3568,7 @@
           "message": "Doplňujúci popis poľa."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.short_desc": {
@@ -3620,7 +3620,7 @@
           "message": "Interný názov API identifikujúci pole v požiadavkách a odpovediach API."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3660,7 +3660,7 @@
           "message": "Ďalší text pomáhajúci zákazníkovi vyplniť pole."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Typ poľa"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.short_desc": {
@@ -3712,7 +3712,7 @@
           "message": "Identifikátor poľa, ktorý musí byť v kombinácii s ID typu objektu jedinečný."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3776,7 +3776,7 @@
           "message": "Určuje, či sa majú blokovať bezplatní poskytovatelia e-mailu."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.display_name": {
-          "source": "Group type",
+          "source": "Group Type",
           "message": "Typ skupiny"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.short_desc": {
@@ -3840,7 +3840,7 @@
           "message": "HubSpot"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal consent options",
+          "source": "Legal Consent Options",
           "message": "Možnosti právneho súhlasu"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.union.TGVnYWxDb25zZW50T3B0aW9uc05vbmUjOTg5OTE2YTM4YTU1ZjJmZTcyZjM2NDE4ZDcwMmUxY2U4MWM4ZGJmM2EyNDFmNjJmMDE4Y2Q1YWNmYTk4Y2YwNQ.field.dHlwZQ.display_name": {
@@ -4092,11 +4092,11 @@
           "message": "Názov"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.dXBkYXRlZEF0.display_name": {
-          "source": "Updated at",
+          "source": "Updated At",
           "message": "Aktualizované"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.display_name": {
-          "source": "Archive form",
+          "source": "Archive Form",
           "message": "Archivovať formulár"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.short_desc": {
@@ -4108,7 +4108,7 @@
           "message": "Archivuje definíciu formulára HubSpot. Nové odoslania už nebudú prijímané; definícia sa natrvalo vymaže tri mesiace po archivácii."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get form",
+          "source": "Get Form",
           "message": "Získať formulár"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.short_desc": {
@@ -4120,7 +4120,7 @@
           "message": "Vráti úplnú definíciu formulára pre zadané ID formulára vrátane všetkých skupín polí, konfigurácie, možností zobrazenia a nastavení právneho súhlasu."
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.display_name": {
-          "source": "Update form",
+          "source": "Update Form",
           "message": "Aktualizovať formulár"
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.short_desc": {
@@ -4132,7 +4132,7 @@
           "message": "Aktualizuje jeden alebo viac komponentov definície formulára HubSpot bez ovplyvnenia zvyšku konfigurácie."
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.display_name": {
-          "source": "Replace form",
+          "source": "Replace Form",
           "message": "Nahradiť formulár"
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.short_desc": {

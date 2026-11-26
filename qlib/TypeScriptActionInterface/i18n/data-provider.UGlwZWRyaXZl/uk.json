@@ -28,7 +28,7 @@
           "message": "Зробіть користувацький виклик HTTP / REST API до **Pipedrive**, використовуючи автентифікацію налаштованого підключення.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як повноцінні дії в цьому додатку."
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Метод HTTP"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Пошук записів"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Додає нову угоду. Усі угоди, створені через Pipedrive API, матимуть для `origin` значення `API`. Зауважте, що разом із запитом можна передавати додаткові користувацькі поля, які тут не описані. Ці користувацькі поля відрізняються для кожного облікового запису Pipedrive і розпізнаються за довгими хешами як ключами. Щоб визначити, які користувацькі поля існують, отримайте dealFields і знайдіть значення `key`. Докладнішу інформацію див. у посібнику зі <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">створення угоди<-a>."
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
-          "source": "Delete a deal",
+          "source": "Delete a Deal",
           "message": "Видалити угоду"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Оновлює властивості контакту. Докладнішу інформацію дивіться у посібнику з <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">оновлення контакту<-a>.<br>Якщо компанія використовує [продукт Campaigns](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), ця кінцева точка також прийматиме та повертатиме поле `data.marketing_status`."
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
-          "source": "Get all projects",
+          "source": "Get All Projects",
           "message": "Отримати всі проєкти"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {

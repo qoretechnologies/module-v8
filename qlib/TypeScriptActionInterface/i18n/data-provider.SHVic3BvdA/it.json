@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP/REST personalizzata a **HubSpot** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, gli header e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, gli header di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello su questa app."
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metodo HTTP"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.SHVic3BvdA.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Cerca record"
         },
         "app.SHVic3BvdA.action.c2VhcmNo.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Aggiorna un'azienda tramite ID (`companyId`) o valore di proprietà univoco (`idProperty`). I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti genereranno un errore. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.display_name": {
-          "source": "List contacts",
+          "source": "List Contacts",
           "message": "Elenca contatti"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Legge una pagina di contatti. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.display_name": {
-          "source": "Create contact",
+          "source": "Create Contact",
           "message": "Crea contatto"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Crea un contatto con le proprietà specificate e restituisce una copia dell'oggetto, compreso l'ID. Vengono fornite documentazione ed esempi per la creazione di contatti standard."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.display_name": {
-          "source": "Search contacts",
+          "source": "Search Contacts",
           "message": "Cerca contatti"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Cerca contatti in base a criteri specifici"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Delete contact",
+          "source": "Delete Contact",
           "message": "Elimina contatto"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Sposta nel cestino un oggetto identificato da `contactId`."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Retrieve contact",
+          "source": "Retrieve Contact",
           "message": "Recupera contatto"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Legge un oggetto identificato da `contactId`. `contactId` fa riferimento per impostazione predefinita all'ID oggetto interno o, facoltativamente, a qualsiasi valore di proprietà univoco specificato dal parametro di query `idProperty`. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.display_name": {
-          "source": "Update contact",
+          "source": "Update Contact",
           "message": "Aggiorna contatto"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Esegue un aggiornamento parziale di un oggetto identificato da `contactId`. `contactId` fa riferimento per impostazione predefinita all'ID interno dell'oggetto, oppure facoltativamente a qualsiasi valore di proprietà univoco specificato dal parametro di query `idProperty`. I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti verranno ignorate. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.display_name": {
-          "source": "List custom objects",
+          "source": "List Custom Objects",
           "message": "Elenca oggetti personalizzati"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Legge una pagina di oggetti. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.display_name": {
-          "source": "Create custom object",
+          "source": "Create Custom Object",
           "message": "Crea oggetto personalizzato"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Post-crm-v3-objects-object type-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search custom objects",
+          "source": "Search Custom Objects",
           "message": "Cerca oggetti personalizzati"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Cerca oggetti personalizzati in base a criteri specifici"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete custom object",
+          "source": "Delete Custom Object",
           "message": "Elimina oggetto personalizzato"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Sposta nel cestino un oggetto identificato da `objectId`."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve custom object",
+          "source": "Retrieve Custom Object",
           "message": "Recupera oggetto personalizzato"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Legge un oggetto identificato da `objectId`. `objectId` fa riferimento per impostazione predefinita all'ID oggetto interno o, facoltativamente, a qualsiasi valore di proprietà univoco specificato dal parametro di query `idProperty`. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.display_name": {
-          "source": "Update custom object",
+          "source": "Update Custom Object",
           "message": "Aggiorna Oggetto Personalizzato"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Esegui un aggiornamento parziale di un Oggetto identificato da `objectId`. `objectId` si riferisce all'ID oggetto interno per impostazione predefinita, o facoltativamente a qualsiasi valore di proprietà univoco come specificato dal parametro di query `idProperty`. I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti verranno ignorate. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.display_name": {
-          "source": "List deals",
+          "source": "List Deals",
           "message": "Elenca trattative"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Legge una pagina di trattative. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.display_name": {
-          "source": "Create deal",
+          "source": "Create Deal",
           "message": "Crea trattativa"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Post-crm-v3-objects-deals-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search deals",
+          "source": "Search Deals",
           "message": "Cerca trattative"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Cerca trattative in base a criteri specifici"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.display_name": {
-          "source": "Delete a deal",
+          "source": "Delete a Deal",
           "message": "Elimina una trattativa"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Sposta nel cestino un oggetto identificato da `dealId`."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve deal",
+          "source": "Retrieve Deal",
           "message": "Recupera trattativa"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Legge un oggetto identificato da `dealId`. `dealId` fa riferimento per impostazione predefinita all'ID oggetto interno o, facoltativamente, a qualsiasi valore di proprietà univoco specificato dal parametro di query `idProperty`. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.display_name": {
-          "source": "Update deal",
+          "source": "Update Deal",
           "message": "Aggiorna opportunità"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Esegui un aggiornamento parziale di un Oggetto identificato da `dealId`. `dealId` si riferisce all'ID oggetto interno per impostazione predefinita, o facoltativamente a qualsiasi valore di proprietà univoco come specificato dal parametro di query `idProperty`. I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti verranno ignorate. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.display_name": {
-          "source": "List leads",
+          "source": "List Leads",
           "message": "Elenca lead"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Legge una pagina di lead. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.display_name": {
-          "source": "Create lead",
+          "source": "Create Lead",
           "message": "Crea lead"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Crea o aggiorna i record identificati da `leadsId` o facoltativamente da un valore di proprietà univoco specificato dal parametro di query `idProperty`. `leadsId` fa riferimento per impostazione predefinita all'ID interno dell'oggetto e il parametro di query `idProperty` fa riferimento a una proprietà i cui valori sono univoci per l'oggetto."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search leads",
+          "source": "Search Leads",
           "message": "Cerca lead"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Cerca lead in base a criteri specifici"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete lead",
+          "source": "Delete Lead",
           "message": "Elimina lead"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Sposta nel cestino un oggetto identificato da `leadsId`."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve lead",
+          "source": "Retrieve Lead",
           "message": "Recupera lead"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Legge un oggetto identificato da `leadsId`. `leadsId` fa riferimento per impostazione predefinita all'ID oggetto interno o, facoltativamente, a qualsiasi valore di proprietà univoco specificato dal parametro di query `idProperty`. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.display_name": {
-          "source": "Update lead",
+          "source": "Update Lead",
           "message": "Aggiorna lead"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Esegui un aggiornamento parziale di un Oggetto identificato da `leadsId` o facoltativamente un valore di proprietà univoco come specificato dal parametro di query `idProperty`. `leadsId` si riferisce all'ID oggetto interno per impostazione predefinita e il parametro di query `idProperty` si riferisce a una proprietà i cui valori sono univoci per l'oggetto. I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti genereranno un errore. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.display_name": {
-          "source": "List products",
+          "source": "List Products",
           "message": "Elenca prodotti"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Legge una pagina di prodotti. Controlla cosa viene restituito tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.display_name": {
-          "source": "Create product",
+          "source": "Create Product",
           "message": "Crea prodotto"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Crea o aggiorna i record identificati da un valore di proprietà univoco specificato dal parametro di query `idProperty`. Il parametro di query `idProperty` si riferisce a una proprietà i cui valori sono univoci per l'oggetto."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search products",
+          "source": "Search Products",
           "message": "Cerca prodotti"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Cerca prodotti in base a criteri specifici"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.display_name": {
-          "source": "Delete product",
+          "source": "Delete Product",
           "message": "Elimina prodotto"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Sposta nel cestino un oggetto identificato da `productId`."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve product",
+          "source": "Retrieve Product",
           "message": "Recupera prodotto"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Legge un oggetto identificato da `productId`. `productId` fa riferimento per impostazione predefinita all'ID oggetto interno o, facoltativamente, a qualsiasi valore di proprietà univoco specificato dal parametro di query `idProperty`. Controlla gli elementi restituiti tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.display_name": {
-          "source": "Update product",
+          "source": "Update Product",
           "message": "Aggiorna Prodotto"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Esegui un aggiornamento parziale di un Oggetto identificato da `productId`. `productId` si riferisce all'ID oggetto interno per impostazione predefinita, o facoltativamente a qualsiasi valore di proprietà univoco come specificato dal parametro di query `idProperty`. I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti genereranno un errore. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.display_name": {
-          "source": "List tickets",
+          "source": "List Tickets",
           "message": "Elenca ticket"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Legge una pagina di ticket. Controlla cosa viene restituito tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.display_name": {
-          "source": "Create ticket",
+          "source": "Create Ticket",
           "message": "Crea ticket"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Post-crm-v3-objects-tickets-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search tickets",
+          "source": "Search Tickets",
           "message": "Cerca ticket"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Cerca ticket in base a criteri specifici"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete ticket",
+          "source": "Delete Ticket",
           "message": "Elimina ticket"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Sposta nel cestino un oggetto identificato da `ticketId`."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve ticket",
+          "source": "Retrieve Ticket",
           "message": "Recupera ticket"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Legge un oggetto identificato da `ticketId`. `ticketId` fa riferimento all'ID oggetto interno per impostazione predefinita oppure, facoltativamente, a qualsiasi valore di proprietà univoco come specificato dal parametro di query `idProperty`. Controlla cosa viene restituito tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.display_name": {
-          "source": "Update ticket",
+          "source": "Update Ticket",
           "message": "Aggiorna Ticket"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Esegui un aggiornamento parziale di un Oggetto identificato da `ticketId`. `ticketId` si riferisce all'ID oggetto interno per impostazione predefinita, o facoltativamente a qualsiasi valore di proprietà univoco come specificato dal parametro di query `idProperty`. I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti verranno ignorate. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.display_name": {
-          "source": "List users",
+          "source": "List Users",
           "message": "Elenca utenti"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Post-crm-v3-objects-users-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.display_name": {
-          "source": "Search users",
+          "source": "Search Users",
           "message": "Cerca utenti"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Cerca utenti in base a criteri specifici"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.display_name": {
-          "source": "Retrieve user",
+          "source": "Retrieve User",
           "message": "Recupera utente"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Legge un oggetto identificato da `userId`. `userId` fa riferimento all'ID oggetto interno per impostazione predefinita oppure, facoltativamente, a qualsiasi valore di proprietà univoco come specificato dal parametro di query `idProperty`. Controlla cosa viene restituito tramite il parametro di query `properties`."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.display_name": {
-          "source": "Update user",
+          "source": "Update User",
           "message": "Aggiorna utente"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Esegui un aggiornamento parziale di un Oggetto identificato da `userId`. `userId` si riferisce all'ID oggetto interno per impostazione predefinita, o facoltativamente a qualsiasi valore di proprietà univoco come specificato dal parametro di query `idProperty`. I valori delle proprietà forniti verranno sovrascritti. Le proprietà di sola lettura e non esistenti verranno ignorate. I valori delle proprietà possono essere cancellati passando una stringa vuota."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create list",
+          "source": "Create List",
           "message": "Crea lista"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Crea un nuovo elenco in HubSpot CRM con la configurazione e le proprietà specificate."
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.display_name": {
-          "source": "Search lists",
+          "source": "Search Lists",
           "message": "Cerca liste"
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Cerca e recupera le liste HubSpot in base ai criteri e ai filtri specificati."
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete list",
+          "source": "Delete List",
           "message": "Elimina lista"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Rimuove definitivamente una lista specificata da HubSpot CRM in base al relativo ID."
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.display_name": {
-          "source": "Get list",
+          "source": "Get List",
           "message": "Ottieni elenco"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Recupera informazioni dettagliate su uno specifico elenco HubSpot utilizzando il suo identificatore univoco."
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.display_name": {
-          "source": "Add list records",
+          "source": "Add List Records",
           "message": "Aggiungi record all'elenco"
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Aggiunge tutti i membri da un elenco HubSpot di origine a un elenco di destinazione, copiando di fatto l'appartenenza."
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.display_name": {
-          "source": "Remove list records",
+          "source": "Remove List Records",
           "message": "Rimuovi Record Elenco"
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Rimuove i record specificati dall'appartenenza a un elenco HubSpot esistente."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.display_name": {
-          "source": "List forms",
+          "source": "List Forms",
           "message": "Elenca moduli"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Restituisce un elenco di definizioni dei moduli di marketing nell'account HubSpot, facoltativamente filtrate per tipo di modulo (HubSpot nativo, acquisito, pop-up flow o commento del blog) e stato di archiviazione."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create form",
+          "source": "Create Form",
           "message": "Crea modulo"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "Fasi del ciclo di vita"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -1608,7 +1608,7 @@
           "message": "Indica se CAPTCHA è abilitato per prevenire lo spam."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.Y3JlYXRlZEF0.display_name": {
-          "source": "Created at",
+          "source": "Created At",
           "message": "Data creazione"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZGlzcGxheU9wdGlvbnM.display_name": {
@@ -1656,7 +1656,7 @@
           "message": "Larghezza dello sfondo del modulo in percentuale (ad esempio «100%») o pixel (ad esempio «600px»)."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.display_name": {
-          "source": "Font family",
+          "source": "Font Family",
           "message": "Famiglia di caratteri"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.short_desc": {
@@ -2076,7 +2076,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2240,7 +2240,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.short_desc": {
@@ -2292,7 +2292,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2368,7 +2368,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.short_desc": {
@@ -2544,7 +2544,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2616,7 +2616,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.short_desc": {
@@ -2668,7 +2668,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2768,7 +2768,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.short_desc": {
@@ -2820,7 +2820,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -2880,7 +2880,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.short_desc": {
@@ -2932,7 +2932,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3052,7 +3052,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.short_desc": {
@@ -3104,7 +3104,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3188,7 +3188,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.short_desc": {
@@ -3240,7 +3240,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3324,7 +3324,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.short_desc": {
@@ -3376,7 +3376,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3460,7 +3460,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.short_desc": {
@@ -3512,7 +3512,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3568,7 +3568,7 @@
           "message": "Descrizione aggiuntiva del campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.short_desc": {
@@ -3620,7 +3620,7 @@
           "message": "Nome API interno che identifica il campo nelle richieste e nelle risposte API."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3660,7 +3660,7 @@
           "message": "Testo aggiuntivo che aiuta il cliente a compilare il campo."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field type",
+          "source": "Field Type",
           "message": "Tipo Campo"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.short_desc": {
@@ -3712,7 +3712,7 @@
           "message": "Identificatore del campo, univoco insieme all’ID del tipo di oggetto."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object type ID",
+          "source": "Object Type ID",
           "message": "ID tipo di oggetto"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -3776,7 +3776,7 @@
           "message": "Indica se bloccare i fornitori di email gratuite."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.display_name": {
-          "source": "Group type",
+          "source": "Group Type",
           "message": "Tipo di gruppo"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.short_desc": {
@@ -3840,7 +3840,7 @@
           "message": "HubSpot"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal consent options",
+          "source": "Legal Consent Options",
           "message": "Opzioni di consenso legale"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.union.TGVnYWxDb25zZW50T3B0aW9uc05vbmUjOTg5OTE2YTM4YTU1ZjJmZTcyZjM2NDE4ZDcwMmUxY2U4MWM4ZGJmM2EyNDFmNjJmMDE4Y2Q1YWNmYTk4Y2YwNQ.field.dHlwZQ.display_name": {
@@ -4092,11 +4092,11 @@
           "message": "Nome"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.dXBkYXRlZEF0.display_name": {
-          "source": "Updated at",
+          "source": "Updated At",
           "message": "Data aggiornamento"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.display_name": {
-          "source": "Archive form",
+          "source": "Archive Form",
           "message": "Archivia modulo"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.short_desc": {
@@ -4108,7 +4108,7 @@
           "message": "Archivia una definizione di modulo HubSpot. I nuovi invii non saranno più accettati; la definizione viene eliminata definitivamente tre mesi dopo l'archiviazione."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get form",
+          "source": "Get Form",
           "message": "Ottieni modulo"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.short_desc": {
@@ -4120,7 +4120,7 @@
           "message": "Restituisce la definizione completa del modulo per l'ID modulo fornito, inclusi tutti i gruppi di campi, la configurazione, le opzioni di visualizzazione e le impostazioni del consenso legale."
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.display_name": {
-          "source": "Update form",
+          "source": "Update Form",
           "message": "Aggiorna Modulo"
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.short_desc": {
@@ -4132,7 +4132,7 @@
           "message": "Aggiorna uno o più componenti di una definizione di modulo HubSpot senza influire sul resto della configurazione."
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.display_name": {
-          "source": "Replace form",
+          "source": "Replace Form",
           "message": "Sostituisci Modulo"
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.short_desc": {

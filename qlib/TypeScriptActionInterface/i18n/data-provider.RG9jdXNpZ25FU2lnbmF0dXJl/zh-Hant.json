@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Docusign eSignature** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用的查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n針對尚未在此應用程式上作為一級動作公開的端點使用此動作。"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTP 方法"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -388,7 +388,7 @@
           "message": "授權連線時設定的預設帳戶 ID"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.display_name": {
-          "source": "Get brands",
+          "source": "Get Brands",
           "message": "取得品牌"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "此方法會傳回與帳戶相關聯之所有[品牌](-docs-esign-rest-api-esign101-concepts-branding-)的詳細資訊，\n包括預設品牌設定檔。\n\n帳戶必須啟用下列其中一項或兩項設定，才能使用此方法：\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 相關主題\n\n- [如何建立品牌](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.display_name": {
-          "source": "Create brand",
+          "source": "Create Brand",
           "message": "建立品牌"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.short_desc": {
@@ -412,7 +412,7 @@
           "message": "此方法會為帳戶建立一個或多個品牌設定檔檔案。\n\n若要指定品牌的標誌，\n請在建立品牌之後\n使用\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\n方法。\n\n\n帳戶必須啟用下列其中一項或兩項設定才能使用此方法：\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 相關主題\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.display_name": {
-          "source": "Delete brand",
+          "source": "Delete Brand",
           "message": "刪除品牌"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "此方法會根據您在 `brandsRequest` 中包含的品牌 ID，從帳戶中刪除一或多個品牌設定檔。\n\n帳戶必須啟用下列其中一項或兩項設定，才能使用此方法：\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 相關主題\n\n- [如何建立品牌](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.display_name": {
-          "source": "Get envelopes",
+          "source": "Get Envelopes",
           "message": "取得信封"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "此方法可讓您在帳戶中[搜尋信封](-docs-esign-rest-api-esign101-concepts-envelopes-search-)。大量的篩選條件可讓您依日期、信封 ID 或狀態碼縮小搜尋範圍。您的請求必須包含下列一個或多個參數：\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### 限制\n\n每次呼叫傳回的信封數量限制為 1,000 個。若要檢索下一組或上一組信封，請使用原始呼叫回應中傳回的 `nextUri` 和 `previousUri` 參數。\n\n若未指定 `from_date` 查詢參數，則不會傳回兩年以前的信封。若要擷取較舊的信封，請使用 `from_date` 和 `to_date` 參數設定特定日期範圍。\n\n為避免不必要的資料庫查詢，Docusign 簽章平台在查詢資料庫之前，會先檢查請求以確保提供的篩選條件集不會導致回應大小為零。\n\n### 信封狀態\n\n此表格顯示請求中不同狀態限定詞（`from_to_status` 參數）的有效目前信封狀態（`status` 參數）。若 API 請求中的狀態與狀態限定詞未包含「有效目前狀態」欄中顯示的任何值，則會傳回空清單。\n\n用戶端應用程式應檢查其請求的狀態（`status` 參數）對於給定的 `from_to_status` 參數值是否合理。\n\n| 狀態限定詞<br>(`from_to_status`) | 有效狀態限定詞 | 有效目前狀態                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### 無關結果\n\n在某些情況下，請求特定信封狀態會\n包含具有額外狀態的信封。例如，在\n`from_date` 為 2017-01-01、`to_date` 為\n2017-01-07 且狀態限定詞 (`from_to_status`) 設定\n為 `delivered` 的請求中，回應集可能包含\n在該時間段內建立但未在該時間段內\n送達的信封。作為因應措施，請視需要\n檢查結果集中的信封狀態值。\n\n\n### 相關主題\n\n- [Searching for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.display_name": {
-          "source": "Create envelopes",
+          "source": "Create Envelopes",
           "message": "建立信封"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.short_desc": {
@@ -448,7 +448,7 @@
           "message": "建立並傳送信封，或建立草稿信封。\n信封是 Docusign 平台中的基本資源。\n\n\n使用此方法您可以：\n\n* 建立並傳送包含 [documents][]、[recipients][] 和 [tabs][] 的信封。\n* [從範本建立並傳送信封](-docs-esign-rest-api-esign101-concepts-templates-)。\n* [從文件與範本的組合建立並傳送信封](-docs-esign-rest-api-esign101-concepts-templates-composite-)。\n* 建立草稿信封。\n\n\n當您使用此方法\n在單一請求中\n建立並傳送信封時，\n請求主體（[`envelopeDefinition`][envelopeDefinition] 物件）中的下列參數為必填項：\n\n| 參數      | 說明 |\n| :-      | :- |\n| `status`       | 設定為 `sent` 以將信封傳送給收件者。<br>設定為 `created`（或完全不設定）以將信封儲存為草稿。 |\n| `emailSubject` | 用於傳送信封的電子郵件主旨。 |\n| `documents`    | 要簽署的 [documents][]。 |\n| `recipients`   | 信封 [recipients][] 的電子郵件地址。 |\n\n\n當您使用\n[複合範本](-docs-esign-rest-api-esign101-concepts-templates-composite-)建立信封時，\n應在內嵌範本中指定信封自訂欄位。\n在根層級指定的任何自訂欄位都將被忽略。\n\n如果信封具有工作流程定義\n且 `workflowStatus` 為 `paused`，\n則信封不會立即傳送，\n即使信封的 `status` 為 `sent` 也是如此。\n\n\n### 相關主題\n\n[Envelope][envelopes] 和 [template][templates]\n物件與 [documents][documents]、\n[recipients][recipients] 及 [tabs][tabs]\n是 eSignature API 核心的五個物件模型。\n[eSignature 概念指南](-docs-esign-rest-api-esign101-concepts-)\n說明了這五個物件模型如何協同運作。\n\n下列教學文章包含\n實用範例，向您展示如何\n設定此方法的\n[`envelopeDefinition`][envelopeDefinition] 請求主體\n以執行常見工作。\n\n請求簽署\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature by email using a template](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to request a signature by SMS or WhatsApp delivery](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [How to send a request for payment](-docs-esign-rest-api-how-to-request-a-payment-)\n- [How to send an envelope to an In Person Signer](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [How to request a signature through your app (embedded signing) with a CFR Part 11 account](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\n使用信封與範本\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [How to create a template](-docs-esign-rest-api-how-to-create-template-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n使用進階收件者路由\n\n- [How to pause a signature workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [How to use conditional recipients](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [How to schedule an envelope](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [How to send an envelope with delayed routing](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\n使用文件\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [How to attach documents via binary transfer](-docs-esign-rest-api-how-to-send-binary-)\n- [How to create a signable HTML document](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [How to convert a PDF file into a signable HTML document](-docs-esign-rest-api-how-to-converting-pdf-)\n- [How to set document visibility for envelope recipients](-docs-esign-rest-api-how-to-set-document-visibility-)\n\n使用標籤\n\n- [How to get envelope tab values](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [How to get envelope custom tab values](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\n使用品牌\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n- [How to apply a brand to an envelope](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [How to apply a brand and template to an envelope](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\n使用權限\n\n- [How to create a permission profile](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [How to update individual permission settings](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [How to set a permission profile](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [How to delete a permission profile](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\n實作多因素收件者（簽署人）驗證\n\n- [How to require ID verification (IDV) for a recipient](-docs-esign-rest-api-how-to-id-verification-)\n- [How to require knowledge-based authentication (KBA) for a recipient](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [How to require phone authentication for a recipient](-docs-esign-rest-api-how-to-phone-auth-)\n- [How to require access code authentication for a recipient](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.display_name": {
-          "source": "Get envelope",
+          "source": "Get Envelope",
           "message": "取得信封"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.short_desc": {
@@ -460,7 +460,7 @@
           "message": "檢索指定信封的整體狀態。\n若要取得信封清單的狀態，請使用\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-)。\n\n### 相關主題\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.display_name": {
-          "source": "Update envelope",
+          "source": "Update Envelope",
           "message": "更新信封"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.short_desc": {
@@ -472,7 +472,7 @@
           "message": "此方法可讓您對信封進行變更。\n您可以使用它來：\n\n* [傳送草稿信封](#sending-a-draft-envelope)\n* [作廢處理中信封](#voiding-an-in-process-envelope)\n* [修改草稿信封](#modifying-envelope-email-information)\n* [從 Docusign 平台清除文件與信封中繼資料](#purging-documents-from-docusign)\n\n雖然此方法的請求主體\n是完整的信封定義，\n但您只需要提供\n要更新的屬性即可。\n\n## 傳送草稿信封\n\n若要傳送草稿信封，請在請求主體中包含下列程式碼：\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\n您可以在傳送信封前附加工作流程：\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## 使用工作流程\n\n若要取消暫停工作流程，請求主體應包含以下內容：\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## 作廢處理中信封\n\n若要作廢處理中信封，請在請求主體中包含下列程式碼：\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## 修改信封電子郵件資訊\n\n若要變更草稿信封的電子郵件主旨和訊息，\n請在請求主體中包含下列程式碼：\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## 從 Docusign 清除文件\n\n若只要將文件\n放入清除佇列，\n並在 Docusign 平台中保留任何\n對應的附件\n與標籤，\n請將 `purgeState` 屬性\n設定為 `documents_queued`。\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\n若要將文件、\n附件\n和標籤\n放入清除佇列，\n請將 `purgeState` 屬性\n設定為 `documents_and_metadata_queued`。\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\n若要將文件、\n附件\n和標籤\n放入清除佇列並隱去個人資訊，\n請將 `purgeState` 屬性\n設定為 `documents_and_metadata_and_redact_queued`。\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\n您只能從\n未標記為權威副本的\n已完成信封中清除文件。\n請求清除的使用者\n必須擁有清除文件的權限，\n且\n必須是寄件者或代表寄件者執行操作。\n\n當清除請求啟動時，\n要清除的項目\n會被放入清除佇列，\n並於 14 天後刪除。\n寄件者\n以及\n與信封相關聯且擁有 Docusign 帳戶的所有收件者\n都會收到電子郵件通知，\n告知文件將於 14 天後刪除。\n該通知包含指向\n文件的連結。\n7 天後會傳送\n第二封電子郵件通知。\n在 14 天期限結束時，\n文件會從系統中刪除。\n沒有 Docusign 帳戶的收件者\n不會收到電子郵件通知。\n\n如果您的帳戶具有文件保留政策，\n信封文件\n將會自動放入\n清除佇列中，\n並在保留期結束時\n傳送通知電子郵件。\n設定文件保留政策與設定\n清除文件的排程相同。\n\n## 從清除佇列中移除文件\n\n若要從清除佇列中移除文件，請在請求主體中包含下列程式碼：\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### 相關主題\n\n- [Void an envelope](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Purging documents (eSignature Concepts)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Purging documents in an envelope (blog post)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.display_name": {
-          "source": "Get documents",
+          "source": "Get Documents",
           "message": "取得文件"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.short_desc": {
@@ -484,7 +484,7 @@
           "message": "檢索與指定信封相關聯的文件清單。\n\n### 相關主題\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.display_name": {
-          "source": "Update documents",
+          "source": "Update Documents",
           "message": "更新文件"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "將一個或多個文件新增至現有信封。\n原始文件的標籤將套用至新文件。\n\n\n**注意：**為處理中信封新增或修改文件時，\nDocusign 建議\n在進行任何變更之前\n[鎖定信封](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)。\n\n如果文件的檔案名稱包含 Unicode 字元，則需要包含 `Content-Disposition` 標頭。範例：\n\n\n**標頭：**`Content-Disposition`\n\n\n**值：**`file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\n如果 HTML 文件檔案包含 <code>&lt;img&gt;<-code> 元素且 <code>src<-code> 屬性設定為路徑或 URL，則這些影像將不會顯示。HTML 檔案中的影像必須以 Base64 格式編碼，如下所示：<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.display_name": {
-          "source": "Delete documents",
+          "source": "Delete Documents",
           "message": "刪除文件"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "從尚未完成的現有信封中刪除一個或多個文件。\n\n若要刪除文件，僅需使用 [`envelopeDefinition`](#envelopeDefinition) 的相關部分。\n例如，此請求主體指定要刪除 `documentId` 為 \"1\" 的文件。\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\n信封狀態必須為下列之一：\n\n- `created`\n- `sent`\n- `delivered`\n\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.display_name": {
-          "source": "Get document",
+          "source": "Get Document",
           "message": "取得文件"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.short_desc": {
@@ -520,7 +520,7 @@
           "message": "從信封中檢索單一文件或所有文件。\n\n若要檢索單一文件，請在 `documentId` 路徑參數中提供文件的 ID。\n或者，透過將 `documentId` 參數設定為特殊關鍵字值，\n您可以檢索所有文件（作為合併 PDF、PDF 組合或 ZIP 封存檔）\n或僅檢索完成憑證。有關如何檢索每種格式，請參閱 `documentId` 說明。\n\n\n此方法的回應主體\n為一個檔案。如果您請求多個文件，\n結果將會是包含所有文件的\nZIP 封存檔。\n\n在所有其他情況下，回應為 PDF\n檔案或 PDF 組合。\n\n\n您可以從回應的 `Content-Disposition` 標頭取得檔案名稱與文件 ID：\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\n依預設，回應為作為位元組串流的\nPDF 檔案。\n例如，`curl` 中的請求與回應如下所示：\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\n透過在請求中使用 `Content-Transfer-Encoding`\n標頭，您可以取得以 base64 編碼的\nPDF 檔案。包含 base64 標頭的相同 `curl`\n請求如下所示：\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n（在實際的 `curl` 請求中，您將使用 `-output` 參數\n將位元組串流儲存至檔案中。）\n\n### 相關主題\n\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.display_name": {
-          "source": "Update document",
+          "source": "Update Document",
           "message": "更新文件"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.short_desc": {
@@ -532,7 +532,7 @@
           "message": "在現有的草稿或處理中信封中新增或取代文件。\n處理中信封是指已傳送但尚未完成或作廢的信封。\n\n\n**注意：**為處理中信封新增或修改文件時，\nDocusign 建議\n在進行任何變更之前\n[鎖定信封](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)。\n\n若要新增文件，請將 `documentId` 路徑參數設定為新文件 ID。\n\n若要取代文件，請將 `documentId` 路徑參數設定為現有文件的文件 ID。\n原始文件的標籤將套用至新文件。\n例如，cURL 中的請求如下所示：\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\n如果 HTML 文件檔案包含 <code>&lt;img&gt;<-code> 元素且 <code>src<-code> 屬性設定為路徑或 URL，則這些影像將不會顯示。HTML 檔案中的影像必須以 Base64 格式編碼，如下所示：<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.display_name": {
-          "source": "Get recipients",
+          "source": "Get Recipients",
           "message": "取得收件者"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "檢索單一信封中所有收件者的狀態，並識別路由清單中的目前收件者。此方法也可用於檢索標籤值。\n\n回應的 `currentRoutingOrder` 屬性包含目前收件者的 `routingOrder` 值，指示信封已傳送給該收件者，但該收件者尚未完成其動作。\n\n### 相關主題\n\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.display_name": {
-          "source": "Update recipients",
+          "source": "Update Recipients",
           "message": "更新收件者"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.short_desc": {
@@ -556,7 +556,7 @@
           "message": "更新草稿信封的收件者，或更正處理中信封的收件者資訊。\n\n如果您傳送草稿信封中尚不存在\n的收件者資訊，該收件者將會新增至信封中\n（類似於 [EnvelopeRecipients: Create][EnvelopeRecipients-create] 方法）。\n\n您也可以使用此方法，透過使用 `resend_envelope`\n選項向收件者重新傳送信封。\n\n**更新已傳送的信封**\n\n傳送信封後，您只能編輯下列屬性：\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email`（若您在此方法中提供電子郵件地址，即使該地址與目前地址完全相同，也會被視為新電子郵件地址。如果您不希望傳送更正電子郵件，請勿提供電子郵件地址。）\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType`（為使其生效，您還必須變更收件者物件以符合收件者類型。）\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId`（您可以變更此 ID 以切換至不同的簽署群組及其對應的收件者集合。）\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\n如果收件者已簽署，\n但信封仍處於使用中狀態，\n該方法將傳回成功，\n但回應中的 `recipientUpdateResults`\n屬性將包含收件者無法更新\n的錯誤：\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\n如果信封已完成，\n而您嘗試變更收件者的地址，\n該方法將失敗並顯示以下錯誤：\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**注意：**此方法僅適用於收件者。\n若要新增收件者標籤，\n請使用來自 [EnvelopeRecipientTabs][recipientTabs] 資源的方法。\n例如，此請求主體將新增收件者 (`astanton@example.com`)，\n但**不會**新增「在此簽署」收件者標籤。\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.display_name": {
-          "source": "Add recipients",
+          "source": "Add Recipients",
           "message": "新增收件者"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "將一個或多個收件者新增至信封。\n\n對於處理中信封\n（已傳送且尚未完成或作廢的信封），\n當在路由順序中輪到新收件者時，\n系統會向其傳送電子郵件。\n若新收件者的路由順序\n早於或等於信封的\n下一位收件者，\n則只有在選用的\n`resend_envelope` 查詢字串設為 **true** 時，才會傳送電子郵件。\n\n\n**注意：**此方法僅適用於收件者。\n若要新增收件者標籤，\n請使用來自 [EnvelopeRecipientTabs][recipientTabs] 資源的方法。\n例如，此請求主體將新增收件者 (`astanton@example.com`)，\n但**不會**新增「在此簽署」收件者標籤。\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### 相關主題\n\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.display_name": {
-          "source": "Delete recipients",
+          "source": "Delete Recipients",
           "message": "刪除收件者"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "從草稿或已傳送的信封中刪除一個或多個收件者。在請求主體中列出要刪除的收件者。此方法使用 `recipientId` 作為刪除收件者的索引鍵。\n\n如果信封為 `In Process`（表示已傳送且尚未完成或作廢），則無法刪除已完成其動作的收件者。"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.display_name": {
-          "source": "Create recipient view",
+          "source": "Create Recipient View",
           "message": "建立收件者檢視"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.short_desc": {

@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **Jira**에 맞춤 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL에 대한 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에서 기본 액션으로 아직 제공되지 않는 엔드포인트에 이 액션을 사용하세요."
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTP 메서드"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "레코드 검색"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "테이블 이름"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get announcement banner",
+          "source": "Get Announcement Banner",
           "message": "공지 배너 가져오기"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Jira 인스턴스의 현재 공지 배너 구성을 조회합니다"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set announcement banner",
+          "source": "Set Announcement Banner",
           "message": "공지 배너 설정"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Jira 인스턴스의 공지 배너 구성을 업데이트합니다"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get fields",
+          "source": "Get Fields",
           "message": "필드 목록 가져오기"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Jira 인스턴스의 시스템 필드 및 커스텀 필드를 포함한 모든 필드를 반환합니다"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create custom field",
+          "source": "Create Custom Field",
           "message": "커스텀 필드 생성"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Jira 인스턴스에 새 커스텀 필드를 생성합니다"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update custom field",
+          "source": "Update Custom Field",
           "message": "사용자 지정 필드 업데이트"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "사용자 지정 필드의 이름과 설명을 업데이트합니다"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash custom field",
+          "source": "Trash Custom Field",
           "message": "사용자 지정 필드 휴지통으로 이동"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "사용자 지정 필드를 휴지통으로 이동합니다. 사용자 지정 필드는 60일 이내에 휴지통에서 복원할 수 있습니다"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create issue",
+          "source": "Create Issue",
           "message": "이슈 생성"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Jira 프로젝트에 새 이슈를 생성합니다"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete issue",
+          "source": "Delete Issue",
           "message": "이슈 삭제"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Jira 프로젝트에서 이슈를 삭제합니다"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get issue",
+          "source": "Get Issue",
           "message": "이슈 가져오기"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "ID 또는 키로 특정 이슈의 세부 정보를 조회합니다"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit issue",
+          "source": "Edit Issue",
           "message": "이슈 편집"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
@@ -580,7 +580,7 @@
           "message": "기존 이슈의 필드를 업데이트합니다"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get comments",
+          "source": "Get Comments",
           "message": "댓글 목록 가져오기"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
@@ -592,7 +592,7 @@
           "message": "특정 이슈의 모든 댓글을 조회합니다"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add comment",
+          "source": "Add Comment",
           "message": "댓글 추가"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "특정 이슈에 새 댓글을 추가합니다"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete comment",
+          "source": "Delete Comment",
           "message": "댓글 삭제"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "이슈에서 특정 댓글을 삭제합니다"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get comment",
+          "source": "Get Comment",
           "message": "댓글 가져오기"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "ID로 특정 댓글을 조회합니다"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update comment",
+          "source": "Update Comment",
           "message": "댓글 업데이트"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "이슈의 기존 댓글을 업데이트합니다"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get issue worklogs",
+          "source": "Get Issue Worklogs",
           "message": "이슈 작업 로그 가져오기"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
@@ -652,7 +652,7 @@
           "message": "특정 이슈의 모든 작업 로그를 검색합니다"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add worklog",
+          "source": "Add Worklog",
           "message": "작업 로그 추가"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "특정 이슈에 새 작업 로그 항목을 추가합니다"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete worklog",
+          "source": "Delete Worklog",
           "message": "작업 로그 삭제"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
@@ -676,7 +676,7 @@
           "message": "이슈에서 특정 작업 로그 항목을 삭제합니다"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get worklog",
+          "source": "Get Worklog",
           "message": "작업 로그 가져오기"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "ID로 특정 작업 로그 항목을 검색합니다"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update worklog",
+          "source": "Update Worklog",
           "message": "작업 로그 업데이트"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "이슈의 기존 작업 로그 항목을 업데이트합니다"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get all projects",
+          "source": "Get All Projects",
           "message": "모든 프로젝트 가져오기"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
@@ -748,7 +748,7 @@
           "message": "프로젝트에 대해 반환할 프로젝트 속성 목록입니다. 이 매개변수는 쉼표로 구분된 목록을 허용합니다."
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create project",
+          "source": "Create Project",
           "message": "프로젝트 생성"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Jira에 새 프로젝트를 생성합니다"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete project",
+          "source": "Delete Project",
           "message": "프로젝트 삭제"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Jira에서 프로젝트를 삭제합니다"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get project",
+          "source": "Get Project",
           "message": "프로젝트 가져오기"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
@@ -784,7 +784,7 @@
           "message": "ID 또는 키로 특정 프로젝트의 세부 정보를 검색합니다"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update project",
+          "source": "Update Project",
           "message": "프로젝트 업데이트"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "기존 프로젝트의 세부 정보를 업데이트합니다"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search issues",
+          "source": "Search Issues",
           "message": "이슈 검색"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {

@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Mailchimp** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
-          "message": "HTTP method"
+          "source": "HTTP Method",
+          "message": "HTTP Method"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
-          "source": "Search records",
-          "message": "Search records"
+          "source": "Search Records",
+          "message": "Search Records"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Mailchimp\"",
@@ -484,8 +484,8 @@
           "message": "The table name"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
-          "source": "Get campaigns",
-          "message": "Get campaigns"
+          "source": "Get Campaigns",
+          "message": "Get Campaigns"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
           "source": "Retrieve a list of email campaigns",
@@ -496,8 +496,8 @@
           "message": "Fetches all email campaigns from your Mailchimp account with their details including status, settings, and performance metrics."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
-          "source": "Create campaign",
-          "message": "Create campaign"
+          "source": "Create Campaign",
+          "message": "Create Campaign"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
           "source": "Create a new email campaign",
@@ -508,8 +508,8 @@
           "message": "Creates a new email campaign in Mailchimp with specified settings, content, and audience targeting options."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
-          "source": "Send campaign",
-          "message": "Send campaign"
+          "source": "Send Campaign",
+          "message": "Send Campaign"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
           "source": "Send an email campaign",
@@ -520,8 +520,8 @@
           "message": "Sends a previously created email campaign to its targeted audience immediately or schedules it for later delivery."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
-          "source": "Create audience",
-          "message": "Create audience"
+          "source": "Create Audience",
+          "message": "Create Audience"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
           "source": "Create a new audience",
@@ -532,8 +532,8 @@
           "message": "Creates a new audience (mailing list) in Mailchimp with specified settings and configuration options."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
-          "source": "Search tags by name",
-          "message": "Search tags by name"
+          "source": "Search Tags by Name",
+          "message": "Search Tags by Name"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
           "source": "Search for tags by name",
@@ -544,8 +544,8 @@
           "message": "Searches for subscriber tags by name to help organize and segment your audience members."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
-          "source": "Get audience members",
-          "message": "Get audience members"
+          "source": "Get Audience Members",
+          "message": "Get Audience Members"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
           "source": "Retrieve members from an audience",
@@ -556,8 +556,8 @@
           "message": "Fetches all members (subscribers) from a specific audience with their contact information and subscription details."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
-          "source": "Add audience member",
-          "message": "Add audience member"
+          "source": "Add Audience Member",
+          "message": "Add Audience Member"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
           "source": "Add a new member to an audience",
@@ -568,8 +568,8 @@
           "message": "Adds a new subscriber to a specific audience with their contact information and subscription preferences."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Get audience member",
-          "message": "Get audience member"
+          "source": "Get Audience Member",
+          "message": "Get Audience Member"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
           "source": "Retrieve a specific audience member",
@@ -580,8 +580,8 @@
           "message": "Fetches detailed information about a specific member (subscriber) from an audience including their profile and activity data."
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Update audience member",
-          "message": "Update audience member"
+          "source": "Update Audience Member",
+          "message": "Update Audience Member"
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
           "source": "Update an audience member",
@@ -592,8 +592,8 @@
           "message": "Updates the information and subscription preferences of an existing member in an audience."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Remove audience member",
-          "message": "Remove audience member"
+          "source": "Remove Audience Member",
+          "message": "Remove Audience Member"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
           "source": "Remove a member from an audience",
@@ -604,8 +604,8 @@
           "message": "Removes a subscriber from an audience while preserving their data for compliance purposes."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
-          "source": "Add member tags",
-          "message": "Add member tags"
+          "source": "Add Member Tags",
+          "message": "Add Member Tags"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
           "source": "Add tags to audience members",
@@ -616,8 +616,8 @@
           "message": "Adds one or more tags to audience members for better segmentation and organization."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
-          "source": "Add member events",
-          "message": "Add member events"
+          "source": "Add Member Events",
+          "message": "Add Member Events"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
           "source": "Add events to audience members",
@@ -628,8 +628,8 @@
           "message": "Records custom events for audience members to track their behavior and interactions with your brand."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
-          "source": "Add member note",
-          "message": "Add member note"
+          "source": "Add Member Note",
+          "message": "Add Member Note"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
           "source": "Add a note to an audience member",
@@ -640,8 +640,8 @@
           "message": "Adds a note to a specific audience member for internal tracking and customer relationship management."
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
-          "source": "Update member note",
-          "message": "Update member note"
+          "source": "Update Member Note",
+          "message": "Update Member Note"
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
           "source": "Update an audience member note",
@@ -652,8 +652,8 @@
           "message": "Updates an existing note attached to an audience member with new information or corrections."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
-          "source": "Delete member note",
-          "message": "Delete member note"
+          "source": "Delete Member Note",
+          "message": "Delete Member Note"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
           "source": "Delete an audience member note",
@@ -664,8 +664,8 @@
           "message": "Permanently removes a note from an audience member's profile."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
-          "source": "Permanently delete member",
-          "message": "Permanently delete member"
+          "source": "Permanently Delete Member",
+          "message": "Permanently Delete Member"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
           "source": "Permanently delete an audience member",
@@ -676,8 +676,8 @@
           "message": "Permanently removes an audience member and all their associated data from Mailchimp. This action cannot be undone."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
-          "source": "Get campaign reports",
-          "message": "Get campaign reports"
+          "source": "Get Campaign Reports",
+          "message": "Get Campaign Reports"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
           "source": "Retrieve campaign performance reports",
@@ -772,8 +772,8 @@
           "message": "Restrict the response to campaigns sent after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
-          "source": "Get campaign report",
-          "message": "Get campaign report"
+          "source": "Get Campaign Report",
+          "message": "Get Campaign Report"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
           "source": "Retrieve a specific campaign report",
@@ -784,8 +784,8 @@
           "message": "Fetches detailed performance metrics and analytics for a specific email campaign."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
-          "source": "Get campaign click details",
-          "message": "Get campaign click details"
+          "source": "Get Campaign Click Details",
+          "message": "Get Campaign Click Details"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
           "source": "Retrieve click details for a campaign",
@@ -796,8 +796,8 @@
           "message": "Fetches detailed information about clicks in a specific campaign including which links were clicked and by whom."
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
-          "source": "Get store customer",
-          "message": "Get store customer"
+          "source": "Get Store Customer",
+          "message": "Get Store Customer"
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
           "source": "Retrieve a specific store customer",
@@ -808,8 +808,8 @@
           "message": "Fetches detailed information about a specific customer from your connected e-commerce store."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
-          "source": "Search campaigns",
-          "message": "Search campaigns"
+          "source": "Search Campaigns",
+          "message": "Search Campaigns"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
           "source": "Search for campaigns",
@@ -856,8 +856,8 @@
           "message": "The search query used to filter results."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
-          "source": "Search audience members",
-          "message": "Search audience members"
+          "source": "Search Audience Members",
+          "message": "Search Audience Members"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {
           "source": "Search for audience members",

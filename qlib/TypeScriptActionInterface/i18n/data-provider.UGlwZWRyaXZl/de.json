@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Pipedrive** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App verfügbar sind."
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTP-Methode"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "Datensätze suchen"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Fügt einen neuen Deal hinzu. Bei allen über die Pipedrive-API erstellten Deals ist `origin` auf `API` gesetzt. Beachten Sie, dass Sie mit der Anfrage zusätzliche benutzerdefinierte Felder übergeben können, die hier nicht beschrieben sind. Diese benutzerdefinierten Felder sind für jedes Pipedrive-Konto unterschiedlich und anhand langer Hashes als Schlüssel erkennbar. Um festzustellen, welche benutzerdefinierten Felder existieren, rufen Sie dealFields ab und suchen Sie nach `key`-Werten. Weitere Informationen finden Sie im Tutorial zum <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">Hinzufügen eines Deals<-a>."
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
-          "source": "Delete a deal",
+          "source": "Delete a Deal",
           "message": "Einen Deal löschen"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Aktualisiert die Eigenschaften einer Person. Weitere Informationen finden Sie im Tutorial zum <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">Aktualisieren einer Person<-a>.<br>Wenn ein Unternehmen das [Campaigns-Produkt](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api) verwendet, akzeptiert und gibt dieser Endpunkt auch das Feld `data.marketing_status` zurück."
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
-          "source": "Get all projects",
+          "source": "Get All Projects",
           "message": "Alle Projekte abrufen"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {

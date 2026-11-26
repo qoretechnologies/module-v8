@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**Zendesk**へのカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTPメソッド"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "レコードの検索"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
@@ -496,7 +496,7 @@
           "message": "URIパス変数「attachment_id」"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
-          "source": "List groups",
+          "source": "List Groups",
           "message": "グループを一覧表示"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "削除されたエンティティを除外するかどうか"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
-          "source": "Create group",
+          "source": "Create Group",
           "message": "グループを作成"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "#### 許可対象\n\n* 管理者\n* グループ管理権限を持つカスタムロールに割り当てられたエージェント（Enterpriseのみ）\n"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
-          "source": "Delete group",
+          "source": "Delete Group",
           "message": "グループを削除"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
@@ -556,7 +556,7 @@
           "message": "#### 許可対象\n\n* 管理者\n* エージェント\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
-          "source": "Update group",
+          "source": "Update Group",
           "message": "グループを更新"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
@@ -664,7 +664,7 @@
           "message": "特定のメトリクス、または特定チケットのメトリクスを返します。\n\n#### ページネーション\n\n- カーソルページネーション（推奨）\n- オフセットページネーション\n\n[ページネーション](-api-reference-introduction-pagination-)を参照してください。\n\n1ページあたり最大100レコードを返します。\n\n#### 許可対象\n\n* エージェント\n"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
-          "source": "List tickets",
+          "source": "List Tickets",
           "message": "チケット一覧"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
@@ -688,7 +688,7 @@
           "message": "外部IDでチケットを一覧表示します。外部IDは各チケットに対して一意である必要はありません。そのため、リクエストによって同じ外部IDを持つ複数のチケットが返される場合があります。"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
-          "source": "Create ticket",
+          "source": "Create Ticket",
           "message": "チケットを作成"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
@@ -712,7 +712,7 @@
           "message": "アカウント内のチケットのおおよその件数を返します。件数が100,000件を超える場合、24時間ごとに更新されます。\n\n`ccd` は指定されたユーザーがCCに含まれているチケットを一覧表示します。\n\n`count[refreshed_at]` プロパティは、件数が最後に更新された日時を示すタイムスタンプです。\n\n**注**: 件数が100,000件を超える場合、`count[refreshed_at]` はnullになることがあります。\nこれは件数がバックグラウンドで更新中であることを示しており、更新が完了するまで `count[value]` は100,000件に制限されます。\n\n#### 許可対象\n* エージェント"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
-          "source": "Delete ticket",
+          "source": "Delete Ticket",
           "message": "チケットを削除"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
@@ -736,7 +736,7 @@
           "message": "チケットのプロパティを返しますが、チケットのコメントは返しません。コメントを取得するには、[コメントの一覧表示](-api-reference-ticketing-tickets-ticket_comments-#list-comments)を使用してください\n\n#### 許可対象\n* エージェント"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
-          "source": "Update ticket",
+          "source": "Update Ticket",
           "message": "チケットを更新"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
@@ -772,7 +772,7 @@
           "message": "URIパス変数「token」"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
-          "source": "List users",
+          "source": "List Users",
           "message": "ユーザー一覧"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
@@ -784,7 +784,7 @@
           "message": "#### ページネーション\n\n* カーソルページネーション（推奨）\n* オフセットページネーション\n\n[ページネーション](-api-reference-introduction-pagination-)を参照してください。\n\n1ページあたり最大100レコードを返します。\n\n#### 許可対象\n\n* 管理者、エージェント、およびライトエージェント\n"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
-          "source": "Create user",
+          "source": "Create User",
           "message": "ユーザーを作成"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "ユーザーを作成"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
-          "source": "Delete user",
+          "source": "Delete User",
           "message": "ユーザーを削除"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "#### 許可対象\n\n* エージェント\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
-          "source": "Update user",
+          "source": "Update User",
           "message": "ユーザーを更新"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {

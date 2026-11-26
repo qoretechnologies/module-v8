@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Magento** pomocí ověřování nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci vystaveny jako prvotřídní akce."
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Metoda HTTP"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Získá podrobné informace o zákaznickém účtu pomocí ID zákazníka. Vrátí všechny atributy zákazníka včetně informací o adrese, stavu účtu a vlastních atributů."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Update customer",
+          "source": "Update Customer",
           "message": "Aktualizovat zákazníka"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Aktualizuje informace o zákazníkovi pro existující účet. Tento koncový bod umožňuje úpravu osobních údajů, adres, vlastních atributů a dalších podrobností o účtu. V požadavku musí být zahrnuto ID zákazníka."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
-          "source": "Delete customer",
+          "source": "Delete Customer",
           "message": "Smazat zákazníka"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Trvale smaže zákaznický účet ze systému. Tuto operaci nelze vrátit zpět a odebere všechna zákaznická data spojená se zadaným ID, včetně adres a odkazů na historii objednávek."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List customers",
+          "source": "List Customers",
           "message": "Seznam zákazníků"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Vrátí seznam zákaznických účtů, které odpovídají zadaným kritériím vyhledávání. Výsledky lze filtrovat, řadit a stránkovat. Pomocí parametrů vyhledávacích kritérií můžete zúžit výsledky podle e-mailu, jména, data vytvoření nebo jiných atributů zákazníka."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
-          "source": "Create customer account",
+          "source": "Create Customer Account",
           "message": "Vytvořit zákaznický účet"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Vytvoří nový zákaznický účet s poskytnutými informacemi. Mezi povinná pole patří e-mail, heslo a jméno/příjmení. Mezi volitelné údaje patří adresy, datum narození a vlastní atributy. V případě úspěchu vrátí ID nově vytvořeného zákazníka."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
-          "source": "Create product",
+          "source": "Create Product",
           "message": "Vytvořit produkt"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Vytvoří v katalogu nový produkt se zadanými atributy, cenou a informacemi o zásobách. Produkty mohou být jednoduché, konfigurovatelné, balíčkové, seskupené, virtuální nebo ke stažení. Lze také definovat položky mediální galerie, stupňovité ceny a vlastní možnosti."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
-          "source": "List products",
+          "source": "List Products",
           "message": "Vypsat produkty"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Vrátí kolekci produktů, které odpovídají zadaným kritériím vyhledávání. Výsledky lze filtrovat podle atributů, jako je název, SKU, cena a stav. Podporuje stránkování, řazení a zahrnutí vlastních atributů do odpovědi."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
-          "source": "Update product",
+          "source": "Update Product",
           "message": "Aktualizovat produkt"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Aktualizuje existující produkt v katalogu. Může upravit jakýkoli atribut produktu včetně názvu, ceny, popisu, obrázků, inventáře a přiřazení do kategorií. V požadavku musí být zadáno SKU nebo ID produktu."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
-          "source": "Delete product",
+          "source": "Delete Product",
           "message": "Smazat produkt"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Trvale odebere produkt z katalogu podle ID nebo SKU. Tuto operaci nelze vrátit zpět a může ovlivnit existující objednávky a košíky, které na smazaný produkt odkazují."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
-          "source": "Get product details",
+          "source": "Get Product Details",
           "message": "Získat podrobnosti o produktu"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Získá komplexní informace o konkrétním produktu podle SKU nebo ID. Odpověď obsahuje všechny atributy produktu, obrázky, informace o cenách, stav zásob a přiřazení do kategorií. Další parametry mohou řídit, která data budou zahrnuta."
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List shopping carts",
+          "source": "List Shopping Carts",
           "message": "Zobrazit seznam nákupních košíků"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Vrací kolekci aktivních nákupních košíků, které odpovídají zadaným vyhledávacím kritériím. Výsledky lze filtrovat podle ID zákazníka, data vytvoření a stavu košíku. Každý košík obsahuje položky, uplatněné kupóny a případné informace o dopravě/fakturaci."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
-          "source": "Get order details",
+          "source": "Get Order Details",
           "message": "Získat podrobnosti objednávky"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Načte komplexní informace o konkrétní objednávce podle ID. Zahrnuje položky objednávky, fakturační a doručovací adresy, platební údaje, uplatněné slevy a historii stavu objednávky. Užitečné pro zpracování objednávek a dotazy zákaznického servisu."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List orders",
+          "source": "List Orders",
           "message": "Zobrazit seznam objednávek"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Vrací kolekci objednávek, které odpovídají zadaným kritériím vyhledávání. Výsledky lze filtrovat podle zákazníka, stavu, časového období a celkové částky. Podporuje stránkování a řazení pro efektivní procházení velkých objemů objednávek."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Create order",
+          "source": "Create Order",
           "message": "Vytvořit objednávku"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Provádí operace uložení pro zadanou objednávku. Uloží data objednávky do databáze, včetně informací o zákazníkovi, položek, platebních údajů, informací o dopravě a dalších relevantních metadat objednávky."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
-          "source": "Add order comment",
+          "source": "Add Order Comment",
           "message": "Přidat komentář k objednávce"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Přidá komentář do historie objednávky. Komentáře mohou být interní (viditelné pouze pro správce) nebo viditelné pro zákazníka. Každý komentář má časové razítko a přiřazeného autora. Užitečné pro dokumentaci kroků zpracování objednávky a komunikaci se zákazníkem."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
-          "source": "Get order comments",
+          "source": "Get Order Comments",
           "message": "Získat komentáře objednávky"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Vrací úplnou historii komentářů pro konkrétní objednávku. Výsledky zahrnují text komentáře, časové razítko, informace o autorovi a stav viditelnosti (viditelné pro zákazníka nebo pouze pro správce). Komentáře jsou vráceny v chronologickém pořadí."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List invoices",
+          "source": "List Invoices",
           "message": "Vypsat faktury"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Vrátí seznam faktur na základě zadaných kritérií vyhledávání. Výsledky lze filtrovat podle ID objednávky, zákazníka, data a částky. Každá faktura obsahuje položky řádků, platební informace a související podrobnosti o objednávce. Podporuje stránkování a řazení."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
-          "source": "Create invoice",
+          "source": "Create Invoice",
           "message": "Vytvořit fakturu"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Vytvoří nový záznam faktury pro existující objednávku, který dokumentuje finanční transakci a žádost o platbu. Umožňuje zadat položky k fakturaci, platební údaje a komentáře, které se zobrazí na faktuře zákazníka."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List shipments",
+          "source": "List Shipments",
           "message": "Zobrazit seznam zásilek"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vrací seznam zásilek na základě zadaných vyhledávacích kritérií. Výsledky lze filtrovat podle ID objednávky, zákazníka, data vytvoření a informací o sledování. Každá zásilka obsahuje odeslané položky, množství, sledovací čísla a informace o dopravci."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
-          "source": "Create shipment",
+          "source": "Create Shipment",
           "message": "Vytvořit zásilku"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Vytvoří nový záznam zásilky pro existující objednávku, což vám umožní zdokumentovat a sledovat fyzické odeslání položek objednávky zákazníkovi. Zahrnuje možnosti pro zadání sledovacích čísel, dopravců a odeslaných položek s jejich množstvím."
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List payment transactions",
+          "source": "List Payment Transactions",
           "message": "Zobrazit seznam platebních transakcí"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {

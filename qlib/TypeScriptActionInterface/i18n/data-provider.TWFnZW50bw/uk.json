@@ -28,7 +28,7 @@
           "message": "Виконайте довільний виклик HTTP / REST API до **Magento**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API підключення), необов’язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "Метод HTTP"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Отримує детальну інформацію про обліковий запис клієнта за допомогою ID клієнта. Повертає всі атрибути клієнта, включно з адресною інформацією, статусом облікового запису та настроюваними атрибутами."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Update customer",
+          "source": "Update Customer",
           "message": "Оновити клієнта"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Оновлює інформацію про клієнта для наявного облікового запису. Ця кінцева точка дає змогу змінювати особисту інформацію, адреси, настроювані атрибути та інші відомості облікового запису. ID клієнта має бути вказано в запиті."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
-          "source": "Delete customer",
+          "source": "Delete Customer",
           "message": "Видалити клієнта"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Безповоротно видаляє обліковий запис клієнта із системи. Цю дію неможливо скасувати, і вона видалить усі дані клієнта, пов’язані із зазначеним ID, включно з адресами та посиланнями на історію замовлень."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List customers",
+          "source": "List Customers",
           "message": "Список клієнтів"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Повертає список облікових записів клієнтів, які відповідають указаним критеріям пошуку. Результати можна фільтрувати, сортувати та розбивати на сторінки. Використовуйте параметри критеріїв пошуку, щоб звузити результати за електронною поштою, іменем, датою створення чи іншими атрибутами клієнта."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
-          "source": "Create customer account",
+          "source": "Create Customer Account",
           "message": "Створити обліковий запис клієнта"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Створює новий обліковий запис клієнта з наданою інформацією. Обов’язкові поля містять електронну пошту, пароль та ім’я/прізвище. Необов’язкові дані включають адреси, дату народження та настроювані атрибути. У разі успіху повертає ID щойно створеного клієнта."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
-          "source": "Create product",
+          "source": "Create Product",
           "message": "Створити товар"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Створює новий товар у каталозі із зазначеними атрибутами, ціною та інформацією про запаси. Товари можуть бути простими, конфігурованими, пакетними, згрупованими, віртуальними або завантажуваними. Також можна визначати записи медіагалереї, багаторівневі ціни та настроювані параметри."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
-          "source": "List products",
+          "source": "List Products",
           "message": "Список продуктів"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Повертає колекцію товарів, які відповідають указаним критеріям пошуку. Результати можна фільтрувати за такими атрибутами, як назва, SKU, ціна та статус. Підтримує розбиття на сторінки, сортування та включення настроюваних атрибутів у відповідь."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
-          "source": "Update product",
+          "source": "Update Product",
           "message": "Оновити продукт"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Оновлює наявний товар у каталозі. Може змінювати будь-який атрибут товару, зокрема назву, ціну, опис, зображення, запаси та прив'язку до категорій. У запиті потрібно вказати SKU або ID товару."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
-          "source": "Delete product",
+          "source": "Delete Product",
           "message": "Видалити товар"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Безповоротно видаляє товар із каталогу за ID або SKU. Цю дію неможливо скасувати, і вона може вплинути на наявні замовлення та кошики, які посилаються на видалений товар."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
-          "source": "Get product details",
+          "source": "Get Product Details",
           "message": "Отримати відомості про товар"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Отримує повну інформацію про конкретний товар за SKU або ID. Відповідь містить усі атрибути товару, зображення, інформацію про ціни, стан запасів і призначення категорій. Додаткові параметри дають змогу контролювати, які дані включаються."
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List shopping carts",
+          "source": "List Shopping Carts",
           "message": "Список кошиків покупця"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Повертає колекцію активних кошиків покупця, які відповідають вказаним критеріям пошуку. Результати можна фільтрувати за ID клієнта, датою створення та статусом кошика. Кожен кошик містить товари, застосовані купони та інформацію про доставку/оплату, якщо вона доступна."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
-          "source": "Get order details",
+          "source": "Get Order Details",
           "message": "Отримати деталі замовлення"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Отримує вичерпну інформацію про вказане замовлення за ID. Включає позиції замовлення, платіжні адреси та адреси доставки, інформацію про оплату, застосовані знижки та історію статусів замовлення. Корисно для обробки замовлень та запитів клієнтської підтримки."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List orders",
+          "source": "List Orders",
           "message": "Список замовлень"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Повертає колекцію замовлень, які відповідають вказаним критеріям пошуку. Результати можна фільтрувати за клієнтом, статусом, діапазоном дат і загальною сумою. Підтримує пагінацію та сортування для ефективного перегляду великих обсягів замовлень."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Create order",
+          "source": "Create Order",
           "message": "Створити замовлення"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Виконує операції збереження для вказаного замовлення. Зберігає дані замовлення в базі даних, включно з інформацією про клієнта, позиціями, платіжними реквізитами, інформацією про доставку та іншими відповідними метаданими замовлення."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
-          "source": "Add order comment",
+          "source": "Add Order Comment",
           "message": "Додати коментар до замовлення"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Додає коментар до історії замовлення. Коментарі можуть бути внутрішніми (видимими лише для адміністраторів) або видимими для клієнта. Кожен коментар містить часову мітку та прив'язаний до автора. Корисно для документування етапів обробки замовлення та спілкування з клієнтами."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
-          "source": "Get order comments",
+          "source": "Get Order Comments",
           "message": "Отримати коментарі до замовлення"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Повертає повну історію коментарів для вказаного замовлення. Результати містять текст коментаря, часову мітку, інформацію про автора та статус видимості (видимий для клієнта чи лише для адміністратора). Коментарі повертаються в хронологічному порядку."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List invoices",
+          "source": "List Invoices",
           "message": "Список рахунків-фактур"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Повертає список рахунків-фактур на основі вказаних критеріїв пошуку. Результати можна фільтрувати за ID замовлення, клієнтом, датою та сумою. Кожен рахунок-фактура містить позиції, інформацію про оплату та пов'язані деталі замовлення. Підтримує розбиття на сторінки та сортування."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
-          "source": "Create invoice",
+          "source": "Create Invoice",
           "message": "Створити рахунок-фактуру"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Створює новий запис рахунка-фактури для наявного замовлення, документуючи фінансову транзакцію та запит на оплату. Дозволяє вказувати позиції для виставлення рахунка, платіжні реквізити та коментарі, які відображатимуться в рахунку клієнта."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List shipments",
+          "source": "List Shipments",
           "message": "Список відправлень"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Повертає список відправлень на основі вказаних критеріїв пошуку. Результати можна фільтрувати за ID замовлення, клієнтом, датою створення та інформацією про відстеження. Кожне відправлення містить відправлені товари, кількість, номери відстеження та інформацію про перевізника."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
-          "source": "Create shipment",
+          "source": "Create Shipment",
           "message": "Створити відправлення"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Створює новий запис відправлення для наявного замовлення, дозволяючи документувати та відстежувати фізичне надсилання товарів замовлення клієнту. Включає параметри для вказання номерів відстеження, перевізників і відправлених товарів із їхньою кількістю."
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List payment transactions",
+          "source": "List Payment Transactions",
           "message": "Список платіжних транзакцій"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {

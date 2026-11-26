@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Pipedrive** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
-          "message": "HTTP method"
+          "source": "HTTP Method",
+          "message": "HTTP Method"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
-          "source": "Search records",
-          "message": "Search records"
+          "source": "Search Records",
+          "message": "Search Records"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Pipedrive\"",
@@ -544,8 +544,8 @@
           "message": "Adds a new deal. All deals created through the Pipedrive API will have a `origin` set to `API`. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the dealFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">adding a deal<-a>."
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
-          "source": "Delete a deal",
-          "message": "Delete a deal"
+          "source": "Delete a Deal",
+          "message": "Delete a Deal"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
           "source": "Delete a deal",
@@ -820,8 +820,8 @@
           "message": "Updates the properties of a person. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">updating a person<-a>.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field."
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
-          "source": "Get all projects",
-          "message": "Get all projects"
+          "source": "Get All Projects",
+          "message": "Get All Projects"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
           "source": "Get all projects",

@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**OpenRouter**に対してカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、およびレスポンスボディを含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対して使用します。"
         },
         "app.T3BlblJvdXRlcg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTPメソッド"
         },
         "app.T3BlblJvdXRlcg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.T3BlblJvdXRlcg.action.bGlzdF9tb2RlbHM.display_name": {
-          "source": "List models",
+          "source": "List Models",
           "message": "モデルのリスト"
         },
         "app.T3BlblJvdXRlcg.action.bGlzdF9tb2RlbHM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "モデルを一覧表示"
         },
         "app.T3BlblJvdXRlcg.action.c2VuZF9wcm9tcHQ.display_name": {
-          "source": "Send prompt",
+          "source": "Send Prompt",
           "message": "プロンプトを送信"
         },
         "app.T3BlblJvdXRlcg.action.c2VuZF9wcm9tcHQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "プロンプトを送信"
         },
         "app.T3BlblJvdXRlcg.action.Y2hhdF9jb21wbGV0aW9u.display_name": {
-          "source": "Chat completion",
+          "source": "Chat Completion",
           "message": "チャット補完"
         },
         "app.T3BlblJvdXRlcg.action.Y2hhdF9jb21wbGV0aW9u.short_desc": {

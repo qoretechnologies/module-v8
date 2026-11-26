@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Pipedrive** 進行自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n當端點尚未在此應用程式中以第一類動作形式提供時，請使用此動作。"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP method",
+          "source": "HTTP Method",
           "message": "HTTP 方法"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
-          "source": "Search records",
+          "source": "Search Records",
           "message": "搜尋記錄"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
@@ -544,7 +544,7 @@
           "message": "新增一筆交易。所有透過 Pipedrive API 建立的交易將把 `origin` 設為 `API`。請注意，您可以隨請求提供此處未說明的額外自訂欄位。這些自訂欄位在每個 Pipedrive 帳戶中各不相同，可透過長雜湊值作為索引鍵來識別。若要確定存在哪些自訂欄位，請擷取 dealFields 並尋找 `key` 值。如需詳細資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">新增交易<-a>的教學課程。"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
-          "source": "Delete a deal",
+          "source": "Delete a Deal",
           "message": "刪除交易"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
@@ -820,7 +820,7 @@
           "message": "更新聯絡人的屬性。如需詳細資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">更新聯絡人<-a>教學課程。<br>如果公司使用 [Campaigns 產品](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)，則此端點也會接受並傳回 `data.marketing_status` 欄位。"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
-          "source": "Get all projects",
+          "source": "Get All Projects",
           "message": "獲取所有專案"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
