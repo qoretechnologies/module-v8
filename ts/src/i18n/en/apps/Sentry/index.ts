@@ -51,7 +51,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
 
   triggers: {
     new_project_issue: {
-      displayName: 'New Project Issue',
+      displayName: 'New project issue',
       shortDesc: 'Triggers when a new issue is detected in a specific project',
       longDesc:
         'Monitors a specific Sentry project and triggers when a new issue (grouped error or problem) is detected. Issues represent single bugs or problems in your application, with events grouped by fingerprint. Use optional query filters and time periods to focus on specific types of issues.',
@@ -63,13 +63,13 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
             'Select the Sentry project you want to monitor. Projects represent individual applications or services within your organization.',
         },
         query: {
-          displayName: 'Query Filter',
+          displayName: 'Query filter',
           shortDesc: 'Optional search query to filter issues',
           longDesc:
             'Use Sentry query syntax to filter which issues trigger this event. For example, filter by browser, device, tags, or whether errors are unhandled.',
         },
         statsPeriod: {
-          displayName: 'Statistics Period',
+          displayName: 'Statistics period',
           shortDesc: 'Time period for issue statistics',
           longDesc:
             'The time range for collecting issue statistics. Affects metrics like event counts and user impact within the selected period.',
@@ -77,19 +77,19 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     new_organization_issue: {
-      displayName: 'New Organization Issue',
+      displayName: 'New organization issue',
       shortDesc: 'Triggers when a new issue is detected across the entire organization',
       longDesc:
         'Monitors all projects within your Sentry organization and triggers when a new issue is detected in any project. This provides organization-wide visibility into problems across all applications and services. Use query filters to focus on specific issue types or characteristics.',
       options: {
         query: {
-          displayName: 'Query Filter',
+          displayName: 'Query filter',
           shortDesc: 'Optional search query to filter issues',
           longDesc:
             'Use Sentry query syntax to filter which issues trigger this event across all projects. Filter by properties like platform, environment, release, or custom tags.',
         },
         statsPeriod: {
-          displayName: 'Statistics Period',
+          displayName: 'Statistics period',
           shortDesc: 'Time period for issue statistics',
           longDesc:
             'The time range for collecting issue statistics across all projects. Determines the time window for metrics like frequency and user impact.',
@@ -100,7 +100,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
 
   actions: {
     list_projects: {
-      displayName: 'List Projects',
+      displayName: 'List projects',
       shortDesc: 'Retrieve all projects in your organization',
       longDesc:
         'Fetches a paginated list of all projects within your Sentry organization. Each project represents an individual application or service being monitored. Returns project details including name, platform, creation date, team membership, and configuration.',
@@ -114,7 +114,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     get_project: {
-      displayName: 'Get Project Details',
+      displayName: 'Get project details',
       shortDesc: 'Retrieve detailed information about a specific project',
       longDesc:
         'Fetches comprehensive details about a specific Sentry project, including configuration options, team assignments, integrations, features, symbol sources, and project statistics. Use this to understand project settings and capabilities.',
@@ -128,7 +128,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     list_project_events: {
-      displayName: 'List Project Events',
+      displayName: 'List project events',
       shortDesc: 'Retrieve events from a specific project',
       longDesc:
         'Fetches a paginated list of events (individual error or transaction occurrences) from a specific project. Events are the raw data sent to Sentry and are grouped into issues. Use the full parameter to retrieve complete event payloads including context, breadcrumbs, and metadata.',
@@ -139,7 +139,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
           longDesc: 'Select the project whose events you want to list.',
         },
         full: {
-          displayName: 'Full Details',
+          displayName: 'Full details',
           shortDesc: 'Whether to return complete event data',
           longDesc:
             'When enabled, returns the full event payload including all context, breadcrumbs, stack traces, and metadata. When disabled, returns summary information only.',
@@ -152,7 +152,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     get_event: {
-      displayName: 'Get Event Details',
+      displayName: 'Get event details',
       shortDesc: 'Retrieve detailed information about a specific event',
       longDesc:
         'Fetches complete details about a specific event, including the full stack trace, breadcrumbs (trail of events leading to the error), user context, device information, tags, SDK details, and all captured metadata. Essential for debugging and understanding the exact conditions when an error occurred.',
@@ -171,7 +171,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     list_project_issues: {
-      displayName: 'List Project Issues',
+      displayName: 'List project issues',
       shortDesc: 'Retrieve issues from a specific project',
       longDesc:
         'Fetches a paginated list of issues (grouped errors or problems) from a specific project. Issues represent single bugs affecting your application, with multiple event occurrences grouped by fingerprint. Filter by query to find specific types of issues, and use statistics period to see relevant metrics.',
@@ -182,19 +182,19 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
           longDesc: 'Select the project whose issues you want to list.',
         },
         query: {
-          displayName: 'Query Filter',
+          displayName: 'Query filter',
           shortDesc: 'Search query to filter issues',
           longDesc:
             'Use Sentry query syntax to filter issues by properties like status, assignee, tags, platform, or time range. Example: "is:unresolved assigned:me"',
         },
         statsPeriod: {
-          displayName: 'Statistics Period',
+          displayName: 'Statistics period',
           shortDesc: 'Time period for issue statistics',
           longDesc:
             'The time range for calculating issue statistics such as event count, frequency, and user impact.',
         },
         shortIdLookup: {
-          displayName: 'Short ID Lookup',
+          displayName: 'Short ID lookup',
           shortDesc: 'Whether to look up issues by their short ID',
           longDesc:
             'When enabled, allows searching for issues using their short IDs (e.g., PROJECT-123) instead of full issue IDs.',
@@ -207,25 +207,25 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     list_organization_issues: {
-      displayName: 'List Organization Issues',
+      displayName: 'List organization issues',
       shortDesc: 'Retrieve issues across the entire organization',
       longDesc:
         'Fetches a paginated list of issues from all projects within your organization. This provides organization-wide visibility into problems across all applications and services. Use query filters to narrow down results by project, platform, status, or other criteria.',
       options: {
         query: {
-          displayName: 'Query Filter',
+          displayName: 'Query filter',
           shortDesc: 'Search query to filter issues',
           longDesc:
             'Use Sentry query syntax to filter issues across all projects. Filter by project, platform, environment, status, tags, or any other issue property.',
         },
         statsPeriod: {
-          displayName: 'Statistics Period',
+          displayName: 'Statistics period',
           shortDesc: 'Time period for issue statistics',
           longDesc:
             'The time range for calculating issue statistics and metrics across the organization.',
         },
         shortIdLookup: {
-          displayName: 'Short ID Lookup',
+          displayName: 'Short ID lookup',
           shortDesc: 'Whether to look up issues by their short ID',
           longDesc:
             'When enabled, allows searching for issues using their short IDs across all projects.',
@@ -239,7 +239,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     get_issue: {
-      displayName: 'Get Issue Details',
+      displayName: 'Get issue details',
       shortDesc: 'Retrieve detailed information about a specific issue',
       longDesc:
         'Fetches comprehensive details about a specific issue, including its status, metadata, assignment, statistics (event count, user impact, frequency), participants, activity history, linked integrations, and the latest event details. Essential for understanding the full context and history of a problem.',
@@ -253,7 +253,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     update_issue: {
-      displayName: 'Update Issue',
+      displayName: 'Update issue',
       shortDesc: 'Update the status or properties of an issue',
       longDesc:
         "Modifies an issue's status (resolved, unresolved, ignored), assignment, bookmarked state, subscription status, or visibility. Use this to triage issues, assign them to team members, resolve bugs, or mark issues as ignored. Status changes can trigger alerts and affect issue grouping.",
@@ -277,31 +277,31 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
             'Change the issue status to control its lifecycle. "Resolved" marks it as fixed, "Unresolved" reopens it, "Ignored" archives it temporarily, and "Resolved in Next Release" indicates it will be fixed in an upcoming deployment.',
         },
         assignedTo: {
-          displayName: 'Assigned To',
+          displayName: 'Assigned to',
           shortDesc: 'User or team to assign the issue to',
           longDesc:
             'Assign the issue to a specific user or team for ownership and accountability. Enter a team slug (e.g., "team:backend") or user ID.',
         },
         hasSeen: {
-          displayName: 'Has Seen',
+          displayName: 'Has seen',
           shortDesc: 'Mark whether the issue has been viewed',
           longDesc:
             'Mark the issue as seen (reviewed) or unseen. This helps track which issues have been triaged by your team.',
         },
         isBookmarked: {
-          displayName: 'Is Bookmarked',
+          displayName: 'Is bookmarked',
           shortDesc: 'Bookmark status for the issue',
           longDesc:
             'Bookmark the issue for easy access and filtering. Bookmarked issues appear in your personal issue list.',
         },
         isSubscribed: {
-          displayName: 'Is Subscribed',
+          displayName: 'Is subscribed',
           shortDesc: 'Subscription status for notifications',
           longDesc:
             "Subscribe to or unsubscribe from notifications about this issue. When subscribed, you'll receive alerts when the issue changes or escalates.",
         },
         isPublic: {
-          displayName: 'Is Public',
+          displayName: 'Is public',
           shortDesc: 'Whether the issue should be publicly accessible',
           longDesc:
             'Control whether the issue is publicly visible via a share link. Public issues can be viewed by anyone with the link, even without Sentry access.',
@@ -309,7 +309,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     list_teams: {
-      displayName: 'List Teams',
+      displayName: 'List teams',
       shortDesc: 'Retrieve all teams in your organization',
       longDesc:
         'Fetches a paginated list of all teams within your Sentry organization. Teams represent groups of developers working together on projects. Returns team details including member count, access permissions, role assignments, linked projects, and external team integrations.',
@@ -322,7 +322,7 @@ The URL-friendly identifier for your organization (found in your Sentry URL).
       },
     },
     get_team: {
-      displayName: 'Get Team Details',
+      displayName: 'Get team details',
       shortDesc: 'Retrieve detailed information about a specific team',
       longDesc:
         'Fetches comprehensive details about a specific team, including its members, assigned projects, access permissions, role settings, external integrations (like Slack channels), and organization-level role. Use this to understand team structure and project ownership.',

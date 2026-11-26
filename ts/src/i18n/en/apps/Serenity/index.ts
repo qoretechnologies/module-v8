@@ -26,24 +26,24 @@ Your Serenity API key that authenticates requests to execute agents, manage conv
   },
   actions: {
     'create-conversation': {
-      displayName: 'Create Conversation',
+      displayName: 'Create conversation',
       shortDesc: 'Create a conversation with a conversation agent',
       longDesc:
         'Creates a conversation with the given agent code. This is required before executing an agent.',
       options: {
         agentCode: {
-          displayName: 'Agent Code',
+          displayName: 'Agent code',
           shortDesc: 'The code of the agent to create a conversation with',
           longDesc: 'The code of the agent to create a conversation with',
         },
         userIdentifier: {
-          displayName: 'User Identifier',
+          displayName: 'User identifier',
           shortDesc: 'Used to uniquely identify a user in a conversation. ',
           longDesc:
             'It helps maintain context across interactions. For example, you might use `"userIdentifier": "landing-page-user"` to track a specific user session.',
         },
         inputParameters: {
-          displayName: 'Input Parameters',
+          displayName: 'Input parameters',
           shortDesc: 'An array of key-value pairs for additional context.',
           longDesc: 'An array of key-value pairs for additional context.',
           type: {
@@ -66,12 +66,12 @@ Your Serenity API key that authenticates requests to execute agents, manage conv
       },
     },
     'execute-agent': {
-      displayName: 'Execute Agent',
+      displayName: 'Execute agent',
       shortDesc: 'Executes an agent with the given code.',
       longDesc: 'Executes an agent with the given code.',
       options: {
         agentCode: {
-          displayName: 'Agent Code',
+          displayName: 'Agent code',
           shortDesc: 'Used to identify and execute a specific agent within the Serenity* AI Hub',
           longDesc: 'Used to identify and execute a specific agent within the Serenity* AI Hub',
         },
@@ -81,7 +81,7 @@ Your Serenity API key that authenticates requests to execute agents, manage conv
           longDesc: 'Use this param to override the culture of the response.',
         },
         userLanguage: {
-          displayName: 'User Language',
+          displayName: 'User language',
           shortDesc: 'The preferred language of the response',
           longDesc: 'The preferred language of the response',
         },
@@ -107,7 +107,7 @@ Your Serenity API key that authenticates requests to execute agents, manage conv
           },
         },
         volatileKnowledgeIds: {
-          displayName: 'Volatile Knowledge IDs',
+          displayName: 'Volatile knowledge IDs',
           shortDesc:
             'Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub',
           longDesc:
@@ -116,12 +116,12 @@ Your Serenity API key that authenticates requests to execute agents, manage conv
       },
     },
     'execute-conversation': {
-      displayName: 'Execute Conversation',
+      displayName: 'Execute conversation',
       shortDesc: 'Send a message to a chat with agent',
       longDesc: 'Send a message to a chat with agent',
       options: {
         agentCode: {
-          displayName: 'Agent Code',
+          displayName: 'Agent code',
           shortDesc: 'The agent to check for conversations with',
           longDesc: 'The agent to check for conversations with',
         },
@@ -131,7 +131,7 @@ Your Serenity API key that authenticates requests to execute agents, manage conv
           longDesc: 'The conversation to send the message to',
         },
         userLanguage: {
-          displayName: 'User Language',
+          displayName: 'User language',
           shortDesc: 'The preferred language of the response',
           longDesc: 'The preferred language of the response',
         },
@@ -150,7 +150,7 @@ Your Serenity API key that authenticates requests to execute agents, manage conv
   },
   triggers: {
     'new-conversation-message': {
-      displayName: 'New Conversation Message',
+      displayName: 'New conversation message',
       shortDesc: 'Triggered when a new message is posted in a conversation.',
       longDesc: 'This trigger activates when a new message is posted in a conversation.',
       options: {

@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **NocoDB** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré v tejto aplikácii zatiaľ nie sú k dispozícii ako samostatné akcie."
         },
         "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.Tm9jb0RC.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.Tm9jb0RC.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Názov tabuľky"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.display_name": {
-          "source": "Count Records",
+          "source": "Count records",
           "message": "Spočítať záznamy"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vyberte tabuľku NocoDB, z ktorej chcete spočítať záznamy."
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.display_name": {
-          "source": "Where Filter",
+          "source": "Where filter",
           "message": "Filter Where"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Voliteľne zadajte filter pomocou syntaxe where v NocoDB (napr. \"(Status,eq,Active)\"), aby sa započítali iba záznamy spĺňajúce konkrétne kritériá."
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.display_name": {
-          "source": "Upload Attachment",
+          "source": "Upload attachment",
           "message": "Nahrať prílohu"
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Zadajte ID záznamu, do ktorého sa má súbor nahrať."
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.display_name": {
-          "source": "Attachment Field",
+          "source": "Attachment field",
           "message": "Pole prílohy"
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Názov súboru"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.display_name": {
-          "source": "Link Records",
+          "source": "Link records",
           "message": "Prepojiť záznamy"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Vyberte tabuľku NocoDB obsahujúcu záznam, z ktorého chcete vytvoriť prepojenie."
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.display_name": {
-          "source": "Link Field",
+          "source": "Link field",
           "message": "Pole prepojenia"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Zadajte ID záznamu v zdrojovej tabuľke, z ktorého sa má prepojenie vytvoriť."
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.display_name": {
-          "source": "Records to Link",
+          "source": "Records to link",
           "message": "Záznamy na prepojenie"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Zadajte ID záznamov z prepojenej tabuľky, ktoré sa majú pripojiť k zdrojovému záznamu."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.display_name": {
-          "source": "Unlink Records",
+          "source": "Unlink records",
           "message": "Odpojiť záznamy"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Vyberte tabuľku NocoDB obsahujúcu záznam, od ktorého chcete odpojiť."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.display_name": {
-          "source": "Link Field",
+          "source": "Link field",
           "message": "Pole prepojenia"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Zadajte ID záznamu v zdrojovej tabuľke, od ktorého sa má odpojiť."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.display_name": {
-          "source": "Records to Unlink",
+          "source": "Records to unlink",
           "message": "Záznamy na odpojenie"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Zadajte ID záznamov z prepojenej tabuľky, ktoré sa majú odpojiť od zdrojového záznamu."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.display_name": {
-          "source": "Trigger Button",
+          "source": "Trigger button",
           "message": "Spustiť tlačidlo"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Vyberte tabuľku NocoDB obsahujúcu pole tlačidla na spustenie."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.display_name": {
-          "source": "Button Field",
+          "source": "Button field",
           "message": "Pole tlačidla"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Zadajte ID záznamov, pre ktoré sa má akcia tlačidla spustiť. Maximálne 25 záznamov na požiadavku."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.display_name": {
-          "source": "Preview Mode",
+          "source": "Preview mode",
           "message": "Režim ukážky"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Keď je táto možnosť povolená, akcia tlačidla sa spustí v režime ukážky a zmeny sa neuložia. Užitočné na testovanie."
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "Nový riadok"
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Vyberte tabuľku NocoDB, ktorú chcete monitorovať. Spúšťač sa aktivuje, keď sa do tejto tabuľky pridajú nové riadky."
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.display_name": {
-          "source": "Where Filter",
+          "source": "Where filter",
           "message": "Filter Where"
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.short_desc": {

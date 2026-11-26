@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Docusign eSignature** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.display_name": {
-          "source": "Envelope Status Updated",
-          "message": "Envelope Status Updated"
+          "source": "Envelope status updated",
+          "message": "Envelope status updated"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.short_desc": {
           "source": "Triggers whenever a DocuSign envelope's status or properties are updated, including events like it being sent, delivered, signed, completed, declined, voided, corrected, purged, or deleted.",
@@ -352,8 +352,8 @@
           "message": "This trigger activates whenever there’s a change in a DocuSign envelope’s lifecycle. It listens for a variety of updates, such as when an envelope is sent to recipients, delivered, signed, completed, or declined. It also includes administrative events like envelopes being resent, corrected, purged, deleted, discarded, newly created, or removed. By setting up this trigger, you can stay informed of envelope progress and status changes, enabling timely follow-ups, record-keeping, or other automated actions in your workflow."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.display_name": {
-          "source": "Default Account ID",
-          "message": "Default Account ID"
+          "source": "Default account ID",
+          "message": "Default account ID"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.short_desc": {
           "source": "The default account ID set when the connection is authorized",
@@ -364,8 +364,8 @@
           "message": "The default account ID set when the connection is authorized"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.display_name": {
-          "source": "Template Updated",
-          "message": "Template Updated"
+          "source": "Template updated",
+          "message": "Template updated"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.short_desc": {
           "source": "Triggers whenever a new DocuSign template is created, updated or deleted, allowing you to take immediate action in response to the new template.",
@@ -376,8 +376,8 @@
           "message": "Template updated"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.display_name": {
-          "source": "Default Account ID",
-          "message": "Default Account ID"
+          "source": "Default account ID",
+          "message": "Default account ID"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.short_desc": {
           "source": "The default account ID set when the connection is authorized",
@@ -388,8 +388,8 @@
           "message": "The default account ID set when the connection is authorized"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.display_name": {
-          "source": "Get Brands",
-          "message": "Get Brands"
+          "source": "Get brands",
+          "message": "Get brands"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.short_desc": {
           "source": "Gets a list of brands.",
@@ -400,8 +400,8 @@
           "message": "This method returns details about all of the [brands](-docs-esign-rest-api-esign101-concepts-branding-) associated with an account,\nincluding the default brand profiles.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.display_name": {
-          "source": "Create Brand",
-          "message": "Create Brand"
+          "source": "Create brand",
+          "message": "Create brand"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.short_desc": {
           "source": "Creates one or more brand profiles for an account.",
@@ -412,8 +412,8 @@
           "message": "This method creates one or more brand profile files for an account.\n\nTo specify logos for the brand,\nuse the\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\nmethod\nafter you create the brand.\n\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.display_name": {
-          "source": "Delete Brand",
-          "message": "Delete Brand"
+          "source": "Delete brand",
+          "message": "Delete brand"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.short_desc": {
           "source": "Deletes one or more brand profiles.",
@@ -424,8 +424,8 @@
           "message": "This method deletes one or more brand profiles from an account, based on the brand IDs that you include in the `brandsRequest`.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.display_name": {
-          "source": "Get Envelopes",
-          "message": "Get Envelopes"
+          "source": "Get envelopes",
+          "message": "Get envelopes"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.short_desc": {
           "source": "Search for specific sets of envelopes by using search filters.",
@@ -436,8 +436,8 @@
           "message": "This method lets you [search for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-) in your accounts. A large set of filters let you narrow the scope of your search by date, by envelope ID, or by status codes. Your request must include one or more of the following parameters:\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### Restrictions\n\nThe number of envelopes returned is limited to 1,000 per call. To retrieve the next or previous set of envelopes, use the `nextUri` and `previousUri` parameters returned in the original call's response.\n\nIf no `from_date` query parameter is specified, envelopes from more than two years ago will not be returned. To fetch older envelopes, set the specific date range using the `from_date` and `to_date` parameters.\n\nTo avoid unnecessary database queries, the Docusign signature platform first checks requests to ensure that the filter set supplied does not result in a zero-size response before querying the database.\n\n### Envelope statuses\n\nThis table shows the valid current envelope statuses (`status` parameter) for the different status qualifiers (`from_to_status` parameter) in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the Valid Current Statuses column, then an empty list is returned.\n\nClient applications should check that the statuses (`status` parameter) they are requesting make sense for a given `from_to_status` parameter value.\n\n| Status Qualifier<br>(`from_to_status`) | Effective Status Qualifier | Valid Current Statuses                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### Extraneous results\n\nIn some cases, a request for a specific envelope status will\ninclude envelopes with additional statuses. For example, in\na request with a `from_date` of 2017-01-01, a `to_date` of\n2017-01-07 and the status qualifier (`from_to_status`) set\nto `delivered`, the response set might contain envelopes\nthat were created during that time period, but not delivered\nduring the time period. As a workaround, check the envelope\nstatus values in the result set as needed.\n\n\n### Related topics\n\n- [Searching for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.display_name": {
-          "source": "Create Envelopes",
-          "message": "Create Envelopes"
+          "source": "Create envelopes",
+          "message": "Create envelopes"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.short_desc": {
           "source": "Creates an envelope.",
@@ -448,8 +448,8 @@
           "message": "Creates and sends an envelope or creates a draft envelope.\nEnvelopes are fundamental resources in the Docusign platform.\n\n\nWith this method you can:\n\n* Create and send an envelope\n  with [documents][], [recipients][], and [tabs][].\n* [Create and send an envelope from a template](-docs-esign-rest-api-esign101-concepts-templates-).\n* [Create and send an envelope from\n  a combination of documents and templates](-docs-esign-rest-api-esign101-concepts-templates-composite-).\n* Create a draft envelope.\n\n\nWhen you use this method\nto create and send an envelope\nin a single request,\nthe following parameters in the request body (an [`envelopeDefinition`][envelopeDefinition] object) are required:\n\n| Parameter      | Description |\n| :-      | :- |\n| `status`       | Set to `sent` to send the envelope to recipients.<br>Set to `created` (or don't set at all) to save the envelope as a draft. |\n| `emailSubject` | The subject of the email used to send the envelope. |\n| `documents`    | The [documents][] to be signed. |\n| `recipients`   | The email addresses of the envelope [recipients][]. |\n\n\nWhen you create an envelope by using a\n[composite template](-docs-esign-rest-api-esign101-concepts-templates-composite-),\nyou should specify the envelope custom fields in the inline template.\nAny custom fields that you specify at the root level are ignored.\n\nIf the envelope has a workflow definition\nand the `workflowStatus` is `paused`,\nthe envelope will not be sent immediately,\neven if the envelope's `status` is `sent`.\n\n\n### Related topics\n\n[Envelope][envelopes] and [template][templates]\nobjects along with [documents][documents],\n[recipients][recipients], and [tabs][tabs]\nare the five object models at the core of the eSignature API.\nThe [eSignature concepts guide](-docs-esign-rest-api-esign101-concepts-)\ndescribes how the five object models work together.\n\nThe following how-to articles contain\npractical examples that show you how to\nto\nconfigure this method's\n[`envelopeDefinition`][envelopeDefinition] request body\nto perform common tasks.\n\nRequesting a signature\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature by email using a template](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to request a signature by SMS or WhatsApp delivery](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [How to send a request for payment](-docs-esign-rest-api-how-to-request-a-payment-)\n- [How to send an envelope to an In Person Signer](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [How to request a signature through your app (embedded signing) with a CFR Part 11 account](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\nWorking with envelopes and templates\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [How to create a template](-docs-esign-rest-api-how-to-create-template-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\nWorking with advanced recipient routing\n\n- [How to pause a signature workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [How to use conditional recipients](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [How to schedule an envelope](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [How to send an envelope with delayed routing](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\nWorking with documents\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [How to attach documents via binary transfer](-docs-esign-rest-api-how-to-send-binary-)\n- [How to create a signable HTML document](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [How to convert a PDF file into a signable HTML document](-docs-esign-rest-api-how-to-converting-pdf-)\n- [How to set document visibility for envelope recipients](-docs-esign-rest-api-how-to-set-document-visibility-)\n\nWorking with tabs\n\n- [How to get envelope tab values](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [How to get envelope custom tab values](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\nWorking with brands\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n- [How to apply a brand to an envelope](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [How to apply a brand and template to an envelope](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\nWorking with permissions\n\n- [How to create a permission profile](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [How to update individual permission settings](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [How to set a permission profile](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [How to delete a permission profile](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\nImplementing multi-factor recipient (signer) authentication\n\n- [How to require ID verification (IDV) for a recipient](-docs-esign-rest-api-how-to-id-verification-)\n- [How to require knowledge-based authentication (KBA) for a recipient](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [How to require phone authentication for a recipient](-docs-esign-rest-api-how-to-phone-auth-)\n- [How to require access code authentication for a recipient](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.display_name": {
-          "source": "Get Envelope",
-          "message": "Get Envelope"
+          "source": "Get envelope",
+          "message": "Get envelope"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.short_desc": {
           "source": "Gets the status of a single envelope.",
@@ -460,8 +460,8 @@
           "message": "Retrieves the overall status for the specified envelope.\nTo get the status of a list of envelopes, use\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-).\n\n### Related topics\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.display_name": {
-          "source": "Update Envelope",
-          "message": "Update Envelope"
+          "source": "Update envelope",
+          "message": "Update envelope"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.short_desc": {
           "source": "Send, void, or modify a draft envelope. Purge documents from a completed envelope.",
@@ -472,8 +472,8 @@
           "message": "This method enables you to make changes to an envelope.\nYou can use it to:\n\n* [Send a draft envelope](#sending-a-draft-envelope)\n* [Void an in-process envelope](#voiding-an-in-process-envelope)\n* [Modify a draft envelope](#modifying-envelope-email-information)\n* [Purge documents and envelope metadata from the Docusign platform](#purging-documents-from-docusign)\n\nAlthough the request body for this method\nis a complete envelope definition,\nyou only need to provide\nthe properties that\nyou're updating.\n\n## Sending a draft envelope\n\nTo send a draft envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\nYou can attach a workflow before sending the envelope:\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## Working with workflows\n\nTo unpause a workflow, the request body should include this:\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## Voiding an in-process envelope\n\nTo void an in-process envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## Modifying envelope email information\n\nTo change the email subject and message of a draft envelope,\ninclude the following code in the request body:\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Purging documents from Docusign\n\nTo place only the documents\nin the purge queue,\nleaving any\ncorresponding attachments\nand tabs in the Docusign platform,\nset the `purgeState` property\nto `documents_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue,\nset the `purgeState` property\nto `documents_and_metadata_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue\nand to redact personal information,\nset the `purgeState` property\nto `documents_and_metadata_and_redact_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\nYou can purge documents\nonly from completed envelopes\nthat are not marked as the authoritative copy.\nThe user requesting the purge\nmust have permission to purge documents\nand\nmust be the sender or be acting on behalf of the sender.\n\nWhen the purge request is initiated\nthe items to be purged\nare placed in the purge queue\nfor deletion in 14 days.\nThe sender\nand\nall recipients with Docusign accounts\nassociated with the envelope\nget an email notification\nthe documents will be deleted in 14 days.\nThe notification contains a link\nto the documents.\nA second email notification\nis sent 7 days later.\nAt the end of the 14-day period\nthe documents are deleted from the system.\nRecipients without Docusign accounts\ndo not receive email notifications.\n\nIf your account has a Document Retention policy,\nenvelope documents\nare automatically placed\nin the purge queue,\nand notification emails are sent\nat the end of the retention period.\nSetting a Document Retention policy is the same as setting a\nschedule for purging documents.\n\n## Removing documents from the purge queue\n\nTo remove documents from the purge queue, include the following code in the request body:\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### Related topics\n\n- [Void an envelope](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Purging documents (eSignature Concepts)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Purging documents in an envelope (blog post)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.display_name": {
-          "source": "Get Documents",
-          "message": "Get Documents"
+          "source": "Get documents",
+          "message": "Get documents"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.short_desc": {
           "source": "Gets a list of documents in an envelope.",
@@ -484,8 +484,8 @@
           "message": "Retrieves a list of documents associated with the specified envelope.\n\n### Related topics\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.display_name": {
-          "source": "Update Documents",
-          "message": "Update Documents"
+          "source": "Update documents",
+          "message": "Update documents"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.short_desc": {
           "source": "Adds one or more documents to an existing envelope.",
@@ -496,8 +496,8 @@
           "message": "Adds one or more documents to an existing envelope.\nThe tabs of the original document will be applied to the new document.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nIf the file name of a document contains Unicode characters, you need to include a `Content-Disposition` header. Example:\n\n\n**Header:** `Content-Disposition`\n\n\n**Value:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.display_name": {
-          "source": "Delete Documents",
-          "message": "Delete Documents"
+          "source": "Delete documents",
+          "message": "Delete documents"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.short_desc": {
           "source": "Deletes documents from a draft envelope.",
@@ -508,8 +508,8 @@
           "message": "Deletes one or more documents from an existing envelope that has not yet been completed.\n\nTo delete a document, use only the relevant parts of the [`envelopeDefinition`](#envelopeDefinition).\nFor example, this request body specifies that you want to delete the document whose `documentId` is \"1\".\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\nThe envelope status must be one of:\n\n- `created`\n- `sent`\n- `delivered`\n\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.display_name": {
-          "source": "Get Document",
-          "message": "Get Document"
+          "source": "Get document",
+          "message": "Get document"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.short_desc": {
           "source": "Retrieves a single document or all documents from an envelope.",
@@ -520,8 +520,8 @@
           "message": "Retrieves a single document or all documents from an envelope.\n\nTo retrieve a single document, provide the ID of the document in the `documentId` path parameter.\nAlternatively, by setting the `documentId` parameter to special keyword values,\nyou can retrieve all the documents (as a combined PDF, portfolio PDF, or ZIP archive)\nor just the certificate of completion. See the `documentId` description for how to retrieve each format.\n\n\nThe response body of this method\nis a file. If you request multiple documents,\nthe result is a ZIP archive\nthat contains all of the documents.\n\nIn all other cases, the response is a PDF\nfile or PDF portfolio.\n\n\nYou can get the file name and document ID from the response's `Content-Disposition` header:\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\nBy default, the response is the PDF file\nas a byte stream.\nFor example a request-response in `curl` looks like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\nBy using the `Content-Transfer-Encoding`\nheader in the request, you can obtain the PDF file\nencoded in base64. The same `curl` request with\nthe base64 header would look like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(In an actual `curl` request you would use the `-output` switch to\nsave the byte stream into a file.)\n\n### Related topics\n\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.display_name": {
-          "source": "Update Document",
-          "message": "Update Document"
+          "source": "Update document",
+          "message": "Update document"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.short_desc": {
           "source": "Adds or replaces a document in an existing envelope.",
@@ -532,8 +532,8 @@
           "message": "Adds or replaces a document in an existing draft or in-process envelope.\nAn in-process envelope is one that has been sent but not yet completed or voided.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nTo add a new document, set the `documentId` path parameter to a new document ID.\n\nTo replace a document, set the `documentId` path parameter to the document ID of the existing document.\nThe tabs of the original document will be applied to the new document.\nFor example, a request in cURL looks like this:\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.display_name": {
-          "source": "Get Recipients",
-          "message": "Get Recipients"
+          "source": "Get recipients",
+          "message": "Get recipients"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.short_desc": {
           "source": "Gets the status of recipients for an envelope.",
@@ -544,8 +544,8 @@
           "message": "Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list. This method can also be used to retrieve the tab values.\n\nThe `currentRoutingOrder` property of the response contains the `routingOrder` value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.\n\n### Related topics\n\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.display_name": {
-          "source": "Update Recipients",
-          "message": "Update Recipients"
+          "source": "Update recipients",
+          "message": "Update recipients"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.short_desc": {
           "source": "Updates recipients in a draft envelope or corrects recipient information for an in-process envelope.",
@@ -556,8 +556,8 @@
           "message": "Updates the recipients of a draft envelope or corrects recipient information for an in-process envelope.\n\nIf you send information for a recipient that does not already\nexist in a draft envelope, the recipient is added to the envelope\n(similar to the [EnvelopeRecipients: Create][EnvelopeRecipients-create] method).\n\nYou can also use this method to resend an envelope to a recipient\nby using the `resend_envelope` option.\n\n**Updating Sent Envelopes**\n\nAfter an envelope has been sent, you can edit only the following properties:\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email` (If you provide an email address in this method, it will be treated as a new email address, even if it is exactly the same as the current address. Do not provide an email address if you do not want a correction email sent.)\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType` (For this to work, you must also change the recipient object to match the recipient type.)\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId` (You can change this ID to switch to a different signing group and its corresponding set of recipients.)\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\nIf the recipient has signed,\nbut the envelope is still active,\nthe method will return success,\nbut the `recipientUpdateResults` property\nin the response will include an error\nthat the recipient could not be updated:\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\nIf the envelope is completed,\nand you try to change a recipient's address,\nthe method will fail with this error:\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.display_name": {
-          "source": "Add Recipients",
-          "message": "Add Recipients"
+          "source": "Add recipients",
+          "message": "Add recipients"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.short_desc": {
           "source": "Adds one or more recipients to an envelope.",
@@ -568,8 +568,8 @@
           "message": "Adds one or more recipients to an envelope.\n\nFor an in-process envelope,\none that has been sent and has not been completed or voided,\nan email is sent to a new recipient\nwhen they are reached in the routing order.\nIf the new recipient's routing order\nis before or the same as the envelope's\nnext recipient,\nan email is only sent if the optional\n`resend_envelope` query string is set to **true.**\n\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### Related topics\n\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.display_name": {
-          "source": "Delete Recipients",
-          "message": "Delete Recipients"
+          "source": "Delete recipients",
+          "message": "Delete recipients"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.short_desc": {
           "source": "Deletes recipients from an envelope.",
@@ -580,8 +580,8 @@
           "message": "Deletes one or more recipients from a draft or sent envelope. List the recipients that you want to delete in the body of the request. This method uses the `recipientId` as the key for deleting recipients.\n\nIf the envelope is `In Process`, meaning that it has been sent and has not been completed or voided, recipients that have completed their actions cannot be deleted."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.display_name": {
-          "source": "Create Recipient View",
-          "message": "Create Recipient View"
+          "source": "Create recipient view",
+          "message": "Create recipient view"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.short_desc": {
           "source": "Returns a URL to the recipient view UI. For signer recipients, returns the embedded signing view. Can also be used for other recipient types.",

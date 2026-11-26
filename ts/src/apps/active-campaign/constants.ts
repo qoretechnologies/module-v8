@@ -27,7 +27,7 @@ export const ACTIVE_CAMPAIGN_CONN_OPTIONS = {
     type: 'string',
   },
   token: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your ActiveCampaign account API key',
     desc:
       `To get your API key:\n` +

@@ -28,7 +28,7 @@
           "message": "使用已設定之連線的驗證向 **Browse AI** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選填的查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊返回。\n\n對於尚未在此應用程式上公開為第一類動作的端點，請使用此動作。"
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.display_name": {
-          "source": "List Robots",
+          "source": "List robots",
           "message": "列出機器人"
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "擷取您 Browse AI 帳戶中所有可用機器人的完整清單，包含其基本資訊和設定詳細資料"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.display_name": {
-          "source": "Get Robot",
+          "source": "Get robot",
           "message": "取得機器人"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.short_desc": {
@@ -364,7 +364,7 @@
           "message": "擷取有關 Browse AI 機器人的完整資訊，包含其設定、輸入參數和中繼資料"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "列出任務"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "擷取由特定 Browse AI 機器人執行的經篩選任務清單，包含按狀態、日期範圍和排序偏好進行篩選的選項"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.display_name": {
-          "source": "Run Task",
+          "source": "Run task",
           "message": "執行任務"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.short_desc": {
@@ -388,7 +388,7 @@
           "message": "使用指定的 Browse AI 機器人及提供的輸入參數執行單一任務"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.display_name": {
-          "source": "Run Bulk Task",
+          "source": "Run bulk task",
           "message": "批次執行任務"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "使用指定的 Browse AI 機器人搭配不同的輸入參數集批次執行多個任務"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "新任務"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.short_desc": {
@@ -424,7 +424,7 @@
           "message": "選擇要監視其任務事件的 Browse AI 機器人"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "活動類型"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.short_desc": {

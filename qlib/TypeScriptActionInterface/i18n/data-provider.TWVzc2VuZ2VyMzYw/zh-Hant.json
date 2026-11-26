@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證，對 **360 Messenger for WhatsApp** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、可選的查詢參數、標頭以及請求本文。回應將以雜湊格式傳回，其中包含狀態碼、回應標頭和回應本文。\n\n當端點尚未在此應用程式中公開為一級動作時，請使用此動作。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.display_name": {
-          "source": "Get WhatsApp Contacts",
+          "source": "Get WhatsApp contacts",
           "message": "取得 WhatsApp 聯絡人"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.short_desc": {
@@ -352,7 +352,7 @@
           "message": "擷取完整的 WhatsApp 聯絡人清單，包括其電話號碼、商業狀態及聯絡資訊等詳細資料。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.display_name": {
-          "source": "Get WhatsApp Chats",
+          "source": "Get WhatsApp chats",
           "message": "取得 WhatsApp 聊天對話"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.short_desc": {
@@ -364,7 +364,7 @@
           "message": "擷取所有 WhatsApp 聊天對話的清單，包括對話詳細資訊、最新訊息、未讀計數，以及置頂和封存狀態等對話中繼資料。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.display_name": {
-          "source": "Get WhatsApp Groups",
+          "source": "Get WhatsApp groups",
           "message": "取得 WhatsApp 群組"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "擷取您所屬的所有 WhatsApp 群組對話清單，包括群組 ID 和名稱。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Text Message",
+          "source": "Send WhatsApp text message",
           "message": "傳送 WhatsApp 文字訊息"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -388,7 +388,7 @@
           "message": "透過電話號碼傳送文字訊息給指定的 WhatsApp 聯絡人。可選擇包含 URL 連結並排程稍後傳送訊息。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話號碼"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.short_desc": {
@@ -400,7 +400,7 @@
           "message": "要接收訊息的 WhatsApp 聯絡人電話號碼。應包含國碼。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "訊息文字"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "將作為 WhatsApp 訊息傳送的文字內容。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL 連結"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -424,7 +424,7 @@
           "message": "可隨文字訊息一同附帶以分享連結的可選 URL。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "排程時間"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "排程傳送訊息的可選日期與時間。若未提供，訊息將會立即傳送。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Group Message",
+          "source": "Send WhatsApp group message",
           "message": "傳送 WhatsApp 群組訊息"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -460,7 +460,7 @@
           "message": "接收訊息之 WhatsApp 群組的唯一識別碼。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "訊息文字"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "將作為 WhatsApp 群組訊息傳送的文字內容。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL 連結"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "可隨文字訊息一同附帶以分享連結的可選 URL。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "排程時間"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "排程傳送訊息的可選日期與時間。若未提供，訊息將會立即傳送。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New WhatsApp Message",
+          "source": "New WhatsApp message",
           "message": "新 WhatsApp 訊息"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.short_desc": {

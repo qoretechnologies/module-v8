@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**Todoist**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.display_name": {
-          "source": "Add Comment to Project",
+          "source": "Add comment to project",
           "message": "プロジェクトにコメントを追加"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.short_desc": {
@@ -352,7 +352,7 @@
           "message": "指定されたTodoistプロジェクトに新しいコメントを作成します。コメントを使用して、更新情報の提供、メモの作成、またはプロジェクト関連のディスカッションでチームメンバーと共同作業を行うことができます。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.display_name": {
-          "source": "Comment Content",
+          "source": "Comment content",
           "message": "コメント内容"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.short_desc": {
@@ -376,7 +376,7 @@
           "message": "コメントを追加するTodoistプロジェクトを選択します。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.display_name": {
-          "source": "Add Comment to Task",
+          "source": "Add comment to task",
           "message": "タスクにコメントを追加"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.short_desc": {
@@ -388,7 +388,7 @@
           "message": "指定されたTodoistタスクに新しいコメントを作成します。コメントを使用して、メモや更新情報の追加、特定のタスクに関するチームメンバーとの共同作業を行うことができます。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.display_name": {
-          "source": "Comment Content",
+          "source": "Comment content",
           "message": "コメント内容"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "コメントを追加するTodoistタスクを選択します。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.display_name": {
-          "source": "Create Project",
+          "source": "Create project",
           "message": "プロジェクトを作成"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Todoistに新規プロジェクトを作成します。プロジェクトは、関連するタスクの整理やチームメンバーとの共同作業に役立ちます。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.display_name": {
-          "source": "Project Name",
+          "source": "Project name",
           "message": "プロジェクト名"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Todoistインターフェースでプロジェクトを視覚的に識別するために使用される色。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.display_name": {
-          "source": "View Style",
+          "source": "View style",
           "message": "表示スタイル"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "カレンダー"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.display_name": {
-          "source": "Is Favorite",
+          "source": "Is favorite",
           "message": "お気に入り"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.short_desc": {
@@ -496,7 +496,7 @@
           "message": "有効にすると、素早くアクセスできるようにプロジェクトがお気に入りセクションに表示されます。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "タスクを作成"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Todoistに新規タスクを作成します。タスクはプロジェクトやセクションへの割り当て、ラベル、優先度、期日などの設定が可能です。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "タスクの内容"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "タスクの優先度レベルを設定します。優先度の高いタスクには色付きのフラグが表示されます: 1 (緊急)、2 (高)、3 (通常)、4 (低)。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "期日"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
@@ -660,7 +660,7 @@
           "message": "日"
         },
         "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
+          "source": "Delete task",
           "message": "タスクを削除"
         },
         "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.short_desc": {
@@ -684,7 +684,7 @@
           "message": "完全に削除するTodoistタスクを選択します。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.display_name": {
-          "source": "Get Project Collaborators",
+          "source": "Get project collaborators",
           "message": "プロジェクトコラボレーターの取得"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.short_desc": {
@@ -732,7 +732,7 @@
           "message": "1回のリクエストで返すコラボレーターの最大数。デフォルトは50です。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.display_name": {
-          "source": "Get Project",
+          "source": "Get project",
           "message": "プロジェクトの取得"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.short_desc": {
@@ -756,7 +756,7 @@
           "message": "詳細を取得するTodoistプロジェクトを選択します。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "タスクの取得"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.short_desc": {
@@ -780,7 +780,7 @@
           "message": "詳細を取得するTodoistタスクを選択します。"
         },
         "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.display_name": {
-          "source": "List Labels",
+          "source": "List labels",
           "message": "ラベル一覧の取得"
         },
         "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.short_desc": {
@@ -816,7 +816,7 @@
           "message": "1回のリクエストで返されるラベルの最大数です。デフォルトは50です。"
         },
         "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "プロジェクトの一覧表示"
         },
         "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -852,7 +852,7 @@
           "message": "1回のリクエストで返されるプロジェクトの最大数です。デフォルトは50です。"
         },
         "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.display_name": {
-          "source": "List Sections",
+          "source": "List sections",
           "message": "セクション一覧の取得"
         },
         "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.short_desc": {
@@ -900,7 +900,7 @@
           "message": "1回のリクエストで返されるセクションの最大数です。デフォルトは50です。"
         },
         "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "タスクの一覧表示"
         },
         "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.short_desc": {
@@ -984,7 +984,7 @@
           "message": "特定のラベルが割り当てられているタスクのみを取得します。"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "タスクの更新"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -1008,7 +1008,7 @@
           "message": "変更するTodoistタスクを選択します。"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "タスクの内容"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "優先度レベルを変更します: 1（緊急）、2（高）、3（通常）、4（低）。"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "期日"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
@@ -1148,7 +1148,7 @@
           "message": "日"
         },
         "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.display_name": {
-          "source": "Complete Task",
+          "source": "Complete task",
           "message": "タスクを完了"
         },
         "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.short_desc": {
@@ -1172,7 +1172,7 @@
           "message": "完了としてマークするTodoistタスクを選択してください。"
         },
         "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.display_name": {
-          "source": "Move Task to Section",
+          "source": "Move task to section",
           "message": "タスクをセクションに移動"
         },
         "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.short_desc": {
@@ -1220,7 +1220,7 @@
           "message": "タスクの移動先となるプロジェクトです。section_idまたはproject_idのいずれかを指定する必要があります。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.display_name": {
-          "source": "Get Tasks by Filter",
+          "source": "Get tasks by filter",
           "message": "フィルターでタスクを取得"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.short_desc": {
@@ -1256,7 +1256,7 @@
           "message": "1回のリクエストで返すタスクの最大数。デフォルトは50です。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.display_name": {
-          "source": "Filter Query",
+          "source": "Filter query",
           "message": "フィルタークエリ"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.short_desc": {
@@ -1292,7 +1292,7 @@
           "message": "自分に割り当てられているすべてのタスクを表示"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
-          "source": "New Completed Task",
+          "source": "New completed task",
           "message": "新しい完了タスク"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
@@ -1328,7 +1328,7 @@
           "message": "必要に応じて、プロジェクト内の特定のセクションから完了したタスクのみを監視します。これにより、ワークフローの特定の領域での完了を追跡できます。"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.display_name": {
-          "source": "Filter Query",
+          "source": "Filter query",
           "message": "フィルタークエリ"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.short_desc": {

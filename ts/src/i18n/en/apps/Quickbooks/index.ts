@@ -7,13 +7,13 @@ const QuickbooksAppEn = {
     'Connect to QuickBooks Online to manage customers, vendors, items, invoices, payments, and financial reports. Automate your accounting workflows and keep your financial data synchronized.',
   actions: {
     list_accounts: {
-      displayName: 'List Accounts',
+      displayName: 'List accounts',
       shortDesc: 'Retrieve a list of accounts from QuickBooks',
       longDesc:
         'Fetch multiple accounts from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all accounts without pagination',
           longDesc: 'When enabled, fetches all accounts ignoring limit and offset parameters',
         },
@@ -59,12 +59,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The account field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -74,7 +74,7 @@ const QuickbooksAppEn = {
       },
     },
     get_account: {
-      displayName: 'Get Account',
+      displayName: 'Get account',
       shortDesc: 'Retrieve a specific account from QuickBooks',
       longDesc: 'Fetch detailed information about a specific account using its ID',
       options: {
@@ -86,7 +86,7 @@ const QuickbooksAppEn = {
       },
     },
     get_bill: {
-      displayName: 'Get Bill',
+      displayName: 'Get bill',
       shortDesc: 'Retrieve a specific bill from QuickBooks',
       longDesc: 'Fetch detailed information about a specific bill using its ID',
       options: {
@@ -98,13 +98,13 @@ const QuickbooksAppEn = {
       },
     },
     list_bills: {
-      displayName: 'List Bills',
+      displayName: 'List bills',
       shortDesc: 'Retrieve a list of bills from QuickBooks',
       longDesc:
         'Fetch multiple bills from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all bills without pagination',
           longDesc: 'When enabled, fetches all bills ignoring limit and offset parameters',
         },
@@ -150,12 +150,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The bill field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -165,7 +165,7 @@ const QuickbooksAppEn = {
       },
     },
     update_bill: {
-      displayName: 'Update Bill',
+      displayName: 'Update bill',
       shortDesc: 'Update an existing bill in QuickBooks',
       longDesc:
         'Modify an existing bill with new vendor information, line items, and other details',
@@ -181,12 +181,12 @@ const QuickbooksAppEn = {
           longDesc: 'The unique identifier of the vendor who issued the bill',
         },
         line_item_type: {
-          displayName: 'Line Item Type',
+          displayName: 'Line item type',
           shortDesc: 'The type of line items for the bill',
           longDesc: 'Choose between account-based or item-based expense line details for the bill',
         },
         line_items: {
-          displayName: 'Line Items',
+          displayName: 'Line items',
           shortDesc: 'List of line items for the bill',
           longDesc: 'The detailed list of expenses or items included in the bill',
           type: {
@@ -203,7 +203,7 @@ const QuickbooksAppEn = {
                   longDesc: 'A detailed description of what this line item represents',
                 },
                 tax_code_id: {
-                  displayName: 'Tax Code ID',
+                  displayName: 'Tax code ID',
                   shortDesc: 'The tax code for this line item',
                   longDesc: 'The unique identifier of the tax code to apply to this line item',
                 },
@@ -218,7 +218,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The unique identifier of the customer if this expense is billable',
                 },
                 billable_status: {
-                  displayName: 'Billable Status',
+                  displayName: 'Billable status',
                   shortDesc: 'Whether this line item is billable',
                   longDesc: 'Indicates if this expense can be billed to a customer',
                 },
@@ -238,7 +238,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The number of units of the item being purchased',
                 },
                 unit_price: {
-                  displayName: 'Unit Price',
+                  displayName: 'Unit price',
                   shortDesc: 'The price per unit',
                   longDesc: 'The cost per individual unit of the item',
                 },
@@ -249,7 +249,7 @@ const QuickbooksAppEn = {
       },
     },
     create_bill: {
-      displayName: 'Create Bill',
+      displayName: 'Create bill',
       shortDesc: 'Create a new bill in QuickBooks',
       longDesc:
         'Create a new bill with vendor information, line items, and other necessary details',
@@ -260,12 +260,12 @@ const QuickbooksAppEn = {
           longDesc: 'The unique identifier of the vendor who is issuing this bill',
         },
         line_item_type: {
-          displayName: 'Line Item Type',
+          displayName: 'Line item type',
           shortDesc: 'The type of line items for the bill',
           longDesc: 'Choose between account-based or item-based expense line details for the bill',
         },
         line_items: {
-          displayName: 'Line Items',
+          displayName: 'Line items',
           shortDesc: 'List of line items for the bill',
           longDesc: 'The detailed list of expenses or items included in the bill',
           type: {
@@ -282,7 +282,7 @@ const QuickbooksAppEn = {
                   longDesc: 'A detailed description of what this line item represents',
                 },
                 tax_code_id: {
-                  displayName: 'Tax Code ID',
+                  displayName: 'Tax code ID',
                   shortDesc: 'The tax code for this line item',
                   longDesc: 'The unique identifier of the tax code to apply to this line item',
                 },
@@ -297,7 +297,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The unique identifier of the customer if this expense is billable',
                 },
                 billable_status: {
-                  displayName: 'Billable Status',
+                  displayName: 'Billable status',
                   shortDesc: 'Whether this line item is billable',
                   longDesc: 'Indicates if this expense can be billed to a customer',
                 },
@@ -317,7 +317,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The number of units of the item being purchased',
                 },
                 unit_price: {
-                  displayName: 'Unit Price',
+                  displayName: 'Unit price',
                   shortDesc: 'The price per unit',
                   longDesc: 'The cost per individual unit of the item',
                 },
@@ -328,7 +328,7 @@ const QuickbooksAppEn = {
       },
     },
     delete_bill: {
-      displayName: 'Delete Bill',
+      displayName: 'Delete bill',
       shortDesc: 'Delete a bill from QuickBooks',
       longDesc: 'Permanently remove a bill from QuickBooks using its unique identifier',
       options: {
@@ -340,25 +340,25 @@ const QuickbooksAppEn = {
       },
     },
     get_credit_memo: {
-      displayName: 'Get Credit Memo',
+      displayName: 'Get credit memo',
       shortDesc: 'Retrieve a specific credit memo from QuickBooks',
       longDesc: 'Fetch detailed information about a specific credit memo using its ID',
       options: {
         id: {
-          displayName: 'Credit Memo ID',
+          displayName: 'Credit memo ID',
           shortDesc: 'The unique identifier of the credit memo',
           longDesc: 'The QuickBooks credit memo ID to retrieve detailed information for',
         },
       },
     },
     list_credit_memos: {
-      displayName: 'List Credit Memos',
+      displayName: 'List credit memos',
       shortDesc: 'Retrieve a list of credit memos from QuickBooks',
       longDesc:
         'Fetch multiple credit memos from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all credit memos without pagination',
           longDesc: 'When enabled, fetches all credit memos ignoring limit and offset parameters',
         },
@@ -406,12 +406,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The credit memo field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -421,28 +421,28 @@ const QuickbooksAppEn = {
       },
     },
     create_customer: {
-      displayName: 'Create Customer',
+      displayName: 'Create customer',
       shortDesc: 'Create a new customer in QuickBooks',
       longDesc:
         'Create a new customer record with personal information, contact details, and addresses',
       options: {
         display_name: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'The display name for the customer',
           longDesc: 'The name that will be displayed for this customer in QuickBooks',
         },
         given_name: {
-          displayName: 'Given Name',
+          displayName: 'Given name',
           shortDesc: 'The first name of the customer',
           longDesc: "The customer's first name or given name",
         },
         middle_name: {
-          displayName: 'Middle Name',
+          displayName: 'Middle name',
           shortDesc: 'The middle name of the customer',
           longDesc: "The customer's middle name or middle initial",
         },
         family_name: {
-          displayName: 'Family Name',
+          displayName: 'Family name',
           shortDesc: 'The last name of the customer',
           longDesc: "The customer's last name or family name",
         },
@@ -457,7 +457,7 @@ const QuickbooksAppEn = {
           longDesc: "The customer's suffix (e.g., Jr., Sr., III, etc.)",
         },
         company_name: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'The company name of the customer',
           longDesc: 'The name of the company the customer represents',
         },
@@ -467,18 +467,18 @@ const QuickbooksAppEn = {
           longDesc: 'The primary email address for the customer',
         },
         billing_address: {
-          displayName: 'Billing Address',
+          displayName: 'Billing address',
           shortDesc: 'The billing address of the customer',
           longDesc: 'The address where bills should be sent for this customer',
           type: {
             fields: {
               Line1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'The first line of the billing address',
                 longDesc: 'The street address or P.O. box number',
               },
               Line2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'The second line of the billing address',
                 longDesc: 'Additional address information like apartment or suite number',
               },
@@ -488,12 +488,12 @@ const QuickbooksAppEn = {
                 longDesc: 'The city where the customer is located',
               },
               PostalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'The postal code of the billing address',
                 longDesc: 'The ZIP code or postal code for the billing address',
               },
               CountrySubDivisionCode: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'The state or province code',
                 longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
               },
@@ -506,18 +506,18 @@ const QuickbooksAppEn = {
           },
         },
         shipping_address: {
-          displayName: 'Shipping Address',
+          displayName: 'Shipping address',
           shortDesc: 'The shipping address of the customer',
           longDesc: 'The address where products should be shipped for this customer',
           type: {
             fields: {
               Line1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'The first line of the shipping address',
                 longDesc: 'The street address or P.O. box number',
               },
               Line2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'The second line of the shipping address',
                 longDesc: 'Additional address information like apartment or suite number',
               },
@@ -527,12 +527,12 @@ const QuickbooksAppEn = {
                 longDesc: 'The city where products should be shipped',
               },
               PostalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'The postal code of the shipping address',
                 longDesc: 'The ZIP code or postal code for the shipping address',
               },
               CountrySubDivisionCode: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'The state or province code',
                 longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
               },
@@ -547,7 +547,7 @@ const QuickbooksAppEn = {
       },
     },
     get_customer: {
-      displayName: 'Get Customer',
+      displayName: 'Get customer',
       shortDesc: 'Retrieve a specific customer from QuickBooks',
       longDesc: 'Fetch detailed information about a specific customer using their ID',
       options: {
@@ -559,13 +559,13 @@ const QuickbooksAppEn = {
       },
     },
     list_customers: {
-      displayName: 'List Customers',
+      displayName: 'List customers',
       shortDesc: 'Retrieve a list of customers from QuickBooks',
       longDesc:
         'Fetch multiple customers from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all customers without pagination',
           longDesc: 'When enabled, fetches all customers ignoring limit and offset parameters',
         },
@@ -612,12 +612,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The customer field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -627,7 +627,7 @@ const QuickbooksAppEn = {
       },
     },
     update_customer: {
-      displayName: 'Update Customer',
+      displayName: 'Update customer',
       shortDesc: 'Update an existing customer in QuickBooks',
       longDesc:
         'Modify an existing customer record with updated personal information, contact details, and addresses',
@@ -638,22 +638,22 @@ const QuickbooksAppEn = {
           longDesc: 'The QuickBooks customer ID that you want to update',
         },
         display_name: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'The display name for the customer',
           longDesc: 'The name that will be displayed for this customer in QuickBooks',
         },
         given_name: {
-          displayName: 'Given Name',
+          displayName: 'Given name',
           shortDesc: 'The first name of the customer',
           longDesc: "The customer's first name or given name",
         },
         middle_name: {
-          displayName: 'Middle Name',
+          displayName: 'Middle name',
           shortDesc: 'The middle name of the customer',
           longDesc: "The customer's middle name or middle initial",
         },
         family_name: {
-          displayName: 'Family Name',
+          displayName: 'Family name',
           shortDesc: 'The last name of the customer',
           longDesc: "The customer's last name or family name",
         },
@@ -668,7 +668,7 @@ const QuickbooksAppEn = {
           longDesc: "The customer's suffix (e.g., Jr., Sr., III, etc.)",
         },
         company_name: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'The company name of the customer',
           longDesc: 'The name of the company the customer represents',
         },
@@ -678,18 +678,18 @@ const QuickbooksAppEn = {
           longDesc: 'The primary email address for the customer',
         },
         billing_address: {
-          displayName: 'Billing Address',
+          displayName: 'Billing address',
           shortDesc: 'The billing address of the customer',
           longDesc: 'The address where bills should be sent for this customer',
           type: {
             fields: {
               Line1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'The first line of the billing address',
                 longDesc: 'The street address or P.O. box number',
               },
               Line2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'The second line of the billing address',
                 longDesc: 'Additional address information like apartment or suite number',
               },
@@ -699,12 +699,12 @@ const QuickbooksAppEn = {
                 longDesc: 'The city where the customer is located',
               },
               PostalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'The postal code of the billing address',
                 longDesc: 'The ZIP code or postal code for the billing address',
               },
               CountrySubDivisionCode: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'The state or province code',
                 longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
               },
@@ -717,18 +717,18 @@ const QuickbooksAppEn = {
           },
         },
         shipping_address: {
-          displayName: 'Shipping Address',
+          displayName: 'Shipping address',
           shortDesc: 'The shipping address of the customer',
           longDesc: 'The address where products should be shipped for this customer',
           type: {
             fields: {
               Line1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'The first line of the shipping address',
                 longDesc: 'The street address or P.O. box number',
               },
               Line2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'The second line of the shipping address',
                 longDesc: 'Additional address information like apartment or suite number',
               },
@@ -738,12 +738,12 @@ const QuickbooksAppEn = {
                 longDesc: 'The city where products should be shipped',
               },
               PostalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'The postal code of the shipping address',
                 longDesc: 'The ZIP code or postal code for the shipping address',
               },
               CountrySubDivisionCode: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'The state or province code',
                 longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
               },
@@ -758,7 +758,7 @@ const QuickbooksAppEn = {
       },
     },
     get_deposit: {
-      displayName: 'Get Deposit',
+      displayName: 'Get deposit',
       shortDesc: 'Retrieve a specific deposit from QuickBooks',
       longDesc: 'Fetch detailed information about a specific deposit using its ID',
       options: {
@@ -770,13 +770,13 @@ const QuickbooksAppEn = {
       },
     },
     list_deposits: {
-      displayName: 'List Deposits',
+      displayName: 'List deposits',
       shortDesc: 'Retrieve a list of deposits from QuickBooks',
       longDesc:
         'Fetch multiple deposits from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all deposits without pagination',
           longDesc: 'When enabled, fetches all deposits ignoring limit and offset parameters',
         },
@@ -822,12 +822,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The deposit field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -837,7 +837,7 @@ const QuickbooksAppEn = {
       },
     },
     create_estimate: {
-      displayName: 'Create Estimate',
+      displayName: 'Create estimate',
       shortDesc: 'Create a new estimate in QuickBooks',
       longDesc:
         'Create a new estimate for a customer with line items, quantities, and pricing information',
@@ -848,7 +848,7 @@ const QuickbooksAppEn = {
           longDesc: 'The unique identifier of the customer who will receive this estimate',
         },
         lines: {
-          displayName: 'Line Items',
+          displayName: 'Line items',
           shortDesc: 'List of line items for the estimate',
           longDesc: 'The detailed list of items or services included in the estimate',
           type: {
@@ -870,7 +870,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The number of units of the item being estimated',
                 },
                 unit_price: {
-                  displayName: 'Unit Price',
+                  displayName: 'Unit price',
                   shortDesc: 'The price per unit',
                   longDesc: 'The cost per individual unit of the item',
                 },
@@ -880,12 +880,12 @@ const QuickbooksAppEn = {
                   longDesc: 'The unique identifier of the item being estimated',
                 },
                 service_date: {
-                  displayName: 'Service Date',
+                  displayName: 'Service date',
                   shortDesc: 'The date when the service will be provided',
                   longDesc: 'The specific date when the service or item will be delivered',
                 },
                 tax_code_id: {
-                  displayName: 'Tax Code ID',
+                  displayName: 'Tax code ID',
                   shortDesc: 'The tax code for this line item',
                   longDesc: 'The unique identifier of the tax code to apply to this line item',
                 },
@@ -901,7 +901,7 @@ const QuickbooksAppEn = {
       },
     },
     delete_estimate: {
-      displayName: 'Delete Estimate',
+      displayName: 'Delete estimate',
       shortDesc: 'Delete an estimate from QuickBooks',
       longDesc: 'Permanently remove an estimate from QuickBooks using its unique identifier',
       options: {
@@ -913,7 +913,7 @@ const QuickbooksAppEn = {
       },
     },
     get_estimate: {
-      displayName: 'Get Estimate',
+      displayName: 'Get estimate',
       shortDesc: 'Retrieve a specific estimate from QuickBooks',
       longDesc: 'Fetch detailed information about a specific estimate using its ID',
       options: {
@@ -925,13 +925,13 @@ const QuickbooksAppEn = {
       },
     },
     list_estimates: {
-      displayName: 'List Estimates',
+      displayName: 'List estimates',
       shortDesc: 'Retrieve a list of estimates from QuickBooks',
       longDesc:
         'Fetch multiple estimates from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all estimates without pagination',
           longDesc: 'When enabled, fetches all estimates ignoring limit and offset parameters',
         },
@@ -978,12 +978,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The estimate field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -993,7 +993,7 @@ const QuickbooksAppEn = {
       },
     },
     create_invoice: {
-      displayName: 'Create Invoice',
+      displayName: 'Create invoice',
       shortDesc: 'Create a new invoice in QuickBooks',
       longDesc:
         'Create a new invoice for a customer with line items, quantities, and pricing information',
@@ -1004,7 +1004,7 @@ const QuickbooksAppEn = {
           longDesc: 'The unique identifier of the customer who will receive this invoice',
         },
         lines: {
-          displayName: 'Line Items',
+          displayName: 'Line items',
           shortDesc: 'List of line items for the invoice',
           longDesc: 'The detailed list of items or services included in the invoice',
           type: {
@@ -1026,7 +1026,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The number of units of the item being invoiced',
                 },
                 unit_price: {
-                  displayName: 'Unit Price',
+                  displayName: 'Unit price',
                   shortDesc: 'The price per unit',
                   longDesc: 'The cost per individual unit of the item',
                 },
@@ -1036,12 +1036,12 @@ const QuickbooksAppEn = {
                   longDesc: 'The unique identifier of the item being invoiced',
                 },
                 service_date: {
-                  displayName: 'Service Date',
+                  displayName: 'Service date',
                   shortDesc: 'The date when the service was provided',
                   longDesc: 'The specific date when the service or item was delivered',
                 },
                 tax_code_id: {
-                  displayName: 'Tax Code ID',
+                  displayName: 'Tax code ID',
                   shortDesc: 'The tax code for this line item',
                   longDesc: 'The unique identifier of the tax code to apply to this line item',
                 },
@@ -1057,7 +1057,7 @@ const QuickbooksAppEn = {
       },
     },
     delete_invoice: {
-      displayName: 'Delete Invoice',
+      displayName: 'Delete invoice',
       shortDesc: 'Delete an invoice from QuickBooks',
       longDesc: 'Permanently remove an invoice from QuickBooks using its unique identifier',
       options: {
@@ -1069,7 +1069,7 @@ const QuickbooksAppEn = {
       },
     },
     get_invoice: {
-      displayName: 'Get Invoice',
+      displayName: 'Get invoice',
       shortDesc: 'Retrieve a specific invoice from QuickBooks',
       longDesc: 'Fetch detailed information about a specific invoice using its ID',
       options: {
@@ -1081,13 +1081,13 @@ const QuickbooksAppEn = {
       },
     },
     list_invoices: {
-      displayName: 'List Invoices',
+      displayName: 'List invoices',
       shortDesc: 'Retrieve a list of invoices from QuickBooks',
       longDesc:
         'Fetch multiple invoices from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all invoices without pagination',
           longDesc: 'When enabled, fetches all invoices ignoring limit and offset parameters',
         },
@@ -1133,12 +1133,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The invoice field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1148,7 +1148,7 @@ const QuickbooksAppEn = {
       },
     },
     update_invoice: {
-      displayName: 'Update Invoice',
+      displayName: 'Update invoice',
       shortDesc: 'Update an existing invoice in QuickBooks',
       longDesc:
         'Modify an existing invoice with updated customer information, line items, and other details',
@@ -1164,7 +1164,7 @@ const QuickbooksAppEn = {
           longDesc: 'The unique identifier of the customer who will receive this invoice',
         },
         lines: {
-          displayName: 'Line Items',
+          displayName: 'Line items',
           shortDesc: 'List of line items for the invoice',
           longDesc: 'The detailed list of items or services included in the invoice',
           type: {
@@ -1186,7 +1186,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The number of units of the item being invoiced',
                 },
                 unit_price: {
-                  displayName: 'Unit Price',
+                  displayName: 'Unit price',
                   shortDesc: 'The price per unit',
                   longDesc: 'The cost per individual unit of the item',
                 },
@@ -1196,12 +1196,12 @@ const QuickbooksAppEn = {
                   longDesc: 'The unique identifier of the item being invoiced',
                 },
                 service_date: {
-                  displayName: 'Service Date',
+                  displayName: 'Service date',
                   shortDesc: 'The date when the service was provided',
                   longDesc: 'The specific date when the service or item was delivered',
                 },
                 tax_code_id: {
-                  displayName: 'Tax Code ID',
+                  displayName: 'Tax code ID',
                   shortDesc: 'The tax code for this line item',
                   longDesc: 'The unique identifier of the tax code to apply to this line item',
                 },
@@ -1217,7 +1217,7 @@ const QuickbooksAppEn = {
       },
     },
     create_invoice_from_estimate: {
-      displayName: 'Create Invoice from Estimate',
+      displayName: 'Create invoice from estimate',
       shortDesc: 'Convert an estimate into an invoice in QuickBooks',
       longDesc:
         'Create a new invoice by converting an existing estimate, copying all line items and linking the invoice back to the original estimate',
@@ -1231,59 +1231,59 @@ const QuickbooksAppEn = {
       },
     },
     create_item: {
-      displayName: 'Create Item',
+      displayName: 'Create item',
       shortDesc: 'Create a new item in QuickBooks',
       longDesc:
         'Create a new item for products or services that can be used on invoices, estimates, and other transactions',
       options: {
         name: {
-          displayName: 'Item Name',
+          displayName: 'Item name',
           shortDesc: 'The name of the item',
           longDesc: 'The display name for this item as it will appear on transactions',
         },
         type: {
-          displayName: 'Item Type',
+          displayName: 'Item type',
           shortDesc: 'The type of item being created',
           longDesc:
             'Choose the type of item: Service (for services), NonInventory (for non-tracked products), or Inventory (for tracked products)',
         },
         income_account_id: {
-          displayName: 'Income Account ID',
+          displayName: 'Income account ID',
           shortDesc: 'The income account for this item',
           longDesc:
             'The unique identifier of the account that will be credited when this item is sold',
         },
         expense_account_id: {
-          displayName: 'Expense Account ID',
+          displayName: 'Expense account ID',
           shortDesc: 'The expense account for this item',
           longDesc:
             'The unique identifier of the account that will be debited when this item is purchased',
         },
         account_id: {
-          displayName: 'Asset Account ID',
+          displayName: 'Asset account ID',
           shortDesc: 'The asset account for inventory items',
           longDesc:
             'The unique identifier of the asset account used to track inventory value (required for Inventory items)',
         },
         quantity_on_hand: {
-          displayName: 'Quantity On Hand',
+          displayName: 'Quantity on hand',
           shortDesc: 'The initial quantity in stock',
           longDesc: 'The starting quantity of this inventory item that you currently have in stock',
         },
         track_quantity_on_hand: {
-          displayName: 'Track Quantity On Hand',
+          displayName: 'Track quantity on hand',
           shortDesc: 'Whether to track inventory quantities',
           longDesc: 'Enable this to track the quantity of this inventory item in stock',
         },
         inventory_start_date: {
-          displayName: 'Inventory Start Date',
+          displayName: 'Inventory start date',
           shortDesc: 'The date when inventory tracking begins',
           longDesc: 'The date from which inventory tracking for this item should begin',
         },
       },
     },
     get_item: {
-      displayName: 'Get Item',
+      displayName: 'Get item',
       shortDesc: 'Retrieve a specific item from QuickBooks',
       longDesc: 'Fetch detailed information about a specific item using its ID',
       options: {
@@ -1295,13 +1295,13 @@ const QuickbooksAppEn = {
       },
     },
     list_items: {
-      displayName: 'List Items',
+      displayName: 'List items',
       shortDesc: 'Retrieve a list of items from QuickBooks',
       longDesc:
         'Fetch multiple items from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all items without pagination',
           longDesc: 'When enabled, fetches all items ignoring limit and offset parameters',
         },
@@ -1347,12 +1347,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The item field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1362,25 +1362,25 @@ const QuickbooksAppEn = {
       },
     },
     get_journal_entry: {
-      displayName: 'Get Journal Entry',
+      displayName: 'Get journal entry',
       shortDesc: 'Retrieve a specific journal entry from QuickBooks',
       longDesc: 'Fetch detailed information about a specific journal entry using its ID',
       options: {
         id: {
-          displayName: 'Journal Entry ID',
+          displayName: 'Journal entry ID',
           shortDesc: 'The unique identifier of the journal entry',
           longDesc: 'The QuickBooks journal entry ID to retrieve detailed information for',
         },
       },
     },
     list_journal_entries: {
-      displayName: 'List Journal Entries',
+      displayName: 'List journal entries',
       shortDesc: 'Retrieve a list of journal entries from QuickBooks',
       longDesc:
         'Fetch multiple journal entries from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all journal entries without pagination',
           longDesc:
             'When enabled, fetches all journal entries ignoring limit and offset parameters',
@@ -1429,12 +1429,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The journal entry field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1444,7 +1444,7 @@ const QuickbooksAppEn = {
       },
     },
     create_payment: {
-      displayName: 'Create Payment',
+      displayName: 'Create payment',
       shortDesc: 'Create a new payment in QuickBooks',
       longDesc:
         'Create a new payment record for a customer, optionally linked to one or more invoices for invoicing workflows',
@@ -1455,7 +1455,7 @@ const QuickbooksAppEn = {
           longDesc: 'The unique identifier of the customer who is making this payment',
         },
         total_amount: {
-          displayName: 'Total Amount',
+          displayName: 'Total amount',
           shortDesc: 'The total payment amount',
           longDesc: 'The total monetary amount of the payment being received',
         },
@@ -1466,7 +1466,7 @@ const QuickbooksAppEn = {
             'A list of invoice IDs to link this payment to. The payment amount will be distributed evenly across the specified invoices',
         },
         payment_date: {
-          displayName: 'Payment Date',
+          displayName: 'Payment date',
           shortDesc: 'The date the payment was received',
           longDesc: 'The transaction date for this payment. Defaults to the current date if not specified',
         },
@@ -1478,7 +1478,7 @@ const QuickbooksAppEn = {
       },
     },
     delete_payment: {
-      displayName: 'Delete Payment',
+      displayName: 'Delete payment',
       shortDesc: 'Delete a payment from QuickBooks',
       longDesc: 'Permanently remove a payment record from QuickBooks using its unique identifier',
       options: {
@@ -1490,7 +1490,7 @@ const QuickbooksAppEn = {
       },
     },
     get_payment: {
-      displayName: 'Get Payment',
+      displayName: 'Get payment',
       shortDesc: 'Retrieve a specific payment from QuickBooks',
       longDesc: 'Fetch detailed information about a specific payment using its ID',
       options: {
@@ -1502,13 +1502,13 @@ const QuickbooksAppEn = {
       },
     },
     list_payments: {
-      displayName: 'List Payments',
+      displayName: 'List payments',
       shortDesc: 'Retrieve a list of payments from QuickBooks',
       longDesc:
         'Fetch multiple payments from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all payments without pagination',
           longDesc: 'When enabled, fetches all payments ignoring limit and offset parameters',
         },
@@ -1554,12 +1554,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The payment field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1569,19 +1569,19 @@ const QuickbooksAppEn = {
       },
     },
     get_purchase_order: {
-      displayName: 'Get Purchase Order',
+      displayName: 'Get purchase order',
       shortDesc: 'Retrieve a specific purchase order from QuickBooks',
       longDesc: 'Fetch detailed information about a specific purchase order using its ID',
       options: {
         id: {
-          displayName: 'Purchase Order ID',
+          displayName: 'Purchase order ID',
           shortDesc: 'The unique identifier of the purchase order',
           longDesc: 'The QuickBooks purchase order ID to retrieve detailed information for',
         },
       },
     },
     get_purchase: {
-      displayName: 'Get Purchase',
+      displayName: 'Get purchase',
       shortDesc: 'Retrieve a specific purchase from QuickBooks',
       longDesc: 'Fetch detailed information about a specific purchase transaction using its ID',
       options: {
@@ -1593,13 +1593,13 @@ const QuickbooksAppEn = {
       },
     },
     list_purchases: {
-      displayName: 'List Purchases',
+      displayName: 'List purchases',
       shortDesc: 'Retrieve a list of purchases from QuickBooks',
       longDesc:
         'Fetch multiple purchases from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all purchases without pagination',
           longDesc: 'When enabled, fetches all purchases ignoring limit and offset parameters',
         },
@@ -1646,12 +1646,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The purchase field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1661,13 +1661,13 @@ const QuickbooksAppEn = {
       },
     },
     list_purchase_orders: {
-      displayName: 'List Purchase Orders',
+      displayName: 'List purchase orders',
       shortDesc: 'Retrieve a list of purchase orders from QuickBooks',
       longDesc:
         'Fetch multiple purchase orders from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all purchase orders without pagination',
           longDesc:
             'When enabled, fetches all purchase orders ignoring limit and offset parameters',
@@ -1716,12 +1716,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The purchase order field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1731,7 +1731,7 @@ const QuickbooksAppEn = {
       },
     },
     create_refund_receipt: {
-      displayName: 'Create Refund Receipt',
+      displayName: 'Create refund receipt',
       shortDesc: 'Create a new refund receipt in QuickBooks',
       longDesc:
         'Create a new refund receipt to document a return of funds to a customer via check, credit card, or bank transfer',
@@ -1742,7 +1742,7 @@ const QuickbooksAppEn = {
           longDesc: 'The unique identifier of the customer who will receive this refund',
         },
         lines: {
-          displayName: 'Line Items',
+          displayName: 'Line items',
           shortDesc: 'List of line items for the refund',
           longDesc: 'The detailed list of items or services being refunded',
           type: {
@@ -1764,7 +1764,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The number of units of the item being refunded',
                 },
                 unit_price: {
-                  displayName: 'Unit Price',
+                  displayName: 'Unit price',
                   shortDesc: 'The price per unit',
                   longDesc: 'The cost per individual unit of the item being refunded',
                 },
@@ -1774,7 +1774,7 @@ const QuickbooksAppEn = {
                   longDesc: 'The unique identifier of the item being refunded',
                 },
                 tax_code_id: {
-                  displayName: 'Tax Code ID',
+                  displayName: 'Tax code ID',
                   shortDesc: 'The tax code for this line item',
                   longDesc: 'The unique identifier of the tax code to apply to this refund line item',
                 },
@@ -1795,25 +1795,25 @@ const QuickbooksAppEn = {
       },
     },
     get_refund_receipt: {
-      displayName: 'Get Refund Receipt',
+      displayName: 'Get refund receipt',
       shortDesc: 'Retrieve a specific refund receipt from QuickBooks',
       longDesc: 'Fetch detailed information about a specific refund receipt using its ID',
       options: {
         id: {
-          displayName: 'Refund Receipt ID',
+          displayName: 'Refund receipt ID',
           shortDesc: 'The unique identifier of the refund receipt',
           longDesc: 'The QuickBooks refund receipt ID to retrieve detailed information for',
         },
       },
     },
     list_refund_receipts: {
-      displayName: 'List Refund Receipts',
+      displayName: 'List refund receipts',
       shortDesc: 'Retrieve a list of refund receipts from QuickBooks',
       longDesc:
         'Fetch multiple refund receipts from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all refund receipts without pagination',
           longDesc:
             'When enabled, fetches all refund receipts ignoring limit and offset parameters',
@@ -1862,12 +1862,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The refund receipt field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1877,25 +1877,25 @@ const QuickbooksAppEn = {
       },
     },
     get_sales_receipt: {
-      displayName: 'Get Sales Receipt',
+      displayName: 'Get sales receipt',
       shortDesc: 'Retrieve a specific sales receipt from QuickBooks',
       longDesc: 'Fetch detailed information about a specific sales receipt using its ID',
       options: {
         id: {
-          displayName: 'Sales Receipt ID',
+          displayName: 'Sales receipt ID',
           shortDesc: 'The unique identifier of the sales receipt',
           longDesc: 'The QuickBooks sales receipt ID to retrieve detailed information for',
         },
       },
     },
     list_sales_receipts: {
-      displayName: 'List Sales Receipts',
+      displayName: 'List sales receipts',
       shortDesc: 'Retrieve a list of sales receipts from QuickBooks',
       longDesc:
         'Fetch multiple sales receipts from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all sales receipts without pagination',
           longDesc: 'When enabled, fetches all sales receipts ignoring limit and offset parameters',
         },
@@ -1943,12 +1943,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The sales receipt field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -1958,23 +1958,23 @@ const QuickbooksAppEn = {
       },
     },
     create_vendor: {
-      displayName: 'Create Vendor',
+      displayName: 'Create vendor',
       shortDesc: 'Create a new vendor in QuickBooks',
       longDesc:
         'Create a new vendor record with contact information, address, and other business details',
       options: {
         display_name: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'The display name for the vendor',
           longDesc: 'The name that will be displayed for this vendor in QuickBooks',
         },
         phone: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: 'The primary phone number of the vendor',
           longDesc: 'The main contact phone number for the vendor',
         },
         email: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: 'The email address of the vendor',
           longDesc: 'The primary email address for contacting the vendor',
         },
@@ -1990,12 +1990,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               Line1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'The first line of the vendor address',
                 longDesc: 'The street address or P.O. box number',
               },
               Line2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'The second line of the vendor address',
                 longDesc: 'Additional address information like apartment or suite number',
               },
@@ -2005,12 +2005,12 @@ const QuickbooksAppEn = {
                 longDesc: 'The city where the vendor is located',
               },
               PostalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'The postal code of the vendor address',
                 longDesc: 'The ZIP code or postal code for the vendor address',
               },
               CountrySubDivisionCode: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'The state or province code',
                 longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
               },
@@ -2025,7 +2025,7 @@ const QuickbooksAppEn = {
       },
     },
     get_vendor: {
-      displayName: 'Get Vendor',
+      displayName: 'Get vendor',
       shortDesc: 'Retrieve a specific vendor from QuickBooks',
       longDesc: 'Fetch detailed information about a specific vendor using their ID',
       options: {
@@ -2037,13 +2037,13 @@ const QuickbooksAppEn = {
       },
     },
     list_vendors: {
-      displayName: 'List Vendors',
+      displayName: 'List vendors',
       shortDesc: 'Retrieve a list of vendors from QuickBooks',
       longDesc:
         'Fetch multiple vendors from QuickBooks with optional filtering, sorting, and pagination capabilities',
       options: {
         fetchAll: {
-          displayName: 'Fetch All',
+          displayName: 'Fetch all',
           shortDesc: 'Retrieve all vendors without pagination',
           longDesc: 'When enabled, fetches all vendors ignoring limit and offset parameters',
         },
@@ -2089,12 +2089,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'The field to sort by',
                 longDesc: 'The vendor field to use for sorting the results',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'The sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -2104,7 +2104,7 @@ const QuickbooksAppEn = {
       },
     },
     update_vendor: {
-      displayName: 'Update Vendor',
+      displayName: 'Update vendor',
       shortDesc: 'Update an existing vendor in QuickBooks',
       longDesc:
         'Modify an existing vendor record with updated contact information, address, and other business details',
@@ -2115,17 +2115,17 @@ const QuickbooksAppEn = {
           longDesc: 'The QuickBooks vendor ID that you want to update',
         },
         display_name: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'The display name for the vendor',
           longDesc: 'The name that will be displayed for this vendor in QuickBooks',
         },
         phone: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: 'The primary phone number of the vendor',
           longDesc: 'The main contact phone number for the vendor',
         },
         email: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: 'The email address of the vendor',
           longDesc: 'The primary email address for contacting the vendor',
         },
@@ -2141,12 +2141,12 @@ const QuickbooksAppEn = {
           type: {
             fields: {
               Line1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'The first line of the vendor address',
                 longDesc: 'The street address or P.O. box number',
               },
               Line2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'The second line of the vendor address',
                 longDesc: 'Additional address information like apartment or suite number',
               },
@@ -2156,12 +2156,12 @@ const QuickbooksAppEn = {
                 longDesc: 'The city where the vendor is located',
               },
               PostalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'The postal code of the vendor address',
                 longDesc: 'The ZIP code or postal code for the vendor address',
               },
               CountrySubDivisionCode: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'The state or province code',
                 longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
               },
@@ -2176,13 +2176,13 @@ const QuickbooksAppEn = {
       },
     },
     void_transaction: {
-      displayName: 'Void Transaction',
+      displayName: 'Void transaction',
       shortDesc: 'Void a transaction in QuickBooks',
       longDesc:
         'Void a transaction in QuickBooks, zeroing all amounts and marking it as voided. Supports invoices, payments, sales receipts, and bill payments',
       options: {
         transaction_type: {
-          displayName: 'Transaction Type',
+          displayName: 'Transaction type',
           shortDesc: 'The type of transaction to void',
           longDesc:
             'The entity type of the transaction to void. Supported types: Invoice, Payment, SalesReceipt, BillPayment',
@@ -2197,13 +2197,13 @@ const QuickbooksAppEn = {
   },
   triggers: {
     bill_trigger: {
-      displayName: 'Bill Trigger',
+      displayName: 'Bill trigger',
       shortDesc: 'Triggers when a bill is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new bills or updates to existing bills. This trigger allows you to respond to bill events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated bills',
           longDesc:
             'Select "Created" to trigger when new bills are added to QuickBooks, or "Updated" to trigger when existing bills are modified.',
@@ -2211,13 +2211,13 @@ const QuickbooksAppEn = {
       },
     },
     credit_memo_trigger: {
-      displayName: 'Credit Memo Trigger',
+      displayName: 'Credit memo trigger',
       shortDesc: 'Triggers when a credit memo is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new credit memos or updates to existing credit memos. This trigger allows you to respond to credit memo events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated credit memos',
           longDesc:
             'Select "Created" to trigger when new credit memos are added to QuickBooks, or "Updated" to trigger when existing credit memos are modified.',
@@ -2225,13 +2225,13 @@ const QuickbooksAppEn = {
       },
     },
     customer_trigger: {
-      displayName: 'Customer Trigger',
+      displayName: 'Customer trigger',
       shortDesc: 'Triggers when a customer is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new customers or updates to existing customers. This trigger allows you to respond to customer events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated customers',
           longDesc:
             'Select "Created" to trigger when new customers are added to QuickBooks, or "Updated" to trigger when existing customers are modified.',
@@ -2239,13 +2239,13 @@ const QuickbooksAppEn = {
       },
     },
     deposit_trigger: {
-      displayName: 'Deposit Trigger',
+      displayName: 'Deposit trigger',
       shortDesc: 'Triggers when a deposit is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new deposits or updates to existing deposits. This trigger allows you to respond to deposit events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated deposits',
           longDesc:
             'Select "Created" to trigger when new deposits are added to QuickBooks, or "Updated" to trigger when existing deposits are modified.',
@@ -2253,13 +2253,13 @@ const QuickbooksAppEn = {
       },
     },
     estimate_trigger: {
-      displayName: 'Estimate Trigger',
+      displayName: 'Estimate trigger',
       shortDesc: 'Triggers when an estimate is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new estimates or updates to existing estimates. This trigger allows you to respond to estimate events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated estimates',
           longDesc:
             'Select "Created" to trigger when new estimates are added to QuickBooks, or "Updated" to trigger when existing estimates are modified.',
@@ -2267,13 +2267,13 @@ const QuickbooksAppEn = {
       },
     },
     invoice_trigger: {
-      displayName: 'Invoice Trigger',
+      displayName: 'Invoice trigger',
       shortDesc: 'Triggers when an invoice is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new invoices or updates to existing invoices. This trigger allows you to respond to invoice events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated invoices',
           longDesc:
             'Select "Created" to trigger when new invoices are added to QuickBooks, or "Updated" to trigger when existing invoices are modified.',
@@ -2281,13 +2281,13 @@ const QuickbooksAppEn = {
       },
     },
     item_trigger: {
-      displayName: 'Item Trigger',
+      displayName: 'Item trigger',
       shortDesc: 'Triggers when an item is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new items or updates to existing items. This trigger allows you to respond to item events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated items',
           longDesc:
             'Select "Created" to trigger when new items are added to QuickBooks, or "Updated" to trigger when existing items are modified.',
@@ -2295,13 +2295,13 @@ const QuickbooksAppEn = {
       },
     },
     journal_entry_trigger: {
-      displayName: 'Journal Entry Trigger',
+      displayName: 'Journal entry trigger',
       shortDesc: 'Triggers when a journal entry is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new journal entries or updates to existing journal entries. This trigger allows you to respond to journal entry events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated journal entries',
           longDesc:
             'Select "Created" to trigger when new journal entries are added to QuickBooks, or "Updated" to trigger when existing journal entries are modified.',
@@ -2309,13 +2309,13 @@ const QuickbooksAppEn = {
       },
     },
     payment_trigger: {
-      displayName: 'Payment Trigger',
+      displayName: 'Payment trigger',
       shortDesc: 'Triggers when a payment is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new payments or updates to existing payments. This trigger allows you to respond to payment events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated payments',
           longDesc:
             'Select "Created" to trigger when new payments are added to QuickBooks, or "Updated" to trigger when existing payments are modified.',
@@ -2323,13 +2323,13 @@ const QuickbooksAppEn = {
       },
     },
     purchase_order_trigger: {
-      displayName: 'Purchase Order Trigger',
+      displayName: 'Purchase order trigger',
       shortDesc: 'Triggers when a purchase order is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new purchase orders or updates to existing purchase orders. This trigger allows you to respond to purchase order events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated purchase orders',
           longDesc:
             'Select "Created" to trigger when new purchase orders are added to QuickBooks, or "Updated" to trigger when existing purchase orders are modified.',
@@ -2337,13 +2337,13 @@ const QuickbooksAppEn = {
       },
     },
     purchase_trigger: {
-      displayName: 'Purchase Trigger',
+      displayName: 'Purchase trigger',
       shortDesc: 'Triggers when a purchase is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new purchases or updates to existing purchases. This trigger allows you to respond to purchase events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated purchases',
           longDesc:
             'Select "Created" to trigger when new purchases are added to QuickBooks, or "Updated" to trigger when existing purchases are modified.',
@@ -2351,13 +2351,13 @@ const QuickbooksAppEn = {
       },
     },
     refund_receipt_trigger: {
-      displayName: 'Refund Receipt Trigger',
+      displayName: 'Refund receipt trigger',
       shortDesc: 'Triggers when a refund receipt is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new refund receipts or updates to existing refund receipts. This trigger allows you to respond to refund receipt events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated refund receipts',
           longDesc:
             'Select "Created" to trigger when new refund receipts are added to QuickBooks, or "Updated" to trigger when existing refund receipts are modified.',
@@ -2365,13 +2365,13 @@ const QuickbooksAppEn = {
       },
     },
     sales_receipt_trigger: {
-      displayName: 'Sales Receipt Trigger',
+      displayName: 'Sales receipt trigger',
       shortDesc: 'Triggers when a sales receipt is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new sales receipts or updates to existing sales receipts. This trigger allows you to respond to sales receipt events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated sales receipts',
           longDesc:
             'Select "Created" to trigger when new sales receipts are added to QuickBooks, or "Updated" to trigger when existing sales receipts are modified.',
@@ -2379,13 +2379,13 @@ const QuickbooksAppEn = {
       },
     },
     vendor_trigger: {
-      displayName: 'Vendor Trigger',
+      displayName: 'Vendor trigger',
       shortDesc: 'Triggers when a vendor is created or updated in QuickBooks',
       longDesc:
         'Monitor QuickBooks for new vendors or updates to existing vendors. This trigger allows you to respond to vendor events in real-time.',
       options: {
         action: {
-          displayName: 'Trigger Action',
+          displayName: 'Trigger action',
           shortDesc: 'Choose whether to trigger on created or updated vendors',
           longDesc:
             'Select "Created" to trigger when new vendors are added to QuickBooks, or "Updated" to trigger when existing vendors are modified.',
@@ -2410,37 +2410,37 @@ const QuickbooksAppEn = {
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value (evaluated client-side)',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc: 'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc: 'Matches records where the field value is less than or equal to the specified value',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a value (is not empty, evaluated client-side)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches records where the field has no value (is empty, evaluated client-side)',
     },
@@ -2450,14 +2450,14 @@ const QuickbooksAppEn = {
       longDesc: 'Matches records where the field contains the specified substring',
     },
     'starts-with': {
-      displayName: 'Starts With',
+      displayName: 'Starts with',
       shortDesc: 'Field starts with value',
       longDesc: 'Matches records where the field value starts with the specified prefix',
     },
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {

@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **BigML** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi oraz treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze dostępne jako bezpośrednie akcje w tej aplikacji."
         },
         "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Anomaly Score",
+          "source": "Create anomaly score",
           "message": "Utwórz wynik anomalii"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Wygeneruj wynik anomalii, stosując wytrenowany detektor anomalii do danych wejściowych. Pomaga to zidentyfikować nietypowe wzorce lub wartości odstające w zestawie danych."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "Detektor anomalii"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Wybierz wytrenowany model detektora anomalii, który zostanie użyty do wygenerowania wyniku anomalii dla danych wejściowych."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Dane wejściowe"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Opcjonalny projekt do organizacji tego wyniku anomalii wraz z powiązanymi zasobami w celu lepszego zarządzania przepływem pracy."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Batch Anomaly Score",
+          "source": "Create batch anomaly score",
           "message": "Utwórz wsadowy wynik anomalii"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Generuj wyniki anomalii dla wielu punktów danych jednocześnie, stosując wykrywacz anomalii do zbioru danych. Jest to wydajne rozwiązanie do przetwarzania dużych ilości danych."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "Detektor anomalii"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Opcjonalny projekt do organizacji tego wsadowego wyniku anomalii wraz z powiązanymi zasobami w celu lepszego zarządzania przepływem pracy."
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.display_name": {
-          "source": "List Anomaly Detectors",
+          "source": "List anomaly detectors",
           "message": "Lista detektorów anomalii"
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.display_name": {
-          "source": "List Datasets",
+          "source": "List datasets",
           "message": "Lista zestawów danych"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.display_name": {
-          "source": "List Models",
+          "source": "List models",
           "message": "Lista modeli"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.short_desc": {
@@ -2844,7 +2844,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Pobierz listę projektów"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -3060,7 +3060,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.display_name": {
-          "source": "List Sources",
+          "source": "List sources",
           "message": "Lista źródeł"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.short_desc": {
@@ -3876,7 +3876,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.display_name": {
-          "source": "List Clusters",
+          "source": "List clusters",
           "message": "Lista klastrów"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.short_desc": {
@@ -4628,7 +4628,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.display_name": {
-          "source": "Create Centroid",
+          "source": "Create centroid",
           "message": "Utwórz centroid"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.short_desc": {
@@ -4640,7 +4640,7 @@
           "message": "Określ, który centroid klastra jest najbliższy podanym danym wejściowym, używając wytrenowanego modelu klastrów. Pomaga to klasyfikować nowe punkty danych do istniejących klastrów."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.display_name": {
-          "source": "Cluster Model",
+          "source": "Cluster model",
           "message": "Model klastrów"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.short_desc": {
@@ -4652,7 +4652,7 @@
           "message": "Wybierz wytrenowany model klastrów, który zostanie użyty do znalezienia najbliższego centroidu dla danych wejściowych."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Dane wejściowe"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -4712,7 +4712,7 @@
           "message": "Opcjonalny projekt do organizacji tego obliczenia centroidu wraz z powiązanymi zasobami w celu lepszego zarządzania przepływem pracy."
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.display_name": {
-          "source": "List Ensembles",
+          "source": "List ensembles",
           "message": "Lista zespołów"
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.short_desc": {
@@ -4888,7 +4888,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.display_name": {
-          "source": "List Deep Networks",
+          "source": "List deep networks",
           "message": "Lista głębokich sieci neuronowych"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.short_desc": {
@@ -5064,7 +5064,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.display_name": {
-          "source": "List Topic Models",
+          "source": "List topic models",
           "message": "Lista modeli tematycznych"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.short_desc": {
@@ -5240,7 +5240,7 @@
           "message": "Malejąco"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.display_name": {
-          "source": "Create Prediction",
+          "source": "Create prediction",
           "message": "Utwórz przewidywanie"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.short_desc": {
@@ -5276,7 +5276,7 @@
           "message": "Wybierz wytrenowany zespół modeli, który zostanie użyty do generowania przewidywań dla danych wejściowych."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.display_name": {
-          "source": "Deep Network",
+          "source": "Deep network",
           "message": "Sieć głęboka"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.short_desc": {
@@ -5288,7 +5288,7 @@
           "message": "Wybierz wytrenowaną sieć głęboką, która zostanie użyta do generowania przewidywań dla danych wejściowych."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Dane wejściowe"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5348,7 +5348,7 @@
           "message": "Opcjonalny projekt do organizacji tego przewidywania wraz z powiązanymi zasobami w celu lepszego zarządzania przepływem pracy."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Create Topic Distribution",
+          "source": "Create topic distribution",
           "message": "Utwórz rozkład tematów"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -5360,7 +5360,7 @@
           "message": "Twórz rozkłady tematów dla danych tekstowych przy użyciu wytrenowanego modelu tematów. Pomaga to zrozumieć główne tematy obecne w tekście oraz ich względne znaczenie."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.display_name": {
-          "source": "Topic Model",
+          "source": "Topic model",
           "message": "Model tematyczny"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.short_desc": {
@@ -5372,7 +5372,7 @@
           "message": "Wybierz wytrenowany model tematyczny, który zostanie użyty do wygenerowania dystrybucji tematów dla wejściowych danych tekstowych."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Dane wejściowe"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5432,7 +5432,7 @@
           "message": "Opcjonalny projekt do organizacji tej dystrybucji tematów wraz z powiązanymi zasobami w celu lepszego zarządzania przepływem pracy."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.display_name": {
-          "source": "New Resource",
+          "source": "New resource",
           "message": "Nowy zasób"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.short_desc": {
@@ -5444,7 +5444,7 @@
           "message": "Monitoruj swoje konto BigML pod kątem nowo utworzonych zasobów, takich jak modele, zestawy danych, klastry i inne zasoby uczenia maszynowego. Ten wyzwalacz umożliwia automatyzację przepływów pracy po utworzeniu określonych typów zasobów."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.display_name": {
-          "source": "Resource Type",
+          "source": "Resource type",
           "message": "Typ zasobu"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.short_desc": {
@@ -5480,7 +5480,7 @@
           "message": "Model tematyczny"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.display_name": {
-          "source": "Name Filter",
+          "source": "Name filter",
           "message": "Filtr nazwy"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.short_desc": {
@@ -5492,7 +5492,7 @@
           "message": "Opcjonalny filtr wyzwalający tylko dla zasobów, których nazwy zawierają ten tekst. Pozostaw puste, aby monitorować wszystkie zasoby wybranego typu."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.display_name": {
-          "source": "Project Filter",
+          "source": "Project filter",
           "message": "Filtr projektu"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.short_desc": {
@@ -5504,7 +5504,7 @@
           "message": "Opcjonalny filtr wyzwalający tylko dla zasobów utworzonych w ramach określonego projektu. Pozostaw puste, aby monitorować zasoby we wszystkich projektach."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.display_name": {
-          "source": "Tags Filter",
+          "source": "Tags filter",
           "message": "Filtr tagów"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.short_desc": {

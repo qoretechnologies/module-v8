@@ -21,19 +21,19 @@ export const ATTIO_TO_QORUS_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType
     type: 'hash',
     fields: {
       line_1: {
-        display_name: 'Address Line 1',
+        display_name: 'Address line 1',
         type: 'string',
       },
       line_2: {
-        display_name: 'Address Line 2',
+        display_name: 'Address line 2',
         type: 'string',
       },
       line_3: {
-        display_name: 'Address Line 3',
+        display_name: 'Address line 3',
         type: 'string',
       },
       line_4: {
-        display_name: 'Address Line 4',
+        display_name: 'Address line 4',
         type: 'string',
       },
       locality: {
@@ -41,15 +41,15 @@ export const ATTIO_TO_QORUS_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType
         type: 'string',
       },
       region: {
-        display_name: 'State/Region',
+        display_name: 'State/region',
         type: 'string',
       },
       postcode: {
-        display_name: 'Postal Code',
+        display_name: 'Postal code',
         type: 'string',
       },
       country_code: {
-        display_name: 'Country Code',
+        display_name: 'Country code',
         type: 'string',
       },
       latitude: {

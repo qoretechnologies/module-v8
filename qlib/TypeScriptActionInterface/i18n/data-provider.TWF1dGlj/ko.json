@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **Mautic**에 사용자 정의 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에서 기본 작업으로 아직 제공되지 않는 엔드포인트에 이 작업을 사용합니다."
         },
         "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "연락처 생성"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "지정된 정보를 사용하여 Mautic에 새 연락처를 생성합니다."
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "이메일 주소"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "연락처의 기본 이메일 주소(필수)"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "이름"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
@@ -376,7 +376,7 @@
           "message": "연락처의 이름"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "성"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "연락처의 직책 또는 직함"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "주소 1"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
@@ -448,7 +448,7 @@
           "message": "연락처의 도로명 주소"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "주소 2"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
@@ -472,7 +472,7 @@
           "message": "연락처 주소의 시/군/구"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "시/도/지역"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
@@ -484,7 +484,7 @@
           "message": "시, 도 또는 지역"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "우편번호"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "정리 및 세분화를 위해 연락처에 적용할 태그 목록"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "사용자 지정 필드"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "커스텀 필드 별칭과 해당 값을 포함하는 객체입니다. 필드 별칭을 키로 사용하세요 "
         },
         "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "연락처 가져오기"
         },
         "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -568,7 +568,7 @@
           "message": "세부 정보를 가져올 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.display_name": {
-          "source": "Get Many Contacts",
+          "source": "Get many contacts",
           "message": "다수의 연락처 가져오기"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.short_desc": {
@@ -616,7 +616,7 @@
           "message": "페이지네이션 시작 행(기본값: 0)"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "정렬 기준"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "최종 활동 시간"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.display_name": {
-          "source": "Order Direction",
+          "source": "Order direction",
           "message": "정렬 방향"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.short_desc": {
@@ -672,7 +672,7 @@
           "message": "내림차순"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "연락처 업데이트"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -696,7 +696,7 @@
           "message": "업데이트할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "이메일 주소"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -708,7 +708,7 @@
           "message": "연락처의 새 이메일 주소"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "이름"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
@@ -720,7 +720,7 @@
           "message": "연락처의 새 이름"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "성"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
@@ -780,7 +780,7 @@
           "message": "새 직책 또는 직함"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "주소 1"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
@@ -792,7 +792,7 @@
           "message": "새 도로명 주소"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "주소 2"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
@@ -816,7 +816,7 @@
           "message": "새 구/군/시"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "시/도/지역"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
@@ -828,7 +828,7 @@
           "message": "새 주, 도 또는 지역"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "우편번호"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
@@ -876,7 +876,7 @@
           "message": "연락처에 적용할 태그입니다. 태그를 제거하려면 앞에 \"-\"를 붙이세요(예: \"-oldtag\")."
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "사용자 지정 필드"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "커스텀 필드 별칭과 해당 값을 포함하는 객체입니다. 필드 별칭을 키로 사용하세요 "
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "연락처 삭제"
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -912,7 +912,7 @@
           "message": "삭제할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.display_name": {
-          "source": "Edit Contact Points",
+          "source": "Edit contact points",
           "message": "연락처 포인트 편집"
         },
         "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.short_desc": {
@@ -968,7 +968,7 @@
           "message": "연락처 점수에서 추가하거나 차감할 포인트 수"
         },
         "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.display_name": {
-          "source": "Edit Do Not Contact List",
+          "source": "Edit do not contact list",
           "message": "연락 금지 목록 편집"
         },
         "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "DNC 항목에 대한 추가 메모 또는 코멘트"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.display_name": {
-          "source": "Send Email to Contact",
+          "source": "Send email to contact",
           "message": "연락처로 이메일 전송"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "특정 연락처에 Mautic 이메일 템플릿을 전송합니다."
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.display_name": {
-          "source": "Email Template",
+          "source": "Email template",
           "message": "이메일 템플릿"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.short_desc": {
@@ -1104,7 +1104,7 @@
           "message": "이메일을 보낼 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
-          "source": "Create Company",
+          "source": "Create company",
           "message": "회사 생성"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "지정된 세부 정보를 사용하여 Mautic에 새 회사 레코드를 생성합니다."
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "회사 이름"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "회사 이름(필수)"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
-          "source": "Company Email",
+          "source": "Company email",
           "message": "회사 이메일"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "회사의 기본 이메일 주소"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
-          "source": "Company Phone",
+          "source": "Company phone",
           "message": "회사 전화번호"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "회사 웹사이트 URL"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "주소 1"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "회사의 도로명 주소"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "주소 2"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "회사 주소의 시/군/구"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "시/도/지역"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "회사 주소의 주/도/지역"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "우편번호"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "회사가 속한 산업 또는 업종"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "사용자 지정 필드"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "커스텀 필드 별칭과 해당 값을 포함하는 객체입니다. 필드 별칭을 키로 사용하세요"
         },
         "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.display_name": {
-          "source": "Get Company",
+          "source": "Get company",
           "message": "회사 조회"
         },
         "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "세부 정보를 가져올 회사를 선택하세요"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.display_name": {
-          "source": "Get Many Companies",
+          "source": "Get many companies",
           "message": "다수의 회사 가져오기"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "페이지네이션 시작 행(기본값: 0)"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "정렬 기준"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "추가된 날짜"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.display_name": {
-          "source": "Order Direction",
+          "source": "Order direction",
           "message": "정렬 방향"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.short_desc": {
@@ -1388,7 +1388,7 @@
           "message": "내림차순"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.display_name": {
-          "source": "Update Company",
+          "source": "Update company",
           "message": "회사 업데이트"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
@@ -1412,7 +1412,7 @@
           "message": "업데이트할 회사를 선택하세요"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "회사 이름"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
@@ -1424,7 +1424,7 @@
           "message": "회사의 새 이름"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
-          "source": "Company Email",
+          "source": "Company email",
           "message": "회사 이메일"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
@@ -1436,7 +1436,7 @@
           "message": "회사의 새 기본 이메일 주소"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
-          "source": "Company Phone",
+          "source": "Company phone",
           "message": "회사 전화번호"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
@@ -1460,7 +1460,7 @@
           "message": "새 회사 웹사이트 URL"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "주소 1"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
@@ -1472,7 +1472,7 @@
           "message": "회사의 새 도로명 주소"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "주소 2"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
@@ -1496,7 +1496,7 @@
           "message": "회사 주소의 새 도시"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "시/도/지역"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
@@ -1508,7 +1508,7 @@
           "message": "새 주, 도 또는 지역"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "우편번호"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
@@ -1556,7 +1556,7 @@
           "message": "새 업종 또는 분야"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "사용자 지정 필드"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1568,7 +1568,7 @@
           "message": "커스텀 필드 별칭과 해당 값을 포함하는 객체입니다. 필드 별칭을 키로 사용하세요 "
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
-          "source": "Delete Company",
+          "source": "Delete company",
           "message": "회사 삭제"
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
@@ -1592,7 +1592,7 @@
           "message": "삭제할 회사를 선택하세요"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.display_name": {
-          "source": "Add Contact to Company",
+          "source": "Add contact to company",
           "message": "회사에 연락처 추가"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "회사와 연결할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.display_name": {
-          "source": "Remove Contact from Company",
+          "source": "Remove contact from company",
           "message": "회사에서 연락처 제거"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "회사에서 제거할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.display_name": {
-          "source": "Add Contact to Campaign",
+          "source": "Add contact to campaign",
           "message": "캠페인에 연락처 추가"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "캠페인에 추가할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.display_name": {
-          "source": "Remove Contact from Campaign",
+          "source": "Remove contact from campaign",
           "message": "캠페인에서 연락처 제거"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "캠페인에서 제거할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.display_name": {
-          "source": "Add Contact to Segment",
+          "source": "Add contact to segment",
           "message": "세그먼트에 연락처 추가"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.short_desc": {
@@ -1772,7 +1772,7 @@
           "message": "세그먼트에 추가할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.display_name": {
-          "source": "Remove Contact from Segment",
+          "source": "Remove contact from segment",
           "message": "세그먼트에서 연락처 제거"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "세그먼트에서 제거할 연락처를 선택하세요"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.display_name": {
-          "source": "Send Email to Segment",
+          "source": "Send email to segment",
           "message": "세그먼트로 이메일 전송"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "연결된 세그먼트의 모든 연락처에 Mautic 세그먼트 이메일을 전송합니다. 이메일은 \"list\" 유형(세그먼트 이메일)이어야 합니다."
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.display_name": {
-          "source": "Segment Email",
+          "source": "Segment email",
           "message": "세그먼트 이메일"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.short_desc": {

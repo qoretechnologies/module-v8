@@ -28,7 +28,7 @@
           "message": "Effectuer un appel API HTTP / REST personnalisé à **Google Analytics** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est retournée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés comme actions de premier ordre sur cette application."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.display_name": {
-          "source": "Run Report",
+          "source": "Run report",
           "message": "Exécuter le rapport"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Sélectionnez la propriété GA4 à partir de laquelle récupérer les données d'analyse."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
+          "source": "Date ranges",
           "message": "Plages de dates"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Spécifiez une ou plusieurs plages de dates pour le rapport. Les dates peuvent être au format YYYY-MM-DD ou des valeurs relatives telles que \"7daysAgo\", \"yesterday\", \"today\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Date de fin"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "La date de fin incluse pour la requête au format YYYY-MM-DD, ou une date relative comme \"aujourd'hui\", \"hier\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Date de début"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Sélectionnez les mesures quantitatives à inclure (par ex., activeUsers, sessions, pageViews). Vous pouvez inclure jusqu'à 10 métriques par rapport."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Nom de la métrique"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Sélectionnez les attributs par lesquels segmenter vos données (par ex., country, browser, pagePath). Les dimensions sont facultatives et vous permettent de ventiler les métriques par catégories spécifiques."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Nom de la dimension"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "L'ID de la transaction e-commerce"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
+          "source": "Dimension filter",
           "message": "Filtre de dimension"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Une expression de filtre avancée pour filtrer les données du rapport en fonction des valeurs de dimension. Utilisez la syntaxe d'expression de filtre GA4."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
+          "source": "Metric filter",
           "message": "Filtre de métrique"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Une expression de filtre avancée pour filtrer les données du rapport en fonction des valeurs de métrique. Utilisez la syntaxe d'expression de filtre GA4."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Trier par"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Si vrai, trie par ordre décroissant. Si faux, trie par ordre croissant."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Nom du champ"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Le nom de la dimension ou de la métrique à utiliser pour le tri"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Type d'ordre"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
@@ -1352,7 +1352,7 @@
           "message": "Le nombre de lignes à ignorer avant de retourner les résultats. Utilisé pour la pagination."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.display_name": {
-          "source": "Keep Empty Rows",
+          "source": "Keep empty rows",
           "message": "Conserver les lignes vides"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.short_desc": {
@@ -1364,7 +1364,7 @@
           "message": "Si true, inclut les lignes où toutes les métriques ont des valeurs zéro. Si false (par défaut), ces lignes sont exclues."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.display_name": {
-          "source": "Return Property Quota",
+          "source": "Return property quota",
           "message": "Retourner le quota de la propriété"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.short_desc": {
@@ -1376,7 +1376,7 @@
           "message": "Si true, retourne dans la réponse des informations sur l'utilisation du quota d'API pour cette propriété."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.display_name": {
-          "source": "Run Real-time Report",
+          "source": "Run real-time report",
           "message": "Exécuter un rapport en temps réel"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.short_desc": {
@@ -1412,7 +1412,7 @@
           "message": "Sélectionnez les métriques en temps réel à inclure dans le rapport (par ex., activeUsers, screenPageViews, eventCount)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Nom de la métrique"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "Sélectionnez les dimensions en temps réel par lesquelles segmenter vos données (par ex., country, city, deviceCategory, unifiedScreenName)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Nom de la dimension"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Nombre de minutes écoulées depuis l'événement"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.display_name": {
-          "source": "Minute Ranges",
+          "source": "Minute ranges",
           "message": "Plages de minutes"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Spécifiez des plages horaires personnalisées pour les données en temps réel. Par défaut, les données des 30 dernières minutes sont retournées."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.display_name": {
-          "source": "End Minutes Ago",
+          "source": "End minutes ago",
           "message": "Fin il y a quelques minutes"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "La fin de la plage de minutes, exprimée en minutes écoulées (par exemple 0 pour la minute actuelle)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.display_name": {
-          "source": "Range Name",
+          "source": "Range name",
           "message": "Nom de plage"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.short_desc": {
@@ -1588,7 +1588,7 @@
           "message": "Nom facultatif pour identifier cette plage de temps dans la réponse."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.display_name": {
-          "source": "Start Minutes Ago",
+          "source": "Start minutes ago",
           "message": "Début il y a quelques minutes"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.short_desc": {
@@ -1600,7 +1600,7 @@
           "message": "Le début de la plage de minutes, exprimé en minutes écoulées (par exemple, 29 pour 29 minutes écoulées)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
+          "source": "Dimension filter",
           "message": "Filtre de dimension"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "Une expression de filtre avancée pour filtrer les données en temps réel en fonction des valeurs de dimension."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
+          "source": "Metric filter",
           "message": "Filtre de métrique"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "Une expression de filtre avancée pour filtrer les données en temps réel en fonction des valeurs de métrique."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Trier par"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
@@ -1648,7 +1648,7 @@
           "message": "Si vrai, trie par ordre décroissant."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Nom du champ"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
@@ -1660,7 +1660,7 @@
           "message": "Le nom de la dimension ou de la métrique à utiliser pour le tri"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Type d'ordre"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "Le nombre maximal de lignes à retourner. La valeur par défaut est 10 000."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.display_name": {
-          "source": "Get Metadata",
+          "source": "Get metadata",
           "message": "Obtenir les métadonnées"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.short_desc": {
@@ -1716,7 +1716,7 @@
           "message": "Sélectionnez la propriété GA4 pour laquelle récupérer les métadonnées. La réponse inclura les dimensions/métriques standard et personnalisées."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.display_name": {
-          "source": "Batch Run Reports",
+          "source": "Batch run reports",
           "message": "Exécuter des rapports en lot"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.short_desc": {
@@ -1740,7 +1740,7 @@
           "message": "Sélectionnez la propriété GA4 à partir de laquelle récupérer les données d'analyse pour tous les rapports."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.display_name": {
-          "source": "Report Requests",
+          "source": "Report requests",
           "message": "Requêtes de rapport"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.short_desc": {
@@ -1752,7 +1752,7 @@
           "message": "Un tableau de configurations de requêtes de rapport. Chaque requête peut avoir ses propres plages de dates, métriques, dimensions et limites. Maximum 5 requêtes par lot."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
+          "source": "Date ranges",
           "message": "Plages de dates"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "Les plages de dates pour ce rapport spécifique dans le lot."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Date de fin"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.short_desc": {
@@ -1776,7 +1776,7 @@
           "message": "La date de fin au format YYYY-MM-DD ou format relatif."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Date de début"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Les dimensions à inclure dans ce rapport spécifique."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Nom de la dimension"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.short_desc": {
@@ -2260,7 +2260,7 @@
           "message": "Les métriques à inclure dans ce rapport spécifique."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Nom de la métrique"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.short_desc": {
@@ -2648,7 +2648,7 @@
           "message": "Nombre d'impressions publicitaires sur votre propriété"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.display_name": {
-          "source": "Check Compatibility",
+          "source": "Check compatibility",
           "message": "Vérifier la compatibilité"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.short_desc": {
@@ -2684,7 +2684,7 @@
           "message": "Les dimensions dont vous souhaitez vérifier qu'elles peuvent être utilisées ensemble."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Nom de la dimension"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -3132,7 +3132,7 @@
           "message": "Les métriques dont vous souhaitez vérifier qu'elles peuvent être utilisées ensemble."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Nom de la métrique"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -3520,7 +3520,7 @@
           "message": "Nombre d'impressions publicitaires sur votre propriété"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.display_name": {
-          "source": "Compatibility Filter",
+          "source": "Compatibility filter",
           "message": "Filtre de compatibilité"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.short_desc": {

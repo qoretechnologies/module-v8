@@ -7,7 +7,7 @@ const AirtableAppEn = {
     'Airtable combines the simplicity of a spreadsheet with the power of a database. Create and manage bases, tables, and records with ease. Perfect for project management, CRM, content planning, and team collaboration.',
   actions: {
     list_records: {
-      displayName: 'List Records',
+      displayName: 'List records',
       shortDesc: 'Retrieve records from an Airtable table',
       longDesc:
         'List and filter records from a specified Airtable table with support for sorting, filtering, pagination, and field selection',
@@ -29,7 +29,7 @@ const AirtableAppEn = {
             'Select which fields to include in the response. If not specified, all fields will be returned',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of records per page',
           longDesc: 'Specify how many records to retrieve per page (maximum 100)',
         },
@@ -44,7 +44,7 @@ const AirtableAppEn = {
           longDesc: 'The timezone to use when formatting date and time fields in the response',
         },
         user_locale: {
-          displayName: 'User Locale',
+          displayName: 'User locale',
           shortDesc: 'Locale for formatting',
           longDesc:
             'The locale to use for formatting numbers, dates, and other locale-specific data',
@@ -56,12 +56,12 @@ const AirtableAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'Field to sort by',
                 longDesc: 'Select the field to use for sorting the records',
               },
               direction: {
-                displayName: 'Sort Direction',
+                displayName: 'Sort direction',
                 shortDesc: 'Sort order direction',
                 longDesc: 'Choose whether to sort in ascending or descending order',
               },
@@ -69,7 +69,7 @@ const AirtableAppEn = {
           },
         },
         cell_format: {
-          displayName: 'Cell Format',
+          displayName: 'Cell format',
           shortDesc: 'Format for cell values',
           longDesc: 'Choose how cell values should be formatted in the response',
         },
@@ -80,22 +80,22 @@ const AirtableAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Filter Field',
+                displayName: 'Filter field',
                 shortDesc: 'Field to filter on',
                 longDesc: 'Select the field to use for filtering records',
               },
               value: {
-                displayName: 'Filter Value',
+                displayName: 'Filter value',
                 shortDesc: 'Value to filter by',
                 longDesc: 'The value to compare against when filtering records',
               },
               type: {
-                displayName: 'Filter Type',
+                displayName: 'Filter type',
                 shortDesc: 'Type of filter comparison',
                 longDesc: 'Choose the type of comparison to perform when filtering',
               },
               formula: {
-                displayName: 'Filter Formula',
+                displayName: 'Filter formula',
                 shortDesc: 'Custom filter formula',
                 longDesc: 'A custom Airtable formula to use for filtering records',
               },
@@ -103,7 +103,7 @@ const AirtableAppEn = {
           },
         },
         return_fields_by_field_id: {
-          displayName: 'Return Fields by Field ID',
+          displayName: 'Return fields by field ID',
           shortDesc: 'Return field IDs instead of names',
           longDesc:
             'When enabled, field data will be returned using field IDs instead of field names',
@@ -116,7 +116,7 @@ const AirtableAppEn = {
       },
     },
     get_record: {
-      displayName: 'Get Record',
+      displayName: 'Get record',
       shortDesc: 'Retrieve a specific record from Airtable',
       longDesc: 'Get a single record by its ID from a specified Airtable table',
       options: {
@@ -139,7 +139,7 @@ const AirtableAppEn = {
       },
     },
     create_record: {
-      displayName: 'Create Record',
+      displayName: 'Create record',
       shortDesc: 'Create a new record in Airtable',
       longDesc: 'Create a new record in a specified Airtable table with the provided field values',
       options: {
@@ -156,7 +156,7 @@ const AirtableAppEn = {
       },
     },
     delete_record: {
-      displayName: 'Delete Record',
+      displayName: 'Delete record',
       shortDesc: 'Delete a record from Airtable',
       longDesc: 'Permanently delete a specific record from an Airtable table',
       options: {
@@ -178,7 +178,7 @@ const AirtableAppEn = {
       },
     },
     list_bases: {
-      displayName: 'List Bases',
+      displayName: 'List bases',
       shortDesc: 'List all accessible Airtable bases',
       longDesc:
         'Retrieve a list of all Airtable bases that are accessible with the current authentication',
@@ -191,7 +191,7 @@ const AirtableAppEn = {
       },
     },
     list_tables: {
-      displayName: 'List Tables',
+      displayName: 'List tables',
       shortDesc: 'List tables in an Airtable base',
       longDesc: 'Retrieve a list of all tables within a specified Airtable base',
       options: {
@@ -205,7 +205,7 @@ const AirtableAppEn = {
   },
   triggers: {
     new_record: {
-      displayName: 'New Record',
+      displayName: 'New record',
       shortDesc: 'Triggers when a new record is created in Airtable',
       longDesc:
         'Monitor an Airtable table for newly created records and trigger automation when new records are added',
@@ -230,7 +230,7 @@ const AirtableAppEn = {
       },
     },
     updated_record: {
-      displayName: 'Updated Record',
+      displayName: 'Updated record',
       shortDesc: 'Triggers when a record is updated in Airtable',
       longDesc:
         'Monitor an Airtable table for record modifications and trigger automation when existing records are updated',
@@ -257,7 +257,7 @@ const AirtableAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -551,7 +551,7 @@ const AirtableAppEn = {
       longDesc: 'Returns True if the field date is earlier than the specified date',
       args: [
         {
-          displayName: 'Date Field',
+          displayName: 'Date field',
           shortDesc: 'Date field to compare',
           longDesc: 'The date field whose value will be compared',
         },
@@ -568,7 +568,7 @@ const AirtableAppEn = {
       longDesc: 'Returns True if the field date is later than the specified date',
       args: [
         {
-          displayName: 'Date Field',
+          displayName: 'Date field',
           shortDesc: 'Date field to compare',
           longDesc: 'The date field whose value will be compared',
         },
@@ -585,7 +585,7 @@ const AirtableAppEn = {
       longDesc: 'Returns True if the field date is the same as the specified date',
       args: [
         {
-          displayName: 'Date Field',
+          displayName: 'Date field',
           shortDesc: 'Date field to compare',
           longDesc: 'The date field whose value will be compared',
         },
@@ -604,7 +604,7 @@ const AirtableAppEn = {
       longDesc: 'Returns True if the boolean field matches the specified value (true or false)',
       args: [
         {
-          displayName: 'Boolean Field',
+          displayName: 'Boolean field',
           shortDesc: 'Boolean field to check',
           longDesc: 'The boolean/checkbox field to evaluate',
         },
@@ -784,12 +784,12 @@ const AirtableAppEn = {
           longDesc: 'The condition to evaluate',
         },
         {
-          displayName: 'If True',
+          displayName: 'If true',
           shortDesc: 'Value when true',
           longDesc: 'The value to return if the condition is true',
         },
         {
-          displayName: 'If False',
+          displayName: 'If false',
           shortDesc: 'Value when false',
           longDesc: 'The value to return if the condition is false',
         },

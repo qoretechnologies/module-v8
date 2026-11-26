@@ -32,7 +32,7 @@ Your API token grants access to a specific base. Each token can have read-only o
   },
   triggers: {
     new_document: {
-      displayName: 'New Row',
+      displayName: 'New row',
       shortDesc: 'Trigger when a new row is added to a SeaTable table',
       longDesc:
         'Monitors a SeaTable table for new rows and triggers when new records are detected. The trigger polls for changes and fires when new rows are found.',
@@ -48,7 +48,7 @@ Your API token grants access to a specific base. Each token can have read-only o
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -69,13 +69,13 @@ Your API token grants access to a specific base. Each token can have read-only o
   },
   actions: {
     run_sql: {
-      displayName: 'Run SQL Query',
+      displayName: 'Run SQL query',
       shortDesc: 'Execute a SQL query on the SeaTable base',
       longDesc:
         'Executes a SQL query on your SeaTable base and returns the results. Supports SELECT, INSERT, UPDATE, and DELETE statements. Maximum of 10,000 rows can be returned for SELECT queries.',
       options: {
         sql: {
-          displayName: 'SQL Query',
+          displayName: 'SQL query',
           shortDesc: 'The SQL query to execute',
           longDesc:
             'Enter your SQL query. Use backticks around column names with special characters (e.g., `My Column`). Example: SELECT * FROM `Table1` WHERE `Status` = \'Active\' LIMIT 100',

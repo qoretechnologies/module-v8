@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Google Docs** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.display_name": {
-          "source": "Append Text to Document",
-          "message": "Append Text to Document"
+          "source": "Append text to document",
+          "message": "Append text to document"
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.short_desc": {
           "source": "Add text to an existing Google Docs document at a specified position.",
@@ -376,8 +376,8 @@
           "message": "The text content to be added to the document."
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.display_name": {
-          "source": "Insert Position",
-          "message": "Insert Position"
+          "source": "Insert position",
+          "message": "Insert position"
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.short_desc": {
           "source": "Where to insert the text",
@@ -412,8 +412,8 @@
           "message": "The specific character index position where text should be inserted (required when insert_position is \"index\")."
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.display_name": {
-          "source": "Add Line Break",
-          "message": "Add Line Break"
+          "source": "Add line break",
+          "message": "Add line break"
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.short_desc": {
           "source": "Add line break with text",
@@ -424,8 +424,8 @@
           "message": "Whether to add a line break before or after the inserted text for better formatting."
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.display_name": {
-          "source": "Text Style",
-          "message": "Text Style"
+          "source": "Text style",
+          "message": "Text style"
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.short_desc": {
           "source": "Formatting options for text",
@@ -448,8 +448,8 @@
           "message": "Whether to make the text bold."
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.field.Zm9udF9mYW1pbHk.display_name": {
-          "source": "Font Family",
-          "message": "Font Family"
+          "source": "Font family",
+          "message": "Font family"
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.field.Zm9udF9mYW1pbHk.short_desc": {
           "source": "Font family name",
@@ -460,8 +460,8 @@
           "message": "The font family to use for the text (e.g., \"Arial\", \"Times New Roman\")."
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.field.Zm9udF9zaXpl.display_name": {
-          "source": "Font Size",
-          "message": "Font Size"
+          "source": "Font size",
+          "message": "Font size"
         },
         "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.field.Zm9udF9zaXpl.short_desc": {
           "source": "Text font size in points",
@@ -496,8 +496,8 @@
           "message": "Whether to underline the text."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.display_name": {
-          "source": "Create Document from Template",
-          "message": "Create Document from Template"
+          "source": "Create document from template",
+          "message": "Create document from template"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.short_desc": {
           "source": "Create a new Google Docs document from an existing template with placeholder replacements.",
@@ -520,8 +520,8 @@
           "message": "The Google Docs document ID to use as a template for creating the new document."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.display_name": {
-          "source": "New Document Name",
-          "message": "New Document Name"
+          "source": "New document name",
+          "message": "New document name"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.short_desc": {
           "source": "Name for the new document",
@@ -532,8 +532,8 @@
           "message": "The name to give the newly created document."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.display_name": {
-          "source": "Destination Folder",
-          "message": "Destination Folder"
+          "source": "Destination folder",
+          "message": "Destination folder"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.short_desc": {
           "source": "Folder to create document in",
@@ -544,8 +544,8 @@
           "message": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.display_name": {
-          "source": "Text Replacements",
-          "message": "Text Replacements"
+          "source": "Text replacements",
+          "message": "Text replacements"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.short_desc": {
           "source": "Placeholder text replacements",
@@ -556,8 +556,8 @@
           "message": "List of placeholder text replacements to make in the template."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.field.bWF0Y2hfY2FzZQ.display_name": {
-          "source": "Match Case",
-          "message": "Match Case"
+          "source": "Match case",
+          "message": "Match case"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.field.bWF0Y2hfY2FzZQ.short_desc": {
           "source": "Case-sensitive replacement",
@@ -580,8 +580,8 @@
           "message": "The placeholder text in the template to be replaced (e.g., \"NAME\")."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.field.cmVwbGFjZW1lbnRfdGV4dA.display_name": {
-          "source": "Replacement Text",
-          "message": "Replacement Text"
+          "source": "Replacement text",
+          "message": "Replacement text"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.field.cmVwbGFjZW1lbnRfdGV4dA.short_desc": {
           "source": "Text to replace placeholder with",
@@ -592,8 +592,8 @@
           "message": "The text that will replace the placeholder in the new document."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.display_name": {
-          "source": "Remove Unused Fields",
-          "message": "Remove Unused Fields"
+          "source": "Remove unused fields",
+          "message": "Remove unused fields"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.short_desc": {
           "source": "Remove unreplaced placeholders",
@@ -604,8 +604,8 @@
           "message": "Whether to remove placeholder text that was not replaced with actual values."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.display_name": {
-          "source": "Share with Template Collaborators",
-          "message": "Share with Template Collaborators"
+          "source": "Share with template collaborators",
+          "message": "Share with template collaborators"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.short_desc": {
           "source": "Share with template collaborators",
@@ -616,8 +616,8 @@
           "message": "Whether to automatically share the new document with all collaborators of the original template."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
-          "source": "Export Format",
-          "message": "Export Format"
+          "source": "Export format",
+          "message": "Export format"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
           "source": "Format to export document as",
@@ -648,8 +648,8 @@
           "message": "Plain Text (.txt)"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.display_name": {
-          "source": "Image Replacements",
-          "message": "Image Replacements"
+          "source": "Image replacements",
+          "message": "Image replacements"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.short_desc": {
           "source": "Placeholder image replacements",
@@ -708,8 +708,8 @@
           "message": "The width of the inserted image in points."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.display_name": {
-          "source": "Create Document from Text",
-          "message": "Create Document from Text"
+          "source": "Create document from text",
+          "message": "Create document from text"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.short_desc": {
           "source": "Create a new Google Docs document from text content.",
@@ -720,8 +720,8 @@
           "message": "Creates a new Google Docs document from provided text content. Supports HTML parsing for rich formatting and can optionally export the document to various formats."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.display_name": {
-          "source": "Document Name",
-          "message": "Document Name"
+          "source": "Document name",
+          "message": "Document name"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.short_desc": {
           "source": "Name for the new document",
@@ -732,8 +732,8 @@
           "message": "The name to give the newly created document."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.display_name": {
-          "source": "Document Content",
-          "message": "Document Content"
+          "source": "Document content",
+          "message": "Document content"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.short_desc": {
           "source": "Text content for the document",
@@ -768,8 +768,8 @@
           "message": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder."
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
-          "source": "Export Format",
-          "message": "Export Format"
+          "source": "Export format",
+          "message": "Export format"
         },
         "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
           "source": "Format to export document as",
@@ -800,8 +800,8 @@
           "message": "Plain Text (.txt)"
         },
         "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.display_name": {
-          "source": "Get Document by ID",
-          "message": "Get Document by ID"
+          "source": "Get document by ID",
+          "message": "Get document by ID"
         },
         "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.short_desc": {
           "source": "Retrieve detailed information about a Google Docs document.",
@@ -824,8 +824,8 @@
           "message": "The unique identifier of the Google Docs document to retrieve information for."
         },
         "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.display_name": {
-          "source": "Upload Document",
-          "message": "Upload Document"
+          "source": "Upload document",
+          "message": "Upload document"
         },
         "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.short_desc": {
           "source": "Upload a file and convert it to Google Docs format.",
@@ -980,8 +980,8 @@
           "message": "The filename"
         },
         "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.display_name": {
-          "source": "File Name",
-          "message": "File Name"
+          "source": "File name",
+          "message": "File name"
         },
         "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.short_desc": {
           "source": "Custom name for uploaded file",
@@ -992,8 +992,8 @@
           "message": "Optional custom name for the uploaded file. If not provided, the original filename will be used."
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.display_name": {
-          "source": "Search Documents",
-          "message": "Search Documents"
+          "source": "Search documents",
+          "message": "Search documents"
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.short_desc": {
           "source": "Search for Google Docs documents with advanced filtering and sorting options.",
@@ -1016,8 +1016,8 @@
           "message": "The name or partial name of the Google Docs document to search for."
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
-          "message": "Search Type"
+          "source": "Search type",
+          "message": "Search type"
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.short_desc": {
           "source": "Type of filename matching",
@@ -1048,8 +1048,8 @@
           "message": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders."
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.short_desc": {
           "source": "Sorting criteria for results",
@@ -1112,8 +1112,8 @@
           "message": "Recency"
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.short_desc": {
           "source": "Maximum number of results to return",
@@ -1124,8 +1124,8 @@
           "message": "The maximum number of documents to return in a single request. Default is 100."
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
-          "source": "Custom Query",
-          "message": "Custom Query"
+          "source": "Custom query",
+          "message": "Custom query"
         },
         "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
           "source": "Additional search criteria",
@@ -1136,8 +1136,8 @@
           "message": "Custom Google Drive search query to add additional filtering criteria beyond the basic options."
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Document",
-          "message": "New Document"
+          "source": "New document",
+          "message": "New document"
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.short_desc": {
           "source": "Triggers when a new Google Docs document is created.",
@@ -1160,8 +1160,8 @@
           "message": "The Google Drive folder ID to monitor for new documents. If not specified, monitors all accessible folders."
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.display_name": {
-          "source": "Filename Filter",
-          "message": "Filename Filter"
+          "source": "Filename filter",
+          "message": "Filename filter"
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.short_desc": {
           "source": "Filter by document name",
@@ -1172,8 +1172,8 @@
           "message": "Optional filename filter to only trigger for documents with names that match this pattern."
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
-          "message": "Search Type"
+          "source": "Search type",
+          "message": "Search type"
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.short_desc": {
           "source": "How to match the filename",
@@ -1192,8 +1192,8 @@
           "message": "Exact Match"
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.display_name": {
-          "source": "Include Content",
-          "message": "Include Content"
+          "source": "Include content",
+          "message": "Include content"
         },
         "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.short_desc": {
           "source": "Include document content in trigger",

@@ -28,7 +28,7 @@
           "message": "Виконати довільний виклик HTTP / REST API до **OpenWeatherMap**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть HTTP-метод, шлях URI (відносно базового URL API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для ендпоінтів, які ще не представлені як повноцінні дії в цьому додатку."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.display_name": {
-          "source": "Get Current Weather",
+          "source": "Get current weather",
           "message": "Отримати поточну погоду"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Отримання інформації про погоду в реальному часі, включаючи температуру, вологість, швидкість вітру, тиск, видимість та погодні умови для будь-якої точки світу. Підтримує пошук за назвою міста, географічними координатами або поштовим індексом."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Тип локації"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Необов'язковий дволітерний код мови для описів погодних умов (наприклад, \"en\" для англійської, \"es\" для іспанської, \"fr\" для французької, \"de\" для німецької)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.display_name": {
-          "source": "Get Weather Forecast",
+          "source": "Get weather forecast",
           "message": "Отримати прогноз погоди"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Отримання прогнозу погоди на 5 днів із точками даних кожні 3 години для будь-якої точки світу. Кожен елемент прогнозу включає температуру, вологість, вітер, ймовірність опадів та погодні умови. Підтримує пошук за назвою міста, географічними координатами або поштовим індексом."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Тип локації"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Обмежити кількість повертаваних 3-годинних елементів прогнозу. Кожен день містить до 8 точок даних (кожні 3 години). Максимум — 40 (5 днів x 8 інтервалів)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.display_name": {
-          "source": "Temperature Threshold",
+          "source": "Temperature threshold",
           "message": "Порогове значення температури"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Відстежуйте температуру у вказаному місці та запускайте тригер, коли вона перетинає налаштоване порогове значення вище або нижче. Корисно для сповіщень про температуру, автоматизації систем HVAC та робочих процесів, що залежать від погоди."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Тип локації"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Стандартна (Кельвін, м/с)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.display_name": {
-          "source": "Threshold Type",
+          "source": "Threshold type",
           "message": "Тип порогу"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Опускається нижче"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.display_name": {
-          "source": "Threshold Value",
+          "source": "Threshold value",
           "message": "Порогове значення"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Встановіть значення температури, перетин якого активує подію. Використовуйте ті самі одиниці, що й вибрані в параметрі «Одиниці вимірювання» (наприклад, 0 для точки замерзання в градусах Цельсія, 32 у Фаренгейтах)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.display_name": {
-          "source": "Weather Condition Change",
+          "source": "Weather condition change",
           "message": "Зміна погодних умов"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.short_desc": {
@@ -600,7 +600,7 @@
           "message": "Відстежуйте погодні умови у вказаному місці та запускайте тригер у разі зміни умов (наприклад, з Ясно на Дощ, Хмарно на Сніг). За бажанням фільтруйте за певними типами умов."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Тип локації"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Стандартна (Кельвін, м/с)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.display_name": {
-          "source": "Condition Filter",
+          "source": "Condition filter",
           "message": "Фільтр умов"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.short_desc": {

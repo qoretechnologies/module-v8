@@ -28,7 +28,7 @@
           "message": "Effectuer un appel d'API HTTP / REST personnalisé vers **Azure DevOps** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est retournée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés sous forme d'actions de premier ordre dans cette application."
         },
         "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.display_name": {
-          "source": "Create Work Item",
+          "source": "Create work item",
           "message": "Créer un élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Sélectionnez le projet cible de votre organisation Azure DevOps dans lequel le nouvel élément de travail doit être créé."
         },
         "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.display_name": {
-          "source": "Work Item Type",
+          "source": "Work item type",
           "message": "Type d'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Suite de tests"
         },
         "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.display_name": {
-          "source": "Work Item Properties",
+          "source": "Work item properties",
           "message": "Propriétés de l'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Un titre descriptif résumant le contenu de l'élément de travail."
         },
         "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.display_name": {
-          "source": "Delete Work Item",
+          "source": "Delete work item",
           "message": "Supprimer l'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Sélectionnez le projet dans lequel se trouve l'élément de travail à supprimer."
         },
         "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.aWQ.display_name": {
-          "source": "Work Item ID",
+          "source": "Work item ID",
           "message": "ID de l'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.aWQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Saisissez ou sélectionnez l'ID de l'élément de travail spécifique que vous souhaitez supprimer définitivement du projet."
         },
         "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.display_name": {
-          "source": "Get Work Item",
+          "source": "Get work item",
           "message": "Obtenir l'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Sélectionnez le projet dans lequel se trouve l'élément de travail pour récupérer ses détails."
         },
         "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.aWQ.display_name": {
-          "source": "Work Item ID",
+          "source": "Work item ID",
           "message": "ID de l'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.aWQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Saisissez ou sélectionnez l'ID de l'élément de travail dont vous souhaitez récupérer les détails."
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Lister les projets"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Spécifiez le nombre de projets à ignorer à partir du début de la liste à des fins de pagination."
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.display_name": {
-          "source": "State Filter",
+          "source": "State filter",
           "message": "Filtre d'état"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.short_desc": {
@@ -608,7 +608,7 @@
           "message": "Bien formé"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Lister les utilisateurs"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.short_desc": {
@@ -632,7 +632,7 @@
           "message": "Définissez le nombre maximal d'utilisateurs à inclure dans la réponse pour contrôler la pagination."
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.Y29udGludWF0aW9uVG9rZW4.display_name": {
-          "source": "Continuation Token",
+          "source": "Continuation token",
           "message": "Jeton de continuation"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.Y29udGludWF0aW9uVG9rZW4.short_desc": {
@@ -644,7 +644,7 @@
           "message": "Fournissez le jeton de continuation d'une requête précédente pour obtenir le groupe d'utilisateurs suivant dans les résultats paginés."
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.display_name": {
-          "source": "List Work Items",
+          "source": "List work items",
           "message": "Lister les éléments de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.short_desc": {
@@ -680,7 +680,7 @@
           "message": "Définissez le nombre maximal d'éléments de travail à inclure dans la réponse pour une meilleure performance et gestion de la pagination."
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.display_name": {
-          "source": "Work Item Type",
+          "source": "Work item type",
           "message": "Type d'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Supprimé"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.dGl0bGU.display_name": {
-          "source": "Title Filter",
+          "source": "Title filter",
           "message": "Filtre par titre"
         },
         "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.dGl0bGU.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Rechercher des éléments de travail contenant le texte spécifié dans leur titre."
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.display_name": {
-          "source": "Update Work Item",
+          "source": "Update work item",
           "message": "Mettre à jour l'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Sélectionner le projet où se trouve l'élément de travail à mettre à jour."
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.aXRlbUlk.display_name": {
-          "source": "Work Item ID",
+          "source": "Work item ID",
           "message": "ID de l'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.aXRlbUlk.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Saisir ou sélectionner l'ID de l'élément de travail que vous souhaitez modifier."
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.display_name": {
-          "source": "Updated Properties",
+          "source": "Updated properties",
           "message": "Propriétés mises à jour"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Fournissez un nouveau titre qui décrit mieux le contenu de l'élément de travail."
         },
         "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.display_name": {
-          "source": "New Work Item",
+          "source": "New work item",
           "message": "Nouvel élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Sélectionner le projet dans lequel vous souhaitez surveiller la création de nouveaux éléments de travail."
         },
         "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.display_name": {
-          "source": "Work Item Type Filter",
+          "source": "Work item type filter",
           "message": "Filtre de type d'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.short_desc": {
@@ -888,7 +888,7 @@
           "message": "User Story"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.display_name": {
-          "source": "Updated Work Item",
+          "source": "Updated work item",
           "message": "Élément de travail mis à jour"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Sélectionner le projet dans lequel vous souhaitez surveiller les mises à jour des éléments de travail."
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.display_name": {
-          "source": "Work Item Type Filter",
+          "source": "Work item type filter",
           "message": "Filtre de type d'élément de travail"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.short_desc": {
@@ -944,7 +944,7 @@
           "message": "User Story"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.Y2hhbmdlZEZpZWxkcw.display_name": {
-          "source": "Changed Fields Filter",
+          "source": "Changed fields filter",
           "message": "Filtre des champs modifiés"
         },
         "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.Y2hhbmdlZEZpZWxkcw.short_desc": {

@@ -206,7 +206,7 @@ const getPostComments = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       page_name: {
         type: 'string',
-        display_name: 'Page Name',
+        display_name: 'Page name',
         short_desc: 'The name of the page',
       },
       post_id: {
@@ -216,12 +216,12 @@ const getPostComments = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       post_message: {
         type: 'string',
-        display_name: 'Post Message',
+        display_name: 'Post message',
         short_desc: 'The message content of the post',
       },
       total_comments: {
         type: 'integer',
-        display_name: 'Total Comments',
+        display_name: 'Total comments',
         short_desc: 'The total number of comments retrieved',
       },
       comments: {
@@ -300,7 +300,7 @@ const getPostComments = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
-        display_name: 'Search Criteria',
+        display_name: 'Search criteria',
         short_desc: 'The criteria used for retrieving comments',
       },
       cursors: {
@@ -316,7 +316,7 @@ const getPostComments = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When this response was generated',
       },
     },

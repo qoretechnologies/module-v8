@@ -28,7 +28,7 @@
           "message": "Effectuez un appel d'API HTTP / REST personnalisé à **Airtable** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.QWlydGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Rechercher des enregistrements"
         },
         "app.QWlydGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Le nom de la table"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
+          "source": "List records",
           "message": "Lister les enregistrements"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Sélectionnez les champs à inclure dans la réponse. S'ils ne sont pas spécifiés, tous les champs seront retournés"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.short_desc": {
@@ -2272,7 +2272,7 @@
           "message": "Pacific/Wallis"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.display_name": {
-          "source": "User Locale",
+          "source": "User locale",
           "message": "Paramètre régional de l'utilisateur"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.short_desc": {
@@ -2296,7 +2296,7 @@
           "message": "Configurer la façon de trier les enregistrements retournés"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Sens du tri"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -2316,7 +2316,7 @@
           "message": "Décroissant"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Champ de tri"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -2328,7 +2328,7 @@
           "message": "Sélectionnez le champ à utiliser pour trier les enregistrements"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.display_name": {
-          "source": "Cell Format",
+          "source": "Cell format",
           "message": "Format de cellule"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "Configurer les critères de filtrage pour limiter les enregistrements retournés"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "Champ de filtre"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -2372,7 +2372,7 @@
           "message": "Sélectionnez le champ à utiliser pour filtrer les enregistrements"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.Zm9ybXVsYQ.display_name": {
-          "source": "Filter Formula",
+          "source": "Filter formula",
           "message": "Formule de filtre"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.Zm9ybXVsYQ.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "Une formule Airtable personnalisée à utiliser pour filtrer les enregistrements"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dHlwZQ.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "Type de filtre"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dHlwZQ.short_desc": {
@@ -2404,7 +2404,7 @@
           "message": "Égal à"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Valeur du filtre"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -2416,7 +2416,7 @@
           "message": "La valeur à comparer lors du filtrage des enregistrements"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.display_name": {
-          "source": "Return Fields by Field ID",
+          "source": "Return fields by field ID",
           "message": "Retourner les champs par ID de champ"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.short_desc": {
@@ -2440,7 +2440,7 @@
           "message": "Sélectionnez une vue spécifique de la table pour appliquer son filtrage et son tri"
         },
         "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "Obtenir un enregistrement"
         },
         "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.short_desc": {
@@ -2488,7 +2488,7 @@
           "message": "Sélectionnez ou saisissez l'ID de l'enregistrement spécifique que vous souhaitez récupérer"
         },
         "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "Créer un enregistrement"
         },
         "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "Sélectionnez la table spécifique au sein de la base dans laquelle l'enregistrement sera créé"
         },
         "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "Supprimer l'enregistrement"
         },
         "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -2572,7 +2572,7 @@
           "message": "Sélectionnez ou saisissez l'ID de l'enregistrement spécifique que vous souhaitez supprimer"
         },
         "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.display_name": {
-          "source": "List Bases",
+          "source": "List bases",
           "message": "Lister les bases"
         },
         "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "Utiliser l'offset d'une réponse précédente pour récupérer la page suivante de bases"
         },
         "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
+          "source": "List tables",
           "message": "Lister les tables"
         },
         "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.short_desc": {
@@ -2620,7 +2620,7 @@
           "message": "Sélectionnez la base Airtable pour laquelle vous souhaitez lister toutes les tables disponibles"
         },
         "app.QWlydGFibGU.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "Nouvel enregistrement"
         },
         "app.QWlydGFibGU.action.bmV3X3JlY29yZA.short_desc": {
@@ -2668,7 +2668,7 @@
           "message": "Sélectionnez une vue spécifique de la table pour surveiller uniquement les enregistrements qui correspondent aux critères de filtrage et de tri de la vue"
         },
         "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
-          "source": "Updated Record",
+          "source": "Updated record",
           "message": "Enregistrement mis à jour"
         },
         "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {

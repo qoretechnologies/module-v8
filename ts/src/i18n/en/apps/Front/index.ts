@@ -8,7 +8,7 @@ const FrontAppEn = {
     // Account actions
     list_accounts: {
       groups: ['Accounts'],
-      displayName: 'List Accounts',
+      displayName: 'List accounts',
       shortDesc: 'Retrieve a list of accounts',
       longDesc:
         'Retrieve a list of all accounts in your Front workspace. Accounts represent companies or organizations that your contacts belong to. Use accounts to group contacts and track interactions at the company level.',
@@ -23,7 +23,7 @@ const FrontAppEn = {
     },
     get_account: {
       groups: ['Accounts'],
-      displayName: 'Get Account',
+      displayName: 'Get account',
       shortDesc: 'Retrieve a single account by ID',
       longDesc:
         'Retrieve the full details of a specific account from Front by its ID. Returns all account data including name, description, domains, external ID, and custom fields.',
@@ -38,7 +38,7 @@ const FrontAppEn = {
     },
     create_account: {
       groups: ['Accounts'],
-      displayName: 'Create Account',
+      displayName: 'Create account',
       shortDesc: 'Create a new account',
       longDesc:
         'Create a new account in Front. Accounts represent companies or organizations and can be used to group related contacts together. You can associate domains with accounts to automatically link contacts.',
@@ -68,7 +68,7 @@ const FrontAppEn = {
             'An optional external ID to link this account to a record in another system, such as a CRM or billing platform.',
         },
         customFields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc:
             'An object containing custom field values for the account. The keys should match your configured custom field names.',
@@ -77,7 +77,7 @@ const FrontAppEn = {
     },
     update_account: {
       groups: ['Accounts'],
-      displayName: 'Update Account',
+      displayName: 'Update account',
       shortDesc: 'Update an existing account',
       longDesc:
         'Update the properties of an existing account in Front. You can modify the name, description, domains, external ID, or custom fields. At least one field must be provided to update.',
@@ -109,7 +109,7 @@ const FrontAppEn = {
           longDesc: 'Update the external system identifier for this account.',
         },
         customFields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom field values',
           longDesc: 'Update custom field values for the account.',
         },
@@ -117,7 +117,7 @@ const FrontAppEn = {
     },
     delete_account: {
       groups: ['Accounts'],
-      displayName: 'Delete Account',
+      displayName: 'Delete account',
       shortDesc: 'Delete an account',
       longDesc:
         'Delete an account from Front. This action is permanent. Contacts associated with the account will not be deleted but will no longer be linked to this account.',
@@ -132,7 +132,7 @@ const FrontAppEn = {
     // Account-Contact actions
     list_account_contacts: {
       groups: ['Accounts'],
-      displayName: 'List Account Contacts',
+      displayName: 'List account contacts',
       shortDesc: 'List contacts associated with an account',
       longDesc:
         'Retrieve a list of all contacts that are associated with a specific account. This helps you see all the people from a particular company or organization.',
@@ -151,7 +151,7 @@ const FrontAppEn = {
     },
     add_contact_to_account: {
       groups: ['Accounts'],
-      displayName: 'Add Contact to Account',
+      displayName: 'Add contact to account',
       shortDesc: 'Add contacts to an account',
       longDesc:
         'Add one or more contacts to an account in Front. This creates an association between the contacts and the account, helping you organize contacts by company or organization.',
@@ -171,7 +171,7 @@ const FrontAppEn = {
     },
     remove_contact_from_account: {
       groups: ['Accounts'],
-      displayName: 'Remove Contact from Account',
+      displayName: 'Remove contact from account',
       shortDesc: 'Remove contacts from an account',
       longDesc:
         'Remove one or more contacts from an account in Front. This removes the association between the contacts and the account but does not delete the contacts themselves.',
@@ -191,18 +191,18 @@ const FrontAppEn = {
     // Contact actions
     list_contacts: {
       groups: ['Contacts'],
-      displayName: 'List Contacts',
+      displayName: 'List contacts',
       shortDesc: 'Retrieve a list of contacts',
       longDesc:
         'Retrieve a list of all contacts in your Front workspace. Contacts represent the people you communicate with. Results can be sorted by creation or update date.',
       options: {
         sortBy: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to sort results by: created_at or updated_at.',
         },
         sortOrder: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'Sort order direction',
           longDesc: 'The direction to sort results: desc (newest first) or asc (oldest first).',
         },
@@ -215,7 +215,7 @@ const FrontAppEn = {
     },
     get_contact: {
       groups: ['Contacts'],
-      displayName: 'Get Contact',
+      displayName: 'Get contact',
       shortDesc: 'Retrieve a single contact by ID',
       longDesc:
         'Retrieve the full details of a specific contact from Front by their ID. Returns all contact data including name, handles (email, phone, etc.), groups, links, and custom fields.',
@@ -230,7 +230,7 @@ const FrontAppEn = {
     },
     create_contact: {
       groups: ['Contacts'],
-      displayName: 'Create Contact',
+      displayName: 'Create contact',
       shortDesc: 'Create a new contact',
       longDesc:
         'Create a new contact in Front. Contacts represent the people you communicate with. A contact must have at least one handle (email, phone, etc.) to be created.',
@@ -278,13 +278,13 @@ const FrontAppEn = {
             'A list of URLs associated with this contact, such as social media profiles or company websites.',
         },
         groupNames: {
-          displayName: 'Group Names',
+          displayName: 'Group names',
           shortDesc: 'Groups to add the contact to',
           longDesc:
             'A list of group names to add the contact to. Groups help organize contacts into categories.',
         },
         customFields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc:
             'An object containing custom field values for the contact. The keys should match your configured custom field names.',
@@ -293,7 +293,7 @@ const FrontAppEn = {
     },
     update_contact: {
       groups: ['Contacts'],
-      displayName: 'Update Contact',
+      displayName: 'Update contact',
       shortDesc: 'Update an existing contact',
       longDesc:
         'Update the properties of an existing contact in Front. You can modify the name, description, links, or custom fields. At least one field must be provided to update.',
@@ -321,7 +321,7 @@ const FrontAppEn = {
             'A list of URLs associated with this contact, such as social media profiles or company websites.',
         },
         customFields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom field values',
           longDesc: 'Update custom field values for the contact.',
         },
@@ -329,7 +329,7 @@ const FrontAppEn = {
     },
     delete_contact: {
       groups: ['Contacts'],
-      displayName: 'Delete Contact',
+      displayName: 'Delete contact',
       shortDesc: 'Delete a contact',
       longDesc:
         'Delete a contact from Front. This action is permanent and will remove all associated data. Conversations with this contact will remain but will no longer be linked to the contact.',
@@ -343,7 +343,7 @@ const FrontAppEn = {
     },
     list_contact_conversations: {
       groups: ['Contacts'],
-      displayName: 'List Contact Conversations',
+      displayName: 'List contact conversations',
       shortDesc: 'List conversations for a contact',
       longDesc:
         'Retrieve a list of all conversations associated with a specific contact. Conversations are returned in reverse chronological order (newest first). This helps you see the full communication history with a contact.',
@@ -364,7 +364,7 @@ const FrontAppEn = {
     // Contact Notes actions
     list_contact_notes: {
       groups: ['Contacts', 'Notes'],
-      displayName: 'List Contact Notes',
+      displayName: 'List contact notes',
       shortDesc: 'List notes for a contact',
       longDesc:
         'Retrieve all notes that have been added to a specific contact. Notes are internal annotations visible only to your team, useful for documenting important information about contacts.',
@@ -383,7 +383,7 @@ const FrontAppEn = {
     },
     add_contact_note: {
       groups: ['Contacts', 'Notes'],
-      displayName: 'Add Note to Contact',
+      displayName: 'Add note to contact',
       shortDesc: 'Add a note to a contact',
       longDesc:
         'Add a new note to a contact in Front. Notes are internal annotations that are only visible to your team members. Use notes to document important information, context, or reminders about a contact.',
@@ -394,7 +394,7 @@ const FrontAppEn = {
           longDesc: 'Select or enter the ID of the contact you want to add a note to.',
         },
         body: {
-          displayName: 'Note Body',
+          displayName: 'Note body',
           shortDesc: 'The content of the note',
           longDesc:
             'The text content of the note. This will be visible to all team members who can access the contact.',
@@ -410,7 +410,7 @@ const FrontAppEn = {
     // Contact Lists actions
     list_contact_lists: {
       groups: ['Contact Lists'],
-      displayName: 'List Contact Lists',
+      displayName: 'List contact lists',
       shortDesc: 'Retrieve all contact lists',
       longDesc:
         'Retrieve a list of all contact lists in your Front workspace. Contact lists are used to organize contacts into groups for easier management, such as for marketing campaigns or customer segments.',
@@ -424,7 +424,7 @@ const FrontAppEn = {
     },
     create_contact_list: {
       groups: ['Contact Lists'],
-      displayName: 'Create Contact List',
+      displayName: 'Create contact list',
       shortDesc: 'Create a new contact list',
       longDesc:
         'Create a new contact list in Front. Contact lists help you organize contacts into logical groups. The list will be created in the oldest active workspace that your token has access to.',
@@ -445,13 +445,13 @@ const FrontAppEn = {
     },
     delete_contact_list: {
       groups: ['Contact Lists'],
-      displayName: 'Delete Contact List',
+      displayName: 'Delete contact list',
       shortDesc: 'Delete a contact list',
       longDesc:
         'Delete a contact list from Front. This removes the list but does not delete the contacts that were in it. The contacts will remain in your workspace.',
       options: {
         contactListId: {
-          displayName: 'Contact List',
+          displayName: 'Contact list',
           shortDesc: 'The contact list to delete',
           longDesc: 'Select or enter the ID of the contact list you want to delete.',
         },
@@ -459,13 +459,13 @@ const FrontAppEn = {
     },
     list_contacts_in_contact_list: {
       groups: ['Contact Lists'],
-      displayName: 'List Contacts in Contact List',
+      displayName: 'List contacts in contact list',
       shortDesc: 'List contacts in a specific contact list',
       longDesc:
         'Retrieve all contacts that belong to a specific contact list. This helps you see which contacts are included in a particular list or segment.',
       options: {
         contactListId: {
-          displayName: 'Contact List',
+          displayName: 'Contact list',
           shortDesc: 'The contact list to retrieve contacts from',
           longDesc: 'Select or enter the ID of the contact list whose contacts you want to see.',
         },
@@ -478,13 +478,13 @@ const FrontAppEn = {
     },
     add_contacts_to_contact_list: {
       groups: ['Contact Lists'],
-      displayName: 'Add Contacts to Contact List',
+      displayName: 'Add contacts to contact list',
       shortDesc: 'Add contacts to a contact list',
       longDesc:
         'Add one or more contacts to a contact list in Front. This helps you organize contacts into logical groups for easier management and targeted communication.',
       options: {
         contactListId: {
-          displayName: 'Contact List',
+          displayName: 'Contact list',
           shortDesc: 'The contact list to add contacts to',
           longDesc: 'Select or enter the ID of the contact list where you want to add contacts.',
         },
@@ -497,13 +497,13 @@ const FrontAppEn = {
     },
     remove_contacts_from_contact_list: {
       groups: ['Contact Lists'],
-      displayName: 'Remove Contacts from Contact List',
+      displayName: 'Remove contacts from contact list',
       shortDesc: 'Remove contacts from a contact list',
       longDesc:
         'Remove one or more contacts from a contact list in Front. This removes the contacts from the list but does not delete the contacts themselves.',
       options: {
         contactListId: {
-          displayName: 'Contact List',
+          displayName: 'Contact list',
           shortDesc: 'The contact list to remove contacts from',
           longDesc:
             'Select or enter the ID of the contact list from which you want to remove contacts.',
@@ -518,7 +518,7 @@ const FrontAppEn = {
     // Conversation actions
     list_conversations: {
       groups: ['Conversations'],
-      displayName: 'List Conversations',
+      displayName: 'List conversations',
       shortDesc: 'Retrieve a list of conversations',
       longDesc:
         'Retrieve a list of conversations in your Front workspace. Conversations are returned in reverse chronological order (most recently updated first). You can filter by inbox or status.',
@@ -544,7 +544,7 @@ const FrontAppEn = {
     },
     get_conversation: {
       groups: ['Conversations'],
-      displayName: 'Get Conversation',
+      displayName: 'Get conversation',
       shortDesc: 'Retrieve a single conversation by ID',
       longDesc:
         'Retrieve the full details of a specific conversation from Front by its ID. Returns all conversation data including subject, status, assignee, tags, and custom fields.',
@@ -559,13 +559,13 @@ const FrontAppEn = {
     },
     search_conversations: {
       groups: ['Conversations'],
-      displayName: 'Search Conversations',
+      displayName: 'Search conversations',
       shortDesc: 'Search for conversations',
       longDesc:
         'Search for conversations in Front using a search query. Returns matching conversations in descending order by last activity along with a count of total matches.',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'The search query',
           longDesc:
             'The search query to find conversations. You can search by keywords, email addresses, or use Front search syntax for advanced queries.',
@@ -579,7 +579,7 @@ const FrontAppEn = {
     },
     update_conversation: {
       groups: ['Conversations'],
-      displayName: 'Update Conversation',
+      displayName: 'Update conversation',
       shortDesc: 'Update a conversation',
       longDesc:
         'Update the properties of an existing conversation in Front. You can change the status, move to a different inbox, or update custom fields.',
@@ -601,7 +601,7 @@ const FrontAppEn = {
           longDesc: 'Move the conversation to a different inbox.',
         },
         customFields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom field values',
           longDesc: 'Update custom field values for the conversation.',
         },
@@ -609,7 +609,7 @@ const FrontAppEn = {
     },
     update_conversation_assignee: {
       groups: ['Conversations'],
-      displayName: 'Update Conversation Assignee',
+      displayName: 'Update conversation assignee',
       shortDesc: 'Assign or unassign a conversation',
       longDesc:
         'Assign a conversation to a teammate or unassign it. Assigning conversations helps route work to the right team members and track ownership.',
@@ -629,7 +629,7 @@ const FrontAppEn = {
     },
     add_conversation_tag: {
       groups: ['Conversations', 'Tags'],
-      displayName: 'Add Tag to Conversation',
+      displayName: 'Add tag to conversation',
       shortDesc: 'Add tags to a conversation',
       longDesc:
         'Add one or more tags to a conversation in Front. Tags help categorize and organize conversations for easier filtering and reporting.',
@@ -648,7 +648,7 @@ const FrontAppEn = {
     },
     remove_conversation_tag: {
       groups: ['Conversations', 'Tags'],
-      displayName: 'Remove Tag from Conversation',
+      displayName: 'Remove tag from conversation',
       shortDesc: 'Remove tags from a conversation',
       longDesc:
         'Remove one or more tags from a conversation in Front. This removes the tag association but does not delete the tags themselves.',
@@ -667,7 +667,7 @@ const FrontAppEn = {
     },
     add_conversation_followers: {
       groups: ['Conversations'],
-      displayName: 'Add Conversation Followers',
+      displayName: 'Add conversation followers',
       shortDesc: 'Add followers to a conversation',
       longDesc:
         'Add teammates as followers to a conversation. Followers receive notifications about conversation updates without being the assignee.',
@@ -687,7 +687,7 @@ const FrontAppEn = {
     // Message actions
     get_message: {
       groups: ['Messages'],
-      displayName: 'Get Message',
+      displayName: 'Get message',
       shortDesc: 'Retrieve a single message by ID',
       longDesc:
         'Retrieve the full details of a specific message from Front by its ID. Returns all message data including content, author, recipients, and attachments.',
@@ -702,7 +702,7 @@ const FrontAppEn = {
     },
     list_conversation_messages: {
       groups: ['Conversations', 'Messages'],
-      displayName: 'List Conversation Messages',
+      displayName: 'List conversation messages',
       shortDesc: 'List messages in a conversation',
       longDesc:
         'Retrieve a list of all messages in a specific conversation. Messages are returned in reverse chronological order (newest first). This provides the full message history of a conversation.',
@@ -721,7 +721,7 @@ const FrontAppEn = {
     },
     create_message_reply: {
       groups: ['Conversations', 'Messages'],
-      displayName: 'Reply to Conversation',
+      displayName: 'Reply to conversation',
       shortDesc: 'Send a reply message to a conversation',
       longDesc:
         'Reply to a conversation by sending a message. The message will be appended to the conversation and sent to the recipients. You can optionally save it as a draft instead of sending immediately.',
@@ -732,7 +732,7 @@ const FrontAppEn = {
           longDesc: 'Select or enter the ID of the conversation you want to reply to.',
         },
         body: {
-          displayName: 'Message Body',
+          displayName: 'Message body',
           shortDesc: 'The content of the reply',
           longDesc:
             'The HTML content of the reply message. This is the main body text that will be sent to recipients.',
@@ -760,7 +760,7 @@ const FrontAppEn = {
           longDesc: 'A list of email addresses to BCC on the reply.',
         },
         isDraft: {
-          displayName: 'Save as Draft',
+          displayName: 'Save as draft',
           shortDesc: 'Save as draft instead of sending',
           longDesc:
             'If true, the message will be saved as a draft instead of being sent immediately. Default is false.',
@@ -770,7 +770,7 @@ const FrontAppEn = {
     // Comment actions
     add_conversation_comment: {
       groups: ['Conversations', 'Comments'],
-      displayName: 'Add Comment to Conversation',
+      displayName: 'Add comment to conversation',
       shortDesc: 'Add an internal comment to a conversation',
       longDesc:
         'Add an internal comment to a conversation in Front. Comments are private messages visible only to your teammates and are never sent to external contacts. Use comments for internal notes, discussions, or context sharing.',
@@ -781,7 +781,7 @@ const FrontAppEn = {
           longDesc: 'Select or enter the ID of the conversation you want to add a comment to.',
         },
         body: {
-          displayName: 'Comment Body',
+          displayName: 'Comment body',
           shortDesc: 'The content of the comment',
           longDesc:
             'The text content of the internal comment. This will be visible to all teammates who can access the conversation.',
@@ -790,7 +790,7 @@ const FrontAppEn = {
     },
     list_conversation_comments: {
       groups: ['Conversations', 'Comments'],
-      displayName: 'List Conversation Comments',
+      displayName: 'List conversation comments',
       shortDesc: 'List comments in a conversation',
       longDesc:
         'Retrieve a list of all internal comments in a specific conversation. Comments are returned in reverse chronological order (newest first). This provides the full internal discussion history of a conversation.',
@@ -811,7 +811,7 @@ const FrontAppEn = {
   triggers: {
     new_conversation: {
       groups: ['Conversations'],
-      displayName: 'New Conversation',
+      displayName: 'New conversation',
       shortDesc: 'Triggers when a new conversation is created',
       longDesc:
         'This trigger fires whenever a new conversation is created in Front. You can optionally filter by inbox or status to only trigger for specific types of conversations.',
@@ -832,7 +832,7 @@ const FrontAppEn = {
     },
     new_contact: {
       groups: ['Contacts'],
-      displayName: 'New Contact',
+      displayName: 'New contact',
       shortDesc: 'Triggers when a new contact is created',
       longDesc:
         'This trigger fires whenever a new contact is created in Front. Use this to automate workflows when new contacts are added to your workspace.',
@@ -840,7 +840,7 @@ const FrontAppEn = {
     },
     new_contact_note: {
       groups: ['Contacts', 'Notes'],
-      displayName: 'New Contact Note',
+      displayName: 'New contact note',
       shortDesc: 'Triggers when a new note is added to a contact',
       longDesc:
         'This trigger fires whenever a new note is added to a specific contact in Front. You must specify which contact to monitor for new notes.',
@@ -855,7 +855,7 @@ const FrontAppEn = {
     },
     new_comment: {
       groups: ['Conversations', 'Comments'],
-      displayName: 'New Comment',
+      displayName: 'New comment',
       shortDesc: 'Triggers when a new comment is added to a conversation',
       longDesc:
         'This trigger fires whenever a new internal comment is added to a specific conversation in Front. Comments are private messages visible only to teammates. You must specify which conversation to monitor for new comments.',

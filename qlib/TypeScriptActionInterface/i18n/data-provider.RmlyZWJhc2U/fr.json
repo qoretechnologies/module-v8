@@ -28,7 +28,7 @@
           "message": "Passez un appel d'API HTTP / REST personnalisé à **Firebase** à l'aide de l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'accès URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous la forme d'une table de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions natives sur cette application."
         },
         "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Lister les utilisateurs"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Sélectionnez le projet Firebase depuis lequel vous souhaitez récupérer les utilisateurs. Le projet doit avoir Firebase Authentication activé."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Résultats max"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Spécifiez le nombre maximal d'utilisateurs à récupérer en une seule requête. La valeur par défaut est 100 si elle n'est pas spécifiée. Utilisez la pagination pour les jeux de données plus volumineux."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Jeton de page suivante"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Fournissez le jeton de pagination d'une réponse précédente pour récupérer le groupe d'utilisateurs suivant. Laissez vide pour la première page."
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
+          "source": "Get user",
           "message": "Obtenir l'utilisateur"
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Spécifiez l'ID utilisateur Firebase (localId) de l'utilisateur dont vous souhaitez récupérer les détails. Il s'agit de l'identifiant unique attribué par Firebase Authentication."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.display_name": {
-          "source": "Send Push Notification",
+          "source": "Send push notification",
           "message": "Envoyer une notification push"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Sélectionnez le projet Firebase qui enverra la notification push. Le projet doit avoir Firebase Cloud Messaging configuré."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.display_name": {
-          "source": "Token or Topic",
+          "source": "Token or topic",
           "message": "Jeton ou thème"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Normal"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
+          "source": "Upload file",
           "message": "Téléverser un fichier"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Sélectionnez le projet Firebase dans lequel le fichier sera stocké. Le projet doit avoir Firebase Cloud Storage activé."
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Chemin du fichier"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Métadonnées personnalisées facultatives à associer au fichier téléversé. Fournissez-les sous forme de paires clé-valeur pouvant être récupérées ultérieurement avec les informations du fichier."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.display_name": {
-          "source": "Get File Metadata",
+          "source": "Get file metadata",
           "message": "Obtenir les métadonnées du fichier"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Sélectionnez le bucket Cloud Storage où se trouve le fichier. Le bucket doit exister dans le projet Firebase sélectionné."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Chemin du fichier"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.short_desc": {
@@ -768,7 +768,7 @@
           "message": "Spécifiez le chemin complet vers le fichier dans le bucket, y compris le nom du fichier et toute la structure de répertoires."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.display_name": {
-          "source": "List Files in Bucket",
+          "source": "List files in bucket",
           "message": "Lister les fichiers dans le bucket"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Filtre les résultats pour inclure uniquement les fichiers dont le chemin commence par ce préfixe. Utile pour lister les fichiers d'un répertoire spécifique ou correspondant à un modèle de nommage particulier."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Résultats max"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Spécifiez le nombre maximal de fichiers à récupérer en une seule requête. La valeur par défaut est 100 si elle n'est pas spécifiée. Utilisez la pagination pour les jeux de résultats plus volumineux."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Jeton de page"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Fournissez le jeton de pagination d'une réponse précédente pour récupérer le groupe de fichiers suivant. Laissez vide pour la première page."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Buckets",
+          "source": "List buckets",
           "message": "Lister les buckets"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Sélectionnez le projet Firebase dont vous souhaitez lister les buckets de stockage. Le projet doit avoir Firebase Cloud Storage activé."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.display_name": {
-          "source": "Delete File",
+          "source": "Delete file",
           "message": "Supprimer le fichier"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Sélectionnez le bucket Cloud Storage où se trouve le fichier à supprimer. Le bucket doit exister dans le projet Firebase sélectionné."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Chemin du fichier"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Spécifiez le chemin complet vers le fichier dans le bucket qui doit être supprimé, y compris le nom du fichier et toute la structure de répertoires. Cette opération est définitive et ne peut pas être annulée."
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "Nouvel utilisateur"
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata a **SeaTable** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello in questa app."
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Cerca record"
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Il nome della tabella"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.display_name": {
-          "source": "Run SQL Query",
+          "source": "Run SQL query",
           "message": "Esegui query SQL"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Esegue una query SQL sulla tua base SeaTable e restituisce i risultati. Supporta le istruzioni SELECT, INSERT, UPDATE e DELETE. È possibile restituire un massimo di 10.000 righe per le query SELECT."
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.display_name": {
-          "source": "SQL Query",
+          "source": "SQL query",
           "message": "Query SQL"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Inserisci la tua query SQL. Usa i backtick per i nomi di colonna contenenti caratteri speciali (ad es. `My Column`). Esempio: SELECT * FROM `Table1` WHERE `Status` = 'Active' LIMIT 100"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "Nuova riga"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.short_desc": {

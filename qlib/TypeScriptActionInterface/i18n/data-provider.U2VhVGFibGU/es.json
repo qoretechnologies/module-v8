@@ -28,7 +28,7 @@
           "message": "Realice una llamada HTTP / REST API personalizada a **SeaTable** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), los parámetros de consulta opcionales, los encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para los endpoints que aún no están expuestos como acciones de primer nivel en esta aplicación."
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Método HTTP"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Buscar registros"
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "El nombre de la tabla"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.display_name": {
-          "source": "Run SQL Query",
+          "source": "Run SQL query",
           "message": "Ejecutar consulta SQL"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Ejecuta una consulta SQL en su base de SeaTable y devuelve los resultados. Admite sentencias SELECT, INSERT, UPDATE y DELETE. Se puede devolver un máximo de 10 000 filas para las consultas SELECT."
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.display_name": {
-          "source": "SQL Query",
+          "source": "SQL query",
           "message": "Consulta SQL"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Ingrese su consulta SQL. Utilice comillas invertidas alrededor de los nombres de columnas con caracteres especiales (p. ej., `My Column`). Ejemplo: SELECT * FROM `Table1` WHERE `Status` = 'Active' LIMIT 100"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "Nueva fila"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.short_desc": {

@@ -24,7 +24,7 @@ export const TWILIO_CONN_OPTIONS = {
     type: 'string',
   },
   password: {
-    display_name: 'Auth Token',
+    display_name: 'Auth token',
     short_desc: 'Found directly below your Account SID.',
     desc: 'Log into your Twilio account and find "API Credentials" on this page https://www.twilio.com/console',
     type: 'string',

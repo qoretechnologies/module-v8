@@ -36,7 +36,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
   actions: {
     // Entry actions
     get_entry: {
-      displayName: 'Get an Entry',
+      displayName: 'Get an entry',
       shortDesc: 'Returns attributes of a specific entry',
       longDesc:
         'Retrieves a single entry by its ID from the specified space and environment. Returns all entry fields with their values in the default locale.',
@@ -54,7 +54,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type of the entry',
           longDesc: 'Select the content type to filter entries by type.',
         },
@@ -66,7 +66,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     get_entry_with_replacement: {
-      displayName: 'Get an Entry with Replacement',
+      displayName: 'Get an entry with replacement',
       shortDesc: 'Replaces text fields with new values using specific tags; returns new values as output',
       longDesc:
         'Retrieves an entry and performs text replacements on all string fields. For each replacement pair, all occurrences of the tag are replaced with the specified value. Useful for template-based content.',
@@ -84,7 +84,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type of the entry',
           longDesc: 'Select the content type to filter entries by type.',
         },
@@ -118,7 +118,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     create_entry: {
-      displayName: 'Create an Entry',
+      displayName: 'Create an entry',
       shortDesc: 'Creates a new entry',
       longDesc:
         'Creates a new entry of the specified content type in the given space and environment. Optionally publishes the entry immediately after creation.',
@@ -136,7 +136,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type for the new entry',
           longDesc: 'Select the content type that defines the schema for the new entry.',
         },
@@ -155,7 +155,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     update_entry: {
-      displayName: 'Update an Entry',
+      displayName: 'Update an entry',
       shortDesc: 'Updates a specific entry by its ID',
       longDesc:
         'Updates an existing entry with new field values. Only the specified fields are updated; other fields remain unchanged.',
@@ -173,7 +173,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type of the entry',
           longDesc: 'Select the content type to filter entries by type.',
         },
@@ -191,7 +191,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     delete_entry: {
-      displayName: 'Delete an Entry',
+      displayName: 'Delete an entry',
       shortDesc: 'Permanently removes a specific entry',
       longDesc:
         'Permanently deletes an entry from the space. If the entry is published, it will be unpublished first. This action is irreversible.',
@@ -209,7 +209,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type of the entry',
           longDesc: 'Select the content type to filter entries by type.',
         },
@@ -221,7 +221,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     publish_entry: {
-      displayName: 'Publish an Entry',
+      displayName: 'Publish an entry',
       shortDesc: 'Changes entry status to "published"',
       longDesc:
         'Publishes a draft entry, making it available through the Content Delivery API.',
@@ -239,7 +239,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to filter entries',
           longDesc: 'Select the content type to filter the entry dropdown.',
         },
@@ -251,7 +251,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     unpublish_entry: {
-      displayName: 'Unpublish an Entry',
+      displayName: 'Unpublish an entry',
       shortDesc: 'Puts an entry back into "draft" state',
       longDesc:
         'Unpublishes an entry, removing it from the Content Delivery API and reverting it to draft state.',
@@ -269,7 +269,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to filter entries',
           longDesc: 'Select the content type to filter the entry dropdown.',
         },
@@ -281,7 +281,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     archive_entry: {
-      displayName: 'Archive/Unarchive an Entry',
+      displayName: 'Archive/unarchive an entry',
       shortDesc: 'Archives/Unarchives an unpublished entry',
       longDesc:
         'Archives or unarchives an entry. The entry must be unpublished before it can be archived. Archived entries are hidden from the default entry list.',
@@ -299,7 +299,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to filter entries',
           longDesc: 'Select the content type to filter the entry dropdown.',
         },
@@ -317,7 +317,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     search_entries: {
-      displayName: 'Search Entries',
+      displayName: 'Search entries',
       shortDesc: 'Searches for entries',
       longDesc:
         'Searches for entries of a specific content type with optional full-text search. Returns a paginated list of entries.',
@@ -335,12 +335,12 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to search',
           longDesc: 'Select the content type to filter results by.',
         },
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Full-text search query',
           longDesc: 'Optional text to search across all text fields of the entries.',
         },
@@ -359,7 +359,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
 
     // Asset actions
     get_asset: {
-      displayName: 'Get an Asset',
+      displayName: 'Get an asset',
       shortDesc: 'Returns attributes of a specific asset',
       longDesc:
         'Retrieves a single asset by its ID, returning metadata including title, description, file URL, MIME type, and size.',
@@ -384,7 +384,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     create_asset: {
-      displayName: 'Create an Asset',
+      displayName: 'Create an asset',
       shortDesc: 'Creates a new asset',
       longDesc:
         'Creates a new asset from a URL. The asset will be processed (downloaded and stored) automatically. Optionally publishes the asset after creation.',
@@ -412,7 +412,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
           longDesc: 'An optional description for the asset.',
         },
         file_name: {
-          displayName: 'File Name',
+          displayName: 'File name',
           shortDesc: 'The file name for the asset',
           longDesc: 'The file name including extension (e.g., "photo.jpg").',
         },
@@ -422,7 +422,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
           longDesc: 'The publicly accessible URL from which Contentful will download the file.',
         },
         content_type: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The MIME type of the file',
           longDesc: 'The MIME type of the file (e.g., "image/jpeg", "application/pdf").',
         },
@@ -435,7 +435,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     update_asset: {
-      displayName: 'Update an Asset',
+      displayName: 'Update an asset',
       shortDesc: 'Updates an asset by its ID',
       longDesc: 'Updates the title and/or description of an existing asset.',
       groups: ['Assets'],
@@ -469,7 +469,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     delete_asset: {
-      displayName: 'Delete an Asset',
+      displayName: 'Delete an asset',
       shortDesc: 'Permanently removes an unpublished asset',
       longDesc:
         'Permanently deletes an asset. If the asset is published, it will be unpublished first. This action is irreversible.',
@@ -494,7 +494,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     publish_asset: {
-      displayName: 'Publish an Asset',
+      displayName: 'Publish an asset',
       shortDesc: 'Changes asset status to "published"',
       longDesc: 'Publishes a draft asset, making it available through the Content Delivery API.',
       groups: ['Assets'],
@@ -518,7 +518,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     unpublish_asset: {
-      displayName: 'Unpublish an Asset',
+      displayName: 'Unpublish an asset',
       shortDesc: 'Puts an asset back into "draft" state',
       longDesc:
         'Unpublishes an asset, removing it from the Content Delivery API and reverting it to draft state.',
@@ -543,7 +543,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     archive_asset: {
-      displayName: 'Archive/Unarchive an Asset',
+      displayName: 'Archive/unarchive an asset',
       shortDesc: 'Archives/Unarchives an unpublished asset',
       longDesc:
         'Archives or unarchives an asset. The asset must be unpublished before it can be archived.',
@@ -574,7 +574,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     search_assets: {
-      displayName: 'Search Assets',
+      displayName: 'Search assets',
       shortDesc: 'Searches for assets',
       longDesc:
         'Searches for assets with optional full-text search and MIME type filtering. Returns a paginated list of assets.',
@@ -592,12 +592,12 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Full-text search query',
           longDesc: 'Optional text to search across asset titles and descriptions.',
         },
         mime_type_group: {
-          displayName: 'MIME Type Group',
+          displayName: 'MIME type group',
           shortDesc: 'Filter by file type group',
           longDesc:
             'Optionally filter assets by MIME type group (e.g., image, video, audio, pdfdocument).',
@@ -617,7 +617,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
 
     // Content Type actions
     get_content_type: {
-      displayName: 'Get a Content Type',
+      displayName: 'Get a content type',
       shortDesc: 'Returns attributes of a specific content type',
       longDesc:
         'Retrieves a content type by its ID, including its name, description, and field definitions.',
@@ -635,14 +635,14 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to retrieve',
           longDesc: 'Select the content type to retrieve details for.',
         },
       },
     },
     create_content_type: {
-      displayName: 'Create a Content Type',
+      displayName: 'Create a content type',
       shortDesc: 'Creates a new content type',
       longDesc:
         'Creates a new content type with the specified name, description, and field definitions. The content type will be created in draft state.',
@@ -683,12 +683,12 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
                   longDesc: 'A unique ID for the field (e.g., "heroImage", "publishDate"). Must be unique within the content type.',
                 },
                 name: {
-                  displayName: 'Field Name',
+                  displayName: 'Field name',
                   shortDesc: 'Display name for the field',
                   longDesc: 'A human-readable name for the field (e.g., "Hero Image", "Publish Date").',
                 },
                 type: {
-                  displayName: 'Field Type',
+                  displayName: 'Field type',
                   shortDesc: 'Data type (Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location)',
                   longDesc: 'The data type for the field. Supported types: Symbol (short text), Text (long text), Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location.',
                 },
@@ -709,7 +709,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     update_content_type: {
-      displayName: 'Update a Content Type',
+      displayName: 'Update a content type',
       shortDesc: 'Updates a specific content type by its ID',
       longDesc: 'Updates the name and/or description of an existing content type.',
       groups: ['Content Types'],
@@ -726,7 +726,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to update',
           longDesc: 'Select the content type to update.',
         },
@@ -743,7 +743,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     delete_content_type: {
-      displayName: 'Delete a Content Type',
+      displayName: 'Delete a content type',
       shortDesc: 'Permanently removes a deactivated content type',
       longDesc:
         'Permanently deletes a content type. The content type must be deactivated (unpublished) first. This action is irreversible.',
@@ -761,14 +761,14 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to delete',
           longDesc: 'Select the content type to permanently remove.',
         },
       },
     },
     activate_content_type: {
-      displayName: 'Activate a Content Type',
+      displayName: 'Activate a content type',
       shortDesc: 'Activates a content type by its ID',
       longDesc:
         'Publishes (activates) a content type, making it available for creating entries.',
@@ -786,14 +786,14 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to activate',
           longDesc: 'Select the content type to activate (publish).',
         },
       },
     },
     deactivate_content_type: {
-      displayName: 'Deactivate a Content Type',
+      displayName: 'Deactivate a content type',
       shortDesc: 'Changes a content type status to "draft"',
       longDesc:
         'Unpublishes (deactivates) a content type, reverting it to draft state. No new entries can be created for a deactivated content type.',
@@ -811,14 +811,14 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to deactivate',
           longDesc: 'Select the content type to deactivate (unpublish).',
         },
       },
     },
     add_field_to_content_type: {
-      displayName: 'Add a Field to a Content Type',
+      displayName: 'Add a field to a content type',
       shortDesc: 'Adds a new field to a specific content type',
       longDesc:
         'Adds a new field definition to an existing content type. The content type will need to be re-activated after adding the field.',
@@ -836,7 +836,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type to add the field to',
           longDesc: 'Select the content type to modify.',
         },
@@ -847,12 +847,12 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'A unique ID for the field (e.g., "heroImage", "publishDate"). Must be unique within the content type.',
         },
         field_name: {
-          displayName: 'Field Name',
+          displayName: 'Field name',
           shortDesc: 'Display name for the new field',
           longDesc: 'A human-readable name for the field (e.g., "Hero Image", "Publish Date").',
         },
         field_type: {
-          displayName: 'Field Type',
+          displayName: 'Field type',
           shortDesc: 'The data type for the field',
           longDesc:
             'Select the data type: Symbol (short text), Text (long text), Integer, Number, Date, Boolean, RichText, Link, Array, Object, or Location.',
@@ -870,7 +870,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     update_field_of_content_type: {
-      displayName: 'Update a Field of a Content Type',
+      displayName: 'Update a field of a content type',
       shortDesc: 'Updates a field inside a specific content type',
       longDesc: 'Updates the properties of an existing field in a content type.',
       groups: ['Content Types'],
@@ -887,7 +887,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type containing the field',
           longDesc: 'Select the content type to modify.',
         },
@@ -897,7 +897,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
           longDesc: 'Select the field to update.',
         },
         field_name: {
-          displayName: 'Field Name',
+          displayName: 'Field name',
           shortDesc: 'New display name for the field',
           longDesc: 'The updated display name for the field.',
         },
@@ -914,7 +914,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     delete_field_from_content_type: {
-      displayName: 'Delete a Field from a Content Type',
+      displayName: 'Delete a field from a content type',
       shortDesc: 'Removes a field from a specific content type',
       longDesc:
         'Removes a field from a content type. The field is first marked as omitted, then removed entirely. Existing entry data for this field will be lost.',
@@ -932,7 +932,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         content_type_id: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'The content type containing the field',
           longDesc: 'Select the content type to modify.',
         },
@@ -944,7 +944,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
       },
     },
     search_content_types: {
-      displayName: 'Search Content Types',
+      displayName: 'Search content types',
       shortDesc: 'Searches for content types',
       longDesc:
         'Searches for content types with optional text filtering. Returns a paginated list of content types with their field definitions.',
@@ -962,7 +962,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Text search query',
           longDesc: 'Optional text to search across content type names and descriptions.',
         },
@@ -981,7 +981,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
   },
   triggers: {
     watch_event: {
-      displayName: 'Watch an Event',
+      displayName: 'Watch an event',
       shortDesc: 'Triggers when a new event occurs',
       longDesc:
         'Creates a webhook in Contentful that triggers when selected events occur. Supports entry, asset, and content type events such as creation, updates, publishing, and deletion.',
@@ -999,7 +999,7 @@ The CMA token inherits the permissions of the user who created it. Ensure the us
             'Select the environment within the space. Defaults to "master" if not specified.',
         },
         event_types: {
-          displayName: 'Event Types',
+          displayName: 'Event types',
           shortDesc: 'The types of events to watch for',
           longDesc:
             'Select one or more event types to trigger on. Events include entry, asset, and content type lifecycle events.',

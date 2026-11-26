@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **OpenRouter** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.T3BlblJvdXRlcg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.T3BlblJvdXRlcg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.T3BlblJvdXRlcg.action.bGlzdF9tb2RlbHM.display_name": {
-          "source": "List Models",
-          "message": "List Models"
+          "source": "List models",
+          "message": "List models"
         },
         "app.T3BlblJvdXRlcg.action.bGlzdF9tb2RlbHM.short_desc": {
           "source": "List models",
@@ -352,8 +352,8 @@
           "message": "List models"
         },
         "app.T3BlblJvdXRlcg.action.c2VuZF9wcm9tcHQ.display_name": {
-          "source": "Send Prompt",
-          "message": "Send Prompt"
+          "source": "Send prompt",
+          "message": "Send prompt"
         },
         "app.T3BlblJvdXRlcg.action.c2VuZF9wcm9tcHQ.short_desc": {
           "source": "Send prompt",
@@ -364,8 +364,8 @@
           "message": "Send prompt"
         },
         "app.T3BlblJvdXRlcg.action.Y2hhdF9jb21wbGV0aW9u.display_name": {
-          "source": "Chat Completion",
-          "message": "Chat Completion"
+          "source": "Chat completion",
+          "message": "Chat completion"
         },
         "app.T3BlblJvdXRlcg.action.Y2hhdF9jb21wbGV0aW9u.short_desc": {
           "source": "Chat completion",

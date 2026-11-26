@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**Webflow**へのカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.display_name": {
-          "source": "Delete Item",
+          "source": "Delete item",
           "message": "アイテムの削除"
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.short_desc": {
@@ -388,7 +388,7 @@
           "message": "コレクションを絞り込むWebflowサイトを選択（オプション）"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
+          "source": "Get collection",
           "message": "コレクションを取得"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
@@ -424,7 +424,7 @@
           "message": "情報を取得する特定のWebflowコレクションを選択"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.display_name": {
-          "source": "Get Item",
+          "source": "Get item",
           "message": "アイテムの取得"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.short_desc": {
@@ -472,7 +472,7 @@
           "message": "コレクションを絞り込むWebflowサイトを選択（オプション）"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "CMSロケールID"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "マルチロケールサイトを使用している場合はCMSロケールIDを指定"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
+          "source": "Get order",
           "message": "注文を取得"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.short_desc": {
@@ -520,7 +520,7 @@
           "message": "情報を取得する特定の注文を選択"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.display_name": {
-          "source": "Get Site",
+          "source": "Get site",
           "message": "サイトの取得"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "情報を取得したい特定のWebflowサイトを選択してください"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "コレクションの一覧表示"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "コレクション一覧を取得するWebflowサイトを選択してください"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.display_name": {
-          "source": "List Custom Domains",
+          "source": "List custom domains",
           "message": "カスタムドメインの一覧取得"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "カスタムドメイン一覧を取得するWebflowサイトを選択してください"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.display_name": {
-          "source": "List Items",
+          "source": "List items",
           "message": "品目一覧"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "アイテム一覧を取得するWebflowコレクションを選択してください"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "CMSロケールID"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -688,7 +688,7 @@
           "message": "スラッグフィールドでアイテムをフィルタリングします"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.display_name": {
-          "source": "Last Published",
+          "source": "Last published",
           "message": "最終公開日時"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "最終公開日の範囲でアイテムをフィルタリングします"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.display_name": {
-          "source": "Greater Than or Equal To",
+          "source": "Greater than or equal to",
           "message": "以上"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.short_desc": {
@@ -712,7 +712,7 @@
           "message": "この日付以降またはその日に公開されたアイテムを含む"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.display_name": {
-          "source": "Less Than or Equal To",
+          "source": "Less than or equal to",
           "message": "以下（または等しい）"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.short_desc": {
@@ -724,7 +724,7 @@
           "message": "この日付以前またはその日に公開されたアイテムを含む"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.short_desc": {
@@ -748,7 +748,7 @@
           "message": "スラッグ"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.short_desc": {
@@ -768,7 +768,7 @@
           "message": "降順"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.display_name": {
-          "source": "List Orders",
+          "source": "List orders",
           "message": "注文の一覧取得"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.short_desc": {
@@ -852,7 +852,7 @@
           "message": "1ページあたりに返す注文の最大数（デフォルト: 20）"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.display_name": {
-          "source": "List Sites",
+          "source": "List sites",
           "message": "サイトの一覧取得"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.short_desc": {
@@ -864,7 +864,7 @@
           "message": "現在の認証トークンでアクセス可能なすべてのWebflowサイトの一覧を取得します。"
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.display_name": {
-          "source": "Mark Order Status",
+          "source": "Mark order status",
           "message": "注文ステータスの変更"
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.short_desc": {
@@ -924,7 +924,7 @@
           "message": "返金済み"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.display_name": {
-          "source": "Publish Site",
+          "source": "Publish site",
           "message": "サイトを公開"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.short_desc": {
@@ -948,7 +948,7 @@
           "message": "公開するWebflowサイトを選択してください"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.display_name": {
-          "source": "Custom Domains",
+          "source": "Custom domains",
           "message": "カスタムドメイン"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.short_desc": {
@@ -960,7 +960,7 @@
           "message": "サイトを公開するカスタムドメインを指定します（オプション）"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.display_name": {
-          "source": "Publish to Webflow Subdomain",
+          "source": "Publish to Webflow subdomain",
           "message": "Webflowサブドメインに公開"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Webflowサブドメインにサイトを公開するかどうか"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.display_name": {
-          "source": "Publish Item",
+          "source": "Publish item",
           "message": "アイテムを公開"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "コレクションを絞り込むWebflowサイトを選択（オプション）"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.display_name": {
-          "source": "Create Item",
+          "source": "Create item",
           "message": "品目の作成"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "新しいアイテムを作成するWebflowコレクションを選択"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "アーカイブ済み"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "作成時にアイテムをアーカイブする場合はtrueに設定"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "下書き"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "アイテムを下書きとして保存する場合はtrueに設定（デフォルト: true）"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "CMSロケールID"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "マルチロケールサイトを使用している場合はCMSロケールIDを指定"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.display_name": {
-          "source": "Update Item",
+          "source": "Update item",
           "message": "アイテムを更新"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "更新する特定のアイテムを選択してください"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "アーカイブ済み"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "アイテムをアーカイブする場合はtrue、アーカイブを解除する場合はfalseに設定します"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "下書き"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "アイテムを下書きとして保存する場合はtrue、公開する場合はfalseに設定します"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "CMSロケールID"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "マルチロケールサイトを使用している場合はCMSロケールIDを指定"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.display_name": {
-          "source": "New Item",
+          "source": "New item",
           "message": "新規アイテム"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "新規アイテム作成イベントを監視するWebflowサイトを選択してください"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.display_name": {
-          "source": "Updated Item",
+          "source": "Updated item",
           "message": "更新されたアイテム"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "アイテム更新イベントを監視するWebflowサイトを選択してください"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.display_name": {
-          "source": "New Order",
+          "source": "New order",
           "message": "新規注文"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "新規注文イベントを監視するWebflowサイトを選択してください"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.display_name": {
-          "source": "Updated Order",
+          "source": "Updated order",
           "message": "更新された注文"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.short_desc": {

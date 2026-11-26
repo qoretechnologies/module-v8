@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**Google Sheets** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（コネクションの API ベース URL 相対）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "レコードの検索"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "テーブル名"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Add Rows to Spreadsheet",
+          "source": "Add rows to spreadsheet",
           "message": "スプレッドシートに行を追加"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -496,7 +496,7 @@
           "message": "行が追加されるスプレッドシート内の特定のワークシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
-          "source": "Insert at Start",
+          "source": "Insert at start",
           "message": "先頭に挿入"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
@@ -508,7 +508,7 @@
           "message": "選択した場合、新しい行はテーブルの先頭に挿入されます。選択しない場合、行はテーブルの末尾に追加されます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
-          "source": "Clear Spreadsheet Row(s)",
+          "source": "Clear spreadsheet row(s)",
           "message": "スプレッドシートの行をクリア"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "行がクリアされるスプレッドシート内の特定のシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
-          "source": "Rows to Clear",
+          "source": "Rows to clear",
           "message": "クリアする行"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "クリアする行インデックスのリスト（スプレッドシートに表示される通りの 1 から始まる番号）"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
-          "source": "Copy Worksheet",
+          "source": "Copy worksheet",
           "message": "ワークシートをコピー"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "コピー元のスプレッドシートからコピー先のスプレッドシートにワークシートのコピーを作成します（オプションのカスタマイズ機能付き）"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "コピー元スプレッドシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -580,7 +580,7 @@
           "message": "コピーするワークシートが含まれている Google スプレッドシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
-          "source": "Source Worksheet",
+          "source": "Source worksheet",
           "message": "コピー元ワークシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
@@ -592,7 +592,7 @@
           "message": "コピーされるコピー元スプレッドシート内の特定のワークシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
-          "source": "Destination Spreadsheet",
+          "source": "Destination spreadsheet",
           "message": "コピー先スプレッドシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
@@ -604,7 +604,7 @@
           "message": "ワークシートのコピー先となる Google スプレッドシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
-          "source": "New Worksheet Name",
+          "source": "New worksheet name",
           "message": "新しいワークシート名"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
@@ -616,7 +616,7 @@
           "message": "コピーしたワークシートのカスタム名を指定します。指定しない場合、元の名前に \"Copy of\" プレフィックスが付けられます"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "挿入位置"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -628,7 +628,7 @@
           "message": "新しいワークシートを挿入する 0 から始まるインデックス。指定しない場合、ワークシートはスプレッドシートの末尾に追加されます"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
-          "source": "Create Spreadsheet",
+          "source": "Create spreadsheet",
           "message": "スプレッドシートを作成"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
@@ -640,7 +640,7 @@
           "message": "新しい Google スプレッドシートを作成します。カスタムヘッダーを使用してゼロから作成するか、既存のスプレッドシートをコピーできます。ヘッダーを指定すると、太字で枠線付きにフォーマットされ、ヘッダー行が固定されます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
-          "source": "Spreadsheet Title",
+          "source": "Spreadsheet title",
           "message": "スプレッドシートのタイトル"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "新規作成される Google スプレッドシートに付与される名前。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "コピー元スプレッドシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "オプション。新しいスプレッドシートの 1 行目に追加する列ヘッダーのリスト。ヘッダーは太字で枠線付きにフォーマットされ、ヘッダー行が固定されます。コピー元スプレッドシートが指定されている場合、このオプションは無視されます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
-          "source": "Create Worksheet",
+          "source": "Create worksheet",
           "message": "ワークシートを作成"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "新しいワークシートを作成する Google スプレッドシートの ID。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
-          "source": "Worksheet Title",
+          "source": "Worksheet title",
           "message": "ワークシートのタイトル"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "新しいワークシートのタブに表示される名前。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
-          "source": "Overwrite Existing",
+          "source": "Overwrite existing",
           "message": "既存のものを上書き"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
@@ -736,7 +736,7 @@
           "message": "新しいワークシートの 1 行目に追加され、太字にフォーマットされる列ヘッダーのリスト。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Sheet Position",
+          "source": "Sheet position",
           "message": "シートの位置"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -748,7 +748,7 @@
           "message": "スプレッドシート内で新しいワークシートを挿入する位置（0 から始まるインデックス）。指定しない場合、ワークシートは末尾に追加されます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
-          "source": "Delete Row",
+          "source": "Delete row",
           "message": "行を削除"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "削除する行が含まれるスプレッドシート内のワークシート (タブ) の ID。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
-          "source": "Row Index",
+          "source": "Row index",
           "message": "行インデックス"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
@@ -796,7 +796,7 @@
           "message": "削除する行の位置（0 ではなく 1 から始まります）。これは Google スプレッドシート UI に表示される行番号と一致します。たとえば、最初の行を削除するには 1 を使用します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
-          "source": "Find Spreadsheet Rows",
+          "source": "Find spreadsheet rows",
           "message": "スプレッドシートの行を検索"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
@@ -856,7 +856,7 @@
           "message": "結果を返す前にスキップする一致行の数。ページネーションに使用されます。デフォルトは 0 です。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
-          "source": "Search From Last Row",
+          "source": "Search from last row",
           "message": "最後の行から検索"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
@@ -868,7 +868,7 @@
           "message": "有効にすると、シートの上から下ではなく下から上に向かって検索します。新しいデータが最下部に追加されるシートで、最新のエントリを検索する際に便利です。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
-          "source": "Maximum Rows to Search",
+          "source": "Maximum rows to search",
           "message": "検索する最大行数"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
@@ -880,7 +880,7 @@
           "message": "大規模なシートでのパフォーマンスを制御するため、検索する総行数を制限します。デフォルトは 5000 です。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
-          "source": "Header Row",
+          "source": "Header row",
           "message": "ヘッダー行"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
@@ -892,7 +892,7 @@
           "message": "列ヘッダーがある行の番号です。表の上にタイトルやメモがあるシートで使用します。ヘッダーはこの行から読み取られ、行はこの行より下でのみ読み取りと検索が行われます。結果の `row_index` は引き続きシート内の行番号です。デフォルトは 1 (最初の行) です。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
-          "source": "Values Returned",
+          "source": "Values returned",
           "message": "返される値"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
@@ -928,7 +928,7 @@
           "message": "数式セルの数式。その他のセルは保存されたまま"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
-          "source": "Dates Returned",
+          "source": "Dates returned",
           "message": "返される日付"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
@@ -956,7 +956,7 @@
           "message": "シートでの表示どおりのテキストとしての日付と時刻"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
-          "source": "Response Format",
+          "source": "Response format",
           "message": "レスポンス形式"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
@@ -992,7 +992,7 @@
           "message": "列文字（A、B、C など）にマッピングされた値を返す"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
-          "source": "Search Criteria",
+          "source": "Search criteria",
           "message": "検索条件"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "一致する行を検索する際に使用する検索条件を定義します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.display_name": {
-          "source": "Column Letter",
+          "source": "Column letter",
           "message": "列ラベル"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "検索対象の列の文字列（例：A、B、C）。Column Headerと併用しないでください。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.display_name": {
-          "source": "Column Header",
+          "source": "Column header",
           "message": "列見出し"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "検索対象の列の見出しテキスト。Column Letterと併用しないでください。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "検索タイプ"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "次を含む"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.display_name": {
-          "source": "Search Value",
+          "source": "Search value",
           "message": "検索値"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "指定された列で探す値。この正確な値を持つ行が返されます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Format Spreadsheet Rows",
+          "source": "Format spreadsheet rows",
           "message": "スプレッドシートの行を書式設定"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "書式設定する行番号のリスト (1 開始のインデックス)。たとえば、[1, 2, 5] は 1 行目、2 行目、および 5 行目を書式設定します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
-          "source": "Background Color",
+          "source": "Background color",
           "message": "背景色"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "`0`〜`255`の整数で表される赤色成分"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
-          "source": "Text Color",
+          "source": "Text color",
           "message": "テキストの色"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "指定した行のテキストに下線を引くかどうか。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
-          "source": "Horizontal Alignment",
+          "source": "Horizontal alignment",
           "message": "水平方向の配置"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "右"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
-          "source": "Vertical Alignment",
+          "source": "Vertical alignment",
           "message": "垂直方向の配置"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "下"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
-          "source": "Font Size",
+          "source": "Font size",
           "message": "フォントサイズ"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "フォントサイズ（ポイント単位）"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
-          "source": "Wrap Text",
+          "source": "Wrap text",
           "message": "テキストを折り返す"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "セル内でテキストを折り返すかどうか"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
-          "source": "Search Worksheets",
+          "source": "Search worksheets",
           "message": "ワークシートの検索"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "ワークシートを検索したい Google スプレッドシートの一意の識別子。これはスプレッドシートの URL で確認できます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
-          "source": "Sheet Title",
+          "source": "Sheet title",
           "message": "シートのタイトル"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "このテキストを含むタイトルのワークシートを検索します。スプレッドシート内のすべてのワークシートを一覧表示するには空のままにしてください。検索はデフォルトで大文字と小文字を区別しません。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
-          "source": "Exact Match",
+          "source": "Exact match",
           "message": "完全一致"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "有効にすると、タイトルが完全一致するワークシートのみが返されます。無効（デフォルト）の場合、検索テキストを含むタイトルのワークシートが結果に含まれます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Update Spreadsheet Rows",
+          "source": "Update spreadsheet rows",
           "message": "スプレッドシートの行を更新"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "行が更新されるスプレッドシート内の特定シートの一意の識別子。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
-          "source": "Search Spreadsheets",
+          "source": "Search spreadsheets",
           "message": "スプレッドシートの検索"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "検索する Google Sheets スプレッドシートの名前または部分名。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "検索タイプ"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "検索を限定する Google ドライブのフォルダ ID。指定しない場合は、アクセス可能なすべてのフォルダを検索します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "並べ替え"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "最近性"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "単一のリクエストで返すスプレッドシートの最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
-          "source": "Custom Query",
+          "source": "Custom query",
           "message": "カスタム クエリ"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "基本オプション以外の追加のフィルター基準を追加するためのカスタム Google ドライブ検索クエリ。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
-          "source": "Create Spreadsheet Column",
+          "source": "Create spreadsheet column",
           "message": "スプレッドシートの列を作成"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "列が追加されるスプレッドシート内の特定のシートの ID。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
-          "source": "Column Title",
+          "source": "Column title",
           "message": "列タイトル"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "新しい列の先頭に表示されるヘッダーテキスト。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
-          "source": "Column Index",
+          "source": "Column index",
           "message": "列インデックス"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
@@ -1636,7 +1636,7 @@
           "message": "新しい列を挿入する位置の 0 から始まるインデックス。例えば、0 はシートの先頭に列が挿入されることを意味し、1 は 1 列目の後に挿入されることを意味します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
-          "source": "New Spreadsheet Row",
+          "source": "New spreadsheet row",
           "message": "新しいスプレッドシートの行"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
@@ -1672,7 +1672,7 @@
           "message": "新しい行を監視するスプレッドシート内の特定シートの一意の識別子。シート ID はスプレッドシートの URL で確認できます。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
-          "source": "New Spreadsheet",
+          "source": "New spreadsheet",
           "message": "新しいスプレッドシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "新規作成された Google スプレッドシートについて Google Drive を監視します。このトリガーは、ID、名前、URL、作成日時、所有者情報など、新規作成されたスプレッドシートに関するメタデータを提供します。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
-          "source": "New Spreadsheet Sheet",
+          "source": "New spreadsheet sheet",
           "message": "新しいスプレッドシートのシート"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {

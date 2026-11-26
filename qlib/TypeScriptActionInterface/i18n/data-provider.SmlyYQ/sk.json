@@ -28,7 +28,7 @@
           "message": "Vykoná vlastné volanie HTTP / REST API do služby **Jira** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré v tejto aplikácii zatiaľ nie sú k dispozícii ako samostatné akcie."
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Názov tabuľky"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get Announcement Banner",
+          "source": "Get announcement banner",
           "message": "Získať oznamovací baner"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Získa aktuálnu konfiguráciu oznamovacieho banera pre inštanciu Jira"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set Announcement Banner",
+          "source": "Set announcement banner",
           "message": "Nastaviť oznamovací banner"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Aktualizuje konfiguráciu oznamovacieho bannera pre inštanciu Jira"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get Fields",
+          "source": "Get fields",
           "message": "Získať polia"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Vráti všetky polia, systémové aj vlastné, v inštancii Jira"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create Custom Field",
+          "source": "Create custom field",
           "message": "Vytvoriť vlastné pole"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vytvorí nové vlastné pole v inštancii Jira"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update Custom Field",
+          "source": "Update custom field",
           "message": "Aktualizovať vlastné pole"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Aktualizuje názov a popis vlastného poľa"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash Custom Field",
+          "source": "Trash custom field",
           "message": "Presunúť vlastné pole do koša"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Presunie vlastné pole do koša. Vlastné pole je možné obnoviť z koša do 60 dní"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create Issue",
+          "source": "Create issue",
           "message": "Vytvoriť požiadavku"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Vytvorí novú požiadavku v projekte Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete Issue",
+          "source": "Delete issue",
           "message": "Odstrániť úlohu"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Odstráni úlohu z projektu Jira"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get Issue",
+          "source": "Get issue",
           "message": "Získať úlohu"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Získa podrobnosti o konkrétnej úlohe podľa jej ID alebo kľúča"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit Issue",
+          "source": "Edit issue",
           "message": "Upraviť úlohu"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Aktualizuje polia existujúcej úlohy"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get Comments",
+          "source": "Get comments",
           "message": "Získať komentáre"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Získa všetky komentáre pre konkrétnu požiadavku"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add Comment",
+          "source": "Add comment",
           "message": "Pridať komentár"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Pridá nový komentár ku konkrétnej požiadavke"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete Comment",
+          "source": "Delete comment",
           "message": "Odstrániť komentár"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Odstráni konkrétny komentár z úlohy"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get Comment",
+          "source": "Get comment",
           "message": "Získať komentár"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Získa konkrétny komentár podľa jeho ID"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update Comment",
+          "source": "Update comment",
           "message": "Aktualizovať komentár"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Aktualizuje existujúci komentár k úlohe"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get Issue Worklogs",
+          "source": "Get issue worklogs",
           "message": "Získať záznamy o práci k úlohe"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Získa všetky záznamy o práci pre konkrétnu úlohu"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add Worklog",
+          "source": "Add worklog",
           "message": "Pridať záznam do denníka prác"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Pridá nový záznam do denníka prác ku konkrétnej požiadavke"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete Worklog",
+          "source": "Delete worklog",
           "message": "Odstrániť záznam o práci"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Odstráni konkrétny záznam o práci z úlohy"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get Worklog",
+          "source": "Get worklog",
           "message": "Získať záznam o práci"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Získa konkrétny záznam o práci podľa jeho ID"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update Worklog",
+          "source": "Update worklog",
           "message": "Aktualizovať záznam o práci"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Aktualizuje existujúci záznam o práci v úlohe"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
+          "source": "Get all projects",
           "message": "Získať všetky projekty"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Zoznam vlastností projektu, ktoré sa majú vrátiť pre projekt. Tento parameter prijíma zoznam oddelený čiarkami."
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create Project",
+          "source": "Create project",
           "message": "Vytvoriť projekt"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Vytvorí nový projekt v Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete Project",
+          "source": "Delete project",
           "message": "Odstrániť projekt"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Odstráni projekt z Jira"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get Project",
+          "source": "Get project",
           "message": "Získať projekt"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Získa podrobnosti o konkrétnom projekte podľa jeho ID alebo kľúča"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update Project",
+          "source": "Update project",
           "message": "Aktualizovať projekt"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Aktualizuje podrobnosti existujúceho projektu"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search Issues",
+          "source": "Search issues",
           "message": "Vyhľadať úlohy"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Vyhľadáva úlohy pomocou JQL (Jira Query Language). Vracia úlohy zodpovedajúce kritériám vyhľadávania"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
-          "source": "New Issue",
+          "source": "New issue",
           "message": "Nová úloha"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Projekt, v ktorom sa majú sledovať nové úlohy"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
-          "source": "Updated Issue",
+          "source": "Updated issue",
           "message": "Aktualizovaná úloha"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {

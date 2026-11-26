@@ -58,19 +58,19 @@ const options = {
     allowed_values: [
       {
         value: [{ timestamp: 'created_time', direction: 'descending' }],
-        display_name: 'Created (Newest First)',
+        display_name: 'Created (newest first)',
       },
       {
         value: [{ timestamp: 'created_time', direction: 'ascending' }],
-        display_name: 'Created (Oldest First)',
+        display_name: 'Created (oldest first)',
       },
       {
         value: [{ timestamp: 'last_edited_time', direction: 'descending' }],
-        display_name: 'Last Edited (Newest First)',
+        display_name: 'Last edited (newest first)',
       },
       {
         value: [{ timestamp: 'last_edited_time', direction: 'ascending' }],
-        display_name: 'Last Edited (Oldest First)',
+        display_name: 'Last edited (oldest first)',
       },
     ],
     type: {

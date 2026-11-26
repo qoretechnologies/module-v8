@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Zendesk** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Datensätze suchen"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
@@ -496,7 +496,7 @@
           "message": "URI-Pfadvariable \"attachment_id\""
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Gruppen auflisten"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Gibt an, ob gelöschte Entitäten ausgeschlossen werden sollen"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
-          "source": "Create Group",
+          "source": "Create group",
           "message": "Gruppe erstellen"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "#### Zulässig für\n\n* Admins\n* Agenten, die einer benutzerdefinierten Rolle mit Berechtigungen zum Verwalten von Gruppen zugewiesen sind (nur Enterprise)\n"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
-          "source": "Delete Group",
+          "source": "Delete group",
           "message": "Gruppe löschen"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
@@ -556,7 +556,7 @@
           "message": "#### Zulässig für\n\n* Administratoren\n* Agenten\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
-          "source": "Update Group",
+          "source": "Update group",
           "message": "Gruppe aktualisieren"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Gibt eine bestimmte Metrik oder die Metriken eines bestimmten Tickets zurück.\n\n#### Paginierung\n\n- Cursor-Paginierung (empfohlen)\n- Offset-Paginierung\n\nSiehe [Pagination](-api-reference-introduction-pagination-).\n\nGibt maximal 100 Datensätze pro Seite zurück.\n\n#### Zulässig für\n\n* Agenten\n"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
-          "source": "List Tickets",
+          "source": "List tickets",
           "message": "Tickets auflisten"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Listet Tickets anhand der externen ID auf. Externe IDs müssen nicht für jedes Ticket eindeutig sein. Infolgedessen kann die Anfrage mehrere Tickets mit derselben externen ID zurückgeben."
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
-          "source": "Create Ticket",
+          "source": "Create ticket",
           "message": "Ticket erstellen"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Gibt eine ungefähre Anzahl der Tickets im Konto zurück. Wenn die Anzahl 100.000 überschreitet, wird sie alle 24 Stunden aktualisiert.\n\n`ccd` listet Tickets auf, bei denen der angegebene Benutzer in CC steht.\n\nDie Eigenschaft `count[refreshed_at]` ist ein Zeitstempel, der angibt, wann die Anzahl zuletzt aktualisiert wurde.\n\n**Hinweis**: Wenn die Anzahl 100.000 überschreitet, kann `count[refreshed_at]` gelegentlich null sein.\nDies weist darauf hin, dass die Anzahl im Hintergrund aktualisiert wird und `count[value]` auf 100.000 begrenzt ist, bis die Aktualisierung abgeschlossen ist.\n\n#### Zulässig für\n* Agenten"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
-          "source": "Delete Ticket",
+          "source": "Delete ticket",
           "message": "Ticket löschen"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Gibt eine Reihe von Ticketeigenschaften zurück, jedoch nicht die Ticketkommentare. Um die Kommentare abzurufen, verwenden Sie [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Zulässig für\n* Agenten"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
-          "source": "Update Ticket",
+          "source": "Update ticket",
           "message": "Ticket aktualisieren"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
@@ -772,7 +772,7 @@
           "message": "URI-Pfadvariable \"token\""
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Benutzer auflisten"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
@@ -784,7 +784,7 @@
           "message": "#### Paginierung\n\n* Cursor-Paginierung (empfohlen)\n* Offset-Paginierung\n\nSiehe [Pagination](-api-reference-introduction-pagination-).\n\nGibt maximal 100 Datensätze pro Seite zurück.\n\n#### Zulässig für\n\n* Administratoren, Agenten und Light-Agenten\n"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
-          "source": "Create User",
+          "source": "Create user",
           "message": "Benutzer erstellen"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Benutzer erstellen"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
-          "source": "Delete User",
+          "source": "Delete user",
           "message": "Benutzer löschen"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "#### Zulässig für\n\n* Agenten\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
-          "source": "Update User",
+          "source": "Update user",
           "message": "Benutzer aktualisieren"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Benutzer aktualisieren"
         },
         "app.WmVuZGVzaw.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "Neuer Benutzer"
         },
         "app.WmVuZGVzaw.action.bmV3X3VzZXI.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Wird ausgelöst, wenn ein neuer Benutzer erstellt wird"
         },
         "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
-          "source": "New Organization",
+          "source": "New organization",
           "message": "Neue Organisation"
         },
         "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Wird ausgelöst, wenn eine neue Organisation erstellt wird"
         },
         "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.display_name": {
-          "source": "New Ticket",
+          "source": "New ticket",
           "message": "Neues Ticket"
         },
         "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Wird ausgelöst, wenn ein neues Ticket erstellt wird"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.display_name": {
-          "source": "New Custom Object Record",
+          "source": "New custom object record",
           "message": "Neuer benutzerdefinierter Objektdatensatz"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Wird ausgelöst, wenn ein neuer Datensatz für ein benutzerdefiniertes Objekt in Zendesk erstellt wird"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.display_name": {
-          "source": "Custom Object",
+          "source": "Custom object",
           "message": "Benutzerdefiniertes Objekt"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.short_desc": {

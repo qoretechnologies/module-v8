@@ -28,7 +28,7 @@
           "message": "Provede vlastní volání HTTP / REST API do služby **Amazon CloudFront** pomocí autentizace nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou vystaveny jako primární akce v této aplikaci."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.display_name": {
-          "source": "List Distributions",
+          "source": "List distributions",
           "message": "Seznam distribucí"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Načte seznam všech distribucí CloudFront ve vašem účtu AWS včetně jejich stavu, doménových jmen a podrobností o konfiguraci. Pro velké sady distribucí můžete řídit počet výsledků a použít stránkování."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
+          "source": "Max items",
           "message": "Maximální počet položek"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Použijte tento marker k pokračování stránkování z předchozího požadavku na seznam. Tato hodnota je vrácena v poli next_marker předchozích odpovědí, pokud jsou výsledky zkráceny."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Get Distribution",
+          "source": "Get distribution",
           "message": "Získat distribuci"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Vyberte konkrétní distribuci CloudFront, o které chcete získat podrobné informace. Vrátí kompletní konfiguraci a stav distribuce."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.display_name": {
-          "source": "Update Distribution Status",
+          "source": "Update distribution status",
           "message": "Aktualizovat stav distribuce"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Vyberte distribuci CloudFront, jejíhož stav chcete změnit. Distribuce musí existovat a být ve stavu, který umožňuje změny stavu."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.display_name": {
-          "source": "Enable Distribution",
+          "source": "Enable distribution",
           "message": "Povolit distribuci"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Zvolte, zda chcete distribuci povolit nebo zakázat. Povolení umožní distribuci doručovat obsah, zatímco zakázání zastaví doručování obsahu a účtování. Šíření změn stavu může nějakou dobu trvat."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.display_name": {
-          "source": "Invalidate Item",
+          "source": "Invalidate item",
           "message": "Invalidovat položku"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Vyberte distribuci CloudFront, ve které chcete zneplatnit obsah v mezipaměti. Zneplatnění se použije pro všechna hraniční místa této distribuce."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.display_name": {
-          "source": "Paths to Invalidate",
+          "source": "Paths to invalidate",
           "message": "Cesty ke zneplatnění"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Uveďte cesty k souborům, které chcete zneplatnit v mezipaměti CloudFront. Použijte /* pro zneplatnění všech souborů nebo uveďte jednotlivé cesty jako /images/logo.png. Cesty by měly začínat /."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.display_name": {
-          "source": "Caller Reference",
+          "source": "Caller reference",
           "message": "Reference volajícího"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Volitelný jedinečný identifikátor pro tento požadavek na invalidaci. Pokud není zadán, automaticky se vygeneruje jedinečná hodnota. Pomáhá sledovat a identifikovat konkrétní požadavky na invalidaci."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.display_name": {
-          "source": "List Invalidations",
+          "source": "List invalidations",
           "message": "Seznam zneplatnění"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vyberte distribuci CloudFront, jejíhož historii zneplatnění chcete získat. Zobrazí se všechny požadavky na zneplatnění vytvořené pro tuto distribuci."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
+          "source": "Max items",
           "message": "Maximální počet položek"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Použijte tento marker k pokračování stránkování z předchozího požadavku na seznam. Tato hodnota je vrácena v poli next_marker předchozích odpovědí, pokud jsou výsledky zkráceny."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "Get Invalidation",
+          "source": "Get invalidation",
           "message": "Získat invalidaci"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vyberte konkrétní požadavek na invalidaci, o kterém chcete získat podrobnosti. Zobrazí se kompletní informace o invalidaci včetně jejího aktuálního stavu a dotčených cest."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "New Distribution",
+          "source": "New distribution",
           "message": "Nová distribuce"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Tento spouštěč sleduje nově vytvořené distribuce CloudFront ve vašem účtu AWS. Spustí se vždy, když je zjištěna nová distribuce, a poskytne podrobnosti o konfiguraci a stavu distribuce."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "New Invalidation",
+          "source": "New invalidation",
           "message": "Nové zneplatnění"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.short_desc": {

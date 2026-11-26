@@ -28,7 +28,7 @@
           "message": "Vytvorte vlastné volanie HTTP / REST API do **OpenWeatherMap** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej URL adrese API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré v tejto aplikácii ešte nie sú k dispozícii ako plnohodnotné akcie."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.display_name": {
-          "source": "Get Current Weather",
+          "source": "Get current weather",
           "message": "Získať aktuálne počasie"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Získajte informácie o počasí v reálnom čase vrátane teploty, vlhkosti, rýchlosti vetra, tlaku, viditeľnosti a poveternostných podmienok pre akúkoľvek lokalitu na svete. Podporuje vyhľadávanie podľa názvu mesta, geografických súradníc alebo PSČ/poštového smerovacieho čísla."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Typ lokality"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Voliteľný dvojpísmenový kód jazyka pre popisy poveternostných podmienok (napr. „en“ pre angličtinu, „es“ pre španielčinu, „fr“ pre francúzštinu, „de“ pre nemčinu)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.display_name": {
-          "source": "Get Weather Forecast",
+          "source": "Get weather forecast",
           "message": "Získať predpoveď počasia"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Získajte 5-dňovú predpoveď počasia s údajmi každé 3 hodiny pre akúkoľvek lokalitu na celom svete. Každá položka predpovede zahŕňa teplotu, vlhkosť, vietor, pravdepodobnosť zrážok a poveternostné podmienky. Podporuje vyhľadávanie podľa názvu mesta, geografických súradníc alebo PSČ/poštového smerovacieho čísla."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Typ lokality"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Obmedzte počet vrátených 3-hodinových položiek predpovede. Každý deň má až 8 dátových bodov (každé 3 hodiny). Maximum je 40 (5 dní x 8 intervalov)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.display_name": {
-          "source": "Temperature Threshold",
+          "source": "Temperature threshold",
           "message": "Teplotný prah"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Sledujte teplotu v konkrétnej lokalite a spustite akciu, keď prekročí nastavenú prahovú hodnotu smerom nahor alebo nadol. Užitočné pre teplotné upozornenia, automatizáciu HVAC a pracovné postupy závislé od počasia."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Typ lokality"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Štandardné (Kelvin, m/s)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.display_name": {
-          "source": "Threshold Type",
+          "source": "Threshold type",
           "message": "Typ prahu"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Klesne pod"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.display_name": {
-          "source": "Threshold Value",
+          "source": "Threshold value",
           "message": "Prahová hodnota"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Nastavte hodnotu teploty, ktorej prekročenie vyvolá udalosť. Použite rovnaké jednotky, aké sú vybrané v možnosti Jednotky (napr. 0 pre bod mrazu v stupňoch Celzia, 32 vo Fahrenheitoch)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.display_name": {
-          "source": "Weather Condition Change",
+          "source": "Weather condition change",
           "message": "Zmena poveternostných podmienok"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.short_desc": {
@@ -600,7 +600,7 @@
           "message": "Sledujte poveternostné podmienky v konkrétnej lokalite a spustite akciu, keď sa podmienky zmenia (napr. z jasno na dážď, oblačno na sneh). Voliteľne filtrujte podľa konkrétnych typov podmienok."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Typ lokality"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Štandardné (Kelvin, m/s)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.display_name": {
-          "source": "Condition Filter",
+          "source": "Condition filter",
           "message": "Filter podmienok"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.short_desc": {

@@ -1,6 +1,6 @@
 export const HubspotTriggerOptionsEn = {
   activationCriteria: {
-    displayName: 'Activation Criteria',
+    displayName: 'Activation criteria',
     shortDesc: 'Criteria for trigger to activate (created or updated)',
     longDesc:
       'Select the criteria for the trigger to activate.\n\n' +
@@ -8,7 +8,7 @@ export const HubspotTriggerOptionsEn = {
       '- Updated: Triggers when an existing object is updated',
   },
   additionalProperties: {
-    displayName: 'Additional Properties',
+    displayName: 'Additional properties',
     shortDesc: 'Additional properties to add to returned data',
     longDesc: 'Select additional properties to add to the returned object data',
   },

@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Calendly** 發送自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求內文。回應將作為包含狀態碼、回應標頭和回應內文的雜湊傳回。\n\n對此應用程式上尚未公開為一級動作的端點使用此動作。"
         },
         "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.display_name": {
-          "source": "List Event Invitees",
+          "source": "List event invitees",
           "message": "列出活動受邀者"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "回應中傳回的受邀者最大數量（預設為 20）。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.short_desc": {
@@ -388,7 +388,7 @@
           "message": "當受邀者數量超過限制時，使用此權牌擷取下一頁結果。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "電子郵件篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "篩選結果，僅包含具有此特定電子郵件地址的受邀者。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "排序選項"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "設定受邀者清單的排序方式。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "排序方向"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -432,7 +432,7 @@
           "message": "降序"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "排序欄位"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "建立時間"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.display_name": {
-          "source": "Status Filter",
+          "source": "Status filter",
           "message": "狀態篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.short_desc": {
@@ -468,7 +468,7 @@
           "message": "已取消"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.display_name": {
-          "source": "List Events",
+          "source": "List events",
           "message": "列出活動"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.short_desc": {
@@ -492,7 +492,7 @@
           "message": "回應中傳回的活動最大數量（預設為 20）。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.display_name": {
-          "source": "Group Filter",
+          "source": "Group filter",
           "message": "群組篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.short_desc": {
@@ -504,7 +504,7 @@
           "message": "篩選結果，僅包含與特定群組相關聯的活動。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.display_name": {
-          "source": "Invitee Email Filter",
+          "source": "Invitee email filter",
           "message": "受邀者電子郵件篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.short_desc": {
@@ -516,7 +516,7 @@
           "message": "篩選結果，僅包含指定電子郵件地址為受邀者的活動。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.display_name": {
-          "source": "Maximum Start Time",
+          "source": "Maximum start time",
           "message": "最晚開始時間"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.short_desc": {
@@ -528,7 +528,7 @@
           "message": "篩選活動，僅包含在此日期和時間之前開始的活動。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.display_name": {
-          "source": "Minimum Start Time",
+          "source": "Minimum start time",
           "message": "最早開始時間"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.short_desc": {
@@ -540,7 +540,7 @@
           "message": "篩選活動，僅包含在此日期和時間之後開始的活動。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.short_desc": {
@@ -552,7 +552,7 @@
           "message": "當活動數量超過限制時，使用此權牌擷取下一頁結果。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "排序選項"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.short_desc": {
@@ -564,7 +564,7 @@
           "message": "設定活動清單的排序方式。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "排序方向"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -584,7 +584,7 @@
           "message": "降序"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "排序欄位"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "篩選活動，僅包含來自特定組織的活動。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.display_name": {
-          "source": "User Filter",
+          "source": "User filter",
           "message": "使用者篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "篩選結果，僅包含與特定使用者相關聯的活動。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "列出群組"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.short_desc": {
@@ -652,7 +652,7 @@
           "message": "回應中傳回的群組最大數量（預設為 20）。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.short_desc": {
@@ -676,7 +676,7 @@
           "message": "要從中擷取群組清單的組織。"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.display_name": {
-          "source": "Get Event Invitee",
+          "source": "Get event invitee",
           "message": "取得活動受邀者"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "選擇您想要擷取其資訊的特定受邀者。"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.display_name": {
-          "source": "Get Event",
+          "source": "Get event",
           "message": "取得活動"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.short_desc": {
@@ -736,7 +736,7 @@
           "message": "選擇您想要擷取其詳細資料的特定活動。"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.display_name": {
-          "source": "Get Group",
+          "source": "Get group",
           "message": "取得群組"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "從您的組織中選擇您想要擷取其詳細資料的特定群組。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.display_name": {
-          "source": "List Event Types",
+          "source": "List event types",
           "message": "列出活動類型"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "回應中要傳回的活動類型最大數量（預設為 20）。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "當活動類型數量超過限制時，使用此權牌擷取下一頁結果。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "排序選項"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "設定活動類型清單的排序方式。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "排序方向"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -828,7 +828,7 @@
           "message": "降序"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "排序欄位"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "篩選活動類型，僅包含來自特定組織的活動類型。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.display_name": {
-          "source": "User Filter",
+          "source": "User filter",
           "message": "使用者篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.short_desc": {
@@ -880,7 +880,7 @@
           "message": "篩選結果，僅包含與特定使用者相關聯的活動類型。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.display_name": {
-          "source": "Admin Managed Filter",
+          "source": "Admin managed filter",
           "message": "管理員管理篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.short_desc": {
@@ -892,7 +892,7 @@
           "message": "根據活動類型是否由管理員管理來篩選。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.display_name": {
-          "source": "Active Filter",
+          "source": "Active filter",
           "message": "啟用狀態篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.short_desc": {
@@ -904,7 +904,7 @@
           "message": "根據活動類型目前是否為啟用中且可用於預約來篩選。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.display_name": {
-          "source": "User Availability Schedule",
+          "source": "User availability schedule",
           "message": "使用者空閒時間表"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.short_desc": {
@@ -916,7 +916,7 @@
           "message": "根據特定使用者的空閒時間表篩選活動類型。"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.display_name": {
-          "source": "Get Event Type",
+          "source": "Get event type",
           "message": "取得活動類型"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "擷取活動類型的完整資訊，包含時長、設定與組態。"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.display_name": {
-          "source": "Event Type ID",
+          "source": "Event type ID",
           "message": "活動類型 ID"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.short_desc": {
@@ -940,7 +940,7 @@
           "message": "選擇您想要擷取其詳細資料的特定活動類型。"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.display_name": {
-          "source": "Create Scheduling Link",
+          "source": "Create scheduling link",
           "message": "建立排程連結"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.short_desc": {
@@ -952,7 +952,7 @@
           "message": "產生排程連結，可與其他人分享以預約特定活動類型的會議。"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.display_name": {
-          "source": "Maximum Event Count",
+          "source": "Maximum event count",
           "message": "最大活動數量"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.short_desc": {
@@ -964,7 +964,7 @@
           "message": "使用此連結變為停用狀態前可排程的最大活動數量。"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "活動類型"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "選擇人員在使用此排程連結時能夠預約的活動類型。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.display_name": {
-          "source": "List Organization Members",
+          "source": "List organization members",
           "message": "列出組織成員"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "回應中要傳回的組織成員最大數量（預設為 20）。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "當成員數量超過計數限制時，使用此權標擷取下一頁結果。"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "電子郵件篩選器"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "要從中擷取成員清單的組織。"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.display_name": {
-          "source": "Cancel Event",
+          "source": "Cancel event",
           "message": "取消事件"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "從已排定的事件中選擇您要取消的特定事件。"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.display_name": {
-          "source": "Cancellation Reason",
+          "source": "Cancellation reason",
           "message": "取消原因"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "傳送給參與者的取消通知中將包含的選填原因。"
         },
         "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.display_name": {
-          "source": "Event Canceled",
+          "source": "Event canceled",
           "message": "活動已取消"
         },
         "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "當您 Calendly 帳戶中的任何已排程活動被主辦人或受邀者取消時，此觸發條件會啟用。"
         },
         "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.display_name": {
-          "source": "New Form Submission Created",
+          "source": "New form submission created",
           "message": "建立新表單提交"
         },
         "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "當有人提交路由表單時，此觸發條件會啟動，幫助引導他們至適當的排程選項。"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.display_name": {
-          "source": "Invitee Created",
+          "source": "Invitee created",
           "message": "受邀者已建立"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "群組"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.display_name": {
-          "source": "Invitee Canceled",
+          "source": "Invitee canceled",
           "message": "受邀者已取消"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "群組"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.display_name": {
-          "source": "Invitee No-Show Created",
+          "source": "Invitee no-show created",
           "message": "受邀者未出席已建立"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.short_desc": {

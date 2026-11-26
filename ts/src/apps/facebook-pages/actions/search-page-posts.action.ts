@@ -174,12 +174,12 @@ const searchPagePosts = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       page_name: {
         type: 'string',
-        display_name: 'Page Name',
+        display_name: 'Page name',
         short_desc: 'The name of the page',
       },
       total_posts: {
         type: 'integer',
-        display_name: 'Total Posts',
+        display_name: 'Total posts',
         short_desc: 'The total number of posts found',
       },
       posts: {
@@ -226,12 +226,12 @@ const searchPagePosts = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
-        display_name: 'Search Criteria',
+        display_name: 'Search criteria',
         short_desc: 'The criteria used for searching posts',
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When the search was performed',
       },
       cursors: {

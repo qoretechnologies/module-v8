@@ -28,7 +28,7 @@
           "message": "使用已配置連線的驗證向 **Canva** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊返回。\n\n對尚未在此應用程式中作為一等動作公開的端點使用此動作。"
         },
         "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.display_name": {
-          "source": "Upload Image",
+          "source": "Upload image",
           "message": "上傳圖片"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.short_desc": {
@@ -352,7 +352,7 @@
           "message": "上傳圖片檔案至您的 Canva 帳戶，並可選擇設定名稱和標籤"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.display_name": {
-          "source": "Image File",
+          "source": "Image file",
           "message": "圖片檔案"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.short_desc": {
@@ -508,7 +508,7 @@
           "message": "新增標籤以利日後整理和尋找您的圖片"
         },
         "app.Q2FudmE.action.Z2V0X2ltYWdl.display_name": {
-          "source": "Get Image",
+          "source": "Get image",
           "message": "取得影像"
         },
         "app.Q2FudmE.action.Z2V0X2ltYWdl.short_desc": {
@@ -532,7 +532,7 @@
           "message": "您想要擷取之影像的 Canva 資產 ID"
         },
         "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.display_name": {
-          "source": "Delete Image",
+          "source": "Delete image",
           "message": "刪除影像"
         },
         "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.short_desc": {
@@ -556,7 +556,7 @@
           "message": "您想要刪除之影像的 Canva 資產 ID"
         },
         "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.display_name": {
-          "source": "Update Image",
+          "source": "Update image",
           "message": "更新圖片"
         },
         "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.short_desc": {
@@ -604,7 +604,7 @@
           "message": "更新與圖片關聯的標籤以更有效地進行整理"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.display_name": {
-          "source": "Upload Image by URL",
+          "source": "Upload image by URL",
           "message": "透過 URL 上傳圖片"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "新增標籤以利日後整理和尋找您的圖片"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.display_name": {
-          "source": "List Designs",
+          "source": "List designs",
           "message": "列出設計"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.short_desc": {
@@ -664,7 +664,7 @@
           "message": "擷取您的 Canva 設計清單，支援選填的篩選和排序"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "搜尋查詢"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "輸入搜尋詞以按標題或內容尋找特定設計"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.display_name": {
-          "source": "Continuation Token",
+          "source": "Continuation token",
           "message": "延續權標"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.short_desc": {
@@ -688,7 +688,7 @@
           "message": "使用此權標從上次請求中斷的地方繼續"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.display_name": {
-          "source": "Ownership Filter",
+          "source": "Ownership filter",
           "message": "所有權篩選條件"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.short_desc": {
@@ -712,7 +712,7 @@
           "message": "共享"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "排序依據"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.short_desc": {
@@ -744,7 +744,7 @@
           "message": "標題遞增"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.display_name": {
-          "source": "Create Comment Thread",
+          "source": "Create comment thread",
           "message": "建立留言串"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.short_desc": {
@@ -792,7 +792,7 @@
           "message": "將此留言指派給特定的團隊成員以採取行動"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.display_name": {
-          "source": "Create Reply",
+          "source": "Create reply",
           "message": "建立回覆"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.short_desc": {
@@ -840,7 +840,7 @@
           "message": "輸入您回覆的文字內容"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.display_name": {
-          "source": "List Thread Replies",
+          "source": "List thread replies",
           "message": "列出評論串回覆"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.short_desc": {
@@ -864,7 +864,7 @@
           "message": "設定要檢索的回覆最大數量（預設：50）"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.display_name": {
-          "source": "Continuation Token",
+          "source": "Continuation token",
           "message": "延續權標"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.short_desc": {
@@ -900,7 +900,7 @@
           "message": "要列出其回覆之評論串的唯一識別碼"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.display_name": {
-          "source": "New Design",
+          "source": "New design",
           "message": "新設計"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.short_desc": {
@@ -912,7 +912,7 @@
           "message": "當您的 Canva 帳戶中建立新設計時觸發此觸發條件，並可選擇按所有權和搜尋查詢進行篩選"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "搜尋查詢"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.short_desc": {
@@ -924,7 +924,7 @@
           "message": "選填的搜尋詞，用於篩選哪些設計會觸發該事件。只有符合此查詢的設計才會觸發該事件"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.display_name": {
-          "source": "Ownership Filter",
+          "source": "Ownership filter",
           "message": "所有權篩選條件"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.short_desc": {
@@ -948,7 +948,7 @@
           "message": "共享"
         },
         "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.display_name": {
-          "source": "New Thread Reply",
+          "source": "New thread reply",
           "message": "新評論串回覆"
         },
         "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.short_desc": {

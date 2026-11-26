@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **SendGrid** 進行自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊返回。\n\n對此應用程式尚未公開為一級動作的端點使用此動作。"
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
+          "source": "List blocks",
           "message": "列出區塊"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.short_desc": {
@@ -352,7 +352,7 @@
           "message": "擷取目前在您封鎖名單中的所有電子郵件地址清單。已封鎖地址是指遭接收端伺服器拒絕的電子郵件。您可以依時間範圍篩選並對結果進行分頁。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.short_desc": {
@@ -364,7 +364,7 @@
           "message": "擷取在此時間點之後建立的封鎖記錄。請以 Unix 時間戳記（自 Epoch 起算的秒數）提供時間。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "結束時間"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.short_desc": {
@@ -400,7 +400,7 @@
           "message": "分頁結果清單的起始點。預設值為 0。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.display_name": {
-          "source": "Get a Block",
+          "source": "Get a block",
           "message": "取得封鎖記錄"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.short_desc": {
@@ -424,7 +424,7 @@
           "message": "要從封鎖名單中擷取的電子郵件地址。這必須是遭到封鎖的確切電子郵件地址。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
+          "source": "Delete blocks",
           "message": "刪除區塊"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "從封鎖名單中移除電子郵件地址。您可以一次刪除所有封鎖記錄，或指定要移除的個別電子郵件地址。刪除封鎖記錄可讓這些地址再次接收電子郵件。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "全部刪除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.short_desc": {
@@ -460,7 +460,7 @@
           "message": "要從封鎖名單中移除的電子郵件地址陣列。若「全部刪除」未設為 true 則為必填。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.display_name": {
-          "source": "Get All Bounces",
+          "source": "Get all bounces",
           "message": "取得所有退信"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.short_desc": {
@@ -472,7 +472,7 @@
           "message": "擷取所有發生退信的電子郵件地址清單。當電子郵件無法傳送給收件者時，即會發生退信。您可以依時間範圍篩選並對結果進行分頁。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.short_desc": {
@@ -484,7 +484,7 @@
           "message": "擷取在此時間點之後建立的退信記錄。請以 Unix 時間戳記（自 Epoch 起算的秒數）提供時間。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "結束時間"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "分頁結果清單的起始點。預設值為 0。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.display_name": {
-          "source": "Delete Bounces",
+          "source": "Delete bounces",
           "message": "刪除退信記錄"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.short_desc": {
@@ -532,7 +532,7 @@
           "message": "從退信清單中移除電子郵件地址。您可以一次刪除所有退信記錄，或指定要移除的個別電子郵件地址。刪除退信記錄可讓這些地址再次接收電子郵件。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "全部刪除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.short_desc": {
@@ -556,7 +556,7 @@
           "message": "要從退信清單中移除的電子郵件地址陣列。若「全部刪除」未設為 true 則為必填。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.display_name": {
-          "source": "List Global Suppressions",
+          "source": "List global suppressions",
           "message": "列出全域抑止記錄"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.short_desc": {
@@ -568,7 +568,7 @@
           "message": "擷取已全域退訂您所有電子郵件的電子郵件地址清單。在從此清單中移除之前，這些地址將不會收到來自您帳戶的任何電子郵件。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.short_desc": {
@@ -580,7 +580,7 @@
           "message": "擷取在此時間點之後建立的隱藏記錄。請以 Unix 時間戳記（自 Epoch 起的秒數）提供時間。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "結束時間"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "分頁結果清單的起始點。預設值為 0。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Get a Global Suppression",
+          "source": "Get a global suppression",
           "message": "取得全域抑止記錄"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -640,7 +640,7 @@
           "message": "要在全域抑止清單中查詢的電子郵件地址。若找到，則傳回抑止詳細資料。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.display_name": {
-          "source": "Add Global Suppressions",
+          "source": "Add global suppressions",
           "message": "新增全域隱制名單"
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.short_desc": {
@@ -664,7 +664,7 @@
           "message": "要新增至全域隱制名單的電子郵件地址陣列。這些地址未來將被阻止接收所有電子郵件。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Delete a Global Suppression",
+          "source": "Delete a global suppression",
           "message": "刪除全域抑止記錄"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "要從全域抑止清單中移除的電子郵件地址。移除後，此地址將能夠再次接收電子郵件。"
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create a List",
+          "source": "Create a list",
           "message": "建立名單"
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -712,7 +712,7 @@
           "message": "聯絡人名單的描述性名稱。請選擇能清楚識別該名單目的或受眾的名稱。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.display_name": {
-          "source": "Get All Lists",
+          "source": "Get all lists",
           "message": "取得所有清單"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.short_desc": {
@@ -724,7 +724,7 @@
           "message": "擷取您 SendGrid 帳戶中的所有收件者清單。傳回包含名稱與收件者數量的清單詳細資料。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete a List",
+          "source": "Delete a list",
           "message": "刪除清單"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -748,7 +748,7 @@
           "message": "您要刪除的清單唯一識別碼。從現有清單中選取。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "刪除聯絡人"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.short_desc": {
@@ -760,7 +760,7 @@
           "message": "當設定為 true 時，清單中的所有聯絡人也將從您的聯絡人資料庫中永久刪除。請謹慎使用。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.display_name": {
-          "source": "Add or Update a Contact",
+          "source": "Add or update a contact",
           "message": "新增或更新聯絡人"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.short_desc": {
@@ -784,7 +784,7 @@
           "message": "聯絡人的電子郵件地址。這是唯一識別碼 - 若已存在包含此電子郵件的聯絡人，系統將會進行更新。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.short_desc": {
@@ -796,7 +796,7 @@
           "message": "聯絡人的名字。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.short_desc": {
@@ -820,7 +820,7 @@
           "message": "要將此聯絡人新增至其中的一個或多個名單 ID。該聯絡人將被新增至所有指定的名單。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "自訂欄位"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -832,7 +832,7 @@
           "message": "包含自訂欄位名稱與值的 JSON 物件。自訂欄位必須先在您的 SendGrid 帳戶中建立。"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
-          "source": "Search for Contacts",
+          "source": "Search for contacts",
           "message": "搜尋聯絡人"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "在聯絡人資料庫中搜尋符合特定欄位值的聯絡人。您可以依電子郵件、姓名或任何自訂欄位進行搜尋。"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "欄位名稱"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.short_desc": {
@@ -868,7 +868,7 @@
           "message": "要與指定欄位相符的值。文字欄位可能需要進行 URL 編碼。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "刪除聯絡人"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "要刪除的聯絡人 ID 陣列。從現有的聯絡人中選取。所有選取的聯絡人都將被永久移除。"
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
-          "source": "Remove Contacts from List",
+          "source": "Remove contacts from list",
           "message": "從清單中移除聯絡人"
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "要從清單中移除的聯絡人 ID 陣列。聯絡人將保留在資料庫中，但會從此清單取消連結。"
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.display_name": {
-          "source": "Validate Email",
+          "source": "Validate email",
           "message": "驗證電子郵件"
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.short_desc": {
@@ -964,7 +964,7 @@
           "message": "可選的來源字串，用於協助您追蹤驗證請求的來源。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "傳送電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.short_desc": {
@@ -976,7 +976,7 @@
           "message": "傳送交易式電子郵件給一位或多位收件者。您可以傳送純文字、HTML 或兩者皆傳送。支援副本、密件副本及自訂回覆地址。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "收件者電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -988,7 +988,7 @@
           "message": "主要收件者的電子郵件地址。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "收件者名稱"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "用於個人化「收件者」欄位的選填收件者姓名。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "寄件者電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "將顯示為寄件者的電子郵件地址。必須是 SendGrid 帳戶中已驗證的寄件者。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "寄件者名稱"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "電子郵件的主旨行。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.display_name": {
-          "source": "Text Content",
+          "source": "Text content",
           "message": "文字內容"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "電子郵件內容的純文字版本。必須提供文字內容或 HTML 內容（或兩者）。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.display_name": {
-          "source": "HTML Content",
+          "source": "HTML content",
           "message": "HTML 內容"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "電子郵件內容的 HTML 版本。必須提供文字內容或 HTML 內容（或兩者）。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "回覆電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "收件者應回覆的選填電子郵件地址。如果未提供，回覆將傳送至寄件者地址。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "回覆收件者名稱"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "回覆地址所顯示的選填名稱。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "副本電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "要包含為副本 (CC) 收件者的電子郵件地址陣列。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "密件副本電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "要包含為密件副本 (BCC) 收件者的電子郵件地址陣列。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.display_name": {
-          "source": "Send Template Email",
+          "source": "Send template email",
           "message": "傳送範本電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "使用預先定義的 SendGrid 動態範本傳送交易式電子郵件。透過提供個人化的動態範本資料來自訂電子郵件內容。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "收件者電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "主要收件者的電子郵件地址。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "收件者名稱"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "用於個人化「收件者」欄位的選填收件者姓名。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "寄件者電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "將顯示為寄件者的電子郵件地址。必須是 SendGrid 帳戶中已驗證的寄件者。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "寄件者名稱"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "選取用於此電子郵件的動態範本。範本必須已在您的 SendGrid 帳戶中建立。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.display_name": {
-          "source": "Template Values",
+          "source": "Template values",
           "message": "範本值"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "包含動態範本資料鍵值組的 JSON 物件。這些值將取代所選範本中對應的預留位置。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "回覆電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "收件者應回覆的選填電子郵件地址。如果未提供，回覆將傳送至寄件者地址。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "回覆收件者名稱"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "回覆地址所顯示的選填名稱。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "副本電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "要包含為副本 (CC) 收件者的電子郵件地址陣列。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "密件副本電子郵件"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.short_desc": {

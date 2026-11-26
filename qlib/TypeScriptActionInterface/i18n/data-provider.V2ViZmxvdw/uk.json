@@ -28,7 +28,7 @@
           "message": "Виконати спеціальний виклик HTTP / REST API до **Webflow**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.display_name": {
-          "source": "Delete Item",
+          "source": "Delete item",
           "message": "Видалити елемент"
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Виберіть сайт Webflow для фільтрації колекцій (необов'язково)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
+          "source": "Get collection",
           "message": "Отримати колекцію"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Виберіть конкретну колекцію Webflow, інформацію про яку потрібно отримати"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.display_name": {
-          "source": "Get Item",
+          "source": "Get item",
           "message": "Отримати елемент"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Виберіть сайт Webflow для фільтрації колекцій (необов'язково)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Ідентифікатор локалі CMS"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Укажіть ідентифікатор локалі CMS у разі роботи із сайтом із кількома локалями"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
+          "source": "Get order",
           "message": "Отримати замовлення"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Виберіть конкретне замовлення, інформацію про яке потрібно отримати"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.display_name": {
-          "source": "Get Site",
+          "source": "Get site",
           "message": "Отримати сайт"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Виберіть конкретний сайт Webflow, про який потрібно отримати інформацію"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "Список колекцій"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Виберіть сайт Webflow, з якого потрібно отримати список колекцій"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.display_name": {
-          "source": "List Custom Domains",
+          "source": "List custom domains",
           "message": "Отримати список кастомних доменів"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Виберіть сайт Webflow, для якого потрібно отримати список кастомних доменів"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.display_name": {
-          "source": "List Items",
+          "source": "List items",
           "message": "Список елементів"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Виберіть колекцію Webflow, з якої потрібно отримати список елементів"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Ідентифікатор локалі CMS"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Фільтрувати елементи за полем слага"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.display_name": {
-          "source": "Last Published",
+          "source": "Last published",
           "message": "Востаннє опубліковано"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Фільтрувати елементи за діапазоном дати останньої публікації"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.display_name": {
-          "source": "Greater Than or Equal To",
+          "source": "Greater than or equal to",
           "message": "Більше або дорівнює"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Включити товари, опубліковані після або в цю дату"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.display_name": {
-          "source": "Less Than or Equal To",
+          "source": "Less than or equal to",
           "message": "Менше або дорівнює"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Включити товари, опубліковані до або в цю дату"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Сортувати за"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Слаг"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Порядок сортування"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.short_desc": {
@@ -768,7 +768,7 @@
           "message": "За спаданням"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.display_name": {
-          "source": "List Orders",
+          "source": "List orders",
           "message": "Список замовлень"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Максимальна кількість замовлень для повернення на сторінку (за замовчуванням: 20)"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.display_name": {
-          "source": "List Sites",
+          "source": "List sites",
           "message": "Отримати список сайтів"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Отримати список усіх сайтів Webflow, доступних із поточним токеном автентифікації."
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.display_name": {
-          "source": "Mark Order Status",
+          "source": "Mark order status",
           "message": "Позначити статус замовлення"
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Повернено"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.display_name": {
-          "source": "Publish Site",
+          "source": "Publish site",
           "message": "Опублікувати сайт"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Виберіть сайт Webflow, який ви хочете опублікувати"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.display_name": {
-          "source": "Custom Domains",
+          "source": "Custom domains",
           "message": "Власні домени"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Вкажіть власні домени для публікації сайту (необов’язково)"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.display_name": {
-          "source": "Publish to Webflow Subdomain",
+          "source": "Publish to Webflow subdomain",
           "message": "Опублікувати на субдомені Webflow"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Чи публікувати сайт на його субдомені Webflow"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.display_name": {
-          "source": "Publish Item",
+          "source": "Publish item",
           "message": "Опублікувати елемент"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "Виберіть сайт Webflow для фільтрації колекцій (необов'язково)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.display_name": {
-          "source": "Create Item",
+          "source": "Create item",
           "message": "Створити позицію"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Виберіть колекцію Webflow, у якій потрібно створити новий елемент"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "Архівовано"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Установіть значення true, якщо елемент має бути архівованим після створення"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "Чернетка"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Установіть значення true, якщо елемент потрібно зберегти як чернетку (за замовчуванням: true)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Ідентифікатор локалі CMS"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Укажіть ідентифікатор локалі CMS у разі роботи із сайтом із кількома локалями"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.display_name": {
-          "source": "Update Item",
+          "source": "Update item",
           "message": "Оновити елемент"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Виберіть конкретний елемент, який потрібно оновити"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "Архівовано"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Встановіть значення true, щоб архівувати елемент, або false, щоб розархівувати його"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "Чернетка"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Встановіть значення true, щоб зберегти елемент як чернетку, або false, щоб опублікувати його"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Ідентифікатор локалі CMS"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Укажіть ідентифікатор локалі CMS у разі роботи із сайтом із кількома локалями"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.display_name": {
-          "source": "New Item",
+          "source": "New item",
           "message": "Новий елемент"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Виберіть сайт Webflow, на якому потрібно відстежувати події створення нових елементів"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.display_name": {
-          "source": "Updated Item",
+          "source": "Updated item",
           "message": "Оновлений елемент"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "Виберіть сайт Webflow, на якому потрібно відстежувати події оновлення елементів"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.display_name": {
-          "source": "New Order",
+          "source": "New order",
           "message": "Нове замовлення"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Виберіть сайт Webflow, на якому потрібно відстежувати події нових замовлень"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.display_name": {
-          "source": "Updated Order",
+          "source": "Updated order",
           "message": "Оновлене замовлення"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.short_desc": {

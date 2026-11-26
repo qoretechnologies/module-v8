@@ -27,13 +27,13 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
   },
   actions: {
     get_current_weather: {
-      displayName: 'Get Current Weather',
+      displayName: 'Get current weather',
       shortDesc: 'Retrieve current weather data for a specific location',
       longDesc:
         'Get real-time weather information including temperature, humidity, wind speed, pressure, visibility, and weather conditions for any location worldwide. Supports lookup by city name, geographic coordinates, or zip/postal code.',
       options: {
         location_type: {
-          displayName: 'Location Type',
+          displayName: 'Location type',
           shortDesc: 'How to specify the location',
           longDesc:
             'Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.',
@@ -57,7 +57,7 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
             'Enter the longitude coordinate of the location in decimal degrees (e.g., -0.1278 for London). Valid range is -180 to 180.',
         },
         zip: {
-          displayName: 'Zip/Postal Code',
+          displayName: 'Zip/postal code',
           shortDesc: 'Zip or postal code with optional country code',
           longDesc:
             'Enter the zip or postal code, optionally followed by a comma and the two-letter country code (e.g., "10001,US", "SW1A 1AA,GB"). Defaults to US if no country code is provided.',
@@ -77,13 +77,13 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
       },
     },
     get_forecast: {
-      displayName: 'Get Weather Forecast',
+      displayName: 'Get weather forecast',
       shortDesc: 'Retrieve 5-day weather forecast with 3-hour intervals',
       longDesc:
         'Get a 5-day weather forecast with data points every 3 hours for any location worldwide. Each forecast item includes temperature, humidity, wind, precipitation probability, and weather conditions. Supports lookup by city name, geographic coordinates, or zip/postal code.',
       options: {
         location_type: {
-          displayName: 'Location Type',
+          displayName: 'Location type',
           shortDesc: 'How to specify the location',
           longDesc:
             'Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.',
@@ -107,7 +107,7 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
             'Enter the longitude coordinate of the location in decimal degrees (e.g., -0.1278 for London). Valid range is -180 to 180.',
         },
         zip: {
-          displayName: 'Zip/Postal Code',
+          displayName: 'Zip/postal code',
           shortDesc: 'Zip or postal code with optional country code',
           longDesc:
             'Enter the zip or postal code, optionally followed by a comma and the two-letter country code (e.g., "10001,US", "SW1A 1AA,GB"). Defaults to US if no country code is provided.',
@@ -135,13 +135,13 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
   },
   triggers: {
     temperature_threshold: {
-      displayName: 'Temperature Threshold',
+      displayName: 'Temperature threshold',
       shortDesc: 'Trigger when temperature crosses a threshold',
       longDesc:
         'Monitor the temperature at a specific location and trigger when it crosses above or below a configured threshold value. Useful for temperature alerts, HVAC automation, and weather-dependent workflows.',
       options: {
         location_type: {
-          displayName: 'Location Type',
+          displayName: 'Location type',
           shortDesc: 'How to specify the location',
           longDesc:
             'Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.',
@@ -163,7 +163,7 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
           longDesc: 'Enter the longitude coordinate of the location in decimal degrees. Valid range is -180 to 180.',
         },
         zip: {
-          displayName: 'Zip/Postal Code',
+          displayName: 'Zip/postal code',
           shortDesc: 'Zip or postal code with optional country code',
           longDesc: 'Enter the zip or postal code, optionally followed by a comma and the two-letter country code.',
         },
@@ -173,13 +173,13 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
           longDesc: 'Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).',
         },
         threshold_type: {
-          displayName: 'Threshold Type',
+          displayName: 'Threshold type',
           shortDesc: 'Direction of temperature crossing',
           longDesc:
             'Choose whether to trigger when temperature goes above or below the threshold value. "Goes Above" triggers when temperature rises past the threshold. "Goes Below" triggers when temperature drops below the threshold.',
         },
         threshold_value: {
-          displayName: 'Threshold Value',
+          displayName: 'Threshold value',
           shortDesc: 'Temperature threshold to monitor',
           longDesc:
             'Set the temperature value that will trigger the event when crossed. Use the same units as selected in the Units option (e.g., 0 for freezing point in Celsius, 32 in Fahrenheit).',
@@ -190,13 +190,13 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
       },
     },
     weather_condition_change: {
-      displayName: 'Weather Condition Change',
+      displayName: 'Weather condition change',
       shortDesc: 'Trigger when weather conditions change',
       longDesc:
         'Monitor the weather conditions at a specific location and trigger when conditions change (e.g., from Clear to Rain, Clouds to Snow). Optionally filter for specific condition types.',
       options: {
         location_type: {
-          displayName: 'Location Type',
+          displayName: 'Location type',
           shortDesc: 'How to specify the location',
           longDesc:
             'Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.',
@@ -218,7 +218,7 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
           longDesc: 'Enter the longitude coordinate of the location in decimal degrees. Valid range is -180 to 180.',
         },
         zip: {
-          displayName: 'Zip/Postal Code',
+          displayName: 'Zip/postal code',
           shortDesc: 'Zip or postal code with optional country code',
           longDesc: 'Enter the zip or postal code, optionally followed by a comma and the two-letter country code.',
         },
@@ -228,7 +228,7 @@ Your OpenWeatherMap API key that authenticates requests to the weather data APIs
           longDesc: 'Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).',
         },
         condition_filter: {
-          displayName: 'Condition Filter',
+          displayName: 'Condition filter',
           shortDesc: 'Filter for specific weather conditions',
           longDesc:
             'Optionally filter to only trigger when the new condition matches a specific type. Select "Any Change" to trigger on all condition changes, or select a specific condition like Rain, Snow, Clear, etc.',

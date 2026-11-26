@@ -28,7 +28,7 @@
           "message": "Effectuer un appel d'API HTTP / REST personnalisé à **ClickUp** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), des paramètres de requête optionnels, des en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hash contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.Q2xpY2tVcA.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Rechercher des enregistrements"
         },
         "app.Q2xpY2tVcA.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Le nom de la table"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.display_name": {
-          "source": "Add Task Comment",
+          "source": "Add task comment",
           "message": "Ajouter un commentaire à la tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "La tâche ClickUp à laquelle ajouter le commentaire"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Y29tbWVudF90ZXh0.display_name": {
-          "source": "Comment Text",
+          "source": "Comment text",
           "message": "Texte du commentaire"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Y29tbWVudF90ZXh0.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Le contenu textuel du commentaire à ajouter à la tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Notifier tout le monde"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.bm90aWZ5X2FsbA.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Utilisateur auquel attribuer le commentaire"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Z3JvdXBfYXNzaWduZWU.display_name": {
-          "source": "Group Assignee",
+          "source": "Group assignee",
           "message": "Groupe assigné"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Z3JvdXBfYXNzaWduZWU.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Groupe auquel attribuer le commentaire"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.display_name": {
-          "source": "Create Document Page",
+          "source": "Create document page",
           "message": "Créer une page de document"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Le document ClickUp auquel ajouter la page"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.bmFtZQ.display_name": {
-          "source": "Page Name",
+          "source": "Page name",
           "message": "Nom de la page"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.bmFtZQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Un sous-titre optionnel pour la page"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.Y29udGVudF9mb3JtYXQ.display_name": {
-          "source": "Content Format",
+          "source": "Content format",
           "message": "Format du contenu"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.Y29udGVudF9mb3JtYXQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Texte brut"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
-          "source": "Create Document",
+          "source": "Create document",
           "message": "Créer un document"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
@@ -696,7 +696,7 @@
           "message": "L'espace de travail ClickUp dans lequel le document sera créé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.bmFtZQ.display_name": {
-          "source": "Document Name",
+          "source": "Document name",
           "message": "Nom du document"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.bmFtZQ.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Le nom/titre du nouveau document"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.display_name": {
-          "source": "Parent Location",
+          "source": "Parent location",
           "message": "Emplacement parent"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Le conteneur parent (espace, dossier, liste, etc.) où le document sera placé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.field.dHlwZQ.display_name": {
-          "source": "Parent Type",
+          "source": "Parent type",
           "message": "Type de parent"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.field.dHlwZQ.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Privé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.Y3JlYXRlX3BhZ2U.display_name": {
-          "source": "Create Page",
+          "source": "Create page",
           "message": "Créer une page"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.Y3JlYXRlX3BhZ2U.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Indique s'il faut créer une page initiale dans le document"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.display_name": {
-          "source": "Create Folder",
+          "source": "Create folder",
           "message": "Créer un dossier"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "L'espace ClickUp dans lequel le dossier sera créé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.option.bmFtZQ.display_name": {
-          "source": "Folder Name",
+          "source": "Folder name",
           "message": "Nom du dossier"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.option.bmFtZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Le nom du nouveau dossier"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create List",
+          "source": "Create list",
           "message": "Créer une liste"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Le dossier ClickUp dans lequel la liste sera créée"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "List Name",
+          "source": "List name",
           "message": "Nom de la liste"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Niveau de priorité de la liste"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Date d'échéance"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.ZHVlX2RhdGU.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Date d'échéance de la liste"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Contenu Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Contenu de la description au format Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Créer une tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "La liste ClickUp dans laquelle la tâche sera créée"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "Nom de la tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Indique s'il faut créer la tâche dans un état archivé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.display_name": {
-          "source": "Group Assignees",
+          "source": "Group assignees",
           "message": "Groupes assignés"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Niveau de priorité de la tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Date d'échéance"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Date d'échéance de la tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Date de début"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Quand le travail sur la tâche doit commencer"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.display_name": {
-          "source": "Time Estimate",
+          "source": "Time estimate",
           "message": "Estimation de temps"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Valeur en points attribuée à la tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Notifier tout le monde"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Indique s'il faut informer tous les membres de l'équipe concernés de la nouvelle tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
+          "source": "Parent task",
           "message": "Tâche parente"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Tâche parente pour créer celle-ci en tant que sous-tâche"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Contenu Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Description de la tâche au format Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bGlua3NfdG8.display_name": {
-          "source": "Links To",
+          "source": "Links to",
           "message": "Lié à"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bGlua3NfdG8.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Tâche avec laquelle créer une relation de lien"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Check Required Custom Fields",
+          "source": "Check required custom fields",
           "message": "Vérifier les champs personnalisés requis"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Indique s'il faut valider que tous les champs personnalisés requis sont fournis"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Champs personnalisés"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "L'identifiant unique du champ personnalisé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Valeur du champ"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "La valeur à définir pour ce champ personnalisé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.display_name": {
-          "source": "Custom Item ID",
+          "source": "Custom item ID",
           "message": "ID d'élément personnalisé"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "Identifiant de type de tâche personnalisé"
         },
         "app.Q2xpY2tVcA.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
+          "source": "Delete task",
           "message": "Supprimer la tâche"
         },
         "app.Q2xpY2tVcA.action.ZGVsZXRlX3Rhc2s.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "La tâche ClickUp à supprimer"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2RvY3VtZW50.display_name": {
-          "source": "Get Document",
+          "source": "Get document",
           "message": "Obtenir le document"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2RvY3VtZW50.short_desc": {
@@ -1360,7 +1360,7 @@
           "message": "Le document ClickUp à récupérer"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2ZvbGRlcg.display_name": {
-          "source": "Get Folder",
+          "source": "Get folder",
           "message": "Obtenir le dossier"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2ZvbGRlcg.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "Le dossier ClickUp pour lequel récupérer des informations"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2xpc3Rz.display_name": {
-          "source": "Get List",
+          "source": "Get list",
           "message": "Obtenir la liste"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2xpc3Rz.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "La liste ClickUp pour laquelle récupérer des informations"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Obtenir la tâche"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.short_desc": {
@@ -1540,7 +1540,7 @@
           "message": "La tâche ClickUp à récupérer"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Include Markdown Description",
+          "source": "Include markdown description",
           "message": "Inclure la description Markdown"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Indique s'il faut inclure la description de la tâche au format Markdown"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.c3VidGFza3M.display_name": {
-          "source": "Include Subtasks",
+          "source": "Include subtasks",
           "message": "Inclure les sous-tâches"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.c3VidGFza3M.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Indique s'il faut inclure les sous-tâches dans la réponse"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3dvcmtzcGFjZQ.display_name": {
-          "source": "Get Workspace",
+          "source": "Get workspace",
           "message": "Obtenir l'espace de travail"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3dvcmtzcGFjZQ.short_desc": {
@@ -1588,7 +1588,7 @@
           "message": "L'espace de travail ClickUp pour lequel récupérer des informations"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.display_name": {
-          "source": "List Channels",
+          "source": "List channels",
           "message": "Lister les canaux"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "L'espace de travail ClickUp à partir duquel lister les canaux"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.ZGVzY3JpcHRpb25fZm9ybWF0.display_name": {
-          "source": "Description Format",
+          "source": "Description format",
           "message": "Format de description"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.ZGVzY3JpcHRpb25fZm9ybWF0.short_desc": {
@@ -1656,7 +1656,7 @@
           "message": "Nombre maximum de canaux à retourner"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aXNfZm9sbG93ZXI.display_name": {
-          "source": "Is Follower",
+          "source": "Is follower",
           "message": "Est abonné"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aXNfZm9sbG93ZXI.short_desc": {
@@ -1668,7 +1668,7 @@
           "message": "Indique s'il faut filtrer les canaux par statut d'abonné"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden",
+          "source": "Include hidden",
           "message": "Inclure les éléments masqués"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
@@ -1680,7 +1680,7 @@
           "message": "Indique s'il faut inclure les canaux masqués dans les résultats"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.cm9vbV90eXBlcw.display_name": {
-          "source": "Room Types",
+          "source": "Room types",
           "message": "Types de salons"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.cm9vbV90eXBlcw.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "Message direct de groupe"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jdXN0b21fZmllbGRz.display_name": {
-          "source": "List Custom Fields",
+          "source": "List custom fields",
           "message": "Lister les champs personnalisés"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jdXN0b21fZmllbGRz.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "L'espace de travail ClickUp à partir duquel lister les champs personnalisés"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "Lister les documents"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Nombre maximum de documents à retourner"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.bmV4dF9jdXJzb3I.display_name": {
-          "source": "Next Cursor",
+          "source": "Next cursor",
           "message": "Curseur suivant"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.bmV4dF9jdXJzb3I.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "Curseur pour récupérer la page de résultats suivante"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.cGFyZW50X3R5cGU.display_name": {
-          "source": "Parent Type",
+          "source": "Parent type",
           "message": "Type de parent"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.cGFyZW50X3R5cGU.short_desc": {
@@ -1856,7 +1856,7 @@
           "message": "ID du conteneur parent par lequel filtrer les documents"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.display_name": {
-          "source": "List Folders",
+          "source": "List folders",
           "message": "Lister les dossiers"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "L'espace ClickUp à partir duquel récupérer les dossiers"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.option.YXJjaGl2ZWQ.display_name": {
-          "source": "Include Archived",
+          "source": "Include archived",
           "message": "Inclure les éléments archivés"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.option.YXJjaGl2ZWQ.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "Indique s'il faut inclure les dossiers archivés dans les résultats"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Lister les groupes"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9ncm91cHM.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "ID de groupes spécifiques à récupérer (séparés par des virgules)"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.display_name": {
-          "source": "List Lists",
+          "source": "List lists",
           "message": "Lister les listes"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.short_desc": {
@@ -1988,7 +1988,7 @@
           "message": "Le dossier ClickUp à partir duquel récupérer les listes"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.option.YXJjaGl2ZWQ.display_name": {
-          "source": "Include Archived",
+          "source": "Include archived",
           "message": "Inclure les éléments archivés"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.option.YXJjaGl2ZWQ.short_desc": {
@@ -2000,7 +2000,7 @@
           "message": "Indique s'il faut inclure les listes archivées dans les résultats"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Lister les tâches"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.short_desc": {
@@ -2072,7 +2072,7 @@
           "message": "Indique s'il faut inclure les tâches archivées"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Include Markdown Description",
+          "source": "Include markdown description",
           "message": "Inclure la description Markdown"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.short_desc": {
@@ -2096,7 +2096,7 @@
           "message": "Numéro de page pour la pagination"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Trier par"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.b3JkZXJfYnk.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "Indique s'il faut inverser l'ordre de tri"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.c3VidGFza3M.display_name": {
-          "source": "Include Subtasks",
+          "source": "Include subtasks",
           "message": "Inclure les sous-tâches"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.c3VidGFza3M.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "Indique s'il faut inclure les sous-tâches dans les résultats"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9jbG9zZWQ.display_name": {
-          "source": "Include Closed",
+          "source": "Include closed",
           "message": "Inclure les tâches fermées"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9jbG9zZWQ.short_desc": {
@@ -2172,7 +2172,7 @@
           "message": "Statuts de tâche spécifiques selon lesquels filtrer"
         },
         "app.Q2xpY2tVcA.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
-          "source": "List Workspaces",
+          "source": "List workspaces",
           "message": "Lister les espaces de travail"
         },
         "app.Q2xpY2tVcA.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
@@ -2184,7 +2184,7 @@
           "message": "Récupérer tous les espaces de travail ClickUp accessibles à l'utilisateur authentifié"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.display_name": {
-          "source": "Send Channel Message",
+          "source": "Send channel message",
           "message": "Envoyer un message de canal"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "Utilisateur auquel assigner le message"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Z3JvdXBfYXNzaWduZWU.display_name": {
-          "source": "Group Assignee",
+          "source": "Group assignee",
           "message": "Groupe assigné"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Z3JvdXBfYXNzaWduZWU.short_desc": {
@@ -2244,7 +2244,7 @@
           "message": "Groupe auquel assigner le message"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.dHlwZQ.display_name": {
-          "source": "Message Type",
+          "source": "Message type",
           "message": "Type de message"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.dHlwZQ.short_desc": {
@@ -2288,7 +2288,7 @@
           "message": "Utilisateurs à ajouter comme abonnés au message"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Y29udGVudF9mb3JtYXQ.display_name": {
-          "source": "Content Format",
+          "source": "Content format",
           "message": "Format du contenu"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Y29udGVudF9mb3JtYXQ.short_desc": {
@@ -2308,7 +2308,7 @@
           "message": "Markdown"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "Mettre à jour la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -2380,7 +2380,7 @@
           "message": "La tâche ClickUp à mettre à jour"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "Nom de la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -2428,7 +2428,7 @@
           "message": "Indique s'il faut archiver la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.display_name": {
-          "source": "Group Assignees",
+          "source": "Group assignees",
           "message": "Groupes assignés"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.short_desc": {
@@ -2452,7 +2452,7 @@
           "message": "Niveau de priorité mis à jour pour la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Date d'échéance"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -2464,7 +2464,7 @@
           "message": "Date d'échéance mise à jour pour la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Date de début"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -2476,7 +2476,7 @@
           "message": "Date de début mise à jour pour la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.display_name": {
-          "source": "Time Estimate",
+          "source": "Time estimate",
           "message": "Estimation de temps"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.short_desc": {
@@ -2500,7 +2500,7 @@
           "message": "Valeur en points mise à jour pour la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Notifier tout le monde"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.short_desc": {
@@ -2512,7 +2512,7 @@
           "message": "Indique s'il faut notifier tous les membres de l'équipe concernés de la mise à jour de la tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
+          "source": "Parent task",
           "message": "Tâche parente"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "Tâche parente mise à jour pour en faire une sous-tâche"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Contenu Markdown"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -2536,7 +2536,7 @@
           "message": "Description de la tâche mise à jour au format Markdown"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bGlua3NfdG8.display_name": {
-          "source": "Links To",
+          "source": "Links to",
           "message": "Lié à"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bGlua3NfdG8.short_desc": {
@@ -2548,7 +2548,7 @@
           "message": "Tâche avec laquelle créer ou mettre à jour une relation de lien"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Check Required Custom Fields",
+          "source": "Check required custom fields",
           "message": "Vérifier les champs personnalisés requis"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -2560,7 +2560,7 @@
           "message": "Indique s'il faut valider que tous les champs personnalisés requis sont fournis"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Champs personnalisés"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -2584,7 +2584,7 @@
           "message": "L'identifiant unique du champ personnalisé"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Valeur du champ"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "La nouvelle valeur pour ce champ personnalisé"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.display_name": {
-          "source": "Custom Item ID",
+          "source": "Custom item ID",
           "message": "ID d'élément personnalisé"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.short_desc": {
@@ -2608,7 +2608,7 @@
           "message": "Identifiant de type de tâche personnalisé mis à jour"
         },
         "app.Q2xpY2tVcA.action.bmV3X2ZvbGRlcg.display_name": {
-          "source": "New Folder",
+          "source": "New folder",
           "message": "Nouveau dossier"
         },
         "app.Q2xpY2tVcA.action.bmV3X2ZvbGRlcg.short_desc": {
@@ -2632,7 +2632,7 @@
           "message": "L'espace de travail ClickUp à surveiller pour les événements de création de nouveau dossier"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "Nouvelle tâche"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2s.short_desc": {
@@ -2656,7 +2656,7 @@
           "message": "L'espace de travail ClickUp à surveiller pour les événements de création de nouvelle tâche"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2tfY29tbWVudA.display_name": {
-          "source": "New Task Comment",
+          "source": "New task comment",
           "message": "Nouveau commentaire de tâche"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2tfY29tbWVudA.short_desc": {
@@ -2728,7 +2728,7 @@
           "message": "Optionnel : déclencher uniquement pour les commentaires sur cette tâche spécifique"
         },
         "app.Q2xpY2tVcA.action.dGFza191cGRhdGVk.display_name": {
-          "source": "Task Updated",
+          "source": "Task updated",
           "message": "Tâche mise à jour"
         },
         "app.Q2xpY2tVcA.action.dGFza191cGRhdGVk.short_desc": {
@@ -2752,7 +2752,7 @@
           "message": "L'espace de travail ClickUp à surveiller pour les événements de mise à jour de tâche"
         },
         "app.Q2xpY2tVcA.action.dGFza190aW1lX3RyYWNrZWRfdXBkYXRlZA.display_name": {
-          "source": "Task Time Tracked Updated",
+          "source": "Task time tracked updated",
           "message": "Suivi du temps de tâche mis à jour"
         },
         "app.Q2xpY2tVcA.action.dGFza190aW1lX3RyYWNrZWRfdXBkYXRlZA.short_desc": {
@@ -2776,7 +2776,7 @@
           "message": "L'espace de travail ClickUp à surveiller pour les mises à jour du suivi du temps sur les tâches"
         },
         "app.Q2xpY2tVcA.action.bmV3X2xpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "Nouvelle liste"
         },
         "app.Q2xpY2tVcA.action.bmV3X2xpc3Q.short_desc": {

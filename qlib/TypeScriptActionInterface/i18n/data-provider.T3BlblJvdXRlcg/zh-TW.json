@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **OpenRouter** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊返回。\n\n將此動作使用於尚未在此應用程式中公開為第一類動作的端點。"
         },
         "app.T3BlblJvdXRlcg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.T3BlblJvdXRlcg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.T3BlblJvdXRlcg.action.bGlzdF9tb2RlbHM.display_name": {
-          "source": "List Models",
+          "source": "List models",
           "message": "列出模型"
         },
         "app.T3BlblJvdXRlcg.action.bGlzdF9tb2RlbHM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "列出模型"
         },
         "app.T3BlblJvdXRlcg.action.c2VuZF9wcm9tcHQ.display_name": {
-          "source": "Send Prompt",
+          "source": "Send prompt",
           "message": "傳送提示詞"
         },
         "app.T3BlblJvdXRlcg.action.c2VuZF9wcm9tcHQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "傳送提示詞"
         },
         "app.T3BlblJvdXRlcg.action.Y2hhdF9jb21wbGV0aW9u.display_name": {
-          "source": "Chat Completion",
+          "source": "Chat completion",
           "message": "對話補全"
         },
         "app.T3BlblJvdXRlcg.action.Y2hhdF9jb21wbGV0aW9u.short_desc": {

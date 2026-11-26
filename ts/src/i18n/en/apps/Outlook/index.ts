@@ -8,7 +8,7 @@ const OutlookAppEn = {
     'Microsoft Outlook is a personal information manager software system from Microsoft, available as a part of the Microsoft Office suite. Primarily an email application, it also includes a calendar, task manager, contact manager, note taking, journal, and web browsing. Connect your Outlook account to create and manage contacts, calendar events, and send emails.',
   actions: {
     'manage-email': {
-      displayName: 'Manage Email',
+      displayName: 'Manage email',
       shortDesc: 'Delete or move an email message to another folder.',
       longDesc:
         'Performs operations on an existing email message, allowing you to either delete it permanently or move it to another folder in your Outlook mailbox.',
@@ -24,7 +24,7 @@ const OutlookAppEn = {
           longDesc: 'Specify whether to delete the email permanently or move it to another folder.',
         },
         targetFolderId: {
-          displayName: 'Target Folder ID',
+          displayName: 'Target folder ID',
           shortDesc: 'ID of the target folder',
           longDesc:
             'The ID of the folder where you want to move the email. This field is required only when the action is set to "move".',
@@ -32,7 +32,7 @@ const OutlookAppEn = {
       },
     },
     'search-emails': {
-      displayName: 'Search Emails',
+      displayName: 'Search emails',
       shortDesc:
         'Search for emails using various filter criteria including advanced attachment filters.',
       longDesc:
@@ -46,12 +46,12 @@ const OutlookAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'Field to sort by',
                 longDesc: 'Select the field by which to sort the email results.',
               },
               order: {
-                displayName: 'Sort Order',
+                displayName: 'Sort order',
                 shortDesc: 'Order of sorting',
                 longDesc:
                   'Choose the order in which to sort the results. Options include Ascending and Descending.',
@@ -65,22 +65,22 @@ const OutlookAppEn = {
           longDesc: 'Sets the maximum number of email results to return. Default is 50.',
         },
         startDateTime: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'Filter emails received on or after this date',
           longDesc: 'Only include emails that were received on or after this date and time.',
         },
         endDateTime: {
-          displayName: 'End Date',
+          displayName: 'End date',
           shortDesc: 'Filter emails received on or before this date',
           longDesc: 'Only include emails that were received on or before this date and time.',
         },
         fromSender: {
-          displayName: 'From Sender',
+          displayName: 'From sender',
           shortDesc: 'Filter emails from a specific sender',
           longDesc: 'Only include emails from this specific sender email address.',
         },
         toRecipient: {
-          displayName: 'To Recipient',
+          displayName: 'To recipient',
           shortDesc: 'Filter emails sent to a specific recipient',
           longDesc: 'Only include emails sent to this specific recipient email address.',
         },
@@ -90,29 +90,29 @@ const OutlookAppEn = {
           longDesc: 'Only include emails with this text in the subject line.',
         },
         hasAttachments: {
-          displayName: 'Has Attachments',
+          displayName: 'Has attachments',
           shortDesc: 'Filter emails with or without attachments',
           longDesc:
             'When set to true, only include emails that have attachments. When false, only include emails without attachments.',
         },
         isRead: {
-          displayName: 'Is Read',
+          displayName: 'Is read',
           shortDesc: 'Filter read or unread emails',
           longDesc:
             'When set to true, only include emails that have been read. When false, only include unread emails.',
         },
         attachmentNames: {
-          displayName: 'Attachment Names',
+          displayName: 'Attachment names',
           shortDesc: 'Filter emails by specific attachment names',
           longDesc: 'Only include emails that have attachments with these filenames.',
         },
         bodyContains: {
-          displayName: 'Body Contains',
+          displayName: 'Body contains',
           shortDesc: 'Filter emails by body content',
           longDesc: 'Only include emails that contain this text in the body content.',
         },
         includeAttachments: {
-          displayName: 'Include Attachments',
+          displayName: 'Include attachments',
           shortDesc: 'Include attachment content in results',
           longDesc:
             'When set to true, the content of email attachments will be included in the results. This may increase response size significantly.',
@@ -123,25 +123,25 @@ const OutlookAppEn = {
           longDesc: 'The email folder to search in. Defaults to Inbox if not specified.',
         },
         attachmentFilenamePattern: {
-          displayName: 'Attachment Filename Pattern',
+          displayName: 'Attachment filename pattern',
           shortDesc: 'Filter by attachment filename pattern (regex)',
           longDesc:
             'Filter emails by a regular expression pattern that matches attachment filenames. Example: ".*\\.pdf$" would match all PDF files.',
         },
         attachmentMimeTypes: {
-          displayName: 'Attachment MIME Types',
+          displayName: 'Attachment MIME types',
           shortDesc: 'Filter by attachment MIME types',
           longDesc:
             'Only include emails with attachments matching these MIME types (e.g., "application/pdf", "image/jpeg").',
         },
         attachmentMinSize: {
-          displayName: 'Attachment Minimum Size',
+          displayName: 'Attachment minimum size',
           shortDesc: 'Filter by attachment minimum size in bytes',
           longDesc:
             'Only include emails with attachments larger than or equal to this size in bytes.',
         },
         attachmentMaxSize: {
-          displayName: 'Attachment Maximum Size',
+          displayName: 'Attachment maximum size',
           shortDesc: 'Filter by attachment maximum size in bytes',
           longDesc:
             'Only include emails with attachments smaller than or equal to this size in bytes.',
@@ -149,35 +149,35 @@ const OutlookAppEn = {
       },
     },
     'create-contact': {
-      displayName: 'Create Contact',
+      displayName: 'Create contact',
       shortDesc: 'Create a new contact in your Outlook contacts.',
       longDesc:
         'Create a new contact with details such as name, email, phone numbers, and job information in your Microsoft Outlook contacts.',
       options: {
         givenName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "The contact's first name.",
           longDesc: 'Enter the first name or given name of the contact.',
         },
         surname: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "The contact's last name.",
           longDesc: 'Enter the last name or surname of the contact.',
         },
         emailAddresses: {
-          displayName: 'Email Addresses',
+          displayName: 'Email addresses',
           shortDesc: 'Email addresses for the contact.',
           longDesc: 'Enter one or more email addresses for the contact.',
           type: {
             element_type: {
               fields: {
                 address: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: 'The email address of the contact.',
                   longDesc: 'Enter a valid email address for the contact.',
                 },
                 name: {
-                  displayName: 'Display Name',
+                  displayName: 'Display name',
                   shortDesc: 'The display name for this email address.',
                   longDesc: 'Enter how you want the name to appear for this email address.',
                 },
@@ -186,22 +186,22 @@ const OutlookAppEn = {
           },
         },
         businessPhones: {
-          displayName: 'Business Phones',
+          displayName: 'Business phones',
           shortDesc: 'Business phone numbers for the contact.',
           longDesc: 'Enter one or more business phone numbers for the contact.',
         },
         mobilePhone: {
-          displayName: 'Mobile Phone',
+          displayName: 'Mobile phone',
           shortDesc: "The contact's mobile phone number.",
           longDesc: 'Enter the mobile or cell phone number for the contact.',
         },
         jobTitle: {
-          displayName: 'Job Title',
+          displayName: 'Job title',
           shortDesc: "The contact's job title.",
           longDesc: 'Enter the professional title or role of the contact.',
         },
         companyName: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: "The name of the contact's company.",
           longDesc: 'Enter the organization or company where the contact works.',
         },
@@ -211,12 +211,12 @@ const OutlookAppEn = {
           longDesc: 'Enter the department or division within the company where the contact works.',
         },
         officeLocation: {
-          displayName: 'Office Location',
+          displayName: 'Office location',
           shortDesc: "The contact's office location.",
           longDesc: 'Enter the physical location or office where the contact works.',
         },
         businessAddress: {
-          displayName: 'Business Address',
+          displayName: 'Business address',
           shortDesc: "The contact's business address.",
           longDesc: 'Enter the full business address details for the contact.',
           type: {
@@ -232,17 +232,17 @@ const OutlookAppEn = {
                 longDesc: 'Enter the city or town for the business address.',
               },
               state: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'State or province.',
                 longDesc: 'Enter the state, province, or region for the business address.',
               },
               countryOrRegion: {
-                displayName: 'Country/Region',
+                displayName: 'Country/region',
                 shortDesc: 'Country or region.',
                 longDesc: 'Enter the country or region for the business address.',
               },
               postalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'Postal or zip code.',
                 longDesc: 'Enter the postal code or zip code for the business address.',
               },
@@ -252,7 +252,7 @@ const OutlookAppEn = {
       },
     },
     'update-contact': {
-      displayName: 'Update Contact',
+      displayName: 'Update contact',
       shortDesc: 'Update an existing contact in your Outlook contacts.',
       longDesc:
         'Modify details of an existing contact in your Microsoft Outlook contacts, such as name, email, phone numbers, or job information.',
@@ -263,29 +263,29 @@ const OutlookAppEn = {
           longDesc: 'Select the unique identifier of the contact you want to update.',
         },
         givenName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "The contact's first name.",
           longDesc: 'Update the first name or given name of the contact.',
         },
         surname: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "The contact's last name.",
           longDesc: 'Update the last name or surname of the contact.',
         },
         emailAddresses: {
-          displayName: 'Email Addresses',
+          displayName: 'Email addresses',
           shortDesc: 'Email addresses for the contact.',
           longDesc: 'Update one or more email addresses for the contact.',
           type: {
             element_type: {
               fields: {
                 address: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: 'The email address of the contact.',
                   longDesc: 'Enter a valid email address for the contact.',
                 },
                 name: {
-                  displayName: 'Display Name',
+                  displayName: 'Display name',
                   shortDesc: 'The display name for this email address.',
                   longDesc: 'Enter how you want the name to appear for this email address.',
                 },
@@ -294,22 +294,22 @@ const OutlookAppEn = {
           },
         },
         businessPhones: {
-          displayName: 'Business Phones',
+          displayName: 'Business phones',
           shortDesc: 'Business phone numbers for the contact.',
           longDesc: 'Update one or more business phone numbers for the contact.',
         },
         mobilePhone: {
-          displayName: 'Mobile Phone',
+          displayName: 'Mobile phone',
           shortDesc: "The contact's mobile phone number.",
           longDesc: 'Update the mobile or cell phone number for the contact.',
         },
         jobTitle: {
-          displayName: 'Job Title',
+          displayName: 'Job title',
           shortDesc: "The contact's job title.",
           longDesc: 'Update the professional title or role of the contact.',
         },
         companyName: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: "The name of the contact's company.",
           longDesc: 'Update the organization or company where the contact works.',
         },
@@ -319,12 +319,12 @@ const OutlookAppEn = {
           longDesc: 'Update the department or division within the company where the contact works.',
         },
         officeLocation: {
-          displayName: 'Office Location',
+          displayName: 'Office location',
           shortDesc: "The contact's office location.",
           longDesc: 'Update the physical location or office where the contact works.',
         },
         businessAddress: {
-          displayName: 'Business Address',
+          displayName: 'Business address',
           shortDesc: "The contact's business address.",
           longDesc: 'Update the full business address details for the contact.',
           type: {
@@ -340,17 +340,17 @@ const OutlookAppEn = {
                 longDesc: 'Update the city or town for the business address.',
               },
               state: {
-                displayName: 'State/Province',
+                displayName: 'State/province',
                 shortDesc: 'State or province.',
                 longDesc: 'Update the state, province, or region for the business address.',
               },
               countryOrRegion: {
-                displayName: 'Country/Region',
+                displayName: 'Country/region',
                 shortDesc: 'Country or region.',
                 longDesc: 'Update the country or region for the business address.',
               },
               postalCode: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'Postal or zip code.',
                 longDesc: 'Update the postal code or zip code for the business address.',
               },
@@ -360,7 +360,7 @@ const OutlookAppEn = {
       },
     },
     'delete-contact': {
-      displayName: 'Delete Contact',
+      displayName: 'Delete contact',
       shortDesc: 'Delete a contact from your Outlook contacts.',
       longDesc: 'Permanently remove a contact from your Microsoft Outlook contacts.',
       options: {
@@ -372,7 +372,7 @@ const OutlookAppEn = {
       },
     },
     'create-event': {
-      displayName: 'Create Event',
+      displayName: 'Create event',
       shortDesc: 'Create a new event in your Outlook calendar.',
       longDesc:
         'Create a new event or meeting in your Microsoft Outlook calendar with details such as title, start and end times, location, and attendees.',
@@ -388,17 +388,17 @@ const OutlookAppEn = {
           longDesc: 'Enter a title or subject for the event that will appear in your calendar.',
         },
         start: {
-          displayName: 'Start Time',
+          displayName: 'Start time',
           shortDesc: 'When the event begins.',
           longDesc: 'Enter the date and time when the event will start.',
         },
         timezone: {
-          displayName: 'Time Zone',
+          displayName: 'Time zone',
           shortDesc: 'The time zone for the event times.',
           longDesc: 'Select the time zone that applies to the start and end times of the event.',
         },
         end: {
-          displayName: 'End Time',
+          displayName: 'End time',
           shortDesc: 'When the event ends.',
           longDesc:
             'Enter the date and time when the event will end. If not specified, defaults to 1 hour after start time.',
@@ -416,12 +416,12 @@ const OutlookAppEn = {
             element_type: {
               fields: {
                 address: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: "The attendee's email address.",
                   longDesc: 'Enter the email address of the person you want to invite.',
                 },
                 name: {
-                  displayName: 'Display Name',
+                  displayName: 'Display name',
                   shortDesc: "The attendee's display name.",
                   longDesc: 'Optionally enter a display name for the attendee.',
                 },
@@ -436,12 +436,12 @@ const OutlookAppEn = {
             'Enter the description or details of the event that attendees will see in the invitation.',
         },
         bodyContentType: {
-          displayName: 'Body Content Type',
+          displayName: 'Body content type',
           shortDesc: 'Format of the body content.',
           longDesc: 'Select whether the body content is plain text or HTML formatted.',
         },
         isOnlineMeeting: {
-          displayName: 'Online Meeting',
+          displayName: 'Online meeting',
           shortDesc: 'Whether this is an online meeting.',
           longDesc:
             'Enable this option to make this event an online meeting and generate a meeting link.',
@@ -449,7 +449,7 @@ const OutlookAppEn = {
       },
     },
     'delete-event': {
-      displayName: 'Delete Event',
+      displayName: 'Delete event',
       shortDesc: 'Delete an event from your Outlook calendar.',
       longDesc: 'Permanently remove an event or meeting from your Microsoft Outlook calendar.',
       options: {
@@ -466,7 +466,7 @@ const OutlookAppEn = {
       },
     },
     'list-contacts': {
-      displayName: 'List Contacts',
+      displayName: 'List contacts',
       shortDesc: 'Retrieve a list of contacts from your Outlook contacts.',
       longDesc:
         'Get a list of contacts from your Microsoft Outlook contacts with optional filtering and limit.',
@@ -485,7 +485,7 @@ const OutlookAppEn = {
       },
     },
     'list-events': {
-      displayName: 'List Events',
+      displayName: 'List events',
       shortDesc: 'Retrieve a list of events from your Outlook calendar.',
       longDesc:
         'Get a list of events from your Microsoft Outlook calendar with optional filtering by date range and limit.',
@@ -496,12 +496,12 @@ const OutlookAppEn = {
           longDesc: 'Select the calendar from which you want to retrieve events.',
         },
         startDateTime: {
-          displayName: 'Start Date and Time',
+          displayName: 'Start date and time',
           shortDesc: 'The start date and time for filtering events.',
           longDesc: 'Enter a date and time to retrieve events that start on or after this time.',
         },
         endDateTime: {
-          displayName: 'End Date and Time',
+          displayName: 'End date and time',
           shortDesc: 'The end date and time for filtering events.',
           longDesc: 'Enter a date and time to retrieve events that end on or before this time.',
         },
@@ -513,25 +513,25 @@ const OutlookAppEn = {
       },
     },
     'send-email': {
-      displayName: 'Send Email',
+      displayName: 'Send email',
       shortDesc: 'Send an email from your Outlook account.',
       longDesc:
         'Compose and send an email message from your Microsoft Outlook account to one or more recipients.',
       options: {
         toRecipients: {
-          displayName: 'To Recipients',
+          displayName: 'To recipients',
           shortDesc: 'The primary recipients of the email.',
           longDesc: 'Enter one or more email addresses for the primary recipients of the email.',
           type: {
             element_type: {
               fields: {
                 address: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: "Recipient's email address.",
                   longDesc: 'Enter the email address of the recipient.',
                 },
                 name: {
-                  displayName: 'Display Name',
+                  displayName: 'Display name',
                   shortDesc: "Recipient's display name.",
                   longDesc: 'Optionally enter a display name for the recipient.',
                 },
@@ -540,7 +540,7 @@ const OutlookAppEn = {
           },
         },
         ccRecipients: {
-          displayName: 'CC Recipients',
+          displayName: 'CC recipients',
           shortDesc: 'The carbon copy recipients of the email.',
           longDesc:
             'Optionally enter one or more email addresses for recipients to be copied on the email.',
@@ -548,12 +548,12 @@ const OutlookAppEn = {
             element_type: {
               fields: {
                 address: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: "CC recipient's email address.",
                   longDesc: 'Enter the email address of the CC recipient.',
                 },
                 name: {
-                  displayName: 'Display Name',
+                  displayName: 'Display name',
                   shortDesc: "CC recipient's display name.",
                   longDesc: 'Optionally enter a display name for the CC recipient.',
                 },
@@ -562,7 +562,7 @@ const OutlookAppEn = {
           },
         },
         bccRecipients: {
-          displayName: 'BCC Recipients',
+          displayName: 'BCC recipients',
           shortDesc: 'The blind carbon copy recipients of the email.',
           longDesc:
             'Optionally enter one or more email addresses for recipients to be blind copied on the email.',
@@ -570,12 +570,12 @@ const OutlookAppEn = {
             element_type: {
               fields: {
                 address: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: "BCC recipient's email address.",
                   longDesc: 'Enter the email address of the BCC recipient.',
                 },
                 name: {
-                  displayName: 'Display Name',
+                  displayName: 'Display name',
                   shortDesc: "BCC recipient's display name.",
                   longDesc: 'Optionally enter a display name for the BCC recipient.',
                 },
@@ -594,12 +594,12 @@ const OutlookAppEn = {
           longDesc: 'Enter the main message content of the email.',
         },
         bodyContentType: {
-          displayName: 'Body Content Type',
+          displayName: 'Body content type',
           shortDesc: 'Format of the email body.',
           longDesc: 'Select whether the email body is plain text or HTML formatted.',
         },
         saveToSentItems: {
-          displayName: 'Save to Sent Items',
+          displayName: 'Save to sent items',
           shortDesc: 'Whether to save a copy in Sent Items.',
           longDesc: 'Choose whether to save a copy of the email in your Sent Items folder.',
         },
@@ -614,44 +614,44 @@ const OutlookAppEn = {
   },
   triggers: {
     'new-email-with-attachment': {
-      displayName: 'New Email with Attachment',
+      displayName: 'New email with attachment',
       shortDesc:
         'Triggers when an email with attachments is received, processing each matching attachment individually.',
       longDesc:
         'Monitors an Outlook mailbox for new emails with attachments. When an email with attachments is received, each attachment that matches the specified filters will trigger a separate event. This allows for processing individual attachments from emails while maintaining the full email context.',
       options: {
         senderFilter: {
-          displayName: 'Sender Filter',
+          displayName: 'Sender filter',
           shortDesc: 'Only process emails from this sender',
           longDesc:
             'If specified, only emails from this exact sender email address will be processed. Leave empty to process emails from any sender.',
         },
         subjectFilter: {
-          displayName: 'Subject Filter',
+          displayName: 'Subject filter',
           shortDesc: 'Only process emails with this text in the subject',
           longDesc:
             'If specified, only emails containing this text in the subject line will be processed. Leave empty to process emails with any subject.',
         },
         filenameFilters: {
-          displayName: 'Filename Filters',
+          displayName: 'Filename filters',
           shortDesc: 'Only process attachments with matching filenames',
           longDesc:
             'A list of text strings to match against attachment filenames. If provided, only attachments with filenames containing any of these strings will be processed. Matching is case-insensitive. Leave empty to process all attachments regardless of filename.',
         },
         mimeTypeFilters: {
-          displayName: 'MIME Type Filters',
+          displayName: 'MIME type filters',
           shortDesc: 'Only process attachments with matching MIME types',
           longDesc:
             'A list of MIME type strings to match against attachment content types. If provided, only attachments with content types containing any of these strings will be processed. For example, use "pdf" to match PDF files, "image/" to match all images, or "spreadsheet" to match Excel files. Matching is case-insensitive. Leave empty to process all attachments regardless of MIME type.',
         },
         action: {
-          displayName: 'Email Action',
+          displayName: 'Email action',
           shortDesc: 'Action to perform on the email after processing its attachments',
           longDesc:
             'Specify what should happen to the email after all matching attachments have been processed. Options include: None (leave the email as is), Delete (permanently remove the email), or Move (relocate the email to another folder).',
         },
         targetFolderId: {
-          displayName: 'Target Folder',
+          displayName: 'Target folder',
           shortDesc: 'Destination folder for emails when using Move action',
           longDesc:
             'If the Email Action is set to "Move", specify the folder where the email should be moved after all attachments have been processed. This option is only used when Move is selected.',
@@ -662,49 +662,49 @@ const OutlookAppEn = {
       },
     },
     'new-contact': {
-      displayName: 'New Contact',
+      displayName: 'New contact',
       shortDesc: 'Triggered when a new contact is created in Outlook.',
       longDesc:
         'This trigger is activated whenever a new contact is added to your Microsoft Outlook contacts.',
     },
     'new-email': {
-      displayName: 'New Email Trigger',
+      displayName: 'New email trigger',
       shortDesc: 'Triggers when a new email is received in your Outlook inbox',
       longDesc:
         'Monitors your Outlook inbox and triggers when new emails arrive. Supports filtering by sender, subject, or attachments, and can optionally delete or move processed emails.',
       options: {
         senderFilter: {
-          displayName: 'Sender Filter',
+          displayName: 'Sender filter',
           shortDesc: 'Filter emails by sender address',
           longDesc:
             'Only trigger for emails from this specific sender email address. Leave empty to trigger for all senders.',
         },
         subjectFilter: {
-          displayName: 'Subject Filter',
+          displayName: 'Subject filter',
           shortDesc: 'Filter emails by subject content',
           longDesc:
             'Only trigger for emails containing this text in the subject line. Leave empty to match any subject.',
         },
         hasAttachments: {
-          displayName: 'Has Attachments',
+          displayName: 'Has attachments',
           shortDesc: 'Filter by attachment presence',
           longDesc:
             'Filter emails based on whether they have attachments. Set to true to only trigger for emails with attachments, false for emails without attachments, or leave empty to trigger for both.',
         },
         includeAttachmentData: {
-          displayName: 'Include Attachment Data',
+          displayName: 'Include attachment data',
           shortDesc: 'Include attachment content in trigger data',
           longDesc:
             'When enabled, the trigger will fetch and include the actual attachment content in the trigger data. This may increase processing time for large attachments.',
         },
         action: {
-          displayName: 'Email Action',
+          displayName: 'Email action',
           shortDesc: 'Action to perform once the email event has been raised',
           longDesc:
             'Optional action to perform on each email once its event has been raised. Choose "None" to leave emails unchanged, "Delete" to remove the email, or "Move" to relocate the email to another folder.\n\nThe action runs as soon as the event has been **raised**, which is not the same as the consumer having **processed** it: a consumer that receives the event and then fails, times out, or is restarted mid-processing has already lost the email, and a delete cannot be undone. For any workload that must not lose the source email, leave this set to "None" and act from the consumer once processing has succeeded, using the message ID the event carries.',
         },
         targetFolderId: {
-          displayName: 'Target Folder',
+          displayName: 'Target folder',
           shortDesc: 'Destination folder for moved emails',
           longDesc:
             'The folder where emails will be moved if the "Move" action is selected. Only required when action is set to "Move".',
@@ -715,7 +715,7 @@ const OutlookAppEn = {
       },
     },
     'new-event': {
-      displayName: 'New Event',
+      displayName: 'New event',
       shortDesc: 'Triggered when a new event is created in an Outlook calendar.',
       longDesc:
         'This trigger is activated whenever a new event or meeting is created in your Microsoft Outlook calendar.',

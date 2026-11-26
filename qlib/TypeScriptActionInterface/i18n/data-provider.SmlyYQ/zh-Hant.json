@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Jira** 發出自訂 HTTP / REST API 呼叫。\n\n請指定 HTTP 方法、URI 路徑 (相對於連線的 API 基本 URL)、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n針對此應用程式尚未作為頂級動作公開的端點，請使用此動作。"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "表格名稱"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get Announcement Banner",
+          "source": "Get announcement banner",
           "message": "獲取公告橫幅"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
@@ -472,7 +472,7 @@
           "message": "擷取 Jira 執行個體目前的公告橫幅配置"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set Announcement Banner",
+          "source": "Set announcement banner",
           "message": "設定公告橫幅"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
@@ -484,7 +484,7 @@
           "message": "更新 Jira 執行個體的公告橫幅設定"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get Fields",
+          "source": "Get fields",
           "message": "獲取欄位"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "傳回 Jira 執行個體中的所有欄位（包含系統欄位與自訂欄位）"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create Custom Field",
+          "source": "Create custom field",
           "message": "建立自訂欄位"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "在 Jira 執行個體中建立新的自訂欄位"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update Custom Field",
+          "source": "Update custom field",
           "message": "更新自訂欄位"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "更新自訂欄位的名稱和描述"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash Custom Field",
+          "source": "Trash custom field",
           "message": "將自訂欄位移至垃圾桶"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "將自訂欄位移至垃圾桶。自訂欄位可在 60 天內從垃圾桶還原"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create Issue",
+          "source": "Create issue",
           "message": "建立議題"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "在 Jira 專案中建立新的議題"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete Issue",
+          "source": "Delete issue",
           "message": "刪除問題"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "從 Jira 專案中刪除問題"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get Issue",
+          "source": "Get issue",
           "message": "取得問題"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "依 ID 或鍵擷取特定問題的詳細資訊"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit Issue",
+          "source": "Edit issue",
           "message": "編輯問題"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
@@ -580,7 +580,7 @@
           "message": "更新現有問題的欄位"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get Comments",
+          "source": "Get comments",
           "message": "獲取註解"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
@@ -592,7 +592,7 @@
           "message": "擷取指定議題的所有註解"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add Comment",
+          "source": "Add comment",
           "message": "新增註解"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "為指定議題新增註解"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete Comment",
+          "source": "Delete comment",
           "message": "刪除留言"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "刪除問題中的特定留言"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get Comment",
+          "source": "Get comment",
           "message": "獲取註解"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "依 ID 擷取特定註解"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update Comment",
+          "source": "Update comment",
           "message": "更新留言"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "更新問題上的現有留言"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get Issue Worklogs",
+          "source": "Get issue worklogs",
           "message": "取得問題工作記錄"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
@@ -652,7 +652,7 @@
           "message": "擷取特定問題的所有工作記錄"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add Worklog",
+          "source": "Add worklog",
           "message": "新增工作記錄"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "為指定議題新增工作記錄項目"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete Worklog",
+          "source": "Delete worklog",
           "message": "刪除工作記錄"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
@@ -676,7 +676,7 @@
           "message": "從問題中刪除特定工作記錄項目"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get Worklog",
+          "source": "Get worklog",
           "message": "取得工作記錄"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "依 ID 擷取特定工作記錄項目"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update Worklog",
+          "source": "Update worklog",
           "message": "更新工作記錄"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "更新問題上的現有工作記錄項目"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
+          "source": "Get all projects",
           "message": "獲取所有專案"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
@@ -748,7 +748,7 @@
           "message": "要為該專案傳回的專案屬性清單。此參數接受逗號分隔的清單。"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create Project",
+          "source": "Create project",
           "message": "建立專案"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "在 Jira 中建立新專案"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete Project",
+          "source": "Delete project",
           "message": "刪除專案"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
@@ -772,7 +772,7 @@
           "message": "從 Jira 刪除專案"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get Project",
+          "source": "Get project",
           "message": "取得專案"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
@@ -784,7 +784,7 @@
           "message": "依 ID 或鍵擷取特定專案的詳細資訊"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update Project",
+          "source": "Update project",
           "message": "更新專案"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "更新現有專案的詳細資訊"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search Issues",
+          "source": "Search issues",
           "message": "搜尋問題"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
@@ -808,7 +808,7 @@
           "message": "使用 JQL (Jira 查詢語言) 搜尋問題。傳回符合搜尋條件的問題"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
-          "source": "New Issue",
+          "source": "New issue",
           "message": "新問題"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "要監視新問題的專案"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
-          "source": "Updated Issue",
+          "source": "Updated issue",
           "message": "已更新問題"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {

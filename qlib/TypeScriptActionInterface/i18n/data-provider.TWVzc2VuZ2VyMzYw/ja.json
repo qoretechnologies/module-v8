@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**360 Messenger for WhatsApp** に対するカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。応答は、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.display_name": {
-          "source": "Get WhatsApp Contacts",
+          "source": "Get WhatsApp contacts",
           "message": "WhatsApp 連絡先の取得"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.short_desc": {
@@ -352,7 +352,7 @@
           "message": "電話番号、ビジネスステータス、連絡先情報などの詳細を含む、WhatsApp 連絡先の完全なリストを取得します。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.display_name": {
-          "source": "Get WhatsApp Chats",
+          "source": "Get WhatsApp chats",
           "message": "WhatsApp チャットの取得"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.short_desc": {
@@ -364,7 +364,7 @@
           "message": "チャットの詳細、最新のメッセージ、未読数、ピン留めやアーカイブ状態などのチャットメタデータを含む、すべての WhatsApp チャット会話のリストを取得します。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.display_name": {
-          "source": "Get WhatsApp Groups",
+          "source": "Get WhatsApp groups",
           "message": "WhatsApp グループの取得"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "グループ ID や名前を含む、自分がメンバーであるすべての WhatsApp グループ会話のリストを取得します。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Text Message",
+          "source": "Send WhatsApp text message",
           "message": "WhatsApp テキストメッセージの送信"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -388,7 +388,7 @@
           "message": "電話番号で指定した WhatsApp 連絡先にテキストメッセージを送信します。オプションで URL リンクを含めたり、後で配信するようにメッセージをスケジュールしたりできます。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.short_desc": {
@@ -400,7 +400,7 @@
           "message": "メッセージの送信先となる WhatsApp 連絡先の電話番号。国番号を含める必要があります。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "メッセージテキスト"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "WhatsApp メッセージとして送信されるテキストコンテンツ。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL リンク"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -424,7 +424,7 @@
           "message": "リンクを共有するためにテキストメッセージに含めることができるオプションの URL。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "スケジュール日時"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "メッセージを送信する日時を指定するオプション。指定しない場合、メッセージは即座に送信されます。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Group Message",
+          "source": "Send WhatsApp group message",
           "message": "WhatsApp グループメッセージの送信"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -460,7 +460,7 @@
           "message": "メッセージが送信される WhatsApp グループの一意の識別子。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "メッセージテキスト"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "WhatsApp グループメッセージとして送信されるテキストコンテンツ。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL リンク"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "リンクを共有するためにテキストメッセージに含めることができるオプションの URL。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "スケジュール日時"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "メッセージを送信する日時を指定するオプション。指定しない場合、メッセージは即座に送信されます。"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New WhatsApp Message",
+          "source": "New WhatsApp message",
           "message": "新規 WhatsApp メッセージ"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Google Chat** pomocí ověření nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou k dispozici jako primární akce v této aplikaci."
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Vypsat prostory"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Maximální počet prostorů vrácených na jedné stránce. Výchozí hodnota je 20."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Token stránky obdržený z předchozího volání výpisu prostorů. Zadejte jej pro načtení následující stránky."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.display_name": {
-          "source": "Space Type",
+          "source": "Space type",
           "message": "Typ prostoru"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Unikátní identifikátor prostoru v Google Chat, jehož členy chcete zobrazit."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Maximální počet členů vrácených na jedné stránce. Výchozí hodnota je 20."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Filtrovat seznam členů podle konkrétního pole a hodnoty, jako je role nebo typ člena."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "Filtr pole"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -504,7 +504,7 @@
           "message": "Typ člena"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Hodnota filtru"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -516,7 +516,7 @@
           "message": "Konkrétní hodnota pro filtrování členů podle vybraného pole."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.display_name": {
-          "source": "Show Groups",
+          "source": "Show groups",
           "message": "Zobrazit skupiny"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Zda do výsledků zahrnout členství ve skupinách."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.display_name": {
-          "source": "Show Invited",
+          "source": "Show invited",
           "message": "Zobrazit pozvané"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Zda zahrnout členy, kteří byli pozváni, ale ještě se nepřipojili."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.display_name": {
-          "source": "Use Admin Access",
+          "source": "Use admin access",
           "message": "Použít přístup správce"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Zda při výpisu členů použít oprávnění přístupu správce."
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "Získat člena"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Unikátní identifikátor člena, o kterém chcete získat informace."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "Seznam zpráv"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -612,7 +612,7 @@
           "message": "Unikátní identifikátor prostoru v Google Chat, jehož zprávy chcete vypsat."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Maximální počet zpráv vrácených na jedné stránce. Výchozí hodnota je 25."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Filtrovat seznam zpráv podle konkrétního pole a hodnoty, například podle času vytvoření nebo vlákna."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "Filtr pole"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Vlákno"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Hodnota filtru"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -680,7 +680,7 @@
           "message": "Konkrétní hodnota pro filtrování zpráv podle vybraného pole."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.display_name": {
-          "source": "Show Deleted",
+          "source": "Show deleted",
           "message": "Zobrazit smazané"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Zda do výsledků zahrnout smazané zprávy."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Pořadí řazení"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Sestupně"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "Získat zprávu"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Unikátní identifikátor zprávy, o které chcete získat informace."
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete Message",
+          "source": "Delete message",
           "message": "Smazat zprávu"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Unikátní identifikátor zprávy, kterou chcete smazat."
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.display_name": {
-          "source": "Force Delete",
+          "source": "Force delete",
           "message": "Vynutit smazání"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Zda vynutit smazání zprávy, i když ji nelze smazat běžným způsobem."
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.display_name": {
-          "source": "Send Message",
+          "source": "Send message",
           "message": "Odeslat zprávu"
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.short_desc": {
@@ -844,7 +844,7 @@
           "message": "ID existující zprávy, na kterou chcete odpovědět nebo ji aktualizovat. Ponechte prázdné pro odeslání nové zprávy."
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Nová zpráva"
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.short_desc": {

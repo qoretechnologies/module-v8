@@ -28,7 +28,7 @@
           "message": "Provede vlastní volání HTTP / REST API do **Odoo CRM** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL rozhraní API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci ještě nejsou k dispozici jako samostatné akce."
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.display_name": {
-          "source": "Create Lead",
+          "source": "Create lead",
           "message": "Vytvořit leada"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Hlavní název nebo jméno, které identifikuje tohoto potenciálního zákazníka nebo příležitost. Jedná se o povinné pole, které se bude zobrazovat v seznamech a sestavách."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
-          "source": "Contact Name",
+          "source": "Contact name",
           "message": "Jméno kontaktu"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Celé jméno hlavní kontaktní osoby spojené s tímto potenciálním zákazníkem."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Název společnosti"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Název společnosti nebo organizace, kterou tento potenciální zákazník zastupuje."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "Kontaktní údaje"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Hlavní e-mailová adresa pro kontakt s tímto závazkem."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Position",
+          "source": "Job position",
           "message": "Pozice úkolu"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Webová adresa společnosti nebo kontaktu."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "Informace o adrese"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -544,7 +544,7 @@
           "message": "PSČ nebo ZIP kód adresy."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
-          "source": "Sales Information",
+          "source": "Sales information",
           "message": "Informace o prodeji"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Informace o řízení prodeje včetně přiřazeného obchodníka, týmu, fáze, priority a podrobností o očekávaném uzavření."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.ZGF0ZV9kZWFkbGluZQ.display_name": {
-          "source": "Expected Closing",
+          "source": "Expected closing",
           "message": "Očekávané uzavření"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.ZGF0ZV9kZWFkbGluZQ.short_desc": {
@@ -620,7 +620,7 @@
           "message": "ID aktuální fáze v prodejním kanálu pro tento zájemce."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Obchodní tým"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.short_desc": {
@@ -644,7 +644,7 @@
           "message": "ID uživatele přiřazeného jako prodejce pro tento zájemce."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
-          "source": "Marketing Information",
+          "source": "Marketing information",
           "message": "Marketingové informace"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
@@ -704,7 +704,7 @@
           "message": "ID konkrétního zdroje, který vygeneroval tento zájemce."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
-          "source": "Activity Information",
+          "source": "Activity information",
           "message": "Informace o aktivitách"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
@@ -716,7 +716,7 @@
           "message": "Informace o další plánované aktivitě nebo navazující akci pro tohoto potenciálního zákazníka."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.display_name": {
-          "source": "Next Activity Summary",
+          "source": "Next activity summary",
           "message": "Souhrn další aktivity"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.short_desc": {
@@ -728,7 +728,7 @@
           "message": "Krátce popište plánovanou aktivitu pro tohoto zájemce."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.display_name": {
-          "source": "Next Activity Type",
+          "source": "Next activity type",
           "message": "Typ další aktivity"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Interní poznámky a komentáře k tomuto potenciálnímu zákazníkovi. Tyto informace jsou pro interní použití a nejsou viditelné pro zákazníka."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.display_name": {
-          "source": "Color Index",
+          "source": "Color index",
           "message": "Index barvy"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Počet zaznamenaných nedoručených e-mailů pro e-mailovou adresu tohoto potenciálního zákazníka."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
-          "source": "Lost Reason",
+          "source": "Lost reason",
           "message": "Důvod ztráty"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Preferovaný kód jazyka pro komunikaci s tímto potenciálním zákazníkem (např. en_US pro angličtinu, fr_FR pro francouzštinu)."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.display_name": {
-          "source": "Create Partner",
+          "source": "Create partner",
           "message": "Vytvořit partnera"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Jméno partnera (jméno jednotlivce nebo název společnosti)."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.display_name": {
-          "source": "Is Company",
+          "source": "Is company",
           "message": "Je společnost"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Nastavte na true, pokud tento partner představuje společnost/organizaci, nebo false pro individuální kontakty."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "Kontaktní údaje"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Hlavní e-mailová adresa partnera."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Function",
+          "source": "Job function",
           "message": "Funkce úkolu"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Webová adresa partnera nebo společnosti."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "Informace o adrese"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Další řádek adresy (byt, kancelář apod.)."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.field.emlw.display_name": {
-          "source": "ZIP Code",
+          "source": "ZIP code",
           "message": "PSČ"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.field.emlw.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "PSČ nebo poštovní směrovací číslo."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.display_name": {
-          "source": "Business Information",
+          "source": "Business information",
           "message": "Obchodní informace"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Interní odkazový kód nebo identifikátor partnera."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.field.dmF0.display_name": {
-          "source": "VAT Number",
+          "source": "VAT number",
           "message": "DIČ"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.field.dmF0.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "DIČ nebo daňové identifikační číslo partnera."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.display_name": {
-          "source": "Relationship Information",
+          "source": "Relationship information",
           "message": "Informace o vztazích"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Informace o vztazích k ostatním partnerům a přiřazení uživatelů."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.cGFyZW50X2lk.display_name": {
-          "source": "Parent Company",
+          "source": "Parent company",
           "message": "Rodičovská společnost"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.cGFyZW50X2lk.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Rodičovská společnost nebo organizace, ke které tento partner patří."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.dXNlcl9pZA.display_name": {
-          "source": "Assigned User",
+          "source": "Assigned user",
           "message": "Přiřazený uživatel"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.dXNlcl9pZA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Nastavte na false pro archivaci partnera bez jeho smazání."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.display_name": {
-          "source": "Internal Notes",
+          "source": "Internal notes",
           "message": "Interní poznámky"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.short_desc": {
@@ -1268,7 +1268,7 @@
           "message": "Austrálie/Sydney"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.display_name": {
-          "source": "Profile Image",
+          "source": "Profile image",
           "message": "Profilový obrázek"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.short_desc": {
@@ -1280,7 +1280,7 @@
           "message": "Profilový obrázek partnera (kódovaný v base64)."
         },
         "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.display_name": {
-          "source": "Delete Lead",
+          "source": "Delete lead",
           "message": "Odstranit zájemce"
         },
         "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.short_desc": {
@@ -1304,7 +1304,7 @@
           "message": "Jedinečný identifikátor záznamu leadu, který má být trvale smazán z Odoo CRM."
         },
         "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.display_name": {
-          "source": "Delete Partner",
+          "source": "Delete partner",
           "message": "Smazat partnera"
         },
         "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.short_desc": {
@@ -1328,7 +1328,7 @@
           "message": "Jedinečný identifikátor záznamu partnera ke smazání z Odoo."
         },
         "app.T2Rvbw.action.Z2V0X2xlYWQ.display_name": {
-          "source": "Get Lead",
+          "source": "Get lead",
           "message": "Získat zájemce"
         },
         "app.T2Rvbw.action.Z2V0X2xlYWQ.short_desc": {
@@ -1364,7 +1364,7 @@
           "message": "Seznam názvů polí, která se mají načíst ze záznamu leadu. Běžná pole jsou předvybrána."
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.display_name": {
-          "source": "Get Partner",
+          "source": "Get partner",
           "message": "Získat partnera"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.short_desc": {
@@ -1388,7 +1388,7 @@
           "message": "Jedinečný identifikátor záznamu partnera k načtení z Odoo."
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.display_name": {
-          "source": "Fields to Retrieve",
+          "source": "Fields to retrieve",
           "message": "Pole k načtení"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.short_desc": {
@@ -1400,7 +1400,7 @@
           "message": "Seznam konkrétních polí partnera k načtení. Není-li zadáno, vrátí základní informace o partnerovi včetně ID, jména, e-mailu, telefonu a stavu společnosti."
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.display_name": {
-          "source": "List Companies",
+          "source": "List companies",
           "message": "Seznam společností"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.short_desc": {
@@ -1516,7 +1516,7 @@
           "message": "Název pole, ke kterému se použije podmínka filtru"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Typ vyhledávání"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "Hodnota, proti které se porovnává pole."
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.display_name": {
-          "source": "List Leads",
+          "source": "List leads",
           "message": "Vypsat leady"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Název pole, ke kterému se použije podmínka filtru"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Typ vyhledávání"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1696,7 +1696,7 @@
           "message": "Hodnota, proti které se porovnává pole."
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.display_name": {
-          "source": "List Partners",
+          "source": "List partners",
           "message": "Vypsat partnery"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "Název pole, ke kterému se použije podmínka filtru"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Typ vyhledávání"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Hodnota, proti které se porovnává pole."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.display_name": {
-          "source": "Update Lead",
+          "source": "Update lead",
           "message": "Aktualizovat leada"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Název nebo předmět potenciálního zákazníka."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
-          "source": "Contact Name",
+          "source": "Contact name",
           "message": "Jméno kontaktu"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "Jméno primární kontaktní osoby pro tohoto potenciálního zákazníka."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
-          "source": "Partner Name",
+          "source": "Partner name",
           "message": "Název partnera"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "Název partnera nebo společnosti spojené s tímto potenciálním zákazníkem."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "Kontaktní údaje"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -1916,7 +1916,7 @@
           "message": "E-mailové adresy, telefonní číslo, pracovní pozice a informace o webových stránkách."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZW1haWxfY2M.display_name": {
-          "source": "CC Email",
+          "source": "CC email",
           "message": "CC e-mail"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZW1haWxfY2M.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "Primární e-mailová adresa kontaktu."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Function",
+          "source": "Job function",
           "message": "Funkce úkolu"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "Webová adresa kontaktu nebo společnosti."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "Informace o adrese"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -2048,7 +2048,7 @@
           "message": "Další informace o adrese (byt, kancelář apod.)."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.field.emlw.display_name": {
-          "source": "ZIP Code",
+          "source": "ZIP code",
           "message": "PSČ"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.field.emlw.short_desc": {
@@ -2060,7 +2060,7 @@
           "message": "PSČ nebo ZIP kód adresy kontaktu."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
-          "source": "Sales Information",
+          "source": "Sales information",
           "message": "Informace o prodeji"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "Aktuální fáze nebo stupeň zákazníka v prodejním procesu."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Obchodní tým"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.short_desc": {
@@ -2160,7 +2160,7 @@
           "message": "Prodejce přidělený tomuto zákazníkovi."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
-          "source": "Marketing Information",
+          "source": "Marketing information",
           "message": "Marketingové informace"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "Marketingové médium použité (e-mail, sociální sítě atd.)."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.field.cmVmZXJyZWQ.display_name": {
-          "source": "Referred By",
+          "source": "Referred by",
           "message": "Doporučil(a)"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.field.cmVmZXJyZWQ.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "Konkrétní zdroj, který vytvořil tento zákazníka."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
-          "source": "Activity Information",
+          "source": "Activity information",
           "message": "Informace o aktivitách"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "Informace o další plánované aktivitě pro tohoto potenciálního zákazníka."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.display_name": {
-          "source": "Activity Summary",
+          "source": "Activity summary",
           "message": "Shrnutí aktivity"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.short_desc": {
@@ -2244,7 +2244,7 @@
           "message": "Krátce shrňte plánovanou aktivitu."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.display_name": {
-          "source": "Activity Type",
+          "source": "Activity type",
           "message": "Typ aktivity"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.short_desc": {
@@ -2348,7 +2348,7 @@
           "message": "Příležitost"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.display_name": {
-          "source": "Email Bounce Count",
+          "source": "Email bounce count",
           "message": "Počet nedoručených e-mailů"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "Počet případů, kdy byl e-mail tomuto kontaktu vrácen jako nedoručitelný."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
-          "source": "Lost Reason",
+          "source": "Lost reason",
           "message": "Důvod ztráty"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "Preferovaný jazyk pro komunikaci s tímto kontaktem."
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.display_name": {
-          "source": "New Lead",
+          "source": "New lead",
           "message": "Nový lead"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.short_desc": {
@@ -2408,7 +2408,7 @@
           "message": "Spustit pouze pro potenciální zákazníky patřící pod zadanou společnost. Ponechte prázdné pro sledování všech společností."
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Obchodní tým"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "Spustit pouze pro potenciální zákazníky v zadané fázi. Ponechte prázdné pro sledování všech fází."
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.display_name": {
-          "source": "Lead Type",
+          "source": "Lead type",
           "message": "Typ potenciálního zákazníka"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.short_desc": {
@@ -2480,7 +2480,7 @@
           "message": "Spustit pouze pro potenciální zákazníky, kteří mají jakýkoli ze zadaných štítků. Ponechte prázdné pro sledování všech potenciálních zákazníků bez ohledu na štítky."
         },
         "app.T2Rvbw.action.bmV3X3BhcnRuZXI.display_name": {
-          "source": "New Partner",
+          "source": "New partner",
           "message": "Nový partner"
         },
         "app.T2Rvbw.action.bmV3X3BhcnRuZXI.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "Sleduje Odoo a vyhledává nově vytvořené záznamy partnerů v modelu res.partner. Tento trigger se spustí při každém přidání nové entity partnera do vašeho systému Odoo a poskytuje podrobnosti o konfiguraci partnera včetně adresy, kontaktních a organizačních údajů."
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.display_name": {
-          "source": "Updated Lead",
+          "source": "Updated lead",
           "message": "Aktualizovaný potenciální zákazník"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.short_desc": {
@@ -2516,7 +2516,7 @@
           "message": "Spustit pouze pro potenciální zákazníky patřící pod zadanou společnost. Ponechte prázdné pro sledování všech společností."
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Obchodní tým"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.short_desc": {
@@ -2552,7 +2552,7 @@
           "message": "Spustit pouze pro potenciální zákazníky v zadané fázi. Ponechte prázdné pro sledování všech fází."
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.display_name": {
-          "source": "Lead Type",
+          "source": "Lead type",
           "message": "Typ potenciálního zákazníka"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.short_desc": {

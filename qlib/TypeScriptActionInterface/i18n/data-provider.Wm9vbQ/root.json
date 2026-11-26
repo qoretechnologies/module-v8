@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Zoom** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -580,8 +580,8 @@
           "message": "Create and submit a user's registration for a webinar. Zoom users with a [Webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars allow hosts to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar. \n\n**Prerequisites:** \n* A Pro or higher plan with the Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
-          "source": "New Meeting",
-          "message": "New Meeting"
+          "source": "New meeting",
+          "message": "New meeting"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
           "source": "Triggers when a Zoom meeting is created, started, or ended.",
@@ -592,8 +592,8 @@
           "message": "Monitors Zoom meetings and triggers when meetings are created, started (live), or ended (previous meetings) based on the selected event type. Returns meeting details including topic, duration, join URL, and meeting type."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
-          "source": "Meeting Event Type",
-          "message": "Meeting Event Type"
+          "source": "Meeting event type",
+          "message": "Meeting event type"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
           "source": "Type of meeting event to monitor",
@@ -616,8 +616,8 @@
           "message": "Triggers when a meeting is started"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
-          "source": "New Webinar",
-          "message": "New Webinar"
+          "source": "New webinar",
+          "message": "New webinar"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
           "source": "Triggers when a new Zoom webinar is created.",
@@ -628,8 +628,8 @@
           "message": "Monitors Zoom webinars and triggers when new webinars are created. Returns webinar details including topic, duration, join URL, registration URL, and webinar type."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
-          "source": "New Meeting Summary",
-          "message": "New Meeting Summary"
+          "source": "New meeting summary",
+          "message": "New meeting summary"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {
           "source": "Triggers when a new Zoom meeting summary is created.",

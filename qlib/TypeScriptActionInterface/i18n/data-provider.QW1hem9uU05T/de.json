@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Amazon SNS** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anforderungstext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App bereitgestellt werden."
         },
         "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.display_name": {
-          "source": "Create Topic",
+          "source": "Create topic",
           "message": "Topic erstellen"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Erstellt ein neues Amazon SNS-Topic mit optionaler Konfiguration für FIFO-Topics, Verschlüsselung und Zustellungsrichtlinien."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.display_name": {
-          "source": "Topic Name",
+          "source": "Topic name",
           "message": "Themenname"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Die AWS-Region, in der das Topic erstellt wird. Standardmäßig us-east-1, wenn nicht angegeben."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Anzeigename"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Ein lesbarer Name für das Topic, der in E-Mail-Benachrichtigungen und anderen Kontexten angezeigt wird."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.display_name": {
-          "source": "Delivery Policy",
+          "source": "Delivery policy",
           "message": "Zustellungsrichtlinie"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Ein JSON-String, der die Zugriffsrichtlinie für das Topic definiert und steuert, wer in dem Topic veröffentlichen oder es abonnieren kann."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "KMS Master Key ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Die ID eines AWS KMS-Schlüssels, der zum Verschlüsseln von an dieses Topic veröffentlichten Nachrichten verwendet werden soll."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.display_name": {
-          "source": "FIFO Topic",
+          "source": "FIFO topic",
           "message": "FIFO-Topic"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Gibt an, ob ein FIFO-Topic (First-In-First-Out) erstellt werden soll, das die Nachrichtenreihenfolge beibehält und Duplikate verhindert."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "Inhaltsbasierte Duplikatentfernung"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Gibt an, ob die inhaltsbasierte Duplikatentfernung für FIFO-Topics aktiviert werden soll, was doppelte Nachrichten anhand des Nachrichteninhalts verhindert."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "Nachricht erstellen"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Eine optionale Betreffzeile für die Nachricht, die hauptsächlich für E-Mail-Benachrichtigungen verwendet wird."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Nachrichtenattribute"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Ein Hash mit zusätzlichen Attributen, die der Nachricht für Filter- und Routing-Zwecke beigefügt werden sollen."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "Nachrichtendeduplizierungs-ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Eindeutige Kennung für die Nachrichtendeduplizierung in FIFO-Topics. Erforderlich für FIFO-Topics ohne inhaltsbasierte Deduplizierung."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "Nachrichtengruppen-ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Ein Tag, das angibt, dass Nachrichten zu einer bestimmten Nachrichtengruppe für FIFO-Topics gehören. Erforderlich für FIFO-Topics."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "JSON-Nachricht erstellen"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Der Amazon Resource Name (ARN) des SNS-Topics, in dem die JSON-Nachricht veröffentlicht wird."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.display_name": {
-          "source": "JSON Message",
+          "source": "JSON message",
           "message": "JSON-Nachricht"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Eine optionale Betreffzeile für die Nachricht, die hauptsächlich für E-Mail-Benachrichtigungen verwendet wird."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Nachrichtenattribute"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Ein Hash mit zusätzlichen Attributen, die der Nachricht für Filter- und Routing-Zwecke beigefügt werden sollen."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "Nachrichtendeduplizierungs-ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Eindeutige Kennung für die Nachrichtendeduplizierung in FIFO-Topics. Erforderlich für FIFO-Topics ohne inhaltsbasierte Deduplizierung."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "Nachrichtengruppen-ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Ein Tag, das angibt, dass Nachrichten zu einer bestimmten Nachrichtengruppe für FIFO-Topics gehören. Erforderlich für FIFO-Topics."
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.display_name": {
-          "source": "List Topics",
+          "source": "List topics",
           "message": "Topics auflisten"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Die AWS-Region, aus der die Liste der SNS-Topics abgerufen werden soll."
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "Attribute einschließen"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Gibt an, ob detaillierte Attribute für jedes Topic eingeschlossen werden sollen, wie z. B. Abonnementanzahlen und Richtlinien."
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.display_name": {
-          "source": "Next Token",
+          "source": "Next token",
           "message": "Nächstes Token"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Ein Token zur Paginierung durch große Topic-Listen. Verwenden Sie das bei einem vorherigen Aufruf zurückgegebene Token."
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.display_name": {
-          "source": "Get Topic",
+          "source": "Get topic",
           "message": "Topic abrufen"
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Der Amazon Resource Name (ARN) des SNS-Topics, für das Details abgerufen werden sollen."
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.display_name": {
-          "source": "Add Subscriber",
+          "source": "Add subscriber",
           "message": "Abonnent hinzufügen"
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Der Endpunkt, der die Nachrichten empfängt. Das Format hängt vom Protokoll ab (URL für HTTP/HTTPS, E-Mail-Adresse für E-Mail, Telefonnummer für SMS usw.)."
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.display_name": {
-          "source": "New Topic",
+          "source": "New topic",
           "message": "Neues Thema"
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Die AWS-Region, in der Sie auf neue SNS-Themen überwachen möchten. Wenn nicht angegeben, wird standardmäßig us-east-1 verwendet."
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Neue Nachricht"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Dieser Trigger abonniert ein Amazon SNS-Thema und wird ausgelöst, wenn eine neue Nachricht veröffentlicht wird. Er verwaltet das Abonnement automatisch und stellt die vollständige Nachrichtennutzlast bereit."
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS-Region"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {

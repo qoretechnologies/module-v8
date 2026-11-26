@@ -28,7 +28,7 @@
           "message": "Зробити власний виклик HTTP / REST API до **PayPal**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
         },
         "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.display_name": {
-          "source": "List Transactions",
+          "source": "List transactions",
           "message": "Список транзакцій"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Отримує список транзакцій для вашого облікового запису PayPal за вказаний діапазон дат. Підтримує фільтрацію за типом транзакції, статусом, діапазоном сум, валютою та способом оплати, щоб допомогти знайти конкретні транзакції або створити звіти."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Дата початку"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Найдавніша дата для включення в пошук транзакцій. У результати буде включено транзакції за цю дату або пізніші."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Кінцева дата"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Кінцева дата для пошуку транзакцій. Транзакції на цю дату або раніше будуть включені до результатів."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
-          "source": "Transaction Type",
+          "source": "Transaction type",
           "message": "Тип транзакції"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
@@ -1532,7 +1532,7 @@
           "message": "Інше."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.display_name": {
-          "source": "Transaction Status",
+          "source": "Transaction status",
           "message": "Статус транзакції"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.short_desc": {
@@ -1568,7 +1568,7 @@
           "message": "Успішну транзакцію було скасовано, а кошти повернуто початковому відправнику."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.display_name": {
-          "source": "Transaction Amount Range",
+          "source": "Transaction amount range",
           "message": "Діапазон сум транзакцій"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "Укажіть діапазон сум транзакцій для фільтрації результатів. Корисно для пошуку транзакцій у певних діапазонах значень."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.display_name": {
-          "source": "Minimum Amount",
+          "source": "Minimum amount",
           "message": "Мінімальна сума"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.short_desc": {
@@ -1592,7 +1592,7 @@
           "message": "Мінімальна сума транзакції, яку включити до результатів."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.display_name": {
-          "source": "Maximum Amount",
+          "source": "Maximum amount",
           "message": "Максимальна сума"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.short_desc": {
@@ -1604,7 +1604,7 @@
           "message": "Максимальна сума транзакції, яку включити до результатів."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.display_name": {
-          "source": "Transaction Currency",
+          "source": "Transaction currency",
           "message": "Валюта транзакції"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "Долар США"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.display_name": {
-          "source": "Payment Method Type",
+          "source": "Payment method type",
           "message": "Тип способу оплати"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "Дебетова картка"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Розмір сторінки"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.short_desc": {
@@ -1848,7 +1848,7 @@
           "message": "Максимальна кількість транзакцій для повернення в одній відповіді. Використовуйте для розбиття на сторінки великих наборів результатів."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "Номер сторінки"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.short_desc": {
@@ -1860,7 +1860,7 @@
           "message": "Номер сторінки для отримання під час розбиття на сторінки великих наборів результатів."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.display_name": {
-          "source": "Create Order",
+          "source": "Create order",
           "message": "Створити замовлення"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.short_desc": {
@@ -1872,7 +1872,7 @@
           "message": "Створює нове замовлення PayPal із зазначеною сумою платежу, товарами, деталями доставки та параметрами оплати. Замовлення представляють платіж між двома або більше сторонами та можуть бути авторизовані негайно або списані пізніше. Підтримує різні джерела платежів, включно з PayPal, картками та альтернативними методами оплати."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.display_name": {
-          "source": "Payment Intent",
+          "source": "Payment intent",
           "message": "Намір платежу"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.short_desc": {
@@ -1900,7 +1900,7 @@
           "message": "Продавець має намір авторизувати платіж і заблокувати кошти після здійснення оплати клієнтом. Авторизовані платежі найкраще списувати протягом трьох днів, але вони доступні для списання до 29 днів."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "Код валюти"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2112,7 +2112,7 @@
           "message": "Долар США"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.display_name": {
-          "source": "Total Amount",
+          "source": "Total amount",
           "message": "Загальна сума"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.short_desc": {
@@ -2124,7 +2124,7 @@
           "message": "Загальна сума для цього замовлення. Має бути додатним числом і збігатися із сумою всіх компонентів розбивки, якщо вони вказані. Форматуйте як рядок із відповідною точністю десяткових знаків для валюти."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.display_name": {
-          "source": "Item Total",
+          "source": "Item total",
           "message": "Загальна сума товарів"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "Загальна вартість усіх товарів у замовленні до застосування податків, доставки, обробки, страхування чи знижок. Має дорівнювати сумі (quantity × unit_amount) для всіх товарів."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.display_name": {
-          "source": "Shipping Amount",
+          "source": "Shipping amount",
           "message": "Сума доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "Вартість доставки товарів у цьому замовленні. Ця сума додається до загальної суми замовлення."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.display_name": {
-          "source": "Handling Amount",
+          "source": "Handling amount",
           "message": "Вартість обробки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.short_desc": {
@@ -2160,7 +2160,7 @@
           "message": "Додатковий збір за обробку цього замовлення. Він покриває такі витрати, як пакування та обробка замовлення."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.display_name": {
-          "source": "Tax Total",
+          "source": "Tax total",
           "message": "Загальний податок"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.short_desc": {
@@ -2172,7 +2172,7 @@
           "message": "Загальна сума податку для всіх позицій у цьому замовленні. Включає податок з продажу, ПДВ або інші застосовні податки на основі адреси доставки та місцевих правил."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.display_name": {
-          "source": "Insurance Amount",
+          "source": "Insurance amount",
           "message": "Сума страхування"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.short_desc": {
@@ -2184,7 +2184,7 @@
           "message": "Необов’язкова сума страхування для захисту відправлення. Вона покриває вартість товарів у разі втрати або пошкодження під час доставки."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.display_name": {
-          "source": "Shipping Discount",
+          "source": "Shipping discount",
           "message": "Знижка на доставку"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "Будь-яка знижка, застосована саме до вартості доставки, наприклад акції з безкоштовної доставки або знижені тарифи на доставку для оптових замовлень."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.display_name": {
-          "source": "Discount Amount",
+          "source": "Discount amount",
           "message": "Сума знижки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.short_desc": {
@@ -2208,7 +2208,7 @@
           "message": "Загальна сума знижки, застосована до цього замовлення, включно з промокодами, акціями або оптовими знижками. Це зменшує загальну суму замовлення."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Payee Email",
+          "source": "Payee email",
           "message": "Електронна пошта одержувача платежу"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "Електронна адреса продавця, який отримає платіж. Потрібно для транзакцій маркетплейсу або в разі вказання іншого одержувача."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Payee Merchant ID",
+          "source": "Payee merchant ID",
           "message": "ID продавця-одержувача"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "Ідентифікатор продавця PayPal облікового запису, який отримає платіж. Використовується для транзакцій маркетплейсу або в разі маршрутизації платежів конкретним продавцям."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Order Description",
+          "source": "Order description",
           "message": "Опис замовлення"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.short_desc": {
@@ -2268,7 +2268,7 @@
           "message": "Номер рахунку-фактури для цього замовлення. Допомагає зіставляти замовлення з вашою бухгалтерською системою та запобігає дублюванню платежів."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.display_name": {
-          "source": "Soft Descriptor",
+          "source": "Soft descriptor",
           "message": "М’який дескриптор"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.short_desc": {
@@ -2280,7 +2280,7 @@
           "message": "Текст, який відображається у виписці з банківської картки чи банківського рахунку клієнта. Зробіть його коротким і впізнаваним, щоб уникнути повернень платежів."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.display_name": {
-          "source": "Order Items",
+          "source": "Order items",
           "message": "Товари замовлення"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.short_desc": {
@@ -2316,7 +2316,7 @@
           "message": "Пожертвування"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Item Description",
+          "source": "Item description",
           "message": "Опис позиції"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -2328,7 +2328,7 @@
           "message": "Додатковий детальний опис, що містить більше інформації про цей товар."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.display_name": {
-          "source": "Item Name",
+          "source": "Item name",
           "message": "Назва позиції"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.short_desc": {
@@ -2364,7 +2364,7 @@
           "message": "Ваш внутрішній ідентифікатор одиниці зберігання товару для відстеження запасів."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.display_name": {
-          "source": "Tax Amount",
+          "source": "Tax amount",
           "message": "Сума податку"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.short_desc": {
@@ -2376,7 +2376,7 @@
           "message": "Сума податку, що стосується цього товару, розрахована на основі кількості та застосовних ставок податку."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "Ціна за одиницю"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.short_desc": {
@@ -2400,7 +2400,7 @@
           "message": "Необов’язковий URL-посилання на сторінку товару, де клієнти можуть переглянути додаткову інформацію про цей товар."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.display_name": {
-          "source": "Shipping Type",
+          "source": "Shipping type",
           "message": "Тип доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "Самовивіз"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.display_name": {
-          "source": "Shipping Name",
+          "source": "Shipping name",
           "message": "Ім’я для доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.short_desc": {
@@ -2432,7 +2432,7 @@
           "message": "Повне ім’я особи, яка отримає відправлення за адресою доставки."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.display_name": {
-          "source": "Shipping Address Line 1",
+          "source": "Shipping address line 1",
           "message": "Рядок 1 адреси доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "Перший рядок адреси доставки, що зазвичай містить назву вулиці та номер будинку."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.display_name": {
-          "source": "Shipping Address Line 2",
+          "source": "Shipping address line 2",
           "message": "Рядок 2 адреси доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.short_desc": {
@@ -2456,7 +2456,7 @@
           "message": "Необов’язковий другий рядок адреси доставки для номерів квартир, офісів або додаткових деталей місцезнаходження."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.display_name": {
-          "source": "Shipping City",
+          "source": "Shipping city",
           "message": "Місто доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.short_desc": {
@@ -2468,7 +2468,7 @@
           "message": "Місто, куди буде доставлено товари."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.display_name": {
-          "source": "Shipping State",
+          "source": "Shipping state",
           "message": "Штат/область доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.short_desc": {
@@ -2480,7 +2480,7 @@
           "message": "Штат, область або регіон для адреси доставки. Використовуйте відповідні коди для країни."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.display_name": {
-          "source": "Shipping Postal Code",
+          "source": "Shipping postal code",
           "message": "Поштовий індекс доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "Поштовий індекс або його еквівалент для адреси доставки."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.display_name": {
-          "source": "Shipping Country Code",
+          "source": "Shipping country code",
           "message": "Код країни доставки"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.short_desc": {
@@ -2504,7 +2504,7 @@
           "message": "Двозначний код країни ISO 3166-1 для адреси доставки."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.display_name": {
-          "source": "Platform Fees",
+          "source": "Platform fees",
           "message": "Комісії платформи"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.short_desc": {
@@ -2516,7 +2516,7 @@
           "message": "Масив комісій платформи, які стягуються за цю транзакцію. Використовується маркетплейсами для стягнення комісій із транзакцій, оброблених на їхній платформі."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.display_name": {
-          "source": "Fee Amount",
+          "source": "Fee amount",
           "message": "Сума комісії"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.short_desc": {
@@ -2528,7 +2528,7 @@
           "message": "Сума платформи, яку потрібно зібрати з цієї транзакції."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Fee Recipient Email",
+          "source": "Fee recipient email",
           "message": "Електронна пошта отримувача комісії"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.short_desc": {
@@ -2540,7 +2540,7 @@
           "message": "Адреса електронної пошти рахунку, який отримуватиме плату платформи."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Fee Recipient Merchant ID",
+          "source": "Fee recipient merchant ID",
           "message": "Ідентифікатор мерчанта отримувача комісії"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
@@ -2552,7 +2552,7 @@
           "message": "Ідентифікатор мерчанта PayPal облікового запису, який отримуватиме плату платформи."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
+          "source": "Disbursement mode",
           "message": "Режим виплати"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "URL-адреса, на яку перенаправлятимуться клієнти в разі скасування процесу оплати. Має надавати інформацію про скасовану транзакцію та подальші кроки."
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.display_name": {
-          "source": "Capture Order",
+          "source": "Capture order",
           "message": "Стягнути оплату за замовлення"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.short_desc": {
@@ -2620,7 +2620,7 @@
           "message": "Ідентифікатор схваленого замовлення для списання коштів"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.display_name": {
-          "source": "Final Capture",
+          "source": "Final capture",
           "message": "Остаточне списання"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.short_desc": {
@@ -2632,7 +2632,7 @@
           "message": "Чи є це остаточним списанням коштів за замовлення"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.display_name": {
-          "source": "Payment Instructions",
+          "source": "Payment instructions",
           "message": "Інструкції щодо оплати"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.short_desc": {
@@ -2644,7 +2644,7 @@
           "message": "Спеціальні інструкції для обробки цього платежу, наприклад, терміни виплат або стягнення комісії платформи."
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
+          "source": "Disbursement mode",
           "message": "Режим виплати"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
@@ -2664,7 +2664,7 @@
           "message": "Відкладено"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
+          "source": "Get order",
           "message": "Отримати замовлення"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.short_desc": {
@@ -2688,7 +2688,7 @@
           "message": "Унікальний ідентифікатор замовлення, відомості про яке потрібно отримати."
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.display_name": {
-          "source": "Authorize Order",
+          "source": "Authorize order",
           "message": "Авторизувати замовлення"
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.short_desc": {
@@ -2712,7 +2712,7 @@
           "message": "Ідентифікатор схваленого замовлення для списання коштів"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.display_name": {
-          "source": "Refund Payment",
+          "source": "Refund payment",
           "message": "Повернути платіж"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.short_desc": {
@@ -2736,7 +2736,7 @@
           "message": "Унікальний ідентифікатор захопленого платежу, за який потрібно повернути кошти. Його можна знайти у відповіді захоплення або в деталях замовлення."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.display_name": {
-          "source": "Refund Amount",
+          "source": "Refund amount",
           "message": "Сума повернення"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.short_desc": {
@@ -2748,7 +2748,7 @@
           "message": "Сума повернення. Якщо не вказано, буде повернено повну суму захопленого платежу. Для часткових повернень вкажіть валюту та суму."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "Код валюти"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2960,7 +2960,7 @@
           "message": "Долар США"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.display_name": {
-          "source": "Refund Value",
+          "source": "Refund value",
           "message": "Сума повернення"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.short_desc": {
@@ -2972,7 +2972,7 @@
           "message": "Сума повернення, форматована як рядок із відповідною точністю десяткових розрядів."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.display_name": {
-          "source": "Note to Payer",
+          "source": "Note to payer",
           "message": "Примітка для платника"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.short_desc": {
@@ -2996,7 +2996,7 @@
           "message": "Необов'язковий ID рахунка-фактури для зв'язування з цим поверненням коштів з метою обліку та відстеження."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.display_name": {
-          "source": "List Disputes",
+          "source": "List disputes",
           "message": "Список суперечок"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.short_desc": {
@@ -3008,7 +3008,7 @@
           "message": "Отримує список суперечок клієнтів для вашого рахунку. Суперечки виникають, коли клієнти оскаржують транзакції, і цей API допомагає вам ефективно керувати ними та відповідати на них."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Час початку"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.short_desc": {
@@ -3020,7 +3020,7 @@
           "message": "Фільтрувати диспути, створені в цю дату й час або пізніше."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.display_name": {
-          "source": "Disputed Transaction ID",
+          "source": "Disputed transaction ID",
           "message": "ID оскарженої транзакції"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.short_desc": {
@@ -3032,7 +3032,7 @@
           "message": "Показувати лише диспути, пов'язані з певним ідентифікатором транзакції."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.display_name": {
-          "source": "Dispute States",
+          "source": "Dispute states",
           "message": "Стани диспуту"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.short_desc": {
@@ -3092,7 +3092,7 @@
           "message": "Суперечку вирішено та закрито."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Розмір сторінки"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.short_desc": {
@@ -3104,7 +3104,7 @@
           "message": "Максимальна кількість диспутів, що повертаються в одній відповіді."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Токен наступної сторінки"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -3116,7 +3116,7 @@
           "message": "Токен пагінації для отримання наступної сторінки диспутів."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.display_name": {
-          "source": "Updated Before",
+          "source": "Updated before",
           "message": "Оновлено до"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.short_desc": {
@@ -3128,7 +3128,7 @@
           "message": "Фільтрувати диспути, які востаннє оновлювалися до цієї дати й часу."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.display_name": {
-          "source": "Updated After",
+          "source": "Updated after",
           "message": "Оновлено після"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.short_desc": {
@@ -3140,7 +3140,7 @@
           "message": "Фільтрувати диспути, які востаннє оновлювалися після цієї дати й часу."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.display_name": {
-          "source": "List Invoices",
+          "source": "List invoices",
           "message": "Список рахунків-фактур"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.short_desc": {
@@ -3152,7 +3152,7 @@
           "message": "Отримує список рахунків-фактур у вашому обліковому записі з розбивкою на сторінки. Використовуйте параметри пагінації для перегляду великої кількості рахунків-фактур."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "Номер сторінки"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.short_desc": {
@@ -3164,7 +3164,7 @@
           "message": "Номер сторінки для отримання під час пагінації рахунків-фактур."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Розмір сторінки"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.short_desc": {
@@ -3176,7 +3176,7 @@
           "message": "Максимальна кількість рахунків-фактур, що повертаються в одній відповіді."
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.display_name": {
-          "source": "Get Invoice",
+          "source": "Get invoice",
           "message": "Отримати рахунок-фактуру"
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.short_desc": {
@@ -3200,7 +3200,7 @@
           "message": "Унікальний ідентифікатор рахунка-фактури, відомості про який потрібно отримати."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.display_name": {
-          "source": "Create Invoice",
+          "source": "Create invoice",
           "message": "Створити рахунок-фактуру"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
@@ -3212,7 +3212,7 @@
           "message": "Створює новий рахунок-фактуру, який можна надіслати клієнтам для оплати. Включає відомості про позиції, ціни, податкову інформацію та умови оплати. Рахунки-фактури можна автоматично надсилати одержувачам або ділитися ними вручну."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.display_name": {
-          "source": "Invoice Number",
+          "source": "Invoice number",
           "message": "Номер рахунка-фактури"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.short_desc": {
@@ -3224,7 +3224,7 @@
           "message": "Унікальний ідентифікатор для цього рахунка-фактури. Якщо не вказано, PayPal згенерує його автоматично."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "Код валюти"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -3448,7 +3448,7 @@
           "message": "Необов'язкова примітка або пам'ятка для додавання до рахунка-фактури. Видима для одержувача."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.display_name": {
-          "source": "Recipient Email",
+          "source": "Recipient email",
           "message": "Електронна пошта одержувача"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.short_desc": {
@@ -3460,7 +3460,7 @@
           "message": "Електронна адреса, на яку буде надіслано рахунок-фактуру. Це основний одержувач, який отримуватиме запити на оплату."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.display_name": {
-          "source": "Recipient First Name",
+          "source": "Recipient first name",
           "message": "Ім'я одержувача"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.short_desc": {
@@ -3472,7 +3472,7 @@
           "message": "Ім'я фізичної особи або контактної особи компанії, яка отримує рахунок-фактуру."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.display_name": {
-          "source": "Recipient Last Name",
+          "source": "Recipient last name",
           "message": "Прізвище одержувача"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.short_desc": {
@@ -3484,7 +3484,7 @@
           "message": "Прізвище особи, яка отримує рахунок-фактуру."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.display_name": {
-          "source": "Item Name",
+          "source": "Item name",
           "message": "Назва позиції"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.short_desc": {
@@ -3496,7 +3496,7 @@
           "message": "Описова назва товару або послуги, для якої виставляється рахунок."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Item Description",
+          "source": "Item description",
           "message": "Опис позиції"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.short_desc": {
@@ -3508,7 +3508,7 @@
           "message": "Необов'язковий детальний опис із додатковою інформацією про товар або послугу."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.display_name": {
-          "source": "Item Quantity",
+          "source": "Item quantity",
           "message": "Кількість позицій"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.short_desc": {
@@ -3520,7 +3520,7 @@
           "message": "Кількість позицій, для яких виставляється рахунок. За замовчуванням: 1, якщо не вказано."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "Ціна за одиницю"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.short_desc": {
@@ -3532,7 +3532,7 @@
           "message": "Вартість за окрему одиницю товару або послуги."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.display_name": {
-          "source": "Tax Percentage",
+          "source": "Tax percentage",
           "message": "Відсоток податку"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.short_desc": {
@@ -3544,7 +3544,7 @@
           "message": "Ставка податку у відсотках, яка застосовується до суми позиції."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.display_name": {
-          "source": "Tax Name",
+          "source": "Tax name",
           "message": "Назва податку"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.short_desc": {
@@ -3556,7 +3556,7 @@
           "message": "Описова назва податку, що застосовується, наприклад \"Sales Tax\", \"VAT\" або \"GST\"."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.display_name": {
-          "source": "Payment Terms",
+          "source": "Payment terms",
           "message": "Умови оплати"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.short_desc": {
@@ -3596,7 +3596,7 @@
           "message": "Протягом 90 днів"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.display_name": {
-          "source": "Send to Recipient",
+          "source": "Send to recipient",
           "message": "Надіслати одержувачу"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.short_desc": {
@@ -3608,7 +3608,7 @@
           "message": "Якщо true, рахунок-фактура буде автоматично надіслано на електронну адресу одержувача. Якщо false, ви зможете надіслати його вручну пізніше."
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.display_name": {
-          "source": "Subscription Events",
+          "source": "Subscription events",
           "message": "Події підписки"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.short_desc": {
@@ -3620,7 +3620,7 @@
           "message": "Спрацьовує під час подій, пов'язаних із підписками, включаючи створення, активацію, оновлення, скасування, закінчення терміну дії або призупинення підписки. Важливо для керування регулярними платежами та автоматизації життєвого циклу підписок."
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Subscription Event Type",
+          "source": "Subscription event type",
           "message": "Тип події підписки"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3680,7 +3680,7 @@
           "message": "Підписку призупинено."
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
-          "source": "Invoice Events",
+          "source": "Invoice events",
           "message": "Події рахунків-фактур"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
@@ -3692,7 +3692,7 @@
           "message": "Спрацьовує, коли відбуваються події, пов'язані з рахунками-фактурами, наприклад створення, оплата, скасування, повернення коштів або оновлення рахунка-фактури. Необхідно для керування процесами виставлення рахунків і синхронізації статусу рахунків із вашими системами."
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Invoice Event Type",
+          "source": "Invoice event type",
           "message": "Тип події рахунка-фактури"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3752,7 +3752,7 @@
           "message": "Рахунок-фактуру оновлено."
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.display_name": {
-          "source": "Dispute Events",
+          "source": "Dispute events",
           "message": "Події спорів"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.short_desc": {
@@ -3764,7 +3764,7 @@
           "message": "Спрацьовує, коли виникають події щодо спорів із клієнтами, наприклад створення, оновлення або вирішення нового спору. Необхідно для керування процесами обслуговування клієнтів і швидкого реагування на платіжні спори."
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Dispute Event Type",
+          "source": "Dispute event type",
           "message": "Тип події спору"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3800,7 +3800,7 @@
           "message": "Спір оновлено."
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.display_name": {
-          "source": "Order Events",
+          "source": "Order events",
           "message": "Події замовлень"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.short_desc": {
@@ -3812,7 +3812,7 @@
           "message": "Спрацьовує, коли відбуваються певні події, пов'язані із замовленнями, наприклад коли замовлення схвалено клієнтом, виконано або коли скасовано схвалення платежу. Використовуйте це для автоматизації робочих процесів обробки замовлень і обробки змін статусу замовлень."
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Order Event Type",
+          "source": "Order event type",
           "message": "Тип події замовлення"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.short_desc": {

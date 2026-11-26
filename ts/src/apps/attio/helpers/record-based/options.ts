@@ -20,7 +20,7 @@ export const AttioSearchOptions = {
   limit: {
     type: 'int',
     required: false,
-    display_name: 'Maximum Records',
+    display_name: 'Maximum records',
     short_desc: 'Maximum number of records to return',
     desc: 'The maximum total number of records to return across all pages. If not specified, all matching records will be returned.',
   },
@@ -40,7 +40,7 @@ export const AttioUpsertOptions = {
         },
       });
     },
-    display_name: 'Matching Attribute',
+    display_name: 'Matching attribute',
     short_desc: 'Attribute to match for upsert. Must be a unique attribute.',
     desc: 'The attribute used to determine if a record already exists for updating. If no existing record is found, a new record will be created.',
   },

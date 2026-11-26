@@ -22,7 +22,7 @@ export const CRAFT_CONN_OPTIONS = {
     type: 'string',
   },
   token: {
-    display_name: 'Craft API Token (Optional)',
+    display_name: 'Craft API token (optional)',
     short_desc: 'Craft API key for API Key access mode',
     type: 'string',
     preselected: true,

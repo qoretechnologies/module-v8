@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Asana** pomocí ověření nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní URL API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou dostupné jako primární akce v této aplikaci."
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.QXNhbmE.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhledat záznamy"
         },
         "app.QXNhbmE.action.c2VhcmNo.short_desc": {
@@ -1720,7 +1720,7 @@
           "message": "Konkrétní existující pracovní prostor lze aktualizovat odesláním požadavku PUT na URL daného pracovního prostoru. Aktualizována budou pouze pole uvedená v datovém bloku; všechna neuvedená pole zůstanou nezměněna.\nV současné době je jediným polem, které lze u pracovního prostoru upravit, jeho název.\nVrací úplný aktualizovaný záznam pracovního prostoru."
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
-          "source": "Attachment Added",
+          "source": "Attachment added",
           "message": "Příloha přidána"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
@@ -1756,7 +1756,7 @@
           "message": "Unikátní identifikátor projektu, kde budou sledovány aktivity příloh"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
-          "source": "Task ID (Optional)",
+          "source": "Task ID (optional)",
           "message": "ID úkolu (volitelné)"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
@@ -1768,7 +1768,7 @@
           "message": "Unikátní identifikátor konkrétního úkolu k monitorování. Pokud není zadán, pracovní postup spustí přílohy ze všech úkolů v projektu"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Subtask Completed",
+          "source": "Subtask completed",
           "message": "Podúkol dokončen"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1804,7 +1804,7 @@
           "message": "Jedinečný identifikátor projektu, ve kterém existuje nadřazený úkol"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID nadřazeného úkolu"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "Jedinečný identifikátor nadřazeného úkolu, jehož podúkoly budou sledovány z hlediska dokončení"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Task Completed",
+          "source": "Task completed",
           "message": "Úkol dokončen"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1852,7 +1852,7 @@
           "message": "Jedinečný identifikátor projektu, ve kterém bude sledováno dokončování úkolů"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
-          "source": "Project Task Added",
+          "source": "Project task added",
           "message": "Přidán úkol do projektu"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
@@ -1888,7 +1888,7 @@
           "message": "Jedinečný identifikátor projektu, ve kterém bude sledována tvorba nových úkolů"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
-          "source": "Project Added",
+          "source": "Project added",
           "message": "Projekt přidán"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
@@ -1912,7 +1912,7 @@
           "message": "Jedinečný identifikátor pracovního prostoru, ve kterém bude sledována tvorba nových projektů"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
-          "source": "Task Comment Added",
+          "source": "Task comment added",
           "message": "Přidán komentář k úkolu"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
@@ -1960,7 +1960,7 @@
           "message": "Jedinečný identifikátor úkolu, u kterého budou sledovány komentáře"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
-          "source": "Task Story Added",
+          "source": "Task story added",
           "message": "Přidán příběh k úkolu"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "Unikátní identifikátor úkolu, u kterého bude sledována veškerá aktivita"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
-          "source": "Task Subtask Added",
+          "source": "Task subtask added",
           "message": "Přidán podúkol k úkolu"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "Jedinečný identifikátor projektu, ve kterém existuje nadřazený úkol"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID nadřazeného úkolu"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
@@ -2056,7 +2056,7 @@
           "message": "Unikátní identifikátor nadřazeného úkolu, u kterého bude sledováno vytváření podúkolů"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
-          "source": "Task Tag Added",
+          "source": "Task tag added",
           "message": "Přidán štítek úkolu"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
@@ -2104,7 +2104,7 @@
           "message": "Jedinečný identifikátor úkolu, u kterého bude sledováno přidávání štítků"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
-          "source": "Team Added",
+          "source": "Team added",
           "message": "Tým přidán"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "Unikátní identifikátor pracovního prostoru, ve kterém bude sledováno vytváření nových týmů"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
-          "source": "User Added",
+          "source": "User added",
           "message": "Přidán uživatel"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
@@ -2152,7 +2152,7 @@
           "message": "Unikátní identifikátor pracovního prostoru, ve kterém bude sledováno přidávání nových uživatelů"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
-          "source": "Tag Created",
+          "source": "Tag created",
           "message": "Štítek vytvořen"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
@@ -2176,7 +2176,7 @@
           "message": "Jedinečný identifikátor pracovního prostoru, ve kterém bude sledována tvorba nových štítků"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
-          "source": "Task Moved to Section",
+          "source": "Task moved to section",
           "message": "Úkol přesunut do sekce"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {

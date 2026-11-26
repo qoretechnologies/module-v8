@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Trello** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.VHJlbGxv.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Trello\"",
@@ -736,8 +736,8 @@
           "message": "Create a new Workspace"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
           "source": "The name to display for the Organization",
@@ -892,8 +892,8 @@
           "message": "Search for Trello members."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
-          "source": "Card Due",
-          "message": "Card Due"
+          "source": "Card due",
+          "message": "Card due"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
           "source": "Triggers when a card becomes overdue.",
@@ -948,8 +948,8 @@
           "message": "Select a specific list to monitor for overdue cards. Only required if Source is set to \"list\"."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
-          "source": "Include Completed Cards",
-          "message": "Include Completed Cards"
+          "source": "Include completed cards",
+          "message": "Include completed cards"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
           "source": "Include cards marked as complete.",
@@ -960,8 +960,8 @@
           "message": "When enabled, the trigger will include overdue cards that have been marked as complete. By default, only incomplete overdue cards are included."
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
-          "source": "New Board",
-          "message": "New Board"
+          "source": "New board",
+          "message": "New board"
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
           "source": "Triggers when a new board is created.",
@@ -972,8 +972,8 @@
           "message": "This trigger fires when a new Trello board is created or shared with the authenticated user."
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
-          "source": "New Card",
-          "message": "New Card"
+          "source": "New card",
+          "message": "New card"
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
           "source": "Triggers when a new card is created.",
@@ -1028,8 +1028,8 @@
           "message": "Select a specific list to monitor for new cards. Only required if Source is set to \"list\"."
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
-          "source": "New Label",
-          "message": "New Label"
+          "source": "New label",
+          "message": "New label"
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
           "source": "Triggers when a new label is created.",
@@ -1052,8 +1052,8 @@
           "message": "Select the Trello board where you want to monitor for new labels being created."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
-          "source": "New List",
-          "message": "New List"
+          "source": "New list",
+          "message": "New list"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
           "source": "Triggers when a new list is created.",
@@ -1076,8 +1076,8 @@
           "message": "Select the Trello board where you want to monitor for new lists being created."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
-          "source": "Include Archived Lists",
-          "message": "Include Archived Lists"
+          "source": "Include archived lists",
+          "message": "Include archived lists"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
           "source": "Include lists that are archived.",
@@ -1088,8 +1088,8 @@
           "message": "When enabled, the trigger will include new lists that are archived. By default, only open lists are included."
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
-          "source": "New Member",
-          "message": "New Member"
+          "source": "New member",
+          "message": "New member"
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {
           "source": "Triggers when a new member is added to a board.",

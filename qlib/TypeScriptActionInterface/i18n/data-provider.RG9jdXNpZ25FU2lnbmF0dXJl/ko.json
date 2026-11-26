@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **Docusign eSignature**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 기본 작업으로 아직 제공되지 않는 엔드포인트에 이 작업을 사용하십시오."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.display_name": {
-          "source": "Envelope Status Updated",
+          "source": "Envelope status updated",
           "message": "봉투 상태 업데이트됨"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.short_desc": {
@@ -352,7 +352,7 @@
           "message": "이 트리거는 DocuSign 봉투의 수명 주기에 변경 사항이 있을 때마다 활성화됩니다. 봉투가 수신인에게 전송되거나, 전달되거나, 서명되거나, 완료되거나, 거부되는 등 다양한 업데이트를 감지합니다. 또한 봉투 재전송, 수정, 영구 삭제, 삭제, 폐기, 신규 생성 또는 제거와 같은 관리 이벤트도 포함됩니다. 이 트리거를 설정하면 봉투 진행 상황 및 상태 변경 사항을 지속적으로 파악하여 적시에 후속 조치를 취하거나 기록을 유지하거나 워크플로에서 기타 자동화된 작업을 수행할 수 있습니다."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.display_name": {
-          "source": "Default Account ID",
+          "source": "Default account ID",
           "message": "기본 계정 ID"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.short_desc": {
@@ -364,7 +364,7 @@
           "message": "연결이 인증될 때 설정되는 기본 계정 ID"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.display_name": {
-          "source": "Template Updated",
+          "source": "Template updated",
           "message": "템플릿 업데이트됨"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.short_desc": {
@@ -376,7 +376,7 @@
           "message": "템플릿 업데이트됨"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.display_name": {
-          "source": "Default Account ID",
+          "source": "Default account ID",
           "message": "기본 계정 ID"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.short_desc": {
@@ -388,7 +388,7 @@
           "message": "연결이 인증될 때 설정되는 기본 계정 ID"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.display_name": {
-          "source": "Get Brands",
+          "source": "Get brands",
           "message": "브랜드 가져오기"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "이 메서드는 기본 브랜드 프로필을 포함하여 계정과 연결된 모든 [브랜드](-docs-esign-rest-api-esign101-concepts-branding-)에 대한 세부 정보를 반환합니다.\n\n계정에서 이 메서드를 사용하려면 다음 설정 중 하나 이상이 활성화되어 있어야 합니다.\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 관련 주제\n\n- [브랜드 생성 방법](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.display_name": {
-          "source": "Create Brand",
+          "source": "Create brand",
           "message": "브랜드 생성"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.short_desc": {
@@ -412,7 +412,7 @@
           "message": "이 메서드는 계정에 대해 하나 이상의 브랜드 프로필 파일을 생성합니다.\n\n브랜드의 로고를 지정하려면\n브랜드를 생성한 후\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\n메서드를\n사용하십시오.\n\n\n이 메서드를 사용하려면 계정에 다음 설정 중 하나 또는 둘 모두가 활성화되어 있어야 합니다.\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 관련 주제\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.display_name": {
-          "source": "Delete Brand",
+          "source": "Delete brand",
           "message": "브랜드 삭제"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "이 메서드는 `brandsRequest`에 포함된 브랜드 ID를 기반으로 계정에서 하나 이상의 브랜드 프로필을 삭제합니다.\n\n계정에서 이 메서드를 사용하려면 다음 설정 중 하나 이상이 활성화되어 있어야 합니다.\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 관련 주제\n\n- [브랜드 생성 방법](-docs-esign-rest-api-how-to-create-brand-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.display_name": {
-          "source": "Get Envelopes",
+          "source": "Get envelopes",
           "message": "봉투 가져오기"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "이 메서드를 사용하면 계정에서 [봉투를 검색](-docs-esign-rest-api-esign101-concepts-envelopes-search-)할 수 있습니다. 다양한 필터 세트를 사용하여 날짜, 봉투 ID 또는 상태 코드별로 검색 범위를 좁힐 수 있습니다. 요청에 다음 매개변수 중 하나 이상이 포함되어야 합니다.\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### 제한 사항\n\n반환되는 봉투 수는 호출당 1,000개로 제한됩니다. 다음 또는 이전 봉투 세트를 가져오려면 원래 호출의 응답에서 반환된 `nextUri` 및 `previousUri` 매개변수를 사용하십시오.\n\n`from_date` 쿼리 매개변수가 지정되지 않은 경우 2년 이상 지난 봉투는 반환되지 않습니다. 더 오래된 봉투를 가져오려면 `from_date` 및 `to_date` 매개변수를 사용하여 특정 날짜 범위를 설정하십시오.\n\n불필요한 데이터베이스 쿼리를 방지하기 위해 Docusign 서명 플랫폼은 데이터베이스를 쿼리하기 전에 제공된 필터 세트가 0 크기 응답을 생성하지 않는지 요청을 먼저 확인합니다.\n\n### 봉투 상태\n\n이 표는 요청의 여러 상태 한정자(`from_to_status` 매개변수)에 대한 유효한 현재 봉투 상태(`status` 매개변수)를 보여줍니다. API 요청의 상태 및 상태 한정자에 유효한 현재 상태 열에 표시된 값이 포함되어 있지 않으면 빈 목록이 반환됩니다.\n\n클라이언트 애플리케이션은 요청하는 상태(`status` 매개변수)가 주어진 `from_to_status` 매개변수 값에 적합한지 확인해야 합니다.\n\n| Status Qualifier<br>(`from_to_status`) | Effective Status Qualifier | Valid Current Statuses                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### 추가 결과\n\n경우에 따라 특정 봉투 상태에 대한 요청에 추가 상태가 있는 봉투가 포함될 수 있습니다. 예를 들어 `from_date`이(가) 2017-01-01, `to_date`이(가) 2017-01-07이고 상태 한정자(`from_to_status`)가 `delivered`(으)로 설정된 요청의 경우, 응답 세트에 해당 기간 동안 생성되었지만 전달되지 않은 봉투가 포함될 수 있습니다. 해결 방법으로 결과 세트의 봉투 상태 값을 필요에 따라 확인하십시오.\n\n\n### 관련 주제\n\n- [Searching for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.display_name": {
-          "source": "Create Envelopes",
+          "source": "Create envelopes",
           "message": "봉투 생성"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.short_desc": {
@@ -448,7 +448,7 @@
           "message": "봉투를 생성하여 전송하거나 임시 보관 봉투를 생성합니다.\n봉투는 Docusign 플랫폼의 기본 리소스입니다.\n\n\n이 메서드를 사용하면 다음 작업을 수행할 수 있습니다.\n\n* [documents][], [recipients][] 및 [tabs][]가 포함된 봉투를\n  생성하고 전송합니다.\n* [템플릿에서 봉투를 생성하고 전송합니다](-docs-esign-rest-api-esign101-concepts-templates-).\n* [문서와 템플릿의 조합으로\n  봉투를 생성하고 전송합니다](-docs-esign-rest-api-esign101-concepts-templates-composite-).\n* 임시 보관 봉투를 생성합니다.\n\n\n단일 요청으로 봉투를 생성하고 전송하기 위해\n이 메서드를 사용할 때,\n요청 본문([`envelopeDefinition`][envelopeDefinition] 객체)에 다음 매개변수가 필요합니다.\n\n| Parameter      | Description |\n| :-      | :- |\n| `status`       | 수신인에게 봉투를 전송하려면 `sent`(으)로 설정합니다.<br>봉투를 임시 보관으로 저장하려면 `created`(으)로 설정하거나 설정하지 않습니다. |\n| `emailSubject` | 봉투를 전송하는 데 사용되는 이메일의 제목입니다. |\n| `documents`    | 서명할 [documents][]입니다. |\n| `recipients`   | 봉투 [recipients][]의 이메일 주소입니다. |\n\n\n[복합 템플릿](-docs-esign-rest-api-esign101-concepts-templates-composite-)을 사용하여\n봉투를 생성할 때는\n인라인 템플릿에 봉투 사용자 지정 필드를 지정해야 합니다.\n루트 수준에서 지정하는 사용자 지정 필드는 모두 무시됩니다.\n\n봉투에 워크플로 정의가 있고\n`workflowStatus`이(가) `paused`인 경우,\n봉투의 `status`이(가) `sent`이더라도\n봉투가 즉시 전송되지 않습니다.\n\n\n### 관련 주제\n\n[Envelope][envelopes] 및 [template][templates]\n객체는 [documents][documents],\n[recipients][recipients] 및 [tabs][tabs]와 함께\neSignature API의 핵심을 이루는 5가지 객체 모델입니다.\n[eSignature 개념 가이드](-docs-esign-rest-api-esign101-concepts-)에서는\n5가지 객체 모델이 함께 작동하는 방식을 설명합니다.\n\n다음 사용 방법 문서에는 일반적인 작업을 수행하기 위해\n이 메서드의 [`envelopeDefinition`][envelopeDefinition] 요청 본문을\n구성하는 방법을 보여주는\n실용적인 예제가 포함되어 있습니다.\n\n서명 요청\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature by email using a template](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to request a signature by SMS or WhatsApp delivery](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [How to send a request for payment](-docs-esign-rest-api-how-to-request-a-payment-)\n- [How to send an envelope to an In Person Signer](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [How to request a signature through your app (embedded signing) with a CFR Part 11 account](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\n봉투 및 템플릿 작업\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [How to create a template](-docs-esign-rest-api-how-to-create-template-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n고급 수신인 라우팅 작업\n\n- [How to pause a signature workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [How to use conditional recipients](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [How to schedule an envelope](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [How to send an envelope with delayed routing](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\n문서 작업\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [How to attach documents via binary transfer](-docs-esign-rest-api-how-to-send-binary-)\n- [How to create a signable HTML document](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [How to convert a PDF file into a signable HTML document](-docs-esign-rest-api-how-to-converting-pdf-)\n- [How to set document visibility for envelope recipients](-docs-esign-rest-api-how-to-set-document-visibility-)\n\n탭 작업\n\n- [How to get envelope tab values](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [How to get envelope custom tab values](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\n브랜드 작업\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n- [How to apply a brand to an envelope](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [How to apply a brand and template to an envelope](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\n권한 작업\n\n- [How to create a permission profile](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [How to update individual permission settings](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [How to set a permission profile](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [How to delete a permission profile](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\n다단계 수신인(서명자) 인증 구현\n\n- [How to require ID verification (IDV) for a recipient](-docs-esign-rest-api-how-to-id-verification-)\n- [How to require knowledge-based authentication (KBA) for a recipient](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [How to require phone authentication for a recipient](-docs-esign-rest-api-how-to-phone-auth-)\n- [How to require access code authentication for a recipient](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.display_name": {
-          "source": "Get Envelope",
+          "source": "Get envelope",
           "message": "봉투 가져오기"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.short_desc": {
@@ -460,7 +460,7 @@
           "message": "지정된 봉투의 전체 상태를 가져옵니다.\n봉투 목록의 상태를 가져오려면\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-)\n을 사용하십시오.\n\n### 관련 주제\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.display_name": {
-          "source": "Update Envelope",
+          "source": "Update envelope",
           "message": "봉투 업데이트"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.short_desc": {
@@ -472,7 +472,7 @@
           "message": "이 메서드를 사용하면 봉투를 변경할 수 있습니다.\n다음 용도로 사용할 수 있습니다.\n\n* [임시 보관 봉투 전송](#sending-a-draft-envelope)\n* [처리 중인 봉투 무효화](#voiding-an-in-process-envelope)\n* [임시 보관 봉투 수정](#modifying-envelope-email-information)\n* [Docusign 플랫폼에서 문서 및 봉투 메타데이터 영구 삭제](#purging-documents-from-docusign)\n\n이 메서드의 요청 본문은\n완전한 봉투 정의이지만,\n업데이트하려는 속성만\n제공하면 됩니다.\n\n## 임시 보관 봉투 전송\n\n임시 보관 봉투를 전송하려면 요청 본문에 다음 코드를 포함하십시오.\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\n봉투를 전송하기 전에 워크플로를 연결할 수 있습니다.\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## 워크플로 작업\n\n워크플로의 일시 중지를 해제하려면 요청 본문에 다음이 포함되어야 합니다.\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## 처리 중인 봉투 무효화\n\n처리 중인 봉투를 무효화하려면 요청 본문에 다음 코드를 포함하십시오.\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## 봉투 이메일 정보 수정\n\n임시 보관 봉투의 이메일 제목과 메시지를 변경하려면\n요청 본문에 다음 코드를 포함하십시오.\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Docusign에서 문서 영구 삭제\n\n문서만 영구 삭제 대기열에 배치하고\n해당 첨부 파일과 탭을\nDocusign 플랫폼에 남겨두려면\n`purgeState` 속성을\n`documents_queued`(으)로 설정하십시오.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\n문서, 첨부 파일 및 탭을\n영구 삭제 대기열에 배치하려면\n`purgeState` 속성을\n`documents_and_metadata_queued`(으)로 설정하십시오.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\n문서, 첨부 파일 및 탭을\n영구 삭제 대기열에 배치하고 개인 정보를 편집(마스킹)하려면\n`purgeState` 속성을\n`documents_and_metadata_and_redact_queued`(으)로 설정하십시오.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\n원본 사본으로 표시되지 않은 완료된 봉투에서만\n문서를 영구 삭제할 수 있습니다.\n영구 삭제를 요청하는 사용자에게는 문서를 영구 삭제할 권한이 있어야 하며,\n발신인이거나 발신인을 대리하여 작업해야 합니다.\n\n영구 삭제 요청이 시작되면\n영구 삭제할 항목이 영구 삭제 대기열에 배치되어\n14일 후에 삭제됩니다.\n발신인과 봉투에 연결된 Docusign 계정이 있는\n모든 수신인에게는\n문서가 14일 후에 삭제된다는 이메일 알림이 전송됩니다.\n알림에는 문서로 연결되는 링크가 포함되어 있습니다.\n두 번째 이메일 알림은\n7일 후에 전송됩니다.\n14일이 지나면\n문서가 시스템에서 삭제됩니다.\nDocusign 계정이 없는 수신인에게는\n이메일 알림이 전송되지 않습니다.\n\n계정에 문서 보존 정책이 있는 경우,\n봉투 문서는 보존 기간이 끝날 때\n자동으로 영구 삭제 대기열에 배치되고\n알림 이메일이 전송됩니다.\n문서 보존 정책을 설정하는 것은 문서 영구 삭제 일정을\n설정하는 것과 같습니다.\n\n## 영구 삭제 대기열에서 문서 제거\n\n영구 삭제 대기열에서 문서를 제거하려면 요청 본문에 다음 코드를 포함하십시오.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### 관련 주제\n\n- [Void an envelope](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Purging documents (eSignature Concepts)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Purging documents in an envelope (blog post)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.display_name": {
-          "source": "Get Documents",
+          "source": "Get documents",
           "message": "문서 가져오기"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.short_desc": {
@@ -484,7 +484,7 @@
           "message": "지정된 봉투와 연결된 문서 목록을 가져옵니다.\n\n### 관련 주제\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.display_name": {
-          "source": "Update Documents",
+          "source": "Update documents",
           "message": "문서 업데이트"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "기존 봉투에 하나 이상의 문서를 추가합니다.\n원본 문서의 탭이 새 문서에 적용됩니다.\n\n\n**참고:** 처리 중인 봉투의 문서를 추가하거나 수정할 때,\nDocusign에서는 변경하기 전에\n[봉투 잠금](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\n을 권장합니다.\n\n문서 파일 이름에 유니코드 문자가 포함되어 있는 경우 `Content-Disposition` 헤더를 포함해야 합니다. 예:\n\n\n**Header:** `Content-Disposition`\n\n\n**Value:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nHTML 문서 파일에 <code>src<-code> 속성이 경로 또는 URL로 설정된 <code>&lt;img&gt;<-code> 요소가 포함되어 있으면 해당 이미지가 표시되지 않습니다. HTML 파일의 이미지는 다음과 같이 Base64 형식으로 인코딩되어야 합니다.<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.display_name": {
-          "source": "Delete Documents",
+          "source": "Delete documents",
           "message": "문서 삭제"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "아직 완료되지 않은 기존 봉투에서 하나 이상의 문서를 삭제합니다.\n\n문서를 삭제하려면 [`envelopeDefinition`](#envelopeDefinition)의 관련 부분만 사용하십시오.\n예를 들어 이 요청 본문은 `documentId`이(가) \"1\"인 문서를 삭제하도록 지정합니다.\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\n봉투 상태는 다음 중 하나여야 합니다.\n\n- `created`\n- `sent`\n- `delivered`\n\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.display_name": {
-          "source": "Get Document",
+          "source": "Get document",
           "message": "문서 가져오기"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.short_desc": {
@@ -520,7 +520,7 @@
           "message": "봉투에서 단일 문서 또는 모든 문서를 가져옵니다.\n\n단일 문서를 가져오려면 `documentId` 경로 매개변수에 문서의 ID를 제공하십시오.\n또는 `documentId` 매개변수를 특수 키워드 값으로 설정하여\n모든 문서(통합 PDF, 포트폴리오 PDF 또는 ZIP 아카이브 형태)나\n완료 인증서만 가져올 수 있습니다. 각 형식을 가져오는 방법은 `documentId` 설명을 참조하십시오.\n\n\n이 메서드의 응답 본문은\n파일입니다. 여러 문서를 요청하는 경우\n결과는 모든 문서를 포함하는\nZIP 아카이브입니다.\n\n그 외의 모든 경우에는 응답이 PDF\n파일 또는 PDF 포트폴리오입니다.\n\n\n응답의 `Content-Disposition` 헤더에서 파일 이름과 문서 ID를 가져올 수 있습니다.\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\n기본적으로 응답은 바이트 스트림 형태의\nPDF 파일입니다.\n예를 들어 `curl`의 요청-응답은 다음과 같습니다.\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\n요청에서 `Content-Transfer-Encoding`\n헤더를 사용하여 Base64로 인코딩된\nPDF 파일을 얻을 수 있습니다. Base64 헤더를 포함한 동일한 `curl` 요청은\n다음과 같습니다.\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(실제 `curl` 요청에서는 `-output` 스위치를 사용하여\n바이트 스트림을 파일로 저장합니다.)\n\n### 관련 주제\n\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.display_name": {
-          "source": "Update Document",
+          "source": "Update document",
           "message": "문서 업데이트"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.short_desc": {
@@ -532,7 +532,7 @@
           "message": "기존 임시 보관 또는 처리 중인 봉투에 문서를 추가하거나 교체합니다.\n처리 중인 봉투는 전송되었지만 아직 완료되거나 무효화되지 않은 봉투입니다.\n\n\n**참고:** 처리 중인 봉투의 문서를 추가하거나 수정할 때,\nDocusign에서는 변경하기 전에\n[봉투 잠금](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\n을 권장합니다.\n\n새 문서를 추가하려면 `documentId` 경로 매개변수를 새 문서 ID로 설정하십시오.\n\n문서를 교체하려면 `documentId` 경로 매개변수를 기존 문서의 문서 ID로 설정하십시오.\n원본 문서의 탭이 새 문서에 적용됩니다.\n예를 들어 cURL 요청은 다음과 같습니다.\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nHTML 문서 파일에 <code>src<-code> 속성이 경로 또는 URL로 설정된 <code>&lt;img&gt;<-code> 요소가 포함되어 있으면 해당 이미지가 표시되지 않습니다. HTML 파일의 이미지는 다음과 같이 Base64 형식으로 인코딩되어야 합니다.<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.display_name": {
-          "source": "Get Recipients",
+          "source": "Get recipients",
           "message": "수신인 가져오기"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "단일 봉투의 모든 수신인 상태를 가져오고 라우팅 목록의 현재 수신인을 식별합니다. 이 메서드는 탭 값을 가져오는 데 사용할 수도 있습니다.\n\n응답의 `currentRoutingOrder` 속성에는 봉투가 수신인에게 전송되었지만 수신인이 작업을 완료하지 않았음을 나타내는 현재 수신인의 `routingOrder` 값이 포함됩니다.\n\n### 관련 주제\n\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.display_name": {
-          "source": "Update Recipients",
+          "source": "Update recipients",
           "message": "수신인 업데이트"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.short_desc": {
@@ -556,7 +556,7 @@
           "message": "임시 보관 봉투의 수신인을 업데이트하거나 처리 중인 봉투의 수신인 정보를 수정합니다.\n\n임시 보관 봉투에 아직 존재하지 않는 수신인의 정보를 보내면 수신인이 봉투에 추가됩니다([EnvelopeRecipients: Create][EnvelopeRecipients-create] 메서드와 유사).\n\n`resend_envelope` 옵션을 사용하여 수신인에게 봉투를 다시 보낼 수도 있습니다.\n\n**전송된 봉투 업데이트**\n\n봉투가 전송된 후에는 다음 속성만 편집할 수 있습니다.\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email` (이 메서드에서 이메일 주소를 제공하면 현재 주소와 완전히 동일하더라도 새 이메일 주소로 처리됩니다. 수정 이메일이 발송되는 것을 원하지 않으면 이메일 주소를 제공하지 마십시오.)\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType` (이 기능이 작동하려면 수신인 유형과 일치하도록 수신인 객체도 변경해야 합니다.)\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId` (이 ID를 변경하여 다른 서명 그룹 및 해당 수신인 세트로 전환할 수 있습니다.)\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\n수신인이 서명했지만\n봉투가 여전히 활성 상태인 경우,\n메서드는 성공을 반환하지만\n응답의 `recipientUpdateResults` 속성에는\n수신인을 업데이트할 수 없다는 오류가 포함됩니다.\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\n봉투가 완료된 상태에서\n수신인의 주소를 변경하려고 하면\n메서드가 다음 오류와 함께 실패합니다.\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**참고:** 이 메서드는 수신인에게만 작동합니다.\n수신인 탭을 추가하려면\n[EnvelopeRecipientTabs][recipientTabs] 리소스의 메서드를 사용하십시오.\n예를 들어 이 요청 본문은 수신인(`astanton@example.com`)을 추가하지만\n'Sign Here' 수신인 탭은 **추가하지 않습니다**.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.display_name": {
-          "source": "Add Recipients",
+          "source": "Add recipients",
           "message": "수신인 추가"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "봉투에 하나 이상의 수신인을 추가합니다.\n\n처리 중인 봉투(전송되었지만 완료되거나 무효화되지 않은 봉투)의 경우,\n라우팅 순서에서 해당 수신인의 차례가 되면\n새 수신인에게 이메일이 전송됩니다.\n새 수신인의 라우팅 순서가\n봉투의 다음 수신인보다 앞서거나 같은 경우,\n선택적 `resend_envelope` 쿼리 문자열이 **true**로 설정된 경우에만\n이메일이 전송됩니다.\n\n\n**참고:** 이 메서드는 수신인에게만 작동합니다.\n수신인 탭을 추가하려면\n[EnvelopeRecipientTabs][recipientTabs] 리소스의 메서드를 사용하십시오.\n예를 들어 이 요청 본문은 수신인(`astanton@example.com`)을 추가하지만\n'Sign Here' 수신인 탭은 **추가하지 않습니다**.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### 관련 주제\n\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.display_name": {
-          "source": "Delete Recipients",
+          "source": "Delete recipients",
           "message": "수신인 삭제"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "임시 보관 또는 전송된 봉투에서 하나 이상의 수신인을 삭제합니다. 요청 본문에 삭제하려는 수신인을 나열하십시오. 이 메서드는 `recipientId`을(를) 수신인 삭제를 위한 키로 사용합니다.\n\n봉투가 `In Process` 상태인 경우(전송되었으며 완료되거나 무효화되지 않았음을 의미), 작업을 완료한 수신인은 삭제할 수 없습니다."
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.display_name": {
-          "source": "Create Recipient View",
+          "source": "Create recipient view",
           "message": "수신인 뷰 생성"
         },
         "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.short_desc": {

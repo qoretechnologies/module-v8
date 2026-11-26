@@ -82,7 +82,7 @@ const BambooHRTypeMap: Record<TBambooHRFieldType, ITypeMapping> = {
         },
         currency: {
           type: 'softstring',
-          display_name: 'Currency Code',
+          display_name: 'Currency code',
           short_desc: 'ISO currency code (e.g., "EUR"). Omit for company default.',
         },
       },

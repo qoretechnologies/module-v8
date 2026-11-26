@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Facebook Pages** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.display_name": {
-          "source": "Create Page Post",
-          "message": "Create Page Post"
+          "source": "Create page post",
+          "message": "Create page post"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.short_desc": {
           "source": "Create a new post on a Facebook page",
@@ -412,8 +412,8 @@
           "message": "If true, the post will be published immediately. If false, it will be saved as a draft or scheduled."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.display_name": {
-          "source": "Scheduled Publish Time",
-          "message": "Scheduled Publish Time"
+          "source": "Scheduled publish time",
+          "message": "Scheduled publish time"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.short_desc": {
           "source": "When to publish the post",
@@ -424,8 +424,8 @@
           "message": "ISO timestamp for when the post should be published. Requires published to be false."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.display_name": {
-          "source": "Feed Story Visibility",
-          "message": "Feed Story Visibility"
+          "source": "Feed story visibility",
+          "message": "Feed story visibility"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.short_desc": {
           "source": "Visibility in news feed",
@@ -452,8 +452,8 @@
           "message": "Post will be hidden from news feed"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.display_name": {
-          "source": "Timeline Visibility",
-          "message": "Timeline Visibility"
+          "source": "Timeline visibility",
+          "message": "Timeline visibility"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.short_desc": {
           "source": "Visibility on timeline",
@@ -480,8 +480,8 @@
           "message": "Post will be hidden from timeline"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.display_name": {
-          "source": "Get Page Post Insights",
-          "message": "Get Page Post Insights"
+          "source": "Get page post insights",
+          "message": "Get page post insights"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.short_desc": {
           "source": "Get analytics data for a Facebook page post",
@@ -692,8 +692,8 @@
           "message": "Lifetime total metrics"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.display_name": {
-          "source": "Get Page Post",
-          "message": "Get Page Post"
+          "source": "Get page post",
+          "message": "Get page post"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.short_desc": {
           "source": "Get details of a Facebook page post",
@@ -988,8 +988,8 @@
           "message": "width"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.display_name": {
-          "source": "Get Page",
-          "message": "Get Page"
+          "source": "Get page",
+          "message": "Get page"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.short_desc": {
           "source": "Get details of a Facebook page",
@@ -1632,8 +1632,8 @@
           "message": "written_by"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.display_name": {
-          "source": "Search Page Posts",
-          "message": "Search Page Posts"
+          "source": "Search page posts",
+          "message": "Search page posts"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.short_desc": {
           "source": "Search and filter posts on a Facebook page",
@@ -1692,8 +1692,8 @@
           "message": "ISO timestamp or date string for the latest post creation date to include in results."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.display_name": {
-          "source": "Search Text",
-          "message": "Search Text"
+          "source": "Search text",
+          "message": "Search text"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.short_desc": {
           "source": "Text to search for in posts",
@@ -1704,8 +1704,8 @@
           "message": "Text string to search for within post messages and stories. Case-insensitive search."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden",
-          "message": "Include Hidden"
+          "source": "Include hidden",
+          "message": "Include hidden"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
           "source": "Whether to include hidden posts",
@@ -1976,8 +1976,8 @@
           "message": "width"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.display_name": {
-          "source": "Get Post Comments",
-          "message": "Get Post Comments"
+          "source": "Get post comments",
+          "message": "Get post comments"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.short_desc": {
           "source": "Get comments on a Facebook page post",
@@ -2184,8 +2184,8 @@
           "message": "All comments including replies in chronological order"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
-          "source": "Include Replies",
-          "message": "Include Replies"
+          "source": "Include replies",
+          "message": "Include replies"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {
           "source": "Whether to include replies to comments",
@@ -2196,8 +2196,8 @@
           "message": "If true, includes replies to each top-level comment in the results."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.display_name": {
-          "source": "Like Comment",
-          "message": "Like Comment"
+          "source": "Like comment",
+          "message": "Like comment"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.short_desc": {
           "source": "Like or unlike a comment on a Facebook post",
@@ -2272,8 +2272,8 @@
           "message": "Remove like from the comment"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
-          "source": "Reply to Comment",
-          "message": "Reply to Comment"
+          "source": "Reply to comment",
+          "message": "Reply to comment"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
           "source": "Reply to a comment on a Facebook page post",
@@ -2344,8 +2344,8 @@
           "message": "Optional URL to attach to the reply, such as an image or link."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.display_name": {
-          "source": "New Post",
-          "message": "New Post"
+          "source": "New post",
+          "message": "New post"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.short_desc": {
           "source": "Triggers when a new post is created on a Facebook page.",
@@ -2628,8 +2628,8 @@
           "message": "width"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden Posts",
-          "message": "Include Hidden Posts"
+          "source": "Include hidden posts",
+          "message": "Include hidden posts"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
           "source": "Whether to include hidden posts",
@@ -2640,8 +2640,8 @@
           "message": "When enabled, the trigger will also fire for posts that are hidden from the page timeline. Default is false."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.display_name": {
-          "source": "New Post Comment",
-          "message": "New Post Comment"
+          "source": "New post comment",
+          "message": "New post comment"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.short_desc": {
           "source": "Triggers when a new comment is added to a Facebook post.",
@@ -2780,8 +2780,8 @@
           "message": "user_likes"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden Comments",
-          "message": "Include Hidden Comments"
+          "source": "Include hidden comments",
+          "message": "Include hidden comments"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
           "source": "Whether to include hidden comments",
@@ -2792,8 +2792,8 @@
           "message": "When enabled, the trigger will also fire for comments that are hidden. Default is false."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
-          "source": "Include Replies",
-          "message": "Include Replies"
+          "source": "Include replies",
+          "message": "Include replies"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {
           "source": "Whether to include comment replies",

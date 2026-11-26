@@ -28,7 +28,7 @@
           "message": "Виконайте користувацький виклик HTTP / REST API до **Front**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
+          "source": "List accounts",
           "message": "Список акаунтів"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Максимальна кількість записів облікових записів для повернення. За замовчуванням: 50. Використовуйте пагінацію для більших наборів даних."
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
+          "source": "Get account",
           "message": "Отримати обліковий запис"
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Виберіть або введіть ID облікового запису, який потрібно отримати. ID облікових записів починаються з \"acc_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
-          "source": "Create Account",
+          "source": "Create account",
           "message": "Створити обліковий запис"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Необов'язковий зовнішній ID для прив'язки цього акаунта до запису в іншій системі, як-от CRM або білінгова платформа."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Об'єкт, що містить значення настроюваних полів для акаунта. Ключі мають відповідати налаштованим назвам настроюваних полів."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
-          "source": "Update Account",
+          "source": "Update account",
           "message": "Оновити обліковий запис"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Оновити ідентифікатор зовнішньої системи для цього облікового запису."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Оновити значення настроюваних полів для облікового запису."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
-          "source": "Delete Account",
+          "source": "Delete account",
           "message": "Видалити обліковий запис"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Виберіть або введіть ID облікового запису, який потрібно видалити."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
-          "source": "List Account Contacts",
+          "source": "List account contacts",
           "message": "Список контактів облікового запису"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Максимальна кількість записів контактів для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
-          "source": "Add Contact to Account",
+          "source": "Add contact to account",
           "message": "Додати контакт до облікового запису"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Виберіть один або кілька контактів для додавання до облікового запису. ID контактів починаються з \"crd_\"."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
-          "source": "Remove Contact from Account",
+          "source": "Remove contact from account",
           "message": "Видалити контакт з облікового запису"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Виберіть один або кілька контактів для видалення з облікового запису."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Список контактів"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Отримати перелік усіх контактів у вашому робочому просторі Front. Контакти представляють людей, з якими ви спілкуєтеся. Результати можна сортувати за датою створення або оновлення."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Сортувати за"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Час оновлення"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Порядок сортування"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
@@ -740,7 +740,7 @@
           "message": "Максимальна кількість записів контактів для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "Отримати контакт"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Виберіть або введіть ID контакту, який потрібно отримати. ID контактів починаються з \"crd_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Створити контакт"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Список URL-адрес, пов'язаних із цим контактом, як-от профілі в соціальних мережах або вебсайти компаній."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
-          "source": "Group Names",
+          "source": "Group names",
           "message": "Назви груп"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Список назв груп, до яких слід додати контакт. Групи допомагають упорядковувати контакти за категоріями."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Об'єкт, що містить значення настроюваних полів для контакту. Ключі мають відповідати налаштованим назвам настроюваних полів."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Оновити контакт"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Список URL-адрес, пов'язаних із цим контактом, як-от профілі в соціальних мережах або вебсайти компаній."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Оновити значення настроюваних полів для контакту."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Видалити контакт"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Виберіть або введіть ID контакту, який потрібно видалити."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "List Contact Conversations",
+          "source": "List contact conversations",
           "message": "Список розмов контакту"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Максимальна кількість записів розмов для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
-          "source": "List Contact Notes",
+          "source": "List contact notes",
           "message": "Список нотаток контакту"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Максимальна кількість записів нотаток для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "Add Note to Contact",
+          "source": "Add note to contact",
           "message": "Додати примітку до контакту"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Виберіть або введіть ID контакту, до якого потрібно додати примітку."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
-          "source": "Note Body",
+          "source": "Note body",
           "message": "Тіло примітки"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Виберіть учасника команди, якого буде записано як автора цієї примітки. Це обов’язкове поле."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "Список списків контактів"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Максимальна кількість записів списків контактів для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "Створити список контактів"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Необов'язковий опис, що пояснює мету списку контактів або критерії для контактів у ньому."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Delete Contact List",
+          "source": "Delete contact list",
           "message": "Видалити список контактів"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Видалити список контактів із Front. Це видаляє сам список, але не контакти, які в ньому перебували. Контакти залишаться у вашому робочому просторі."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Список контактів"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Виберіть або введіть ID списку контактів, який потрібно видалити."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
-          "source": "List Contacts in Contact List",
+          "source": "List contacts in contact list",
           "message": "Список контактів у списку контактів"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Отримати всі контакти, які належать до певного списку контактів. Це дає змогу побачити, які контакти включено до конкретного списку або сегмента."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Список контактів"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Максимальна кількість записів контактів для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Add Contacts to Contact List",
+          "source": "Add contacts to contact list",
           "message": "Додати контакти до списку контактів"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Додайте один або кілька контактів до списку контактів у Front. Це допомагає організувати контакти в логічні групи для зручнішого керування та цільової комунікації."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Список контактів"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Виберіть один або кілька контактів для додавання до списку контактів."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
-          "source": "Remove Contacts from Contact List",
+          "source": "Remove contacts from contact list",
           "message": "Видалити контакти зі списку контактів"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Видалити один або кілька контактів зі списку контактів у Front. Це видаляє контакти зі списку, але не видаляє самі контакти."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Список контактів"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Виберіть один або кілька контактів для видалення зі списку контактів."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
+          "source": "List conversations",
           "message": "Список розмов"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Максимальна кількість записів розмов для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
+          "source": "Get conversation",
           "message": "Отримати розмову"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Виберіть або введіть ID розмови, яку потрібно отримати. ID розмов починаються з \"cnv_\"."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "Search Conversations",
+          "source": "Search conversations",
           "message": "Пошук розмов"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "Шукайте розмови у Front за допомогою пошукового запиту. Повертає відповідні розмови у порядку спадання за останньою активністю разом із загальною кількістю збігів."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Пошуковий запит"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "Максимальна кількість записів розмов для повернення. За замовчуванням — 25."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
+          "source": "Update conversation",
           "message": "Оновити розмову"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1496,7 +1496,7 @@
           "message": "Перемістити розмову до іншої вхідної скриньки."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -1508,7 +1508,7 @@
           "message": "Оновити значення настроюваних полів для розмови."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
-          "source": "Update Conversation Assignee",
+          "source": "Update conversation assignee",
           "message": "Оновити призначеного виконавця розмови"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
@@ -1544,7 +1544,7 @@
           "message": "Виберіть учасника команди, якому слід призначити розмову. Залиште порожнім, щоб скасувати призначення розмови."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Add Tag to Conversation",
+          "source": "Add tag to conversation",
           "message": "Додати тег до розмови"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "Виберіть один або кілька тегів для додавання до розмови."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Remove Tag from Conversation",
+          "source": "Remove tag from conversation",
           "message": "Видалити тег із розмови"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "Виберіть один або кілька тегів для видалення з розмови."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
-          "source": "Add Conversation Followers",
+          "source": "Add conversation followers",
           "message": "Додати підписників до розмови"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Виберіть одного або кількох учасників команди для додавання підписниками до розмови."
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "Отримати повідомлення"
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Введіть ID повідомлення, яке потрібно отримати. ID повідомлень починаються з \"msg_\"."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
-          "source": "List Conversation Messages",
+          "source": "List conversation messages",
           "message": "Список повідомлень розмови"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
@@ -1712,7 +1712,7 @@
           "message": "Максимальна кількість записів повідомлень для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
-          "source": "Reply to Conversation",
+          "source": "Reply to conversation",
           "message": "Відповісти на розмову"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "Виберіть або введіть ID розмови, на яку ви хочете відповісти."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "Тіло повідомлення"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
@@ -1796,7 +1796,7 @@
           "message": "Список адрес електронної пошти для прихованої копії (BCC) у відповіді."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
-          "source": "Save as Draft",
+          "source": "Save as draft",
           "message": "Зберегти як чернетку"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Якщо true, повідомлення буде збережено як чернетку замість негайного надсилання. За замовчуванням — false."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
-          "source": "Add Comment to Conversation",
+          "source": "Add comment to conversation",
           "message": "Додати коментар до розмови"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "Виберіть або введіть ID розмови, до якої потрібно додати коментар."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
-          "source": "Comment Body",
+          "source": "Comment body",
           "message": "Тіло коментаря"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Текстовий вміст внутрішнього коментаря. Його бачитимуть усі учасники команди, які мають доступ до розмови."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
-          "source": "List Conversation Comments",
+          "source": "List conversation comments",
           "message": "Список коментарів розмови"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Максимальна кількість записів коментарів для повернення. За замовчуванням: 50."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
+          "source": "New conversation",
           "message": "Нова розмова"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "Спам"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Новий контакт"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -1944,7 +1944,7 @@
           "message": "Цей тригер спрацьовує щоразу, коли у Front створюється новий контакт. Використовуйте це для автоматизації робочих процесів під час додавання нових контактів до вашого робочого простору."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "New Contact Note",
+          "source": "New contact note",
           "message": "Нова примітка до контакту"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "Виберіть або введіть ID контакту, який потрібно відстежувати для отримання нових приміток. Тригер спрацьовуватиме щоразу, коли до цього контакту додаватиметься нова примітка."
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
-          "source": "New Comment",
+          "source": "New comment",
           "message": "Новий коментар"
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {

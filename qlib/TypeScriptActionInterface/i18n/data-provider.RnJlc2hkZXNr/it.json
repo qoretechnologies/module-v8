@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata a **Freshdesk** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine in questa app."
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Cerca record"
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Ticket appartenenti all'ID azienda specificato."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Ordina per"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Ordina i risultati."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Tipo di ordinamento"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Il numero di pagina dei risultati da restituire."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "Per pagina"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Usa questa API per recuperare un elenco di tutte le aziende."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "Per pagina"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Api v2 custom objects schemas schema id records id put"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Nuovo contatto"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Si attiva ogni volta che un nuovo contatto viene aggiunto alla tua istanza Freshdesk. Acquisisce dettagli come nome, email, telefono ed eventuali campi personalizzati associati al contatto."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.display_name": {
-          "source": "Updated Contact",
+          "source": "Updated contact",
           "message": "Contatto aggiornato"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Si attiva ogni volta che i dettagli di un contatto esistente vengono aggiornati nella tua istanza Freshdesk. Ad esempio modifiche a nome, numero di telefono, email o campi personalizzati."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.display_name": {
-          "source": "Updated Ticket",
+          "source": "Updated ticket",
           "message": "Ticket aggiornato"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Si attiva ogni volta che un ticket esistente viene aggiornato con nuovi dettagli nella tua istanza Freshdesk. Ad esempio modifiche a oggetto, priorità, stato o agente assegnato."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.display_name": {
-          "source": "New Ticket",
+          "source": "New ticket",
           "message": "Nuovo ticket"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Si attiva ogni volta che un nuovo ticket viene creato nella tua istanza Freshdesk. Puoi acquisire dettagli come oggetto, descrizione, priorità e altro, e utilizzare questi dati in azioni o notifiche successive."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.display_name": {
-          "source": "Ticket Status Filter",
+          "source": "Ticket status filter",
           "message": "Filtro stato ticket"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Limita o filtra il trigger per attivarsi solo per i ticket corrispondenti a un determinato stato (ad es. Open, Pending, Resolved, ecc.)."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.display_name": {
-          "source": "Ticket Priority Filter",
+          "source": "Ticket priority filter",
           "message": "Filtro priorità ticket"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.short_desc": {

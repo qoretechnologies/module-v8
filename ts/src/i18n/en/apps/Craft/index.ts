@@ -54,7 +54,7 @@ Required for:
   },
   triggers: {
     new_collection_item: {
-      displayName: 'New Collection Item',
+      displayName: 'New collection item',
       shortDesc: 'Triggers when a new item is added to a collection',
       longDesc:
         'This trigger activates when a new item is created in the specified Craft collection, allowing you to automate workflows based on new collection entries.',
@@ -66,7 +66,7 @@ Required for:
             'Select the Craft collection you want to monitor for new items. When a new item is added to this collection, the trigger will fire.',
         },
         maxDepth: {
-          displayName: 'Maximum Depth',
+          displayName: 'Maximum depth',
           shortDesc: 'Maximum depth for nested content retrieval',
           longDesc:
             'The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.',
@@ -79,7 +79,7 @@ Required for:
     // Daily Note Blocks
     get_blocks: {
       groups: ['Daily Note Blocks (Daily Tasks & Notes API)'],
-      displayName: 'Get Daily Note Blocks',
+      displayName: 'Get daily note blocks',
       shortDesc: 'Retrieve blocks from a daily note',
       longDesc:
         'Fetch all blocks from a Craft daily note for a specific date. You can retrieve blocks from today, yesterday, tomorrow, or any custom date, with control over the depth and metadata of the returned content.',
@@ -97,13 +97,13 @@ Required for:
             'Choose a relative day option such as today, yesterday, or tomorrow to retrieve the corresponding daily note blocks.',
         },
         maxDepth: {
-          displayName: 'Maximum Depth',
+          displayName: 'Maximum depth',
           shortDesc: 'Maximum depth for nested blocks',
           longDesc:
             'Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit how deep the nested block structure should be retrieved.',
         },
         fetchMetadata: {
-          displayName: 'Fetch Metadata',
+          displayName: 'Fetch metadata',
           shortDesc: 'Include metadata in the response',
           longDesc:
             'Enable this option to include additional metadata such as creation date, last modified date, and author information for each block in the response.',
@@ -114,7 +114,7 @@ Required for:
     // Documents
     list_documents: {
       groups: ['Documents (Selected Documents API)'],
-      displayName: 'List Documents',
+      displayName: 'List documents',
       shortDesc: 'Retrieve all documents',
       longDesc:
         'Get a list of all documents in your Craft workspace. This includes document IDs, titles, and their deletion status, providing a complete overview of your document library.',
@@ -124,7 +124,7 @@ Required for:
     // Collections
     list_collections: {
       groups: ['Collections (Selected Documents API)'],
-      displayName: 'List Collections',
+      displayName: 'List collections',
       shortDesc: 'Retrieve all collections',
       longDesc:
         'Get a list of all collections in your Craft workspace. You can optionally filter collections by specific documents using include or exclude modes.',
@@ -136,7 +136,7 @@ Required for:
             'The document IDs to filter. If not provided, collections in all documents will be listed.',
         },
         documentFilterMode: {
-          displayName: 'Document Filter Mode',
+          displayName: 'Document filter mode',
           shortDesc: 'How to filter by documents',
           longDesc:
             'Choose whether to include or exclude collections based on the provided document IDs. Select "Include" to only show collections from the specified documents, or "Exclude" to hide collections from those documents.',
@@ -146,7 +146,7 @@ Required for:
 
     create_collection_item: {
       groups: ['Collections (Selected Documents API)'],
-      displayName: 'Create Collection Item',
+      displayName: 'Create collection item',
       shortDesc: 'Add a new item to a collection',
       longDesc:
         'Create a new item in a Craft collection with a title and optional custom properties. This allows you to programmatically add entries to your structured collections.',
@@ -174,7 +174,7 @@ Required for:
 
     delete_collection_items: {
       groups: ['Collections (Selected Documents API)'],
-      displayName: 'Delete Collection Items',
+      displayName: 'Delete collection items',
       shortDesc: 'Remove items from a collection',
       longDesc:
         'Delete one or more items from a Craft collection by providing their IDs. This action permanently removes the specified items from the collection.',
@@ -195,7 +195,7 @@ Required for:
 
     update_collection_item: {
       groups: ['Collections (Selected Documents API)'],
-      displayName: 'Update Collection Item',
+      displayName: 'Update collection item',
       shortDesc: 'Modify an existing collection item',
       longDesc:
         'Update the title and properties of an existing item in a Craft collection. You can modify any custom properties that are part of the collection schema.',
@@ -228,7 +228,7 @@ Required for:
 
     list_collection_items: {
       groups: ['Collections (Selected Documents API)'],
-      displayName: 'List Collection Items',
+      displayName: 'List collection items',
       shortDesc: 'Retrieve all items in a collection',
       longDesc:
         'Get a list of all items in a specific Craft collection, including their IDs, titles, properties, and content blocks. You can control the depth of nested content retrieval.',
@@ -240,7 +240,7 @@ Required for:
             'Select the Craft collection whose items you want to list. All items in the collection will be returned.',
         },
         maxDepth: {
-          displayName: 'Maximum Depth',
+          displayName: 'Maximum depth',
           shortDesc: 'Maximum depth for nested content',
           longDesc:
             'The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.',
@@ -251,30 +251,30 @@ Required for:
     // Blocks
     list_blocks: {
       groups: ['Blocks (Selected Documents API)'],
-      displayName: 'List Blocks',
+      displayName: 'List blocks',
       shortDesc: 'Retrieve blocks from a document',
       longDesc:
         'Fetch all blocks from a specific Craft document or page. This allows you to access the structured content of your documents, including nested blocks, with control over depth and metadata.',
       options: {
         id: {
-          displayName: 'Document/Page ID',
+          displayName: 'Document/page ID',
           shortDesc: 'The document or page to retrieve blocks from',
           longDesc:
             'The ID of the page block to fetch. Required for multi-document operations. Accepts IDs for documents, pages and blocks.',
         },
         maxDepth: {
-          displayName: 'Maximum Depth',
+          displayName: 'Maximum depth',
           shortDesc: 'Maximum depth for nested blocks',
           longDesc:
             'Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit the nesting level.',
         },
         fetchMetadata: {
-          displayName: 'Fetch Metadata',
+          displayName: 'Fetch metadata',
           shortDesc: 'Include metadata in the response',
           longDesc: `Whether to fetch metadata (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) for the blocks.`,
         },
         getMarkdownString: {
-          displayName: 'Get Markdown String',
+          displayName: 'Get markdown string',
           shortDesc: 'Retrieve the markdown string representation of blocks',
           longDesc: 'Whether to retrieve the markdown string representation of the blocks.',
         },
@@ -283,13 +283,13 @@ Required for:
 
     insert_block: {
       groups: ['Blocks (Selected Documents API)'],
-      displayName: 'Insert Block',
+      displayName: 'Insert block',
       shortDesc: 'Add a new block to a document',
       longDesc:
         'Insert a new block with markdown content into a Craft document. You can specify whether to insert the block at the start or end of the target page.',
       options: {
         markdown: {
-          displayName: 'Markdown Content',
+          displayName: 'Markdown content',
           shortDesc: 'The markdown content for the block',
           longDesc: `
           The Markdown content to insert. Separate each paragraph and heading with two newlines. Separate each list item with one newline. The first item in any list cannot be empty. Craft-specific tokens are HTML tags.:\n\n
@@ -306,7 +306,7 @@ Required for:
           type: {
             fields: {
               position: {
-                displayName: 'Insert Position',
+                displayName: 'Insert position',
                 shortDesc: 'Insert at start or end',
                 longDesc:
                   'Choose whether to insert the block at the start or end of the target page.',
@@ -325,7 +325,7 @@ Required for:
 
     delete_blocks: {
       groups: ['Blocks (Selected Documents API)'],
-      displayName: 'Delete Blocks',
+      displayName: 'Delete blocks',
       shortDesc: 'Remove blocks from a document',
       longDesc:
         'Delete one or more blocks from a Craft document by providing their block IDs. This action permanently removes the specified blocks.',
@@ -342,7 +342,7 @@ Required for:
     // Tasks
     list_tasks: {
       groups: ['Tasks (Daily Tasks & Notes API)'],
-      displayName: 'List Tasks',
+      displayName: 'List tasks',
       shortDesc: 'Retrieve tasks based on scope',
       longDesc:
         'Get a list of tasks from your Craft workspace filtered by scope. You can retrieve active tasks, upcoming tasks, inbox tasks, or tasks from your logbook.',
@@ -357,18 +357,18 @@ Required for:
 
     create_task: {
       groups: ['Tasks (Daily Tasks & Notes API)'],
-      displayName: 'Create Task',
+      displayName: 'Create task',
       shortDesc: 'Add a new task',
       longDesc:
         'Create a new task in Craft with markdown content, optional task information (state, schedule, deadline), and a location (inbox or daily note).',
       options: {
         markdown: {
-          displayName: 'Task Content',
+          displayName: 'Task content',
           shortDesc: 'The markdown content for the task',
           longDesc: "The task content in markdown format. This will be the task's text.",
         },
         taskInfo: {
-          displayName: 'Task Information',
+          displayName: 'Task information',
           shortDesc: 'Additional task details',
           longDesc: 'Optional task metadata including state, schedule date, and deadline date',
           type: {
@@ -380,13 +380,13 @@ Required for:
                   'Set the initial state of the task: To Do (pending), Done (completed), or Canceled (abandoned).',
               },
               scheduleDate: {
-                displayName: 'Schedule Date',
+                displayName: 'Schedule date',
                 shortDesc: 'When the task is scheduled',
                 longDesc:
                   "Planned execution date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'",
               },
               deadlineDate: {
-                displayName: 'Deadline Date',
+                displayName: 'Deadline date',
                 shortDesc: 'When the task is due',
                 longDesc:
                   "Due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'",
@@ -401,7 +401,7 @@ Required for:
           type: {
             fields: {
               type: {
-                displayName: 'Location Type',
+                displayName: 'Location type',
                 shortDesc: 'Type of location',
                 longDesc:
                   'Choose whether to create the task in your inbox (for unscheduled tasks) or in a daily note (for a specific date).',
@@ -420,7 +420,7 @@ Required for:
 
     update_task: {
       groups: ['Tasks (Daily Tasks & Notes API)'],
-      displayName: 'Update Task',
+      displayName: 'Update task',
       shortDesc: 'Modify an existing task',
       longDesc:
         'Update an existing task in Craft by changing its markdown content, state, schedule date, or deadline date.',
@@ -432,7 +432,7 @@ Required for:
             'Select the task you want to modify. Only active tasks are available for selection.',
         },
         markdown: {
-          displayName: 'Task Content',
+          displayName: 'Task content',
           shortDesc: 'Updated markdown content',
           longDesc:
             'Provide new markdown-formatted content for the task. Leave empty to keep the existing content.',
@@ -444,13 +444,13 @@ Required for:
             'Change the state of the task to To Do, Done, or Canceled. Leave empty to keep the current state.',
         },
         scheduleDate: {
-          displayName: 'Schedule Date',
+          displayName: 'Schedule date',
           shortDesc: 'Updated schedule date',
           longDesc:
             "Updated planned execution date. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing schedule.",
         },
         deadlineDate: {
-          displayName: 'Deadline Date',
+          displayName: 'Deadline date',
           shortDesc: 'Updated deadline date',
           longDesc:
             "Updated due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing deadline.",
@@ -460,7 +460,7 @@ Required for:
 
     delete_tasks: {
       groups: ['Tasks (Daily Tasks & Notes API)'],
-      displayName: 'Delete Tasks',
+      displayName: 'Delete tasks',
       shortDesc: 'Remove tasks',
       longDesc:
         'Delete one or more tasks from your Craft workspace by providing their task IDs. This action permanently removes the specified tasks.',

@@ -28,7 +28,7 @@
           "message": "Vykonať vlastné volanie HTTP / REST API do **Google Sheets** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej URL adrese API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako vstavané akcie v tejto aplikácii."
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Názov tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Add Rows to Spreadsheet",
+          "source": "Add rows to spreadsheet",
           "message": "Pridať riadky do tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Konkrétny hárok v tabuľke, do ktorého sa pridajú riadky"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
-          "source": "Insert at Start",
+          "source": "Insert at start",
           "message": "Vložiť na začiatok"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Ak je vybraté, nové riadky sa vložia na začiatok tabuľky. Ak nie je vybraté, riadky sa pripoja na koniec tabuľky."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
-          "source": "Clear Spreadsheet Row(s)",
+          "source": "Clear spreadsheet row(s)",
           "message": "Vymazať riadok/riadky tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Konkrétny hárok v tabuľke, v ktorom sa vymažú riadky"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
-          "source": "Rows to Clear",
+          "source": "Rows to clear",
           "message": "Riadky na vymazanie"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Zoznam indexov riadkov na vymazanie (číslované od 1, ako sa zobrazujú v tabuľke)"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
-          "source": "Copy Worksheet",
+          "source": "Copy worksheet",
           "message": "Kopírovať pracovný hárok"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vytvoriť kópiu pracovného hárka zo zdrojovej tabuľky do cieľovej tabuľky s voliteľným prispôsobením"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "Zdrojová tabuľka"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Tabuľka Google Sheets obsahujúca pracovný hárok, ktorý chcete skopírovať"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
-          "source": "Source Worksheet",
+          "source": "Source worksheet",
           "message": "Zdrojový pracovný hárok"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Konkrétny pracovný hárok v zdrojovej tabuľke, ktorý sa skopíruje"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
-          "source": "Destination Spreadsheet",
+          "source": "Destination spreadsheet",
           "message": "Cieľová tabuľka"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Tabuľka Google Sheets, do ktorej sa pracovný hárok skopíruje"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
-          "source": "New Worksheet Name",
+          "source": "New worksheet name",
           "message": "Nový názov pracovného hárka"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Zadajte vlastný názov pre skopírovaný pracovný hárok. Ak nie je zadaný, použije sa pôvodný názov s predponou „Kópia – “"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "Pozícia vloženia"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Index začínajúci od nuly, kam sa má vložiť nový pracovný hárok. Ak nie je zadaný, pracovný hárok sa pridá na koniec tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
-          "source": "Create Spreadsheet",
+          "source": "Create spreadsheet",
           "message": "Vytvoriť tabuľku"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Vytvorí novú tabuľku Google Sheets. Môžete ju vytvoriť úplne od začiatku s vlastnými hlavičkami alebo skopírovať existujúcu tabuľku. Ak sú zadané hlavičky, naformátujú sa tučným písmom s orámovaním a riadok hlavičky sa ukotví."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
-          "source": "Spreadsheet Title",
+          "source": "Spreadsheet title",
           "message": "Názov tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Názov, ktorý bude priradený novovytvorenej tabuľke Google Sheets."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "Zdrojová tabuľka"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Voliteľné. Zoznam hlavičiek stĺpcov, ktoré sa pridajú do prvého riadku novej tabuľky. Hlavičky budú naformátované tučným písmom s orámovaním a riadok hlavičky bude ukotvený. Táto možnosť sa ignoruje, ak je zadaná zdrojová tabuľka."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
-          "source": "Create Worksheet",
+          "source": "Create worksheet",
           "message": "Vytvoriť pracovný hárok"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "ID tabuľky Google Sheets, v ktorej sa má vytvoriť nový pracovný hárok."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
-          "source": "Worksheet Title",
+          "source": "Worksheet title",
           "message": "Názov pracovného hárka"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Názov, ktorý sa zobrazí na karte nového pracovného hárka."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
-          "source": "Overwrite Existing",
+          "source": "Overwrite existing",
           "message": "Prepísať existujúci"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Zoznam hlavičiek stĺpcov, ktoré sa pridajú do prvého riadku nového pracovného hárka a naformátujú sa tučným písmom."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Sheet Position",
+          "source": "Sheet position",
           "message": "Pozícia hárka"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Pozícia (index začínajúci od nuly), kam sa má nový pracovný hárok vložiť v tabuľke. Ak nie je zadaná, pracovný hárok sa pridá na koniec."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
-          "source": "Delete Row",
+          "source": "Delete row",
           "message": "Odstrániť riadok"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "ID hárka (karty) v tabuľke, ktorý obsahuje riadok na odstránenie."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
-          "source": "Row Index",
+          "source": "Row index",
           "message": "Index riadka"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Pozícia riadka na odstránenie, začínajúca od 1 (nie 0). Zodpovedá to číslam riadkov, ktoré vidíte v rozhraní Google Sheets. Ak chcete napríklad odstrániť úplne prvý riadok, použite 1."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
-          "source": "Find Spreadsheet Rows",
+          "source": "Find spreadsheet rows",
           "message": "Nájsť riadky tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Počet zodpovedajúcich riadkov, ktoré sa majú pred vrátením výsledkov preskočiť. Používa sa na stránkovanie. Predvolená hodnota je 0."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
-          "source": "Search From Last Row",
+          "source": "Search from last row",
           "message": "Hľadať od posledného riadka"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Keď je táto možnosť povolená, vyhľadáva sa od konca hárka smerom nahor namiesto zhora nadol. Užitočné na nájdenie najnovších záznamov v hárkoch, kde sa nové údaje pridávajú na koniec."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
-          "source": "Maximum Rows to Search",
+          "source": "Maximum rows to search",
           "message": "Maximálny počet riadkov na vyhľadávanie"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Obmedzuje celkový počet prehľadávaných riadkov z dôvodu optimalizácie výkonu pri veľkých hárkoch. Predvolená hodnota je 5000."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
-          "source": "Header Row",
+          "source": "Header row",
           "message": "Riadok hlavičky"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Číslo riadka, ktorý obsahuje hlavičky stĺpcov, pre hárky s nadpismi alebo poznámkami nad tabuľkou. Hlavičky sa čítajú z tohto riadka a riadky sa čítajú a prehľadávajú len pod ním; `row_index` vo výsledku je stále číslo riadka v hárku. Predvolená hodnota je 1, prvý riadok."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
-          "source": "Values Returned",
+          "source": "Values returned",
           "message": "Vrátené hodnoty"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Vzorec každej bunky so vzorcom; ostatné bunky tak, ako sú uložené"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
-          "source": "Dates Returned",
+          "source": "Dates returned",
           "message": "Vrátené dátumy"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Dátumy a časy ako text, tak ako ich hárok zobrazuje"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
-          "source": "Response Format",
+          "source": "Response format",
           "message": "Formát odpovede"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Vrátiť hodnoty namapované na písmená stĺpcov (A, B, C atď.)"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
-          "source": "Search Criteria",
+          "source": "Search criteria",
           "message": "Kritériá vyhľadávania"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "Definuje kritériá vyhľadávania, ktoré sa použijú pri hľadaní zodpovedajúcich riadkov."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.display_name": {
-          "source": "Column Letter",
+          "source": "Column letter",
           "message": "Písmeno stĺpca"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "Písmenové označenie stĺpca, ktorý sa má vyhľadávať (napr. A, B, C). Použite toto alebo Hlavičku stĺpca, nie oboje."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.display_name": {
-          "source": "Column Header",
+          "source": "Column header",
           "message": "Hlavička stĺpca"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Hlavička stĺpca, ktorý sa má vyhľadávať. Použite toto alebo Písmeno stĺpca, nie oboje."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Typ vyhľadávania"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Obsahuje"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.display_name": {
-          "source": "Search Value",
+          "source": "Search value",
           "message": "Hodnota vyhľadávania"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Hodnota, ktorú hľadáte v zadanom stĺpci. Budú vrátené riadky s touto presnou hodnotou."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Format Spreadsheet Rows",
+          "source": "Format spreadsheet rows",
           "message": "Formátovať riadky tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Zoznam čísel riadkov na formátovanie (indexovanie od 1). Napríklad [1, 2, 5] naformátuje prvý, druhý a piaty riadok."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
-          "source": "Background Color",
+          "source": "Background color",
           "message": "Farba pozadia"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Červená zložka farby ako celé číslo od `0` - `255`"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
-          "source": "Text Color",
+          "source": "Text color",
           "message": "Farba textu"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Či podčiarknuť text v zadaných riadkoch."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
-          "source": "Horizontal Alignment",
+          "source": "Horizontal alignment",
           "message": "Vodorovné zarovnanie"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "Vpravo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
-          "source": "Vertical Alignment",
+          "source": "Vertical alignment",
           "message": "Zvislé zarovnanie"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Dole"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
-          "source": "Font Size",
+          "source": "Font size",
           "message": "Veľkosť písma"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "Veľkosť písma v bodoch"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
-          "source": "Wrap Text",
+          "source": "Wrap text",
           "message": "Zalomiť text"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Či zalamovať text v bunkách"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
-          "source": "Search Worksheets",
+          "source": "Search worksheets",
           "message": "Vyhľadať pracovné hárky"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Jedinečný identifikátor tabuľky Google Spreadsheet, v ktorej chcete vyhľadávať pracovné hárky. Nájdete ho v URL adrese tabuľky."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
-          "source": "Sheet Title",
+          "source": "Sheet title",
           "message": "Názov hárka"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "Vyhľadať pracovné hárky s názvami obsahujúcimi tento text. Nechajte prázdne, ak chcete zobraziť zoznam všetkých pracovných hárkov v tabuľke. Pri vyhľadávaní sa predvolene nerozlišujú malé a veľké písmená."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
-          "source": "Exact Match",
+          "source": "Exact match",
           "message": "Presná zhoda"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Ak je táto možnosť povolená, vrátia sa iba pracovné hárky s presne zodpovedajúcimi názvami. Ak je zakázaná (predvolené), vo výsledkoch budú zahrnuté pracovné hárky s názvami obsahujúcimi hľadaný text."
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Update Spreadsheet Rows",
+          "source": "Update spreadsheet rows",
           "message": "Aktualizovať riadky tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "Jedinečný identifikátor konkrétneho hárka v tabuľke, kde sa aktualizujú riadky."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
-          "source": "Search Spreadsheets",
+          "source": "Search spreadsheets",
           "message": "Vyhľadať tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Celý alebo čiastočný názov tabuľky Google Sheets, ktorú chcete vyhľadať."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Typ vyhľadávania"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "ID priečinka na Disku Google, na ktorý sa má vyhľadávanie obmedziť. Ak nie je zadané, vyhľadáva vo všetkých prístupných priečinkoch."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Zoradiť podľa"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Recencia"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Veľkosť stránky"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Maximálny počet tabuliek, ktoré sa majú vrátiť v jednej požiadavke. Predvolená hodnota je 100."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
-          "source": "Custom Query",
+          "source": "Custom query",
           "message": "Vlastný dotaz"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "Vlastný vyhľadávací dotaz pre Disk Google na pridanie ďalších kritérií filtrovania nad rámec základných možností."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
-          "source": "Create Spreadsheet Column",
+          "source": "Create spreadsheet column",
           "message": "Vytvoriť stĺpec tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "ID konkrétneho hárka v tabuľke, kam sa stĺpec pridá."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
-          "source": "Column Title",
+          "source": "Column title",
           "message": "Názov stĺpca"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "Text hlavičky, ktorý sa zobrazí v hornej časti nového stĺpca."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
-          "source": "Column Index",
+          "source": "Column index",
           "message": "Index stĺpca"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
@@ -1636,7 +1636,7 @@
           "message": "Index začínajúci od nuly pre pozíciu, kam sa má vložiť nový stĺpec. Napríklad 0 znamená, že stĺpec bude vložený na začiatok hárka, 1 znamená za prvý stĺpec atď."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
-          "source": "New Spreadsheet Row",
+          "source": "New spreadsheet row",
           "message": "Nový riadok tabuľky"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
@@ -1672,7 +1672,7 @@
           "message": "Jedinečný identifikátor konkrétneho hárka v tabuľke, v ktorom chcete monitorovať nové riadky. ID hárka nájdete v URL adrese tabuľky."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
-          "source": "New Spreadsheet",
+          "source": "New spreadsheet",
           "message": "Nová tabuľka"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "Monitoruje Disk Google a zisťuje novovytvorené tabuľky Google Spreadsheets. Spúšťač poskytuje metaúdaje o novovytvorenej tabuľke vrátane jej ID, názvu, URL adresy, času vytvorenia a informácií o vlastníkovi."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
-          "source": "New Spreadsheet Sheet",
+          "source": "New spreadsheet sheet",
           "message": "Nový hárok v tabuľke"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {

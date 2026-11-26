@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Figma** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki oraz treść żądania. Odpowiedź jest zwracana jako hash zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako gotowe akcje w tej aplikacji."
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Pobierz listę projektów"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Wprowadź identyfikator zespołu Figma, którego projekty chcesz pobrać"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.display_name": {
-          "source": "List Project Files",
+          "source": "List project files",
           "message": "Pobierz listę plików projektu"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Wybierz określony projekt Figma, którego pliki chcesz pobrać"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.display_name": {
-          "source": "List File Version History",
+          "source": "List file version history",
           "message": "Pobierz historię wersji pliku"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Wybierz określony projekt w zespole, który zawiera plik"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Klucz pliku"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Wybierz określony plik projektu Figma, którego historię wersji chcesz pobrać"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.display_name": {
-          "source": "Next Page URL",
+          "source": "Next page URL",
           "message": "Adres URL następnej strony"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Opcjonalny adres URL do pobrania następnej strony wyników historii wersji dla dużych plików z wieloma wersjami"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.display_name": {
-          "source": "List Comments",
+          "source": "List comments",
           "message": "Pobierz listę komentarzy"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Wybierz określony projekt w zespole, który zawiera plik"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Klucz pliku"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Wybierz określony plik projektu Figma, którego komentarze chcesz pobrać"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.display_name": {
-          "source": "Create Comment",
+          "source": "Create comment",
           "message": "Utwórz komentarz"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Wybierz określony projekt w zespole, który zawiera plik"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Klucz pliku"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Wprowadź treść tekstową komentarza, który chcesz opublikować w pliku Figma"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.display_name": {
-          "source": "Parent Comment ID",
+          "source": "Parent comment ID",
           "message": "Identyfikator komentarza nadrzędnego"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Opcjonalny identyfikator istniejącego komentarza, na który chcesz odpowiedzieć; pozostaw puste, aby utworzyć nowy komentarz najwyższego poziomu"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.display_name": {
-          "source": "New File Comment",
+          "source": "New file comment",
           "message": "Nowy komentarz do pliku"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Wybierz określony projekt w zespole, który zawiera plik do monitorowania"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Klucz pliku"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Wybierz plik projektu Figma, który chcesz monitorować pod kątem nowych komentarzy"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.display_name": {
-          "source": "New File Version",
+          "source": "New file version",
           "message": "Nowa wersja pliku"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Wybierz określony projekt w zespole, który zawiera plik do monitorowania"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Klucz pliku"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.short_desc": {

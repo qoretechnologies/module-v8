@@ -28,7 +28,7 @@
           "message": "Effectue un appel d'API HTTP / REST personnalisé à **Twilio** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous la forme d'un hash contenant le code d'état, les en-têtes de réponse et le corps de réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "Get a Transcription",
+          "source": "Get a transcription",
           "message": "Obtenir une transcription"
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
@@ -376,7 +376,7 @@
           "message": "L'identifiant de chaîne unique (SID) de la transcription à récupérer. Les SID de transcription commencent par \"TR\"."
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
-          "source": "List Transcriptions",
+          "source": "List transcriptions",
           "message": "Lister les transcriptions"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Le nombre maximal d'enregistrements de transcription à renvoyer. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Le nombre d'enregistrements de transcription à renvoyer par page. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
-          "source": "Get a Recording",
+          "source": "Get a recording",
           "message": "Obtenir un enregistrement"
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
@@ -448,7 +448,7 @@
           "message": "L'identifiant de chaîne unique (SID) de l'enregistrement à récupérer. Les SID d'enregistrement commencent par \"RE\"."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
-          "source": "List Recordings",
+          "source": "List recordings",
           "message": "Lister les enregistrements"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Renvoyer uniquement les enregistrements associés à cette conférence spécifique. Le SID de conférence doit commencer par \"CF\"."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
-          "source": "Date Created After",
+          "source": "Date created after",
           "message": "Date de création après le"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Renvoyer uniquement les enregistrements créés à cette date ou après. Indiquez la date au format ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
-          "source": "Date Created Before",
+          "source": "Date created before",
           "message": "Date de création avant le"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Renvoyer uniquement les enregistrements créés à cette date ou avant. Indiquez la date au format ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
-          "source": "Include Soft Deleted",
+          "source": "Include soft deleted",
           "message": "Inclure les éléments supprimés temporairement"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Le nombre maximal d'enregistrements à renvoyer. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Le nombre d'enregistrements à renvoyer par page. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get a Message",
+          "source": "Get a message",
           "message": "Obtenir un message"
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -568,7 +568,7 @@
           "message": "L'identifiant de chaîne unique (SID) du message à récupérer. Les SID de message commencent par \"SM\" ou \"MM\"."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "Lister les messages"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Renvoyer uniquement les messages envoyés depuis ce numéro de téléphone ou cet identifiant d'expéditeur alphanumérique. Le numéro de téléphone doit être au format E.164."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
-          "source": "Date Sent After",
+          "source": "Date sent after",
           "message": "Date d'envoi après le"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Renvoyer uniquement les messages envoyés à cette date ou après. Indiquez la date au format ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
-          "source": "Date Sent Before",
+          "source": "Date sent before",
           "message": "Date d'envoi avant le"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Le nombre maximal d'enregistrements de messages à renvoyer. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Le nombre d'enregistrements de messages à renvoyer par page. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create a Message",
+          "source": "Create a message",
           "message": "Créer un message"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Une liste d'URL accessibles publiquement de fichiers multimédias à envoyer avec le message. Pris en charge pour les messages MMS. Vous pouvez inclure jusqu'à 10 fichiers multimédias."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
-          "source": "Messaging Service SID",
+          "source": "Messaging service SID",
           "message": "SID du service de messagerie"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Le SID du service de messagerie à utiliser pour le message. Lorsqu'il est défini, le paramètre from peut être omis et Twilio sélectionnera un numéro de téléphone approprié dans le pool du service de messagerie."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "URL de callback de statut"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -736,7 +736,7 @@
           "message": "L'URL vers laquelle Twilio effectuera une requête POST chaque fois que le statut du message change. Cela vous permet de suivre le statut de distribution de vos messages."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
-          "source": "Max Price",
+          "source": "Max price",
           "message": "Prix maximal"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Le prix total maximal en USD acceptable pour l'envoi du message. Si le coût dépasse cette valeur, le message échouera."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
-          "source": "Validity Period",
+          "source": "Validity period",
           "message": "Période de validité"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Le nombre de secondes pendant lesquelles le message peut rester dans la file d'attente. Passé ce délai, si le message n'a pas été remis, il échouera. Le maximum est de 14400 secondes (4 heures)."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
-          "source": "Schedule Type",
+          "source": "Schedule type",
           "message": "Type de planification"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Fixe"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
-          "source": "Send At",
+          "source": "Send at",
           "message": "Envoyer à"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
@@ -788,7 +788,7 @@
           "message": "L'heure à laquelle le message planifié doit être envoyé, au format ISO 8601. Ce paramètre est obligatoire lorsque Schedule Type est défini sur « fixed »."
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete a Message",
+          "source": "Delete a message",
           "message": "Supprimer un message"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -812,7 +812,7 @@
           "message": "L'identifiant unique de type chaîne (SID) du message à supprimer. Les SID de message commencent par \"SM\" ou \"MM\"."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
-          "source": "List Message Media",
+          "source": "List message media",
           "message": "Lister les médias du message"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
@@ -848,7 +848,7 @@
           "message": "Le nombre maximal d'enregistrements de médias à renvoyer. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
@@ -860,7 +860,7 @@
           "message": "Le nombre d'enregistrements de médias à renvoyer par page. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
-          "source": "Create a Call",
+          "source": "Create a call",
           "message": "Créer un appel"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Instructions TwiML à exécuter lorsque l'appel est connecté. Si TwiML et URL sont tous deux fournis, TwiML prévaut. 4000 caractères maximum."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
@@ -940,7 +940,7 @@
           "message": "POST"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "URL de callback de statut"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -952,7 +952,7 @@
           "message": "L'URL vers laquelle Twilio effectuera un POST lorsque le statut de l'appel change. Vous pouvez spécifier les événements qui déclenchent les callbacks à l'aide de Status Callback Events."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
-          "source": "Status Callback Events",
+          "source": "Status callback events",
           "message": "Événements de callback de statut"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
@@ -980,7 +980,7 @@
           "message": "Terminée"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
-          "source": "Status Callback Method",
+          "source": "Status callback method",
           "message": "Méthode de callback de statut"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Définissez sur true pour enregistrer l'intégralité de l'appel. L'enregistrement sera disponible une fois l'appel terminé."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
-          "source": "Recording Channels",
+          "source": "Recording channels",
           "message": "Canaux d'enregistrement"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "Dual"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Recording Status Callback",
+          "source": "Recording status callback",
           "message": "Callback de statut d'enregistrement"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "L'URL vers laquelle Twilio effectuera un POST lorsque l'enregistrement sera disponible. Cela vous permet de traiter ou de stocker immédiatement les enregistrements."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
+          "source": "Machine detection",
           "message": "Détection de répondeur"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Détecter la fin du message"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
-          "source": "Machine Detection Timeout",
+          "source": "Machine detection timeout",
           "message": "Délai d'expiration de la détection de répondeur"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "Le nombre de secondes pour tenter la détection de répondeur avant expiration du délai. La valeur par défaut est 30 secondes."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
+          "source": "Send digits",
           "message": "Envoyer les touches"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "Une séquence de touches à composer après la connexion. Caractères valides : 0-9, A-D, #, *, w (pause de 0,5 s), W (pause de 1 s). Par exemple : « W1234# »."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
-          "source": "Time Limit",
+          "source": "Time limit",
           "message": "Limite de durée"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
@@ -1112,7 +1112,7 @@
           "message": "La durée maximale de l'appel en secondes. L'appel sera automatiquement interrompu passé ce délai."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
-          "source": "Create Call with Text-to-Speech",
+          "source": "Create call with text-to-speech",
           "message": "Créer un appel avec synthèse vocale"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Turc (Turquie)"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
-          "source": "Record Call",
+          "source": "Record call",
           "message": "Enregistrer l'appel"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "Définir sur true pour enregistrer l'intégralité de l'appel. L'enregistrement sera disponible une fois l'appel terminé et pourra être récupéré à l'aide de l'action List Recordings."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
-          "source": "Transcribe Recording",
+          "source": "Transcribe recording",
           "message": "Transcrire l'enregistrement"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
@@ -1480,7 +1480,7 @@
           "message": "Définir sur true pour transcrire automatiquement l'enregistrement de l'appel. Cela nécessite que l'option Enregistrer l'appel soit activée. La transcription sera disponible après traitement."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
-          "source": "Transcription Callback URL",
+          "source": "Transcription callback URL",
           "message": "URL de rappel de transcription"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "L'URL vers laquelle Twilio effectuera un POST lorsque la transcription sera terminée. Cela vous permet de traiter ou de stocker les transcriptions dès qu'elles sont disponibles."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
+          "source": "Send digits",
           "message": "Envoyer les touches"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "Une chaîne de touches à composer après la connexion de l'appel. Utile pour naviguer automatiquement dans les menus téléphoniques. Caractères valides : 0-9, #, *, w (attente de 0,5 seconde). Par exemple : « w123# » attend 0,5 seconde puis compose 123#."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "URL de callback de statut"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -1528,7 +1528,7 @@
           "message": "Le nombre de secondes d'attente d'une réponse à l'appel avant l'expiration du délai. La valeur par défaut est de 60 secondes, le maximum est de 600 secondes."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
+          "source": "Machine detection",
           "message": "Détection de répondeur"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "Détecter la fin du message"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
-          "source": "List Calls",
+          "source": "List calls",
           "message": "Lister les appels"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "Pas de réponse"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
-          "source": "Start Time After",
+          "source": "Start time after",
           "message": "Heure de début après"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
@@ -1640,7 +1640,7 @@
           "message": "Renvoie uniquement les appels qui ont commencé à cette date et heure ou après. Fournissez la date au format ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
-          "source": "Start Time Before",
+          "source": "Start time before",
           "message": "Heure de début avant"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Renvoie uniquement les appels qui ont commencé à cette date et heure ou avant. Fournissez la date au format ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
-          "source": "End Time After",
+          "source": "End time after",
           "message": "Heure de fin après"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Renvoie uniquement les appels qui se sont terminés à cette date et heure ou après. Fournissez la date au format ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
-          "source": "End Time Before",
+          "source": "End time before",
           "message": "Heure de fin avant"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
@@ -1688,7 +1688,7 @@
           "message": "Le nombre maximal d'enregistrements d'appels à renvoyer. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "Le nombre d'enregistrements d'appels à renvoyer par page. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
-          "source": "Get a Call",
+          "source": "Get a call",
           "message": "Obtenir un appel"
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "L'identifiant de chaîne unique (SID) de l'appel à récupérer. Les SID d'appel commencent par \"CA\"."
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
-          "source": "Delete a Call",
+          "source": "Delete a call",
           "message": "Supprimer un appel"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
@@ -1748,7 +1748,7 @@
           "message": "L'identifiant unique de type chaîne (SID) de l'appel à supprimer. Les SID d'appel commencent par \"CA\"."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Create an Execution",
+          "source": "Create an execution",
           "message": "Créer une exécution"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Données JSON qui seront ajoutées au contexte du flux et accessibles en tant que variables. Par exemple : un objet JSON avec une propriété name devient accessible sous la forme flow.data.name dans le flux."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
-          "source": "List Executions",
+          "source": "List executions",
           "message": "Lister les exécutions"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "Le SID du Studio Flow dont vous souhaitez lister les exécutions. Les SID de flux commencent par \"FW\"."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
-          "source": "Date Created From",
+          "source": "Date created from",
           "message": "Date de création depuis"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Renvoie uniquement les exécutions créées à cette date et heure ou après, au format ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
-          "source": "Date Created To",
+          "source": "Date created to",
           "message": "Date de création jusqu'au"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
@@ -1868,7 +1868,7 @@
           "message": "Le nombre maximal d'enregistrements d'exécutions à renvoyer. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Le nombre d'enregistrements d'exécutions à renvoyer par page. La valeur par défaut est 50 et le maximum est 1000."
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
-          "source": "Get an Execution",
+          "source": "Get an execution",
           "message": "Obtenir une exécution"
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
@@ -1916,7 +1916,7 @@
           "message": "L'identifiant de chaîne unique (SID) de l'exécution à récupérer. Les SID d'exécution commencent par \"FN\"."
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Update an Execution",
+          "source": "Update an execution",
           "message": "Mettre à jour une exécution"
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -1972,7 +1972,7 @@
           "message": "Terminé"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Delete an Execution",
+          "source": "Delete an execution",
           "message": "Supprimer une exécution"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "L'identifiant unique de type chaîne (SID) de l'exécution à supprimer. Les SID d'exécution commencent par \"FN\"."
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Nouveau message"
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "Déclencher uniquement pour les messages envoyés depuis ce numéro de téléphone ou cet identifiant d'expéditeur alphanumérique. Le numéro de téléphone doit être au format E.164 (par ex. +15551234567). Laissez vide pour déclencher pour tous les expéditeurs."
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
-          "source": "New Recording",
+          "source": "New recording",
           "message": "Nouvel enregistrement"
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
@@ -2080,7 +2080,7 @@
           "message": "Déclencher uniquement pour les enregistrements associés à cette conférence spécifique. Le SID de conférence doit commencer par \"CF\". Laissez vide pour déclencher pour toutes les conférences."
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "New Transcription",
+          "source": "New transcription",
           "message": "Nouvelle transcription"
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {

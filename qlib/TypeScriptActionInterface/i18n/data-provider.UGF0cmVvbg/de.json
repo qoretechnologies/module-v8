@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Patreon** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App bereitgestellt werden."
         },
         "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
+          "source": "List campaigns",
           "message": "Kampagnen auflisten"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Verwenden Sie den von einer vorherigen Anfrage zurückgegebenen Cursor, um die nächste Seite der Kampagnen abzurufen. Für die erste Seite leer lassen."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
-          "source": "List Campaign Members",
+          "source": "List campaign members",
           "message": "Kampagnenmitglieder auflisten"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Verwenden Sie den von einer vorherigen Anfrage zurückgegebenen Cursor, um die nächste Seite der Mitglieder abzurufen. Für die erste Seite leer lassen."
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
+          "source": "Get campaign",
           "message": "Kampagne abrufen"
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Wählen Sie die Kampagne aus, zu der Sie detaillierte Informationen abrufen möchten. Dies ist ein Pflichtfeld."
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "Mitglied abrufen"
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Wählen Sie die ID des Mitglieds (Patrons) aus oder geben Sie sie ein, dessen Details Sie abrufen möchten. Dies ist ein Pflichtfeld."
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
-          "source": "List Posts",
+          "source": "List posts",
           "message": "Beiträge auflisten"
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Verwenden Sie den von einer vorherigen Anfrage zurückgegebenen Cursor, um die nächste Seite der Beiträge abzurufen. Für die erste Seite leer lassen."
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
-          "source": "Get Post",
+          "source": "Get post",
           "message": "Beitrag abrufen"
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Wählen Sie die ID des Beitrags aus oder geben Sie sie ein, dessen Details Sie abrufen möchten. Dies ist ein Pflichtfeld."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
-          "source": "Pledge Event",
+          "source": "Pledge event",
           "message": "Pledge-Ereignis"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Wählen Sie die Kampagne aus, die Sie auf pledge-bezogene Ereignisse überwachen möchten. Dies ist ein Pflichtfeld."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Trigger-Ereignis"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Wird ausgelöst, wenn ein Mitglied seinen Pledge löscht."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
-          "source": "Member Event",
+          "source": "Member event",
           "message": "Mitgliederereignis"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Wählen Sie die Kampagne aus, die Sie auf mitgliederbezogene Ereignisse überwachen möchten. Dies ist ein Pflichtfeld."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Trigger-Ereignis"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Wird ausgelöst, wenn eine Mitgliedschaft gelöscht wird. Beachten Sie, dass Sie möglicherweise mehr als eines dieser Ereignisse pro Patron erhalten, wenn dieser seine Mitgliedschaft löscht und erneuert. Die Löschung erfolgt nur, wenn zuvor keine Zahlung stattgefunden hat, andernfalls ist die Pledge-Löschung eine Aktualisierung des Mitgliedsstatus."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
-          "source": "Post Event",
+          "source": "Post event",
           "message": "Beitragsereignis"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Wählen Sie die Kampagne aus, die Sie auf beitragsbezogene Ereignisse überwachen möchten. Dies ist ein Pflichtfeld."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Trigger-Ereignis"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {

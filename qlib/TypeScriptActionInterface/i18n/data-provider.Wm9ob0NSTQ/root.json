@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Zoho CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"ZohoCRM\"",
@@ -484,8 +484,8 @@
           "message": "The table name"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
-          "message": "Create Record"
+          "source": "Create record",
+          "message": "Create record"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
           "source": "Create a new record in a Zoho CRM module",
@@ -508,8 +508,8 @@
           "message": "Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names."
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Record Properties",
-          "message": "Record Properties"
+          "source": "Record properties",
+          "message": "Record properties"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
           "source": "Field values for the new record",
@@ -520,8 +520,8 @@
           "message": "Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.)."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
-          "message": "List Records"
+          "source": "List records",
+          "message": "List records"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
           "source": "Retrieve multiple records from a Zoho CRM module",
@@ -544,8 +544,8 @@
           "message": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
-          "source": "Fields to Return",
-          "message": "Fields to Return"
+          "source": "Fields to return",
+          "message": "Fields to return"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
           "source": "Specify which fields to include in the response",
@@ -556,8 +556,8 @@
           "message": "Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
-          "source": "Records Per Page",
-          "message": "Records Per Page"
+          "source": "Records per page",
+          "message": "Records per page"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
           "source": "Number of records to return per page",
@@ -568,8 +568,8 @@
           "message": "Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
           "source": "Token for retrieving the next page of results",
@@ -592,8 +592,8 @@
           "message": "Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
-          "source": "Sort Configuration",
-          "message": "Sort Configuration"
+          "source": "Sort configuration",
+          "message": "Sort configuration"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
           "source": "Configure how to sort the returned records",
@@ -604,8 +604,8 @@
           "message": "Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
-          "message": "Sort Order"
+          "source": "Sort order",
+          "message": "Sort order"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.short_desc": {
           "source": "Sort in ascending or descending order",
@@ -624,8 +624,8 @@
           "message": "Descending"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.display_name": {
-          "source": "Sort By Field",
-          "message": "Sort By Field"
+          "source": "Sort by field",
+          "message": "Sort by field"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.short_desc": {
           "source": "The field to use for sorting records",
@@ -648,8 +648,8 @@
           "message": "Modified Time"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
-          "source": "List Modules",
-          "message": "List Modules"
+          "source": "List modules",
+          "message": "List modules"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
           "source": "Retrieve all available modules in Zoho CRM",
@@ -660,8 +660,8 @@
           "message": "Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
-          "source": "Module Status Filter",
-          "message": "Module Status Filter"
+          "source": "Module status filter",
+          "message": "Module status filter"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
           "source": "Filter modules by their status",
@@ -688,8 +688,8 @@
           "message": "Visible"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
-          "source": "List Module Fields",
-          "message": "List Module Fields"
+          "source": "List module fields",
+          "message": "List module fields"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
           "source": "Retrieve field metadata for a Zoho CRM module",
@@ -712,8 +712,8 @@
           "message": "Select the Zoho CRM module whose field metadata you want to retrieve. The API returns detailed information about all fields including standard fields (system-defined) and custom fields (user-defined) in the module."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
-          "source": "Update Record",
-          "message": "Update Record"
+          "source": "Update record",
+          "message": "Update record"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
           "source": "Update an existing record in a Zoho CRM module",
@@ -748,8 +748,8 @@
           "message": "Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Updated Properties",
-          "message": "Updated Properties"
+          "source": "Updated properties",
+          "message": "Updated properties"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
           "source": "Field values to update on the record",
@@ -760,8 +760,8 @@
           "message": "Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules."
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
-          "message": "Delete Record"
+          "source": "Delete record",
+          "message": "Delete record"
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
           "source": "Delete a record from a Zoho CRM module",
@@ -796,8 +796,8 @@
           "message": "Enter or select the unique record ID of the record you want to delete. Record IDs can be retrieved using the Get Records API. Deleting a record that has already been deleted will result in an error."
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
-          "message": "Get Record"
+          "source": "Get record",
+          "message": "Get record"
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
           "source": "Retrieve a single record from a Zoho CRM module",
@@ -832,8 +832,8 @@
           "message": "Enter or select the unique record ID of the record you want to fetch. Record IDs can be obtained from the Get Records API, search results, or webhook notifications. The record must exist in the specified module."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
-          "message": "List Users"
+          "source": "List users",
+          "message": "List users"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
           "source": "Retrieve users from your Zoho CRM organization",
@@ -844,8 +844,8 @@
           "message": "Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Users Per Page",
-          "message": "Users Per Page"
+          "source": "Users per page",
+          "message": "Users per page"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
           "source": "Number of users to return per page",
@@ -856,8 +856,8 @@
           "message": "Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
           "source": "The page number for pagination",
@@ -868,8 +868,8 @@
           "message": "Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
-          "source": "User Type Filter",
-          "message": "User Type Filter"
+          "source": "User type filter",
+          "message": "User type filter"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
           "source": "Filter users by type or status",
@@ -960,8 +960,8 @@
           "message": "Retrieves the currently logged-in CRM user."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
-          "source": "List Tags",
-          "message": "List Tags"
+          "source": "List tags",
+          "message": "List tags"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
           "source": "Retrieve tags available in a Zoho CRM module",
@@ -984,8 +984,8 @@
           "message": "Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
-          "source": "My Tags Only",
-          "message": "My Tags Only"
+          "source": "My tags only",
+          "message": "My tags only"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
           "source": "Retrieve only tags created by you",
@@ -996,8 +996,8 @@
           "message": "When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
-          "source": "Add Tags to Records",
-          "message": "Add Tags to Records"
+          "source": "Add tags to records",
+          "message": "Add tags to records"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
           "source": "Add tags to one or more records in a module",
@@ -1020,8 +1020,8 @@
           "message": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
-          "source": "Tags to Add",
-          "message": "Tags to Add"
+          "source": "Tags to add",
+          "message": "Tags to add"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
           "source": "List of tags to add to the records",
@@ -1032,8 +1032,8 @@
           "message": "Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.display_name": {
-          "source": "Color Code",
-          "message": "Color Code"
+          "source": "Color code",
+          "message": "Color code"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.short_desc": {
           "source": "Optional hexadecimal color code for the tag",
@@ -1056,8 +1056,8 @@
           "message": "The unique ID of an existing tag in the module. This ID takes precedence over the name field. Use the List Tags action to retrieve tag IDs. The tag must already exist in the module."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
-          "message": "Tag Name"
+          "source": "Tag name",
+          "message": "Tag name"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.short_desc": {
           "source": "The display name of the tag",
@@ -1080,8 +1080,8 @@
           "message": "List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
-          "source": "Overwrite Existing Tags",
-          "message": "Overwrite Existing Tags"
+          "source": "Overwrite existing tags",
+          "message": "Overwrite existing tags"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
           "source": "Replace all existing tags on the records",
@@ -1092,8 +1092,8 @@
           "message": "When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
-          "message": "New Record"
+          "source": "New record",
+          "message": "New record"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
           "source": "Triggers when a new record is created in a Zoho CRM module",
@@ -1116,8 +1116,8 @@
           "message": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
-          "source": "Phone Filter",
-          "message": "Phone Filter"
+          "source": "Phone filter",
+          "message": "Phone filter"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
           "source": "Filter records by phone number",
@@ -1128,8 +1128,8 @@
           "message": "Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
-          "message": "Email Filter"
+          "source": "Email filter",
+          "message": "Email filter"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
           "source": "Filter records by email address",
@@ -1140,8 +1140,8 @@
           "message": "Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
-          "source": "Keyword Search",
-          "message": "Keyword Search"
+          "source": "Keyword search",
+          "message": "Keyword search"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
           "source": "Filter records by keyword",
@@ -1152,8 +1152,8 @@
           "message": "Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
-          "source": "Field Filters",
-          "message": "Field Filters"
+          "source": "Field filters",
+          "message": "Field filters"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
           "source": "Filter records by specific field values",
@@ -1164,8 +1164,8 @@
           "message": "Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the \"equals\" operator for each field comparison."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Field Name",
-          "message": "Field Name"
+          "source": "Field name",
+          "message": "Field name"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.short_desc": {
           "source": "The API name of the field to filter on",
@@ -1176,8 +1176,8 @@
           "message": "Select or enter the field API name from the module. Available field names can be retrieved using the Fields Metadata API. The field must be searchable to be used in filtering."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Field Value",
-          "message": "Field Value"
+          "source": "Field value",
+          "message": "Field value"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.short_desc": {
           "source": "The value that the field must equal",

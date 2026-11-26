@@ -28,7 +28,7 @@
           "message": "Effectue un appel d'API HTTP / REST personnalisé vers **Odoo CRM** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.display_name": {
-          "source": "Create Lead",
+          "source": "Create lead",
           "message": "Créer un prospect"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Le titre principal ou le nom qui identifie cette piste ou opportunité. C'est un champ obligatoire qui sera affiché dans les listes de pistes et les rapports."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
-          "source": "Contact Name",
+          "source": "Contact name",
           "message": "Nom du contact"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Le nom complet du contact principal associé à cette piste."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Nom de l'entreprise"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Le nom de l'entreprise ou de l'organisation que cette piste représente."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "Informations de contact"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -424,7 +424,7 @@
           "message": "L'adresse e-mail principale pour contacter ce lead."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Position",
+          "source": "Job position",
           "message": "Poste"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -460,7 +460,7 @@
           "message": "L'URL du site web de l'entreprise ou du contact."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "Informations d'adresse"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Le code postal ou le code ZIP pour l'adresse."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
-          "source": "Sales Information",
+          "source": "Sales information",
           "message": "Informations sur les ventes"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Informations de gestion des ventes incluant le commercial assigné, l'équipe, l'étape, la priorité et les détails de clôture prévue."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.ZGF0ZV9kZWFkbGluZQ.display_name": {
-          "source": "Expected Closing",
+          "source": "Expected closing",
           "message": "Clôture prévue"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.ZGF0ZV9kZWFkbGluZQ.short_desc": {
@@ -620,7 +620,7 @@
           "message": "L'ID de l'étape actuelle dans le pipeline de vente pour ce lead."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Équipe commerciale"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.short_desc": {
@@ -644,7 +644,7 @@
           "message": "L'ID de l'utilisateur affecté en tant que commercial pour ce lead."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
-          "source": "Marketing Information",
+          "source": "Marketing information",
           "message": "Informations marketing"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
@@ -704,7 +704,7 @@
           "message": "L'ID de la source spécifique qui a généré ce lead."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
-          "source": "Activity Information",
+          "source": "Activity information",
           "message": "Informations sur l'activité"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
@@ -716,7 +716,7 @@
           "message": "Informations sur la prochaine activité planifiée ou l'action de suivi pour cette piste."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.display_name": {
-          "source": "Next Activity Summary",
+          "source": "Next activity summary",
           "message": "Résumé de la prochaine activité"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.short_desc": {
@@ -728,7 +728,7 @@
           "message": "Une brève description ou résumé de l'activité suivante prévue pour ce lead."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.display_name": {
-          "source": "Next Activity Type",
+          "source": "Next activity type",
           "message": "Type de la prochaine activité"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Notes et commentaires internes sur cette piste. Ces informations sont à usage interne et ne sont pas visibles par le client."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.display_name": {
-          "source": "Color Index",
+          "source": "Color index",
           "message": "Index de couleur"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Le nombre de rebonds d'e-mails enregistrés pour l'adresse e-mail de cette piste."
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
-          "source": "Lost Reason",
+          "source": "Lost reason",
           "message": "Motif de perte"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Le code de langue préféré pour les communications avec cette piste (ex. : en_US pour l'anglais, fr_FR pour le français)."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.display_name": {
-          "source": "Create Partner",
+          "source": "Create partner",
           "message": "Créer un partenaire"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Nom du partenaire (nom d'un particulier ou d'une société)."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.display_name": {
-          "source": "Is Company",
+          "source": "Is company",
           "message": "Est une société"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Définir sur true si ce partenaire représente une société/organisation, false pour les contacts individuels."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "Informations de contact"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Adresse e-mail principale du partenaire."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Function",
+          "source": "Job function",
           "message": "Fonction poste"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -996,7 +996,7 @@
           "message": "URL du site web du partenaire ou de l'entreprise."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "Informations d'adresse"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Ligne d'adresse supplémentaire (appartement, suite, etc.)."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.field.emlw.display_name": {
-          "source": "ZIP Code",
+          "source": "ZIP code",
           "message": "Code postal"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.field.emlw.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Code postal ou ZIP."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.display_name": {
-          "source": "Business Information",
+          "source": "Business information",
           "message": "Informations professionnelles"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Code de référence interne ou identifiant du partenaire."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.field.dmF0.display_name": {
-          "source": "VAT Number",
+          "source": "VAT number",
           "message": "Numéro de TVA"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.field.dmF0.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "Numéro de TVA ou d'identification fiscale du partenaire."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.display_name": {
-          "source": "Relationship Information",
+          "source": "Relationship information",
           "message": "Informations sur la relation"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Informations sur les relations avec d'autres partenaires et les affectations d'utilisateurs."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.cGFyZW50X2lk.display_name": {
-          "source": "Parent Company",
+          "source": "Parent company",
           "message": "Société mère"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.cGFyZW50X2lk.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Société mère ou organisation à laquelle ce partenaire appartient."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.dXNlcl9pZA.display_name": {
-          "source": "Assigned User",
+          "source": "Assigned user",
           "message": "Utilisateur assigné"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.dXNlcl9pZA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Définir sur faux pour archiver le partenaire sans le supprimer."
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.display_name": {
-          "source": "Internal Notes",
+          "source": "Internal notes",
           "message": "Notes internes"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.short_desc": {
@@ -1268,7 +1268,7 @@
           "message": "Australie/Sydney"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.display_name": {
-          "source": "Profile Image",
+          "source": "Profile image",
           "message": "Image de profil"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.short_desc": {
@@ -1280,7 +1280,7 @@
           "message": "Image de profil du partenaire (encodée en base64)."
         },
         "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.display_name": {
-          "source": "Delete Lead",
+          "source": "Delete lead",
           "message": "Supprimer le lead"
         },
         "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.short_desc": {
@@ -1304,7 +1304,7 @@
           "message": "L'identifiant unique de l'enregistrement de piste à supprimer définitivement d'Odoo CRM."
         },
         "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.display_name": {
-          "source": "Delete Partner",
+          "source": "Delete partner",
           "message": "Supprimer le partenaire"
         },
         "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.short_desc": {
@@ -1328,7 +1328,7 @@
           "message": "L'identifiant unique de l'enregistrement de partenaire à supprimer d'Odoo."
         },
         "app.T2Rvbw.action.Z2V0X2xlYWQ.display_name": {
-          "source": "Get Lead",
+          "source": "Get lead",
           "message": "Obtenir la piste"
         },
         "app.T2Rvbw.action.Z2V0X2xlYWQ.short_desc": {
@@ -1364,7 +1364,7 @@
           "message": "Liste des noms de champs à récupérer depuis l'enregistrement de piste. Les champs courants sont présélectionnés."
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.display_name": {
-          "source": "Get Partner",
+          "source": "Get partner",
           "message": "Obtenir le partenaire"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.short_desc": {
@@ -1388,7 +1388,7 @@
           "message": "L'identifiant unique de l'enregistrement de partenaire à récupérer depuis Odoo."
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.display_name": {
-          "source": "Fields to Retrieve",
+          "source": "Fields to retrieve",
           "message": "Champs à récupérer"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.short_desc": {
@@ -1400,7 +1400,7 @@
           "message": "Liste des champs de partenaire spécifiques à récupérer. Si non spécifié, renvoie les informations de base du partenaire, notamment l'ID, le nom, l'e-mail, le téléphone et le statut d'entreprise."
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.display_name": {
-          "source": "List Companies",
+          "source": "List companies",
           "message": "Lister les entreprises"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.short_desc": {
@@ -1516,7 +1516,7 @@
           "message": "Le nom du champ à appliquer la condition de filtre"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Type de recherche"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "La valeur à comparer avec le champ."
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.display_name": {
-          "source": "List Leads",
+          "source": "List leads",
           "message": "Lister les leads"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Le nom du champ à appliquer la condition de filtre"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Type de recherche"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1696,7 +1696,7 @@
           "message": "La valeur à comparer avec le champ."
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.display_name": {
-          "source": "List Partners",
+          "source": "List partners",
           "message": "Lister les partenaires"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "Le nom du champ à appliquer la condition de filtre"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Type de recherche"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "La valeur à comparer avec le champ."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.display_name": {
-          "source": "Update Lead",
+          "source": "Update lead",
           "message": "Mettre à jour la piste"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Le titre ou l'objet de la piste."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
-          "source": "Contact Name",
+          "source": "Contact name",
           "message": "Nom du contact"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "Le nom du contact principal pour cette piste."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
-          "source": "Partner Name",
+          "source": "Partner name",
           "message": "Nom du partenaire"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "Le nom du partenaire ou de la société associé(e) à cette piste."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "Informations de contact"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -1916,7 +1916,7 @@
           "message": "Adresses e-mail, numéro de téléphone, fonction professionnelle et informations sur le site web."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZW1haWxfY2M.display_name": {
-          "source": "CC Email",
+          "source": "CC email",
           "message": "Email CC"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZW1haWxfY2M.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "L'adresse e-mail principale du contact."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Function",
+          "source": "Job function",
           "message": "Fonction poste"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "L'URL du site web du contact ou de l'entreprise."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "Informations d'adresse"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -2048,7 +2048,7 @@
           "message": "Informations d'adresse supplémentaires (appartement, suite, etc.)."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.field.emlw.display_name": {
-          "source": "ZIP Code",
+          "source": "ZIP code",
           "message": "Code postal"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.field.emlw.short_desc": {
@@ -2060,7 +2060,7 @@
           "message": "Le code postal ou le code ZIP de l'adresse du contact."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
-          "source": "Sales Information",
+          "source": "Sales information",
           "message": "Informations sur les ventes"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "L'étape ou le stade actuel du lead dans le processus de vente."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Équipe commerciale"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.short_desc": {
@@ -2160,7 +2160,7 @@
           "message": "Le vendeur affecté à ce lead."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
-          "source": "Marketing Information",
+          "source": "Marketing information",
           "message": "Informations marketing"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "Le média marketing utilisé (e-mail, réseaux sociaux, etc.)."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.field.cmVmZXJyZWQ.display_name": {
-          "source": "Referred By",
+          "source": "Referred by",
           "message": "Recommandé par"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.field.cmVmZXJyZWQ.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "La source spécifique qui a généré ce lead."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
-          "source": "Activity Information",
+          "source": "Activity information",
           "message": "Informations sur l'activité"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "Informations sur la prochaine activité planifiée pour cette piste."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.display_name": {
-          "source": "Activity Summary",
+          "source": "Activity summary",
           "message": "Résumé d'activité"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.short_desc": {
@@ -2244,7 +2244,7 @@
           "message": "Un bref résumé de l'activité planifiée."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.display_name": {
-          "source": "Activity Type",
+          "source": "Activity type",
           "message": "Type d'activité"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.short_desc": {
@@ -2348,7 +2348,7 @@
           "message": "Opportunité"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.display_name": {
-          "source": "Email Bounce Count",
+          "source": "Email bounce count",
           "message": "Nombre de rebonds d'e-mails"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "Le nombre de fois où les e-mails envoyés à ce contact ont été rejetés."
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
-          "source": "Lost Reason",
+          "source": "Lost reason",
           "message": "Motif de perte"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "La langue préférée pour communiquer avec ce contact."
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.display_name": {
-          "source": "New Lead",
+          "source": "New lead",
           "message": "Nouveau lead"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.short_desc": {
@@ -2408,7 +2408,7 @@
           "message": "Déclencher uniquement pour les pistes appartenant à la société spécifiée. Laisser vide pour surveiller toutes les sociétés."
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Équipe commerciale"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "Déclencher uniquement pour les pistes à l'étape spécifiée. Laisser vide pour surveiller toutes les étapes."
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.display_name": {
-          "source": "Lead Type",
+          "source": "Lead type",
           "message": "Type de piste"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.short_desc": {
@@ -2480,7 +2480,7 @@
           "message": "Déclencher uniquement pour les pistes possédant l'une des étiquettes spécifiées. Laisser vide pour surveiller toutes les pistes, quelles que soient leurs étiquettes."
         },
         "app.T2Rvbw.action.bmV3X3BhcnRuZXI.display_name": {
-          "source": "New Partner",
+          "source": "New partner",
           "message": "Nouveau partenaire"
         },
         "app.T2Rvbw.action.bmV3X3BhcnRuZXI.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "Surveille Odoo à la recherche de nouveaux enregistrements de partenaires créés dans le modèle res.partner. Ce déclencheur se lance chaque fois qu'une nouvelle entité partenaire est ajoutée à votre système Odoo, fournissant les détails de configuration du partenaire, notamment l'adresse, les coordonnées et les informations sur l'organisation."
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.display_name": {
-          "source": "Updated Lead",
+          "source": "Updated lead",
           "message": "Piste mise à jour"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.short_desc": {
@@ -2516,7 +2516,7 @@
           "message": "Déclencher uniquement pour les pistes appartenant à la société spécifiée. Laisser vide pour surveiller toutes les sociétés."
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "Équipe commerciale"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.short_desc": {
@@ -2552,7 +2552,7 @@
           "message": "Déclencher uniquement pour les pistes à l'étape spécifiée. Laisser vide pour surveiller toutes les étapes."
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.display_name": {
-          "source": "Lead Type",
+          "source": "Lead type",
           "message": "Type de piste"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.short_desc": {

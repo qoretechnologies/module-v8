@@ -28,7 +28,7 @@
           "message": "Realice una llamada personalizada a la API HTTP / REST a **SurveyMonkey** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), los parámetros de consulta opcionales, los encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para los extremos que aún no están expuestos como acciones de primera clase en esta aplicación."
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Método HTTP"
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Crear contacto"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Crear un nuevo contacto en SurveyMonkey con nombre, apellido, correo electrónico o número de teléfono"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Nombre"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "El nombre del contacto"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Apellido"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "La dirección de correo electrónico del contacto (se requiere correo electrónico o número de teléfono)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Número de teléfono"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -400,7 +400,7 @@
           "message": "El número de teléfono del contacto (se requiere correo electrónico o número de teléfono)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Listar contactos"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "El número de página para la paginación (comienza en 1)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "Por página"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
@@ -448,7 +448,7 @@
           "message": "El número total máximo de contactos a recuperar en todas las páginas (predeterminado: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Create Collector",
+          "source": "Create collector",
           "message": "Crear recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Seleccione la encuesta para la cual desea crear un recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
-          "source": "Collector Type",
+          "source": "Collector type",
           "message": "Tipo de recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
@@ -500,7 +500,7 @@
           "message": "Encuesta incrustada"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
-          "source": "Collector Name",
+          "source": "Collector name",
           "message": "Nombre del recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
@@ -512,7 +512,7 @@
           "message": "Un nombre descriptivo para el recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
-          "source": "List Collectors",
+          "source": "List collectors",
           "message": "Listar recopiladores"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
@@ -548,7 +548,7 @@
           "message": "El número total máximo de recopiladores a recuperar (predeterminado: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
-          "source": "List Responses",
+          "source": "List responses",
           "message": "Listar respuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
@@ -584,7 +584,7 @@
           "message": "El número total máximo de respuestas a recuperar (predeterminado: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
-          "source": "Get Response",
+          "source": "Get response",
           "message": "Obtener respuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
@@ -620,7 +620,7 @@
           "message": "El identificador único de la respuesta que desea obtener"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "Incluir respuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -632,7 +632,7 @@
           "message": "Cuando está habilitado, obtiene los detalles completos de la respuesta incluyendo todas las respuestas a las preguntas"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
-          "source": "Get Collector",
+          "source": "Get collector",
           "message": "Obtener recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Seleccione el recopilador del cual desea obtener información detallada"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
-          "source": "Get Survey",
+          "source": "Get survey",
           "message": "Obtener encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Seleccione la encuesta de la que desea obtener información detallada"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
-          "source": "List Surveys",
+          "source": "List surveys",
           "message": "Listar encuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
@@ -716,7 +716,7 @@
           "message": "El número total máximo de encuestas a recuperar (predeterminado: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
-          "source": "Send Survey",
+          "source": "Send survey",
           "message": "Enviar encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
@@ -752,7 +752,7 @@
           "message": "Seleccione el recopilador de correo electrónico a través del cual enviar la encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "Asunto del correo electrónico"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "La línea de asunto que aparecerá en el correo electrónico de invitación"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
-          "source": "Email Body",
+          "source": "Email body",
           "message": "Cuerpo del correo electrónico"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
@@ -776,7 +776,7 @@
           "message": "El cuerpo del mensaje que aparecerá en el correo electrónico de invitación"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
-          "source": "Recipient Emails",
+          "source": "Recipient emails",
           "message": "Correos electrónicos de los destinatarios"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Una lista de direcciones de correo electrónico a las que enviar la invitación a la encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
-          "source": "Create Survey",
+          "source": "Create survey",
           "message": "Crear encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
@@ -860,7 +860,7 @@
           "message": "El ID de una plantilla para usar como base de la nueva encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
-          "source": "Copy Survey",
+          "source": "Copy survey",
           "message": "Copiar encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
@@ -896,7 +896,7 @@
           "message": "El título que se mostrará para la encuesta copiada"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Update Collector",
+          "source": "Update collector",
           "message": "Actualizar recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Cerrado"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
+          "source": "Close date",
           "message": "Fecha de cierre"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "La URL a la que se redirigirá a los encuestados tras completar la encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
-          "source": "Response Limit",
+          "source": "Response limit",
           "message": "Límite de respuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "El número máximo de respuestas que se aceptarán antes de cerrar el recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Delete Collector",
+          "source": "Delete collector",
           "message": "Eliminar recopilador"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Seleccione el recopilador que desea eliminar permanentemente"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
-          "source": "Get Response Counts",
+          "source": "Get response counts",
           "message": "Obtener recuento de respuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Seleccione la encuesta de la que desea obtener los recuentos de respuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Actualizar contacto"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "El identificador único del contacto que desea actualizar"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Nombre"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "El nuevo nombre del contacto"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Apellido"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "La nueva dirección de correo electrónico del contacto"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Número de teléfono"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "El nuevo número de teléfono del contacto"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Eliminar contacto"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "El identificador único del contacto que desea eliminar"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "Listar listas de contactos"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "El número total máximo de listas de contactos a recuperar (predeterminado: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "Crear lista de contactos"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Un nombre descriptivo para la nueva lista de contactos"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
+          "source": "Add contacts to list",
           "message": "Añadir contactos a la lista"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Agregar uno o más contactos existentes a una lista de contactos por lotes"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
-          "source": "Contact List ID",
+          "source": "Contact list ID",
           "message": "ID de lista de contactos"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "Una lista de ID de contactos para agregar a la lista de contactos"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
-          "source": "Get Survey Rollup",
+          "source": "Get survey rollup",
           "message": "Obtener resumen acumulado de encuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
@@ -1264,7 +1264,7 @@
           "message": "Seleccione la encuesta de la que desea obtener estadísticas agregadas"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
-          "source": "Get User Details",
+          "source": "Get user details",
           "message": "Obtener detalles del usuario"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Recuperar detalles sobre el usuario autenticado de SurveyMonkey, incluidos el tipo de cuenta y los permisos"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
-          "source": "List Survey Folders",
+          "source": "List survey folders",
           "message": "Listar carpetas de encuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "El número total máximo de carpetas de encuestas a recuperar (predeterminado: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
-          "source": "Create Survey Folder",
+          "source": "Create survey folder",
           "message": "Crear carpeta de encuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Un título descriptivo para la nueva carpeta de encuestas"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
-          "source": "New Response",
+          "source": "New response",
           "message": "Nueva respuesta"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Seleccione la encuesta específica que desea monitorear para respuestas completadas"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
-          "source": "Response Disqualified",
+          "source": "Response disqualified",
           "message": "Respuesta descalificada"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Seleccione la encuesta específica que desea supervisar para detectar respuestas descalificadas"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
-          "source": "Response Updated",
+          "source": "Response updated",
           "message": "Respuesta actualizada"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Seleccione la encuesta específica que desea supervisar para detectar respuestas actualizadas"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
-          "source": "Collector Updated",
+          "source": "Collector updated",
           "message": "Recopilador actualizado"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {

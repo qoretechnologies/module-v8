@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Firestore** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填查詢參數、標頭以及請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n對於尚未在此應用程式上作為一級動作公開的端點，請使用此動作。"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "列出專案"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -352,7 +352,7 @@
           "message": "擷取使用您的憑證可存取的所有 Google Cloud 專案清單。您可以依名稱篩選專案，並使用分頁瀏覽大型結果集。這對於找出哪些專案包含 Firestore 資料庫非常有用。"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
-          "source": "Project Name",
+          "source": "Project name",
           "message": "專案名稱"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "用於搜尋包含此名稱專案的選填篩選條件。搜尋不區分大小寫並比對部分名稱。"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -376,7 +376,7 @@
           "message": "單一請求中要傳回的專案數量上限。預設值為 100。與分頁權杖搭配使用可擷取大型結果集。"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "下一頁權杖"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "從先前的請求中取得的分頁權杖。當結果數量大於頁面大小時，使用此項目擷取下一頁專案。"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
-          "source": "Create Document",
+          "source": "Create document",
           "message": "建立文件"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
@@ -412,7 +412,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "集合路徑"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -436,7 +436,7 @@
           "message": "文件的選填自訂識別碼。如果未提供，Firestore 將自動產生專屬 ID。文件 ID 必須為有效的 UTF-8 字串且不能包含正斜線。"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
+          "source": "Document data",
           "message": "文件資料"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "要儲存在文件中的結構化資料。如果有集合結構描述，將根據該結構描述動態確定型別。每個欄位都將以其相應的 Firestore 資料型別儲存。"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
+          "source": "Additional data",
           "message": "其他資料"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
@@ -460,7 +460,7 @@
           "message": "可與結構化資料合併的選填額外欄位。使用此項可新增不屬於預定義結構描述的欄位或包含動態欄位。"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
-          "source": "Get Document",
+          "source": "Get document",
           "message": "取得文件"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
@@ -484,7 +484,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "集合路徑"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -508,7 +508,7 @@
           "message": "您要擷取的文件之專屬識別碼。這是建立文件時自動產生或指定的文件 ID。"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
-          "source": "Update Document",
+          "source": "Update document",
           "message": "更新文件"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
@@ -532,7 +532,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "集合路徑"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -556,7 +556,7 @@
           "message": "您要更新之文件的唯一識別碼。該文件必須存在，否則操作將失敗。"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
+          "source": "Document data",
           "message": "文件資料"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "要在文件中更新的資料。啟用合併時，將僅更新指定的欄位。停用合併時，此資料將取代整份文件。"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
+          "source": "Additional data",
           "message": "其他資料"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
@@ -592,7 +592,7 @@
           "message": "設為 true（預設值）時，僅更新指定的欄位，其他欄位保持不變。設為 false 時，整份文件將被新資料取代。"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
-          "source": "Delete Document",
+          "source": "Delete document",
           "message": "刪除文件"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
@@ -616,7 +616,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "集合路徑"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -640,7 +640,7 @@
           "message": "您要刪除的文件之專屬識別碼。文件必須存在，否則操作將失敗。"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "列出文件"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -664,7 +664,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "集合路徑"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -688,7 +688,7 @@
           "message": "要擷取的文件數量上限。預設值為 100。使用此項目可控制結果集的大小並提升效能。"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "排序依據"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
@@ -700,7 +700,7 @@
           "message": "用於為文件排序的選填欄位名稱。該欄位必須存在於文件中，且為可比較的類型（字串、數字、日期）。"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
-          "source": "Order Direction",
+          "source": "Order direction",
           "message": "排序方向"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
@@ -720,7 +720,7 @@
           "message": "降序"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "列出集合"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -744,7 +744,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
+          "source": "Parent document path",
           "message": "父文件路徑"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
@@ -756,7 +756,7 @@
           "message": "要列出其子集合的文件選填路徑。若未指定，則會列出根層級集合。格式：collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
+          "source": "Get collection",
           "message": "取得集合"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
@@ -792,7 +792,7 @@
           "message": "您要擷取其資訊之集合的識別碼。這是不含任何父路徑的集合名稱。"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
+          "source": "Parent document path",
           "message": "父文件路徑"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
@@ -804,7 +804,7 @@
           "message": "若此集合為子集合，則為父文件的選填路徑。如果未指定，則假設此為根層級集合。格式：collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
-          "source": "Include Sample Documents",
+          "source": "Include sample documents",
           "message": "包含範例文件"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
@@ -816,7 +816,7 @@
           "message": "若為 true，會在回應中包含來自該集合的範例文件。這有助於您了解該集合的結構與內容。"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
-          "source": "Sample Limit",
+          "source": "Sample limit",
           "message": "範例限制"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
@@ -828,7 +828,7 @@
           "message": "當 include_sample_documents 為 true 時，要擷取的範例文件最大數量。預設值為 5。"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
-          "source": "Query Documents",
+          "source": "Query documents",
           "message": "查詢文件"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
@@ -852,7 +852,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "集合路徑"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -952,7 +952,7 @@
           "message": "用於比較的值。值類型應與文件中的欄位類型相符（字串、數字、布林值等）"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "排序依據"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
@@ -1008,7 +1008,7 @@
           "message": "要擷取的文件數量上限。預設值為 100。使用此項目可控制查詢效能和結果集大小。"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Backup to Google Cloud Storage",
+          "source": "Backup to Google cloud storage",
           "message": "備份至 Google Cloud Storage"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "包含要備份的 Firestore 資料庫之 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
-          "source": "Output URI Prefix",
+          "source": "Output URI prefix",
           "message": "輸出 URI 前綴"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "要備份的集合 ID 選填清單。如果未指定，將備份整個資料庫。使用此項可建立特定集合的選擇性備份。"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Restore from Google Cloud Storage",
+          "source": "Restore from Google cloud storage",
           "message": "從 Google Cloud Storage 還原"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "要將資料還原至其中的 Google Cloud 專案唯一識別碼"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
-          "source": "Input URI Prefix",
+          "source": "Input URI prefix",
           "message": "輸入 URI 前綴"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
@@ -1104,7 +1104,7 @@
           "message": "要從備份中還原的選填集合 ID 清單。若未指定，將還原備份中的所有集合。使用此項目可選擇性地還原特定集合。"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Document",
+          "source": "New document",
           "message": "新增文件"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "包含 Firestore 資料庫的 Google Cloud 專案專屬識別碼"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "集合路徑"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "用於比較的值。值將自動轉換為適當的類型（字串、數字、布林值或 null）"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "排序依據"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {

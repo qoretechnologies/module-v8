@@ -28,7 +28,7 @@
           "message": "Виконати спеціальний виклик HTTP / REST API до **Zoom**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Створити та надіслати реєстрацію користувача на вебінар. Користувачі Zoom із [планом Webinar](https:-zoom.us-webinar) мають доступ до створення вебінарів та керування ними. Вебінари дозволяють організаторам транслювати зустріч Zoom для щонайбільше 10 000 учасників. Планування [вебінару з реєстрацією](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) вимагає від ваших реєстрантів заповнення короткої форми перед отриманням посилання для приєднання до вебінару. \n\n**Передумови:** \n* План Pro або вищий із доповненням Webinar.\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "Нова зустріч"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Відстежує зустрічі Zoom і спрацьовує, коли зустрічі створюються, розпочинаються (live) або завершуються (previous meetings) на основі вибраного типу події. Повертає відомості про зустріч, включно з темою, тривалістю, URL-адресою приєднання та типом зустрічі."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
-          "source": "Meeting Event Type",
+          "source": "Meeting event type",
           "message": "Тип події зустрічі"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Спрацьовує, коли зустріч розпочинається"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
-          "source": "New Webinar",
+          "source": "New webinar",
           "message": "Новий вебінар"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Відстежує вебінари Zoom і спрацьовує, коли створюються нові вебінари. Повертає відомості про вебінар, включно з темою, тривалістю, URL-адресою приєднання, URL-адресою реєстрації та типом вебінару."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
-          "source": "New Meeting Summary",
+          "source": "New meeting summary",
           "message": "Новий підсумок зустрічі"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {

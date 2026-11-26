@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Figma** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選填查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n針對此應用程式中尚未公開為頂級動作的端點使用此動作。"
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "列出專案"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "輸入您要擷取專案的 Figma 團隊 ID"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.display_name": {
-          "source": "List Project Files",
+          "source": "List project files",
           "message": "列出專案檔案"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "選擇您要擷取檔案的特定 Figma 專案"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.display_name": {
-          "source": "List File Version History",
+          "source": "List file version history",
           "message": "列出檔案版本歷程記錄"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "選擇團隊中包含該檔案的特定專案"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "檔案索引鍵"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.short_desc": {
@@ -448,7 +448,7 @@
           "message": "選取您要擷取版本歷程記錄的特定 Figma 設計檔案"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.display_name": {
-          "source": "Next Page URL",
+          "source": "Next page URL",
           "message": "下一頁 URL"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.short_desc": {
@@ -460,7 +460,7 @@
           "message": "適用於包含多個版本的大型檔案，用於擷取下一頁版本歷程記錄結果的選填 URL"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.display_name": {
-          "source": "List Comments",
+          "source": "List comments",
           "message": "列出留言"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "選擇團隊中包含該檔案的特定專案"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "檔案索引鍵"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.short_desc": {
@@ -508,7 +508,7 @@
           "message": "選取您要擷取留言的特定 Figma 設計檔案"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.display_name": {
-          "source": "Create Comment",
+          "source": "Create comment",
           "message": "建立留言"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "選擇團隊中包含該檔案的特定專案"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "檔案索引鍵"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.short_desc": {
@@ -568,7 +568,7 @@
           "message": "輸入要在 Figma 檔案上發表的留言文字內容"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.display_name": {
-          "source": "Parent Comment ID",
+          "source": "Parent comment ID",
           "message": "父留言 ID"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "要回覆的現有留言選填 ID，留空則建立新的頂層留言"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.display_name": {
-          "source": "New File Comment",
+          "source": "New file comment",
           "message": "新增檔案留言"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "選擇團隊中包含要監控之檔案的特定專案"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "檔案索引鍵"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.short_desc": {
@@ -628,7 +628,7 @@
           "message": "選取您要監控新留言活動的 Figma 設計檔案"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.display_name": {
-          "source": "New File Version",
+          "source": "New file version",
           "message": "新增檔案版本"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.short_desc": {
@@ -664,7 +664,7 @@
           "message": "選擇團隊中包含要監控之檔案的特定專案"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "檔案索引鍵"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.short_desc": {

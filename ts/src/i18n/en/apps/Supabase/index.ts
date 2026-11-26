@@ -52,13 +52,13 @@ The \`service_role\` secret key from your project's API settings. This key:
   actions: {
     get_table: {
       groups: ['Tables'],
-      displayName: 'Get Table',
+      displayName: 'Get table',
       shortDesc: 'Retrieve detailed schema information about a specific Supabase table',
       longDesc:
         'Fetches comprehensive metadata for a specific table including column definitions, data types, required fields, and descriptions. This action helps you understand the structure of your database tables.',
       options: {
         tableName: {
-          displayName: 'Table Name',
+          displayName: 'Table name',
           shortDesc: 'The name of the table to retrieve',
           longDesc:
             'Select the Supabase table whose schema information you want to fetch. The table must exist in your Supabase project.',
@@ -67,13 +67,13 @@ The \`service_role\` secret key from your project's API settings. This key:
     },
     list_tables: {
       groups: ['Tables'],
-      displayName: 'List Tables',
+      displayName: 'List tables',
       shortDesc: 'Get a list of all tables in your Supabase database',
       longDesc:
         'Retrieves all tables from your Supabase database with their basic metadata including column information and descriptions. Optionally include system tables in the results.',
       options: {
         include_system_tables: {
-          displayName: 'Include System Tables',
+          displayName: 'Include system tables',
           shortDesc: 'Include internal Supabase system tables in the results',
           longDesc:
             'When enabled, the response will include system tables (those starting with underscore). System tables contain Supabase internal data and are typically hidden from regular queries.',
@@ -82,19 +82,19 @@ The \`service_role\` secret key from your project's API settings. This key:
     },
     create_row: {
       groups: ['Rows'],
-      displayName: 'Create Row',
+      displayName: 'Create row',
       shortDesc: 'Insert a new row into a Supabase table',
       longDesc:
         'Creates a new record in the specified Supabase table. The action dynamically presents the table schema, allowing you to provide values for each column. Returns the newly created row with all its data.',
       options: {
         tableName: {
-          displayName: 'Table Name',
+          displayName: 'Table name',
           shortDesc: 'The table where the row will be inserted',
           longDesc:
             'Select the target Supabase table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.',
         },
         values: {
-          displayName: 'Row Values',
+          displayName: 'Row values',
           shortDesc: 'The data to insert into the new row',
           longDesc:
             'Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.',
@@ -103,13 +103,13 @@ The \`service_role\` secret key from your project's API settings. This key:
     },
     list_rows: {
       groups: ['Rows'],
-      displayName: 'List Rows',
+      displayName: 'List rows',
       shortDesc: 'Query and retrieve rows from a Supabase table',
       longDesc:
         'Fetches rows from a Supabase table with support for filtering, sorting, pagination, and ordering. Returns a list of records matching your query criteria along with total count information.',
       options: {
         tableName: {
-          displayName: 'Table Name',
+          displayName: 'Table name',
           shortDesc: 'The table to query',
           longDesc:
             'Select the Supabase table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.',
@@ -127,7 +127,7 @@ The \`service_role\` secret key from your project's API settings. This key:
             'Skip this many rows before starting to return results. Used in combination with limit for pagination through large datasets.',
         },
         orderBy: {
-          displayName: 'Order By',
+          displayName: 'Order by',
           shortDesc: 'Sort the results by a specific column',
           longDesc:
             'Define how to sort the retrieved rows by specifying a column and sort direction (ascending or descending).',
@@ -178,13 +178,13 @@ The \`service_role\` secret key from your project's API settings. This key:
     },
     delete_rows: {
       groups: ['Rows'],
-      displayName: 'Delete Rows',
+      displayName: 'Delete rows',
       shortDesc: 'Delete rows from a Supabase table based on a filter',
       longDesc:
         'Removes rows from a Supabase table that match the specified filter criteria. Returns the count of deleted rows and their data. Use with caution as this operation is irreversible.',
       options: {
         tableName: {
-          displayName: 'Table Name',
+          displayName: 'Table name',
           shortDesc: 'The table to delete rows from',
           longDesc:
             'Select the Supabase table from which you want to delete rows. Ensure you have proper permissions for delete operations on this table.',
@@ -219,31 +219,31 @@ The \`service_role\` secret key from your project's API settings. This key:
     },
     upsert_row: {
       groups: ['Rows'],
-      displayName: 'Upsert Row',
+      displayName: 'Upsert row',
       shortDesc: 'Insert a new row or update an existing one',
       longDesc:
         'Performs an upsert operation (insert or update) on a Supabase table. If a row with the specified unique constraint exists, it will be updated; otherwise, a new row is inserted.',
       options: {
         tableName: {
-          displayName: 'Table Name',
+          displayName: 'Table name',
           shortDesc: 'The table for the upsert operation',
           longDesc:
             'Select the target Supabase table. The available fields will be dynamically loaded based on the table schema.',
         },
         values: {
-          displayName: 'Row Values',
+          displayName: 'Row values',
           shortDesc: 'The data to upsert',
           longDesc:
             'Provide values for the table columns. If a row with matching unique constraints exists, these values will update it; otherwise, a new row is created.',
         },
         onConflict: {
-          displayName: 'On Conflict',
+          displayName: 'On conflict',
           shortDesc: 'The column(s) used to detect conflicts',
           longDesc:
             "Specify the column or comma-separated list of columns that should be used to detect conflicts. If not specified, uses the table's primary key.",
         },
         ignoreDuplicates: {
-          displayName: 'Ignore Duplicates',
+          displayName: 'Ignore duplicates',
           shortDesc: 'Skip the operation if a duplicate exists',
           longDesc:
             'When enabled, if a conflicting row exists, the operation is silently ignored. When disabled (default), conflicting rows are updated with the new values.',
@@ -252,31 +252,31 @@ The \`service_role\` secret key from your project's API settings. This key:
     },
     create_bucket: {
       groups: ['Storage'],
-      displayName: 'Create Storage Bucket',
+      displayName: 'Create storage bucket',
       shortDesc: 'Create a new storage bucket in Supabase',
       longDesc:
         'Creates a new storage bucket in Supabase Storage for organizing and storing files. Configure access permissions, file size limits, and allowed MIME types.',
       options: {
         name: {
-          displayName: 'Bucket Name',
+          displayName: 'Bucket name',
           shortDesc: 'The name for the new bucket',
           longDesc:
             'Specify a unique name for the storage bucket. The name must be URL-safe and unique within your Supabase project.',
         },
         public_access: {
-          displayName: 'Public Access',
+          displayName: 'Public access',
           shortDesc: 'Allow public access to bucket contents',
           longDesc:
             'When enabled, files in this bucket can be accessed publicly without authentication. When disabled (default), files require authentication to access.',
         },
         file_size_limit: {
-          displayName: 'File Size Limit',
+          displayName: 'File size limit',
           shortDesc: 'Maximum file size in bytes',
           longDesc:
             'Set the maximum file size that can be uploaded to this bucket, specified in bytes. Leave empty for no limit.',
         },
         allowed_mime_types: {
-          displayName: 'Allowed MIME Types',
+          displayName: 'Allowed MIME types',
           shortDesc: 'List of allowed file MIME types',
           longDesc:
             'Specify which file types can be uploaded to this bucket by providing a list of MIME types (e.g., image/png, application/pdf). Leave empty to allow all file types.',
@@ -285,14 +285,14 @@ The \`service_role\` secret key from your project's API settings. This key:
     },
     list_buckets: {
       groups: ['Storage'],
-      displayName: 'List Storage Buckets',
+      displayName: 'List storage buckets',
       shortDesc: 'Get all storage buckets in your Supabase project',
       longDesc:
         'Retrieves a list of all storage buckets in your Supabase project with their configurations including access permissions, file size limits, and allowed MIME types.',
     },
     get_bucket: {
       groups: ['Storage'],
-      displayName: 'Get Storage Bucket',
+      displayName: 'Get storage bucket',
       shortDesc: 'Retrieve details of a specific storage bucket',
       longDesc:
         'Fetches detailed information about a specific Supabase storage bucket including its configuration, creation date, access permissions, and file restrictions.',
@@ -308,13 +308,13 @@ The \`service_role\` secret key from your project's API settings. This key:
   },
   triggers: {
     new_table_row: {
-      displayName: 'New Table Row',
+      displayName: 'New table row',
       shortDesc: 'Triggers when a new row is added to a Supabase table',
       longDesc:
         'Monitors a Supabase table for new rows and triggers when new records are inserted. Supports optional filtering to trigger only for rows matching specific criteria.',
       options: {
         tableName: {
-          displayName: 'Table Name',
+          displayName: 'Table name',
           shortDesc: 'The table to monitor for new rows',
           longDesc:
             'Select the Supabase table you want to monitor. The trigger will fire whenever new rows are inserted into this table.',
@@ -560,7 +560,7 @@ The \`service_role\` secret key from your project's API settings. This key:
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {

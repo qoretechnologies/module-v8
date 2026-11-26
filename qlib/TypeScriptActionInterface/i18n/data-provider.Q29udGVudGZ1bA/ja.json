@@ -28,7 +28,7 @@
           "message": "設定済みのコネクションの認証を使用して、**Contentful** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（コネクションの API ベース URL からの相対パス）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに使用します。"
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.display_name": {
-          "source": "Get an Entry",
+          "source": "Get an entry",
           "message": "エントリーの取得"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.short_desc": {
@@ -376,7 +376,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -400,7 +400,7 @@
           "message": "取得するエントリーの ID を選択または入力します。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.display_name": {
-          "source": "Get an Entry with Replacement",
+          "source": "Get an entry with replacement",
           "message": "置換付きエントリーの取得"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "タグのすべての出現箇所を置換するテキスト。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.display_name": {
-          "source": "Create an Entry",
+          "source": "Create an entry",
           "message": "エントリーの作成"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.short_desc": {
@@ -532,7 +532,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -568,7 +568,7 @@
           "message": "有効にすると、作成後すぐにエントリーが公開されます。無効の場合、下書きとして保存されます。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.display_name": {
-          "source": "Update an Entry",
+          "source": "Update an entry",
           "message": "エントリの更新"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.short_desc": {
@@ -604,7 +604,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -640,7 +640,7 @@
           "message": "更新するフィールド値をキーと値のオブジェクトとして指定します。指定したフィールドのみが変更されます。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.display_name": {
-          "source": "Delete an Entry",
+          "source": "Delete an entry",
           "message": "エントリの削除"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.short_desc": {
@@ -676,7 +676,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -700,7 +700,7 @@
           "message": "恒久的に削除するエントリのIDを選択または入力してください。"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.display_name": {
-          "source": "Publish an Entry",
+          "source": "Publish an entry",
           "message": "エントリの公開"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.short_desc": {
@@ -736,7 +736,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -760,7 +760,7 @@
           "message": "公開するエントリのIDを選択または入力してください。"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.display_name": {
-          "source": "Unpublish an Entry",
+          "source": "Unpublish an entry",
           "message": "エントリの非公開"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.short_desc": {
@@ -796,7 +796,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -820,7 +820,7 @@
           "message": "非公開にするエントリのIDを選択または入力してください。"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.display_name": {
-          "source": "Archive/Unarchive an Entry",
+          "source": "Archive/unarchive an entry",
           "message": "エントリーのアーカイブ/アーカイブ解除"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.short_desc": {
@@ -856,7 +856,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -892,7 +892,7 @@
           "message": "有効にするとエントリーがアーカイブされます。無効にするとエントリーのアーカイブが解除されます。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.display_name": {
-          "source": "Search Entries",
+          "source": "Search entries",
           "message": "エントリの検索"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.short_desc": {
@@ -928,7 +928,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -940,7 +940,7 @@
           "message": "結果をフィルタリングするコンテンツタイプを選択してください。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.short_desc": {
@@ -976,7 +976,7 @@
           "message": "ページ分割のためにスキップするエントリの数。デフォルトは 0 です。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.display_name": {
-          "source": "Get an Asset",
+          "source": "Get an asset",
           "message": "アセットの取得"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "取得するアセットの ID を選択または入力します。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.display_name": {
-          "source": "Create an Asset",
+          "source": "Create an asset",
           "message": "アセットの作成"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "アセットのオプションの説明。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.display_name": {
-          "source": "File Name",
+          "source": "File name",
           "message": "ファイル名"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Contentful がファイルをダウンロードする一般公開 URL。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "有効にすると、処理後にアセットがすぐに公開されます。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.display_name": {
-          "source": "Update an Asset",
+          "source": "Update an asset",
           "message": "アセットの更新"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "アセットの更新後の説明。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.display_name": {
-          "source": "Delete an Asset",
+          "source": "Delete an asset",
           "message": "アセットの削除"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "恒久的に削除するアセットのIDを選択または入力してください。"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.display_name": {
-          "source": "Publish an Asset",
+          "source": "Publish an asset",
           "message": "アセットの公開"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "公開するアセットのIDを選択または入力してください。"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.display_name": {
-          "source": "Unpublish an Asset",
+          "source": "Unpublish an asset",
           "message": "アセットの非公開"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "非公開にするアセットのIDを選択または入力してください。"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.display_name": {
-          "source": "Archive/Unarchive an Asset",
+          "source": "Archive/unarchive an asset",
           "message": "アセットのアーカイブ/アーカイブ解除"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "有効にするとアセットがアーカイブされます。無効にするとアセットのアーカイブが解除されます。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.display_name": {
-          "source": "Search Assets",
+          "source": "Search assets",
           "message": "アセットの検索"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "アセットのタイトルと説明を検索するためのオプションのテキスト。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.display_name": {
-          "source": "MIME Type Group",
+          "source": "MIME type group",
           "message": "MIME タイプグループ"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "ページ分割のためにスキップするアセットの数。デフォルトは 0 です。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Get a Content Type",
+          "source": "Get a content type",
           "message": "コンテンツタイプの取得"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1620,7 +1620,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "詳細を取得するコンテンツタイプを選択します。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Create a Content Type",
+          "source": "Create a content type",
           "message": "コンテンツタイプの作成"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "有効にすると、ロケールごとに異なる値をこのフィールドに設定できます。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "フィールド名"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.short_desc": {
@@ -1752,7 +1752,7 @@
           "message": "有効にすると、エントリーでこのフィールドに値を指定する必要があります。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "フィールドタイプ"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "フィールドのデータ型。サポートされる型: シンボル（短いテキスト）、テキスト（長いテキスト）、整数、数値、日付、論理値、RichText、リンク、配列、オブジェクト、場所"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Content Type",
+          "source": "Update a content type",
           "message": "コンテンツタイプの更新"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "コンテンツタイプの更新後の説明。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Delete a Content Type",
+          "source": "Delete a content type",
           "message": "コンテンツタイプの削除"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1872,7 +1872,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1884,7 +1884,7 @@
           "message": "恒久的に削除するコンテンツタイプを選択してください。"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.display_name": {
-          "source": "Activate a Content Type",
+          "source": "Activate a content type",
           "message": "コンテンツタイプの有効化"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.short_desc": {
@@ -1920,7 +1920,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "有効化（公開）するコンテンツタイプを選択します。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.display_name": {
-          "source": "Deactivate a Content Type",
+          "source": "Deactivate a content type",
           "message": "コンテンツタイプの無効化"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1980,7 +1980,7 @@
           "message": "無効化（非公開化）するコンテンツタイプを選択します。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Add a Field to a Content Type",
+          "source": "Add a field to a content type",
           "message": "コンテンツタイプへのフィールドの追加"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2016,7 +2016,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2040,7 +2040,7 @@
           "message": "フィールドの一意の ID（例: \"heroImage\"、\"publishDate\"）。コンテンツタイプ内で一意である必要があります。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "フィールド名"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2052,7 +2052,7 @@
           "message": "フィールドの表示名（例: \"Hero Image\"、\"Publish Date\"）。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "フィールドタイプ"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.short_desc": {
@@ -2132,7 +2132,7 @@
           "message": "有効にすると、ロケールごとに異なる値をこのフィールドに設定できます。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Field of a Content Type",
+          "source": "Update a field of a content type",
           "message": "コンテンツタイプのフィールドの更新"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2168,7 +2168,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2192,7 +2192,7 @@
           "message": "更新するフィールドを選択してください。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "フィールド名"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2228,7 +2228,7 @@
           "message": "ロケールごとに異なる値を保持できるかどうかを更新します。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.display_name": {
-          "source": "Delete a Field from a Content Type",
+          "source": "Delete a field from a content type",
           "message": "コンテンツタイプからフィールドを削除"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.short_desc": {
@@ -2264,7 +2264,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "コンテンツタイプ"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2288,7 +2288,7 @@
           "message": "コンテンツタイプから恒久的に削除するフィールドを選択してください。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.display_name": {
-          "source": "Search Content Types",
+          "source": "Search content types",
           "message": "コンテンツタイプの検索"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.short_desc": {
@@ -2324,7 +2324,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "ページ分割のためにスキップするコンテンツタイプの数。デフォルトは 0 です。"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.display_name": {
-          "source": "Watch an Event",
+          "source": "Watch an event",
           "message": "イベントの監視"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.short_desc": {
@@ -2396,7 +2396,7 @@
           "message": "スペース内の環境を選択します。指定しない場合のデフォルトは \"master\" です。"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
+          "source": "Event types",
           "message": "イベントタイプ"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.short_desc": {

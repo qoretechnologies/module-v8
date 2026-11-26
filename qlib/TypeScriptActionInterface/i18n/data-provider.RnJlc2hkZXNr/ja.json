@@ -28,7 +28,7 @@
           "message": "設定された接続の認証情報を使用して、**Freshdesk** へのカスタム HTTP / REST API コールを実行します。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "レコードの検索"
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.short_desc": {
@@ -520,7 +520,7 @@
           "message": "指定された会社IDに属するチケット。"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "並べ替え"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "結果を並べ替えます。"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "並べ替えタイプ"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "返される結果のページ番号。"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "ページあたり"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.short_desc": {
@@ -952,7 +952,7 @@
           "message": "このAPIを使用してすべての会社の一覧を取得します。"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "ページあたり"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Api v2 custom objects schemas schema id records id put"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "新規連絡先"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Freshdesk インスタンスに新しい連絡先が追加されるたびに起動します。名前、メール、電話番号、連絡先に関連付けられたカスタムフィールドなどの詳細を取得します。"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.display_name": {
-          "source": "Updated Contact",
+          "source": "Updated contact",
           "message": "更新された連絡先"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Freshdesk インスタンスで既存の連絡先の詳細（名前、電話番号、メール、カスタムフィールドの変更など）が更新されるたびにトリガーされます。"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.display_name": {
-          "source": "Updated Ticket",
+          "source": "Updated ticket",
           "message": "更新されたチケット"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Freshdesk インスタンスで既存のチケットが新しい詳細（件名、優先度、ステータス、担当エージェントの変更など）で更新されるたびにトリガーされます。"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.display_name": {
-          "source": "New Ticket",
+          "source": "New ticket",
           "message": "新規チケット"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Freshdesk インスタンスに新しいチケットが作成されるたびに起動します。件名、説明、優先度などの詳細を取得し、後続のアクションや通知でこのデータを使用できます。"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.display_name": {
-          "source": "Ticket Status Filter",
+          "source": "Ticket status filter",
           "message": "チケットステータスフィルター"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "特定のステータス（例: Open、Pending、Resolved など）に一致するチケットに対してのみトリガーが起動するように制限またはフィルタリングします。"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.display_name": {
-          "source": "Ticket Priority Filter",
+          "source": "Ticket priority filter",
           "message": "チケット優先度フィルター"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.short_desc": {

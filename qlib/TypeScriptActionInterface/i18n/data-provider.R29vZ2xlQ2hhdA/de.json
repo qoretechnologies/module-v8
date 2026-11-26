@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Google Chat** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragerumpf an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwortrumpf enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als primäre Aktionen bereitgestellt werden."
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Bereiche auflisten"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Seitengröße"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Die maximale Anzahl an Bereichen, die auf einer einzelnen Seite zurückgegeben werden sollen. Standard ist 20."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Ein Seitentoken, das aus einem vorherigen Aufruf zum Auflisten von Bereichen empfangen wurde. Angeben, um die nachfolgende Seite abzurufen."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.display_name": {
-          "source": "Space Type",
+          "source": "Space type",
           "message": "Bereichstyp"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Die eindeutige Kennung des Google Chat-Gruppenraums, dessen Mitglieder Sie auflisten möchten."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Seitengröße"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Die maximale Anzahl an Mitgliedern, die auf einer einzelnen Seite zurückgegeben werden soll. Standard ist 20."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Filtern Sie die Liste der Mitglieder nach einem bestimmten Feld und Wert, wie z. B. Rolle oder Mitgliedstyp."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "Filterfeld"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -504,7 +504,7 @@
           "message": "Mitgliedstyp"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Filterwert"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -516,7 +516,7 @@
           "message": "Der spezifische Wert, nach dem Mitglieder basierend auf dem ausgewählten Feld gefiltert werden sollen."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.display_name": {
-          "source": "Show Groups",
+          "source": "Show groups",
           "message": "Gruppen anzeigen"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Gibt an, ob Gruppenmitgliedschaften in den Ergebnissen enthalten sein sollen."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.display_name": {
-          "source": "Show Invited",
+          "source": "Show invited",
           "message": "Eingeladene anzeigen"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Gibt an, ob Mitglieder einbezogen werden sollen, die eingeladen wurden, aber noch nicht beigetreten sind."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.display_name": {
-          "source": "Use Admin Access",
+          "source": "Use admin access",
           "message": "Administratorrechte verwenden"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Gibt an, ob beim Auflisten von Mitgliedern Administratorrechte verwendet werden sollen."
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "Mitglied abrufen"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Die eindeutige Kennung des Mitglieds, über das Sie Informationen abrufen möchten."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "Nachrichten auflisten"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -612,7 +612,7 @@
           "message": "Die eindeutige Kennung des Google Chat-Bereichs, dessen Nachrichten Sie auflisten möchten."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Seitengröße"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Die maximale Anzahl an Nachrichten, die auf einer einzelnen Seite zurückgegeben werden sollen. Standard ist 25."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Filtern Sie die Liste der Nachrichten nach einem bestimmten Feld und Wert, wie Erstellungszeit oder Thread."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "Filterfeld"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Thread"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Filterwert"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -680,7 +680,7 @@
           "message": "Der spezifische Wert, nach dem Nachrichten basierend auf dem ausgewählten Feld gefiltert werden sollen."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.display_name": {
-          "source": "Show Deleted",
+          "source": "Show deleted",
           "message": "Gelöschte anzeigen"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Gibt an, ob gelöschte Nachrichten in den Ergebnissen enthalten sein sollen."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Sortierreihenfolge"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Absteigend"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "Nachricht abrufen"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Die eindeutige Kennung der Nachricht, über die Sie Informationen abrufen möchten."
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete Message",
+          "source": "Delete message",
           "message": "Nachricht löschen"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Die eindeutige Kennung der Nachricht, die Sie löschen möchten."
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.display_name": {
-          "source": "Force Delete",
+          "source": "Force delete",
           "message": "Löschen erzwingen"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Gibt an, ob das Löschen der Nachricht erzwungen werden soll, selbst wenn sie normalerweise nicht gelöscht werden kann."
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.display_name": {
-          "source": "Send Message",
+          "source": "Send message",
           "message": "Nachricht senden"
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Die ID einer vorhandenen Nachricht, auf die geantwortet oder die aktualisiert werden soll. Leer lassen, um eine neue Nachricht zu senden."
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Neue Nachricht"
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.short_desc": {

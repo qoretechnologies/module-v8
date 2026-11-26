@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Google Sheets** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anforderungstext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App bereitgestellt werden."
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Datensätze suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Der Tabellenname"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Add Rows to Spreadsheet",
+          "source": "Add rows to spreadsheet",
           "message": "Zeilen zu Tabellendatei hinzufügen"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Das spezifische Tabellenblatt innerhalb der Tabellendatei, in dem die Zeilen hinzugefügt werden"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
-          "source": "Insert at Start",
+          "source": "Insert at start",
           "message": "Am Anfang einfügen"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Wenn ausgewählt, werden neue Zeilen am Anfang der Tabelle eingefügt. Wenn nicht ausgewählt, werden Zeilen am Ende der Tabelle angehängt."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
-          "source": "Clear Spreadsheet Row(s)",
+          "source": "Clear spreadsheet row(s)",
           "message": "Spreadsheet-Zeile(n) leeren"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Das spezifische Tabellenblatt im Spreadsheet, in dem Zeilen geleert werden"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
-          "source": "Rows to Clear",
+          "source": "Rows to clear",
           "message": "Zu leerende Zeilen"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Liste der zu leerenden Zeilenindizes (1-basiert, wie im Spreadsheet angezeigt)"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
-          "source": "Copy Worksheet",
+          "source": "Copy worksheet",
           "message": "Arbeitsblatt kopieren"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Erstellen Sie eine Kopie eines Arbeitsblatts aus einer Quell-Tabellenkalkulation in eine Ziel-Tabellenkalkulation mit optionaler Anpassung"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "Quell-Spreadsheet"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Das Google Sheets-Spreadsheet, das das zu kopierende Tabellenblatt enthält"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
-          "source": "Source Worksheet",
+          "source": "Source worksheet",
           "message": "Quell-Tabellenblatt"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Das spezifische Tabellenblatt im Quell-Spreadsheet, das kopiert werden soll"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
-          "source": "Destination Spreadsheet",
+          "source": "Destination spreadsheet",
           "message": "Ziel-Spreadsheet"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Die Google Sheets-Tabellenkalkulation, in die das Arbeitsblatt kopiert wird"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
-          "source": "New Worksheet Name",
+          "source": "New worksheet name",
           "message": "Neuer Tabellenblattname"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Geben Sie einen benutzerdefinierten Namen für das kopierte Tabellenblatt an. Falls nicht angegeben, wird der ursprüngliche Name mit dem Präfix „Kopie von“ verwendet"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "Einfügeposition"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Der nullbasierte Index, an dem das neue Tabellenblatt eingefügt werden soll. Falls nicht angegeben, wird das Tabellenblatt am Ende des Spreadsheets hinzugefügt"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
-          "source": "Create Spreadsheet",
+          "source": "Create spreadsheet",
           "message": "Spreadsheet erstellen"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Erstellt ein neues Google Sheets-Spreadsheet. Sie können es entweder von Grund auf mit benutzerdefinierten Kopfzeilen erstellen oder ein vorhandenes Spreadsheet kopieren. Wenn Kopfzeilen angegeben werden, werden sie fett mit Rahmen formatiert und die Kopfzeile wird fixiert."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
-          "source": "Spreadsheet Title",
+          "source": "Spreadsheet title",
           "message": "Spreadsheet-Titel"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Der Name, der dem neu erstellten Google Sheets-Spreadsheet gegeben wird."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "Quell-Spreadsheet"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Optional. Eine Liste von Spaltenkopfzeilen, die der ersten Zeile des neuen Spreadsheets hinzugefügt werden sollen. Kopfzeilen werden fett mit Rahmen formatiert und die Kopfzeile wird fixiert. Diese Option wird ignoriert, wenn ein Quell-Spreadsheet angegeben ist."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
-          "source": "Create Worksheet",
+          "source": "Create worksheet",
           "message": "Tabellenblatt erstellen"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Die ID des Google Sheets-Spreadsheets, in dem das neue Tabellenblatt erstellt werden soll."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
-          "source": "Worksheet Title",
+          "source": "Worksheet title",
           "message": "Tabellenblatttitel"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Der Name, der auf dem Tab des neuen Tabellenblatts angezeigt wird."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
-          "source": "Overwrite Existing",
+          "source": "Overwrite existing",
           "message": "Bestehendes überschreiben"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Eine Liste von Spaltenkopfzeilen, die der ersten Zeile des neuen Tabellenblatts hinzugefügt und fett formatiert werden."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Sheet Position",
+          "source": "Sheet position",
           "message": "Tabellenblattposition"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Die Position (nullbasierter Index), an der das neue Tabellenblatt im Spreadsheet eingefügt werden soll. Falls nicht angegeben, wird das Tabellenblatt am Ende hinzugefügt."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
-          "source": "Delete Row",
+          "source": "Delete row",
           "message": "Zeile löschen"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Die ID des Tabellenblatts (Tabs) innerhalb der Tabellendatei, das die zu löschende Zeile enthält."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
-          "source": "Row Index",
+          "source": "Row index",
           "message": "Zeilenindex"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Die Position der zu löschenden Zeile, beginnend bei 1 (nicht 0). Dies entspricht den Zeilennummern in der Google Sheets-Benutzeroberfläche. Um beispielsweise die allererste Zeile zu löschen, verwenden Sie 1."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
-          "source": "Find Spreadsheet Rows",
+          "source": "Find spreadsheet rows",
           "message": "Tabellenzeilen suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Die Anzahl der übereinstimmenden Zeilen, die vor dem Zurückgeben von Ergebnissen übersprungen werden sollen. Wird für die Seitennummerierung verwendet. Standardwert ist 0."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
-          "source": "Search From Last Row",
+          "source": "Search from last row",
           "message": "Ab der letzten Zeile suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Wenn aktiviert, wird von unten nach oben im Tabellenblatt gesucht statt von oben nach unten. Nützlich, um die neuesten Einträge in Tabellenblättern zu finden, bei denen neue Daten unten angehängt werden."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
-          "source": "Maximum Rows to Search",
+          "source": "Maximum rows to search",
           "message": "Maximale zu durchsuchende Zeilen"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Begrenzt die Gesamtzahl der zu durchsuchenden Zeilen, um die Leistung bei großen Tabellenblättern zu steuern. Standardwert ist 5000."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
-          "source": "Header Row",
+          "source": "Header row",
           "message": "Kopfzeile"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Die Nummer der Zeile mit den Spaltenköpfen, für Tabellenblätter mit Titeln oder Notizen über der Tabelle. Die Spaltenköpfe werden aus dieser Zeile gelesen, und Zeilen werden nur darunter gelesen und durchsucht; `row_index` im Ergebnis ist weiterhin die Zeilennummer im Tabellenblatt. Standardwert ist 1, die erste Zeile."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
-          "source": "Values Returned",
+          "source": "Values returned",
           "message": "Zurückgegebene Werte"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Die Formel jeder Formelzelle; andere Zellen wie gespeichert"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
-          "source": "Dates Returned",
+          "source": "Dates returned",
           "message": "Zurückgegebene Datumswerte"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Datums- und Zeitwerte als Text, wie das Tabellenblatt sie anzeigt"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
-          "source": "Response Format",
+          "source": "Response format",
           "message": "Antwortformat"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Werte zugeordnet zu Spaltenbuchstaben (A, B, C usw.) zurückgeben"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
-          "source": "Search Criteria",
+          "source": "Search criteria",
           "message": "Suchkriterien"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "Definiert die Suchkriterien, die bei der Suche nach übereinstimmenden Zeilen verwendet werden sollen."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.display_name": {
-          "source": "Column Letter",
+          "source": "Column letter",
           "message": "Spaltenbuchstabe"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "Die Buchstabenzuordnung der Spalte, in der gesucht werden soll (z. B. A, B, C). Verwenden Sie dies oder Spaltenüberschrift, nicht beides."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.display_name": {
-          "source": "Column Header",
+          "source": "Column header",
           "message": "Spaltenüberschrift"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Der Kopftext der Spalte, in der gesucht werden soll. Verwenden Sie dies oder Spaltenbuchstabe, nicht beides."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Suchtyp"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Enthält"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.display_name": {
-          "source": "Search Value",
+          "source": "Search value",
           "message": "Suchwert"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Der Wert, nach dem in der angegebenen Spalte gesucht werden soll. Zeilen mit diesem exakten Wert werden zurückgegeben."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Format Spreadsheet Rows",
+          "source": "Format spreadsheet rows",
           "message": "Tabellenzeilen formatieren"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Liste der zu formatierenden Zeilennummern (1-basierte Indizierung). Beispiel: [1, 2, 5] formatiert die erste, zweite und fünfte Zeile."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
-          "source": "Background Color",
+          "source": "Background color",
           "message": "Hintergrundfarbe"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Rotkomponente als Ganzzahl von `0` bis `255`"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
-          "source": "Text Color",
+          "source": "Text color",
           "message": "Textfarbe"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Gibt an, ob der Text in den angegebenen Zeilen unterstrichen werden soll."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
-          "source": "Horizontal Alignment",
+          "source": "Horizontal alignment",
           "message": "Horizontale Ausrichtung"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "Rechts"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
-          "source": "Vertical Alignment",
+          "source": "Vertical alignment",
           "message": "Vertikale Ausrichtung"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Unten"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
-          "source": "Font Size",
+          "source": "Font size",
           "message": "Schriftgröße"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "Schriftgröße in Punkten"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
-          "source": "Wrap Text",
+          "source": "Wrap text",
           "message": "Text umbrechen"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Gibt an, ob Text in Zellen umgebrochen werden soll"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
-          "source": "Search Worksheets",
+          "source": "Search worksheets",
           "message": "Tabellenblätter suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Die eindeutige Kennung der Google Sheets-Tabellenkalkulation, in der nach Tabellenblättern gesucht werden soll. Diese ist in der URL der Tabellenkalkulation zu finden."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
-          "source": "Sheet Title",
+          "source": "Sheet title",
           "message": "Tabellenblatt-Titel"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "Suchen Sie nach Tabellenblättern, deren Titel diesen Text enthalten. Leer lassen, um alle Tabellenblätter in der Tabellenkalkulation aufzulisten. Die Suche unterscheidet standardmäßig nicht zwischen Groß- und Kleinschreibung."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
-          "source": "Exact Match",
+          "source": "Exact match",
           "message": "Exakte Übereinstimmung"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Wenn aktiviert, werden nur Tabellenblätter mit exakt übereinstimmenden Titeln zurückgegeben. Wenn deaktiviert (Standard), werden Tabellenblätter, deren Titel den Suchtext enthalten, in die Ergebnisse einbezogen."
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Update Spreadsheet Rows",
+          "source": "Update spreadsheet rows",
           "message": "Tabellenkalkulationszeilen aktualisieren"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "Die eindeutige Kennung des spezifischen Tabellenblatts innerhalb der Tabellenkalkulation, in dem Zeilen aktualisiert werden sollen."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
-          "source": "Search Spreadsheets",
+          "source": "Search spreadsheets",
           "message": "Tabellenkalkulationen suchen"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Der Name oder Teilname der zu suchenden Google Sheets-Tabellenkalkulation."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Suchtyp"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "Die Google Drive-Ordner-ID, auf die die Suche beschränkt werden soll. Wenn nicht angegeben, werden alle zugänglichen Ordner durchsucht."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Sortieren nach"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Reziprozität"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Seitengröße"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Die maximale Anzahl von Tabellenkalkulationen, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standardwert ist 100."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
-          "source": "Custom Query",
+          "source": "Custom query",
           "message": "Benutzerdefinierte Abfrage"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "Benutzerdefinierte Google Drive-Suchabfrage, um zusätzliche Filterkriterien über die grundlegenden Optionen hinaus hinzuzufügen."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
-          "source": "Create Spreadsheet Column",
+          "source": "Create spreadsheet column",
           "message": "Spreadsheet-Spalte erstellen"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "Die ID des spezifischen Tabellenblatts im Spreadsheet, in dem die Spalte hinzugefügt wird."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
-          "source": "Column Title",
+          "source": "Column title",
           "message": "Spaltentitel"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "Der Kopfzeilentext, der oben in der neuen Spalte angezeigt wird."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
-          "source": "Column Index",
+          "source": "Column index",
           "message": "Spaltenindex"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
@@ -1636,7 +1636,7 @@
           "message": "Nullbasierter Index der Position, an der die neue Spalte eingefügt werden soll. Zum Beispiel bedeutet 0, dass die Spalte am Anfang des Tabellenblatts eingefügt wird, 1 bedeutet nach der ersten Spalte usw."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
-          "source": "New Spreadsheet Row",
+          "source": "New spreadsheet row",
           "message": "Neue Tabellenkalkulationszeile"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
@@ -1672,7 +1672,7 @@
           "message": "Die eindeutige Kennung des spezifischen Tabellenblatts innerhalb der Tabellenkalkulation, das auf neue Zeilen überwacht werden soll. Die Tabellenblatt-ID ist in der URL der Tabellenkalkulation zu finden."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
-          "source": "New Spreadsheet",
+          "source": "New spreadsheet",
           "message": "Neue Tabellenkalkulation"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "Überwacht Google Drive auf neu erstellte Google Sheets-Tabellenkalkulationen. Der Auslöser stellt Metadaten über die neu erstellte Tabellenkalkulation bereit, einschließlich ID, Name, URL, Erstellungszeit und Eigentümerinformationen."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
-          "source": "New Spreadsheet Sheet",
+          "source": "New spreadsheet sheet",
           "message": "Neues Tabellenblatt"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {

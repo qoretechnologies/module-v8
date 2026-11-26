@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**Shopify** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、およびレスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.U2hvcGlmeQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "レコードの検索"
         },
         "app.U2hvcGlmeQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "テーブル名"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.display_name": {
-          "source": "Find Product Variants",
+          "source": "Find product variants",
           "message": "商品のバリエーションを検索"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Shopify の商品 ID を使用して、特定の親商品に属するバリエーションを検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.display_name": {
-          "source": "Variant Title",
+          "source": "Variant title",
           "message": "バリアントのタイトル"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Shopify の一意のバリエーション ID を使用して特定のバリエーションを検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.display_name": {
-          "source": "Inventory Quantity",
+          "source": "Inventory quantity",
           "message": "在庫数"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.short_desc": {
@@ -544,7 +544,7 @@
           "message": "正確な在庫数または範囲（例: \"inventory_quantity:10\" または \"inventory_quantity:>5\"）に基づいてバリエーションを検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.display_name": {
-          "source": "Product Status",
+          "source": "Product status",
           "message": "商品ステータス"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "アーカイブ済み"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.display_name": {
-          "source": "Product Type",
+          "source": "Product type",
           "message": "商品タイプ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.short_desc": {
@@ -580,7 +580,7 @@
           "message": "特定のタイプまたはカテゴリーの商品に属するバリエーションを検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.display_name": {
-          "source": "Product Tag",
+          "source": "Product tag",
           "message": "商品タグ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.short_desc": {
@@ -592,7 +592,7 @@
           "message": "特定のタグを持つ商品に属するバリアントを検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.display_name": {
-          "source": "Exclude Tag",
+          "source": "Exclude tag",
           "message": "タグを除外"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.short_desc": {
@@ -684,7 +684,7 @@
           "message": "非課税"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.display_name": {
-          "source": "Updated At",
+          "source": "Updated at",
           "message": "更新日時"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.short_desc": {
@@ -696,7 +696,7 @@
           "message": "最終更新日時に基づいてバリアントを検索します（例: \"updated_at:>2023-01-01\" または \"updated_at:<now\"）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
+          "source": "Advanced query",
           "message": "高度なクエリ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Shopify の検索構文を使用した高度な絞り込みのためのカスタム検索クエリを入力します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "更新日時"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "並び順を反転"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.short_desc": {
@@ -760,7 +760,7 @@
           "message": "有効にすると、結果の順序を逆にします（例: A-Z ではなく Z-A）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.short_desc": {
@@ -772,7 +772,7 @@
           "message": "検索結果で返すバリエーションの最大数を指定します（最大: 250）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "ページネーションカーソル"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.short_desc": {
@@ -784,7 +784,7 @@
           "message": "カーソルを使用して大量の検索結果セットをページ分割します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.display_name": {
-          "source": "Find Customers",
+          "source": "Find customers",
           "message": "顧客の検索"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Shopifyストア内の顧客を、名前、メールアドレス、その他の属性に基づいて検索および絞り込みます。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.short_desc": {
@@ -808,7 +808,7 @@
           "message": "名前、メールアドレス、またはその他の識別情報で顧客を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.short_desc": {
@@ -820,7 +820,7 @@
           "message": "検索結果として返す顧客の最大件数を指定します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "ページネーションカーソル"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.short_desc": {
@@ -832,7 +832,7 @@
           "message": "カーソルを使用して大量の検索結果セットをページ分割します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.short_desc": {
@@ -872,7 +872,7 @@
           "message": "注文数"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "並び順を反転"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.short_desc": {
@@ -884,7 +884,7 @@
           "message": "検索結果の並び順を昇順と降順で切り替えます。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.display_name": {
-          "source": "Find Orders",
+          "source": "Find orders",
           "message": "注文の検索"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.short_desc": {
@@ -896,7 +896,7 @@
           "message": "顧客名、メールアドレス、注文番号など、さまざまな条件に基づいてShopifyストア内の注文を検索および絞り込みます。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.display_name": {
-          "source": "Order Number",
+          "source": "Order number",
           "message": "注文番号"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.short_desc": {
@@ -932,7 +932,7 @@
           "message": "Shopify顧客IDを使用して、特定の顧客によって発注されたすべての注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.display_name": {
-          "source": "Confirmation Number",
+          "source": "Confirmation number",
           "message": "確認番号"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.short_desc": {
@@ -956,7 +956,7 @@
           "message": "固有のShopify注文IDを使用して特定の注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.display_name": {
-          "source": "Payment Status",
+          "source": "Payment status",
           "message": "支払いステータス"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "期限切れ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.display_name": {
-          "source": "Fulfillment Status",
+          "source": "Fulfillment status",
           "message": "フルフィルメントステータス"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "リクエスト拒否"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.display_name": {
-          "source": "Order Status",
+          "source": "Order status",
           "message": "注文ステータス"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "特定のソース（Web、下書き注文、POSなど）からの注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.display_name": {
-          "source": "Sales Channel",
+          "source": "Sales channel",
           "message": "販売チャネル"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "特定のSKUの製品を含む注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.display_name": {
-          "source": "Created Date",
+          "source": "Created date",
           "message": "作成日"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "特定の作成日または日付範囲で注文を検索します（例: 2021-01-01、<now、<=2024）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.display_name": {
-          "source": "Updated Date",
+          "source": "Updated date",
           "message": "更新日"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "特定の日付または期間内に最終更新された注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.display_name": {
-          "source": "Processed Date",
+          "source": "Processed date",
           "message": "処理日"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Shopifyで特定のラベルがタグ付けされた注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.display_name": {
-          "source": "Test Orders",
+          "source": "Test orders",
           "message": "テスト注文"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "特定の店舗ロケーションまたはフルフィルメントセンターに関連付けられた注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.display_name": {
-          "source": "Purchase Order Number",
+          "source": "Purchase order number",
           "message": "発注番号"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "特定の発注書（PO）番号に関連付けられた注文を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
+          "source": "Advanced query",
           "message": "高度なクエリ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Shopify の検索構文を使用した高度な絞り込みのためのカスタム検索クエリを入力します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "注文 ID"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "並び順を反転"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "検索結果の並び順を昇順と降順で切り替えます。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "検索結果で返す注文の最大数を指定します（最大: 250）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "ページネーションカーソル"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "カーソルを使用して大量の検索結果セットをページ分割します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.display_name": {
-          "source": "Find Products",
+          "source": "Find products",
           "message": "商品を検索"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "ストア内の特定のベンダーまたはサプライヤーからの商品を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.display_name": {
-          "source": "Product Type",
+          "source": "Product type",
           "message": "商品タイプ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "ストア内の特定のコレクションに属する商品を検索します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.short_desc": {
@@ -1428,7 +1428,7 @@
           "message": "総在庫数"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "並び順を反転"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.short_desc": {
@@ -1440,7 +1440,7 @@
           "message": "検索結果の並び順を昇順と降順で切り替えます。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
+          "source": "Advanced query",
           "message": "高度なクエリ"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.short_desc": {
@@ -1452,7 +1452,7 @@
           "message": "Shopify の検索構文を使用した高度な絞り込みのためのカスタム検索クエリを入力します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "検索結果で返す商品の最大数を指定します。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "ページネーションカーソル"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "カーソルを使用して大量の検索結果セットをページ分割します。"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.display_name": {
-          "source": "Add Line Item to Order",
+          "source": "Add line item to order",
           "message": "注文に明細項目を追加"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "明細項目が追加される特定の注文"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.display_name": {
-          "source": "Line Item Type",
+          "source": "Line item type",
           "message": "明細項目の種類"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.short_desc": {
@@ -1556,7 +1556,7 @@
           "message": "注文に明細項目が追加される理由の説明"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
-          "source": "Notify Customer",
+          "source": "Notify customer",
           "message": "顧客に通知"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
@@ -1568,7 +1568,7 @@
           "message": "明細項目の追加について顧客に通知するかどうかを指定します"
         },
         "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.display_name": {
-          "source": "Add Tag to Customer",
+          "source": "Add tag to customer",
           "message": "顧客にタグを追加"
         },
         "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "true の場合、既存のタグに新しいタグを追加します。false の場合、既存のすべてのタグを新しいタグで置換します。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.display_name": {
-          "source": "Create Blog Entry",
+          "source": "Create blog entry",
           "message": "ブログエントリを作成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "ブログ記事に関連付けられたメイン画像。プレビューやヘッダーで視覚的な魅力を高めるために使用されます。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.field.YWx0VGV4dA.display_name": {
-          "source": "Alt Text",
+          "source": "Alt text",
           "message": "代替テキスト"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.field.YWx0VGV4dA.short_desc": {
@@ -1748,7 +1748,7 @@
           "message": "ブログ投稿で使用する画像ファイルのWebアドレスまたはソース場所。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.display_name": {
-          "source": "Create Company",
+          "source": "Create company",
           "message": "会社を作成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.short_desc": {
@@ -1796,7 +1796,7 @@
           "message": "会社に関する内部メモ（アカウント詳細や特記事項など）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.display_name": {
-          "source": "Customer Since",
+          "source": "Customer since",
           "message": "顧客登録日"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "会社が顧客となった日付（タイムスタンプ形式）。取引期間の追跡に役立ちます。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.display_name": {
-          "source": "Contact Properties",
+          "source": "Contact properties",
           "message": "連絡先プロパティ"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "主な連絡先のメールアドレス、通信に使用されます"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.Zmlyc3ROYW1l.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "会社の主要連絡担当者の名前"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.bGFzdE5hbWU.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "会社の主要連絡担当者の役職または役割"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.display_name": {
-          "source": "Location Properties",
+          "source": "Location properties",
           "message": "ロケーションプロパティ"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "配送先住所や請求先住所を含む、会社の物理的な所在地に関する詳細。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ0FkZHJlc3M.display_name": {
-          "source": "Billing Address",
+          "source": "Billing address",
           "message": "請求先住所"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ0FkZHJlc3M.short_desc": {
@@ -1916,11 +1916,11 @@
           "message": "配送先とは異なる請求目的で使用される住所。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "住所 1"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "住所 1"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczE.short_desc": {
@@ -1932,11 +1932,11 @@
           "message": "請求先の通り名または郵便番号（P.O. Box）"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "住所 2"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "住所 2"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczI.short_desc": {
@@ -1964,11 +1964,11 @@
           "message": "請求先住所の都市"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
+          "source": "Country code",
           "message": "国コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
+          "source": "Country code",
           "message": "国コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.Y291bnRyeUNvZGU.short_desc": {
@@ -1984,11 +1984,11 @@
           "message": "ISO 3166-1 alpha-2国コード（例：\"CA\"）。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵便番号／郵便コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵便番号／郵便コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.emlw.short_desc": {
@@ -2000,11 +2000,11 @@
           "message": "請求先住所の郵便番号または郵便コード。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.em9uZUNvZGU.display_name": {
-          "source": "Zone Code",
+          "source": "Zone code",
           "message": "ゾーンコード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.em9uZUNvZGU.display_name": {
-          "source": "Zone Code",
+          "source": "Zone code",
           "message": "ゾーンコード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.em9uZUNvZGU.short_desc": {
@@ -2020,7 +2020,7 @@
           "message": "州または都道府県のコード（例：\"NY\"）"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ1NhbWVBc1NoaXBwaW5n.display_name": {
-          "source": "Billing Same as Shipping",
+          "source": "Billing same as shipping",
           "message": "請求先住所と配送先住所を同じにする"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ1NhbWVBc1NoaXBwaW5n.short_desc": {
@@ -2056,7 +2056,7 @@
           "message": "この場所の推奨される言語および地域コード。例: \"en-CA\"。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.bG9jYXRpb25OYW1l.display_name": {
-          "source": "Location Name",
+          "source": "Location name",
           "message": "場所名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.bG9jYXRpb25OYW1l.short_desc": {
@@ -2092,7 +2092,7 @@
           "message": "この会社の所在地に関連する電話番号。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
+          "source": "Shipping address",
           "message": "配送先住所"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.c2hpcHBpbmdBZGRyZXNz.short_desc": {
@@ -2144,7 +2144,7 @@
           "message": "州または都道府県のコード（例：カリフォルニア州は\"CA\"）"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
+          "source": "Tax exempt",
           "message": "免税"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0.short_desc": {
@@ -2156,7 +2156,7 @@
           "message": "この場所が税金の免除対象であるかどうかを示します。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
+          "source": "Tax exemptions",
           "message": "免税項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0aW9ucw.short_desc": {
@@ -2168,7 +2168,7 @@
           "message": "この拠点に適用された特定の税制除外のリスト。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4UmVnaXN0cmF0aW9uSWQ.display_name": {
-          "source": "Tax Registration ID",
+          "source": "Tax registration ID",
           "message": "税登録ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4UmVnaXN0cmF0aW9uSWQ.short_desc": {
@@ -2180,7 +2180,7 @@
           "message": "この場所の税登録番号。例：VATまたはEIN。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.display_name": {
-          "source": "Create Customer",
+          "source": "Create customer",
           "message": "顧客を作成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.short_desc": {
@@ -2216,7 +2216,7 @@
           "message": "顧客の電話番号。連絡や（同意がある場合の）SMSマーケティングに役立ちます。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
@@ -2228,7 +2228,7 @@
           "message": "顧客の名。パーソナライズや住所情報に使用されます。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
@@ -2264,7 +2264,7 @@
           "message": "顧客に関する内部メモ（好み、特記事項、アカウント詳細など）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
+          "source": "Tax exempt",
           "message": "免税"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.short_desc": {
@@ -2276,7 +2276,7 @@
           "message": "顧客がすべての購入で免税対象であるかどうかを示します。免税対象団体の場合は true に設定します。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
+          "source": "Tax exemptions",
           "message": "免税項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
@@ -2312,7 +2312,7 @@
           "message": "顧客の住所。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "住所 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczE.short_desc": {
@@ -2324,7 +2324,7 @@
           "message": "顧客の通り名または郵便番号（P.O. Box）"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "住所 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczI.short_desc": {
@@ -2372,7 +2372,7 @@
           "message": "顧客の住所の国"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.Zmlyc3ROYW1l.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "この特定の住所に関連する名前"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.bGFzdE5hbWU.short_desc": {
@@ -2408,7 +2408,7 @@
           "message": "この特定の住所に関連する電話番号。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
+          "source": "Province/state",
           "message": "州/都道府県"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.cHJvdmluY2U.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "顧客住所の都道府県、州、または地域。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵便番号／郵便コード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.emlw.short_desc": {
@@ -2432,7 +2432,7 @@
           "message": "顧客住所の郵便番号または郵便コード。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.display_name": {
-          "source": "Email Marketing Consent",
+          "source": "Email marketing consent",
           "message": "メールマーケティングの同意"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "メールマーケティングの受信に関する顧客の同意情報の詳細。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nT3B0SW5MZXZlbA.display_name": {
-          "source": "Marketing Opt-In Level",
+          "source": "Marketing opt-in level",
           "message": "マーケティングオプインレベル"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nT3B0SW5MZXZlbA.short_desc": {
@@ -2464,7 +2464,7 @@
           "message": "二重確認"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nU3RhdGU.display_name": {
-          "source": "Marketing State",
+          "source": "Marketing state",
           "message": "マーケティング状態"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nU3RhdGU.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "配信解除済み"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.display_name": {
-          "source": "SMS Marketing Consent",
+          "source": "SMS marketing consent",
           "message": "SMSマーケティングの同意"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.short_desc": {
@@ -2504,7 +2504,7 @@
           "message": "SMSマーケティングメッセージの受信に対する顧客の同意に関する詳細。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nT3B0SW5MZXZlbA.display_name": {
-          "source": "Marketing Opt-In Level",
+          "source": "Marketing opt-in level",
           "message": "マーケティングオプインレベル"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nT3B0SW5MZXZlbA.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "二重確認"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nU3RhdGU.display_name": {
-          "source": "Marketing State",
+          "source": "Marketing state",
           "message": "マーケティング状態"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nU3RhdGU.short_desc": {
@@ -2612,7 +2612,7 @@
           "message": "メタフィールドに格納される値。文字列、数値、またはJSON形式です。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.display_name": {
-          "source": "Create Draft Order",
+          "source": "Create draft order",
           "message": "下書き注文を作成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.short_desc": {
@@ -2672,7 +2672,7 @@
           "message": "特別な指示やコンテキストなど、下書き注文に関する内部メモを追加するためのフィールド。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
+          "source": "Tax exempt",
           "message": "免税"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.short_desc": {
@@ -2684,7 +2684,7 @@
           "message": "注文全体が免税対象かどうかを示します。免税対象の顧客の場合はtrueに設定します。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
+          "source": "Tax exemptions",
           "message": "免税項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
@@ -2708,7 +2708,7 @@
           "message": "下書き注文を分類またはフィルタリングするためのタグの一覧（例: \"wholesale\"、\"pre-order\"）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
+          "source": "Shipping address",
           "message": "配送先住所"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.short_desc": {
@@ -2720,7 +2720,7 @@
           "message": "すべての関連フィールドを含む、注文が配送される完全な配送先住所。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "住所 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczE.short_desc": {
@@ -2732,7 +2732,7 @@
           "message": "配送先の通り名または郵便番号（P.O. Box）"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "住所 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczI.short_desc": {
@@ -2780,7 +2780,7 @@
           "message": "配送先住所の国"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.Zmlyc3ROYW1l.short_desc": {
@@ -2792,7 +2792,7 @@
           "message": "お届け先受領者の名前"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.bGFzdE5hbWU.short_desc": {
@@ -2816,7 +2816,7 @@
           "message": "配送受領者の電話番号。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
+          "source": "Province/state",
           "message": "州/都道府県"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.cHJvdmluY2U.short_desc": {
@@ -2828,7 +2828,7 @@
           "message": "配送先住所の都道府県、州、または地域。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵便番号／郵便コード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.emlw.short_desc": {
@@ -2840,7 +2840,7 @@
           "message": "配送先住所の郵便番号または郵便コード。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.display_name": {
-          "source": "Billing Address",
+          "source": "Billing address",
           "message": "請求先住所"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.short_desc": {
@@ -2852,7 +2852,7 @@
           "message": "請求目的で使用される住所（配送先住所と異なる場合があります）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "住所 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczE.short_desc": {
@@ -2864,7 +2864,7 @@
           "message": "請求先の通り名または郵便番号（P.O. Box）"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "住所 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczI.short_desc": {
@@ -2912,7 +2912,7 @@
           "message": "請求先住所の国"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.Zmlyc3ROYW1l.short_desc": {
@@ -2924,7 +2924,7 @@
           "message": "請求先連絡担当者の名前"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.bGFzdE5hbWU.short_desc": {
@@ -2948,7 +2948,7 @@
           "message": "請求連絡先の電話番号。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
+          "source": "Province/state",
           "message": "州/都道府県"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.cHJvdmluY2U.short_desc": {
@@ -2960,7 +2960,7 @@
           "message": "請求先住所の都道府県、州、または地域。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵便番号／郵便コード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.emlw.short_desc": {
@@ -2972,7 +2972,7 @@
           "message": "請求先住所の郵便番号または郵便コード。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.display_name": {
-          "source": "Use Customer Default Address",
+          "source": "Use customer default address",
           "message": "顧客のデフォルト住所を使用"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.short_desc": {
@@ -2984,7 +2984,7 @@
           "message": "trueの場合、カスタム住所の代わりに顧客のデフォルトの配送先および請求先住所を使用します。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.display_name": {
-          "source": "Line Items",
+          "source": "Line items",
           "message": "品目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.short_desc": {
@@ -2996,7 +2996,7 @@
           "message": "数量や価格などの詳細を含む、下書き注文に含まれる商品またはバリアントの一覧。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.YXBwbGllZERpc2NvdW50.display_name": {
-          "source": "Applied Discount",
+          "source": "Applied discount",
           "message": "適用されたディスカウント"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.YXBwbGllZERpc2NvdW50.short_desc": {
@@ -3008,7 +3008,7 @@
           "message": "この明細行に適用された割引の詳細"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.YW1vdW50V2l0aEN1cnJlbmN5.display_name": {
-          "source": "Amount with Currency",
+          "source": "Amount with currency",
           "message": "通貨付き金額"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.YW1vdW50V2l0aEN1cnJlbmN5.short_desc": {
@@ -3060,27 +3060,27 @@
           "message": "割引の数値。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNhMDY3ZGZkZjE3NTBlZWI4MmE1N2Y4NTU3ZjA1ZGQyY2ZjZTBjYjYxMjA5NmU1OGQyMzM3Zjk0ZDZhMDVlNmYz.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM2NWJiZGQwNjZmMDg4ZTJkYjk4MmQ0NzlmODM5ODFiNzdmMDQ2YTE1OWI4ZWE4ZDA2MTdlOTA1NTA5MmE5MTcx.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM4N2U5MDY4ZWJlZTRjNDQ0YjkzMmI3NDliZDY2ZTg5OTk2YWY5MzU1MzA4NWI1ZTdkZTY4OTE4ZDJiYTM1ZDUx.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMzNDQ5OTc1MTgwMGFmMzk1ZjY5ZDg3MDdjY2E1YTNiZmFiZjAxZjY5Y2QzYTBiNDdmM2FmM2UyMDE1NDA0NjUy.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM3ZDE5MDE1NmRhOTY5YTg2OTYxYWMwYjBhOWM3YzI2YWY5NjE5YmRhZDI4MzI1NzQwZWM4NTQ0M2MyY2JhMzFi.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNhMDY3ZGZkZjE3NTBlZWI4MmE1N2Y4NTU3ZjA1ZGQyY2ZjZTBjYjYxMjA5NmU1OGQyMzM3Zjk0ZDZhMDVlNmYz.field.Y3VycmVuY3lDb2Rl.short_desc": {
@@ -3100,7 +3100,7 @@
           "message": "割引額のISO 4217通貨コード。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Discount Description",
+          "source": "Discount description",
           "message": "割引の説明"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -3112,7 +3112,7 @@
           "message": "適用された割引の説明。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dGl0bGU.display_name": {
-          "source": "Discount Title",
+          "source": "Discount title",
           "message": "割引タイトル"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dGl0bGU.short_desc": {
@@ -3124,7 +3124,7 @@
           "message": "割引の名前またはタイトル。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWU.display_name": {
-          "source": "Discount Value",
+          "source": "Discount value",
           "message": "割引額"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWU.short_desc": {
@@ -3136,7 +3136,7 @@
           "message": "割引の数値、固定額またはパーセンテージとして。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWVUeXBl.display_name": {
-          "source": "Value Type",
+          "source": "Value type",
           "message": "値の種類"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWVUeXBl.short_desc": {
@@ -3192,7 +3192,7 @@
           "message": "コンポーネントとして含めるバリエーションの固有識別子"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Y3VzdG9tQXR0cmlidXRlcw.display_name": {
-          "source": "Custom Attributes",
+          "source": "Custom attributes",
           "message": "カスタム属性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Y3VzdG9tQXR0cmlidXRlcw.short_desc": {
@@ -3228,7 +3228,7 @@
           "message": "カスタム属性キーに関連する値。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Z2VuZXJhdGVQcmljZU92ZXJyaWRl.display_name": {
-          "source": "Generate Price Override",
+          "source": "Generate price override",
           "message": "価格オーバーライドの生成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Z2VuZXJhdGVQcmljZU92ZXJyaWRl.short_desc": {
@@ -3240,7 +3240,7 @@
           "message": "trueの場合、アイテムの元の価格ではなく、カスタム価格を設定できます。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2U.display_name": {
-          "source": "Original Unit Price",
+          "source": "Original unit price",
           "message": "元の単価"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2U.short_desc": {
@@ -3252,7 +3252,7 @@
           "message": "割引前のアイテムの単価。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2VXaXRoQ3VycmVuY3k.display_name": {
-          "source": "Original Unit Price with Currency",
+          "source": "Original unit price with currency",
           "message": "通貨付きの元の単価"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2VXaXRoQ3VycmVuY3k.short_desc": {
@@ -3280,7 +3280,7 @@
           "message": "価格のISO 4217通貨コード（例：USD、EUR）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cHJpY2VPdmVycmlkZQ.display_name": {
-          "source": "Price Override",
+          "source": "Price override",
           "message": "価格オーバーライド"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cHJpY2VPdmVycmlkZQ.short_desc": {
@@ -3320,7 +3320,7 @@
           "message": "ドラフト注文に含めるこのバリエーションの単位数。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cmVxdWlyZXNTaGlwcGluZw.display_name": {
-          "source": "Requires Shipping",
+          "source": "Requires shipping",
           "message": "配送が必要"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cmVxdWlyZXNTaGlwcGluZw.short_desc": {
@@ -3404,7 +3404,7 @@
           "message": "アイテムの重量。出荷計算に使用されます。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dW5pdA.display_name": {
-          "source": "Weight Unit",
+          "source": "Weight unit",
           "message": "重量単位"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dW5pdA.short_desc": {
@@ -3432,7 +3432,7 @@
           "message": "オンス"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dmFsdWU.display_name": {
-          "source": "Weight Value",
+          "source": "Weight value",
           "message": "重量値"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dmFsdWU.short_desc": {
@@ -3444,7 +3444,7 @@
           "message": "重量値"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.display_name": {
-          "source": "Applied Discount",
+          "source": "Applied discount",
           "message": "適用されたディスカウント"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.short_desc": {
@@ -3456,7 +3456,7 @@
           "message": "下書き注文全体に適用されるディスカウントの詳細。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.YW1vdW50V2l0aEN1cnJlbmN5.display_name": {
-          "source": "Amount with Currency",
+          "source": "Amount with currency",
           "message": "通貨付き金額"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.YW1vdW50V2l0aEN1cnJlbmN5.short_desc": {
@@ -3468,7 +3468,7 @@
           "message": "通貨情報を含む割引額"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Discount Description",
+          "source": "Discount description",
           "message": "割引の説明"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -3480,7 +3480,7 @@
           "message": "注文全体に適用される割引の説明。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dGl0bGU.display_name": {
-          "source": "Discount Title",
+          "source": "Discount title",
           "message": "割引タイトル"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dGl0bGU.short_desc": {
@@ -3492,7 +3492,7 @@
           "message": "注文全体の割引の名前またはタイトル。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWU.display_name": {
-          "source": "Discount Value",
+          "source": "Discount value",
           "message": "割引額"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWU.short_desc": {
@@ -3504,7 +3504,7 @@
           "message": "割引の数値、固定額またはパーセンテージとして。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWVUeXBl.display_name": {
-          "source": "Value Type",
+          "source": "Value type",
           "message": "値の種類"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWVUeXBl.short_desc": {
@@ -3524,7 +3524,7 @@
           "message": "割合"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.display_name": {
-          "source": "Shipping Line",
+          "source": "Shipping line",
           "message": "配送ライン"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.short_desc": {
@@ -3548,7 +3548,7 @@
           "message": "配送コスト（数値）"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.cHJpY2VXaXRoQ3VycmVuY3k.display_name": {
-          "source": "Price with Currency",
+          "source": "Price with currency",
           "message": "通貨付き価格"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.cHJpY2VXaXRoQ3VycmVuY3k.short_desc": {
@@ -3576,7 +3576,7 @@
           "message": "送料のISO 4217通貨コード。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.c2hpcHBpbmdSYXRlSGFuZGxl.display_name": {
-          "source": "Shipping Rate Handle",
+          "source": "Shipping rate handle",
           "message": "配送レートハンドル"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.c2hpcHBpbmdSYXRlSGFuZGxl.short_desc": {
@@ -3600,7 +3600,7 @@
           "message": "配送方法の名前、例: \"標準配送\"。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.display_name": {
-          "source": "Custom Attributes",
+          "source": "Custom attributes",
           "message": "カスタム属性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.short_desc": {
@@ -3636,7 +3636,7 @@
           "message": "カスタム属性キーに関連する値。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.display_name": {
-          "source": "Allow Discount Codes in Checkout",
+          "source": "Allow discount codes in checkout",
           "message": "チェックアウト時のディスカウントコードを許可"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.short_desc": {
@@ -3648,7 +3648,7 @@
           "message": "true の場合、顧客がこの下書き注文からのチェックアウト時にディスカウントコードを適用できるようになります。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.display_name": {
-          "source": "Accept Automatic Discounts",
+          "source": "Accept automatic discounts",
           "message": "自動ディスカウントを適用"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.short_desc": {
@@ -3660,7 +3660,7 @@
           "message": "true の場合、下書き注文に対象となるストア全体の割引を自動的に適用します。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.display_name": {
-          "source": "Discount Codes",
+          "source": "Discount codes",
           "message": "ディスカウントコード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.short_desc": {
@@ -3732,7 +3732,7 @@
           "message": "メタフィールドに格納される値。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.display_name": {
-          "source": "Localized Fields",
+          "source": "Localized fields",
           "message": "ローカライズ済みフィールド"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.short_desc": {
@@ -3780,7 +3780,7 @@
           "message": "ローカライズされたコンテンツの値"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.display_name": {
-          "source": "Presentment Currency Code",
+          "source": "Presentment currency code",
           "message": "表示通貨コード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.short_desc": {
@@ -3792,7 +3792,7 @@
           "message": "顧客に価格を表示するためのISO 4217通貨コード（例: USD、CAD）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.display_name": {
-          "source": "PO Number",
+          "source": "PO number",
           "message": "注文番号 (PO)"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.short_desc": {
@@ -3804,7 +3804,7 @@
           "message": "B2B取引でよく使用される、下書き注文に関連付けられた発注番号（PO番号）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.display_name": {
-          "source": "Payment Terms",
+          "source": "Payment terms",
           "message": "支払条件"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.short_desc": {
@@ -3816,7 +3816,7 @@
           "message": "期日やスケジュールなど、下書き注文の支払条件を定義します。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFNjaGVkdWxlcw.display_name": {
-          "source": "Payment Schedules",
+          "source": "Payment schedules",
           "message": "支払いスケジュール"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFNjaGVkdWxlcw.short_desc": {
@@ -3844,7 +3844,7 @@
           "message": "支払いに使用する通貨"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.ZHVlQXQ.display_name": {
-          "source": "Due At",
+          "source": "Due at",
           "message": "期日"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.ZHVlQXQ.short_desc": {
@@ -3856,7 +3856,7 @@
           "message": "支払いの支払い期限日"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.aXNzdWVkQXQ.display_name": {
-          "source": "Issued At",
+          "source": "Issued at",
           "message": "発行時刻"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.aXNzdWVkQXQ.short_desc": {
@@ -3868,7 +3868,7 @@
           "message": "支払いスケジュールが発行された日付"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFRlcm1zVGVtcGxhdGVJZA.display_name": {
-          "source": "Payment Terms Template ID",
+          "source": "Payment terms template ID",
           "message": "支払い条件テンプレートID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFRlcm1zVGVtcGxhdGVJZA.short_desc": {
@@ -3880,7 +3880,7 @@
           "message": "Shopify内の事前定義された支払条件テンプレートのID。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.display_name": {
-          "source": "Purchasing Entity",
+          "source": "Purchasing entity",
           "message": "購入エンティティ"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.short_desc": {
@@ -3892,7 +3892,7 @@
           "message": "企業や個人など、購入を行うエンティティに関する詳細。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUNvbnRhY3RJZA.display_name": {
-          "source": "Company Contact ID",
+          "source": "Company contact ID",
           "message": "会社連絡先ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUNvbnRhY3RJZA.short_desc": {
@@ -3916,7 +3916,7 @@
           "message": "購入を行う会社のID。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUxvY2F0aW9uSWQ.display_name": {
-          "source": "Company Location ID",
+          "source": "Company location ID",
           "message": "会社ロケーションID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUxvY2F0aW9uSWQ.short_desc": {
@@ -3940,7 +3940,7 @@
           "message": "購入を行う顧客のID。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.display_name": {
-          "source": "Reserve Inventory Until",
+          "source": "Reserve inventory until",
           "message": "在庫確保期限"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.short_desc": {
@@ -3952,7 +3952,7 @@
           "message": "この下書き注文のために在庫が確保される日時。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.display_name": {
-          "source": "Source Name",
+          "source": "Source name",
           "message": "ソース名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.short_desc": {
@@ -3964,7 +3964,7 @@
           "message": "下書き注文の作成元（例: \"web\"、\"manual\"、アプリ名など）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.display_name": {
-          "source": "Visible to Customer",
+          "source": "Visible to customer",
           "message": "顧客に表示"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.short_desc": {
@@ -3976,7 +3976,7 @@
           "message": "trueの場合、下書き注文が顧客に表示されます（例: アカウント内など）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.display_name": {
-          "source": "Create Fulfillment",
+          "source": "Create fulfillment",
           "message": "フルフィルメントを作成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.short_desc": {
@@ -3988,7 +3988,7 @@
           "message": "注文のフルフィルメントを作成し、配送情報および追跡情報を処理します"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.display_name": {
-          "source": "Fulfillment Order ID",
+          "source": "Fulfillment order ID",
           "message": "フルフィルメント注文ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.short_desc": {
@@ -4000,7 +4000,7 @@
           "message": "処理対象の特定のフルフィルメント注文"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.display_name": {
-          "source": "Fulfillment Order Line Items",
+          "source": "Fulfillment order line items",
           "message": "フルフィルメント注文品目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.short_desc": {
@@ -4012,7 +4012,7 @@
           "message": "フルフィルメント注文内の特定の品目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.field.aWQ.display_name": {
-          "source": "Line Item ID",
+          "source": "Line item ID",
           "message": "行アイテムID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.field.aWQ.short_desc": {
@@ -4036,7 +4036,7 @@
           "message": "この特定の商品の履行数量"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
-          "source": "Notify Customer",
+          "source": "Notify customer",
           "message": "顧客に通知"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
@@ -4048,7 +4048,7 @@
           "message": "フルフィルメントに関する通知を顧客に送信するかどうかを決定します"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.display_name": {
-          "source": "Tracking Information",
+          "source": "Tracking information",
           "message": "追跡情報"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.short_desc": {
@@ -4060,7 +4060,7 @@
           "message": "配送を追跡するための情報"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.Y29tcGFueQ.display_name": {
-          "source": "Shipping Company",
+          "source": "Shipping company",
           "message": "配送会社"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.Y29tcGFueQ.short_desc": {
@@ -4072,7 +4072,7 @@
           "message": "配送を担当する会社の名前。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.bnVtYmVy.display_name": {
-          "source": "Tracking Number",
+          "source": "Tracking number",
           "message": "追跡番号"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.bnVtYmVy.short_desc": {
@@ -4096,7 +4096,7 @@
           "message": "出荷の追跡が可能なWebアドレス"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.display_name": {
-          "source": "Origin Address",
+          "source": "Origin address",
           "message": "発送元住所"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.short_desc": {
@@ -4108,7 +4108,7 @@
           "message": "商品の発送元住所"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "住所 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczE.short_desc": {
@@ -4120,7 +4120,7 @@
           "message": "出荷元住所の1行目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "住所 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczI.short_desc": {
@@ -4144,7 +4144,7 @@
           "message": "出荷元の都市"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
+          "source": "Country code",
           "message": "国コード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.Y291bnRyeUNvZGU.short_desc": {
@@ -4156,7 +4156,7 @@
           "message": "出荷元の2文字の国コード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.cHJvdmluY2VDb2Rl.display_name": {
-          "source": "Province Code",
+          "source": "Province code",
           "message": "州コード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.cHJvdmluY2VDb2Rl.short_desc": {
@@ -4168,7 +4168,7 @@
           "message": "出発地の州または都道府県を表すコード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.emlw.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.emlw.short_desc": {
@@ -4192,7 +4192,7 @@
           "message": "フルフィルメントに関する追加情報またはメモ"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.display_name": {
-          "source": "Create Gift Card",
+          "source": "Create gift card",
           "message": "ギフトカードを作成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.short_desc": {
@@ -4204,7 +4204,7 @@
           "message": "初期金額、有効期限、受取人情報などのカスタマイズ可能なパラメータを使用してギフトカードを作成します"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.display_name": {
-          "source": "Initial Value",
+          "source": "Initial value",
           "message": "初期金額"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.short_desc": {
@@ -4240,7 +4240,7 @@
           "message": "ギフトカードに関する個人的なメッセージまたは追加詳細"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.display_name": {
-          "source": "Expiration Date",
+          "source": "Expiration date",
           "message": "有効期限"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.short_desc": {
@@ -4252,7 +4252,7 @@
           "message": "ギフトカードが無効になる日付"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.display_name": {
-          "source": "Gift Card Code",
+          "source": "Gift card code",
           "message": "ギフトカードコード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.short_desc": {
@@ -4264,7 +4264,7 @@
           "message": "ギフトカードの利用に使用される固有のコード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.display_name": {
-          "source": "Template Suffix",
+          "source": "Template suffix",
           "message": "テンプレートサフィックス"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.short_desc": {
@@ -4276,7 +4276,7 @@
           "message": "ギフトカードの外観またはテンプレートをカスタマイズするためのオプションのサフィックス"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.display_name": {
-          "source": "Recipient Attributes",
+          "source": "Recipient attributes",
           "message": "受取人属性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.short_desc": {
@@ -4300,7 +4300,7 @@
           "message": "ギフトカード受領者の一意な識別子"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.bWVzc2FnZQ.display_name": {
-          "source": "Recipient Message",
+          "source": "Recipient message",
           "message": "受信者メッセージ"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.bWVzc2FnZQ.short_desc": {
@@ -4312,7 +4312,7 @@
           "message": "ギフトカードに添えるパーソナライズされたメッセージ"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.cHJlZmVycmVkTmFtZQ.display_name": {
-          "source": "Preferred Name",
+          "source": "Preferred name",
           "message": "推奨名"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.cHJlZmVycmVkTmFtZQ.short_desc": {
@@ -4324,7 +4324,7 @@
           "message": "受信者が好む呼び方。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.c2VuZE5vdGlmaWNhdGlvbkF0.display_name": {
-          "source": "Notification Timing",
+          "source": "Notification timing",
           "message": "通知タイミング"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.c2VuZE5vdGlmaWNhdGlvbkF0.short_desc": {
@@ -4336,7 +4336,7 @@
           "message": "ギフトカード通知を送信する具体的な日時または時刻"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.display_name": {
-          "source": "Create Transaction",
+          "source": "Create transaction",
           "message": "取引を作成"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.short_desc": {
@@ -4412,7 +4412,7 @@
           "message": "返金"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.display_name": {
-          "source": "Parent Transaction ID",
+          "source": "Parent transaction ID",
           "message": "親取引ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.short_desc": {
@@ -4452,7 +4452,7 @@
           "message": "ギフトカード"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.display_name": {
-          "source": "Final Capture",
+          "source": "Final capture",
           "message": "最終売上請求"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.short_desc": {
@@ -4464,7 +4464,7 @@
           "message": "trueの場合、これがオーソリに対する最終的な売上請求であることを示します。falseの場合、後続の部分的な売上請求が行われる可能性があります。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.display_name": {
-          "source": "Shopify New Abandoned Cart",
+          "source": "Shopify new abandoned cart",
           "message": "Shopify 新規カゴ落ち"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.short_desc": {
@@ -4476,7 +4476,7 @@
           "message": "このトリガーは、Shopifyのチェックアウトが作成されたものの、指定された時間枠内に完了しなかった場合にアクティブになります。これを使用して、リカバリメールの送信、割引の提供、またはカゴ落ちパターンの分析を行います。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.display_name": {
-          "source": "Abandoned Hours",
+          "source": "Abandoned hours",
           "message": "放置時間（時間）"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.short_desc": {
@@ -4488,7 +4488,7 @@
           "message": "カゴ落ちを遡って確認する時間数"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.display_name": {
-          "source": "Shopify Blog Created",
+          "source": "Shopify blog created",
           "message": "Shopify ブログ作成"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.short_desc": {
@@ -4500,7 +4500,7 @@
           "message": "このトリガーは、Shopifyストアで新しいブログ（記事ではなく）が作成されるたびに起動します。ブログの作成を監視したり、フォローアップタスクを自動化したりするのに使用します。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.display_name": {
-          "source": "Shopify New Blog Article",
+          "source": "Shopify new blog article",
           "message": "Shopify 新規ブログ記事"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.short_desc": {
@@ -4524,7 +4524,7 @@
           "message": "新しい記事を監視するShopifyブログを選択してください。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.display_name": {
-          "source": "Shopify Customer Created",
+          "source": "Shopify customer created",
           "message": "Shopify 顧客作成"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.short_desc": {
@@ -4536,7 +4536,7 @@
           "message": "このトリガーは、Shopifyストアで新しい顧客が登録または作成されるたびに起動します。ウェルカムメールの送信、マーケティングリストへの顧客の追加、他のシステムでのレコード作成に使用します。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.display_name": {
-          "source": "Shopify Customer Updated",
+          "source": "Shopify customer updated",
           "message": "Shopify 顧客更新"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.short_desc": {
@@ -4548,7 +4548,7 @@
           "message": "このトリガーは、Shopifyストアで顧客情報が更新されるたびに起動します。顧客データを他のシステムと同期したり、特定の顧客の変更を追跡したり、マーケティング設定を更新したりするのに使用します。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.display_name": {
-          "source": "Shopify New Order",
+          "source": "Shopify new order",
           "message": "Shopify 新規注文"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.short_desc": {
@@ -4560,7 +4560,7 @@
           "message": "このトリガーは、Shopifyストアで指定されたステータスフィルターに一致する新しい注文が作成されたときに起動します。注文の処理、他のシステムでの在庫更新、または注文ステータスに基づくカスタム通知の送信に使用します。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.display_name": {
-          "source": "Order Status",
+          "source": "Order status",
           "message": "注文ステータス"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.short_desc": {

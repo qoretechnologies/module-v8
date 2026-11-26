@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **SendGrid** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
-          "message": "List Blocks"
+          "source": "List blocks",
+          "message": "List blocks"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.short_desc": {
           "source": "Retrieve a list of blocked email addresses",
@@ -352,8 +352,8 @@
           "message": "Retrieve a list of all email addresses that are currently on your blocks list. Blocked addresses are emails that have been rejected by receiving servers. You can filter by time range and paginate through results."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
-          "message": "Start Time"
+          "source": "Start time",
+          "message": "Start time"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.short_desc": {
           "source": "Filter blocks created after this Unix timestamp",
@@ -364,8 +364,8 @@
           "message": "Retrieve blocks that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
-          "message": "End Time"
+          "source": "End time",
+          "message": "End time"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.short_desc": {
           "source": "Filter blocks created before this Unix timestamp",
@@ -400,8 +400,8 @@
           "message": "The starting point in the list of results for pagination. Default is 0."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.display_name": {
-          "source": "Get a Block",
-          "message": "Get a Block"
+          "source": "Get a block",
+          "message": "Get a block"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.short_desc": {
           "source": "Retrieve details of a specific blocked email",
@@ -424,8 +424,8 @@
           "message": "The email address to retrieve from the blocks list. This should be the exact email address that was blocked."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
-          "message": "Delete Blocks"
+          "source": "Delete blocks",
+          "message": "Delete blocks"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
           "source": "Delete blocked email addresses from your list",
@@ -436,8 +436,8 @@
           "message": "Remove email addresses from your blocks list. You can either delete all blocks at once or specify individual email addresses to remove. Deleting blocks allows those addresses to receive emails again."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
-          "message": "Delete All"
+          "source": "Delete all",
+          "message": "Delete all"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.short_desc": {
           "source": "Delete all blocked emails",
@@ -460,8 +460,8 @@
           "message": "An array of email addresses to remove from the blocks list. Required if Delete All is not set to true."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.display_name": {
-          "source": "Get All Bounces",
-          "message": "Get All Bounces"
+          "source": "Get all bounces",
+          "message": "Get all bounces"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.short_desc": {
           "source": "Retrieve a list of bounced email addresses",
@@ -472,8 +472,8 @@
           "message": "Retrieve a list of all email addresses that have bounced. Bounces occur when an email cannot be delivered to the recipient. You can filter by time range and paginate through results."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
-          "message": "Start Time"
+          "source": "Start time",
+          "message": "Start time"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.short_desc": {
           "source": "Filter bounces created after this Unix timestamp",
@@ -484,8 +484,8 @@
           "message": "Retrieve bounces that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
-          "message": "End Time"
+          "source": "End time",
+          "message": "End time"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.short_desc": {
           "source": "Filter bounces created before this Unix timestamp",
@@ -520,8 +520,8 @@
           "message": "The starting point in the list of results for pagination. Default is 0."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.display_name": {
-          "source": "Delete Bounces",
-          "message": "Delete Bounces"
+          "source": "Delete bounces",
+          "message": "Delete bounces"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.short_desc": {
           "source": "Delete bounced email addresses from your list",
@@ -532,8 +532,8 @@
           "message": "Remove email addresses from your bounces list. You can either delete all bounces at once or specify individual email addresses to remove. Deleting bounces allows those addresses to receive emails again."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
-          "message": "Delete All"
+          "source": "Delete all",
+          "message": "Delete all"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.short_desc": {
           "source": "Delete all bounced emails",
@@ -556,8 +556,8 @@
           "message": "An array of email addresses to remove from the bounces list. Required if Delete All is not set to true."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.display_name": {
-          "source": "List Global Suppressions",
-          "message": "List Global Suppressions"
+          "source": "List global suppressions",
+          "message": "List global suppressions"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.short_desc": {
           "source": "Retrieve a list of globally unsubscribed email addresses",
@@ -568,8 +568,8 @@
           "message": "Retrieve a list of all email addresses that have globally unsubscribed from all of your emails. These addresses will not receive any emails from your account until they are removed from this list."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
-          "message": "Start Time"
+          "source": "Start time",
+          "message": "Start time"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.short_desc": {
           "source": "Filter suppressions created after this Unix timestamp",
@@ -580,8 +580,8 @@
           "message": "Retrieve suppressions that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
-          "message": "End Time"
+          "source": "End time",
+          "message": "End time"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.short_desc": {
           "source": "Filter suppressions created before this Unix timestamp",
@@ -616,8 +616,8 @@
           "message": "The starting point in the list of results for pagination. Default is 0."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Get a Global Suppression",
-          "message": "Get a Global Suppression"
+          "source": "Get a global suppression",
+          "message": "Get a global suppression"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
           "source": "Retrieve details of a specific globally suppressed email",
@@ -640,8 +640,8 @@
           "message": "The email address to look up in the global suppression list. Returns the suppression details if found."
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.display_name": {
-          "source": "Add Global Suppressions",
-          "message": "Add Global Suppressions"
+          "source": "Add global suppressions",
+          "message": "Add global suppressions"
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.short_desc": {
           "source": "Add email addresses to the global suppression list",
@@ -664,8 +664,8 @@
           "message": "An array of email addresses to add to the global suppression list. These addresses will be blocked from receiving all future emails."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Delete a Global Suppression",
-          "message": "Delete a Global Suppression"
+          "source": "Delete a global suppression",
+          "message": "Delete a global suppression"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
           "source": "Remove an email address from the global suppression list",
@@ -688,8 +688,8 @@
           "message": "The email address to remove from the global suppression list. Once removed, this address will be able to receive emails again."
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create a List",
-          "message": "Create a List"
+          "source": "Create a list",
+          "message": "Create a list"
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.short_desc": {
           "source": "Create a new contact list",
@@ -712,8 +712,8 @@
           "message": "A descriptive name for your contact list. Choose a name that clearly identifies the purpose or audience of the list."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.display_name": {
-          "source": "Get All Lists",
-          "message": "Get All Lists"
+          "source": "Get all lists",
+          "message": "Get all lists"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.short_desc": {
           "source": "Retrieve all contact lists",
@@ -724,8 +724,8 @@
           "message": "Retrieve all recipient lists in your SendGrid account. Returns list details including name and recipient count."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete a List",
-          "message": "Delete a List"
+          "source": "Delete a list",
+          "message": "Delete a list"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.short_desc": {
           "source": "Delete a contact list",
@@ -748,8 +748,8 @@
           "message": "The unique identifier of the list you want to delete. Select from your existing lists."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.display_name": {
-          "source": "Delete Contacts",
-          "message": "Delete Contacts"
+          "source": "Delete contacts",
+          "message": "Delete contacts"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.short_desc": {
           "source": "Also delete all contacts in the list",
@@ -760,8 +760,8 @@
           "message": "When set to true, all contacts within the list will also be permanently deleted from your contact database. Use with caution."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.display_name": {
-          "source": "Add or Update a Contact",
-          "message": "Add or Update a Contact"
+          "source": "Add or update a contact",
+          "message": "Add or update a contact"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.short_desc": {
           "source": "Add a new contact or update an existing one",
@@ -784,8 +784,8 @@
           "message": "The email address for the contact. This is the unique identifier - if a contact with this email exists, it will be updated."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.short_desc": {
           "source": "The first name of the contact",
@@ -796,8 +796,8 @@
           "message": "The contact's first name."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.short_desc": {
           "source": "The last name of the contact",
@@ -820,8 +820,8 @@
           "message": "One or more list IDs to add this contact to. The contact will be added to all specified lists."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.short_desc": {
           "source": "Additional custom field values",
@@ -832,8 +832,8 @@
           "message": "A JSON object containing custom field names and values. Custom fields must be created in your SendGrid account first."
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
-          "source": "Search for Contacts",
-          "message": "Search for Contacts"
+          "source": "Search for contacts",
+          "message": "Search for contacts"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
           "source": "Search contacts by field value",
@@ -844,8 +844,8 @@
           "message": "Search your contact database for contacts matching a specific field value. You can search by email, name, or any custom field."
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.display_name": {
-          "source": "Field Name",
-          "message": "Field Name"
+          "source": "Field name",
+          "message": "Field name"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.short_desc": {
           "source": "The field to search on",
@@ -868,8 +868,8 @@
           "message": "The value to match against the specified field. Text fields may require URL encoding."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.display_name": {
-          "source": "Delete Contacts",
-          "message": "Delete Contacts"
+          "source": "Delete contacts",
+          "message": "Delete contacts"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.short_desc": {
           "source": "Permanently delete contacts from your database",
@@ -892,8 +892,8 @@
           "message": "An array of contact IDs to delete. Select from your existing contacts. All selected contacts will be permanently removed."
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
-          "source": "Remove Contacts from List",
-          "message": "Remove Contacts from List"
+          "source": "Remove contacts from list",
+          "message": "Remove contacts from list"
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
           "source": "Remove contacts from a specific list",
@@ -928,8 +928,8 @@
           "message": "An array of contact IDs to remove from the list. The contacts will remain in your database but will be unlinked from this list."
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.display_name": {
-          "source": "Validate Email",
-          "message": "Validate Email"
+          "source": "Validate email",
+          "message": "Validate email"
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.short_desc": {
           "source": "Validate an email address for deliverability",
@@ -964,8 +964,8 @@
           "message": "An optional source string to help you track where the validation request originated from."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
-          "message": "Send Email"
+          "source": "Send email",
+          "message": "Send email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.short_desc": {
           "source": "Send an email message",
@@ -976,8 +976,8 @@
           "message": "Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
-          "message": "To Email"
+          "source": "To email",
+          "message": "To email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.short_desc": {
           "source": "The recipient email address",
@@ -988,8 +988,8 @@
           "message": "The email address of the primary recipient."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
-          "message": "To Name"
+          "source": "To name",
+          "message": "To name"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.short_desc": {
           "source": "The recipient name",
@@ -1000,8 +1000,8 @@
           "message": "Optional name of the recipient to personalize the 'To' field."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
-          "message": "From Email"
+          "source": "From email",
+          "message": "From email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
           "source": "The sender email address",
@@ -1012,8 +1012,8 @@
           "message": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
-          "message": "From Name"
+          "source": "From name",
+          "message": "From name"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
           "source": "The sender name",
@@ -1036,8 +1036,8 @@
           "message": "The subject line of the email."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.display_name": {
-          "source": "Text Content",
-          "message": "Text Content"
+          "source": "Text content",
+          "message": "Text content"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.short_desc": {
           "source": "Plain text content of the email",
@@ -1048,8 +1048,8 @@
           "message": "The plain text version of the email content. Either text content or HTML content (or both) must be provided."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.display_name": {
-          "source": "HTML Content",
-          "message": "HTML Content"
+          "source": "HTML content",
+          "message": "HTML content"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.short_desc": {
           "source": "HTML content of the email",
@@ -1060,8 +1060,8 @@
           "message": "The HTML version of the email content. Either text content or HTML content (or both) must be provided."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
-          "message": "Reply-To Email"
+          "source": "Reply-to email",
+          "message": "Reply-to email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
           "source": "Email address for replies",
@@ -1072,8 +1072,8 @@
           "message": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
-          "message": "Reply-To Name"
+          "source": "Reply-to name",
+          "message": "Reply-to name"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
           "source": "Name for the reply-to address",
@@ -1084,8 +1084,8 @@
           "message": "Optional name to display for the reply-to address."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
-          "message": "CC Emails"
+          "source": "CC emails",
+          "message": "CC emails"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
           "source": "Carbon copy recipients",
@@ -1096,8 +1096,8 @@
           "message": "An array of email addresses to include as CC recipients."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
-          "message": "BCC Emails"
+          "source": "BCC emails",
+          "message": "BCC emails"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
           "source": "Blind carbon copy recipients",
@@ -1108,8 +1108,8 @@
           "message": "An array of email addresses to include as BCC recipients."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.display_name": {
-          "source": "Send Template Email",
-          "message": "Send Template Email"
+          "source": "Send template email",
+          "message": "Send template email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.short_desc": {
           "source": "Send an email message using a SendGrid template",
@@ -1120,8 +1120,8 @@
           "message": "Send a transactional email using a predefined SendGrid dynamic template. Customize the email content by providing dynamic template data for personalization."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
-          "message": "To Email"
+          "source": "To email",
+          "message": "To email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.short_desc": {
           "source": "The recipient email address",
@@ -1132,8 +1132,8 @@
           "message": "The email address of the primary recipient."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
-          "message": "To Name"
+          "source": "To name",
+          "message": "To name"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.short_desc": {
           "source": "The recipient name",
@@ -1144,8 +1144,8 @@
           "message": "Optional name of the recipient to personalize the 'To' field."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
-          "message": "From Email"
+          "source": "From email",
+          "message": "From email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
           "source": "The sender email address",
@@ -1156,8 +1156,8 @@
           "message": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
-          "message": "From Name"
+          "source": "From name",
+          "message": "From name"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
           "source": "The sender name",
@@ -1180,8 +1180,8 @@
           "message": "Select the dynamic template to use for this email. The template must be created in your SendGrid account."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.display_name": {
-          "source": "Template Values",
-          "message": "Template Values"
+          "source": "Template values",
+          "message": "Template values"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.short_desc": {
           "source": "Dynamic data for template personalization",
@@ -1192,8 +1192,8 @@
           "message": "A JSON object containing key-value pairs for dynamic template data. These values will replace the corresponding placeholders in the selected template."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
-          "message": "Reply-To Email"
+          "source": "Reply-to email",
+          "message": "Reply-to email"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
           "source": "Email address for replies",
@@ -1204,8 +1204,8 @@
           "message": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
-          "message": "Reply-To Name"
+          "source": "Reply-to name",
+          "message": "Reply-to name"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
           "source": "Name for the reply-to address",
@@ -1216,8 +1216,8 @@
           "message": "Optional name to display for the reply-to address."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
-          "message": "CC Emails"
+          "source": "CC emails",
+          "message": "CC emails"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
           "source": "Carbon copy recipients",
@@ -1228,8 +1228,8 @@
           "message": "An array of email addresses to include as CC recipients."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
-          "message": "BCC Emails"
+          "source": "BCC emails",
+          "message": "BCC emails"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
           "source": "Blind carbon copy recipients",

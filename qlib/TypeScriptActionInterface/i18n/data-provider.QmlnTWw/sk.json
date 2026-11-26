@@ -28,7 +28,7 @@
           "message": "Make a custom HTTP / REST API call to **BigML** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Anomaly Score",
+          "source": "Create anomaly score",
           "message": "Vytvoriť skóre anomálie"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Vygenerujte skóre anomálie aplikovaním trénovaného detektora anomálií na vstupné údaje. Pomáha to identifikovať neobvyklé vzory alebo odľahlé hodnoty vo vašej množine údajov."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "Detektor anomálií"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Vyberte trénovaný model detektora anomálií, ktorý sa použije na vygenerovanie skóre anomálie pre vstupné údaje."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Vstupné dáta"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Voliteľný projekt na organizáciu tohto skóre anomálie so súvisiacimi zdrojmi pre lepšiu správu pracovných postupov."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Batch Anomaly Score",
+          "source": "Create batch anomaly score",
           "message": "Vytvoriť dávkové skóre anomálie"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Vygenerujte skóre anomálií pre viacero dátových bodov naraz aplikovaním detektora anomálií na dátovú množinu. Toto je efektívne na spracovanie veľkých objemov údajov."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "Detektor anomálií"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Voliteľný projekt na organizáciu tohto dávkového skóre anomálie so súvisiacimi zdrojmi pre lepšiu správu pracovných postupov."
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.display_name": {
-          "source": "List Anomaly Detectors",
+          "source": "List anomaly detectors",
           "message": "Zoznam detektorov anomálií"
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.display_name": {
-          "source": "List Datasets",
+          "source": "List datasets",
           "message": "Zoznam dátových množín"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.display_name": {
-          "source": "List Models",
+          "source": "List models",
           "message": "Zoznam modelov"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.short_desc": {
@@ -2844,7 +2844,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Zoznam projektov"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -3060,7 +3060,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.display_name": {
-          "source": "List Sources",
+          "source": "List sources",
           "message": "Zoznam zdrojov"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.short_desc": {
@@ -3876,7 +3876,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.display_name": {
-          "source": "List Clusters",
+          "source": "List clusters",
           "message": "Zoznam zhlukov"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.short_desc": {
@@ -4628,7 +4628,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.display_name": {
-          "source": "Create Centroid",
+          "source": "Create centroid",
           "message": "Vytvoriť centroid"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.short_desc": {
@@ -4640,7 +4640,7 @@
           "message": "Určite, ktorý centroid zhluku je najbližšie k poskytnutým vstupným údajom pomocou trénovaného zhlukového modelu. Pomáha to klasifikovať nové dátové body do existujúcich zhlukov."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.display_name": {
-          "source": "Cluster Model",
+          "source": "Cluster model",
           "message": "Zhlukový model"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.short_desc": {
@@ -4652,7 +4652,7 @@
           "message": "Vyberte trénovaný zhlukový model, ktorý sa použije na nájdenie najbližšieho centroidu pre vstupné údaje."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Vstupné dáta"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -4712,7 +4712,7 @@
           "message": "Voliteľný projekt na organizáciu tohto výpočtu centroidu so súvisiacimi zdrojmi pre lepšiu správu pracovných postupov."
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.display_name": {
-          "source": "List Ensembles",
+          "source": "List ensembles",
           "message": "Zoznam ensemble modelov"
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.short_desc": {
@@ -4888,7 +4888,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.display_name": {
-          "source": "List Deep Networks",
+          "source": "List deep networks",
           "message": "Zoznam hlbokých sietí"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.short_desc": {
@@ -5064,7 +5064,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.display_name": {
-          "source": "List Topic Models",
+          "source": "List topic models",
           "message": "Zoznam modelov tém"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.short_desc": {
@@ -5240,7 +5240,7 @@
           "message": "Zostupne"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.display_name": {
-          "source": "Create Prediction",
+          "source": "Create prediction",
           "message": "Vytvoriť predikciu"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.short_desc": {
@@ -5276,7 +5276,7 @@
           "message": "Vyberte trénovaný ansámbel, ktorý sa použije na generovanie predikcií pre vstupné údaje."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.display_name": {
-          "source": "Deep Network",
+          "source": "Deep network",
           "message": "Hlboká sieť"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.short_desc": {
@@ -5288,7 +5288,7 @@
           "message": "Vyberte trénovanú hlbokú sieť, ktorá sa použije na generovanie predikcií pre vstupné údaje."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Vstupné dáta"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5348,7 +5348,7 @@
           "message": "Voliteľný projekt na organizáciu tejto predikcie so súvisiacimi zdrojmi pre lepšiu správu pracovných postupov."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Create Topic Distribution",
+          "source": "Create topic distribution",
           "message": "Vytvoriť distribúciu tém"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -5360,7 +5360,7 @@
           "message": "Vytvárajte distribúcie tém pre textové údaje pomocou trénovaného tematického modelu. Pomáha to pochopiť hlavné témy prítomné vo vašom texte a ich relatívny význam."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.display_name": {
-          "source": "Topic Model",
+          "source": "Topic model",
           "message": "Model tém"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.short_desc": {
@@ -5372,7 +5372,7 @@
           "message": "Vyberte natrénovaný model tém, ktorý sa použije na generovanie distribúcií tém pre vstupné textové dáta."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Vstupné dáta"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5432,7 +5432,7 @@
           "message": "Voliteľný projekt na organizáciu tejto distribúcie tém so súvisiacimi zdrojmi pre lepšiu správu pracovných postupov."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.display_name": {
-          "source": "New Resource",
+          "source": "New resource",
           "message": "Nový zdroj"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.short_desc": {
@@ -5444,7 +5444,7 @@
           "message": "Sledujte svoj účet BigML na novovytvorené zdroje, ako sú modely, dátové sady, zhluky a iné zdroje strojového učenia. Tento spúšťač vám umožňuje automatizovať pracovné postupy, keď sú vytvorené špecifické typy zdrojov."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.display_name": {
-          "source": "Resource Type",
+          "source": "Resource type",
           "message": "Typ zdroja"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.short_desc": {
@@ -5480,7 +5480,7 @@
           "message": "Model tém"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.display_name": {
-          "source": "Name Filter",
+          "source": "Name filter",
           "message": "Filter názvu"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.short_desc": {
@@ -5492,7 +5492,7 @@
           "message": "Voliteľný filter na spustenie len pre zdroje, ktorých názvy obsahujú tento text. Ponechajte prázdne na sledovanie všetkých zdrojov vybraného typu."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.display_name": {
-          "source": "Project Filter",
+          "source": "Project filter",
           "message": "Filter projektu"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.short_desc": {
@@ -5504,7 +5504,7 @@
           "message": "Voliteľný filter na spustenie len pre zdroje vytvorené v rámci konkrétneho projektu. Ponechajte prázdne na sledovanie zdrojov vo všetkých projektoch."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.display_name": {
-          "source": "Tags Filter",
+          "source": "Tags filter",
           "message": "Filter značiek"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.short_desc": {

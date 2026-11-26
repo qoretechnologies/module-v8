@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP / REST-API-Aufruf an **Facebook Pages** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.display_name": {
-          "source": "Create Page Post",
+          "source": "Create page post",
           "message": "Seitenbeitrag erstellen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Wenn true, wird der Beitrag sofort veröffentlicht. Wenn false, wird er als Entwurf gespeichert oder geplant."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.display_name": {
-          "source": "Scheduled Publish Time",
+          "source": "Scheduled publish time",
           "message": "Geplante Veröffentlichungszeit"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "ISO-Zeitstempel für den Zeitpunkt, zu dem der Beitrag veröffentlicht werden soll. Erfordert, dass published false ist."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.display_name": {
-          "source": "Feed Story Visibility",
+          "source": "Feed story visibility",
           "message": "Sichtbarkeit im Newsfeed"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.short_desc": {
@@ -452,7 +452,7 @@
           "message": "Beitrag wird im Newsfeed ausgeblendet"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.display_name": {
-          "source": "Timeline Visibility",
+          "source": "Timeline visibility",
           "message": "Sichtbarkeit in der Timeline"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.short_desc": {
@@ -480,7 +480,7 @@
           "message": "Beitrag wird in der Timeline verborgen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.display_name": {
-          "source": "Get Page Post Insights",
+          "source": "Get page post insights",
           "message": "Seitenbeitrags-Insights abrufen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Gesamtmetriken für die gesamte Laufzeit"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.display_name": {
-          "source": "Get Page Post",
+          "source": "Get page post",
           "message": "Seitenbeitrag abrufen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.short_desc": {
@@ -988,7 +988,7 @@
           "message": "width"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.display_name": {
-          "source": "Get Page",
+          "source": "Get page",
           "message": "Seite abrufen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "written_by"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.display_name": {
-          "source": "Search Page Posts",
+          "source": "Search page posts",
           "message": "Seitenbeiträge suchen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "ISO-Zeitstempel oder Datumszeichenfolge für das späteste Beitragserstellungsdatum, das in den Ergebnissen enthalten sein soll."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.display_name": {
-          "source": "Search Text",
+          "source": "Search text",
           "message": "Suchtext"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "Textzeichenfolge, nach der in Beitragsnachrichten und Stories gesucht werden soll. Suche ohne Berücksichtigung von Groß-/Kleinschreibung."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden",
+          "source": "Include hidden",
           "message": "Ausgeblendete einschließen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "width"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.display_name": {
-          "source": "Get Post Comments",
+          "source": "Get post comments",
           "message": "Beitragskommentare abrufen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.short_desc": {
@@ -2184,7 +2184,7 @@
           "message": "Alle Kommentare einschließlich Antworten in chronologischer Reihenfolge"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
-          "source": "Include Replies",
+          "source": "Include replies",
           "message": "Antworten einbeziehen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "Wenn true, werden Antworten auf jeden Kommentar der obersten Ebene in den Ergebnissen enthalten sein."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.display_name": {
-          "source": "Like Comment",
+          "source": "Like comment",
           "message": "Kommentar mit „Gefällt mir“ markieren"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.short_desc": {
@@ -2272,7 +2272,7 @@
           "message": "Gefällt mir vom Kommentar entfernen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
-          "source": "Reply to Comment",
+          "source": "Reply to comment",
           "message": "Auf Kommentar antworten"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
@@ -2344,7 +2344,7 @@
           "message": "Optionale URL, die an die Antwort angehängt werden soll, z. B. ein Bild oder Link."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.display_name": {
-          "source": "New Post",
+          "source": "New post",
           "message": "Neuer Beitrag"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.short_desc": {
@@ -2628,7 +2628,7 @@
           "message": "width"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden Posts",
+          "source": "Include hidden posts",
           "message": "Verborgene Beiträge einschließen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
@@ -2640,7 +2640,7 @@
           "message": "Wenn aktiviert, wird der Auslöser auch für Beiträge ausgelöst, die auf der Seitenchronik verborgen sind. Der Standardwert ist false."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.display_name": {
-          "source": "New Post Comment",
+          "source": "New post comment",
           "message": "Neuer Beitragskommentar"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.short_desc": {
@@ -2780,7 +2780,7 @@
           "message": "user_likes"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden Comments",
+          "source": "Include hidden comments",
           "message": "Verborgene Kommentare einschließen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
@@ -2792,7 +2792,7 @@
           "message": "Wenn aktiviert, wird der Auslöser auch für verborgene Kommentare ausgelöst. Der Standardwert ist false."
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
-          "source": "Include Replies",
+          "source": "Include replies",
           "message": "Antworten einbeziehen"
         },
         "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {

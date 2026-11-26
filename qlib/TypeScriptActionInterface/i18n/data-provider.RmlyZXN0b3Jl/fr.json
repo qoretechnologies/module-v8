@@ -28,7 +28,7 @@
           "message": "Passez un appel d'API HTTP / REST personnalisé à **Firestore** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous la forme d'un hash contenant le code d'état, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions natives sur cette application."
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Lister les projets"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Récupère une liste de tous les projets Google Cloud accessibles avec vos identifiants. Vous pouvez filtrer les projets par nom et utiliser la pagination pour parcourir de grands ensembles de résultats. Cela est utile pour déterminer quels projets contiennent des bases de données Firestore."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
-          "source": "Project Name",
+          "source": "Project name",
           "message": "Nom du projet"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Filtre facultatif pour rechercher les projets contenant ce nom. La recherche n'est pas sensible à la casse et correspond à des noms partiels."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Taille de la page"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Le nombre maximal de projets à renvoyer dans une seule requête. La valeur par défaut est 100. Utilisez cette option avec les jetons de pagination pour récupérer de grands ensembles de résultats."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Jeton de page suivante"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Jeton de pagination obtenu à partir d'une requête précédente. Utilisez-le pour récupérer la page de projets suivante lorsqu'il y a plus de résultats que la taille de page."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
-          "source": "Create Document",
+          "source": "Create document",
           "message": "Créer un document"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
@@ -412,7 +412,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Chemin de la collection"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Identifiant personnalisé facultatif pour le document. S'il n'est pas fourni, Firestore générera automatiquement un ID unique. Les ID de document doivent être des chaînes UTF-8 valides et ne peuvent pas contenir de barres obliques."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
+          "source": "Document data",
           "message": "Données du document"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Les données structurées à stocker dans le document. Celles-ci seront typées dynamiquement en fonction du schéma de la collection, le cas échéant. Chaque champ sera stocké avec son type de données Firestore approprié."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
+          "source": "Additional data",
           "message": "Données supplémentaires"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Champs supplémentaires facultatifs à fusionner avec les données structurées. Utilisez ceci pour ajouter des champs qui ne font pas partie du schéma prédéfini ou pour inclure des champs dynamiques."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
-          "source": "Get Document",
+          "source": "Get document",
           "message": "Obtenir le document"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
@@ -484,7 +484,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Chemin de la collection"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -508,7 +508,7 @@
           "message": "L'identifiant unique du document que vous souhaitez récupérer. Il s'agit de l'ID de document qui a été généré automatiquement ou spécifié lors de la création du document."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
-          "source": "Update Document",
+          "source": "Update document",
           "message": "Mettre à jour le document"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
@@ -532,7 +532,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Chemin de la collection"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -556,7 +556,7 @@
           "message": "L'identifiant unique du document que vous souhaitez mettre à jour. Le document doit exister, sinon l'opération échouera."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
+          "source": "Document data",
           "message": "Données du document"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Les données à mettre à jour dans le document. Lorsque la fusion est activée, seuls les champs spécifiés seront mis à jour. Lorsque la fusion est désactivée, ces données remplaceront l'intégralité du document."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
+          "source": "Additional data",
           "message": "Données supplémentaires"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Lorsque la valeur est true (par défaut), seuls les champs spécifiés sont mis à jour et les autres champs restent inchangés. Lorsque la valeur est false, le document entier est remplacé par les nouvelles données."
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
-          "source": "Delete Document",
+          "source": "Delete document",
           "message": "Supprimer le document"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
@@ -616,7 +616,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Chemin de la collection"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -640,7 +640,7 @@
           "message": "L'identifiant unique du document que vous souhaitez supprimer. Le document doit exister, sinon l'opération échouera."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "Lister les documents"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -664,7 +664,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Chemin de la collection"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Le nombre maximal de documents à récupérer. La valeur par défaut est 100. Utilisez cette option pour contrôler la taille de l'ensemble de résultats et améliorer les performances."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Trier par"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Nom de champ facultatif à utiliser pour trier les documents. Le champ doit exister dans les documents et être d'un type comparable (chaîne, nombre, date)."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
-          "source": "Order Direction",
+          "source": "Order direction",
           "message": "Sens du tri"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Décroissant"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "Lister les collections"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -744,7 +744,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
+          "source": "Parent document path",
           "message": "Chemin du document parent"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Chemin facultatif vers un document dont vous souhaitez lister les sous-collections. Si non spécifié, liste les collections au niveau racine. Format : collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
+          "source": "Get collection",
           "message": "Obtenir la collection"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
@@ -792,7 +792,7 @@
           "message": "L'identifiant de la collection pour laquelle vous souhaitez récupérer des informations. Il s'agit du nom de la collection sans aucun chemin parent."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
+          "source": "Parent document path",
           "message": "Chemin du document parent"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
@@ -804,7 +804,7 @@
           "message": "Chemin facultatif vers le document parent s'il s'agit d'une sous-collection. Si non spécifié, suppose qu'il s'agit d'une collection racine. Format : collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
-          "source": "Include Sample Documents",
+          "source": "Include sample documents",
           "message": "Inclure des exemples de documents"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Lorsque défini sur true, inclut des exemples de documents de la collection dans la réponse. Cela permet de comprendre la structure et le contenu de la collection."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
-          "source": "Sample Limit",
+          "source": "Sample limit",
           "message": "Limite d'échantillons"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Le nombre maximal d'exemples de documents à récupérer lorsque include_sample_documents est défini sur true. La valeur par défaut est 5."
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
-          "source": "Query Documents",
+          "source": "Query documents",
           "message": "Interroger les documents"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
@@ -852,7 +852,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Chemin de la collection"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -952,7 +952,7 @@
           "message": "La valeur à utiliser dans la comparaison. Le type de valeur doit correspondre au type de champ dans les documents (chaîne, nombre, booléen, etc.)."
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Trier par"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
@@ -1008,7 +1008,7 @@
           "message": "Le nombre maximal de documents à récupérer. La valeur par défaut est 100. Utilisez cette option pour contrôler les performances des requêtes et la taille de l'ensemble de résultats."
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Backup to Google Cloud Storage",
+          "source": "Backup to Google cloud storage",
           "message": "Sauvegarder vers Google Cloud Storage"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore à sauvegarder"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
-          "source": "Output URI Prefix",
+          "source": "Output URI prefix",
           "message": "Préfixe de l'URI de sortie"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Liste facultative d'ID de collections à sauvegarder. Si non spécifié, l'ensemble de la base de données sera sauvegardé. Utilisez ceci pour créer des sauvegardes sélectives de collections spécifiques."
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Restore from Google Cloud Storage",
+          "source": "Restore from Google cloud storage",
           "message": "Restaurer depuis Google Cloud Storage"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud dans lequel les données seront restaurées"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
-          "source": "Input URI Prefix",
+          "source": "Input URI prefix",
           "message": "Préfixe d'URI d'entrée"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
@@ -1104,7 +1104,7 @@
           "message": "Liste facultative d'identifiants de collection à restaurer à partir de la sauvegarde. Si non spécifié, toutes les collections de la sauvegarde seront restaurées. Utilisez cette option pour restaurer sélectivement des collections spécifiques."
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Document",
+          "source": "New document",
           "message": "Nouveau document"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "L'identifiant unique de votre projet Google Cloud contenant la base de données Firestore"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Chemin de la collection"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "La valeur à utiliser dans la comparaison. La valeur sera automatiquement convertie au type approprié (chaîne, nombre, booléen ou null)"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Trier par"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {

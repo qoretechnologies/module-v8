@@ -28,7 +28,7 @@
           "message": "設定された接続の認証情報を使用して、**Magento** に対してカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "顧客IDを使用して顧客アカウントに関する詳細情報を取得します。住所情報、アカウントステータス、カスタム属性を含むすべての顧客属性を返します。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Update Customer",
+          "source": "Update customer",
           "message": "顧客を更新"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "既存のアカウントの顧客情報を更新します。このエンドポイントを使用すると、個人情報、住所、カスタム属性、およびその他のアカウント詳細を変更できます。リクエストに顧客IDを含める必要があります。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
-          "source": "Delete Customer",
+          "source": "Delete customer",
           "message": "顧客を削除"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "システムから顧客アカウントを完全に削除します。この操作は元に戻すことができず、住所や注文履歴の参照など、指定されたIDに関連付けられているすべての顧客データを削除します。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Customers",
+          "source": "List customers",
           "message": "顧客の一覧表示"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "指定された検索条件に一致する顧客アカウントのリストを返します。結果はフィルタリング、並べ替え、ページネーションが可能です。検索条件パラメータを使用して、メールアドレス、名前、作成日、その他の顧客属性で結果を絞り込みます。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
-          "source": "Create Customer Account",
+          "source": "Create customer account",
           "message": "顧客アカウントを作成"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
@@ -400,7 +400,7 @@
           "message": "提供された情報を使用して新しい顧客アカウントを作成します。必須フィールドにはメールアドレス、パスワード、名/姓が含まれます。オプションの詳細には住所、生年月日、カスタム属性が含まれます。成功すると新しく作成された顧客IDを返します。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
-          "source": "Create Product",
+          "source": "Create product",
           "message": "商品を作成"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "指定された属性、価格設定、在庫情報を使用して、カタログに新しい製品を作成します。製品は、シンプル、コンフィグラブル、バンドル、グループ、バーチャル、ダウンロード可能のいずれかにすることができます。メディアギャラリーのエントリ、段階価格、カスタムオプションも定義できます。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
-          "source": "List Products",
+          "source": "List products",
           "message": "商品一覧"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "指定された検索条件に一致する製品のコレクションを返します。名前、SKU、価格、ステータスなどの属性で結果を絞り込むことができます。ページネーション、並べ替え、レスポンスへのカスタム属性の包含をサポートしています。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
-          "source": "Update Product",
+          "source": "Update product",
           "message": "製品を更新"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
@@ -436,7 +436,7 @@
           "message": "カタログ内の既存の製品を更新します。名前、価格、説明、画像、在庫、カテゴリ割り当てを含む任意の製品属性を変更できます。リクエストで製品のSKUまたはIDを指定する必要があります。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
-          "source": "Delete Product",
+          "source": "Delete product",
           "message": "製品を削除"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "IDまたはSKUでカタログから製品を完全に削除します。この操作は元に戻すことができず、削除された製品を参照する既存の注文やカートに影響を与える可能性があります。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
-          "source": "Get Product Details",
+          "source": "Get product details",
           "message": "製品詳細を取得"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "SKUまたはIDで特定の製品に関する詳細情報を取得します。レスポンスには、すべての製品属性、画像、価格情報、在庫状況、カテゴリの割り当てが含まれます。追加のパラメータで含めるデータを制御できます。"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Shopping Carts",
+          "source": "List shopping carts",
           "message": "ショッピングカートの一覧取得"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "指定された検索条件に一致するアクティブなショッピングカートのコレクションを返します。結果は顧客ID、作成日、カートのステータスでフィルタリングできます。各カートには、品目、適用されたクーポン、および利用可能な場合は配送先/請求先情報が含まれます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
-          "source": "Get Order Details",
+          "source": "Get order details",
           "message": "注文の詳細を取得"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "IDを指定して特定の注文に関する包括的な情報を取得します。注文項目、請求先および配送先住所、支払い情報、適用された割引、注文ステータス履歴が含まれます。注文処理やカスタマーサービスへの問い合わせに役立ちます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Orders",
+          "source": "List orders",
           "message": "注文の一覧取得"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "指定された検索条件に一致する注文のコレクションを返します。結果は顧客、ステータス、日付範囲、合計金額でフィルタリングできます。ページネーションと並べ替えをサポートし、大量の注文を効率的に閲覧できます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Create Order",
+          "source": "Create order",
           "message": "注文を作成"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "指定された注文の永続化操作を実行します。顧客情報、明細行、支払いの詳細、配送情報、その他の関連する注文メタデータを含む注文データをデータベースに保存します。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
-          "source": "Add Order Comment",
+          "source": "Add order comment",
           "message": "注文コメントを追加"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
@@ -520,7 +520,7 @@
           "message": "注文履歴にコメントを追加します。コメントは内部用（管理者のみに表示）または顧客に表示可能に設定できます。各コメントにはタイムスタンプと作成者が記録されます。注文処理ステップや顧客とのやり取りを記録するのに役立ちます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
-          "source": "Get Order Comments",
+          "source": "Get order comments",
           "message": "注文コメントを取得"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "特定の注文のすべてのコメント履歴を返します。結果にはコメントのテキスト、タイムスタンプ、作成者情報、公開ステータス（顧客に表示または管理者のみ）が含まれます。コメントは時系列順に返されます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Invoices",
+          "source": "List invoices",
           "message": "請求書の一覧取得"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "指定された検索条件に基づいて請求書のリストを返します。注文ID、顧客、日付、金額で結果を絞り込むことができます。各請求書には、明細項目、支払い情報、関連する注文の詳細が含まれます。ページネーションと並べ替えをサポートしています。"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
-          "source": "Create Invoice",
+          "source": "Create invoice",
           "message": "請求書を作成"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
@@ -556,7 +556,7 @@
           "message": "既存の注文に対して新しい請求書レコードを作成し、金銭取引と支払い要求を記録します。請求対象の品目、支払いの詳細、顧客の請求書に表示されるコメントを指定できます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Shipments",
+          "source": "List shipments",
           "message": "配送の一覧取得"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "指定された検索条件に基づいて配送のリストを返します。結果は注文ID、顧客、作成日、追跡情報でフィルタリングできます。各配送には、発送された品目、数量、追跡番号、配送業者情報が含まれます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
-          "source": "Create Shipment",
+          "source": "Create shipment",
           "message": "配送を作成"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
@@ -580,7 +580,7 @@
           "message": "既存の注文に対して新しい配送レコードを作成し、顧客への注文品目の物理的な発送を記録および追跡できるようにします。追跡番号、配送業者、発送品目とその数量を指定するオプションが含まれます。"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Payment Transactions",
+          "source": "List payment transactions",
           "message": "決済トランザクションの一覧取得"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -592,7 +592,7 @@
           "message": "指定された検索条件に基づいて決済トランザクションのリストを返します。結果は注文ID、支払い方法、トランザクションタイプ、ステータスでフィルタリングできます。各トランザクションには金額、ステータス、関連する決済ゲートウェイ情報が含まれます。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.display_name": {
-          "source": "Customer Created or Updated",
+          "source": "Customer created or updated",
           "message": "顧客が作成または更新されたとき"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.short_desc": {
@@ -604,7 +604,7 @@
           "message": "このトリガーは、Magentoストアで新しい顧客が作成されたとき、または既存顧客の情報が更新されたときに起動します。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "アクティベーション条件"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -624,7 +624,7 @@
           "message": "更新日時"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Invoice Created or Updated",
+          "source": "Invoice created or updated",
           "message": "請求書が作成または更新されたとき"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
@@ -636,7 +636,7 @@
           "message": "このトリガーは、Magentoストアで新しい請求書が生成されたとき、または既存の請求書が変更されたときに起動します。"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "アクティベーション条件"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -656,7 +656,7 @@
           "message": "更新日時"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.display_name": {
-          "source": "Order Created",
+          "source": "Order created",
           "message": "注文が作成されたとき"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.short_desc": {
@@ -668,7 +668,7 @@
           "message": "このトリガーは、顧客がチェックアウトプロセスを完了し、Magentoストアで新規注文を行ったときに起動します。"
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.display_name": {
-          "source": "Shipment Created",
+          "source": "Shipment created",
           "message": "配送が作成された時"
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.short_desc": {
@@ -680,7 +680,7 @@
           "message": "このトリガーは、Magentoストアで注文に対して新しい配送が作成され、商品が顧客に発送されたことを示すときにアクティブ化されます。"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Product Created or Updated",
+          "source": "Product created or updated",
           "message": "製品の作成または更新"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "このトリガーは、Magentoカタログに新しい商品が追加されたとき、または既存の商品の情報が変更されたときにアクティブ化されます。"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "アクティベーション条件"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {

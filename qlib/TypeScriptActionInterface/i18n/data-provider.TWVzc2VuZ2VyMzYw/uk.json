@@ -28,7 +28,7 @@
           "message": "Виконати довільний виклик HTTP / REST API до **360 Messenger for WhatsApp** з використанням автентифікації налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як повноцінні дії в цьому додатку."
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.display_name": {
-          "source": "Get WhatsApp Contacts",
+          "source": "Get WhatsApp contacts",
           "message": "Отримати контакти WhatsApp"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Отримує повний список контактів WhatsApp, включно з їхніми даними, такими як номери телефонів, бізнес-статус і контактна інформація."
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.display_name": {
-          "source": "Get WhatsApp Chats",
+          "source": "Get WhatsApp chats",
           "message": "Отримати чати WhatsApp"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Отримує список усіх чатів WhatsApp, включно з деталями чату, останніми повідомленнями, кількістю непрочитаних і метаданими чату, такими як закріплений та архівований статус."
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.display_name": {
-          "source": "Get WhatsApp Groups",
+          "source": "Get WhatsApp groups",
           "message": "Отримати групи WhatsApp"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Отримує список усіх групових чатів WhatsApp, учасником яких ви є, включно з ідентифікаторами та назвами груп."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Text Message",
+          "source": "Send WhatsApp text message",
           "message": "Надіслати текстове повідомлення WhatsApp"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Надсилає текстове повідомлення певному контакту WhatsApp за номером телефону. За бажанням можна додати URL-посилання та запланувати надсилання повідомлення на пізніший час."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Номер телефону"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Номер телефону контакту WhatsApp, якому потрібно надіслати повідомлення. Має містити код країни."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Текст повідомлення"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Текстовий вміст, який буде надіслано як повідомлення WhatsApp."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL-посилання"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Необов'язкова URL-адреса, яку можна додати до текстового повідомлення для надсилання посилань."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "Запланований час"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Необов'язкова дата й час для планування надсилання повідомлення. Якщо не вказано, повідомлення буде надіслано негайно."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Group Message",
+          "source": "Send WhatsApp group message",
           "message": "Надіслати повідомлення групі WhatsApp"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Унікальний ідентифікатор групи WhatsApp, куди буде надіслано повідомлення."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Текст повідомлення"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Текстовий вміст, який буде надіслано як групове повідомлення WhatsApp."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL-посилання"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Необов'язкова URL-адреса, яку можна додати до текстового повідомлення для надсилання посилань."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "Запланований час"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Необов'язкова дата й час для планування надсилання повідомлення. Якщо не вказано, повідомлення буде надіслано негайно."
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New WhatsApp Message",
+          "source": "New WhatsApp message",
           "message": "Нове повідомлення WhatsApp"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.short_desc": {

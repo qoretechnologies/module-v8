@@ -8,7 +8,7 @@ const WebflowAppEn = {
   actions: {
     create_item: {
       groups: ['Collections'],
-      displayName: 'Create Item',
+      displayName: 'Create item',
       shortDesc: 'Create a new item in a Webflow collection',
       longDesc:
         'Create a new item with custom field data in a specified Webflow collection. You can set the item as archived or draft and specify a CMS locale.',
@@ -24,17 +24,17 @@ const WebflowAppEn = {
           longDesc: 'Select the Webflow collection where you want to create the new item',
         },
         isArchived: {
-          displayName: 'Is Archived',
+          displayName: 'Is archived',
           shortDesc: 'Whether the item should be archived',
           longDesc: 'Set to true if you want the item to be archived upon creation',
         },
         isDraft: {
-          displayName: 'Is Draft',
+          displayName: 'Is draft',
           shortDesc: 'Whether the item should be a draft',
           longDesc: 'Set to true if you want the item to be saved as a draft (default: true)',
         },
         cmsLocaleId: {
-          displayName: 'CMS Locale ID',
+          displayName: 'CMS locale ID',
           shortDesc: 'The locale ID for the item',
           longDesc: 'Specify the CMS locale ID if working with a multi-locale site',
         },
@@ -42,7 +42,7 @@ const WebflowAppEn = {
     },
     delete_item: {
       groups: ['Collections'],
-      displayName: 'Delete Item',
+      displayName: 'Delete item',
       shortDesc: 'Delete an item from a Webflow collection',
       longDesc:
         'Permanently delete a specified item from a Webflow collection. This action cannot be undone.',
@@ -66,7 +66,7 @@ const WebflowAppEn = {
     },
     get_collection: {
       groups: ['Collections'],
-      displayName: 'Get Collection',
+      displayName: 'Get collection',
       shortDesc: 'Retrieve information about a Webflow collection',
       longDesc:
         'Get detailed information about a specific Webflow collection including its fields, settings, and metadata.',
@@ -85,7 +85,7 @@ const WebflowAppEn = {
     },
     get_item: {
       groups: ['Collections'],
-      displayName: 'Get Item',
+      displayName: 'Get item',
       shortDesc: 'Retrieve a specific item from a Webflow collection',
       longDesc:
         'Get detailed information about a specific item from a Webflow collection, including all its field data.',
@@ -106,7 +106,7 @@ const WebflowAppEn = {
           longDesc: 'Select the Webflow collection that contains the item you want to retrieve',
         },
         cmsLocaleId: {
-          displayName: 'CMS Locale ID',
+          displayName: 'CMS locale ID',
           shortDesc: 'The locale ID for the item',
           longDesc: 'Specify the CMS locale ID if working with a multi-locale site',
         },
@@ -114,7 +114,7 @@ const WebflowAppEn = {
     },
     get_order: {
       groups: ['Orders'],
-      displayName: 'Get Order',
+      displayName: 'Get order',
       shortDesc: 'Retrieve a specific order from Webflow',
       longDesc:
         'Get detailed information about a specific order from Webflow, including customer details, purchased items, and payment information.',
@@ -133,7 +133,7 @@ const WebflowAppEn = {
     },
     get_site: {
       groups: ['Sites'],
-      displayName: 'Get Site',
+      displayName: 'Get site',
       shortDesc: 'Retrieve information about a Webflow site',
       longDesc:
         'Get detailed information about a specific Webflow site including its settings, domains, and locale configuration.',
@@ -147,7 +147,7 @@ const WebflowAppEn = {
     },
     list_collections: {
       groups: ['Collections'],
-      displayName: 'List Collections',
+      displayName: 'List collections',
       shortDesc: 'List all collections from a Webflow site',
       longDesc:
         'Retrieve a list of all collections from a specified Webflow site with their basic information.',
@@ -161,7 +161,7 @@ const WebflowAppEn = {
     },
     list_custom_domains: {
       groups: ['Sites'],
-      displayName: 'List Custom Domains',
+      displayName: 'List custom domains',
       shortDesc: 'List custom domains for a Webflow site',
       longDesc: 'Retrieve a list of all custom domains configured for a specified Webflow site.',
       options: {
@@ -174,7 +174,7 @@ const WebflowAppEn = {
     },
     list_items: {
       groups: ['Collections'],
-      displayName: 'List Items',
+      displayName: 'List items',
       shortDesc: 'List items from a Webflow collection',
       longDesc:
         'Retrieve a paginated list of items from a specified Webflow collection with filtering and sorting options.',
@@ -190,7 +190,7 @@ const WebflowAppEn = {
           longDesc: 'Select the Webflow collection you want to list items from',
         },
         cmsLocaleId: {
-          displayName: 'CMS Locale ID',
+          displayName: 'CMS locale ID',
           shortDesc: 'The locale ID for filtering items',
           longDesc: 'Specify the CMS locale ID to filter items by locale',
         },
@@ -215,18 +215,18 @@ const WebflowAppEn = {
           longDesc: 'Filter items by their slug field',
         },
         lastPublished: {
-          displayName: 'Last Published',
+          displayName: 'Last published',
           shortDesc: 'Filter by publication date range',
           longDesc: 'Filter items by their last published date range',
           type: {
             fields: {
               lte: {
-                displayName: 'Less Than or Equal To',
+                displayName: 'Less than or equal to',
                 shortDesc: 'Items published before or on this date',
                 longDesc: 'Include items published before or on this date',
               },
               gte: {
-                displayName: 'Greater Than or Equal To',
+                displayName: 'Greater than or equal to',
                 shortDesc: 'Items published after or on this date',
                 longDesc: 'Include items published after or on this date',
               },
@@ -234,12 +234,12 @@ const WebflowAppEn = {
           },
         },
         sortBy: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort items by',
           longDesc: 'Choose the field to sort the items by',
         },
         sortOrder: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'Sort direction',
           longDesc: 'Choose whether to sort in ascending or descending order',
         },
@@ -247,7 +247,7 @@ const WebflowAppEn = {
     },
     list_orders: {
       groups: ['Orders'],
-      displayName: 'List Orders',
+      displayName: 'List orders',
       shortDesc: 'List orders from a Webflow site',
       longDesc:
         'Retrieve a paginated list of orders from a specified Webflow site with filtering options.',
@@ -276,14 +276,14 @@ const WebflowAppEn = {
     },
     list_sites: {
       groups: ['Sites'],
-      displayName: 'List Sites',
+      displayName: 'List sites',
       shortDesc: 'List all Webflow sites',
       longDesc:
         'Retrieve a list of all Webflow sites accessible with the current authentication token.',
     },
     mark_order_status: {
       groups: ['Orders'],
-      displayName: 'Mark Order Status',
+      displayName: 'Mark order status',
       shortDesc: 'Update the status of a Webflow order',
       longDesc:
         'Change the status of a Webflow order to fulfilled, unfulfilled, or refunded with additional options.',
@@ -304,12 +304,12 @@ const WebflowAppEn = {
           longDesc: 'Choose the new status to set for the order',
         },
         reason: {
-          displayName: 'Refund Reason',
+          displayName: 'Refund reason',
           shortDesc: 'Reason for refunding the order',
           longDesc: 'Specify the reason for refunding the order (required for refunded status)',
         },
         sendOrderFulfilledEmail: {
-          displayName: 'Send Order Fulfilled Email',
+          displayName: 'Send order fulfilled email',
           shortDesc: 'Send fulfillment notification email',
           longDesc: 'Whether to send an order fulfilled email to the customer',
         },
@@ -317,7 +317,7 @@ const WebflowAppEn = {
     },
     publish_item: {
       groups: ['Collections'],
-      displayName: 'Publish Item',
+      displayName: 'Publish item',
       shortDesc: 'Publish items from a Webflow collection',
       longDesc:
         'Publish one or more items from a Webflow collection to make them live on the website.',
@@ -341,7 +341,7 @@ const WebflowAppEn = {
     },
     publish_site: {
       groups: ['Sites'],
-      displayName: 'Publish Site',
+      displayName: 'Publish site',
       shortDesc: 'Publish a Webflow site',
       longDesc:
         'Publish a Webflow site to make all changes live. You can specify custom domains and whether to publish to the Webflow subdomain.',
@@ -352,12 +352,12 @@ const WebflowAppEn = {
           longDesc: 'Select the Webflow site you want to publish',
         },
         customDomains: {
-          displayName: 'Custom Domains',
+          displayName: 'Custom domains',
           shortDesc: 'Custom domains to publish to',
           longDesc: 'Specify custom domains to publish the site to (optional)',
         },
         publishToWebflowSubdomain: {
-          displayName: 'Publish to Webflow Subdomain',
+          displayName: 'Publish to Webflow subdomain',
           shortDesc: 'Whether to publish to Webflow subdomain',
           longDesc: 'Whether to publish the site to its Webflow subdomain',
         },
@@ -365,7 +365,7 @@ const WebflowAppEn = {
     },
     update_item: {
       groups: ['Collections'],
-      displayName: 'Update Item',
+      displayName: 'Update item',
       shortDesc: 'Update an existing item in a Webflow collection',
       longDesc: 'Update the field data and settings of an existing item in a Webflow collection.',
       options: {
@@ -385,17 +385,17 @@ const WebflowAppEn = {
           longDesc: 'Select the Webflow collection that contains the item you want to update',
         },
         isArchived: {
-          displayName: 'Is Archived',
+          displayName: 'Is archived',
           shortDesc: 'Whether the item should be archived',
           longDesc: 'Set to true to archive the item, false to unarchive it',
         },
         isDraft: {
-          displayName: 'Is Draft',
+          displayName: 'Is draft',
           shortDesc: 'Whether the item should be a draft',
           longDesc: 'Set to true to save the item as a draft, false to make it live',
         },
         cmsLocaleId: {
-          displayName: 'CMS Locale ID',
+          displayName: 'CMS locale ID',
           shortDesc: 'The locale ID for the item',
           longDesc: 'Specify the CMS locale ID if working with a multi-locale site',
         },
@@ -404,7 +404,7 @@ const WebflowAppEn = {
   },
   triggers: {
     new_item: {
-      displayName: 'New Item',
+      displayName: 'New item',
       shortDesc: 'Triggered when a new item is created in a collection',
       longDesc:
         'This trigger fires whenever a new item is created in any collection within the specified Webflow site. It provides detailed information about the newly created item including its field data.',
@@ -418,7 +418,7 @@ const WebflowAppEn = {
       },
     },
     new_order: {
-      displayName: 'New Order',
+      displayName: 'New order',
       shortDesc: 'Triggered when a new order is placed',
       longDesc:
         'This trigger fires whenever a new order is placed on the specified Webflow site. It provides comprehensive order information including customer details, purchased items, payment information, and shipping details.',
@@ -431,7 +431,7 @@ const WebflowAppEn = {
       },
     },
     updated_item: {
-      displayName: 'Updated Item',
+      displayName: 'Updated item',
       shortDesc: 'Triggered when an item is updated in a collection',
       longDesc:
         'This trigger fires whenever an existing item is modified in any collection within the specified Webflow site. It provides information about the updated item including its current field data.',
@@ -444,7 +444,7 @@ const WebflowAppEn = {
       },
     },
     updated_order: {
-      displayName: 'Updated Order',
+      displayName: 'Updated order',
       shortDesc: 'Triggered when an order status is updated',
       longDesc:
         'This trigger fires whenever an existing order is modified on the specified Webflow site. This includes status changes, fulfillment updates, refunds, and other order modifications.',

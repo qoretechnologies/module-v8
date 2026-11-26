@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **OpenWeatherMap** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.display_name": {
-          "source": "Get Current Weather",
-          "message": "Get Current Weather"
+          "source": "Get current weather",
+          "message": "Get current weather"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.short_desc": {
           "source": "Retrieve current weather data for a specific location",
@@ -352,8 +352,8 @@
           "message": "Get real-time weather information including temperature, humidity, wind speed, pressure, visibility, and weather conditions for any location worldwide. Supports lookup by city name, geographic coordinates, or zip/postal code."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
-          "message": "Location Type"
+          "source": "Location type",
+          "message": "Location type"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.short_desc": {
           "source": "How to specify the location",
@@ -412,8 +412,8 @@
           "message": "Optional two-letter language code for weather condition descriptions (e.g., \"en\" for English, \"es\" for Spanish, \"fr\" for French, \"de\" for German)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.display_name": {
-          "source": "Get Weather Forecast",
-          "message": "Get Weather Forecast"
+          "source": "Get weather forecast",
+          "message": "Get weather forecast"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.short_desc": {
           "source": "Retrieve 5-day weather forecast with 3-hour intervals",
@@ -424,8 +424,8 @@
           "message": "Get a 5-day weather forecast with data points every 3 hours for any location worldwide. Each forecast item includes temperature, humidity, wind, precipitation probability, and weather conditions. Supports lookup by city name, geographic coordinates, or zip/postal code."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
-          "message": "Location Type"
+          "source": "Location type",
+          "message": "Location type"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.short_desc": {
           "source": "How to specify the location",
@@ -496,8 +496,8 @@
           "message": "Limit the number of 3-hour forecast items returned. Each day has up to 8 data points (every 3 hours). Maximum is 40 (5 days x 8 intervals)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.display_name": {
-          "source": "Temperature Threshold",
-          "message": "Temperature Threshold"
+          "source": "Temperature threshold",
+          "message": "Temperature threshold"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.short_desc": {
           "source": "Trigger when temperature crosses a threshold",
@@ -508,8 +508,8 @@
           "message": "Monitor the temperature at a specific location and trigger when it crosses above or below a configured threshold value. Useful for temperature alerts, HVAC automation, and weather-dependent workflows."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
-          "message": "Location Type"
+          "source": "Location type",
+          "message": "Location type"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.short_desc": {
           "source": "How to specify the location",
@@ -556,8 +556,8 @@
           "message": "Standard (Kelvin, m/s)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.display_name": {
-          "source": "Threshold Type",
-          "message": "Threshold Type"
+          "source": "Threshold type",
+          "message": "Threshold type"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.short_desc": {
           "source": "Direction of temperature crossing",
@@ -576,8 +576,8 @@
           "message": "Goes Below"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.display_name": {
-          "source": "Threshold Value",
-          "message": "Threshold Value"
+          "source": "Threshold value",
+          "message": "Threshold value"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.short_desc": {
           "source": "Temperature threshold to monitor",
@@ -588,8 +588,8 @@
           "message": "Set the temperature value that will trigger the event when crossed. Use the same units as selected in the Units option (e.g., 0 for freezing point in Celsius, 32 in Fahrenheit)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.display_name": {
-          "source": "Weather Condition Change",
-          "message": "Weather Condition Change"
+          "source": "Weather condition change",
+          "message": "Weather condition change"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.short_desc": {
           "source": "Trigger when weather conditions change",
@@ -600,8 +600,8 @@
           "message": "Monitor the weather conditions at a specific location and trigger when conditions change (e.g., from Clear to Rain, Clouds to Snow). Optionally filter for specific condition types."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
-          "message": "Location Type"
+          "source": "Location type",
+          "message": "Location type"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.short_desc": {
           "source": "How to specify the location",
@@ -648,8 +648,8 @@
           "message": "Standard (Kelvin, m/s)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.display_name": {
-          "source": "Condition Filter",
-          "message": "Condition Filter"
+          "source": "Condition filter",
+          "message": "Condition filter"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.short_desc": {
           "source": "Filter for specific weather conditions",

@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して **Slack** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL に対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、およびレスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.display_name": {
-          "source": "Add Reaction",
+          "source": "Add reaction",
           "message": "リアクションを追加"
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "メッセージが存在するチャンネルを選択します。"
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "メッセージのタイムスタンプ"
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.short_desc": {
@@ -388,7 +388,7 @@
           "message": "コロンを含まない絵文字名（例: 「thumbsup」、「fire」、「smile」）。"
         },
         "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.display_name": {
-          "source": "Archive Channel",
+          "source": "Archive channel",
           "message": "チャンネルをアーカイブ"
         },
         "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.short_desc": {
@@ -412,7 +412,7 @@
           "message": "アーカイブするチャンネルを選択します。"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.display_name": {
-          "source": "Create Channel",
+          "source": "Create channel",
           "message": "チャンネルを作成"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Slack ワークスペース内に新しいパブリックまたはプライベートチャンネルを作成します。"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "チャンネル名"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "新しいチャンネルの名前。一意であり、Slack の命名規則（小文字、スペースなし）に従う必要があります。"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.display_name": {
-          "source": "Private Channel",
+          "source": "Private channel",
           "message": "プライベートチャンネル"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "有効にすると、パブリックチャンネルの代わりにプライベートチャンネルを作成します。"
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete Message",
+          "source": "Delete message",
           "message": "メッセージの削除"
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -472,7 +472,7 @@
           "message": "メッセージが投稿されたチャンネルを選択します。"
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "メッセージのタイムスタンプ"
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
@@ -484,7 +484,7 @@
           "message": "削除したいメッセージのタイムスタンプ（ts）。Slackメッセージのリンクを貼り付けることもできます。"
         },
         "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.display_name": {
-          "source": "Find User by Email",
+          "source": "Find user by email",
           "message": "メールアドレスでユーザーを検索"
         },
         "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.short_desc": {
@@ -508,7 +508,7 @@
           "message": "検索したいユーザーのメールアドレス。"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.display_name": {
-          "source": "Get Channel History",
+          "source": "Get channel history",
           "message": "チャンネル履歴を取得"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "メッセージを取得するチャンネルを選択します。"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.display_name": {
-          "source": "Oldest Timestamp",
+          "source": "Oldest timestamp",
           "message": "最古のタイムスタンプ"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Unix タイムスタンプ。この時間以降のメッセージのみが含まれます。"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.display_name": {
-          "source": "Latest Timestamp",
+          "source": "Latest timestamp",
           "message": "最新のタイムスタンプ"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.short_desc": {
@@ -568,7 +568,7 @@
           "message": "結果に最古または最新のタイムスタンプを持つメッセージを含めます。"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.display_name": {
-          "source": "Include All Metadata",
+          "source": "Include all metadata",
           "message": "すべてのメタデータを含める"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.short_desc": {
@@ -592,7 +592,7 @@
           "message": "取得するメッセージの最大数。デフォルトは200です。"
         },
         "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.display_name": {
-          "source": "Get User Info",
+          "source": "Get user info",
           "message": "ユーザー情報を取得"
         },
         "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.short_desc": {
@@ -616,7 +616,7 @@
           "message": "情報を取得したいユーザーを選択します。"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.display_name": {
-          "source": "List Channels",
+          "source": "List channels",
           "message": "チャンネル一覧"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Slack ワークスペース内のチャンネル一覧を取得します。チャンネルタイプやアーカイブされたチャンネルを含めるかどうかでフィルタリングできます。"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.display_name": {
-          "source": "Channel Types",
+          "source": "Channel types",
           "message": "チャンネルタイプ"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.short_desc": {
@@ -640,7 +640,7 @@
           "message": "カンマ区切りのチャンネルタイプのリスト。選択肢: public_channel, private_channel, mpim, im。デフォルトは public_channel,private_channel です。"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.display_name": {
-          "source": "Exclude Archived",
+          "source": "Exclude archived",
           "message": "アーカイブ済みを除外"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.short_desc": {
@@ -664,7 +664,7 @@
           "message": "取得するチャンネルの最大数。デフォルトは200です。"
         },
         "app.U2xhY2s.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "ユーザー一覧"
         },
         "app.U2xhY2s.action.bGlzdF91c2Vycw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "取得するユーザーの最大数。デフォルトは200です。"
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.display_name": {
-          "source": "Pin Message",
+          "source": "Pin message",
           "message": "メッセージをピン留め"
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.short_desc": {
@@ -712,7 +712,7 @@
           "message": "メッセージが存在するチャンネルを選択します。"
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "メッセージのタイムスタンプ"
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
@@ -724,7 +724,7 @@
           "message": "ピン留めするメッセージのタイムスタンプ (ts)。Slackメッセージリンクを貼り付けることもできます。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.display_name": {
-          "source": "Send Action Message to User",
+          "source": "Send action message to user",
           "message": "ユーザーにアクションメッセージを送信"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.short_desc": {
@@ -748,7 +748,7 @@
           "message": "アクションメッセージを受信するユーザーを選択します。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "メッセージテキスト"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "アクションボタンの上に表示されるテキストコンテンツ。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.display_name": {
-          "source": "Action Buttons",
+          "source": "Action buttons",
           "message": "アクションボタン"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "タイトルとURLでアクションボタンを定義します。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.field.dGl0bGU.display_name": {
-          "source": "Button Title",
+          "source": "Button title",
           "message": "ボタンタイトル"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.field.dGl0bGU.short_desc": {
@@ -796,7 +796,7 @@
           "message": "ボタンをクリックしたときに開かれるURL"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "ボットのユーザー名"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.short_desc": {
@@ -820,7 +820,7 @@
           "message": "デフォルトのボットアイコンを上書きします。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.display_name": {
-          "source": "Send Action Message to Channel",
+          "source": "Send action message to channel",
           "message": "チャンネルにアクションメッセージを送信"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.short_desc": {
@@ -844,7 +844,7 @@
           "message": "アクションメッセージを投稿するチャンネルを選択します。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "メッセージテキスト"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.short_desc": {
@@ -856,7 +856,7 @@
           "message": "アクションボタンの上に表示されるテキストコンテンツ。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.display_name": {
-          "source": "Action Buttons",
+          "source": "Action buttons",
           "message": "アクションボタン"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "タイトルとURLでアクションボタンを定義します。各ボタンをクリックすると特定のURLにリンクします。"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.field.dGl0bGU.display_name": {
-          "source": "Button Title",
+          "source": "Button title",
           "message": "ボタンタイトル"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.field.dGl0bGU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "ボタンをクリックしたときに開かれるURL"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "ボットのユーザー名"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
@@ -916,7 +916,7 @@
           "message": "デフォルトのボットアイコンを上書きします。"
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.display_name": {
-          "source": "Search Messages",
+          "source": "Search messages",
           "message": "メッセージの検索"
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Slack ワークスペース全体でクエリに一致するメッセージを検索します。ユーザートークン認証が必要です。"
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.short_desc": {
@@ -952,7 +952,7 @@
           "message": "1 ページあたりに返す結果の数。デフォルトは 100 です。"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.display_name": {
-          "source": "Send Direct Message",
+          "source": "Send direct message",
           "message": "ダイレクトメッセージの送信"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "ダイレクトメッセージを受信するユーザーを選択します。"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "メッセージテキスト"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.short_desc": {
@@ -988,7 +988,7 @@
           "message": "ダイレクトメッセージのメインテキストコンテンツ。"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "ボットのユーザー名"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "リッチでインタラクティブなコンテンツ用の Block Kit ブロックを追加します。"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.display_name": {
-          "source": "Send Message to Channel",
+          "source": "Send message to channel",
           "message": "チャンネルにメッセージを送信"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "メッセージを投稿するチャンネルを選択します。ボットがチャンネルのメンバーであることを確認してください。"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "メッセージテキスト"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "メッセージのメインテキストコンテンツ。Slackマークダウン形式をサポートしています。"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "ボットのユーザー名"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "デフォルトのボットアイコンをカスタム画像URLで上書きします。"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.display_name": {
-          "source": "Thread Timestamp",
+          "source": "Thread timestamp",
           "message": "スレッドのタイムスタンプ"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "リッチでインタラクティブなコンテンツのためにBlock Kitブロックを追加します。仕様については https://api.slack.com/block-kit を参照してください。"
         },
         "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.display_name": {
-          "source": "Unarchive Channel",
+          "source": "Unarchive channel",
           "message": "チャンネルのアーカイブを解除"
         },
         "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "アーカイブ解除するアーカイブ済みチャンネルを選択します。"
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.display_name": {
-          "source": "Unpin Message",
+          "source": "Unpin message",
           "message": "メッセージのピン留めを解除"
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "ピン留めされたメッセージのあるチャンネルを選択します。"
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "メッセージのタイムスタンプ"
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "ピン留めを解除するメッセージのタイムスタンプ (ts)。Slack メッセージリンクを貼り付けることもできます。"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.display_name": {
-          "source": "Update Message",
+          "source": "Update message",
           "message": "メッセージを更新"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "メッセージが投稿されたチャンネルを選択します。"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "メッセージのタイムスタンプ"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "更新するメッセージのタイムスタンプ (ts)。Slack メッセージリンクを貼り付けることもできます。"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "New Text",
+          "source": "New text",
           "message": "新しいテキスト"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "メッセージの新しい Block Kit ブロック。"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.display_name": {
-          "source": "Update Profile",
+          "source": "Update profile",
           "message": "プロファイルを更新"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "名前や役職などの基本プロファイルフィールドを更新します。ユーザー トークン認証が必要です。"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "プロフィールに設定する名。"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.short_desc": {
@@ -1288,7 +1288,7 @@
           "message": "更新するユーザーのID。有料チームの管理者のみが他のユーザーを更新できます。"
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
+          "source": "Upload file",
           "message": "ファイルをアップロード"
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "アップロード時に使用するファイル名。"
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.display_name": {
-          "source": "Initial Comment",
+          "source": "Initial comment",
           "message": "最初のコメント"
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "ファイルを共有する際に追加するオプションのコメント。"
         },
         "app.U2xhY2s.action.YXBwX21lbnRpb24.display_name": {
-          "source": "App Mention",
+          "source": "App mention",
           "message": "アプリメンション"
         },
         "app.U2xhY2s.action.YXBwX21lbnRpb24.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "ボットのメンションを監視するチャンネルを選択します。ボットがそのチャンネルのメンバーであることを確認してください。"
         },
         "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.display_name": {
-          "source": "Channel Created",
+          "source": "Channel created",
           "message": "チャンネルが作成されました"
         },
         "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "このトリガーは、ワークスペースで新しいパブリックまたはプライベートチャンネルが作成されるたびに実行されます。"
         },
         "app.U2xhY2s.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "新しいメッセージ"
         },
         "app.U2xhY2s.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -1528,7 +1528,7 @@
           "message": "新しいメッセージを監視するチャンネルを選択します。ボットがチャンネルのメンバーであることを確認してください。"
         },
         "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.display_name": {
-          "source": "New Reaction",
+          "source": "New reaction",
           "message": "新しいリアクション"
         },
         "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.short_desc": {

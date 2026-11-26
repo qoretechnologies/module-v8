@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Asana** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QXNhbmE.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.QXNhbmE.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Asana\"",
@@ -1720,8 +1720,8 @@
           "message": "A specific, existing workspace can be updated by making a PUT request on the URL for that workspace. Only the fields provided in the data block will be updated; any unspecified fields will remain unchanged.\nCurrently the only field that can be modified for a workspace is its name.\nReturns the complete, updated workspace record."
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
-          "source": "Attachment Added",
-          "message": "Attachment Added"
+          "source": "Attachment added",
+          "message": "Attachment added"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
           "source": "Triggers when an attachment is uploaded to a task",
@@ -1756,8 +1756,8 @@
           "message": "The unique identifier of the project where attachment activities will be monitored"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
-          "source": "Task ID (Optional)",
-          "message": "Task ID (Optional)"
+          "source": "Task ID (optional)",
+          "message": "Task ID (optional)"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
           "source": "Specific task to monitor for attachments",
@@ -1768,8 +1768,8 @@
           "message": "The unique identifier of a specific task to monitor. If not provided, attachments from all tasks in the project will trigger the workflow"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Subtask Completed",
-          "message": "Subtask Completed"
+          "source": "Subtask completed",
+          "message": "Subtask completed"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
           "source": "Triggers when a subtask is marked complete",
@@ -1804,8 +1804,8 @@
           "message": "The unique identifier of the project where the parent task exists"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
-          "message": "Parent Task ID"
+          "source": "Parent task ID",
+          "message": "Parent task ID"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
           "source": "The parent task containing the subtasks",
@@ -1816,8 +1816,8 @@
           "message": "The unique identifier of the parent task whose subtasks will be monitored for completion"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Task Completed",
-          "message": "Task Completed"
+          "source": "Task completed",
+          "message": "Task completed"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
           "source": "Triggers when a task is marked complete in a specific project",
@@ -1852,8 +1852,8 @@
           "message": "The unique identifier of the project where task completions will be monitored"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
-          "source": "Project Task Added",
-          "message": "Project Task Added"
+          "source": "Project task added",
+          "message": "Project task added"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
           "source": "Triggers when a new task is created in a project",
@@ -1888,8 +1888,8 @@
           "message": "The unique identifier of the project where new task creation will be monitored"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
-          "source": "Project Added",
-          "message": "Project Added"
+          "source": "Project added",
+          "message": "Project added"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
           "source": "Triggers when a new project is created in a workspace",
@@ -1912,8 +1912,8 @@
           "message": "The unique identifier of the workspace where new project creation will be monitored"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
-          "source": "Task Comment Added",
-          "message": "Task Comment Added"
+          "source": "Task comment added",
+          "message": "Task comment added"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
           "source": "Triggers when a comment is added to a specific task",
@@ -1960,8 +1960,8 @@
           "message": "The unique identifier of the task where comments will be monitored"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
-          "source": "Task Story Added",
-          "message": "Task Story Added"
+          "source": "Task story added",
+          "message": "Task story added"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
           "source": "Triggers when any activity occurs on a task",
@@ -2008,8 +2008,8 @@
           "message": "The unique identifier of the task where all activity will be monitored"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
-          "source": "Task Subtask Added",
-          "message": "Task Subtask Added"
+          "source": "Task subtask added",
+          "message": "Task subtask added"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
           "source": "Triggers when a subtask is created under a parent task",
@@ -2044,8 +2044,8 @@
           "message": "The unique identifier of the project where the parent task exists"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
-          "message": "Parent Task ID"
+          "source": "Parent task ID",
+          "message": "Parent task ID"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
           "source": "The parent task to monitor for new subtasks",
@@ -2056,8 +2056,8 @@
           "message": "The unique identifier of the parent task where subtask creation will be monitored"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
-          "source": "Task Tag Added",
-          "message": "Task Tag Added"
+          "source": "Task tag added",
+          "message": "Task tag added"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
           "source": "Triggers when a tag is applied to a task",
@@ -2104,8 +2104,8 @@
           "message": "The unique identifier of the task where tag additions will be monitored"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
-          "source": "Team Added",
-          "message": "Team Added"
+          "source": "Team added",
+          "message": "Team added"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
           "source": "Triggers when a new team is created in a workspace",
@@ -2128,8 +2128,8 @@
           "message": "The unique identifier of the workspace where new team creation will be monitored"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
-          "source": "User Added",
-          "message": "User Added"
+          "source": "User added",
+          "message": "User added"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
           "source": "Triggers when a user joins a workspace",
@@ -2152,8 +2152,8 @@
           "message": "The unique identifier of the workspace where new user additions will be monitored"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
-          "source": "Tag Created",
-          "message": "Tag Created"
+          "source": "Tag created",
+          "message": "Tag created"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
           "source": "Triggers when a new tag is created in a workspace",
@@ -2176,8 +2176,8 @@
           "message": "The unique identifier of the workspace where new tag creation will be monitored"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
-          "source": "Task Moved to Section",
-          "message": "Task Moved to Section"
+          "source": "Task moved to section",
+          "message": "Task moved to section"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {
           "source": "Triggers when a task is moved to a different section",

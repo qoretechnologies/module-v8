@@ -8,7 +8,7 @@ const ActiveDirectoryEn = {
 
   triggers: {
     new_user: {
-      displayName: 'New User',
+      displayName: 'New user',
       shortDesc: 'Triggers when a new user is created in Active Directory',
       longDesc:
         'Monitor Active Directory for newly created users. This trigger can be filtered by specific criteria such as user attributes, group membership, or organizational units to detect relevant user additions.',
@@ -20,7 +20,7 @@ const ActiveDirectoryEn = {
             'Optional group identifier to monitor for new user additions. When specified, the trigger will only fire for users added to this particular group.',
         },
         filter: {
-          displayName: 'Filter Criteria',
+          displayName: 'Filter criteria',
           shortDesc: 'Filter conditions for user monitoring',
           longDesc:
             'Optional filter criteria to specify which users should trigger the event. Configure field, operator, and value to match specific user attributes.',
@@ -50,13 +50,13 @@ const ActiveDirectoryEn = {
       },
     },
     new_group: {
-      displayName: 'New Group',
+      displayName: 'New group',
       shortDesc: 'Triggers when a new group is created in Active Directory',
       longDesc:
         'Monitor Active Directory for newly created groups. This trigger can be filtered by specific criteria such as group type, visibility, or naming patterns to detect relevant group additions.',
       options: {
         filter: {
-          displayName: 'Filter Criteria',
+          displayName: 'Filter criteria',
           shortDesc: 'Filter conditions for group monitoring',
           longDesc:
             'Optional filter criteria to specify which groups should trigger the event. Configure field, operator, and value to match specific group attributes.',
@@ -89,37 +89,37 @@ const ActiveDirectoryEn = {
 
   actions: {
     create_user: {
-      displayName: 'Create User',
+      displayName: 'Create user',
       shortDesc: 'Create a new user in Active Directory',
       longDesc:
         'Create a new user account in Active Directory with comprehensive profile information, security settings, and organizational details. Supports setting passwords, contact information, and location data.',
       options: {
         displayName: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'Full name of the user',
           longDesc:
             'The full display name of the user as it will appear in Active Directory and throughout Microsoft services.',
         },
         givenName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "User's first name",
           longDesc:
             'The given name (first name) of the user for profile completion and directory organization.',
         },
         surname: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "User's last name",
           longDesc:
             'The surname (last name) of the user for profile completion and directory organization.',
         },
         mailNickname: {
-          displayName: 'Mail Nickname',
+          displayName: 'Mail nickname',
           shortDesc: 'Email alias for the user',
           longDesc:
             "The mail nickname that will be used as part of the user's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
         },
         userPrincipalName: {
-          displayName: 'User Principal Name',
+          displayName: 'User principal name',
           shortDesc: 'Primary login identifier',
           longDesc:
             'The user principal name (UPN) that serves as the primary login identifier. Must be in email format (user@domain.com).',
@@ -131,19 +131,19 @@ const ActiveDirectoryEn = {
             "The initial password for the user account. Must meet your organization's password complexity requirements and be at least 8 characters long.",
         },
         forceChangePasswordNextSignIn: {
-          displayName: 'Force Password Change',
+          displayName: 'Force password change',
           shortDesc: 'Require password change on first login',
           longDesc:
             'When enabled, the user will be required to change their password on their first sign-in to the account.',
         },
         forceChangePasswordNextSignInWithMfa: {
-          displayName: 'Force Password Change with MFA',
+          displayName: 'Force password change with MFA',
           shortDesc: 'Require password change with multi-factor authentication',
           longDesc:
             'When enabled, the user will be required to change their password with multi-factor authentication on their first sign-in.',
         },
         jobTitle: {
-          displayName: 'Job Title',
+          displayName: 'Job title',
           shortDesc: "User's job title",
           longDesc:
             'The job title or position of the user within the organization for directory and contact information.',
@@ -155,19 +155,19 @@ const ActiveDirectoryEn = {
             'The department or organizational unit the user belongs to within the company structure.',
         },
         mobilePhone: {
-          displayName: 'Mobile Phone',
+          displayName: 'Mobile phone',
           shortDesc: "User's mobile phone number",
           longDesc:
             'The mobile phone number for the user, used for contact information and potential multi-factor authentication.',
         },
         mail: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: 'Primary email address',
           longDesc:
             'The primary email address for the user. If not specified, it may be automatically generated based on the user principal name.',
         },
         streetAddress: {
-          displayName: 'Street Address',
+          displayName: 'Street address',
           shortDesc: 'Physical street address',
           longDesc:
             "The street address component of the user's physical location for contact and organizational purposes.",
@@ -178,13 +178,13 @@ const ActiveDirectoryEn = {
           longDesc: 'The city where the user is located for contact and organizational purposes.',
         },
         state: {
-          displayName: 'State/Province',
+          displayName: 'State/province',
           shortDesc: 'State or province',
           longDesc:
             'The state or province where the user is located for contact and organizational purposes.',
         },
         postalCode: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'ZIP or postal code',
           longDesc: "The postal code or ZIP code for the user's location.",
         },
@@ -195,13 +195,13 @@ const ActiveDirectoryEn = {
             'The country where the user is located for contact and organizational purposes.',
         },
         accountEnabled: {
-          displayName: 'Account Enabled',
+          displayName: 'Account enabled',
           shortDesc: 'Enable the user account',
           longDesc:
             'Whether the user account should be enabled and able to sign in. When disabled, the user cannot access any services.',
         },
         usageLocation: {
-          displayName: 'Usage Location',
+          displayName: 'Usage location',
           shortDesc: 'Country code for license assignment',
           longDesc:
             "The two-letter country code (ISO 3166-1 alpha-2) that represents the user's usage location. Required for license assignment in some regions.",
@@ -209,7 +209,7 @@ const ActiveDirectoryEn = {
       },
     },
     update_user: {
-      displayName: 'Update User',
+      displayName: 'Update user',
       shortDesc: 'Update an existing user in Active Directory',
       longDesc:
         'Modify properties of an existing user account in Active Directory. Update profile information, contact details, organizational data, and account settings.',
@@ -221,29 +221,29 @@ const ActiveDirectoryEn = {
             'The unique identifier of the user account to be updated. Select from existing users in your directory.',
         },
         displayName: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'Updated full name',
           longDesc:
             'The updated full display name of the user as it will appear in Active Directory and throughout Microsoft services.',
         },
         givenName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'Updated first name',
           longDesc: 'The updated given name (first name) of the user.',
         },
         surname: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'Updated last name',
           longDesc: 'The updated surname (last name) of the user.',
         },
         mailNickname: {
-          displayName: 'Mail Nickname',
+          displayName: 'Mail nickname',
           shortDesc: 'Updated email alias',
           longDesc:
             'The updated mail nickname for the user. Must contain only letters, numbers, periods, hyphens, and underscores.',
         },
         jobTitle: {
-          displayName: 'Job Title',
+          displayName: 'Job title',
           shortDesc: 'Updated job title',
           longDesc: 'The updated job title or position of the user within the organization.',
         },
@@ -253,17 +253,17 @@ const ActiveDirectoryEn = {
           longDesc: 'The updated department or organizational unit the user belongs to.',
         },
         mobilePhone: {
-          displayName: 'Mobile Phone',
+          displayName: 'Mobile phone',
           shortDesc: 'Updated mobile phone number',
           longDesc: 'The updated mobile phone number for the user.',
         },
         mail: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: 'Updated email address',
           longDesc: 'The updated primary email address for the user.',
         },
         streetAddress: {
-          displayName: 'Street Address',
+          displayName: 'Street address',
           shortDesc: 'Updated street address',
           longDesc: "The updated street address component of the user's physical location.",
         },
@@ -273,12 +273,12 @@ const ActiveDirectoryEn = {
           longDesc: 'The updated city where the user is located.',
         },
         state: {
-          displayName: 'State/Province',
+          displayName: 'State/province',
           shortDesc: 'Updated state or province',
           longDesc: 'The updated state or province where the user is located.',
         },
         postalCode: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'Updated postal code',
           longDesc: "The updated postal code or ZIP code for the user's location.",
         },
@@ -288,13 +288,13 @@ const ActiveDirectoryEn = {
           longDesc: 'The updated country where the user is located.',
         },
         accountEnabled: {
-          displayName: 'Account Enabled',
+          displayName: 'Account enabled',
           shortDesc: 'Enable or disable the account',
           longDesc:
             'Whether the user account should be enabled or disabled. Disabled accounts cannot sign in to any services.',
         },
         usageLocation: {
-          displayName: 'Usage Location',
+          displayName: 'Usage location',
           shortDesc: 'Updated usage location',
           longDesc:
             "The updated two-letter country code representing the user's usage location for license assignment purposes.",
@@ -302,7 +302,7 @@ const ActiveDirectoryEn = {
       },
     },
     get_user: {
-      displayName: 'Get User',
+      displayName: 'Get user',
       shortDesc: 'Retrieve user information from Active Directory',
       longDesc:
         'Fetch detailed information about a specific user from Active Directory, including profile data, contact information, and account status.',
@@ -316,7 +316,7 @@ const ActiveDirectoryEn = {
       },
     },
     delete_user: {
-      displayName: 'Delete User',
+      displayName: 'Delete user',
       shortDesc: 'Delete a user from Active Directory',
       longDesc:
         'Permanently remove a user account from Active Directory. This action cannot be undone and will remove all associated data and access permissions.',
@@ -330,7 +330,7 @@ const ActiveDirectoryEn = {
       },
     },
     disable_user: {
-      displayName: 'Disable User',
+      displayName: 'Disable user',
       shortDesc: 'Disable a user account in Active Directory',
       longDesc:
         'Disable a user account to prevent sign-in while preserving the account and its data. The user will be unable to access any services until the account is re-enabled.',
@@ -344,7 +344,7 @@ const ActiveDirectoryEn = {
       },
     },
     list_users: {
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'Retrieve a list of users from Active Directory',
       longDesc:
         'Get a paginated list of users from Active Directory with optional filtering and group membership criteria. Useful for reporting and bulk operations.',
@@ -356,7 +356,7 @@ const ActiveDirectoryEn = {
             'The maximum number of users to return in a single request. Default is 20, with pagination available for larger result sets.',
         },
         next_page_token: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'The pagination token to retrieve the next page of results. Obtained from previous list operations.',
@@ -368,7 +368,7 @@ const ActiveDirectoryEn = {
             'Optional group identifier to filter users who are members of a specific group. When specified, only users belonging to this group will be returned.',
         },
         filter: {
-          displayName: 'Filter Criteria',
+          displayName: 'Filter criteria',
           shortDesc: 'Additional filter conditions',
           longDesc:
             'Optional filter criteria to narrow down the user list based on specific attributes and conditions.',
@@ -396,13 +396,13 @@ const ActiveDirectoryEn = {
       },
     },
     create_group: {
-      displayName: 'Create Group',
+      displayName: 'Create group',
       shortDesc: 'Create a new group in Active Directory',
       longDesc:
         'Create a new group in Active Directory with specified properties, type, and security settings. Supports both security groups and Microsoft 365 groups.',
       options: {
         displayName: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'Name of the group',
           longDesc:
             'The display name of the group as it will appear in Active Directory and throughout Microsoft services.',
@@ -413,31 +413,31 @@ const ActiveDirectoryEn = {
           longDesc: 'Optional description explaining the purpose and scope of the group.',
         },
         groupTypes: {
-          displayName: 'Group Types',
+          displayName: 'Group types',
           shortDesc: 'Type characteristics of the group',
           longDesc:
             'Optional array specifying special characteristics of the group, such as Unified (Microsoft 365) or DynamicMembership.',
         },
         mailEnabled: {
-          displayName: 'Mail Enabled',
+          displayName: 'Mail enabled',
           shortDesc: 'Enable email functionality',
           longDesc:
             'Whether the group should be mail-enabled, allowing it to receive and send emails.',
         },
         mailNickname: {
-          displayName: 'Mail Nickname',
+          displayName: 'Mail nickname',
           shortDesc: 'Email alias for the group',
           longDesc:
             "The mail nickname used for the group's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
         },
         securityEnabled: {
-          displayName: 'Security Enabled',
+          displayName: 'Security enabled',
           shortDesc: 'Enable security functionality',
           longDesc:
             'Whether the group should be security-enabled, allowing it to be assigned permissions and used for access control.',
         },
         isAssignableToRole: {
-          displayName: 'Assignable to Role',
+          displayName: 'Assignable to role',
           shortDesc: 'Allow role assignment',
           longDesc:
             'Whether the group can be assigned to Azure AD roles. This setting cannot be changed after group creation.',
@@ -451,7 +451,7 @@ const ActiveDirectoryEn = {
       },
     },
     update_group: {
-      displayName: 'Update Group',
+      displayName: 'Update group',
       shortDesc: 'Update an existing group in Active Directory',
       longDesc:
         'Modify properties of an existing group in Active Directory, including display name, description, visibility, and other configurable settings.',
@@ -463,7 +463,7 @@ const ActiveDirectoryEn = {
             'The unique identifier of the group to be updated. Select from existing groups in your directory.',
         },
         displayName: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'Updated group name',
           longDesc: 'The updated display name of the group as it will appear in Active Directory.',
         },
@@ -473,7 +473,7 @@ const ActiveDirectoryEn = {
           longDesc: 'The updated description explaining the purpose and scope of the group.',
         },
         mailNickname: {
-          displayName: 'Mail Nickname',
+          displayName: 'Mail nickname',
           shortDesc: 'Updated email alias',
           longDesc:
             'The updated mail nickname for the group. Must contain only letters, numbers, periods, hyphens, and underscores.',
@@ -485,35 +485,35 @@ const ActiveDirectoryEn = {
             'The updated visibility setting controlling who can see the group and its content.',
         },
         preferredLanguage: {
-          displayName: 'Preferred Language',
+          displayName: 'Preferred language',
           shortDesc: "Group's preferred language",
           longDesc: "The preferred language for the group's communications and interface.",
         },
         allowExternalSenders: {
-          displayName: 'Allow External Senders',
+          displayName: 'Allow external senders',
           shortDesc: 'Allow external email senders',
           longDesc: 'Whether people external to the organization can send messages to the group.',
         },
         autoSubscribeNewMembers: {
-          displayName: 'Auto-Subscribe New Members',
+          displayName: 'Auto-subscribe new members',
           shortDesc: 'Automatically subscribe new members',
           longDesc:
             'Whether new members should be automatically subscribed to receive email notifications from the group.',
         },
         hideFromAddressLists: {
-          displayName: 'Hide from Address Lists',
+          displayName: 'Hide from address lists',
           shortDesc: 'Hide group from address lists',
           longDesc: 'Whether to hide this group from address lists and directory browsing.',
         },
         hideFromOutlookClients: {
-          displayName: 'Hide from Outlook Clients',
+          displayName: 'Hide from Outlook clients',
           shortDesc: 'Hide group from Outlook clients',
           longDesc: 'Whether to hide this group from appearing in Outlook clients.',
         },
       },
     },
     get_group: {
-      displayName: 'Get Group',
+      displayName: 'Get group',
       shortDesc: 'Retrieve group information from Active Directory',
       longDesc:
         'Fetch detailed information about a specific group from Active Directory, including properties, settings, and configuration details.',
@@ -527,7 +527,7 @@ const ActiveDirectoryEn = {
       },
     },
     delete_group: {
-      displayName: 'Delete Group',
+      displayName: 'Delete group',
       shortDesc: 'Delete a group from Active Directory',
       longDesc:
         'Permanently remove a group from Active Directory. This action cannot be undone and will remove all group memberships and associated permissions.',
@@ -541,7 +541,7 @@ const ActiveDirectoryEn = {
       },
     },
     list_groups: {
-      displayName: 'List Groups',
+      displayName: 'List groups',
       shortDesc: 'Retrieve a list of groups from Active Directory',
       longDesc:
         'Get a paginated list of groups from Active Directory with optional filtering criteria. Useful for reporting and group management operations.',
@@ -553,13 +553,13 @@ const ActiveDirectoryEn = {
             'The maximum number of groups to return in a single request. Default is 20, with pagination available for larger result sets.',
         },
         next_page_token: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'The pagination token to retrieve the next page of results. Obtained from previous list operations.',
         },
         filter: {
-          displayName: 'Filter Criteria',
+          displayName: 'Filter criteria',
           shortDesc: 'Filter conditions for groups',
           longDesc:
             'Optional filter criteria to narrow down the group list based on specific attributes and conditions.',
@@ -587,7 +587,7 @@ const ActiveDirectoryEn = {
       },
     },
     add_user_to_group: {
-      displayName: 'Add User to Group',
+      displayName: 'Add user to group',
       shortDesc: 'Add a user to an Active Directory group',
       longDesc:
         'Add a user as a member of an existing group in Active Directory. This grants the user any permissions and access rights associated with the group.',
@@ -607,7 +607,7 @@ const ActiveDirectoryEn = {
       },
     },
     remove_user_from_group: {
-      displayName: 'Remove User from Group',
+      displayName: 'Remove user from group',
       shortDesc: 'Remove a user from an Active Directory group',
       longDesc:
         'Remove a user from membership in an existing group in Active Directory. This revokes any permissions and access rights the user had through this group.',

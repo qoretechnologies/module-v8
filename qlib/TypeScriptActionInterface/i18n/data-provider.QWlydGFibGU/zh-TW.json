@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Airtable** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n當端點尚未在此應用程式中公開為一級動作時，請使用此動作。"
         },
         "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.QWlydGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.QWlydGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "資料表名稱"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
+          "source": "List records",
           "message": "列出記錄"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "選擇回應中要包含哪些欄位。若未指定，將返回所有欄位"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.short_desc": {
@@ -2272,7 +2272,7 @@
           "message": "Pacific/Wallis"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.display_name": {
-          "source": "User Locale",
+          "source": "User locale",
           "message": "使用者地區設定"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.short_desc": {
@@ -2296,7 +2296,7 @@
           "message": "設定如何對返回的記錄進行排序"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "排序方向"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -2316,7 +2316,7 @@
           "message": "降序"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "排序欄位"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -2328,7 +2328,7 @@
           "message": "選擇用於排序記錄的欄位"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.display_name": {
-          "source": "Cell Format",
+          "source": "Cell format",
           "message": "儲存格格式"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "設定篩選條件以限制返回的記錄"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "過濾欄位"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -2372,7 +2372,7 @@
           "message": "選擇用於篩選記錄的欄位"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.Zm9ybXVsYQ.display_name": {
-          "source": "Filter Formula",
+          "source": "Filter formula",
           "message": "過濾公式"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.Zm9ybXVsYQ.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "用於篩選記錄的自訂 Airtable 公式"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dHlwZQ.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "過濾類型"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dHlwZQ.short_desc": {
@@ -2404,7 +2404,7 @@
           "message": "等於"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "過濾值"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -2416,7 +2416,7 @@
           "message": "篩選記錄時要比較的值"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.display_name": {
-          "source": "Return Fields by Field ID",
+          "source": "Return fields by field ID",
           "message": "依欄位 ID 返回欄位"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.short_desc": {
@@ -2440,7 +2440,7 @@
           "message": "從資料表中選擇特定檢視表，以套用其篩選和排序"
         },
         "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "取得記錄"
         },
         "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.short_desc": {
@@ -2488,7 +2488,7 @@
           "message": "選擇或輸入您想要擷取之特定記錄的 ID"
         },
         "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "建立記錄"
         },
         "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "選擇 Base 中將要在其中建立記錄的特定資料表"
         },
         "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "刪除記錄"
         },
         "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -2572,7 +2572,7 @@
           "message": "選擇或輸入您想要刪除之特定記錄的 ID"
         },
         "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.display_name": {
-          "source": "List Bases",
+          "source": "List bases",
           "message": "列出 Base"
         },
         "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "使用前次回應中的偏移量來擷取下一頁 Base"
         },
         "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
+          "source": "List tables",
           "message": "列出資料表"
         },
         "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.short_desc": {
@@ -2620,7 +2620,7 @@
           "message": "選擇您想要列出所有可用資料表的 Airtable Base"
         },
         "app.QWlydGFibGU.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "新增記錄"
         },
         "app.QWlydGFibGU.action.bmV3X3JlY29yZA.short_desc": {
@@ -2668,7 +2668,7 @@
           "message": "從資料表中選擇特定檢視表，以僅監控符合該檢視表篩選和排序條件的記錄"
         },
         "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
-          "source": "Updated Record",
+          "source": "Updated record",
           "message": "已更新記錄"
         },
         "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Provede vlastní volání HTTP / REST API do **SurveyMonkey** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci vystaveny jako prvotřídní akce."
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Vytvořit kontakt"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Vytvořit nový kontakt ve službě SurveyMonkey se jménem, příjmením, e-mailem nebo telefonním číslem"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Křestní jméno"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Jméno kontaktu"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Příjmení"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "E-mailová adresa kontaktu (je vyžadován buď e-mail, nebo telefonní číslo)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Telefonní číslo"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Telefonní číslo kontaktu (je vyžadován buď e-mail, nebo telefonní číslo)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Seznam kontaktů"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Číslo stránky pro stránkování (začíná od 1)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "Na stránku"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Maximální celkový počet kontaktů k načtení napříč všemi stránkami (výchozí: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Create Collector",
+          "source": "Create collector",
           "message": "Vytvořit sběrač"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Vyberte průzkum, pro který chcete vytvořit sběrač"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
-          "source": "Collector Type",
+          "source": "Collector type",
           "message": "Typ sběrače"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
@@ -500,7 +500,7 @@
           "message": "Vložený průzkum"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
-          "source": "Collector Name",
+          "source": "Collector name",
           "message": "Název sběrače"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
@@ -512,7 +512,7 @@
           "message": "Popisný název sběrače"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
-          "source": "List Collectors",
+          "source": "List collectors",
           "message": "Zobrazit seznam sběračů"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
@@ -548,7 +548,7 @@
           "message": "Maximální celkový počet sběračů k načtení (výchozí: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
-          "source": "List Responses",
+          "source": "List responses",
           "message": "Zobrazit seznam odpovědí"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
@@ -584,7 +584,7 @@
           "message": "Maximální celkový počet odpovědí k načtení (výchozí: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
-          "source": "Get Response",
+          "source": "Get response",
           "message": "Získat odpověď"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
@@ -620,7 +620,7 @@
           "message": "Jedinečný identifikátor odpovědi, kterou chcete načíst"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "Zahrnout odpovědi"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -632,7 +632,7 @@
           "message": "Pokud je povoleno, načte úplné podrobnosti odpovědi včetně všech odpovědí na otázky"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
-          "source": "Get Collector",
+          "source": "Get collector",
           "message": "Získat sběrač"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Vyberte sběrač, o kterém chcete získat podrobné informace"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
-          "source": "Get Survey",
+          "source": "Get survey",
           "message": "Získat průzkum"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Vyberte průzkum, pro který chcete získat podrobné informace"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
-          "source": "List Surveys",
+          "source": "List surveys",
           "message": "Zobrazit seznam průzkumů"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
@@ -716,7 +716,7 @@
           "message": "Maximální celkový počet průzkumů k načtení (výchozí: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
-          "source": "Send Survey",
+          "source": "Send survey",
           "message": "Odeslat průzkum"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
@@ -752,7 +752,7 @@
           "message": "Vyberte e-mailový sběrač, přes který chcete průzkum odeslat"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "Předmět e-mailu"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Předmět, který se zobrazí v e-mailové pozvánce"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
-          "source": "Email Body",
+          "source": "Email body",
           "message": "Tělo e-mailu"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Tělo zprávy, které se zobrazí v e-mailu s pozvánkou"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
-          "source": "Recipient Emails",
+          "source": "Recipient emails",
           "message": "E-maily příjemců"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Seznam e-mailových adres, na které se má odeslat pozvánka k průzkumu"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
-          "source": "Create Survey",
+          "source": "Create survey",
           "message": "Vytvořit průzkum"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
@@ -860,7 +860,7 @@
           "message": "ID šablony, která se má použít jako základ pro nový průzkum"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
-          "source": "Copy Survey",
+          "source": "Copy survey",
           "message": "Kopírovat průzkum"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
@@ -896,7 +896,7 @@
           "message": "Název, který se zobrazí pro zkopírovaný průzkum"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Update Collector",
+          "source": "Update collector",
           "message": "Aktualizovat sběrač"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Uzavřeno"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
+          "source": "Close date",
           "message": "Datum uzavření"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Adresa URL, na kterou budou respondenti přesměrováni po dokončení průzkumu"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
-          "source": "Response Limit",
+          "source": "Response limit",
           "message": "Limit odpovědí"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Maximální počet odpovědí k přijetí před uzavřením sběrače"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Delete Collector",
+          "source": "Delete collector",
           "message": "Smazat sběrač"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Vyberte sběrač, který chcete trvale smazat"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
-          "source": "Get Response Counts",
+          "source": "Get response counts",
           "message": "Získat počty odpovědí"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Vyberte průzkum, pro který chcete získat počty odpovědí"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Aktualizovat kontakt"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Jedinečný identifikátor kontaktu, který chcete aktualizovat"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Křestní jméno"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Nové křestní jméno kontaktu"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Příjmení"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Nová e-mailová adresa kontaktu"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Telefonní číslo"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Nové telefonní číslo kontaktu"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Smazat kontakt"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Jedinečný identifikátor kontaktu, který chcete smazat"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "Zobrazit seznamy kontaktů"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Maximální celkový počet seznamů kontaktů k načtení (výchozí: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "Vytvořit seznam kontaktů"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Popisný název pro nový seznam kontaktů"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
+          "source": "Add contacts to list",
           "message": "Přidat kontakty do seznamu"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Hromadně přidat jeden nebo více existujících kontaktů do seznamu kontaktů"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
-          "source": "Contact List ID",
+          "source": "Contact list ID",
           "message": "ID seznamu kontaktů"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "Seznam ID kontaktů k přidání do seznamu kontaktů"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
-          "source": "Get Survey Rollup",
+          "source": "Get survey rollup",
           "message": "Získat souhrn průzkumu"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
@@ -1264,7 +1264,7 @@
           "message": "Vyberte průzkum, pro který chcete získat agregované statistiky"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
-          "source": "Get User Details",
+          "source": "Get user details",
           "message": "Získat podrobnosti o uživateli"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Načíst podrobnosti o ověřeném uživateli SurveyMonkey včetně typu účtu a oprávnění"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
-          "source": "List Survey Folders",
+          "source": "List survey folders",
           "message": "Zobrazit seznam složek průzkumů"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "Maximální celkový počet složek průzkumů k načtení (výchozí: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
-          "source": "Create Survey Folder",
+          "source": "Create survey folder",
           "message": "Vytvořit složku průzkumů"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Popisný název pro novou složku průzkumů"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
-          "source": "New Response",
+          "source": "New response",
           "message": "Nová odpověď"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Vyberte konkrétní průzkum, u kterého chcete sledovat dokončené odpovědi"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
-          "source": "Response Disqualified",
+          "source": "Response disqualified",
           "message": "Odpověď diskvalifikována"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Vyberte konkrétní průzkum, který chcete sledovat pro diskvalifikované odpovědi"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
-          "source": "Response Updated",
+          "source": "Response updated",
           "message": "Odpověď aktualizována"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Vyberte konkrétní průzkum, který chcete sledovat pro aktualizované odpovědi"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
-          "source": "Collector Updated",
+          "source": "Collector updated",
           "message": "Sběrač aktualizován"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do aplikace **Contentful** pomocí autentizace nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci vystaveny jako prvotřídní akce."
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.display_name": {
-          "source": "Get an Entry",
+          "source": "Get an entry",
           "message": "Získat položku"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Vyberte nebo zadejte ID položky k načtení."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.display_name": {
-          "source": "Get an Entry with Replacement",
+          "source": "Get an entry with replacement",
           "message": "Získat položku s nahrazením"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Text, který nahradí všechny výskyty zástupného znaku."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.display_name": {
-          "source": "Create an Entry",
+          "source": "Create an entry",
           "message": "Vytvořit záznam"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Pokud je tato možnost povolena, záznam bude publikován ihned po vytvoření. V opačném případě bude uložen jako koncept."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.display_name": {
-          "source": "Update an Entry",
+          "source": "Update an entry",
           "message": "Aktualizovat záznam"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Zadejte hodnoty polí k aktualizaci jako objekt klíč-hodnota. Změněna budou pouze zadaná pole."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.display_name": {
-          "source": "Delete an Entry",
+          "source": "Delete an entry",
           "message": "Smazat položku"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Vyberte nebo zadejte ID položky, kterou chcete trvale odstranit."
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.display_name": {
-          "source": "Publish an Entry",
+          "source": "Publish an entry",
           "message": "Publikovat položku"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Vyberte nebo zadejte ID položky, kterou chcete publikovat."
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.display_name": {
-          "source": "Unpublish an Entry",
+          "source": "Unpublish an entry",
           "message": "Zrušit publikování položky"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Vyberte nebo zadejte ID položky, jejíže publikování chcete zrušit."
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.display_name": {
-          "source": "Archive/Unarchive an Entry",
+          "source": "Archive/unarchive an entry",
           "message": "Archivovat / zrušit archivaci položky"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Pokud je možnost povolena, položka bude archivována. Pokud je zakázána, archivace položky bude zrušena."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.display_name": {
-          "source": "Search Entries",
+          "source": "Search entries",
           "message": "Vyhledat položky"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Vyberte typ obsahu, podle kterého se mají filtrovat výsledky."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Vyhledávací dotaz"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Počet položek, které se mají přeskočit při stránkování. Výchozí hodnota je 0."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.display_name": {
-          "source": "Get an Asset",
+          "source": "Get an asset",
           "message": "Získat asset"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Vyberte nebo zadejte ID assetu k načtení."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.display_name": {
-          "source": "Create an Asset",
+          "source": "Create an asset",
           "message": "Vytvořit asset"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Volitelný popis assetu."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.display_name": {
-          "source": "File Name",
+          "source": "File name",
           "message": "Název souboru"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Veřejně přístupná adresa URL, ze které Contentful soubor stáhne."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Pokud je tato možnost povolena, asset bude publikován ihned po zpracování."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.display_name": {
-          "source": "Update an Asset",
+          "source": "Update an asset",
           "message": "Aktualizovat aktivum"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "Aktualizovaný popis aktiva."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.display_name": {
-          "source": "Delete an Asset",
+          "source": "Delete an asset",
           "message": "Smazat asset"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "Vyberte nebo zadejte ID assetu, který chcete trvale odstranit."
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.display_name": {
-          "source": "Publish an Asset",
+          "source": "Publish an asset",
           "message": "Publikovat aktivum"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Vyberte nebo zadejte ID aktiva, které chcete publikovat."
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.display_name": {
-          "source": "Unpublish an Asset",
+          "source": "Unpublish an asset",
           "message": "Zrušit publikování aktiva"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Vyberte nebo zadejte ID aktiva, jehož publikování chcete zrušit."
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.display_name": {
-          "source": "Archive/Unarchive an Asset",
+          "source": "Archive/unarchive an asset",
           "message": "Archivovat / zrušit archivaci assetu"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Pokud je možnost povolena, asset bude archivován. Pokud je zakázána, archivace assetu bude zrušena."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.display_name": {
-          "source": "Search Assets",
+          "source": "Search assets",
           "message": "Vyhledat assety"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Vyhledávací dotaz"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "Volitelný text pro vyhledávání v názvech a popisech assetů."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.display_name": {
-          "source": "MIME Type Group",
+          "source": "MIME type group",
           "message": "Skupina typů MIME"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "Počet assetů, které se mají přeskočit při stránkování. Výchozí hodnota je 0."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Get a Content Type",
+          "source": "Get a content type",
           "message": "Získat typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1620,7 +1620,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "Vyberte typ obsahu, pro který chcete získat podrobnosti."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Create a Content Type",
+          "source": "Create a content type",
           "message": "Vytvořit typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "Pokud je tato možnost povolena, pole může mít různé hodnoty pro různé lokalizace."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Název pole"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.short_desc": {
@@ -1752,7 +1752,7 @@
           "message": "Pokud je tato možnost povolena, položky musí pro toto pole obsahovat hodnotu."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "Typ pole"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "Datový typ pole. Podporované typy: Symbol (krátký text), Text (dlouhý text), Celé číslo, Číslo, Datum, Logická hodnota, RichText, Odkaz, Pole, Objekt, Umístění."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Content Type",
+          "source": "Update a content type",
           "message": "Aktualizovat typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "Aktualizovaný popis typu obsahu."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Delete a Content Type",
+          "source": "Delete a content type",
           "message": "Smazat typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1872,7 +1872,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1884,7 +1884,7 @@
           "message": "Vyberte typ obsahu, který chcete trvale odstranit."
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.display_name": {
-          "source": "Activate a Content Type",
+          "source": "Activate a content type",
           "message": "Aktivovat typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.short_desc": {
@@ -1920,7 +1920,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "Vyberte typ obsahu k aktivaci (publikování)."
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.display_name": {
-          "source": "Deactivate a Content Type",
+          "source": "Deactivate a content type",
           "message": "Deaktivovat typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1980,7 +1980,7 @@
           "message": "Vyberte typ obsahu, jehož publikování chcete zrušit (deaktivovat)."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Add a Field to a Content Type",
+          "source": "Add a field to a content type",
           "message": "Přidat pole do typu obsahu"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2016,7 +2016,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2040,7 +2040,7 @@
           "message": "Unikátní ID pro pole (např. \"heroImage\", \"publishDate\"). Musí být unikátní v rámci typu obsahu."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Název pole"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2052,7 +2052,7 @@
           "message": "Čitelný název pro pole (např. \"Hero Image\", \"Publish Date\")."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "Typ pole"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.short_desc": {
@@ -2132,7 +2132,7 @@
           "message": "Pokud je tato možnost povolena, pole může mít různé hodnoty pro různé lokalizace."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Field of a Content Type",
+          "source": "Update a field of a content type",
           "message": "Aktualizovat pole typu obsahu"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2168,7 +2168,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2192,7 +2192,7 @@
           "message": "Vyberte pole, které chcete aktualizovat."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Název pole"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2228,7 +2228,7 @@
           "message": "Aktualizovat, zda pole může mít různé hodnoty pro různé lokalizace."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.display_name": {
-          "source": "Delete a Field from a Content Type",
+          "source": "Delete a field from a content type",
           "message": "Smazat pole z typu obsahu"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.short_desc": {
@@ -2264,7 +2264,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Typ obsahu"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2288,7 +2288,7 @@
           "message": "Vyberte pole, které chcete trvale odstranit z typu obsahu."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.display_name": {
-          "source": "Search Content Types",
+          "source": "Search content types",
           "message": "Vyhledat typy obsahu"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.short_desc": {
@@ -2324,7 +2324,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Vyhledávací dotaz"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "Počet typů obsahu, které se mají přeskočit při stránkování. Výchozí hodnota je 0."
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.display_name": {
-          "source": "Watch an Event",
+          "source": "Watch an event",
           "message": "Sledovat událost"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.short_desc": {
@@ -2396,7 +2396,7 @@
           "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
+          "source": "Event types",
           "message": "Typy událostí"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.short_desc": {

@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**CopperCRM**へカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLからの相対パス）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.Q29wcGVyQ3Jt.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.Q29wcGVyQ3Jt.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.display_name": {
-          "source": "Create Lead",
+          "source": "Create lead",
           "message": "リードを作成"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.short_desc": {
@@ -352,7 +352,7 @@
           "message": "連絡先情報と詳細を含む新しいリードレコードをCopperCRMに作成します。リードは、自社の製品やサービスに関心を示した見込み客を表します。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "リードの名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bGFzdF9uYW1l.short_desc": {
@@ -376,7 +376,7 @@
           "message": "リードの姓"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
+          "source": "Middle name",
           "message": "ミドルネーム"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.short_desc": {
@@ -412,7 +412,7 @@
           "message": "このリードの管理に割り当てられるCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "会社名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.short_desc": {
@@ -508,7 +508,7 @@
           "message": "ウェブサイトの完全なURL"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.c29jaWFscw.short_desc": {
@@ -612,7 +612,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "メールアドレス"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.short_desc": {
@@ -624,7 +624,7 @@
           "message": "リードのメール アドレス"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
+          "source": "Phone numbers",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.short_desc": {
@@ -648,7 +648,7 @@
           "message": "この電話番号のカテゴリまたは種類"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
@@ -696,7 +696,7 @@
           "message": "国"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
@@ -732,7 +732,7 @@
           "message": "住所の通り名。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
+          "source": "Customer source",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
@@ -744,7 +744,7 @@
           "message": "このリードを獲得した情報源またはチャネル"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -756,7 +756,7 @@
           "message": "CopperCRMのリード設定に特有のカスタムフィールド値"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2xlYWQ.display_name": {
-          "source": "Get Lead",
+          "source": "Get lead",
           "message": "リードを取得"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2xlYWQ.short_desc": {
@@ -780,7 +780,7 @@
           "message": "CopperCRMから取得したいリードを選択します"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.display_name": {
-          "source": "Update Lead",
+          "source": "Update lead",
           "message": "リードを更新"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.short_desc": {
@@ -804,7 +804,7 @@
           "message": "更新するリードを選択してください"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -816,7 +816,7 @@
           "message": "更新されたリードの名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bGFzdF9uYW1l.short_desc": {
@@ -828,7 +828,7 @@
           "message": "更新されたリードの姓"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
+          "source": "Middle name",
           "message": "ミドルネーム"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.short_desc": {
@@ -864,7 +864,7 @@
           "message": "このリードに割り当てる新しいCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "会社名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.short_desc": {
@@ -960,7 +960,7 @@
           "message": "ウェブサイトの完全なURL"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.c29jaWFscw.short_desc": {
@@ -1064,7 +1064,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "メールアドレス"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "リードのメール アドレス"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
+          "source": "Phone numbers",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "この電話番号のカテゴリまたは種類"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
@@ -1148,7 +1148,7 @@
           "message": "国"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
@@ -1184,7 +1184,7 @@
           "message": "住所の通り名。"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
+          "source": "Customer source",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
@@ -1196,7 +1196,7 @@
           "message": "更新されたソースまたはチャネル"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1208,7 +1208,7 @@
           "message": "更新されたカスタムフィールドの値"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2xlYWQ.display_name": {
-          "source": "Delete Lead",
+          "source": "Delete lead",
           "message": "リードを削除"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2xlYWQ.short_desc": {
@@ -1232,7 +1232,7 @@
           "message": "CopperCRMから削除するリードを選択してください"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.display_name": {
-          "source": "Search Leads",
+          "source": "Search leads",
           "message": "リードを検索"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.short_desc": {
@@ -1256,7 +1256,7 @@
           "message": "取得する特定のリードIDのリスト"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9udW1iZXI.short_desc": {
@@ -1268,7 +1268,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9zaXpl.short_desc": {
@@ -1280,7 +1280,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9ieQ.short_desc": {
@@ -1292,7 +1292,7 @@
           "message": "結果の並べ替えに使用するフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "この値に一致する名前のリードを検索"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "ステータスでリードをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
+          "source": "Customer sources",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "都道府県・州でリードをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -1444,7 +1444,7 @@
           "message": "これらのタグのいずれかを持つリードをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29jaWFscw.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "リードの経過日数でフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
+          "source": "Minimum value",
           "message": "最小金額"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "金額がこの額以上のリードをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
+          "source": "Maximum value",
           "message": "最大金額"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -1512,7 +1512,7 @@
           "message": "金額がこの額以下のリードをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -1524,7 +1524,7 @@
           "message": "インタラクション回数がこの回数以上のリードをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -1536,7 +1536,7 @@
           "message": "インタラクション回数がこの回数以下のリードをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.display_name": {
-          "source": "Include Converted Leads",
+          "source": "Include converted leads",
           "message": "変換済みリードを含める"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "案件にコンバートされたリードを含めるかどうか"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.display_name": {
-          "source": "Create Person",
+          "source": "Create person",
           "message": "個人を作成"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "Mr.、Mrs.、Dr.などの名前の接頭辞"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -1596,7 +1596,7 @@
           "message": "この人物の名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
+          "source": "Middle name",
           "message": "ミドルネーム"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.short_desc": {
@@ -1608,7 +1608,7 @@
           "message": "この人物のミドルネームまたはイニシャル"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.short_desc": {
@@ -1668,7 +1668,7 @@
           "message": "都道府県または州"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -1716,7 +1716,7 @@
           "message": "この人物が勤務している会社"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
+          "source": "Contact type",
           "message": "コンタクトタイプ"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.short_desc": {
@@ -1740,7 +1740,7 @@
           "message": "この人物に関する追加のメモ、説明、または重要な詳細"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "メールアドレス"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.short_desc": {
@@ -1776,7 +1776,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "メールアドレス"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.short_desc": {
@@ -1788,7 +1788,7 @@
           "message": "メール アドレス"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
+          "source": "Phone numbers",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.short_desc": {
@@ -1828,7 +1828,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
@@ -1840,7 +1840,7 @@
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.c29jaWFscw.short_desc": {
@@ -1980,7 +1980,7 @@
           "message": "ウェブサイトの URL"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1992,7 +1992,7 @@
           "message": "CopperCRMの個人設定に固有のカスタムフィールド値"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3BlcnNvbg.display_name": {
-          "source": "Get Person",
+          "source": "Get person",
           "message": "個人を取得"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3BlcnNvbg.short_desc": {
@@ -2016,7 +2016,7 @@
           "message": "CopperCRMから取得したい個人の連絡先を選択します"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.display_name": {
-          "source": "Update Person",
+          "source": "Update person",
           "message": "個人の更新"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.short_desc": {
@@ -2064,7 +2064,7 @@
           "message": "更新された名前の敬称（接頭辞）"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -2076,7 +2076,7 @@
           "message": "更新された名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
+          "source": "Middle name",
           "message": "ミドルネーム"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.short_desc": {
@@ -2088,7 +2088,7 @@
           "message": "更新されたミドルネームまたはイニシャル"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "更新された都道府県または州"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "この人物が勤務する更新された会社"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
+          "source": "Contact type",
           "message": "コンタクトタイプ"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "更新されたメモ、説明、または重要な詳細"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "メールアドレス"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.short_desc": {
@@ -2256,7 +2256,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "メールアドレス"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.short_desc": {
@@ -2268,7 +2268,7 @@
           "message": "メール アドレス"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
+          "source": "Phone numbers",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.short_desc": {
@@ -2308,7 +2308,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
@@ -2320,7 +2320,7 @@
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.c29jaWFscw.short_desc": {
@@ -2460,7 +2460,7 @@
           "message": "ウェブサイトの URL"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -2472,7 +2472,7 @@
           "message": "更新されたカスタムフィールドの値"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3BlcnNvbg.display_name": {
-          "source": "Delete Person",
+          "source": "Delete person",
           "message": "人物を削除"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3BlcnNvbg.short_desc": {
@@ -2496,7 +2496,7 @@
           "message": "CopperCRMから削除する人物コンタクトを選択してください"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.display_name": {
-          "source": "Search People",
+          "source": "Search people",
           "message": "人物を検索"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.short_desc": {
@@ -2592,7 +2592,7 @@
           "message": "州または都道府県で人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -2628,7 +2628,7 @@
           "message": "担当ユーザーで人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
+          "source": "Contact types",
           "message": "連絡先タイプ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
@@ -2664,7 +2664,7 @@
           "message": "これらのタグのいずれかを持つ人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29jaWFscw.short_desc": {
@@ -2676,7 +2676,7 @@
           "message": "ソーシャルメディアのプロファイルで人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -2688,7 +2688,7 @@
           "message": "インタラクション数がこの回数以上の人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -2700,7 +2700,7 @@
           "message": "インタラクション数がこの回数以下の人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
+          "source": "Created after",
           "message": "作成日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -2712,7 +2712,7 @@
           "message": "この日付以降に作成された人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
+          "source": "Created before",
           "message": "作成日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -2724,7 +2724,7 @@
           "message": "この日付以前に作成された人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
+          "source": "Modified after",
           "message": "更新日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -2736,7 +2736,7 @@
           "message": "この日付以降に更新された人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
+          "source": "Modified before",
           "message": "更新日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -2748,7 +2748,7 @@
           "message": "この日付以前に更新された人物をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9ieQ.short_desc": {
@@ -2804,7 +2804,7 @@
           "message": "更新日"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -2824,7 +2824,7 @@
           "message": "降順"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9udW1iZXI.short_desc": {
@@ -2836,7 +2836,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9zaXpl.short_desc": {
@@ -2848,7 +2848,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "タスクを作成"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -2860,7 +2860,7 @@
           "message": "詳細、期日、担当者を設定してCopperCRMで新しいタスクを作成します。タスクはアクションアイテムやフォローアップの追跡に役立ちます。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "タスク名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -2872,7 +2872,7 @@
           "message": "タスクのわかりやすい名前"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.display_name": {
-          "source": "Related Resource",
+          "source": "Related resource",
           "message": "関連リソース"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.short_desc": {
@@ -2896,7 +2896,7 @@
           "message": "関連するCRMレコードのID"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.display_name": {
-          "source": "Resource Type",
+          "source": "Resource type",
           "message": "リソースタイプ"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.short_desc": {
@@ -2940,7 +2940,7 @@
           "message": "このタスクを完了するために割り当てられるCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "期日"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -2952,7 +2952,7 @@
           "message": "このタスクを完了すべき日付"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.display_name": {
-          "source": "Reminder Date",
+          "source": "Reminder date",
           "message": "リマインダー日"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.short_desc": {
@@ -3036,7 +3036,7 @@
           "message": "タスクを分類および整理するためのタグ。新しいタグを作成するか、既存のタグから選択できます。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -3048,7 +3048,7 @@
           "message": "お使いのCopperCRMタスク設定に固有のカスタムフィールド値"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "タスクの取得"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3Rhc2s.short_desc": {
@@ -3072,7 +3072,7 @@
           "message": "CopperCRMから取得したいタスクを選択します"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "タスクの更新"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -3096,7 +3096,7 @@
           "message": "更新するタスクを選択"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "タスク名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -3108,7 +3108,7 @@
           "message": "更新されたタスク名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.display_name": {
-          "source": "Related Resource",
+          "source": "Related resource",
           "message": "関連リソース"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.short_desc": {
@@ -3132,7 +3132,7 @@
           "message": "関連するCRMレコードのID"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.display_name": {
-          "source": "Resource Type",
+          "source": "Resource type",
           "message": "リソースタイプ"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.short_desc": {
@@ -3176,7 +3176,7 @@
           "message": "このタスクに割り当てる新しいCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "期日"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -3188,7 +3188,7 @@
           "message": "このタスクを完了する更新された期日"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.display_name": {
-          "source": "Reminder Date",
+          "source": "Reminder date",
           "message": "リマインダー日"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.short_desc": {
@@ -3272,7 +3272,7 @@
           "message": "タスクを分類および整理するための更新されたタグ"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -3284,7 +3284,7 @@
           "message": "更新されたカスタムフィールドの値"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
+          "source": "Delete task",
           "message": "タスクを削除"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3Rhc2s.short_desc": {
@@ -3308,7 +3308,7 @@
           "message": "CopperCRMから削除するタスクを選択してください"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.display_name": {
-          "source": "Search Tasks",
+          "source": "Search tasks",
           "message": "タスクの検索"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.short_desc": {
@@ -3332,7 +3332,7 @@
           "message": "取得する特定のタスクIDのリスト"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9udW1iZXI.short_desc": {
@@ -3344,7 +3344,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9zaXpl.short_desc": {
@@ -3356,7 +3356,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9ieQ.short_desc": {
@@ -3408,7 +3408,7 @@
           "message": "更新日"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -3520,7 +3520,7 @@
           "message": "フォロー中ではない"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9kdWVfZGF0ZQ.display_name": {
-          "source": "Due Date After",
+          "source": "Due date after",
           "message": "指定日以降の期限"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9kdWVfZGF0ZQ.short_desc": {
@@ -3532,7 +3532,7 @@
           "message": "期限がこの日付以降のタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9kdWVfZGF0ZQ.display_name": {
-          "source": "Due Date Before",
+          "source": "Due date before",
           "message": "指定日以前の期限"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9kdWVfZGF0ZQ.short_desc": {
@@ -3544,7 +3544,7 @@
           "message": "期限がこの日付以前のタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9yZW1pbmRlcl9kYXRl.display_name": {
-          "source": "Reminder After",
+          "source": "Reminder after",
           "message": "指定日以降のリマインダー"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9yZW1pbmRlcl9kYXRl.short_desc": {
@@ -3556,7 +3556,7 @@
           "message": "リマインダー日時がこの日付以降のタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9yZW1pbmRlcl9kYXRl.display_name": {
-          "source": "Reminder Before",
+          "source": "Reminder before",
           "message": "指定日以前のリマインダー"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9yZW1pbmRlcl9kYXRl.short_desc": {
@@ -3568,7 +3568,7 @@
           "message": "リマインダー日時がこの日付以前のタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jb21wbGV0ZWRfZGF0ZQ.display_name": {
-          "source": "Completed After",
+          "source": "Completed after",
           "message": "指定日以降に完了"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jb21wbGV0ZWRfZGF0ZQ.short_desc": {
@@ -3580,7 +3580,7 @@
           "message": "この日付以降に完了したタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jb21wbGV0ZWRfZGF0ZQ.display_name": {
-          "source": "Completed Before",
+          "source": "Completed before",
           "message": "指定日以前に完了"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jb21wbGV0ZWRfZGF0ZQ.short_desc": {
@@ -3592,7 +3592,7 @@
           "message": "この日付以前に完了したタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
+          "source": "Created after",
           "message": "作成日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -3604,7 +3604,7 @@
           "message": "この日付以降に作成されたタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
+          "source": "Created before",
           "message": "作成日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -3616,7 +3616,7 @@
           "message": "この日付以前に作成されたタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
+          "source": "Modified after",
           "message": "更新日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -3628,7 +3628,7 @@
           "message": "この日付以降に更新されたタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
+          "source": "Modified before",
           "message": "更新日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -3640,7 +3640,7 @@
           "message": "この日付以前に更新されたタスクをフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
-          "source": "Create Company",
+          "source": "Create company",
           "message": "会社を作成"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
@@ -3652,7 +3652,7 @@
           "message": "名前、住所、連絡先情報、カスタムフィールドなどの詳細を含む新しい会社レコードをCopperCRMに作成します。会社はCRM内の組織を表します。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "会社名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
@@ -3700,7 +3700,7 @@
           "message": "会社が所在する国"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
@@ -3748,7 +3748,7 @@
           "message": "この会社の管理に割り当てられるCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
+          "source": "Contact type",
           "message": "コンタクトタイプ"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.short_desc": {
@@ -3772,7 +3772,7 @@
           "message": "会社に関するメモ、説明、または重要な詳細"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.display_name": {
-          "source": "Email Domain",
+          "source": "Email domain",
           "message": "メール ドメイン"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.short_desc": {
@@ -3784,7 +3784,7 @@
           "message": "会社が使用するプライマリ電子メールドメイン（例: example.com）"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
+          "source": "Phone numbers",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.short_desc": {
@@ -3824,7 +3824,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
@@ -3836,7 +3836,7 @@
           "message": "任意のフォーマットの電話番号。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
+          "source": "Primary contact",
           "message": "主担当者"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
@@ -3848,7 +3848,7 @@
           "message": "この会社に関連付けられている主担当者"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.c29jaWFscw.short_desc": {
@@ -3976,7 +3976,7 @@
           "message": "ウェブサイトの完全なURL"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -3988,7 +3988,7 @@
           "message": "CopperCRMの会社設定に特有のカスタムフィールド値"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2NvbXBhbnk.display_name": {
-          "source": "Get Company",
+          "source": "Get company",
           "message": "会社を取得"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2NvbXBhbnk.short_desc": {
@@ -4012,7 +4012,7 @@
           "message": "CopperCRMから取得したい会社を選択します"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.display_name": {
-          "source": "Update Company",
+          "source": "Update company",
           "message": "会社を更新"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
@@ -4036,7 +4036,7 @@
           "message": "更新する会社を選択してください"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "会社名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
@@ -4084,7 +4084,7 @@
           "message": "会社が所在する国"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
@@ -4132,7 +4132,7 @@
           "message": "この会社に割り当てる新しいCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
+          "source": "Contact type",
           "message": "コンタクトタイプ"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.short_desc": {
@@ -4156,7 +4156,7 @@
           "message": "更新されたメモ、説明、または重要な詳細"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.display_name": {
-          "source": "Email Domain",
+          "source": "Email domain",
           "message": "メール ドメイン"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.short_desc": {
@@ -4168,7 +4168,7 @@
           "message": "更新された主要メールドメイン"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
+          "source": "Phone numbers",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.short_desc": {
@@ -4208,7 +4208,7 @@
           "message": "その他"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
@@ -4220,7 +4220,7 @@
           "message": "任意のフォーマットの電話番号。"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
+          "source": "Primary contact",
           "message": "主担当者"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
@@ -4232,7 +4232,7 @@
           "message": "この会社の新しい主担当者"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.c29jaWFscw.short_desc": {
@@ -4360,7 +4360,7 @@
           "message": "ウェブサイトの完全なURL"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -4372,7 +4372,7 @@
           "message": "更新されたカスタムフィールドの値"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
-          "source": "Delete Company",
+          "source": "Delete company",
           "message": "会社を削除"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
@@ -4396,7 +4396,7 @@
           "message": "CopperCRMから削除したい会社を選択します"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.display_name": {
-          "source": "Search Companies",
+          "source": "Search companies",
           "message": "企業の検索"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.short_desc": {
@@ -4420,7 +4420,7 @@
           "message": "取得する特定の会社IDのリスト"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9udW1iZXI.short_desc": {
@@ -4432,7 +4432,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9zaXpl.short_desc": {
@@ -4444,7 +4444,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9ieQ.short_desc": {
@@ -4488,7 +4488,7 @@
           "message": "作成日"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -4532,7 +4532,7 @@
           "message": "担当ユーザーで会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
+          "source": "Contact types",
           "message": "連絡先タイプ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
@@ -4568,7 +4568,7 @@
           "message": "都道府県・州で会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -4604,7 +4604,7 @@
           "message": "これらのタグのいずれかを持つ会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29jaWFscw.short_desc": {
@@ -4636,7 +4636,7 @@
           "message": "フォロー中ではない"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -4648,7 +4648,7 @@
           "message": "インタラクション回数がこの回数以上の会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -4660,7 +4660,7 @@
           "message": "インタラクション回数がこの回数以下の会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Minimum Inactive Days",
+          "source": "Minimum inactive days",
           "message": "最小非アクティブ日数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
@@ -4672,7 +4672,7 @@
           "message": "非アクティブ日数がこの日数以上の会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Maximum Inactive Days",
+          "source": "Maximum inactive days",
           "message": "最大非アクティブ日数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
@@ -4684,7 +4684,7 @@
           "message": "非アクティブ日数がこの日数以下の会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
+          "source": "Created after",
           "message": "作成日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -4696,7 +4696,7 @@
           "message": "この日付以降に作成された会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
+          "source": "Created before",
           "message": "作成日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -4708,7 +4708,7 @@
           "message": "この日付以前に作成された会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
+          "source": "Modified after",
           "message": "更新日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -4720,7 +4720,7 @@
           "message": "この日付以降に更新された会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
+          "source": "Modified before",
           "message": "更新日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -4732,7 +4732,7 @@
           "message": "この日付以前に更新された会社をフィルタリング"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.display_name": {
-          "source": "Create Opportunity",
+          "source": "Create opportunity",
           "message": "案件を作成"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.short_desc": {
@@ -4744,7 +4744,7 @@
           "message": "CopperCRMに、金額、ステージ、関連する連絡先などの詳細を含む新しい案件を作成します。案件はセールスパイプラインにおける潜在的な商談を表します。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.display_name": {
-          "source": "Opportunity Name",
+          "source": "Opportunity name",
           "message": "案件名"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.short_desc": {
@@ -4756,7 +4756,7 @@
           "message": "案件の説明的な名前"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
+          "source": "Primary contact",
           "message": "主担当者"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
@@ -4780,7 +4780,7 @@
           "message": "この案件の管理に割り当てられるCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
+          "source": "Close date",
           "message": "クローズ日"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.short_desc": {
@@ -4804,7 +4804,7 @@
           "message": "この案件に関連付けられている会社"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
+          "source": "Customer source",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
@@ -4828,7 +4828,7 @@
           "message": "案件に関する追加のメモ、説明、または重要な詳細"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.display_name": {
-          "source": "Loss Reason",
+          "source": "Loss reason",
           "message": "失注理由"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.short_desc": {
@@ -4840,7 +4840,7 @@
           "message": "この案件が失注となった理由（該当する場合）"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.display_name": {
-          "source": "Monetary Value",
+          "source": "Monetary value",
           "message": "金額"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.short_desc": {
@@ -4864,7 +4864,7 @@
           "message": "この案件が属するセールスパイプライン"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.display_name": {
-          "source": "Pipeline Stage",
+          "source": "Pipeline stage",
           "message": "パイプラインのステージ"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.short_desc": {
@@ -4944,7 +4944,7 @@
           "message": "案件を分類して整理するためのタグ。新しいタグを作成するか、既存のタグから選択できます。"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.display_name": {
-          "source": "Win Probability",
+          "source": "Win probability",
           "message": "成約率"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.short_desc": {
@@ -4956,7 +4956,7 @@
           "message": "この案件を獲得する推定確率 (0-100)"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -4968,7 +4968,7 @@
           "message": "CopperCRMの案件構成に固有のカスタムフィールド値"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X29wcG9ydHVuaXR5.display_name": {
-          "source": "Get Opportunity",
+          "source": "Get opportunity",
           "message": "案件を取得"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X29wcG9ydHVuaXR5.short_desc": {
@@ -4992,7 +4992,7 @@
           "message": "CopperCRMから取得したい案件を選択します"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.display_name": {
-          "source": "Update Opportunity",
+          "source": "Update opportunity",
           "message": "案件の更新"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.short_desc": {
@@ -5016,7 +5016,7 @@
           "message": "更新する案件を選択してください"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.display_name": {
-          "source": "Opportunity Name",
+          "source": "Opportunity name",
           "message": "案件名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.short_desc": {
@@ -5028,7 +5028,7 @@
           "message": "更新された案件名"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
+          "source": "Primary contact",
           "message": "主担当者"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
@@ -5052,7 +5052,7 @@
           "message": "この案件に割り当てる新しいCopperCRMユーザー"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
+          "source": "Close date",
           "message": "クローズ日"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.short_desc": {
@@ -5076,7 +5076,7 @@
           "message": "更新後の関連会社"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
+          "source": "Customer source",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
@@ -5100,7 +5100,7 @@
           "message": "更新されたメモ、説明、または重要な詳細"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.display_name": {
-          "source": "Loss Reason",
+          "source": "Loss reason",
           "message": "失注理由"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.short_desc": {
@@ -5112,7 +5112,7 @@
           "message": "更新された失注理由"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.display_name": {
-          "source": "Monetary Value",
+          "source": "Monetary value",
           "message": "金額"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.short_desc": {
@@ -5136,7 +5136,7 @@
           "message": "更新されたセールスパイプライン"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.display_name": {
-          "source": "Pipeline Stage",
+          "source": "Pipeline stage",
           "message": "パイプラインのステージ"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.short_desc": {
@@ -5216,7 +5216,7 @@
           "message": "案件を分類・整理するための更新されたタグ"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.display_name": {
-          "source": "Win Probability",
+          "source": "Win probability",
           "message": "成約率"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.short_desc": {
@@ -5228,7 +5228,7 @@
           "message": "更新された見込み受注確率"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -5240,7 +5240,7 @@
           "message": "更新されたカスタムフィールドの値"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX29wcG9ydHVuaXR5.display_name": {
-          "source": "Delete Opportunity",
+          "source": "Delete opportunity",
           "message": "案件を削除"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX29wcG9ydHVuaXR5.short_desc": {
@@ -5264,7 +5264,7 @@
           "message": "CopperCRMから削除したい案件を選択します"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.display_name": {
-          "source": "Search Opportunities",
+          "source": "Search opportunities",
           "message": "案件の検索"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.short_desc": {
@@ -5288,7 +5288,7 @@
           "message": "取得する特定の案件 ID のリスト"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9udW1iZXI.short_desc": {
@@ -5300,7 +5300,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9zaXpl.short_desc": {
@@ -5312,7 +5312,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9ieQ.short_desc": {
@@ -5376,7 +5376,7 @@
           "message": "クローズ日"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -5432,7 +5432,7 @@
           "message": "関連会社で案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
+          "source": "Customer sources",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
@@ -5444,7 +5444,7 @@
           "message": "顧客ソースで案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bG9zc19yZWFzb25faWRz.display_name": {
-          "source": "Loss Reasons",
+          "source": "Loss reasons",
           "message": "失注理由"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bG9zc19yZWFzb25faWRz.short_desc": {
@@ -5468,7 +5468,7 @@
           "message": "パイプラインで案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGlwZWxpbmVfc3RhZ2VfaWRz.display_name": {
-          "source": "Pipeline Stages",
+          "source": "Pipeline stages",
           "message": "パイプラインステージ"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGlwZWxpbmVfc3RhZ2VfaWRz.short_desc": {
@@ -5480,7 +5480,7 @@
           "message": "パイプラインのステージで案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cHJpbWFyeV9jb250YWN0X2lkcw.display_name": {
-          "source": "Primary Contacts",
+          "source": "Primary contacts",
           "message": "主担当連絡先"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cHJpbWFyeV9jb250YWN0X2lkcw.short_desc": {
@@ -5580,7 +5580,7 @@
           "message": "フォロー中ではない"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
+          "source": "Minimum value",
           "message": "最小金額"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -5592,7 +5592,7 @@
           "message": "金額がこの値以上の案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
+          "source": "Maximum value",
           "message": "最大金額"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -5604,7 +5604,7 @@
           "message": "金額がこの値以下の案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Minimum Win Probability",
+          "source": "Minimum win probability",
           "message": "最小成約率"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
@@ -5616,7 +5616,7 @@
           "message": "この受注確率以上の案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Maximum Win Probability",
+          "source": "Maximum win probability",
           "message": "最大成約率"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
@@ -5628,7 +5628,7 @@
           "message": "この受注確率以下の案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -5640,7 +5640,7 @@
           "message": "インタラクション回数がこの値以上の案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -5652,7 +5652,7 @@
           "message": "インタラクション回数がこの値以下の案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jbG9zZV9kYXRl.display_name": {
-          "source": "Close Date After",
+          "source": "Close date after",
           "message": "完了予定日（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jbG9zZV9kYXRl.short_desc": {
@@ -5664,7 +5664,7 @@
           "message": "この日付以降に完了予定日がある案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jbG9zZV9kYXRl.display_name": {
-          "source": "Close Date Before",
+          "source": "Close date before",
           "message": "完了予定日（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jbG9zZV9kYXRl.short_desc": {
@@ -5676,7 +5676,7 @@
           "message": "この日付以前に完了予定日がある案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
+          "source": "Created after",
           "message": "作成日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -5688,7 +5688,7 @@
           "message": "この日付以降に作成された案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
+          "source": "Created before",
           "message": "作成日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
@@ -5700,7 +5700,7 @@
           "message": "この日付以前に作成された案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
+          "source": "Modified after",
           "message": "更新日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -5712,7 +5712,7 @@
           "message": "この日付以降に更新された案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
+          "source": "Modified before",
           "message": "更新日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
@@ -5724,7 +5724,7 @@
           "message": "この日付以前に更新された案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.display_name": {
-          "source": "Stage Changed After",
+          "source": "Stage changed after",
           "message": "ステージ変更日時（以降）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.short_desc": {
@@ -5736,7 +5736,7 @@
           "message": "この日付以降にステージが変更された案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.display_name": {
-          "source": "Stage Changed Before",
+          "source": "Stage changed before",
           "message": "ステージ変更日時（以前）"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.short_desc": {
@@ -5748,7 +5748,7 @@
           "message": "この日付以前にステージが変更された案件を絞り込み"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.display_name": {
-          "source": "New Lead",
+          "source": "New lead",
           "message": "新しいリード"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.short_desc": {
@@ -5772,7 +5772,7 @@
           "message": "指定した特定のリードIDでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9udW1iZXI.short_desc": {
@@ -5784,7 +5784,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9zaXpl.short_desc": {
@@ -5796,7 +5796,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9ieQ.short_desc": {
@@ -5808,7 +5808,7 @@
           "message": "結果の並べ替えに使用するフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -5840,7 +5840,7 @@
           "message": "名前がこの値に一致するリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -5888,7 +5888,7 @@
           "message": "これらのステータスを持つリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
+          "source": "Customer sources",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
@@ -5924,7 +5924,7 @@
           "message": "この都道府県・州にあるリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -5960,7 +5960,7 @@
           "message": "これらのタグのいずれかを持つリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29jaWFscw.short_desc": {
@@ -6004,7 +6004,7 @@
           "message": "この経過日数（日単位）のリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
+          "source": "Minimum value",
           "message": "最小金額"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -6016,7 +6016,7 @@
           "message": "金額がこの値以上のリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
+          "source": "Maximum value",
           "message": "最大金額"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -6028,7 +6028,7 @@
           "message": "金額がこの値以下のリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6040,7 +6040,7 @@
           "message": "やり取り回数がこの値以上のリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6052,7 +6052,7 @@
           "message": "やり取り回数がこの値以下のリードでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.display_name": {
-          "source": "Include Converted Leads",
+          "source": "Include converted leads",
           "message": "変換済みリードを含める"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.short_desc": {
@@ -6064,7 +6064,7 @@
           "message": "案件に変換されたリードでトリガーするかどうか"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.display_name": {
-          "source": "New Person",
+          "source": "New person",
           "message": "新しい人物"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.short_desc": {
@@ -6160,7 +6160,7 @@
           "message": "この都道府県・州にいる人物でのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -6196,7 +6196,7 @@
           "message": "これらのユーザーに割り当てられた人物でのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
+          "source": "Contact types",
           "message": "連絡先タイプ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
@@ -6232,7 +6232,7 @@
           "message": "これらのタグのいずれかを持つ人物でのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29jaWFscw.short_desc": {
@@ -6244,7 +6244,7 @@
           "message": "これらのソーシャルメディアプロファイルを持つ人物でのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6256,7 +6256,7 @@
           "message": "やり取り回数がこの値以上の人物でのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6268,7 +6268,7 @@
           "message": "やり取り回数がこの値以下の人物でのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9udW1iZXI.short_desc": {
@@ -6280,7 +6280,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9zaXpl.short_desc": {
@@ -6292,7 +6292,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9ieQ.short_desc": {
@@ -6304,7 +6304,7 @@
           "message": "結果の並べ替えに使用するフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -6324,7 +6324,7 @@
           "message": "降順"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.display_name": {
-          "source": "New Opportunity",
+          "source": "New opportunity",
           "message": "新規案件"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.short_desc": {
@@ -6348,7 +6348,7 @@
           "message": "これらの特定の案件IDのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9udW1iZXI.short_desc": {
@@ -6360,7 +6360,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9zaXpl.short_desc": {
@@ -6372,7 +6372,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9ieQ.short_desc": {
@@ -6384,7 +6384,7 @@
           "message": "結果の並べ替えに使用するフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -6440,7 +6440,7 @@
           "message": "これらの会社に関連付けられた案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
+          "source": "Customer sources",
           "message": "顧客ソース"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
@@ -6452,7 +6452,7 @@
           "message": "これらの顧客ソースからの案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWRz.display_name": {
-          "source": "Loss Reasons",
+          "source": "Loss reasons",
           "message": "失注理由"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWRz.short_desc": {
@@ -6476,7 +6476,7 @@
           "message": "これらのパイプラインにある案件に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWRz.display_name": {
-          "source": "Pipeline Stages",
+          "source": "Pipeline stages",
           "message": "パイプラインステージ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWRz.short_desc": {
@@ -6488,7 +6488,7 @@
           "message": "これらのパイプラインステージにある案件に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lkcw.display_name": {
-          "source": "Primary Contacts",
+          "source": "Primary contacts",
           "message": "主担当連絡先"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lkcw.short_desc": {
@@ -6588,7 +6588,7 @@
           "message": "フォロー中ではない"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
+          "source": "Minimum value",
           "message": "最小金額"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -6600,7 +6600,7 @@
           "message": "この金額以上の案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
+          "source": "Maximum value",
           "message": "最大金額"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
@@ -6612,7 +6612,7 @@
           "message": "この金額以下の案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Minimum Win Probability",
+          "source": "Minimum win probability",
           "message": "最小成約率"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
@@ -6624,7 +6624,7 @@
           "message": "この成約率以上の案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Maximum Win Probability",
+          "source": "Maximum win probability",
           "message": "最大成約率"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
@@ -6636,7 +6636,7 @@
           "message": "この成約率以下の案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6648,7 +6648,7 @@
           "message": "このインタラクション数以上の案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6660,7 +6660,7 @@
           "message": "このインタラクション数以下の案件のみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.display_name": {
-          "source": "New Company",
+          "source": "New company",
           "message": "新しい会社"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.short_desc": {
@@ -6684,7 +6684,7 @@
           "message": "これらの特定会社IDに対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9udW1iZXI.short_desc": {
@@ -6696,7 +6696,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9zaXpl.short_desc": {
@@ -6708,7 +6708,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9ieQ.short_desc": {
@@ -6720,7 +6720,7 @@
           "message": "結果の並べ替えに使用するフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -6764,7 +6764,7 @@
           "message": "これらのユーザーに割り当てられている会社に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
+          "source": "Contact types",
           "message": "連絡先タイプ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
@@ -6800,7 +6800,7 @@
           "message": "この都道府県・州にある会社に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵便番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cG9zdGFsX2NvZGU.short_desc": {
@@ -6836,7 +6836,7 @@
           "message": "これらのタグのいずれかを持つ会社に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
+          "source": "Social media",
           "message": "ソーシャル メディア"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29jaWFscw.short_desc": {
@@ -6868,7 +6868,7 @@
           "message": "フォロー中ではない"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
+          "source": "Minimum interactions",
           "message": "最小インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6880,7 +6880,7 @@
           "message": "やり取りの回数が少なくともこの回数以上の会社に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
+          "source": "Maximum interactions",
           "message": "最大インタラクション数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
@@ -6892,7 +6892,7 @@
           "message": "やり取りの回数がこの回数以下の会社に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Minimum Inactive Days",
+          "source": "Minimum inactive days",
           "message": "最小非アクティブ日数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
@@ -6904,7 +6904,7 @@
           "message": "非アクティブ期間が少なくともこの日数以上の会社に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Maximum Inactive Days",
+          "source": "Maximum inactive days",
           "message": "最大非アクティブ日数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
@@ -6916,7 +6916,7 @@
           "message": "非アクティブ期間がこの日数以下の会社に対してのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "新しいタスク"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.short_desc": {
@@ -6940,7 +6940,7 @@
           "message": "指定した特定のタスクIDでのみトリガー"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9udW1iZXI.short_desc": {
@@ -6952,7 +6952,7 @@
           "message": "ページネーションで取得する結果のページ番号"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "ページサイズ"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9zaXpl.short_desc": {
@@ -6964,7 +6964,7 @@
           "message": "1ページあたりに返す結果の数"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9ieQ.short_desc": {
@@ -6976,7 +6976,7 @@
           "message": "結果の並べ替えに使用するフィールド"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "並べ替えの方向"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9kaXJlY3Rpb24.short_desc": {

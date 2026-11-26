@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **SurveyMonkey** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選用查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的 hash 形式返回。\n\n當端點尚未在此應用程式中作為一級動作公開時，請使用此動作。"
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "建立聯絡人"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "在 SurveyMonkey 中建立包含名字、姓氏、電子郵件或電話號碼的新聯絡人"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "聯絡人的名字"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "聯絡人的電子郵件地址（電子郵件或電話號碼二選一必填）"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話號碼"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -400,7 +400,7 @@
           "message": "聯絡人的電話號碼（電子郵件或電話號碼二選一必填）"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "列出聯絡人"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "分頁的頁碼（從 1 開始）"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "每頁"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
@@ -448,7 +448,7 @@
           "message": "跨所有頁面要檢索的聯絡人總數上限（預設：500）"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Create Collector",
+          "source": "Create collector",
           "message": "建立收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -472,7 +472,7 @@
           "message": "選取您要為其建立收集器的問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
-          "source": "Collector Type",
+          "source": "Collector type",
           "message": "收集器類型"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
@@ -500,7 +500,7 @@
           "message": "內嵌問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
-          "source": "Collector Name",
+          "source": "Collector name",
           "message": "收集器名稱"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
@@ -512,7 +512,7 @@
           "message": "收集器的描述性名稱"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
-          "source": "List Collectors",
+          "source": "List collectors",
           "message": "列出收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
@@ -548,7 +548,7 @@
           "message": "要檢索的收集器總數上限（預設：500）"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
-          "source": "List Responses",
+          "source": "List responses",
           "message": "列出回覆"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
@@ -584,7 +584,7 @@
           "message": "要檢索的回覆總數上限（預設：500）"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
-          "source": "Get Response",
+          "source": "Get response",
           "message": "取得回覆"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
@@ -620,7 +620,7 @@
           "message": "您要擷取的回覆之唯一識別碼"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "包含答案"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -632,7 +632,7 @@
           "message": "啟用時，擷取完整回覆詳細資訊，包括所有問題的答案"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
-          "source": "Get Collector",
+          "source": "Get collector",
           "message": "取得收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
@@ -668,7 +668,7 @@
           "message": "選取您要獲取詳細資訊的收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
-          "source": "Get Survey",
+          "source": "Get survey",
           "message": "獲取問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "選擇要獲取詳細資訊的問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
-          "source": "List Surveys",
+          "source": "List surveys",
           "message": "列出問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
@@ -716,7 +716,7 @@
           "message": "要檢索的問卷總數上限（預設：500）"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
-          "source": "Send Survey",
+          "source": "Send survey",
           "message": "傳送問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
@@ -752,7 +752,7 @@
           "message": "選擇用於傳送問卷的電子郵件收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "電子郵件主旨"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "將顯示在邀請電子郵件中的主旨"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
-          "source": "Email Body",
+          "source": "Email body",
           "message": "電子郵件內文"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
@@ -776,7 +776,7 @@
           "message": "將顯示在邀請電子郵件中的郵件內文"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
-          "source": "Recipient Emails",
+          "source": "Recipient emails",
           "message": "收件者電子郵件"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
@@ -788,7 +788,7 @@
           "message": "要傳送問卷邀請的電子郵件地址清單"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
-          "source": "Create Survey",
+          "source": "Create survey",
           "message": "建立問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
@@ -860,7 +860,7 @@
           "message": "用作新問卷基礎的範本 ID"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
-          "source": "Copy Survey",
+          "source": "Copy survey",
           "message": "複製問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
@@ -896,7 +896,7 @@
           "message": "將為複製之問卷顯示的標題"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Update Collector",
+          "source": "Update collector",
           "message": "更新收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -964,7 +964,7 @@
           "message": "已關閉"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
+          "source": "Close date",
           "message": "關閉日期"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "受訪者完成問卷後將被重新導向的 URL"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
-          "source": "Response Limit",
+          "source": "Response limit",
           "message": "回覆上限"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "關閉收集器前可接受的回覆數量上限"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Delete Collector",
+          "source": "Delete collector",
           "message": "刪除收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "選擇要永久刪除的收集器"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
-          "source": "Get Response Counts",
+          "source": "Get response counts",
           "message": "取得回覆計數"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "選取您要獲取回覆計數的問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "更新聯絡人"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "您要更新的聯絡人唯一識別碼"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "聯絡人的新名字"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "聯絡人的新電子郵件地址"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話號碼"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "聯絡人的新電話號碼"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "刪除聯絡人"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "要刪除之聯絡人的唯一識別碼"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "列出聯絡人清單"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "要檢索的聯絡人清單總數上限（預設：500）"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "建立聯絡人清單"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "新聯絡人清單的描述性名稱"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
+          "source": "Add contacts to list",
           "message": "新增聯絡人至清單"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "批次將一或多個現有聯絡人新增至聯絡人清單"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
-          "source": "Contact List ID",
+          "source": "Contact list ID",
           "message": "聯絡人清單 ID"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "要新增至聯絡人清單的聯絡人 ID 清單"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
-          "source": "Get Survey Rollup",
+          "source": "Get survey rollup",
           "message": "獲取問卷彙總"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
@@ -1264,7 +1264,7 @@
           "message": "選擇要獲取彙總統計資料的問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
-          "source": "Get User Details",
+          "source": "Get user details",
           "message": "獲取使用者詳細資訊"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "檢索已驗證 SurveyMonkey 使用者的詳細資訊，包括帳戶類型和權限"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
-          "source": "List Survey Folders",
+          "source": "List survey folders",
           "message": "列出問卷資料夾"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "要檢索的問卷資料夾總數上限（預設：500）"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
-          "source": "Create Survey Folder",
+          "source": "Create survey folder",
           "message": "建立問卷資料夾"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "新問卷資料夾的描述性標題"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
-          "source": "New Response",
+          "source": "New response",
           "message": "新回覆"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "選擇要監控已完成回覆的特定問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
-          "source": "Response Disqualified",
+          "source": "Response disqualified",
           "message": "回覆資格取消"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "選取您要監控資格取消回覆的特定問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
-          "source": "Response Updated",
+          "source": "Response updated",
           "message": "回覆已更新"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "選取您要監控已更新回覆的特定問卷"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
-          "source": "Collector Updated",
+          "source": "Collector updated",
           "message": "收集器已更新"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {

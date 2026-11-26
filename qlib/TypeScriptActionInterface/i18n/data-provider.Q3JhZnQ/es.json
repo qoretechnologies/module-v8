@@ -28,7 +28,7 @@
           "message": "Realice una llamada personalizada a la API HTTP / REST a **Craft** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para endpoints que aún no estén expuestos como acciones principales en esta aplicación."
         },
         "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Método HTTP"
         },
         "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.display_name": {
-          "source": "Get Daily Note Blocks",
+          "source": "Get daily note blocks",
           "message": "Obtener bloques de nota diaria"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Mañana"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Profundidad máxima"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Especifique la profundidad máxima para recuperar bloques anidados. Use -1 para profundidad ilimitada o proporcione un número positivo para limitar la profundidad de la estructura de bloques anidados que se debe recuperar."
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
+          "source": "Fetch metadata",
           "message": "Obtener metadatos"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Habilite esta opción para incluir metadatos adicionales como la fecha de creación, la fecha de última modificación y la información del autor para cada bloque en la respuesta."
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "Listar documentos"
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Obtenga una lista de todos los documentos en su espacio de trabajo de Craft. Esto incluye los ID de documento, títulos y su estado de eliminación, proporcionando una visión general completa de su biblioteca de documentos."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "Listar colecciones"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Los ID de documento para filtrar. Si no se proporcionan, se enumerarán las colecciones de todos los documentos."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.display_name": {
-          "source": "Document Filter Mode",
+          "source": "Document filter mode",
           "message": "Modo de filtro de documentos"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.short_desc": {
@@ -468,7 +468,7 @@
           "message": "Excluir"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Create Collection Item",
+          "source": "Create collection item",
           "message": "Crear elemento de colección"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -516,7 +516,7 @@
           "message": "Añada propiedades personalizadas al elemento de la colección. Las propiedades disponibles se determinan dinámicamente en función del esquema de la colección seleccionada."
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.display_name": {
-          "source": "Delete Collection Items",
+          "source": "Delete collection items",
           "message": "Eliminar elementos de colección"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Proporcione una lista de ID de elementos que desea eliminar de la colección. Puede seleccionar varios elementos para eliminar en una sola operación."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Update Collection Item",
+          "source": "Update collection item",
           "message": "Actualizar elemento de colección"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -612,7 +612,7 @@
           "message": "Actualice las propiedades personalizadas del elemento de la colección. Solo se actualizarán las propiedades que especifique; las demás permanecerán sin cambios."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.display_name": {
-          "source": "List Collection Items",
+          "source": "List collection items",
           "message": "Listar elementos de colección"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.short_desc": {
@@ -636,7 +636,7 @@
           "message": "Seleccione la colección de Craft cuyos elementos desea listar. Se devolverán todos los elementos de la colección."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Profundidad máxima"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.short_desc": {
@@ -648,7 +648,7 @@
           "message": "La profundidad máxima de contenido anidado que se va a recuperar para cada elemento de la colección. El valor predeterminado es -1 (todos los descendientes). Con una profundidad de 0, solo se recuperan las propiedades del elemento sin contenido anidado."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
+          "source": "List blocks",
           "message": "Listar bloques"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Obtenga todos los bloques de un documento o página específicos de Craft. Esto le permite acceder al contenido estructurado de sus documentos, incluidos los bloques anidados, con control sobre la profundidad y los metadatos."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.display_name": {
-          "source": "Document/Page ID",
+          "source": "Document/page ID",
           "message": "ID del documento/página"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "El ID del bloque de página que se va a recuperar. Requerido para operaciones de varios documentos. Acepta ID de documentos, páginas y bloques."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Profundidad máxima"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Especifique la profundidad máxima para recuperar bloques anidados. Use -1 para profundidad ilimitada o proporcione un número positivo para limitar el nivel de anidamiento."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
+          "source": "Fetch metadata",
           "message": "Obtener metadatos"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Indica si se deben obtener los metadatos (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) de los bloques."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.display_name": {
-          "source": "Get Markdown String",
+          "source": "Get markdown string",
           "message": "Obtener cadena Markdown"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Indica si se debe recuperar la representación en cadena de texto Markdown de los bloques."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.display_name": {
-          "source": "Insert Block",
+          "source": "Insert block",
           "message": "Insertar bloque"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Inserte un nuevo bloque con contenido Markdown en un documento de Craft. Puede especificar si desea insertar el bloque al principio o al final de la página de destino."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Contenido en Markdown"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.short_desc": {
@@ -756,7 +756,7 @@
           "message": "ID del bloque al que insertar hijos. Requerido para operaciones multi-documento. Solo los bloques de tipo página, texto y tarjeta pueden ser bloques padres. Los bloques de texto se convierten automáticamente en tipo página cuando reciben hijos. Los elementos de colección son páginas implícitas."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "Posición de inserción"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Fin"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
+          "source": "Delete blocks",
           "message": "Eliminar bloques"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
@@ -800,7 +800,7 @@
           "message": "Proporcione una lista de ID de bloques que desea eliminar del documento. Puede eliminar varios bloques en una sola operación."
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Listar tareas"
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Logbook"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Crear tarea"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Cree una nueva tarea en Craft con contenido markdown, información opcional de la tarea (estado, programación, fecha límite) y una ubicación (bandeja de entrada o nota diaria)."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Contenido de la tarea"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
@@ -864,7 +864,7 @@
           "message": "El contenido de la tarea en formato markdown. Este será el texto de la tarea."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.display_name": {
-          "source": "Task Information",
+          "source": "Task information",
           "message": "Información de la tarea"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Metadatos opcionales de la tarea, incluidos el estado, la fecha de programación y la fecha límite"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
+          "source": "Deadline date",
           "message": "Fecha límite"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Fecha de vencimiento de la tarea. Acepta el formato ISO YYYY-MM-DD o fechas relativas: 'hoy', 'mañana', 'ayer'"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
+          "source": "Schedule date",
           "message": "Fecha de programación"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.short_desc": {
@@ -948,7 +948,7 @@
           "message": "La fecha de la nota diaria donde se encuentra la tarea. Acepta formato ISO YYYY-MM-DD o fechas relativas: 'hoy', 'mañana', 'ayer'. Por defecto es 'hoy' si no se proporciona."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Tipo de ubicación"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Nota diaria"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "Actualizar tarea"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Seleccione la tarea que desea modificar. Solo las tareas activas están disponibles para su selección."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Contenido de la tarea"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Cancelado"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
+          "source": "Schedule date",
           "message": "Fecha de programación"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "Fecha de ejecución planificada actualizada. Acepta el formato ISO YYYY-MM-DD o fechas relativas: 'today', 'tomorrow', 'yesterday'. Déjelo en blanco para mantener la programación existente."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
+          "source": "Deadline date",
           "message": "Fecha límite"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Fecha de vencimiento actualizada de la tarea. Acepta el formato ISO YYYY-MM-DD o fechas relativas: 'today', 'tomorrow', 'yesterday'. Déjelo en blanco para mantener la fecha límite existente."
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.display_name": {
-          "source": "Delete Tasks",
+          "source": "Delete tasks",
           "message": "Eliminar tareas"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Proporcione una lista de ID de tareas que desea eliminar. Puede eliminar varias tareas en una sola operación."
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "New Collection Item",
+          "source": "New collection item",
           "message": "Nuevo elemento de colección"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "Seleccione la colección de Craft que desea supervisar para detectar nuevos elementos. Cuando se agregue un nuevo elemento a esta colección, el disparador se activará."
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Profundidad máxima"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.short_desc": {

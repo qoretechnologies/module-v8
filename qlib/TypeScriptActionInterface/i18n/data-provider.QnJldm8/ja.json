@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**Brevo** に対するカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL 相対）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "コンタクトを作成"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Brevoに新しい連絡先を作成します。連絡先は、メールアドレス、電話番号（国番号付き）、または外部IDを使用して作成できます。カスタム属性およびリスト割り当てを含めることができます。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "メールアドレス"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -388,7 +388,7 @@
           "message": "作成時に連絡先を自動的に追加するリストIDの配列。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
-          "source": "Email Blacklisted",
+          "source": "Email blacklisted",
           "message": "メールブラックリスト登録済み"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
@@ -400,7 +400,7 @@
           "message": "メールキャンペーンの受信から連絡先をブラックリストに登録するには、trueに設定します。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
-          "source": "SMS Blacklisted",
+          "source": "SMS blacklisted",
           "message": "SMSブラックリスト登録済み"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "SMSキャンペーンの受信から連絡先をブラックリストに登録するには、trueに設定します。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Contact Attributes",
+          "source": "Contact attributes",
           "message": "連絡先属性"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "氏名、会社名、電話番号、およびアカウントで定義されている任意のカスタムフィールドを含む、連絡先のカスタム属性。"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "連絡先を削除"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Brevoアカウントから連絡先を永久に削除します。この操作は取り消せません。連絡先はすべてのリストおよびキャンペーンから削除されます。"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
-          "source": "Contact Identifier",
+          "source": "Contact identifier",
           "message": "連絡先識別子"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
@@ -448,7 +448,7 @@
           "message": "永久に削除する連絡先の一意の識別子。メールアドレス、連絡先ID、電話番号、外部ID、WhatsApp ID、または固定電話番号を使用できます。"
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "連絡先の取得"
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -460,7 +460,7 @@
           "message": "特定の連絡先に関する詳細情報を取得します。メールアドレス、連絡先ID、電話番号、外部ID、WhatsApp ID、または固定電話番号を使用して連絡先を特定できます。"
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
-          "source": "Contact Identifier",
+          "source": "Contact identifier",
           "message": "連絡先識別子"
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
@@ -472,7 +472,7 @@
           "message": "連絡先の一意の識別子。メールアドレス、連絡先ID、電話番号（SMS）、外部ID、WhatsApp ID、または固定電話番号を使用できます。"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "連絡先一覧"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -484,7 +484,7 @@
           "message": "ページネーション、並べ替え、フィルタリングのオプションを使用してアカウント内のすべての連絡先のリストを取得します。リスト、属性、またはその他の条件でフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "1ページあたりに返す連絡先の最大数。デフォルトは10、最大は100です。"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "ページオフセット"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.short_desc": {
@@ -508,7 +508,7 @@
           "message": "ページネーションのためにスキップする連絡先の数。ページネーションのlimitとともに使用します。"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.short_desc": {
@@ -528,7 +528,7 @@
           "message": "古い順"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.display_name": {
-          "source": "Filter by Lists",
+          "source": "Filter by lists",
           "message": "リストでフィルター"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.short_desc": {
@@ -540,7 +540,7 @@
           "message": "連絡先をフィルタリングするためのリストIDの配列。これらのリストに属する連絡先のみが返されます。"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.display_name": {
-          "source": "Attribute Filter",
+          "source": "Attribute filter",
           "message": "属性フィルター"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.short_desc": {
@@ -552,7 +552,7 @@
           "message": "等価演算子を使用して特定属性の値に基づき連絡先をフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Attribute Field",
+          "source": "Attribute field",
           "message": "属性フィールド"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -564,7 +564,7 @@
           "message": "フィルタリングに使用する連絡先属性フィールド名"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "フィルターバリュー"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -576,7 +576,7 @@
           "message": "属性が等しくなる必要がある値。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "連絡先を更新"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -588,7 +588,7 @@
           "message": "属性、メール設定、リストメンバーシップ、カスタムデータを含む連絡先情報を更新します。連絡先はメールアドレス、ID、またはその他の識別子によって識別できます。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
-          "source": "Contact Identifier",
+          "source": "Contact identifier",
           "message": "連絡先識別子"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
@@ -600,7 +600,7 @@
           "message": "更新する連絡先の一意の識別子。メールアドレス、連絡先ID、電話番号、外部ID、WhatsApp ID、または固定電話番号を指定できます。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "New Email Address",
+          "source": "New email address",
           "message": "新しいメールアドレス"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -624,7 +624,7 @@
           "message": "システムからの連絡先のカスタム外部識別子。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
-          "source": "Add to Lists",
+          "source": "Add to lists",
           "message": "リストに追加"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
@@ -636,7 +636,7 @@
           "message": "連絡先を追加するリストIDの配列。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.display_name": {
-          "source": "Remove from Lists",
+          "source": "Remove from lists",
           "message": "リストから削除"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.short_desc": {
@@ -648,7 +648,7 @@
           "message": "連絡先を削除するリストIDの配列。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
-          "source": "Email Blacklisted",
+          "source": "Email blacklisted",
           "message": "メールブラックリスト登録済み"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
@@ -660,7 +660,7 @@
           "message": "連絡先のメールブラックリストステータスを設定します。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
-          "source": "SMS Blacklisted",
+          "source": "SMS blacklisted",
           "message": "SMSブラックリスト登録済み"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "連絡先のSMSブラックリストステータスを設定します。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Contact Attributes",
+          "source": "Contact attributes",
           "message": "連絡先属性"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
@@ -684,7 +684,7 @@
           "message": "名前、会社、電話番号、カスタムフィールドを含む連絡先のカスタム属性を更新します。"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.display_name": {
-          "source": "List Folders",
+          "source": "List folders",
           "message": "フォルダ一覧"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.short_desc": {
@@ -696,7 +696,7 @@
           "message": "購読者数および作成情報とともに、連絡先リストの整理に使用されるすべてのフォルダーを取得します。"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.short_desc": {
@@ -708,7 +708,7 @@
           "message": "1ページあたりに返すフォルダーの最大数。デフォルトは10です。"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "ページオフセット"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.short_desc": {
@@ -720,7 +720,7 @@
           "message": "ページネーションのためにスキップするフォルダーの数。"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.short_desc": {
@@ -740,7 +740,7 @@
           "message": "古い順"
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
+          "source": "Add contacts to list",
           "message": "リストに連絡先を追加"
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
@@ -764,7 +764,7 @@
           "message": "連絡先を追加するリストの一意の識別子。"
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "メールアドレス"
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.short_desc": {
@@ -788,7 +788,7 @@
           "message": "リストに追加する連絡先IDの配列。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create List",
+          "source": "Create list",
           "message": "リストを作成"
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -800,7 +800,7 @@
           "message": "指定されたフォルダに新しい連絡先リストを作成します。リストは、ターゲットキャンペーン用に連絡先を整理およびセグメント化するために使用されます。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "List Name",
+          "source": "List name",
           "message": "リスト名"
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -824,7 +824,7 @@
           "message": "リストが作成されるフォルダ。リストの整理に必須です。"
         },
         "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete List",
+          "source": "Delete list",
           "message": "リストを削除"
         },
         "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -848,7 +848,7 @@
           "message": "永久に削除する連絡先リストの一意の識別子。"
         },
         "app.QnJldm8.action.Z2V0X2xpc3Q.display_name": {
-          "source": "Get List",
+          "source": "Get list",
           "message": "リストを取得"
         },
         "app.QnJldm8.action.Z2V0X2xpc3Q.short_desc": {
@@ -872,7 +872,7 @@
           "message": "詳細を取得する連絡先リストの一意の識別子。"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.display_name": {
-          "source": "List All Lists",
+          "source": "List all lists",
           "message": "すべてのリストを一覧表示"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.short_desc": {
@@ -884,7 +884,7 @@
           "message": "ページネーションおよび並べ替えオプションを使用して、アカウント内のすべての連絡先リストを取得します。購読者数と作成日が含まれます。"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.short_desc": {
@@ -896,7 +896,7 @@
           "message": "1ページあたりに返すリストの最大数。デフォルトは10です。"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "ページオフセット"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.short_desc": {
@@ -908,7 +908,7 @@
           "message": "ページネーションのためにスキップするリストの数。"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "古い順"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
-          "source": "Remove Contacts from List",
+          "source": "Remove contacts from list",
           "message": "リストから連絡先を削除"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
@@ -952,7 +952,7 @@
           "message": "連絡先を削除するリストの固有識別子。"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "メールアドレス"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.short_desc": {
@@ -976,7 +976,7 @@
           "message": "リストから削除する連絡先 ID の配列。"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.display_name": {
-          "source": "Remove All",
+          "source": "Remove all",
           "message": "すべて削除"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.short_desc": {
@@ -988,7 +988,7 @@
           "message": "リストからすべての連絡先を削除するには true に設定します。"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.display_name": {
-          "source": "Update List",
+          "source": "Update list",
           "message": "リストを更新"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "更新する連絡先リストの一意の識別子。"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "New Name",
+          "source": "New name",
           "message": "新しい名前"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "連絡先リストの新しい表示名。"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.display_name": {
-          "source": "New Folder",
+          "source": "New folder",
           "message": "新しいフォルダ"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "リストの移動先となる新しいフォルダID。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
-          "source": "Create Company",
+          "source": "Create company",
           "message": "会社を作成"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "カスタム属性および既存の連絡先や取引とのオプションの関連付けを使用して、新しい会社レコードを作成します。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "会社名"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "会社の正式名称。必須項目です。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Company Attributes",
+          "source": "Company attributes",
           "message": "会社属性"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "会社に関連する主要ドメイン。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "関連付けられた連絡先"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "この会社に関連付ける連絡先IDの配列。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
-          "source": "Associated Deals",
+          "source": "Associated deals",
           "message": "関連付けられた取引"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "この会社に関連付ける取引IDの配列。"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
-          "source": "Delete Company",
+          "source": "Delete company",
           "message": "会社を削除"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "アカウントから永久に削除する会社の一意の識別子。"
         },
         "app.QnJldm8.action.Z2V0X2NvbXBhbnk.display_name": {
-          "source": "Get Company",
+          "source": "Get company",
           "message": "会社を取得"
         },
         "app.QnJldm8.action.Z2V0X2NvbXBhbnk.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "詳細を取得する会社の一意の識別子。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.display_name": {
-          "source": "List Companies",
+          "source": "List companies",
           "message": "会社一覧を取得"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "ページネーション、並べ替え、フィルタリングのオプションを使用してすべての会社のリストを取得します。関連付けられた連絡先、取引、またはカスタム属性でフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "1ページあたりに返す会社の最大数。デフォルトは10です。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "ページ番号"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "取得するページ番号（1から開始）。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "降順"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.display_name": {
-          "source": "Sort By Field",
+          "source": "Sort by field",
           "message": "並べ替えフィールド"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "結果を並べ替える基準となる会社の属性。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contact",
+          "source": "Filter by contact",
           "message": "連絡先でフィルター"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "特定の連絡先に関連付けられている会社をフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.display_name": {
-          "source": "Filter by Deal",
+          "source": "Filter by deal",
           "message": "取引でフィルター"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "特定の取引に関連付けられている会社をフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.display_name": {
-          "source": "Attribute Filter",
+          "source": "Attribute filter",
           "message": "属性フィルター"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "特定の属性値に基づいて会社をフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Attribute Field",
+          "source": "Attribute field",
           "message": "属性フィールド"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "フィルタリングに使用する会社属性フィールド名"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "フィルターバリュー"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "属性が等しくなる必要がある値。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.display_name": {
-          "source": "Update Company",
+          "source": "Update company",
           "message": "会社を更新"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "更新する会社の一意の識別子。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "会社名"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "会社の新しいビジネス名。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Company Attributes",
+          "source": "Company attributes",
           "message": "会社属性"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "業種、規模、ウェブサイト、カスタムフィールドを含む会社のカスタム属性を更新します。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "関連付けられた連絡先"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "この会社に関連付ける連絡先IDの配列。既存の関連付けを置き換えます。"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
-          "source": "Associated Deals",
+          "source": "Associated deals",
           "message": "関連付けられた取引"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "この会社に関連付ける案件IDの配列。既存の関連付けを置き換えます。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.display_name": {
-          "source": "Create Deal",
+          "source": "Create deal",
           "message": "案件を作成"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "カスタム属性および既存の連絡先や会社とのオプションの関連付けを使用して、セールスパイプラインに新しい取引を作成します。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.display_name": {
-          "source": "Deal Name",
+          "source": "Deal name",
           "message": "取引名"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "取引案件のわかりやすい名前。必須項目です。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Deal Attributes",
+          "source": "Deal attributes",
           "message": "取引属性"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
@@ -1392,7 +1392,7 @@
           "message": "金額、ステージ、完了予定日、およびアカウントで定義されている任意のカスタムフィールドを含む、取引のカスタム属性。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "関連付けられた連絡先"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1404,7 +1404,7 @@
           "message": "この取引に関連付ける連絡先IDの配列。"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
-          "source": "Associated Companies",
+          "source": "Associated companies",
           "message": "関連付けられた会社"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
@@ -1416,7 +1416,7 @@
           "message": "この取引に関連付ける会社IDの配列。"
         },
         "app.QnJldm8.action.ZGVsZXRlX2RlYWw.display_name": {
-          "source": "Delete Deal",
+          "source": "Delete deal",
           "message": "取引を削除"
         },
         "app.QnJldm8.action.ZGVsZXRlX2RlYWw.short_desc": {
@@ -1440,7 +1440,7 @@
           "message": "パイプラインから永久に削除する取引の一意の識別子。"
         },
         "app.QnJldm8.action.Z2V0X2RlYWw.display_name": {
-          "source": "Get Deal",
+          "source": "Get deal",
           "message": "取引の取得"
         },
         "app.QnJldm8.action.Z2V0X2RlYWw.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "詳細を取得する取引の一意の識別子。"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.display_name": {
-          "source": "List Deals",
+          "source": "List deals",
           "message": "商談一覧"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "ページネーション、並べ替え、フィルタリングのオプションを使用して、パイプライン内のすべての取引のリストを取得します。関連付けられた連絡先、会社、または取引名でフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果の上限"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "1ページあたりに返す取引の最大数。デフォルトは10です。"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "ページオフセット"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "ページネーションのためにスキップする取引の数。"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.short_desc": {
@@ -1520,7 +1520,7 @@
           "message": "古い順"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contact",
+          "source": "Filter by contact",
           "message": "連絡先でフィルター"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1532,7 +1532,7 @@
           "message": "特定の連絡先に関連付けられている取引をフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
-          "source": "Filter by Company",
+          "source": "Filter by company",
           "message": "会社でフィルタリング"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {
@@ -1544,7 +1544,7 @@
           "message": "特定の会社に関連付けられている取引をフィルタリングします。"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.display_name": {
-          "source": "Deal Name Filter",
+          "source": "Deal name filter",
           "message": "取引名フィルター"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.short_desc": {
@@ -1556,7 +1556,7 @@
           "message": "指定したテキストを含む名前で取引をフィルタリングします。"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.display_name": {
-          "source": "Update Deal",
+          "source": "Update deal",
           "message": "案件を更新"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "更新する案件の一意の識別子。"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.display_name": {
-          "source": "Deal Name",
+          "source": "Deal name",
           "message": "取引名"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.short_desc": {
@@ -1592,7 +1592,7 @@
           "message": "案件の新しい説明用の名前。"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Deal Attributes",
+          "source": "Deal attributes",
           "message": "取引属性"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
@@ -1604,7 +1604,7 @@
           "message": "金額、ステージ、完了日、カスタムフィールドを含む案件のカスタム属性を更新します。"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "関連付けられた連絡先"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "この案件に関連付ける連絡先IDの配列。既存の関連付けを置き換えます。"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
-          "source": "Associated Companies",
+          "source": "Associated companies",
           "message": "関連付けられた会社"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "この案件に関連付ける会社IDの配列。既存の関連付けを置き換えます。"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.display_name": {
-          "source": "New Company",
+          "source": "New company",
           "message": "新しい会社"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.short_desc": {
@@ -1640,7 +1640,7 @@
           "message": "Brevo アカウントで新しく作成された会社を監視します。オプションで、特定の連絡先や取引にリンクされている会社でフィルタリングできます。"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contact",
+          "source": "Filter by contact",
           "message": "連絡先でフィルター"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "指定した連絡先にリンクされている会社が作成された場合にのみトリガーするオプションのフィルター。"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.display_name": {
-          "source": "Filter by Deal",
+          "source": "Filter by deal",
           "message": "取引でフィルター"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "指定した取引にリンクされている会社が作成された場合にのみトリガーするオプションのフィルター。"
         },
         "app.QnJldm8.action.bmV3X2xpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "新しいリスト"
         },
         "app.QnJldm8.action.bmV3X2xpc3Q.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Brevo アカウントで新しく作成された連絡先リストを監視します。いずれかのフォルダーに新しいリストが作成されるたびにトリガーします。"
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "新規連絡先"
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -1688,7 +1688,7 @@
           "message": "Brevo アカウントで新しく作成された連絡先を監視します。特定のリストに連絡先が追加されたときにのみトリガーするように、オプションで特定のリストでフィルタリングできます。"
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
-          "source": "Filter by Lists",
+          "source": "Filter by lists",
           "message": "リストでフィルター"
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "指定したリストに連絡先が作成された場合にのみトリガーするオプションのフィルター。空の場合、すべての新しい連絡先でトリガーします。"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.display_name": {
-          "source": "New Deal",
+          "source": "New deal",
           "message": "新規商談"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.short_desc": {
@@ -1712,7 +1712,7 @@
           "message": "Brevo アカウントのセールスパイプラインで新しく作成された取引を監視します。オプションで、特定の連絡先や会社にリンクされている取引でフィルタリングできます。"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contacts",
+          "source": "Filter by contacts",
           "message": "連絡先でフィルタリング"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "指定した連絡先にリンクされている取引が作成された場合にのみトリガーするオプションのフィルター。"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
-          "source": "Filter by Companies",
+          "source": "Filter by companies",
           "message": "会社でフィルタリング"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {

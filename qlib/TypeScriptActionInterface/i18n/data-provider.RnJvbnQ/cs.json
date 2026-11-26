@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Front** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL rozhraní API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci vystaveny jako prvotřídní akce."
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
+          "source": "List accounts",
           "message": "Seznam účtů"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Maximální počet záznamů účtů k vrácení. Výchozí hodnota je 50. Pro větší sady dat použijte stránkování."
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
+          "source": "Get account",
           "message": "Získat účet"
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Vyberte nebo zadejte ID účtu, který chcete načíst. ID účtů začínají na \"acc_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
-          "source": "Create Account",
+          "source": "Create account",
           "message": "Vytvořit účet"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Volitelný externí identifikátor pro propojení tohoto účtu se záznamem v jiném systému, jako je CRM nebo fakturační platforma."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastní pole"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Objekt obsahující hodnoty vlastních polí účtu. Klíče by měly odpovídat nakonfigurovaným názvům vlastních polí."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
-          "source": "Update Account",
+          "source": "Update account",
           "message": "Aktualizovat účet"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Aktualizovat identifikátor externího systému pro tento účet."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastní pole"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Aktualizovat hodnoty vlastních polí pro účet."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
-          "source": "Delete Account",
+          "source": "Delete account",
           "message": "Smazat účet"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vyberte nebo zadejte ID účtu, který chcete smazat."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
-          "source": "List Account Contacts",
+          "source": "List account contacts",
           "message": "Zobrazit kontakty účtu"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Maximální počet záznamů kontaktů k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
-          "source": "Add Contact to Account",
+          "source": "Add contact to account",
           "message": "Přidat kontakt k účtu"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Vyberte jeden nebo více kontaktů, které chcete přidat k účtu. ID kontaktů začínají na \"crd_\"."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
-          "source": "Remove Contact from Account",
+          "source": "Remove contact from account",
           "message": "Odebrat kontakt z účtu"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Vyberte jeden nebo více kontaktů k odebrání z účtu."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Seznam kontaktů"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Načtěte seznam všech kontaktů ve vašem pracovním prostoru Front. Kontakty představují lidi, se kterými komunikujete. Výsledky lze řadit podle data vytvoření nebo aktualizace."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Řadit podle"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Aktualizováno"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Pořadí řazení"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
@@ -740,7 +740,7 @@
           "message": "Maximální počet záznamů kontaktů k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "Získat kontakt"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Vyberte nebo zadejte ID kontaktu, který chcete načíst. ID kontaktů začínají na \"crd_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Vytvořit kontakt"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Seznam URL adres spojených s tímto kontaktem, například profily na sociálních sítích nebo weby společností."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
-          "source": "Group Names",
+          "source": "Group names",
           "message": "Názvy skupin"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Seznam názvů skupin, do kterých má být kontakt přidán. Skupiny pomáhají organizovat kontakty do kategorií."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastní pole"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Objekt obsahující hodnoty vlastních polí kontaktu. Klíče by měly odpovídat nakonfigurovaným názvům vlastních polí."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Aktualizovat kontakt"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Seznam URL adres spojených s tímto kontaktem, například profily na sociálních sítích nebo weby společností."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastní pole"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Aktualizovat hodnoty vlastních polí pro kontakt."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Smazat kontakt"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Vyberte nebo zadejte ID kontaktu, který chcete odstranit."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "List Contact Conversations",
+          "source": "List contact conversations",
           "message": "Zobrazit konverzace kontaktu"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Maximální počet záznamů konverzací k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
-          "source": "List Contact Notes",
+          "source": "List contact notes",
           "message": "Zobrazit poznámky kontaktu"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Maximální počet záznamů poznámek k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "Add Note to Contact",
+          "source": "Add note to contact",
           "message": "Přidat poznámku ke kontaktu"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Vyberte nebo zadejte ID kontaktu, ke kterému chcete přidat poznámku."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
-          "source": "Note Body",
+          "source": "Note body",
           "message": "Text poznámky"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Vyberte spolupracovníka, který bude zaznamenán jako autor této poznámky. Toto pole je povinné."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "Zobrazit seznamy kontaktů"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Maximální počet záznamů seznamů kontaktů k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "Vytvořit seznam kontaktů"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Volitelný popis vysvětlující účel seznamu kontaktů nebo kritéria pro kontakty v něm zařazené."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Delete Contact List",
+          "source": "Delete contact list",
           "message": "Odstranit seznam kontaktů"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Odstraňte seznam kontaktů z Frontu. Tím se seznam odebere, ale kontakty v něm obsažené se neodstraní. Kontakty zůstanou ve vašem pracovním prostoru."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Seznam kontaktů"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Vyberte nebo zadejte ID seznamu kontaktů, který chcete odstranit."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
-          "source": "List Contacts in Contact List",
+          "source": "List contacts in contact list",
           "message": "Zobrazit kontakty v seznamu kontaktů"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Načtěte všechny kontakty, které patří do konkrétního seznamu kontaktů. To vám pomůže zjistit, které kontakty jsou zahrnuty v daném seznamu nebo segmentu."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Seznam kontaktů"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Maximální počet záznamů kontaktů k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Add Contacts to Contact List",
+          "source": "Add contacts to contact list",
           "message": "Přidat kontakty do seznamu kontaktů"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Přidá jeden nebo více kontaktů do seznamu kontaktů ve Frontu. To vám pomůže uspořádat kontakty do logických skupin pro snazší správu a cílenou komunikaci."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Seznam kontaktů"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Vyberte jeden nebo více kontaktů, které chcete přidat do seznamu kontaktů."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
-          "source": "Remove Contacts from Contact List",
+          "source": "Remove contacts from contact list",
           "message": "Odebrat kontakty ze seznamu kontaktů"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Odeberte jeden nebo více kontaktů ze seznamu kontaktů ve Front. Tím se kontakty odeberou ze seznamu, ale samotné kontakty se nesmažou."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Seznam kontaktů"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Vyberte jeden nebo více kontaktů k odebrání ze seznamu kontaktů."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
+          "source": "List conversations",
           "message": "Zobrazit konverzace"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Maximální počet záznamů konverzací k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
+          "source": "Get conversation",
           "message": "Získat konverzaci"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Vyberte nebo zadejte ID konverzace, kterou chcete načíst. ID konverzací začínají na \"cnv_\"."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "Search Conversations",
+          "source": "Search conversations",
           "message": "Vyhledat konverzace"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "Vyhledávejte konverzace ve Front pomocí vyhledávacího dotazu. Vrací odpovídající konverzace v sestupném pořadí podle poslední aktivity spolu s celkovým počtem shod."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Vyhledávací dotaz"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "Maximální počet záznamů konverzací k vrácení. Výchozí hodnota je 25."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
+          "source": "Update conversation",
           "message": "Aktualizovat konverzaci"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1496,7 +1496,7 @@
           "message": "Přesuňte konverzaci do jiné schránky."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastní pole"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -1508,7 +1508,7 @@
           "message": "Aktualizujte hodnoty vlastních polí pro konverzaci."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
-          "source": "Update Conversation Assignee",
+          "source": "Update conversation assignee",
           "message": "Aktualizovat řešitele konverzace"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
@@ -1544,7 +1544,7 @@
           "message": "Vyberte člena týmu, kterému chcete konverzaci přiřadit. Ponechte prázdné pro zrušení přiřazení konverzace."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Add Tag to Conversation",
+          "source": "Add tag to conversation",
           "message": "Přidat štítek ke konverzaci"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "Vyberte jeden nebo více štítků, které chcete přidat ke konverzaci."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Remove Tag from Conversation",
+          "source": "Remove tag from conversation",
           "message": "Odebrat štítek z konverzace"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "Vyberte jeden nebo více štítků k odebrání z konverzace."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
-          "source": "Add Conversation Followers",
+          "source": "Add conversation followers",
           "message": "Přidat sledující ke konverzaci"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Vyberte jednoho nebo více spolupracovníků, které chcete přidat jako sledující ke konverzaci."
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "Získat zprávu"
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Zadejte ID zprávy, kterou chcete načíst. ID zpráv začínají na \"msg_\"."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
-          "source": "List Conversation Messages",
+          "source": "List conversation messages",
           "message": "Zobrazit zprávy konverzace"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
@@ -1712,7 +1712,7 @@
           "message": "Maximální počet záznamů zpráv k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
-          "source": "Reply to Conversation",
+          "source": "Reply to conversation",
           "message": "Odpovědět na konverzaci"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "Vyberte nebo zadejte ID konverzace, na kterou chcete odpovědět."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "Tělo zprávy"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
@@ -1796,7 +1796,7 @@
           "message": "Seznam e-mailových adres pro skrytou kopii (BCC) odpovědi."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
-          "source": "Save as Draft",
+          "source": "Save as draft",
           "message": "Uložit jako koncept"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Pokud je nastaveno na true, zpráva se uloží jako koncept, místo aby byla okamžitě odeslána. Výchozí hodnota je false."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
-          "source": "Add Comment to Conversation",
+          "source": "Add comment to conversation",
           "message": "Přidat komentář ke konverzaci"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "Vyberte nebo zadejte ID konverzace, ke které chcete přidat komentář."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
-          "source": "Comment Body",
+          "source": "Comment body",
           "message": "Text komentáře"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Textový obsah interního komentáře. Bude viditelný pro všechny spolupracovníky, kteří mají ke konverzaci přístup."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
-          "source": "List Conversation Comments",
+          "source": "List conversation comments",
           "message": "Zobrazit komentáře konverzace"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Maximální počet záznamů komentářů k vrácení. Výchozí hodnota je 50."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
+          "source": "New conversation",
           "message": "Nová konverzace"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "Spam"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Nový kontakt"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -1944,7 +1944,7 @@
           "message": "Tento trigger se spustí při vytvoření nového kontaktu ve Front. Použijte jej k automatizaci pracovních postupů při přidání nových kontaktů do vašeho pracovního prostoru."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "New Contact Note",
+          "source": "New contact note",
           "message": "Nová poznámka ke kontaktu"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "Vyberte nebo zadejte ID kontaktu, u kterého chcete sledovat nové poznámky. Trigger se spustí pokaždé, když je k tomuto kontaktu přidána nová poznámka."
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
-          "source": "New Comment",
+          "source": "New comment",
           "message": "Nový komentář"
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {

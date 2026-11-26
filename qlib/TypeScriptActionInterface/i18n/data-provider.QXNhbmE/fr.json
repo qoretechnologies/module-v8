@@ -28,7 +28,7 @@
           "message": "Effectuez un appel API HTTP / REST personnalisé à **Asana** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code d'état, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés comme actions de premier ordre sur cette application."
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.QXNhbmE.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Rechercher des enregistrements"
         },
         "app.QXNhbmE.action.c2VhcmNo.short_desc": {
@@ -1720,7 +1720,7 @@
           "message": "Un espace de travail spécifique existant peut être mis à jour en effectuant une requête PUT sur l'URL de cet espace de travail. Seuls les champs fournis dans le bloc data seront mis à jour ; tous les champs non spécifiés resteront inchangés.\nActuellement, le seul champ pouvant être modifié pour un espace de travail est son nom.\nRenvoie l'enregistrement complet de l'espace de travail mis à jour."
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
-          "source": "Attachment Added",
+          "source": "Attachment added",
           "message": "Pièce jointe ajoutée"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
@@ -1756,7 +1756,7 @@
           "message": "L'identifiant unique du projet dans lequel les activités relatives aux pièces jointes seront surveillées"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
-          "source": "Task ID (Optional)",
+          "source": "Task ID (optional)",
           "message": "ID de tâche (facultatif)"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
@@ -1768,7 +1768,7 @@
           "message": "L'identifiant unique d'une tâche spécifique à surveiller. S'il n'est pas fourni, les pièces jointes de toutes les tâches du projet déclencheront le flux de travail"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Subtask Completed",
+          "source": "Subtask completed",
           "message": "Sous-tâche terminée"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1804,7 +1804,7 @@
           "message": "L'identifiant unique du projet dans lequel se trouve la tâche parente"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID de la tâche parente"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "L'identifiant unique de la tâche parente dont les sous-tâches seront surveillées pour vérifier leur achèvement"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Task Completed",
+          "source": "Task completed",
           "message": "Tâche terminée"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1852,7 +1852,7 @@
           "message": "L'identifiant unique du projet dans lequel les achèvements de tâches seront surveillés"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
-          "source": "Project Task Added",
+          "source": "Project task added",
           "message": "Tâche de projet ajoutée"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
@@ -1888,7 +1888,7 @@
           "message": "L'identifiant unique du projet dans lequel la création de nouvelles tâches sera surveillée"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
-          "source": "Project Added",
+          "source": "Project added",
           "message": "Projet ajouté"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
@@ -1912,7 +1912,7 @@
           "message": "L'identifiant unique de l'espace de travail dans lequel la création de nouveaux projets sera surveillée"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
-          "source": "Task Comment Added",
+          "source": "Task comment added",
           "message": "Commentaire de tâche ajouté"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
@@ -1960,7 +1960,7 @@
           "message": "L'identifiant unique de la tâche dans laquelle les commentaires seront surveillés"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
-          "source": "Task Story Added",
+          "source": "Task story added",
           "message": "Story de tâche ajoutée"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "L'identifiant unique de la tâche dont toute l'activité sera surveillée"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
-          "source": "Task Subtask Added",
+          "source": "Task subtask added",
           "message": "Sous-tâche de tâche ajoutée"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "L'identifiant unique du projet dans lequel se trouve la tâche parente"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID de la tâche parente"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
@@ -2056,7 +2056,7 @@
           "message": "L'identifiant unique de la tâche parente où la création de sous-tâches sera surveillée"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
-          "source": "Task Tag Added",
+          "source": "Task tag added",
           "message": "Étiquette de tâche ajoutée"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
@@ -2104,7 +2104,7 @@
           "message": "L'identifiant unique de la tâche dans laquelle les ajouts d'étiquettes seront surveillés"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
-          "source": "Team Added",
+          "source": "Team added",
           "message": "Équipe ajoutée"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "L'identifiant unique de l'espace de travail où la création de nouvelles équipes sera surveillée"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
-          "source": "User Added",
+          "source": "User added",
           "message": "Utilisateur ajouté"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
@@ -2152,7 +2152,7 @@
           "message": "L'identifiant unique de l'espace de travail où les ajouts de nouveaux utilisateurs seront surveillés"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
-          "source": "Tag Created",
+          "source": "Tag created",
           "message": "Étiquette créée"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
@@ -2176,7 +2176,7 @@
           "message": "L'identifiant unique de l'espace de travail dans lequel la création de nouvelles étiquettes sera surveillée"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
-          "source": "Task Moved to Section",
+          "source": "Task moved to section",
           "message": "Tâche déplacée vers une section"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {

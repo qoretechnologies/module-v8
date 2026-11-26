@@ -28,7 +28,7 @@
           "message": "Provést vlastní volání HTTP / REST API do **Google Analytics** pomocí ověření nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou k dispozici jako primární akce v této aplikaci."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.display_name": {
-          "source": "Run Report",
+          "source": "Run report",
           "message": "Spustit přehled"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Vyberte službu GA4, ze které chcete načíst analytická data."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
+          "source": "Date ranges",
           "message": "Rozsahy dat"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Zadejte jeden nebo více rozsahů dat pro přehled. Data mohou být ve formátu RRRR-MM-DD nebo jako relativní hodnoty jako \"7daysAgo\", \"yesterday\", \"today\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Koncové datum"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Zahrnující konečný termín dotazu ve formátu YYYY-MM-DD nebo relativní datum jako \"dnes\", \"včera\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Datum zahájení"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Vyberte kvantitativní měření, která mají být zahrnuta (např. activeUsers, sessions, pageViews). Do jednoho přehledu můžete zahrnout až 10 metrik."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Název metriky"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Vyberte atributy, podle kterých chcete data segmentovat (např. country, browser, pagePath). Dimenze jsou volitelné a umožňují rozpad metrik podle konkrétních kategorií."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Název rozměru"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "ID e-commerce transakce"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
+          "source": "Dimension filter",
           "message": "Filtr dimenzí"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Pokročilý výraz filtru pro filtrování dat přehledu na základě hodnot dimenzí. Použijte syntaxi výrazů filtrů GA4."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
+          "source": "Metric filter",
           "message": "Filtr metrik"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Pokročilý výraz filtru pro filtrování dat přehledu na základě hodnot metrik. Použijte syntaxi výrazů filtrů GA4."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Seřadit podle"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Pokud je hodnota true, řadí v sestupném pořadí. Pokud je hodnota false, řadí v vzestupném pořadí."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Název pole"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Název dimenze nebo metriky pro třídění."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Typ řazení"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
@@ -1352,7 +1352,7 @@
           "message": "Počet řádků, které se mají přeskočit před vrácením výsledků. Používá se pro stránkování."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.display_name": {
-          "source": "Keep Empty Rows",
+          "source": "Keep empty rows",
           "message": "Ponechat prázdné řádky"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.short_desc": {
@@ -1364,7 +1364,7 @@
           "message": "Pokud je hodnota true, zahrne řádky, kde mají všechny metriky nulové hodnoty. Pokud je false (výchozí), jsou tyto řádky vyloučeny."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.display_name": {
-          "source": "Return Property Quota",
+          "source": "Return property quota",
           "message": "Vrátit kvótu služby"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.short_desc": {
@@ -1376,7 +1376,7 @@
           "message": "Pokud je hodnota true, vrátí v odpovědi informace o využití kvóty API pro tuto službu."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.display_name": {
-          "source": "Run Real-time Report",
+          "source": "Run real-time report",
           "message": "Spustit přehled v reálném čase"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.short_desc": {
@@ -1412,7 +1412,7 @@
           "message": "Vyberte metriky v reálném čase, které mají být zahrnuty do přehledu (např. activeUsers, screenPageViews, eventCount)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Název metriky"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "Vyberte dimenze v reálném čase, podle kterých chcete data segmentovat (např. country, city, deviceCategory, unifiedScreenName)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Název rozměru"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Počet minut, které uplynuly od výskytu události"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.display_name": {
-          "source": "Minute Ranges",
+          "source": "Minute ranges",
           "message": "Minutové rozsahy"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Určete vlastní časové rozsahy pro data v reálném čase. Ve výchozím nastavení se vrací data za posledních 30 minut."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.display_name": {
-          "source": "End Minutes Ago",
+          "source": "End minutes ago",
           "message": "Konec před minutami"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "Konec časového rozsahu v minutách zpět (např. 0 pro aktuální minutu)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.display_name": {
-          "source": "Range Name",
+          "source": "Range name",
           "message": "Název rozsahu"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.short_desc": {
@@ -1588,7 +1588,7 @@
           "message": "Volitelný název pro identifikaci tohoto časového rozsahu v odpovědi."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.display_name": {
-          "source": "Start Minutes Ago",
+          "source": "Start minutes ago",
           "message": "Začít před minutami"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.short_desc": {
@@ -1600,7 +1600,7 @@
           "message": "Začátek rozsahu minut vyjádřený v minutách zpět (např. 29 pro 29 minut zpět)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
+          "source": "Dimension filter",
           "message": "Filtr dimenzí"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "Pokročilý výraz filtru pro filtrování dat v reálném čase na základě hodnot dimenzí."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
+          "source": "Metric filter",
           "message": "Filtr metrik"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "Pokročilý výraz filtru pro filtrování dat v reálném čase na základě hodnot metrik."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Seřadit podle"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
@@ -1648,7 +1648,7 @@
           "message": "Pokud je hodnota true, řadí v sestupném pořadí."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Název pole"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
@@ -1660,7 +1660,7 @@
           "message": "Název dimenze nebo metriky pro třídění."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Typ řazení"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "Maximální počet řádků k vrácení. Výchozí hodnota je 10 000."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.display_name": {
-          "source": "Get Metadata",
+          "source": "Get metadata",
           "message": "Získat metadata"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.short_desc": {
@@ -1716,7 +1716,7 @@
           "message": "Vyberte službu GA4, pro kterou chcete získat metadata. Odpověď bude obsahovat standardní i vlastní dimenze/metriky."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.display_name": {
-          "source": "Batch Run Reports",
+          "source": "Batch run reports",
           "message": "Dávkově spustit přehledy"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.short_desc": {
@@ -1740,7 +1740,7 @@
           "message": "Vyberte službu GA4, ze které chcete získat analytická data pro všechny přehledy."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.display_name": {
-          "source": "Report Requests",
+          "source": "Report requests",
           "message": "Požadavky na přehled"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.short_desc": {
@@ -1752,7 +1752,7 @@
           "message": "Pole konfigurací požadavků na přehled. Každý požadavek může mít vlastní rozsahy dat, metriky, dimenze a limity. Maximálně 5 požadavků na dávku."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
+          "source": "Date ranges",
           "message": "Rozsahy dat"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "Rozsahy dat pro tento konkrétní report v dávce."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Koncové datum"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.short_desc": {
@@ -1776,7 +1776,7 @@
           "message": "Konečné datum ve formátu YYYY-MM-DD nebo relativním formátu."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Datum zahájení"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Rozměry, které mají být zahrnuty v tomto konkrétním reportu."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Název rozměru"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.short_desc": {
@@ -2260,7 +2260,7 @@
           "message": "Metriky, které se mají zahrnout do této konkrétní sestavy."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Název metriky"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.short_desc": {
@@ -2648,7 +2648,7 @@
           "message": "Počet zobrazení reklamy na vašem místě"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.display_name": {
-          "source": "Check Compatibility",
+          "source": "Check compatibility",
           "message": "Zkontrolovat kompatibilitu"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.short_desc": {
@@ -2684,7 +2684,7 @@
           "message": "Dimenze, u kterých chcete ověřit, že je lze použít společně."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Název rozměru"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -3132,7 +3132,7 @@
           "message": "Metriky, u kterých chcete ověřit, že je lze použít společně."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Název metriky"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -3520,7 +3520,7 @@
           "message": "Počet zobrazení reklamy na vašem místě"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.display_name": {
-          "source": "Compatibility Filter",
+          "source": "Compatibility filter",
           "message": "Filtr kompatibility"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.short_desc": {

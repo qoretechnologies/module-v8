@@ -28,7 +28,7 @@
           "message": "Зробіть власний виклик HTTP / REST API до **Craft**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не реалізовано як окремі дії в цьому додатку."
         },
         "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.display_name": {
-          "source": "Get Daily Note Blocks",
+          "source": "Get daily note blocks",
           "message": "Отримати блоки щоденної нотатки"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Завтра"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Максимальна глибина"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Укажіть максимальну глибину отримання вкладених блоків. Використовуйте -1 для необмеженої глибини або вкажіть додатне число, щоб обмежити глибину отримання структури вкладених блоків."
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
+          "source": "Fetch metadata",
           "message": "Отримати метадані"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Увімкніть цю опцію, щоб включити до відповіді додаткові метадані для кожного блоку, такі як дата створення, дата останньої зміни та інформація про автора."
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "Отримати список документів"
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Отримати список усіх документів у вашому робочому просторі Craft. Це включає ідентифікатори документів, назви та їхній статус видалення, забезпечуючи повний огляд вашої бібліотеки документів."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "Список колекцій"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Ідентифікатори документів для фільтрації. Якщо не вказано, буде наведено перелік колекцій у всіх документах."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.display_name": {
-          "source": "Document Filter Mode",
+          "source": "Document filter mode",
           "message": "Режим фільтрації документів"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.short_desc": {
@@ -468,7 +468,7 @@
           "message": "Виключити"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Create Collection Item",
+          "source": "Create collection item",
           "message": "Створити елемент колекції"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -516,7 +516,7 @@
           "message": "Додати настроювані властивості до елемента колекції. Доступні властивості визначаються динамічно на основі схеми вибраної колекції."
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.display_name": {
-          "source": "Delete Collection Items",
+          "source": "Delete collection items",
           "message": "Видалити елементи колекції"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Укажіть список ID елементів, які ви хочете вилучити з колекції. Ви можете вибрати кілька елементів для видалення за одну операцію."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Update Collection Item",
+          "source": "Update collection item",
           "message": "Оновити елемент колекції"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -612,7 +612,7 @@
           "message": "Оновіть користувацькі властивості елемента колекції. Буде оновлено лише вказані вами властивості, інші залишаться без змін."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.display_name": {
-          "source": "List Collection Items",
+          "source": "List collection items",
           "message": "Список елементів колекції"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.short_desc": {
@@ -636,7 +636,7 @@
           "message": "Виберіть колекцію Craft, елементи якої ви хочете відобразити у списку. Буде повернено всі елементи в колекції."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Максимальна глибина"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Максимальна глибина вкладеного вмісту, яку слід отримати для кожного елемента колекції. Значення за замовчуванням — -1 (усі нащадки). При глибині 0 отримуються лише властивості елемента без вкладеного вмісту."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
+          "source": "List blocks",
           "message": "Список блоків"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Отримайте всі блоки з конкретного документа або сторінки Craft. Це дозволяє отримати доступ до структурованого вмісту ваших документів, включаючи вкладені блоки, із контролем глибини та метаданих."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.display_name": {
-          "source": "Document/Page ID",
+          "source": "Document/page ID",
           "message": "ID документа/сторінки"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "ID блоку сторінки для отримання. Обов'язково для багатодокументних операцій. Приймає ID для документів, сторінок і блоків."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Максимальна глибина"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Укажіть максимальну глибину отримання вкладених блоків. Використовуйте -1 для необмеженої глибини або вкажіть додатне число, щоб обмежити рівень вкладеності."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
+          "source": "Fetch metadata",
           "message": "Отримати метадані"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Чи отримувати метадані (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) для блоків."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.display_name": {
-          "source": "Get Markdown String",
+          "source": "Get markdown string",
           "message": "Отримати рядок Markdown"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Чи отримувати представлення блоків у вигляді рядка markdown."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.display_name": {
-          "source": "Insert Block",
+          "source": "Insert block",
           "message": "Вставити блок"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Вставте новий блок із вмістом markdown у документ Craft. Ви можете вказати, чи вставляти блок на початку чи в кінці цільової сторінки."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Вміст у форматі Markdown"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.short_desc": {
@@ -756,7 +756,7 @@
           "message": "ID блоку, в який вставляються дочірні елементи. Необхідно для операцій з кількома документами. Іншими батьківськими блоками можуть бути лише блоки типу сторінка, текст і картка. Текстові блоки автоматично перетворюються на тип сторінка, коли отримують дочірні елементи. Елементи колекції є неявно сторінками."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "Позиція вставлення"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Кінець"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
+          "source": "Delete blocks",
           "message": "Видалити блоки"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
@@ -800,7 +800,7 @@
           "message": "Укажіть список ID блоків, які ви хочете вилучити з документа. Ви можете видалити кілька блоків за одну операцію."
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Отримати список завдань"
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Журнал"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Створити завдання"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Створити нове завдання в Craft із вмістом markdown, необов'язковою інформацією про завдання (стан, розклад, крайній термін) і розташуванням (вхідні або щоденна нотатка)."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Вміст завдання"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Вміст завдання у форматі markdown. Це буде текст завдання."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.display_name": {
-          "source": "Task Information",
+          "source": "Task information",
           "message": "Інформація про завдання"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Необов'язкові метадані завдання, включаючи стан, дату розкладу та дату крайнього терміну"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
+          "source": "Deadline date",
           "message": "Кінцевий термін"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Термін виплати завдання. Приймає формат ISO YYYY-MM-DD або відносні дати: 'сьогодні', 'завтра', 'вчора'"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
+          "source": "Schedule date",
           "message": "Запланована дата"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Дата нотатки, де розташована задача. Приймає формат ISO YYYY-MM-DD або відносні дати: 'сьогодні', 'завтра', 'вчора'. За замовчуванням 'сьогодні', якщо не вказано."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Тип локації"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Щоденний нотатка"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "Оновити завдання"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Виберіть завдання, яке ви хочете змінити. Для вибору доступні лише активні завдання."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Вміст завдання"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Скасовано"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
+          "source": "Schedule date",
           "message": "Запланована дата"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "Оновлена запланована дата виконання. Приймає ISO-формат YYYY-MM-DD або відносні дати: 'today', 'tomorrow', 'yesterday'. Залиште порожнім, щоб залишити існуючий розклад."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
+          "source": "Deadline date",
           "message": "Кінцевий термін"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Оновлена дата виконання завдання. Приймає ISO-формат YYYY-MM-DD або відносні дати: 'today', 'tomorrow', 'yesterday'. Залиште порожнім, щоб залишити існуючий кінцевий термін."
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.display_name": {
-          "source": "Delete Tasks",
+          "source": "Delete tasks",
           "message": "Видалити завдання"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Укажіть список ID завдань, які ви хочете вилучити. Ви можете видалити кілька завдань за одну операцію."
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "New Collection Item",
+          "source": "New collection item",
           "message": "Новий елемент колекції"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "Виберіть колекцію Craft, за якою потрібно відстежувати нові елементи. Коли до цієї колекції додається новий елемент, тригер спрацює."
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "Максимальна глибина"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Виконайте користувацький виклик HTTP / REST API до **Firestore**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається як хеш, що містить код статусу, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не реалізовано як окремі дії в цьому додатку."
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Отримати список проєктів"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Отримує список усіх проєктів Google Cloud, доступних за вашими обліковими даними. Ви можете фільтрувати проєкти за назвою та використовувати пагінацію для перегляду великих наборів результатів. Це корисно для визначення проєктів, які містять бази даних Firestore."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
-          "source": "Project Name",
+          "source": "Project name",
           "message": "Назва проєкту"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Необов'язковий фільтр для пошуку проєктів, які містять цю назву. Пошук нечутливий до регістру та знаходить часткові збіги назв."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Розмір сторінки"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Максимальна кількість проєктів для повернення в одному запиті. За замовчуванням — 100. Використовуйте разом із токенами пагінації для отримання великих наборів результатів."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Токен наступної сторінки"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Токен пагінації, отриманий з попереднього запиту. Використовуйте його для отримання наступної сторінки проєктів, коли результатів більше, ніж розмір сторінки."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
-          "source": "Create Document",
+          "source": "Create document",
           "message": "Створити документ"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Шлях до колекції"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Необов'язковий власний ідентифікатор для документа. Якщо не вказано, Firestore автоматично згенерує унікальний ID. Ідентифікатори документів мають бути коректними рядками UTF-8 і не можуть містити скісну риску."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
+          "source": "Document data",
           "message": "Дані документа"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Структуровані дані для збереження в документі. Типи даних визначатимуться динамічно на основі схеми колекції, якщо вона доступна. Кожне поле зберігатиметься з відповідним типом даних Firestore."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
+          "source": "Additional data",
           "message": "Додаткові дані"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Необов'язкові додаткові поля для об'єднання зі структурованими даними. Використовуйте це, щоб додати поля, які не входять до попередньо визначеної схеми, або включити динамічні поля."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
-          "source": "Get Document",
+          "source": "Get document",
           "message": "Отримати документ"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Шлях до колекції"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Унікальний ідентифікатор документа, який потрібно отримати. Це ID документа, автоматично згенерований або вказаний під час створення документа."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
-          "source": "Update Document",
+          "source": "Update document",
           "message": "Оновити документ"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Шлях до колекції"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Унікальний ідентифікатор документа, який потрібно оновити. Документ повинен існувати, інакше операція зазнає невдачі."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
+          "source": "Document data",
           "message": "Дані документа"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Дані для оновлення в документі. Якщо об'єднання увімкнено, оновлюються лише вказані поля. Якщо об'єднання вимкнено, ці дані замінять увесь документ."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
+          "source": "Additional data",
           "message": "Додаткові дані"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Якщо true (за замовчуванням), оновлюються лише вказані поля, а інші поля залишаються без змін. Якщо false, увесь документ замінюється новими даними."
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
-          "source": "Delete Document",
+          "source": "Delete document",
           "message": "Видалити документ"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Шлях до колекції"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Унікальний ідентифікатор документа, який потрібно видалити. Документ має існувати, інакше операція завершиться помилкою."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "Отримати список документів"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Шлях до колекції"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Максимальна кількість документів для отримання. За замовчуванням — 100. Використовуйте це для керування розміром вибірки результатів та покращення продуктивності."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Сортувати за"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Необов'язкова назва поля для сортування документів. Поле має існувати в документах і мати тип, що підтримує порівняння (рядок, число, дата)."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
-          "source": "Order Direction",
+          "source": "Order direction",
           "message": "Напрямок сортування"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
@@ -720,7 +720,7 @@
           "message": "За спаданням"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "Список колекцій"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
+          "source": "Parent document path",
           "message": "Шлях до батьківського документа"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Необов'язковий шлях до документа, підколекції якого потрібно отримати у вигляді списку. Якщо не вказано, виводить список колекцій кореневого рівня. Формат: collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
+          "source": "Get collection",
           "message": "Отримати колекцію"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
@@ -792,7 +792,7 @@
           "message": "Ідентифікатор колекції, відомості про яку потрібно отримати. Це назва колекції без батьківського шляху."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
+          "source": "Parent document path",
           "message": "Шлях до батьківського документа"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
@@ -804,7 +804,7 @@
           "message": "Необов'язковий шлях до батьківського документа, якщо це підколекція. Якщо не вказано, вважається, що це колекція кореневого рівня. Формат: collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
-          "source": "Include Sample Documents",
+          "source": "Include sample documents",
           "message": "Включити зразки документів"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Якщо має значення true, додає до відповіді зразки документів із колекції. Це допомагає зрозуміти структуру та вміст колекції."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
-          "source": "Sample Limit",
+          "source": "Sample limit",
           "message": "Ліміт зразків"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Максимальна кількість зразків документів для отримання, якщо для include_sample_documents встановлено значення true. За замовчуванням: 5."
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
-          "source": "Query Documents",
+          "source": "Query documents",
           "message": "Запит документів"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Шлях до колекції"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Значення, яке потрібно використовувати у порівнянні. Тип значення повинен відповідати типу поля в документах (рядок, число, булеве значення тощо)."
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Сортувати за"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
@@ -1008,7 +1008,7 @@
           "message": "Максимальна кількість документів для отримання. За замовчуванням — 100. Використовуйте це для керування продуктивністю запиту та розміром вибірки результатів."
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Backup to Google Cloud Storage",
+          "source": "Backup to Google cloud storage",
           "message": "Резервне копіювання в Google Cloud Storage"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore для резервного копіювання"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
-          "source": "Output URI Prefix",
+          "source": "Output URI prefix",
           "message": "Префікс вихідного URI"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Необов'язковий список ідентифікаторів колекцій для резервного копіювання. Якщо не вказано, резервна копія створюється для всієї бази даних. Використовуйте це для створення вибіркових резервних копій певних колекцій."
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Restore from Google Cloud Storage",
+          "source": "Restore from Google cloud storage",
           "message": "Відновити з Google Cloud Storage"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, до якого будуть відновлені дані"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
-          "source": "Input URI Prefix",
+          "source": "Input URI prefix",
           "message": "Префікс вхідного URI"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
@@ -1104,7 +1104,7 @@
           "message": "Необов'язковий список ID колекцій для відновлення з резервної копії. Якщо не вказано, будуть відновлені всі колекції з резервної копії. Використовуйте це для вибіркового відновлення конкретних колекцій."
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Document",
+          "source": "New document",
           "message": "Новий документ"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
+          "source": "Collection path",
           "message": "Шлях до колекції"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Значення, яке потрібно використовувати у порівнянні. Значення буде автоматично перетворено на відповідний тип (рядок, число, булеве значення або null)"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Сортувати за"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {

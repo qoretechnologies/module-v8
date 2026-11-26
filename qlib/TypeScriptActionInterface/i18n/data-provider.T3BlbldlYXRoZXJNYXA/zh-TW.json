@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **OpenWeatherMap** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊返回。\n\n將此動作使用於尚未在此應用程式中公開為第一類動作的端點。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.display_name": {
-          "source": "Get Current Weather",
+          "source": "Get current weather",
           "message": "取得目前天氣"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.short_desc": {
@@ -352,7 +352,7 @@
           "message": "取得全球任何地點的即時天氣資訊，包括溫度、濕度、風速、氣壓、能見度和天氣狀況。支援依城市名稱、地理座標或郵遞區號查詢。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "位置類型"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "天氣狀況描述的選用雙字母語言代碼（例如 \"en\" 代表英文、\"es\" 代表西班牙文、\"fr\" 代表法文、\"de\" 代表德文）。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.display_name": {
-          "source": "Get Weather Forecast",
+          "source": "Get weather forecast",
           "message": "取得天氣預報"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "取得全球任何地點每 3 小時一個資料點的 5 天天氣預報。每個預報項目皆包含溫度、濕度、風力、降雨機率及天氣狀況。支援依城市名稱、地理座標或郵遞區號查詢。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "位置類型"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "限制返回的 3 小時預報項目數量。每天最多有 8 個資料點（每 3 小時一個）。最大值為 40（5 天 x 8 個區間）。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.display_name": {
-          "source": "Temperature Threshold",
+          "source": "Temperature threshold",
           "message": "溫度閾值"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.short_desc": {
@@ -508,7 +508,7 @@
           "message": "監控特定地點的溫度，並在溫度高於或低於設定的閾值時觸發。適用於溫度警示、HVAC 自動化和相依於天氣的工作流程。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "位置類型"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -556,7 +556,7 @@
           "message": "標準（克耳文，公尺/秒）"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.display_name": {
-          "source": "Threshold Type",
+          "source": "Threshold type",
           "message": "閾值類型"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.short_desc": {
@@ -576,7 +576,7 @@
           "message": "低於"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.display_name": {
-          "source": "Threshold Value",
+          "source": "Threshold value",
           "message": "門檻值"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.short_desc": {
@@ -588,7 +588,7 @@
           "message": "設定穿越時將觸發事件的溫度值。請使用在「單位」選項中所選的相同單位（例如攝氏冰點為 0，華氏為 32）。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.display_name": {
-          "source": "Weather Condition Change",
+          "source": "Weather condition change",
           "message": "天氣狀況變化"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.short_desc": {
@@ -600,7 +600,7 @@
           "message": "監控特定地點的天氣狀況，並在狀況發生變化時觸發（例如從晴天變為下雨、多雲變為下雪）。可選填依特定狀況類型進行篩選。"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "位置類型"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "標準（克耳文，公尺/秒）"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.display_name": {
-          "source": "Condition Filter",
+          "source": "Condition filter",
           "message": "狀況篩選條件"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.short_desc": {

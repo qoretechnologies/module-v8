@@ -6,7 +6,7 @@ const SurveyMonkeyAppEn = {
   longDesc: `Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.`,
   triggers: {
     new_response: {
-      displayName: 'New Response',
+      displayName: 'New response',
       shortDesc: 'Triggers when a new survey response is completed',
       longDesc:
         'This trigger fires when a respondent completes a survey. The webhook payload includes basic response information. Use the "Get Response" action to fetch detailed response data including answers.',
@@ -19,7 +19,7 @@ const SurveyMonkeyAppEn = {
       },
     },
     response_disqualified: {
-      displayName: 'Response Disqualified',
+      displayName: 'Response disqualified',
       shortDesc: 'Triggers when a respondent is disqualified from a survey',
       longDesc:
         'This trigger fires when a respondent is screened out or disqualified from a survey based on their answers to qualifying questions.',
@@ -32,7 +32,7 @@ const SurveyMonkeyAppEn = {
       },
     },
     response_updated: {
-      displayName: 'Response Updated',
+      displayName: 'Response updated',
       shortDesc: 'Triggers when a survey response is updated',
       longDesc:
         'This trigger fires when an existing survey response is modified or updated. Useful for tracking partial responses or response edits.',
@@ -45,7 +45,7 @@ const SurveyMonkeyAppEn = {
       },
     },
     collector_updated: {
-      displayName: 'Collector Updated',
+      displayName: 'Collector updated',
       shortDesc: 'Triggers when a collector is updated',
       longDesc:
         'This trigger fires when a collector (distribution method) for a survey is modified, such as status changes or configuration updates.',
@@ -61,17 +61,17 @@ const SurveyMonkeyAppEn = {
   actions: {
     create_contact: {
       groups: ['Contact Management'],
-      displayName: 'Create Contact',
+      displayName: 'Create contact',
       shortDesc: 'Create a new contact',
       longDesc: 'Create a new contact in SurveyMonkey with first name, last name, email, or phone number',
       options: {
         first_name: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "The contact's first name",
           longDesc: 'The first name of the contact',
         },
         last_name: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "The contact's last name",
           longDesc: 'The last name of the contact',
         },
@@ -81,7 +81,7 @@ const SurveyMonkeyAppEn = {
           longDesc: 'The email address for the contact (either email or phone number is required)',
         },
         phone_number: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: "The contact's phone number",
           longDesc: 'The phone number for the contact (either email or phone number is required)',
         },
@@ -89,7 +89,7 @@ const SurveyMonkeyAppEn = {
     },
     list_contacts: {
       groups: ['Data Retrieval'],
-      displayName: 'List Contacts',
+      displayName: 'List contacts',
       shortDesc: 'Retrieve a list of contacts',
       longDesc: 'Retrieve a paginated list of contacts from SurveyMonkey',
       options: {
@@ -99,7 +99,7 @@ const SurveyMonkeyAppEn = {
           longDesc: 'The page number for pagination (starts at 1)',
         },
         per_page: {
-          displayName: 'Per Page',
+          displayName: 'Per page',
           shortDesc: 'Number of contacts per page',
           longDesc: 'The number of contacts to return per page (default: 100)',
         },
@@ -113,7 +113,7 @@ const SurveyMonkeyAppEn = {
     },
     create_collector: {
       groups: ['Survey Management'],
-      displayName: 'Create Collector',
+      displayName: 'Create collector',
       shortDesc: 'Create a collector for a survey',
       longDesc: 'Create a new collector (distribution method) for a survey in SurveyMonkey',
       options: {
@@ -123,12 +123,12 @@ const SurveyMonkeyAppEn = {
           longDesc: 'Select the survey that you want to create a collector for',
         },
         type: {
-          displayName: 'Collector Type',
+          displayName: 'Collector type',
           shortDesc: 'The type of collector',
           longDesc: 'Select the type of collector (email, weblink, facebook, or embed)',
         },
         name: {
-          displayName: 'Collector Name',
+          displayName: 'Collector name',
           shortDesc: 'The name of the collector',
           longDesc: 'A descriptive name for the collector',
         },
@@ -136,7 +136,7 @@ const SurveyMonkeyAppEn = {
     },
     list_collectors: {
       groups: ['Data Retrieval'],
-      displayName: 'List Collectors',
+      displayName: 'List collectors',
       shortDesc: 'Retrieve collectors for a survey',
       longDesc: 'Retrieve a paginated list of collectors for a specific survey',
       options: {
@@ -154,7 +154,7 @@ const SurveyMonkeyAppEn = {
     },
     list_responses: {
       groups: ['Data Retrieval'],
-      displayName: 'List Responses',
+      displayName: 'List responses',
       shortDesc: 'Retrieve survey responses',
       longDesc: 'Retrieve a paginated list of responses for a specific survey',
       options: {
@@ -172,7 +172,7 @@ const SurveyMonkeyAppEn = {
     },
     get_response: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Response',
+      displayName: 'Get response',
       shortDesc: 'Retrieve a specific survey response',
       longDesc:
         'Retrieve detailed information about a specific survey response, optionally including full answer details',
@@ -188,7 +188,7 @@ const SurveyMonkeyAppEn = {
           longDesc: 'The unique identifier of the response you want to retrieve',
         },
         include_answers: {
-          displayName: 'Include Answers',
+          displayName: 'Include answers',
           shortDesc: 'Include detailed answer data',
           longDesc:
             'When enabled, retrieves the full response details including all question answers',
@@ -197,7 +197,7 @@ const SurveyMonkeyAppEn = {
     },
     get_collector: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Collector',
+      displayName: 'Get collector',
       shortDesc: 'Retrieve collector details',
       longDesc: 'Retrieve detailed information about a specific collector',
       options: {
@@ -215,7 +215,7 @@ const SurveyMonkeyAppEn = {
     },
     get_survey: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Survey',
+      displayName: 'Get survey',
       shortDesc: 'Retrieve survey details',
       longDesc: 'Retrieve detailed information about a specific survey including pages and questions',
       options: {
@@ -228,7 +228,7 @@ const SurveyMonkeyAppEn = {
     },
     list_surveys: {
       groups: ['Data Retrieval'],
-      displayName: 'List Surveys',
+      displayName: 'List surveys',
       shortDesc: 'Retrieve a list of surveys',
       longDesc: 'Retrieve a paginated list of all surveys in your SurveyMonkey account',
       options: {
@@ -241,7 +241,7 @@ const SurveyMonkeyAppEn = {
     },
     send_survey: {
       groups: ['Survey Management'],
-      displayName: 'Send Survey',
+      displayName: 'Send survey',
       shortDesc: 'Send survey invitation via collector',
       longDesc: 'Send a survey invitation to recipients via an email collector',
       options: {
@@ -256,17 +256,17 @@ const SurveyMonkeyAppEn = {
           longDesc: 'Select the email collector to send the survey through',
         },
         subject: {
-          displayName: 'Email Subject',
+          displayName: 'Email subject',
           shortDesc: 'The subject line for the invitation email',
           longDesc: 'The subject line that will appear in the invitation email',
         },
         body_text: {
-          displayName: 'Email Body',
+          displayName: 'Email body',
           shortDesc: 'The body text for the invitation email',
           longDesc: 'The message body that will appear in the invitation email',
         },
         recipient_emails: {
-          displayName: 'Recipient Emails',
+          displayName: 'Recipient emails',
           shortDesc: 'List of recipient email addresses',
           longDesc: 'A list of email addresses to send the survey invitation to',
         },
@@ -274,7 +274,7 @@ const SurveyMonkeyAppEn = {
     },
     create_survey: {
       groups: ['Survey Management'],
-      displayName: 'Create Survey',
+      displayName: 'Create survey',
       shortDesc: 'Create a new survey',
       longDesc: 'Create a new survey in SurveyMonkey from scratch or from a template',
       options: {
@@ -307,7 +307,7 @@ const SurveyMonkeyAppEn = {
     },
     copy_survey: {
       groups: ['Survey Management'],
-      displayName: 'Copy Survey',
+      displayName: 'Copy survey',
       shortDesc: 'Create a copy of an existing survey',
       longDesc: 'Clone an existing survey to create a new survey with the same structure and questions',
       options: {
@@ -325,7 +325,7 @@ const SurveyMonkeyAppEn = {
     },
     update_collector: {
       groups: ['Survey Management'],
-      displayName: 'Update Collector',
+      displayName: 'Update collector',
       shortDesc: 'Update collector settings',
       longDesc: 'Modify the settings of an existing collector such as status, close date, or redirect URL',
       options: {
@@ -350,7 +350,7 @@ const SurveyMonkeyAppEn = {
           longDesc: 'Set the collector to open or closed',
         },
         close_date: {
-          displayName: 'Close Date',
+          displayName: 'Close date',
           shortDesc: 'When to automatically close the collector',
           longDesc: 'The date and time when the collector should automatically close (ISO 8601 format)',
         },
@@ -360,7 +360,7 @@ const SurveyMonkeyAppEn = {
           longDesc: 'The URL where respondents will be redirected after completing the survey',
         },
         response_limit: {
-          displayName: 'Response Limit',
+          displayName: 'Response limit',
           shortDesc: 'Maximum number of responses',
           longDesc: 'The maximum number of responses to accept before closing the collector',
         },
@@ -368,7 +368,7 @@ const SurveyMonkeyAppEn = {
     },
     delete_collector: {
       groups: ['Survey Management'],
-      displayName: 'Delete Collector',
+      displayName: 'Delete collector',
       shortDesc: 'Delete a collector from a survey',
       longDesc: 'Permanently remove a collector from a survey. This action cannot be undone.',
       options: {
@@ -386,7 +386,7 @@ const SurveyMonkeyAppEn = {
     },
     get_response_counts: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Response Counts',
+      displayName: 'Get response counts',
       shortDesc: 'Get total response count for a survey',
       longDesc: 'Quickly retrieve the total number of responses for a survey without fetching all response data',
       options: {
@@ -399,7 +399,7 @@ const SurveyMonkeyAppEn = {
     },
     update_contact: {
       groups: ['Contact Management'],
-      displayName: 'Update Contact',
+      displayName: 'Update contact',
       shortDesc: 'Update an existing contact',
       longDesc: 'Modify the details of an existing contact in SurveyMonkey',
       options: {
@@ -409,12 +409,12 @@ const SurveyMonkeyAppEn = {
           longDesc: 'The unique identifier of the contact you want to update',
         },
         first_name: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "The contact's first name",
           longDesc: 'The new first name for the contact',
         },
         last_name: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "The contact's last name",
           longDesc: 'The new last name for the contact',
         },
@@ -424,7 +424,7 @@ const SurveyMonkeyAppEn = {
           longDesc: 'The new email address for the contact',
         },
         phone_number: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: "The contact's phone number",
           longDesc: 'The new phone number for the contact',
         },
@@ -432,7 +432,7 @@ const SurveyMonkeyAppEn = {
     },
     delete_contact: {
       groups: ['Contact Management'],
-      displayName: 'Delete Contact',
+      displayName: 'Delete contact',
       shortDesc: 'Delete a contact',
       longDesc: 'Permanently remove a contact from SurveyMonkey. This action cannot be undone.',
       options: {
@@ -445,7 +445,7 @@ const SurveyMonkeyAppEn = {
     },
     list_contact_lists: {
       groups: ['Data Retrieval'],
-      displayName: 'List Contact Lists',
+      displayName: 'List contact lists',
       shortDesc: 'Retrieve all contact lists',
       longDesc: 'Retrieve a list of all contact lists in your SurveyMonkey account',
       options: {
@@ -458,7 +458,7 @@ const SurveyMonkeyAppEn = {
     },
     create_contact_list: {
       groups: ['Contact Management'],
-      displayName: 'Create Contact List',
+      displayName: 'Create contact list',
       shortDesc: 'Create a new contact list',
       longDesc: 'Create a new contact list for organizing contacts in SurveyMonkey',
       options: {
@@ -471,12 +471,12 @@ const SurveyMonkeyAppEn = {
     },
     add_contacts_to_list: {
       groups: ['Contact Management'],
-      displayName: 'Add Contacts to List',
+      displayName: 'Add contacts to list',
       shortDesc: 'Add contacts to a contact list',
       longDesc: 'Add one or more existing contacts to a contact list in bulk',
       options: {
         contact_list_id: {
-          displayName: 'Contact List ID',
+          displayName: 'Contact list ID',
           shortDesc: 'The contact list to add contacts to',
           longDesc: 'The ID of the contact list where contacts will be added',
         },
@@ -489,7 +489,7 @@ const SurveyMonkeyAppEn = {
     },
     get_survey_rollup: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Survey Rollup',
+      displayName: 'Get survey rollup',
       shortDesc: 'Get aggregated survey statistics',
       longDesc: 'Retrieve aggregated response statistics for a survey including question-level summaries',
       options: {
@@ -502,14 +502,14 @@ const SurveyMonkeyAppEn = {
     },
     get_user_details: {
       groups: ['Data Retrieval'],
-      displayName: 'Get User Details',
+      displayName: 'Get user details',
       shortDesc: 'Get authenticated user information',
       longDesc: 'Retrieve details about the authenticated SurveyMonkey user including account type and permissions',
       options: {},
     },
     list_survey_folders: {
       groups: ['Data Retrieval'],
-      displayName: 'List Survey Folders',
+      displayName: 'List survey folders',
       shortDesc: 'Retrieve all survey folders',
       longDesc: 'Retrieve a list of all survey folders in your SurveyMonkey account',
       options: {
@@ -522,7 +522,7 @@ const SurveyMonkeyAppEn = {
     },
     create_survey_folder: {
       groups: ['Survey Management'],
-      displayName: 'Create Survey Folder',
+      displayName: 'Create survey folder',
       shortDesc: 'Create a new survey folder',
       longDesc: 'Create a new folder to organize your surveys in SurveyMonkey',
       options: {

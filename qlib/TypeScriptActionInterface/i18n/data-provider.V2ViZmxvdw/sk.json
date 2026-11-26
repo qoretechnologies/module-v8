@@ -28,7 +28,7 @@
           "message": "Vykonať vlastné volanie HTTP / REST API do **Webflow** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako plnohodnotné akcie v tejto aplikácii."
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.display_name": {
-          "source": "Delete Item",
+          "source": "Delete item",
           "message": "Odstrániť položku"
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
+          "source": "Get collection",
           "message": "Získať kolekciu"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Vyberte konkrétnu kolekciu Webflow, o ktorej chcete získať informácie"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.display_name": {
-          "source": "Get Item",
+          "source": "Get item",
           "message": "Získať položku"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "ID jazykového nastavenia CMS"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Zadajte ID jazykového nastavenia CMS, ak pracujete s webom s viacerými jazykovými nastaveniami"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
+          "source": "Get order",
           "message": "Získať objednávku"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Vyberte konkrétnu objednávku, o ktorej chcete získať informácie"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.display_name": {
-          "source": "Get Site",
+          "source": "Get site",
           "message": "Získať web"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Vyberte konkrétny web Webflow, o ktorom chcete získať informácie"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "Zoznam kolekcií"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vyberte web Webflow, z ktorého chcete zobraziť zoznam kolekcií"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.display_name": {
-          "source": "List Custom Domains",
+          "source": "List custom domains",
           "message": "Zoznam vlastných domén"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Vyberte web Webflow, z ktorého chcete zobraziť zoznam vlastných domén"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.display_name": {
-          "source": "List Items",
+          "source": "List items",
           "message": "Zoznam položiek"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Vyberte kolekciu Webflow, z ktorej chcete zobraziť položky"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "ID jazykového nastavenia CMS"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Filtrovať položky podľa poľa slug"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.display_name": {
-          "source": "Last Published",
+          "source": "Last published",
           "message": "Naposledy zverejnené"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Filtrovať položky podľa rozsahu dátumu ich posledného zverejnenia"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.display_name": {
-          "source": "Greater Than or Equal To",
+          "source": "Greater than or equal to",
           "message": "Väčšie alebo rovné"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Zahrnúť položky publikované po alebo v tomto dátume"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.display_name": {
-          "source": "Less Than or Equal To",
+          "source": "Less than or equal to",
           "message": "Menej ako alebo rovné"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Zahrnúť položky publikované pred alebo v tomto dátume"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Zoradiť podľa"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Slug"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.short_desc": {
@@ -768,7 +768,7 @@
           "message": "Zostupne"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.display_name": {
-          "source": "List Orders",
+          "source": "List orders",
           "message": "Zoznam objednávok"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Maximálny počet objednávok vrátených na stránku (predvolené: 20)"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.display_name": {
-          "source": "List Sites",
+          "source": "List sites",
           "message": "Zoznam webov"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Načítať zoznam všetkých webov Webflow prístupných pomocou aktuálneho autentifikačného tokenu."
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.display_name": {
-          "source": "Mark Order Status",
+          "source": "Mark order status",
           "message": "Označiť stav objednávky"
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Refundované"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.display_name": {
-          "source": "Publish Site",
+          "source": "Publish site",
           "message": "Zverejniť web"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Vyberte web Webflow, ktorý chcete zverejniť"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.display_name": {
-          "source": "Custom Domains",
+          "source": "Custom domains",
           "message": "Vlastné domény"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Zadajte vlastné domény, na ktorých sa má web zverejniť (voliteľné)"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.display_name": {
-          "source": "Publish to Webflow Subdomain",
+          "source": "Publish to Webflow subdomain",
           "message": "Zverejniť na subdoméne Webflow"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Či sa má web zverejniť na svojej subdoméne Webflow"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.display_name": {
-          "source": "Publish Item",
+          "source": "Publish item",
           "message": "Zverejniť položku"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.display_name": {
-          "source": "Create Item",
+          "source": "Create item",
           "message": "Vytvoriť položku"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Vyberte kolekciu Webflow, v ktorej chcete vytvoriť novú položku"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "Je archivované"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Nastavte na hodnotu true, ak chcete, aby bola položka po vytvorení archivovaná"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "Je koncept"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Nastavte na hodnotu true, ak chcete, aby bola položka uložená ako koncept (predvolené: true)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "ID jazykového nastavenia CMS"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Zadajte ID jazykového nastavenia CMS, ak pracujete s webom s viacerými jazykovými nastaveniami"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.display_name": {
-          "source": "Update Item",
+          "source": "Update item",
           "message": "Aktualizovať položku"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Vyberte konkrétnu položku, ktorú chcete aktualizovať"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "Je archivované"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Nastavte na true pre archiváciu položky, false pre jej zrušenie z archívu"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "Je koncept"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Nastavte na true pre uloženie položky ako koncept, false pre jej zverejnenie"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "ID jazykového nastavenia CMS"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Zadajte ID jazykového nastavenia CMS, ak pracujete s webom s viacerými jazykovými nastaveniami"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.display_name": {
-          "source": "New Item",
+          "source": "New item",
           "message": "Nová položka"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Vyberte web Webflow, na ktorom chcete monitorovať udalosti vytvorenia novej položky"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.display_name": {
-          "source": "Updated Item",
+          "source": "Updated item",
           "message": "Aktualizovaná položka"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "Vyberte web Webflow, na ktorom chcete monitorovať udalosti aktualizácie položiek"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.display_name": {
-          "source": "New Order",
+          "source": "New order",
           "message": "Nová objednávka"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Vyberte web Webflow, kde chcete sledovať udalosti nových objednávok"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.display_name": {
-          "source": "Updated Order",
+          "source": "Updated order",
           "message": "Aktualizovaná objednávka"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.short_desc": {

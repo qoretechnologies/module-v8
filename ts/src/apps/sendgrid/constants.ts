@@ -18,7 +18,7 @@ export const SENDGRID_API_VERSION = 'v3';
 
 export const SENDGRID_CONN_OPTIONS = {
   token: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your SendGrid API key.',
     desc: 'Log into your SendGrid account and create an API key at https://app.sendgrid.com/settings/api_keys. Make sure to give it the appropriate permissions for the operations you want to perform.',
     type: 'string',

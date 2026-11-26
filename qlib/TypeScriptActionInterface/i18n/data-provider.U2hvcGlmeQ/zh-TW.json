@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Shopify** 進行自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基礎 URL)、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊 (hash) 傳回。\n\n當此應用程式尚未將特定端點提供為第一方動作時，請使用此動作。"
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.U2hvcGlmeQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.U2hvcGlmeQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "資料表名稱"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.display_name": {
-          "source": "Find Product Variants",
+          "source": "Find product variants",
           "message": "尋找產品款式"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.short_desc": {
@@ -484,7 +484,7 @@
           "message": "使用 Shopify 產品 ID 尋找屬於特定母產品的款式。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.display_name": {
-          "source": "Variant Title",
+          "source": "Variant title",
           "message": "多屬性商品標題"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.short_desc": {
@@ -532,7 +532,7 @@
           "message": "使用唯一的 Shopify 款式 ID 查詢特定款式。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.display_name": {
-          "source": "Inventory Quantity",
+          "source": "Inventory quantity",
           "message": "庫存數量"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.short_desc": {
@@ -544,7 +544,7 @@
           "message": "根據精確庫存數量或範圍（例如 \"inventory_quantity:10\" 或 \"inventory_quantity:>5\"）尋找款式。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.display_name": {
-          "source": "Product Status",
+          "source": "Product status",
           "message": "產品狀態"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "已封存"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.display_name": {
-          "source": "Product Type",
+          "source": "Product type",
           "message": "產品類型"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.short_desc": {
@@ -580,7 +580,7 @@
           "message": "尋找屬於特定類型或類別之產品的款式。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.display_name": {
-          "source": "Product Tag",
+          "source": "Product tag",
           "message": "產品標籤"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.short_desc": {
@@ -592,7 +592,7 @@
           "message": "尋找屬於具有特定標籤之產品的多屬性商品。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.display_name": {
-          "source": "Exclude Tag",
+          "source": "Exclude tag",
           "message": "排除標籤"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.short_desc": {
@@ -684,7 +684,7 @@
           "message": "免稅"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.display_name": {
-          "source": "Updated At",
+          "source": "Updated at",
           "message": "更新時間"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.short_desc": {
@@ -696,7 +696,7 @@
           "message": "根據上次更新時間尋找多屬性商品（例如 \"updated_at:>2023-01-01\" 或 \"updated_at:<now\"）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
+          "source": "Advanced query",
           "message": "進階查詢"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.short_desc": {
@@ -708,7 +708,7 @@
           "message": "輸入自訂搜尋查詢，以使用 Shopify 搜尋語法進行進階篩選。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "排序依據"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "更新時間"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "反向排序"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.short_desc": {
@@ -760,7 +760,7 @@
           "message": "啟用時，將反轉結果的順序（例如由 Z-A 取代 A-Z）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果限制"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.short_desc": {
@@ -772,7 +772,7 @@
           "message": "指定搜尋結果中要傳回的款式數量上限（最大值：250）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "分頁游標"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.short_desc": {
@@ -784,7 +784,7 @@
           "message": "使用游標在大量搜尋結果之間分頁瀏覽。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.display_name": {
-          "source": "Find Customers",
+          "source": "Find customers",
           "message": "尋找顧客"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "根據姓名、電子郵件或其他屬性搜尋並篩選 Shopify 商店中的顧客。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "搜尋查詢"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.short_desc": {
@@ -808,7 +808,7 @@
           "message": "依顧客姓名、電子郵件或其他識別資訊搜尋顧客。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果限制"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.short_desc": {
@@ -820,7 +820,7 @@
           "message": "指定搜尋結果中要傳回的顧客數量上限。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "分頁游標"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.short_desc": {
@@ -832,7 +832,7 @@
           "message": "使用游標在大量搜尋結果之間分頁瀏覽。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "排序依據"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.short_desc": {
@@ -872,7 +872,7 @@
           "message": "訂單數量"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "反向排序"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.short_desc": {
@@ -884,7 +884,7 @@
           "message": "在結果的遞增與遞減排序順序之間切換。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.display_name": {
-          "source": "Find Orders",
+          "source": "Find orders",
           "message": "尋找訂單"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.short_desc": {
@@ -896,7 +896,7 @@
           "message": "根據顧客姓名、電子郵件、訂單編號等多種條件搜尋並篩選 Shopify 商店中的訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.display_name": {
-          "source": "Order Number",
+          "source": "Order number",
           "message": "訂單編號"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.short_desc": {
@@ -932,7 +932,7 @@
           "message": "使用特定顧客的 Shopify 顧客 ID 尋找其下的所有訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.display_name": {
-          "source": "Confirmation Number",
+          "source": "Confirmation number",
           "message": "確認編號"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.short_desc": {
@@ -956,7 +956,7 @@
           "message": "使用專屬的 Shopify 訂單 ID 查詢特定訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.display_name": {
-          "source": "Payment Status",
+          "source": "Payment status",
           "message": "付款狀態"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "已過期"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.display_name": {
-          "source": "Fulfillment Status",
+          "source": "Fulfillment status",
           "message": "出貨狀態"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "請求已拒絕"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.display_name": {
-          "source": "Order Status",
+          "source": "Order status",
           "message": "訂單狀態"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "尋找來自特定來源的訂單 (例如：網站、草稿訂單、POS)。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.display_name": {
-          "source": "Sales Channel",
+          "source": "Sales channel",
           "message": "銷售管道"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "尋找包含具有特定 SKU 之商品的訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.display_name": {
-          "source": "Created Date",
+          "source": "Created date",
           "message": "建立日期"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "尋找在特定日期或日期範圍內建立的訂單（例如：2021-01-01、<now、<=2024）。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.display_name": {
-          "source": "Updated Date",
+          "source": "Updated date",
           "message": "更新日期"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "尋找在特定日期或日期範圍內最後更新的訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.display_name": {
-          "source": "Processed Date",
+          "source": "Processed date",
           "message": "處理日期"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "尋找在 Shopify 中標有特定標籤的訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.display_name": {
-          "source": "Test Orders",
+          "source": "Test orders",
           "message": "測試訂單"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "尋找與特定商店位置或履約中心相關聯的訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.display_name": {
-          "source": "Purchase Order Number",
+          "source": "Purchase order number",
           "message": "採購單號"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "尋找與特定採購單號相關聯的訂單。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
+          "source": "Advanced query",
           "message": "進階查詢"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "輸入自訂搜尋查詢，以使用 Shopify 搜尋語法進行進階篩選。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "排序依據"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "訂單 ID"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "反向排序"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "在結果的遞增與遞減排序順序之間切換。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果限制"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "指定搜尋結果中要傳回的訂單數量上限 (上限：250)。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "分頁游標"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "使用游標在大量搜尋結果之間分頁瀏覽。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.display_name": {
-          "source": "Find Products",
+          "source": "Find products",
           "message": "尋找商品"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "尋找商店中來自特定廠商或供應商的商品。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.display_name": {
-          "source": "Product Type",
+          "source": "Product type",
           "message": "產品類型"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "尋找屬於商店中特定商品系列的商品。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "排序依據"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.short_desc": {
@@ -1428,7 +1428,7 @@
           "message": "庫存總數"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
+          "source": "Reverse order",
           "message": "反向排序"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.short_desc": {
@@ -1440,7 +1440,7 @@
           "message": "在結果的遞增與遞減排序順序之間切換。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
+          "source": "Advanced query",
           "message": "進階查詢"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.short_desc": {
@@ -1452,7 +1452,7 @@
           "message": "輸入自訂搜尋查詢，以使用 Shopify 搜尋語法進行進階篩選。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "結果限制"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "指定搜尋結果中要傳回的商品數量上限。"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
+          "source": "Pagination cursor",
           "message": "分頁游標"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "使用游標在大量搜尋結果之間分頁瀏覽。"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.display_name": {
-          "source": "Add Line Item to Order",
+          "source": "Add line item to order",
           "message": "新增品項至訂單"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "要新增該品項的特定訂單"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.display_name": {
-          "source": "Line Item Type",
+          "source": "Line item type",
           "message": "明細項目類型"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.short_desc": {
@@ -1556,7 +1556,7 @@
           "message": "說明為何將明細項目新增至訂單"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
-          "source": "Notify Customer",
+          "source": "Notify customer",
           "message": "通知客戶"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
@@ -1568,7 +1568,7 @@
           "message": "決定是否要通知顧客品項新增事宜"
         },
         "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.display_name": {
-          "source": "Add Tag to Customer",
+          "source": "Add tag to customer",
           "message": "為客戶新增標籤"
         },
         "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "若為 true，將新標籤附加至現有標籤；若為 false，則以新標籤取代所有現有標籤。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.display_name": {
-          "source": "Create Blog Entry",
+          "source": "Create blog entry",
           "message": "建立部落格文章"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "與部落格文章關聯的主要圖片，用於預覽或標頭以增添視覺吸引力。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.field.YWx0VGV4dA.display_name": {
-          "source": "Alt Text",
+          "source": "Alt text",
           "message": "替代文字"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.field.YWx0VGV4dA.short_desc": {
@@ -1748,7 +1748,7 @@
           "message": "用於部落格文章的影像檔的網址或來源位置"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.display_name": {
-          "source": "Create Company",
+          "source": "Create company",
           "message": "建立公司"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.short_desc": {
@@ -1796,7 +1796,7 @@
           "message": "關於公司的內部備註，例如帳戶詳細資訊或特殊指示。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.display_name": {
-          "source": "Customer Since",
+          "source": "Customer since",
           "message": "成為客戶時間"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "該公司成為客戶的日期，格式化為時間戳記，適用於追蹤往來時間。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.display_name": {
-          "source": "Contact Properties",
+          "source": "Contact properties",
           "message": "聯絡人屬性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "主要聯絡人的電子郵件地址，用於通訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.Zmlyc3ROYW1l.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "公司主要聯絡人的名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.bGFzdE5hbWU.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "公司主要聯絡人在公司內的職稱或職位"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.display_name": {
-          "source": "Location Properties",
+          "source": "Location properties",
           "message": "位置屬性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "公司實際位置的詳細資訊，包括運送與帳單地址。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ0FkZHJlc3M.display_name": {
-          "source": "Billing Address",
+          "source": "Billing address",
           "message": "帳單地址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ0FkZHJlc3M.short_desc": {
@@ -1916,11 +1916,11 @@
           "message": "用於帳單目的的地址，若與運送地址不同。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "地址第 1 行"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "地址第 1 行"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczE.short_desc": {
@@ -1932,11 +1932,11 @@
           "message": "帳單用的街道地址或郵政信箱。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "地址第 2 行"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "地址第 2 行"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczI.short_desc": {
@@ -1964,11 +1964,11 @@
           "message": "帳單地址的城市"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
+          "source": "Country code",
           "message": "國家代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
+          "source": "Country code",
           "message": "國家代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.Y291bnRyeUNvZGU.short_desc": {
@@ -1984,11 +1984,11 @@
           "message": "ISO 3166-1 alpha-2 國家代碼，例如 \"CA\"。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵遞區號/郵政編碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵遞區號/郵政編碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.emlw.short_desc": {
@@ -2000,11 +2000,11 @@
           "message": "帳單地址的 ZIP 或郵政編碼。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.em9uZUNvZGU.display_name": {
-          "source": "Zone Code",
+          "source": "Zone code",
           "message": "區域代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.em9uZUNvZGU.display_name": {
-          "source": "Zone Code",
+          "source": "Zone code",
           "message": "區域代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.em9uZUNvZGU.short_desc": {
@@ -2020,7 +2020,7 @@
           "message": "省或州的代碼，例如「NY」"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ1NhbWVBc1NoaXBwaW5n.display_name": {
-          "source": "Billing Same as Shipping",
+          "source": "Billing same as shipping",
           "message": "帳單地址與配送地址相同"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ1NhbWVBc1NoaXBwaW5n.short_desc": {
@@ -2056,7 +2056,7 @@
           "message": "此位置的首選語言和地區代碼，例如「en-CA」。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.bG9jYXRpb25OYW1l.display_name": {
-          "source": "Location Name",
+          "source": "Location name",
           "message": "地點名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.bG9jYXRpb25OYW1l.short_desc": {
@@ -2092,7 +2092,7 @@
           "message": "與此公司位置相關聯的電話號碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
+          "source": "Shipping address",
           "message": "運送地址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.c2hpcHBpbmdBZGRyZXNz.short_desc": {
@@ -2144,7 +2144,7 @@
           "message": "省或州的代碼，例如「CA」代表加州"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
+          "source": "Tax exempt",
           "message": "免稅"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0.short_desc": {
@@ -2156,7 +2156,7 @@
           "message": "表示此位置是否免於稅務。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
+          "source": "Tax exemptions",
           "message": "免稅項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0aW9ucw.short_desc": {
@@ -2168,7 +2168,7 @@
           "message": "適用於此地點的特定稅務豁免清單。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4UmVnaXN0cmF0aW9uSWQ.display_name": {
-          "source": "Tax Registration ID",
+          "source": "Tax registration ID",
           "message": "稅務登記 ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4UmVnaXN0cmF0aW9uSWQ.short_desc": {
@@ -2180,7 +2180,7 @@
           "message": "此位置的稅務登記號碼，例如 VAT 或 EIN。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.display_name": {
-          "source": "Create Customer",
+          "source": "Create customer",
           "message": "建立客戶"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.short_desc": {
@@ -2216,7 +2216,7 @@
           "message": "客戶的電話號碼，用於聯絡用途，若獲得同意亦可用於簡訊行銷。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
@@ -2228,7 +2228,7 @@
           "message": "客戶的名字，用於個人化與地址詳細資訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
@@ -2264,7 +2264,7 @@
           "message": "關於客戶的內部備註，例如偏好設定、特殊指示或帳戶詳細資訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
+          "source": "Tax exempt",
           "message": "免稅"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.short_desc": {
@@ -2276,7 +2276,7 @@
           "message": "指出客戶是否在所有採購中免稅。若為免稅實體請設為 true。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
+          "source": "Tax exemptions",
           "message": "免稅項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
@@ -2312,7 +2312,7 @@
           "message": "客戶的地址。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "地址第 1 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczE.short_desc": {
@@ -2324,7 +2324,7 @@
           "message": "客戶用的街道地址或郵政信箱。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "地址第 2 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczI.short_desc": {
@@ -2372,7 +2372,7 @@
           "message": "客戶地址的國家"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.Zmlyc3ROYW1l.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "與此特定地址相關聯的名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.bGFzdE5hbWU.short_desc": {
@@ -2408,7 +2408,7 @@
           "message": "與此特定地址連結的電話號碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
+          "source": "Province/state",
           "message": "省/州"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.cHJvdmluY2U.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "客戶地址的省、州或地區。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵遞區號/郵政編碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.emlw.short_desc": {
@@ -2432,7 +2432,7 @@
           "message": "客戶地址的 ZIP 或郵政編碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.display_name": {
-          "source": "Email Marketing Consent",
+          "source": "Email marketing consent",
           "message": "電子郵件行銷同意"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "關於客戶同意接收電子郵件行銷通訊的詳細資訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nT3B0SW5MZXZlbA.display_name": {
-          "source": "Marketing Opt-In Level",
+          "source": "Marketing opt-in level",
           "message": "行銷同意層級"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nT3B0SW5MZXZlbA.short_desc": {
@@ -2464,7 +2464,7 @@
           "message": "雙重確認"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nU3RhdGU.display_name": {
-          "source": "Marketing State",
+          "source": "Marketing state",
           "message": "行銷狀態"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nU3RhdGU.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "已取消訂閱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.display_name": {
-          "source": "SMS Marketing Consent",
+          "source": "SMS marketing consent",
           "message": "簡訊行銷同意"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.short_desc": {
@@ -2504,7 +2504,7 @@
           "message": "有關客戶同意接收簡訊行銷訊息的詳細資訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nT3B0SW5MZXZlbA.display_name": {
-          "source": "Marketing Opt-In Level",
+          "source": "Marketing opt-in level",
           "message": "行銷同意層級"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nT3B0SW5MZXZlbA.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "雙重確認"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nU3RhdGU.display_name": {
-          "source": "Marketing State",
+          "source": "Marketing state",
           "message": "行銷狀態"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nU3RhdGU.short_desc": {
@@ -2612,7 +2612,7 @@
           "message": "儲存在元欄位中的值，可以是字串、數字或JSON"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.display_name": {
-          "source": "Create Draft Order",
+          "source": "Create draft order",
           "message": "建立草稿訂單"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.short_desc": {
@@ -2672,7 +2672,7 @@
           "message": "用於新增草稿訂單內部備註的欄位，例如特殊指示或背景資訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
+          "source": "Tax exempt",
           "message": "免稅"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.short_desc": {
@@ -2684,7 +2684,7 @@
           "message": "指出整筆訂單是否免稅。免稅客戶請設為 true。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
+          "source": "Tax exemptions",
           "message": "免稅項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
@@ -2708,7 +2708,7 @@
           "message": "用於分類或篩選草稿訂單的標籤清單，例如 \"wholesale\"、\"pre-order\"。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
+          "source": "Shipping address",
           "message": "運送地址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.short_desc": {
@@ -2720,7 +2720,7 @@
           "message": "訂單要送達的完整運送地址，包含所有相關欄位。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "地址第 1 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczE.short_desc": {
@@ -2732,7 +2732,7 @@
           "message": "運送用的街道地址或郵政信箱。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "地址第 2 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczI.short_desc": {
@@ -2780,7 +2780,7 @@
           "message": "運送地址的國家"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.Zmlyc3ROYW1l.short_desc": {
@@ -2792,7 +2792,7 @@
           "message": "運送收件人的名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.bGFzdE5hbWU.short_desc": {
@@ -2816,7 +2816,7 @@
           "message": "運送收件人的電話號碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
+          "source": "Province/state",
           "message": "省/州"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.cHJvdmluY2U.short_desc": {
@@ -2828,7 +2828,7 @@
           "message": "運送地址的省、州或地區。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵遞區號/郵政編碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.emlw.short_desc": {
@@ -2840,7 +2840,7 @@
           "message": "運送地址的 ZIP 或郵政編碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.display_name": {
-          "source": "Billing Address",
+          "source": "Billing address",
           "message": "帳單地址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.short_desc": {
@@ -2852,7 +2852,7 @@
           "message": "用於帳單用途的地址，可能與運送地址不同。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "地址第 1 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczE.short_desc": {
@@ -2864,7 +2864,7 @@
           "message": "帳單用的街道地址或郵政信箱。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "地址第 2 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczI.short_desc": {
@@ -2912,7 +2912,7 @@
           "message": "帳單地址的國家"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.Zmlyc3ROYW1l.short_desc": {
@@ -2924,7 +2924,7 @@
           "message": "帳單聯絡人的名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.bGFzdE5hbWU.short_desc": {
@@ -2948,7 +2948,7 @@
           "message": "帳單聯絡人的電話號碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
+          "source": "Province/state",
           "message": "省/州"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.cHJvdmluY2U.short_desc": {
@@ -2960,7 +2960,7 @@
           "message": "帳單地址的省、州或地區。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
+          "source": "ZIP/postal code",
           "message": "郵遞區號/郵政編碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.emlw.short_desc": {
@@ -2972,7 +2972,7 @@
           "message": "帳單地址的 ZIP 或郵政編碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.display_name": {
-          "source": "Use Customer Default Address",
+          "source": "Use customer default address",
           "message": "使用客戶預設地址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.short_desc": {
@@ -2984,7 +2984,7 @@
           "message": "若為 true，則使用客戶的預設運送與帳單地址，而非自訂地址。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.display_name": {
-          "source": "Line Items",
+          "source": "Line items",
           "message": "明細項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.short_desc": {
@@ -2996,7 +2996,7 @@
           "message": "草稿訂單中包含的商品或子類選項清單，包含數量與價格等詳細資訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.YXBwbGllZERpc2NvdW50.display_name": {
-          "source": "Applied Discount",
+          "source": "Applied discount",
           "message": "已套用折扣"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.YXBwbGllZERpc2NvdW50.short_desc": {
@@ -3008,7 +3008,7 @@
           "message": "此特定明細項目所適用的折價細節"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.YW1vdW50V2l0aEN1cnJlbmN5.display_name": {
-          "source": "Amount with Currency",
+          "source": "Amount with currency",
           "message": "含貨幣金額"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.YW1vdW50V2l0aEN1cnJlbmN5.short_desc": {
@@ -3060,27 +3060,27 @@
           "message": "折扣的數值。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNhMDY3ZGZkZjE3NTBlZWI4MmE1N2Y4NTU3ZjA1ZGQyY2ZjZTBjYjYxMjA5NmU1OGQyMzM3Zjk0ZDZhMDVlNmYz.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM2NWJiZGQwNjZmMDg4ZTJkYjk4MmQ0NzlmODM5ODFiNzdmMDQ2YTE1OWI4ZWE4ZDA2MTdlOTA1NTA5MmE5MTcx.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM4N2U5MDY4ZWJlZTRjNDQ0YjkzMmI3NDliZDY2ZTg5OTk2YWY5MzU1MzA4NWI1ZTdkZTY4OTE4ZDJiYTM1ZDUx.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMzNDQ5OTc1MTgwMGFmMzk1ZjY5ZDg3MDdjY2E1YTNiZmFiZjAxZjY5Y2QzYTBiNDdmM2FmM2UyMDE1NDA0NjUy.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM3ZDE5MDE1NmRhOTY5YTg2OTYxYWMwYjBhOWM3YzI2YWY5NjE5YmRhZDI4MzI1NzQwZWM4NTQ0M2MyY2JhMzFi.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNhMDY3ZGZkZjE3NTBlZWI4MmE1N2Y4NTU3ZjA1ZGQyY2ZjZTBjYjYxMjA5NmU1OGQyMzM3Zjk0ZDZhMDVlNmYz.field.Y3VycmVuY3lDb2Rl.short_desc": {
@@ -3100,7 +3100,7 @@
           "message": "折扣金額的 ISO 4217 貨幣代碼。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Discount Description",
+          "source": "Discount description",
           "message": "折價說明"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -3112,7 +3112,7 @@
           "message": "折扣內容的描述。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dGl0bGU.display_name": {
-          "source": "Discount Title",
+          "source": "Discount title",
           "message": "折價標題"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dGl0bGU.short_desc": {
@@ -3124,7 +3124,7 @@
           "message": "折扣的名稱或標題。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWU.display_name": {
-          "source": "Discount Value",
+          "source": "Discount value",
           "message": "折價金額"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWU.short_desc": {
@@ -3136,7 +3136,7 @@
           "message": "折扣的數值，可為固定金額或百分比。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWVUeXBl.display_name": {
-          "source": "Value Type",
+          "source": "Value type",
           "message": "值類型"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWVUeXBl.short_desc": {
@@ -3192,7 +3192,7 @@
           "message": "作為元件包含的變體唯一識別碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Y3VzdG9tQXR0cmlidXRlcw.display_name": {
-          "source": "Custom Attributes",
+          "source": "Custom attributes",
           "message": "自訂屬性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Y3VzdG9tQXR0cmlidXRlcw.short_desc": {
@@ -3228,7 +3228,7 @@
           "message": "與自訂屬性金鑰相關的值"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Z2VuZXJhdGVQcmljZU92ZXJyaWRl.display_name": {
-          "source": "Generate Price Override",
+          "source": "Generate price override",
           "message": "產生價格覆蓋"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Z2VuZXJhdGVQcmljZU92ZXJyaWRl.short_desc": {
@@ -3240,7 +3240,7 @@
           "message": "如果為真，則允許為項目設定自訂價格，而非原始價格。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2U.display_name": {
-          "source": "Original Unit Price",
+          "source": "Original unit price",
           "message": "原始單價"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2U.short_desc": {
@@ -3252,7 +3252,7 @@
           "message": "項目在折扣前的原始單價。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2VXaXRoQ3VycmVuY3k.display_name": {
-          "source": "Original Unit Price with Currency",
+          "source": "Original unit price with currency",
           "message": "含貨幣的原始單價"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2VXaXRoQ3VycmVuY3k.short_desc": {
@@ -3280,7 +3280,7 @@
           "message": "價格的 ISO 4217 貨幣代碼，例如 USD、EUR。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cHJpY2VPdmVycmlkZQ.display_name": {
-          "source": "Price Override",
+          "source": "Price override",
           "message": "價格覆蓋"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cHJpY2VPdmVycmlkZQ.short_desc": {
@@ -3320,7 +3320,7 @@
           "message": "要包含在草稿訂單中的此變體單位數量。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cmVxdWlyZXNTaGlwcGluZw.display_name": {
-          "source": "Requires Shipping",
+          "source": "Requires shipping",
           "message": "需要寄送"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cmVxdWlyZXNTaGlwcGluZw.short_desc": {
@@ -3404,7 +3404,7 @@
           "message": "物品的重量，用於運送計算"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dW5pdA.display_name": {
-          "source": "Weight Unit",
+          "source": "Weight unit",
           "message": "重量單位"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dW5pdA.short_desc": {
@@ -3432,7 +3432,7 @@
           "message": "盎司"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dmFsdWU.display_name": {
-          "source": "Weight Value",
+          "source": "Weight value",
           "message": "重量值"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dmFsdWU.short_desc": {
@@ -3444,7 +3444,7 @@
           "message": "重量值"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.display_name": {
-          "source": "Applied Discount",
+          "source": "Applied discount",
           "message": "已套用折扣"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.short_desc": {
@@ -3456,7 +3456,7 @@
           "message": "套用至整個草稿訂單的折扣詳細資訊。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.YW1vdW50V2l0aEN1cnJlbmN5.display_name": {
-          "source": "Amount with Currency",
+          "source": "Amount with currency",
           "message": "含貨幣金額"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.YW1vdW50V2l0aEN1cnJlbmN5.short_desc": {
@@ -3468,7 +3468,7 @@
           "message": "包含貨幣資訊的折扣金額。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Discount Description",
+          "source": "Discount description",
           "message": "折價說明"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -3480,7 +3480,7 @@
           "message": "訂單級別折扣的描述。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dGl0bGU.display_name": {
-          "source": "Discount Title",
+          "source": "Discount title",
           "message": "折價標題"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dGl0bGU.short_desc": {
@@ -3492,7 +3492,7 @@
           "message": "訂單範圍折扣的名稱或標題。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWU.display_name": {
-          "source": "Discount Value",
+          "source": "Discount value",
           "message": "折價金額"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWU.short_desc": {
@@ -3504,7 +3504,7 @@
           "message": "折扣的數值，可為固定金額或百分比。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWVUeXBl.display_name": {
-          "source": "Value Type",
+          "source": "Value type",
           "message": "值類型"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWVUeXBl.short_desc": {
@@ -3524,7 +3524,7 @@
           "message": "百分比"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.display_name": {
-          "source": "Shipping Line",
+          "source": "Shipping line",
           "message": "運送項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.short_desc": {
@@ -3548,7 +3548,7 @@
           "message": "運送成本的數值"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.cHJpY2VXaXRoQ3VycmVuY3k.display_name": {
-          "source": "Price with Currency",
+          "source": "Price with currency",
           "message": "含幣別的價格"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.cHJpY2VXaXRoQ3VycmVuY3k.short_desc": {
@@ -3576,7 +3576,7 @@
           "message": "運費的 ISO 4217 貨幣代碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.c2hpcHBpbmdSYXRlSGFuZGxl.display_name": {
-          "source": "Shipping Rate Handle",
+          "source": "Shipping rate handle",
           "message": "運送費處理代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.c2hpcHBpbmdSYXRlSGFuZGxl.short_desc": {
@@ -3600,7 +3600,7 @@
           "message": "運送方式名稱，例如「標準運送」。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.display_name": {
-          "source": "Custom Attributes",
+          "source": "Custom attributes",
           "message": "自訂屬性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.short_desc": {
@@ -3636,7 +3636,7 @@
           "message": "與自訂屬性金鑰相關的值"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.display_name": {
-          "source": "Allow Discount Codes in Checkout",
+          "source": "Allow discount codes in checkout",
           "message": "允許在結帳時使用折扣代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.short_desc": {
@@ -3648,7 +3648,7 @@
           "message": "若為 true，允許客戶從此草稿訂單結帳時套用折扣代碼。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.display_name": {
-          "source": "Accept Automatic Discounts",
+          "source": "Accept automatic discounts",
           "message": "接受自動折扣"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.short_desc": {
@@ -3660,7 +3660,7 @@
           "message": "若為 true，會自動將任何符合資格的全店折扣套用至草稿訂單。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.display_name": {
-          "source": "Discount Codes",
+          "source": "Discount codes",
           "message": "折扣碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.short_desc": {
@@ -3732,7 +3732,7 @@
           "message": "儲存在元欄位中的值"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.display_name": {
-          "source": "Localized Fields",
+          "source": "Localized fields",
           "message": "本地化欄位"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.short_desc": {
@@ -3780,7 +3780,7 @@
           "message": "地區化內容的值"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.display_name": {
-          "source": "Presentment Currency Code",
+          "source": "Presentment currency code",
           "message": "顯示貨幣代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.short_desc": {
@@ -3792,7 +3792,7 @@
           "message": "向客戶顯示價格所使用的 ISO 4217 貨幣代碼，例如 USD、CAD。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.display_name": {
-          "source": "PO Number",
+          "source": "PO number",
           "message": "採購單號"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.short_desc": {
@@ -3804,7 +3804,7 @@
           "message": "與草稿訂單相關聯的採購單號，通常用於 B2B 交易。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.display_name": {
-          "source": "Payment Terms",
+          "source": "Payment terms",
           "message": "付款條件"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.short_desc": {
@@ -3816,7 +3816,7 @@
           "message": "定義草稿訂單的付款條件，例如到期日或付款時程。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFNjaGVkdWxlcw.display_name": {
-          "source": "Payment Schedules",
+          "source": "Payment schedules",
           "message": "付款排程"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFNjaGVkdWxlcw.short_desc": {
@@ -3844,7 +3844,7 @@
           "message": "付款的貨幣"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.ZHVlQXQ.display_name": {
-          "source": "Due At",
+          "source": "Due at",
           "message": "到期日"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.ZHVlQXQ.short_desc": {
@@ -3856,7 +3856,7 @@
           "message": "付款到期日。"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.aXNzdWVkQXQ.display_name": {
-          "source": "Issued At",
+          "source": "Issued at",
           "message": "發出時間"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.aXNzdWVkQXQ.short_desc": {
@@ -3868,7 +3868,7 @@
           "message": "付款計畫發出的日期。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFRlcm1zVGVtcGxhdGVJZA.display_name": {
-          "source": "Payment Terms Template ID",
+          "source": "Payment terms template ID",
           "message": "付款條件範本ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFRlcm1zVGVtcGxhdGVJZA.short_desc": {
@@ -3880,7 +3880,7 @@
           "message": "Shopify 中預設付款條件範本的 ID。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.display_name": {
-          "source": "Purchasing Entity",
+          "source": "Purchasing entity",
           "message": "採購實體"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.short_desc": {
@@ -3892,7 +3892,7 @@
           "message": "進行採購的實體詳細資訊，例如公司或個人。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUNvbnRhY3RJZA.display_name": {
-          "source": "Company Contact ID",
+          "source": "Company contact ID",
           "message": "公司聯絡人ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUNvbnRhY3RJZA.short_desc": {
@@ -3916,7 +3916,7 @@
           "message": "進行購買之公司的 ID。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUxvY2F0aW9uSWQ.display_name": {
-          "source": "Company Location ID",
+          "source": "Company location ID",
           "message": "公司地點ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUxvY2F0aW9uSWQ.short_desc": {
@@ -3940,7 +3940,7 @@
           "message": "進行購買之客戶的 ID。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.display_name": {
-          "source": "Reserve Inventory Until",
+          "source": "Reserve inventory until",
           "message": "保留庫存截止時間"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.short_desc": {
@@ -3952,7 +3952,7 @@
           "message": "為此草稿訂單保留庫存的截止日期與時間。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.display_name": {
-          "source": "Source Name",
+          "source": "Source name",
           "message": "來源名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.short_desc": {
@@ -3964,7 +3964,7 @@
           "message": "草稿訂單的來源，例如 \"web\"、\"manual\" 或應用程式名稱。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.display_name": {
-          "source": "Visible to Customer",
+          "source": "Visible to customer",
           "message": "對客戶可見"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.short_desc": {
@@ -3976,7 +3976,7 @@
           "message": "若為 true，則草稿訂單對客戶可見（例如在其帳戶中）。"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.display_name": {
-          "source": "Create Fulfillment",
+          "source": "Create fulfillment",
           "message": "建立履約"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.short_desc": {
@@ -3988,7 +3988,7 @@
           "message": "為訂單建立履約，處理運送與追蹤資訊"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.display_name": {
-          "source": "Fulfillment Order ID",
+          "source": "Fulfillment order ID",
           "message": "履約訂單 ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.short_desc": {
@@ -4000,7 +4000,7 @@
           "message": "正在處理的特定履約訂單"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.display_name": {
-          "source": "Fulfillment Order Line Items",
+          "source": "Fulfillment order line items",
           "message": "履約訂單明細項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.short_desc": {
@@ -4012,7 +4012,7 @@
           "message": "履約訂單中的特定明細項目"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.field.aWQ.display_name": {
-          "source": "Line Item ID",
+          "source": "Line item ID",
           "message": "項目 ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.field.aWQ.short_desc": {
@@ -4036,7 +4036,7 @@
           "message": "特定物品的履行數量"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
-          "source": "Notify Customer",
+          "source": "Notify customer",
           "message": "通知客戶"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
@@ -4048,7 +4048,7 @@
           "message": "決定是否向客戶傳送有關履約的通知"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.display_name": {
-          "source": "Tracking Information",
+          "source": "Tracking information",
           "message": "追蹤資訊"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.short_desc": {
@@ -4060,7 +4060,7 @@
           "message": "追蹤貨件的資訊"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.Y29tcGFueQ.display_name": {
-          "source": "Shipping Company",
+          "source": "Shipping company",
           "message": "運送公司"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.Y29tcGFueQ.short_desc": {
@@ -4072,7 +4072,7 @@
           "message": "負責運送的公司名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.bnVtYmVy.display_name": {
-          "source": "Tracking Number",
+          "source": "Tracking number",
           "message": "追蹤編號"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.bnVtYmVy.short_desc": {
@@ -4096,7 +4096,7 @@
           "message": "可用於追蹤運送的網址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.display_name": {
-          "source": "Origin Address",
+          "source": "Origin address",
           "message": "起運地址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.short_desc": {
@@ -4108,7 +4108,7 @@
           "message": "商品出貨的起運地址"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "地址第 1 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczE.short_desc": {
@@ -4120,7 +4120,7 @@
           "message": "運送來源地址的第一行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "地址第 2 行"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczI.short_desc": {
@@ -4144,7 +4144,7 @@
           "message": "出貨起始城市"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
+          "source": "Country code",
           "message": "國家代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.Y291bnRyeUNvZGU.short_desc": {
@@ -4156,7 +4156,7 @@
           "message": "出貨來源的兩位元國家代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.cHJvdmluY2VDb2Rl.display_name": {
-          "source": "Province Code",
+          "source": "Province code",
           "message": "省代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.cHJvdmluY2VDb2Rl.short_desc": {
@@ -4168,7 +4168,7 @@
           "message": "代表起源地的州或省代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.emlw.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵遞區號"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.emlw.short_desc": {
@@ -4192,7 +4192,7 @@
           "message": "關於履約的任何其他資訊或備註"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.display_name": {
-          "source": "Create Gift Card",
+          "source": "Create gift card",
           "message": "建立禮品卡"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.short_desc": {
@@ -4204,7 +4204,7 @@
           "message": "建立禮品卡，並可自訂初始面額、到期日和收件人詳細資訊等參數"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.display_name": {
-          "source": "Initial Value",
+          "source": "Initial value",
           "message": "初始面額"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.short_desc": {
@@ -4240,7 +4240,7 @@
           "message": "個人留言或關於禮品卡的附加詳細資訊"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.display_name": {
-          "source": "Expiration Date",
+          "source": "Expiration date",
           "message": "到期日"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.short_desc": {
@@ -4252,7 +4252,7 @@
           "message": "禮品卡失效的日期"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.display_name": {
-          "source": "Gift Card Code",
+          "source": "Gift card code",
           "message": "禮品卡代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.short_desc": {
@@ -4264,7 +4264,7 @@
           "message": "用於兌換禮品卡的特定代碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.display_name": {
-          "source": "Template Suffix",
+          "source": "Template suffix",
           "message": "範本後綴"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.short_desc": {
@@ -4276,7 +4276,7 @@
           "message": "用於自訂禮品卡外觀或範本的可選後綴"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.display_name": {
-          "source": "Recipient Attributes",
+          "source": "Recipient attributes",
           "message": "收件人屬性"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.short_desc": {
@@ -4300,7 +4300,7 @@
           "message": "禮品卡收件人的唯一識別碼"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.bWVzc2FnZQ.display_name": {
-          "source": "Recipient Message",
+          "source": "Recipient message",
           "message": "收件人訊息"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.bWVzc2FnZQ.short_desc": {
@@ -4312,7 +4312,7 @@
           "message": "附於禮品卡的個人化訊息"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.cHJlZmVycmVkTmFtZQ.display_name": {
-          "source": "Preferred Name",
+          "source": "Preferred name",
           "message": "首選名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.cHJlZmVycmVkTmFtZQ.short_desc": {
@@ -4324,7 +4324,7 @@
           "message": "收件人偏好的稱呼名稱"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.c2VuZE5vdGlmaWNhdGlvbkF0.display_name": {
-          "source": "Notification Timing",
+          "source": "Notification timing",
           "message": "通知時機"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.c2VuZE5vdGlmaWNhdGlvbkF0.short_desc": {
@@ -4336,7 +4336,7 @@
           "message": "寄送禮品卡通知的特定時間或日期"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.display_name": {
-          "source": "Create Transaction",
+          "source": "Create transaction",
           "message": "建立交易"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.short_desc": {
@@ -4412,7 +4412,7 @@
           "message": "退款"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.display_name": {
-          "source": "Parent Transaction ID",
+          "source": "Parent transaction ID",
           "message": "父交易 ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.short_desc": {
@@ -4452,7 +4452,7 @@
           "message": "禮品卡"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.display_name": {
-          "source": "Final Capture",
+          "source": "Final capture",
           "message": "最終請款"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.short_desc": {
@@ -4464,7 +4464,7 @@
           "message": "若為 true，表示這是該筆授權的最後一次請款；若為 false，後續可能會有部分請款。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.display_name": {
-          "source": "Shopify New Abandoned Cart",
+          "source": "Shopify new abandoned cart",
           "message": "Shopify 新增未結購物車"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.short_desc": {
@@ -4476,7 +4476,7 @@
           "message": "當在指定時間範圍內建立但未完成 Shopify 結帳時，將觸發此觸發器。可用於傳送挽回電子郵件、提供折扣或分析棄單模式。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.display_name": {
-          "source": "Abandoned Hours",
+          "source": "Abandoned hours",
           "message": "未結時數"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.short_desc": {
@@ -4488,7 +4488,7 @@
           "message": "回溯查詢未結購物車的時數"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.display_name": {
-          "source": "Shopify Blog Created",
+          "source": "Shopify blog created",
           "message": "Shopify 部落格已建立"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.short_desc": {
@@ -4500,7 +4500,7 @@
           "message": "每當在您的 Shopify 商店中建立新部落格（非文章）時，將觸發此觸發器。可用於監控部落格建立或自動執行後續任務。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.display_name": {
-          "source": "Shopify New Blog Article",
+          "source": "Shopify new blog article",
           "message": "Shopify 新增部落格文章"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.short_desc": {
@@ -4524,7 +4524,7 @@
           "message": "選擇要監控新文章的 Shopify 部落格。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.display_name": {
-          "source": "Shopify Customer Created",
+          "source": "Shopify customer created",
           "message": "Shopify 顧客已建立"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.short_desc": {
@@ -4536,7 +4536,7 @@
           "message": "每當在您的 Shopify 商店中註冊或建立新顧客時，將觸發此觸發器。可用於傳送歡迎電子郵件、將顧客新增至行銷清單或在其他系統中建立記錄。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.display_name": {
-          "source": "Shopify Customer Updated",
+          "source": "Shopify customer updated",
           "message": "Shopify 顧客已更新"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.short_desc": {
@@ -4548,7 +4548,7 @@
           "message": "每當在您的 Shopify 商店中更新顧客資訊時，將觸發此觸發器。可用於將顧客資料與其他系統同步、追蹤特定顧客變更或更新行銷偏好設定。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.display_name": {
-          "source": "Shopify New Order",
+          "source": "Shopify new order",
           "message": "Shopify 新增訂單"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.short_desc": {
@@ -4560,7 +4560,7 @@
           "message": "當在您的 Shopify 商店中建立符合指定狀態篩選條件的新訂單時，將觸發此觸發器。可用於處理訂單、在其他系統中更新庫存或根據訂單狀態傳送自訂通知。"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.display_name": {
-          "source": "Order Status",
+          "source": "Order status",
           "message": "訂單狀態"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.short_desc": {

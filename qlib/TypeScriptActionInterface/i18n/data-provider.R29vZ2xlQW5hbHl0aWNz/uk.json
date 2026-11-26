@@ -28,7 +28,7 @@
           "message": "Виконайте настроюваний виклик HTTP / REST API до **Google Analytics**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов’язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.display_name": {
-          "source": "Run Report",
+          "source": "Run report",
           "message": "Запустити звіт"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Виберіть ресурс GA4, з якого потрібно отримати аналітичні дані."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
+          "source": "Date ranges",
           "message": "Діапазони дат"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Вкажіть один або кілька діапазонів дат для звіту. Дати можуть бути у форматі РРРР-ММ-ДД або відносними значеннями, такими як \"7daysAgo\", \"yesterday\", \"today\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Кінцева дата"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Включна кінцева дата запиту у форматі YYYY-MM-DD або відносна дата, наприклад \"сьогодні\", \"вчора\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Дата початку"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Виберіть кількісні вимірювання для включення (наприклад, activeUsers, sessions, pageViews). До звіту можна включити до 10 показників."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Назва метрики"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Виберіть атрибути для сегментації ваших даних (наприклад, country, browser, pagePath). Параметри є необов'язковими та дозволяють розбивати показники за певними категоріями."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Назва розмірності"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Ідентифікатор електронної комерційної транзакції"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
+          "source": "Dimension filter",
           "message": "Фільтр параметрів"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Розширений вираз фільтра для фільтрації даних звіту на основі значень параметрів. Використовуйте синтаксис виразів фільтрів GA4."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
+          "source": "Metric filter",
           "message": "Фільтр показників"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Розширений вираз фільтра для фільтрації даних звіту на основі значень показників. Використовуйте синтаксис виразів фільтрів GA4."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Сортувати за"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Якщо значення true, сортування відбувається у зворотному порядку. Якщо значення false, сортування відбувається у прямому порядку."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Назва поля"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Назва виміру або метрики для сортування."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Тип порядку"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
@@ -1352,7 +1352,7 @@
           "message": "Кількість рядків, яку слід пропустити перед поверненням результатів. Використовується для розбиття на сторінки."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.display_name": {
-          "source": "Keep Empty Rows",
+          "source": "Keep empty rows",
           "message": "Зберігати порожні рядки"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.short_desc": {
@@ -1364,7 +1364,7 @@
           "message": "Якщо вибрано true, включає рядки, де всі показники мають нульові значення. Якщо вибрано false (за замовчуванням), такі рядки виключаються."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.display_name": {
-          "source": "Return Property Quota",
+          "source": "Return property quota",
           "message": "Повернути квоту ресурсу"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.short_desc": {
@@ -1376,7 +1376,7 @@
           "message": "Якщо вибрано true, повертає у відповіді інформацію про використання квоти API для цього ресурсу."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.display_name": {
-          "source": "Run Real-time Report",
+          "source": "Run real-time report",
           "message": "Запустити звіт у реальному часі"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.short_desc": {
@@ -1412,7 +1412,7 @@
           "message": "Виберіть показники реального часу для включення до звіту (наприклад, activeUsers, screenPageViews, eventCount)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Назва метрики"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "Виберіть параметри реального часу для сегментації ваших даних (наприклад, country, city, deviceCategory, unifiedScreenName)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Назва розмірності"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Скільки хвилин тому відбувся подія"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.display_name": {
-          "source": "Minute Ranges",
+          "source": "Minute ranges",
           "message": "Діапазони хвилин"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Вкажіть власні часові діапазони для даних у реальному часі. За замовчуванням повертаються дані за останні 30 хвилин."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.display_name": {
-          "source": "End Minutes Ago",
+          "source": "End minutes ago",
           "message": "Кінець хвилин тому"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "Кінець діапазону хвилин, виражений у хвилинах тому (наприклад, 0 — поточна хвилина)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.display_name": {
-          "source": "Range Name",
+          "source": "Range name",
           "message": "Назва діапазону"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.short_desc": {
@@ -1588,7 +1588,7 @@
           "message": "Необов’язкове ім’я для ідентифікації цього діапазону часу у відповіді."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.display_name": {
-          "source": "Start Minutes Ago",
+          "source": "Start minutes ago",
           "message": "Почати хвилин тому"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.short_desc": {
@@ -1600,7 +1600,7 @@
           "message": "Початок діапазону хвилин, виражений у хвилинах тому (наприклад, 29 для 29 хвилин тому)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
+          "source": "Dimension filter",
           "message": "Фільтр параметрів"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "Розширений вираз фільтра для фільтрації даних у реальному часі на основі значень параметрів."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
+          "source": "Metric filter",
           "message": "Фільтр показників"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "Розширений вираз фільтра для фільтрації даних у реальному часі на основі значень показників."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Сортувати за"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
@@ -1648,7 +1648,7 @@
           "message": "Якщо значення true, сортування відбувається у зворотному порядку."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Назва поля"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
@@ -1660,7 +1660,7 @@
           "message": "Назва виміру або метрики для сортування."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Тип порядку"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "Максимальна кількість рядків для повернення. За замовчуванням — 10 000."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.display_name": {
-          "source": "Get Metadata",
+          "source": "Get metadata",
           "message": "Отримати метадані"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.short_desc": {
@@ -1716,7 +1716,7 @@
           "message": "Виберіть ресурс GA4, для якого потрібно отримати метадані. Відповідь міститиме як стандартні, так і спеціальні параметри/показники."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.display_name": {
-          "source": "Batch Run Reports",
+          "source": "Batch run reports",
           "message": "Пакетне виконання звітів"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.short_desc": {
@@ -1740,7 +1740,7 @@
           "message": "Виберіть ресурс GA4, з якого потрібно отримати аналітичні дані для всіх звітів."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.display_name": {
-          "source": "Report Requests",
+          "source": "Report requests",
           "message": "Запити на звіти"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.short_desc": {
@@ -1752,7 +1752,7 @@
           "message": "Масив конфігурацій запитів на звіти. Кожен запит може мати власні діапазони дат, показники, параметри та обмеження. Максимум 5 запитів на пакет."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
+          "source": "Date ranges",
           "message": "Діапазони дат"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "Діапазони дат для цього конкретного звіту в пакеті."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Кінцева дата"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.short_desc": {
@@ -1776,7 +1776,7 @@
           "message": "Кінцева дата у форматі YYYY-MM-DD або відносному форматі."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Дата початку"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Виміри, які включити в цей конкретний звіт."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Назва розмірності"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.short_desc": {
@@ -2260,7 +2260,7 @@
           "message": "Метрики, які включити до цього звіту."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Назва метрики"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.short_desc": {
@@ -2648,7 +2648,7 @@
           "message": "Кількість показів реклами на вашому ресурсі"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.display_name": {
-          "source": "Check Compatibility",
+          "source": "Check compatibility",
           "message": "Перевірити сумісність"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.short_desc": {
@@ -2684,7 +2684,7 @@
           "message": "Параметри, спільне використання яких потрібно перевірити."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
+          "source": "Dimension name",
           "message": "Назва розмірності"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
@@ -3132,7 +3132,7 @@
           "message": "Показники, спільне використання яких потрібно перевірити."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
+          "source": "Metric name",
           "message": "Назва метрики"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
@@ -3520,7 +3520,7 @@
           "message": "Кількість показів реклами на вашому ресурсі"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.display_name": {
-          "source": "Compatibility Filter",
+          "source": "Compatibility filter",
           "message": "Фільтр сумісності"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.short_desc": {

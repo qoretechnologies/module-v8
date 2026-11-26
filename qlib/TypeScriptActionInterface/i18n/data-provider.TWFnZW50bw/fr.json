@@ -28,7 +28,7 @@
           "message": "Effectuez un appel d'API HTTP / REST personnalisé vers **Magento** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Récupère des informations détaillées sur un compte client à l'aide de l'ID client. Renvoie tous les attributs du client, y compris les informations d'adresse, le statut du compte et les attributs personnalisés."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Update Customer",
+          "source": "Update customer",
           "message": "Mettre à jour le client"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Met à jour les informations client pour un compte existant. Ce point de terminaison permet de modifier les informations personnelles, les adresses, les attributs personnalisés et d'autres détails du compte. L'ID du client doit être inclus dans la requête."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
-          "source": "Delete Customer",
+          "source": "Delete customer",
           "message": "Supprimer le client"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Supprime définitivement un compte client du système. Cette opération est irréversible et supprimera toutes les données client associées à l'ID spécifié, y compris les adresses et les références à l'historique des commandes."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Customers",
+          "source": "List customers",
           "message": "Lister les clients"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Renvoie une liste de comptes clients correspondant aux critères de recherche spécifiés. Les résultats peuvent être filtrés, triés et paginés. Utilisez les paramètres de critères de recherche pour affiner les résultats par e-mail, nom, date de création ou d'autres attributs client."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
-          "source": "Create Customer Account",
+          "source": "Create customer account",
           "message": "Créer un compte client"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Crée un nouveau compte client avec les informations fournies. Les champs obligatoires comprennent l'e-mail, le mot de passe, ainsi que le prénom et le nom. Les détails facultatifs incluent les adresses, la date de naissance et les attributs personnalisés. Renvoie l'ID du client nouvellement créé en cas de succès."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
-          "source": "Create Product",
+          "source": "Create product",
           "message": "Créer un produit"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Crée un nouveau produit dans le catalogue avec les attributs, la tarification et les informations de stock spécifiés. Les produits peuvent être simples, configurables, groupés, virtuels ou téléchargeables. Les entrées de la galerie média, les prix par niveau et les options personnalisées peuvent également être définis."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
-          "source": "List Products",
+          "source": "List products",
           "message": "Lister les produits"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Renvoie une collection de produits correspondant aux critères de recherche spécifiés. Les résultats peuvent être filtrés par des attributs tels que le nom, le SKU, le prix et le statut. Prend en charge la pagination, le tri et l'inclusion d'attributs personnalisés dans la réponse."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
-          "source": "Update Product",
+          "source": "Update product",
           "message": "Mettre à jour le produit"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Met à jour un produit existant dans le catalogue. Peut modifier n'importe quel attribut de produit, y compris le nom, le prix, la description, les images, le stock et les affectations de catégories. Le SKU ou l'ID du produit doit être spécifié dans la requête."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
-          "source": "Delete Product",
+          "source": "Delete product",
           "message": "Supprimer le produit"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Supprime définitivement un produit du catalogue par son ID ou SKU. Cette opération est irréversible et peut affecter les commandes et paniers existants faisant référence au produit supprimé."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
-          "source": "Get Product Details",
+          "source": "Get product details",
           "message": "Obtenir les détails du produit"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Récupère des informations complètes sur un produit spécifique par son SKU ou ID. La réponse comprend tous les attributs du produit, les images, les informations tarifaires, l'état des stocks et les affectations de catégories. Des paramètres supplémentaires permettent de contrôler les données incluses."
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Shopping Carts",
+          "source": "List shopping carts",
           "message": "Lister les paniers d'achat"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Renvoie une collection de paniers d'achat actifs correspondant aux critères de recherche spécifiés. Les résultats peuvent être filtrés par identifiant de client, date de création et statut du panier. Chaque panier comprend les articles, les coupons appliqués et les informations de livraison/facturation si disponibles."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
-          "source": "Get Order Details",
+          "source": "Get order details",
           "message": "Obtenir les détails de la commande"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Récupère des informations complètes sur une commande spécifique par son identifiant. Comprend les articles de la commande, les adresses de facturation et de livraison, les informations de paiement, les réductions appliquées et l'historique des statuts de la commande. Utile pour le traitement des commandes et les demandes du service client."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Orders",
+          "source": "List orders",
           "message": "Lister les commandes"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Renvoie une collection de commandes correspondant aux critères de recherche spécifiés. Les résultats peuvent être filtrés par client, statut, plage de dates et montant total. Prend en charge la pagination et le tri pour parcourir efficacement de grands volumes de commandes."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Create Order",
+          "source": "Create order",
           "message": "Créer une commande"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Effectue des opérations de persistance pour une commande spécifiée. Enregistre les données de la commande dans la base de données, y compris les informations client, les articles, les détails de paiement, les informations de livraison et autres métadonnées pertinentes de la commande."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
-          "source": "Add Order Comment",
+          "source": "Add order comment",
           "message": "Ajouter un commentaire à la commande"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Ajoute un commentaire à l'historique de la commande. Les commentaires peuvent être internes (visibles uniquement par les administrateurs) ou visibles par le client. Chaque commentaire est horodaté et attribué à son auteur. Utile pour documenter les étapes de traitement des commandes et les communications avec les clients."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
-          "source": "Get Order Comments",
+          "source": "Get order comments",
           "message": "Obtenir les commentaires de la commande"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Renvoie l'historique complet des commentaires pour une commande spécifique. Les résultats incluent le texte du commentaire, l'horodatage, les informations sur l'auteur et le statut de visibilité (visible par le client ou réservé aux administrateurs). Les commentaires sont renvoyés par ordre chronologique."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Invoices",
+          "source": "List invoices",
           "message": "Lister les factures"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Renvoie une liste de factures en fonction des critères de recherche spécifiés. Les résultats peuvent être filtrés par ID de commande, client, date et montant. Chaque facture comprend les articles, les informations de paiement et les détails de la commande associée. Prend en charge la pagination et le tri."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
-          "source": "Create Invoice",
+          "source": "Create invoice",
           "message": "Créer une facture"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Crée un nouvel enregistrement de facture pour une commande existante, documentant la transaction financière et la demande de paiement. Permet de spécifier les articles à facturer, les détails de paiement et les commentaires qui apparaîtront sur la facture du client."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Shipments",
+          "source": "List shipments",
           "message": "Lister les expéditions"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Renvoie une liste d'expéditions selon des critères de recherche spécifiés. Les résultats peuvent être filtrés par identifiant de commande, client, date de création et informations de suivi. Chaque expédition comprend les articles expédiés, les quantités, les numéros de suivi et les informations sur le transporteur."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
-          "source": "Create Shipment",
+          "source": "Create shipment",
           "message": "Créer une expédition"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Crée un nouvel enregistrement d'expédition pour une commande existante, vous permettant de documenter et de suivre l'envoi physique des articles de la commande au client. Comprend des options pour spécifier les numéros de suivi, les transporteurs et les articles expédiés avec leurs quantités."
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Payment Transactions",
+          "source": "List payment transactions",
           "message": "Lister les transactions de paiement"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Renvoie une liste de transactions de paiement selon des critères de recherche spécifiés. Les résultats peuvent être filtrés par identifiant de commande, méthode de paiement, type de transaction et statut. Chaque transaction comprend le montant, le statut et les informations relatives à la passerelle de paiement."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.display_name": {
-          "source": "Customer Created or Updated",
+          "source": "Customer created or updated",
           "message": "Client créé ou mis à jour"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Ce déclencheur s'active lorsqu'un nouveau client est créé dans votre boutique Magento ou lorsque les informations d'un client existant sont mises à jour."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Critères d'activation"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Mis à jour"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Invoice Created or Updated",
+          "source": "Invoice created or updated",
           "message": "Facture créée ou mise à jour"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
@@ -636,7 +636,7 @@
           "message": "Ce déclencheur s'active lorsqu'une nouvelle facture est générée dans votre boutique Magento ou lorsqu'une facture existante est modifiée."
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Critères d'activation"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -656,7 +656,7 @@
           "message": "Mis à jour"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.display_name": {
-          "source": "Order Created",
+          "source": "Order created",
           "message": "Commande créée"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Ce déclencheur s'active lorsqu'un client termine le processus de commande et passe une nouvelle commande dans votre boutique Magento."
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.display_name": {
-          "source": "Shipment Created",
+          "source": "Shipment created",
           "message": "Expédition créée"
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.short_desc": {
@@ -680,7 +680,7 @@
           "message": "Ce déclencheur s'active lorsqu'une nouvelle expédition est créée pour une commande dans votre boutique Magento, indiquant que les produits ont été expédiés au client."
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Product Created or Updated",
+          "source": "Product created or updated",
           "message": "Produit créé ou mis à jour"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Ce déclencheur s'active lorsqu'un nouveau produit est ajouté à votre catalogue Magento ou lorsque les informations d'un produit existant sont modifiées."
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Critères d'activation"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {

@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Craft** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基礎 URL)、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n當端點尚未在此應用程式中作為一等動作公開時，請使用此動作。"
         },
         "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.display_name": {
-          "source": "Get Daily Note Blocks",
+          "source": "Get daily note blocks",
           "message": "取得每日筆記區塊"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.short_desc": {
@@ -388,7 +388,7 @@
           "message": "明天"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "最大深度"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.short_desc": {
@@ -400,7 +400,7 @@
           "message": "指定擷取巢狀區塊的最大深度。使用 -1 代表不限深度，或提供正數以限制要擷取多深的巢狀區塊結構。"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
+          "source": "Fetch metadata",
           "message": "擷取元資料"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "啟用此選項以在回應中包含每個區塊的附加元資料，例如建立日期、上次修改日期和作者資訊。"
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "列出文件"
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "取得您的 Craft 工作區中所有文件的清單。這包含文件 ID、標題及其刪除狀態，提供您文件庫的完整總覽。"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "列出集合"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -448,7 +448,7 @@
           "message": "要篩選的文件 ID。若未提供，將列出所有文件中的集合。"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.display_name": {
-          "source": "Document Filter Mode",
+          "source": "Document filter mode",
           "message": "文件篩選模式"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.short_desc": {
@@ -468,7 +468,7 @@
           "message": "排除"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Create Collection Item",
+          "source": "Create collection item",
           "message": "建立集合項目"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -516,7 +516,7 @@
           "message": "為集合項目新增自訂屬性。可用的屬性是根據所選集合的結構動態決定的。"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.display_name": {
-          "source": "Delete Collection Items",
+          "source": "Delete collection items",
           "message": "刪除集合項目"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.short_desc": {
@@ -552,7 +552,7 @@
           "message": "提供您想要從集合中移除的項目 ID 列表。您可以在單次操作中選擇多個要刪除的項目。"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Update Collection Item",
+          "source": "Update collection item",
           "message": "更新集合項目"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -612,7 +612,7 @@
           "message": "更新集合項目的自訂屬性。僅會更新您指定的屬性；其他屬性將保持不變。"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.display_name": {
-          "source": "List Collection Items",
+          "source": "List collection items",
           "message": "列出集合項目"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.short_desc": {
@@ -636,7 +636,7 @@
           "message": "選擇您想要列出項目的 Craft 集合。將會傳回該集合中的所有項目。"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "最大深度"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.short_desc": {
@@ -648,7 +648,7 @@
           "message": "每個集合項目要擷取的巢狀內容最大深度。預設為 -1（所有後代）。深度為 0 時，僅擷取項目屬性而不包含巢狀內容。"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
+          "source": "List blocks",
           "message": "列出區塊"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.short_desc": {
@@ -660,7 +660,7 @@
           "message": "從指定的 Craft 文件或頁面擷取所有區塊。這可讓您存取文件的結構化內容（包括巢狀區塊），並能控制深度與元資料。"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.display_name": {
-          "source": "Document/Page ID",
+          "source": "Document/page ID",
           "message": "文件/頁面 ID"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "要擷取的頁面區塊 ID。多文件操作時為必填。接受文件、頁面和區塊的 ID。"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "最大深度"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.short_desc": {
@@ -684,7 +684,7 @@
           "message": "指定擷取巢狀區塊的最大深度。使用 -1 代表不限深度，或提供正數以限制巢狀層級。"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
+          "source": "Fetch metadata",
           "message": "擷取元資料"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
@@ -696,7 +696,7 @@
           "message": "是否擷取區塊的元資料 (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt)。"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.display_name": {
-          "source": "Get Markdown String",
+          "source": "Get markdown string",
           "message": "取得 Markdown 字串"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.short_desc": {
@@ -708,7 +708,7 @@
           "message": "是否擷取區塊的 Markdown 字串表示法。"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.display_name": {
-          "source": "Insert Block",
+          "source": "Insert block",
           "message": "插入區塊"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.short_desc": {
@@ -720,7 +720,7 @@
           "message": "將帶有 Markdown 內容的新區塊插入至 Craft 文件中。您可以指定要將區塊插入目標頁面的開頭還是結尾。"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Markdown 內容"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.short_desc": {
@@ -756,7 +756,7 @@
           "message": "要插入子項的區塊 ID。多文件操作時必需。僅頁面、文字和卡片類型區塊可作為父區塊。文字區塊在接收子項時會自動轉換為頁面類型。集合項目為隱式頁面。"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "插入位置"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.short_desc": {
@@ -776,7 +776,7 @@
           "message": "結束"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
+          "source": "Delete blocks",
           "message": "刪除區塊"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
@@ -800,7 +800,7 @@
           "message": "提供您想要從文件中移除的區塊 ID 列表。您可以在單次操作中刪除多個區塊。"
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "列出任務"
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.short_desc": {
@@ -840,7 +840,7 @@
           "message": "日誌"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "建立任務"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -852,7 +852,7 @@
           "message": "在 Craft 中建立一個包含 Markdown 內容、選填任務資訊（狀態、排程、截止日期）和位置（收件匣或每日筆記）的新任務。"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "任務內容"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Markdown 格式的任務內容。這將是任務的文字。"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.display_name": {
-          "source": "Task Information",
+          "source": "Task information",
           "message": "任務資訊"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.short_desc": {
@@ -876,7 +876,7 @@
           "message": "選填的任務元資料，包括狀態、排程日期和截止日期"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
+          "source": "Deadline date",
           "message": "截止日期"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.short_desc": {
@@ -888,7 +888,7 @@
           "message": "任務的到期日。支援 ISO 格式 YYYY-MM-DD 或相對日期：'today'、'tomorrow'、'yesterday'"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
+          "source": "Schedule date",
           "message": "排定日期"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.short_desc": {
@@ -948,7 +948,7 @@
           "message": "任務所在的每日備註日期。支援 ISO 格式 YYYY-MM-DD 或相對日期：'today'、'tomorrow'、'yesterday'。若未提供，預設為 'today'"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "位置類型"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.short_desc": {
@@ -968,7 +968,7 @@
           "message": "每日筆記"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "更新工作"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -992,7 +992,7 @@
           "message": "選擇您要修改的任務。只有活動中的任務可供選擇。"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "任務內容"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "已取消"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
+          "source": "Schedule date",
           "message": "排定日期"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "更新後的預計執行日期。接受 ISO 格式 YYYY-MM-DD 或相對日期：'today'、'tomorrow'、'yesterday'。留空以保持原有排程。"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
+          "source": "Deadline date",
           "message": "截止日期"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "更新後的任務截止日期。接受 ISO 格式 YYYY-MM-DD 或相對日期：'today'、'tomorrow'、'yesterday'。留空以保持原有截止日期。"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.display_name": {
-          "source": "Delete Tasks",
+          "source": "Delete tasks",
           "message": "刪除工作"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "提供您想要移除的工作 ID 列表。您可以在單次操作中刪除多個工作。"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "New Collection Item",
+          "source": "New collection item",
           "message": "新增集合項目"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "選擇您要監控新項目的 Craft 集合。當此集合新增項目時，將會觸發此條件。"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
+          "source": "Maximum depth",
           "message": "最大深度"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Виконайте користувацький виклик HTTP / REST API до **Jira**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Пошук записів"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Назва таблиці"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get Announcement Banner",
+          "source": "Get announcement banner",
           "message": "Отримати банер оголошень"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Отримує поточну конфігурацію банера оголошень для екземпляра Jira"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set Announcement Banner",
+          "source": "Set announcement banner",
           "message": "Встановити банер оголошень"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Оновлює конфігурацію банера оголошень для екземпляра Jira"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get Fields",
+          "source": "Get fields",
           "message": "Отримати поля"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Повертає всі поля, як системні, так і настроювані, в екземплярі Jira"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create Custom Field",
+          "source": "Create custom field",
           "message": "Створити настроюване поле"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Створює нове настроюване поле в екземплярі Jira"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update Custom Field",
+          "source": "Update custom field",
           "message": "Оновити настроюване поле"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Оновлює назву та опис настроюваного поля"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash Custom Field",
+          "source": "Trash custom field",
           "message": "Перемістити настроюване поле до кошика"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Переміщує настроюване поле до кошика. Настроюване поле можна відновити з кошика протягом 60 днів"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create Issue",
+          "source": "Create issue",
           "message": "Створити задачу"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Створює нову задачу в проєкті Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete Issue",
+          "source": "Delete issue",
           "message": "Видалити завдання"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Видаляє завдання з проєкту Jira"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get Issue",
+          "source": "Get issue",
           "message": "Отримати завдання"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Отримує відомості про певне завдання за його ID або ключем"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit Issue",
+          "source": "Edit issue",
           "message": "Редагувати завдання"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Оновлює поля наявного завдання"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get Comments",
+          "source": "Get comments",
           "message": "Отримати коментарі"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Отримує всі коментарі для вказаної задачі"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add Comment",
+          "source": "Add comment",
           "message": "Додати коментар"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Додає новий коментар до вказаної задачі"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete Comment",
+          "source": "Delete comment",
           "message": "Видалити коментар"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Видаляє конкретний коментар із завдання"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get Comment",
+          "source": "Get comment",
           "message": "Отримати коментар"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Отримує вказаний коментар за його ідентифікатором"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update Comment",
+          "source": "Update comment",
           "message": "Оновити коментар"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Оновлює наявний коментар до завдання"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get Issue Worklogs",
+          "source": "Get issue worklogs",
           "message": "Отримати журнали роботи завдання"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Отримує всі записи журналу роботи для певного завдання"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add Worklog",
+          "source": "Add worklog",
           "message": "Додати запис журналу робіт"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Додає новий запис журналу робіт до вказаної задачі"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete Worklog",
+          "source": "Delete worklog",
           "message": "Видалити журнал роботи"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Видаляє конкретний запис журналу роботи із завдання"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get Worklog",
+          "source": "Get worklog",
           "message": "Отримати журнал роботи"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Отримує конкретний запис журналу роботи за його ID"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update Worklog",
+          "source": "Update worklog",
           "message": "Оновити журнал роботи"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Оновлює наявний запис журналу роботи для завдання"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
+          "source": "Get all projects",
           "message": "Отримати всі проєкти"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Список властивостей проєкту, які потрібно повернути для проєкту. Цей параметр приймає список, розділений комами."
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create Project",
+          "source": "Create project",
           "message": "Створити проєкт"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Створює новий проєкт у Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete Project",
+          "source": "Delete project",
           "message": "Видалити проєкт"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Видаляє проєкт із Jira"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get Project",
+          "source": "Get project",
           "message": "Отримати проєкт"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Отримує відомості про певний проєкт за його ID або ключем"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update Project",
+          "source": "Update project",
           "message": "Оновити проєкт"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Оновлює відомості про наявний проєкт"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search Issues",
+          "source": "Search issues",
           "message": "Пошук завдань"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Шукає завдання за допомогою JQL (Jira Query Language). Повертає завдання, що відповідають критеріям пошуку"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
-          "source": "New Issue",
+          "source": "New issue",
           "message": "Нове завдання"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Проєкт для відстеження нових завдань"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
-          "source": "Updated Issue",
+          "source": "Updated issue",
           "message": "Оновлене завдання"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {

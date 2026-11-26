@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **SeaTable** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n對於此應用程式上尚未作為一級動作公開的端點，請使用此動作。"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "表格名稱"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.display_name": {
-          "source": "Run SQL Query",
+          "source": "Run SQL query",
           "message": "執行 SQL 查詢"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "在您的 SeaTable base 上執行 SQL 查詢並傳回結果。支援 SELECT、INSERT、UPDATE 和 DELETE 陳述式。SELECT 查詢最多可傳回 10,000 列。"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.display_name": {
-          "source": "SQL Query",
+          "source": "SQL query",
           "message": "SQL 查詢"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "輸入您的 SQL 查詢。若欄位名稱包含特殊字元，請使用反引號（例如：`My Column`）。範例：SELECT * FROM `Table1` WHERE `Status` = 'Active' LIMIT 100"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "新增列"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.short_desc": {

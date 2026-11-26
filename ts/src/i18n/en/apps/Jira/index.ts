@@ -5,7 +5,7 @@ const JiraAppEn = {
   longDesc: 'Collection of actions to interact with the Jira API',
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -41,39 +41,39 @@ const JiraAppEn = {
       longDesc: 'Matches issues where the field equals the specified value (JQL: =)',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches issues where the field does not equal the specified value (JQL: !=)',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches issues where the field value is greater than the specified value (JQL: >)',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc:
         'Matches issues where the field value is greater than or equal to the specified value (JQL: >=)',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches issues where the field value is less than the specified value (JQL: <)',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc:
         'Matches issues where the field value is less than or equal to the specified value (JQL: <=)',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches issues where the field has a value (JQL: IS NOT EMPTY)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches issues where the field has no value (JQL: IS EMPTY)',
     },
@@ -86,51 +86,51 @@ const JiraAppEn = {
   actions: {
     // Banner actions
     getBanner: {
-      displayName: 'Get Announcement Banner',
+      displayName: 'Get announcement banner',
       shortDesc: 'Gets the current announcement banner configuration',
       longDesc: 'Retrieves the current announcement banner configuration for the Jira instance',
       groups: ['Banner'],
     },
     setBanner: {
-      displayName: 'Set Announcement Banner',
+      displayName: 'Set announcement banner',
       shortDesc: 'Updates the announcement banner configuration',
       longDesc: 'Updates the announcement banner configuration for the Jira instance',
       groups: ['Banner'],
     },
     // Field actions
     getFields: {
-      displayName: 'Get Fields',
+      displayName: 'Get fields',
       shortDesc: 'Gets all fields in the system',
       longDesc: 'Returns all fields, both system and custom fields, in the Jira instance',
       groups: ['Fields'],
     },
     createCustomField: {
-      displayName: 'Create Custom Field',
+      displayName: 'Create custom field',
       shortDesc: 'Creates a new custom field',
       longDesc: 'Creates a new custom field in the Jira instance',
       groups: ['Fields'],
     },
     updateCustomField: {
-      displayName: 'Update Custom Field',
+      displayName: 'Update custom field',
       shortDesc: 'Updates a custom field',
       longDesc: 'Updates the name and description of a custom field',
       groups: ['Fields'],
     },
     trashCustomField: {
-      displayName: 'Trash Custom Field',
+      displayName: 'Trash custom field',
       shortDesc: 'Moves a custom field to trash',
       longDesc: 'Moves a custom field to the trash. The custom field can be restored from trash within 60 days',
       groups: ['Fields'],
     },
     // Issue actions
     searchAndReconsileIssuesUsingJqlPost: {
-      displayName: 'Search Issues',
+      displayName: 'Search issues',
       shortDesc: 'Searches for issues using JQL',
       longDesc: 'Searches for issues using JQL (Jira Query Language). Returns issues matching the search criteria',
       groups: ['Issues'],
       options: {
         jql: {
-          displayName: 'JQL Query',
+          displayName: 'JQL query',
           shortDesc: 'JQL query to search for issues. Must be a bounded query with search restrictions.',
           longDesc: `A JQL (Jira Query Language) expression to search for issues.
 
@@ -148,118 +148,118 @@ const JiraAppEn = {
       },
     },
     createIssue: {
-      displayName: 'Create Issue',
+      displayName: 'Create issue',
       shortDesc: 'Creates a new issue',
       longDesc: 'Creates a new issue in a Jira project',
       groups: ['Issues'],
     },
     deleteIssue: {
-      displayName: 'Delete Issue',
+      displayName: 'Delete issue',
       shortDesc: 'Deletes an issue',
       longDesc: 'Deletes an issue from a Jira project',
       groups: ['Issues'],
     },
     getIssue: {
-      displayName: 'Get Issue',
+      displayName: 'Get issue',
       shortDesc: 'Gets an issue by ID or key',
       longDesc: 'Retrieves the details of a specific issue by its ID or key',
       groups: ['Issues'],
     },
     editIssue: {
-      displayName: 'Edit Issue',
+      displayName: 'Edit issue',
       shortDesc: 'Updates an existing issue',
       longDesc: 'Updates the fields of an existing issue',
       groups: ['Issues'],
     },
     // Comment actions
     getComments: {
-      displayName: 'Get Comments',
+      displayName: 'Get comments',
       shortDesc: 'Gets all comments for an issue',
       longDesc: 'Retrieves all comments for a specific issue',
       groups: ['Comments'],
     },
     addComment: {
-      displayName: 'Add Comment',
+      displayName: 'Add comment',
       shortDesc: 'Adds a comment to an issue',
       longDesc: 'Adds a new comment to a specific issue',
       groups: ['Comments'],
     },
     deleteComment: {
-      displayName: 'Delete Comment',
+      displayName: 'Delete comment',
       shortDesc: 'Deletes a comment from an issue',
       longDesc: 'Deletes a specific comment from an issue',
       groups: ['Comments'],
     },
     getComment: {
-      displayName: 'Get Comment',
+      displayName: 'Get comment',
       shortDesc: 'Gets a specific comment',
       longDesc: 'Retrieves a specific comment by its ID',
       groups: ['Comments'],
     },
     updateComment: {
-      displayName: 'Update Comment',
+      displayName: 'Update comment',
       shortDesc: 'Updates a comment',
       longDesc: 'Updates an existing comment on an issue',
       groups: ['Comments'],
     },
     // Worklog actions
     getIssueWorklog: {
-      displayName: 'Get Issue Worklogs',
+      displayName: 'Get issue worklogs',
       shortDesc: 'Gets all worklogs for an issue',
       longDesc: 'Retrieves all worklogs for a specific issue',
       groups: ['Worklogs'],
     },
     addWorklog: {
-      displayName: 'Add Worklog',
+      displayName: 'Add worklog',
       shortDesc: 'Adds a worklog to an issue',
       longDesc: 'Adds a new worklog entry to a specific issue',
       groups: ['Worklogs'],
     },
     deleteWorklog: {
-      displayName: 'Delete Worklog',
+      displayName: 'Delete worklog',
       shortDesc: 'Deletes a worklog from an issue',
       longDesc: 'Deletes a specific worklog entry from an issue',
       groups: ['Worklogs'],
     },
     getWorklog: {
-      displayName: 'Get Worklog',
+      displayName: 'Get worklog',
       shortDesc: 'Gets a specific worklog',
       longDesc: 'Retrieves a specific worklog entry by its ID',
       groups: ['Worklogs'],
     },
     updateWorklog: {
-      displayName: 'Update Worklog',
+      displayName: 'Update worklog',
       shortDesc: 'Updates a worklog',
       longDesc: 'Updates an existing worklog entry on an issue',
       groups: ['Worklogs'],
     },
     // Project actions
     getAllProjects: {
-      displayName: 'Get All Projects',
+      displayName: 'Get all projects',
       shortDesc: 'Gets all projects',
       longDesc: 'Retrieves all projects visible to the authenticated user',
       groups: ['Projects'],
     },
     createProject: {
-      displayName: 'Create Project',
+      displayName: 'Create project',
       shortDesc: 'Creates a new project',
       longDesc: 'Creates a new project in Jira',
       groups: ['Projects'],
     },
     deleteProject: {
-      displayName: 'Delete Project',
+      displayName: 'Delete project',
       shortDesc: 'Deletes a project',
       longDesc: 'Deletes a project from Jira',
       groups: ['Projects'],
     },
     getProject: {
-      displayName: 'Get Project',
+      displayName: 'Get project',
       shortDesc: 'Gets a project by ID or key',
       longDesc: 'Retrieves the details of a specific project by its ID or key',
       groups: ['Projects'],
     },
     updateProject: {
-      displayName: 'Update Project',
+      displayName: 'Update project',
       shortDesc: 'Updates a project',
       longDesc: 'Updates the details of an existing project',
       groups: ['Projects'],
@@ -267,7 +267,7 @@ const JiraAppEn = {
   },
   triggers: {
     issue_created: {
-      displayName: 'New Issue',
+      displayName: 'New issue',
       shortDesc: 'Triggers when a new issue is created',
       longDesc: 'Triggers when a new issue is created',
       groups: ['Issues'],
@@ -280,7 +280,7 @@ const JiraAppEn = {
       },
     },
     issue_updated: {
-      displayName: 'Updated Issue',
+      displayName: 'Updated issue',
       shortDesc: 'Triggers when an issue is updated',
       longDesc: 'Triggers when an issue is updated',
       groups: ['Issues'],
@@ -293,7 +293,7 @@ const JiraAppEn = {
       },
     },
     project_created: {
-      displayName: 'New Project',
+      displayName: 'New project',
       shortDesc: 'Triggers when a new project is created',
       longDesc: 'Triggers when a new project is created',
       groups: ['Projects'],

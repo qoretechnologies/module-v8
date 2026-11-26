@@ -28,7 +28,7 @@
           "message": "Effectuez un appel API HTTP / REST personnalisé vers **Supabase** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous la forme d'un hachage contenant le code d'état, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.U3VwYWJhc2U.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Rechercher des enregistrements"
         },
         "app.U3VwYWJhc2U.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Le nom de la table"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.display_name": {
-          "source": "Get Table",
+          "source": "Get table",
           "message": "Obtenir la table"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Récupère des métadonnées exhaustives pour une table spécifique, notamment les définitions de colonnes, les types de données, les champs obligatoires et les descriptions. Cette action vous aide à comprendre la structure des tables de votre base de données."
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nom de la table"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Sélectionnez la table Supabase dont vous souhaitez récupérer les informations de schéma. La table doit exister dans votre projet Supabase."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
+          "source": "List tables",
           "message": "Lister les tables"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Récupère toutes les tables de votre base de données Supabase avec leurs métadonnées de base, y compris les informations sur les colonnes et les descriptions. Inclut éventuellement les tables système dans les résultats."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.display_name": {
-          "source": "Include System Tables",
+          "source": "Include system tables",
           "message": "Inclure les tables système"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Si activé, la réponse inclura les tables système (celles commençant par un trait de soulignement). Les tables système contiennent des données internes de Supabase et sont généralement masquées pour les requêtes ordinaires."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.display_name": {
-          "source": "Create Row",
+          "source": "Create row",
           "message": "Créer une ligne"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Crée un nouvel enregistrement dans la table Supabase spécifiée. L'action présente dynamiquement le schéma de la table, vous permettant de fournir des valeurs pour chaque colonne. Renvoie la ligne nouvellement créée avec toutes ses données."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nom de la table"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Sélectionnez la table Supabase cible pour insérer la nouvelle ligne. Les champs disponibles seront chargés dynamiquement selon le schéma de la table sélectionnée."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
+          "source": "Row values",
           "message": "Valeurs de la ligne"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Fournissez des valeurs pour les colonnes de la table. La structure est générée dynamiquement en fonction du schéma de la table sélectionnée, affichant toutes les colonnes disponibles avec leurs types de données et contraintes."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.display_name": {
-          "source": "List Rows",
+          "source": "List rows",
           "message": "Lister les lignes"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Récupère des lignes d'une table Supabase avec prise en charge du filtrage, du tri et de la pagination. Renvoie une liste d'enregistrements correspondant à vos critères de requête ainsi que les informations de décompte total."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nom de la table"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Ignore ce nombre de lignes avant de commencer à renvoyer les résultats. Utilisé en combinaison avec la limite pour la pagination dans de grands jeux de données."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Trier par"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "La valeur à comparer avec la colonne en utilisant l'opérateur sélectionné. Pour l'opérateur \"in\", fournissez des valeurs séparées par des virgules."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.display_name": {
-          "source": "Delete Rows",
+          "source": "Delete rows",
           "message": "Supprimer des lignes"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Supprime les lignes d'une table Supabase correspondant aux critères de filtrage spécifiés. Renvoie le nombre de lignes supprimées et leurs données. À utiliser avec précaution, car cette opération est irréversible."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nom de la table"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.short_desc": {
@@ -856,7 +856,7 @@
           "message": "La valeur à comparer. Les lignes correspondant à cette condition seront supprimées."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.display_name": {
-          "source": "Upsert Row",
+          "source": "Upsert row",
           "message": "Insérer ou mettre à jour une ligne"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Effectue une opération d'upsert (insertion ou mise à jour) sur une table Supabase. Si une ligne avec la contrainte d'unicité spécifiée existe, elle sera mise à jour ; sinon, une nouvelle ligne est insérée."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nom de la table"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Sélectionnez la table Supabase cible. Les champs disponibles seront chargés dynamiquement en fonction du schéma de la table."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
+          "source": "Row values",
           "message": "Valeurs de la ligne"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Fournissez des valeurs pour les colonnes de la table. Si une ligne correspondant aux contraintes d'unicité existe, ces valeurs la mettront à jour ; sinon, une nouvelle ligne est créée."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.display_name": {
-          "source": "On Conflict",
+          "source": "On conflict",
           "message": "En cas de conflit"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Spécifiez la colonne ou la liste de colonnes séparées par des virgules à utiliser pour détecter les conflits. Si non spécifié, utilise la clé primaire de la table."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.display_name": {
-          "source": "Ignore Duplicates",
+          "source": "Ignore duplicates",
           "message": "Ignorer les doublons"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Si activé, en cas de conflit avec une ligne existante, l'opération est ignorée sans erreur. Si désactivé (par défaut), les lignes en conflit sont mises à jour avec les nouvelles valeurs."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.display_name": {
-          "source": "Create Storage Bucket",
+          "source": "Create storage bucket",
           "message": "Créer un compartiment de stockage"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Crée un nouveau compartiment de stockage dans Supabase Storage pour organiser et stocker des fichiers. Configurez les autorisations d'accès, les limites de taille de fichier et les types MIME autorisés."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.display_name": {
-          "source": "Bucket Name",
+          "source": "Bucket name",
           "message": "Nom du bucket"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Spécifiez un nom unique pour le compartiment de stockage. Le nom doit être compatible avec les URL et unique au sein de votre projet Supabase."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.display_name": {
-          "source": "Public Access",
+          "source": "Public access",
           "message": "Accès public"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Lorsqu'elle est activée, les fichiers de ce compartiment sont accessibles publiquement sans authentification. Lorsqu'elle est désactivée (par défaut), l'accès aux fichiers nécessite une authentification."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.display_name": {
-          "source": "File Size Limit",
+          "source": "File size limit",
           "message": "Limite de taille de fichier"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Définissez la taille maximale de fichier pouvant être téléversée dans ce compartiment, exprimée en octets. Laissez vide pour aucune limite."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.display_name": {
-          "source": "Allowed MIME Types",
+          "source": "Allowed MIME types",
           "message": "Types MIME autorisés"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Spécifiez les types de fichiers pouvant être téléversés dans ce compartiment en fournissant une liste de types MIME (par ex. image/png, application/pdf). Laissez vide pour autoriser tous les types de fichiers."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Storage Buckets",
+          "source": "List storage buckets",
           "message": "Lister les compartiments de stockage"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Récupère la liste de tous les compartiments de stockage de votre projet Supabase avec leurs configurations, y compris les autorisations d'accès, les limites de taille de fichier et les types MIME autorisés."
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.display_name": {
-          "source": "Get Storage Bucket",
+          "source": "Get storage bucket",
           "message": "Obtenir le compartiment de stockage"
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Sélectionnez le compartiment de stockage dont vous souhaitez récupérer les détails depuis votre projet Supabase."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.display_name": {
-          "source": "New Table Row",
+          "source": "New table row",
           "message": "Nouvelle ligne de table"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Surveille une table Supabase pour détecter les nouvelles lignes et se déclenche lorsque de nouveaux enregistrements sont insérés. Prend en charge un filtrage facultatif pour ne se déclencher que pour les lignes correspondant à des critères spécifiques."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nom de la table"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.short_desc": {

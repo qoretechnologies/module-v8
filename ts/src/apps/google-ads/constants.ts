@@ -33,14 +33,14 @@ export const GOOGLE_ADS_APP_LOGO =
 
 export const GOOGLE_ADS_CONN_OPTIONS = {
   developer_token: {
-    display_name: 'Developer Token',
+    display_name: 'Developer token',
     short_desc: 'Your Google Ads API developer token',
     desc: 'A 22-character alphanumeric developer token obtained from your Google Ads Manager Account API Center.',
     type: 'string',
     sensitive: true,
   },
   login_customer_id: {
-    display_name: 'Manager Account ID',
+    display_name: 'Manager account ID',
     short_desc: 'Manager (MCC) account ID for accessing client accounts',
     desc: 'The Google Ads Manager Account ID (10 digits, without hyphens). Required only when using a manager account to access client accounts.',
     type: 'string',

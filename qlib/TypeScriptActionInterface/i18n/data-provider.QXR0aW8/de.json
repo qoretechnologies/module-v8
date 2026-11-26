@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Attio** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anforderungstext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App bereitgestellt werden."
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.QXR0aW8.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Datensätze suchen"
         },
         "app.QXR0aW8.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Der Tabellenname"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Create Object Record",
+          "source": "Create object record",
           "message": "Objektdatensatz erstellen"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Wählen Sie den Objekttyp aus, in dem Sie einen neuen Datensatz erstellen möchten. Dies kann ein benutzerdefiniertes Objekt oder ein Standardobjekt in Ihrem Attio-Workspace sein."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
-          "source": "Find Object Records",
+          "source": "Find object records",
           "message": "Objektdatensätze finden"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Ruft Datensätze aus einem bestimmten Attio-Objekt mit Unterstützung für das Filtern nach Attributwerten, das Sortieren nach Attributen und Paginierung ab. Gibt eine Liste von Datensätzen zurück, die den angegebenen Kriterien entsprechen."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Objekttyp"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Die Anzahl der zu überspringenden Datensätze, bevor Ergebnisse zurückgegeben werden. Wird für die Paginierung verwendet. Standardwert ist 0."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Sortierattribut"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Das Attribut, nach dem die Ergebnisse sortiert werden sollen. Standardwert ist \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Sortierrichtung"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Der Wert zum Filtern."
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Update Object Record",
+          "source": "Update object record",
           "message": "Objektdatensatz aktualisieren"
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Die eindeutige Kennung des zu aktualisierenden Datensatzes."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Create List Entry",
+          "source": "Create list entry",
           "message": "Listeneintrag erstellen"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Der API-Slug der Attio-Liste, in der der neue Eintrag erstellt wird."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID des übergeordneten Datensatzes"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Die eindeutige ID des übergeordneten Datensatzes, mit dem dieser Listeneintrag verknüpft wird."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
-          "source": "Find List Entries",
+          "source": "Find list entries",
           "message": "Listeneinträge finden"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Die Anzahl der zu überspringenden Einträge, bevor Ergebnisse zurückgegeben werden. Wird für die Paginierung verwendet. Standardwert ist 0."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Sortierattribut"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Das Attribut, nach dem die Ergebnisse sortiert werden sollen. Standardwert ist \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Sortierrichtung"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Der Wert zum Filtern."
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Update List Entry",
+          "source": "Update list entry",
           "message": "Listeneintrag aktualisieren"
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -848,7 +848,7 @@
           "message": "Die eindeutige Kennung des zu aktualisierenden Listeneintrags."
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
-          "source": "Get Single List Entry",
+          "source": "Get single list entry",
           "message": "Einzelnen Listeneintrag abrufen"
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
@@ -884,7 +884,7 @@
           "message": "Geben Sie die eindeutige ID des Eintrags an, den Sie abrufen möchten. Diese ID ist spezifisch für die von Ihnen ausgewählte Liste und lädt verfügbare Einträge basierend auf Ihrer Listenauswahl."
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Get Single Object Record",
+          "source": "Get single object record",
           "message": "Einzelnen Objektdatensatz abrufen"
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Geben Sie die eindeutige ID des Datensatzes an, den Sie abrufen möchten. Diese ID ist spezifisch für das von Ihnen ausgewählte Objekt und lädt verfügbare Datensätze basierend auf Ihrer Objektauswahl."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Tasks auflisten"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Geben Sie die Anzahl der Aufgaben an, die übersprungen werden sollen, bevor Ergebnisse zurückgegeben werden. Nützlich für die Paginierung. Standard ist 0."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
-          "source": "Linked Object",
+          "source": "Linked object",
           "message": "Verknüpftes Objekt"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Filtern Sie Aufgaben so, dass nur solche enthalten sind, die mit einem bestimmten Objekttyp in Attio verknüpft sind. Nach der Auswahl können Sie die Auskunft weiter verfeinern, indem Sie einen bestimmten Datensatz angeben."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
-          "source": "Linked Record ID",
+          "source": "Linked record ID",
           "message": "ID des verknüpften Datensatzes"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Filtern Sie Aufgaben danach, ob sie erledigt sind oder nicht. Standard ist false (zeigt unvollständige Aufgaben an)."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Sortierreihenfolge"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Filtern Sie Aufgaben so, dass nur solche enthalten sind, die einem bestimmten Workspace-Mitglied zugewiesen sind."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Task abrufen"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Geben Sie die eindeutige ID der Aufgabe an, die Sie abrufen möchten. Die verfügbaren Aufgaben-IDs werden basierend auf Ihrer vorherigen Objektauswahl geladen."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
-          "source": "Get Notes",
+          "source": "Get notes",
           "message": "Notizen abrufen"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Die Anzahl der Notizen, die übersprungen werden sollen, bevor Ergebnisse zurückgegeben werden. Wird für die Paginierung verwendet. Standard ist 0."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Übergeordnetes Objekt"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Der Typ des übergeordneten Objekts, mit dem diese Notiz verknüpft ist. Dies ist erforderlich, um Notizen nach ihrem übergeordneten Objekt zu filtern."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID des übergeordneten Datensatzes"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Die eindeutige ID des übergeordneten Datensatzes, mit dem diese Notiz verknüpft ist. Dies ist erforderlich, um Notizen nach ihrem übergeordneten Datensatz zu filtern."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Aufgabe erstellen"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Diese Aktion erstellt eine neue Aufgabe in Attio mit Inhalt, Frist, Fertigstellungsstatus und optionalen Zugewiesenen. Sie können den Aufgabeninhalt festlegen, ein Fristdatum angeben, sie als erledigt oder nicht markieren und sie einem oder mehreren Workspace-Mitgliedern zuweisen."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Aufgabeninhalt"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Wählen Sie ein oder mehrere Workspace-Mitglieder aus, die dieser Aufgabe zugewiesen werden sollen. Diese Mitglieder sind für die Erledigung der Aufgabe verantwortlich und erhalten Benachrichtigungen darüber."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
-          "source": "Create Note",
+          "source": "Create note",
           "message": "Notiz erstellen"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Diese Aktion erstellt eine neue Notiz und fügt sie einem bestimmten Datensatz innerhalb eines Attio-Objekts bei. Notizen können als Reinktext oder im Markdown-Format verfasst werden und enthalten einen Titel sowie einen Inhaltstext. Sie dienen dazu, wichtige Informationen zu Datensätzen in Ihrem Workspace zu dokumentieren."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Übergeordnetes Objekt"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Wählen Sie das Attio-Objekt aus, das den Datensatz enthält, dem Sie diese Notiz beifügen möchten. Dies legt fest, mit welchem Objekttyp die Notiz verknüpft wird."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID des übergeordneten Datensatzes"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Geben Sie den Inhalt für Ihre Notiz ein. Dieser kann entsprechend dem ausgewählten Formattyp (Reinktext oder Markdown) formatiert werden."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
-          "source": "New List Entry Created",
+          "source": "New list entry created",
           "message": "Neuer Listeneintrag erstellt"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Der API-Slug der Attio-Liste, die auf neue Einträge überwacht werden soll."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
-          "source": "List Entry Deleted",
+          "source": "List entry deleted",
           "message": "Listeneintrag gelöscht"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Der API-Slug der Attio-Liste, die auf gelöschte Einträge überwacht werden soll."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
-          "source": "List Entry Updated",
+          "source": "List entry updated",
           "message": "Listeneintrag aktualisiert"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "Der API-Slug der Attio-Liste, die auf aktualisierte Einträge überwacht werden soll."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
-          "source": "New Object Record Created",
+          "source": "New object record created",
           "message": "Neuer Objektdatensatz erstellt"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Dieser Auslöser wird aktiviert, wenn ein neuer Datensatz für ein angegebenes Attio-Objekt erstellt wird. Er enthält Details zum erstellten Datensatz, einschließlich seiner ID, des Objekttyps und des Akteurs, der ihn erstellt hat."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Objekttyp"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Der API-Slug des Attio-Objekttyps, der auf neue Datensätze überwacht werden soll."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
-          "source": "Object Record Deleted",
+          "source": "Object record deleted",
           "message": "Objektdatensatz gelöscht"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Dieser Auslöser wird aktiviert, wenn ein Datensatz aus einem angegebenen Attio-Objekt gelöscht wird. Er enthält Details zum gelöschten Datensatz, einschließlich seiner ID, des Objekttyps und des Akteurs, der die Löschung durchgeführt hat."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Objekttyp"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "Der API-Slug des Attio-Objekttyps, der auf gelöschte Datensätze überwacht werden soll."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
-          "source": "Object Record Updated",
+          "source": "Object record updated",
           "message": "Objektdatensatz aktualisiert"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "Dieser Auslöser wird aktiviert, wenn ein Datensatz für ein angegebenes Attio-Objekt aktualisiert wird. Er enthält Details zum aktualisierten Datensatz, einschließlich seiner ID, des Objekttyps, des Akteurs, der die Aktualisierung vorgenommen hat, und der spezifischen vorgenommenen Änderungen."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Objekttyp"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
@@ -1392,7 +1392,7 @@
           "message": "Der API-Slug des Attio-Objekttyps, der auf aktualisierte Datensätze überwacht werden soll."
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
-          "source": "New Task Created",
+          "source": "New task created",
           "message": "Neue Aufgabe erstellt"
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {

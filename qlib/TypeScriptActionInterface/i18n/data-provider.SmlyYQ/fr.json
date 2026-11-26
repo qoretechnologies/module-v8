@@ -28,7 +28,7 @@
           "message": "Effectue un appel API HTTP / REST personnalisé vers **Jira** à l'aide de l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions natives dans cette application."
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Rechercher des enregistrements"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Le nom de la table"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get Announcement Banner",
+          "source": "Get announcement banner",
           "message": "Obtenir la bannière d'annonce"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Récupère la configuration actuelle de la bannière d'annonce pour l'instance Jira"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set Announcement Banner",
+          "source": "Set announcement banner",
           "message": "Définir la bannière d'annonce"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Met à jour la configuration de la bannière d'annonce pour l'instance Jira"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get Fields",
+          "source": "Get fields",
           "message": "Obtenir les champs"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Renvoie tous les champs, qu'il s'agisse de champs système ou personnalisés, dans l'instance Jira"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create Custom Field",
+          "source": "Create custom field",
           "message": "Créer un champ personnalisé"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Crée un nouveau champ personnalisé dans l'instance Jira"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update Custom Field",
+          "source": "Update custom field",
           "message": "Mettre à jour le champ personnalisé"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Met à jour le nom et la description d'un champ personnalisé"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash Custom Field",
+          "source": "Trash custom field",
           "message": "Mettre le champ personnalisé à la corbeille"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Déplace un champ personnalisé vers la corbeille. Le champ personnalisé peut être restauré depuis la corbeille dans un délai de 60 jours"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create Issue",
+          "source": "Create issue",
           "message": "Créer un ticket"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Crée un nouveau ticket dans un projet Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete Issue",
+          "source": "Delete issue",
           "message": "Supprimer le ticket"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Supprime un ticket d'un projet Jira"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get Issue",
+          "source": "Get issue",
           "message": "Obtenir le ticket"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Récupère les détails d'un ticket spécifique par son ID ou sa clé"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit Issue",
+          "source": "Edit issue",
           "message": "Modifier le ticket"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Met à jour les champs d'un ticket existant"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get Comments",
+          "source": "Get comments",
           "message": "Obtenir les commentaires"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Récupère tous les commentaires d'un ticket spécifique"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add Comment",
+          "source": "Add comment",
           "message": "Ajouter un commentaire"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Ajoute un nouveau commentaire à un ticket spécifique"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete Comment",
+          "source": "Delete comment",
           "message": "Supprimer le commentaire"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Supprime un commentaire spécifique d'un ticket"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get Comment",
+          "source": "Get comment",
           "message": "Obtenir le commentaire"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Récupère un commentaire spécifique par son ID"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update Comment",
+          "source": "Update comment",
           "message": "Mettre à jour le commentaire"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Met à jour un commentaire existant sur un ticket"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get Issue Worklogs",
+          "source": "Get issue worklogs",
           "message": "Obtenir les journaux de travail du ticket"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Récupère tous les journaux de travail pour un ticket spécifique"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add Worklog",
+          "source": "Add worklog",
           "message": "Ajouter un journal de travail"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Ajoute une nouvelle entrée de journal de travail à un ticket spécifique"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete Worklog",
+          "source": "Delete worklog",
           "message": "Supprimer le journal de travail"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Supprime une entrée de journal de travail spécifique d'un ticket"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get Worklog",
+          "source": "Get worklog",
           "message": "Obtenir le journal de travail"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Récupère une entrée de journal de travail spécifique par son ID"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update Worklog",
+          "source": "Update worklog",
           "message": "Mettre à jour le journal de travail"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Met à jour une entrée de journal de travail existante sur un ticket"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
+          "source": "Get all projects",
           "message": "Obtenir tous les projets"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Une liste de propriétés de projet à renvoyer pour le projet. Ce paramètre accepte une liste séparée par des virgules."
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create Project",
+          "source": "Create project",
           "message": "Créer un projet"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Crée un nouveau projet dans Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete Project",
+          "source": "Delete project",
           "message": "Supprimer le projet"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Supprime un projet de Jira"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get Project",
+          "source": "Get project",
           "message": "Obtenir le projet"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Récupère les détails d'un projet spécifique par son ID ou sa clé"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update Project",
+          "source": "Update project",
           "message": "Mettre à jour le projet"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Met à jour les détails d'un projet existant"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search Issues",
+          "source": "Search issues",
           "message": "Rechercher des tickets"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Recherche des tickets à l'aide de JQL (Jira Query Language). Renvoie les tickets correspondant aux critères de recherche"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
-          "source": "New Issue",
+          "source": "New issue",
           "message": "Nouveau ticket"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Le projet à surveiller pour les nouveaux tickets"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
-          "source": "Updated Issue",
+          "source": "Updated issue",
           "message": "Ticket mis à jour"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {

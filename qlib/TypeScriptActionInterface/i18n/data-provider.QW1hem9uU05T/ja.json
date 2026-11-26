@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して **Amazon SNS** にカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.display_name": {
-          "source": "Create Topic",
+          "source": "Create topic",
           "message": "トピックを作成"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.short_desc": {
@@ -352,7 +352,7 @@
           "message": "FIFOトピック、暗号化、配信ポリシーのオプション設定を使用して、新しいAmazon SNSトピックを作成します。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.display_name": {
-          "source": "Topic Name",
+          "source": "Topic name",
           "message": "トピック名"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.short_desc": {
@@ -376,7 +376,7 @@
           "message": "トピックが作成されるAWSリージョン。指定しない場合は us-east-1 がデフォルトになります。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "表示名"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "メール通知やその他の文脈で表示されるトピックの表示名。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.display_name": {
-          "source": "Delivery Policy",
+          "source": "Delivery policy",
           "message": "配信ポリシー"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.short_desc": {
@@ -412,7 +412,7 @@
           "message": "トピックへのアクセス権限（配信およびサブスクライブの権限）を定義するJSON文字列。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "KMSマスターキーID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "このトピックに配信されたメッセージの暗号化に使用するAWS KMSキーのID。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.display_name": {
-          "source": "FIFO Topic",
+          "source": "FIFO topic",
           "message": "FIFOトピック"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "メッセージの順序を保持し、重複を防ぐFIFO（先入れ先出し）トピックを作成するかどうか。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "コンテンツに基づく重複排除"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -448,7 +448,7 @@
           "message": "メッセージ内容に基づいて重複メッセージを防ぐ、FIFOトピックのコンテンツに基づく重複排除を有効にするかどうか。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "メッセージを作成"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -508,7 +508,7 @@
           "message": "メッセージのオプションの件名行。主に電子メール通知に使用されます。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "メッセージ属性"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -520,7 +520,7 @@
           "message": "フィルタリングおよびルーティングの目的でメッセージに含まれる追加属性のハッシュ。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "メッセージ重複排除 ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "FIFO トピックでのメッセージ重複排除のための固有の識別子。コンテンツに基づく重複排除を行わない FIFO トピックで必須です。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "メッセージグループ ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "メッセージが FIFO トピックの特定のメッセージグループに属していることを指定するタグ。FIFO トピックで必須です。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "JSONメッセージを作成"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "JSONメッセージが配信されるSNSトピックのAmazon Resource Name (ARN)。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.display_name": {
-          "source": "JSON Message",
+          "source": "JSON message",
           "message": "JSONメッセージ"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.short_desc": {
@@ -604,7 +604,7 @@
           "message": "メッセージのオプションの件名行。主に電子メール通知に使用されます。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "メッセージ属性"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "フィルタリングおよびルーティングの目的でメッセージに含まれる追加属性のハッシュ。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "メッセージ重複排除 ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -628,7 +628,7 @@
           "message": "FIFO トピックでのメッセージ重複排除のための固有の識別子。コンテンツに基づく重複排除を行わない FIFO トピックで必須です。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "メッセージグループ ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "メッセージが FIFO トピックの特定のメッセージグループに属していることを指定するタグ。FIFO トピックで必須です。"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.display_name": {
-          "source": "List Topics",
+          "source": "List topics",
           "message": "トピックを一覧表示"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.short_desc": {
@@ -664,7 +664,7 @@
           "message": "SNSトピックのリストを取得するAWSリージョン。"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "属性を含める"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -676,7 +676,7 @@
           "message": "サブスクリプション数やポリシーなど、各トピックの詳細属性を含めるかどうか。"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.display_name": {
-          "source": "Next Token",
+          "source": "Next token",
           "message": "次のトークン"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "トピックの大きなリストをページ分割するためのトークン。前回の呼び出しから返されたトークンを使用します。"
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.display_name": {
-          "source": "Get Topic",
+          "source": "Get topic",
           "message": "トピックを取得"
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.short_desc": {
@@ -724,7 +724,7 @@
           "message": "詳細を取得するSNSトピックのAmazon Resource Name (ARN)。"
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.display_name": {
-          "source": "Add Subscriber",
+          "source": "Add subscriber",
           "message": "サブスクライバーを追加"
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.short_desc": {
@@ -816,7 +816,7 @@
           "message": "メッセージを受信するエンドポイント。形式はプロトコルによって異なります（HTTP/HTTPSの場合はURL、メールの場合はメールアドレス、SMSの場合は電話番号など）。"
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.display_name": {
-          "source": "New Topic",
+          "source": "New topic",
           "message": "新しいトピック"
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.short_desc": {
@@ -840,7 +840,7 @@
           "message": "新しいSNSトピックを監視するAWSリージョン。指定しない場合のデフォルトはus-east-1です。"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "新しいメッセージ"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -852,7 +852,7 @@
           "message": "このトリガーはAmazon SNSトピックをサブスクライブし、新しいメッセージが公開されたときに実行されます。サブスクリプションの管理を自動的に行い、完全なメッセージペイロードを提供します。"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {

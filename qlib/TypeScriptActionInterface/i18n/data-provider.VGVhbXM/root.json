@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Microsoft Teams** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.display_name": {
-          "source": "Create Channel",
-          "message": "Create Channel"
+          "source": "Create channel",
+          "message": "Create channel"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.short_desc": {
           "source": "Create a new channel in a team",
@@ -364,8 +364,8 @@
           "message": "The unique identifier (GUID) for the team where the new channel will be created."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
-          "message": "Channel Name"
+          "source": "Channel name",
+          "message": "Channel name"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
           "source": "Name of the new channel",
@@ -388,8 +388,8 @@
           "message": "Optional description explaining the purpose or topic of the channel. Limited to 1024 characters."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.display_name": {
-          "source": "Membership Type",
-          "message": "Membership Type"
+          "source": "Membership type",
+          "message": "Membership type"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.short_desc": {
           "source": "Channel privacy setting",
@@ -424,8 +424,8 @@
           "message": "Shared channel"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.display_name": {
-          "source": "Create Meeting",
-          "message": "Create Meeting"
+          "source": "Create meeting",
+          "message": "Create meeting"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.short_desc": {
           "source": "Schedule a new Teams meeting",
@@ -448,8 +448,8 @@
           "message": "The title or subject of the meeting that will appear in calendar invitations and the meeting list."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
-          "message": "Start Time"
+          "source": "Start time",
+          "message": "Start time"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
           "source": "Meeting start date and time",
@@ -460,8 +460,8 @@
           "message": "The date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS)."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
-          "message": "End Time"
+          "source": "End time",
+          "message": "End time"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
           "source": "Meeting end date and time",
@@ -496,8 +496,8 @@
           "message": "Optional channel identifier if the meeting is associated with a specific channel within a team."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
-          "message": "Meeting Content"
+          "source": "Meeting content",
+          "message": "Meeting content"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
           "source": "Meeting agenda or notes",
@@ -532,8 +532,8 @@
           "message": "List of email addresses or user IDs for people who should be invited to the meeting."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
-          "message": "Online Meeting"
+          "source": "Online meeting",
+          "message": "Online meeting"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
           "source": "Enable Teams online meeting features",
@@ -544,8 +544,8 @@
           "message": "When set to true, creates a Teams online meeting with video conferencing capabilities and a join link."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
-          "message": "Time Zone"
+          "source": "Time zone",
+          "message": "Time zone"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
           "source": "Meeting time zone",
@@ -556,8 +556,8 @@
           "message": "The time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\"."
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.display_name": {
-          "source": "Delete Meeting",
-          "message": "Delete Meeting"
+          "source": "Delete meeting",
+          "message": "Delete meeting"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.short_desc": {
           "source": "Cancel an existing meeting",
@@ -580,8 +580,8 @@
           "message": "The unique identifier (GUID) of the meeting to be canceled."
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
-          "message": "Meeting Source"
+          "source": "Meeting source",
+          "message": "Meeting source"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
           "source": "Origin of the meeting",
@@ -600,8 +600,8 @@
           "message": "Team"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.display_name": {
-          "source": "Send Channel Message",
-          "message": "Send Channel Message"
+          "source": "Send channel message",
+          "message": "Send channel message"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.short_desc": {
           "source": "Post a message to a team channel",
@@ -648,8 +648,8 @@
           "message": "The text content of the message to be posted in the channel."
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
-          "message": "Content Type"
+          "source": "Content type",
+          "message": "Content type"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
           "source": "Format of the message content",
@@ -668,8 +668,8 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.display_name": {
-          "source": "Send Chat Message",
-          "message": "Send Chat Message"
+          "source": "Send chat message",
+          "message": "Send chat message"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.short_desc": {
           "source": "Send a message to a chat conversation",
@@ -704,8 +704,8 @@
           "message": "The text content of the message to be sent in the chat."
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
-          "message": "Content Type"
+          "source": "Content type",
+          "message": "Content type"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
           "source": "Format of the message content",
@@ -724,8 +724,8 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.display_name": {
-          "source": "Update Channel",
-          "message": "Update Channel"
+          "source": "Update channel",
+          "message": "Update channel"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.short_desc": {
           "source": "Modify an existing channel",
@@ -760,8 +760,8 @@
           "message": "The unique identifier of the channel to be updated."
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
-          "message": "Channel Name"
+          "source": "Channel name",
+          "message": "Channel name"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
           "source": "New channel name",
@@ -784,8 +784,8 @@
           "message": "Updated description explaining the purpose or topic of the channel. Limited to 1024 characters."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.display_name": {
-          "source": "Update Meeting",
-          "message": "Update Meeting"
+          "source": "Update meeting",
+          "message": "Update meeting"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.short_desc": {
           "source": "Modify an existing meeting",
@@ -820,8 +820,8 @@
           "message": "The new title or subject of the meeting that will appear in calendar invitations and the meeting list."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
-          "message": "Start Time"
+          "source": "Start time",
+          "message": "Start time"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
           "source": "Updated meeting start time",
@@ -832,8 +832,8 @@
           "message": "The new date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS)."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
-          "message": "End Time"
+          "source": "End time",
+          "message": "End time"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
           "source": "Updated meeting end time",
@@ -868,8 +868,8 @@
           "message": "Updated channel identifier if the meeting is associated with a specific channel within a team."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
-          "message": "Meeting Content"
+          "source": "Meeting content",
+          "message": "Meeting content"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
           "source": "Updated meeting agenda or notes",
@@ -904,8 +904,8 @@
           "message": "Updated list of email addresses or user IDs for people who should be invited to the meeting."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
-          "message": "Online Meeting"
+          "source": "Online meeting",
+          "message": "Online meeting"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
           "source": "Enable/disable Teams online meeting features",
@@ -916,8 +916,8 @@
           "message": "When set to true, ensures the meeting has Teams online meeting capabilities with video conferencing and a join link."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
-          "message": "Time Zone"
+          "source": "Time zone",
+          "message": "Time zone"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
           "source": "Updated meeting time zone",
@@ -928,8 +928,8 @@
           "message": "The new time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\"."
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.display_name": {
-          "source": "New Channel Message",
-          "message": "New Channel Message"
+          "source": "New channel message",
+          "message": "New channel message"
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.short_desc": {
           "source": "Trigger when a message is posted in a channel",
@@ -964,8 +964,8 @@
           "message": "The unique identifier of the channel to monitor for new messages."
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.display_name": {
-          "source": "New Chat Message",
-          "message": "New Chat Message"
+          "source": "New chat message",
+          "message": "New chat message"
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.short_desc": {
           "source": "Trigger when a message is sent in a chat",
@@ -988,8 +988,8 @@
           "message": "The unique identifier of the direct chat or group chat to monitor for new messages."
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.display_name": {
-          "source": "New Meeting",
-          "message": "New Meeting"
+          "source": "New meeting",
+          "message": "New meeting"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.short_desc": {
           "source": "Trigger when a meeting is created",
@@ -1000,8 +1000,8 @@
           "message": "This trigger fires when a new meeting is scheduled that matches the specified criteria."
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
-          "message": "Meeting Source"
+          "source": "Meeting source",
+          "message": "Meeting source"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
           "source": "Origin of the meeting",

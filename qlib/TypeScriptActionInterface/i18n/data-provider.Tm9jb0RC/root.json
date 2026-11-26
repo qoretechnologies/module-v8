@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **NocoDB** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.Tm9jb0RC.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.Tm9jb0RC.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"NocoDB\"",
@@ -460,8 +460,8 @@
           "message": "The table name"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.display_name": {
-          "source": "Count Records",
-          "message": "Count Records"
+          "source": "Count records",
+          "message": "Count records"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.short_desc": {
           "source": "Get the count of records in a table",
@@ -508,8 +508,8 @@
           "message": "Select the NocoDB table to count records from."
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.display_name": {
-          "source": "Where Filter",
-          "message": "Where Filter"
+          "source": "Where filter",
+          "message": "Where filter"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.short_desc": {
           "source": "Optional filter to count specific records",
@@ -520,8 +520,8 @@
           "message": "Optionally specify a filter using NocoDB where syntax (e.g., \"(Status,eq,Active)\") to only count records matching specific criteria."
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.display_name": {
-          "source": "Upload Attachment",
-          "message": "Upload Attachment"
+          "source": "Upload attachment",
+          "message": "Upload attachment"
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.short_desc": {
           "source": "Upload a file to an attachment field",
@@ -580,8 +580,8 @@
           "message": "Specify the ID of the record where the file should be uploaded."
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.display_name": {
-          "source": "Attachment Field",
-          "message": "Attachment Field"
+          "source": "Attachment field",
+          "message": "Attachment field"
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.short_desc": {
           "source": "The attachment field to upload to",
@@ -724,8 +724,8 @@
           "message": "The filename"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.display_name": {
-          "source": "Link Records",
-          "message": "Link Records"
+          "source": "Link records",
+          "message": "Link records"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.short_desc": {
           "source": "Create relationships between records",
@@ -772,8 +772,8 @@
           "message": "Select the NocoDB table containing the record you want to link from."
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.display_name": {
-          "source": "Link Field",
-          "message": "Link Field"
+          "source": "Link field",
+          "message": "Link field"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.short_desc": {
           "source": "The link field to use for the relationship",
@@ -796,8 +796,8 @@
           "message": "Specify the ID of the record in the source table to link from."
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.display_name": {
-          "source": "Records to Link",
-          "message": "Records to Link"
+          "source": "Records to link",
+          "message": "Records to link"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
           "source": "IDs of records to link",
@@ -808,8 +808,8 @@
           "message": "Provide the IDs of records from the linked table to connect to the source record."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.display_name": {
-          "source": "Unlink Records",
-          "message": "Unlink Records"
+          "source": "Unlink records",
+          "message": "Unlink records"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.short_desc": {
           "source": "Remove relationships between records",
@@ -856,8 +856,8 @@
           "message": "Select the NocoDB table containing the record you want to unlink from."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.display_name": {
-          "source": "Link Field",
-          "message": "Link Field"
+          "source": "Link field",
+          "message": "Link field"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.short_desc": {
           "source": "The link field with the relationship",
@@ -880,8 +880,8 @@
           "message": "Specify the ID of the record in the source table to unlink from."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.display_name": {
-          "source": "Records to Unlink",
-          "message": "Records to Unlink"
+          "source": "Records to unlink",
+          "message": "Records to unlink"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
           "source": "IDs of records to unlink",
@@ -892,8 +892,8 @@
           "message": "Provide the IDs of records from the linked table to disconnect from the source record."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.display_name": {
-          "source": "Trigger Button",
-          "message": "Trigger Button"
+          "source": "Trigger button",
+          "message": "Trigger button"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.short_desc": {
           "source": "Trigger a button action on records",
@@ -940,8 +940,8 @@
           "message": "Select the NocoDB table containing the button field to trigger."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.display_name": {
-          "source": "Button Field",
-          "message": "Button Field"
+          "source": "Button field",
+          "message": "Button field"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.short_desc": {
           "source": "The button field to trigger",
@@ -964,8 +964,8 @@
           "message": "Provide the IDs of records to trigger the button action for. Maximum 25 records per request."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.display_name": {
-          "source": "Preview Mode",
-          "message": "Preview Mode"
+          "source": "Preview mode",
+          "message": "Preview mode"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.short_desc": {
           "source": "Run in preview mode without saving changes",
@@ -976,8 +976,8 @@
           "message": "When enabled, the button action runs in preview mode and changes are not saved. Useful for testing."
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
-          "message": "New Row"
+          "source": "New row",
+          "message": "New row"
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.short_desc": {
           "source": "Trigger when a new row is added to a NocoDB table",
@@ -1024,8 +1024,8 @@
           "message": "Select the NocoDB table to monitor. The trigger will fire when new rows are added to this table."
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.display_name": {
-          "source": "Where Filter",
-          "message": "Where Filter"
+          "source": "Where filter",
+          "message": "Where filter"
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.short_desc": {
           "source": "Optional filter for new rows",

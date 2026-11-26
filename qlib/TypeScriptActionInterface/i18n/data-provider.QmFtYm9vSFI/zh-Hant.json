@@ -28,7 +28,7 @@
           "message": "使用設定連線的驗證向 **BambooHR** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基底 URL)、選填的查詢參數、標頭與請求主體。回應會以包含狀態碼、回應標頭與回應主體的雜湊傳回。\n\n對尚未在此應用程式中公開為一等動作的端點使用此動作。"
         },
         "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNo.short_desc": {
@@ -436,7 +436,7 @@
           "message": "表格名稱"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.display_name": {
-          "source": "Get Employee",
+          "source": "Get employee",
           "message": "取得員工"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.short_desc": {
@@ -472,7 +472,7 @@
           "message": "選擇要為該員工擷取哪些欄位。留空可擷取所有可用欄位（最多 400 個欄位）。"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.display_name": {
-          "source": "Create Employee",
+          "source": "Create employee",
           "message": "建立員工"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.short_desc": {
@@ -484,7 +484,7 @@
           "message": "在 BambooHR 中建立新的員工記錄。最少需要填寫 firstName 和 lastName。此動作會根據您的 BambooHR 設定動態呈現所有可用欄位，包括自訂欄位。"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
+          "source": "Employee data",
           "message": "員工資料"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "提供員工欄位的值。可用欄位會從您的 BambooHR 帳戶動態載入，包括標準欄位與自訂欄位。firstName 和 lastName 為必填。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.display_name": {
-          "source": "Update Employee",
+          "source": "Update employee",
           "message": "更新員工"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.short_desc": {
@@ -520,7 +520,7 @@
           "message": "輸入您想要更新的員工之唯一識別碼。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
+          "source": "Employee data",
           "message": "員工資料"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "為您想要更新的員工欄位提供新值。可用欄位會從您的 BambooHR 帳戶動態載入。"
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.display_name": {
-          "source": "List Employees",
+          "source": "List employees",
           "message": "列出員工"
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.short_desc": {
@@ -568,7 +568,7 @@
           "message": "擷取指定日期範圍內休假員工（年假、病假等）與公司假日的清單。若未指定日期，則傳回當天及未來 14 天的資料。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日期"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "查詢的開始日期。若未指定，預設為今天。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "結束日期"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.short_desc": {
@@ -592,7 +592,7 @@
           "message": "查詢的結束日期。若未指定，預設為開始日期的 14 天後。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.display_name": {
-          "source": "Search Time Off Requests",
+          "source": "Search time off requests",
           "message": "搜尋休假申請"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "使用各種篩選條件在 BambooHR 中搜尋休假申請。傳回符合指定條件 (包含日期範圍、員工、狀態與休假類型) 的申請。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日期"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "僅顯示在此日期或之後發生的休假申請。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "結束日期"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.short_desc": {
@@ -672,7 +672,7 @@
           "message": "已被取代"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.display_name": {
-          "source": "Time Off Type",
+          "source": "Time off type",
           "message": "休假類型"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.short_desc": {
@@ -684,7 +684,7 @@
           "message": "依您的 BambooHR 帳戶中設定的一或多個休假類型篩選。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.display_name": {
-          "source": "Get All Employee Files",
+          "source": "Get all employee files",
           "message": "取得所有員工檔案"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.short_desc": {
@@ -708,7 +708,7 @@
           "message": "您要擷取其檔案的員工 ID。"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.display_name": {
-          "source": "Download Employee File",
+          "source": "Download employee file",
           "message": "下載員工檔案"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.short_desc": {
@@ -744,7 +744,7 @@
           "message": "要下載的檔案 ID。"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Upload Employee File",
+          "source": "Upload employee file",
           "message": "上傳員工檔案"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -912,7 +912,7 @@
           "message": "檔案名稱"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
+          "source": "Share with employee",
           "message": "與員工分享"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
@@ -924,7 +924,7 @@
           "message": "是否在員工自助服務門戶中將此檔案設為對該員工可見。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Update Employee File",
+          "source": "Update employee file",
           "message": "更新員工檔案"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -984,7 +984,7 @@
           "message": "將檔案移動至不同類別。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
+          "source": "Share with employee",
           "message": "與員工分享"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
@@ -996,7 +996,7 @@
           "message": "是否將此檔案設為對該員工可見。"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Delete Employee File",
+          "source": "Delete employee file",
           "message": "刪除員工檔案"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "要刪除的檔案 ID。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.display_name": {
-          "source": "Get All Company Files",
+          "source": "Get all company files",
           "message": "取得所有公司檔案"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "擷取按類別整理的所有公司檔案。傳回檔案中繼資料，包括名稱、大小、上傳日期及共用狀態。"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.display_name": {
-          "source": "Download Company File",
+          "source": "Download company file",
           "message": "下載公司檔案"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "要下載的公司檔案 ID。"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Upload Company File",
+          "source": "Upload company file",
           "message": "上傳公司檔案"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "檔案名稱"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
+          "source": "Share with employees",
           "message": "與員工分享"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "是否將此檔案設為對所有員工可見。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Update Company File",
+          "source": "Update company file",
           "message": "更新公司檔案"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "將檔案移動至不同類別。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
+          "source": "Share with employees",
           "message": "與員工分享"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "是否將此檔案設為對所有員工可見。"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Delete Company File",
+          "source": "Delete company file",
           "message": "刪除公司檔案"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "要刪除的公司檔案 ID。"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.display_name": {
-          "source": "New Time Off Request",
+          "source": "New time off request",
           "message": "新休假申請"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "僅針對來自特定員工的休假申請觸發。"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.display_name": {
-          "source": "New Time Off",
+          "source": "New time off",
           "message": "新休假"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "當 Who's Out 清單中出現新的已核准休假條目時觸發。這包含員工休假與公司假期。"
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.display_name": {
-          "source": "New Employee",
+          "source": "New employee",
           "message": "新增員工"
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.short_desc": {

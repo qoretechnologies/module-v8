@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Pipedrive** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App verfügbar sind."
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Datensätze suchen"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Fügt einen neuen Deal hinzu. Bei allen über die Pipedrive-API erstellten Deals ist `origin` auf `API` gesetzt. Beachten Sie, dass Sie mit der Anfrage zusätzliche benutzerdefinierte Felder übergeben können, die hier nicht beschrieben sind. Diese benutzerdefinierten Felder sind für jedes Pipedrive-Konto unterschiedlich und anhand langer Hashes als Schlüssel erkennbar. Um festzustellen, welche benutzerdefinierten Felder existieren, rufen Sie dealFields ab und suchen Sie nach `key`-Werten. Weitere Informationen finden Sie im Tutorial zum <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">Hinzufügen eines Deals<-a>."
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
-          "source": "Delete a Deal",
+          "source": "Delete a deal",
           "message": "Einen Deal löschen"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Aktualisiert die Eigenschaften einer Person. Weitere Informationen finden Sie im Tutorial zum <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">Aktualisieren einer Person<-a>.<br>Wenn ein Unternehmen das [Campaigns-Produkt](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api) verwendet, akzeptiert und gibt dieser Endpunkt auch das Feld `data.marketing_status` zurück."
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
+          "source": "Get all projects",
           "message": "Alle Projekte abrufen"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Aktualisiert eine Aufgabe."
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.display_name": {
-          "source": "Activity Action",
+          "source": "Activity action",
           "message": "Aktivitäts-Aktion"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Wird ausgelöst, wenn eine Aktivität erstellt, geändert oder gelöscht wird"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.display_name": {
-          "source": "Deal Action",
+          "source": "Deal action",
           "message": "Deal-Aktion"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Wird ausgelöst, wenn eine Aktivität erstellt, geändert oder gelöscht wird"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.display_name": {
-          "source": "Lead Action",
+          "source": "Lead action",
           "message": "Lead-Aktion"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Wird ausgelöst, wenn eine Aktivität erstellt, geändert oder gelöscht wird"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.display_name": {
-          "source": "Note Action",
+          "source": "Note action",
           "message": "Notiz-Aktion"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Wird ausgelöst, wenn eine Aktivität erstellt, geändert oder gelöscht wird"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.display_name": {
-          "source": "Organization Action",
+          "source": "Organization action",
           "message": "Organisations-Aktion"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.short_desc": {
@@ -1220,7 +1220,7 @@
           "message": "Wird ausgelöst, wenn eine Aktivität erstellt, geändert oder gelöscht wird"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.display_name": {
-          "source": "Person Action",
+          "source": "Person action",
           "message": "Personen-Aktion"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Wird ausgelöst, wenn eine Aktivität erstellt, geändert oder gelöscht wird"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.display_name": {
-          "source": "User Action",
+          "source": "User action",
           "message": "Benutzer-Aktion"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.short_desc": {

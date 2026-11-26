@@ -28,7 +28,7 @@
           "message": "Esegue una chiamata API HTTP / REST personalizzata a **Browse AI** utilizzando l'autenticazione della connessione configurata.\n\nSpecificare il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni della risposta e il corpo della risposta.\n\nUtilizzare questa azione per gli endpoint che non sono ancora esposti come azioni principali in questa app."
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.display_name": {
-          "source": "List Robots",
+          "source": "List robots",
           "message": "Elenca robot"
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Recupera un elenco completo di tutti i robot disponibili nel tuo account Browse AI, incluse le loro informazioni di base e i dettagli di configurazione"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.display_name": {
-          "source": "Get Robot",
+          "source": "Get robot",
           "message": "Ottieni robot"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Recupera informazioni dettagliate su un robot Browse AI, inclusi la sua configurazione, i parametri di input e i metadati"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Elenca attività"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Recupera un elenco filtrato di attività eseguite da uno specifico robot Browse AI, con opzioni di filtraggio per stato, intervallo di date e preferenze di ordinamento"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.display_name": {
-          "source": "Run Task",
+          "source": "Run task",
           "message": "Esegui task"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Esegue un singolo task utilizzando il robot Browse AI specificato con i parametri di input forniti"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.display_name": {
-          "source": "Run Bulk Task",
+          "source": "Run bulk task",
           "message": "Esegui task in blocco"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Esegue più task in blocco utilizzando il robot Browse AI specificato con diversi set di parametri di input"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "Nuova attività"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Seleziona il robot Browse AI i cui eventi del task desideri monitorare"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "Tipo di evento"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.short_desc": {

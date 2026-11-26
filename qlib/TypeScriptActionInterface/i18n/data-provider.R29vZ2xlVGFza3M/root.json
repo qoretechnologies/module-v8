@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Google Tasks** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.display_name": {
-          "source": "Create Task List",
-          "message": "Create Task List"
+          "source": "Create task list",
+          "message": "Create task list"
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.short_desc": {
           "source": "Create a new task list in Google Tasks",
@@ -364,8 +364,8 @@
           "message": "Enter the name/title for the new task list that will be created in Google Tasks."
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.display_name": {
-          "source": "Delete Task List",
-          "message": "Delete Task List"
+          "source": "Delete task list",
+          "message": "Delete task list"
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.short_desc": {
           "source": "Delete a task list from Google Tasks",
@@ -376,8 +376,8 @@
           "message": "Permanently deletes the specified task list and all tasks within it from your Google Tasks account."
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
           "source": "The task list to delete",
@@ -388,8 +388,8 @@
           "message": "Select the task list that you want to permanently delete from Google Tasks."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.display_name": {
-          "source": "List Task Lists",
-          "message": "List Task Lists"
+          "source": "List task lists",
+          "message": "List task lists"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.short_desc": {
           "source": "Get all task lists from Google Tasks",
@@ -400,8 +400,8 @@
           "message": "Retrieves a list of all task lists in your Google Tasks account with optional pagination."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Max Results",
-          "message": "Max Results"
+          "source": "Max results",
+          "message": "Max results"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of task lists to return",
@@ -412,8 +412,8 @@
           "message": "Specify the maximum number of task lists to return in the response. Default is 10."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
           "source": "Token for pagination",
@@ -424,8 +424,8 @@
           "message": "Provide the next page token from a previous request to get the next page of results."
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.display_name": {
-          "source": "Update Task List",
-          "message": "Update Task List"
+          "source": "Update task list",
+          "message": "Update task list"
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.short_desc": {
           "source": "Update an existing task list in Google Tasks",
@@ -436,8 +436,8 @@
           "message": "Updates the title of an existing task list in your Google Tasks account."
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
           "source": "The task list to update",
@@ -460,8 +460,8 @@
           "message": "Enter the new title/name for the selected task list."
         },
         "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.display_name": {
-          "source": "Clear Completed Tasks",
-          "message": "Clear Completed Tasks"
+          "source": "Clear completed Tasks",
+          "message": "Clear completed Tasks"
         },
         "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.short_desc": {
           "source": "Clear all completed tasks from a task list",
@@ -472,8 +472,8 @@
           "message": "Removes all completed tasks from the specified task list, helping to keep your lists clean and organized."
         },
         "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list to clear completed tasks from",
@@ -484,8 +484,8 @@
           "message": "Select the task list from which you want to remove all completed tasks."
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
-          "message": "Create Task"
+          "source": "Create task",
+          "message": "Create task"
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.short_desc": {
           "source": "Create a new task in Google Tasks",
@@ -496,8 +496,8 @@
           "message": "Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning."
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list to add the task to",
@@ -508,8 +508,8 @@
           "message": "Select the task list where you want to create the new task."
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
-          "message": "Parent Task"
+          "source": "Parent task",
+          "message": "Parent task"
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
           "source": "The parent task (to create a subtask)",
@@ -520,8 +520,8 @@
           "message": "Select a parent task if you want to create this task as a subtask under another task."
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
-          "source": "Previous Task",
-          "message": "Previous Task"
+          "source": "Previous task",
+          "message": "Previous task"
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
           "source": "The task after which this task should be positioned",
@@ -556,8 +556,8 @@
           "message": "Add any additional notes, details, or description for the task."
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.display_name": {
-          "source": "Due Date",
-          "message": "Due Date"
+          "source": "Due date",
+          "message": "Due date"
         },
         "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.short_desc": {
           "source": "The due date for the task",
@@ -568,8 +568,8 @@
           "message": "Set a due date for when this task should be completed."
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
-          "message": "Delete Task"
+          "source": "Delete task",
+          "message": "Delete task"
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.short_desc": {
           "source": "Delete a task from Google Tasks",
@@ -580,8 +580,8 @@
           "message": "Permanently deletes the specified task from the selected task list."
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list containing the task",
@@ -604,8 +604,8 @@
           "message": "Select the specific task that you want to permanently delete."
         },
         "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
-          "message": "Get Task"
+          "source": "Get task",
+          "message": "Get task"
         },
         "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.short_desc": {
           "source": "Retrieve details of a specific task",
@@ -616,8 +616,8 @@
           "message": "Retrieves detailed information about a specific task from the selected task list."
         },
         "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list containing the task",
@@ -640,8 +640,8 @@
           "message": "Select the specific task whose details you want to retrieve."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
-          "message": "List Tasks"
+          "source": "List tasks",
+          "message": "List tasks"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.short_desc": {
           "source": "Get all tasks from a task list",
@@ -652,8 +652,8 @@
           "message": "Retrieves a list of tasks from the specified task list with various filtering options like due dates, completion status, and more."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list to get tasks from",
@@ -664,8 +664,8 @@
           "message": "Select the task list from which you want to retrieve tasks."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.display_name": {
-          "source": "Completed Max Date",
-          "message": "Completed Max Date"
+          "source": "Completed max date",
+          "message": "Completed max date"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.short_desc": {
           "source": "Upper bound for a task completion date",
@@ -676,8 +676,8 @@
           "message": "Only return tasks completed before this date."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.display_name": {
-          "source": "Completed Min Date",
-          "message": "Completed Min Date"
+          "source": "Completed min date",
+          "message": "Completed min date"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.short_desc": {
           "source": "Lower bound for a task completion date",
@@ -688,8 +688,8 @@
           "message": "Only return tasks completed after this date."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.display_name": {
-          "source": "Due Max Date",
-          "message": "Due Max Date"
+          "source": "Due max date",
+          "message": "Due max date"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.short_desc": {
           "source": "Upper bound for a task due date",
@@ -700,8 +700,8 @@
           "message": "Only return tasks with due dates before this date."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.display_name": {
-          "source": "Due Min Date",
-          "message": "Due Min Date"
+          "source": "Due min date",
+          "message": "Due min date"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.short_desc": {
           "source": "Lower bound for a task due date",
@@ -712,8 +712,8 @@
           "message": "Only return tasks with due dates after this date."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Max Results",
-          "message": "Max Results"
+          "source": "Max results",
+          "message": "Max results"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of tasks to return",
@@ -724,8 +724,8 @@
           "message": "Specify the maximum number of tasks to return in the response."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -736,8 +736,8 @@
           "message": "Provide the page token from a previous request to get the next page of results."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.display_name": {
-          "source": "Show Completed",
-          "message": "Show Completed"
+          "source": "Show completed",
+          "message": "Show completed"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.short_desc": {
           "source": "Whether to include completed tasks",
@@ -748,8 +748,8 @@
           "message": "Enable this option to include completed tasks in the results."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.display_name": {
-          "source": "Show Deleted",
-          "message": "Show Deleted"
+          "source": "Show deleted",
+          "message": "Show deleted"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
           "source": "Whether to include deleted tasks",
@@ -760,8 +760,8 @@
           "message": "Enable this option to include deleted tasks in the results."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.display_name": {
-          "source": "Show Hidden",
-          "message": "Show Hidden"
+          "source": "Show hidden",
+          "message": "Show hidden"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.short_desc": {
           "source": "Whether to include hidden tasks",
@@ -772,8 +772,8 @@
           "message": "Enable this option to include hidden tasks in the results."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.display_name": {
-          "source": "Updated Min Date",
-          "message": "Updated Min Date"
+          "source": "Updated min date",
+          "message": "Updated min date"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.short_desc": {
           "source": "Lower bound for a task last modification time",
@@ -784,8 +784,8 @@
           "message": "Only return tasks that have been updated after this date."
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.display_name": {
-          "source": "Show Assigned",
-          "message": "Show Assigned"
+          "source": "Show assigned",
+          "message": "Show assigned"
         },
         "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.short_desc": {
           "source": "Whether to include assigned tasks",
@@ -796,8 +796,8 @@
           "message": "Enable this option to include tasks that have been assigned to other people."
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
-          "message": "Update Task"
+          "source": "Update task",
+          "message": "Update task"
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.short_desc": {
           "source": "Update an existing task in Google Tasks",
@@ -808,8 +808,8 @@
           "message": "Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning."
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list containing the task",
@@ -832,8 +832,8 @@
           "message": "Select the specific task that you want to update."
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
-          "message": "Parent Task"
+          "source": "Parent task",
+          "message": "Parent task"
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
           "source": "The parent task (to make this a subtask)",
@@ -844,8 +844,8 @@
           "message": "Select a parent task if you want to make this task a subtask under another task."
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
-          "source": "Previous Task",
-          "message": "Previous Task"
+          "source": "Previous task",
+          "message": "Previous task"
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
           "source": "The task after which this task should be positioned",
@@ -880,8 +880,8 @@
           "message": "Update any additional notes, details, or description for the task."
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.display_name": {
-          "source": "Due Date",
-          "message": "Due Date"
+          "source": "Due date",
+          "message": "Due date"
         },
         "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.short_desc": {
           "source": "The due date for the task",
@@ -912,8 +912,8 @@
           "message": "Completed"
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
-          "message": "New Task"
+          "source": "New task",
+          "message": "New task"
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.short_desc": {
           "source": "Triggers when a new task is created in Google Tasks",
@@ -924,8 +924,8 @@
           "message": "Monitors your Google Tasks lists and triggers when a new task is added to the specified task list."
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list to monitor for new tasks",
@@ -936,8 +936,8 @@
           "message": "Select the Google Tasks list that you want to monitor for newly created tasks."
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
-          "source": "Include Assigned Tasks",
-          "message": "Include Assigned Tasks"
+          "source": "Include assigned Tasks",
+          "message": "Include assigned Tasks"
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
           "source": "Whether to include tasks assigned to others",
@@ -948,8 +948,8 @@
           "message": "Enable this option to include tasks that have been assigned to other people in the trigger results."
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
-          "source": "New Completed Task",
-          "message": "New Completed Task"
+          "source": "New completed task",
+          "message": "New completed task"
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
           "source": "Triggers when a task is marked as completed",
@@ -960,8 +960,8 @@
           "message": "Monitors your Google Tasks lists and triggers when any task in the specified list is marked as completed."
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.display_name": {
-          "source": "Task List",
-          "message": "Task List"
+          "source": "Task list",
+          "message": "Task list"
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.short_desc": {
           "source": "The task list to monitor for completed tasks",
@@ -972,8 +972,8 @@
           "message": "Select the Google Tasks list that you want to monitor for newly completed tasks."
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
-          "source": "Include Assigned Tasks",
-          "message": "Include Assigned Tasks"
+          "source": "Include assigned Tasks",
+          "message": "Include assigned Tasks"
         },
         "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
           "source": "Whether to include tasks assigned to others",

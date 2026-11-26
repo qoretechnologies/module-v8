@@ -28,7 +28,7 @@
           "message": "Виконати користувацький виклик HTTP / REST API до **Freshdesk**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для ендпоінтів, які ще не представлені як окремі дії в цьому додатку."
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Пошук записів"
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Тікети, що належать компанії із зазначеним ID."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Сортувати за"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Сортувати результати."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Тип порядку"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Номер сторінки результатів для повернення."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "На сторінку"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Використовуйте цей API, щоб отримати список усіх компаній."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "На сторінку"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Api v2 custom objects schemas schema id records id put"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Новий контакт"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Спрацьовує щоразу, коли до вашого екземпляра Freshdesk додається новий контакт. Отримуйте такі дані, як ім'я, електронна пошта, телефон та будь-які користувацькі поля, пов'язані з контактом."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.display_name": {
-          "source": "Updated Contact",
+          "source": "Updated contact",
           "message": "Оновлений контакт"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Спрацьовує щоразу, коли оновлюються дані наявного контакту у вашому інстансі Freshdesk. Наприклад, зміни в імені, номері телефону, адресі електронної пошти або настроюваних полях."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.display_name": {
-          "source": "Updated Ticket",
+          "source": "Updated ticket",
           "message": "Оновлений тікет"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Спрацьовує щоразу, коли наявний тікет оновлюється новими деталями у вашому інстансі Freshdesk. Наприклад, зміна теми, пріоритету, статусу або призначеного агента."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.display_name": {
-          "source": "New Ticket",
+          "source": "New ticket",
           "message": "Новий тікет"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Спрацьовує щоразу, коли у вашому екземплярі Freshdesk створюється новий тікет. Ви можете отримувати такі дані, як тема, опис, пріоритет тощо, та використовувати їх у подальших діях або сповіщеннях."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.display_name": {
-          "source": "Ticket Status Filter",
+          "source": "Ticket status filter",
           "message": "Фільтр статусу тікета"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Обмежити або відфільтрувати тригер, щоб він спрацьовував лише для тікетів із певним статусом (наприклад, Open, Pending, Resolved тощо)."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.display_name": {
-          "source": "Ticket Priority Filter",
+          "source": "Ticket priority filter",
           "message": "Фільтр пріоритету тікета"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.short_desc": {

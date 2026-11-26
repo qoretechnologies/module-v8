@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata a **Trello** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine in questa app."
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.VHJlbGxv.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Cerca record"
         },
         "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Crea un nuovo spazio di lavoro"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nome visualizzato"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Cerca membri di Trello."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
-          "source": "Card Due",
+          "source": "Card due",
           "message": "Scheda in scadenza"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Seleziona un elenco specifico da monitorare per le schede scadute. Richiesto solo se Source è impostato su \"list\"."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
-          "source": "Include Completed Cards",
+          "source": "Include completed cards",
           "message": "Includi schede completate"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Se abilitato, il trigger includerà le schede scadute contrassegnate come completate. Per impostazione predefinita, vengono incluse solo le schede scadute incomplete."
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
-          "source": "New Board",
+          "source": "New board",
           "message": "Nuova bacheca"
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Questo trigger si attiva quando una nuova bacheca Trello viene creata o condivisa con l'utente autenticato."
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
-          "source": "New Card",
+          "source": "New card",
           "message": "Nuova scheda"
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Seleziona una lista specifica da monitorare per le nuove schede. Richiesto solo se Source è impostato su \"list\"."
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
-          "source": "New Label",
+          "source": "New label",
           "message": "Nuova etichetta"
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Seleziona la bacheca Trello in cui desideri monitorare la creazione di nuove etichette."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "Nuova lista"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Seleziona la bacheca Trello in cui desideri monitorare la creazione di nuove liste."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
-          "source": "Include Archived Lists",
+          "source": "Include archived lists",
           "message": "Includi liste archiviate"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "Se abilitato, il trigger includerà le nuove liste archiviate. Per impostazione predefinita, sono incluse solo le liste aperte."
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
-          "source": "New Member",
+          "source": "New member",
           "message": "Nuovo membro"
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {

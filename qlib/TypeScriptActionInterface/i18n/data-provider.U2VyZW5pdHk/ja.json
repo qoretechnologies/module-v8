@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**Serenity** へのカスタム HTTP / REST API 呼び出しを実行します。\n\nHTTP メソッド、URI パス (接続の API ベース URL に対する相対パス)、任意のクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、およびレスポンス本文を含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに使用します。"
         },
         "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.display_name": {
-          "source": "Execute Conversation",
+          "source": "Execute conversation",
           "message": "会話を実行"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.short_desc": {
@@ -352,7 +352,7 @@
           "message": "エージェントとのチャットにメッセージを送信します"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.display_name": {
-          "source": "Agent Code",
+          "source": "Agent code",
           "message": "エージェントコード"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.short_desc": {
@@ -376,7 +376,7 @@
           "message": "メッセージの送信先となる会話"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.display_name": {
-          "source": "User Language",
+          "source": "User language",
           "message": "ユーザー言語"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.short_desc": {
@@ -420,7 +420,7 @@
           "message": "ES"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.display_name": {
-          "source": "Execute Agent",
+          "source": "Execute agent",
           "message": "エージェントの実行"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.short_desc": {
@@ -432,7 +432,7 @@
           "message": "指定されたコードでエージェントを実行します。"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.display_name": {
-          "source": "Agent Code",
+          "source": "Agent code",
           "message": "エージェントコード"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.short_desc": {
@@ -500,7 +500,7 @@
           "message": "パラメータの値"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.display_name": {
-          "source": "Volatile Knowledge IDs",
+          "source": "Volatile knowledge IDs",
           "message": "揮発性ナレッジ ID"
         },
         "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.short_desc": {
@@ -512,7 +512,7 @@
           "message": "Serenity* AI Hub 内の特定の揮発性ナレッジを取得するために使用される一意識別子 (UUID)"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.display_name": {
-          "source": "Create Conversation",
+          "source": "Create conversation",
           "message": "会話を作成"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.short_desc": {
@@ -524,7 +524,7 @@
           "message": "指定されたエージェントコードで会話を作成します。これはエージェントを実行する前に必要です。"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.display_name": {
-          "source": "Agent Code",
+          "source": "Agent code",
           "message": "エージェントコード"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.short_desc": {
@@ -536,7 +536,7 @@
           "message": "会話を作成するエージェントのコード"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.display_name": {
-          "source": "User Identifier",
+          "source": "User identifier",
           "message": "ユーザー識別子"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.short_desc": {
@@ -548,7 +548,7 @@
           "message": "インタラクション間でコンテキストを維持するのに役立ちます。たとえば、`\"userIdentifier\": \"landing-page-user\"` を使用して特定のユーザーセッションを追跡できます。"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.display_name": {
-          "source": "Input Parameters",
+          "source": "Input parameters",
           "message": "入力パラメータ"
         },
         "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.short_desc": {
@@ -584,7 +584,7 @@
           "message": "パラメータの値"
         },
         "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.display_name": {
-          "source": "New Conversation Message",
+          "source": "New conversation message",
           "message": "新規会話メッセージ"
         },
         "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.short_desc": {

@@ -28,7 +28,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
   },
   triggers: {
     contact_added_to_list: {
-      displayName: 'Contact Added to List',
+      displayName: 'Contact added to list',
       shortDesc: 'Triggers when a contact is added to a list',
       longDesc:
         'This trigger fires when a contact subscribes or is added to a specific list in ActiveCampaign',
@@ -41,28 +41,28 @@ Both credentials can be found in the same location within your ActiveCampaign De
       },
     },
     updated_contact: {
-      displayName: 'Contact Updated',
+      displayName: 'Contact updated',
       shortDesc: 'Triggers when a contact is updated',
       longDesc: 'This trigger fires when any contact information is updated in ActiveCampaign',
     },
     new_campaign_bounce: {
-      displayName: 'New Campaign Bounce',
+      displayName: 'New campaign bounce',
       shortDesc: 'Triggers when a campaign email bounces',
       longDesc:
         'This trigger fires when an email from a campaign bounces, indicating delivery failure',
     },
     new_campaign_link_click: {
-      displayName: 'New Campaign Link Click',
+      displayName: 'New campaign link click',
       shortDesc: 'Triggers when a link in a campaign is clicked',
       longDesc: 'This trigger fires when a recipient clicks on a link within a campaign email',
     },
     new_campaign_reply: {
-      displayName: 'New Campaign Reply',
+      displayName: 'New campaign reply',
       shortDesc: 'Triggers when someone replies to a campaign',
       longDesc: 'This trigger fires when a recipient replies to a campaign email',
     },
     new_contact_note: {
-      displayName: 'New Contact Note',
+      displayName: 'New contact note',
       shortDesc: 'Triggers when a note is added to a contact',
       longDesc: 'This trigger fires when a note is added to a contact in a specific list',
       options: {
@@ -74,12 +74,12 @@ Both credentials can be found in the same location within your ActiveCampaign De
       },
     },
     new_contact: {
-      displayName: 'New Contact',
+      displayName: 'New contact',
       shortDesc: 'Triggers when a new contact is created',
       longDesc: 'This trigger fires when a new contact subscribes or is created in ActiveCampaign',
     },
     deal_note_added: {
-      displayName: 'Deal Note Added',
+      displayName: 'Deal note added',
       shortDesc: 'Triggers when a note is added to a deal',
       longDesc: 'This trigger fires when a note is added to a deal for contacts in a specific list',
       options: {
@@ -91,7 +91,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
       },
     },
     new_deal: {
-      displayName: 'New Deal',
+      displayName: 'New deal',
       shortDesc: 'Triggers when a new deal is created',
       longDesc: 'This trigger fires when a new deal is created for contacts in a specific list',
       options: {
@@ -106,7 +106,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
   actions: {
     add_contact_note: {
       groups: ['Contact Management'],
-      displayName: 'Add Contact Note',
+      displayName: 'Add contact note',
       shortDesc: 'Add a note to a contact',
       longDesc: 'Add a new note to a specific contact in ActiveCampaign',
       options: {
@@ -124,7 +124,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     add_contact_to_account: {
       groups: ['Account Management'],
-      displayName: 'Add Contact to Account',
+      displayName: 'Add contact to account',
       shortDesc: 'Associate a contact with an account',
       longDesc: 'Create an association between a contact and an account in ActiveCampaign',
       options: {
@@ -139,7 +139,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the contact that you want to associate with the account',
         },
         jobTitle: {
-          displayName: 'Job Title',
+          displayName: 'Job title',
           shortDesc: "The contact's job title at this account",
           longDesc: 'Optional job title or role of the contact within the account',
         },
@@ -147,7 +147,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     add_deal_note: {
       groups: ['Deal Management'],
-      displayName: 'Add Deal Note',
+      displayName: 'Add deal note',
       shortDesc: 'Add a note to a deal',
       longDesc: 'Add a new note to a specific deal in ActiveCampaign',
       options: {
@@ -165,7 +165,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     add_tag_to_contact: {
       groups: ['Contact Management'],
-      displayName: 'Add Tag to Contact',
+      displayName: 'Add tag to contact',
       shortDesc: 'Add a tag to a contact',
       longDesc:
         'Apply a tag to a specific contact in ActiveCampaign for organization and segmentation',
@@ -184,12 +184,12 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     create_account: {
       groups: ['Account Management'],
-      displayName: 'Create Account',
+      displayName: 'Create account',
       shortDesc: 'Create a new account',
       longDesc: 'Create a new account (company/organization) in ActiveCampaign',
       options: {
         name: {
-          displayName: 'Account Name',
+          displayName: 'Account name',
           shortDesc: 'The name of the account',
           longDesc: 'The name of the company or organization account',
         },
@@ -199,12 +199,12 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Optional website URL or domain for the account',
         },
         owner: {
-          displayName: 'Account Owner',
+          displayName: 'Account owner',
           shortDesc: 'The user who will own this account',
           longDesc: 'Select the user who will be responsible for managing this account',
         },
         fieldOptions: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values for the account',
           longDesc: 'Set values for any custom fields configured for accounts',
         },
@@ -212,33 +212,33 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     create_contact: {
       groups: ['Contact Management'],
-      displayName: 'Create Contact',
+      displayName: 'Create contact',
       shortDesc: 'Create a new contact',
       longDesc:
         'Create a new contact in ActiveCampaign with basic information and custom field values',
       options: {
         email: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: "The contact's email address",
           longDesc: 'The primary email address for the contact (required)',
         },
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "The contact's first name",
           longDesc: 'The first name of the contact',
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "The contact's last name",
           longDesc: 'The last name of the contact',
         },
         phone: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: "The contact's phone number",
           longDesc: 'The phone number for the contact',
         },
         fieldValues: {
-          displayName: 'Custom Field Values',
+          displayName: 'Custom field values',
           shortDesc: 'Values for custom fields',
           longDesc: 'Set values for any custom fields configured for contacts',
         },
@@ -246,12 +246,12 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     create_deal: {
       groups: ['Deal Management'],
-      displayName: 'Create Deal',
+      displayName: 'Create deal',
       shortDesc: 'Create a new deal',
       longDesc: 'Create a new sales deal in ActiveCampaign with all relevant details',
       options: {
         title: {
-          displayName: 'Deal Title',
+          displayName: 'Deal title',
           shortDesc: 'The title of the deal',
           longDesc: 'A descriptive title for the deal',
         },
@@ -266,7 +266,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the main contact person for this deal',
         },
         value: {
-          displayName: 'Deal Value',
+          displayName: 'Deal value',
           shortDesc: 'The monetary value of the deal',
           longDesc: 'The total value or amount of the deal',
         },
@@ -276,32 +276,32 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the currency that the deal value is denominated in',
         },
         stage: {
-          displayName: 'Deal Stage',
+          displayName: 'Deal stage',
           shortDesc: 'The current stage of the deal',
           longDesc: 'Select the pipeline stage that represents the current status of the deal',
         },
         group: {
-          displayName: 'Pipeline Group',
+          displayName: 'Pipeline group',
           shortDesc: 'The pipeline group for the deal',
           longDesc: 'Select the pipeline group that this deal belongs to',
         },
         owner: {
-          displayName: 'Deal Owner',
+          displayName: 'Deal owner',
           shortDesc: 'The user responsible for this deal',
           longDesc: 'Select the user who will be responsible for managing this deal',
         },
         percent: {
-          displayName: 'Completion Percentage',
+          displayName: 'Completion percentage',
           shortDesc: 'The percentage completion of the deal',
           longDesc: 'A percentage value representing how close the deal is to completion',
         },
         description: {
-          displayName: 'Deal Description',
+          displayName: 'Deal description',
           shortDesc: 'Additional description or notes',
           longDesc: 'Optional description or additional details about the deal',
         },
         status: {
-          displayName: 'Deal Status',
+          displayName: 'Deal status',
           shortDesc: 'The current status of the deal',
           longDesc: 'Select whether the deal is open, won, or lost',
         },
@@ -309,7 +309,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_account: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Account',
+      displayName: 'Get account',
       shortDesc: 'Retrieve account details',
       longDesc: 'Retrieve detailed information about a specific account in ActiveCampaign',
       options: {
@@ -322,7 +322,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_campaign: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Campaign',
+      displayName: 'Get campaign',
       shortDesc: 'Retrieve campaign details',
       longDesc: 'Retrieve detailed information about a specific campaign in ActiveCampaign',
       options: {
@@ -335,7 +335,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_contact: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Contact',
+      displayName: 'Get contact',
       shortDesc: 'Retrieve contact details',
       longDesc:
         'Retrieve detailed information about a specific contact in ActiveCampaign including custom fields, automations, and related data',
@@ -349,7 +349,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_deal: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Deal',
+      displayName: 'Get deal',
       shortDesc: 'Retrieve deal details',
       longDesc: 'Retrieve detailed information about a specific deal in ActiveCampaign',
       options: {
@@ -362,7 +362,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_form: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Form',
+      displayName: 'Get form',
       shortDesc: 'Retrieve form details',
       longDesc:
         'Retrieve detailed information about a specific form in ActiveCampaign including styling and field configuration',
@@ -376,7 +376,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_list: {
       groups: ['Data Retrieval'],
-      displayName: 'Get List',
+      displayName: 'Get list',
       shortDesc: 'Retrieve list details',
       longDesc:
         'Retrieve detailed information about a specific list in ActiveCampaign including settings and configuration',
@@ -390,7 +390,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_task: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Task',
+      displayName: 'Get task',
       shortDesc: 'Retrieve task details',
       longDesc: 'Retrieve detailed information about a specific deal task in ActiveCampaign',
       options: {
@@ -403,7 +403,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     get_user: {
       groups: ['Data Retrieval'],
-      displayName: 'Get User',
+      displayName: 'Get user',
       shortDesc: 'Retrieve user details',
       longDesc: 'Retrieve detailed information about a specific user in ActiveCampaign',
       options: {
@@ -416,7 +416,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_accounts: {
       groups: ['Data Retrieval'],
-      displayName: 'List Accounts',
+      displayName: 'List accounts',
       shortDesc: 'Retrieve a list of accounts',
       longDesc:
         'Retrieve a paginated list of accounts in ActiveCampaign with optional search and filtering',
@@ -427,7 +427,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Search for accounts by name or other searchable fields',
         },
         count_deals: {
-          displayName: 'Count Deals',
+          displayName: 'Count deals',
           shortDesc: 'Include deal count for each account',
           longDesc:
             'Whether to include the number of deals associated with each account in the response',
@@ -446,7 +446,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_campaigns: {
       groups: ['Data Retrieval'],
-      displayName: 'List Campaigns',
+      displayName: 'List campaigns',
       shortDesc: 'Retrieve a list of campaigns',
       longDesc: 'Retrieve a paginated list of campaigns in ActiveCampaign',
       options: {
@@ -464,7 +464,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_contacts: {
       groups: ['Data Retrieval'],
-      displayName: 'List Contacts',
+      displayName: 'List contacts',
       shortDesc: 'Retrieve a list of contacts',
       longDesc:
         'Retrieve a paginated list of contacts in ActiveCampaign with extensive filtering and sorting options',
@@ -475,7 +475,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Filter contacts by exact email address match',
         },
         email_like: {
-          displayName: 'Email Like',
+          displayName: 'Email like',
           shortDesc: 'Partial email address to search for',
           longDesc: 'Filter contacts by partial email address match',
         },
@@ -505,18 +505,18 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Filter contacts who are members of a specific list',
         },
         sort: {
-          displayName: 'Sort Options',
+          displayName: 'Sort options',
           shortDesc: 'Sorting configuration',
           longDesc: 'Configure how to sort the contact results',
           type: {
             fields: {
               field: {
-                displayName: 'Sort Field',
+                displayName: 'Sort field',
                 shortDesc: 'Field to sort by',
                 longDesc: 'The field to use for sorting the contacts',
               },
               order: {
-                displayName: 'Sort Order',
+                displayName: 'Sort order',
                 shortDesc: 'Sort direction',
                 longDesc: 'Whether to sort in ascending or descending order',
               },
@@ -537,7 +537,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_deals: {
       groups: ['Data Retrieval'],
-      displayName: 'List Deals',
+      displayName: 'List deals',
       shortDesc: 'Retrieve a list of deals',
       longDesc:
         'Retrieve a paginated list of deals in ActiveCampaign with optional search functionality',
@@ -553,18 +553,18 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'The number of deals to skip for pagination',
         },
         search: {
-          displayName: 'Search Options',
+          displayName: 'Search options',
           shortDesc: 'Search configuration for deals',
           longDesc: 'Configure how to search for deals by different fields',
           type: {
             fields: {
               field: {
-                displayName: 'Search Field',
+                displayName: 'Search field',
                 shortDesc: 'Field to search in',
                 longDesc: 'The field to search in (title, contact, organization, or all)',
               },
               value: {
-                displayName: 'Search Value',
+                displayName: 'Search value',
                 shortDesc: 'Value to search for',
                 longDesc: 'The search term to look for in the specified field',
               },
@@ -575,7 +575,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_deal_stages: {
       groups: ['Data Retrieval'],
-      displayName: 'List Deal Stages',
+      displayName: 'List deal stages',
       shortDesc: 'Retrieve a list of deal stages',
       longDesc: 'Retrieve a paginated list of deal stages (pipeline stages) in ActiveCampaign',
       options: {
@@ -598,7 +598,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_forms: {
       groups: ['Data Retrieval'],
-      displayName: 'List Forms',
+      displayName: 'List forms',
       shortDesc: 'Retrieve a list of forms',
       longDesc: 'Retrieve a paginated list of forms in ActiveCampaign',
       options: {
@@ -616,7 +616,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_lists: {
       groups: ['Data Retrieval'],
-      displayName: 'List Lists',
+      displayName: 'List lists',
       shortDesc: 'Retrieve a list of lists',
       longDesc:
         'Retrieve a paginated list of contact lists in ActiveCampaign with optional name filtering',
@@ -640,7 +640,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_tags: {
       groups: ['Data Retrieval'],
-      displayName: 'List Tags',
+      displayName: 'List tags',
       shortDesc: 'Retrieve a list of tags',
       longDesc:
         'Retrieve a paginated list of tags in ActiveCampaign with optional search functionality',
@@ -664,7 +664,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_tasks: {
       groups: ['Data Retrieval'],
-      displayName: 'List Tasks',
+      displayName: 'List tasks',
       shortDesc: 'Retrieve a list of tasks',
       longDesc: 'Retrieve a paginated list of deal tasks in ActiveCampaign with filtering options',
       options: {
@@ -697,7 +697,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     list_users: {
       groups: ['Data Retrieval'],
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'Retrieve a list of users',
       longDesc: 'Retrieve a paginated list of users in ActiveCampaign',
       options: {
@@ -715,7 +715,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     remove_tag_from_contact: {
       groups: ['Contact Management'],
-      displayName: 'Remove Tag from Contact',
+      displayName: 'Remove tag from contact',
       shortDesc: 'Remove a tag from a contact',
       longDesc: 'Remove a specific tag from a contact in ActiveCampaign',
       options: {
@@ -733,7 +733,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     update_account: {
       groups: ['Account Management'],
-      displayName: 'Update Account',
+      displayName: 'Update account',
       shortDesc: 'Update an existing account',
       longDesc: 'Update the information of an existing account in ActiveCampaign',
       options: {
@@ -743,7 +743,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the account that you want to update',
         },
         name: {
-          displayName: 'Account Name',
+          displayName: 'Account name',
           shortDesc: 'The updated name of the account',
           longDesc: 'The new name for the company or organization account',
         },
@@ -753,12 +753,12 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'The new website URL or domain for the account',
         },
         owner: {
-          displayName: 'Account Owner',
+          displayName: 'Account owner',
           shortDesc: 'The updated owner of the account',
           longDesc: 'Select the user who will be responsible for managing this account',
         },
         fieldOptions: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom field values for the account',
           longDesc: 'Update values for any custom fields configured for accounts',
         },
@@ -766,7 +766,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     update_contact: {
       groups: ['Contact Management'],
-      displayName: 'Update Contact',
+      displayName: 'Update contact',
       shortDesc: 'Update an existing contact',
       longDesc:
         'Update the information of an existing contact in ActiveCampaign including basic information and custom field values',
@@ -777,27 +777,27 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the contact that you want to update',
         },
         email: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: 'The updated email address',
           longDesc: 'The new email address for the contact',
         },
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'The updated first name',
           longDesc: 'The new first name of the contact',
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'The updated last name',
           longDesc: 'The new last name of the contact',
         },
         phone: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: 'The updated phone number',
           longDesc: 'The new phone number for the contact',
         },
         fieldValues: {
-          displayName: 'Custom Field Values',
+          displayName: 'Custom field values',
           shortDesc: 'Updated values for custom fields',
           longDesc: 'Update values for any custom fields configured for contacts',
         },
@@ -805,7 +805,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
     },
     update_deal: {
       groups: ['Deal Management'],
-      displayName: 'Update Deal',
+      displayName: 'Update deal',
       shortDesc: 'Update an existing deal',
       longDesc: 'Update the information of an existing sales deal in ActiveCampaign',
       options: {
@@ -815,7 +815,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the deal that you want to update',
         },
         title: {
-          displayName: 'Deal Title',
+          displayName: 'Deal title',
           shortDesc: 'The updated title of the deal',
           longDesc: 'The new descriptive title for the deal',
         },
@@ -830,7 +830,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the new main contact person for this deal',
         },
         value: {
-          displayName: 'Deal Value',
+          displayName: 'Deal value',
           shortDesc: 'The updated monetary value of the deal',
           longDesc: 'The new total value or amount of the deal',
         },
@@ -840,32 +840,32 @@ Both credentials can be found in the same location within your ActiveCampaign De
           longDesc: 'Select the new currency that the deal value is denominated in',
         },
         stage: {
-          displayName: 'Deal Stage',
+          displayName: 'Deal stage',
           shortDesc: 'The updated stage of the deal',
           longDesc: 'Select the new pipeline stage that represents the current status of the deal',
         },
         group: {
-          displayName: 'Pipeline Group',
+          displayName: 'Pipeline group',
           shortDesc: 'The updated pipeline group for the deal',
           longDesc: 'Select the new pipeline group that this deal belongs to',
         },
         owner: {
-          displayName: 'Deal Owner',
+          displayName: 'Deal owner',
           shortDesc: 'The updated user responsible for this deal',
           longDesc: 'Select the new user who will be responsible for managing this deal',
         },
         percent: {
-          displayName: 'Completion Percentage',
+          displayName: 'Completion percentage',
           shortDesc: 'The updated percentage completion of the deal',
           longDesc: 'The new percentage value representing how close the deal is to completion',
         },
         description: {
-          displayName: 'Deal Description',
+          displayName: 'Deal description',
           shortDesc: 'Updated description or notes',
           longDesc: 'New description or additional details about the deal',
         },
         status: {
-          displayName: 'Deal Status',
+          displayName: 'Deal status',
           shortDesc: 'The updated status of the deal',
           longDesc: 'Select whether the deal is open, won, or lost',
         },
@@ -874,7 +874,7 @@ Both credentials can be found in the same location within your ActiveCampaign De
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -910,37 +910,37 @@ Both credentials can be found in the same location within your ActiveCampaign De
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc: 'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc: 'Matches records where the field value is less than or equal to the specified value',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a value (is not empty)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches records where the field has no value (is empty)',
     },

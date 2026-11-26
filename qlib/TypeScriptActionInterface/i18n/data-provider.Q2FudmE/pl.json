@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Canva**, używając uwierzytelnienia skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec podstawowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki oraz treść żądania. Odpowiedź jest zwracana jako hash zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżywaj tej akcji w przypadku punktów końcowych, które nie są jeszcze udostępnione jako natywne akcje w tej aplikacji."
         },
         "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.display_name": {
-          "source": "Upload Image",
+          "source": "Upload image",
           "message": "Prześlij obraz"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Prześlij plik obrazu na swoje konto Canva i opcjonalnie ustaw nazwę oraz tagi"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.display_name": {
-          "source": "Image File",
+          "source": "Image file",
           "message": "Plik obrazu"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Dodaj tagi, które pomogą zorganizować i znaleźć obraz później"
         },
         "app.Q2FudmE.action.Z2V0X2ltYWdl.display_name": {
-          "source": "Get Image",
+          "source": "Get image",
           "message": "Pobierz obraz"
         },
         "app.Q2FudmE.action.Z2V0X2ltYWdl.short_desc": {
@@ -532,7 +532,7 @@
           "message": "ID zasobu Canva dla obrazu, który chcesz pobrać"
         },
         "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.display_name": {
-          "source": "Delete Image",
+          "source": "Delete image",
           "message": "Usuń obraz"
         },
         "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.short_desc": {
@@ -556,7 +556,7 @@
           "message": "ID zasobu Canva dla obrazu, który chcesz usunąć"
         },
         "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.display_name": {
-          "source": "Update Image",
+          "source": "Update image",
           "message": "Zaktualizuj obraz"
         },
         "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Zaktualizuj tagi powiązane z obrazem w celu lepszej organizacji"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.display_name": {
-          "source": "Upload Image by URL",
+          "source": "Upload image by URL",
           "message": "Prześlij obraz przez URL"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Dodaj tagi, które pomogą zorganizować i znaleźć obraz później"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.display_name": {
-          "source": "List Designs",
+          "source": "List designs",
           "message": "Pobierz listę projektów"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Pobierz listę swoich projektów Canva z opcjonalnym filtrowaniem i sortowaniem"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Zapytanie wyszukiwania"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Wprowadź wyszukiwaną frazę, aby znaleźć określone projekty według tytułu lub treści"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.display_name": {
-          "source": "Continuation Token",
+          "source": "Continuation token",
           "message": "Token kontynuacji"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Użyj tego tokenu, aby kontynuować od miejsca, w którym zakończyło się poprzednie żądanie"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.display_name": {
-          "source": "Ownership Filter",
+          "source": "Ownership filter",
           "message": "Filtr własności"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Udostępnione"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Sortuj według"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Tytuł rosnąco"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.display_name": {
-          "source": "Create Comment Thread",
+          "source": "Create comment thread",
           "message": "Utwórz wątek komentarza"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.short_desc": {
@@ -792,7 +792,7 @@
           "message": "Przypisz ten komentarz do konkretnego członka zespołu do wykonania"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.display_name": {
-          "source": "Create Reply",
+          "source": "Create reply",
           "message": "Utwórz odpowiedź"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Wprowadź treść tekstową swojej odpowiedzi"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.display_name": {
-          "source": "List Thread Replies",
+          "source": "List thread replies",
           "message": "Wyświetl odpowiedzi w wątku"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Ustaw maksymalną liczbę odpowiedzi do pobrania (domyślnie: 50)"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.display_name": {
-          "source": "Continuation Token",
+          "source": "Continuation token",
           "message": "Token kontynuacji"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Unikalny identyfikator wątku komentarzy, którego odpowiedzi chcesz wyświetlić"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.display_name": {
-          "source": "New Design",
+          "source": "New design",
           "message": "Nowy projekt"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Ten wyzwalacz uruchamia się po utworzeniu nowego projektu na koncie Canva, z opcjonalnym filtrowaniem według własności i frazy wyszukiwania"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Zapytanie wyszukiwania"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Opcjonalna fraza wyszukiwania do filtrowania projektów wyzwalających zdarzenie. Tylko projekty pasujące do tego zapytania wyzwolą zdarzenie"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.display_name": {
-          "source": "Ownership Filter",
+          "source": "Ownership filter",
           "message": "Filtr własności"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Udostępnione"
         },
         "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.display_name": {
-          "source": "New Thread Reply",
+          "source": "New thread reply",
           "message": "Nowa odpowiedź w wątku"
         },
         "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.short_desc": {

@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Todoist** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.display_name": {
-          "source": "Add Comment to Project",
-          "message": "Add Comment to Project"
+          "source": "Add comment to project",
+          "message": "Add comment to project"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.short_desc": {
           "source": "Add a comment to a Todoist project",
@@ -352,8 +352,8 @@
           "message": "Creates a new comment on a specified Todoist project. Comments can be used to provide updates, notes, or collaborate with team members on project-related discussions."
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.display_name": {
-          "source": "Comment Content",
-          "message": "Comment Content"
+          "source": "Comment content",
+          "message": "Comment content"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.short_desc": {
           "source": "The text content of the comment",
@@ -376,8 +376,8 @@
           "message": "Select the Todoist project where you want to add the comment."
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.display_name": {
-          "source": "Add Comment to Task",
-          "message": "Add Comment to Task"
+          "source": "Add comment to task",
+          "message": "Add comment to task"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.short_desc": {
           "source": "Add a comment to a Todoist task",
@@ -388,8 +388,8 @@
           "message": "Creates a new comment on a specified Todoist task. Use comments to add notes, updates, or collaborate with team members on specific tasks."
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.display_name": {
-          "source": "Comment Content",
-          "message": "Comment Content"
+          "source": "Comment content",
+          "message": "Comment content"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.short_desc": {
           "source": "The text content of the comment",
@@ -412,8 +412,8 @@
           "message": "Select the Todoist task where you want to add the comment."
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.display_name": {
-          "source": "Create Project",
-          "message": "Create Project"
+          "source": "Create project",
+          "message": "Create project"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.short_desc": {
           "source": "Create a new Todoist project",
@@ -424,8 +424,8 @@
           "message": "Creates a new project in Todoist. Projects help you organize related tasks and collaborate with team members."
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.display_name": {
-          "source": "Project Name",
-          "message": "Project Name"
+          "source": "Project name",
+          "message": "Project name"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.short_desc": {
           "source": "The name of the project",
@@ -460,8 +460,8 @@
           "message": "The color used to visually identify the project in the Todoist interface."
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.display_name": {
-          "source": "View Style",
-          "message": "View Style"
+          "source": "View style",
+          "message": "View style"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.short_desc": {
           "source": "How the project is displayed",
@@ -484,8 +484,8 @@
           "message": "Calendar"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.display_name": {
-          "source": "Is Favorite",
-          "message": "Is Favorite"
+          "source": "Is favorite",
+          "message": "Is favorite"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.short_desc": {
           "source": "Mark project as favorite",
@@ -496,8 +496,8 @@
           "message": "When enabled, the project will appear in your favorites section for quick access."
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
-          "message": "Create Task"
+          "source": "Create task",
+          "message": "Create task"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.short_desc": {
           "source": "Create a new Todoist task",
@@ -508,8 +508,8 @@
           "message": "Creates a new task in Todoist. Tasks can be assigned to projects, sections, given labels, priorities, due dates, and more."
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
-          "message": "Task Content"
+          "source": "Task content",
+          "message": "Task content"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
           "source": "The task description",
@@ -604,8 +604,8 @@
           "message": "Set the priority level for the task. Higher priority tasks are displayed with color-coded flags: 1 (urgent), 2 (high), 3 (normal), 4 (low)."
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
-          "source": "Due Date",
-          "message": "Due Date"
+          "source": "Due date",
+          "message": "Due date"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
           "source": "When the task is due",
@@ -660,8 +660,8 @@
           "message": "Day"
         },
         "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
-          "message": "Delete Task"
+          "source": "Delete task",
+          "message": "Delete task"
         },
         "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.short_desc": {
           "source": "Permanently delete a Todoist task",
@@ -684,8 +684,8 @@
           "message": "Select the Todoist task you want to permanently delete."
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.display_name": {
-          "source": "Get Project Collaborators",
-          "message": "Get Project Collaborators"
+          "source": "Get project collaborators",
+          "message": "Get project collaborators"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.short_desc": {
           "source": "List collaborators in a project",
@@ -732,8 +732,8 @@
           "message": "The maximum number of collaborators to return in a single request. Default is 50."
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.display_name": {
-          "source": "Get Project",
-          "message": "Get Project"
+          "source": "Get project",
+          "message": "Get project"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.short_desc": {
           "source": "Retrieve details of a Todoist project",
@@ -756,8 +756,8 @@
           "message": "Select the Todoist project you want to get details for."
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
-          "message": "Get Task"
+          "source": "Get task",
+          "message": "Get task"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.short_desc": {
           "source": "Retrieve details of a Todoist task",
@@ -780,8 +780,8 @@
           "message": "Select the Todoist task you want to get details for."
         },
         "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.display_name": {
-          "source": "List Labels",
-          "message": "List Labels"
+          "source": "List labels",
+          "message": "List labels"
         },
         "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.short_desc": {
           "source": "Retrieve all Todoist labels",
@@ -816,8 +816,8 @@
           "message": "The maximum number of labels to return in a single request. Default is 50."
         },
         "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
-          "message": "List Projects"
+          "source": "List projects",
+          "message": "List projects"
         },
         "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.short_desc": {
           "source": "Retrieve all Todoist projects",
@@ -852,8 +852,8 @@
           "message": "The maximum number of projects to return in a single request. Default is 50."
         },
         "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.display_name": {
-          "source": "List Sections",
-          "message": "List Sections"
+          "source": "List sections",
+          "message": "List sections"
         },
         "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.short_desc": {
           "source": "Retrieve sections from projects",
@@ -900,8 +900,8 @@
           "message": "The maximum number of sections to return in a single request. Default is 50."
         },
         "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
-          "message": "List Tasks"
+          "source": "List tasks",
+          "message": "List tasks"
         },
         "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.short_desc": {
           "source": "Retrieve Todoist tasks",
@@ -984,8 +984,8 @@
           "message": "Retrieve only tasks that have a specific label assigned."
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
-          "message": "Update Task"
+          "source": "Update task",
+          "message": "Update task"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.short_desc": {
           "source": "Update an existing Todoist task",
@@ -1008,8 +1008,8 @@
           "message": "Select the Todoist task you want to modify."
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
-          "message": "Task Content"
+          "source": "Task content",
+          "message": "Task content"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
           "source": "Updated task description",
@@ -1092,8 +1092,8 @@
           "message": "Change the priority level: 1 (urgent), 2 (high), 3 (normal), 4 (low)."
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
-          "source": "Due Date",
-          "message": "Due Date"
+          "source": "Due date",
+          "message": "Due date"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
           "source": "Updated due date",
@@ -1148,8 +1148,8 @@
           "message": "Day"
         },
         "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.display_name": {
-          "source": "Complete Task",
-          "message": "Complete Task"
+          "source": "Complete task",
+          "message": "Complete task"
         },
         "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.short_desc": {
           "source": "Mark a Todoist task as complete",
@@ -1172,8 +1172,8 @@
           "message": "Select the Todoist task you want to mark as complete."
         },
         "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.display_name": {
-          "source": "Move Task to Section",
-          "message": "Move Task to Section"
+          "source": "Move task to section",
+          "message": "Move task to section"
         },
         "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.short_desc": {
           "source": "Move a task to a different section or project",
@@ -1220,8 +1220,8 @@
           "message": "The project where you want to move the task. Either section_id or project_id must be specified."
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.display_name": {
-          "source": "Get Tasks by Filter",
-          "message": "Get Tasks by Filter"
+          "source": "Get tasks by filter",
+          "message": "Get tasks by filter"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.short_desc": {
           "source": "Search tasks using Todoist filter queries",
@@ -1256,8 +1256,8 @@
           "message": "The maximum number of tasks to return in a single request. Default is 50."
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.display_name": {
-          "source": "Filter Query",
-          "message": "Filter Query"
+          "source": "Filter query",
+          "message": "Filter query"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.short_desc": {
           "source": "The filter expression",
@@ -1292,8 +1292,8 @@
           "message": "See all tasks assigned to you"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
-          "source": "New Completed Task",
-          "message": "New Completed Task"
+          "source": "New completed task",
+          "message": "New completed task"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
           "source": "Triggers when a task is completed in Todoist",
@@ -1328,8 +1328,8 @@
           "message": "Optionally monitor only completed tasks from a specific section within a project. This allows you to track completions in specific areas of your workflow."
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.display_name": {
-          "source": "Filter Query",
-          "message": "Filter Query"
+          "source": "Filter query",
+          "message": "Filter query"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.short_desc": {
           "source": "Custom filter expression",

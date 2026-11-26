@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Shopify** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.U2hvcGlmeQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.U2hvcGlmeQ.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Shopify\"",
@@ -460,8 +460,8 @@
           "message": "The table name"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.display_name": {
-          "source": "Find Product Variants",
-          "message": "Find Product Variants"
+          "source": "Find product variants",
+          "message": "Find product variants"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.short_desc": {
           "source": "Search for specific product variants",
@@ -484,8 +484,8 @@
           "message": "Find variants that belong to a specific parent product using its Shopify product ID."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.display_name": {
-          "source": "Variant Title",
-          "message": "Variant Title"
+          "source": "Variant title",
+          "message": "Variant title"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.short_desc": {
           "source": "Search by variant title",
@@ -532,8 +532,8 @@
           "message": "Look up a specific variant using its unique Shopify variant ID."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.display_name": {
-          "source": "Inventory Quantity",
-          "message": "Inventory Quantity"
+          "source": "Inventory quantity",
+          "message": "Inventory quantity"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.short_desc": {
           "source": "Filter by inventory quantity",
@@ -544,8 +544,8 @@
           "message": "Find variants based on their exact inventory quantity or range (e.g., \"inventory_quantity:10\" or \"inventory_quantity:>5\")."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.display_name": {
-          "source": "Product Status",
-          "message": "Product Status"
+          "source": "Product status",
+          "message": "Product status"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.short_desc": {
           "source": "Filter by product status",
@@ -568,8 +568,8 @@
           "message": "Archived"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.display_name": {
-          "source": "Product Type",
-          "message": "Product Type"
+          "source": "Product type",
+          "message": "Product type"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.short_desc": {
           "source": "Filter by product type",
@@ -580,8 +580,8 @@
           "message": "Find variants belonging to products of a specific type or category."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.display_name": {
-          "source": "Product Tag",
-          "message": "Product Tag"
+          "source": "Product tag",
+          "message": "Product tag"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.short_desc": {
           "source": "Filter by product tag",
@@ -592,8 +592,8 @@
           "message": "Find variants belonging to products that have a specific tag."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.display_name": {
-          "source": "Exclude Tag",
-          "message": "Exclude Tag"
+          "source": "Exclude tag",
+          "message": "Exclude tag"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.short_desc": {
           "source": "Filter out products with tag",
@@ -684,8 +684,8 @@
           "message": "Non-taxable"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.display_name": {
-          "source": "Updated At",
-          "message": "Updated At"
+          "source": "Updated at",
+          "message": "Updated at"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.short_desc": {
           "source": "Filter by update time",
@@ -696,8 +696,8 @@
           "message": "Find variants based on when they were last updated (e.g., \"updated_at:>2023-01-01\" or \"updated_at:<now\")."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
-          "message": "Advanced Query"
+          "source": "Advanced query",
+          "message": "Advanced query"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.short_desc": {
           "source": "Use custom search syntax",
@@ -708,8 +708,8 @@
           "message": "Enter a custom search query for advanced filtering using Shopify search syntax."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.short_desc": {
           "source": "Order results by field",
@@ -748,8 +748,8 @@
           "message": "Updated At"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
-          "message": "Reverse Order"
+          "source": "Reverse order",
+          "message": "Reverse order"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.short_desc": {
           "source": "Reverse the sort order",
@@ -760,8 +760,8 @@
           "message": "When enabled, reverses the order of the results (e.g., Z-A instead of A-Z)."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
-          "message": "Results Limit"
+          "source": "Results limit",
+          "message": "Results limit"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.short_desc": {
           "source": "Maximum number of results",
@@ -772,8 +772,8 @@
           "message": "Specify the maximum number of variants to return in the search results (max: 250)."
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
-          "message": "Pagination Cursor"
+          "source": "Pagination cursor",
+          "message": "Pagination cursor"
         },
         "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.short_desc": {
           "source": "Navigate through pages of results",
@@ -784,8 +784,8 @@
           "message": "Use a cursor to paginate through large sets of search results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.display_name": {
-          "source": "Find Customers",
-          "message": "Find Customers"
+          "source": "Find customers",
+          "message": "Find customers"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.short_desc": {
           "source": "Search for customers",
@@ -796,8 +796,8 @@
           "message": "Search and filter customers in your Shopify store based on names, emails, or other attributes."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.display_name": {
-          "source": "Search Query",
-          "message": "Search Query"
+          "source": "Search query",
+          "message": "Search query"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.short_desc": {
           "source": "Search by name or email",
@@ -808,8 +808,8 @@
           "message": "Search for customers by their name, email, or other identifying information."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
-          "message": "Results Limit"
+          "source": "Results limit",
+          "message": "Results limit"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.short_desc": {
           "source": "Maximum number of results",
@@ -820,8 +820,8 @@
           "message": "Specify the maximum number of customers to return in the search results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
-          "message": "Pagination Cursor"
+          "source": "Pagination cursor",
+          "message": "Pagination cursor"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.short_desc": {
           "source": "Navigate through pages of results",
@@ -832,8 +832,8 @@
           "message": "Use a cursor to paginate through large sets of search results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.short_desc": {
           "source": "Sort the results",
@@ -872,8 +872,8 @@
           "message": "Orders Count"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
-          "message": "Reverse Order"
+          "source": "Reverse order",
+          "message": "Reverse order"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.short_desc": {
           "source": "Reverse the sort order",
@@ -884,8 +884,8 @@
           "message": "Toggle between ascending and descending sort order for the results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.display_name": {
-          "source": "Find Orders",
-          "message": "Find Orders"
+          "source": "Find orders",
+          "message": "Find orders"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.short_desc": {
           "source": "Search for customer orders",
@@ -896,8 +896,8 @@
           "message": "Search and filter orders in your Shopify store based on various criteria including customer name, email, order number, and more."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.display_name": {
-          "source": "Order Number",
-          "message": "Order Number"
+          "source": "Order number",
+          "message": "Order number"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.short_desc": {
           "source": "Search by order number",
@@ -932,8 +932,8 @@
           "message": "Find all orders placed by a specific customer using their Shopify customer ID."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.display_name": {
-          "source": "Confirmation Number",
-          "message": "Confirmation Number"
+          "source": "Confirmation number",
+          "message": "Confirmation number"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.short_desc": {
           "source": "Search by confirmation number",
@@ -956,8 +956,8 @@
           "message": "Look up a specific order using its unique Shopify order ID."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.display_name": {
-          "source": "Payment Status",
-          "message": "Payment Status"
+          "source": "Payment status",
+          "message": "Payment status"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.short_desc": {
           "source": "Filter by payment status",
@@ -1000,8 +1000,8 @@
           "message": "Expired"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.display_name": {
-          "source": "Fulfillment Status",
-          "message": "Fulfillment Status"
+          "source": "Fulfillment status",
+          "message": "Fulfillment status"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.short_desc": {
           "source": "Filter by shipping status",
@@ -1044,8 +1044,8 @@
           "message": "Request Declined"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.display_name": {
-          "source": "Order Status",
-          "message": "Order Status"
+          "source": "Order status",
+          "message": "Order status"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.short_desc": {
           "source": "Filter by order status",
@@ -1084,8 +1084,8 @@
           "message": "Find orders from specific sources (e.g., web, draft orders, POS)."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.display_name": {
-          "source": "Sales Channel",
-          "message": "Sales Channel"
+          "source": "Sales channel",
+          "message": "Sales channel"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.short_desc": {
           "source": "Filter by sales channel",
@@ -1108,8 +1108,8 @@
           "message": "Find orders containing products with a specific SKU."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.display_name": {
-          "source": "Created Date",
-          "message": "Created Date"
+          "source": "Created date",
+          "message": "Created date"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.short_desc": {
           "source": "Filter by creation date",
@@ -1120,8 +1120,8 @@
           "message": "Find orders created on a specific date or within a date range (e.g., 2021-01-01, <now, <=2024)."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.display_name": {
-          "source": "Updated Date",
-          "message": "Updated Date"
+          "source": "Updated date",
+          "message": "Updated date"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.short_desc": {
           "source": "Filter by last update date",
@@ -1132,8 +1132,8 @@
           "message": "Find orders last updated on a specific date or within a date range."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.display_name": {
-          "source": "Processed Date",
-          "message": "Processed Date"
+          "source": "Processed date",
+          "message": "Processed date"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.short_desc": {
           "source": "Filter by processed date",
@@ -1156,8 +1156,8 @@
           "message": "Find orders that have been tagged with specific labels in Shopify."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.display_name": {
-          "source": "Test Orders",
-          "message": "Test Orders"
+          "source": "Test orders",
+          "message": "Test orders"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.short_desc": {
           "source": "Include/exclude test orders",
@@ -1180,8 +1180,8 @@
           "message": "Find orders associated with a specific store location or fulfillment center."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.display_name": {
-          "source": "Purchase Order Number",
-          "message": "Purchase Order Number"
+          "source": "Purchase order number",
+          "message": "Purchase order number"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.short_desc": {
           "source": "Search by PO number",
@@ -1192,8 +1192,8 @@
           "message": "Find orders associated with a specific purchase order number."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
-          "message": "Advanced Query"
+          "source": "Advanced query",
+          "message": "Advanced query"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.short_desc": {
           "source": "Use custom search syntax",
@@ -1204,8 +1204,8 @@
           "message": "Enter a custom search query for advanced filtering using Shopify search syntax."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.short_desc": {
           "source": "Sort the results",
@@ -1236,8 +1236,8 @@
           "message": "Order ID"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
-          "message": "Reverse Order"
+          "source": "Reverse order",
+          "message": "Reverse order"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.short_desc": {
           "source": "Reverse the sort order",
@@ -1248,8 +1248,8 @@
           "message": "Toggle between ascending and descending sort order for the results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
-          "message": "Results Limit"
+          "source": "Results limit",
+          "message": "Results limit"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.short_desc": {
           "source": "Maximum number of results",
@@ -1260,8 +1260,8 @@
           "message": "Specify the maximum number of orders to return in the search results (max: 250)."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
-          "message": "Pagination Cursor"
+          "source": "Pagination cursor",
+          "message": "Pagination cursor"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.short_desc": {
           "source": "Navigate through pages of results",
@@ -1272,8 +1272,8 @@
           "message": "Use a cursor to paginate through large sets of search results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.display_name": {
-          "source": "Find Products",
-          "message": "Find Products"
+          "source": "Find products",
+          "message": "Find products"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.short_desc": {
           "source": "Search for products in your store",
@@ -1308,8 +1308,8 @@
           "message": "Find products from specific vendors or suppliers in your store."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.display_name": {
-          "source": "Product Type",
-          "message": "Product Type"
+          "source": "Product type",
+          "message": "Product type"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.short_desc": {
           "source": "Filter by product type",
@@ -1380,8 +1380,8 @@
           "message": "Find products that belong to a specific collection in your store."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.short_desc": {
           "source": "Sort the results",
@@ -1428,8 +1428,8 @@
           "message": "Inventory Total"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.display_name": {
-          "source": "Reverse Order",
-          "message": "Reverse Order"
+          "source": "Reverse order",
+          "message": "Reverse order"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.short_desc": {
           "source": "Reverse the sort order",
@@ -1440,8 +1440,8 @@
           "message": "Toggle between ascending and descending sort order for the results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.display_name": {
-          "source": "Advanced Query",
-          "message": "Advanced Query"
+          "source": "Advanced query",
+          "message": "Advanced query"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.short_desc": {
           "source": "Use custom search syntax",
@@ -1452,8 +1452,8 @@
           "message": "Enter a custom search query for advanced filtering using Shopify search syntax."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
-          "message": "Results Limit"
+          "source": "Results limit",
+          "message": "Results limit"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.short_desc": {
           "source": "Maximum number of results",
@@ -1464,8 +1464,8 @@
           "message": "Specify the maximum number of products to return in the search results."
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.display_name": {
-          "source": "Pagination Cursor",
-          "message": "Pagination Cursor"
+          "source": "Pagination cursor",
+          "message": "Pagination cursor"
         },
         "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.short_desc": {
           "source": "Navigate through pages of results",
@@ -1476,8 +1476,8 @@
           "message": "Use a cursor to paginate through large sets of search results."
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.display_name": {
-          "source": "Add Line Item to Order",
-          "message": "Add Line Item to Order"
+          "source": "Add line item to order",
+          "message": "Add line item to order"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.short_desc": {
           "source": "Add a new product line to an existing order",
@@ -1500,8 +1500,8 @@
           "message": "The specific order to which the line item will be added"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.display_name": {
-          "source": "Line Item Type",
-          "message": "Line Item Type"
+          "source": "Line item type",
+          "message": "Line item type"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.short_desc": {
           "source": "Type of line item being added",
@@ -1556,8 +1556,8 @@
           "message": "Explanation for why the line item is being added to the order"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
-          "source": "Notify Customer",
-          "message": "Notify Customer"
+          "source": "Notify customer",
+          "message": "Notify customer"
         },
         "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
           "source": "Send notification about order change",
@@ -1568,8 +1568,8 @@
           "message": "Determines whether the customer should be notified about the line item addition"
         },
         "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.display_name": {
-          "source": "Add Tag to Customer",
-          "message": "Add Tag to Customer"
+          "source": "Add tag to customer",
+          "message": "Add tag to customer"
         },
         "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.short_desc": {
           "source": "Adds tags to an existing customer",
@@ -1616,8 +1616,8 @@
           "message": "If true, adds the new tags to the existing ones; if false, replaces all existing tags with the new ones."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.display_name": {
-          "source": "Create Blog Entry",
-          "message": "Create Blog Entry"
+          "source": "Create blog entry",
+          "message": "Create blog entry"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.short_desc": {
           "source": "Creates a new blog post in Shopify",
@@ -1724,8 +1724,8 @@
           "message": "The primary image associated with the blog post, used for visual appeal in previews or headers."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.field.YWx0VGV4dA.display_name": {
-          "source": "Alt Text",
-          "message": "Alt Text"
+          "source": "Alt text",
+          "message": "Alt text"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.field.YWx0VGV4dA.short_desc": {
           "source": "Image alt text",
@@ -1748,8 +1748,8 @@
           "message": "The web address or source location of the image file to be used in the blog post."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.display_name": {
-          "source": "Create Company",
-          "message": "Create Company"
+          "source": "Create company",
+          "message": "Create company"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.short_desc": {
           "source": "Creates a new company in Shopify",
@@ -1796,8 +1796,8 @@
           "message": "Internal notes about the company, such as account details or special instructions."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.display_name": {
-          "source": "Customer Since",
-          "message": "Customer Since"
+          "source": "Customer since",
+          "message": "Customer since"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.short_desc": {
           "source": "Start date",
@@ -1808,8 +1808,8 @@
           "message": "The date the company became a customer, formatted as a timestamp, useful for tracking tenure."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.display_name": {
-          "source": "Contact Properties",
-          "message": "Contact Properties"
+          "source": "Contact properties",
+          "message": "Contact properties"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.short_desc": {
           "source": "Primary contact details",
@@ -1832,8 +1832,8 @@
           "message": "The email address of the primary contact, used for communication."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Contact first name",
@@ -1844,8 +1844,8 @@
           "message": "The first name of the company’s primary contact."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.field.bGFzdE5hbWU.short_desc": {
           "source": "Contact last name",
@@ -1892,8 +1892,8 @@
           "message": "The job title or role of the primary contact within the company."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.display_name": {
-          "source": "Location Properties",
-          "message": "Location Properties"
+          "source": "Location properties",
+          "message": "Location properties"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.short_desc": {
           "source": "Company location details",
@@ -1904,8 +1904,8 @@
           "message": "Details about the company’s physical location, including shipping and billing addresses."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ0FkZHJlc3M.display_name": {
-          "source": "Billing Address",
-          "message": "Billing Address"
+          "source": "Billing address",
+          "message": "Billing address"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ0FkZHJlc3M.short_desc": {
           "source": "Billing address",
@@ -1916,8 +1916,8 @@
           "message": "The address used for billing purposes, if different from shipping."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
-          "message": "Address Line 1"
+          "source": "Address line 1",
+          "message": "Address line 1"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczE.short_desc": {
           "source": "Primary billing line",
@@ -1928,8 +1928,8 @@
           "message": "The street address or PO Box for billing."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
-          "message": "Address Line 2"
+          "source": "Address line 2",
+          "message": "Address line 2"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.YWRkcmVzczI.short_desc": {
           "source": "Secondary billing line",
@@ -1952,8 +1952,8 @@
           "message": "The city for the billing address."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
-          "message": "Country Code"
+          "source": "Country code",
+          "message": "Country code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.Y291bnRyeUNvZGU.short_desc": {
           "source": "Country code",
@@ -1964,8 +1964,8 @@
           "message": "The ISO 3166-1 alpha-2 country code, e.g., \"CA\"."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
-          "message": "ZIP/Postal Code"
+          "source": "ZIP/postal code",
+          "message": "ZIP/postal code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.emlw.short_desc": {
           "source": "Billing postal code",
@@ -1976,8 +1976,8 @@
           "message": "The ZIP or postal code for the billing address."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.em9uZUNvZGU.display_name": {
-          "source": "Zone Code",
-          "message": "Zone Code"
+          "source": "Zone code",
+          "message": "Zone code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jZmZhMDIzN2Y3MDFkODM4ODNjYmY1YTk1MWYyODIxMzBlMzliZmVkNmVjZTg3NTFhYjA1ZTRmMzYwODczYTliNg.field.em9uZUNvZGU.short_desc": {
           "source": "Province/state code",
@@ -1988,8 +1988,8 @@
           "message": "The code for the province or state, e.g., \"NY\"."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ1NhbWVBc1NoaXBwaW5n.display_name": {
-          "source": "Billing Same as Shipping",
-          "message": "Billing Same as Shipping"
+          "source": "Billing same as shipping",
+          "message": "Billing same as shipping"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.YmlsbGluZ1NhbWVBc1NoaXBwaW5n.short_desc": {
           "source": "Use shipping for billing",
@@ -2024,8 +2024,8 @@
           "message": "The preferred language and region code for this location, e.g., \"en-CA\"."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.bG9jYXRpb25OYW1l.display_name": {
-          "source": "Location Name",
-          "message": "Location Name"
+          "source": "Location name",
+          "message": "Location name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.bG9jYXRpb25OYW1l.short_desc": {
           "source": "Name of location",
@@ -2060,8 +2060,8 @@
           "message": "The phone number associated with this company location."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
-          "message": "Shipping Address"
+          "source": "Shipping address",
+          "message": "Shipping address"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.c2hpcHBpbmdBZGRyZXNz.short_desc": {
           "source": "Shipping address",
@@ -2072,8 +2072,8 @@
           "message": "The address where goods are shipped for this company location."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
-          "message": "Address Line 1"
+          "source": "Address line 1",
+          "message": "Address line 1"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczE.short_desc": {
           "source": "Primary shipping line",
@@ -2084,8 +2084,8 @@
           "message": "The street address or PO Box for shipping."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
-          "message": "Address Line 2"
+          "source": "Address line 2",
+          "message": "Address line 2"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.YWRkcmVzczI.short_desc": {
           "source": "Secondary shipping line",
@@ -2108,8 +2108,8 @@
           "message": "The city for the shipping address."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
-          "message": "Country Code"
+          "source": "Country code",
+          "message": "Country code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.Y291bnRyeUNvZGU.short_desc": {
           "source": "Country code",
@@ -2120,8 +2120,8 @@
           "message": "The ISO 3166-1 alpha-2 country code, e.g., \"US\"."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
-          "message": "ZIP/Postal Code"
+          "source": "ZIP/postal code",
+          "message": "ZIP/postal code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.emlw.short_desc": {
           "source": "Shipping postal code",
@@ -2132,8 +2132,8 @@
           "message": "The ZIP or postal code for the shipping address."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.em9uZUNvZGU.display_name": {
-          "source": "Zone Code",
-          "message": "Zone Code"
+          "source": "Zone code",
+          "message": "Zone code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdOdmJYQmhibms6Kmhhc2g8YXV0bz4jOTgwOTYwZTExMDIzMjYzMzFlODUzZTU4YWIwY2IwNDdkYzg1YmEyYjhhOTY4ZmVkNzc2ZDIyZWFlZTE5MDlhOA.field.em9uZUNvZGU.short_desc": {
           "source": "Province/state code",
@@ -2144,8 +2144,8 @@
           "message": "The code for the province or state, e.g., \"CA\" for California."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
-          "message": "Tax Exempt"
+          "source": "Tax exempt",
+          "message": "Tax exempt"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0.short_desc": {
           "source": "Tax exemption status",
@@ -2156,8 +2156,8 @@
           "message": "Indicates if this location is exempt from taxes."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
-          "message": "Tax Exemptions"
+          "source": "Tax exemptions",
+          "message": "Tax exemptions"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4RXhlbXB0aW9ucw.short_desc": {
           "source": "Specific tax exemptions",
@@ -2168,8 +2168,8 @@
           "message": "A list of specific tax exemptions applied to this location."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4UmVnaXN0cmF0aW9uSWQ.display_name": {
-          "source": "Tax Registration ID",
-          "message": "Tax Registration ID"
+          "source": "Tax registration ID",
+          "message": "Tax registration ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.field.dGF4UmVnaXN0cmF0aW9uSWQ.short_desc": {
           "source": "Tax ID",
@@ -2180,8 +2180,8 @@
           "message": "The tax registration number for this location, e.g., VAT or EIN."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.display_name": {
-          "source": "Create Customer",
-          "message": "Create Customer"
+          "source": "Create customer",
+          "message": "Create customer"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.short_desc": {
           "source": "Creates a new customer in Shopify",
@@ -2216,8 +2216,8 @@
           "message": "The customer’s phone number, useful for contact purposes and SMS marketing if consented."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
           "source": "Customer first name",
@@ -2228,8 +2228,8 @@
           "message": "The first name of the customer, used for personalization and address details."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
           "source": "Customer last name",
@@ -2264,8 +2264,8 @@
           "message": "Internal notes about the customer, such as preferences, special instructions, or account details."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
-          "message": "Tax Exempt"
+          "source": "Tax exempt",
+          "message": "Tax exempt"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.short_desc": {
           "source": "Exempt customer from taxes",
@@ -2276,8 +2276,8 @@
           "message": "Indicates whether the customer is exempt from taxes on all purchases. Set to true for tax-exempt entities."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
-          "message": "Tax Exemptions"
+          "source": "Tax exemptions",
+          "message": "Tax exemptions"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
           "source": "Specific tax exemptions",
@@ -2312,8 +2312,8 @@
           "message": "The addresses for a customer."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
-          "message": "Address Line 1"
+          "source": "Address line 1",
+          "message": "Address line 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczE.short_desc": {
           "source": "Primary address line",
@@ -2324,8 +2324,8 @@
           "message": "The street address or PO Box for the customer."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
-          "message": "Address Line 2"
+          "source": "Address line 2",
+          "message": "Address line 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.YWRkcmVzczI.short_desc": {
           "source": "Secondary address line",
@@ -2372,8 +2372,8 @@
           "message": "The country for the customer’s address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Address first name",
@@ -2384,8 +2384,8 @@
           "message": "The first name associated with this specific address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.bGFzdE5hbWU.short_desc": {
           "source": "Address last name",
@@ -2408,8 +2408,8 @@
           "message": "The phone number linked to this specific address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
-          "message": "Province/State"
+          "source": "Province/state",
+          "message": "Province/state"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.cHJvdmluY2U.short_desc": {
           "source": "Customer province or state",
@@ -2420,8 +2420,8 @@
           "message": "The province, state, or region for the customer’s address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
-          "message": "ZIP/Postal Code"
+          "source": "ZIP/postal code",
+          "message": "ZIP/postal code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.field.emlw.short_desc": {
           "source": "Customer postal code",
@@ -2432,8 +2432,8 @@
           "message": "The ZIP or postal code for the customer’s address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.display_name": {
-          "source": "Email Marketing Consent",
-          "message": "Email Marketing Consent"
+          "source": "Email marketing consent",
+          "message": "Email marketing consent"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.short_desc": {
           "source": "Email marketing preferences",
@@ -2444,8 +2444,8 @@
           "message": "Details about the customer’s consent to receive email marketing communications."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nT3B0SW5MZXZlbA.display_name": {
-          "source": "Marketing Opt-In Level",
-          "message": "Marketing Opt-In Level"
+          "source": "Marketing opt-in level",
+          "message": "Marketing opt-in level"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nT3B0SW5MZXZlbA.short_desc": {
           "source": "Opt-in level",
@@ -2464,8 +2464,8 @@
           "message": "Double Opt-In"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nU3RhdGU.display_name": {
-          "source": "Marketing State",
-          "message": "Marketing State"
+          "source": "Marketing state",
+          "message": "Marketing state"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.field.bWFya2V0aW5nU3RhdGU.short_desc": {
           "source": "Consent status",
@@ -2492,8 +2492,8 @@
           "message": "Unsubscribed"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.display_name": {
-          "source": "SMS Marketing Consent",
-          "message": "SMS Marketing Consent"
+          "source": "SMS marketing consent",
+          "message": "SMS marketing consent"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.short_desc": {
           "source": "SMS marketing preferences",
@@ -2504,8 +2504,8 @@
           "message": "Details about the customer’s consent to receive SMS marketing messages."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nT3B0SW5MZXZlbA.display_name": {
-          "source": "Marketing Opt-In Level",
-          "message": "Marketing Opt-In Level"
+          "source": "Marketing opt-in level",
+          "message": "Marketing opt-in level"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nT3B0SW5MZXZlbA.short_desc": {
           "source": "Opt-in level",
@@ -2524,8 +2524,8 @@
           "message": "Double Opt-In"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nU3RhdGU.display_name": {
-          "source": "Marketing State",
-          "message": "Marketing State"
+          "source": "Marketing state",
+          "message": "Marketing state"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.field.bWFya2V0aW5nU3RhdGU.short_desc": {
           "source": "Consent status",
@@ -2612,8 +2612,8 @@
           "message": "The value stored in the metafield, which can be a string, number, or JSON."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.display_name": {
-          "source": "Create Draft Order",
-          "message": "Create Draft Order"
+          "source": "Create draft order",
+          "message": "Create draft order"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.short_desc": {
           "source": "Creates a new draft order in Shopify",
@@ -2672,8 +2672,8 @@
           "message": "A field for adding internal notes about the draft order, such as special instructions or context."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.display_name": {
-          "source": "Tax Exempt",
-          "message": "Tax Exempt"
+          "source": "Tax exempt",
+          "message": "Tax exempt"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.short_desc": {
           "source": "Exempt order from taxes",
@@ -2684,8 +2684,8 @@
           "message": "Indicates whether the entire order is exempt from taxes. Set to true for tax-exempt customers."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
-          "source": "Tax Exemptions",
-          "message": "Tax Exemptions"
+          "source": "Tax exemptions",
+          "message": "Tax exemptions"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
           "source": "Specific tax exemptions",
@@ -2708,8 +2708,8 @@
           "message": "A list of tags to categorize or filter the draft order, e.g., \"wholesale\", \"pre-order\"."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
-          "message": "Shipping Address"
+          "source": "Shipping address",
+          "message": "Shipping address"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.short_desc": {
           "source": "Customer shipping address",
@@ -2720,8 +2720,8 @@
           "message": "The full shipping address where the order will be delivered, including all relevant fields."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
-          "message": "Address Line 1"
+          "source": "Address line 1",
+          "message": "Address line 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczE.short_desc": {
           "source": "Primary address line",
@@ -2732,8 +2732,8 @@
           "message": "The street address or PO Box for shipping."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
-          "message": "Address Line 2"
+          "source": "Address line 2",
+          "message": "Address line 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.YWRkcmVzczI.short_desc": {
           "source": "Secondary address line",
@@ -2780,8 +2780,8 @@
           "message": "The country for the shipping address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Recipient first name",
@@ -2792,8 +2792,8 @@
           "message": "The first name of the shipping recipient."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.bGFzdE5hbWU.short_desc": {
           "source": "Recipient last name",
@@ -2816,8 +2816,8 @@
           "message": "The phone number for the shipping recipient."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
-          "message": "Province/State"
+          "source": "Province/state",
+          "message": "Province/state"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.cHJvdmluY2U.short_desc": {
           "source": "Shipping province or state",
@@ -2828,8 +2828,8 @@
           "message": "The province, state, or region for the shipping address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
-          "message": "ZIP/Postal Code"
+          "source": "ZIP/postal code",
+          "message": "ZIP/postal code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.field.emlw.short_desc": {
           "source": "Shipping postal code",
@@ -2840,8 +2840,8 @@
           "message": "The ZIP or postal code for the shipping address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.display_name": {
-          "source": "Billing Address",
-          "message": "Billing Address"
+          "source": "Billing address",
+          "message": "Billing address"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.short_desc": {
           "source": "Customer billing address",
@@ -2852,8 +2852,8 @@
           "message": "The address used for billing purposes, which may differ from the shipping address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
-          "message": "Address Line 1"
+          "source": "Address line 1",
+          "message": "Address line 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczE.short_desc": {
           "source": "Primary billing address line",
@@ -2864,8 +2864,8 @@
           "message": "The street address or PO Box for billing."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
-          "message": "Address Line 2"
+          "source": "Address line 2",
+          "message": "Address line 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.YWRkcmVzczI.short_desc": {
           "source": "Secondary billing address line",
@@ -2912,8 +2912,8 @@
           "message": "The country for the billing address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Billing first name",
@@ -2924,8 +2924,8 @@
           "message": "The first name of the billing contact."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.bGFzdE5hbWU.short_desc": {
           "source": "Billing last name",
@@ -2948,8 +2948,8 @@
           "message": "The phone number for the billing contact."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.cHJvdmluY2U.display_name": {
-          "source": "Province/State",
-          "message": "Province/State"
+          "source": "Province/state",
+          "message": "Province/state"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.cHJvdmluY2U.short_desc": {
           "source": "Billing province or state",
@@ -2960,8 +2960,8 @@
           "message": "The province, state, or region for the billing address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.emlw.display_name": {
-          "source": "ZIP/Postal Code",
-          "message": "ZIP/Postal Code"
+          "source": "ZIP/postal code",
+          "message": "ZIP/postal code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.field.emlw.short_desc": {
           "source": "Billing postal code",
@@ -2972,8 +2972,8 @@
           "message": "The ZIP or postal code for the billing address."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.display_name": {
-          "source": "Use Customer Default Address",
-          "message": "Use Customer Default Address"
+          "source": "Use customer default address",
+          "message": "Use customer default address"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.short_desc": {
           "source": "Use customer’s default address",
@@ -2984,8 +2984,8 @@
           "message": "If true, uses the customer’s default shipping and billing address instead of custom ones."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.display_name": {
-          "source": "Line Items",
-          "message": "Line Items"
+          "source": "Line items",
+          "message": "Line items"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.short_desc": {
           "source": "Products in the draft order",
@@ -2996,8 +2996,8 @@
           "message": "A list of products or variants included in the draft order, with details like quantity and price."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.YXBwbGllZERpc2NvdW50.display_name": {
-          "source": "Applied Discount",
-          "message": "Applied Discount"
+          "source": "Applied discount",
+          "message": "Applied discount"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.YXBwbGllZERpc2NvdW50.short_desc": {
           "source": "Discount on item",
@@ -3008,8 +3008,8 @@
           "message": "Details of any discount applied to this specific line item."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.YW1vdW50V2l0aEN1cnJlbmN5.display_name": {
-          "source": "Amount with Currency",
-          "message": "Amount with Currency"
+          "source": "Amount with currency",
+          "message": "Amount with currency"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.YW1vdW50V2l0aEN1cnJlbmN5.short_desc": {
           "source": "Discount amount with currency",
@@ -3032,8 +3032,8 @@
           "message": "The numerical value of the discount."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNhMDY3ZGZkZjE3NTBlZWI4MmE1N2Y4NTU3ZjA1ZGQyY2ZjZTBjYjYxMjA5NmU1OGQyMzM3Zjk0ZDZhMDVlNmYz.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNhMDY3ZGZkZjE3NTBlZWI4MmE1N2Y4NTU3ZjA1ZGQyY2ZjZTBjYjYxMjA5NmU1OGQyMzM3Zjk0ZDZhMDVlNmYz.field.Y3VycmVuY3lDb2Rl.short_desc": {
           "source": "Discount currency",
@@ -3044,8 +3044,8 @@
           "message": "The ISO 4217 currency code for the discount amount."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Discount Description",
-          "message": "Discount Description"
+          "source": "Discount description",
+          "message": "Discount description"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.ZGVzY3JpcHRpb24.short_desc": {
           "source": "Discount details",
@@ -3056,8 +3056,8 @@
           "message": "A description of the discount applied."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dGl0bGU.display_name": {
-          "source": "Discount Title",
-          "message": "Discount Title"
+          "source": "Discount title",
+          "message": "Discount title"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dGl0bGU.short_desc": {
           "source": "Discount name",
@@ -3068,8 +3068,8 @@
           "message": "The name or title of the discount."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWU.display_name": {
-          "source": "Discount Value",
-          "message": "Discount Value"
+          "source": "Discount value",
+          "message": "Discount value"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWU.short_desc": {
           "source": "Discount amount or percentage",
@@ -3080,8 +3080,8 @@
           "message": "The numerical value of the discount, either as a fixed amount or percentage."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWVUeXBl.display_name": {
-          "source": "Value Type",
-          "message": "Value Type"
+          "source": "Value type",
+          "message": "Value type"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYWM1ZmM1Njg1NzFhMTU1ZjM1ZTUyMDQ1NTUwNjNkMjUzMDU5YTBlODhkNmNhNDFmYjc3ZTE5ZGJiMTg4OWQ5.field.dmFsdWVUeXBl.short_desc": {
           "source": "Type of discount value",
@@ -3136,8 +3136,8 @@
           "message": "The unique identifier of the variant included as a component."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Y3VzdG9tQXR0cmlidXRlcw.display_name": {
-          "source": "Custom Attributes",
-          "message": "Custom Attributes"
+          "source": "Custom attributes",
+          "message": "Custom attributes"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Y3VzdG9tQXR0cmlidXRlcw.short_desc": {
           "source": "Additional item attributes",
@@ -3172,8 +3172,8 @@
           "message": "The value associated with the custom attribute key."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Z2VuZXJhdGVQcmljZU92ZXJyaWRl.display_name": {
-          "source": "Generate Price Override",
-          "message": "Generate Price Override"
+          "source": "Generate price override",
+          "message": "Generate price override"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.Z2VuZXJhdGVQcmljZU92ZXJyaWRl.short_desc": {
           "source": "Override item price",
@@ -3184,8 +3184,8 @@
           "message": "If true, allows setting a custom price for the item instead of the original price."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2U.display_name": {
-          "source": "Original Unit Price",
-          "message": "Original Unit Price"
+          "source": "Original unit price",
+          "message": "Original unit price"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2U.short_desc": {
           "source": "Price per unit",
@@ -3196,8 +3196,8 @@
           "message": "The original price per unit of the item before discounts."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2VXaXRoQ3VycmVuY3k.display_name": {
-          "source": "Original Unit Price with Currency",
-          "message": "Original Unit Price with Currency"
+          "source": "Original unit price with currency",
+          "message": "Original unit price with currency"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.b3JpZ2luYWxVbml0UHJpY2VXaXRoQ3VycmVuY3k.short_desc": {
           "source": "Price with currency details",
@@ -3220,8 +3220,8 @@
           "message": "The numerical value of the unit price."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM2NWJiZGQwNjZmMDg4ZTJkYjk4MmQ0NzlmODM5ODFiNzdmMDQ2YTE1OWI4ZWE4ZDA2MTdlOTA1NTA5MmE5MTcx.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM2NWJiZGQwNjZmMDg4ZTJkYjk4MmQ0NzlmODM5ODFiNzdmMDQ2YTE1OWI4ZWE4ZDA2MTdlOTA1NTA5MmE5MTcx.field.Y3VycmVuY3lDb2Rl.short_desc": {
           "source": "Currency code",
@@ -3232,8 +3232,8 @@
           "message": "The ISO 4217 currency code for the price, e.g., USD, EUR."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cHJpY2VPdmVycmlkZQ.display_name": {
-          "source": "Price Override",
-          "message": "Price Override"
+          "source": "Price override",
+          "message": "Price override"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cHJpY2VPdmVycmlkZQ.short_desc": {
           "source": "Custom item price",
@@ -3256,8 +3256,8 @@
           "message": "The numerical value of the custom price."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM4N2U5MDY4ZWJlZTRjNDQ0YjkzMmI3NDliZDY2ZTg5OTk2YWY5MzU1MzA4NWI1ZTdkZTY4OTE4ZDJiYTM1ZDUx.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM4N2U5MDY4ZWJlZTRjNDQ0YjkzMmI3NDliZDY2ZTg5OTk2YWY5MzU1MzA4NWI1ZTdkZTY4OTE4ZDJiYTM1ZDUx.field.Y3VycmVuY3lDb2Rl.short_desc": {
           "source": "Override currency",
@@ -3280,8 +3280,8 @@
           "message": "The number of units of this variant to include in the draft order."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cmVxdWlyZXNTaGlwcGluZw.display_name": {
-          "source": "Requires Shipping",
-          "message": "Requires Shipping"
+          "source": "Requires shipping",
+          "message": "Requires shipping"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.field.cmVxdWlyZXNTaGlwcGluZw.short_desc": {
           "source": "Needs shipping",
@@ -3364,8 +3364,8 @@
           "message": "The weight of the item, used for shipping calculations."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dW5pdA.display_name": {
-          "source": "Weight Unit",
-          "message": "Weight Unit"
+          "source": "Weight unit",
+          "message": "Weight unit"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dW5pdA.short_desc": {
           "source": "Unit of weight",
@@ -3392,8 +3392,8 @@
           "message": "Ounces"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dmFsdWU.display_name": {
-          "source": "Weight Value",
-          "message": "Weight Value"
+          "source": "Weight value",
+          "message": "Weight value"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiNlZDhlZGM3NTczYjM2NTQ0Y2FmMTkwMTFjZWRjOGUzZTE3MmZiM2U2NDhlZTVmODg2ODhmZjFjZjc4YTE1MTdk.field.dmFsdWU.short_desc": {
           "source": "Numerical weight",
@@ -3404,8 +3404,8 @@
           "message": "The weight value"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.display_name": {
-          "source": "Applied Discount",
-          "message": "Applied Discount"
+          "source": "Applied discount",
+          "message": "Applied discount"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.short_desc": {
           "source": "Order-wide discount",
@@ -3416,8 +3416,8 @@
           "message": "Details of a discount applied to the entire draft order."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.YW1vdW50V2l0aEN1cnJlbmN5.display_name": {
-          "source": "Amount with Currency",
-          "message": "Amount with Currency"
+          "source": "Amount with currency",
+          "message": "Amount with currency"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.YW1vdW50V2l0aEN1cnJlbmN5.short_desc": {
           "source": "Discount amount with currency",
@@ -3440,8 +3440,8 @@
           "message": "The numerical value of the discount."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMzNDQ5OTc1MTgwMGFmMzk1ZjY5ZDg3MDdjY2E1YTNiZmFiZjAxZjY5Y2QzYTBiNDdmM2FmM2UyMDE1NDA0NjUy.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMzNDQ5OTc1MTgwMGFmMzk1ZjY5ZDg3MDdjY2E1YTNiZmFiZjAxZjY5Y2QzYTBiNDdmM2FmM2UyMDE1NDA0NjUy.field.Y3VycmVuY3lDb2Rl.short_desc": {
           "source": "Discount currency",
@@ -3452,8 +3452,8 @@
           "message": "The ISO 4217 currency code for the discount amount."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Discount Description",
-          "message": "Discount Description"
+          "source": "Discount description",
+          "message": "Discount description"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.ZGVzY3JpcHRpb24.short_desc": {
           "source": "Discount details",
@@ -3464,8 +3464,8 @@
           "message": "A description of the order-wide discount."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dGl0bGU.display_name": {
-          "source": "Discount Title",
-          "message": "Discount Title"
+          "source": "Discount title",
+          "message": "Discount title"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dGl0bGU.short_desc": {
           "source": "Discount name",
@@ -3476,8 +3476,8 @@
           "message": "The name or title of the order-wide discount."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWU.display_name": {
-          "source": "Discount Value",
-          "message": "Discount Value"
+          "source": "Discount value",
+          "message": "Discount value"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWU.short_desc": {
           "source": "Discount amount or percentage",
@@ -3488,8 +3488,8 @@
           "message": "The numerical value of the discount, either as a fixed amount or percentage."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWVUeXBl.display_name": {
-          "source": "Value Type",
-          "message": "Value Type"
+          "source": "Value type",
+          "message": "Value type"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.field.dmFsdWVUeXBl.short_desc": {
           "source": "Type of discount value",
@@ -3508,8 +3508,8 @@
           "message": "Percentage"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.display_name": {
-          "source": "Shipping Line",
-          "message": "Shipping Line"
+          "source": "Shipping line",
+          "message": "Shipping line"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.short_desc": {
           "source": "Shipping details",
@@ -3532,8 +3532,8 @@
           "message": "The cost of shipping as a numerical value."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.cHJpY2VXaXRoQ3VycmVuY3k.display_name": {
-          "source": "Price with Currency",
-          "message": "Price with Currency"
+          "source": "Price with currency",
+          "message": "Price with currency"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.cHJpY2VXaXRoQ3VycmVuY3k.short_desc": {
           "source": "Shipping cost with currency",
@@ -3556,8 +3556,8 @@
           "message": "The numerical value of the shipping cost."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM3ZDE5MDE1NmRhOTY5YTg2OTYxYWMwYjBhOWM3YzI2YWY5NjE5YmRhZDI4MzI1NzQwZWM4NTQ0M2MyY2JhMzFi.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiM3ZDE5MDE1NmRhOTY5YTg2OTYxYWMwYjBhOWM3YzI2YWY5NjE5YmRhZDI4MzI1NzQwZWM4NTQ0M2MyY2JhMzFi.field.Y3VycmVuY3lDb2Rl.short_desc": {
           "source": "Shipping currency",
@@ -3568,8 +3568,8 @@
           "message": "The ISO 4217 currency code for the shipping cost."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.c2hpcHBpbmdSYXRlSGFuZGxl.display_name": {
-          "source": "Shipping Rate Handle",
-          "message": "Shipping Rate Handle"
+          "source": "Shipping rate handle",
+          "message": "Shipping rate handle"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.field.c2hpcHBpbmdSYXRlSGFuZGxl.short_desc": {
           "source": "Shipping rate identifier",
@@ -3592,8 +3592,8 @@
           "message": "The name of the shipping method, e.g., \"Standard Shipping\"."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.display_name": {
-          "source": "Custom Attributes",
-          "message": "Custom Attributes"
+          "source": "Custom attributes",
+          "message": "Custom attributes"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.short_desc": {
           "source": "Order custom attributes",
@@ -3628,8 +3628,8 @@
           "message": "The value associated with the custom attribute key."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.display_name": {
-          "source": "Allow Discount Codes in Checkout",
-          "message": "Allow Discount Codes in Checkout"
+          "source": "Allow discount codes in checkout",
+          "message": "Allow discount codes in checkout"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.short_desc": {
           "source": "Enable discount codes",
@@ -3640,8 +3640,8 @@
           "message": "If true, allows customers to apply discount codes during checkout from this draft order."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.display_name": {
-          "source": "Accept Automatic Discounts",
-          "message": "Accept Automatic Discounts"
+          "source": "Accept automatic discounts",
+          "message": "Accept automatic discounts"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.short_desc": {
           "source": "Apply automatic discounts",
@@ -3652,8 +3652,8 @@
           "message": "If true, automatically applies any eligible store-wide discounts to the draft order."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.display_name": {
-          "source": "Discount Codes",
-          "message": "Discount Codes"
+          "source": "Discount codes",
+          "message": "Discount codes"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.short_desc": {
           "source": "List of discount codes",
@@ -3724,8 +3724,8 @@
           "message": "The value stored in the metafield."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.display_name": {
-          "source": "Localized Fields",
-          "message": "Localized Fields"
+          "source": "Localized fields",
+          "message": "Localized fields"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.short_desc": {
           "source": "Localized content",
@@ -3772,8 +3772,8 @@
           "message": "The localized content value."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.display_name": {
-          "source": "Presentment Currency Code",
-          "message": "Presentment Currency Code"
+          "source": "Presentment currency code",
+          "message": "Presentment currency code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.short_desc": {
           "source": "Display currency",
@@ -3784,8 +3784,8 @@
           "message": "The ISO 4217 currency code for displaying prices to the customer, e.g., USD, CAD."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.display_name": {
-          "source": "PO Number",
-          "message": "PO Number"
+          "source": "PO number",
+          "message": "PO number"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.short_desc": {
           "source": "Purchase order number",
@@ -3796,8 +3796,8 @@
           "message": "The purchase order number associated with the draft order, often used for B2B transactions."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.display_name": {
-          "source": "Payment Terms",
-          "message": "Payment Terms"
+          "source": "Payment terms",
+          "message": "Payment terms"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.short_desc": {
           "source": "Payment conditions",
@@ -3808,8 +3808,8 @@
           "message": "Defines the payment terms for the draft order, such as due dates or schedules."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFNjaGVkdWxlcw.display_name": {
-          "source": "Payment Schedules",
-          "message": "Payment Schedules"
+          "source": "Payment schedules",
+          "message": "Payment schedules"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFNjaGVkdWxlcw.short_desc": {
           "source": "Payment due dates",
@@ -3832,8 +3832,8 @@
           "message": "The numerical value of the payment due."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.Y3VycmVuY3lDb2Rl.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.Y3VycmVuY3lDb2Rl.short_desc": {
           "source": "Payment currency",
@@ -3844,8 +3844,8 @@
           "message": "The currency for the payment"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.ZHVlQXQ.display_name": {
-          "source": "Due At",
-          "message": "Due At"
+          "source": "Due at",
+          "message": "Due at"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.ZHVlQXQ.short_desc": {
           "source": "Due date",
@@ -3856,8 +3856,8 @@
           "message": "The date when the payment is due."
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.aXNzdWVkQXQ.display_name": {
-          "source": "Issued At",
-          "message": "Issued At"
+          "source": "Issued at",
+          "message": "Issued at"
         },
         "app.U2hvcGlmeQ.type.YWN0aW9uOlkzSmxZWFJsTFdSeVlXWjBMVzl5WkdWeToqaGFzaDxhdXRvPiMwYjUwOGVhOGExYWVlZTBlNDEyOWQ4NWE4ZmQ5MDM3OTdiZTFhMDg5OWQ3ZDAzYWUwNWE3MWUxNjhlNmJlMzA3.field.aXNzdWVkQXQ.short_desc": {
           "source": "Issue date",
@@ -3868,8 +3868,8 @@
           "message": "The date when the payment schedule was issued."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFRlcm1zVGVtcGxhdGVJZA.display_name": {
-          "source": "Payment Terms Template ID",
-          "message": "Payment Terms Template ID"
+          "source": "Payment terms template ID",
+          "message": "Payment terms template ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.field.cGF5bWVudFRlcm1zVGVtcGxhdGVJZA.short_desc": {
           "source": "Template identifier",
@@ -3880,8 +3880,8 @@
           "message": "The ID of a predefined payment terms template in Shopify."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.display_name": {
-          "source": "Purchasing Entity",
-          "message": "Purchasing Entity"
+          "source": "Purchasing entity",
+          "message": "Purchasing entity"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.short_desc": {
           "source": "Buyer details",
@@ -3892,8 +3892,8 @@
           "message": "Details about the entity making the purchase, such as a company or individual."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUNvbnRhY3RJZA.display_name": {
-          "source": "Company Contact ID",
-          "message": "Company Contact ID"
+          "source": "Company contact ID",
+          "message": "Company contact ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUNvbnRhY3RJZA.short_desc": {
           "source": "Contact ID",
@@ -3916,8 +3916,8 @@
           "message": "The ID of the company making the purchase."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUxvY2F0aW9uSWQ.display_name": {
-          "source": "Company Location ID",
-          "message": "Company Location ID"
+          "source": "Company location ID",
+          "message": "Company location ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.field.Y29tcGFueUxvY2F0aW9uSWQ.short_desc": {
           "source": "Company location ID",
@@ -3940,8 +3940,8 @@
           "message": "The ID of the customer making the purchase."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.display_name": {
-          "source": "Reserve Inventory Until",
-          "message": "Reserve Inventory Until"
+          "source": "Reserve inventory until",
+          "message": "Reserve inventory until"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.short_desc": {
           "source": "Inventory reservation deadline",
@@ -3952,8 +3952,8 @@
           "message": "The date and time until which the inventory is reserved for this draft order."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.display_name": {
-          "source": "Source Name",
-          "message": "Source Name"
+          "source": "Source name",
+          "message": "Source name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.short_desc": {
           "source": "Order source",
@@ -3964,8 +3964,8 @@
           "message": "The source of the draft order, e.g., \"web\", \"manual\", or an app name."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.display_name": {
-          "source": "Visible to Customer",
-          "message": "Visible to Customer"
+          "source": "Visible to customer",
+          "message": "Visible to customer"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.short_desc": {
           "source": "Customer visibility",
@@ -3976,8 +3976,8 @@
           "message": "If true, the draft order is visible to the customer, e.g., in their account."
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.display_name": {
-          "source": "Create Fulfillment",
-          "message": "Create Fulfillment"
+          "source": "Create fulfillment",
+          "message": "Create fulfillment"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.short_desc": {
           "source": "Process and ship an order",
@@ -3988,8 +3988,8 @@
           "message": "Create a fulfillment for an order, handling shipping and tracking information"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.display_name": {
-          "source": "Fulfillment Order ID",
-          "message": "Fulfillment Order ID"
+          "source": "Fulfillment order ID",
+          "message": "Fulfillment order ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.short_desc": {
           "source": "Unique fulfillment order identifier",
@@ -4000,8 +4000,8 @@
           "message": "The specific fulfillment order being processed"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.display_name": {
-          "source": "Fulfillment Order Line Items",
-          "message": "Fulfillment Order Line Items"
+          "source": "Fulfillment order line items",
+          "message": "Fulfillment order line items"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.short_desc": {
           "source": "Items in the fulfillment order",
@@ -4012,8 +4012,8 @@
           "message": "Specific line items within the fulfillment order"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.field.aWQ.display_name": {
-          "source": "Line Item ID",
-          "message": "Line Item ID"
+          "source": "Line item ID",
+          "message": "Line item ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.field.aWQ.short_desc": {
           "source": "Unique identifier for line item",
@@ -4036,8 +4036,8 @@
           "message": "The quantity of the specific item being fulfilled"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
-          "source": "Notify Customer",
-          "message": "Notify Customer"
+          "source": "Notify customer",
+          "message": "Notify customer"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
           "source": "Send shipping notification",
@@ -4048,8 +4048,8 @@
           "message": "Determines whether to send a notification to the customer about the fulfillment"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.display_name": {
-          "source": "Tracking Information",
-          "message": "Tracking Information"
+          "source": "Tracking information",
+          "message": "Tracking information"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.short_desc": {
           "source": "Shipping tracking details",
@@ -4060,8 +4060,8 @@
           "message": "Information for tracking the shipment"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.Y29tcGFueQ.display_name": {
-          "source": "Shipping Company",
-          "message": "Shipping Company"
+          "source": "Shipping company",
+          "message": "Shipping company"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.Y29tcGFueQ.short_desc": {
           "source": "Name of shipping carrier",
@@ -4072,8 +4072,8 @@
           "message": "The name of the company responsible for shipping"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.bnVtYmVy.display_name": {
-          "source": "Tracking Number",
-          "message": "Tracking Number"
+          "source": "Tracking number",
+          "message": "Tracking number"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.field.bnVtYmVy.short_desc": {
           "source": "Shipment tracking number",
@@ -4096,8 +4096,8 @@
           "message": "The web address where the shipment can be tracked"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.display_name": {
-          "source": "Origin Address",
-          "message": "Origin Address"
+          "source": "Origin address",
+          "message": "Origin address"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.short_desc": {
           "source": "Shipping origin location",
@@ -4108,8 +4108,8 @@
           "message": "The address from which the items are being shipped"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
-          "message": "Address Line 1"
+          "source": "Address line 1",
+          "message": "Address line 1"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczE.short_desc": {
           "source": "Primary address line",
@@ -4120,8 +4120,8 @@
           "message": "The first line of the shipping origin address"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
-          "message": "Address Line 2"
+          "source": "Address line 2",
+          "message": "Address line 2"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.YWRkcmVzczI.short_desc": {
           "source": "Secondary address line",
@@ -4144,8 +4144,8 @@
           "message": "The city from which the shipment originates"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.Y291bnRyeUNvZGU.display_name": {
-          "source": "Country Code",
-          "message": "Country Code"
+          "source": "Country code",
+          "message": "Country code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.Y291bnRyeUNvZGU.short_desc": {
           "source": "Origin country code",
@@ -4156,8 +4156,8 @@
           "message": "The two-letter country code for the shipping origin"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.cHJvdmluY2VDb2Rl.display_name": {
-          "source": "Province Code",
-          "message": "Province Code"
+          "source": "Province code",
+          "message": "Province code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.cHJvdmluY2VDb2Rl.short_desc": {
           "source": "State or province code",
@@ -4168,8 +4168,8 @@
           "message": "The code representing the state or province of origin"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.emlw.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.field.emlw.short_desc": {
           "source": "Origin postal code",
@@ -4192,8 +4192,8 @@
           "message": "Any additional information or notes about the fulfillment"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.display_name": {
-          "source": "Create Gift Card",
-          "message": "Create Gift Card"
+          "source": "Create gift card",
+          "message": "Create gift card"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.short_desc": {
           "source": "Generate a new gift card",
@@ -4204,8 +4204,8 @@
           "message": "Create a gift card with customizable parameters like initial value, expiration, and recipient details"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.display_name": {
-          "source": "Initial Value",
-          "message": "Initial Value"
+          "source": "Initial value",
+          "message": "Initial value"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.short_desc": {
           "source": "Starting balance of gift card",
@@ -4240,8 +4240,8 @@
           "message": "A personal message or additional details about the gift card"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.display_name": {
-          "source": "Expiration Date",
-          "message": "Expiration Date"
+          "source": "Expiration date",
+          "message": "Expiration date"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.short_desc": {
           "source": "Date when gift card expires",
@@ -4252,8 +4252,8 @@
           "message": "The date after which the gift card will no longer be valid"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.display_name": {
-          "source": "Gift Card Code",
-          "message": "Gift Card Code"
+          "source": "Gift card code",
+          "message": "Gift card code"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.short_desc": {
           "source": "Unique gift card identifier",
@@ -4264,8 +4264,8 @@
           "message": "The specific code used to redeem the gift card"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.display_name": {
-          "source": "Template Suffix",
-          "message": "Template Suffix"
+          "source": "Template suffix",
+          "message": "Template suffix"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.short_desc": {
           "source": "Customization of gift card template",
@@ -4276,8 +4276,8 @@
           "message": "Optional suffix to customize the gift card's appearance or template"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.display_name": {
-          "source": "Recipient Attributes",
-          "message": "Recipient Attributes"
+          "source": "Recipient attributes",
+          "message": "Recipient attributes"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.short_desc": {
           "source": "Details about gift card recipient",
@@ -4300,8 +4300,8 @@
           "message": "A unique identifier for the gift card recipient"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.bWVzc2FnZQ.display_name": {
-          "source": "Recipient Message",
-          "message": "Recipient Message"
+          "source": "Recipient message",
+          "message": "Recipient message"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.bWVzc2FnZQ.short_desc": {
           "source": "Personal message to recipient",
@@ -4312,8 +4312,8 @@
           "message": "A personalized message to accompany the gift card"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.cHJlZmVycmVkTmFtZQ.display_name": {
-          "source": "Preferred Name",
-          "message": "Preferred Name"
+          "source": "Preferred name",
+          "message": "Preferred name"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.cHJlZmVycmVkTmFtZQ.short_desc": {
           "source": "Recipient's preferred name",
@@ -4324,8 +4324,8 @@
           "message": "The name the recipient prefers to be called"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.c2VuZE5vdGlmaWNhdGlvbkF0.display_name": {
-          "source": "Notification Timing",
-          "message": "Notification Timing"
+          "source": "Notification timing",
+          "message": "Notification timing"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.field.c2VuZE5vdGlmaWNhdGlvbkF0.short_desc": {
           "source": "When to send gift card notification",
@@ -4336,8 +4336,8 @@
           "message": "The specific time or date to send the gift card notification"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.display_name": {
-          "source": "Create Transaction",
-          "message": "Create Transaction"
+          "source": "Create transaction",
+          "message": "Create transaction"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.short_desc": {
           "source": "Creates a transaction for an order",
@@ -4412,8 +4412,8 @@
           "message": "Refund"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.display_name": {
-          "source": "Parent Transaction ID",
-          "message": "Parent Transaction ID"
+          "source": "Parent transaction ID",
+          "message": "Parent transaction ID"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.short_desc": {
           "source": "ID of parent transaction",
@@ -4452,8 +4452,8 @@
           "message": "Gift Card"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.display_name": {
-          "source": "Final Capture",
-          "message": "Final Capture"
+          "source": "Final capture",
+          "message": "Final capture"
         },
         "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.short_desc": {
           "source": "Complete capture flag",
@@ -4464,8 +4464,8 @@
           "message": "If true, indicates this is the final capture of funds for an authorization; if false, partial captures may follow."
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.display_name": {
-          "source": "Shopify New Abandoned Cart",
-          "message": "Shopify New Abandoned Cart"
+          "source": "Shopify new abandoned cart",
+          "message": "Shopify new abandoned cart"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.short_desc": {
           "source": "Triggers when a customer abandons a checkout in Shopify",
@@ -4476,8 +4476,8 @@
           "message": "This trigger activates when a Shopify checkout is created but not completed within the specified time window. Use this to send recovery emails, offer discounts, or analyze cart abandonment patterns."
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.display_name": {
-          "source": "Abandoned Hours",
-          "message": "Abandoned Hours"
+          "source": "Abandoned hours",
+          "message": "Abandoned hours"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.short_desc": {
           "source": "Time window to consider a cart abandoned",
@@ -4488,8 +4488,8 @@
           "message": "The number of hours to look back for abandoned carts"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.display_name": {
-          "source": "Shopify Blog Created",
-          "message": "Shopify Blog Created"
+          "source": "Shopify blog created",
+          "message": "Shopify blog created"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.short_desc": {
           "source": "Triggers when a new blog is created in Shopify",
@@ -4500,8 +4500,8 @@
           "message": "This trigger activates whenever a new blog (not an article) is created in your Shopify store. Use this to monitor blog creation or automate follow-up tasks."
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.display_name": {
-          "source": "Shopify New Blog Article",
-          "message": "Shopify New Blog Article"
+          "source": "Shopify new blog article",
+          "message": "Shopify new blog article"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.short_desc": {
           "source": "Triggers when a blog article is created or published",
@@ -4524,8 +4524,8 @@
           "message": "Choose which Shopify blog to monitor for new articles."
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.display_name": {
-          "source": "Shopify Customer Created",
-          "message": "Shopify Customer Created"
+          "source": "Shopify customer created",
+          "message": "Shopify customer created"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.short_desc": {
           "source": "Triggers when a new customer account is created",
@@ -4536,8 +4536,8 @@
           "message": "This trigger activates whenever a new customer registers or is created in your Shopify store. Use this to send welcome emails, add customers to marketing lists, or create records in other systems."
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.display_name": {
-          "source": "Shopify Customer Updated",
-          "message": "Shopify Customer Updated"
+          "source": "Shopify customer updated",
+          "message": "Shopify customer updated"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.short_desc": {
           "source": "Triggers when customer information is modified",
@@ -4548,8 +4548,8 @@
           "message": "This trigger activates whenever customer information is updated in your Shopify store. Use this to sync customer data with other systems, track specific customer changes, or update marketing preferences."
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.display_name": {
-          "source": "Shopify New Order",
-          "message": "Shopify New Order"
+          "source": "Shopify new order",
+          "message": "Shopify new order"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a new order is placed with the specified status",
@@ -4560,8 +4560,8 @@
           "message": "This trigger activates when a new order is created in your Shopify store that matches the specified status filter. Use this to process orders, update inventory in other systems, or send custom notifications based on order status."
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.display_name": {
-          "source": "Order Status",
-          "message": "Order Status"
+          "source": "Order status",
+          "message": "Order status"
         },
         "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.short_desc": {
           "source": "Filter orders by their status",

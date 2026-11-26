@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Google Sheets** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭與請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對於尚未在此應用程式中公開為一級動作的端點，請使用此動作。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "資料表名稱"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Add Rows to Spreadsheet",
+          "source": "Add rows to spreadsheet",
           "message": "新增列至試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -496,7 +496,7 @@
           "message": "將新增列的試算表內特定工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
-          "source": "Insert at Start",
+          "source": "Insert at start",
           "message": "在開頭插入"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
@@ -508,7 +508,7 @@
           "message": "若勾選，新列將插入至表格開頭。若未勾選，新列將附加至表格末尾。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
-          "source": "Clear Spreadsheet Row(s)",
+          "source": "Clear spreadsheet row(s)",
           "message": "清除試算表資料列"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "試算表中要清除資料列的特定工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
-          "source": "Rows to Clear",
+          "source": "Rows to clear",
           "message": "要清除的資料列"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "要清除的資料列索引清單 (從 1 開始，與試算表中顯示一致)"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
-          "source": "Copy Worksheet",
+          "source": "Copy worksheet",
           "message": "複製工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "將工作表從來源試算表複製到目標試算表，並可進行自訂設定"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "來源試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -580,7 +580,7 @@
           "message": "包含您想要複製之工作表的 Google 試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
-          "source": "Source Worksheet",
+          "source": "Source worksheet",
           "message": "來源工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
@@ -592,7 +592,7 @@
           "message": "來源試算表中要複製的特定工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
-          "source": "Destination Spreadsheet",
+          "source": "Destination spreadsheet",
           "message": "目標試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
@@ -604,7 +604,7 @@
           "message": "工作表將複製到的 Google Sheets 試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
-          "source": "New Worksheet Name",
+          "source": "New worksheet name",
           "message": "新工作表名稱"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
@@ -616,7 +616,7 @@
           "message": "指定複製工作表的自訂名稱。若未提供，將使用原始名稱並加上 \"Copy of\" 前綴"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "插入位置"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -628,7 +628,7 @@
           "message": "新工作表應插入的位置索引 (從 0 開始)。若未指定，工作表將新增至試算表的末尾"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
-          "source": "Create Spreadsheet",
+          "source": "Create spreadsheet",
           "message": "建立試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
@@ -640,7 +640,7 @@
           "message": "建立新的 Google 試算表。您可以從頭開始建立並附帶自訂標頭，或複製現有試算表。提供標頭時，將套用粗體與邊框格式，且標頭列將會凍結。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
-          "source": "Spreadsheet Title",
+          "source": "Spreadsheet title",
           "message": "試算表標題"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "將賦予新建立之 Google 試算表的名稱。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "來源試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "選填。要新增至新試算表第一列的欄標頭清單。標頭將設定為粗體並帶有邊框，且標頭列將會凍結。若已提供來源試算表，則會忽略此選項。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
-          "source": "Create Worksheet",
+          "source": "Create worksheet",
           "message": "建立工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "要在其中建立新工作表的 Google 試算表 ID。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
-          "source": "Worksheet Title",
+          "source": "Worksheet title",
           "message": "工作表標題"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "將顯示在新工作表頁籤上的名稱。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
-          "source": "Overwrite Existing",
+          "source": "Overwrite existing",
           "message": "覆寫現有工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
@@ -736,7 +736,7 @@
           "message": "將新增至新工作表第一列並設定為粗體格式的欄標頭清單。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Sheet Position",
+          "source": "Sheet position",
           "message": "工作表位置"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -748,7 +748,7 @@
           "message": "新工作表應插入至試算表中的位置 (從 0 開始的索引)。若未指定，工作表將新增至末尾。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
-          "source": "Delete Row",
+          "source": "Delete row",
           "message": "刪除資料列"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "包含要刪除列的試算表內工作表 (頁籤) ID。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
-          "source": "Row Index",
+          "source": "Row index",
           "message": "列索引"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
@@ -796,7 +796,7 @@
           "message": "要刪除的列位置，從 1 開始（而非 0）。這與您在 Google Sheets 使用者介面中看到的列號一致。例如，要刪除第一列，請使用 1。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
-          "source": "Find Spreadsheet Rows",
+          "source": "Find spreadsheet rows",
           "message": "尋找試算表列"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
@@ -856,7 +856,7 @@
           "message": "傳回結果前要跳過的相符列數。用於分頁。預設值為 0。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
-          "source": "Search From Last Row",
+          "source": "Search from last row",
           "message": "從最後一列開始搜尋"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
@@ -868,7 +868,7 @@
           "message": "啟用時，將從工作表底部向上搜尋，而不是從頂部向下搜尋。適用於在底部追加新資料的工作表中尋找最新的項目。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
-          "source": "Maximum Rows to Search",
+          "source": "Maximum rows to search",
           "message": "要搜尋的最大列數"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
@@ -880,7 +880,7 @@
           "message": "限制要搜尋的總列數，以控制大型工作表的效能。預設值為 5000。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
-          "source": "Header Row",
+          "source": "Header row",
           "message": "標頭列"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
@@ -892,7 +892,7 @@
           "message": "欄標頭所在列的列號，適用於表格上方有標題或備註的工作表。標頭從這一列讀取，且只讀取和搜尋這一列下方的列；結果中的 `row_index` 仍是工作表中的列號。預設值為 1，即第一列。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
-          "source": "Values Returned",
+          "source": "Values returned",
           "message": "傳回的值"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
@@ -928,7 +928,7 @@
           "message": "每個公式儲存格的公式；其他儲存格為儲存的值"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
-          "source": "Dates Returned",
+          "source": "Dates returned",
           "message": "傳回的日期"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
@@ -956,7 +956,7 @@
           "message": "日期與時間為文字，與工作表顯示的相同"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
-          "source": "Response Format",
+          "source": "Response format",
           "message": "回應格式"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
@@ -992,7 +992,7 @@
           "message": "傳回對映至欄英文字母（A、B、C 等）的值"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
-          "source": "Search Criteria",
+          "source": "Search criteria",
           "message": "搜尋條件"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "定義尋找相符資料列時使用的搜尋條件。"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.display_name": {
-          "source": "Column Letter",
+          "source": "Column letter",
           "message": "欄位字母"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "要搜尋的欄位字母標示（例如：A、B、C）。請使用此項或「欄位標題」，不要同時使用兩者"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.display_name": {
-          "source": "Column Header",
+          "source": "Column header",
           "message": "欄位標題"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "要搜尋的欄位標題文字。請使用此項或「欄位字母」，不要同時使用兩者"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "搜尋類型"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "包含"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.display_name": {
-          "source": "Search Value",
+          "source": "Search value",
           "message": "搜尋值"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "要在指定欄位中查找的值。具有此精確值的資料列將被傳回"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Format Spreadsheet Rows",
+          "source": "Format spreadsheet rows",
           "message": "格式化試算表列"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "要格式化的列號清單（從 1 開始索引）。例如，[1, 2, 5] 將格式化第一列、第二列和第五列。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
-          "source": "Background Color",
+          "source": "Background color",
           "message": "背景顏色"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "紅色色碼成分，整數範圍為 `0` - `255`"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
-          "source": "Text Color",
+          "source": "Text color",
           "message": "文字顏色"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "是否為指定列中的文字加底線。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
-          "source": "Horizontal Alignment",
+          "source": "Horizontal alignment",
           "message": "水平對齊"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "靠右"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
-          "source": "Vertical Alignment",
+          "source": "Vertical alignment",
           "message": "垂直對齊"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "靠下"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
-          "source": "Font Size",
+          "source": "Font size",
           "message": "字型大小"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "字型大小（點）"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
-          "source": "Wrap Text",
+          "source": "Wrap text",
           "message": "自動換行"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "是否在儲存格中自動換行"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
-          "source": "Search Worksheets",
+          "source": "Search worksheets",
           "message": "搜尋工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "您要在其中搜尋工作表的 Google 試算表唯一識別碼。這可以在試算表 URL 中找到。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
-          "source": "Sheet Title",
+          "source": "Sheet title",
           "message": "工作表標題"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "搜尋標題包含此文字的工作表。留空可列出試算表中的所有工作表。預設搜尋不區分大小寫。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
-          "source": "Exact Match",
+          "source": "Exact match",
           "message": "完全符合"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "若啟用，將僅傳回標題完全相符的工作表。若停用（預設），結果中將包含標題含有搜尋文字的工作表。"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Update Spreadsheet Rows",
+          "source": "Update spreadsheet rows",
           "message": "更新試算表資料列"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "將更新資料列之試算表中特定工作表的唯一識別碼。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
-          "source": "Search Spreadsheets",
+          "source": "Search spreadsheets",
           "message": "搜尋試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "要搜尋的 Google Sheets 試算表名稱或部分名稱。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "搜尋類型"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "限制搜尋的 Google Drive 資料夾 ID。若未指定，則搜尋所有可存取的資料夾。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "排序依據"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "最近性"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "單一請求中要傳回的試算表最大數量。預設值為 100。"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
-          "source": "Custom Query",
+          "source": "Custom query",
           "message": "自訂查詢"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "自訂 Google Drive 搜尋查詢，以在基本選項之外新增額外的篩選條件。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
-          "source": "Create Spreadsheet Column",
+          "source": "Create spreadsheet column",
           "message": "建立試算表欄"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "將新增欄之試算表中特定工作表的 ID。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
-          "source": "Column Title",
+          "source": "Column title",
           "message": "欄標題"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "將顯示在新欄頂端的標頭文字。"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
-          "source": "Column Index",
+          "source": "Column index",
           "message": "欄索引"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
@@ -1636,7 +1636,7 @@
           "message": "應插入新欄的位置索引 (從 0 開始)。例如，0 代表欄將插入至工作表的開頭，1 代表插入至第一欄之後，以此類推。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
-          "source": "New Spreadsheet Row",
+          "source": "New spreadsheet row",
           "message": "新增試算表資料列"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
@@ -1672,7 +1672,7 @@
           "message": "您要監視新資料列之試算表中特定工作表的唯一識別碼。工作表 ID 可以在試算表 URL 中找到。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
-          "source": "New Spreadsheet",
+          "source": "New spreadsheet",
           "message": "新增試算表"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "監視 Google 雲端硬碟中新建立的 Google 試算表。此觸發條件提供有關新建立試算表的中繼資料，包括其 ID、名稱、URL、建立時間和擁有者資訊。"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
-          "source": "New Spreadsheet Sheet",
+          "source": "New spreadsheet sheet",
           "message": "新增試算表工作表"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {

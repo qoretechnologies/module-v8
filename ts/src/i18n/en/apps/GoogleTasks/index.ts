@@ -7,19 +7,19 @@ const GoogleTasksAppEn = {
     'The Google Tasks integration provides comprehensive actions and triggers to interact with the Google Tasks API. Manage task lists, create and update tasks, set due dates, and organize your productivity workflow with seamless automation capabilities.',
   triggers: {
     new_task: {
-      displayName: 'New Task',
+      displayName: 'New task',
       shortDesc: 'Triggers when a new task is created in Google Tasks',
       longDesc:
         'Monitors your Google Tasks lists and triggers when a new task is added to the specified task list.',
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list to monitor for new tasks',
           longDesc:
             'Select the Google Tasks list that you want to monitor for newly created tasks.',
         },
         includeAssigned: {
-          displayName: 'Include Assigned Tasks',
+          displayName: 'Include assigned Tasks',
           shortDesc: 'Whether to include tasks assigned to others',
           longDesc:
             'Enable this option to include tasks that have been assigned to other people in the trigger results.',
@@ -27,19 +27,19 @@ const GoogleTasksAppEn = {
       },
     },
     new_completed_task: {
-      displayName: 'New Completed Task',
+      displayName: 'New completed task',
       shortDesc: 'Triggers when a task is marked as completed',
       longDesc:
         'Monitors your Google Tasks lists and triggers when any task in the specified list is marked as completed.',
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list to monitor for completed tasks',
           longDesc:
             'Select the Google Tasks list that you want to monitor for newly completed tasks.',
         },
         includeAssigned: {
-          displayName: 'Include Assigned Tasks',
+          displayName: 'Include assigned Tasks',
           shortDesc: 'Whether to include tasks assigned to others',
           longDesc:
             'Enable this option to include tasks that have been assigned to other people in the trigger results.',
@@ -49,7 +49,7 @@ const GoogleTasksAppEn = {
   },
   actions: {
     create_task_list: {
-      displayName: 'Create Task List',
+      displayName: 'Create task list',
       shortDesc: 'Create a new task list in Google Tasks',
       longDesc: 'Creates a new task list in your Google Tasks account with the specified title.',
       groups: ['Task Lists'],
@@ -63,34 +63,34 @@ const GoogleTasksAppEn = {
       },
     },
     delete_task_list: {
-      displayName: 'Delete Task List',
+      displayName: 'Delete task list',
       shortDesc: 'Delete a task list from Google Tasks',
       longDesc:
         'Permanently deletes the specified task list and all tasks within it from your Google Tasks account.',
       groups: ['Task Lists'],
       options: {
         id: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list to delete',
           longDesc: 'Select the task list that you want to permanently delete from Google Tasks.',
         },
       },
     },
     list_tasks_lists: {
-      displayName: 'List Task Lists',
+      displayName: 'List task lists',
       shortDesc: 'Get all task lists from Google Tasks',
       longDesc:
         'Retrieves a list of all task lists in your Google Tasks account with optional pagination.',
       groups: ['Task Lists'],
       options: {
         maxResults: {
-          displayName: 'Max Results',
+          displayName: 'Max results',
           shortDesc: 'Maximum number of task lists to return',
           longDesc:
             'Specify the maximum number of task lists to return in the response. Default is 10.',
         },
         nextPageToken: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'Provide the next page token from a previous request to get the next page of results.',
@@ -98,13 +98,13 @@ const GoogleTasksAppEn = {
       },
     },
     update_task_list: {
-      displayName: 'Update Task List',
+      displayName: 'Update task list',
       shortDesc: 'Update an existing task list in Google Tasks',
       longDesc: 'Updates the title of an existing task list in your Google Tasks account.',
       groups: ['Task Lists'],
       options: {
         id: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list to update',
           longDesc: 'Select the task list that you want to update in Google Tasks.',
         },
@@ -116,39 +116,39 @@ const GoogleTasksAppEn = {
       },
     },
     clear_completed_tasks: {
-      displayName: 'Clear Completed Tasks',
+      displayName: 'Clear completed Tasks',
       shortDesc: 'Clear all completed tasks from a task list',
       longDesc:
         'Removes all completed tasks from the specified task list, helping to keep your lists clean and organized.',
       groups: ['Tasks'],
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list to clear completed tasks from',
           longDesc: 'Select the task list from which you want to remove all completed tasks.',
         },
       },
     },
     create_task: {
-      displayName: 'Create Task',
+      displayName: 'Create task',
       shortDesc: 'Create a new task in Google Tasks',
       longDesc:
         'Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning.',
       groups: ['Tasks'],
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list to add the task to',
           longDesc: 'Select the task list where you want to create the new task.',
         },
         parent: {
-          displayName: 'Parent Task',
+          displayName: 'Parent task',
           shortDesc: 'The parent task (to create a subtask)',
           longDesc:
             'Select a parent task if you want to create this task as a subtask under another task.',
         },
         previous: {
-          displayName: 'Previous Task',
+          displayName: 'Previous task',
           shortDesc: 'The task after which this task should be positioned',
           longDesc: 'Select the task after which this new task should be positioned in the list.',
         },
@@ -163,20 +163,20 @@ const GoogleTasksAppEn = {
           longDesc: 'Add any additional notes, details, or description for the task.',
         },
         due: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'The due date for the task',
           longDesc: 'Set a due date for when this task should be completed.',
         },
       },
     },
     delete_task: {
-      displayName: 'Delete Task',
+      displayName: 'Delete task',
       shortDesc: 'Delete a task from Google Tasks',
       longDesc: 'Permanently deletes the specified task from the selected task list.',
       groups: ['Tasks'],
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list containing the task',
           longDesc: 'Select the task list that contains the task you want to delete.',
         },
@@ -188,13 +188,13 @@ const GoogleTasksAppEn = {
       },
     },
     get_task: {
-      displayName: 'Get Task',
+      displayName: 'Get task',
       shortDesc: 'Retrieve details of a specific task',
       longDesc: 'Retrieves detailed information about a specific task from the selected task list.',
       groups: ['Tasks'],
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list containing the task',
           longDesc: 'Select the task list that contains the task you want to retrieve.',
         },
@@ -213,77 +213,77 @@ const GoogleTasksAppEn = {
       groups: ['Tasks'],
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list to get tasks from',
           longDesc: 'Select the task list from which you want to retrieve tasks.',
         },
         completedMax: {
-          displayName: 'Completed Max Date',
+          displayName: 'Completed max date',
           shortDesc: 'Upper bound for a task completion date',
           longDesc: 'Only return tasks completed before this date.',
         },
         completedMin: {
-          displayName: 'Completed Min Date',
+          displayName: 'Completed min date',
           shortDesc: 'Lower bound for a task completion date',
           longDesc: 'Only return tasks completed after this date.',
         },
         dueMax: {
-          displayName: 'Due Max Date',
+          displayName: 'Due max date',
           shortDesc: 'Upper bound for a task due date',
           longDesc: 'Only return tasks with due dates before this date.',
         },
         dueMin: {
-          displayName: 'Due Min Date',
+          displayName: 'Due min date',
           shortDesc: 'Lower bound for a task due date',
           longDesc: 'Only return tasks with due dates after this date.',
         },
         maxResults: {
-          displayName: 'Max Results',
+          displayName: 'Max results',
           shortDesc: 'Maximum number of tasks to return',
           longDesc: 'Specify the maximum number of tasks to return in the response.',
         },
         pageToken: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'Provide the page token from a previous request to get the next page of results.',
         },
         showCompleted: {
-          displayName: 'Show Completed',
+          displayName: 'Show completed',
           shortDesc: 'Whether to include completed tasks',
           longDesc: 'Enable this option to include completed tasks in the results.',
         },
         showDeleted: {
-          displayName: 'Show Deleted',
+          displayName: 'Show deleted',
           shortDesc: 'Whether to include deleted tasks',
           longDesc: 'Enable this option to include deleted tasks in the results.',
         },
         showHidden: {
-          displayName: 'Show Hidden',
+          displayName: 'Show hidden',
           shortDesc: 'Whether to include hidden tasks',
           longDesc: 'Enable this option to include hidden tasks in the results.',
         },
         updateMin: {
-          displayName: 'Updated Min Date',
+          displayName: 'Updated min date',
           shortDesc: 'Lower bound for a task last modification time',
           longDesc: 'Only return tasks that have been updated after this date.',
         },
         showAssigned: {
-          displayName: 'Show Assigned',
+          displayName: 'Show assigned',
           shortDesc: 'Whether to include assigned tasks',
           longDesc: 'Enable this option to include tasks that have been assigned to other people.',
         },
       },
     },
     update_task: {
-      displayName: 'Update Task',
+      displayName: 'Update task',
       shortDesc: 'Update an existing task in Google Tasks',
       longDesc:
         'Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning.',
       groups: ['Tasks'],
       options: {
         taskList: {
-          displayName: 'Task List',
+          displayName: 'Task list',
           shortDesc: 'The task list containing the task',
           longDesc: 'Select the task list that contains the task you want to update.',
         },
@@ -293,13 +293,13 @@ const GoogleTasksAppEn = {
           longDesc: 'Select the specific task that you want to update.',
         },
         parent: {
-          displayName: 'Parent Task',
+          displayName: 'Parent task',
           shortDesc: 'The parent task (to make this a subtask)',
           longDesc:
             'Select a parent task if you want to make this task a subtask under another task.',
         },
         previous: {
-          displayName: 'Previous Task',
+          displayName: 'Previous task',
           shortDesc: 'The task after which this task should be positioned',
           longDesc: 'Select the task after which this task should be positioned in the list.',
         },
@@ -314,7 +314,7 @@ const GoogleTasksAppEn = {
           longDesc: 'Update any additional notes, details, or description for the task.',
         },
         due: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'The due date for the task',
           longDesc: 'Set or update the due date for when this task should be completed.',
         },

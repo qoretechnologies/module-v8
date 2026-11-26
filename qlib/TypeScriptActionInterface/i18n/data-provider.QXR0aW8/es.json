@@ -28,7 +28,7 @@
           "message": "Realice una llamada personalizada a la API HTTP / REST a **Attio** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), los parámetros de consulta opcionales, los encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para puntos de extremo que aún no estén expuestos como acciones de primera clase en esta aplicación."
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Método HTTP"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.QXR0aW8.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Buscar registros"
         },
         "app.QXR0aW8.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "El nombre de la tabla"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Create Object Record",
+          "source": "Create object record",
           "message": "Crear registro de objeto"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Elige el tipo de objeto en el que deseas crear un nuevo registro. Puede ser un objeto personalizado o un objeto estándar en tu espacio de trabajo de Attio."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
-          "source": "Find Object Records",
+          "source": "Find object records",
           "message": "Buscar registros de objeto"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Consulta registros de un objeto específico de Attio con soporte para filtrado por valores de atributos, ordenación por atributos y paginación. Devuelve una lista de registros que coinciden con los criterios especificados."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo de objeto"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
@@ -556,7 +556,7 @@
           "message": "El número de registros que se omitirán antes de comenzar a devolver resultados. Se utiliza para la paginación. El valor predeterminado es 0."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Atributo de ordenación"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "El atributo por el que ordenar los resultados. El valor predeterminado es \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Dirección de ordenación"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -624,7 +624,7 @@
           "message": "El valor para filtrar."
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Update Object Record",
+          "source": "Update object record",
           "message": "Actualizar registro de objeto"
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -660,7 +660,7 @@
           "message": "El identificador único del registro a actualizar."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Create List Entry",
+          "source": "Create list entry",
           "message": "Crear entrada de lista"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "El slug de API de la lista de Attio donde se creará la nueva entrada."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID del registro primario"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -696,7 +696,7 @@
           "message": "El identificador único del registro primario al que se vinculará esta entrada de lista."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
-          "source": "Find List Entries",
+          "source": "Find list entries",
           "message": "Buscar entradas de lista"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
@@ -744,7 +744,7 @@
           "message": "El número de entradas que se omitirán antes de comenzar a devolver resultados. Se utiliza para la paginación. El valor predeterminado es 0."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Atributo de ordenación"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -756,7 +756,7 @@
           "message": "El atributo por el que ordenar los resultados. El valor predeterminado es \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Dirección de ordenación"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -812,7 +812,7 @@
           "message": "El valor para filtrar."
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Update List Entry",
+          "source": "Update list entry",
           "message": "Actualizar entrada de lista"
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -848,7 +848,7 @@
           "message": "El identificador único de la entrada de la lista a actualizar."
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
-          "source": "Get Single List Entry",
+          "source": "Get single list entry",
           "message": "Obtener una sola entrada de lista"
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
@@ -884,7 +884,7 @@
           "message": "Especifica el identificador único de la entrada que deseas recuperar. Este ID es específico para la lista que has seleccionado y cargará las entradas disponibles según tu selección de lista."
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Get Single Object Record",
+          "source": "Get single object record",
           "message": "Obtener un solo registro de objeto"
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Especifica el identificador único del registro que deseas recuperar. Este ID es específico para el objeto que has seleccionado y cargará los registros disponibles según tu selección de objeto."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Listar tareas"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Especifica la cantidad de tareas a omitir antes de comenzar a devolver resultados. Útil para la paginación. El valor predeterminado es 0."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
-          "source": "Linked Object",
+          "source": "Linked object",
           "message": "Objeto vinculado"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Filtra las tareas para incluir solo aquellas vinculadas a un tipo de objeto específico en Attio. Al seleccionarlo, puedes refinar aún más especificando un registro en particular."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
-          "source": "Linked Record ID",
+          "source": "Linked record ID",
           "message": "ID de registro vinculado"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Filtra las tareas según estén completadas o no. El valor predeterminado es false (muestra tareas incompletas)."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Orden de clasificación"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Filtra las tareas para incluir solo aquellas asignadas a un miembro específico del espacio de trabajo."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Obtener tarea"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Especifica el identificador único de la tarea que deseas recuperar. Los ID de tarea disponibles se cargarán según tu selección de objeto previa."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
-          "source": "Get Notes",
+          "source": "Get notes",
           "message": "Obtener notas"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "El número de notas a omitir antes de comenzar a devolver resultados. Se utiliza para la paginación. El valor predeterminado es 0."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Objeto primario"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "El tipo de objeto primario al que está vinculada esta nota. Esto es necesario para filtrar notas por su objeto primario."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID del registro primario"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "El identificador único del registro primario al que está vinculada esta nota. Esto es necesario para filtrar notas por su registro primario."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Crear tarea"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Esta acción crea una nueva tarea en Attio con contenido, fecha límite, estado de finalización y asignados opcionales. Puedes establecer el contenido de la tarea, especificar una fecha límite, marcarla como completada o no, y asignarla a uno o más miembros del espacio de trabajo."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Contenido de la tarea"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Selecciona uno o más miembros del espacio de trabajo que estarán asignados a esta tarea. Estos miembros serán responsables de completar la tarea y recibirán notificaciones sobre ella."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
-          "source": "Create Note",
+          "source": "Create note",
           "message": "Crear nota"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Esta acción crea una nueva nota y la adjunta a un registro específico dentro de un objeto de Attio. Las notas se pueden escribir en formato de texto plano o markdown e incluyen un título y un cuerpo de contenido. Sirven como una forma de documentar información importante sobre registros en su espacio de trabajo."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Objeto primario"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Seleccione el objeto de Attio que contiene el registro al que desea adjuntar esta nota. Esto define con qué tipo de objeto se asociará la nota."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID del registro primario"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Ingrese el contenido de su nota. Esto se puede formatear según el tipo de formato seleccionado (texto plano o markdown)."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
-          "source": "New List Entry Created",
+          "source": "New list entry created",
           "message": "Nueva entrada de lista creada"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "El slug de la API de la lista de Attio que se monitoreará en busca de nuevas entradas."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
-          "source": "List Entry Deleted",
+          "source": "List entry deleted",
           "message": "Entrada de lista eliminada"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "El slug de la API de la lista de Attio que se monitoreará en busca de entradas eliminadas."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
-          "source": "List Entry Updated",
+          "source": "List entry updated",
           "message": "Entrada de lista actualizada"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "El slug de la API de la lista de Attio que se monitoreará en busca de entradas actualizadas."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
-          "source": "New Object Record Created",
+          "source": "New object record created",
           "message": "Nuevo registro de objeto creado"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Este activador se dispara cada vez que se crea un nuevo registro para un objeto de Attio especificado. Proporciona detalles sobre el registro creado, incluyendo su ID, tipo de objeto y el actor que lo creó."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo de objeto"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "El slug de la API del tipo de objeto de Attio que se monitoreará en busca de nuevos registros."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
-          "source": "Object Record Deleted",
+          "source": "Object record deleted",
           "message": "Registro de objeto eliminado"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Este activador se dispara cada vez que se elimina un registro de un objeto de Attio especificado. Proporciona detalles sobre el registro eliminado, incluyendo su ID, tipo de objeto y el actor que realizó la eliminación."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo de objeto"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "El slug de la API del tipo de objeto de Attio que se monitoreará en busca de registros eliminados."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
-          "source": "Object Record Updated",
+          "source": "Object record updated",
           "message": "Registro de objeto actualizado"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "Este activador se dispara cada vez que se actualiza un registro para un objeto de Attio especificado. Proporciona detalles sobre el registro actualizado, incluyendo su ID, tipo de objeto, el actor que realizó la actualización y los cambios específicos realizados."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo de objeto"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
@@ -1392,7 +1392,7 @@
           "message": "El slug de la API del tipo de objeto de Attio que se monitoreará en busca de registros actualizados."
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
-          "source": "New Task Created",
+          "source": "New task created",
           "message": "Nueva tarea creada"
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {

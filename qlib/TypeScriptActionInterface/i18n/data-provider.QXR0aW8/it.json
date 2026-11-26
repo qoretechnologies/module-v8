@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata ad **Attio** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query opzionali, intestazioni e corpo della richiesta. La risposta viene restituita come un hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello in questa app."
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.QXR0aW8.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Cerca record"
         },
         "app.QXR0aW8.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Il nome della tabella"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Create Object Record",
+          "source": "Create object record",
           "message": "Crea record oggetto"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Scegli il tipo di oggetto in cui desideri creare un nuovo record. Può essere un oggetto personalizzato o un oggetto standard nel tuo workspace Attio."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
-          "source": "Find Object Records",
+          "source": "Find object records",
           "message": "Trova record di oggetti"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Interroga i record di un oggetto Attio specifico con supporto per il filtraggio in base ai valori degli attributi, l'ordinamento in base agli attributi e la paginazione. Restituisce un elenco di record corrispondenti ai criteri specificati."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo di oggetto"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Il numero di record da ignorare prima di iniziare a restituire i risultati. Utilizzato per la paginazione. Il valore predefinito è 0."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Attributo di ordinamento"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "L'attributo in base al quale ordinare i risultati. Il valore predefinito è \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Direzione di ordinamento"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Il valore da utilizzare per il filtro."
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Update Object Record",
+          "source": "Update object record",
           "message": "Aggiorna record oggetto"
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -660,7 +660,7 @@
           "message": "L'identificatore univoco del record da aggiornare."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Create List Entry",
+          "source": "Create list entry",
           "message": "Crea voce di lista"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Lo slug API della lista Attio in cui verrà creata la nuova voce."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID record padre"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -696,7 +696,7 @@
           "message": "L'identificatore unico del record padre a cui verrà collegata questa voce di lista."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
-          "source": "Find List Entries",
+          "source": "Find list entries",
           "message": "Trova voci di elenco"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Il numero di voci da ignorare prima di iniziare a restituire i risultati. Utilizzato per la paginazione. Il valore predefinito è 0."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Attributo di ordinamento"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -756,7 +756,7 @@
           "message": "L'attributo in base al quale ordinare i risultati. Il valore predefinito è \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Direzione di ordinamento"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Il valore da utilizzare per il filtro."
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Update List Entry",
+          "source": "Update list entry",
           "message": "Aggiorna voce dell'elenco"
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -848,7 +848,7 @@
           "message": "L'identificatore univoco della voce dell'elenco da aggiornare."
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
-          "source": "Get Single List Entry",
+          "source": "Get single list entry",
           "message": "Ottieni singola voce di lista"
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
@@ -884,7 +884,7 @@
           "message": "Specifica l'identificatore unico della voce che desideri recuperare. Questo ID è specifico per la lista selezionata e caricherà le voci disponibili in base alla selezione della lista."
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Get Single Object Record",
+          "source": "Get single object record",
           "message": "Ottieni singolo record oggetto"
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Specifica l'identificatore unico del record che desideri recuperare. Questo ID è specifico per l'oggetto selezionato e caricherà i record disponibili in base alla selezione dell'oggetto."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Elenca attività"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Specifica il numero di compiti da ignorare prima di iniziare a restituire i risultati. Utile per la paginazione. Il valore predefinito è 0."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
-          "source": "Linked Object",
+          "source": "Linked object",
           "message": "Oggetto collegato"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Filtra i compiti per includere solo quelli collegati a un tipo di oggetto specifico in Attio. Quando selezionato, puoi perfezionare ulteriormente specificando un record particolare."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
-          "source": "Linked Record ID",
+          "source": "Linked record ID",
           "message": "ID record collegato"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Filtra i compiti in base al fatto che siano completati o meno. Il valore predefinito è false (mostra i compiti non completati)."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Criterio di ordinamento"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Filtra i compiti per includere solo quelli assegnati a un membro specifico del workspace."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Ottieni attività"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Specifica l'identificatore unico del compito che desideri recuperare. Gli ID compito disponibili verranno caricati in base alla selezione dell'oggetto precedente."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
-          "source": "Get Notes",
+          "source": "Get notes",
           "message": "Ottieni note"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Il numero di note da ignorare prima di iniziare a restituire i risultati. Utilizzato per la paginazione. Il valore predefinito è 0."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Oggetto padre"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Il tipo dell'oggetto padre a cui è collegata questa nota. È richiesto per filtrare le note in base al loro oggetto padre."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID record padre"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "L'identificatore unico del record padre a cui è collegata questa nota. È richiesto per filtrare le note in base al loro record padre."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Crea attività"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Questa azione crea un nuovo compito in Attio con contenuto, scadenza, stato di completamento e assegnatari opzionali. Puoi impostare il contenuto del compito, specificare una data di scadenza, contrassegnarlo come completato o meno e assegnarlo a uno o più membri del workspace."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Contenuto dell'attività"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Seleziona uno o più membri del workspace che verranno assegnati a questo compito. Questi membri saranno responsabili del completamento del compito e riceveranno notifiche al riguardo."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
-          "source": "Create Note",
+          "source": "Create note",
           "message": "Crea nota"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Questa azione crea una nuova nota e la allega a un record specifico all'interno di un oggetto Attio. Le note possono essere scritte in testo semplice o in formato markdown e includono un titolo e un corpo del contenuto. Servono a documentare informazioni importanti sui record nel tuo workspace."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Oggetto padre"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Seleziona l'oggetto Attio che contiene il record a cui desideri allegare questa nota. Questo definisce a quale tipo di oggetto verrà associata la nota."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID record padre"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Inserisci il contenuto della nota. Questo può essere formattato in base al tipo di formato selezionato (testo semplice o markdown)."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
-          "source": "New List Entry Created",
+          "source": "New list entry created",
           "message": "Nuova voce dell'elenco creata"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Lo slug API dell'elenco Attio da monitorare per le nuove voci."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
-          "source": "List Entry Deleted",
+          "source": "List entry deleted",
           "message": "Voce dell'elenco eliminata"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Lo slug API dell'elenco Attio da monitorare per le voci eliminate."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
-          "source": "List Entry Updated",
+          "source": "List entry updated",
           "message": "Voce dell'elenco aggiornata"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "Lo slug API dell'elenco Attio da monitorare per le voci aggiornate."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
-          "source": "New Object Record Created",
+          "source": "New object record created",
           "message": "Nuovo record dell'oggetto creato"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Questo trigger viene attivato ogni volta che viene creato un nuovo record per un oggetto Attio specificato. Fornisce dettagli sul record creato, inclusi il suo ID, il tipo di oggetto e l'esecutore che lo ha creato."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo di oggetto"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Lo slug API del tipo di oggetto Attio da monitorare per i nuovi record."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
-          "source": "Object Record Deleted",
+          "source": "Object record deleted",
           "message": "Record dell'oggetto eliminato"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Questo trigger viene attivato ogni volta che un record viene eliminato da un oggetto Attio specificato. Fornisce dettagli sul record eliminato, inclusi il suo ID, il tipo di oggetto e l'esecutore che ha effettuato l'eliminazione."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo di oggetto"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "Lo slug API del tipo di oggetto Attio da monitorare per i record eliminati."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
-          "source": "Object Record Updated",
+          "source": "Object record updated",
           "message": "Record dell'oggetto aggiornato"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "Questo trigger viene attivato ogni volta che un record viene aggiornato per un oggetto Attio specificato. Fornisce dettagli sul record aggiornato, inclusi il suo ID, il tipo di oggetto, l'esecutore che ha apportato l'aggiornamento e le modifiche specifiche apportate."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Tipo di oggetto"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
@@ -1392,7 +1392,7 @@
           "message": "Lo slug API del tipo di oggetto Attio da monitorare per i record aggiornati."
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
-          "source": "New Task Created",
+          "source": "New task created",
           "message": "Nuovo compito creato"
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {

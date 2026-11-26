@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証情報を使用して、**Zoom**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、任意のクエリパラメーター、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -580,7 +580,7 @@
           "message": "ウェビナーへのユーザーの登録を作成して送信します。[Webinarプラン](https:-zoom.us-webinar)を持つZoomユーザーは、ウェビナーの作成と管理にアクセスできます。ウェビナーでは、ホストが最大10,000人の参加者にZoomミーティングをブロードキャストできます。[登録制ウェビナー](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration)をスケジュールする場合、登録者はウェビナーに参加するためのリンクを受け取る前に簡単なフォームに記入する必要があります。\n\n**前提条件:** \n* Webinarアドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "新しい会議"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Zoomミーティングを監視し、選択されたイベントタイプに基づいてミーティングが作成、開始（ライブ）、または終了（過去のミーティング）したときにトリガーします。トピック、所要時間、参加URL、ミーティングタイプなどのミーティング詳細を返します。"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
-          "source": "Meeting Event Type",
+          "source": "Meeting event type",
           "message": "ミーティングイベントタイプ"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
@@ -616,7 +616,7 @@
           "message": "ミーティングが開始されたときにトリガーします"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
-          "source": "New Webinar",
+          "source": "New webinar",
           "message": "新規ウェビナー"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Zoomウェビナーを監視し、新しいウェビナーが作成されたときにトリガーします。トピック、所要時間、参加URL、登録URL、ウェビナータイプなどのウェビナー詳細を返します。"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
-          "source": "New Meeting Summary",
+          "source": "New meeting summary",
           "message": "新規ミーティングサマリー"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {

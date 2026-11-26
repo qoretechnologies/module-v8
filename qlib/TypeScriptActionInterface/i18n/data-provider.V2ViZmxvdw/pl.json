@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Webflow** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi oraz treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako bezpośrednie akcje w tej aplikacji."
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.display_name": {
-          "source": "Delete Item",
+          "source": "Delete item",
           "message": "Usuń element"
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Wybierz witrynę Webflow, z której mają być filtrowane kolekcje (opcjonalnie)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
+          "source": "Get collection",
           "message": "Pobierz kolekcję"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Wybierz określoną kolekcję Webflow, o której chcesz uzyskać informacje"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.display_name": {
-          "source": "Get Item",
+          "source": "Get item",
           "message": "Pobierz pozycję"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Wybierz witrynę Webflow, z której mają być filtrowane kolekcje (opcjonalnie)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Identyfikator ustawień regionalnych CMS"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Określ identyfikator ustawień regionalnych CMS w przypadku pracy z witryną wielojęzyczną"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
+          "source": "Get order",
           "message": "Pobierz zamówienie"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Wybierz określone zamówienie, o którym chcesz pobrać informacje"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.display_name": {
-          "source": "Get Site",
+          "source": "Get site",
           "message": "Pobierz witrynę"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Wybierz określoną witrynę Webflow, o której chcesz pobrać informacje"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
+          "source": "List collections",
           "message": "Lista kolekcji"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Wybierz witrynę Webflow, z której chcesz wyświetlić listę kolekcji"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.display_name": {
-          "source": "List Custom Domains",
+          "source": "List custom domains",
           "message": "Wyświetl listę domen niestandardowych"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Wybierz witrynę Webflow, z której chcesz wyświetlić domeny niestandardowe"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.display_name": {
-          "source": "List Items",
+          "source": "List items",
           "message": "Wyświetl listę pozycji"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Wybierz kolekcję Webflow, z której chcesz pobrać listę elementów"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Identyfikator ustawień regionalnych CMS"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Filtruj elementy według ich pola slug"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.display_name": {
-          "source": "Last Published",
+          "source": "Last published",
           "message": "Ostatnio opublikowano"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Filtruj elementy według zakresu daty ostatniej publikacji"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.display_name": {
-          "source": "Greater Than or Equal To",
+          "source": "Greater than or equal to",
           "message": "Większe lub równe"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Uwzględnij pozycje opublikowane po lub w dniu tej daty"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.display_name": {
-          "source": "Less Than or Equal To",
+          "source": "Less than or equal to",
           "message": "Mniejsze lub równe"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Uwzględnij pozycje opublikowane przed lub w dniu tej daty"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Sortuj według"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Slug"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Kolejność sortowania"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.short_desc": {
@@ -768,7 +768,7 @@
           "message": "Malejąco"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.display_name": {
-          "source": "List Orders",
+          "source": "List orders",
           "message": "Pobierz listę zamówień"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Maksymalna liczba zamówień do zwrócenia na stronę (domyślnie: 20)"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.display_name": {
-          "source": "List Sites",
+          "source": "List sites",
           "message": "Wyświetl listę witryn"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Pobierz listę wszystkich witryn Webflow dostępnych za pomocą bieżącego tokenu uwierzytelniania."
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.display_name": {
-          "source": "Mark Order Status",
+          "source": "Mark order status",
           "message": "Oznacz status zamówienia"
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Zwrócone"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.display_name": {
-          "source": "Publish Site",
+          "source": "Publish site",
           "message": "Opublikuj witrynę"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Wybierz witrynę Webflow, którą chcesz opublikować"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.display_name": {
-          "source": "Custom Domains",
+          "source": "Custom domains",
           "message": "Domeny niestandardowe"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Określ domeny niestandardowe, w których witryna ma zostać opublikowana (opcjonalnie)"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.display_name": {
-          "source": "Publish to Webflow Subdomain",
+          "source": "Publish to Webflow subdomain",
           "message": "Publikuj w subdomenie Webflow"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Określa, czy opublikować witrynę w jej subdomenie Webflow"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.display_name": {
-          "source": "Publish Item",
+          "source": "Publish item",
           "message": "Opublikuj element"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "Wybierz witrynę Webflow, z której mają być filtrowane kolekcje (opcjonalnie)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.display_name": {
-          "source": "Create Item",
+          "source": "Create item",
           "message": "Utwórz pozycję"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Wybierz kolekcję Webflow, w której chcesz utworzyć nowy element"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "Czy zarchiwizowane"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Ustaw na true, jeśli chcesz, aby element został zarchiwizowany po utworzeniu"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "Czy wersja robocza"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Ustaw na true, jeśli chcesz, aby element został zapisany jako wersja robocza (domyślnie: true)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Identyfikator ustawień regionalnych CMS"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Określ identyfikator ustawień regionalnych CMS w przypadku pracy z witryną wielojęzyczną"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.display_name": {
-          "source": "Update Item",
+          "source": "Update item",
           "message": "Zaktualizuj element"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Wybierz konkretny element, który chcesz zaktualizować"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
+          "source": "Is archived",
           "message": "Czy zarchiwizowane"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Ustaw na true, aby zarchiwizować element, lub false, aby cofnąć archiwizację"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
+          "source": "Is draft",
           "message": "Czy wersja robocza"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Ustaw na true, aby zapisać element jako wersję roboczą, lub false, aby go opublikować"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
+          "source": "CMS locale ID",
           "message": "Identyfikator ustawień regionalnych CMS"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Określ identyfikator ustawień regionalnych CMS w przypadku pracy z witryną wielojęzyczną"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.display_name": {
-          "source": "New Item",
+          "source": "New item",
           "message": "Nowy element"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Wybierz witrynę Webflow, w której chcesz monitorować zdarzenia tworzenia nowych elementów"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.display_name": {
-          "source": "Updated Item",
+          "source": "Updated item",
           "message": "Zaktualizowany element"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "Wybierz witrynę Webflow, w której chcesz monitorować zdarzenia aktualizacji elementów"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.display_name": {
-          "source": "New Order",
+          "source": "New order",
           "message": "Nowe zamówienie"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Wybierz witrynę Webflow, w której chcesz monitorować zdarzenia nowych zamówień"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.display_name": {
-          "source": "Updated Order",
+          "source": "Updated order",
           "message": "Zaktualizowane zamówienie"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.short_desc": {

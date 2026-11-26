@@ -161,7 +161,7 @@ const getPagePostInsights = QoreAppCreator.createLocalizedAction<typeof options>
             permalink_url: { type: 'string' },
           },
         },
-        display_name: 'Post Information',
+        display_name: 'Post information',
         short_desc: 'Basic information about the post',
       },
       period: {
@@ -174,21 +174,21 @@ const getPagePostInsights = QoreAppCreator.createLocalizedAction<typeof options>
           type: 'list',
           element_type: 'string',
         },
-        display_name: 'Metrics Requested',
+        display_name: 'Metrics requested',
         short_desc: 'The metrics that were requested',
       },
       insights: {
         type: {
           type: 'hash',
         },
-        display_name: 'Insights Data',
+        display_name: 'Insights data',
         short_desc: 'The insights metrics and their values',
       },
       time_series_data: {
         type: {
           type: 'hash',
         },
-        display_name: 'Time Series Data',
+        display_name: 'Time series data',
         short_desc: 'Time-series breakdown of metrics (when applicable)',
       },
       date_range: {
@@ -199,12 +199,12 @@ const getPagePostInsights = QoreAppCreator.createLocalizedAction<typeof options>
             until: { type: 'string' },
           },
         },
-        display_name: 'Date Range',
+        display_name: 'Date range',
         short_desc: 'The date range used for the insights',
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When the insights were generated',
       },
     },

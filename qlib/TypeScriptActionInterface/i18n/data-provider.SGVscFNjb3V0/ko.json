@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **Help Scout**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에서 아직 기본 액션으로 노출되지 않은 엔드포인트에 이 액션을 사용하세요."
         },
         "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.display_name": {
-          "source": "Add Note to Conversation",
+          "source": "Add note to conversation",
           "message": "대화에 메모 추가"
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.short_desc": {
@@ -364,7 +364,7 @@
           "message": "메모를 추가할 대화의 ID를 선택하거나 입력합니다. 번호 또는 제목으로 대화를 검색할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.display_name": {
-          "source": "Note Text",
+          "source": "Note text",
           "message": "메모 텍스트"
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.short_desc": {
@@ -420,7 +420,7 @@
           "message": "스팸"
         },
         "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.display_name": {
-          "source": "Add Tags to Conversation",
+          "source": "Add tags to conversation",
           "message": "대화에 태그 추가"
         },
         "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.short_desc": {
@@ -456,7 +456,7 @@
           "message": "대화에 추가할 태그 이름 목록입니다. 태그는 대소문자를 구분하지 않으며, 아직 존재하지 않는 경우 새로 생성됩니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Create Conversation",
+          "source": "Create conversation",
           "message": "대화 생성"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Help Scout에서 기존 고객을 선택합니다. 고객 ID 또는 고객 이메일 중 하나를 제공해야 합니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.display_name": {
-          "source": "Customer Email",
+          "source": "Customer email",
           "message": "고객 이메일"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.short_desc": {
@@ -564,7 +564,7 @@
           "message": "고객의 이메일 주소입니다. 고객이 존재하지 않는 경우 새로 생성됩니다. 고객 ID 또는 고객 이메일 중 하나를 제공해야 합니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.display_name": {
-          "source": "Thread Type",
+          "source": "Thread type",
           "message": "스레드 유형"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.short_desc": {
@@ -596,7 +596,7 @@
           "message": "채팅"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.display_name": {
-          "source": "Thread Text",
+          "source": "Thread text",
           "message": "스레드 텍스트"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.short_desc": {
@@ -608,7 +608,7 @@
           "message": "대화 첫 번째 메시지의 텍스트 내용입니다. HTML 서식을 포함할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
-          "source": "Assign To",
+          "source": "Assign to",
           "message": "할당 대상"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
@@ -632,7 +632,7 @@
           "message": "대화에 추가할 태그 이름 목록입니다. 태그를 사용하면 대화를 정리하고 분류하여 필터링 및 보고를 더 쉽게 할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.display_name": {
-          "source": "Auto Reply",
+          "source": "Auto reply",
           "message": "자동 응답"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.short_desc": {
@@ -644,7 +644,7 @@
           "message": "true로 설정하면 사서함에 자동 응답이 구성되어 있는 경우 Help Scout에서 고객에게 자동 응답을 전송합니다. 자동 응답을 방지하려면 false로 설정하십시오."
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Delete Conversation",
+          "source": "Delete conversation",
           "message": "대화 삭제"
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -668,7 +668,7 @@
           "message": "삭제할 대화의 ID를 선택하거나 입력하세요."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
+          "source": "Get conversation",
           "message": "대화 가져오기"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -692,7 +692,7 @@
           "message": "조회할 대화의 ID를 선택하거나 입력하세요."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
+          "source": "List conversations",
           "message": "대화 목록 조회"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
@@ -752,7 +752,7 @@
           "message": "스팸"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.display_name": {
-          "source": "Assigned To",
+          "source": "Assigned to",
           "message": "담당자"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.short_desc": {
@@ -776,7 +776,7 @@
           "message": "이 태그가 있는 대화만 반환합니다. 쉼표로 구분하여 여러 태그를 지정할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.display_name": {
-          "source": "Modified Since",
+          "source": "Modified since",
           "message": "이후 수정됨"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
@@ -788,7 +788,7 @@
           "message": "이 날짜 이후에 수정된 대화만 반환합니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "정렬 필드"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.short_desc": {
@@ -832,7 +832,7 @@
           "message": "제목"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "정렬 순서"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.short_desc": {
@@ -876,7 +876,7 @@
           "message": "반환할 최대 대화 레코드 수입니다. 기본값은 50입니다."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
+          "source": "Update conversation",
           "message": "대화 업데이트"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -936,7 +936,7 @@
           "message": "대기 중"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
-          "source": "Assign To",
+          "source": "Assign to",
           "message": "할당 대상"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
@@ -948,7 +948,7 @@
           "message": "대화를 특정 Help Scout 사용자에게 할당하거나 재할당합니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.display_name": {
-          "source": "Get Customer",
+          "source": "Get customer",
           "message": "고객 조회"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.short_desc": {
@@ -972,7 +972,7 @@
           "message": "프로필을 조회할 고객의 ID를 선택하거나 입력합니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.display_name": {
-          "source": "Create Customer",
+          "source": "Create customer",
           "message": "고객 생성"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.short_desc": {
@@ -984,7 +984,7 @@
           "message": "Help Scout에서 새 고객 프로필을 생성합니다. 고객은 지원 팀에 문의하는 사람들을 나타냅니다. 연락처 정보, 회사 세부 정보 및 기타 관련 데이터를 저장할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "이름"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
@@ -996,7 +996,7 @@
           "message": "고객의 이름입니다. 최대 40자입니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "성"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "고객의 기본 이메일 주소입니다. 고객이 지원 주소로 이메일을 보낼 때 고객을 식별하는 데 사용됩니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.display_name": {
-          "source": "Email Type",
+          "source": "Email type",
           "message": "이메일 유형"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "고객의 전화번호입니다."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.display_name": {
-          "source": "Phone Type",
+          "source": "Phone type",
           "message": "전화번호 유형"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "기타"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "직책"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "문자열 형태의 고객 나이."
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.display_name": {
-          "source": "Delete Customer",
+          "source": "Delete customer",
           "message": "고객 삭제"
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "삭제할 고객의 ID를 선택하거나 입력하세요."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.display_name": {
-          "source": "List Customers",
+          "source": "List customers",
           "message": "고객 목록 조회"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "이 사서함의 대화와 연결된 고객만 반환합니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "이름"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "이 이름(First Name)을 가진 고객만 반환합니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "성"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "이 이메일 주소를 가진 고객만 반환합니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.display_name": {
-          "source": "Modified Since",
+          "source": "Modified since",
           "message": "이후 수정됨"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "이 날짜 또는 그 이후에 수정된 고객만 반환합니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "정렬 필드"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "수정 일시"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "정렬 순서"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "반환할 최대 고객 레코드 수입니다. 기본값은 50입니다."
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.display_name": {
-          "source": "Search Customers",
+          "source": "Search customers",
           "message": "고객 검색"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Help Scout 쿼리 구문을 사용한 검색 쿼리입니다. 예시: (email:\"john@example.com\"), (firstName:\"John\"), (phone:\"555-1234\"). AND/OR 연산자로 여러 조건을 결합할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "정렬 필드"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "수정 일시"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "정렬 순서"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.short_desc": {
@@ -1416,7 +1416,7 @@
           "message": "반환할 최대 고객 레코드 수입니다. 기본값은 50입니다."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.display_name": {
-          "source": "Update Customer",
+          "source": "Update customer",
           "message": "고객 업데이트"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.short_desc": {
@@ -1440,7 +1440,7 @@
           "message": "프로필을 업데이트할 고객을 선택합니다."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "이름"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
@@ -1452,7 +1452,7 @@
           "message": "고객의 이름(First Name)을 업데이트합니다. 최대 40자입니다."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "성"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "고객의 성을 업데이트합니다. 최대 40자입니다."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "직책"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "고객의 나이를 업데이트합니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.display_name": {
-          "source": "Get Company Report",
+          "source": "Get company report",
           "message": "회사 보고서 조회"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.short_desc": {
@@ -1560,7 +1560,7 @@
           "message": "Help Scout에서 전사적 성과 보고서를 조회합니다. 응대한 고객 수, 종료된 대화, 총 답장 수 및 만족도 점수와 같은 지표가 포함됩니다. Plus 및 Pro 플랜에서만 사용할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "시작일"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.short_desc": {
@@ -1572,7 +1572,7 @@
           "message": "보고 기간의 시작 날짜 및 시간(ISO 8601 형식)입니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "종료 날짜"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "보고 기간의 종료 날짜 및 시간(ISO 8601 형식)입니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.display_name": {
-          "source": "Previous Start",
+          "source": "Previous start",
           "message": "이전 시작일"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.short_desc": {
@@ -1596,7 +1596,7 @@
           "message": "비교 대상이 되는 이전 기간의 시작 날짜입니다. 변화량을 계산하는 데 사용됩니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.display_name": {
-          "source": "Previous End",
+          "source": "Previous end",
           "message": "이전 종료일"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.short_desc": {
@@ -1668,7 +1668,7 @@
           "message": "보고서를 필터링할 폴더 ID의 쉼표로 구분된 목록입니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.display_name": {
-          "source": "Get Email Report",
+          "source": "Get email report",
           "message": "이메일 보고서 가져오기"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.short_desc": {
@@ -1680,7 +1680,7 @@
           "message": "Help Scout에서 이메일 채널 성과 보고서를 조회합니다. 볼륨 지표, 해결 시간, 응답 시간 및 시간 분포 데이터가 포함됩니다. Plus 및 Pro 요금제에서만 사용할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "시작일"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "보고 기간의 시작 날짜 및 시간(ISO 8601 형식)입니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "종료 날짜"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "보고 기간의 종료 날짜 및 시간(ISO 8601 형식)입니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.display_name": {
-          "source": "Previous Start",
+          "source": "Previous start",
           "message": "이전 시작일"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.short_desc": {
@@ -1716,7 +1716,7 @@
           "message": "비교 대상이 되는 이전 기간의 시작 날짜입니다. 변화량을 계산하는 데 사용됩니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.display_name": {
-          "source": "Previous End",
+          "source": "Previous end",
           "message": "이전 종료일"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "보고서를 필터링할 폴더 ID의 쉼표로 구분된 목록입니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.display_name": {
-          "source": "Office Hours",
+          "source": "Office hours",
           "message": "업무 시간"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.short_desc": {
@@ -1776,7 +1776,7 @@
           "message": "true로 설정하면 시간 기반 지표에서 업무 시간만 고려합니다. 기본값은 false입니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.display_name": {
-          "source": "List Threads",
+          "source": "List threads",
           "message": "스레드 목록 조회"
         },
         "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "반환할 최대 스레드 레코드 수입니다. 기본값은 50입니다."
         },
         "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.display_name": {
-          "source": "Get Thread",
+          "source": "Get thread",
           "message": "스레드 가져오기"
         },
         "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.short_desc": {
@@ -1848,7 +1848,7 @@
           "message": "조회할 특정 스레드의 ID를 입력하세요."
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.display_name": {
-          "source": "Send Reply",
+          "source": "Send reply",
           "message": "답장 보내기"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.short_desc": {
@@ -1884,7 +1884,7 @@
           "message": "이 답장을 받을 고객을 선택합니다. 대화와 연결된 고객과 일치해야 합니다."
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.display_name": {
-          "source": "Reply Text",
+          "source": "Reply text",
           "message": "답장 텍스트"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "스팸"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.display_name": {
-          "source": "Save as Draft",
+          "source": "Save as draft",
           "message": "임시 저장"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "답장에 숨은 참조(BCC)할 이메일 주소 목록입니다. 이 수신자들은 다른 수신자 모르게 이메일 사본을 받게 됩니다."
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.display_name": {
-          "source": "Assign To",
+          "source": "Assign to",
           "message": "할당 대상"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.short_desc": {
@@ -1988,7 +1988,7 @@
           "message": "선택적으로 답장을 보낸 후 대화를 다른 Help Scout 사용자에게 할당합니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.display_name": {
-          "source": "List Saved Replies",
+          "source": "List saved replies",
           "message": "저장된 응답 목록 조회"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.short_desc": {
@@ -2024,7 +2024,7 @@
           "message": "반환할 최대 저장된 응답 레코드 수입니다. 기본값은 50입니다."
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.display_name": {
-          "source": "Find Mailbox by Name",
+          "source": "Find mailbox by name",
           "message": "이름으로 사서함 찾기"
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.short_desc": {
@@ -2036,7 +2036,7 @@
           "message": "이름으로 Help Scout에서 사서함을 검색합니다. 찾은 경우 사서함 세부 정보를 반환합니다. 대소문자를 구분하지 않으며 부분 일치를 지원합니다."
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.display_name": {
-          "source": "Mailbox Name",
+          "source": "Mailbox name",
           "message": "사서함 이름"
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.short_desc": {
@@ -2048,7 +2048,7 @@
           "message": "검색할 사서함의 이름입니다. 대소문자를 구분하지 않으며 부분 이름 또는 슬러그와 일치합니다."
         },
         "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "사용자 목록"
         },
         "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.short_desc": {
@@ -2096,7 +2096,7 @@
           "message": "반환할 최대 사용자 레코드 수입니다. 기본값은 50입니다."
         },
         "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.display_name": {
-          "source": "New Customer",
+          "source": "New customer",
           "message": "새 고객"
         },
         "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.short_desc": {
@@ -2108,7 +2108,7 @@
           "message": "이 트리거는 Help Scout에서 새 고객이 생성될 때마다 실행됩니다. 연락처 정보, 조직 및 커스텀 필드를 포함한 전체 고객 프로필을 제공합니다."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.display_name": {
-          "source": "Updated Customer",
+          "source": "Updated customer",
           "message": "업데이트된 고객"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.short_desc": {
@@ -2120,7 +2120,7 @@
           "message": "이 트리거는 Help Scout에서 고객 프로필이 업데이트될 때마다 실행됩니다. 변경된 필드를 포함하여 업데이트된 고객 데이터를 제공합니다."
         },
         "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
-          "source": "New Organization",
+          "source": "New organization",
           "message": "새 조직"
         },
         "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
@@ -2132,7 +2132,7 @@
           "message": "이 트리거는 Help Scout에서 새 조직이 생성될 때마다 실행됩니다. 조직을 통해 동일한 회사의 고객들을 그룹화할 수 있습니다."
         },
         "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
+          "source": "New conversation",
           "message": "새 대화"
         },
         "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -2156,7 +2156,7 @@
           "message": "선택적으로 특정 사서함의 대화에 대해서만 트리거하도록 필터링합니다. 모든 사서함에 대해 트리거하려면 비워 둡니다."
         },
         "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.display_name": {
-          "source": "Assigned Conversation",
+          "source": "Assigned conversation",
           "message": "할당된 대화"
         },
         "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.short_desc": {

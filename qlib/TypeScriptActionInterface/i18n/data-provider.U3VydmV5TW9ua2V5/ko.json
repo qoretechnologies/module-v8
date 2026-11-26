@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **SurveyMonkey**에 커스텀 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 아직 기본 액션으로 제공되지 않는 엔드포인트에 이 액션을 사용하세요."
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "연락처 생성"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "SurveyMonkey에서 이름, 성, 이메일 또는 전화번호로 새 연락처 생성"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "이름"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "연락처의 이름"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "성"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "연락처의 이메일 주소(이메일 또는 전화번호 중 하나 필수)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "전화번호"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -400,7 +400,7 @@
           "message": "연락처의 전화번호(이메일 또는 전화번호 중 하나 필수)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "연락처 목록"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "페이지네이션을 위한 페이지 번호 (1부터 시작)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "페이지당 항목 수"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
@@ -448,7 +448,7 @@
           "message": "모든 페이지에서 조회할 연락처의 최대 총 개수 (기본값: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Create Collector",
+          "source": "Create collector",
           "message": "수집기 생성"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -472,7 +472,7 @@
           "message": "컬렉터를 생성할 설문조사 선택"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
-          "source": "Collector Type",
+          "source": "Collector type",
           "message": "컬렉터 유형"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
@@ -500,7 +500,7 @@
           "message": "임베드된 설문조사"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
-          "source": "Collector Name",
+          "source": "Collector name",
           "message": "컬렉터 이름"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
@@ -512,7 +512,7 @@
           "message": "컬렉터에 대한 설명이 포함된 이름"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
-          "source": "List Collectors",
+          "source": "List collectors",
           "message": "수집기 목록 조회"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
@@ -548,7 +548,7 @@
           "message": "조회할 수집기의 최대 총 개수 (기본값: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
-          "source": "List Responses",
+          "source": "List responses",
           "message": "응답 목록 조회"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
@@ -584,7 +584,7 @@
           "message": "조회할 응답의 최대 총 개수 (기본값: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
-          "source": "Get Response",
+          "source": "Get response",
           "message": "응답 가져오기"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
@@ -620,7 +620,7 @@
           "message": "조회하려는 응답의 고유 식별자"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "답변 포함"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -632,7 +632,7 @@
           "message": "활성화하면 모든 질문 답변을 포함한 전체 응답 세부 정보를 조회합니다"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
-          "source": "Get Collector",
+          "source": "Get collector",
           "message": "컬렉터 가져오기"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
@@ -668,7 +668,7 @@
           "message": "세부 정보를 조회할 컬렉터 선택"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
-          "source": "Get Survey",
+          "source": "Get survey",
           "message": "설문조사 가져오기"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "세부 정보를 가져올 설문조사를 선택하세요"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
-          "source": "List Surveys",
+          "source": "List surveys",
           "message": "설문조사 목록 조회"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
@@ -716,7 +716,7 @@
           "message": "조회할 설문조사의 최대 총 개수 (기본값: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
-          "source": "Send Survey",
+          "source": "Send survey",
           "message": "설문조사 발송"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
@@ -752,7 +752,7 @@
           "message": "설문조사를 발송할 이메일 수집기를 선택하세요"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "이메일 제목"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "초대 이메일에 표시될 제목 줄"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
-          "source": "Email Body",
+          "source": "Email body",
           "message": "이메일 본문"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
@@ -776,7 +776,7 @@
           "message": "초대 이메일에 표시될 메시지 본문"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
-          "source": "Recipient Emails",
+          "source": "Recipient emails",
           "message": "수신자 이메일"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
@@ -788,7 +788,7 @@
           "message": "설문조사 초대를 보낼 이메일 주소 목록"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
-          "source": "Create Survey",
+          "source": "Create survey",
           "message": "설문조사 생성"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
@@ -860,7 +860,7 @@
           "message": "새 설문조사의 기반으로 사용할 템플릿의 ID"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
-          "source": "Copy Survey",
+          "source": "Copy survey",
           "message": "설문조사 복사"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
@@ -896,7 +896,7 @@
           "message": "복사된 설문조사에 표시될 제목"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Update Collector",
+          "source": "Update collector",
           "message": "수집기 업데이트"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -964,7 +964,7 @@
           "message": "닫힘"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
+          "source": "Close date",
           "message": "마감일"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "응답자가 설문조사를 완료한 후 리디렉션될 URL"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
-          "source": "Response Limit",
+          "source": "Response limit",
           "message": "응답 한도"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "수집기를 마감하기 전까지 허용할 최대 응답 수"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Delete Collector",
+          "source": "Delete collector",
           "message": "수집기 삭제"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "영구적으로 삭제할 수집기를 선택하세요"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
-          "source": "Get Response Counts",
+          "source": "Get response counts",
           "message": "응답 수 가져오기"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "응답 수를 조회할 설문조사 선택"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "연락처 업데이트"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "업데이트할 연락처의 고유 식별자"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "이름"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "연락처의 새 이름"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "성"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "연락처의 새 이메일 주소"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "전화번호"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "연락처의 새 전화번호"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "연락처 삭제"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "삭제할 연락처의 고유 식별자"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "연락처 목록 조회"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "조회할 연락처 목록의 최대 총 개수 (기본값: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "연락처 목록 생성"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "새 연락처 목록에 대한 설명이 포함된 이름"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
+          "source": "Add contacts to list",
           "message": "목록에 연락처 추가"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "하나 이상의 기존 연락처를 연락처 목록에 일괄 추가"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
-          "source": "Contact List ID",
+          "source": "Contact list ID",
           "message": "연락처 목록 ID"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "연락처 목록에 추가할 연락처 ID 목록"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
-          "source": "Get Survey Rollup",
+          "source": "Get survey rollup",
           "message": "설문조사 롤업 가져오기"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
@@ -1264,7 +1264,7 @@
           "message": "집계된 통계를 가져올 설문조사를 선택하세요"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
-          "source": "Get User Details",
+          "source": "Get user details",
           "message": "사용자 세부 정보 가져오기"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "계정 유형 및 권한을 포함하여 인증된 SurveyMonkey 사용자에 대한 세부 정보 조회"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
-          "source": "List Survey Folders",
+          "source": "List survey folders",
           "message": "설문조사 폴더 목록 조회"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "조회할 설문조사 폴더의 최대 총 개수 (기본값: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
-          "source": "Create Survey Folder",
+          "source": "Create survey folder",
           "message": "설문조사 폴더 생성"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "새 설문조사 폴더에 대한 설명이 포함된 제목"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
-          "source": "New Response",
+          "source": "New response",
           "message": "새 응답"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "완료된 응답을 모니터링할 특정 설문조사를 선택하세요"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
-          "source": "Response Disqualified",
+          "source": "Response disqualified",
           "message": "응답 탈락됨"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "탈락된 응답을 모니터링할 특정 설문조사를 선택하세요"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
-          "source": "Response Updated",
+          "source": "Response updated",
           "message": "응답 업데이트됨"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "업데이트된 응답을 모니터링할 특정 설문조사를 선택하세요"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
-          "source": "Collector Updated",
+          "source": "Collector updated",
           "message": "수집기 업데이트됨"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Vykonať vlastné volanie HTTP / REST API do **Browse AI** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.display_name": {
-          "source": "List Robots",
+          "source": "List robots",
           "message": "Zoznam robotov"
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Získa úplný zoznam všetkých robotov dostupných vo vašom účte Browse AI vrátane ich základných informácií a podrobností o konfigurácii"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.display_name": {
-          "source": "Get Robot",
+          "source": "Get robot",
           "message": "Získať robota"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Získa komplexné informácie o robote Browse AI vrátane jeho konfigurácie, vstupných parametrov a metadát"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Zoznam úloh"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Získa filtrovaný zoznam úloh vykonaných konkrétnym robotom Browse AI s možnosťou filtrovania podľa stavu, časového rozsahu a preferencií zoradenia"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.display_name": {
-          "source": "Run Task",
+          "source": "Run task",
           "message": "Spustiť úlohu"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Spustí jedinú úlohu pomocou zadaného robota Browse AI s poskytnutými vstupnými parametrami"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.display_name": {
-          "source": "Run Bulk Task",
+          "source": "Run bulk task",
           "message": "Spustiť hromadnú úlohu"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Spustí viacero úloh hromadne pomocou zadaného robota Browse AI s rôznymi sadami vstupných parametrov"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "Nová úloha"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Vyberte robota Browse AI, ktorého udalosti úloh chcete sledovať"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "Typ udalosti"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.short_desc": {

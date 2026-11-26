@@ -28,7 +28,7 @@
           "message": "Vykonať vlastné volanie HTTP / REST API do **Amazon EC2** pomocou overenia nakonfigurovaného spojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API spojenia), voliteľné parametre vyhľadávania, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.display_name": {
-          "source": "Start Instance",
+          "source": "Start instance",
           "message": "Spustiť inštanciu"
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Jedno alebo viacero ID inštancií EC2, ktoré chcete spustiť. Tieto inštancie musia byť v zastavenom stave."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.display_name": {
-          "source": "Stop Instance",
+          "source": "Stop instance",
           "message": "Zastaviť inštanciu"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Jedno alebo viacero ID inštancií EC2, ktoré chcete zastaviť. Tieto inštancie by mali byť v spustenom stave."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.display_name": {
-          "source": "Force Stop",
+          "source": "Force stop",
           "message": "Vynútiť zastavenie"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Ak je povolené, vynúti okamžité zastavenie inštancií. Je to ekvivalent odpojenia fyzického počítača od napájania."
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.display_name": {
-          "source": "Reboot Instance",
+          "source": "Reboot instance",
           "message": "Reštartovať inštanciu"
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Jedno alebo viacero ID inštancií EC2, ktoré chcete reštartovať. Tieto inštancie by mali byť v spustenom stave."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.display_name": {
-          "source": "Describe Instances",
+          "source": "Describe instances",
           "message": "Opísať inštancie"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Región AWS, z ktorého chcete načítať informácie o inštancii."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Maximálny počet výsledkov"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Maximálny počet inštancií vrátených v jednej požiadavke. Predvolená hodnota je 100."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Token nasledujúcej stránky"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Token používaný na stránkovanie na načípanie ďalšej sady výsledkov, ak je viac inštancií ako limit maximálneho počtu výsledkov."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.display_name": {
-          "source": "Describe Regions",
+          "source": "Describe regions",
           "message": "Opísať regióny"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Získa informácie o dostupných regiónoch AWS vrátane ich koncových bodov a stavu vyžiadaného aktivovania (opt-in)."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.display_name": {
-          "source": "All Regions",
+          "source": "All regions",
           "message": "Všetky regióny"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Ak je povolené, zahrnie všetky regióny AWS vrátane tých, ktoré pred použitím vyžadujú vyžiadané aktivovanie (opt-in)."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.display_name": {
-          "source": "New Instance",
+          "source": "New instance",
           "message": "Nová inštancia"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Región AWS, v ktorom chcete sledovať nové inštancie EC2. Ak nie je určené, predvolená hodnota je us-east-1."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.display_name": {
-          "source": "Instance States",
+          "source": "Instance states",
           "message": "Stavy inštancií"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Zastavené"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.display_name": {
-          "source": "New Scheduled Event",
+          "source": "New scheduled event",
           "message": "Nová naplánovaná udalosť"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Voliteľný zoznam konkrétnych ID inštancií EC2 na sledovanie. Ak zostane prázdny, u všetkých inštancií v regióne sa budú sledovať naplánované udalosti."
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
+          "source": "Event types",
           "message": "Typy udalostí"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.short_desc": {

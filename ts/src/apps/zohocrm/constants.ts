@@ -35,7 +35,7 @@ export const ZOHO_CRM_CONN_OPTIONS = {
     type: 'string',
   },
   'accounts-server': {
-    display_name: 'Accounts Server',
+    display_name: 'Accounts server',
     short_desc: 'Accounts Server URL (used for OAuth2)',
     desc: 'The accounts server URL for your Zoho CRM account (e.g., https://accounts.zoho.eu)',
     type: 'string',

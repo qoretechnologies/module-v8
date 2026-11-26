@@ -21,7 +21,7 @@ export const NOCODB_CONN_OPTIONS = {
   },
   token: {
     type: 'string',
-    display_name: 'NocoDB API Token',
+    display_name: 'NocoDB API token',
     short_desc: 'Please enter your NocoDB API token.',
     desc: `Can be found by clicking on your account icon -> Copy Auth Token, or create an API token in Account Settings -> Tokens.`,
   },

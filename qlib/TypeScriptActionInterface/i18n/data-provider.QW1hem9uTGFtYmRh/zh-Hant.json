@@ -28,7 +28,7 @@
           "message": "使用設定連線的驗證向 **AWS Lambda** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選填的查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對於尚未在此應用程式上作為一級動作公開的端點，請使用此動作。"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
-          "source": "List Functions",
+          "source": "List functions",
           "message": "列出函式"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
@@ -364,7 +364,7 @@
           "message": "指定要列出 Lambda 函式的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
-          "source": "Function Version",
+          "source": "Function version",
           "message": "函式版本"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
@@ -380,7 +380,7 @@
           "message": "所有版本"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
-          "source": "Master Region",
+          "source": "Master region",
           "message": "主要區域"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
@@ -392,7 +392,7 @@
           "message": "對於 Lambda@Edge 函式，請指定主要區域以篩選結果。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "最大項目數"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -404,7 +404,7 @@
           "message": "限制單一請求中傳回的函式數量。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "下一個標記"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -416,7 +416,7 @@
           "message": "使用先前回應中的標記來擷取下一頁結果。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
-          "source": "List Layers",
+          "source": "List layers",
           "message": "列出圖層"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
@@ -440,7 +440,7 @@
           "message": "指定要列出 Lambda 圖層的 AWS 區域。如果未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "相容的執行階段"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Amazon Linux 2 上的自訂執行階段"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "最大項目數"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -540,7 +540,7 @@
           "message": "限制單一請求中傳回的圖層數量。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "下一個標記"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -552,7 +552,7 @@
           "message": "使用先前回應中的標記來擷取下一頁結果。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
-          "source": "List Layer Versions",
+          "source": "List layer versions",
           "message": "列出層版本"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
@@ -576,7 +576,7 @@
           "message": "指定 Lambda 層所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "層名稱"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -588,7 +588,7 @@
           "message": "要列出版本的 Lambda 圖層名稱或 ARN。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "相容的執行階段"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Amazon Linux 2 上的自訂執行階段"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "最大項目數"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
@@ -688,7 +688,7 @@
           "message": "限制單一請求中傳回的圖層版本數量。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "下一個標記"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -700,7 +700,7 @@
           "message": "使用先前回應中的標記來擷取下一頁結果。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
-          "source": "Get Function",
+          "source": "Get function",
           "message": "獲取函式"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
@@ -724,7 +724,7 @@
           "message": "指定 Lambda 函式所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "函式名稱"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "指定版本號碼、別名名稱或 $LATEST，以取得該函式特定版本的資訊。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "Get Layer Version",
+          "source": "Get layer version",
           "message": "取得層版本"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
@@ -772,7 +772,7 @@
           "message": "指定 Lambda 層所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "層名稱"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -784,7 +784,7 @@
           "message": "要擷取版本資訊的 Lambda 層名稱或 ARN。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
-          "source": "Version Number",
+          "source": "Version number",
           "message": "版本號碼"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
@@ -796,7 +796,7 @@
           "message": "要擷取詳細資訊的層版本號碼。"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
-          "source": "Invoke Function",
+          "source": "Invoke function",
           "message": "呼叫函式"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
@@ -820,7 +820,7 @@
           "message": "指定 Lambda 函式所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "函式名稱"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "要呼叫的 Lambda 函式名稱、ARN 或部分 ARN。"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
-          "source": "Invocation Type",
+          "source": "Invocation type",
           "message": "呼叫類型"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Dry Run（僅驗證）"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
-          "source": "Log Type",
+          "source": "Log type",
           "message": "記錄類型"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "指定版本號碼、別名名稱或 $LATEST 以呼叫函式的特定版本。"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
-          "source": "New Function",
+          "source": "New function",
           "message": "新函式"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
@@ -924,7 +924,7 @@
           "message": "指定要監控新 Lambda 函式建立的 AWS 區域。如果未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "New Layer Version",
+          "source": "New layer version",
           "message": "新圖層版本"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {

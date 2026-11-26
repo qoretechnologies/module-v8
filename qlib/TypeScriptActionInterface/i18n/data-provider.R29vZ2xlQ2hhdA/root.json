@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Google Chat** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -352,8 +352,8 @@
           "message": "List spaces"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.short_desc": {
           "source": "Number of spaces to return per page",
@@ -364,8 +364,8 @@
           "message": "The maximum number of spaces to return in a single page. Default is 20."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -376,8 +376,8 @@
           "message": "A page token, received from a previous list spaces call. Provide this to retrieve the subsequent page."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.display_name": {
-          "source": "Space Type",
-          "message": "Space Type"
+          "source": "Space type",
+          "message": "Space type"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.short_desc": {
           "source": "Filter spaces by type",
@@ -448,8 +448,8 @@
           "message": "The unique identifier of the Google Chat space whose members you want to list."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.short_desc": {
           "source": "Number of members to return per page",
@@ -460,8 +460,8 @@
           "message": "The maximum number of members to return in a single page. Default is 20."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -484,8 +484,8 @@
           "message": "Filter the list of members by a specific field and value, such as role or member type."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
-          "message": "Filter Field"
+          "source": "Filter field",
+          "message": "Filter field"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
           "source": "The field to filter by",
@@ -504,8 +504,8 @@
           "message": "Member Type"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
-          "message": "Filter Value"
+          "source": "Filter value",
+          "message": "Filter value"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
           "source": "The value to filter by",
@@ -516,8 +516,8 @@
           "message": "The specific value to filter members by, based on the selected field."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.display_name": {
-          "source": "Show Groups",
-          "message": "Show Groups"
+          "source": "Show groups",
+          "message": "Show groups"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.short_desc": {
           "source": "Include group memberships in results",
@@ -528,8 +528,8 @@
           "message": "Whether to include group memberships in the results."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.display_name": {
-          "source": "Show Invited",
-          "message": "Show Invited"
+          "source": "Show invited",
+          "message": "Show invited"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.short_desc": {
           "source": "Include invited members in results",
@@ -540,8 +540,8 @@
           "message": "Whether to include members who have been invited but not yet joined."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.display_name": {
-          "source": "Use Admin Access",
-          "message": "Use Admin Access"
+          "source": "Use admin access",
+          "message": "Use admin access"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.short_desc": {
           "source": "Use admin privileges for the request",
@@ -552,8 +552,8 @@
           "message": "Whether to use admin access privileges when listing members."
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
-          "message": "Get Member"
+          "source": "Get member",
+          "message": "Get member"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.short_desc": {
           "source": "Get member",
@@ -588,8 +588,8 @@
           "message": "The unique identifier of the member you want to get information about."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
-          "message": "List Messages"
+          "source": "List messages",
+          "message": "List messages"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.short_desc": {
           "source": "List messages",
@@ -612,8 +612,8 @@
           "message": "The unique identifier of the Google Chat space whose messages you want to list."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
           "source": "Number of messages to return per page",
@@ -624,8 +624,8 @@
           "message": "The maximum number of messages to return in a single page. Default is 25."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -648,8 +648,8 @@
           "message": "Filter the list of messages by a specific field and value, such as create time or thread."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
-          "message": "Filter Field"
+          "source": "Filter field",
+          "message": "Filter field"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
           "source": "The field to filter by",
@@ -668,8 +668,8 @@
           "message": "Thread"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
-          "message": "Filter Value"
+          "source": "Filter value",
+          "message": "Filter value"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
           "source": "The value to filter by",
@@ -680,8 +680,8 @@
           "message": "The specific value to filter messages by, based on the selected field."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.display_name": {
-          "source": "Show Deleted",
-          "message": "Show Deleted"
+          "source": "Show deleted",
+          "message": "Show deleted"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
           "source": "Include deleted messages in results",
@@ -692,8 +692,8 @@
           "message": "Whether to include deleted messages in the results."
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
-          "message": "Sort Order"
+          "source": "Sort order",
+          "message": "Sort order"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.short_desc": {
           "source": "Order to sort messages by create time",
@@ -712,8 +712,8 @@
           "message": "Descending"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
-          "message": "Get Message"
+          "source": "Get message",
+          "message": "Get message"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.short_desc": {
           "source": "Get message",
@@ -748,8 +748,8 @@
           "message": "The unique identifier of the message you want to get information about."
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete Message",
-          "message": "Delete Message"
+          "source": "Delete message",
+          "message": "Delete message"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
           "source": "Delete message",
@@ -784,8 +784,8 @@
           "message": "The unique identifier of the message you want to delete."
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.display_name": {
-          "source": "Force Delete",
-          "message": "Force Delete"
+          "source": "Force delete",
+          "message": "Force delete"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.short_desc": {
           "source": "Force deletion of the message",
@@ -796,8 +796,8 @@
           "message": "Whether to force delete the message even if it cannot be normally deleted."
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.display_name": {
-          "source": "Send Message",
-          "message": "Send Message"
+          "source": "Send message",
+          "message": "Send message"
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.short_desc": {
           "source": "Send message",
@@ -844,8 +844,8 @@
           "message": "The ID of an existing message to reply to or update. Leave empty to send a new message."
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
-          "message": "New Message"
+          "source": "New message",
+          "message": "New message"
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.short_desc": {
           "source": "New message",

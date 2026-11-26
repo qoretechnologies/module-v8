@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **Canva** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nŠpecifikujte metódu HTTP, cestu URI (relatívnu k základnej adrese API pripojenia), voliteľné parametre vyhľadávania, hlavičky a telo požiadavky. Odpoveď sa vráti ako objekt typu hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú k dispozícii ako samostatné akcie v tejto aplikácii."
         },
         "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.display_name": {
-          "source": "Upload Image",
+          "source": "Upload image",
           "message": "Nahrať obrázok"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Nahrajte súbor obrázka do svojho účtu Canva a voliteľne nastavte názov a značky"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.display_name": {
-          "source": "Image File",
+          "source": "Image file",
           "message": "Súbor obrázka"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Pridajte značky, ktoré pomôžu neskôr zorganizovať a nájsť váš obrázok"
         },
         "app.Q2FudmE.action.Z2V0X2ltYWdl.display_name": {
-          "source": "Get Image",
+          "source": "Get image",
           "message": "Získať obrázok"
         },
         "app.Q2FudmE.action.Z2V0X2ltYWdl.short_desc": {
@@ -532,7 +532,7 @@
           "message": "ID prvku Canva obrázka, ktorý chcete získať"
         },
         "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.display_name": {
-          "source": "Delete Image",
+          "source": "Delete image",
           "message": "Odstrániť obrázok"
         },
         "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.short_desc": {
@@ -556,7 +556,7 @@
           "message": "ID prvku Canva obrázka, ktorý chcete odstrániť"
         },
         "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.display_name": {
-          "source": "Update Image",
+          "source": "Update image",
           "message": "Aktualizovať obrázok"
         },
         "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Aktualizovať značky priradené k obrázku pre lepšiu organizáciu"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.display_name": {
-          "source": "Upload Image by URL",
+          "source": "Upload image by URL",
           "message": "Nahrať obrázok cez URL"
         },
         "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Pridajte značky, ktoré pomôžu neskôr zorganizovať a nájsť váš obrázok"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.display_name": {
-          "source": "List Designs",
+          "source": "List designs",
           "message": "Zoznam návrhov"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Získať zoznam vašich návrhov Canva s voliteľným filtrovaním a zoradením"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Vyhľadávací dopyt"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Zadajte vyhľadávací výraz na nájdenie konkrétnych návrhov podľa názvu alebo obsahu"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.display_name": {
-          "source": "Continuation Token",
+          "source": "Continuation token",
           "message": "Token pokračovania"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Tento token použite na pokračovanie tam, kde predchádzajúca požiadavka skončila"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.display_name": {
-          "source": "Ownership Filter",
+          "source": "Ownership filter",
           "message": "Filter vlastníctva"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Zdieľané"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Zoradiť podľa"
         },
         "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Názov vzostupne"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.display_name": {
-          "source": "Create Comment Thread",
+          "source": "Create comment thread",
           "message": "Vytvoriť vlákno komentárov"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.short_desc": {
@@ -792,7 +792,7 @@
           "message": "Priradiť tento komentár konkrétnemu členovi tímu na riešenie"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.display_name": {
-          "source": "Create Reply",
+          "source": "Create reply",
           "message": "Vytvoriť odpoveď"
         },
         "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Zadajte textový obsah odpovede"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.display_name": {
-          "source": "List Thread Replies",
+          "source": "List thread replies",
           "message": "Zobraziť zoznam odpovedí vo vlákne"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Nastavte maximálny počet odpovedí na načítanie (predvolené: 50)"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.display_name": {
-          "source": "Continuation Token",
+          "source": "Continuation token",
           "message": "Token pokračovania"
         },
         "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Jedinečný identifikátor vlákna komentárov, ktorého odpovede chcete zobraziť"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.display_name": {
-          "source": "New Design",
+          "source": "New design",
           "message": "Nový návrh"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Tento spúšťač sa aktivuje pri vytvorení nového návrhu vo vašom účte Canva s voliteľným filtrovaním podľa vlastníctva a vyhľadávacieho dotazu"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Vyhľadávací dopyt"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Voliteľný vyhľadávací výraz na filtrovanie návrhov, ktoré spúšťajú udalosť. Udalosť spustia iba návrhy zodpovedajúce tomuto dotazu"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.display_name": {
-          "source": "Ownership Filter",
+          "source": "Ownership filter",
           "message": "Filter vlastníctva"
         },
         "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Zdieľané"
         },
         "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.display_name": {
-          "source": "New Thread Reply",
+          "source": "New thread reply",
           "message": "Nová odpoveď vo vlákne"
         },
         "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do služby **Calendly** pomocí autentizace nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou k dispozici jako primární akce v této aplikaci."
         },
         "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.display_name": {
-          "source": "List Event Invitees",
+          "source": "List event invitees",
           "message": "Seznam pozvaných na událost"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Maximální počet pozvaných, které lze vrátit v odpovědi (výchozí hodnota je 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Tento token použijte k načtení další stránky výsledků, pokud je k dispozici více pozvaných, než je limit počtu."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "Filtr e-mailu"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Filtrovat výsledky tak, aby zahrnovaly pouze pozvané s touto konkrétní e-mailovou adresou."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "Možnosti řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Nakonfigurujte způsob řazení seznamu pozvaných."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Směr řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -432,7 +432,7 @@
           "message": "Sestupně"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Vytvořeno"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.display_name": {
-          "source": "Status Filter",
+          "source": "Status filter",
           "message": "Filtr stavu"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.short_desc": {
@@ -468,7 +468,7 @@
           "message": "Zrušeno"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.display_name": {
-          "source": "List Events",
+          "source": "List events",
           "message": "Seznam událostí"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.short_desc": {
@@ -492,7 +492,7 @@
           "message": "Maximální počet událostí, které lze vrátit v odpovědi (výchozí hodnota je 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.display_name": {
-          "source": "Group Filter",
+          "source": "Group filter",
           "message": "Filtr skupiny"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.short_desc": {
@@ -504,7 +504,7 @@
           "message": "Filtrovat výsledky tak, aby zahrnovaly pouze události spojené s konkrétní skupinou."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.display_name": {
-          "source": "Invitee Email Filter",
+          "source": "Invitee email filter",
           "message": "Filtr e-mailu pozvaného"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.short_desc": {
@@ -516,7 +516,7 @@
           "message": "Filtrovat výsledky tak, aby zahrnovaly pouze události, kde je zadaná e-mailová adresa pozvanou osobou."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.display_name": {
-          "source": "Maximum Start Time",
+          "source": "Maximum start time",
           "message": "Maximální čas začátku"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Filtrovat události tak, aby zahrnovaly pouze ty, které začínají před tímto datem a časem."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.display_name": {
-          "source": "Minimum Start Time",
+          "source": "Minimum start time",
           "message": "Minimální čas začátku"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Filtrovat události tak, aby zahrnovaly pouze ty, které začínají po tomto datu a času."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Tento token použijte k načtení další stránky výsledků, pokud je k dispozici více událostí, než je limit počtu."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "Možnosti řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.short_desc": {
@@ -564,7 +564,7 @@
           "message": "Nakonfigurujte způsob řazení seznamu událostí."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Směr řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -584,7 +584,7 @@
           "message": "Sestupně"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Filtrovat události tak, aby zahrnovaly pouze ty z konkrétní organizace."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.display_name": {
-          "source": "User Filter",
+          "source": "User filter",
           "message": "Filtr uživatele"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Filtrovat výsledky tak, aby zahrnovaly pouze události spojené s konkrétním uživatelem."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Seznam skupin"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Maximální počet skupin, které lze vrátit v odpovědi (výchozí hodnota je 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Organizace, ze které se má načíst seznam skupin."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.display_name": {
-          "source": "Get Event Invitee",
+          "source": "Get event invitee",
           "message": "Získat pozvaného účastníka události"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Vyberte konkrétního pozvaného účastníka, jehož informace chcete získat."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.display_name": {
-          "source": "Get Event",
+          "source": "Get event",
           "message": "Získat událost"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Vyberte konkrétní událost, jejíže detaily chcete získat."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.display_name": {
-          "source": "Get Group",
+          "source": "Get group",
           "message": "Získat skupinu"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Vyberte konkrétní skupinu, jejíže detaily chcete z vaší organizace získat."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.display_name": {
-          "source": "List Event Types",
+          "source": "List event types",
           "message": "Seznam typů událostí"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Maximální počet typů událostí k vrácení v odpovědi (výchozí je 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Tento token použijte k načtení další stránky výsledků, pokud je k dispozici více typů událostí, než je limit počtu."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "Možnosti řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Nakonfigurujte způsob řazení seznamu typů událostí."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Směr řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Sestupně"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole řazení"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Filtrovat typy událostí tak, aby zahrnovaly pouze ty z konkrétní organizace."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.display_name": {
-          "source": "User Filter",
+          "source": "User filter",
           "message": "Filtr uživatele"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Filtrovat výsledky tak, aby zahrnovaly pouze typy událostí spojené s konkrétním uživatelem."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.display_name": {
-          "source": "Admin Managed Filter",
+          "source": "Admin managed filter",
           "message": "Filtr spravovaných správcem"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Filtrovat typy událostí podle toho, zda jsou spravovány správcem."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.display_name": {
-          "source": "Active Filter",
+          "source": "Active filter",
           "message": "Filtr aktivních"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Filtrovat typy událostí podle toho, zda jsou aktuálně aktivní a dostupné pro rezervaci."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.display_name": {
-          "source": "User Availability Schedule",
+          "source": "User availability schedule",
           "message": "Rozvrh dostupnosti uživatele"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Filtrovat typy událostí na základě konkrétního rozvrhu dostupnosti uživatele."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.display_name": {
-          "source": "Get Event Type",
+          "source": "Get event type",
           "message": "Získat typ události"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Získává podrobné informace o typu události včetně trvání, nastavení a konfigurace."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.display_name": {
-          "source": "Event Type ID",
+          "source": "Event type ID",
           "message": "ID typu události"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Vyberte konkrétní typ události, jehož detaily chcete získat."
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.display_name": {
-          "source": "Create Scheduling Link",
+          "source": "Create scheduling link",
           "message": "Vytvořit odkaz pro plánování"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Generuje odkaz pro plánování, který lze sdílet s ostatními pro rezervaci schůzek pro konkrétní typ události."
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.display_name": {
-          "source": "Maximum Event Count",
+          "source": "Maximum event count",
           "message": "Maximální počet událostí"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Maximální počet událostí, které lze pomocí tohoto odkazu naplánovat, než se stane neaktivním."
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "Typ události"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Vyberte typ události, který si lidé budou moci rezervovat pomocí tohoto odkazu pro plánování."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.display_name": {
-          "source": "List Organization Members",
+          "source": "List organization members",
           "message": "Seznam členů organizace"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Maximální počet členů organizace, kteří mají být vraceni v odpovědi (výchozí hodnota je 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Tento token použijte k načtení další stránky výsledků, pokud je členů více než nastavený limit počtu."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "Filtr e-mailu"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Organizace, ze které má být načten seznam členů."
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.display_name": {
-          "source": "Cancel Event",
+          "source": "Cancel event",
           "message": "Zrušit událost"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Vyberte konkrétní událost, kterou chcete zrušit z vašich naplánovaných událostí."
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.display_name": {
-          "source": "Cancellation Reason",
+          "source": "Cancellation reason",
           "message": "Důvod zrušení"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "Volitelný důvod, který bude zahrnut v oznámení o zrušení odeslaném účastníkům."
         },
         "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.display_name": {
-          "source": "Event Canceled",
+          "source": "Event canceled",
           "message": "Událost zrušena"
         },
         "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Tento spouštěč se aktivuje, když je jakákoli naplánovaná událost ve vašem účtu Calendly zrušena pořadatelem nebo pozvaným účastníkem."
         },
         "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.display_name": {
-          "source": "New Form Submission Created",
+          "source": "New form submission created",
           "message": "Vytvořeno nové odeslání formuláře"
         },
         "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Tento spouštěč se aktivuje, když někdo odešle směrovací formulář, který pomáhá přesměrovat uživatele na odpovídající možnost plánování."
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.display_name": {
-          "source": "Invitee Created",
+          "source": "Invitee created",
           "message": "Pozvaný účastník vytvořen"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Skupina"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.display_name": {
-          "source": "Invitee Canceled",
+          "source": "Invitee canceled",
           "message": "Pozvaný účastník zrušil schůzku"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Skupina"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.display_name": {
-          "source": "Invitee No-Show Created",
+          "source": "Invitee no-show created",
           "message": "Vytvořena neúčast pozvaného účastníka"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.short_desc": {

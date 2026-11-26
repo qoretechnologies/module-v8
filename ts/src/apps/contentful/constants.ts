@@ -17,7 +17,7 @@ export const CONTENTFUL_API_URL = 'https://api.contentful.com';
 export const CONTENTFUL_CONN_OPTIONS = {
   token: {
     type: 'string',
-    display_name: 'Content Management API Token',
+    display_name: 'Content management API token',
     short_desc: 'Your Contentful Content Management API access token.',
     desc: 'A personal access token for the Contentful Content Management API. Can be created in Settings > CMA tokens in your Contentful dashboard.',
   },

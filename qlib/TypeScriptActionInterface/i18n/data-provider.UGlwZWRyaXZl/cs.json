@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Pipedrive** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci k dispozici jako samostatné akce."
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhledat záznamy"
         },
         "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Přidá nový obchod. Všechny obchody vytvořené prostřednictvím Pipedrive API budou mít `origin` nastaveno na `API`. Upozorňujeme, že spolu s požadavkem můžete zadat další vlastní pole, která zde nejsou popsána. Tato vlastní pole se u každého účtu Pipedrive liší a lze je rozpoznat podle dlouhých hashů jako klíčů. Chcete-li zjistit, která vlastní pole existují, načtěte dealFields a vyhledejte hodnoty `key`. Další informace naleznete v návodu pro <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">přidání obchodu<-a>."
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
-          "source": "Delete a Deal",
+          "source": "Delete a deal",
           "message": "Smazat obchod"
         },
         "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Aktualizuje vlastnosti osoby. Další informace naleznete v návodu pro <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">aktualizaci osoby<-a>.<br>Pokud společnost používá [produkt Campaigns](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), tento koncový bod bude také přijímat a vracet pole `data.marketing_status`."
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
+          "source": "Get all projects",
           "message": "Získat všechny projekty"
         },
         "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Aktualizuje úkol."
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.display_name": {
-          "source": "Activity Action",
+          "source": "Activity action",
           "message": "Akce s aktivitou"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Spustí se při vytvoření, změně nebo odstranění jakékoli aktivity"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.display_name": {
-          "source": "Deal Action",
+          "source": "Deal action",
           "message": "Akce s obchodem"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Spustí se při vytvoření, změně nebo odstranění jakékoli aktivity"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.display_name": {
-          "source": "Lead Action",
+          "source": "Lead action",
           "message": "Akce s leadem"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Spustí se při vytvoření, změně nebo odstranění jakékoli aktivity"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.display_name": {
-          "source": "Note Action",
+          "source": "Note action",
           "message": "Akce s poznámkou"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Spustí se při vytvoření, změně nebo odstranění jakékoli aktivity"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.display_name": {
-          "source": "Organization Action",
+          "source": "Organization action",
           "message": "Akce s organizací"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.short_desc": {
@@ -1220,7 +1220,7 @@
           "message": "Spustí se při vytvoření, změně nebo odstranění jakékoli aktivity"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.display_name": {
-          "source": "Person Action",
+          "source": "Person action",
           "message": "Akce s osobou"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Spustí se při vytvoření, změně nebo odstranění jakékoli aktivity"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.display_name": {
-          "source": "User Action",
+          "source": "User action",
           "message": "Akce s uživatelem"
         },
         "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.short_desc": {

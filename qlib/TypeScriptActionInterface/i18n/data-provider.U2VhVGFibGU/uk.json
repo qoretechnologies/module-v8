@@ -28,7 +28,7 @@
           "message": "Зробіть користувацький виклик HTTP / REST API до **SeaTable**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть HTTP-метод, шлях URI (відносно базового URL API підключення), необов’язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код статусу, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому застосунку."
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Пошук записів"
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Назва таблиці"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.display_name": {
-          "source": "Run SQL Query",
+          "source": "Run SQL query",
           "message": "Виконати SQL-запит"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Виконує SQL-запит до вашої бази SeaTable та повертає результати. Підтримує інструкції SELECT, INSERT, UPDATE та DELETE. Для запитів SELECT може бути повернено максимум 10 000 рядків."
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.display_name": {
-          "source": "SQL Query",
+          "source": "SQL query",
           "message": "SQL-запит"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Введіть ваш SQL-запит. Використовуйте зворотні лапки навколо назв стовпців зі спеціальними символами (наприклад, `My Column`). Приклад: SELECT * FROM `Table1` WHERE `Status` = 'Active' LIMIT 100"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "Новий рядок"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.short_desc": {

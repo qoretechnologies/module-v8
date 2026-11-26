@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Google Chat** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n對於此應用程式尚未作為頂級操作公開的端點，請使用此操作。"
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "列出空間"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.short_desc": {
@@ -364,7 +364,7 @@
           "message": "單一頁面中傳回的空間數量上限。預設值為 20。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.short_desc": {
@@ -376,7 +376,7 @@
           "message": "從先前的空間清單呼叫收到的分頁權杖。提供此權杖以擷取後續頁面。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.display_name": {
-          "source": "Space Type",
+          "source": "Space type",
           "message": "空間類型"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "您要列出其成員之 Google Chat 聊天室的專屬 ID。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.short_desc": {
@@ -460,7 +460,7 @@
           "message": "單一頁面中要傳回的成員數量上限。預設為 20。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.short_desc": {
@@ -484,7 +484,7 @@
           "message": "依特定欄位和值（例如角色或成員類型）篩選成員清單。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "過濾欄位"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -504,7 +504,7 @@
           "message": "成員類型"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "過濾值"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -516,7 +516,7 @@
           "message": "根據所選欄位篩選成員的特定值。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.display_name": {
-          "source": "Show Groups",
+          "source": "Show groups",
           "message": "顯示群組"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.short_desc": {
@@ -528,7 +528,7 @@
           "message": "結果中是否包含群組成員資格。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.display_name": {
-          "source": "Show Invited",
+          "source": "Show invited",
           "message": "顯示受邀者"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.short_desc": {
@@ -540,7 +540,7 @@
           "message": "是否包含已被邀請但尚未加入的成員。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.display_name": {
-          "source": "Use Admin Access",
+          "source": "Use admin access",
           "message": "使用管理員存取權"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.short_desc": {
@@ -552,7 +552,7 @@
           "message": "列生成員清單時是否使用管理員存取權限。"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "取得成員"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.short_desc": {
@@ -588,7 +588,7 @@
           "message": "您要取得其資訊之成員的專屬 ID。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "列出訊息"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -612,7 +612,7 @@
           "message": "要列出其訊息的 Google Chat 聊天室專屬識別碼。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
@@ -624,7 +624,7 @@
           "message": "單一頁面中傳回的訊息數量上限。預設值為 25。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.short_desc": {
@@ -648,7 +648,7 @@
           "message": "依特定欄位和值篩選訊息清單，例如建立時間或討論串。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "過濾欄位"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -668,7 +668,7 @@
           "message": "線程"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "過濾值"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -680,7 +680,7 @@
           "message": "根據所選欄位篩選訊息的特定值。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.display_name": {
-          "source": "Show Deleted",
+          "source": "Show deleted",
           "message": "顯示已刪除項目"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "結果中是否包含已刪除的訊息。"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "排序順序"
         },
         "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "降序"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "取得訊息"
         },
         "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -748,7 +748,7 @@
           "message": "您要取得其資訊之訊息的專屬 ID。"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete Message",
+          "source": "Delete message",
           "message": "刪除訊息"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -784,7 +784,7 @@
           "message": "您要刪除之訊息的專屬 ID。"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.display_name": {
-          "source": "Force Delete",
+          "source": "Force delete",
           "message": "強制刪除"
         },
         "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.short_desc": {
@@ -796,7 +796,7 @@
           "message": "即使訊息無法正常刪除，是否仍要強制刪除該訊息。"
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.display_name": {
-          "source": "Send Message",
+          "source": "Send message",
           "message": "傳送訊息"
         },
         "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.short_desc": {
@@ -844,7 +844,7 @@
           "message": "要回覆或更新的現有訊息 ID。留空以傳送新訊息。"
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "新訊息"
         },
         "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.short_desc": {

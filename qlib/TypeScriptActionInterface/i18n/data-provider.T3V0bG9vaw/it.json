@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata a **Microsoft Outlook** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query facoltativi, intestazioni e corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni native in questa app."
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Crea contatto"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Crea un nuovo contatto con dettagli quali nome, email, numeri di telefono e informazioni professionali nei tuoi contatti di Microsoft Outlook."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Nome"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Inserisci il nome del contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Cognome"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Inserisci il cognome del contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "Indirizzi email"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Inserisci uno o più indirizzi email per il contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Indirizzo email"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Immetti un indirizzo email valido per il contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nome visualizzato"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Immetti come desideri che il nome appaia per questo indirizzo email."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.display_name": {
-          "source": "Business Phones",
+          "source": "Business phones",
           "message": "Telefoni di lavoro"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Inserisci uno o più numeri di telefono di lavoro per il contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
+          "source": "Mobile phone",
           "message": "Cellulare"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Inserisci il numero di cellulare per il contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "Qualifica professionale"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Inserisci la qualifica professionale o il ruolo del contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Nome azienda"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Inserisci il reparto o la divisione aziendale in cui lavora il contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.display_name": {
-          "source": "Office Location",
+          "source": "Office location",
           "message": "Sede dell'ufficio"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Inserisci la sede fisica o l'ufficio in cui lavora il contatto."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.display_name": {
-          "source": "Business Address",
+          "source": "Business address",
           "message": "Indirizzo di lavoro"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Immetti la città o il paese per l'indirizzo aziendale."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.display_name": {
-          "source": "Country/Region",
+          "source": "Country/region",
           "message": "Paese/Regione"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Immetti il paese o la regione per l'indirizzo aziendale."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Codice postale"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Inserisci il codice postale o zip del domicilio aziendale."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stato/Provincia"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Inserisci l'indirizzo stradale, comprensivo del numero civico e del nome della strada."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.display_name": {
-          "source": "Create Event",
+          "source": "Create event",
           "message": "Crea evento"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Inserisci un titolo o un oggetto per l'evento che apparirà nel tuo calendario."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.c3RhcnQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Ora di inizio"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.c3RhcnQ.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Inserisci la data e l'ora di inizio dell'evento."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.dGltZXpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "Fuso orario"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.dGltZXpvbmU.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Seleziona il fuso orario applicabile alle ore di inizio e fine dell'evento."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.ZW5k.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Ora di fine"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.ZW5k.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Aggiungi uno o più partecipanti da invitare all'evento."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Indirizzo email"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.YWRkcmVzcw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Immetti l'indirizzo e-mail della persona che desideri invitare."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nome visualizzato"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.bmFtZQ.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Inserisci la descrizione o i dettagli dell'evento che i partecipanti vedranno nell'invito."
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.Ym9keUNvbnRlbnRUeXBl.display_name": {
-          "source": "Body Content Type",
+          "source": "Body content type",
           "message": "Tipo di contenuto del corpo"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.Ym9keUNvbnRlbnRUeXBl.short_desc": {
@@ -708,7 +708,7 @@
           "message": "HTML"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "Riunione online"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Abilita questa opzione per rendere questo evento una riunione online e generare un link per la riunione."
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWNvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Elimina contatto"
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWNvbnRhY3Q.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Seleziona l'identificatore univoco del contatto da eliminare."
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWV2ZW50.display_name": {
-          "source": "Delete Event",
+          "source": "Delete event",
           "message": "Elimina evento"
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWV2ZW50.short_desc": {
@@ -780,7 +780,7 @@
           "message": "Seleziona l'identificatore univoco dell'evento da eliminare."
         },
         "app.T3V0bG9vaw.action.bGlzdC1jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Elenca contatti"
         },
         "app.T3V0bG9vaw.action.bGlzdC1jb250YWN0cw.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Inserisci del testo per filtrare i contatti per nome o indirizzo email. Verranno restituiti solo i contatti che corrispondono al filtro."
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.display_name": {
-          "source": "List Events",
+          "source": "List events",
           "message": "Elenca eventi"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Seleziona il calendario da cui desideri recuperare gli eventi."
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Date and Time",
+          "source": "Start date and time",
           "message": "Data e ora di inizio"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Inserisci una data e un'ora per recuperare gli eventi che iniziano da o dopo questo orario."
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Date and Time",
+          "source": "End date and time",
           "message": "Data e ora di fine"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Specifica il numero massimo di eventi da recuperare dal calendario di Outlook."
         },
         "app.T3V0bG9vaw.action.bWFuYWdlLWVtYWls.display_name": {
-          "source": "Manage Email",
+          "source": "Manage email",
           "message": "Gestisci email"
         },
         "app.T3V0bG9vaw.action.bWFuYWdlLWVtYWls.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Sposta"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.display_name": {
-          "source": "Search Emails",
+          "source": "Search emails",
           "message": "Cerca email"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.short_desc": {
@@ -944,7 +944,7 @@
           "message": "Imposta il numero massimo di risultati email da restituire. Il valore predefinito è 50."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Data di inizio"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Includi solo le email ricevute a partire da o dopo questa data e ora."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Data di fine"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Includi solo le email ricevute entro o prima di questa data e ora."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZnJvbVNlbmRlcg.display_name": {
-          "source": "From Sender",
+          "source": "From sender",
           "message": "Dal mittente"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZnJvbVNlbmRlcg.short_desc": {
@@ -980,7 +980,7 @@
           "message": "Includi solo le email provenienti da questo specifico indirizzo email mittente."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.dG9SZWNpcGllbnQ.display_name": {
-          "source": "To Recipient",
+          "source": "To recipient",
           "message": "Al destinatario"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.dG9SZWNpcGllbnQ.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "Includi solo le email con questo testo nell'oggetto."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aGFzQXR0YWNobWVudHM.display_name": {
-          "source": "Has Attachments",
+          "source": "Has attachments",
           "message": "Ha allegati"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aGFzQXR0YWNobWVudHM.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "Se impostato su true, include solo le email con allegati. Se false, include solo le email senza allegati."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aXNSZWFk.display_name": {
-          "source": "Is Read",
+          "source": "Is read",
           "message": "È letto"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aXNSZWFk.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Se impostato su true, include solo le email che sono state lette. Se false, include solo le email non lette."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE5hbWVz.display_name": {
-          "source": "Attachment Names",
+          "source": "Attachment names",
           "message": "Nomi allegati"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE5hbWVz.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "Includi solo le email che hanno allegati con questi nomi file."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudEZpbGVuYW1lUGF0dGVybg.display_name": {
-          "source": "Attachment Filename Pattern",
+          "source": "Attachment filename pattern",
           "message": "Pattern nome file allegato"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudEZpbGVuYW1lUGF0dGVybg.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Filtra le email tramite un pattern di espressione regolare che corrisponde ai nomi file degli allegati. Esempio: \".*\\.pdf$\" corrisponderà a tutti i file PDF."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pbWVUeXBlcw.display_name": {
-          "source": "Attachment MIME Types",
+          "source": "Attachment MIME types",
           "message": "Tipi MIME allegato"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pbWVUeXBlcw.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "XML"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pblNpemU.display_name": {
-          "source": "Attachment Minimum Size",
+          "source": "Attachment minimum size",
           "message": "Dimensione minima allegato"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pblNpemU.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Includi solo le email con allegati di dimensione maggiore o uguale a questa grandezza in byte."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1heFNpemU.display_name": {
-          "source": "Attachment Maximum Size",
+          "source": "Attachment maximum size",
           "message": "Dimensione massima allegato"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1heFNpemU.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Includi solo le email con allegati di dimensione inferiore o uguale a questa grandezza in byte."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.Ym9keUNvbnRhaW5z.display_name": {
-          "source": "Body Contains",
+          "source": "Body contains",
           "message": "Il corpo contiene"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.Ym9keUNvbnRhaW5z.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Includi solo le email che contengono questo testo nel corpo."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aW5jbHVkZUF0dGFjaG1lbnRz.display_name": {
-          "source": "Include Attachments",
+          "source": "Include attachments",
           "message": "Includi allegati"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aW5jbHVkZUF0dGFjaG1lbnRz.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Ordina i risultati delle email in base a un campo specifico. Il valore predefinito prevede l'ordinamento decrescente per data di ricezione."
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Campo di ordinamento"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "Importanza"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Criterio di ordinamento"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.b3JkZXI.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Decrescente"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "Invia email"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Componi e invia un messaggio email dal tuo account Microsoft Outlook a uno o più destinatari."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.display_name": {
-          "source": "To Recipients",
+          "source": "To recipients",
           "message": "Destinatari A"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Inserisci uno o più indirizzi email per i destinatari principali dell'email."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Indirizzo email"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.YWRkcmVzcw.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Immetti l'indirizzo e-mail del destinatario."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nome visualizzato"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.bmFtZQ.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "Immettere facoltativamente un nome visualizzato per il destinatario."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.display_name": {
-          "source": "CC Recipients",
+          "source": "CC recipients",
           "message": "Destinatari in copia (CC)"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Facoltativamente, inserisci uno o più indirizzi email per i destinatari da mettere in copia nell'email."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Indirizzo email"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.YWRkcmVzcw.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Immetti l'indirizzo e-mail del destinatario CC."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nome visualizzato"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.bmFtZQ.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Immettere facoltativamente un nome visualizzato per il destinatario in copia."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.display_name": {
-          "source": "BCC Recipients",
+          "source": "BCC recipients",
           "message": "Destinatari CCN"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "Facoltativamente, inserisci uno o più indirizzi email per i destinatari da mettere in copia nascosta nell'email."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Indirizzo email"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.YWRkcmVzcw.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "Immetti l'indirizzo e-mail del destinatario BCC."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nome visualizzato"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.bmFtZQ.short_desc": {
@@ -1416,7 +1416,7 @@
           "message": "Inserisci il contenuto del messaggio principale dell'email."
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Ym9keUNvbnRlbnRUeXBl.display_name": {
-          "source": "Body Content Type",
+          "source": "Body content type",
           "message": "Tipo di contenuto del corpo"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Ym9keUNvbnRlbnRUeXBl.short_desc": {
@@ -1436,7 +1436,7 @@
           "message": "HTML"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.c2F2ZVRvU2VudEl0ZW1z.display_name": {
-          "source": "Save to Sent Items",
+          "source": "Save to sent items",
           "message": "Salva in Posta inviata"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.c2F2ZVRvU2VudEl0ZW1z.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "Il nome del file"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Aggiorna contatto"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.short_desc": {
@@ -1604,7 +1604,7 @@
           "message": "Seleziona l'identificativo univoco del contatto che desideri aggiornare."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Nome"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "Aggiorna il nome di battesimo o nome del contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Cognome"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "Aggiorna il cognome del contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "Indirizzi email"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.short_desc": {
@@ -1640,7 +1640,7 @@
           "message": "Aggiorna uno o più indirizzi email per il contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Indirizzo email"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Immetti un indirizzo email valido per il contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nome visualizzato"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Immetti come desideri che il nome appaia per questo indirizzo email."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.display_name": {
-          "source": "Business Phones",
+          "source": "Business phones",
           "message": "Telefoni di lavoro"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Aggiorna uno o più numeri di telefono di lavoro per il contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
+          "source": "Mobile phone",
           "message": "Cellulare"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.short_desc": {
@@ -1688,7 +1688,7 @@
           "message": "Aggiorna il numero di cellulare per il contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "Qualifica professionale"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "Aggiorna la qualifica professionale o il ruolo del contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Nome azienda"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "Aggiorna il reparto o la divisione all'interno dell'azienda in cui lavora il contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.display_name": {
-          "source": "Office Location",
+          "source": "Office location",
           "message": "Sede dell'ufficio"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "Aggiorna la sede fisica o l'ufficio in cui lavora il contatto."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.display_name": {
-          "source": "Business Address",
+          "source": "Business address",
           "message": "Indirizzo di lavoro"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.short_desc": {
@@ -1760,7 +1760,7 @@
           "message": "Aggiorna la città o il paese per l'indirizzo aziendale."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.display_name": {
-          "source": "Country/Region",
+          "source": "Country/region",
           "message": "Paese/Regione"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.short_desc": {
@@ -1772,7 +1772,7 @@
           "message": "Aggiorna il paese o la regione per l'indirizzo aziendale."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Codice postale"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.short_desc": {
@@ -1784,7 +1784,7 @@
           "message": "Aggiorna il codice postale o il codice di avviamento postale per l'indirizzo aziendale."
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stato/Provincia"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Aggiorna l'indirizzo stradale, incluso il numero civico e il nome della strada."
         },
         "app.T3V0bG9vaw.action.bmV3LWNvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Nuovo contatto"
         },
         "app.T3V0bG9vaw.action.bmV3LWNvbnRhY3Q.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "Questo trigger si attiva ogni volta che viene aggiunto un nuovo contatto ai tuoi contatti di Microsoft Outlook."
         },
         "app.T3V0bG9vaw.action.bmV3LWV2ZW50.display_name": {
-          "source": "New Event",
+          "source": "New event",
           "message": "Nuovo evento"
         },
         "app.T3V0bG9vaw.action.bmV3LWV2ZW50.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Seleziona facoltativamente un calendario specifico da monitorare. Se non specificato, verranno monitorati tutti i calendari."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.display_name": {
-          "source": "New Email Trigger",
+          "source": "New email trigger",
           "message": "Trigger nuova email"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.short_desc": {
@@ -1856,7 +1856,7 @@
           "message": "Monitora la posta in arrivo di Outlook e si attiva all'arrivo di nuove email. Supporta filtri per mittente, oggetto o allegati e può facoltativamente eliminare o spostare le email elaborate."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c2VuZGVyRmlsdGVy.display_name": {
-          "source": "Sender Filter",
+          "source": "Sender filter",
           "message": "Filtro mittente"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c2VuZGVyRmlsdGVy.short_desc": {
@@ -1868,7 +1868,7 @@
           "message": "Attiva solo per le email provenienti da questo specifico indirizzo email mittente. Lascia vuoto per attivare per tutti i mittenti."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c3ViamVjdEZpbHRlcg.display_name": {
-          "source": "Subject Filter",
+          "source": "Subject filter",
           "message": "Filtro oggetto"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c3ViamVjdEZpbHRlcg.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Attiva solo per le email contenenti questo testo nell'oggetto. Lascia vuoto per associare qualsiasi oggetto."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aGFzQXR0YWNobWVudHM.display_name": {
-          "source": "Has Attachments",
+          "source": "Has attachments",
           "message": "Ha allegati"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aGFzQXR0YWNobWVudHM.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "Filtra le email in base alla presenza di allegati. Imposta su true per attivare il trigger solo per le email con allegati, false per le email senza allegati, oppure lascia vuoto per attivare il trigger per entrambe."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aW5jbHVkZUF0dGFjaG1lbnREYXRh.display_name": {
-          "source": "Include Attachment Data",
+          "source": "Include attachment data",
           "message": "Includi dati allegato"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aW5jbHVkZUF0dGFjaG1lbnREYXRh.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "Se abilitato, il trigger recupererà e includerà il contenuto effettivo dell'allegato nei dati del trigger. Ciò potrebbe aumentare i tempi di elaborazione per gli allegati di grandi dimensioni."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.YWN0aW9u.display_name": {
-          "source": "Email Action",
+          "source": "Email action",
           "message": "Azione email"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.YWN0aW9u.short_desc": {
@@ -1928,7 +1928,7 @@
           "message": "Sposta email"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.display_name": {
-          "source": "New Email with Attachment",
+          "source": "New email with attachment",
           "message": "Nuova email con allegato"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "Monitora una casella di posta di Outlook per individuare nuove email con allegati. Quando viene ricevuta un'email con allegati, ciascun allegato che corrisponde ai filtri specificati attiverà un evento separato. Ciò consente di elaborare i singoli allegati delle email mantenendo il contesto completo dell'email."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c2VuZGVyRmlsdGVy.display_name": {
-          "source": "Sender Filter",
+          "source": "Sender filter",
           "message": "Filtro mittente"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c2VuZGVyRmlsdGVy.short_desc": {
@@ -1952,7 +1952,7 @@
           "message": "Se specificato, verranno elaborate solo le email provenienti esattamente da questo indirizzo email mittente. Lascia vuoto per elaborare le email di qualsiasi mittente."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c3ViamVjdEZpbHRlcg.display_name": {
-          "source": "Subject Filter",
+          "source": "Subject filter",
           "message": "Filtro oggetto"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c3ViamVjdEZpbHRlcg.short_desc": {
@@ -1964,7 +1964,7 @@
           "message": "Se specificato, verranno elaborate solo le email che contengono questo testo nell'oggetto. Lascia vuoto per elaborare le email con qualsiasi oggetto."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.ZmlsZW5hbWVGaWx0ZXJz.display_name": {
-          "source": "Filename Filters",
+          "source": "Filename filters",
           "message": "Filtri nome file"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.ZmlsZW5hbWVGaWx0ZXJz.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "Un elenco di stringhe di testo da confrontare con i nomi file degli allegati. Se specificato, verranno elaborati solo gli allegati con nomi file contenenti una qualsiasi di queste stringhe. La corrispondenza non fa distinzione tra maiuscole e minuscole. Lascia vuoto per elaborare tutti gli allegati indipendentemente dal nome file."
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.bWltZVR5cGVGaWx0ZXJz.display_name": {
-          "source": "MIME Type Filters",
+          "source": "MIME type filters",
           "message": "Filtri tipo MIME"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.bWltZVR5cGVGaWx0ZXJz.short_desc": {
@@ -2068,7 +2068,7 @@
           "message": "XML"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.YWN0aW9u.display_name": {
-          "source": "Email Action",
+          "source": "Email action",
           "message": "Azione email"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.YWN0aW9u.short_desc": {

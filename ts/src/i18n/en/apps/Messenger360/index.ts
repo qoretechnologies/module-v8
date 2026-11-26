@@ -25,7 +25,7 @@ Your 360 Messenger API key that authenticates requests to send and receive Whats
   },
   actions: {
     get_contacts: {
-      displayName: 'Get WhatsApp Contacts',
+      displayName: 'Get WhatsApp contacts',
       shortDesc: 'Retrieve all WhatsApp contacts from your account.',
       longDesc:
         'Fetches a complete list of WhatsApp contacts including their details such as phone numbers, business status, and contact information.',
@@ -33,7 +33,7 @@ Your 360 Messenger API key that authenticates requests to send and receive Whats
     },
 
     get_chats: {
-      displayName: 'Get WhatsApp Chats',
+      displayName: 'Get WhatsApp chats',
       shortDesc: 'Retrieve all WhatsApp chat conversations.',
       longDesc:
         'Fetches a list of all WhatsApp chat conversations including chat details, last messages, unread counts, and chat metadata such as pinned and archived status.',
@@ -41,7 +41,7 @@ Your 360 Messenger API key that authenticates requests to send and receive Whats
     },
 
     get_groups: {
-      displayName: 'Get WhatsApp Groups',
+      displayName: 'Get WhatsApp groups',
       shortDesc: 'Retrieve all WhatsApp group chats.',
       longDesc:
         'Fetches a list of all WhatsApp group conversations that you are a member of, including group IDs and names.',
@@ -49,29 +49,29 @@ Your 360 Messenger API key that authenticates requests to send and receive Whats
     },
 
     send_text_message: {
-      displayName: 'Send WhatsApp Text Message',
+      displayName: 'Send WhatsApp text message',
       shortDesc: 'Send a text message to a WhatsApp contact.',
       longDesc:
         'Sends a text message to a specific WhatsApp contact by phone number. Optionally include a URL link and schedule the message for later delivery.',
       options: {
         phonenumber: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: "The recipient's phone number",
           longDesc:
             'The phone number of the WhatsApp contact to send the message to. Should include country code.',
         },
         text: {
-          displayName: 'Message Text',
+          displayName: 'Message text',
           shortDesc: 'The text content of the message',
           longDesc: 'The text content that will be sent as the WhatsApp message.',
         },
         url: {
-          displayName: 'URL Link',
+          displayName: 'URL link',
           shortDesc: 'Optional URL to include in the message',
           longDesc: 'An optional URL that can be included with the text message for sharing links.',
         },
         delay: {
-          displayName: 'Scheduled Time',
+          displayName: 'Scheduled time',
           shortDesc: 'Optional time to schedule the message',
           longDesc:
             'Optional date and time to schedule when the message should be sent. If not provided, the message will be sent immediately.',
@@ -80,7 +80,7 @@ Your 360 Messenger API key that authenticates requests to send and receive Whats
     },
 
     send_group_text_message: {
-      displayName: 'Send WhatsApp Group Message',
+      displayName: 'Send WhatsApp group message',
       shortDesc: 'Send a text message to a WhatsApp group.',
       longDesc:
         'Sends a text message to a specific WhatsApp group. Optionally include a URL link and schedule the message for later delivery.',
@@ -91,17 +91,17 @@ Your 360 Messenger API key that authenticates requests to send and receive Whats
           longDesc: 'The unique identifier of the WhatsApp group where the message will be sent.',
         },
         text: {
-          displayName: 'Message Text',
+          displayName: 'Message text',
           shortDesc: 'The text content of the message',
           longDesc: 'The text content that will be sent as the WhatsApp group message.',
         },
         url: {
-          displayName: 'URL Link',
+          displayName: 'URL link',
           shortDesc: 'Optional URL to include in the message',
           longDesc: 'An optional URL that can be included with the text message for sharing links.',
         },
         delay: {
-          displayName: 'Scheduled Time',
+          displayName: 'Scheduled time',
           shortDesc: 'Optional time to schedule the message',
           longDesc:
             'Optional date and time to schedule when the message should be sent. If not provided, the message will be sent immediately.',
@@ -111,7 +111,7 @@ Your 360 Messenger API key that authenticates requests to send and receive Whats
   },
   triggers: {
     new_message: {
-      displayName: 'New WhatsApp Message',
+      displayName: 'New WhatsApp message',
       shortDesc: 'Triggers when a new WhatsApp message is received.',
       longDesc:
         'This webhook trigger activates whenever a new WhatsApp message is received in any chat or group conversation. It captures message details including sender, recipient, message content, and metadata.',

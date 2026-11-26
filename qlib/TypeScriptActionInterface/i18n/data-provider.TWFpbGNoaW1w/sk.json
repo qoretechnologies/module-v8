@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **Mailchimp** s použitím autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Názov tabuľky"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
-          "source": "Get Campaigns",
+          "source": "Get campaigns",
           "message": "Získať kampane"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Získa všetky e-mailové kampane z vášho účtu Mailchimp s ich podrobnosťami vrátane stavu, nastavení a metrík výkonnosti."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
-          "source": "Create Campaign",
+          "source": "Create campaign",
           "message": "Vytvoriť kampaň"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vytvorí novú e-mailovú kampaň v Mailchimpe so zadanými nastaveniami, obsahom a možnosťami zacielenia na publikum."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
-          "source": "Send Campaign",
+          "source": "Send campaign",
           "message": "Odoslať kampaň"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Odošle predtým vytvorenú e-mailovú kampaň jej cieľovému publiku okamžite alebo ju naplánuje na neskoršie doručenie."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
-          "source": "Create Audience",
+          "source": "Create audience",
           "message": "Vytvoriť publikum"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Vytvorí v službe Mailchimp nové publikum (zoznam adries) so zadanými nastaveniami a možnosťami konfigurácie."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
-          "source": "Search Tags by Name",
+          "source": "Search tags by name",
           "message": "Vyhľadať štítky podľa názvu"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Vyhľadáva štítky odberateľov podľa názvu na uľahčenie organizácie a segmentácie členov vášho publika."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
-          "source": "Get Audience Members",
+          "source": "Get audience members",
           "message": "Získať členov publika"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Získa všetkých členov (odberateľov) z konkrétneho publika spolu s ich kontaktnými informáciami a podrobnosťami o odbere."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
-          "source": "Add Audience Member",
+          "source": "Add audience member",
           "message": "Pridať člena publika"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Pridá nového odberateľa do konkrétneho publika s jeho kontaktnými údajmi a preferenciami odberu."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Get Audience Member",
+          "source": "Get audience member",
           "message": "Získať člena publika"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Získa podrobné informácie o konkrétnom členovi (odberateľovi) z publika vrátane jeho profilu a údajov o aktivite."
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Update Audience Member",
+          "source": "Update audience member",
           "message": "Aktualizovať člena publika"
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Aktualizuje informácie a preferencie odberu existujúceho člena v publiku."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Remove Audience Member",
+          "source": "Remove audience member",
           "message": "Odstrániť člena publika"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Odstráni odberateľa z publika pri zachovaní jeho údajov na účely dodržiavania predpisov."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
-          "source": "Add Member Tags",
+          "source": "Add member tags",
           "message": "Pridať značky členovi"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Pridá členom publika jednu alebo viac značiek pre lepšiu segmentáciu a organizáciu."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
-          "source": "Add Member Events",
+          "source": "Add member events",
           "message": "Pridať udalosti člena"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Zaznamenáva vlastné udalosti pre členov publika na sledovanie ich správania a interakcií s vašou značkou."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
-          "source": "Add Member Note",
+          "source": "Add member note",
           "message": "Pridať poznámku k členovi"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Pridá poznámku ku konkrétnemu členovi publika pre interné sledovanie a správu vzťahov so zákazníkmi."
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
-          "source": "Update Member Note",
+          "source": "Update member note",
           "message": "Aktualizovať poznámku k členovi"
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Aktualizuje existujúcu poznámku priradenú k členovi publika o nové informácie alebo opravy."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
-          "source": "Delete Member Note",
+          "source": "Delete member note",
           "message": "Odstrániť poznámku člena"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Natrvalo odstráni poznámku z profilu člena publika."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
-          "source": "Permanently Delete Member",
+          "source": "Permanently delete member",
           "message": "Natrvalo vymazať člena"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Natrvalo odstráni člena publika a všetky s ním spojené údaje zo služby Mailchimp. Túto akciu nemožno vrátiť späť."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
-          "source": "Get Campaign Reports",
+          "source": "Get campaign reports",
           "message": "Získať reporty kampaní"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Obmedziť odpoveď na kampane odoslané po nastavenom čase. Používa formát času ISO 8601: 2015-10-21T15:41:36+00:00."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
-          "source": "Get Campaign Report",
+          "source": "Get campaign report",
           "message": "Získať report kampane"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Získa podrobné metriky výkonnosti a analytiku pre konkrétnu e-mailovú kampaň."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
-          "source": "Get Campaign Click Details",
+          "source": "Get campaign click details",
           "message": "Získať podrobnosti o kliknutiach v kampani"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Získa podrobné informácie o kliknutiach v konkrétnej kampani vrátane toho, na ktoré odkazy sa kliklo a kým."
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
-          "source": "Get Store Customer",
+          "source": "Get store customer",
           "message": "Získať zákazníka obchodu"
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Získa podrobné informácie o konkrétnom zákazníkovi z vášho prepojeného internetového obchodu."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
-          "source": "Search Campaigns",
+          "source": "Search campaigns",
           "message": "Vyhľadať kampane"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Vyhľadávací dopyt použitý na filtrovanie výsledkov."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
-          "source": "Search Audience Members",
+          "source": "Search audience members",
           "message": "Vyhľadať členov publika"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Vyhľadáva medzi členmi publika pomocou rôznych kritérií, ako je e-mail, meno alebo štítky, na nájdenie konkrétnych odberateľov."
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.display_name": {
-          "source": "Email Opened",
+          "source": "Email opened",
           "message": "E-mail otvorený"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Vyberte publikum (zoznam adries) Mailchimp, v ktorom chcete sledovať otvorenia e-mailov."
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.display_name": {
-          "source": "Campaign Type",
+          "source": "Campaign type",
           "message": "Typ kampane"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Automatizácia"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.display_name": {
-          "source": "Trigger on Subscriber",
+          "source": "Trigger on subscriber",
           "message": "Spúšťať podľa odberateľa"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Voliteľne zadajte jednu alebo viac e-mailových adries, aby sa spúšťač aktivoval iba pre týchto konkrétnych odberateľov."
         },
         "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.display_name": {
-          "source": "New Subscriber",
+          "source": "New subscriber",
           "message": "Nový odberateľ"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Vyberte publikum Mailchimp, v ktorom chcete sledovať nových odberateľov."
         },
         "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.display_name": {
-          "source": "New Unsubscriber",
+          "source": "New unsubscriber",
           "message": "Nový odhlásený odberateľ"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.short_desc": {

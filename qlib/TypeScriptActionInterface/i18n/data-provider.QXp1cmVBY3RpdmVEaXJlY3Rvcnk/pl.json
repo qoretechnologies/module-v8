@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Active Directory** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względem bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżywaj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako dedykowane akcje w tej aplikacji."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Lista użytkowników"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Maksymalna liczba użytkowników do zwrócenia w jednym żądaniu. Domyślnie jest to 20, z możliwością stronicowania dla większych zestawów wyników."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Token następnej strony"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Opcjonalny identyfikator grupy do filtrowania użytkowników będących członkami określonej grupy. Po określeniu zwróceni zostaną tylko użytkownicy należący do tej grupy."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
+          "source": "Filter criteria",
           "message": "Kryteria filtrowania"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.short_desc": {
@@ -492,7 +492,7 @@
           "message": "Wartość do porównania z określonym polem przy użyciu wybranego operatora."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.display_name": {
-          "source": "Delete User",
+          "source": "Delete user",
           "message": "Usuń użytkownika"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.short_desc": {
@@ -516,7 +516,7 @@
           "message": "Unikalny identyfikator konta użytkownika do usunięcia. Wybierz z istniejących użytkowników w katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
+          "source": "Get user",
           "message": "Pobierz użytkownika"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Unikalny identyfikator konta użytkownika, dla którego mają zostać pobrane informacje. Wybierz spośród istniejących użytkowników w swoim katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.display_name": {
-          "source": "Disable User",
+          "source": "Disable user",
           "message": "Wyłącz użytkownika"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.short_desc": {
@@ -564,7 +564,7 @@
           "message": "Unikalny identyfikator konta użytkownika do wyłączenia. Wybierz z istniejących użytkowników w katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.display_name": {
-          "source": "Create User",
+          "source": "Create user",
           "message": "Utwórz użytkownika"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Utwórz nowe konto użytkownika w Active Directory z pełnymi informacjami profilowymi, ustawieniami zabezpieczeń i danymi organizacyjnymi. Obsługuje ustawianie haseł, informacji kontaktowych i danych o lokalizacji."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Pełna nazwa wyświetlana użytkownika w postaci, w jakiej będzie pojawiać się w usłudze Active Directory i usługach Microsoft."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Imię"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
@@ -600,7 +600,7 @@
           "message": "Imię użytkownika służące do uzupełnienia profilu i organizacji katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Nazwisko"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
@@ -612,7 +612,7 @@
           "message": "Nazwisko użytkownika służące do uzupełnienia profilu i organizacji katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
+          "source": "Mail nickname",
           "message": "Pseudonim pocztowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Pseudonim e-mail, który będzie używany jako część adresu e-mail użytkownika. Musi zawierać wyłącznie litery, cyfry, kropki, łączniki i znaki podkreślenia."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.display_name": {
-          "source": "User Principal Name",
+          "source": "User principal name",
           "message": "Główna nazwa użytkownika"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Początkowe hasło do konta użytkownika. Musi spełniać wymagania organizacji dotyczące złożoności haseł i mieć co najmniej 8 znaków."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.display_name": {
-          "source": "Force Password Change",
+          "source": "Force password change",
           "message": "Wymuś zmianę hasła"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Gdy ta opcja jest włączona, użytkownik będzie musiał zmienić hasło przy pierwszym logowaniu do konta."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.display_name": {
-          "source": "Force Password Change with MFA",
+          "source": "Force password change with MFA",
           "message": "Wymuś zmianę hasła z użyciem MFA"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Gdy ta opcja jest włączona, użytkownik będzie musiał zmienić hasło przy użyciu uwierzytelniania wieloskładnikowego podczas pierwszego logowania."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "Stanowisko"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Dział lub jednostka organizacyjna, do której należy użytkownik w strukturze firmy."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
+          "source": "Mobile phone",
           "message": "Telefon komórkowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Numer telefonu komórkowego użytkownika, używany w celach kontaktowych oraz potencjalnie do uwierzytelniania wieloskładnikowego."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Adres e-mail"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Główny adres e-mail użytkownika. Jeśli nie zostanie podany, może zostać wygenerowany automatycznie na podstawie głównej nazwy użytkownika."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
-          "source": "Street Address",
+          "source": "Street address",
           "message": "Ulica i numer"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Miasto, w którym znajduje się użytkownik, do celów kontaktowych i organizacyjnych."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Stan lub województwo/prowincja, w którym znajduje się użytkownik, w celach kontaktowych i organizacyjnych."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
@@ -780,7 +780,7 @@
           "message": "Kraj, w którym znajduje się użytkownik, do celów kontaktowych i organizacyjnych."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
-          "source": "Account Enabled",
+          "source": "Account enabled",
           "message": "Konto włączone"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
@@ -792,7 +792,7 @@
           "message": "Określa, czy konto użytkownika powinno być włączone i umożliwiać logowanie. Gdy jest wyłączone, użytkownik nie ma dostępu do żadnych usług."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
-          "source": "Usage Location",
+          "source": "Usage location",
           "message": "Lokalizacja użytkowania"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Meksyk"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.display_name": {
-          "source": "Update User",
+          "source": "Update user",
           "message": "Zaktualizuj użytkownika"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Unikalny identyfikator konta użytkownika do zaktualizowania. Wybierz spośród istniejących użytkowników w katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Zaktualizowana pełna nazwa wyświetlana użytkownika, taka jak będzie pojawiać się w Active Directory oraz w usługach firmy Microsoft."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Imię"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Zaktualizowane imię użytkownika."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Nazwisko"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Zaktualizowane nazwisko użytkownika."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
+          "source": "Mail nickname",
           "message": "Pseudonim pocztowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Zaktualizowany alias pocztowy użytkownika. Musi zawierać wyłącznie litery, cyfry, kropki, łączniki i znaki podkreślenia."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "Stanowisko"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Zaktualizowany dział lub jednostka organizacyjna, do której należy użytkownik."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
+          "source": "Mobile phone",
           "message": "Telefon komórkowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Zaktualizowany numer telefonu komórkowego użytkownika."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Adres e-mail"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Zaktualizowany podstawowy adres e-mail użytkownika."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
-          "source": "Street Address",
+          "source": "Street address",
           "message": "Ulica i numer"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Zaktualizowane miasto, w którym znajduje się użytkownik."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Zaktualizowany stan lub województwo, w którym znajduje się użytkownik."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Zaktualizowany kraj, w którym znajduje się użytkownik."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
-          "source": "Account Enabled",
+          "source": "Account enabled",
           "message": "Konto włączone"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Określa, czy konto użytkownika powinno być włączone, czy wyłączone. Wyłączone konta nie mogą logować się do żadnych usług."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
-          "source": "Usage Location",
+          "source": "Usage location",
           "message": "Lokalizacja użytkowania"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "Meksyk"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.display_name": {
-          "source": "Add User to Group",
+          "source": "Add user to group",
           "message": "Dodaj użytkownika do grupy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.short_desc": {
@@ -1124,7 +1124,7 @@
           "message": "Unikalny identyfikator grupy, do której ma zostać dodany użytkownik. Wybierz spośród istniejących grup w swoim katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.display_name": {
-          "source": "Remove User from Group",
+          "source": "Remove user from group",
           "message": "Usuń użytkownika z grupy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.short_desc": {
@@ -1160,7 +1160,7 @@
           "message": "Unikalny identyfikator użytkownika, który ma zostać usunięty z grupy. Wybierz z istniejących użytkowników w katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Wyświetl grupy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.short_desc": {
@@ -1184,7 +1184,7 @@
           "message": "Maksymalna liczba grup do zwrócenia w jednym żądaniu. Domyślnie jest to 20, z możliwością stronicowania dla większych zestawów wyników."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Token następnej strony"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -1196,7 +1196,7 @@
           "message": "Token stronicowania do pobrania następnej strony wyników. Uzyskany z poprzednich operacji pobierania listy."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
+          "source": "Filter criteria",
           "message": "Kryteria filtrowania"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.short_desc": {
@@ -1352,7 +1352,7 @@
           "message": "Wartość do porównania z określonym polem przy użyciu wybranego operatora."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.display_name": {
-          "source": "Delete Group",
+          "source": "Delete group",
           "message": "Usuń grupę"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.short_desc": {
@@ -1376,7 +1376,7 @@
           "message": "Unikalny identyfikator grupy do usunięcia. Wybierz z istniejących grup w katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.display_name": {
-          "source": "Get Group",
+          "source": "Get group",
           "message": "Pobierz grupę"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.short_desc": {
@@ -1400,7 +1400,7 @@
           "message": "Unikalny identyfikator grupy, dla której mają zostać pobrane informacje. Wybierz spośród istniejących grup w swoim katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.display_name": {
-          "source": "Create Group",
+          "source": "Create group",
           "message": "Utwórz grupę"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.short_desc": {
@@ -1412,7 +1412,7 @@
           "message": "Utwórz nową grupę w Active Directory z określonymi właściwościami, typem i ustawieniami zabezpieczeń. Obsługuje zarówno grupy zabezpieczeń, jak i grupy Microsoft 365."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -1436,7 +1436,7 @@
           "message": "Opcjonalny opis wyjaśniający cel i zakres grupy."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.display_name": {
-          "source": "Group Types",
+          "source": "Group types",
           "message": "Typy grup"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "Członkostwo w grupie jest automatycznie zarządzane na podstawie atrybutów użytkowników lub urządzeń"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.display_name": {
-          "source": "Mail Enabled",
+          "source": "Mail enabled",
           "message": "Obsługa poczty włączona"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "Określa, czy grupa powinna mieć włączoną obsługę poczty, umożliwiając jej odbieranie i wysyłanie wiadomości e-mail."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
+          "source": "Mail nickname",
           "message": "Pseudonim pocztowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "Pseudonim pocztowy używany w adresie e-mail grupy. Musi zawierać tylko litery, cyfry, kropki, dywizy i znaki podkreślenia."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.display_name": {
-          "source": "Security Enabled",
+          "source": "Security enabled",
           "message": "Zabezpieczenia włączone"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "Określa, czy grupa powinna mieć włączoną obsługę zabezpieczeń, co pozwala na przypisywanie jej uprawnień i używanie do kontroli dostępu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.display_name": {
-          "source": "Assignable to Role",
+          "source": "Assignable to role",
           "message": "Możliwość przypisania do roli"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "Grupa jest widoczna, ale lista członków jest ukryta dla osób niebędących członkami"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.display_name": {
-          "source": "Update Group",
+          "source": "Update group",
           "message": "Zaktualizuj grupę"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.short_desc": {
@@ -1572,7 +1572,7 @@
           "message": "Unikalny identyfikator grupy do zaktualizowania. Wybierz z istniejących grup w katalogu."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -1596,7 +1596,7 @@
           "message": "Zaktualizowany opis wyjaśniający cel i zakres grupy."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
+          "source": "Mail nickname",
           "message": "Pseudonim pocztowy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
@@ -1644,7 +1644,7 @@
           "message": "Grupa jest widoczna, ale lista członków jest ukryta dla osób niebędących członkami"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.display_name": {
-          "source": "Preferred Language",
+          "source": "Preferred language",
           "message": "Preferowany język"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "Chiński (uproszczony)"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.display_name": {
-          "source": "Allow External Senders",
+          "source": "Allow external senders",
           "message": "Zezwalaj na nadawców zewnętrznych"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "Zezwalaj osobom spoza organizacji na wysyłanie wiadomości do grupy"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.display_name": {
-          "source": "Auto-Subscribe New Members",
+          "source": "Auto-subscribe new members",
           "message": "Automatycznie subskrybuj nowych członków"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.short_desc": {
@@ -1716,7 +1716,7 @@
           "message": "Automatycznie subskrybuj nowych członków, aby otrzymywali powiadomienia e-mail"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.display_name": {
-          "source": "Hide from Address Lists",
+          "source": "Hide from address lists",
           "message": "Ukryj na listach adresowych"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "Ukryj tę grupę na listach adresowych"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.display_name": {
-          "source": "Hide from Outlook Clients",
+          "source": "Hide from Outlook clients",
           "message": "Ukryj przed klientami programu Outlook"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.short_desc": {
@@ -1740,7 +1740,7 @@
           "message": "Ukryj tę grupę przed klientami programu Outlook"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "Nowy użytkownik"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "Opcjonalny identyfikator grupy do monitorowania dodawania nowych użytkowników. Po określeniu wyzwalacz będzie uruchamiany tylko dla użytkowników dodanych do tej konkretnej grupy."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
+          "source": "Filter criteria",
           "message": "Kryteria filtrowania"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.short_desc": {
@@ -1868,7 +1868,7 @@
           "message": "Wartość do porównania z określonym polem przy użyciu wybranego operatora."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.display_name": {
-          "source": "New Group",
+          "source": "New group",
           "message": "Nowa grupa"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Monitoruj Active Directory pod kątem nowo utworzonych grup. Ten wyzwalacz można filtrować według określonych kryteriów, takich jak typ grupy, widoczność lub wzorce nazewnictwa, aby wykrywać istotne dodania grup."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
+          "source": "Filter criteria",
           "message": "Kryteria filtrowania"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.short_desc": {

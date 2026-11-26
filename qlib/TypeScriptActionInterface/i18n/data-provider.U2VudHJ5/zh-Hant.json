@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Sentry** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n針對此應用程式尚未作為一級動作公開的端點使用此動作。"
         },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "列出專案"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "使用先前回應中的游標來擷取下一頁或上一頁結果。保留空白以從頭開始。"
         },
         "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.display_name": {
-          "source": "Get Project Details",
+          "source": "Get project details",
           "message": "取得專案詳細資訊"
         },
         "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.short_desc": {
@@ -388,7 +388,7 @@
           "message": "選取或輸入您要擷取詳細資訊之專案的代稱 (slug) 識別碼。"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.display_name": {
-          "source": "List Project Events",
+          "source": "List project events",
           "message": "列出專案事件"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "選取您要列出其事件的專案。"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.display_name": {
-          "source": "Full Details",
+          "source": "Full details",
           "message": "完整詳細資訊"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "使用先前回應中的游標來瀏覽事件分頁。"
         },
         "app.U2VudHJ5.action.Z2V0X2V2ZW50.display_name": {
-          "source": "Get Event Details",
+          "source": "Get event details",
           "message": "取得事件詳細資訊"
         },
         "app.U2VudHJ5.action.Z2V0X2V2ZW50.short_desc": {
@@ -472,7 +472,7 @@
           "message": "輸入您要擷取的事件 ID (十六進位字串)。事件 ID 可在問題詳細資訊或事件清單中找到。"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.display_name": {
-          "source": "List Project Issues",
+          "source": "List project issues",
           "message": "列出專案問題"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "選取您要列出其問題的專案。"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "查詢篩選條件"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.short_desc": {
@@ -508,7 +508,7 @@
           "message": "使用 Sentry 查詢語法依狀態、被指派者、標籤、平台或時間範圍等屬性來篩選問題。範例：\"is:unresolved assigned:me\""
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "統計週期"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -536,7 +536,7 @@
           "message": "7 天"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.display_name": {
-          "source": "Short ID Lookup",
+          "source": "Short ID lookup",
           "message": "簡短 ID 查詢"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.short_desc": {
@@ -560,7 +560,7 @@
           "message": "使用先前回應中的游標來瀏覽問題分頁。"
         },
         "app.U2VudHJ5.action.Z2V0X2lzc3Vl.display_name": {
-          "source": "Get Issue Details",
+          "source": "Get issue details",
           "message": "取得問題詳細資訊"
         },
         "app.U2VudHJ5.action.Z2V0X2lzc3Vl.short_desc": {
@@ -584,7 +584,7 @@
           "message": "輸入您要擷取的問題 ID。問題 ID 為數值，可在 Sentry 使用者介面或清單操作中找到。"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.display_name": {
-          "source": "Update Issue",
+          "source": "Update issue",
           "message": "更新問題"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.short_desc": {
@@ -648,7 +648,7 @@
           "message": "在下一個版本中解決"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.display_name": {
-          "source": "Assigned To",
+          "source": "Assigned to",
           "message": "指派給"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.short_desc": {
@@ -660,7 +660,7 @@
           "message": "將問題指派給特定使用者或團隊以落實歸屬與責任。請輸入團隊代稱（例如 \"team:backend\"）或使用者 ID。"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.display_name": {
-          "source": "Has Seen",
+          "source": "Has seen",
           "message": "已查看"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.short_desc": {
@@ -672,7 +672,7 @@
           "message": "將問題標記為已查看（已檢視）或未查看。這有助於追蹤團隊已分類哪些問題。"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.display_name": {
-          "source": "Is Bookmarked",
+          "source": "Is bookmarked",
           "message": "已加入書籤"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "將問題加入書籤以便存取和篩選。加入書籤的問題會顯示在您的個人問題清單中。"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.display_name": {
-          "source": "Is Subscribed",
+          "source": "Is subscribed",
           "message": "已訂閱"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.short_desc": {
@@ -696,7 +696,7 @@
           "message": "訂閱或取消訂閱有關此問題的通知。訂閱後，您將在問題發生變更或升級時收到警示。"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.display_name": {
-          "source": "Is Public",
+          "source": "Is public",
           "message": "是否公開"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.short_desc": {
@@ -708,7 +708,7 @@
           "message": "控制是否透過分享連結公開檢視該問題。任何擁有該連結的人都可以檢視公開問題，即使沒有 Sentry 存取權限。"
         },
         "app.U2VudHJ5.action.bGlzdF90ZWFtcw.display_name": {
-          "source": "List Teams",
+          "source": "List teams",
           "message": "列出團隊"
         },
         "app.U2VudHJ5.action.bGlzdF90ZWFtcw.short_desc": {
@@ -732,7 +732,7 @@
           "message": "使用先前回應中的游標來瀏覽團隊分頁。"
         },
         "app.U2VudHJ5.action.Z2V0X3RlYW0.display_name": {
-          "source": "Get Team Details",
+          "source": "Get team details",
           "message": "取得團隊詳細資訊"
         },
         "app.U2VudHJ5.action.Z2V0X3RlYW0.short_desc": {
@@ -756,7 +756,7 @@
           "message": "輸入您要擷取詳細資訊之團隊的團隊代稱 (URL 易讀識別碼)。"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.display_name": {
-          "source": "List Organization Issues",
+          "source": "List organization issues",
           "message": "列出組織問題"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.short_desc": {
@@ -768,7 +768,7 @@
           "message": "擷取組織內所有專案的問題分頁清單。這提供了跨所有應用程式與服務的整個組織問題能見度。使用查詢篩選條件可依專案、平台、狀態或其他條件縮小結果範圍。"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "查詢篩選條件"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.short_desc": {
@@ -780,7 +780,7 @@
           "message": "使用 Sentry 查詢語法篩選所有專案中的問題。可依專案、平台、環境、狀態、標籤或任何其他問題屬性進行篩選。"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "統計週期"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -808,7 +808,7 @@
           "message": "7 天"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.display_name": {
-          "source": "Short ID Lookup",
+          "source": "Short ID lookup",
           "message": "簡短 ID 查詢"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "使用先前回應中的游標來擷取整個組織問題的其他分頁。"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.display_name": {
-          "source": "New Project Issue",
+          "source": "New project issue",
           "message": "新增專案問題"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.short_desc": {
@@ -856,7 +856,7 @@
           "message": "選取您要監控的 Sentry 專案。專案代表您組織內的個別應用程式或服務。"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "查詢篩選條件"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.short_desc": {
@@ -868,7 +868,7 @@
           "message": "使用 Sentry 查詢語法篩選哪些問題會觸發此事件。例如依瀏覽器、裝置、標籤或錯誤是否未處理進行篩選。"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "統計週期"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -896,7 +896,7 @@
           "message": "7 天"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.display_name": {
-          "source": "New Organization Issue",
+          "source": "New organization issue",
           "message": "新增組織問題"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.short_desc": {
@@ -908,7 +908,7 @@
           "message": "監控您 Sentry 組織內的所有專案，並在任何專案中偵測到新問題時觸發。這為跨所有應用程式與服務的問題提供整個組織層級的能見度。使用查詢篩選器聚焦於特定問題類型或特性。"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "查詢篩選條件"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.short_desc": {
@@ -920,7 +920,7 @@
           "message": "使用 Sentry 查詢語法篩選哪些問題會在所有專案中觸發此事件。依平台、環境、版本或自訂標籤等屬性篩選。"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "統計週期"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.short_desc": {

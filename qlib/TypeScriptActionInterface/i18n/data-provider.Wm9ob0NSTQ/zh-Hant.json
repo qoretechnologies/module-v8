@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Zoho CRM** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用的查詢參數、標頭與請求主體。回應將以包含狀態碼、回應標頭與回應主體的雜湊傳回。\n\n對於此應用程式上尚未公開為一級動作的端點，請使用此動作。"
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "表格名稱"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "建立記錄"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -508,7 +508,7 @@
           "message": "選取您要建立新記錄的目標 Zoho CRM 模組 (例如 Leads、Contacts、Deals、Accounts、Products、Vendors 或自訂模組)。使用 Modules API 取得可用模組清單及其 API 名稱。"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Record Properties",
+          "source": "Record properties",
           "message": "記錄屬性"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "以鍵值對形式提供新記錄的欄位值，其中鍵為欄位 API 名稱。可用欄位及其類型會根據所選模組動態載入。必須包含必填欄位，且欄位值必須符合其預期的資料類型 (text、number、date、picklist、lookup 等)。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
+          "source": "List records",
           "message": "列出記錄"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "選取要從中檢索記錄的 Zoho CRM 模組（例如 Leads、Contacts、Deals、Accounts 或自訂模組）。該模組必須支援 API 操作，且使用者必須具有讀取權限。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
-          "source": "Fields to Return",
+          "source": "Fields to return",
           "message": "要傳回的欄位"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
@@ -556,7 +556,7 @@
           "message": "選取每筆記錄要檢索的欄位 API 名稱。最多可包含 50 個欄位 API 名稱。使用欄位中繼資料 API 可取得可用欄位的清單。預設情況下，僅傳回 ID 欄位。可視需要新增 Last_Name、Email、Created_Time 或自訂欄位名稱等欄位。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
-          "source": "Records Per Page",
+          "source": "Records per page",
           "message": "每頁記錄數"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
@@ -568,7 +568,7 @@
           "message": "指定單次 API 請求中要傳回的記錄數量。有效值為 1 到 200。預設值為 20。請將此參數與 page_token 一同使用以對大型結果集進行分頁。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
@@ -592,7 +592,7 @@
           "message": "要檢索的特定記錄 ID 選用清單。提供時，將僅傳回具有這些 ID 的記錄。這對於擷取一組特定記錄而不是逐頁瀏覽所有記錄非常有用。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
-          "source": "Sort Configuration",
+          "source": "Sort configuration",
           "message": "排序設定"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "指定回應中記錄的排序方式。您可以依 id、Created_Time 或 Modified_Time 等欄位按遞增（舊的優先）或遞減（新的優先）順序進行排序。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "排序順序"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.short_desc": {
@@ -624,7 +624,7 @@
           "message": "降序"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.display_name": {
-          "source": "Sort By Field",
+          "source": "Sort by field",
           "message": "依欄位排序"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "修改時間"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
-          "source": "List Modules",
+          "source": "List modules",
           "message": "列出模組"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
@@ -660,7 +660,7 @@
           "message": "擷取 Zoho CRM 組織中所有模組的中繼資料，包括標準模組（Leads、Contacts、Deals、Accounts 等）和自訂模組。傳回完整的詳細資訊，包括模組權限、API 名稱、顯示標籤，以及模組是否可建立、可編輯、可刪除，或者是否支援全域搜尋和快速建立等功能。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
-          "source": "Module Status Filter",
+          "source": "Module status filter",
           "message": "模組狀態篩選條件"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "顯示"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
-          "source": "List Module Fields",
+          "source": "List module fields",
           "message": "列出模組欄位"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
@@ -712,7 +712,7 @@
           "message": "選取要檢索其欄位中繼資料的 Zoho CRM 模組。該 API 會傳回有關該模組中所有欄位的詳細資訊，包括標準欄位（系統定義）和自訂欄位（使用者定義）。"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
-          "source": "Update Record",
+          "source": "Update record",
           "message": "更新記錄"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
@@ -748,7 +748,7 @@
           "message": "輸入或選取要更新之記錄的唯一記錄 ID。記錄 ID 可使用 Get Records API 或從 Webhook 通知中擷取。該記錄必須存在於指定的模組中。"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Updated Properties",
+          "source": "Updated properties",
           "message": "更新的屬性"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "以鍵值配對形式提供您要更新的欄位值，其中鍵為欄位 API 名稱。僅需包含您要變更的欄位；未指定的欄位將保留其目前的值。欄位值必須符合其預期的資料類型與驗證規則。"
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "刪除記錄"
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "輸入或選取要刪除的記錄之唯一記錄 ID。記錄 ID 可使用「取得記錄」API 檢索。刪除已刪除的記錄將會導致錯誤。"
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "取得記錄"
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "輸入或選取您要擷取之記錄的唯一記錄 ID。記錄 ID 可從 Get Records API、搜尋結果或 Webhook 通知中取得。該記錄必須存在於指定的模組中。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "列出使用者"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
@@ -844,7 +844,7 @@
           "message": "擷取 Zoho CRM 組織中的使用者清單，支援分頁和依使用者類型篩選。傳回完整的使用者資訊，包括姓名、電子郵件、角色、設定檔、時區、地區設定、自訂偏好設定和帳號狀態。使用 type 參數可根據使用者的設定檔和狀態進行篩選。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Users Per Page",
+          "source": "Users per page",
           "message": "每頁使用者數"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
@@ -856,7 +856,7 @@
           "message": "指定單一 API 請求中要傳回的使用者數量。有效值為 1 到 200。預設值為 20。將此參數與 page 參數搭配使用，以便在大型結果集中進行分頁。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "頁碼"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "指定要檢索的結果頁碼，第一頁從 1 開始。將此參數與 per_page 搭配使用以瀏覽多頁使用者資料。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
-          "source": "User Type Filter",
+          "source": "User type filter",
           "message": "使用者類型篩選條件"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
@@ -960,7 +960,7 @@
           "message": "檢索目前登入的 CRM 使用者。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
-          "source": "List Tags",
+          "source": "List tags",
           "message": "列出標籤"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
@@ -984,7 +984,7 @@
           "message": "選取要檢索其標籤的 Zoho CRM 模組（例如 Leads、Contacts、Deals 或自訂模組）。每個模組都有各自獨立的一組標籤。"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
-          "source": "My Tags Only",
+          "source": "My tags only",
           "message": "僅限我的標籤"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
@@ -996,7 +996,7 @@
           "message": "設為 true 時，僅傳回目前使用者建立的標籤。設為 false 或未指定時，將傳回模組中的所有標籤，無論由誰建立。"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
-          "source": "Add Tags to Records",
+          "source": "Add tags to records",
           "message": "新增標籤至記錄"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "選取包含您要加上標籤的記錄之 Zoho CRM 模組 (例如 Leads、Contacts、Deals、Accounts 或自訂模組)。標籤專屬於特定模組，且必須存在於模組中才能新增至記錄。"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
-          "source": "Tags to Add",
+          "source": "Tags to add",
           "message": "要新增的標籤"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "指定您要新增至記錄的標籤。每個標籤應包含 ID 和名稱。如果兩者皆提供，則標籤 ID 優先於名稱。您可以選擇性加入 color_code (十六進位值)。使用 List Tags 動作檢索可用標籤及其 ID。"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.display_name": {
-          "source": "Color Code",
+          "source": "Color code",
           "message": "色彩代碼"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "模組中現有標籤的唯一ID。此ID優先於名稱欄位。請使用「列出標籤」動作來取得標籤ID。標籤必須已存在於模組中。"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "標籤名稱"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "要對其新增標籤的唯一記錄 ID 清單。每次 API 呼叫最多可指定 500 個記錄 ID。使用 Get Records API 或搜尋 API 來檢索有效的記錄 ID。"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
-          "source": "Overwrite Existing Tags",
+          "source": "Overwrite existing tags",
           "message": "覆寫現有標籤"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "設為 true 時，將以新標籤取代指定記錄上的所有現有標籤。設為 false (預設值) 時，將新增標籤並保留現有標籤。請謹慎使用此選項，因為設為 true 將移除所有目前標籤。"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "新增記錄"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "選取要監控新建立記錄的 Zoho CRM 模組（例如 Leads、Contacts、Deals、Accounts 或自訂模組）。請使用模組中繼資料 API 傳回的模組 API 名稱。"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
-          "source": "Phone Filter",
+          "source": "Phone filter",
           "message": "電話篩選條件"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "選用的電話號碼，用於在記錄中搜尋。指定後，只有包含此電話號碼的記錄才會觸發事件。這會使用 Zoho CRM 搜尋 API 來尋找相符的記錄。"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "電子郵件篩選器"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "選用的電子郵件地址，用於在記錄中搜尋。指定後，只有包含此電子郵件地址的記錄才會觸發事件。這會使用 Zoho CRM 搜尋 API 來尋找相符的記錄。"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
-          "source": "Keyword Search",
+          "source": "Keyword search",
           "message": "關鍵字搜尋"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "選用的關鍵字，用於在記錄的所有可搜尋欄位中搜尋。指定後，只有包含此關鍵字的記錄才會觸發事件。這會使用 Zoho CRM 搜尋 API 來執行全面的文字搜尋。"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
-          "source": "Field Filters",
+          "source": "Field filters",
           "message": "欄位篩選條件"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "用於建立搜尋條件的選用欄位-值配對清單。指定後，只有所有指定欄位皆符合其對應值的記錄才會觸發事件。每個欄位比較皆使用「equals」運算子。"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "欄位名稱"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "選擇模組中的欄位 API 名稱。可使用欄位元資料 API 取得可用欄位名稱。欄位必須可搜尋，才能用於篩選。"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "欄位值"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.short_desc": {

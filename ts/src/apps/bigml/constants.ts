@@ -13,7 +13,7 @@ export const BIG_ML_APP_LOGO =
 
 export const BIG_ML_CONN_OPTIONS = {
   token: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your BigML account API key',
     desc:
       `To get your API key:\n` +

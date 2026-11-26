@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**Google Forms** に対するカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（コネクションの API ベース URL に対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、およびレスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create Form",
+          "source": "Create form",
           "message": "フォームを作成"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.short_desc": {
@@ -376,7 +376,7 @@
           "message": "追加のコンテキストを提供するためにフォームタイトルの下に表示されるオプションの説明。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.display_name": {
-          "source": "Document Title",
+          "source": "Document title",
           "message": "ドキュメント タイトル"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "ブラウザのタブに表示されるドキュメントのタイトル。指定しない場合は、フォームのタイトルが使用されます。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
-          "source": "Form Settings",
+          "source": "Form settings",
           "message": "フォーム設定"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
@@ -400,7 +400,7 @@
           "message": "メール収集やクイズモードなどの追加のフォーム設定を構成します。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZW1haWxfY29sbGVjdGlvbg.display_name": {
-          "source": "Email Collection",
+          "source": "Email collection",
           "message": "メール収集"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZW1haWxfY29sbGVjdGlvbg.short_desc": {
@@ -436,7 +436,7 @@
           "message": "フォームは、回答者が入力するフィールドを使用してメールアドレスを収集します。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcXVpeg.display_name": {
-          "source": "Quiz Mode",
+          "source": "Quiz mode",
           "message": "クイズモード"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcXVpeg.short_desc": {
@@ -460,7 +460,7 @@
           "message": "フォームに追加する質問のリスト。各質問は異なるタイプやプロパティを持つことができます。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y2hvaWNlcw.display_name": {
-          "source": "Answer Choices",
+          "source": "Answer choices",
           "message": "回答選択肢"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y2hvaWNlcw.short_desc": {
@@ -472,7 +472,7 @@
           "message": "複数選択、チェックボックス、ドロップダウン形式の質問の場合、回答者が選択できるオプションです。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y29ycmVjdF9hbnN3ZXI.display_name": {
-          "source": "Correct Answer",
+          "source": "Correct answer",
           "message": "正解"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y29ycmVjdF9hbnN3ZXI.short_desc": {
@@ -496,7 +496,7 @@
           "message": "クイズ形式の質問の場合、回答後に回答者に表示するフィードバックです。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.aGVscF90ZXh0.display_name": {
-          "source": "Help Text",
+          "source": "Help text",
           "message": "ヘルプテキスト"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.aGVscF90ZXh0.short_desc": {
@@ -532,7 +532,7 @@
           "message": "有効にすると、この質問に回答しなければフォームを送信できません。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4.display_name": {
-          "source": "Scale Maximum",
+          "source": "Scale maximum",
           "message": "スケール最大値"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4.short_desc": {
@@ -544,7 +544,7 @@
           "message": "スケール形式の質問の場合、スケールの最大値を指定します。0から10の間で指定してください。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4X2xhYmVs.display_name": {
-          "source": "Scale Maximum Label",
+          "source": "Scale maximum label",
           "message": "スケール最大ラベル"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4X2xhYmVs.short_desc": {
@@ -556,7 +556,7 @@
           "message": "尺度質問の最高値を表すオプションのラベル。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWlu.display_name": {
-          "source": "Scale Minimum",
+          "source": "Scale minimum",
           "message": "スケール最小値"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWlu.short_desc": {
@@ -568,7 +568,7 @@
           "message": "スケール形式の質問の場合、スケールの最小値を指定します。0から10の間で指定してください。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWluX2xhYmVs.display_name": {
-          "source": "Scale Minimum Label",
+          "source": "Scale minimum label",
           "message": "スケール最小ラベル"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWluX2xhYmVs.short_desc": {
@@ -580,7 +580,7 @@
           "message": "尺度質問の最低値を表すオプションのラベル。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2h1ZmZsZV9jaG9pY2Vz.display_name": {
-          "source": "Shuffle Choices",
+          "source": "Shuffle choices",
           "message": "選択肢をシャッフル"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2h1ZmZsZV9jaG9pY2Vz.short_desc": {
@@ -592,7 +592,7 @@
           "message": "有効にすると、回答者ごとに回答選択肢の順序がランダムに変更されます。"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dGl0bGU.display_name": {
-          "source": "Question Title",
+          "source": "Question title",
           "message": "質問タイトル"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dGl0bGU.short_desc": {
@@ -604,7 +604,7 @@
           "message": "回答者に表示される質問のメインテキスト"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dHlwZQ.display_name": {
-          "source": "Question Type",
+          "source": "Question type",
           "message": "質問タイプ"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dHlwZQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "時間"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get Form",
+          "source": "Get form",
           "message": "フォームの取得"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.short_desc": {
@@ -672,7 +672,7 @@
           "message": "取得する Google フォームの一意の識別子。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "質問を含める"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -696,7 +696,7 @@
           "message": "ファイル名でのフィルタリング、検索タイプの指定、結果のページネーションのオプションを使用して、Google ドライブ内の Google フォームを検索します。"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.display_name": {
-          "source": "Form Name",
+          "source": "Form name",
           "message": "フォーム名"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.short_desc": {
@@ -708,7 +708,7 @@
           "message": "検索する Google フォームの名前または名前の一部。すべてのフォームを取得するには空のままにしてください。"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "検索タイプ"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -740,7 +740,7 @@
           "message": "1 回のリクエストで返すフォームの最大数。最大値は 1000 です。"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "ページトークン"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.short_desc": {
@@ -752,7 +752,7 @@
           "message": "ページネーションを継続するために前の検索から返されたトークン。前のレスポンスからの next_page_token を使用します。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.display_name": {
-          "source": "Get Form Responses",
+          "source": "Get form responses",
           "message": "フォームの回答一覧を取得"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.short_desc": {
@@ -788,7 +788,7 @@
           "message": "1 回のリクエストで返す回答の最大数。デフォルトは 50、最大は 1000 です。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "ページトークン"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.short_desc": {
@@ -800,7 +800,7 @@
           "message": "結果の次のページを取得するためのトークン。大量の回答セットをページングするために使用されます。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.display_name": {
-          "source": "Respondent Email",
+          "source": "Respondent email",
           "message": "回答者のメールアドレス"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.short_desc": {
@@ -812,7 +812,7 @@
           "message": "メールアドレスにこの値が含まれている回答者からの回答のみにフィルタリングします。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.display_name": {
-          "source": "Filter Answers",
+          "source": "Filter answers",
           "message": "回答をフィルタリング"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.short_desc": {
@@ -824,7 +824,7 @@
           "message": "特定の質問の回答に基づいて回答をフィルタリングします。各フィルターは質問 ID、フィルタータイプ、および予期される値を指定します。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.ZmlsdGVyX3R5cGU.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "フィルタータイプ"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.ZmlsdGVyX3R5cGU.short_desc": {
@@ -856,7 +856,7 @@
           "message": "応答をフィルタリングする質問の固有識別子"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "フィルターバリュー"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.dmFsdWU.short_desc": {
@@ -868,7 +868,7 @@
           "message": "質問の回答と一致する値"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "質問を含める"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -880,7 +880,7 @@
           "message": "レスポンスにフォームの質問とメタデータを含めるかどうか。デフォルトは false です。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "回答を含める"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "各回答の詳細な回答データを含めるかどうか。デフォルトは true です。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.display_name": {
-          "source": "Get Form Response",
+          "source": "Get form response",
           "message": "フォームの回答を取得"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.short_desc": {
@@ -928,7 +928,7 @@
           "message": "取得するフォーム回答の一意の識別子。"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "質問を含める"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "レスポンスにフォームの質問とメタデータを含めるかどうか。デフォルトは false です。"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
-          "source": "New Form Response",
+          "source": "New form response",
           "message": "新しいフォームの回答"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
@@ -964,7 +964,7 @@
           "message": "新しい回答を監視する Google フォームの一意の識別子。"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "質問を含める"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -976,7 +976,7 @@
           "message": "トリガーされた各イベントにフォームの質問とメタデータを含めるかどうか。デフォルトは false です。"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "回答を含める"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {

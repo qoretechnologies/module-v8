@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata HTTP / REST API personalizzata a **BambooHR** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come un hash contenente il codice di stato, le intestazioni della risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello su questa app."
         },
         "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.QmFtYm9vSFI.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Cerca record"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNo.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Il nome della tabella"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.display_name": {
-          "source": "Get Employee",
+          "source": "Get employee",
           "message": "Ottieni dipendente"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Seleziona quali campi recuperare per il dipendente. Lascia vuoto per recuperare tutti i campi disponibili (fino a 400 campi)."
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.display_name": {
-          "source": "Create Employee",
+          "source": "Create employee",
           "message": "Crea dipendente"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Crea un nuovo record dipendente in BambooHR. Come minimo, firstName e lastName sono obbligatori. L'azione presenta in modo dinamico tutti i campi disponibili in base alla tua configurazione di BambooHR, inclusi i campi personalizzati."
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
+          "source": "Employee data",
           "message": "Dati dipendente"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Fornisci i valori per i campi del dipendente. I campi disponibili vengono caricati dinamicamente dal tuo account BambooHR e includono sia campi standard sia personalizzati. firstName e lastName sono obbligatori."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.display_name": {
-          "source": "Update Employee",
+          "source": "Update employee",
           "message": "Aggiorna dipendente"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Inserire l'identificativo unico del dipendente che si desidera aggiornare."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
+          "source": "Employee data",
           "message": "Dati dipendente"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Fornire nuovi valori per i campi dipendente che si desidera aggiornare. I campi disponibili vengono caricati dinamicamente dal proprio account BambooHR."
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.display_name": {
-          "source": "List Employees",
+          "source": "List employees",
           "message": "Elenca dipendenti"
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Recupera un elenco di dipendenti assenti (ferie, congedo di malattia, ecc.) e festività aziendali per un intervallo di date specificato. Se non sono specificate date, restituisce il giorno corrente più i 14 giorni successivi."
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Data di inizio"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "La data di inizio per la query. Se non specificata, la data predefinita è oggi."
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Data di fine"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.short_desc": {
@@ -592,7 +592,7 @@
           "message": "La data di fine per la query. Se non specificata, la data predefinita è 14 giorni dopo la data di inizio."
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.display_name": {
-          "source": "Search Time Off Requests",
+          "source": "Search time off requests",
           "message": "Cerca richieste di ferie/permessi"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Cerca richieste di ferie/permessi in BambooHR con vari filtri. Restituisce le richieste che soddisfano i criteri specificati, inclusi intervallo di date, dipendente, stato e tipo di ferie/permessi."
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Data di inizio"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Mostra solo le richieste di ferie/permessi a partire da questa data o in data successiva."
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Data di fine"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Sostituito"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.display_name": {
-          "source": "Time Off Type",
+          "source": "Time off type",
           "message": "Tipo di ferie/permessi"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Filtra per uno o più tipi di ferie/permessi configurati nel tuo account BambooHR."
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.display_name": {
-          "source": "Get All Employee Files",
+          "source": "Get all employee files",
           "message": "Ottieni tutti i file del dipendente"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.short_desc": {
@@ -708,7 +708,7 @@
           "message": "L'ID del dipendente di cui desideri recuperare i file."
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.display_name": {
-          "source": "Download Employee File",
+          "source": "Download employee file",
           "message": "Scarica file dipendente"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.short_desc": {
@@ -744,7 +744,7 @@
           "message": "L'ID del file da scaricare."
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Upload Employee File",
+          "source": "Upload employee file",
           "message": "Carica file dipendente"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Il nome del file"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
+          "source": "Share with employee",
           "message": "Condividi con il dipendente"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Indica se rendere questo file visibile al dipendente nel suo portale self-service."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Update Employee File",
+          "source": "Update employee file",
           "message": "Aggiorna file dipendente"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -984,7 +984,7 @@
           "message": "Sposta il file in una categoria diversa."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
+          "source": "Share with employee",
           "message": "Condividi con il dipendente"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Indica se rendere questo file visibile al dipendente."
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Delete Employee File",
+          "source": "Delete employee file",
           "message": "Elimina file dipendente"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "L'ID del file da eliminare."
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.display_name": {
-          "source": "Get All Company Files",
+          "source": "Get all company files",
           "message": "Ottieni tutti i file aziendali"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "Recupera tutti i file aziendali organizzati per categoria. Restituisce i metadati dei file tra cui nome, dimensione, data di caricamento e stato di condivisione."
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.display_name": {
-          "source": "Download Company File",
+          "source": "Download company file",
           "message": "Scarica file aziendale"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "L'ID del file aziendale da scaricare."
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Upload Company File",
+          "source": "Upload company file",
           "message": "Carica file aziendale"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "Il nome del file"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
+          "source": "Share with employees",
           "message": "Condividi con i dipendenti"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Indica se rendere questo file visibile a tutti i dipendenti."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Update Company File",
+          "source": "Update company file",
           "message": "Aggiorna file aziendale"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Sposta il file in una categoria diversa."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
+          "source": "Share with employees",
           "message": "Condividi con i dipendenti"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Indica se rendere questo file visibile a tutti i dipendenti."
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Delete Company File",
+          "source": "Delete company file",
           "message": "Elimina file aziendale"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "L'ID del file aziendale da eliminare."
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.display_name": {
-          "source": "New Time Off Request",
+          "source": "New time off request",
           "message": "Nuova richiesta di ferie/permessi"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Attiva solo per le richieste di ferie/permessi di un dipendente specifico."
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.display_name": {
-          "source": "New Time Off",
+          "source": "New time off",
           "message": "Nuove ferie/permessi"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Si attiva quando una nuova voce di ferie/permessi approvata appare nell'elenco Chi è fuori. Include sia le ferie dei dipendenti sia le festività aziendali."
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.display_name": {
-          "source": "New Employee",
+          "source": "New employee",
           "message": "Nuovo dipendente"
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.short_desc": {

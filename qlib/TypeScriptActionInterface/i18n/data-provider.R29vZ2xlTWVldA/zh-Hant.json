@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Google Meet** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基本 URL)、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對此應用程式上尚未公開為頂級動作的端點使用此動作。"
         },
         "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.display_name": {
-          "source": "Get Conference Participants",
+          "source": "Get conference participants",
           "message": "取得會議參與者"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.short_desc": {
@@ -376,7 +376,7 @@
           "message": "選填的搜尋詞，用於依名稱或其他屬性篩選參與者。僅會傳回符合搜尋詞的參與者。"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.display_name": {
-          "source": "Include Time Spent",
+          "source": "Include time spent",
           "message": "包含停留時間"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.short_desc": {
@@ -388,7 +388,7 @@
           "message": "啟用時，包含每位參與者在會議中停留時間的資訊。預設為 true。"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.display_name": {
-          "source": "Get Conference Recordings",
+          "source": "Get conference recordings",
           "message": "取得會議錄製內容"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "要擷取錄製資訊的 Google Meet 會議識別碼或會議代碼。可以是會議 ID 或格式為 XXX-XXXX-XXX 的會議代碼。"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.display_name": {
-          "source": "Get Conference Transcript",
+          "source": "Get conference transcript",
           "message": "取得會議逐字稿"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.short_desc": {
@@ -448,7 +448,7 @@
           "message": "要從 Google Meet 會議擷取的特定逐字稿識別碼。"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.display_name": {
-          "source": "List Conferences",
+          "source": "List conferences",
           "message": "列出會議"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.short_desc": {
@@ -472,7 +472,7 @@
           "message": "單次回應中傳回的會議記錄數量上限。預設為 100。"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "下一頁權杖"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "來自先前回應的權杖，允許擷取下一頁結果。若是第一次請求請留空。"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.display_name": {
-          "source": "Meeting Code",
+          "source": "Meeting code",
           "message": "會議代碼"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.short_desc": {
@@ -496,7 +496,7 @@
           "message": "篩選結果以僅包含具有指定會議代碼的會議。"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "篩選結果以僅包含在指定日期與時間或之後開始的會議。"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "結束時間"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.short_desc": {
@@ -520,7 +520,7 @@
           "message": "篩選結果以僅包含在指定日期與時間或之前結束的會議。"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.display_name": {
-          "source": "Space Name",
+          "source": "Space name",
           "message": "空間名稱"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "篩選結果以僅包含與指定空間名稱相關聯的會議。"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.display_name": {
-          "source": "Get Conference",
+          "source": "Get conference",
           "message": "取得會議"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.short_desc": {
@@ -556,7 +556,7 @@
           "message": "要擷取詳細資訊的 Google Meet 會議 ID 或會議代碼。"
         },
         "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.display_name": {
-          "source": "Conference Ended",
+          "source": "Conference ended",
           "message": "會議已結束"
         },
         "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.short_desc": {
@@ -568,7 +568,7 @@
           "message": "監控 Google Meet 會議，並在會議結束時觸發。傳回已結束會議的詳細資訊，包括名稱、開始時間、結束時間、到期時間和空間資訊。"
         },
         "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.display_name": {
-          "source": "Recording Created",
+          "source": "Recording created",
           "message": "已建立錄製內容"
         },
         "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.short_desc": {
@@ -592,7 +592,7 @@
           "message": "要監控新錄製內容的 Google Meet 會議識別碼或會議代碼。可以是會議 ID 或格式為 XXX-XXXX-XXX 的會議代碼。"
         },
         "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.display_name": {
-          "source": "Transcript Created",
+          "source": "Transcript created",
           "message": "已建立逐字稿"
         },
         "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.short_desc": {

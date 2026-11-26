@@ -28,7 +28,7 @@
           "message": "Зробити власний виклик HTTP / REST API до **ClickUp** з використанням автентифікації налаштованого підключення.\n\nУкажіть метод HTTP, шлях URI (відносно базового URL API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не реалізовані як окремі дії в цьому додатку."
         },
         "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.Q2xpY2tVcA.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Пошук записів"
         },
         "app.Q2xpY2tVcA.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Назва таблиці"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.display_name": {
-          "source": "Add Task Comment",
+          "source": "Add task comment",
           "message": "Додати коментар до завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Завдання ClickUp, до якого потрібно додати коментар"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Y29tbWVudF90ZXh0.display_name": {
-          "source": "Comment Text",
+          "source": "Comment text",
           "message": "Текст коментаря"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Y29tbWVudF90ZXh0.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Текстовий вміст коментаря, який буде додано до завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Сповістити всіх"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.bm90aWZ5X2FsbA.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Користувач, якому буде призначено коментар"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Z3JvdXBfYXNzaWduZWU.display_name": {
-          "source": "Group Assignee",
+          "source": "Group assignee",
           "message": "Група-виконавець"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Z3JvdXBfYXNzaWduZWU.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Група, якій буде призначено коментар"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.display_name": {
-          "source": "Create Document Page",
+          "source": "Create document page",
           "message": "Створити сторінку документа"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Документ ClickUp, до якого потрібно додати сторінку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.bmFtZQ.display_name": {
-          "source": "Page Name",
+          "source": "Page name",
           "message": "Назва сторінки"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.bmFtZQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Необов'язковий підзаголовок сторінки"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.Y29udGVudF9mb3JtYXQ.display_name": {
-          "source": "Content Format",
+          "source": "Content format",
           "message": "Формат вмісту"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.Y29udGVudF9mb3JtYXQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Простий текст"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
-          "source": "Create Document",
+          "source": "Create document",
           "message": "Створити документ"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Робочий простір ClickUp, у якому буде створено документ"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.bmFtZQ.display_name": {
-          "source": "Document Name",
+          "source": "Document name",
           "message": "Назва документа"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.bmFtZQ.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Назва/заголовок нового документа"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.display_name": {
-          "source": "Parent Location",
+          "source": "Parent location",
           "message": "Батьківське розташування"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Батьківський контейнер (простір, папка, список тощо), у якому буде розміщено документ"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.field.dHlwZQ.display_name": {
-          "source": "Parent Type",
+          "source": "Parent type",
           "message": "Тип батьківського елемента"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.field.dHlwZQ.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Приватний"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.Y3JlYXRlX3BhZ2U.display_name": {
-          "source": "Create Page",
+          "source": "Create page",
           "message": "Створити сторінку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.Y3JlYXRlX3BhZ2U.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Чи створювати початкову сторінку в документі"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.display_name": {
-          "source": "Create Folder",
+          "source": "Create folder",
           "message": "Створити папку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Простір ClickUp, у якому буде створено папку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.option.bmFtZQ.display_name": {
-          "source": "Folder Name",
+          "source": "Folder name",
           "message": "Назва папки"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.option.bmFtZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Назва для нової папки"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create List",
+          "source": "Create list",
           "message": "Створити список"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Папка ClickUp, у якій буде створено список"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "List Name",
+          "source": "List name",
           "message": "Назва списку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Рівень пріоритету для списку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Кінцевий термін"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.ZHVlX2RhdGU.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Термін виконання для списку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Вміст у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Вміст опису у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Створити завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Список ClickUp, де буде створено завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "Назва завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Чи створювати завдання в архівованому стані"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.display_name": {
-          "source": "Group Assignees",
+          "source": "Group assignees",
           "message": "Групи-виконавці"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Рівень пріоритету для завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Кінцевий термін"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Термін виконання завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Дата початку"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Коли має розпочатися робота над завданням"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.display_name": {
-          "source": "Time Estimate",
+          "source": "Time estimate",
           "message": "Оцінка часу"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Кількість балів, призначена завданню"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Сповістити всіх"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Чи сповіщати всіх відповідних членів команди про нове завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
+          "source": "Parent task",
           "message": "Батьківське завдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Батьківське завдання, щоб створити це як підзавдання"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Вміст у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Опис завдання у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bGlua3NfdG8.display_name": {
-          "source": "Links To",
+          "source": "Links to",
           "message": "Посилання на"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bGlua3NfdG8.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Завдання, з яким потрібно створити зв'язок"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Check Required Custom Fields",
+          "source": "Check required custom fields",
           "message": "Перевіряти обов'язкові користувацькі поля"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Чи перевіряти, чи надано всі обов'язкові користувацькі поля"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Унікальний ідентифікатор користувацького поля"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Значення поля"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "Значення, яке потрібно встановити для цього користувацького поля"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.display_name": {
-          "source": "Custom Item ID",
+          "source": "Custom item ID",
           "message": "ID користувацького елемента"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "Ідентифікатор користувацького типу завдання"
         },
         "app.Q2xpY2tVcA.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
+          "source": "Delete task",
           "message": "Видалити завдання"
         },
         "app.Q2xpY2tVcA.action.ZGVsZXRlX3Rhc2s.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Завдання ClickUp, яке потрібно видалити"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2RvY3VtZW50.display_name": {
-          "source": "Get Document",
+          "source": "Get document",
           "message": "Отримати документ"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2RvY3VtZW50.short_desc": {
@@ -1360,7 +1360,7 @@
           "message": "Документ ClickUp для отримання"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2ZvbGRlcg.display_name": {
-          "source": "Get Folder",
+          "source": "Get folder",
           "message": "Отримати папку"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2ZvbGRlcg.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "Папка ClickUp, для якої потрібно отримати інформацію"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2xpc3Rz.display_name": {
-          "source": "Get List",
+          "source": "Get list",
           "message": "Отримати список"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2xpc3Rz.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "Список ClickUp, для якого потрібно отримати інформацію"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Отримати завдання"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.short_desc": {
@@ -1540,7 +1540,7 @@
           "message": "Завдання ClickUp для отримання"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Include Markdown Description",
+          "source": "Include markdown description",
           "message": "Включити опис у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Чи включати опис завдання у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.c3VidGFza3M.display_name": {
-          "source": "Include Subtasks",
+          "source": "Include subtasks",
           "message": "Включити підзавдання"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.c3VidGFza3M.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Чи включати підзавдання у відповідь"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3dvcmtzcGFjZQ.display_name": {
-          "source": "Get Workspace",
+          "source": "Get workspace",
           "message": "Отримати робочий простір"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3dvcmtzcGFjZQ.short_desc": {
@@ -1588,7 +1588,7 @@
           "message": "Робочий простір ClickUp, для якого потрібно отримати інформацію"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.display_name": {
-          "source": "List Channels",
+          "source": "List channels",
           "message": "Отримати список каналів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "Робочий простір ClickUp, з якого потрібно отримати список каналів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.ZGVzY3JpcHRpb25fZm9ybWF0.display_name": {
-          "source": "Description Format",
+          "source": "Description format",
           "message": "Формат опису"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.ZGVzY3JpcHRpb25fZm9ybWF0.short_desc": {
@@ -1656,7 +1656,7 @@
           "message": "Максимальна кількість каналів для повернення"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aXNfZm9sbG93ZXI.display_name": {
-          "source": "Is Follower",
+          "source": "Is follower",
           "message": "Є підписником"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aXNfZm9sbG93ZXI.short_desc": {
@@ -1668,7 +1668,7 @@
           "message": "Чи фільтрувати канали за статусом підписника"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden",
+          "source": "Include hidden",
           "message": "Включати приховані"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
@@ -1680,7 +1680,7 @@
           "message": "Чи включати приховані канали до результатів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.cm9vbV90eXBlcw.display_name": {
-          "source": "Room Types",
+          "source": "Room types",
           "message": "Типи кімнат"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.cm9vbV90eXBlcw.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "Групове особисте повідомлення"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jdXN0b21fZmllbGRz.display_name": {
-          "source": "List Custom Fields",
+          "source": "List custom fields",
           "message": "Отримати список користувацьких полів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jdXN0b21fZmllbGRz.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "Робочий простір ClickUp, з якого потрібно отримати список користувацьких полів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "Отримати список документів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Максимальна кількість документів для повернення"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.bmV4dF9jdXJzb3I.display_name": {
-          "source": "Next Cursor",
+          "source": "Next cursor",
           "message": "Наступний курсор"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.bmV4dF9jdXJzb3I.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "Курсор для отримання наступної сторінки результатів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.cGFyZW50X3R5cGU.display_name": {
-          "source": "Parent Type",
+          "source": "Parent type",
           "message": "Тип батьківського елемента"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.cGFyZW50X3R5cGU.short_desc": {
@@ -1856,7 +1856,7 @@
           "message": "Ідентифікатор батьківського контейнера для фільтрації документів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.display_name": {
-          "source": "List Folders",
+          "source": "List folders",
           "message": "Отримати список папок"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "Простір ClickUp, з якого потрібно отримати папки"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.option.YXJjaGl2ZWQ.display_name": {
-          "source": "Include Archived",
+          "source": "Include archived",
           "message": "Включати заархівовані"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.option.YXJjaGl2ZWQ.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "Чи включати заархівовані папки до результатів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Отримати список груп"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9ncm91cHM.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "Конкретні ідентифікатори груп для отримання (через кому)"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.display_name": {
-          "source": "List Lists",
+          "source": "List lists",
           "message": "Отримати список списків"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.short_desc": {
@@ -1988,7 +1988,7 @@
           "message": "Папка ClickUp, з якої потрібно отримати списки"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.option.YXJjaGl2ZWQ.display_name": {
-          "source": "Include Archived",
+          "source": "Include archived",
           "message": "Включати заархівовані"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.option.YXJjaGl2ZWQ.short_desc": {
@@ -2000,7 +2000,7 @@
           "message": "Чи включати архівовані списки до результатів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Отримати список завдань"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.short_desc": {
@@ -2072,7 +2072,7 @@
           "message": "Чи включати архівні завдання"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Include Markdown Description",
+          "source": "Include markdown description",
           "message": "Включити опис у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.short_desc": {
@@ -2096,7 +2096,7 @@
           "message": "Номер сторінки для пагінації"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Сортувати за"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.b3JkZXJfYnk.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "Чи змінити порядок сортування на протилежний"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.c3VidGFza3M.display_name": {
-          "source": "Include Subtasks",
+          "source": "Include subtasks",
           "message": "Включити підзавдання"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.c3VidGFza3M.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "Чи включати підзавдання в результати"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9jbG9zZWQ.display_name": {
-          "source": "Include Closed",
+          "source": "Include closed",
           "message": "Включити закриті"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9jbG9zZWQ.short_desc": {
@@ -2172,7 +2172,7 @@
           "message": "Конкретні статуси завдань для фільтрації"
         },
         "app.Q2xpY2tVcA.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
-          "source": "List Workspaces",
+          "source": "List workspaces",
           "message": "Отримати список робочих просторів"
         },
         "app.Q2xpY2tVcA.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
@@ -2184,7 +2184,7 @@
           "message": "Отримати всі робочі простори ClickUp, доступні автентифікованому користувачу"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.display_name": {
-          "source": "Send Channel Message",
+          "source": "Send channel message",
           "message": "Надіслати повідомлення в канал"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "Користувач, якому слід призначити повідомлення"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Z3JvdXBfYXNzaWduZWU.display_name": {
-          "source": "Group Assignee",
+          "source": "Group assignee",
           "message": "Група-виконавець"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Z3JvdXBfYXNzaWduZWU.short_desc": {
@@ -2244,7 +2244,7 @@
           "message": "Група, якій слід призначити повідомлення"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.dHlwZQ.display_name": {
-          "source": "Message Type",
+          "source": "Message type",
           "message": "Тип повідомлення"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.dHlwZQ.short_desc": {
@@ -2288,7 +2288,7 @@
           "message": "Користувачі, яких слід додати як спостерігачів повідомлення"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Y29udGVudF9mb3JtYXQ.display_name": {
-          "source": "Content Format",
+          "source": "Content format",
           "message": "Формат вмісту"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Y29udGVudF9mb3JtYXQ.short_desc": {
@@ -2308,7 +2308,7 @@
           "message": "Markdown"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "Оновити завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -2380,7 +2380,7 @@
           "message": "Завдання ClickUp для оновлення"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "Назва завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -2428,7 +2428,7 @@
           "message": "Чи архівувати завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.display_name": {
-          "source": "Group Assignees",
+          "source": "Group assignees",
           "message": "Групи-виконавці"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.short_desc": {
@@ -2452,7 +2452,7 @@
           "message": "Оновлений рівень пріоритету для завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Кінцевий термін"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -2464,7 +2464,7 @@
           "message": "Оновлена дата виконання завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Дата початку"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -2476,7 +2476,7 @@
           "message": "Оновлена дата початку завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.display_name": {
-          "source": "Time Estimate",
+          "source": "Time estimate",
           "message": "Оцінка часу"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.short_desc": {
@@ -2500,7 +2500,7 @@
           "message": "Оновлене значення балів для завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Сповістити всіх"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.short_desc": {
@@ -2512,7 +2512,7 @@
           "message": "Чи сповіщати всіх відповідних членів команди про оновлення завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
+          "source": "Parent task",
           "message": "Батьківське завдання"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "Оновлене батьківське завдання, щоб зробити це підзавданням"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Вміст у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -2536,7 +2536,7 @@
           "message": "Оновлений опис завдання у форматі Markdown"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bGlua3NfdG8.display_name": {
-          "source": "Links To",
+          "source": "Links to",
           "message": "Посилання на"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bGlua3NfdG8.short_desc": {
@@ -2548,7 +2548,7 @@
           "message": "Завдання, з яким потрібно створити або оновити зв'язок"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Check Required Custom Fields",
+          "source": "Check required custom fields",
           "message": "Перевіряти обов'язкові користувацькі поля"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -2560,7 +2560,7 @@
           "message": "Чи перевіряти, чи надано всі обов'язкові користувацькі поля"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -2584,7 +2584,7 @@
           "message": "Унікальний ідентифікатор користувацького поля"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Значення поля"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "Оновлене значення для цього користувацького поля"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.display_name": {
-          "source": "Custom Item ID",
+          "source": "Custom item ID",
           "message": "ID користувацького елемента"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.short_desc": {
@@ -2608,7 +2608,7 @@
           "message": "Оновлений ідентифікатор настроюваного типу завдання"
         },
         "app.Q2xpY2tVcA.action.bmV3X2ZvbGRlcg.display_name": {
-          "source": "New Folder",
+          "source": "New folder",
           "message": "Нова папка"
         },
         "app.Q2xpY2tVcA.action.bmV3X2ZvbGRlcg.short_desc": {
@@ -2632,7 +2632,7 @@
           "message": "Робоча область ClickUp для відстеження подій створення нових папок"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "Нове завдання"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2s.short_desc": {
@@ -2656,7 +2656,7 @@
           "message": "Робоча область ClickUp для відстеження подій створення нових завдань"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2tfY29tbWVudA.display_name": {
-          "source": "New Task Comment",
+          "source": "New task comment",
           "message": "Новий коментар до завдання"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2tfY29tbWVudA.short_desc": {
@@ -2728,7 +2728,7 @@
           "message": "Необов'язково: спрацьовувати лише для коментарів до цього конкретного завдання"
         },
         "app.Q2xpY2tVcA.action.dGFza191cGRhdGVk.display_name": {
-          "source": "Task Updated",
+          "source": "Task updated",
           "message": "Завдання оновлено"
         },
         "app.Q2xpY2tVcA.action.dGFza191cGRhdGVk.short_desc": {
@@ -2752,7 +2752,7 @@
           "message": "Робочий простір ClickUp для відстеження подій оновлення завдань"
         },
         "app.Q2xpY2tVcA.action.dGFza190aW1lX3RyYWNrZWRfdXBkYXRlZA.display_name": {
-          "source": "Task Time Tracked Updated",
+          "source": "Task time tracked updated",
           "message": "Оновлено відстеження часу завдання"
         },
         "app.Q2xpY2tVcA.action.dGFza190aW1lX3RyYWNrZWRfdXBkYXRlZA.short_desc": {
@@ -2776,7 +2776,7 @@
           "message": "Робоча область ClickUp для відстеження оновлень відстеження часу завдання"
         },
         "app.Q2xpY2tVcA.action.bmV3X2xpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "Новий список"
         },
         "app.Q2xpY2tVcA.action.bmV3X2xpc3Q.short_desc": {

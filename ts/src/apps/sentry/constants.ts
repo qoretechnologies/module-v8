@@ -14,14 +14,14 @@ export const SENTRY_APP_LOGO =
 export const SENTRY_CONN_OPTIONS = {
   token: {
     type: 'string',
-    display_name: 'Auth Token',
+    display_name: 'Auth token',
     short_desc: 'Your Sentry authentication token',
     desc: 'Create a token in [Sentry settings](https://sentry.io/settings/account/api/auth-tokens/). '
       + 'Grant the scopes required by the actions and triggers you use.',
   },
   organization: {
     type: 'string',
-    display_name: 'Organization Slug',
+    display_name: 'Organization slug',
     short_desc: 'The slug of your Sentry organization',
     desc: 'Find the organization slug in your Sentry URL: for example, `qorus-dev` in `https://qorus-dev.sentry.io/`.',
   },

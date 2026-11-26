@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Attio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QXR0aW8.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.QXR0aW8.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Attio\"",
@@ -484,8 +484,8 @@
           "message": "The table name"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Create Object Record",
-          "message": "Create Object Record"
+          "source": "Create object record",
+          "message": "Create object record"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
           "source": "Create a new record in a specified object",
@@ -508,8 +508,8 @@
           "message": "Choose the object type in which you want to create a new record. This can be a custom object or a standard object in your Attio workspace."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
-          "source": "Find Object Records",
-          "message": "Find Object Records"
+          "source": "Find object records",
+          "message": "Find object records"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
           "source": "Search for records in an Attio object with filtering and sorting options.",
@@ -520,8 +520,8 @@
           "message": "Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
-          "message": "Object Type"
+          "source": "Object type",
+          "message": "Object type"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
           "source": "The Attio object to search",
@@ -556,8 +556,8 @@
           "message": "The number of records to skip before starting to return results. Used for pagination. Default is 0."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
-          "message": "Sort Attribute"
+          "source": "Sort attribute",
+          "message": "Sort attribute"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
           "source": "Attribute to sort by",
@@ -568,8 +568,8 @@
           "message": "The attribute to sort the results by. Default is \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort direction",
@@ -624,8 +624,8 @@
           "message": "The value to filter by."
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Update Object Record",
-          "message": "Update Object Record"
+          "source": "Update object record",
+          "message": "Update object record"
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
           "source": "Update an existing record in an Attio object.",
@@ -660,8 +660,8 @@
           "message": "The unique identifier of the record to update."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Create List Entry",
-          "message": "Create List Entry"
+          "source": "Create list entry",
+          "message": "Create list entry"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
           "source": "Create a new entry in an Attio list.",
@@ -684,8 +684,8 @@
           "message": "The API slug of the Attio list where the new entry will be created."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
-          "message": "Parent Record ID"
+          "source": "Parent record ID",
+          "message": "Parent record ID"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
           "source": "ID of the parent record",
@@ -696,8 +696,8 @@
           "message": "The unique identifier of the parent record to which this list entry will be linked."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
-          "source": "Find List Entries",
-          "message": "Find List Entries"
+          "source": "Find list entries",
+          "message": "Find list entries"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
           "source": "Search for entries in an Attio list with filtering and sorting options.",
@@ -744,8 +744,8 @@
           "message": "The number of entries to skip before starting to return results. Used for pagination. Default is 0."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
-          "message": "Sort Attribute"
+          "source": "Sort attribute",
+          "message": "Sort attribute"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
           "source": "Attribute to sort by",
@@ -756,8 +756,8 @@
           "message": "The attribute to sort the results by. Default is \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort direction",
@@ -812,8 +812,8 @@
           "message": "The value to filter by."
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Update List Entry",
-          "message": "Update List Entry"
+          "source": "Update list entry",
+          "message": "Update list entry"
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
           "source": "Update an existing entry in an Attio list.",
@@ -848,8 +848,8 @@
           "message": "The unique identifier of the list entry to update."
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
-          "source": "Get Single List Entry",
-          "message": "Get Single List Entry"
+          "source": "Get single list entry",
+          "message": "Get single list entry"
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
           "source": "Retrieves a specific entry from an Attio list.",
@@ -884,8 +884,8 @@
           "message": "Specify the unique identifier of the entry you want to retrieve. This ID is specific to the list you've selected and will load available entries based on your list selection."
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Get Single Object Record",
-          "message": "Get Single Object Record"
+          "source": "Get single object record",
+          "message": "Get single object record"
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
           "source": "Retrieves a specific record from an Attio object.",
@@ -920,8 +920,8 @@
           "message": "Specify the unique identifier of the record you want to retrieve. This ID is specific to the object you've selected and will load available records based on your object selection."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
-          "source": "List Tasks",
-          "message": "List Tasks"
+          "source": "List tasks",
+          "message": "List tasks"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
           "source": "Retrieves a list of tasks from Attio with filtering options.",
@@ -956,8 +956,8 @@
           "message": "Specify the number of tasks to skip before starting to return results. Useful for pagination. Default is 0."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
-          "source": "Linked Object",
-          "message": "Linked Object"
+          "source": "Linked object",
+          "message": "Linked object"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
           "source": "Filter tasks by linked object type",
@@ -968,8 +968,8 @@
           "message": "Filter tasks to only include those linked to a specific object type in Attio. When selected, you can further refine by specifying a particular record."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
-          "source": "Linked Record ID",
-          "message": "Linked Record ID"
+          "source": "Linked record ID",
+          "message": "Linked record ID"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
           "source": "Filter tasks by specific linked record",
@@ -992,8 +992,8 @@
           "message": "Filter tasks based on whether they are completed or not. Default is false (shows incomplete tasks)."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
-          "source": "Sort Order",
-          "message": "Sort Order"
+          "source": "Sort order",
+          "message": "Sort order"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
           "source": "Order of returned tasks",
@@ -1024,8 +1024,8 @@
           "message": "Filter tasks to only include those assigned to a specific workspace member."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
-          "message": "Get Task"
+          "source": "Get task",
+          "message": "Get task"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
           "source": "Retrieves a specific task from Attio by its ID.",
@@ -1048,8 +1048,8 @@
           "message": "Specify the unique identifier of the task you want to retrieve. The available task IDs will be loaded based on your previous object selection."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
-          "source": "Get Notes",
-          "message": "Get Notes"
+          "source": "Get notes",
+          "message": "Get notes"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
           "source": "Retrieves Notes from Attio.",
@@ -1084,8 +1084,8 @@
           "message": "The number of notes to skip before starting to return results. Used for pagination. Default is 0."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
-          "message": "Parent Object"
+          "source": "Parent object",
+          "message": "Parent object"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
           "source": "The parent object type",
@@ -1096,8 +1096,8 @@
           "message": "The type of the parent object that this note is linked to. This is required to filter notes by their parent object."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
-          "message": "Parent Record ID"
+          "source": "Parent record ID",
+          "message": "Parent record ID"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
           "source": "ID of the parent record",
@@ -1108,8 +1108,8 @@
           "message": "The unique identifier of the parent record to which this note is linked. This is required to filter notes by their parent record."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
-          "message": "Create Task"
+          "source": "Create task",
+          "message": "Create task"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
           "source": "Creates a new task in Attio with specified details.",
@@ -1120,8 +1120,8 @@
           "message": "This action creates a new task in Attio with content, deadline, completion status, and optional assignees. You can set the task content, specify a deadline date, mark it as completed or not, and assign it to one or more workspace members."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
-          "message": "Task Content"
+          "source": "Task content",
+          "message": "Task content"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
           "source": "The content or description of the task",
@@ -1168,8 +1168,8 @@
           "message": "Select one or more workspace members who will be assigned to this task. These members will be responsible for completing the task and will receive notifications about it."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
-          "source": "Create Note",
-          "message": "Create Note"
+          "source": "Create note",
+          "message": "Create note"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
           "source": "Creates a new note attached to a specific record in Attio.",
@@ -1180,8 +1180,8 @@
           "message": "This action creates a new note and attaches it to a specific record within an Attio object. Notes can be written in plain text or markdown format and include a title and content body. They serve as a way to document important information about records in your workspace."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
-          "message": "Parent Object"
+          "source": "Parent object",
+          "message": "Parent object"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
           "source": "The object that contains the record to attach the note to",
@@ -1192,8 +1192,8 @@
           "message": "Select the Attio object that contains the record you want to attach this note to. This defines which object type the note will be associated with."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
-          "message": "Parent Record ID"
+          "source": "Parent record ID",
+          "message": "Parent record ID"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
           "source": "The specific record to attach the note to",
@@ -1248,8 +1248,8 @@
           "message": "Enter the content for your note. This can be formatted according to the selected format type (plain text or markdown)."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
-          "source": "New List Entry Created",
-          "message": "New List Entry Created"
+          "source": "New list entry created",
+          "message": "New list entry created"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
           "source": "Triggers when a new entry is created in an Attio list.",
@@ -1272,8 +1272,8 @@
           "message": "The API slug of the Attio list to monitor for new entries."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
-          "source": "List Entry Deleted",
-          "message": "List Entry Deleted"
+          "source": "List entry deleted",
+          "message": "List entry deleted"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
           "source": "Triggers when an entry is deleted from an Attio list.",
@@ -1296,8 +1296,8 @@
           "message": "The API slug of the Attio list to monitor for deleted entries."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
-          "source": "List Entry Updated",
-          "message": "List Entry Updated"
+          "source": "List entry updated",
+          "message": "List entry updated"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
           "source": "Triggers when an entry is updated in an Attio list.",
@@ -1320,8 +1320,8 @@
           "message": "The API slug of the Attio list to monitor for updated entries."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
-          "source": "New Object Record Created",
-          "message": "New Object Record Created"
+          "source": "New object record created",
+          "message": "New object record created"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
           "source": "Triggers when a new record is created for an Attio object.",
@@ -1332,8 +1332,8 @@
           "message": "This trigger fires whenever a new record is created for a specified Attio object. It provides details about the created record including its ID, object type, and the actor who created it."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
-          "message": "Object Type"
+          "source": "Object type",
+          "message": "Object type"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
           "source": "The Attio object to monitor for new records",
@@ -1344,8 +1344,8 @@
           "message": "The API slug of the Attio object type to monitor for new records."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
-          "source": "Object Record Deleted",
-          "message": "Object Record Deleted"
+          "source": "Object record deleted",
+          "message": "Object record deleted"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
           "source": "Triggers when a record is deleted from an Attio object.",
@@ -1356,8 +1356,8 @@
           "message": "This trigger fires whenever a record is deleted from a specified Attio object. It provides details about the deleted record including its ID, object type, and the actor who performed the deletion."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
-          "message": "Object Type"
+          "source": "Object type",
+          "message": "Object type"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
           "source": "The Attio object to monitor for deleted records",
@@ -1368,8 +1368,8 @@
           "message": "The API slug of the Attio object type to monitor for deleted records."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
-          "source": "Object Record Updated",
-          "message": "Object Record Updated"
+          "source": "Object record updated",
+          "message": "Object record updated"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
           "source": "Triggers when a record is updated for an Attio object.",
@@ -1380,8 +1380,8 @@
           "message": "This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
-          "message": "Object Type"
+          "source": "Object type",
+          "message": "Object type"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
           "source": "The Attio object to monitor for updated records",
@@ -1392,8 +1392,8 @@
           "message": "The API slug of the Attio object type to monitor for updated records."
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
-          "source": "New Task Created",
-          "message": "New Task Created"
+          "source": "New task created",
+          "message": "New task created"
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {
           "source": "Triggers when a new task is created in Attio.",

@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Magento** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對於尚未在此應用程式上作為一等動作公開的端點，請使用此動作。"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -352,7 +352,7 @@
           "message": "使用客戶 ID 擷取客戶帳戶的詳細資訊。傳回所有客戶屬性，包括地址資訊、帳戶狀態和自訂屬性。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Update Customer",
+          "source": "Update customer",
           "message": "更新客戶"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "更新現有帳戶的客戶資訊。此端點允許修改個人資訊、地址、自訂屬性和其他帳戶詳細資料。請求中必須包含客戶 ID。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
-          "source": "Delete Customer",
+          "source": "Delete customer",
           "message": "刪除客戶"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "從系統中永久刪除客戶帳戶。此操作無法復原，並將移除與指定 ID 關聯的所有客戶資料，包括地址和訂單歷史記錄參考。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Customers",
+          "source": "List customers",
           "message": "列出客戶"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "傳回符合指定搜尋條件的客戶帳戶清單。結果可進行篩選、排序和分頁。使用搜尋條件參數依電子郵件、名稱、建立日期或其他客戶屬性縮小結果範圍。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
-          "source": "Create Customer Account",
+          "source": "Create customer account",
           "message": "建立客戶帳戶"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
@@ -400,7 +400,7 @@
           "message": "使用提供的資訊建立新客戶帳戶。必填欄位包括電子郵件、密碼和姓名。選填詳細資訊包括地址、出生日期和自訂屬性。成功時傳回新建立的客戶 ID。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
-          "source": "Create Product",
+          "source": "Create product",
           "message": "建立產品"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "在目錄中建立包含指定屬性、定價和庫存資訊的新商品。商品類型可為簡單、可設定、組合、分組、虛擬或可下載商品。亦可定義媒體庫項目、階梯價格和自訂選項。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
-          "source": "List Products",
+          "source": "List products",
           "message": "列出產品"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "傳回符合指定搜尋條件的商品集合。結果可依名稱、SKU、價格和狀態等屬性進行篩選。支援分頁、排序以及在回應中包含自訂屬性。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
-          "source": "Update Product",
+          "source": "Update product",
           "message": "更新產品"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
@@ -436,7 +436,7 @@
           "message": "更新目錄中的現有商品。可修改任何商品屬性，包括名稱、價格、描述、圖片、庫存和類別分配。請求中必須指定商品 SKU 或 ID。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
-          "source": "Delete Product",
+          "source": "Delete product",
           "message": "刪除產品"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "依 ID 或 SKU 從目錄中永久移除商品。此操作無法復原，並可能影響引用已刪除商品的現有訂單和購物車。"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
-          "source": "Get Product Details",
+          "source": "Get product details",
           "message": "取得商品詳細資料"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "依 SKU 或 ID 擷取特定商品的完整資訊。回應包含所有商品屬性、圖片、定價資訊、庫存狀態和類別分配。其他參數可控制包含哪些資料。"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Shopping Carts",
+          "source": "List shopping carts",
           "message": "列出購物車"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "傳回符合指定搜尋條件的有效購物車集合。結果可依客戶識別碼、建立日期和購物車狀態進行篩選。每個購物車包含品項、已套用的優惠券以及運送/帳單資訊（若有）。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
-          "source": "Get Order Details",
+          "source": "Get order details",
           "message": "取得訂單詳細資料"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "根據識別碼擷取特定訂單的完整資訊。包括訂單品項、帳單和運送地址、付款資訊、套用的折扣以及訂單狀態歷程記錄。適用於訂單處理和客戶服務查詢。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Orders",
+          "source": "List orders",
           "message": "列出訂單"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "傳回符合指定搜尋條件的訂單集合。結果可依客戶、狀態、日期範圍和總金額進行篩選。支援分頁和排序以有效瀏覽大量訂單。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Create Order",
+          "source": "Create order",
           "message": "建立訂單"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "對指定訂單執行持續性儲存作業。將訂單資料儲存至資料庫，包括客戶資訊、明細項目、付款詳細資料、運送資訊和其他相關訂單中繼資料。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
-          "source": "Add Order Comment",
+          "source": "Add order comment",
           "message": "新增訂單備註"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
@@ -520,7 +520,7 @@
           "message": "向訂單歷程新增備註。備註可以是內部備註（僅管理員可見）或客戶可見。每條備註都會記錄時間戳記和作者。適用於記錄訂單處理步驟和客戶溝通內容。"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
-          "source": "Get Order Comments",
+          "source": "Get order comments",
           "message": "取得訂單備註"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "傳回特定訂單的完整備註歷程記錄。結果包括備註文字、時間戳記、作者資訊和可見度狀態（客戶可見或僅管理員可見）。備註按時間順序傳回。"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Invoices",
+          "source": "List invoices",
           "message": "列出發票"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "根據指定的搜尋條件傳回發票清單。結果可依訂單 ID、客戶、日期和金額進行篩選。每張發票均包含明細項目、付款資訊和相關訂單詳細資料。支援分頁和排序。"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
-          "source": "Create Invoice",
+          "source": "Create invoice",
           "message": "建立發票"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
@@ -556,7 +556,7 @@
           "message": "為現有訂單建立新的發票記錄，記錄財務交易和付款請求。允許指定要開立發票的品項、付款詳細資料以及將顯示在客戶發票上的備註。"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Shipments",
+          "source": "List shipments",
           "message": "列出出貨"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "根據指定的搜尋條件傳回出貨清單。結果可依訂單識別碼、客戶、建立日期和物流追蹤資訊進行篩選。每筆出貨包含已出貨品項、數量、追蹤編號和貨運業者資訊。"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
-          "source": "Create Shipment",
+          "source": "Create shipment",
           "message": "建立出貨"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
@@ -580,7 +580,7 @@
           "message": "為現有訂單建立新的出貨記錄，讓您可以記錄並追蹤訂單品項向客戶的實體寄送情況。包含指定追蹤編號、貨運承運商及出貨品項與數量的選項。"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Payment Transactions",
+          "source": "List payment transactions",
           "message": "列出付款交易"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
@@ -592,7 +592,7 @@
           "message": "根據指定的搜尋條件傳回付款交易清單。結果可依訂單識別碼、付款方式、交易類型和狀態進行篩選。每筆交易包括金額、狀態和相關付款閘道資訊。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.display_name": {
-          "source": "Customer Created or Updated",
+          "source": "Customer created or updated",
           "message": "已建立或更新客戶"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.short_desc": {
@@ -604,7 +604,7 @@
           "message": "當您的 Magento 商店中建立新客戶或更新現有客戶的資訊時，此觸發器將會啟動。"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "啟動準則"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -624,7 +624,7 @@
           "message": "已更新"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Invoice Created or Updated",
+          "source": "Invoice created or updated",
           "message": "已建立或更新發票"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
@@ -636,7 +636,7 @@
           "message": "當您的 Magento 商店中產生新發票或修改現有發票時，此觸發器將會啟動。"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "啟動準則"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -656,7 +656,7 @@
           "message": "已更新"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.display_name": {
-          "source": "Order Created",
+          "source": "Order created",
           "message": "已建立訂單"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.short_desc": {
@@ -668,7 +668,7 @@
           "message": "當客戶完成結帳流程並在您的 Magento 商店中下達新訂單時，此觸發器將會啟動。"
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.display_name": {
-          "source": "Shipment Created",
+          "source": "Shipment created",
           "message": "出貨已建立"
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.short_desc": {
@@ -680,7 +680,7 @@
           "message": "當您的 Magento 商店中為訂單建立新出貨時，此觸發程序將會啟動，表示商品已出貨給客戶。"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Product Created or Updated",
+          "source": "Product created or updated",
           "message": "產品已建立或已更新"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "當新產品新增至您的 Magento 目錄或現有產品資訊遭到修改時，此觸發程序將會啟動。"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "啟動準則"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {

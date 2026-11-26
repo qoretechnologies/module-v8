@@ -28,7 +28,7 @@
           "message": "Effectuez un appel d'API HTTP / REST personnalisé à **YouTube** à l'aide de l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.display_name": {
-          "source": "Add Video to Playlist",
+          "source": "Add video to playlist",
           "message": "Ajouter une vidéo à la playlist"
         },
         "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Position facultative (index basé sur 0) où la vidéo doit être insérée dans la playlist. Si elle n'est pas spécifiée, la vidéo sera ajoutée à la fin"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.display_name": {
-          "source": "Create Playlist",
+          "source": "Create playlist",
           "message": "Créer une playlist"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Texte de description facultatif pour la playlist expliquant son contenu ou son objectif"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
+          "source": "Privacy status",
           "message": "Statut de confidentialité"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Liste facultative de tags/mots-clés pour aider à catégoriser la playlist et la rendre découvrable"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.display_name": {
-          "source": "Default Language",
+          "source": "Default language",
           "message": "Langue par défaut"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Code de langue par défaut facultatif pour le contenu de la playlist (par ex., \"en\" pour l'anglais)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.display_name": {
-          "source": "Search Videos",
+          "source": "Search videos",
           "message": "Rechercher des vidéos"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Rechercher des vidéos YouTube à l'aide de divers filtres, notamment les mots-clés, la durée, la qualité, la date de mise en ligne, etc."
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Requête de recherche"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Votre requête peut également utiliser les opérateurs booléens NOT (-) et OR (|) pour exclure des vidéos ou pour trouver des vidéos associées à l'un de plusieurs termes de recherche. Par exemple, pour rechercher des vidéos correspondant à \"boating\" ou \"sailing\", définissez la valeur du paramètre q sur boating|sailing. De même, pour rechercher des vidéos correspondant à \"boating\" ou \"sailing\" mais pas \"fishing\", définissez la valeur du paramètre q sur boating|sailing -fishing."
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Ordre de tri"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Nombre de vues"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.display_name": {
-          "source": "Published After",
+          "source": "Published after",
           "message": "Publié après"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Filtrer pour inclure uniquement les vidéos publiées après la date spécifiée (format ISO 8601)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.display_name": {
-          "source": "Published Before",
+          "source": "Published before",
           "message": "Publié avant"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Filtrer pour inclure uniquement les vidéos publiées avant la date spécifiée (format ISO 8601)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.display_name": {
-          "source": "Video Duration",
+          "source": "Video duration",
           "message": "Durée de la vidéo"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Longue (> 20 minutes)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.display_name": {
-          "source": "Video Definition",
+          "source": "Video definition",
           "message": "Définition de la vidéo"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Haute définition"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.display_name": {
-          "source": "Video Dimension",
+          "source": "Video dimension",
           "message": "Dimension de la vidéo"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.short_desc": {
@@ -628,7 +628,7 @@
           "message": "3D"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.display_name": {
-          "source": "Video Caption",
+          "source": "Video caption",
           "message": "Sous-titres de la vidéo"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Aucun"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.display_name": {
-          "source": "Video License",
+          "source": "Video license",
           "message": "Licence de la vidéo"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Creative Commons"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.display_name": {
-          "source": "Safe Search",
+          "source": "Safe search",
           "message": "SafeSearch"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Strict"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.display_name": {
-          "source": "Region Code",
+          "source": "Region code",
           "message": "Code de région"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Code pays facultatif à deux lettres pour restreindre les résultats de recherche à une région spécifique"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.display_name": {
-          "source": "Relevance Language",
+          "source": "Relevance language",
           "message": "Langue de pertinence"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Code langue à utiliser pour le classement par pertinence des résultats de recherche"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.display_name": {
-          "source": "Video Category",
+          "source": "Video category",
           "message": "Catégorie de la vidéo"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Identifiant de catégorie facultatif pour filtrer les vidéos selon une catégorie YouTube spécifique"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "Résultats maximum"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Le nombre maximal de résultats de recherche à renvoyer (la valeur par défaut est 25)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Jeton de page"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Jeton permettant de récupérer une page spécifique de résultats (utilisé pour la pagination)"
         },
         "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.display_name": {
-          "source": "Get Channel ID from URL",
+          "source": "Get channel ID from URL",
           "message": "Obtenir l'ID de chaîne à partir de l'URL"
         },
         "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Tout format d'URL YouTube valide, y compris les URL de chaîne, les identifiants (@nom_d_utilisateur), les URL personnalisées (/c/), les noms d'utilisateur (/user/) ou les URL de vidéo"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.display_name": {
-          "source": "Get Analytics Report",
+          "source": "Get analytics report",
           "message": "Obtenir le rapport d'analyse"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Récupérer les données YouTube Analytics pour une chaîne spécifique sur une plage de dates, y compris des métriques telles que les vues, le temps de visionnage et l'engagement"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Date de début"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.short_desc": {
@@ -808,7 +808,7 @@
           "message": "La date de début du rapport d'analyse au format AAAA-MM-JJ"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Date de fin"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.short_desc": {
@@ -944,7 +944,7 @@
           "message": "L'ID de chaîne YouTube pour lequel récupérer les données d'analyse"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "Résultats maximum"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Le nombre maximal de points de données à renvoyer dans le rapport (la valeur par défaut est 10)"
         },
         "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.display_name": {
-          "source": "List Video Categories",
+          "source": "List video categories",
           "message": "Lister les catégories de vidéos"
         },
         "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Récupérer la liste des catégories de vidéos YouTube disponibles qui peuvent être attribuées aux vidéos"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.display_name": {
-          "source": "List User Channels",
+          "source": "List user channels",
           "message": "Lister les chaînes de l'utilisateur"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.short_desc": {
@@ -980,7 +980,7 @@
           "message": "Récupérer des informations sur les chaînes YouTube de l'utilisateur authentifié, y compris les statistiques et les paramètres de personnalisation de marque"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "Résultats maximum"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Le nombre maximal de chaînes à renvoyer (la valeur par défaut est 5)"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Jeton de page suivante"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "Jeton permettant de récupérer la page de résultats suivante"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.display_name": {
-          "source": "List User Subscriptions",
+          "source": "List user subscriptions",
           "message": "Lister les abonnements de l'utilisateur"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "Récupère une liste paginée des chaînes YouTube auxquelles l'utilisateur authentifié est abonné, y compris les détails des chaînes et les miniatures"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "Résultats maximum"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Le nombre maximal d'abonnements à renvoyer dans la réponse (1-50, la valeur par défaut est 25)"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Jeton de page suivante"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "Le jeton pouvant être utilisé comme valeur du paramètre pageToken pour récupérer la page suivante dans le jeu de résultats"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.display_name": {
-          "source": "List Video Comments",
+          "source": "List video comments",
           "message": "Lister les commentaires d'une vidéo"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.short_desc": {
@@ -1064,7 +1064,7 @@
           "message": "L'identifiant unique de la vidéo YouTube dont récupérer les commentaires"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Ordre de tri"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Pertinence"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.display_name": {
-          "source": "Search Terms",
+          "source": "Search terms",
           "message": "Termes de recherche"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Termes de recherche facultatifs pour filtrer les commentaires contenant des mots-clés spécifiques"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.display_name": {
-          "source": "Text Format",
+          "source": "Text format",
           "message": "Format du texte"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Texte brut"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "Résultats maximum"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "Le nombre maximal de fils de commentaires à renvoyer (la valeur par défaut est 20)"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Jeton de page"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Jeton pour récupérer une page spécifique de commentaires"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.display_name": {
-          "source": "List User Videos",
+          "source": "List user videos",
           "message": "Lister les vidéos de l'utilisateur"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Récupérer la liste des vidéos mises en ligne par l'utilisateur authentifié sur sa chaîne YouTube"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "Résultats maximum"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Le nombre maximal de vidéos à renvoyer (la valeur par défaut est 10)"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Jeton de page suivante"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Jeton pour récupérer la page suivante de vidéos"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
-          "source": "Create or Reply to Comment",
+          "source": "Create or reply to comment",
           "message": "Créer un commentaire ou y répondre"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Publier une réponse à un commentaire existant ou en créer un nouveau sur une vidéo YouTube"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.display_name": {
-          "source": "Parent Comment ID",
+          "source": "Parent comment ID",
           "message": "ID du commentaire parent"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "L'identifiant unique du commentaire ou du fil de discussion auquel répondre"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.display_name": {
-          "source": "Reply Text",
+          "source": "Reply text",
           "message": "Texte de la réponse"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Le contenu textuel de votre réponse au commentaire"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.display_name": {
-          "source": "Update Video Details",
+          "source": "Update video details",
           "message": "Mettre à jour les détails de la vidéo"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Nouvelle catégorie facultative pour la vidéo (identifiant numérique de catégorie)"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
+          "source": "Privacy status",
           "message": "Statut de confidentialité"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Nouvelle description facultative pour la vidéo (laisser vide pour conserver la description actuelle)"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.display_name": {
-          "source": "Made for Kids",
+          "source": "Made for kids",
           "message": "Conçu pour les enfants"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "Liste facultative de tags/mots-clés pour aider à catégoriser la vidéo"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.display_name": {
-          "source": "Upload Video",
+          "source": "Upload video",
           "message": "Mettre en ligne une vidéo"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Le titre/nom de la vidéo en cours de mise en ligne"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.display_name": {
-          "source": "Video File",
+          "source": "Video file",
           "message": "Fichier vidéo"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "La catégorie YouTube pour la vidéo (identifiant numérique de catégorie)"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
+          "source": "Privacy status",
           "message": "Statut de confidentialité"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.short_desc": {
@@ -1524,7 +1524,7 @@
           "message": "Texte de description facultatif pour la vidéo expliquant son contenu"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.display_name": {
-          "source": "Made for Kids",
+          "source": "Made for kids",
           "message": "Conçu pour les enfants"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "Liste facultative de tags/mots-clés pour aider à catégoriser et rendre la vidéo facile à trouver"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.display_name": {
-          "source": "New Video by Search",
+          "source": "New video by search",
           "message": "Nouvelle vidéo par recherche"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.short_desc": {
@@ -1560,7 +1560,7 @@
           "message": "Surveille les résultats de recherche YouTube pour une requête spécifique et se déclenche lorsque de nouvelles vidéos correspondant aux termes de recherche sont trouvées."
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Requête de recherche"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.short_desc": {
@@ -1572,7 +1572,7 @@
           "message": "Votre requête peut également utiliser les opérateurs booléens NOT (-) et OR (|) pour exclure des vidéos ou pour trouver des vidéos associées à l'un de plusieurs termes de recherche. Par exemple, pour rechercher des vidéos correspondant à \"boating\" ou \"sailing\", définissez la valeur du paramètre q sur boating|sailing. De même, pour rechercher des vidéos correspondant à \"boating\" ou \"sailing\" mais pas \"fishing\", définissez la valeur du paramètre q sur boating|sailing -fishing."
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.display_name": {
-          "source": "New Video Comment",
+          "source": "New video comment",
           "message": "Nouveau commentaire de vidéo"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.short_desc": {
@@ -1596,7 +1596,7 @@
           "message": "Sélectionner la vidéo YouTube à surveiller pour les nouveaux commentaires"
         },
         "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.display_name": {
-          "source": "New Channel Video",
+          "source": "New channel video",
           "message": "Nouvelle vidéo de la chaîne"
         },
         "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "Saisir l'URL complète de la chaîne YouTube à surveiller pour les nouvelles vidéos mises en ligne"
         },
         "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.display_name": {
-          "source": "New Playlist Video",
+          "source": "New playlist video",
           "message": "Nouvelle vidéo de la playlist"
         },
         "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.short_desc": {
@@ -1656,7 +1656,7 @@
           "message": "Saisir l'ID de la playlist YouTube à surveiller pour l'ajout de nouvelles vidéos"
         },
         "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.display_name": {
-          "source": "New Livestream",
+          "source": "New livestream",
           "message": "Nouveau flux en direct"
         },
         "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.short_desc": {

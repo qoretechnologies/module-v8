@@ -28,7 +28,7 @@
           "message": "Виконати довільний виклик HTTP / REST API до **SurveyMonkey**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як повноцінні дії в цьому додатку."
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Створити контакт"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Створити новий контакт у SurveyMonkey з іменем, прізвищем, електронною поштою або номером телефону"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Ім'я"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Ім'я контакту"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Прізвище"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Електронна адреса контакту (потрібно вказати або електронну пошту, або номер телефону)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Номер телефону"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Номер телефону контакту (потрібно вказати або електронну пошту, або номер телефону)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Список контактів"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Номер сторінки для пагінації (починається з 1)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "На сторінку"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Максимальна загальна кількість контактів для отримання з усіх сторінок (за замовчуванням: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Create Collector",
+          "source": "Create collector",
           "message": "Створити колектор"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Виберіть опитування, для якого потрібно створити колектор"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
-          "source": "Collector Type",
+          "source": "Collector type",
           "message": "Тип колектора"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
@@ -500,7 +500,7 @@
           "message": "Вбудоване опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
-          "source": "Collector Name",
+          "source": "Collector name",
           "message": "Назва колектора"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
@@ -512,7 +512,7 @@
           "message": "Описова назва колектора"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
-          "source": "List Collectors",
+          "source": "List collectors",
           "message": "Список колекторів"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
@@ -548,7 +548,7 @@
           "message": "Максимальна загальна кількість колекторів для отримання (за замовчуванням: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
-          "source": "List Responses",
+          "source": "List responses",
           "message": "Список відповідей"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
@@ -584,7 +584,7 @@
           "message": "Максимальна загальна кількість відповідей для отримання (за замовчуванням: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
-          "source": "Get Response",
+          "source": "Get response",
           "message": "Отримати відповідь"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
@@ -620,7 +620,7 @@
           "message": "Унікальний ідентифікатор відповіді, яку потрібно отримати"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "Включити відповіді"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -632,7 +632,7 @@
           "message": "Якщо ввімкнено, отримує повні відомості про відповідь, включно з відповідями на всі запитання"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
-          "source": "Get Collector",
+          "source": "Get collector",
           "message": "Отримати колектор"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Виберіть колектор, для якого потрібно отримати детальну інформацію"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
-          "source": "Get Survey",
+          "source": "Get survey",
           "message": "Отримати опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Виберіть опитування, для якого потрібно отримати детальну інформацію"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
-          "source": "List Surveys",
+          "source": "List surveys",
           "message": "Список опитувань"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
@@ -716,7 +716,7 @@
           "message": "Максимальна загальна кількість опитувань для отримання (за замовчуванням: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
-          "source": "Send Survey",
+          "source": "Send survey",
           "message": "Надіслати опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
@@ -752,7 +752,7 @@
           "message": "Виберіть email-колектор, через який потрібно надіслати опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "Тема електронного листа"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Тема повідомлення, яка відображатиметься в електронному листі із запрошенням"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
-          "source": "Email Body",
+          "source": "Email body",
           "message": "Тіло електронного листа"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Тіло повідомлення, яке відображатиметься в електронному листі із запрошенням"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
-          "source": "Recipient Emails",
+          "source": "Recipient emails",
           "message": "Електронні адреси одержувачів"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Список адрес електронної пошти для надсилання запрошення до опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
-          "source": "Create Survey",
+          "source": "Create survey",
           "message": "Створити опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
@@ -860,7 +860,7 @@
           "message": "Ідентифікатор шаблону для використання в якості основи нового опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
-          "source": "Copy Survey",
+          "source": "Copy survey",
           "message": "Скопіювати опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
@@ -896,7 +896,7 @@
           "message": "Назва, яка відображатиметься для скопійованого опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Update Collector",
+          "source": "Update collector",
           "message": "Оновити колектор"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Закрито"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
+          "source": "Close date",
           "message": "Дата закриття"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "URL-адреса, на яку респонденти будуть перенаправлені після завершення опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
-          "source": "Response Limit",
+          "source": "Response limit",
           "message": "Ліміт відповідей"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Максимальна кількість відповідей, яку потрібно прийняти перед закриттям колектора"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Delete Collector",
+          "source": "Delete collector",
           "message": "Видалити колектор"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Виберіть колектор, який потрібно остаточно видалити"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
-          "source": "Get Response Counts",
+          "source": "Get response counts",
           "message": "Отримати кількість відповідей"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Виберіть опитування, для якого потрібно отримати кількість відповідей"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Оновити контакт"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Унікальний ідентифікатор контакту, який потрібно оновити"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Ім'я"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Нове ім'я для контакту"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Прізвище"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Нова адреса електронної пошти контакту"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Номер телефону"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Новий номер телефону для контакту"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Видалити контакт"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Унікальний ідентифікатор контакту, який потрібно видалити"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "Список списків контактів"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Максимальна загальна кількість списків контактів для отримання (за замовчуванням: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "Створити список контактів"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Описова назва для нового списку контактів"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
+          "source": "Add contacts to list",
           "message": "Додати контакти до списку"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Масово додати один або кілька наявних контактів до списку контактів"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
-          "source": "Contact List ID",
+          "source": "Contact list ID",
           "message": "Ідентифікатор списку контактів"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "Список ідентифікаторів контактів для додавання до списку контактів"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
-          "source": "Get Survey Rollup",
+          "source": "Get survey rollup",
           "message": "Отримати зведені дані опитування"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
@@ -1264,7 +1264,7 @@
           "message": "Виберіть опитування, для якого потрібно отримати зведену статистику"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
-          "source": "Get User Details",
+          "source": "Get user details",
           "message": "Отримати дані користувача"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Отримати інформацію про автентифікованого користувача SurveyMonkey, включно з типом облікового запису та дозволами"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
-          "source": "List Survey Folders",
+          "source": "List survey folders",
           "message": "Список папок опитувань"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "Максимальна загальна кількість папок опитувань для отримання (за замовчуванням: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
-          "source": "Create Survey Folder",
+          "source": "Create survey folder",
           "message": "Створити папку опитувань"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Описова назва для нової папки опитувань"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
-          "source": "New Response",
+          "source": "New response",
           "message": "Нова відповідь"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Виберіть конкретне опитування, за яким ви хочете стежити на предмет завершених відповідей"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
-          "source": "Response Disqualified",
+          "source": "Response disqualified",
           "message": "Відповідь дискваліфіковано"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Виберіть конкретне опитування, яке потрібно відстежувати на наявність дискваліфікованих відповідей"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
-          "source": "Response Updated",
+          "source": "Response updated",
           "message": "Відповідь оновлено"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Виберіть конкретне опитування, яке потрібно відстежувати на наявність оновлених відповідей"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
-          "source": "Collector Updated",
+          "source": "Collector updated",
           "message": "Колектор оновлено"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {

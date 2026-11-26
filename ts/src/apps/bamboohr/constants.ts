@@ -16,7 +16,7 @@ export const BAMBOOHR_APP_LOGO =
 export const BAMBOOHR_CONN_OPTIONS = {
   company_domain: {
     type: 'string',
-    display_name: 'Company Domain',
+    display_name: 'Company domain',
     short_desc: 'Your BambooHR company subdomain.',
     desc: 'The subdomain of your BambooHR account. For example, if you access BambooHR at https://mycompany.bamboohr.com, your company domain is "mycompany".',
   },

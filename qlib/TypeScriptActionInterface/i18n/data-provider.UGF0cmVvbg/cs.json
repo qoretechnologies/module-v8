@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Patreon** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci vystaveny jako prvotřídní akce."
         },
         "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
+          "source": "List campaigns",
           "message": "Seznam kampaní"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Použijte kurzor vrácený z předchozího požadavku k načtení další stránky kampaní. Pro první stránku nechte prázdné."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
-          "source": "List Campaign Members",
+          "source": "List campaign members",
           "message": "Seznam členů kampaně"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Použijte kurzor vrácený z předchozího požadavku k načtení další stránky členů. Pro první stránku nechte prázdné."
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
+          "source": "Get campaign",
           "message": "Získat kampaň"
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Vyberte kampaň, o které chcete získat podrobné informace. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "Získat člena"
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Vyberte nebo zadejte ID člena (patrona), jehož podrobnosti chcete získat. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
-          "source": "List Posts",
+          "source": "List posts",
           "message": "Vypsat příspěvky"
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Použijte kurzor vrácený z předchozího požadavku k načtení další stránky příspěvků. Pro první stránku nechte prázdné."
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
-          "source": "Get Post",
+          "source": "Get post",
           "message": "Získat příspěvek"
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vyberte nebo zadejte ID příspěvku, jehož podrobnosti chcete získat. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
-          "source": "Pledge Event",
+          "source": "Pledge event",
           "message": "Událost příspěvku (pledge)"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Vyberte kampaň, kterou chcete sledovat z hlediska událostí týkajících se příspěvků (pledge). Toto je povinné pole."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Událost triggeru"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Spustí se, když člen smaže svůj příspěvek (pledge)."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
-          "source": "Member Event",
+          "source": "Member event",
           "message": "Událost člena"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Vyberte kampaň, kterou chcete sledovat z hlediska událostí týkajících se členů. Toto je povinné pole."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Událost triggeru"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Spustí se při smazání členství. Upozorňujeme, že u jednoho patrona můžete tuto událost obdržet vícekrát, pokud své členství smaže a obnoví. Ke smazání dochází pouze v případě, že neproběhla žádná předchozí platba, jinak je zrušení příspěvku aktualizací stavu člena."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
-          "source": "Post Event",
+          "source": "Post event",
           "message": "Událost příspěvku"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Vyberte kampaň, kterou chcete sledovat z hlediska událostí týkajících se příspěvků. Toto je povinné pole."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Událost triggeru"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {

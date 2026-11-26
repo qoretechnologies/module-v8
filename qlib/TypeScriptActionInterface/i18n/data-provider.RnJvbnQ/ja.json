@@ -28,7 +28,7 @@
           "message": "設定された接続の認証情報を使用して、**Front**へのカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ提供されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
+          "source": "List accounts",
           "message": "アカウント一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "取得するアカウントレコードの最大数。デフォルトは50です。大規模なデータセットにはページネーションを使用してください。"
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
+          "source": "Get account",
           "message": "アカウントの取得"
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "取得するアカウントの ID を選択または入力します。アカウント ID は「acc_」で始まります。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
-          "source": "Create Account",
+          "source": "Create account",
           "message": "アカウントを作成"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "このアカウントを CRM や請求プラットフォームなどの別システムのレコードにリンクするためのオプションの外部 ID。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -460,7 +460,7 @@
           "message": "アカウントのカスタムフィールド値を含むオブジェクト。キーは設定されたカスタムフィールド名と一致する必要があります。"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
-          "source": "Update Account",
+          "source": "Update account",
           "message": "アカウントを更新"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "このアカウントの外部システム識別子を更新します。"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "アカウントのカスタムフィールドの値を更新します。"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
-          "source": "Delete Account",
+          "source": "Delete account",
           "message": "アカウントを削除"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "削除するアカウントのIDを選択または入力してください。"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
-          "source": "List Account Contacts",
+          "source": "List account contacts",
           "message": "アカウントの連絡先一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "取得する連絡先レコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
-          "source": "Add Contact to Account",
+          "source": "Add contact to account",
           "message": "コンタクトをアカウントに追加"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "アカウントに追加する1件以上の連絡先を選択します。連絡先 ID は「crd_」で始まります。"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
-          "source": "Remove Contact from Account",
+          "source": "Remove contact from account",
           "message": "アカウントから連絡先を削除"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
@@ -676,7 +676,7 @@
           "message": "アカウントから削除する連絡先を1件以上選択します。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "連絡先一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Frontワークスペース内のすべての連絡先のリストを取得します。連絡先はやり取りを行う相手を表します。結果は作成日または更新日で並べ替えることができます。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "並べ替え順"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
@@ -708,7 +708,7 @@
           "message": "更新日時"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
@@ -740,7 +740,7 @@
           "message": "取得する連絡先レコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "連絡先の取得"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -764,7 +764,7 @@
           "message": "取得する連絡先の ID を選択または入力します。連絡先 ID は「crd_」で始まります。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "コンタクトを作成"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -876,7 +876,7 @@
           "message": "ソーシャルメディアのプロフィールや企業のウェブサイトなど、この連絡先に関連付けられた URL のリスト。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
-          "source": "Group Names",
+          "source": "Group names",
           "message": "グループ名"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "連絡先を追加するグループ名のリスト。グループは連絡先をカテゴリに整理するのに役立ちます。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -900,7 +900,7 @@
           "message": "連絡先のカスタムフィールド値を含むオブジェクト。キーは設定されたカスタムフィールド名と一致する必要があります。"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "連絡先を更新"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -960,7 +960,7 @@
           "message": "ソーシャルメディアのプロフィールや企業のウェブサイトなど、この連絡先に関連付けられた URL のリスト。"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -972,7 +972,7 @@
           "message": "連絡先のカスタムフィールドの値を更新します。"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "連絡先を削除"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -996,7 +996,7 @@
           "message": "削除する連絡先のIDを選択または入力してください。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "List Contact Conversations",
+          "source": "List contact conversations",
           "message": "連絡先の会話一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "取得する会話レコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
-          "source": "List Contact Notes",
+          "source": "List contact notes",
           "message": "連絡先メモの一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "取得するメモレコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "Add Note to Contact",
+          "source": "Add note to contact",
           "message": "連絡先にメモを追加"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "メモを追加する連絡先の ID を選択または入力します。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
-          "source": "Note Body",
+          "source": "Note body",
           "message": "メモ本文"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "このメモの作成者として記録されるチームメイトを選択します。これは必須項目です。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "連絡先リストの一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "取得する連絡先リストレコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "連絡先リストを作成"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "連絡先リストの目的やリスト内の連絡先の条件を説明するオプションの説明。"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Delete Contact List",
+          "source": "Delete contact list",
           "message": "連絡先リストの削除"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Frontから連絡先リストを削除します。これによりリストは削除されますが、リストに含まれていた連絡先は削除されません。連絡先はワークスペースに残ります。"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "連絡先リスト"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "削除する連絡先リストのIDを選択または入力してください。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
-          "source": "List Contacts in Contact List",
+          "source": "List contacts in contact list",
           "message": "連絡先リスト内の連絡先一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "特定の連絡先リストに属するすべての連絡先を取得します。これにより、特定のリストやセグメントにどの連絡先が含まれているかを確認できます。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "連絡先リスト"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "取得する連絡先レコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Add Contacts to Contact List",
+          "source": "Add contacts to contact list",
           "message": "連絡先リストに連絡先を追加"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Front の連絡先リストに1件以上の連絡先を追加します。これにより、管理の簡素化やターゲットを絞ったコミュニケーションのために連絡先を論理グループに整理できます。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "連絡先リスト"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "連絡先リストに追加する1件以上の連絡先を選択します。"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
-          "source": "Remove Contacts from Contact List",
+          "source": "Remove contacts from contact list",
           "message": "連絡先リストから連絡先を削除"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Frontの連絡先リストから1件以上の連絡先を削除します。これにより連絡先はリストから削除されますが、連絡先自体は削除されません。"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "連絡先リスト"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "連絡先リストから削除する連絡先を1件以上選択します。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
+          "source": "List conversations",
           "message": "会話の一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "取得する会話レコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
+          "source": "Get conversation",
           "message": "会話を取得"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "取得する会話の ID を選択または入力します。会話 ID は「cnv_」で始まります。"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "Search Conversations",
+          "source": "Search conversations",
           "message": "会話を検索"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "検索クエリを使用してFront内の会話を検索します。一致する会話が最終アクティビティの降順で、合計一致件数とともに返されます。"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "返される会話レコードの最大件数。デフォルトは25です。"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
+          "source": "Update conversation",
           "message": "会話を更新"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1496,7 +1496,7 @@
           "message": "会話を別の受信トレイに移動します。"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -1508,7 +1508,7 @@
           "message": "会話のカスタムフィールド値を更新します。"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
-          "source": "Update Conversation Assignee",
+          "source": "Update conversation assignee",
           "message": "会話の担当者を更新"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
@@ -1544,7 +1544,7 @@
           "message": "会話を割り当てるチームメイトを選択します。会話の割り当てを解除する場合は空のままにしてください。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Add Tag to Conversation",
+          "source": "Add tag to conversation",
           "message": "会話にタグを追加"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "会話に追加する1件以上のタグを選択します。"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Remove Tag from Conversation",
+          "source": "Remove tag from conversation",
           "message": "会話からタグを削除"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "会話から削除するタグを1件以上選択します。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
-          "source": "Add Conversation Followers",
+          "source": "Add conversation followers",
           "message": "会話フォロワーを追加"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "会話にフォロワーとして追加する1件以上のチームメイトを選択します。"
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "メッセージの取得"
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "取得するメッセージの ID を入力します。メッセージ ID は「msg_」で始まります。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
-          "source": "List Conversation Messages",
+          "source": "List conversation messages",
           "message": "会話メッセージの一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
@@ -1712,7 +1712,7 @@
           "message": "取得するメッセージレコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
-          "source": "Reply to Conversation",
+          "source": "Reply to conversation",
           "message": "会話に返信"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "返信先の会話の ID を選択または入力します。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "メッセージボディ"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
@@ -1796,7 +1796,7 @@
           "message": "返信で BCC に含めるメールアドレスのリスト。"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
-          "source": "Save as Draft",
+          "source": "Save as draft",
           "message": "下書きとして保存"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "true の場合、メッセージはすぐに送信されずに下書きとして保存されます。デフォルトは false です。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
-          "source": "Add Comment to Conversation",
+          "source": "Add comment to conversation",
           "message": "会話にコメントを追加"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "コメントを追加する会話の ID を選択または入力します。"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
-          "source": "Comment Body",
+          "source": "Comment body",
           "message": "コメント本文"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "内部コメントのテキスト内容。これは、その会話にアクセスできるすべてのチームメイトに表示されます。"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
-          "source": "List Conversation Comments",
+          "source": "List conversation comments",
           "message": "会話コメントの一覧"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "取得するコメントレコードの最大数。デフォルトは50です。"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
+          "source": "New conversation",
           "message": "新しい会話"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "スパム"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "新規連絡先"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -1944,7 +1944,7 @@
           "message": "このトリガーは、Frontで新しい連絡先が作成されるたびに実行されます。ワークスペースに新しい連絡先が追加されたときのワークフローを自動化するために使用します。"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "New Contact Note",
+          "source": "New contact note",
           "message": "新規連絡先ノート"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "新しいメモを監視する連絡先のIDを選択または入力します。この連絡先に新しいメモが追加されるたびにトリガーが実行されます。"
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
-          "source": "New Comment",
+          "source": "New comment",
           "message": "新しいコメント"
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {

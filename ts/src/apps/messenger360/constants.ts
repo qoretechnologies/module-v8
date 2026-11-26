@@ -13,7 +13,7 @@ export class Messenger360Error extends Error {
 
 export const MESSENGER360_CONN_OPTIONS = {
   token: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'API Key for 360 Messenger Whatsapp',
     desc: `API key you can get from this page. 'https://360messenger.com'`,
     type: 'string',

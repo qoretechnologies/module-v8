@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Mailchimp** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、可選的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對於此應用程式上尚未公開為一級動作的端點，請使用此動作。"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "表格名稱"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
-          "source": "Get Campaigns",
+          "source": "Get campaigns",
           "message": "獲取行銷活動"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
@@ -496,7 +496,7 @@
           "message": "從您的 Mailchimp 帳戶擷取所有電子郵件行銷活動及其詳細資料，包括狀態、設定和成效指標。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
-          "source": "Create Campaign",
+          "source": "Create campaign",
           "message": "建立廣告活動"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "在 Mailchimp 中建立具有指定設定、內容和受眾定位選項的新電子郵件行銷活動。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
-          "source": "Send Campaign",
+          "source": "Send campaign",
           "message": "發送行銷活動"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "立即將先前建立的電子郵件行銷活動傳送給其目標受眾，或排程稍後傳送。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
-          "source": "Create Audience",
+          "source": "Create audience",
           "message": "建立受眾"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "使用指定的設定和配置選項在 Mailchimp 中建立新受眾（郵寄清單）。"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
-          "source": "Search Tags by Name",
+          "source": "Search tags by name",
           "message": "依名稱搜尋標籤"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "依名稱搜尋訂閱者標籤，以協助組織和細分您的受眾成員。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
-          "source": "Get Audience Members",
+          "source": "Get audience members",
           "message": "獲取受眾成員"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
@@ -556,7 +556,7 @@
           "message": "從特定受眾中擷取所有成員（訂閱者）及其聯絡資訊與訂閱詳細資料。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
-          "source": "Add Audience Member",
+          "source": "Add audience member",
           "message": "新增受眾成員"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "將新訂閱者及其聯絡資訊和訂閱偏好新增至特定受眾。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Get Audience Member",
+          "source": "Get audience member",
           "message": "獲取受眾成員"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "從受眾中擷取特定成員（訂閱者）的詳細資訊，包括其個人資料和活動數據。"
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Update Audience Member",
+          "source": "Update audience member",
           "message": "更新受眾成員"
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -592,7 +592,7 @@
           "message": "更新受眾中現有成員的資訊和訂閱偏好。"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Remove Audience Member",
+          "source": "Remove audience member",
           "message": "移除受眾成員"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "從受眾中移除訂閱者，同時保留其資料以符合法規要求。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
-          "source": "Add Member Tags",
+          "source": "Add member tags",
           "message": "新增成員標籤"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "為受眾成員新增一個或多個標籤，以便進行更佳的細分與管理。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
-          "source": "Add Member Events",
+          "source": "Add member events",
           "message": "新增成員事件"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
@@ -628,7 +628,7 @@
           "message": "記錄受眾成員的自訂事件，以追蹤他們的行為以及與您品牌的互動。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
-          "source": "Add Member Note",
+          "source": "Add member note",
           "message": "新增成員備忘錄"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
@@ -640,7 +640,7 @@
           "message": "為特定受眾成員新增備忘錄，以用於內部追蹤與客戶關係管理。"
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
-          "source": "Update Member Note",
+          "source": "Update member note",
           "message": "更新成員備忘錄"
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "使用新資訊或更正內容更新附加到受眾成員的現有備忘錄。"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
-          "source": "Delete Member Note",
+          "source": "Delete member note",
           "message": "刪除成員備註"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
@@ -664,7 +664,7 @@
           "message": "永久從受眾成員的個人資料中移除備註。"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
-          "source": "Permanently Delete Member",
+          "source": "Permanently delete member",
           "message": "永久刪除成員"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "從 Mailchimp 中永久移除受眾成員及其所有關聯資料。此動作無法復原。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
-          "source": "Get Campaign Reports",
+          "source": "Get campaign reports",
           "message": "獲取行銷活動報告"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "將回應限制在設定時間之後傳送的行銷活動。使用 ISO 8601 時間格式：2015-10-21T15:41:36+00:00。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
-          "source": "Get Campaign Report",
+          "source": "Get campaign report",
           "message": "獲取行銷活動報告"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
@@ -784,7 +784,7 @@
           "message": "獲取特定電子郵件行銷活動的詳細效能指標和分析。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
-          "source": "Get Campaign Click Details",
+          "source": "Get campaign click details",
           "message": "獲取行銷活動點擊詳細資訊"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
@@ -796,7 +796,7 @@
           "message": "獲取特定行銷活動中點擊的詳細資訊，包括點擊了哪些連結以及由誰點擊。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
-          "source": "Get Store Customer",
+          "source": "Get store customer",
           "message": "獲取商店客戶"
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "從已連結的電子商務商店擷取特定客戶的詳細資訊。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
-          "source": "Search Campaigns",
+          "source": "Search campaigns",
           "message": "搜尋行銷活動"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
@@ -856,7 +856,7 @@
           "message": "用於篩選結果的搜尋查詢。"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
-          "source": "Search Audience Members",
+          "source": "Search audience members",
           "message": "搜尋受眾成員"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "使用電子郵件、姓名或標籤等各種條件搜尋受眾成員，以尋找特定訂閱者。"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.display_name": {
-          "source": "Email Opened",
+          "source": "Email opened",
           "message": "電子郵件已開啟"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.short_desc": {
@@ -892,7 +892,7 @@
           "message": "選擇要追蹤電子郵件開啟情況的 Mailchimp 受眾（郵寄清單）。"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.display_name": {
-          "source": "Campaign Type",
+          "source": "Campaign type",
           "message": "行銷活動類型"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.short_desc": {
@@ -912,7 +912,7 @@
           "message": "自動化"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.display_name": {
-          "source": "Trigger on Subscriber",
+          "source": "Trigger on subscriber",
           "message": "依訂閱者觸發"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.short_desc": {
@@ -924,7 +924,7 @@
           "message": "可選指定一個或多個電子郵件地址，以便僅針對這些特定訂閱者觸發。"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.display_name": {
-          "source": "New Subscriber",
+          "source": "New subscriber",
           "message": "新訂閱者"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.short_desc": {
@@ -948,7 +948,7 @@
           "message": "選擇要追蹤新訂閱者的 Mailchimp 受眾。"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.display_name": {
-          "source": "New Unsubscriber",
+          "source": "New unsubscriber",
           "message": "新取消訂閱者"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.short_desc": {

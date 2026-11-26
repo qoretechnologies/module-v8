@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **SeaTable** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API daného pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako štandardné akcie v tejto aplikácii."
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Názov tabuľky"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.display_name": {
-          "source": "Run SQL Query",
+          "source": "Run SQL query",
           "message": "Spustiť SQL dotaz"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Vykoná SQL dotaz na vašej databáze SeaTable a vráti výsledky. Podporuje príkazy SELECT, INSERT, UPDATE a DELETE. Pre SELECT dotazy je možné vrátiť maximálne 10 000 riadkov."
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.display_name": {
-          "source": "SQL Query",
+          "source": "SQL query",
           "message": "Dopyt SQL"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Zadajte svoj SQL dotaz. Pre názvy stĺpcov so špeciálnymi znakmi použite spätné úvodzovky (napr. `My Column`). Príklad: SELECT * FROM `Table1` WHERE `Status` = 'Active' LIMIT 100"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "Nový riadok"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.short_desc": {

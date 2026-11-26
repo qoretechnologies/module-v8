@@ -28,7 +28,7 @@
           "message": "Effettua una chiamata API HTTP / REST personalizzata a **OpenWeatherMap** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine su questa app."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.display_name": {
-          "source": "Get Current Weather",
+          "source": "Get current weather",
           "message": "Ottieni meteo attuale"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Ottieni informazioni meteo in tempo reale, tra cui temperatura, umidità, velocità del vento, pressione, visibilità e condizioni meteorologiche per qualsiasi località nel mondo. Supporta la ricerca per nome della città, coordinate geografiche o codice postale."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Tipo di località"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Codice lingua a due lettere facoltativo per le descrizioni delle condizioni meteorologiche (es. \"en\" per l'inglese, \"es\" per lo spagnolo, \"fr\" per il francese, \"de\" per il tedesco)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.display_name": {
-          "source": "Get Weather Forecast",
+          "source": "Get weather forecast",
           "message": "Ottieni previsioni meteo"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Ottieni previsioni meteo a 5 giorni con punti dati ogni 3 ore per qualsiasi località nel mondo. Ogni elemento di previsione include temperatura, umidità, vento, probabilità di precipitazioni e condizioni meteorologiche. Supporta la ricerca per nome della città, coordinate geografiche o codice postale."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Tipo di località"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Limita il numero di elementi di previsione a 3 ore restituiti. Ogni giorno ha fino a 8 punti dati (ogni 3 ore). Il massimo è 40 (5 giorni x 8 intervalli)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.display_name": {
-          "source": "Temperature Threshold",
+          "source": "Temperature threshold",
           "message": "Soglia di temperatura"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Monitora la temperatura in una posizione specifica e attiva il trigger quando supera o scende al di sotto di un valore di soglia configurato. Utile per avvisi di temperatura, automazione HVAC e flussi di lavoro basati sul meteo."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Tipo di località"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Standard (Kelvin, m/s)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.display_name": {
-          "source": "Threshold Type",
+          "source": "Threshold type",
           "message": "Tipo di soglia"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Scende al di sotto"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.display_name": {
-          "source": "Threshold Value",
+          "source": "Threshold value",
           "message": "Valore di soglia"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Imposta il valore di temperatura che attiverà l'evento una volta superato. Utilizza le stesse unità selezionate nell'opzione Unità di misura (es. 0 per il punto di congelamento in Celsius, 32 in Fahrenheit)."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.display_name": {
-          "source": "Weather Condition Change",
+          "source": "Weather condition change",
           "message": "Cambiamento delle condizioni meteo"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.short_desc": {
@@ -600,7 +600,7 @@
           "message": "Monitora le condizioni meteorologiche in una posizione specifica e attiva il trigger quando le condizioni cambiano (es. da Sereno a Pioggia, da Nuvoloso a Neve). Filtra facoltativamente per tipi di condizioni specifici."
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.display_name": {
-          "source": "Location Type",
+          "source": "Location type",
           "message": "Tipo di località"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Standard (Kelvin, m/s)"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.display_name": {
-          "source": "Condition Filter",
+          "source": "Condition filter",
           "message": "Filtro condizioni"
         },
         "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.short_desc": {

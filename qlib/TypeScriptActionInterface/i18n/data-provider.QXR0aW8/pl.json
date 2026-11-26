@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Attio** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec podstawowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hasz zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżywaj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako bezpośrednie akcje w tej aplikacji."
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.QXR0aW8.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Wyszukaj rekordy"
         },
         "app.QXR0aW8.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Nazwa tabeli"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Create Object Record",
+          "source": "Create object record",
           "message": "Utwórz rekord obiektu"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Wybierz typ obiektu, w którym chcesz utworzyć nowy rekord. Może to być obiekt niestandardowy lub standardowy obiekt w Twojej przestrzeni roboczej Attio."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
-          "source": "Find Object Records",
+          "source": "Find object records",
           "message": "Znajdź rekordy obiektu"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Odpytuje rekordy z określonego obiektu Attio z obsługą filtrowania według wartości atrybutów, sortowania według atrybutów i stronicowania. Zwraca listę rekordów spełniających określone kryteria."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ obiektu"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Liczba rekordów do pominięcia przed rozpoczęciem zwracania wyników. Używane do stronicowania. Domyślnie 0."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Atrybut sortowania"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Atrybut, według którego mają być sortowane wyniki. Domyślnie \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Wartość do filtrowania."
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Update Object Record",
+          "source": "Update object record",
           "message": "Zaktualizuj rekord obiektu"
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Unikalny identyfikator rekordu do aktualizacji."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Create List Entry",
+          "source": "Create list entry",
           "message": "Utwórz wpis na liście"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Slug API listy Attio, na której zostanie utworzony nowy wpis."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID rekordu nadrzędnego"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Unikalny identyfikator rekordu nadrzędnego, z którym zostanie powiązany ten wpis na liście."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
-          "source": "Find List Entries",
+          "source": "Find list entries",
           "message": "Znajdź wpisy listy"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Liczba wpisów do pominięcia przed rozpoczęciem zwracania wyników. Używane do stronicowania. Domyślnie 0."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Atrybut sortowania"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Atrybut, według którego mają być sortowane wyniki. Domyślnie \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Wartość do filtrowania."
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Update List Entry",
+          "source": "Update list entry",
           "message": "Zaktualizuj wpis na liście"
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -848,7 +848,7 @@
           "message": "Unikalny identyfikator wpisu na liście do aktualizacji."
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
-          "source": "Get Single List Entry",
+          "source": "Get single list entry",
           "message": "Pobierz pojedynczy wpis z listy"
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
@@ -884,7 +884,7 @@
           "message": "Określ unikalny identyfikator wpisu, który chcesz pobrać. Ten identyfikator jest właściwy dla wybranej listy i wczyta dostępne wpisy na podstawie wyboru listy."
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Get Single Object Record",
+          "source": "Get single object record",
           "message": "Pobierz pojedynczy rekord obiektu"
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Określ unikalny identyfikator rekordu, który chcesz pobrać. Ten identyfikator jest właściwy dla wybranego obiektu i wczyta dostępne rekordy na podstawie wyboru obiektu."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Wyświetl listę zadań"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Określ liczbę zadań do pominięcia przed rozpoczęciem zwracania wyników. Przydatne przy stronicowaniu. Domyślnie 0."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
-          "source": "Linked Object",
+          "source": "Linked object",
           "message": "Powiązany obiekt"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Filtruj zadania, aby uwzględnić tylko te powiązane z określonym typem obiektu w Attio. Po wybraniu możesz dodatkowo doprecyzować, określając konkretny rekord."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
-          "source": "Linked Record ID",
+          "source": "Linked record ID",
           "message": "ID powiązanego rekordu"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Filtruj zadania na podstawie tego, czy są ukończone, czy nie. Domyślnie wartość to false (pokazuje nieukończone zadania)."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Kolejność sortowania"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Filtruj zadania, aby uwzględnić tylko te przypisane do określonego członka przestrzeni roboczej."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Pobierz zadanie"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Określ unikalny identyfikator zadania, które chcesz pobrać. Dostępne identyfikatory zadań zostaną wczytane na podstawie poprzedniego wyboru obiektu."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
-          "source": "Get Notes",
+          "source": "Get notes",
           "message": "Pobierz notatki"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Liczba notatek do pominięcia przed rozpoczęciem zwracania wyników. Używane do stronicowania. Domyślnie 0."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Obiekt nadrzędny"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Typ obiektu nadrzędnego, z którym powiązana jest ta notatka. Jest to wymagane do filtrowania notatek według ich obiektu nadrzędnego."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID rekordu nadrzędnego"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Unikalny identyfikator rekordu nadrzędnego, z którym powiązana jest ta notatka. Jest to wymagane do filtrowania notatek według ich rekordu nadrzędnego."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Utwórz zadanie"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Ta akcja tworzy nowe zadanie w Attio z treścią, terminem, stanem ukończenia i opcjonalnymi osobami przypisanymi. Możesz ustawić treść zadania, określić termin, oznaczyć je jako ukończone lub nie oraz przypisać je do jednego lub większej liczby członków przestrzeni roboczej."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Zawartość zadania"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Wybierz jednego lub więcej członków przestrzeni roboczej, którzy zostaną przypisani do tego zadania. Członkowie ci będą odpowiedzialni za wykonanie zadania i otrzymają o nim powiadomienia."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
-          "source": "Create Note",
+          "source": "Create note",
           "message": "Utwórz notatkę"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "To działanie tworzy nową notatkę i dołącza ją do określonego rekordu w obiekcie Attio. Notatki mogą być pisane w formacie czystego tekstu lub markdown i zawierają tytuł oraz treść. Służą jako sposób na dokumentowanie ważnych informacji o rekordach w obszarze roboczym."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Obiekt nadrzędny"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Wybierz obiekt Attio zawierający rekord, do którego chcesz dołączyć tę notatkę. Określa to, z jakim typem obiektu zostanie powiązana notatka."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID rekordu nadrzędnego"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Wprowadź treść notatki. Można ją sformatować zgodnie z wybranym typem formatu (czysty tekst lub markdown)."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
-          "source": "New List Entry Created",
+          "source": "New list entry created",
           "message": "Utworzono nowy wpis listy"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Slug API listy Attio, która ma być monitorowana pod kątem nowych wpisów."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
-          "source": "List Entry Deleted",
+          "source": "List entry deleted",
           "message": "Usunięto wpis listy"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Slug API listy Attio, która ma być monitorowana pod kątem usuniętych wpisów."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
-          "source": "List Entry Updated",
+          "source": "List entry updated",
           "message": "Zaktualizowano wpis listy"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "Slug API listy Attio, która ma być monitorowana pod kątem zaktualizowanych wpisów."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
-          "source": "New Object Record Created",
+          "source": "New object record created",
           "message": "Utworzono nowy rekord obiektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Ten wyzwalacz uruchamia się za każdym razem, gdy dla określonego obiektu Attio zostanie utworzony nowy rekord. Udostępnia szczegóły dotyczące utworzonego rekordu, w tym jego identyfikator, typ obiektu oraz wykonawcę, który go utworzył."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ obiektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Slug API typu obiektu Attio, który ma być monitorowany pod kątem nowych rekordów."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
-          "source": "Object Record Deleted",
+          "source": "Object record deleted",
           "message": "Usunięto rekord obiektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Ten wyzwalacz uruchamia się za każdym razem, gdy z określonego obiektu Attio zostanie usunięty rekord. Udostępnia szczegóły dotyczące usuniętego rekordu, w tym jego identyfikator, typ obiektu oraz wykonawcę, który dokonał usunięcia."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ obiektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "Slug API typu obiektu Attio, który ma być monitorowany pod kątem usuniętych rekordów."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
-          "source": "Object Record Updated",
+          "source": "Object record updated",
           "message": "Zaktualizowano rekord obiektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "Ten wyzwalacz uruchamia się za każdym razem, gdy rekord zostanie zaktualizowany dla określonego obiektu Attio. Udostępnia szczegóły dotyczące zaktualizowanego rekordu, w tym jego identyfikator, typ obiektu, wykonawcę aktualizacji oraz konkretne wprowadzone zmiany."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ obiektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
@@ -1392,7 +1392,7 @@
           "message": "Slug API typu obiektu Attio, który ma być monitorowany pod kątem zaktualizowanych rekordów."
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
-          "source": "New Task Created",
+          "source": "New task created",
           "message": "Utworzono nowe zadanie"
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {

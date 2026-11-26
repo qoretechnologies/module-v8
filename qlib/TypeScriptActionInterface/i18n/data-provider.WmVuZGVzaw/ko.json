@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **Zendesk**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 아직 최상위 작업으로 제공되지 않는 엔드포인트에 이 작업을 사용하세요."
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "레코드 검색"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
@@ -496,7 +496,7 @@
           "message": "URI 경로 변수 \"attachment_id\""
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "그룹 목록 조회"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "삭제된 엔터티를 제외할지 여부"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
-          "source": "Create Group",
+          "source": "Create group",
           "message": "그룹 생성"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "#### 허용 대상\n\n* 관리자\n* 그룹 관리 권한이 있는 사용자 지정 역할에 할당된 상담원 (Enterprise 전용)\n"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
-          "source": "Delete Group",
+          "source": "Delete group",
           "message": "그룹 삭제"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
@@ -556,7 +556,7 @@
           "message": "#### 허용 대상\n\n* 관리자\n* 상담원\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
-          "source": "Update Group",
+          "source": "Update group",
           "message": "그룹 업데이트"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
@@ -664,7 +664,7 @@
           "message": "특정 메트릭 또는 특정 티켓의 메트릭을 반환합니다.\n\n#### 페이지 매김\n\n- 커서 기반 페이지 매김(권장)\n- 오프셋 기반 페이지 매김\n\n[페이지 매김](-api-reference-introduction-pagination-)을 참조하세요.\n\n페이지당 최대 100개의 레코드를 반환합니다.\n\n#### 허용 대상\n\n* 상담원\n"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
-          "source": "List Tickets",
+          "source": "List tickets",
           "message": "티켓 목록"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
@@ -688,7 +688,7 @@
           "message": "외부 ID별로 티켓을 나열합니다. 외부 ID는 각 티켓마다 고유하지 않아도 됩니다. 따라서 요청 시 동일한 외부 ID를 가진 여러 티켓이 반환될 수 있습니다."
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
-          "source": "Create Ticket",
+          "source": "Create ticket",
           "message": "티켓 생성"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
@@ -712,7 +712,7 @@
           "message": "계정의 대략적인 티켓 수를 반환합니다. 수가 100,000을 초과하면 24시간마다 업데이트됩니다.\n\n`ccd`은 지정된 사용자가 참조(CC)된 티켓을 나열합니다.\n\n`count[refreshed_at]` 속성은 수가 마지막으로 업데이트된 시점을 나타내는 타임스탬프입니다.\n\n**참고**: 수가 100,000을 초과하면 `count[refreshed_at]`이(가) 간혹 null일 수 있습니다.\n이는 백그라운드에서 수가 업데이트되고 있음을 나타내며, 업데이트가 완료될 때까지 `count[value]`은(는) 100,000으로 제한됩니다.\n\n#### 허용 대상\n* 상담원"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
-          "source": "Delete Ticket",
+          "source": "Delete ticket",
           "message": "티켓 삭제"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
@@ -736,7 +736,7 @@
           "message": "티켓 댓글을 제외한 여러 티켓 속성을 반환합니다. 댓글을 가져오려면 [댓글 나열](-api-reference-ticketing-tickets-ticket_comments-#list-comments)을 사용하세요.\n\n#### 허용 대상\n* 상담원"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
-          "source": "Update Ticket",
+          "source": "Update ticket",
           "message": "티켓 업데이트"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
@@ -772,7 +772,7 @@
           "message": "URI 경로 변수 \"token\""
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "사용자 목록"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
@@ -784,7 +784,7 @@
           "message": "#### 페이지 매김\n\n* 커서 기반 페이지 매김(권장)\n* 오프셋 기반 페이지 매김\n\n[페이지 매김](-api-reference-introduction-pagination-)을 참조하세요.\n\n페이지당 최대 100개의 레코드를 반환합니다.\n\n#### 허용 대상\n\n* 관리자, 상담원 및 라이트 상담원\n"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
-          "source": "Create User",
+          "source": "Create user",
           "message": "사용자 생성"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "사용자 생성"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
-          "source": "Delete User",
+          "source": "Delete user",
           "message": "사용자 삭제"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "#### 허용 대상\n\n* 상담원\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
-          "source": "Update User",
+          "source": "Update user",
           "message": "사용자 업데이트"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {
@@ -832,7 +832,7 @@
           "message": "사용자 업데이트"
         },
         "app.WmVuZGVzaw.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "새 사용자"
         },
         "app.WmVuZGVzaw.action.bmV3X3VzZXI.short_desc": {
@@ -844,7 +844,7 @@
           "message": "새 사용자가 생성될 때 트리거됨"
         },
         "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
-          "source": "New Organization",
+          "source": "New organization",
           "message": "새 조직"
         },
         "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
@@ -856,7 +856,7 @@
           "message": "새 조직이 생성될 때 트리거됨"
         },
         "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.display_name": {
-          "source": "New Ticket",
+          "source": "New ticket",
           "message": "새 티켓"
         },
         "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.short_desc": {
@@ -868,7 +868,7 @@
           "message": "새 티켓이 생성될 때 트리거됨"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.display_name": {
-          "source": "New Custom Object Record",
+          "source": "New custom object record",
           "message": "새 커스텀 객체 레코드"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Zendesk에서 새 커스텀 객체 레코드가 생성될 때 트리거됩니다"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.display_name": {
-          "source": "Custom Object",
+          "source": "Custom object",
           "message": "커스텀 객체"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.short_desc": {

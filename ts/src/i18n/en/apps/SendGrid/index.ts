@@ -12,19 +12,19 @@ const SendGridAppEn = {
     // Blocks
     list_blocks: {
       groups: ['Suppressions'],
-      displayName: 'List Blocks',
+      displayName: 'List blocks',
       shortDesc: 'Retrieve a list of blocked email addresses',
       longDesc:
         'Retrieve a list of all email addresses that are currently on your blocks list. Blocked addresses are emails that have been rejected by receiving servers. You can filter by time range and paginate through results.',
       options: {
         startTime: {
-          displayName: 'Start Time',
+          displayName: 'Start time',
           shortDesc: 'Filter blocks created after this Unix timestamp',
           longDesc:
             'Retrieve blocks that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).',
         },
         endTime: {
-          displayName: 'End Time',
+          displayName: 'End time',
           shortDesc: 'Filter blocks created before this Unix timestamp',
           longDesc:
             'Retrieve blocks that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).',
@@ -43,7 +43,7 @@ const SendGridAppEn = {
     },
     get_block: {
       groups: ['Suppressions'],
-      displayName: 'Get a Block',
+      displayName: 'Get a block',
       shortDesc: 'Retrieve details of a specific blocked email',
       longDesc:
         'Fetch detailed information about a specific blocked email address, including the reason for the block and when it was added to the list.',
@@ -58,13 +58,13 @@ const SendGridAppEn = {
     },
     delete_blocks: {
       groups: ['Suppressions'],
-      displayName: 'Delete Blocks',
+      displayName: 'Delete blocks',
       shortDesc: 'Delete blocked email addresses from your list',
       longDesc:
         'Remove email addresses from your blocks list. You can either delete all blocks at once or specify individual email addresses to remove. Deleting blocks allows those addresses to receive emails again.',
       options: {
         deleteAll: {
-          displayName: 'Delete All',
+          displayName: 'Delete all',
           shortDesc: 'Delete all blocked emails',
           longDesc:
             'Set to true to delete all blocked email addresses from your list. When true, the emails parameter is ignored.',
@@ -81,19 +81,19 @@ const SendGridAppEn = {
     // Bounces
     get_all_bounces: {
       groups: ['Suppressions'],
-      displayName: 'Get All Bounces',
+      displayName: 'Get all bounces',
       shortDesc: 'Retrieve a list of bounced email addresses',
       longDesc:
         'Retrieve a list of all email addresses that have bounced. Bounces occur when an email cannot be delivered to the recipient. You can filter by time range and paginate through results.',
       options: {
         startTime: {
-          displayName: 'Start Time',
+          displayName: 'Start time',
           shortDesc: 'Filter bounces created after this Unix timestamp',
           longDesc:
             'Retrieve bounces that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).',
         },
         endTime: {
-          displayName: 'End Time',
+          displayName: 'End time',
           shortDesc: 'Filter bounces created before this Unix timestamp',
           longDesc:
             'Retrieve bounces that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).',
@@ -112,13 +112,13 @@ const SendGridAppEn = {
     },
     delete_bounces: {
       groups: ['Suppressions'],
-      displayName: 'Delete Bounces',
+      displayName: 'Delete bounces',
       shortDesc: 'Delete bounced email addresses from your list',
       longDesc:
         'Remove email addresses from your bounces list. You can either delete all bounces at once or specify individual email addresses to remove. Deleting bounces allows those addresses to receive emails again.',
       options: {
         deleteAll: {
-          displayName: 'Delete All',
+          displayName: 'Delete all',
           shortDesc: 'Delete all bounced emails',
           longDesc:
             'Set to true to delete all bounced email addresses from your list. When true, the emails parameter is ignored.',
@@ -135,19 +135,19 @@ const SendGridAppEn = {
     // Global Suppressions
     list_global_suppressions: {
       groups: ['Suppressions'],
-      displayName: 'List Global Suppressions',
+      displayName: 'List global suppressions',
       shortDesc: 'Retrieve a list of globally unsubscribed email addresses',
       longDesc:
         'Retrieve a list of all email addresses that have globally unsubscribed from all of your emails. These addresses will not receive any emails from your account until they are removed from this list.',
       options: {
         startTime: {
-          displayName: 'Start Time',
+          displayName: 'Start time',
           shortDesc: 'Filter suppressions created after this Unix timestamp',
           longDesc:
             'Retrieve suppressions that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).',
         },
         endTime: {
-          displayName: 'End Time',
+          displayName: 'End time',
           shortDesc: 'Filter suppressions created before this Unix timestamp',
           longDesc:
             'Retrieve suppressions that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).',
@@ -166,7 +166,7 @@ const SendGridAppEn = {
     },
     get_global_suppression: {
       groups: ['Suppressions'],
-      displayName: 'Get a Global Suppression',
+      displayName: 'Get a global suppression',
       shortDesc: 'Retrieve details of a specific globally suppressed email',
       longDesc:
         'Check if a specific email address is on the global suppression list and retrieve its details.',
@@ -181,7 +181,7 @@ const SendGridAppEn = {
     },
     add_global_suppressions: {
       groups: ['Suppressions'],
-      displayName: 'Add Global Suppressions',
+      displayName: 'Add global suppressions',
       shortDesc: 'Add email addresses to the global suppression list',
       longDesc:
         'Add one or more email addresses to the global suppression list. These addresses will no longer receive any emails from your account until they are removed from the list.',
@@ -196,7 +196,7 @@ const SendGridAppEn = {
     },
     delete_global_suppression: {
       groups: ['Suppressions'],
-      displayName: 'Delete a Global Suppression',
+      displayName: 'Delete a global suppression',
       shortDesc: 'Remove an email address from the global suppression list',
       longDesc:
         'Remove an email address from the global suppression list. This will allow the address to receive emails from your account again.',
@@ -213,7 +213,7 @@ const SendGridAppEn = {
     // Lists
     create_list: {
       groups: ['Contacts'],
-      displayName: 'Create a List',
+      displayName: 'Create a list',
       shortDesc: 'Create a new contact list',
       longDesc:
         'Create a new recipient list for organizing your contacts. Lists help you segment your audience for targeted marketing campaigns.',
@@ -228,7 +228,7 @@ const SendGridAppEn = {
     },
     get_all_lists: {
       groups: ['Contacts'],
-      displayName: 'Get All Lists',
+      displayName: 'Get all lists',
       shortDesc: 'Retrieve all contact lists',
       longDesc:
         'Retrieve all recipient lists in your SendGrid account. Returns list details including name and recipient count.',
@@ -236,7 +236,7 @@ const SendGridAppEn = {
     },
     delete_list: {
       groups: ['Contacts'],
-      displayName: 'Delete a List',
+      displayName: 'Delete a list',
       shortDesc: 'Delete a contact list',
       longDesc:
         'Delete a recipient list from your SendGrid account. You can optionally delete all contacts within the list as well.',
@@ -248,7 +248,7 @@ const SendGridAppEn = {
             'The unique identifier of the list you want to delete. Select from your existing lists.',
         },
         deleteContacts: {
-          displayName: 'Delete Contacts',
+          displayName: 'Delete contacts',
           shortDesc: 'Also delete all contacts in the list',
           longDesc:
             'When set to true, all contacts within the list will also be permanently deleted from your contact database. Use with caution.',
@@ -257,7 +257,7 @@ const SendGridAppEn = {
     },
     add_or_update_contact: {
       groups: ['Contacts'],
-      displayName: 'Add or Update a Contact',
+      displayName: 'Add or update a contact',
       shortDesc: 'Add a new contact or update an existing one',
       longDesc:
         'Add a new contact to your SendGrid contact database or update an existing contact if the email already exists. You can also assign the contact to one or more lists.',
@@ -269,12 +269,12 @@ const SendGridAppEn = {
             'The email address for the contact. This is the unique identifier - if a contact with this email exists, it will be updated.',
         },
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'The first name of the contact',
           longDesc: "The contact's first name.",
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'The last name of the contact',
           longDesc: "The contact's last name.",
         },
@@ -285,7 +285,7 @@ const SendGridAppEn = {
             'One or more list IDs to add this contact to. The contact will be added to all specified lists.',
         },
         customFields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Additional custom field values',
           longDesc:
             'A JSON object containing custom field names and values. Custom fields must be created in your SendGrid account first.',
@@ -294,13 +294,13 @@ const SendGridAppEn = {
     },
     search_contacts: {
       groups: ['Contacts'],
-      displayName: 'Search for Contacts',
+      displayName: 'Search for contacts',
       shortDesc: 'Search contacts by field value',
       longDesc:
         'Search your contact database for contacts matching a specific field value. You can search by email, name, or any custom field.',
       options: {
         fieldName: {
-          displayName: 'Field Name',
+          displayName: 'Field name',
           shortDesc: 'The field to search on',
           longDesc:
             'The name of the field to search. Common fields include `email`, `first_name`, `last_name`, or any custom field name.',
@@ -315,7 +315,7 @@ const SendGridAppEn = {
     },
     delete_contacts: {
       groups: ['Contacts'],
-      displayName: 'Delete Contacts',
+      displayName: 'Delete contacts',
       shortDesc: 'Permanently delete contacts from your database',
       longDesc:
         'Permanently delete one or more contacts from your SendGrid contact database. This action cannot be undone.',
@@ -330,7 +330,7 @@ const SendGridAppEn = {
     },
     remove_contacts_from_list: {
       groups: ['Contacts'],
-      displayName: 'Remove Contacts from List',
+      displayName: 'Remove contacts from list',
       shortDesc: 'Remove contacts from a specific list',
       longDesc:
         'Remove one or more contacts from a specific list without deleting them from your contact database. The contacts will remain in your database but will no longer be associated with the specified list.',
@@ -352,7 +352,7 @@ const SendGridAppEn = {
     // Email Validation
     validate_email: {
       groups: ['Deliverability'],
-      displayName: 'Validate Email',
+      displayName: 'Validate email',
       shortDesc: 'Validate an email address for deliverability',
       longDesc:
         'Check if an email address is valid and likely to receive emails. Returns a verdict (Valid, Risky, or Invalid) along with detailed checks including domain validity, suspected disposable address detection, and bounce history.',
@@ -375,29 +375,29 @@ const SendGridAppEn = {
     // Email
     send_email: {
       groups: ['Email'],
-      displayName: 'Send Email',
+      displayName: 'Send email',
       shortDesc: 'Send an email message',
       longDesc:
         'Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses.',
       options: {
         toEmail: {
-          displayName: 'To Email',
+          displayName: 'To email',
           shortDesc: 'The recipient email address',
           longDesc: 'The email address of the primary recipient.',
         },
         toName: {
-          displayName: 'To Name',
+          displayName: 'To name',
           shortDesc: 'The recipient name',
           longDesc: "Optional name of the recipient to personalize the 'To' field.",
         },
         fromEmail: {
-          displayName: 'From Email',
+          displayName: 'From email',
           shortDesc: 'The sender email address',
           longDesc:
             'The email address that will appear as the sender. Must be a verified sender in your SendGrid account.',
         },
         fromName: {
-          displayName: 'From Name',
+          displayName: 'From name',
           shortDesc: 'The sender name',
           longDesc: "Optional name to display as the sender in the 'From' field.",
         },
@@ -407,35 +407,35 @@ const SendGridAppEn = {
           longDesc: 'The subject line of the email.',
         },
         textContent: {
-          displayName: 'Text Content',
+          displayName: 'Text content',
           shortDesc: 'Plain text content of the email',
           longDesc:
             'The plain text version of the email content. Either text content or HTML content (or both) must be provided.',
         },
         htmlContent: {
-          displayName: 'HTML Content',
+          displayName: 'HTML content',
           shortDesc: 'HTML content of the email',
           longDesc:
             'The HTML version of the email content. Either text content or HTML content (or both) must be provided.',
         },
         replyToEmail: {
-          displayName: 'Reply-To Email',
+          displayName: 'Reply-to email',
           shortDesc: 'Email address for replies',
           longDesc:
             'Optional email address that recipients should reply to. If not provided, replies will go to the sender address.',
         },
         replyToName: {
-          displayName: 'Reply-To Name',
+          displayName: 'Reply-to name',
           shortDesc: 'Name for the reply-to address',
           longDesc: 'Optional name to display for the reply-to address.',
         },
         ccEmails: {
-          displayName: 'CC Emails',
+          displayName: 'CC emails',
           shortDesc: 'Carbon copy recipients',
           longDesc: 'An array of email addresses to include as CC recipients.',
         },
         bccEmails: {
-          displayName: 'BCC Emails',
+          displayName: 'BCC emails',
           shortDesc: 'Blind carbon copy recipients',
           longDesc: 'An array of email addresses to include as BCC recipients.',
         },
@@ -444,50 +444,50 @@ const SendGridAppEn = {
 
     send_template_email: {
       groups: ['Email'],
-      displayName: 'Send Template Email',
+      displayName: 'Send template email',
       shortDesc: 'Send an email message using a SendGrid template',
       longDesc:
         'Send a transactional email using a predefined SendGrid dynamic template. Customize the email content by providing dynamic template data for personalization.',
       options: {
         toEmail: {
-          displayName: 'To Email',
+          displayName: 'To email',
           shortDesc: 'The recipient email address',
           longDesc: 'The email address of the primary recipient.',
         },
         toName: {
-          displayName: 'To Name',
+          displayName: 'To name',
           shortDesc: 'The recipient name',
           longDesc: "Optional name of the recipient to personalize the 'To' field.",
         },
         fromEmail: {
-          displayName: 'From Email',
+          displayName: 'From email',
           shortDesc: 'The sender email address',
           longDesc:
             'The email address that will appear as the sender. Must be a verified sender in your SendGrid account.',
         },
         fromName: {
-          displayName: 'From Name',
+          displayName: 'From name',
           shortDesc: 'The sender name',
           longDesc: "Optional name to display as the sender in the 'From' field.",
         },
         replyToEmail: {
-          displayName: 'Reply-To Email',
+          displayName: 'Reply-to email',
           shortDesc: 'Email address for replies',
           longDesc:
             'Optional email address that recipients should reply to. If not provided, replies will go to the sender address.',
         },
         replyToName: {
-          displayName: 'Reply-To Name',
+          displayName: 'Reply-to name',
           shortDesc: 'Name for the reply-to address',
           longDesc: 'Optional name to display for the reply-to address.',
         },
         ccEmails: {
-          displayName: 'CC Emails',
+          displayName: 'CC emails',
           shortDesc: 'Carbon copy recipients',
           longDesc: 'An array of email addresses to include as CC recipients.',
         },
         bccEmails: {
-          displayName: 'BCC Emails',
+          displayName: 'BCC emails',
           shortDesc: 'Blind carbon copy recipients',
           longDesc: 'An array of email addresses to include as BCC recipients.',
         },
@@ -498,7 +498,7 @@ const SendGridAppEn = {
             'Select the dynamic template to use for this email. The template must be created in your SendGrid account.',
         },
         values: {
-          displayName: 'Template Values',
+          displayName: 'Template values',
           shortDesc: 'Dynamic data for template personalization',
           longDesc:
             'A JSON object containing key-value pairs for dynamic template data. These values will replace the corresponding placeholders in the selected template.',

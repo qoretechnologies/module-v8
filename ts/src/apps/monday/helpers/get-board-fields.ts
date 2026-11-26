@@ -278,7 +278,7 @@ export const getMondayBoardDependentOptions: TQoreGetDependentOptionsFunction = 
   const recordFields = {
     column_values: {
       required: false,
-      display_name: 'Column Values',
+      display_name: 'Column values',
       short_desc: 'The values to set for the record columns.',
       desc: 'The values to set for the columns of the record you want to create.',
       type: options as IQoreTypeObjectNonList,

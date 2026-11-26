@@ -28,7 +28,7 @@
           "message": "Einen benutzerdefinierten HTTP- / REST-API-Aufruf an **360 Messenger for WhatsApp** unter Verwendung der Authentifizierung der konfigurierten Verbindung ausführen.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.display_name": {
-          "source": "Get WhatsApp Contacts",
+          "source": "Get WhatsApp contacts",
           "message": "WhatsApp-Kontakte abrufen"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NvbnRhY3Rz.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Ruft eine vollständige Liste der WhatsApp-Kontakte einschließlich deren Details wie Telefonnummern, Unternehmensstatus und Kontaktinformationen ab."
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.display_name": {
-          "source": "Get WhatsApp Chats",
+          "source": "Get WhatsApp chats",
           "message": "WhatsApp-Chats abrufen"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2NoYXRz.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Ruft eine Liste aller WhatsApp-Chat-Unterhaltungen ab, einschließlich Chat-Details, letzter Nachrichten, Anzahl ungelesener Nachrichten und Chat-Metadaten wie angehefteter und archivierter Status."
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.display_name": {
-          "source": "Get WhatsApp Groups",
+          "source": "Get WhatsApp groups",
           "message": "WhatsApp-Gruppen abrufen"
         },
         "app.TWVzc2VuZ2VyMzYw.action.Z2V0X2dyb3Vwcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Ruft eine Liste aller WhatsApp-Gruppenunterhaltungen ab, in denen Sie Mitglied sind, einschließlich Gruppen-IDs und Namen."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Text Message",
+          "source": "Send WhatsApp text message",
           "message": "WhatsApp-Textnachricht senden"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Sendet eine Textnachricht anhand der Telefonnummer an einen bestimmten WhatsApp-Kontakt. Schließen Sie optional einen URL-Link ein und planen Sie die Nachricht für eine spätere Zustellung."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Telefonnummer"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.cGhvbmVudW1iZXI.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Die Telefonnummer des WhatsApp-Kontakts, an den die Nachricht gesendet werden soll. Sollte die Ländervorwahl enthalten."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Nachrichtentext"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Der Textinhalt, der als WhatsApp-Nachricht gesendet wird."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL-Link"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Eine optionale URL, die zum Teilen von Links in die Textnachricht eingefügt werden kann."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "Geplante Zeit"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Optionales Datum und Uhrzeit für die Planung des Sendezeitpunkts der Nachricht. Wenn nicht angegeben, wird die Nachricht sofort gesendet."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.display_name": {
-          "source": "Send WhatsApp Group Message",
+          "source": "Send WhatsApp group message",
           "message": "WhatsApp-Gruppennachricht senden"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Die eindeutige Kennung der WhatsApp-Gruppe, an die die Nachricht gesendet wird."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Nachrichtentext"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Der Textinhalt, der als WhatsApp-Gruppennachricht gesendet wird."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.display_name": {
-          "source": "URL Link",
+          "source": "URL link",
           "message": "URL-Link"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.dXJs.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Eine optionale URL, die zum Teilen von Links in die Textnachricht eingefügt werden kann."
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.display_name": {
-          "source": "Scheduled Time",
+          "source": "Scheduled time",
           "message": "Geplante Zeit"
         },
         "app.TWVzc2VuZ2VyMzYw.action.c2VuZF9ncm91cF90ZXh0X21lc3NhZ2U.option.ZGVsYXk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Optionales Datum und Uhrzeit für die Planung des Sendezeitpunkts der Nachricht. Wenn nicht angegeben, wird die Nachricht sofort gesendet."
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New WhatsApp Message",
+          "source": "New WhatsApp message",
           "message": "Neue WhatsApp-Nachricht"
         },
         "app.TWVzc2VuZ2VyMzYw.action.bmV3X21lc3NhZ2U.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Виконайте довільний виклик HTTP / REST API до **Sentry**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як стандартні дії в цьому додатку."
         },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Отримати список проєктів"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Використовуйте курсор із попередньої відповіді для отримання наступної або попередньої сторінки результатів. Залиште порожнім, щоб почати спочатку."
         },
         "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.display_name": {
-          "source": "Get Project Details",
+          "source": "Get project details",
           "message": "Отримати відомості про проєкт"
         },
         "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Виберіть або введіть слаг-ідентифікатор проєкту, відомості про який потрібно отримати."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.display_name": {
-          "source": "List Project Events",
+          "source": "List project events",
           "message": "Список подій проєкту"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Виберіть проєкт, події якого потрібно отримати."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.display_name": {
-          "source": "Full Details",
+          "source": "Full details",
           "message": "Повні відомості"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Використовуйте курсор із попередньої відповіді для переходу сторінками подій."
         },
         "app.U2VudHJ5.action.Z2V0X2V2ZW50.display_name": {
-          "source": "Get Event Details",
+          "source": "Get event details",
           "message": "Отримати відомості про подію"
         },
         "app.U2VudHJ5.action.Z2V0X2V2ZW50.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Введіть ідентифікатор події (шістнадцятковий рядок), яку потрібно отримати. Ідентифікатори подій можна знайти в деталях проблеми або у списках подій."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.display_name": {
-          "source": "List Project Issues",
+          "source": "List project issues",
           "message": "Список проблем проєкту"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Виберіть проєкт, проблеми якого потрібно відобразити."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Фільтр запиту"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Використовуйте синтаксис запитів Sentry для фільтрації проблем за такими властивостями, як статус, виконавець, теги, платформа або діапазон часу. Приклад: \"is:unresolved assigned:me\""
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Період статистики"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -536,7 +536,7 @@
           "message": "7 днів"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.display_name": {
-          "source": "Short ID Lookup",
+          "source": "Short ID lookup",
           "message": "Пошук за коротким ID"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.short_desc": {
@@ -560,7 +560,7 @@
           "message": "Використовуйте курсор із попередньої відповіді для переходу сторінками проблем."
         },
         "app.U2VudHJ5.action.Z2V0X2lzc3Vl.display_name": {
-          "source": "Get Issue Details",
+          "source": "Get issue details",
           "message": "Отримати відомості про проблему"
         },
         "app.U2VudHJ5.action.Z2V0X2lzc3Vl.short_desc": {
@@ -584,7 +584,7 @@
           "message": "Введіть ідентифікатор проблеми, яку потрібно отримати. Ідентифікатори проблем — це числові значення, які можна знайти в інтерфейсі Sentry або за допомогою операцій отримання списку."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.display_name": {
-          "source": "Update Issue",
+          "source": "Update issue",
           "message": "Оновити проблему"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Вирішено в наступному релізі"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.display_name": {
-          "source": "Assigned To",
+          "source": "Assigned to",
           "message": "Призначено"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Призначте проблему конкретному користувачеві або команді для відповідальності. Введіть ідентифікатор (slug) команди (наприклад, \"team:backend\") або ідентифікатор користувача."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.display_name": {
-          "source": "Has Seen",
+          "source": "Has seen",
           "message": "Переглянуто"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Позначити проблему як переглянуту або непереглянуту. Це допомагає відстежувати, які проблеми були розглянуті вашою командою."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.display_name": {
-          "source": "Is Bookmarked",
+          "source": "Is bookmarked",
           "message": "У закладках"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Додати проблему в закладки для швидкого доступу та фільтрації. Збережені проблеми з'являються у вашому особистому списку проблем."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.display_name": {
-          "source": "Is Subscribed",
+          "source": "Is subscribed",
           "message": "Підписано"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Підписатися або скасувати підписку на сповіщення про цю проблему. Якщо ви підписані, ви отримуватимете сповіщення при зміні або ескалації проблеми."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.display_name": {
-          "source": "Is Public",
+          "source": "Is public",
           "message": "Загальнодоступно"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Керуйте тим, чи є проблема загальнодоступною через посилання для спільного доступу. Загальнодоступні проблеми може переглядати будь-хто за посиланням, навіть без доступу до Sentry."
         },
         "app.U2VudHJ5.action.bGlzdF90ZWFtcw.display_name": {
-          "source": "List Teams",
+          "source": "List teams",
           "message": "Список команд"
         },
         "app.U2VudHJ5.action.bGlzdF90ZWFtcw.short_desc": {
@@ -732,7 +732,7 @@
           "message": "Використовуйте курсор із попередньої відповіді для переходу сторінками команд."
         },
         "app.U2VudHJ5.action.Z2V0X3RlYW0.display_name": {
-          "source": "Get Team Details",
+          "source": "Get team details",
           "message": "Отримати відомості про команду"
         },
         "app.U2VudHJ5.action.Z2V0X3RlYW0.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Введіть слаг команди (URL-сумісний ідентифікатор) команди, відомості про яку потрібно отримати."
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.display_name": {
-          "source": "List Organization Issues",
+          "source": "List organization issues",
           "message": "Список проблем організації"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.short_desc": {
@@ -768,7 +768,7 @@
           "message": "Отримує сторінковий список проблем з усіх проєктів у вашій організації. Це забезпечує огляд проблем на рівні всієї організації в усіх застосунках і службах. Використовуйте фільтри запитів, щоб звузити результати за проєктом, платформою, статусом або іншими критеріями."
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Фільтр запиту"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.short_desc": {
@@ -780,7 +780,7 @@
           "message": "Використовуйте синтаксис запитів Sentry для фільтрації проблем у всіх проєктах. Фільтруйте за проєктом, платформою, середовищем, статусом, тегами або будь-якою іншою властивістю проблеми."
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Період статистики"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -808,7 +808,7 @@
           "message": "7 днів"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.display_name": {
-          "source": "Short ID Lookup",
+          "source": "Short ID lookup",
           "message": "Пошук за коротким ID"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Використовуйте курсор із попередньої відповіді для отримання додаткових сторінок проблем організації."
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.display_name": {
-          "source": "New Project Issue",
+          "source": "New project issue",
           "message": "Нова проблема в проєкті"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Виберіть проєкт Sentry, який ви хочете відстежувати. Проєкти представляють окремі програми або сервіси у вашій організації."
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Фільтр запиту"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Використовуйте синтаксис запитів Sentry для фільтрації проблем, які викликають цю подію. Наприклад, фільтруйте за браузером, пристроєм, тегами або тим, чи є помилки необробленими."
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Період статистики"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -896,7 +896,7 @@
           "message": "7 днів"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.display_name": {
-          "source": "New Organization Issue",
+          "source": "New organization issue",
           "message": "Нова проблема в організації"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.short_desc": {
@@ -908,7 +908,7 @@
           "message": "Відстежує всі проєкти у вашій організації Sentry та спрацьовує при виявленні нової проблеми в будь-якому проєкті. Це забезпечує видимість проблем в масштабах усієї організації для всіх програм і сервісів. Використовуйте фільтри запитів, щоб зосередитися на певних типах або характеристиках проблем."
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Фільтр запиту"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Використовуйте синтаксис запитів Sentry для фільтрації проблем, які викликають цю подію в усіх проєктах. Фільтруйте за такими властивостями, як платформа, середовище, реліз або спеціальні теги."
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Період статистики"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.short_desc": {

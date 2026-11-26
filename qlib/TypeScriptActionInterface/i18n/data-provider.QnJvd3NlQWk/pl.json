@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Browse AI** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako obiekt typu hash zawierający kod statusu, nagłówki odpowiedzi oraz treść odpowiedzi.\n\nUżyj tej akcji w przypadku punktów końcowych, które nie są jeszcze udostępnione jako dedykowane akcje w tej aplikacji."
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.display_name": {
-          "source": "List Robots",
+          "source": "List robots",
           "message": "Lista robotów"
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Pobiera pełną listę wszystkich robotów dostępnych na Twoim koncie Browse AI, w tym ich podstawowe informacje i szczegóły konfiguracji"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.display_name": {
-          "source": "Get Robot",
+          "source": "Get robot",
           "message": "Pobierz robota"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Pobiera szczegółowe informacje o robocie Browse AI, w tym jego konfigurację, parametry wejściowe i metadane"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Wyświetl listę zadań"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Pobiera przefiltrowaną listę zadań wykonanych przez określonego robota Browse AI z opcjami filtrowania według statusu, zakresu dat i preferencji sortowania"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.display_name": {
-          "source": "Run Task",
+          "source": "Run task",
           "message": "Uruchom zadanie"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Uruchamia pojedyncze zadanie przy użyciu określonego robota Browse AI z podanymi parametrami wejściowymi"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.display_name": {
-          "source": "Run Bulk Task",
+          "source": "Run bulk task",
           "message": "Uruchom zadanie masowe"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Uruchamia masowo wiele zadań przy użyciu określonego robota Browse AI z różnymi zestawami parametrów wejściowych"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "Nowe zadanie"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Wybierz robota Browse AI, którego zdarzenia zadań chcesz monitorować"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "Typ wydarzenia"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.short_desc": {

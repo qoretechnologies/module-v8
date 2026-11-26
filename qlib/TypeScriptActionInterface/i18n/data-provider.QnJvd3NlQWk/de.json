@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP / REST API-Aufruf an **Browse AI** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfrage-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwort-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die auf dieser App noch nicht als Aktionen erster Klasse verfügbar sind."
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.QnJvd3NlQWk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.display_name": {
-          "source": "List Robots",
+          "source": "List robots",
           "message": "Robots auflisten"
         },
         "app.QnJvd3NlQWk.action.bGlzdF9yb2JvdHM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Ruft eine vollständige Liste aller in Ihrem Browse AI-Konto verfügbaren Robots ab, einschließlich ihrer Basisinformationen und Konfigurationsdetails"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.display_name": {
-          "source": "Get Robot",
+          "source": "Get robot",
           "message": "Robot abrufen"
         },
         "app.QnJvd3NlQWk.action.Z2V0X3JvYm90.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Ruft umfassende Informationen über einen Browse AI-Robot ab, einschließlich seiner Konfiguration, Eingabeparameter und Metadaten"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Tasks auflisten"
         },
         "app.QnJvd3NlQWk.action.bGlzdF90YXNrcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Ruft eine gefilterte Liste von Aufgaben ab, die von einem bestimmten Browse AI-Robot ausgeführt wurden, mit Optionen zum Filtern nach Status, Datumsbereich und Sortiereinstellungen"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.display_name": {
-          "source": "Run Task",
+          "source": "Run task",
           "message": "Task ausführen"
         },
         "app.QnJvd3NlQWk.action.cnVuX3Rhc2s.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Führt einen einzelnen Task mit dem angegebenen Browse AI-Roboter und den bereitgestellten Eingabeparametern aus"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.display_name": {
-          "source": "Run Bulk Task",
+          "source": "Run bulk task",
           "message": "Massen-Task ausführen"
         },
         "app.QnJvd3NlQWk.action.cnVuX2J1bGtfdGFzaw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Führt mehrere Tasks als Massenverarbeitung mit dem angegebenen Browse AI-Roboter und unterschiedlichen Eingabeparametersätzen aus"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "Neue Aufgabe"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Wählen Sie den Browse AI-Roboter aus, dessen Task-Ereignisse Sie überwachen möchten"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "Ereignistyp"
         },
         "app.QnJvd3NlQWk.action.bmV3X3Rhc2s.option.ZXZlbnRUeXBl.short_desc": {

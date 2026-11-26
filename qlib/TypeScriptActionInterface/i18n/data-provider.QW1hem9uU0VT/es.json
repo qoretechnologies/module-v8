@@ -28,7 +28,7 @@
           "message": "Realice una llamada personalizada a la API HTTP / REST a **Amazon SES** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), los parámetros de consulta opcionales, los encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para los puntos de enlace que aún no están expuestos como acciones de primera clase en esta aplicación."
         },
         "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Método HTTP"
         },
         "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "Enviar correo electrónico"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Envíe correos electrónicos con soporte para contenido HTML y texto plano, destinatarios en CC/CCO, direcciones de respuesta, etiquetas personalizadas para seguimiento y opciones de entrega avanzadas. Incluye validación exhaustiva y manejo de errores para una entrega de correo electrónico confiable."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Región de AWS"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Seleccione la región de AWS donde está configurado su servicio Amazon SES. Las diferentes regiones pueden tener diferentes identidades verificadas y límites de envío."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.display_name": {
-          "source": "From Email Address",
+          "source": "From email address",
           "message": "Dirección de correo electrónico del remitente"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.short_desc": {
@@ -376,7 +376,7 @@
           "message": "La dirección de correo electrónico del remitente que debe estar verificada en su cuenta de Amazon SES. Esta dirección aparecerá en el campo De del correo electrónico."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.display_name": {
-          "source": "To Email Addresses",
+          "source": "To email addresses",
           "message": "Direcciones de correo electrónico del destinatario"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Una o más direcciones de correo electrónico a las que enviar el mensaje. Las direcciones múltiples deben separarse por comas. Todas las direcciones deben tener formatos de correo electrónico válidos."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.display_name": {
-          "source": "CC Email Addresses",
+          "source": "CC email addresses",
           "message": "Direcciones de correo electrónico en CC"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Destinatarios opcionales en copia de carbón que recibirán una copia del correo electrónico. Múltiples direcciones deben estar separadas por comas."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.display_name": {
-          "source": "BCC Email Addresses",
+          "source": "BCC email addresses",
           "message": "Direcciones de correo electrónico en CCO"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Destinatarios opcionales en copia de carbón oculta que recibirán una copia sin que los demás destinatarios lo sepan. Múltiples direcciones deben estar separadas por comas."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.display_name": {
-          "source": "Reply-To Addresses",
+          "source": "Reply-to addresses",
           "message": "Direcciones de respuesta"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Direcciones de correo electrónico opcionales a las que se deben enviar las respuestas en lugar de la dirección del remitente. Múltiples direcciones deben estar separadas por comas."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "Asunto del correo electrónico"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "La línea de asunto que aparecerá en el cliente de correo electrónico del destinatario. Debe ser descriptiva y atractiva."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.display_name": {
-          "source": "Text Body",
+          "source": "Text body",
           "message": "Cuerpo de texto"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.short_desc": {
@@ -448,7 +448,7 @@
           "message": "El contenido en texto plano del correo electrónico. Se debe proporcionar el cuerpo de texto o el cuerpo HTML. La versión de texto garantiza la compatibilidad con todos los clientes de correo electrónico."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.display_name": {
-          "source": "HTML Body",
+          "source": "HTML body",
           "message": "Cuerpo HTML"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.short_desc": {
@@ -460,7 +460,7 @@
           "message": "El contenido HTML del correo electrónico con formato, enlaces y estilos. Se debe proporcionar el cuerpo de texto o el cuerpo HTML."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.display_name": {
-          "source": "Character Encoding",
+          "source": "Character encoding",
           "message": "Codificación de caracteres"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "US-ASCII"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.display_name": {
-          "source": "Return Path",
+          "source": "Return path",
           "message": "Ruta de retorno"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Dirección de correo electrónico opcional a la que se enviarán las notificaciones de rebote. Debe ser una dirección verificada en su cuenta de SES."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.display_name": {
-          "source": "Configuration Set",
+          "source": "Configuration set",
           "message": "Conjunto de configuraciones"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Nombre opcional del conjunto de configuraciones que se utilizará para este correo electrónico. Los conjuntos de configuraciones le permiten publicar eventos de envío de correo electrónico en otros servicios de AWS."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.display_name": {
-          "source": "Email Tags",
+          "source": "Email tags",
           "message": "Etiquetas de correo electrónico"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Etiquetas opcionales para categorizar y realizar un seguimiento de sus correos electrónicos. Las etiquetas se pueden utilizar para informes y analíticas en su panel de control de SES."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "Nombre de etiqueta"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Un nombre descriptivo para la etiqueta que se utilizará para la categorización."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.display_name": {
-          "source": "Tag Value",
+          "source": "Tag value",
           "message": "Valor de etiqueta"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "El valor asociado con este nombre de etiqueta."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.display_name": {
-          "source": "Verify Email Address",
+          "source": "Verify email address",
           "message": "Verificar dirección de correo electrónico"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Inicie el proceso de verificación para una dirección de correo electrónico o dominio. Amazon SES enviará un correo electrónico de verificación en el que debe hacer clic para completar el proceso de verificación."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Región de AWS"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Seleccione la región de AWS donde desea verificar la dirección de correo electrónico. La identidad verificada estará disponible en esta región."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.display_name": {
-          "source": "Email Address to Verify",
+          "source": "Email address to verify",
           "message": "Dirección de correo electrónico a verificar"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.short_desc": {
@@ -580,7 +580,7 @@
           "message": "La dirección de correo electrónico que desea verificar como identidad de envío. Amazon SES enviará un correo electrónico de verificación a esta dirección."
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.display_name": {
-          "source": "Get Send Statistics",
+          "source": "Get send statistics",
           "message": "Obtener estadísticas de envío"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Obtenga estadísticas de envío completas, incluidos intentos de entrega, rebotes, quejas y tasas de rechazo. Los datos se proporcionan en formato de serie temporal con porcentajes y resúmenes calculados."
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Región de AWS"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Seleccione la región de AWS desde la que desea recuperar las estadísticas de envío. Las estadísticas son específicas de cada región."
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.display_name": {
-          "source": "New Verified Identity",
+          "source": "New verified identity",
           "message": "Nueva identidad verificada"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Monitorea las direcciones de correo electrónico y dominios recién verificados en su cuenta de SES. Se activa cuando se completa el proceso de verificación para nuevas identidades de envío."
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Región de AWS"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.short_desc": {

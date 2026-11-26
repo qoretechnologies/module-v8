@@ -28,7 +28,7 @@
           "message": "使用已設定的連線驗證向 **Contentful** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求主體。傳回的回應為包含狀態碼、回應標頭和回應主體的雜湊。\n\n對尚未在此應用程式中公開為一等動作的端點使用此動作。"
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.display_name": {
-          "source": "Get an Entry",
+          "source": "Get an entry",
           "message": "取得條目"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.short_desc": {
@@ -376,7 +376,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -400,7 +400,7 @@
           "message": "選擇或輸入要擷取的條目 ID。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.display_name": {
-          "source": "Get an Entry with Replacement",
+          "source": "Get an entry with replacement",
           "message": "取得條目並替換"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "將取代所有標籤出現位置的文字。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.display_name": {
-          "source": "Create an Entry",
+          "source": "Create an entry",
           "message": "建立條目"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.short_desc": {
@@ -532,7 +532,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -568,7 +568,7 @@
           "message": "如果啟用，條目將會在建立後立即發佈。否則，它將會儲存為草稿。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.display_name": {
-          "source": "Update an Entry",
+          "source": "Update an entry",
           "message": "更新條目"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.short_desc": {
@@ -604,7 +604,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -640,7 +640,7 @@
           "message": "以鍵值物件形式提供要更新的欄位值。僅會變更指定的欄位。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.display_name": {
-          "source": "Delete an Entry",
+          "source": "Delete an entry",
           "message": "刪除條目"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.short_desc": {
@@ -676,7 +676,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -700,7 +700,7 @@
           "message": "選擇或輸入要永久刪除的條目 ID。"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.display_name": {
-          "source": "Publish an Entry",
+          "source": "Publish an entry",
           "message": "發布條目"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.short_desc": {
@@ -736,7 +736,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -760,7 +760,7 @@
           "message": "選擇或輸入要發布的條目 ID。"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.display_name": {
-          "source": "Unpublish an Entry",
+          "source": "Unpublish an entry",
           "message": "取消發布條目"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.short_desc": {
@@ -796,7 +796,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -820,7 +820,7 @@
           "message": "選擇或輸入要取消發布的條目 ID。"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.display_name": {
-          "source": "Archive/Unarchive an Entry",
+          "source": "Archive/unarchive an entry",
           "message": "歸檔/取消歸檔條目"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.short_desc": {
@@ -856,7 +856,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -892,7 +892,7 @@
           "message": "啟用時將歸檔該條目；停用時將取消歸檔該條目。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.display_name": {
-          "source": "Search Entries",
+          "source": "Search entries",
           "message": "搜尋條目"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.short_desc": {
@@ -928,7 +928,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -940,7 +940,7 @@
           "message": "選擇要用來篩選結果的內容類型。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "搜尋查詢"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.short_desc": {
@@ -976,7 +976,7 @@
           "message": "分頁時要跳過的條目數量。預設為 0。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.display_name": {
-          "source": "Get an Asset",
+          "source": "Get an asset",
           "message": "取得資產"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "選擇或輸入要擷取的資產 ID。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.display_name": {
-          "source": "Create an Asset",
+          "source": "Create an asset",
           "message": "建立資產"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "資產的選填說明。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.display_name": {
-          "source": "File Name",
+          "source": "File name",
           "message": "檔案名稱"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Contentful 將從中下載檔案的公開可存取 URL。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "如果啟用，資產將會在處理後立即發佈。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.display_name": {
-          "source": "Update an Asset",
+          "source": "Update an asset",
           "message": "更新資產"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "資產的更新描述。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.display_name": {
-          "source": "Delete an Asset",
+          "source": "Delete an asset",
           "message": "刪除資產"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "選擇或輸入要永久刪除的資產 ID。"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.display_name": {
-          "source": "Publish an Asset",
+          "source": "Publish an asset",
           "message": "發布資產"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "選擇或輸入要發布的資產 ID。"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.display_name": {
-          "source": "Unpublish an Asset",
+          "source": "Unpublish an asset",
           "message": "取消發布資產"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "選擇或輸入要取消發布的資產 ID。"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.display_name": {
-          "source": "Archive/Unarchive an Asset",
+          "source": "Archive/unarchive an asset",
           "message": "歸檔/取消歸檔資產"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "啟用時將歸檔該資產；停用時將取消歸檔該資產。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.display_name": {
-          "source": "Search Assets",
+          "source": "Search assets",
           "message": "搜尋資產"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "搜尋查詢"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "要在資產標題和描述中搜尋的選填文字。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.display_name": {
-          "source": "MIME Type Group",
+          "source": "MIME type group",
           "message": "MIME 類型群組"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "分頁時要跳過的資產數量。預設為 0。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Get a Content Type",
+          "source": "Get a content type",
           "message": "取得內容類型"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1620,7 +1620,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "選擇要擷取詳細資訊的內容類型。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Create a Content Type",
+          "source": "Create a content type",
           "message": "建立內容類型"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "若啟用，此欄位在不同地區設定下可擁有不同的值。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "欄位名稱"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.short_desc": {
@@ -1752,7 +1752,7 @@
           "message": "若啟用，條目必須填寫此欄位的值。"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "欄位類型"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "欄位的資料類型。支援的類型：符號（短文字）、文字（長文字）、整數、數字、日期、布林、RichText、連結、陣列、物件、位置。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Content Type",
+          "source": "Update a content type",
           "message": "更新內容類型"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "內容類型的更新描述。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Delete a Content Type",
+          "source": "Delete a content type",
           "message": "刪除內容類型"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1872,7 +1872,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1884,7 +1884,7 @@
           "message": "選擇要永久刪除的內容類型。"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.display_name": {
-          "source": "Activate a Content Type",
+          "source": "Activate a content type",
           "message": "啟用內容類型"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.short_desc": {
@@ -1920,7 +1920,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "選擇要啟用（發佈）的內容類型。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.display_name": {
-          "source": "Deactivate a Content Type",
+          "source": "Deactivate a content type",
           "message": "停用內容類型"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1980,7 +1980,7 @@
           "message": "選擇要停用（取消發佈）的內容類型。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Add a Field to a Content Type",
+          "source": "Add a field to a content type",
           "message": "新增欄位至內容類型"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2016,7 +2016,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2040,7 +2040,7 @@
           "message": "欄位的唯一 ID（例如「heroImage」、「publishDate」）。在內容類型中必須唯一。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "欄位名稱"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2052,7 +2052,7 @@
           "message": "欄位的人類可讀名稱（例如「Hero Image」、「Publish Date」）。"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "欄位類型"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.short_desc": {
@@ -2132,7 +2132,7 @@
           "message": "若啟用，此欄位在不同地區設定下可擁有不同的值。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Field of a Content Type",
+          "source": "Update a field of a content type",
           "message": "更新內容類型的欄位"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2168,7 +2168,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2192,7 +2192,7 @@
           "message": "選擇要更新的欄位。"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "欄位名稱"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2228,7 +2228,7 @@
           "message": "更新該欄位是否可以針對不同地區設定擁有不同值。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.display_name": {
-          "source": "Delete a Field from a Content Type",
+          "source": "Delete a field from a content type",
           "message": "從內容類型刪除欄位"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.short_desc": {
@@ -2264,7 +2264,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2288,7 +2288,7 @@
           "message": "選擇要從內容類型中永久刪除的欄位。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.display_name": {
-          "source": "Search Content Types",
+          "source": "Search content types",
           "message": "搜尋內容類型"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.short_desc": {
@@ -2324,7 +2324,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "搜尋查詢"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "分頁時要跳過的內容類型數量。預設為 0。"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.display_name": {
-          "source": "Watch an Event",
+          "source": "Watch an event",
           "message": "監視事件"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.short_desc": {
@@ -2396,7 +2396,7 @@
           "message": "選擇空間內的環境。如果未指定，預設為「master」。"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
+          "source": "Event types",
           "message": "事件類型"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.short_desc": {

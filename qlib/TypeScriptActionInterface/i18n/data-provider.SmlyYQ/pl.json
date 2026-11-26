@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Jira** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względem bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki oraz treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako akcje pierwszoklasowe w tej aplikacji."
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Wyszukaj rekordy"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Nazwa tabeli"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get Announcement Banner",
+          "source": "Get announcement banner",
           "message": "Pobierz baner ogłoszeń"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Pobiera bieżącą konfigurację banera ogłoszeń dla instancji Jira"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set Announcement Banner",
+          "source": "Set announcement banner",
           "message": "Ustaw baner ogłoszeń"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Aktualizuje konfigurację banera ogłoszeń dla instancji Jira"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get Fields",
+          "source": "Get fields",
           "message": "Pobierz pola"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Zwraca wszystkie pola, zarówno systemowe, jak i niestandardowe, w instancji Jira"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create Custom Field",
+          "source": "Create custom field",
           "message": "Utwórz pole niestandardowe"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Tworzy nowe pole niestandardowe w instancji Jira"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update Custom Field",
+          "source": "Update custom field",
           "message": "Zaktualizuj pole niestandardowe"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Aktualizuje nazwę i opis pola niestandardowego"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash Custom Field",
+          "source": "Trash custom field",
           "message": "Przenieś pole niestandardowe do kosza"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Przenosi pole niestandardowe do kosza. Pole niestandardowe można przywrócić z kosza w ciągu 60 dni"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create Issue",
+          "source": "Create issue",
           "message": "Utwórz zgłoszenie"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Tworzy nowe zgłoszenie w projekcie Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete Issue",
+          "source": "Delete issue",
           "message": "Usuń zgłoszenie"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Usuwa zgłoszenie z projektu Jira"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get Issue",
+          "source": "Get issue",
           "message": "Pobierz zgłoszenie"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Pobiera szczegóły określonego zgłoszenia na podstawie jego identyfikatora lub klucza"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit Issue",
+          "source": "Edit issue",
           "message": "Edytuj zgłoszenie"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Aktualizuje pola istniejącego zgłoszenia"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get Comments",
+          "source": "Get comments",
           "message": "Pobierz komentarze"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Pobiera wszystkie komentarze dla określonego zgłoszenia"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add Comment",
+          "source": "Add comment",
           "message": "Dodaj komentarz"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Dodaje nowy komentarz do określonego zgłoszenia"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete Comment",
+          "source": "Delete comment",
           "message": "Usuń komentarz"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Usuwa określony komentarz ze zgłoszenia"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get Comment",
+          "source": "Get comment",
           "message": "Pobierz komentarz"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Pobiera określony komentarz według jego identyfikatora"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update Comment",
+          "source": "Update comment",
           "message": "Zaktualizuj komentarz"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Aktualizuje istniejący komentarz w zgłoszeniu"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get Issue Worklogs",
+          "source": "Get issue worklogs",
           "message": "Pobierz dzienniki pracy zgłoszenia"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Pobiera wszystkie dzienniki pracy dla określonego zgłoszenia"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add Worklog",
+          "source": "Add worklog",
           "message": "Dodaj wpis w dzienniku prac"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Dodaje nowy wpis w dzienniku prac do określonego zgłoszenia"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete Worklog",
+          "source": "Delete worklog",
           "message": "Usuń dziennik pracy"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Usuwa określony wpis dziennika pracy ze zgłoszenia"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get Worklog",
+          "source": "Get worklog",
           "message": "Pobierz dziennik pracy"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Pobiera określony wpis dziennika pracy na podstawie jego identyfikatora"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update Worklog",
+          "source": "Update worklog",
           "message": "Zaktualizuj dziennik pracy"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Aktualizuje istniejący wpis dziennika pracy w zgłoszeniu"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
+          "source": "Get all projects",
           "message": "Pobierz wszystkie projekty"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Lista właściwości projektu do zwrócenia dla projektu. Ten parametr przyjmuje listę rozdzielaną przecinkami."
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create Project",
+          "source": "Create project",
           "message": "Utwórz projekt"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Tworzy nowy projekt w Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete Project",
+          "source": "Delete project",
           "message": "Usuń projekt"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Usuwa projekt z Jira"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get Project",
+          "source": "Get project",
           "message": "Pobierz projekt"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Pobiera szczegóły określonego projektu na podstawie jego identyfikatora lub klucza"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update Project",
+          "source": "Update project",
           "message": "Zaktualizuj projekt"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Aktualizuje szczegóły istniejącego projektu"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search Issues",
+          "source": "Search issues",
           "message": "Wyszukaj zgłoszenia"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Wyszukuje zgłoszenia przy użyciu JQL (Jira Query Language). Zwraca zgłoszenia spełniające kryteria wyszukiwania"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
-          "source": "New Issue",
+          "source": "New issue",
           "message": "Nowe zgłoszenie"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Projekt, w którym mają być monitorowane nowe zgłoszenia"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
-          "source": "Updated Issue",
+          "source": "Updated issue",
           "message": "Zaktualizowane zgłoszenie"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {

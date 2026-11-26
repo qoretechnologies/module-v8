@@ -28,7 +28,7 @@
           "message": "Зробити власний виклик HTTP / REST API до **Amazon CloudFront**, використовуючи автентифікацію налаштованого підключення.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як повноцінні дії в цьому додатку."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.display_name": {
-          "source": "List Distributions",
+          "source": "List distributions",
           "message": "Отримати список дистрибутивів"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Отримує список усіх дистрибутивів CloudFront у вашому обліковому записі AWS, включаючи їхній статус, доменні імена та деталі конфігурації. Ви можете контролювати кількість результатів і використовувати розбиття на сторінки для великих наборів дистрибутивів."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
+          "source": "Max items",
           "message": "Макс. кількість елементів"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Використовуйте цей маркер для продовження пагінації з попереднього запиту списку. Це значення повертається в полі next_marker попередніх відповідей, якщо результати обрізано."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Get Distribution",
+          "source": "Get distribution",
           "message": "Отримати розповсюдження"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Виберіть конкретне розповсюдження CloudFront, про яке ви хочете отримати детальну інформацію. Це поверне повну конфігурацію та статус розповсюдження."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.display_name": {
-          "source": "Update Distribution Status",
+          "source": "Update distribution status",
           "message": "Оновити статус дистрибутиву"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Виберіть дистрибутив CloudFront, статус якого ви хочете змінити. Дистрибутив повинен існувати та перебувати у стані, який дозволяє зміну статусу."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.display_name": {
-          "source": "Enable Distribution",
+          "source": "Enable distribution",
           "message": "Увімкнути дистрибутив"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Виберіть, чи ввімкнути, чи вимкнути дистрибутив. Увімкнення дозволяє дистрибутиву роздавати вміст, тоді як вимкнення зупиняє доставку вмісту та виставлення рахунків. Зміна статусу може вимагати деякого часу для розповсюдження."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.display_name": {
-          "source": "Invalidate Item",
+          "source": "Invalidate item",
           "message": "Інвалідувати елемент"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Виберіть дистрибутив CloudFront, у якому ви хочете інвалідувати кешований вміст. Інвалідація застосовуватиметься до всіх крайових локацій для цього дистрибутиву."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.display_name": {
-          "source": "Paths to Invalidate",
+          "source": "Paths to invalidate",
           "message": "Шляхи для інвалідації"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Укажіть шляхи до файлів, які ви хочете інвалідувати з кешу CloudFront. Використовуйте /*, щоб інвалідувати всі файли, або вкажіть окремі шляхи до файлів, наприклад /images/logo.png. Шляхи мають починатися з /."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.display_name": {
-          "source": "Caller Reference",
+          "source": "Caller reference",
           "message": "Посилання викликача"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Необов'язковий унікальний ідентифікатор для цього запиту на інвалідацію. Якщо не вказано, унікальне значення буде згенеровано автоматично. Це допомагає відстежувати та ідентифікувати конкретні запити на інвалідацію."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.display_name": {
-          "source": "List Invalidations",
+          "source": "List invalidations",
           "message": "Отримати список інвалідацій"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Виберіть дистрибутив CloudFront, історію інвалідації якого ви хочете отримати. Це відобразить усі запити на інвалідацію, зроблені для цього дистрибутиву."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
+          "source": "Max items",
           "message": "Макс. кількість елементів"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Використовуйте цей маркер для продовження пагінації з попереднього запиту списку. Це значення повертається в полі next_marker попередніх відповідей, якщо результати обрізано."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "Get Invalidation",
+          "source": "Get invalidation",
           "message": "Отримати інвалідацію"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Виберіть конкретний запит на інвалідацію, про який ви хочете отримати деталі. Це відобразить повну інформацію про інвалідацію, включаючи її поточний статус та зачеплені шляхи."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "New Distribution",
+          "source": "New distribution",
           "message": "Новий дистрибутив"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Цей тригер відстежує щойно створені дистрибутиви CloudFront у вашому обліковому записі AWS. Він спрацьовуватиме щоразу, коли виявляється новий дистрибутив, надаючи деталі про конфігурацію та статус дистрибутиву."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "New Invalidation",
+          "source": "New invalidation",
           "message": "Нова інвалідація"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.short_desc": {

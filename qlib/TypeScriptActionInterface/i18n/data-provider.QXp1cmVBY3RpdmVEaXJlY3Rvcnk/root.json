@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Active Directory** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
-          "message": "List Users"
+          "source": "List users",
+          "message": "List users"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.short_desc": {
           "source": "Retrieve a list of users from Active Directory",
@@ -364,8 +364,8 @@
           "message": "The maximum number of users to return in a single request. Default is 20, with pagination available for larger result sets."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -388,8 +388,8 @@
           "message": "Optional group identifier to filter users who are members of a specific group. When specified, only users belonging to this group will be returned."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
-          "message": "Filter Criteria"
+          "source": "Filter criteria",
+          "message": "Filter criteria"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.short_desc": {
           "source": "Additional filter conditions",
@@ -492,8 +492,8 @@
           "message": "The value to compare against the specified field using the selected operator."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.display_name": {
-          "source": "Delete User",
-          "message": "Delete User"
+          "source": "Delete user",
+          "message": "Delete user"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.short_desc": {
           "source": "Delete a user from Active Directory",
@@ -516,8 +516,8 @@
           "message": "The unique identifier of the user account to be deleted. Select from existing users in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
-          "message": "Get User"
+          "source": "Get user",
+          "message": "Get user"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.short_desc": {
           "source": "Retrieve user information from Active Directory",
@@ -540,8 +540,8 @@
           "message": "The unique identifier of the user account to retrieve information for. Select from existing users in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.display_name": {
-          "source": "Disable User",
-          "message": "Disable User"
+          "source": "Disable user",
+          "message": "Disable user"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.short_desc": {
           "source": "Disable a user account in Active Directory",
@@ -564,8 +564,8 @@
           "message": "The unique identifier of the user account to be disabled. Select from existing users in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.display_name": {
-          "source": "Create User",
-          "message": "Create User"
+          "source": "Create user",
+          "message": "Create user"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.short_desc": {
           "source": "Create a new user in Active Directory",
@@ -576,8 +576,8 @@
           "message": "Create a new user account in Active Directory with comprehensive profile information, security settings, and organizational details. Supports setting passwords, contact information, and location data."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
           "source": "Full name of the user",
@@ -588,8 +588,8 @@
           "message": "The full display name of the user as it will appear in Active Directory and throughout Microsoft services."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
           "source": "User's first name",
@@ -600,8 +600,8 @@
           "message": "The given name (first name) of the user for profile completion and directory organization."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
           "source": "User's last name",
@@ -612,8 +612,8 @@
           "message": "The surname (last name) of the user for profile completion and directory organization."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
-          "message": "Mail Nickname"
+          "source": "Mail nickname",
+          "message": "Mail nickname"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
           "source": "Email alias for the user",
@@ -624,8 +624,8 @@
           "message": "The mail nickname that will be used as part of the user's email address. Must contain only letters, numbers, periods, hyphens, and underscores."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.display_name": {
-          "source": "User Principal Name",
-          "message": "User Principal Name"
+          "source": "User principal name",
+          "message": "User principal name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.short_desc": {
           "source": "Primary login identifier",
@@ -648,8 +648,8 @@
           "message": "The initial password for the user account. Must meet your organization's password complexity requirements and be at least 8 characters long."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.display_name": {
-          "source": "Force Password Change",
-          "message": "Force Password Change"
+          "source": "Force password change",
+          "message": "Force password change"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.short_desc": {
           "source": "Require password change on first login",
@@ -660,8 +660,8 @@
           "message": "When enabled, the user will be required to change their password on their first sign-in to the account."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.display_name": {
-          "source": "Force Password Change with MFA",
-          "message": "Force Password Change with MFA"
+          "source": "Force password change with MFA",
+          "message": "Force password change with MFA"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.short_desc": {
           "source": "Require password change with multi-factor authentication",
@@ -672,8 +672,8 @@
           "message": "When enabled, the user will be required to change their password with multi-factor authentication on their first sign-in."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
-          "message": "Job Title"
+          "source": "Job title",
+          "message": "Job title"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
           "source": "User's job title",
@@ -696,8 +696,8 @@
           "message": "The department or organizational unit the user belongs to within the company structure."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
           "source": "User's mobile phone number",
@@ -708,8 +708,8 @@
           "message": "The mobile phone number for the user, used for contact information and potential multi-factor authentication."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.display_name": {
-          "source": "Email Address",
-          "message": "Email Address"
+          "source": "Email address",
+          "message": "Email address"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.short_desc": {
           "source": "Primary email address",
@@ -720,8 +720,8 @@
           "message": "The primary email address for the user. If not specified, it may be automatically generated based on the user principal name."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
-          "source": "Street Address",
-          "message": "Street Address"
+          "source": "Street address",
+          "message": "Street address"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
           "source": "Physical street address",
@@ -744,8 +744,8 @@
           "message": "The city where the user is located for contact and organizational purposes."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.display_name": {
-          "source": "State/Province",
-          "message": "State/Province"
+          "source": "State/province",
+          "message": "State/province"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.short_desc": {
           "source": "State or province",
@@ -756,8 +756,8 @@
           "message": "The state or province where the user is located for contact and organizational purposes."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
           "source": "ZIP or postal code",
@@ -780,8 +780,8 @@
           "message": "The country where the user is located for contact and organizational purposes."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
-          "source": "Account Enabled",
-          "message": "Account Enabled"
+          "source": "Account enabled",
+          "message": "Account enabled"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
           "source": "Enable the user account",
@@ -792,8 +792,8 @@
           "message": "Whether the user account should be enabled and able to sign in. When disabled, the user cannot access any services."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
-          "source": "Usage Location",
-          "message": "Usage Location"
+          "source": "Usage location",
+          "message": "Usage location"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
           "source": "Country code for license assignment",
@@ -844,8 +844,8 @@
           "message": "Mexico"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.display_name": {
-          "source": "Update User",
-          "message": "Update User"
+          "source": "Update user",
+          "message": "Update user"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.short_desc": {
           "source": "Update an existing user in Active Directory",
@@ -868,8 +868,8 @@
           "message": "The unique identifier of the user account to be updated. Select from existing users in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
           "source": "Updated full name",
@@ -880,8 +880,8 @@
           "message": "The updated full display name of the user as it will appear in Active Directory and throughout Microsoft services."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
           "source": "Updated first name",
@@ -892,8 +892,8 @@
           "message": "The updated given name (first name) of the user."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
           "source": "Updated last name",
@@ -904,8 +904,8 @@
           "message": "The updated surname (last name) of the user."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
-          "message": "Mail Nickname"
+          "source": "Mail nickname",
+          "message": "Mail nickname"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
           "source": "Updated email alias",
@@ -916,8 +916,8 @@
           "message": "The updated mail nickname for the user. Must contain only letters, numbers, periods, hyphens, and underscores."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
-          "message": "Job Title"
+          "source": "Job title",
+          "message": "Job title"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
           "source": "Updated job title",
@@ -940,8 +940,8 @@
           "message": "The updated department or organizational unit the user belongs to."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
           "source": "Updated mobile phone number",
@@ -952,8 +952,8 @@
           "message": "The updated mobile phone number for the user."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.display_name": {
-          "source": "Email Address",
-          "message": "Email Address"
+          "source": "Email address",
+          "message": "Email address"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.short_desc": {
           "source": "Updated email address",
@@ -964,8 +964,8 @@
           "message": "The updated primary email address for the user."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
-          "source": "Street Address",
-          "message": "Street Address"
+          "source": "Street address",
+          "message": "Street address"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
           "source": "Updated street address",
@@ -988,8 +988,8 @@
           "message": "The updated city where the user is located."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.display_name": {
-          "source": "State/Province",
-          "message": "State/Province"
+          "source": "State/province",
+          "message": "State/province"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.short_desc": {
           "source": "Updated state or province",
@@ -1000,8 +1000,8 @@
           "message": "The updated state or province where the user is located."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
           "source": "Updated postal code",
@@ -1024,8 +1024,8 @@
           "message": "The updated country where the user is located."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
-          "source": "Account Enabled",
-          "message": "Account Enabled"
+          "source": "Account enabled",
+          "message": "Account enabled"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
           "source": "Enable or disable the account",
@@ -1036,8 +1036,8 @@
           "message": "Whether the user account should be enabled or disabled. Disabled accounts cannot sign in to any services."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
-          "source": "Usage Location",
-          "message": "Usage Location"
+          "source": "Usage location",
+          "message": "Usage location"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
           "source": "Updated usage location",
@@ -1088,8 +1088,8 @@
           "message": "Mexico"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.display_name": {
-          "source": "Add User to Group",
-          "message": "Add User to Group"
+          "source": "Add user to group",
+          "message": "Add user to group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.short_desc": {
           "source": "Add a user to an Active Directory group",
@@ -1124,8 +1124,8 @@
           "message": "The unique identifier of the group to add the user to. Select from existing groups in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.display_name": {
-          "source": "Remove User from Group",
-          "message": "Remove User from Group"
+          "source": "Remove user from group",
+          "message": "Remove user from group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.short_desc": {
           "source": "Remove a user from an Active Directory group",
@@ -1160,8 +1160,8 @@
           "message": "The unique identifier of the user to be removed from the group. Select from existing users in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
-          "message": "List Groups"
+          "source": "List groups",
+          "message": "List groups"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.short_desc": {
           "source": "Retrieve a list of groups from Active Directory",
@@ -1184,8 +1184,8 @@
           "message": "The maximum number of groups to return in a single request. Default is 20, with pagination available for larger result sets."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -1196,8 +1196,8 @@
           "message": "The pagination token to retrieve the next page of results. Obtained from previous list operations."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
-          "message": "Filter Criteria"
+          "source": "Filter criteria",
+          "message": "Filter criteria"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.short_desc": {
           "source": "Filter conditions for groups",
@@ -1352,8 +1352,8 @@
           "message": "The value to compare against the specified field using the selected operator."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.display_name": {
-          "source": "Delete Group",
-          "message": "Delete Group"
+          "source": "Delete group",
+          "message": "Delete group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.short_desc": {
           "source": "Delete a group from Active Directory",
@@ -1376,8 +1376,8 @@
           "message": "The unique identifier of the group to be deleted. Select from existing groups in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.display_name": {
-          "source": "Get Group",
-          "message": "Get Group"
+          "source": "Get group",
+          "message": "Get group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.short_desc": {
           "source": "Retrieve group information from Active Directory",
@@ -1400,8 +1400,8 @@
           "message": "The unique identifier of the group to retrieve information for. Select from existing groups in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.display_name": {
-          "source": "Create Group",
-          "message": "Create Group"
+          "source": "Create group",
+          "message": "Create group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.short_desc": {
           "source": "Create a new group in Active Directory",
@@ -1412,8 +1412,8 @@
           "message": "Create a new group in Active Directory with specified properties, type, and security settings. Supports both security groups and Microsoft 365 groups."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
           "source": "Name of the group",
@@ -1436,8 +1436,8 @@
           "message": "Optional description explaining the purpose and scope of the group."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.display_name": {
-          "source": "Group Types",
-          "message": "Group Types"
+          "source": "Group types",
+          "message": "Group types"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.short_desc": {
           "source": "Type characteristics of the group",
@@ -1464,8 +1464,8 @@
           "message": "Group membership is automatically managed based on user or device attributes"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.display_name": {
-          "source": "Mail Enabled",
-          "message": "Mail Enabled"
+          "source": "Mail enabled",
+          "message": "Mail enabled"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.short_desc": {
           "source": "Enable email functionality",
@@ -1476,8 +1476,8 @@
           "message": "Whether the group should be mail-enabled, allowing it to receive and send emails."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
-          "message": "Mail Nickname"
+          "source": "Mail nickname",
+          "message": "Mail nickname"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
           "source": "Email alias for the group",
@@ -1488,8 +1488,8 @@
           "message": "The mail nickname used for the group's email address. Must contain only letters, numbers, periods, hyphens, and underscores."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.display_name": {
-          "source": "Security Enabled",
-          "message": "Security Enabled"
+          "source": "Security enabled",
+          "message": "Security enabled"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.short_desc": {
           "source": "Enable security functionality",
@@ -1500,8 +1500,8 @@
           "message": "Whether the group should be security-enabled, allowing it to be assigned permissions and used for access control."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.display_name": {
-          "source": "Assignable to Role",
-          "message": "Assignable to Role"
+          "source": "Assignable to role",
+          "message": "Assignable to role"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.short_desc": {
           "source": "Allow role assignment",
@@ -1548,8 +1548,8 @@
           "message": "Group is visible but membership is hidden from non-members"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.display_name": {
-          "source": "Update Group",
-          "message": "Update Group"
+          "source": "Update group",
+          "message": "Update group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.short_desc": {
           "source": "Update an existing group in Active Directory",
@@ -1572,8 +1572,8 @@
           "message": "The unique identifier of the group to be updated. Select from existing groups in your directory."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
           "source": "Updated group name",
@@ -1596,8 +1596,8 @@
           "message": "The updated description explaining the purpose and scope of the group."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
-          "source": "Mail Nickname",
-          "message": "Mail Nickname"
+          "source": "Mail nickname",
+          "message": "Mail nickname"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
           "source": "Updated email alias",
@@ -1644,8 +1644,8 @@
           "message": "Group is visible but membership is hidden from non-members"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.display_name": {
-          "source": "Preferred Language",
-          "message": "Preferred Language"
+          "source": "Preferred language",
+          "message": "Preferred language"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.short_desc": {
           "source": "Group's preferred language",
@@ -1692,8 +1692,8 @@
           "message": "Chinese (Simplified)"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.display_name": {
-          "source": "Allow External Senders",
-          "message": "Allow External Senders"
+          "source": "Allow external senders",
+          "message": "Allow external senders"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.short_desc": {
           "source": "Allow external email senders",
@@ -1704,8 +1704,8 @@
           "message": "Allow people external to the organization to send messages to the group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.display_name": {
-          "source": "Auto-Subscribe New Members",
-          "message": "Auto-Subscribe New Members"
+          "source": "Auto-subscribe new members",
+          "message": "Auto-subscribe new members"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.short_desc": {
           "source": "Automatically subscribe new members",
@@ -1716,8 +1716,8 @@
           "message": "Automatically subscribe new members to receive email notifications"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.display_name": {
-          "source": "Hide from Address Lists",
-          "message": "Hide from Address Lists"
+          "source": "Hide from address lists",
+          "message": "Hide from address lists"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.short_desc": {
           "source": "Hide group from address lists",
@@ -1728,8 +1728,8 @@
           "message": "Hide this group from address lists"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.display_name": {
-          "source": "Hide from Outlook Clients",
-          "message": "Hide from Outlook Clients"
+          "source": "Hide from Outlook clients",
+          "message": "Hide from Outlook clients"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.short_desc": {
           "source": "Hide group from Outlook clients",
@@ -1740,8 +1740,8 @@
           "message": "Hide this group from Outlook clients"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
-          "message": "New User"
+          "source": "New user",
+          "message": "New user"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.short_desc": {
           "source": "Triggers when a new user is created in Active Directory",
@@ -1764,8 +1764,8 @@
           "message": "Optional group identifier to monitor for new user additions. When specified, the trigger will only fire for users added to this particular group."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
-          "message": "Filter Criteria"
+          "source": "Filter criteria",
+          "message": "Filter criteria"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.short_desc": {
           "source": "Filter conditions for user monitoring",
@@ -1868,8 +1868,8 @@
           "message": "The value to compare against the specified field using the selected operator."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.display_name": {
-          "source": "New Group",
-          "message": "New Group"
+          "source": "New group",
+          "message": "New group"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.short_desc": {
           "source": "Triggers when a new group is created in Active Directory",
@@ -1880,8 +1880,8 @@
           "message": "Monitor Active Directory for newly created groups. This trigger can be filtered by specific criteria such as group type, visibility, or naming patterns to detect relevant group additions."
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.display_name": {
-          "source": "Filter Criteria",
-          "message": "Filter Criteria"
+          "source": "Filter criteria",
+          "message": "Filter criteria"
         },
         "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.short_desc": {
           "source": "Filter conditions for group monitoring",

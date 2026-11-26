@@ -28,7 +28,7 @@
           "message": "Realice una llamada personalizada a la API HTTP / REST a **Amazon CloudFront** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para los puntos de enlace que aún no están expuestos como acciones de primera clase en esta aplicación."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Método HTTP"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.display_name": {
-          "source": "List Distributions",
+          "source": "List distributions",
           "message": "Listar distribuciones"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Obtiene una lista de todas las distribuciones de CloudFront en su cuenta de AWS, incluidos su estado, nombres de dominio y detalles de configuración. Puede controlar el número de resultados y usar la paginación para conjuntos grandes de distribuciones."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
+          "source": "Max items",
           "message": "Máximo de elementos"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Use este marcador para continuar la paginación desde una solicitud de lista anterior. Este valor se devuelve en el campo next_marker de respuestas anteriores cuando los resultados se truncan."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Get Distribution",
+          "source": "Get distribution",
           "message": "Obtener distribución"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Seleccione la distribución específica de CloudFront de la que desea obtener información detallada. Esto devolverá la configuración y el estado completos de la distribución."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.display_name": {
-          "source": "Update Distribution Status",
+          "source": "Update distribution status",
           "message": "Actualizar estado de la distribución"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Seleccione la distribución de CloudFront cuyo estado desea cambiar. La distribución debe existir y estar en un estado que permita cambios de estado."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.display_name": {
-          "source": "Enable Distribution",
+          "source": "Enable distribution",
           "message": "Habilitar distribución"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Elija si desea habilitar o deshabilitar la distribución. Habilitarla permite que la distribución ofrezca contenido, mientras que deshabilitarla detiene la entrega de contenido y la facturación. Los cambios de estado pueden tardar un tiempo en propagarse."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.display_name": {
-          "source": "Invalidate Item",
+          "source": "Invalidate item",
           "message": "Invalidar elemento"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Seleccione la distribución de CloudFront donde desea invalidar el contenido almacenado en caché. La invalidación se aplicará a todas las ubicaciones de borde para esta distribución."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.display_name": {
-          "source": "Paths to Invalidate",
+          "source": "Paths to invalidate",
           "message": "Rutas a invalidar"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Especifique las rutas de los archivos que desea invalidar de la caché de CloudFront. Use /* para invalidar todos los archivos, o especifique rutas de archivos individuales como /images/logo.png. Las rutas deben comenzar con /."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.display_name": {
-          "source": "Caller Reference",
+          "source": "Caller reference",
           "message": "Referencia del emisor"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Identificador único opcional para esta solicitud de invalidación. Si no se proporciona, se generará automáticamente un valor único. Esto ayuda a realizar un seguimiento e identificar solicitudes de invalidación específicas."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.display_name": {
-          "source": "List Invalidations",
+          "source": "List invalidations",
           "message": "Listar invalidaciones"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Seleccione la distribución de CloudFront cuyo historial de invalidaciones desea obtener. Esto mostrará todas las solicitudes de invalidación realizadas para esta distribución."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
+          "source": "Max items",
           "message": "Máximo de elementos"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Use este marcador para continuar la paginación desde una solicitud de lista anterior. Este valor se devuelve en el campo next_marker de respuestas anteriores cuando los resultados se truncan."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "Get Invalidation",
+          "source": "Get invalidation",
           "message": "Obtener invalidación"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Seleccione la solicitud de invalidación específica de la que desea obtener detalles. Esto mostrará la información completa sobre la invalidación, incluido su estado actual y las rutas afectadas."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "New Distribution",
+          "source": "New distribution",
           "message": "Nueva distribución"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Este disparador supervisa las distribuciones de CloudFront recién creadas en su cuenta de AWS. Se activará cada vez que se detecte una nueva distribución, proporcionando detalles sobre la configuración y el estado de la distribución."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "New Invalidation",
+          "source": "New invalidation",
           "message": "Nueva invalidación"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.short_desc": {

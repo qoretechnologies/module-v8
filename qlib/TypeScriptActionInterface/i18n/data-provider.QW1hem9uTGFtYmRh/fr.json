@@ -28,7 +28,7 @@
           "message": "Effectuez un appel API HTTP / REST personnalisé à **AWS Lambda** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'accès URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hash contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
-          "source": "List Functions",
+          "source": "List functions",
           "message": "Lister les fonctions"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Spécifiez la région AWS à partir de laquelle lister les fonctions Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
-          "source": "Function Version",
+          "source": "Function version",
           "message": "Version de la fonction"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
@@ -380,7 +380,7 @@
           "message": "Toutes les versions"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
-          "source": "Master Region",
+          "source": "Master region",
           "message": "Région principale"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
@@ -392,7 +392,7 @@
           "message": "Pour les fonctions Lambda@Edge, spécifiez la région principale pour filtrer les résultats."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "Éléments maximums"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -404,7 +404,7 @@
           "message": "Limiter le nombre de fonctions renvoyées dans une seule requête."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "Marqueur suivant"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -416,7 +416,7 @@
           "message": "Utilisez le marqueur d'une réponse précédente pour récupérer la page de résultats suivante."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
-          "source": "List Layers",
+          "source": "List layers",
           "message": "Lister les couches"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
@@ -440,7 +440,7 @@
           "message": "Spécifiez la région AWS depuis laquelle lister les couches Lambda. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "Environnement d'exécution compatible"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Environnement d'exécution personnalisé sur Amazon Linux 2"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "Éléments maximums"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Limiter le nombre de couches renvoyées dans une seule requête."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "Marqueur suivant"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Utilisez le marqueur d'une réponse précédente pour récupérer la page de résultats suivante."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
-          "source": "List Layer Versions",
+          "source": "List layer versions",
           "message": "Lister les versions de couche"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Spécifiez la région AWS où réside la couche Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "Nom de la couche"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Le nom ou l'ARN de la couche Lambda dont il faut lister les versions."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "Environnement d'exécution compatible"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Environnement d'exécution personnalisé sur Amazon Linux 2"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "Éléments maximums"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Limiter le nombre de versions de couche renvoyées dans une seule requête."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "Marqueur suivant"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Utilisez le marqueur d'une réponse précédente pour récupérer la page de résultats suivante."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
-          "source": "Get Function",
+          "source": "Get function",
           "message": "Obtenir la fonction"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Spécifiez la région AWS où réside la fonction Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "Nom de la fonction"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Spécifiez un numéro de version, un nom d'alias ou $LATEST pour obtenir des informations sur une version spécifique de la fonction."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "Get Layer Version",
+          "source": "Get layer version",
           "message": "Obtenir la version de la couche"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Spécifiez la région AWS où réside la couche Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "Nom de la couche"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Le nom ou l'ARN de la couche Lambda pour laquelle récupérer les informations de version."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
-          "source": "Version Number",
+          "source": "Version number",
           "message": "Numéro de version"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Le numéro de version de la couche pour laquelle récupérer des informations détaillées."
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
-          "source": "Invoke Function",
+          "source": "Invoke function",
           "message": "Invoquer la fonction"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Spécifiez la région AWS où réside la fonction Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "Nom de la fonction"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Le nom, l'ARN ou l'ARN partiel de la fonction Lambda à invoquer."
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
-          "source": "Invocation Type",
+          "source": "Invocation type",
           "message": "Type d'invocation"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Dry Run (Validation uniquement)"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
-          "source": "Log Type",
+          "source": "Log type",
           "message": "Type de journal"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Spécifiez un numéro de version, un nom d'alias ou $LATEST pour invoquer une version spécifique de la fonction."
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
-          "source": "New Function",
+          "source": "New function",
           "message": "Nouvelle fonction"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Spécifiez la région AWS à surveiller pour la création de nouvelles fonctions Lambda. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "New Layer Version",
+          "source": "New layer version",
           "message": "Nouvelle version de couche"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {

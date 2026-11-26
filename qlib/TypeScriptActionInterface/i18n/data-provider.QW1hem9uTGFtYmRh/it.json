@@ -28,7 +28,7 @@
           "message": "Esegue una chiamata API HTTP / REST personalizzata a **AWS Lambda** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni principali in questa app."
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
-          "source": "List Functions",
+          "source": "List functions",
           "message": "Elenca funzioni"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Specificare la regione AWS da cui elencare le funzioni Lambda. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
-          "source": "Function Version",
+          "source": "Function version",
           "message": "Versione della funzione"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
@@ -380,7 +380,7 @@
           "message": "Tutte le versioni"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
-          "source": "Master Region",
+          "source": "Master region",
           "message": "Regione master"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
@@ -392,7 +392,7 @@
           "message": "Per le funzioni Lambda@Edge, specificare la regione master per filtrare i risultati."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "Elementi massimi"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -404,7 +404,7 @@
           "message": "Limita il numero di funzioni restituite in una singola richiesta."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "Marcatore successivo"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -416,7 +416,7 @@
           "message": "Utilizzare il marcatore di una risposta precedente per recuperare la pagina di risultati successiva."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
-          "source": "List Layers",
+          "source": "List layers",
           "message": "Elenca layer"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
@@ -440,7 +440,7 @@
           "message": "Specifica la regione AWS da cui elencare i layer Lambda. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "Runtime compatibile"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Custom Runtime su Amazon Linux 2"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "Elementi massimi"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Limita il numero di layer restituiti in una singola richiesta."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "Marcatore successivo"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Utilizzare il marcatore di una risposta precedente per recuperare la pagina di risultati successiva."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
-          "source": "List Layer Versions",
+          "source": "List layer versions",
           "message": "Elenca versioni del layer"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Specificare la regione AWS in cui risiede il layer Lambda. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "Nome del layer"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Il nome o l'ARN del layer Lambda di cui elencare le versioni."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "Runtime compatibile"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Custom Runtime su Amazon Linux 2"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "Elementi massimi"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Limita il numero di versioni di layer restituite in una singola richiesta."
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "Marcatore successivo"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Utilizzare il marcatore di una risposta precedente per recuperare la pagina di risultati successiva."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
-          "source": "Get Function",
+          "source": "Get function",
           "message": "Ottieni funzione"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Specificare la regione AWS in cui risiede la funzione Lambda. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "Nome della funzione"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Specificare un numero di versione, un nome alias o $LATEST per ottenere informazioni su una versione specifica della funzione."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "Get Layer Version",
+          "source": "Get layer version",
           "message": "Ottieni versione layer"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Specificare la regione AWS in cui risiede il layer Lambda. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "Nome del layer"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Il nome o ARN del layer Lambda di cui recuperare le informazioni sulla versione."
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
-          "source": "Version Number",
+          "source": "Version number",
           "message": "Numero di versione"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Il numero di versione del layer di cui recuperare informazioni dettagliate."
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
-          "source": "Invoke Function",
+          "source": "Invoke function",
           "message": "Invoca funzione"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Specificare la regione AWS in cui risiede la funzione Lambda. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "Nome della funzione"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Il nome, l'ARN o l'ARN parziale della funzione Lambda da invocare."
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
-          "source": "Invocation Type",
+          "source": "Invocation type",
           "message": "Tipo di invocazione"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Dry Run (Solo convalida)"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
-          "source": "Log Type",
+          "source": "Log type",
           "message": "Tipo di log"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Specificare un numero di versione, un nome alias o $LATEST per invocare una versione specifica della funzione."
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
-          "source": "New Function",
+          "source": "New function",
           "message": "Nuova funzione"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
@@ -924,7 +924,7 @@
           "message": "Specifica la regione AWS da monitorare per la creazione di nuove funzioni Lambda. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "New Layer Version",
+          "source": "New layer version",
           "message": "Nuova versione del layer"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {

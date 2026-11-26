@@ -7,7 +7,7 @@ const FirebaseAppEn = {
     'The Firebase integration provides comprehensive access to Firebase services including Cloud Storage for file management, Authentication for user management, and Firebase Cloud Messaging for push notifications. Automate file uploads, user account operations, and notification delivery across your Firebase projects.',
   actions: {
     list_users: {
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'Retrieve a list of users from Firebase Authentication',
       longDesc:
         'Fetches users from Firebase Authentication with support for pagination. Returns user details including email, display name, verification status, and authentication metadata. Use pagination parameters to retrieve large user lists efficiently.',
@@ -19,13 +19,13 @@ const FirebaseAppEn = {
             'Select the Firebase project from which you want to retrieve users. The project must have Firebase Authentication enabled.',
         },
         max_results: {
-          displayName: 'Max Results',
+          displayName: 'Max results',
           shortDesc: 'Maximum number of users to return',
           longDesc:
             'Specify the maximum number of users to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger datasets.',
         },
         next_page_token: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for retrieving the next page of results',
           longDesc:
             'Provide the pagination token from a previous response to retrieve the next set of users. Leave empty for the first page.',
@@ -33,7 +33,7 @@ const FirebaseAppEn = {
       },
     },
     get_user: {
-      displayName: 'Get User',
+      displayName: 'Get user',
       shortDesc: 'Retrieve detailed information about a specific Firebase user',
       longDesc:
         'Fetches comprehensive details for a specific user from Firebase Authentication including email, display name, photo URL, verification status, account creation date, and custom attributes. Useful for user profile lookups and account verification.',
@@ -53,7 +53,7 @@ const FirebaseAppEn = {
       },
     },
     send_push_notification: {
-      displayName: 'Send Push Notification',
+      displayName: 'Send push notification',
       shortDesc: 'Send a push notification via Firebase Cloud Messaging',
       longDesc:
         'Sends push notifications to specific device tokens or topics using Firebase Cloud Messaging (FCM). Supports rich notifications with titles, body text, images, and custom data payloads. Configure priority levels for Android and iOS delivery.',
@@ -65,7 +65,7 @@ const FirebaseAppEn = {
             'Select the Firebase project that will send the push notification. The project must have Firebase Cloud Messaging configured.',
         },
         token_or_topic: {
-          displayName: 'Token or Topic',
+          displayName: 'Token or topic',
           shortDesc: 'Device token or topic name',
           longDesc:
             'Specify either a device registration token for sending to a specific device, or a topic name (prefixed with /topics/) for sending to all devices subscribed to that topic.',
@@ -103,7 +103,7 @@ const FirebaseAppEn = {
       },
     },
     upload_file: {
-      displayName: 'Upload File',
+      displayName: 'Upload file',
       shortDesc: 'Upload a file to Firebase Cloud Storage',
       longDesc:
         'Uploads a file to a specified bucket in Firebase Cloud Storage. Returns metadata including file path, content type, size, and generation information. Optionally include custom metadata key-value pairs with the upload.',
@@ -115,7 +115,7 @@ const FirebaseAppEn = {
             'Select the Firebase project where the file will be stored. The project must have Firebase Cloud Storage enabled.',
         },
         file_path: {
-          displayName: 'File Path',
+          displayName: 'File path',
           shortDesc: 'Destination path in storage',
           longDesc:
             'Specify the full path where the file should be stored in the bucket, including the filename and any directory structure (e.g., "images/profile/avatar.jpg").',
@@ -141,7 +141,7 @@ const FirebaseAppEn = {
       },
     },
     get_file_metadata: {
-      displayName: 'Get File Metadata',
+      displayName: 'Get file metadata',
       shortDesc: 'Retrieve metadata for a specific file in Cloud Storage',
       longDesc:
         'Fetches comprehensive metadata for a file stored in Firebase Cloud Storage including content type, size, creation date, update date, MD5 hash, custom metadata, and cache control settings. Useful for file verification and management.',
@@ -159,7 +159,7 @@ const FirebaseAppEn = {
             'Select the Cloud Storage bucket where the file is located. The bucket must exist in the selected Firebase project.',
         },
         file_path: {
-          displayName: 'File Path',
+          displayName: 'File path',
           shortDesc: 'Path to the file in storage',
           longDesc:
             'Specify the full path to the file in the bucket, including the filename and any directory structure.',
@@ -167,7 +167,7 @@ const FirebaseAppEn = {
       },
     },
     list_files_in_bucket: {
-      displayName: 'List Files in Bucket',
+      displayName: 'List files in bucket',
       shortDesc: 'List all files in a Cloud Storage bucket',
       longDesc:
         'Retrieves a list of files from a Firebase Cloud Storage bucket with support for filtering by prefix and pagination. Returns file metadata including paths, content types, sizes, and timestamps. Useful for browsing and managing stored files.',
@@ -191,13 +191,13 @@ const FirebaseAppEn = {
             'Filter results to only include files whose paths start with this prefix. Useful for listing files in a specific directory or with a specific naming pattern.',
         },
         max_results: {
-          displayName: 'Max Results',
+          displayName: 'Max results',
           shortDesc: 'Maximum number of files to return',
           longDesc:
             'Specify the maximum number of files to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger result sets.',
         },
         page_token: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for retrieving the next page',
           longDesc:
             'Provide the pagination token from a previous response to retrieve the next set of files. Leave empty for the first page.',
@@ -205,7 +205,7 @@ const FirebaseAppEn = {
       },
     },
     list_buckets: {
-      displayName: 'List Buckets',
+      displayName: 'List buckets',
       shortDesc: 'List all Cloud Storage buckets in a Firebase project',
       longDesc:
         'Retrieves all Cloud Storage buckets configured for a Firebase project. Returns bucket details including names, locations, storage classes, creation dates, and update timestamps. Useful for bucket management and discovery.',
@@ -219,7 +219,7 @@ const FirebaseAppEn = {
       },
     },
     delete_file: {
-      displayName: 'Delete File',
+      displayName: 'Delete file',
       shortDesc: 'Delete a file from Cloud Storage',
       longDesc:
         'Permanently removes a file from Firebase Cloud Storage. This operation is irreversible, so use with caution. Returns confirmation of the deletion including the file path and bucket name.',
@@ -237,7 +237,7 @@ const FirebaseAppEn = {
             'Select the Cloud Storage bucket where the file to be deleted is located. The bucket must exist in the selected Firebase project.',
         },
         file_path: {
-          displayName: 'File Path',
+          displayName: 'File path',
           shortDesc: 'Path to the file to delete',
           longDesc:
             'Specify the full path to the file in the bucket that should be deleted, including the filename and any directory structure. This operation is permanent and cannot be undone.',
@@ -247,7 +247,7 @@ const FirebaseAppEn = {
   },
   triggers: {
     new_user: {
-      displayName: 'New User',
+      displayName: 'New user',
       shortDesc: 'Triggers when a new user is created in Firebase Authentication',
       longDesc:
         'Monitors Firebase Authentication for new user registrations and triggers when new accounts are created. Captures user details including email, display name, verification status, and authentication provider information. Useful for user onboarding workflows, welcome emails, and account setup automation.',

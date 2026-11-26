@@ -265,7 +265,7 @@ const buildReferenceFields = (
   targetObjectAllowedValues: IQoreAllowedValue<string>[]
 ): TQoreOptions => ({
   target_object: {
-    display_name: 'Target Object',
+    display_name: 'Target object',
     on_change: ['refetch'],
     type: 'string',
     required: true,
@@ -273,7 +273,7 @@ const buildReferenceFields = (
     allowed_values: targetObjectAllowedValues,
   },
   target_record_id: {
-    display_name: 'Target Record ID',
+    display_name: 'Target record ID',
     type: 'string',
     required: true,
     allowed_values_creatable: true,

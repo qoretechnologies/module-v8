@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **HubSpot** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.SHVic3BvdA.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.SHVic3BvdA.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Hubspot\"",
@@ -568,8 +568,8 @@
           "message": "Update a company by ID (`companyId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.display_name": {
-          "source": "List Contacts",
-          "message": "List Contacts"
+          "source": "List contacts",
+          "message": "List contacts"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.short_desc": {
           "source": "Retrieve a list of contacts",
@@ -580,8 +580,8 @@
           "message": "Read a page of contacts. Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.display_name": {
-          "source": "Create Contact",
-          "message": "Create Contact"
+          "source": "Create contact",
+          "message": "Create contact"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.short_desc": {
           "source": "Create a new contact",
@@ -592,8 +592,8 @@
           "message": "Create a contact with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard contacts is provided."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.display_name": {
-          "source": "Search Contacts",
-          "message": "Search Contacts"
+          "source": "Search contacts",
+          "message": "Search contacts"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.short_desc": {
           "source": "Search for contacts based on specific criteria",
@@ -604,8 +604,8 @@
           "message": "Search for contacts based on specific criteria"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Delete Contact",
-          "message": "Delete Contact"
+          "source": "Delete contact",
+          "message": "Delete contact"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
           "source": "Soft delete a selected contact",
@@ -616,8 +616,8 @@
           "message": "Move an Object identified by `contactId` to the recycling bin."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
-          "source": "Retrieve Contact",
-          "message": "Retrieve Contact"
+          "source": "Retrieve contact",
+          "message": "Retrieve contact"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
           "source": "Retrieve a specific contact",
@@ -628,8 +628,8 @@
           "message": "Read an Object identified by `contactId`. `contactId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.display_name": {
-          "source": "Update Contact",
-          "message": "Update Contact"
+          "source": "Update contact",
+          "message": "Update contact"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.short_desc": {
           "source": "Update an existing contact",
@@ -640,8 +640,8 @@
           "message": "Perform a partial update of an Object identified by `contactId`. `contactId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.display_name": {
-          "source": "List Custom Objects",
-          "message": "List Custom Objects"
+          "source": "List custom objects",
+          "message": "List custom objects"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.short_desc": {
           "source": "Retrieve a list of selected custom objects",
@@ -652,8 +652,8 @@
           "message": "Read a page of objects. Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.display_name": {
-          "source": "Create Custom Object",
-          "message": "Create Custom Object"
+          "source": "Create custom object",
+          "message": "Create custom object"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.short_desc": {
           "source": "Create a new custom object of a selected type",
@@ -676,8 +676,8 @@
           "message": "Post-crm-v3-objects-object type-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search Custom Objects",
-          "message": "Search Custom Objects"
+          "source": "Search custom objects",
+          "message": "Search custom objects"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
           "source": "Search for custom objects based on specific criteria",
@@ -688,8 +688,8 @@
           "message": "Search for custom objects based on specific criteria"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete Custom Object",
-          "message": "Delete Custom Object"
+          "source": "Delete custom object",
+          "message": "Delete custom object"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.short_desc": {
           "source": "Soft delete a selected custom object",
@@ -700,8 +700,8 @@
           "message": "Move an Object identified by `objectId` to the recycling bin."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve Custom Object",
-          "message": "Retrieve Custom Object"
+          "source": "Retrieve custom object",
+          "message": "Retrieve custom object"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.short_desc": {
           "source": "Retrieve a specific custom object",
@@ -712,8 +712,8 @@
           "message": "Read an Object identified by `objectId`. `objectId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.display_name": {
-          "source": "Update Custom Object",
-          "message": "Update Custom Object"
+          "source": "Update custom object",
+          "message": "Update custom object"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.short_desc": {
           "source": "Update an existing custom object",
@@ -724,8 +724,8 @@
           "message": "Perform a partial update of an Object identified by `objectId`. `objectId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.display_name": {
-          "source": "List Deals",
-          "message": "List Deals"
+          "source": "List deals",
+          "message": "List deals"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.short_desc": {
           "source": "Retrieve a list of deals",
@@ -736,8 +736,8 @@
           "message": "Read a page of deals. Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.display_name": {
-          "source": "Create Deal",
-          "message": "Create Deal"
+          "source": "Create deal",
+          "message": "Create deal"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.short_desc": {
           "source": "Create a new deal",
@@ -760,8 +760,8 @@
           "message": "Post-crm-v3-objects-deals-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search Deals",
-          "message": "Search Deals"
+          "source": "Search deals",
+          "message": "Search deals"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
           "source": "Search for deals based on specific criteria",
@@ -772,8 +772,8 @@
           "message": "Search for deals based on specific criteria"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.display_name": {
-          "source": "Delete a Deal",
-          "message": "Delete a Deal"
+          "source": "Delete a deal",
+          "message": "Delete a deal"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.short_desc": {
           "source": "Soft delete a selected deal",
@@ -784,8 +784,8 @@
           "message": "Move an Object identified by `dealId` to the recycling bin."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve Deal",
-          "message": "Retrieve Deal"
+          "source": "Retrieve deal",
+          "message": "Retrieve deal"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.short_desc": {
           "source": "Retrieve a specific deal",
@@ -796,8 +796,8 @@
           "message": "Read an Object identified by `dealId`. `dealId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.display_name": {
-          "source": "Update Deal",
-          "message": "Update Deal"
+          "source": "Update deal",
+          "message": "Update deal"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.short_desc": {
           "source": "Update an existing deal",
@@ -808,8 +808,8 @@
           "message": "Perform a partial update of an Object identified by `dealId`. `dealId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.display_name": {
-          "source": "List Leads",
-          "message": "List Leads"
+          "source": "List leads",
+          "message": "List leads"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.short_desc": {
           "source": "Retrieve a list of leads",
@@ -820,8 +820,8 @@
           "message": "Read a page of leads. Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.display_name": {
-          "source": "Create Lead",
-          "message": "Create Lead"
+          "source": "Create lead",
+          "message": "Create lead"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.short_desc": {
           "source": "Create a new lead",
@@ -844,8 +844,8 @@
           "message": "Create or update records identified by `leadsId` or optionally a unique property value as specified by the `idProperty` query param. `leadsId` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search Leads",
-          "message": "Search Leads"
+          "source": "Search leads",
+          "message": "Search leads"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
           "source": "Search for leads based on specific criteria",
@@ -856,8 +856,8 @@
           "message": "Search for leads based on specific criteria"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete Lead",
-          "message": "Delete Lead"
+          "source": "Delete lead",
+          "message": "Delete lead"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.short_desc": {
           "source": "Soft delete a selected lead",
@@ -868,8 +868,8 @@
           "message": "Move an Object identified by `leadsId` to the recycling bin."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve Lead",
-          "message": "Retrieve Lead"
+          "source": "Retrieve lead",
+          "message": "Retrieve lead"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.short_desc": {
           "source": "Retrieve a specific lead",
@@ -880,8 +880,8 @@
           "message": "Read an Object identified by `leadsId`. `leadsId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.display_name": {
-          "source": "Update Lead",
-          "message": "Update Lead"
+          "source": "Update lead",
+          "message": "Update lead"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.short_desc": {
           "source": "Update an existing lead",
@@ -892,8 +892,8 @@
           "message": "Perform a partial update of an Object identified by `leadsId`or optionally a unique property value as specified by the `idProperty` query param. `leadsId` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.display_name": {
-          "source": "List Products",
-          "message": "List Products"
+          "source": "List products",
+          "message": "List products"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.short_desc": {
           "source": "Retrieve a list of products",
@@ -904,8 +904,8 @@
           "message": "Read a page of products. Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.display_name": {
-          "source": "Create Product",
-          "message": "Create Product"
+          "source": "Create product",
+          "message": "Create product"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.short_desc": {
           "source": "Create a new product",
@@ -928,8 +928,8 @@
           "message": "Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.display_name": {
-          "source": "Search Products",
-          "message": "Search Products"
+          "source": "Search products",
+          "message": "Search products"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
           "source": "Search for products based on specific criteria",
@@ -940,8 +940,8 @@
           "message": "Search for products based on specific criteria"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.display_name": {
-          "source": "Delete Product",
-          "message": "Delete Product"
+          "source": "Delete product",
+          "message": "Delete product"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.short_desc": {
           "source": "Soft delete a selected product",
@@ -952,8 +952,8 @@
           "message": "Move an Object identified by `productId` to the recycling bin."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.display_name": {
-          "source": "Retrieve Product",
-          "message": "Retrieve Product"
+          "source": "Retrieve product",
+          "message": "Retrieve product"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.short_desc": {
           "source": "Retrieve a specific product",
@@ -964,8 +964,8 @@
           "message": "Read an Object identified by `productId`. `productId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.display_name": {
-          "source": "Update Product",
-          "message": "Update Product"
+          "source": "Update product",
+          "message": "Update product"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.short_desc": {
           "source": "Update an existing product",
@@ -976,8 +976,8 @@
           "message": "Perform a partial update of an Object identified by `productId`. `productId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.display_name": {
-          "source": "List Tickets",
-          "message": "List Tickets"
+          "source": "List tickets",
+          "message": "List tickets"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.short_desc": {
           "source": "Retrieve a list of tickets",
@@ -988,8 +988,8 @@
           "message": "Read a page of tickets. Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.display_name": {
-          "source": "Create Ticket",
-          "message": "Create Ticket"
+          "source": "Create ticket",
+          "message": "Create ticket"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.short_desc": {
           "source": "Create a new ticket",
@@ -1012,8 +1012,8 @@
           "message": "Post-crm-v3-objects-tickets-batch-upsert upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.display_name": {
-          "source": "Search Tickets",
-          "message": "Search Tickets"
+          "source": "Search tickets",
+          "message": "Search tickets"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
           "source": "Search for tickets based on specific criteria",
@@ -1024,8 +1024,8 @@
           "message": "Search for tickets based on specific criteria"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.display_name": {
-          "source": "Delete Ticket",
-          "message": "Delete Ticket"
+          "source": "Delete ticket",
+          "message": "Delete ticket"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.short_desc": {
           "source": "Soft delete a selected ticket",
@@ -1036,8 +1036,8 @@
           "message": "Move an Object identified by `ticketId` to the recycling bin."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.display_name": {
-          "source": "Retrieve Ticket",
-          "message": "Retrieve Ticket"
+          "source": "Retrieve ticket",
+          "message": "Retrieve ticket"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.short_desc": {
           "source": "Retrieve a specific ticket",
@@ -1048,8 +1048,8 @@
           "message": "Read an Object identified by `ticketId`. `ticketId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.display_name": {
-          "source": "Update Ticket",
-          "message": "Update Ticket"
+          "source": "Update ticket",
+          "message": "Update ticket"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.short_desc": {
           "source": "Update an existing ticket",
@@ -1060,8 +1060,8 @@
           "message": "Perform a partial update of an Object identified by `ticketId`. `ticketId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.display_name": {
-          "source": "List Users",
-          "message": "List Users"
+          "source": "List users",
+          "message": "List users"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.short_desc": {
           "source": "Retrieve a list of users",
@@ -1084,8 +1084,8 @@
           "message": "Post-crm-v3-objects-users-batch-upsert"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.display_name": {
-          "source": "Search Users",
-          "message": "Search Users"
+          "source": "Search users",
+          "message": "Search users"
         },
         "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.short_desc": {
           "source": "Search for users based on specific criteria",
@@ -1096,8 +1096,8 @@
           "message": "Search for users based on specific criteria"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.display_name": {
-          "source": "Retrieve User",
-          "message": "Retrieve User"
+          "source": "Retrieve user",
+          "message": "Retrieve user"
         },
         "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.short_desc": {
           "source": "Retrieve a specific user",
@@ -1108,8 +1108,8 @@
           "message": "Read an Object identified by `userId`. `userId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.display_name": {
-          "source": "Update User",
-          "message": "Update User"
+          "source": "Update user",
+          "message": "Update user"
         },
         "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.short_desc": {
           "source": "Update an existing user",
@@ -1120,8 +1120,8 @@
           "message": "Perform a partial update of an Object identified by `userId`. `userId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create List",
-          "message": "Create List"
+          "source": "Create list",
+          "message": "Create list"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.short_desc": {
           "source": "Create a new HubSpot list",
@@ -1132,8 +1132,8 @@
           "message": "Creates a new list in HubSpot CRM with the specified configuration and properties."
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.display_name": {
-          "source": "Search Lists",
-          "message": "Search Lists"
+          "source": "Search lists",
+          "message": "Search lists"
         },
         "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.short_desc": {
           "source": "Search for HubSpot lists",
@@ -1144,8 +1144,8 @@
           "message": "Search and retrieve HubSpot lists based on specified criteria and filters."
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete List",
-          "message": "Delete List"
+          "source": "Delete list",
+          "message": "Delete list"
         },
         "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.short_desc": {
           "source": "Delete a HubSpot list",
@@ -1156,8 +1156,8 @@
           "message": "Permanently removes a specified list from HubSpot CRM by its ID."
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.display_name": {
-          "source": "Get List",
-          "message": "Get List"
+          "source": "Get list",
+          "message": "Get list"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3Q.short_desc": {
           "source": "Retrieve a HubSpot list by ID",
@@ -1168,8 +1168,8 @@
           "message": "Fetches detailed information about a specific HubSpot list using its unique identifier."
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.display_name": {
-          "source": "Add List Records",
-          "message": "Add List Records"
+          "source": "Add list records",
+          "message": "Add list records"
         },
         "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.short_desc": {
           "source": "Add records to a HubSpot list",
@@ -1192,8 +1192,8 @@
           "message": "Adds all members from a source HubSpot list to a target list, effectively copying the membership."
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.display_name": {
-          "source": "Remove List Records",
-          "message": "Remove List Records"
+          "source": "Remove list records",
+          "message": "Remove list records"
         },
         "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.short_desc": {
           "source": "Remove records from a HubSpot list",
@@ -1204,8 +1204,8 @@
           "message": "Removes specified records from an existing HubSpot list membership."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.display_name": {
-          "source": "List Forms",
-          "message": "List Forms"
+          "source": "List forms",
+          "message": "List forms"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.short_desc": {
           "source": "Retrieve a paginated list of HubSpot marketing forms.",
@@ -1216,8 +1216,8 @@
           "message": "Returns a list of marketing form definitions in your HubSpot account, optionally filtered by form type (native HubSpot, captured, pop-up flow, or blog comment) and archive status."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create Form",
-          "message": "Create Form"
+          "source": "Create form",
+          "message": "Create form"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.short_desc": {
           "source": "Create a new HubSpot marketing form definition.",
@@ -1500,8 +1500,8 @@
           "message": "Lifecycle Stages"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpMaWZlY3ljbGVTdGFnZSM3ZTRkNmQzMjU4YmZhOWFjZjkzNDlhMTExMzk5NmZjMDA1MjNiMDA3ZTU2NWM1OGRhZWEzNmI2ZWFiZGMxZWY5.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "The objectTypeId for both contact and company",
@@ -1608,8 +1608,8 @@
           "message": "Whether CAPTCHA (spam prevention) is enabled."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.Y3JlYXRlZEF0.display_name": {
-          "source": "Created At",
-          "message": "Created At"
+          "source": "Created at",
+          "message": "Created at"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZGlzcGxheU9wdGlvbnM.display_name": {
           "source": "Display Options",
@@ -1656,8 +1656,8 @@
           "message": "The width of the form background. Accepts percentage (e.g., \"100%\") or pixel values (e.g., \"600px\")."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.display_name": {
-          "source": "Font Family",
-          "message": "Font Family"
+          "source": "Font family",
+          "message": "Font family"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGb3JtU3R5bGUjNDY0YjdkNGYwNzdhNDE4NDAyMGM4ZDlkNTRkOGUwMjcyNGU2YmMyMzFjN2E4NTUyODk1NjYzZjc3NjQwMmUxNw.field.Zm9udEZhbWlseQ.short_desc": {
           "source": "Font family used throughout the form (e.g., \"arial, helvetica, sans-serif\")",
@@ -2076,8 +2076,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -2128,8 +2128,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQaG9uZUZpZWxkI2ZmMDc2ODA3NWIwYmY0YWY5NDRmNWRjYWQwYjgyMzRkMmI0ZWNjZmE5YWFhMDdkNmMxY2UzNTRkZThiZTQzMjU.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -2240,8 +2240,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -2292,8 +2292,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNb2JpbGVQaG9uZUZpZWxkI2Y4NzhjMmE0ZTA1NjkzZGE1ODliMWQ0YTk3ZDYxYThhZGZkYTFhNmJiN2I1Y2YwNjU5YzIzNGExNjVhNmJlMzU.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -2368,8 +2368,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -2420,8 +2420,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVMaW5lVGV4dEZpZWxkI2ZmZWQ1ZGE0YjA2MGQxNzdiZDE4ZmUyNTkzYWMzNmNkYmVkZGFlODk3YjliZjMyY2I1NTg4ZWRiZGUyYTg2OWI.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -2492,8 +2492,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -2544,8 +2544,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aUxpbmVUZXh0RmllbGQjNWNiM2U0MTRjNzEzMzBhMzc3ZjFiZTRiYWI0ZDVmZDRjNzI3Y2U5MjNkMjZjMzM2OTMzNGM3YWM2MDQ3YjZhYg.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -2616,8 +2616,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -2668,8 +2668,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpOdW1iZXJGaWVsZCNiNjViY2Q2ZmZmYWFmMjI1ZGMyYzZhMDRjY2Q5YjZmZjZlMDA2OTQyYzIxMGRmOWUzNjE3ZTdhOWVkZmM1MDE1.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -2768,8 +2768,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -2820,8 +2820,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpTaW5nbGVDaGVja2JveEZpZWxkI2E1N2U3ZjllODJiMDEwN2VjNDA2MTUzZDc5MmMwN2I1ZDM2MDkzZDU1ODY3ZGYwYjgzYmJjZWZhZGZjZDVmZWQ.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -2880,8 +2880,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -2932,8 +2932,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpNdWx0aXBsZUNoZWNrYm94ZXNGaWVsZCNkZTg3MWE4Mzk2M2IwOTU4ZjVjNGI1YmRkM2FiODBkMGVjMDE4ODAxNzhkNjk3MjE0MGFlY2ZkODgyMWRkMmNl.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -3052,8 +3052,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -3104,8 +3104,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEcm9wZG93bkZpZWxkI2NlZGI5Nzk3ZDFkYzVjZGIyNTgyNmYxOWIzOTU4NmI2OGVhNTU2ZTAxZjNjMTJkNGUwNjgzMTliZGFlODQ2YTI.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -3188,8 +3188,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -3240,8 +3240,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpSYWRpb0ZpZWxkIzgwODc4ZTliNzNkNzQwN2VkYTI5NjZiOTUwMDNjNDQ5ZTZhYjU0N2NmYTljZWFjNTY4OGZiMzA5ZWY5NDliYTE.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -3324,8 +3324,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -3376,8 +3376,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpEYXRlcGlja2VyRmllbGQjNWMxYjQ1NDc0ZGJhZTY5ZmQ5NjgyZjY2YzYwNWUyODI4ZTczZDNlNGNlMWUxNDExMGI3MmQ2MDRmMWYxZjNjNg.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -3460,8 +3460,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -3512,8 +3512,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpGaWxlRmllbGQjODlmMzlmZGZmYzBhNzQyYzk4M2MxYWI2ODU3MDg2YWQzYTU2NDVkMGEzMjZhOTlhZDlmNTAzM2E0MzQ0MzNlNA.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -3568,8 +3568,8 @@
           "message": "Additional descriptive text about the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.ZmllbGRUeXBl.short_desc": {
           "source": "The field type identifier",
@@ -3620,8 +3620,8 @@
           "message": "The internal API name used to identify this field in API requests and responses."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpQYXltZW50TGlua1JhZGlvRmllbGQjN2NhOTViODY5ZWIwZmMyYTViNzA2Y2I4ODdlMzNmYmQ1MTkxMGU5NDQyY2Q0M2QzMTk3ZjgwMTUyMWJmZTY3Mw.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "The CRM object type this field is associated with (e.g., contacts, deals)",
@@ -3660,8 +3660,8 @@
           "message": "Additional text helping the customer to complete the field."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.display_name": {
-          "source": "Field Type",
-          "message": "Field Type"
+          "source": "Field type",
+          "message": "Field type"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.ZmllbGRUeXBl.short_desc": {
           "source": "Determines how the field will be displayed and validated",
@@ -3712,8 +3712,8 @@
           "message": "The identifier of the field. In combination with the object type ID, it must be unique."
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDpFbWFpbEZpZWxkIzllMTFiYTk3NGY2NmZjZWY1MDU5NWMzYTczZGI5OTBlMGUxMzA2MzZkMzAwYmM4MDZiYmRkZWE0MTY4ZDE0ZWE.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "A unique ID for this field's CRM object type",
@@ -3776,8 +3776,8 @@
           "message": "Whether to block the free email providers."
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.display_name": {
-          "source": "Group Type",
-          "message": "Group Type"
+          "source": "Group type",
+          "message": "Group type"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRHcm91cHM.field.Z3JvdXBUeXBl.short_desc": {
           "source": "The type of field grouping",
@@ -3840,8 +3840,8 @@
           "message": "hubspot"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal Consent Options",
-          "message": "Legal Consent Options"
+          "source": "Legal consent options",
+          "message": "Legal consent options"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.union.TGVnYWxDb25zZW50T3B0aW9uc05vbmUjOTg5OTE2YTM4YTU1ZjJmZTcyZjM2NDE4ZDcwMmUxY2U4MWM4ZGJmM2EyNDFmNjJmMDE4Y2Q1YWNmYTk4Y2YwNQ.field.dHlwZQ.display_name": {
           "source": "Type",
@@ -4092,12 +4092,12 @@
           "message": "Name"
         },
         "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.dXBkYXRlZEF0.display_name": {
-          "source": "Updated At",
-          "message": "Updated At"
+          "source": "Updated at",
+          "message": "Updated at"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.display_name": {
-          "source": "Archive Form",
-          "message": "Archive Form"
+          "source": "Archive form",
+          "message": "Archive form"
         },
         "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.short_desc": {
           "source": "Archive a HubSpot form definition.",
@@ -4108,8 +4108,8 @@
           "message": "Archives a HubSpot form definition. New submissions will no longer be accepted; the definition is permanently deleted three months after archival."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get Form",
-          "message": "Get Form"
+          "source": "Get form",
+          "message": "Get form"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm0.short_desc": {
           "source": "Retrieve a single HubSpot form definition by ID.",
@@ -4120,8 +4120,8 @@
           "message": "Returns the complete form definition for the supplied form ID, including all field groups, configuration, display options, and legal consent settings."
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.display_name": {
-          "source": "Update Form",
-          "message": "Update Form"
+          "source": "Update form",
+          "message": "Update form"
         },
         "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.short_desc": {
           "source": "Partially update a HubSpot form definition.",
@@ -4132,8 +4132,8 @@
           "message": "Updates one or more components of a HubSpot form definition without affecting the rest of the configuration."
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.display_name": {
-          "source": "Replace Form",
-          "message": "Replace Form"
+          "source": "Replace form",
+          "message": "Replace form"
         },
         "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.short_desc": {
           "source": "Replace the full form definition.",
@@ -4144,8 +4144,8 @@
           "message": "Replaces all fields of a HubSpot form definition with the supplied payload. Any properties not included will be reset to their defaults."
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.display_name": {
-          "source": "Get List Records",
-          "message": "Get List Records"
+          "source": "Get list records",
+          "message": "Get list records"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.short_desc": {
           "source": "Retrieve records from a HubSpot list with pagination and property filtering.",
@@ -4216,8 +4216,8 @@
           "message": "Specific properties to include in the response for each record. If not specified, default properties will be returned."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.display_name": {
-          "source": "Get Form Submissions",
-          "message": "Get Form Submissions"
+          "source": "Get form submissions",
+          "message": "Get form submissions"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.short_desc": {
           "source": "Retrieve submissions made to a HubSpot form.",
@@ -4240,8 +4240,8 @@
           "message": "The unique identifier (GUID) of the HubSpot form whose submissions to read."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.short_desc": {
           "source": "Records per request (1–50, default 20)",
@@ -4252,8 +4252,8 @@
           "message": "Number of submissions to retrieve per request. HubSpot enforces a maximum of 50; the action paginates automatically until `Max Results` is reached or no more pages remain."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Max Results",
-          "message": "Max Results"
+          "source": "Max results",
+          "message": "Max results"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Cap on the total number of submissions returned",
@@ -4288,8 +4288,8 @@
           "message": "Optional ISO 8601 timestamp. The action stops paginating when it crosses a submission older than this value. Applied client-side because the legacy endpoint does not support a server-side filter."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.display_name": {
-          "source": "Submit Form",
-          "message": "Submit Form"
+          "source": "Submit form",
+          "message": "Submit form"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.short_desc": {
           "source": "Submit data to a HubSpot form on behalf of the connected portal.",
@@ -4324,8 +4324,8 @@
           "message": "List of form fields to submit. Each entry must include the internal `name` (matching the field on the form definition) and the `value` to submit. `objectTypeId` is optional and defaults to the contact object (`0-1`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
-          "message": "Field Name"
+          "source": "Field name",
+          "message": "Field name"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.short_desc": {
           "source": "Internal name of the form field",
@@ -4336,8 +4336,8 @@
           "message": "The internal name of the form field, as defined on the HubSpot form (e.g. `email`, `firstname`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
-          "message": "Object Type ID"
+          "source": "Object type ID",
+          "message": "Object type ID"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.short_desc": {
           "source": "Object the field belongs to (e.g. `0-1` for contacts)",
@@ -4348,8 +4348,8 @@
           "message": "Optional HubSpot object-type identifier the field belongs to. Defaults to the contact object (`0-1`); set explicitly for fields belonging to a different object type."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.display_name": {
-          "source": "Field Value",
-          "message": "Field Value"
+          "source": "Field value",
+          "message": "Field value"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.short_desc": {
           "source": "Value to submit for this field",
@@ -4360,8 +4360,8 @@
           "message": "The value to submit for this field. Must be a string."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.display_name": {
-          "source": "Submission Context",
-          "message": "Submission Context"
+          "source": "Submission context",
+          "message": "Submission context"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.short_desc": {
           "source": "Optional submission context (tracking metadata)",
@@ -4372,8 +4372,8 @@
           "message": "Optional submission context, including the HubSpot user-tracking cookie (`hutk`), IP address, page URI/name/ID, Salesforce campaign ID, and GoToWebinar key."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.display_name": {
-          "source": "GoToWebinar Webinar Key",
-          "message": "GoToWebinar Webinar Key"
+          "source": "GoToWebinar webinar key",
+          "message": "GoToWebinar webinar key"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.short_desc": {
           "source": "GoToWebinar key for webinar registration submissions",
@@ -4384,8 +4384,8 @@
           "message": "GoToWebinar webinar key. Used when this submission is a webinar registration; HubSpot will register the contact for the corresponding GoToWebinar event."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.display_name": {
-          "source": "HubSpot User Token (hutk)",
-          "message": "HubSpot User Token (hutk)"
+          "source": "HubSpot user token (hutk)",
+          "message": "HubSpot user token (hutk)"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.short_desc": {
           "source": "Tracking cookie value from the HubSpot script",
@@ -4396,8 +4396,8 @@
           "message": "Value of the `hubspotutk` cookie set by the HubSpot tracking script on the visitor browser. Used to associate the submission with an existing visitor."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.display_name": {
-          "source": "IP Address",
-          "message": "IP Address"
+          "source": "IP address",
+          "message": "IP address"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.short_desc": {
           "source": "Originating IP address of the submitter",
@@ -4420,8 +4420,8 @@
           "message": "HubSpot page ID where the form was submitted (only when submitting from a HubSpot-hosted page)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.display_name": {
-          "source": "Page Name",
-          "message": "Page Name"
+          "source": "Page name",
+          "message": "Page name"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.short_desc": {
           "source": "Display name of the page where the form was submitted",
@@ -4444,8 +4444,8 @@
           "message": "Full URL of the page where the form was submitted."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.display_name": {
-          "source": "Salesforce Campaign ID",
-          "message": "Salesforce Campaign ID"
+          "source": "Salesforce campaign ID",
+          "message": "Salesforce campaign ID"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.short_desc": {
           "source": "Salesforce campaign to associate the submission with",
@@ -4456,8 +4456,8 @@
           "message": "Salesforce campaign ID. Used when the HubSpot account is linked to a Salesforce org to associate this submission with the campaign."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal Consent Options",
-          "message": "Legal Consent Options"
+          "source": "Legal consent options",
+          "message": "Legal consent options"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.short_desc": {
           "source": "Optional GDPR / legitimate-interest consent payload",
@@ -4468,8 +4468,8 @@
           "message": "Optional GDPR consent payload passed through to HubSpot. Refer to HubSpot documentation for the exact `consent` or `legitimateInterest` shape required by your form."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.display_name": {
-          "source": "Submitted At",
-          "message": "Submitted At"
+          "source": "Submitted at",
+          "message": "Submitted at"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.short_desc": {
           "source": "Override the submission timestamp",
@@ -4480,8 +4480,8 @@
           "message": "Optional ISO 8601 timestamp to record as the submission time. Defaults to the time HubSpot receives the request."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.display_name": {
-          "source": "Skip Validation",
-          "message": "Skip Validation"
+          "source": "Skip validation",
+          "message": "Skip validation"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.short_desc": {
           "source": "Skip field-level validation on the HubSpot side",
@@ -4492,8 +4492,8 @@
           "message": "When true, HubSpot will accept the submission even if some field values fail validation. Use with care."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Company Created or Updated",
-          "message": "Company Created or Updated"
+          "source": "Company created or updated",
+          "message": "Company created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a company is added or updated in HubSpot.",
@@ -4504,8 +4504,8 @@
           "message": "This trigger activates whenever a company record is created or modified in HubSpot, enabling you to automate workflows based on company data changes."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4532,8 +4532,8 @@
           "message": "Triggers when an existing object is updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4544,8 +4544,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Contact Created or Updated",
-          "message": "Contact Created or Updated"
+          "source": "Contact created or updated",
+          "message": "Contact created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a contact is added or updated in HubSpot.",
@@ -4556,8 +4556,8 @@
           "message": "Activate workflows whenever a new contact is created or an existing contact is updated within HubSpot. Ideal for managing customer information efficiently."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4584,8 +4584,8 @@
           "message": "Triggers when an existing object is updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4596,8 +4596,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Custom Object Created or Updated",
-          "message": "Custom Object Created or Updated"
+          "source": "Custom object created or updated",
+          "message": "Custom object created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a custom object is added or updated in HubSpot.",
@@ -4608,8 +4608,8 @@
           "message": "Use this trigger to capture changes to custom objects in HubSpot, ensuring that updates to custom data structures are processed immediately for automation or integration."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4648,8 +4648,8 @@
           "message": "Select the custom object you want to monitor for new or updated records."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4660,8 +4660,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Deal Created or Updated",
-          "message": "Deal Created or Updated"
+          "source": "Deal created or updated",
+          "message": "Deal created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a deal is created or updated in HubSpot.",
@@ -4672,8 +4672,8 @@
           "message": "This trigger fires when a deal is created or modified in HubSpot, allowing you to track sales opportunities and integrate with your sales pipeline automation workflows."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4700,8 +4700,8 @@
           "message": "Triggers when an existing object is updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4712,8 +4712,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Lead Created or Updated",
-          "message": "Lead Created or Updated"
+          "source": "Lead created or updated",
+          "message": "Lead created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a lead is added or updated in HubSpot.",
@@ -4724,8 +4724,8 @@
           "message": "Monitor new leads and updates to existing leads in HubSpot with this trigger, enabling efficient lead management and follow-up processes."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4752,8 +4752,8 @@
           "message": "Triggers when an existing object is updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4764,8 +4764,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Product Created or Updated",
-          "message": "Product Created or Updated"
+          "source": "Product created or updated",
+          "message": "Product created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a product is added or updated in HubSpot.",
@@ -4776,8 +4776,8 @@
           "message": "This trigger alerts you to any new or updated products within your HubSpot account, ensuring that your product data remains synchronized with your workflows and external systems."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4804,8 +4804,8 @@
           "message": "Triggers when an existing object is updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4816,8 +4816,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.display_name": {
-          "source": "Ticket Created or Updated",
-          "message": "Ticket Created or Updated"
+          "source": "Ticket created or updated",
+          "message": "Ticket created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.short_desc": {
           "source": "Triggers when a support ticket is created or updated in HubSpot.",
@@ -4828,8 +4828,8 @@
           "message": "Automatically trigger workflows when a support ticket is created or updated in HubSpot, ideal for managing customer support operations and streamlining issue resolution."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4856,8 +4856,8 @@
           "message": "Triggers when an existing object is updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4868,8 +4868,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "User Created or Updated",
-          "message": "User Created or Updated"
+          "source": "User created or updated",
+          "message": "User created or updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a user is added or updated in HubSpot.",
@@ -4880,8 +4880,8 @@
           "message": "This trigger fires upon the creation or update of a user within HubSpot, helping you keep track of user accounts and maintain updated access control for your team."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Criteria for trigger to activate (created or updated)",
@@ -4908,8 +4908,8 @@
           "message": "Triggers when an existing object is updated"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
-          "message": "Additional Properties"
+          "source": "Additional properties",
+          "message": "Additional properties"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
           "source": "Additional properties to add to returned data",
@@ -4920,8 +4920,8 @@
           "message": "Select additional properties to add to the returned object data"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.display_name": {
-          "source": "Form Submitted",
-          "message": "Form Submitted"
+          "source": "Form submitted",
+          "message": "Form submitted"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a new submission is received for a HubSpot form.",

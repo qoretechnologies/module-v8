@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Jira** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.SmlyYQ.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.SmlyYQ.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Jira\"",
@@ -460,8 +460,8 @@
           "message": "The table name"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
-          "source": "Get Announcement Banner",
-          "message": "Get Announcement Banner"
+          "source": "Get announcement banner",
+          "message": "Get announcement banner"
         },
         "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
           "source": "Gets the current announcement banner configuration",
@@ -472,8 +472,8 @@
           "message": "Retrieves the current announcement banner configuration for the Jira instance"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
-          "source": "Set Announcement Banner",
-          "message": "Set Announcement Banner"
+          "source": "Set announcement banner",
+          "message": "Set announcement banner"
         },
         "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
           "source": "Updates the announcement banner configuration",
@@ -484,8 +484,8 @@
           "message": "Updates the announcement banner configuration for the Jira instance"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
-          "source": "Get Fields",
-          "message": "Get Fields"
+          "source": "Get fields",
+          "message": "Get fields"
         },
         "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
           "source": "Gets all fields in the system",
@@ -496,8 +496,8 @@
           "message": "Returns all fields, both system and custom fields, in the Jira instance"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Create Custom Field",
-          "message": "Create Custom Field"
+          "source": "Create custom field",
+          "message": "Create custom field"
         },
         "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
           "source": "Creates a new custom field",
@@ -508,8 +508,8 @@
           "message": "Creates a new custom field in the Jira instance"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
-          "source": "Update Custom Field",
-          "message": "Update Custom Field"
+          "source": "Update custom field",
+          "message": "Update custom field"
         },
         "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
           "source": "Updates a custom field",
@@ -520,8 +520,8 @@
           "message": "Updates the name and description of a custom field"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
-          "source": "Trash Custom Field",
-          "message": "Trash Custom Field"
+          "source": "Trash custom field",
+          "message": "Trash custom field"
         },
         "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
           "source": "Moves a custom field to trash",
@@ -532,8 +532,8 @@
           "message": "Moves a custom field to the trash. The custom field can be restored from trash within 60 days"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
-          "source": "Create Issue",
-          "message": "Create Issue"
+          "source": "Create issue",
+          "message": "Create issue"
         },
         "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
           "source": "Creates a new issue",
@@ -544,8 +544,8 @@
           "message": "Creates a new issue in a Jira project"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
-          "source": "Delete Issue",
-          "message": "Delete Issue"
+          "source": "Delete issue",
+          "message": "Delete issue"
         },
         "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
           "source": "Deletes an issue",
@@ -556,8 +556,8 @@
           "message": "Deletes an issue from a Jira project"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
-          "source": "Get Issue",
-          "message": "Get Issue"
+          "source": "Get issue",
+          "message": "Get issue"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
           "source": "Gets an issue by ID or key",
@@ -568,8 +568,8 @@
           "message": "Retrieves the details of a specific issue by its ID or key"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
-          "source": "Edit Issue",
-          "message": "Edit Issue"
+          "source": "Edit issue",
+          "message": "Edit issue"
         },
         "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
           "source": "Updates an existing issue",
@@ -580,8 +580,8 @@
           "message": "Updates the fields of an existing issue"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
-          "source": "Get Comments",
-          "message": "Get Comments"
+          "source": "Get comments",
+          "message": "Get comments"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
           "source": "Gets all comments for an issue",
@@ -592,8 +592,8 @@
           "message": "Retrieves all comments for a specific issue"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
-          "source": "Add Comment",
-          "message": "Add Comment"
+          "source": "Add comment",
+          "message": "Add comment"
         },
         "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
           "source": "Adds a comment to an issue",
@@ -604,8 +604,8 @@
           "message": "Adds a new comment to a specific issue"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
-          "source": "Delete Comment",
-          "message": "Delete Comment"
+          "source": "Delete comment",
+          "message": "Delete comment"
         },
         "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
           "source": "Deletes a comment from an issue",
@@ -616,8 +616,8 @@
           "message": "Deletes a specific comment from an issue"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
-          "source": "Get Comment",
-          "message": "Get Comment"
+          "source": "Get comment",
+          "message": "Get comment"
         },
         "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
           "source": "Gets a specific comment",
@@ -628,8 +628,8 @@
           "message": "Retrieves a specific comment by its ID"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
-          "source": "Update Comment",
-          "message": "Update Comment"
+          "source": "Update comment",
+          "message": "Update comment"
         },
         "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
           "source": "Updates a comment",
@@ -640,8 +640,8 @@
           "message": "Updates an existing comment on an issue"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
-          "source": "Get Issue Worklogs",
-          "message": "Get Issue Worklogs"
+          "source": "Get issue worklogs",
+          "message": "Get issue worklogs"
         },
         "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
           "source": "Gets all worklogs for an issue",
@@ -652,8 +652,8 @@
           "message": "Retrieves all worklogs for a specific issue"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
-          "source": "Add Worklog",
-          "message": "Add Worklog"
+          "source": "Add worklog",
+          "message": "Add worklog"
         },
         "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
           "source": "Adds a worklog to an issue",
@@ -664,8 +664,8 @@
           "message": "Adds a new worklog entry to a specific issue"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
-          "source": "Delete Worklog",
-          "message": "Delete Worklog"
+          "source": "Delete worklog",
+          "message": "Delete worklog"
         },
         "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
           "source": "Deletes a worklog from an issue",
@@ -676,8 +676,8 @@
           "message": "Deletes a specific worklog entry from an issue"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
-          "source": "Get Worklog",
-          "message": "Get Worklog"
+          "source": "Get worklog",
+          "message": "Get worklog"
         },
         "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
           "source": "Gets a specific worklog",
@@ -688,8 +688,8 @@
           "message": "Retrieves a specific worklog entry by its ID"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
-          "source": "Update Worklog",
-          "message": "Update Worklog"
+          "source": "Update worklog",
+          "message": "Update worklog"
         },
         "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
           "source": "Updates a worklog",
@@ -700,8 +700,8 @@
           "message": "Updates an existing worklog entry on an issue"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
-          "source": "Get All Projects",
-          "message": "Get All Projects"
+          "source": "Get all projects",
+          "message": "Get all projects"
         },
         "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
           "source": "Gets all projects",
@@ -748,8 +748,8 @@
           "message": "A list of project properties to return for the project. This parameter accepts a comma-separated list."
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
-          "source": "Create Project",
-          "message": "Create Project"
+          "source": "Create project",
+          "message": "Create project"
         },
         "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
           "source": "Creates a new project",
@@ -760,8 +760,8 @@
           "message": "Creates a new project in Jira"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
-          "source": "Delete Project",
-          "message": "Delete Project"
+          "source": "Delete project",
+          "message": "Delete project"
         },
         "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
           "source": "Deletes a project",
@@ -772,8 +772,8 @@
           "message": "Deletes a project from Jira"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
-          "source": "Get Project",
-          "message": "Get Project"
+          "source": "Get project",
+          "message": "Get project"
         },
         "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
           "source": "Gets a project by ID or key",
@@ -784,8 +784,8 @@
           "message": "Retrieves the details of a specific project by its ID or key"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
-          "source": "Update Project",
-          "message": "Update Project"
+          "source": "Update project",
+          "message": "Update project"
         },
         "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
           "source": "Updates a project",
@@ -796,8 +796,8 @@
           "message": "Updates the details of an existing project"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
-          "source": "Search Issues",
-          "message": "Search Issues"
+          "source": "Search issues",
+          "message": "Search issues"
         },
         "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
           "source": "Searches for issues using JQL",
@@ -808,8 +808,8 @@
           "message": "Searches for issues using JQL (Jira Query Language). Returns issues matching the search criteria"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
-          "source": "New Issue",
-          "message": "New Issue"
+          "source": "New issue",
+          "message": "New issue"
         },
         "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
           "source": "Triggers when a new issue is created",
@@ -832,8 +832,8 @@
           "message": "The project to watch for new issues"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
-          "source": "Updated Issue",
-          "message": "Updated Issue"
+          "source": "Updated issue",
+          "message": "Updated issue"
         },
         "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {
           "source": "Triggers when an issue is updated",

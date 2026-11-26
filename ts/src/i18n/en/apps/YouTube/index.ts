@@ -8,19 +8,19 @@ const YouTubeAppEn = {
   actions: {
     list_user_subscriptions: {
       groups: ['Subscriptions'],
-      displayName: 'List User Subscriptions',
+      displayName: 'List user subscriptions',
       shortDesc: 'Get a list of YouTube channel subscriptions for the authenticated user',
       longDesc:
         'Retrieves a paginated list of YouTube channels that the authenticated user is subscribed to, including channel details and thumbnails',
       options: {
         maxResults: {
-          displayName: 'Maximum Results',
+          displayName: 'Maximum results',
           shortDesc: 'Maximum number of subscriptions to return',
           longDesc:
             'The maximum number of subscription items to return in the response (1-50, default is 25)',
         },
         nextPageToken: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination to get the next page of results',
           longDesc:
             'The token that can be used as the value of the pageToken parameter to retrieve the next page in the result set',
@@ -29,7 +29,7 @@ const YouTubeAppEn = {
     },
     get_channel_id_from_url: {
       groups: ['Channels'],
-      displayName: 'Get Channel ID from URL',
+      displayName: 'Get channel ID from URL',
       shortDesc: 'Extract YouTube channel ID from various URL formats',
       longDesc:
         'Extracts the channel ID from different YouTube URL formats including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), and video URLs. Also returns basic channel information.',
@@ -44,7 +44,7 @@ const YouTubeAppEn = {
     },
     add_video_to_playlist: {
       groups: ['Playlist Items'],
-      displayName: 'Add Video to Playlist',
+      displayName: 'Add video to playlist',
       shortDesc: 'Add a video to an existing YouTube playlist',
       longDesc:
         'Adds a specified video to an existing YouTube playlist. You can optionally specify the position where the video should be inserted in the playlist.',
@@ -69,7 +69,7 @@ const YouTubeAppEn = {
     },
     create_playlist: {
       groups: ['Playlists'],
-      displayName: 'Create Playlist',
+      displayName: 'Create playlist',
       shortDesc: 'Create a new YouTube playlist',
       longDesc:
         'Creates a new YouTube playlist with specified title, description, privacy settings, and optional tags',
@@ -85,7 +85,7 @@ const YouTubeAppEn = {
           longDesc: 'Optional description text for the playlist explaining its content or purpose',
         },
         privacy: {
-          displayName: 'Privacy Status',
+          displayName: 'Privacy status',
           shortDesc: 'The privacy setting for the playlist',
           longDesc:
             'Privacy level for the playlist: public (visible to everyone), private (only visible to you), or unlisted (visible to anyone with the link)',
@@ -97,7 +97,7 @@ const YouTubeAppEn = {
             'Optional list of tags/keywords to help categorize and make the playlist discoverable',
         },
         defaultLanguage: {
-          displayName: 'Default Language',
+          displayName: 'Default language',
           shortDesc: 'The default language for the playlist',
           longDesc:
             'Optional default language code for the playlist content (e.g., "en" for English)',
@@ -106,92 +106,92 @@ const YouTubeAppEn = {
     },
     search_videos: {
       groups: ['Videos'],
-      displayName: 'Search Videos',
+      displayName: 'Search videos',
       shortDesc: 'Search for YouTube videos',
       longDesc:
         'Search for YouTube videos using various filters including keywords, duration, quality, upload date, and more',
       options: {
         q: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Keywords to search for',
           longDesc:
             'Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.',
         },
         order: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'How to sort the search results',
           longDesc:
             'The order in which search results should be returned (relevance, date, rating, title, or view count)',
         },
         publishedAfter: {
-          displayName: 'Published After',
+          displayName: 'Published after',
           shortDesc: 'Only return videos published after this date',
           longDesc:
             'Filter to only include videos published after the specified date (ISO 8601 format)',
         },
         publishedBefore: {
-          displayName: 'Published Before',
+          displayName: 'Published before',
           shortDesc: 'Only return videos published before this date',
           longDesc:
             'Filter to only include videos published before the specified date (ISO 8601 format)',
         },
         videoDuration: {
-          displayName: 'Video Duration',
+          displayName: 'Video duration',
           shortDesc: 'Filter by video length',
           longDesc:
             'Filter videos by their duration: any, short (< 4 minutes), medium (4-20 minutes), or long (> 20 minutes)',
         },
         videoDefinition: {
-          displayName: 'Video Definition',
+          displayName: 'Video definition',
           shortDesc: 'Filter by video quality',
           longDesc:
             'Filter videos by their definition quality: any, standard definition, or high definition',
         },
         videoDimension: {
-          displayName: 'Video Dimension',
+          displayName: 'Video dimension',
           shortDesc: 'Filter by 2D or 3D videos',
           longDesc: 'Filter videos by their dimensional format: any, 2D only, or 3D only',
         },
         videoCaption: {
-          displayName: 'Video Caption',
+          displayName: 'Video caption',
           shortDesc: 'Filter by caption availability',
           longDesc:
             'Filter videos by caption availability: any, videos with closed captions, or videos without captions',
         },
         videoLicense: {
-          displayName: 'Video License',
+          displayName: 'Video license',
           shortDesc: 'Filter by video license type',
           longDesc:
             'Filter videos by their license: any, standard YouTube license, or Creative Commons license',
         },
         safeSearch: {
-          displayName: 'Safe Search',
+          displayName: 'Safe search',
           shortDesc: 'Safe search filtering level',
           longDesc: 'Level of safe search filtering to apply: moderate (default), none, or strict',
         },
         regionCode: {
-          displayName: 'Region Code',
+          displayName: 'Region code',
           shortDesc: 'Country code to search within',
           longDesc:
             'Optional two-letter country code to restrict search results to a specific region',
         },
         relevanceLanguage: {
-          displayName: 'Relevance Language',
+          displayName: 'Relevance language',
           shortDesc: 'Language for relevance ranking',
           longDesc: 'Language code to use for relevance ranking of search results',
         },
         videoCategoryId: {
-          displayName: 'Video Category',
+          displayName: 'Video category',
           shortDesc: 'Filter by video category',
           longDesc: 'Optional category ID to filter videos by specific YouTube category',
         },
         maxResults: {
-          displayName: 'Maximum Results',
+          displayName: 'Maximum results',
           shortDesc: 'Maximum number of results to return',
           longDesc: 'The maximum number of search results to return (default is 25)',
         },
         pageToken: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc: 'Token for retrieving a specific page of results (used for pagination)',
         },
@@ -199,18 +199,18 @@ const YouTubeAppEn = {
     },
     get_report: {
       groups: ['Analytics'],
-      displayName: 'Get Analytics Report',
+      displayName: 'Get analytics report',
       shortDesc: 'Get YouTube Analytics report data',
       longDesc:
         'Retrieve YouTube Analytics data for a specific channel within a date range, including metrics like views, watch time, and engagement',
       options: {
         startDate: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'The start date for the report',
           longDesc: 'The start date for the analytics report in YYYY-MM-DD format',
         },
         endDate: {
-          displayName: 'End Date',
+          displayName: 'End date',
           shortDesc: 'The end date for the report',
           longDesc: 'The end date for the analytics report in YYYY-MM-DD format',
         },
@@ -226,7 +226,7 @@ const YouTubeAppEn = {
           longDesc: 'The YouTube channel ID to retrieve analytics data for',
         },
         maxResults: {
-          displayName: 'Maximum Results',
+          displayName: 'Maximum results',
           shortDesc: 'Maximum number of results to return',
           longDesc: 'The maximum number of data points to return in the report (default is 10)',
         },
@@ -234,25 +234,25 @@ const YouTubeAppEn = {
     },
     list_categories: {
       groups: ['Videos'],
-      displayName: 'List Video Categories',
+      displayName: 'List video categories',
       shortDesc: 'Get list of YouTube video categories',
       longDesc:
         'Retrieve the list of available YouTube video categories that can be assigned to videos',
     },
     list_user_channels: {
       groups: ['Channels'],
-      displayName: 'List User Channels',
+      displayName: 'List user channels',
       shortDesc: "Get list of authenticated user's YouTube channels",
       longDesc:
         "Retrieve information about the authenticated user's YouTube channels including statistics and branding settings",
       options: {
         maxResults: {
-          displayName: 'Maximum Results',
+          displayName: 'Maximum results',
           shortDesc: 'Maximum number of channels to return',
           longDesc: 'The maximum number of channels to return (default is 5)',
         },
         nextPageToken: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination',
           longDesc: 'Token for retrieving the next page of results',
         },
@@ -260,7 +260,7 @@ const YouTubeAppEn = {
     },
     list_video_comments: {
       groups: ['Comments'],
-      displayName: 'List Video Comments',
+      displayName: 'List video comments',
       shortDesc: 'Get comments for a YouTube video',
       longDesc:
         'Retrieve comments and comment threads for a specific YouTube video with various filtering and sorting options',
@@ -271,28 +271,28 @@ const YouTubeAppEn = {
           longDesc: 'The unique identifier of the YouTube video to retrieve comments from',
         },
         order: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'How to sort the comments',
           longDesc:
             'The order in which comments should be returned: time (newest first) or relevance',
         },
         searchTerms: {
-          displayName: 'Search Terms',
+          displayName: 'Search terms',
           shortDesc: 'Filter comments by search terms',
           longDesc: 'Optional search terms to filter comments that contain specific keywords',
         },
         textFormat: {
-          displayName: 'Text Format',
+          displayName: 'Text format',
           shortDesc: 'Format of the comment text',
           longDesc: 'The format in which comment text should be returned: HTML or plain text',
         },
         maxResults: {
-          displayName: 'Maximum Results',
+          displayName: 'Maximum results',
           shortDesc: 'Maximum number of comments to return',
           longDesc: 'The maximum number of comment threads to return (default is 20)',
         },
         pageToken: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc: 'Token for retrieving a specific page of comments',
         },
@@ -300,18 +300,18 @@ const YouTubeAppEn = {
     },
     list_user_videos: {
       groups: ['Videos'],
-      displayName: 'List User Videos',
+      displayName: 'List user videos',
       shortDesc: "Get list of authenticated user's YouTube videos",
       longDesc:
         'Retrieve a list of videos uploaded by the authenticated user to their YouTube channel',
       options: {
         maxResults: {
-          displayName: 'Maximum Results',
+          displayName: 'Maximum results',
           shortDesc: 'Maximum number of videos to return',
           longDesc: 'The maximum number of videos to return (default is 10)',
         },
         nextPageToken: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination',
           longDesc: 'Token for retrieving the next page of videos',
         },
@@ -319,17 +319,17 @@ const YouTubeAppEn = {
     },
     reply_to_comment: {
       groups: ['Comments'],
-      displayName: 'Create or Reply to Comment',
+      displayName: 'Create or reply to comment',
       shortDesc: 'Reply to a YouTube comment or create one',
       longDesc: 'Post a reply to an existing comment or create a new one on a YouTube video',
       options: {
         parentId: {
-          displayName: 'Parent Comment ID',
+          displayName: 'Parent comment ID',
           shortDesc: 'The ID of the comment to reply to',
           longDesc: 'The unique identifier of the comment or comment thread to reply to',
         },
         textOriginal: {
-          displayName: 'Reply Text',
+          displayName: 'Reply text',
           shortDesc: 'The text content of the reply',
           longDesc: 'The text content of your reply to the comment',
         },
@@ -337,7 +337,7 @@ const YouTubeAppEn = {
     },
     update_video_details: {
       groups: ['Videos'],
-      displayName: 'Update Video Details',
+      displayName: 'Update video details',
       shortDesc: 'Update details of a YouTube video',
       longDesc:
         'Update the metadata of an existing YouTube video including title, description, privacy settings, and other properties',
@@ -358,7 +358,7 @@ const YouTubeAppEn = {
           longDesc: 'Optional new category for the video (numeric category ID)',
         },
         privacy: {
-          displayName: 'Privacy Status',
+          displayName: 'Privacy status',
           shortDesc: 'Privacy setting for the video',
           longDesc: 'Optional new privacy setting: public, private, or unlisted',
         },
@@ -369,7 +369,7 @@ const YouTubeAppEn = {
             'Optional new description for the video (leave empty to keep current description)',
         },
         forKids: {
-          displayName: 'Made for Kids',
+          displayName: 'Made for kids',
           shortDesc: 'Whether the video is made for kids',
           longDesc: 'Optional setting to indicate if the video is specifically made for children',
         },
@@ -382,7 +382,7 @@ const YouTubeAppEn = {
     },
     upload_video: {
       groups: ['Videos'],
-      displayName: 'Upload Video',
+      displayName: 'Upload video',
       shortDesc: 'Upload a video to YouTube',
       longDesc:
         'Upload a new video to YouTube with specified metadata including title, description, privacy settings, and category',
@@ -393,7 +393,7 @@ const YouTubeAppEn = {
           longDesc: 'The title/name for the video being uploaded',
         },
         video: {
-          displayName: 'Video File',
+          displayName: 'Video file',
           shortDesc: 'The video file to upload',
           longDesc: 'The video file to upload to YouTube',
         },
@@ -403,7 +403,7 @@ const YouTubeAppEn = {
           longDesc: 'The YouTube category for the video (numeric category ID)',
         },
         privacy: {
-          displayName: 'Privacy Status',
+          displayName: 'Privacy status',
           shortDesc: 'Privacy setting for the video',
           longDesc:
             'Privacy level for the video: public (visible to everyone), private (only visible to you), or unlisted (visible to anyone with the link)',
@@ -414,7 +414,7 @@ const YouTubeAppEn = {
           longDesc: 'Optional description text for the video explaining its content',
         },
         forKids: {
-          displayName: 'Made for Kids',
+          displayName: 'Made for kids',
           shortDesc: 'Whether the video is made for kids',
           longDesc:
             'Optional setting to indicate if the video is specifically made for children (default is false)',
@@ -430,7 +430,7 @@ const YouTubeAppEn = {
   },
   triggers: {
     new_channel_video: {
-      displayName: 'New Channel Video',
+      displayName: 'New channel video',
       shortDesc: 'Triggers when a new video is uploaded to a channel',
       longDesc:
         "Monitors a specific YouTube channel for new video uploads and triggers when a new video is detected in the channel's uploads playlist.",
@@ -448,7 +448,7 @@ const YouTubeAppEn = {
       },
     },
     new_livestream: {
-      displayName: 'New Livestream',
+      displayName: 'New livestream',
       shortDesc: 'Triggers when a new livestream starts',
       longDesc:
         'Monitors for new live streams that are currently broadcasting. Can monitor all live streams or filter by a specific channel.',
@@ -467,7 +467,7 @@ const YouTubeAppEn = {
       },
     },
     new_playlist_video: {
-      displayName: 'New Playlist Video',
+      displayName: 'New playlist video',
       shortDesc: 'Triggers when a new video is added to a playlist',
       longDesc:
         'Monitors a specific YouTube playlist for new videos being added and triggers when a new video is detected.',
@@ -480,13 +480,13 @@ const YouTubeAppEn = {
       },
     },
     new_video_by_search: {
-      displayName: 'New Video by Search',
+      displayName: 'New video by search',
       shortDesc: 'Triggers when new videos match a search query',
       longDesc:
         'Monitors YouTube search results for a specific query and triggers when new videos matching the search terms are found.',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'The search terms to monitor',
           longDesc:
             'Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.',
@@ -494,7 +494,7 @@ const YouTubeAppEn = {
       },
     },
     new_video_comment: {
-      displayName: 'New Video Comment',
+      displayName: 'New video comment',
       shortDesc: 'Triggers when a new comment is posted on a video',
       longDesc:
         'Monitors a specific YouTube video for new comments and triggers when a new comment is detected.',

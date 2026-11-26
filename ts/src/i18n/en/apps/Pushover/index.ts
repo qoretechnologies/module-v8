@@ -17,7 +17,7 @@ Both values are 30-character alphanumeric strings.`,
   },
   actions: {
     push_notification: {
-      displayName: 'Push Notification',
+      displayName: 'Push notification',
       shortDesc: 'Send a push notification to a user or group',
       longDesc:
         'Send a push notification with customizable priority, sound, and formatting. Supports priorities from lowest (no alert) to high (bypasses quiet hours).',
@@ -53,7 +53,7 @@ Both values are 30-character alphanumeric strings.`,
             'The sound to play when the notification arrives. Choose from predefined Pushover sounds.',
         },
         format: {
-          displayName: 'Message Format',
+          displayName: 'Message format',
           shortDesc: 'Text formatting style',
           longDesc:
             'Plain text (default), HTML for basic formatting (<b>, <i>, <u>, <a>), or Monospace for code-style text.',
@@ -64,7 +64,7 @@ Both values are 30-character alphanumeric strings.`,
           longDesc: 'A URL to include with the notification. Maximum 512 characters.',
         },
         url_title: {
-          displayName: 'URL Title',
+          displayName: 'URL title',
           shortDesc: 'Title for the URL',
           longDesc: 'Display text for the URL link. Maximum 100 characters.',
         },
@@ -75,7 +75,7 @@ Both values are 30-character alphanumeric strings.`,
             'Unix timestamp to display as the message time, useful for delayed or batched notifications.',
         },
         ttl: {
-          displayName: 'Time to Live',
+          displayName: 'Time to live',
           shortDesc: 'Message expiration time in seconds',
           longDesc:
             'Number of seconds before the message is automatically deleted from devices. Useful for time-sensitive notifications.',
@@ -83,7 +83,7 @@ Both values are 30-character alphanumeric strings.`,
       },
     },
     push_emergency_notification: {
-      displayName: 'Push Emergency Notification',
+      displayName: 'Push emergency notification',
       shortDesc: 'Send a high-priority emergency notification with acknowledgment tracking',
       longDesc:
         'Send an emergency notification that requires acknowledgment. The notification will repeat at specified intervals until acknowledged or expired. Returns a receipt ID for tracking.',
@@ -100,13 +100,13 @@ Both values are 30-character alphanumeric strings.`,
           longDesc: 'The title displayed above the message. Maximum 250 characters.',
         },
         retry: {
-          displayName: 'Retry Interval',
+          displayName: 'Retry interval',
           shortDesc: 'Seconds between retries (minimum 30)',
           longDesc:
             'How often (in seconds) Pushover will resend the notification until acknowledged. Minimum 30 seconds.',
         },
         expire: {
-          displayName: 'Expiration Time',
+          displayName: 'Expiration time',
           shortDesc: 'Seconds until notification stops retrying (maximum 10800)',
           longDesc:
             'How long (in seconds) the notification will continue retrying. Maximum 10800 seconds (3 hours).',
@@ -123,7 +123,7 @@ Both values are 30-character alphanumeric strings.`,
             'The sound to play. Long sounds like "persistent" or "siren" work well for emergencies.',
         },
         format: {
-          displayName: 'Message Format',
+          displayName: 'Message format',
           shortDesc: 'Text formatting style',
           longDesc: 'Plain text, HTML, or Monospace formatting.',
         },
@@ -133,7 +133,7 @@ Both values are 30-character alphanumeric strings.`,
           longDesc: 'A URL to include with the notification.',
         },
         url_title: {
-          displayName: 'URL Title',
+          displayName: 'URL title',
           shortDesc: 'Title for the URL',
           longDesc: 'Display text for the URL link.',
         },
@@ -152,7 +152,7 @@ Both values are 30-character alphanumeric strings.`,
       },
     },
     validate_user: {
-      displayName: 'Validate User',
+      displayName: 'Validate user',
       shortDesc: 'Validate a user or group key and list devices',
       longDesc:
         'Verify that a user or group key is valid and retrieve the list of registered devices. Useful for confirming credentials before sending notifications.',

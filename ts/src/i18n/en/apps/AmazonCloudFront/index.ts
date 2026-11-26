@@ -36,13 +36,13 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
   },
   triggers: {
     new_distribution: {
-      displayName: 'New Distribution',
+      displayName: 'New distribution',
       shortDesc: 'Triggers when a new CloudFront distribution is created',
       longDesc:
         'This trigger monitors for newly created CloudFront distributions in your AWS account. It will fire whenever a new distribution is detected, providing details about the distribution configuration and status.',
     },
     new_invalidation: {
-      displayName: 'New Invalidation',
+      displayName: 'New invalidation',
       shortDesc: 'Triggers when a new invalidation is created for a distribution',
       longDesc:
         'This trigger monitors for new cache invalidations created for a specific CloudFront distribution. It will fire whenever a new invalidation request is submitted, providing details about the invalidation status and affected paths.',
@@ -58,13 +58,13 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
   },
   actions: {
     list_distributions: {
-      displayName: 'List Distributions',
+      displayName: 'List distributions',
       shortDesc: 'Retrieve a list of CloudFront distributions',
       longDesc:
         'Fetches a list of all CloudFront distributions in your AWS account, including their status, domain names, and configuration details. You can control the number of results and use pagination for large sets of distributions.',
       options: {
         max_items: {
-          displayName: 'Max Items',
+          displayName: 'Max items',
           shortDesc: 'Maximum number of distributions to return',
           longDesc:
             'Specify the maximum number of distributions to return in a single request. Default is 100. Use this to control pagination and response size.',
@@ -78,7 +78,7 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
       },
     },
     get_distribution: {
-      displayName: 'Get Distribution',
+      displayName: 'Get distribution',
       shortDesc: 'Retrieve detailed information about a specific distribution',
       longDesc:
         'Fetches comprehensive details about a specific CloudFront distribution, including its configuration, origins, cache behaviors, and current status. This provides complete information about how the distribution is configured.',
@@ -92,7 +92,7 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
       },
     },
     update_distribution_status: {
-      displayName: 'Update Distribution Status',
+      displayName: 'Update distribution status',
       shortDesc: 'Enable or disable a CloudFront distribution',
       longDesc:
         'Updates the enabled/disabled status of a CloudFront distribution. When you disable a distribution, it stops serving content and you stop being charged for it. Enabling it again will resume content delivery.',
@@ -104,7 +104,7 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
             'Select the CloudFront distribution whose status you want to change. The distribution must exist and be in a state that allows status changes.',
         },
         enabled: {
-          displayName: 'Enable Distribution',
+          displayName: 'Enable distribution',
           shortDesc: 'Set to true to enable the distribution, false to disable it',
           longDesc:
             'Choose whether to enable or disable the distribution. Enabling allows the distribution to serve content, while disabling stops content delivery and billing. Status changes can take time to propagate.',
@@ -112,7 +112,7 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
       },
     },
     invalidate_item: {
-      displayName: 'Invalidate Item',
+      displayName: 'Invalidate item',
       shortDesc: 'Create an invalidation request to clear cached content',
       longDesc:
         'Creates an invalidation request to remove specific files from CloudFront edge caches. This forces CloudFront to fetch fresh content from the origin for the specified paths on the next request.',
@@ -124,13 +124,13 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
             'Select the CloudFront distribution where you want to invalidate cached content. The invalidation will apply to all edge locations for this distribution.',
         },
         paths: {
-          displayName: 'Paths to Invalidate',
+          displayName: 'Paths to invalidate',
           shortDesc: 'List of file paths to invalidate from the cache',
           longDesc:
             'Specify the paths of files you want to invalidate from the CloudFront cache. Use /* to invalidate all files, or specify individual file paths like /images/logo.png. Paths should start with /.',
         },
         caller_reference: {
-          displayName: 'Caller Reference',
+          displayName: 'Caller reference',
           shortDesc: 'Unique identifier for this invalidation request',
           longDesc:
             'Optional unique identifier for this invalidation request. If not provided, a unique value will be generated automatically. This helps track and identify specific invalidation requests.',
@@ -138,7 +138,7 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
       },
     },
     list_invalidations: {
-      displayName: 'List Invalidations',
+      displayName: 'List invalidations',
       shortDesc: 'Retrieve a list of invalidations for a distribution',
       longDesc:
         'Fetches a list of cache invalidation requests for a specific CloudFront distribution, showing their status and creation times. This helps you track the progress and history of invalidation requests.',
@@ -150,7 +150,7 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
             'Select the CloudFront distribution whose invalidation history you want to retrieve. This will show all invalidation requests made for this distribution.',
         },
         max_items: {
-          displayName: 'Max Items',
+          displayName: 'Max items',
           shortDesc: 'Maximum number of invalidations to return',
           longDesc:
             'Specify the maximum number of invalidation records to return in a single request. Default is 100. Use this to control pagination and response size.',
@@ -164,7 +164,7 @@ The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
       },
     },
     get_invalidation: {
-      displayName: 'Get Invalidation',
+      displayName: 'Get invalidation',
       shortDesc: 'Retrieve details about a specific invalidation request',
       longDesc:
         'Fetches detailed information about a specific cache invalidation request, including its status, the paths being invalidated, and timing information. Use this to check the progress of an invalidation.',

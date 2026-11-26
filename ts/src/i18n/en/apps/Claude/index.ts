@@ -27,7 +27,7 @@ Your Anthropic API key starting with \`sk-ant-\`. This key authenticates all req
   },
   actions: {
     send_message: {
-      displayName: 'Send Message',
+      displayName: 'Send message',
       shortDesc: 'Send a message to Claude AI and get a response',
       longDesc:
         'Send a text message to Claude AI with optional system instructions, file attachments, and customizable parameters. Claude can process text, images, and documents to provide intelligent responses.',
@@ -45,13 +45,13 @@ Your Anthropic API key starting with \`sk-ant-\`. This key authenticates all req
             'Enter the text message you want to send to Claude. This will be the main content that Claude responds to.',
         },
         system: {
-          displayName: 'System Instructions',
+          displayName: 'System instructions',
           shortDesc: 'System-level instructions for Claude',
           longDesc:
             "Optional system instructions that define how Claude should behave, its role, or specific guidelines for the conversation. These instructions help shape Claude's responses.",
         },
         max_tokens: {
-          displayName: 'Max Tokens',
+          displayName: 'Max tokens',
           shortDesc: 'Maximum number of tokens in the response',
           longDesc:
             'Set the maximum number of tokens (roughly words) that Claude can use in its response. Higher values allow for longer responses but may increase costs.',
@@ -75,7 +75,7 @@ Your Anthropic API key starting with \`sk-ant-\`. This key authenticates all req
             'Use nucleus sampling to control response diversity. Claude will only consider tokens whose cumulative probability mass is within the top P threshold.',
         },
         file: {
-          displayName: 'File Attachment',
+          displayName: 'File attachment',
           shortDesc: 'Optional file to include with the message',
           longDesc:
             'Attach an image or document for Claude to analyze along with your message. Supported formats include images (JPEG, PNG, GIF, WebP) and PDF documents.',
@@ -83,7 +83,7 @@ Your Anthropic API key starting with \`sk-ant-\`. This key authenticates all req
       },
     },
     list_models: {
-      displayName: 'List Models',
+      displayName: 'List models',
       shortDesc: 'Retrieve a list of available Claude models',
       longDesc: 'Get a list of all available Claude models.',
     },

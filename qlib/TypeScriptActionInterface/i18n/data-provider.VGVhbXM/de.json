@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Microsoft Teams** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App verfügbar sind."
         },
         "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.display_name": {
-          "source": "Create Channel",
+          "source": "Create channel",
           "message": "Kanal erstellen"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Die eindeutige Kennung (GUID) für das Team, in dem der neue Kanal erstellt wird."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "Kanalname"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Optionale Beschreibung, die den Zweck oder das Thema des Kanals erläutert. Auf 1024 Zeichen begrenzt."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.display_name": {
-          "source": "Membership Type",
+          "source": "Membership type",
           "message": "Mitgliedschaftstyp"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Geteilter Kanal"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.display_name": {
-          "source": "Create Meeting",
+          "source": "Create meeting",
           "message": "Besprechung erstellen"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Der Titel oder Betreff der Besprechung, der in Kalendereinladungen und der Besprechungsliste angezeigt wird."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Startzeit"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Datum und Uhrzeit des Besprechungsbeginns im ISO 8601-Format (YYYY-MM-DDTHH:MM:SS)."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Endzeit"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Optionale Kanal-ID, falls die Besprechung einem bestimmten Kanal innerhalb eines Teams zugeordnet ist."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
+          "source": "Meeting content",
           "message": "Besprechungsinhalt"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Liste von E-Mail-Adressen oder Benutzer-IDs von Personen, die zur Besprechung eingeladen werden sollen."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "Online-Besprechung"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Wenn auf true gesetzt, wird eine Teams-Onlinebesprechung mit Videokonferenzfunktionen und einem Teilnahme-Link erstellt."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "Zeitzone"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Die Zeitzone für Start- und Endzeit der Besprechung, wie z. B. \"Pacific Standard Time\" oder \"UTC\"."
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.display_name": {
-          "source": "Delete Meeting",
+          "source": "Delete meeting",
           "message": "Besprechung löschen"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Die eindeutige Kennung (GUID) der abzusagenden Besprechung."
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
+          "source": "Meeting source",
           "message": "Besprechungsquelle"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
@@ -600,7 +600,7 @@
           "message": "Team"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.display_name": {
-          "source": "Send Channel Message",
+          "source": "Send channel message",
           "message": "Kanalnachricht senden"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Der Textinhalt der Nachricht, die im Kanal gepostet werden soll."
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Inhaltstyp"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
@@ -668,7 +668,7 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.display_name": {
-          "source": "Send Chat Message",
+          "source": "Send chat message",
           "message": "Chat-Nachricht senden"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.short_desc": {
@@ -704,7 +704,7 @@
           "message": "Der Textinhalt der Nachricht, die im Chat gesendet werden soll."
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Inhaltstyp"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
@@ -724,7 +724,7 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.display_name": {
-          "source": "Update Channel",
+          "source": "Update channel",
           "message": "Kanal aktualisieren"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Die eindeutige Kennung des zu aktualisierenden Kanals."
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "Kanalname"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Aktualisierte Beschreibung, die den Zweck oder das Thema des Kanals erläutert. Begrenzt auf 1024 Zeichen."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.display_name": {
-          "source": "Update Meeting",
+          "source": "Update meeting",
           "message": "Besprechung aktualisieren"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Der neue Titel oder Betreff der Besprechung, der in Kalendereinladungen und der Besprechungsliste angezeigt wird."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Startzeit"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Das neue Datum und die neue Uhrzeit für den Besprechungsbeginn im ISO 8601-Format (YYYY-MM-DDTHH:MM:SS)."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Endzeit"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Aktualisierte Kanalkennung, falls die Besprechung einem bestimmten Kanal innerhalb eines Teams zugeordnet ist."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
+          "source": "Meeting content",
           "message": "Besprechungsinhalt"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Aktualisierte Liste von E-Mail-Adressen oder Benutzer-IDs von Personen, die zur Besprechung eingeladen werden sollen."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "Online-Besprechung"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Wenn auf „true“ gesetzt, wird sichergestellt, dass die Besprechung Teams-Onlinebesprechungsfunktionen mit Videokonferenzen und einem Teilnahmelink enthält."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "Zeitzone"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Die neue Zeitzone für die Start- und Endzeiten der Besprechung, wie z. B. \"Pacific Standard Time\" oder \"UTC\"."
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.display_name": {
-          "source": "New Channel Message",
+          "source": "New channel message",
           "message": "Neue Kanalnachricht"
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Die eindeutige Kennung des Kanals, der auf neue Nachrichten überwacht werden soll."
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.display_name": {
-          "source": "New Chat Message",
+          "source": "New chat message",
           "message": "Neue Chat-Nachricht"
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Die eindeutige Kennung des Direkt-Chats oder Gruppen-Chats, der auf neue Nachrichten überwacht werden soll."
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "Neue Besprechung"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Dieser Trigger wird ausgelöst, wenn eine neue Besprechung geplant wird, die den angegebenen Kriterien entspricht."
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
+          "source": "Meeting source",
           "message": "Besprechungsquelle"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {

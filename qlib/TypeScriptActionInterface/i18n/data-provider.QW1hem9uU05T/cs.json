@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Amazon SNS** pomocí autentizace nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou vystaveny jako primární akce v této aplikaci."
         },
         "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.display_name": {
-          "source": "Create Topic",
+          "source": "Create topic",
           "message": "Vytvořit téma"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Vytvoří nové téma Amazon SNS s volitelnou konfigurací pro témata FIFO, šifrování a zásady doručování."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.display_name": {
-          "source": "Topic Name",
+          "source": "Topic name",
           "message": "Název tématu"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Region AWS, kde bude téma vytvořeno. Pokud není zadán, výchozí hodnota je us-east-1."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Zobrazovaný název"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Srozumitelný název tématu, který se zobrazuje v e-mailových oznámeních a dalších kontextech."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.display_name": {
-          "source": "Delivery Policy",
+          "source": "Delivery policy",
           "message": "Zásady doručování"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Řetězec JSON, který definuje zásady přístupu k tématu a řídí, kdo může do tématu publikovat nebo se k němu přihlásit."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "ID hlavního klíče KMS"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "ID klíče AWS KMS, který se má použít k šifrování zpráv publikovaných do tohoto tématu."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.display_name": {
-          "source": "FIFO Topic",
+          "source": "FIFO topic",
           "message": "Téma FIFO"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Zda vytvořit téma FIFO (First-In-First-Out), které zachovává pořadí zpráv a zabraňuje duplicitám."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "Deduplikace na základě obsahu"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Zda povolit deduplikaci na základě obsahu pro témata FIFO, což zabraňuje duplicitním zprávám na základě obsahu zprávy."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "Vytvořit zprávu"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Volitelný předmět zprávy, používaný především pro e-mailová oznámení."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Atributy zprávy"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Hash dodatečných atributů, které se mají ke zprávě přiložit pro účely filtrování a směrování."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "Deduplikační ID zprávy"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Unikátní identifikátor pro deduplikaci zpráv v tématech FIFO. Vyžadováno pro témata FIFO bez deduplikace založené na obsahu."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "ID skupiny zpráv"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Značka, která určuje, že zprávy patří do konkrétní skupiny zpráv pro témata FIFO. Vyžadováno pro témata FIFO."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "Vytvořit zprávu JSON"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Amazon Resource Name (ARN) tématu SNS, do kterého bude zpráva JSON publikována."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.display_name": {
-          "source": "JSON Message",
+          "source": "JSON message",
           "message": "Zpráva JSON"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Volitelný předmět zprávy, používaný především pro e-mailová oznámení."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Atributy zprávy"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Hash dodatečných atributů, které se mají ke zprávě přiložit pro účely filtrování a směrování."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "Deduplikační ID zprávy"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Unikátní identifikátor pro deduplikaci zpráv v tématech FIFO. Vyžadováno pro témata FIFO bez deduplikace založené na obsahu."
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "ID skupiny zpráv"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Značka, která určuje, že zprávy patří do konkrétní skupiny zpráv pro témata FIFO. Vyžadováno pro témata FIFO."
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.display_name": {
-          "source": "List Topics",
+          "source": "List topics",
           "message": "Seznam témat"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Region AWS, ze kterého se má získat seznam témat SNS."
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "Zahrnout atributy"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Zda zahrnout podrobné atributy pro každé téma, jako jsou počty odběrů a zásady."
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.display_name": {
-          "source": "Next Token",
+          "source": "Next token",
           "message": "Další token"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Token pro stránkování velkých seznamů témat. Použijte token vrácený z předchozího volání."
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.display_name": {
-          "source": "Get Topic",
+          "source": "Get topic",
           "message": "Získat téma"
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Amazon Resource Name (ARN) tématu SNS, pro které se mají získat podrobnosti."
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.display_name": {
-          "source": "Add Subscriber",
+          "source": "Add subscriber",
           "message": "Přidat odběratele"
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Koncový bod, který bude přijímat zprávy. Formát závisí na protokolu (URL pro HTTP/HTTPS, e-mailová adresa pro e-mail, telefonní číslo pro SMS atd.)."
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.display_name": {
-          "source": "New Topic",
+          "source": "New topic",
           "message": "Nové téma"
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Region AWS, ve kterém chcete sledovat nová témata SNS. Pokud není zadán, výchozí hodnota je us-east-1."
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Nová zpráva"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -852,7 +852,7 @@
           "message": "Tento spouštěč se přihlásí k odběru tématu Amazon SNS a spustí se, když je publikována nová zpráva. Automaticky spravuje odběr a poskytuje kompletní datové zatížení zprávy."
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Region AWS"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {

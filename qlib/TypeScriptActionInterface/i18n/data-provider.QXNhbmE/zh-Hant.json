@@ -28,7 +28,7 @@
           "message": "使用已設定的連線驗證發送自訂 HTTP / REST API 呼叫至 **Asana**。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基底 URL)、選填的查詢參數、標頭與請求主體。回應將以包含狀態碼、回應標頭與回應主體的雜湊傳回。\n\n當端點尚未在此應用程式中公開為一級動作時，請使用此動作。"
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.QXNhbmE.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.QXNhbmE.action.c2VhcmNo.short_desc": {
@@ -1720,7 +1720,7 @@
           "message": "對該工作區的 URL 發出 PUT 請求即可更新特定的現有工作區。僅會更新資料區塊中提供的欄位；任何未指定的欄位將保持不變。\n目前工作區唯一可修改的欄位是其名稱。\n傳回完整更新後的工作區記錄。"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
-          "source": "Attachment Added",
+          "source": "Attachment added",
           "message": "已新增附件"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
@@ -1756,7 +1756,7 @@
           "message": "監視附件活動之專案的唯一識別碼"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
-          "source": "Task ID (Optional)",
+          "source": "Task ID (optional)",
           "message": "任務 ID（可選）"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
@@ -1768,7 +1768,7 @@
           "message": "要監視之特定任務的唯一識別碼。若未提供，則該專案中所有任務的附件都將觸發工作流程"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Subtask Completed",
+          "source": "Subtask completed",
           "message": "子任務已完成"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1804,7 +1804,7 @@
           "message": "父任務所在專案的唯一識別碼"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "父任務 ID"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "將監控其子任務完成狀況之父任務的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Task Completed",
+          "source": "Task completed",
           "message": "任務已完成"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1852,7 +1852,7 @@
           "message": "將監控任務完成狀況之專案的唯一識別碼"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
-          "source": "Project Task Added",
+          "source": "Project task added",
           "message": "專案任務已新增"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
@@ -1888,7 +1888,7 @@
           "message": "將監控新任務建立狀況之專案的唯一識別碼"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
-          "source": "Project Added",
+          "source": "Project added",
           "message": "專案已新增"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
@@ -1912,7 +1912,7 @@
           "message": "將監控新專案建立狀況之工作區的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
-          "source": "Task Comment Added",
+          "source": "Task comment added",
           "message": "任務註解已新增"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
@@ -1960,7 +1960,7 @@
           "message": "將監控註解狀況之任務的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
-          "source": "Task Story Added",
+          "source": "Task story added",
           "message": "已新增任務動態"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "將監控所有活動之任務的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
-          "source": "Task Subtask Added",
+          "source": "Task subtask added",
           "message": "已新增任務子任務"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "父任務所在專案的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "父任務 ID"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
@@ -2056,7 +2056,7 @@
           "message": "將監控子任務建立情況之父任務的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
-          "source": "Task Tag Added",
+          "source": "Task tag added",
           "message": "任務標籤已新增"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
@@ -2104,7 +2104,7 @@
           "message": "將監控標籤新增狀況之任務的唯一識別碼"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
-          "source": "Team Added",
+          "source": "Team added",
           "message": "已新增團隊"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "將監控新團隊建立情況之工作區的唯一識別碼"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
-          "source": "User Added",
+          "source": "User added",
           "message": "已新增使用者"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
@@ -2152,7 +2152,7 @@
           "message": "將監控新使用者新增情況之工作區的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
-          "source": "Tag Created",
+          "source": "Tag created",
           "message": "標籤已建立"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
@@ -2176,7 +2176,7 @@
           "message": "將監控新標籤建立狀況之工作區的唯一識別碼"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
-          "source": "Task Moved to Section",
+          "source": "Task moved to section",
           "message": "任務已移動至區段"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {

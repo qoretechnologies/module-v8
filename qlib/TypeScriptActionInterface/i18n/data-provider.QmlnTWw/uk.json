@@ -28,7 +28,7 @@
           "message": "Зробіть власний виклик HTTP / REST API до **BigML**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базового URL API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
         },
         "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Anomaly Score",
+          "source": "Create anomaly score",
           "message": "Створити оцінку аномальності"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Генеруйте оцінку аномальності, застосовуючи навчений детектор аномалій до вхідних даних. Це допомагає виявити незвичні шаблони або викиди у вашому наборі даних."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "Детектор аномалій"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Виберіть модель навченого детектора аномалій, яка використовуватиметься для генерації оцінки аномальності для вхідних даних."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Вхідні дані"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Необов'язковий проєкт для організації цієї оцінки аномальності з пов'язаними ресурсами для кращого управління робочим процесом."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Batch Anomaly Score",
+          "source": "Create batch anomaly score",
           "message": "Створити пакетну оцінку аномальності"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Генеруйте оцінки аномальності для кількох точок даних одночасно, застосовуючи детектор аномалій до набору даних. Це ефективно для обробки великих обсягів даних."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "Детектор аномалій"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Необов'язковий проєкт для організації цієї пакетної оцінки аномальності з пов'язаними ресурсами для кращого управління робочим процесом."
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.display_name": {
-          "source": "List Anomaly Detectors",
+          "source": "List anomaly detectors",
           "message": "Список детекторів аномалій"
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.display_name": {
-          "source": "List Datasets",
+          "source": "List datasets",
           "message": "Список наборів даних"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.display_name": {
-          "source": "List Models",
+          "source": "List models",
           "message": "Список моделей"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.short_desc": {
@@ -2844,7 +2844,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Отримати список проєктів"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -3060,7 +3060,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.display_name": {
-          "source": "List Sources",
+          "source": "List sources",
           "message": "Список джерел"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.short_desc": {
@@ -3876,7 +3876,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.display_name": {
-          "source": "List Clusters",
+          "source": "List clusters",
           "message": "Список кластерів"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.short_desc": {
@@ -4628,7 +4628,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.display_name": {
-          "source": "Create Centroid",
+          "source": "Create centroid",
           "message": "Створити центроїд"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.short_desc": {
@@ -4640,7 +4640,7 @@
           "message": "Визначте, який центроїд кластера є найближчим до наданих вхідних даних, використовуючи навчену модель кластеризації. Це допомагає класифікувати нові точки даних у існуючі кластери."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.display_name": {
-          "source": "Cluster Model",
+          "source": "Cluster model",
           "message": "Модель кластеризації"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.short_desc": {
@@ -4652,7 +4652,7 @@
           "message": "Виберіть навчену модель кластеризації, яка буде використовуватися для пошуку найближчого центроїда для вхідних даних."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Вхідні дані"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -4712,7 +4712,7 @@
           "message": "Необов'язковий проєкт для організації цього обчислення центроїда з пов'язаними ресурсами для кращого управління робочим процесом."
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.display_name": {
-          "source": "List Ensembles",
+          "source": "List ensembles",
           "message": "Список ансамблів"
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.short_desc": {
@@ -4888,7 +4888,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.display_name": {
-          "source": "List Deep Networks",
+          "source": "List deep networks",
           "message": "Список глибоких мереж"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.short_desc": {
@@ -5064,7 +5064,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.display_name": {
-          "source": "List Topic Models",
+          "source": "List topic models",
           "message": "Список тематичних моделей"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.short_desc": {
@@ -5240,7 +5240,7 @@
           "message": "За спаданням"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.display_name": {
-          "source": "Create Prediction",
+          "source": "Create prediction",
           "message": "Створити прогноз"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.short_desc": {
@@ -5276,7 +5276,7 @@
           "message": "Виберіть навчений ансамбль, який буде використовуватися для генерації прогнозів для вхідних даних."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.display_name": {
-          "source": "Deep Network",
+          "source": "Deep network",
           "message": "Глибока мережа"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.short_desc": {
@@ -5288,7 +5288,7 @@
           "message": "Виберіть навчену глибоку мережу, яка буде використовуватися для генерації прогнозів для вхідних даних."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Вхідні дані"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5348,7 +5348,7 @@
           "message": "Необов'язковий проєкт для організації цього прогнозу з пов'язаними ресурсами для кращого управління робочим процесом."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Create Topic Distribution",
+          "source": "Create topic distribution",
           "message": "Створити розподіл тем"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -5360,7 +5360,7 @@
           "message": "Створюйте розподіли тем для текстових даних за допомогою навченої тематичної моделі. Це допомагає зрозуміти основні теми у вашому тексті та їх відносну важливість."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.display_name": {
-          "source": "Topic Model",
+          "source": "Topic model",
           "message": "Тематична модель"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.short_desc": {
@@ -5372,7 +5372,7 @@
           "message": "Оберіть навчену тематичну модель, яка використовуватиметься для генерації розподілів тем для вхідних текстових даних."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "Вхідні дані"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5432,7 +5432,7 @@
           "message": "Необов'язковий проєкт для організації цього розподілу тем із пов'язаними ресурсами для кращого керування робочим процесом."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.display_name": {
-          "source": "New Resource",
+          "source": "New resource",
           "message": "Новий ресурс"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.short_desc": {
@@ -5444,7 +5444,7 @@
           "message": "Відстежуйте свій обліковий запис BigML на наявність щойно створених ресурсів, таких як моделі, набори даних, кластери та інші ресурси машинного навчання. Цей тригер дозволяє автоматизувати робочі процеси у разі створення певних типів ресурсів."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.display_name": {
-          "source": "Resource Type",
+          "source": "Resource type",
           "message": "Тип ресурсу"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.short_desc": {
@@ -5480,7 +5480,7 @@
           "message": "Тематична модель"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.display_name": {
-          "source": "Name Filter",
+          "source": "Name filter",
           "message": "Фільтр за назвою"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.short_desc": {
@@ -5492,7 +5492,7 @@
           "message": "Необов'язковий фільтр для спрацьовування тригера лише для ресурсів, назви яких містять цей текст. Залиште порожнім, щоб відстежувати всі ресурси вибраного типу."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.display_name": {
-          "source": "Project Filter",
+          "source": "Project filter",
           "message": "Фільтр за проєктом"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.short_desc": {
@@ -5504,7 +5504,7 @@
           "message": "Необов'язковий фільтр для спрацьовування тригера лише для ресурсів, створених у межах певного проєкту. Залиште порожнім, щоб відстежувати ресурси в усіх проєктах."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.display_name": {
-          "source": "Tags Filter",
+          "source": "Tags filter",
           "message": "Фільтр за тегами"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.short_desc": {

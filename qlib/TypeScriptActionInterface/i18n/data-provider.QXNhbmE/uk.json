@@ -28,7 +28,7 @@
           "message": "Зробіть настроюваний виклик HTTP / REST API до **Asana**, використовуючи автентифікацію налаштованого підключення.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як стандартні дії в цій програмі."
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.QXNhbmE.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Пошук записів"
         },
         "app.QXNhbmE.action.c2VhcmNo.short_desc": {
@@ -1720,7 +1720,7 @@
           "message": "Конкретний існуючий робочий простір можна оновити, зробивши запит PUT на URL-адресу цього робочого простору. Оновлено буде лише поля, вказані в блоці даних; усі невказані поля залишаться без змін.\nНаразі єдиним полем, яке можна змінити для робочого простору, є його назва.\nПовертає повний оновлений запис робочого простору."
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
-          "source": "Attachment Added",
+          "source": "Attachment added",
           "message": "Вкладення додано"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
@@ -1756,7 +1756,7 @@
           "message": "Унікальний ідентифікатор проєкту, де відстежуватимуться дії з вкладеннями"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
-          "source": "Task ID (Optional)",
+          "source": "Task ID (optional)",
           "message": "ID завдання (необов'язково)"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
@@ -1768,7 +1768,7 @@
           "message": "Унікальний ідентифікатор конкретного завдання для відстеження. Якщо не вказано, вкладення з усіх завдань у проєкті запускатимуть робочий процес"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Subtask Completed",
+          "source": "Subtask completed",
           "message": "Підзавдання виконано"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1804,7 +1804,7 @@
           "message": "Унікальний ідентифікатор проєкту, де існує батьківське завдання"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID батьківського завдання"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "Унікальний ідентифікатор батьківського завдання, підзавдання якого будуть відстежуватися на предмет виконання"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Task Completed",
+          "source": "Task completed",
           "message": "Завдання виконано"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1852,7 +1852,7 @@
           "message": "Унікальний ідентифікатор проєкту, у якому відстежуватиметься виконання завдань"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
-          "source": "Project Task Added",
+          "source": "Project task added",
           "message": "Завдання проєкту додано"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
@@ -1888,7 +1888,7 @@
           "message": "Унікальний ідентифікатор проєкту, у якому відстежуватиметься створення нових завдань"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
-          "source": "Project Added",
+          "source": "Project added",
           "message": "Проєкт додано"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
@@ -1912,7 +1912,7 @@
           "message": "Унікальний ідентифікатор робочого простору, у якому відстежуватиметься створення нових проєктів"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
-          "source": "Task Comment Added",
+          "source": "Task comment added",
           "message": "Коментар до завдання додано"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
@@ -1960,7 +1960,7 @@
           "message": "Унікальний ідентифікатор завдання, у якому відстежуватимуться коментарі"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
-          "source": "Task Story Added",
+          "source": "Task story added",
           "message": "Додано історію завдання"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "Унікальний ідентифікатор завдання, де відстежуватиметься вся активність"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
-          "source": "Task Subtask Added",
+          "source": "Task subtask added",
           "message": "Додано підзавдання"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "Унікальний ідентифікатор проєкту, де існує батьківське завдання"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID батьківського завдання"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
@@ -2056,7 +2056,7 @@
           "message": "Унікальний ідентифікатор батьківського завдання, де відстежуватиметься створення підзавдань"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
-          "source": "Task Tag Added",
+          "source": "Task tag added",
           "message": "Тег завдання додано"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
@@ -2104,7 +2104,7 @@
           "message": "Унікальний ідентифікатор завдання, у якому відстежуватиметься додавання тегів"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
-          "source": "Team Added",
+          "source": "Team added",
           "message": "Команду додано"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "Унікальний ідентифікатор робочого простору, де відстежуватиметься створення нових команд"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
-          "source": "User Added",
+          "source": "User added",
           "message": "Користувача додано"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
@@ -2152,7 +2152,7 @@
           "message": "Унікальний ідентифікатор робочого простору, де відстежуватиметься додавання нових користувачів"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
-          "source": "Tag Created",
+          "source": "Tag created",
           "message": "Тег створено"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
@@ -2176,7 +2176,7 @@
           "message": "Унікальний ідентифікатор робочого простору, у якому відстежуватиметься створення нових тегів"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
-          "source": "Task Moved to Section",
+          "source": "Task moved to section",
           "message": "Завдання переміщено до розділу"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {

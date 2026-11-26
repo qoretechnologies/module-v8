@@ -28,7 +28,7 @@
           "message": "使用已設定之連線的驗證向 **Todoist** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基礎 URL)、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊返回。\n\n當端點尚未在此應用程式中公開為一級動作時，請使用此動作。"
         },
         "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.display_name": {
-          "source": "Add Comment to Project",
+          "source": "Add comment to project",
           "message": "新增評論至專案"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.short_desc": {
@@ -352,7 +352,7 @@
           "message": "在指定的 Todoist 專案上建立新評論。評論可用於提供最新資訊、備註，或與團隊成員就專案相關討論進行協作。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.display_name": {
-          "source": "Comment Content",
+          "source": "Comment content",
           "message": "評論內容"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.short_desc": {
@@ -376,7 +376,7 @@
           "message": "選取您要新增評論的 Todoist 專案。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.display_name": {
-          "source": "Add Comment to Task",
+          "source": "Add comment to task",
           "message": "新增評論至任務"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.short_desc": {
@@ -388,7 +388,7 @@
           "message": "在指定的 Todoist 任務上建立新評論。使用評論為特定任務新增備註、最新資訊或與團隊成員協作。"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.display_name": {
-          "source": "Comment Content",
+          "source": "Comment content",
           "message": "評論內容"
         },
         "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "選取您要新增評論的 Todoist 任務。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.display_name": {
-          "source": "Create Project",
+          "source": "Create project",
           "message": "建立專案"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.short_desc": {
@@ -424,7 +424,7 @@
           "message": "在 Todoist 中建立新專案。專案可協助您整理相關任務並與團隊成員協作。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.display_name": {
-          "source": "Project Name",
+          "source": "Project name",
           "message": "專案名稱"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "用於在 Todoist 介面中以視覺方式識別專案的顏色。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.display_name": {
-          "source": "View Style",
+          "source": "View style",
           "message": "檢視樣式"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.short_desc": {
@@ -484,7 +484,7 @@
           "message": "日曆"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.display_name": {
-          "source": "Is Favorite",
+          "source": "Is favorite",
           "message": "是否為最愛"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.short_desc": {
@@ -496,7 +496,7 @@
           "message": "啟用後，專案將出現在您的最愛區塊中以便快速存取。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "建立任務"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -508,7 +508,7 @@
           "message": "在 Todoist 中建立新任務。任務可以分配給專案、區段，並設定標籤、優先級、到期日等。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "任務內容"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "設定任務的優先順序層級。較高優先順序的任務會以顏色標記的旗標顯示：1 (緊急)、2 (高)、3 (一般)、4 (低)。"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "到期日"
         },
         "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
@@ -660,7 +660,7 @@
           "message": "天"
         },
         "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
+          "source": "Delete task",
           "message": "刪除任務"
         },
         "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.short_desc": {
@@ -684,7 +684,7 @@
           "message": "選取您要永久刪除的 Todoist 任務。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.display_name": {
-          "source": "Get Project Collaborators",
+          "source": "Get project collaborators",
           "message": "取得專案協作者"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.short_desc": {
@@ -732,7 +732,7 @@
           "message": "單一請求中要傳回的協作者數量上限。預設值為 50。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.display_name": {
-          "source": "Get Project",
+          "source": "Get project",
           "message": "取得專案"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.short_desc": {
@@ -756,7 +756,7 @@
           "message": "選取您要取得詳細資訊的 Todoist 專案。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "取得任務"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.short_desc": {
@@ -780,7 +780,7 @@
           "message": "選取您要取得詳細資訊的 Todoist 任務。"
         },
         "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.display_name": {
-          "source": "List Labels",
+          "source": "List labels",
           "message": "列出標籤"
         },
         "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.short_desc": {
@@ -816,7 +816,7 @@
           "message": "單次請求中要返回的標籤最大數量。預設值為 50。"
         },
         "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "列出專案"
         },
         "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -852,7 +852,7 @@
           "message": "單次請求中要返回的專案最大數量。預設值為 50。"
         },
         "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.display_name": {
-          "source": "List Sections",
+          "source": "List sections",
           "message": "列出區段"
         },
         "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.short_desc": {
@@ -900,7 +900,7 @@
           "message": "單次請求中要返回的區段最大數量。預設值為 50。"
         },
         "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "列出任務"
         },
         "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.short_desc": {
@@ -984,7 +984,7 @@
           "message": "僅擷取指派了特定標籤的任務。"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "更新工作"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -1008,7 +1008,7 @@
           "message": "選取您要修改的 Todoist 任務。"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "任務內容"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "變更優先順序層級：1 (緊急)、2 (高)、3 (一般)、4 (低)。"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "到期日"
         },
         "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
@@ -1148,7 +1148,7 @@
           "message": "天"
         },
         "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.display_name": {
-          "source": "Complete Task",
+          "source": "Complete task",
           "message": "完成任務"
         },
         "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.short_desc": {
@@ -1172,7 +1172,7 @@
           "message": "選取您要標記為完成的 Todoist 任務。"
         },
         "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.display_name": {
-          "source": "Move Task to Section",
+          "source": "Move task to section",
           "message": "移動任務至區段"
         },
         "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.short_desc": {
@@ -1220,7 +1220,7 @@
           "message": "您要將任務移至的專案。必須指定 section_id 或 project_id 其中之一。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.display_name": {
-          "source": "Get Tasks by Filter",
+          "source": "Get tasks by filter",
           "message": "依篩選條件取得任務"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.short_desc": {
@@ -1256,7 +1256,7 @@
           "message": "單一請求中要傳回的任務數量上限。預設值為 50。"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.display_name": {
-          "source": "Filter Query",
+          "source": "Filter query",
           "message": "篩選查詢"
         },
         "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.short_desc": {
@@ -1292,7 +1292,7 @@
           "message": "查看所有指派給您的任務"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
-          "source": "New Completed Task",
+          "source": "New completed task",
           "message": "新增已完成任務"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
@@ -1328,7 +1328,7 @@
           "message": "可選擇僅監控專案中特定區段已完成的任務。這可讓您追蹤工作流程特定領域的完成情況。"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.display_name": {
-          "source": "Filter Query",
+          "source": "Filter query",
           "message": "篩選查詢"
         },
         "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.short_desc": {

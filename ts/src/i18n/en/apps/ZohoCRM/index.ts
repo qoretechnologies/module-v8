@@ -272,7 +272,7 @@ const ZohoCRMAppEn = {
   },
   triggers: {
     new_record: {
-      displayName: 'New Record',
+      displayName: 'New record',
       shortDesc: 'Triggers when a new record is created in a Zoho CRM module',
       longDesc:
         'Monitors a specified Zoho CRM module for newly created records and fires when a new record is detected. The trigger polls for records sorted by Created Time in descending order. You can optionally filter records by phone, email, keywords, or specific field values to only trigger for records matching your criteria.',
@@ -284,25 +284,25 @@ const ZohoCRMAppEn = {
             'Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API.',
         },
         phone: {
-          displayName: 'Phone Filter',
+          displayName: 'Phone filter',
           shortDesc: 'Filter records by phone number',
           longDesc:
             'Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records.',
         },
         email: {
-          displayName: 'Email Filter',
+          displayName: 'Email filter',
           shortDesc: 'Filter records by email address',
           longDesc:
             'Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records.',
         },
         word: {
-          displayName: 'Keyword Search',
+          displayName: 'Keyword search',
           shortDesc: 'Filter records by keyword',
           longDesc:
             'Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search.',
         },
         field_filter: {
-          displayName: 'Field Filters',
+          displayName: 'Field filters',
           shortDesc: 'Filter records by specific field values',
           longDesc:
             'Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the "equals" operator for each field comparison.',
@@ -310,13 +310,13 @@ const ZohoCRMAppEn = {
             element_type: {
               fields: {
               field: {
-                displayName: 'Field Name',
+                displayName: 'Field name',
                 shortDesc: 'The API name of the field to filter on',
                 longDesc:
                   'Select or enter the field API name from the module. Available field names can be retrieved using the Fields Metadata API. The field must be searchable to be used in filtering.',
               },
               value: {
-                displayName: 'Field Value',
+                displayName: 'Field value',
                 shortDesc: 'The value that the field must equal',
                 longDesc:
                   'Enter the exact value that the field must equal for the record to match. The comparison uses the "equals" operator, so the field value must match this value exactly.',
@@ -330,7 +330,7 @@ const ZohoCRMAppEn = {
   },
   actions: {
     create_record: {
-      displayName: 'Create Record',
+      displayName: 'Create record',
       shortDesc: 'Create a new record in a Zoho CRM module',
       longDesc:
         'Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.',
@@ -342,7 +342,7 @@ const ZohoCRMAppEn = {
             'Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names.',
         },
         properties: {
-          displayName: 'Record Properties',
+          displayName: 'Record properties',
           shortDesc: 'Field values for the new record',
           longDesc:
             'Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.).',
@@ -350,7 +350,7 @@ const ZohoCRMAppEn = {
       },
     },
     update_record: {
-      displayName: 'Update Record',
+      displayName: 'Update record',
       shortDesc: 'Update an existing record in a Zoho CRM module',
       longDesc:
         'Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.',
@@ -368,7 +368,7 @@ const ZohoCRMAppEn = {
             'Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module.',
         },
         properties: {
-          displayName: 'Updated Properties',
+          displayName: 'Updated properties',
           shortDesc: 'Field values to update on the record',
           longDesc:
             'Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules.',
@@ -376,7 +376,7 @@ const ZohoCRMAppEn = {
       },
     },
     delete_record: {
-      displayName: 'Delete Record',
+      displayName: 'Delete record',
       shortDesc: 'Delete a record from a Zoho CRM module',
       longDesc:
         'Permanently deletes a specific record from the specified Zoho CRM module using its unique record ID. If the module has the Recycle Bin feature enabled, the deleted record will be moved to the Recycle Bin and can be restored. Otherwise, the deletion is permanent. The user must have delete permissions for the module.',
@@ -396,7 +396,7 @@ const ZohoCRMAppEn = {
       },
     },
     get_record: {
-      displayName: 'Get Record',
+      displayName: 'Get record',
       shortDesc: 'Retrieve a single record from a Zoho CRM module',
       longDesc:
         'Fetches detailed information about a specific record from the specified Zoho CRM module using its unique record ID. Returns all field values for the record including standard fields (Created_Time, Modified_Time, Created_By, Modified_By) and custom fields. Subform data, multi-select lookup fields, and multi-user lookup fields are also included in the response.',
@@ -416,7 +416,7 @@ const ZohoCRMAppEn = {
       },
     },
     list_records: {
-      displayName: 'List Records',
+      displayName: 'List records',
       shortDesc: 'Retrieve multiple records from a Zoho CRM module',
       longDesc:
         'Fetches a list of records from the specified Zoho CRM module with support for field selection, pagination, sorting, and filtering. You can specify which fields to return (maximum 50 field API names), sort records by a field in ascending or descending order, and navigate through pages using tokens. Returns both the records data and pagination tokens for retrieving subsequent pages.',
@@ -428,19 +428,19 @@ const ZohoCRMAppEn = {
             'Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions.',
         },
         fields: {
-          displayName: 'Fields to Return',
+          displayName: 'Fields to return',
           shortDesc: 'Specify which fields to include in the response',
           longDesc:
             'Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed.',
         },
         per_page: {
-          displayName: 'Records Per Page',
+          displayName: 'Records per page',
           shortDesc: 'Number of records to return per page',
           longDesc:
             'Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets.',
         },
         page_token: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for retrieving the next page of results',
           longDesc:
             'Use the next_page_token value from a previous response to retrieve the next page of records. Leave this empty for the first page. The page_token is bound to the parameters used in the request, so do not change other parameters when using a token.',
@@ -452,20 +452,20 @@ const ZohoCRMAppEn = {
             'Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records.',
         },
         sort: {
-          displayName: 'Sort Configuration',
+          displayName: 'Sort configuration',
           shortDesc: 'Configure how to sort the returned records',
           longDesc:
             'Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order.',
           type: {
             fields: {
               sort_by: {
-                displayName: 'Sort By Field',
+                displayName: 'Sort by field',
                 shortDesc: 'The field to use for sorting records',
                 longDesc:
                   'Select or enter the field API name to sort records by. Common options include id, Created_Time, and Modified_Time. You can also use custom field API names that support sorting.',
               },
               order: {
-                displayName: 'Sort Order',
+                displayName: 'Sort order',
                 shortDesc: 'Sort in ascending or descending order',
                 longDesc:
                   'Choose whether to sort records in ascending order (asc - oldest first) or descending order (desc - newest first). The default value is descending.',
@@ -476,13 +476,13 @@ const ZohoCRMAppEn = {
       },
     },
     list_modules: {
-      displayName: 'List Modules',
+      displayName: 'List modules',
       shortDesc: 'Retrieve all available modules in Zoho CRM',
       longDesc:
         'Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create.',
       options: {
         status: {
-          displayName: 'Module Status Filter',
+          displayName: 'Module status filter',
           shortDesc: 'Filter modules by their status',
           longDesc:
             'Optional filter to retrieve only modules with specific statuses. Options include: visible (active modules shown in the UI), user_hidden (modules hidden by users), system_hidden (modules hidden by the system), and scheduled_for_deletion (modules marked for deletion). When not specified, all modules are returned.',
@@ -490,7 +490,7 @@ const ZohoCRMAppEn = {
       },
     },
     list_fields: {
-      displayName: 'List Module Fields',
+      displayName: 'List module fields',
       shortDesc: 'Retrieve field metadata for a Zoho CRM module',
       longDesc:
         'Fetches comprehensive metadata about all fields in a specific Zoho CRM module including field types, labels, API names, data types, validation rules, picklist values, lookup configurations, and permissions. This information is essential for understanding module structure, building dynamic forms, or validating data before creating or updating records.',
@@ -504,25 +504,25 @@ const ZohoCRMAppEn = {
       },
     },
     list_users: {
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'Retrieve users from your Zoho CRM organization',
       longDesc:
         'Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status.',
       options: {
         per_page: {
-          displayName: 'Users Per Page',
+          displayName: 'Users per page',
           shortDesc: 'Number of users to return per page',
           longDesc:
             'Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets.',
         },
         page: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'The page number for pagination',
           longDesc:
             'Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data.',
         },
         type: {
-          displayName: 'User Type Filter',
+          displayName: 'User type filter',
           shortDesc: 'Filter users by type or status',
           longDesc:
             'Optional filter to retrieve specific categories of users. Options include: AllUsers (both active and inactive), ActiveUsers (only active users), DeactiveUsers (deactivated users), ConfirmedUsers (users who confirmed their accounts), NotConfirmedUsers (unconfirmed users), DeletedUsers (deleted users), ActiveConfirmedUsers (active and confirmed), AdminUsers (users with Administrator privileges), ActiveConfirmedAdmins (active confirmed administrators), and CurrentUser (the currently authenticated CRM user).',
@@ -530,7 +530,7 @@ const ZohoCRMAppEn = {
       },
     },
     list_tags: {
-      displayName: 'List Tags',
+      displayName: 'List tags',
       shortDesc: 'Retrieve tags available in a Zoho CRM module',
       longDesc:
         'Fetches all tags that have been created for a specific Zoho CRM module. Tags are labels used to categorize and organize records within a module for easier searching and filtering. Each tag includes its name, ID, color code, and metadata about when it was created and modified. You can add a maximum of 100 tags per module and 10 tags per record.',
@@ -542,7 +542,7 @@ const ZohoCRMAppEn = {
             'Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags.',
         },
         my_tags: {
-          displayName: 'My Tags Only',
+          displayName: 'My tags only',
           shortDesc: 'Retrieve only tags created by you',
           longDesc:
             'When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them.',
@@ -550,7 +550,7 @@ const ZohoCRMAppEn = {
       },
     },
     add_tags_to_records: {
-      displayName: 'Add Tags to Records',
+      displayName: 'Add tags to records',
       shortDesc: 'Add tags to one or more records in a module',
       longDesc:
         'Adds one or more tags to specified records in a Zoho CRM module. Tags are labels that help categorize and organize records for easier management, filtering, and searching. You can add up to 10 tags per record and a maximum of 100 tags can exist per module. Returns the count of successfully tagged records and locked records that could not be tagged.',
@@ -562,7 +562,7 @@ const ZohoCRMAppEn = {
             'Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records.',
         },
         tags: {
-          displayName: 'Tags to Add',
+          displayName: 'Tags to add',
           shortDesc: 'List of tags to add to the records',
           longDesc:
             'Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.',
@@ -576,13 +576,13 @@ const ZohoCRMAppEn = {
                     'The unique ID of an existing tag in the module. This ID takes precedence over the name field. Use the List Tags action to retrieve tag IDs. The tag must already exist in the module.',
                 },
                 name: {
-                  displayName: 'Tag Name',
+                  displayName: 'Tag name',
                   shortDesc: 'The display name of the tag',
                   longDesc:
                     'The display name of the tag. When both ID and name are provided, the ID takes precedence. If only the name is provided, the system will look up the tag by name.',
                 },
                 color_code: {
-                  displayName: 'Color Code',
+                  displayName: 'Color code',
                   shortDesc: 'Optional hexadecimal color code for the tag',
                   longDesc:
                     'Optional hexadecimal color code for visual identification of the tag (e.g., #F17574, #57B1FD). The allowed color codes are predefined in Zoho CRM. If not specified or set to null, the tag will use its default color.',
@@ -598,7 +598,7 @@ const ZohoCRMAppEn = {
             'List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs.',
         },
         over_write: {
-          displayName: 'Overwrite Existing Tags',
+          displayName: 'Overwrite existing tags',
           shortDesc: 'Replace all existing tags on the records',
           longDesc:
             'When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags.',
@@ -608,7 +608,7 @@ const ZohoCRMAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -629,7 +629,7 @@ const ZohoCRMAppEn = {
   },
   upsertOptions: {
     duplicate_check_fields: {
-      displayName: 'Duplicate Check Fields',
+      displayName: 'Duplicate check fields',
       shortDesc: 'Fields to check for duplicate records',
       longDesc:
         'A list of field API names used to check for duplicate records during upsert. If a record with matching values for these fields exists, it will be updated; otherwise, a new record will be created.',

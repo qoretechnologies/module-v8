@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do **Trello** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL rozhraní API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrací jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci ještě nejsou dostupné jako prvotřídní akce."
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.VHJlbGxv.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhledat záznamy"
         },
         "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Vytvořit nový pracovní prostor"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Zobrazovaný název"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Vyhledat členy Trello."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
-          "source": "Card Due",
+          "source": "Card due",
           "message": "Karta po termínu"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Vyberte konkrétní seznam pro sledování karet po termínu. Vyžadováno pouze v případě, že je parametr Source nastaven na „list“."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
-          "source": "Include Completed Cards",
+          "source": "Include completed cards",
           "message": "Zahrnout dokončené karty"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Pokud je povoleno, trigger zahrne i karty po termínu, které byly označeny jako dokončené. Ve výchozím nastavení jsou zahrnuty pouze nedokončené karty po termínu."
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
-          "source": "New Board",
+          "source": "New board",
           "message": "Nová nástěnka"
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Tento trigger se spustí při vytvoření nové nástěnky Trello nebo jejím nasdílení ověřenému uživateli."
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
-          "source": "New Card",
+          "source": "New card",
           "message": "Nová karta"
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Vyberte konkrétní seznam ke sledování nových karet. Vyžadováno pouze v případě, že je položka Source nastavena na hodnotu \"list\"."
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
-          "source": "New Label",
+          "source": "New label",
           "message": "Nový štítek"
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Vyberte nástěnku Trello, na které chcete sledovat vytváření nových štítků."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "Nový seznam"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Vyberte nástěnku Trello, na které chcete sledovat vytváření nových seznamů."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
-          "source": "Include Archived Lists",
+          "source": "Include archived lists",
           "message": "Zahrnout archivované seznamy"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "Pokud je tato možnost povolena, trigger zahrne i nové archivované seznamy. Ve výchozím nastavení jsou zahrnuty pouze otevřené seznamy."
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
-          "source": "New Member",
+          "source": "New member",
           "message": "Nový člen"
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {

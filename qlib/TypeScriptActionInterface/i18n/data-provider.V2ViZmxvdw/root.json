@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Webflow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.display_name": {
-          "source": "Delete Item",
-          "message": "Delete Item"
+          "source": "Delete item",
+          "message": "Delete item"
         },
         "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.short_desc": {
           "source": "Delete an item from a Webflow collection",
@@ -388,8 +388,8 @@
           "message": "Select the Webflow site to filter collections from (optional)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
-          "message": "Get Collection"
+          "source": "Get collection",
+          "message": "Get collection"
         },
         "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
           "source": "Retrieve information about a Webflow collection",
@@ -424,8 +424,8 @@
           "message": "Select the specific Webflow collection you want to get information about"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.display_name": {
-          "source": "Get Item",
-          "message": "Get Item"
+          "source": "Get item",
+          "message": "Get item"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.short_desc": {
           "source": "Retrieve a specific item from a Webflow collection",
@@ -472,8 +472,8 @@
           "message": "Select the Webflow site to filter collections from (optional)"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
-          "message": "CMS Locale ID"
+          "source": "CMS locale ID",
+          "message": "CMS locale ID"
         },
         "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
           "source": "The locale ID for the item",
@@ -484,8 +484,8 @@
           "message": "Specify the CMS locale ID if working with a multi-locale site"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
-          "message": "Get Order"
+          "source": "Get order",
+          "message": "Get order"
         },
         "app.V2ViZmxvdw.action.Z2V0X29yZGVy.short_desc": {
           "source": "Retrieve a specific order from Webflow",
@@ -520,8 +520,8 @@
           "message": "Select the specific order you want to retrieve information about"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.display_name": {
-          "source": "Get Site",
-          "message": "Get Site"
+          "source": "Get site",
+          "message": "Get site"
         },
         "app.V2ViZmxvdw.action.Z2V0X3NpdGU.short_desc": {
           "source": "Retrieve information about a Webflow site",
@@ -544,8 +544,8 @@
           "message": "Select the specific Webflow site you want to get information about"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
-          "message": "List Collections"
+          "source": "List collections",
+          "message": "List collections"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
           "source": "List all collections from a Webflow site",
@@ -568,8 +568,8 @@
           "message": "Select the Webflow site to list collections from"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.display_name": {
-          "source": "List Custom Domains",
-          "message": "List Custom Domains"
+          "source": "List custom domains",
+          "message": "List custom domains"
         },
         "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.short_desc": {
           "source": "List custom domains for a Webflow site",
@@ -592,8 +592,8 @@
           "message": "Select the Webflow site to list custom domains from"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.display_name": {
-          "source": "List Items",
-          "message": "List Items"
+          "source": "List items",
+          "message": "List items"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.short_desc": {
           "source": "List items from a Webflow collection",
@@ -628,8 +628,8 @@
           "message": "Select the Webflow collection you want to list items from"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
-          "message": "CMS Locale ID"
+          "source": "CMS locale ID",
+          "message": "CMS locale ID"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.short_desc": {
           "source": "The locale ID for filtering items",
@@ -688,8 +688,8 @@
           "message": "Filter items by their slug field"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.display_name": {
-          "source": "Last Published",
-          "message": "Last Published"
+          "source": "Last published",
+          "message": "Last published"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.short_desc": {
           "source": "Filter by publication date range",
@@ -700,8 +700,8 @@
           "message": "Filter items by their last published date range"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.display_name": {
-          "source": "Greater Than or Equal To",
-          "message": "Greater Than or Equal To"
+          "source": "Greater than or equal to",
+          "message": "Greater than or equal to"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.Z3Rl.short_desc": {
           "source": "Items published after or on this date",
@@ -712,8 +712,8 @@
           "message": "Include items published after or on this date"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.display_name": {
-          "source": "Less Than or Equal To",
-          "message": "Less Than or Equal To"
+          "source": "Less than or equal to",
+          "message": "Less than or equal to"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.field.bHRl.short_desc": {
           "source": "Items published before or on this date",
@@ -724,8 +724,8 @@
           "message": "Include items published before or on this date"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.short_desc": {
           "source": "Field to sort items by",
@@ -748,8 +748,8 @@
           "message": "Slug"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
-          "message": "Sort Order"
+          "source": "Sort order",
+          "message": "Sort order"
         },
         "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.short_desc": {
           "source": "Sort direction",
@@ -768,8 +768,8 @@
           "message": "Descending"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.display_name": {
-          "source": "List Orders",
-          "message": "List Orders"
+          "source": "List orders",
+          "message": "List orders"
         },
         "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.short_desc": {
           "source": "List orders from a Webflow site",
@@ -852,8 +852,8 @@
           "message": "The maximum number of orders to return per page (default: 20)"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.display_name": {
-          "source": "List Sites",
-          "message": "List Sites"
+          "source": "List sites",
+          "message": "List sites"
         },
         "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.short_desc": {
           "source": "List all Webflow sites",
@@ -864,8 +864,8 @@
           "message": "Retrieve a list of all Webflow sites accessible with the current authentication token."
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.display_name": {
-          "source": "Mark Order Status",
-          "message": "Mark Order Status"
+          "source": "Mark order status",
+          "message": "Mark order status"
         },
         "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.short_desc": {
           "source": "Update the status of a Webflow order",
@@ -924,8 +924,8 @@
           "message": "Refunded"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.display_name": {
-          "source": "Publish Site",
-          "message": "Publish Site"
+          "source": "Publish site",
+          "message": "Publish site"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.short_desc": {
           "source": "Publish a Webflow site",
@@ -948,8 +948,8 @@
           "message": "Select the Webflow site you want to publish"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.display_name": {
-          "source": "Custom Domains",
-          "message": "Custom Domains"
+          "source": "Custom domains",
+          "message": "Custom domains"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.short_desc": {
           "source": "Custom domains to publish to",
@@ -960,8 +960,8 @@
           "message": "Specify custom domains to publish the site to (optional)"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.display_name": {
-          "source": "Publish to Webflow Subdomain",
-          "message": "Publish to Webflow Subdomain"
+          "source": "Publish to Webflow subdomain",
+          "message": "Publish to Webflow subdomain"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.short_desc": {
           "source": "Whether to publish to Webflow subdomain",
@@ -972,8 +972,8 @@
           "message": "Whether to publish the site to its Webflow subdomain"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.display_name": {
-          "source": "Publish Item",
-          "message": "Publish Item"
+          "source": "Publish item",
+          "message": "Publish item"
         },
         "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.short_desc": {
           "source": "Publish items from a Webflow collection",
@@ -1020,8 +1020,8 @@
           "message": "Select the Webflow site to filter collections from (optional)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.display_name": {
-          "source": "Create Item",
-          "message": "Create Item"
+          "source": "Create item",
+          "message": "Create item"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.short_desc": {
           "source": "Create a new item in a Webflow collection",
@@ -1056,8 +1056,8 @@
           "message": "Select the Webflow collection where you want to create the new item"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
-          "message": "Is Archived"
+          "source": "Is archived",
+          "message": "Is archived"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
           "source": "Whether the item should be archived",
@@ -1068,8 +1068,8 @@
           "message": "Set to true if you want the item to be archived upon creation"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
-          "message": "Is Draft"
+          "source": "Is draft",
+          "message": "Is draft"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
           "source": "Whether the item should be a draft",
@@ -1080,8 +1080,8 @@
           "message": "Set to true if you want the item to be saved as a draft (default: true)"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
-          "message": "CMS Locale ID"
+          "source": "CMS locale ID",
+          "message": "CMS locale ID"
         },
         "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
           "source": "The locale ID for the item",
@@ -1092,8 +1092,8 @@
           "message": "Specify the CMS locale ID if working with a multi-locale site"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.display_name": {
-          "source": "Update Item",
-          "message": "Update Item"
+          "source": "Update item",
+          "message": "Update item"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.short_desc": {
           "source": "Update an existing item in a Webflow collection",
@@ -1140,8 +1140,8 @@
           "message": "Select the specific item you want to update"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
-          "source": "Is Archived",
-          "message": "Is Archived"
+          "source": "Is archived",
+          "message": "Is archived"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
           "source": "Whether the item should be archived",
@@ -1152,8 +1152,8 @@
           "message": "Set to true to archive the item, false to unarchive it"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
-          "source": "Is Draft",
-          "message": "Is Draft"
+          "source": "Is draft",
+          "message": "Is draft"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
           "source": "Whether the item should be a draft",
@@ -1164,8 +1164,8 @@
           "message": "Set to true to save the item as a draft, false to make it live"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
-          "source": "CMS Locale ID",
-          "message": "CMS Locale ID"
+          "source": "CMS locale ID",
+          "message": "CMS locale ID"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
           "source": "The locale ID for the item",
@@ -1176,8 +1176,8 @@
           "message": "Specify the CMS locale ID if working with a multi-locale site"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.display_name": {
-          "source": "New Item",
-          "message": "New Item"
+          "source": "New item",
+          "message": "New item"
         },
         "app.V2ViZmxvdw.action.bmV3X2l0ZW0.short_desc": {
           "source": "Triggered when a new item is created in a collection",
@@ -1200,8 +1200,8 @@
           "message": "Select the Webflow site where you want to monitor for new item creation events"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.display_name": {
-          "source": "Updated Item",
-          "message": "Updated Item"
+          "source": "Updated item",
+          "message": "Updated item"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.short_desc": {
           "source": "Triggered when an item is updated in a collection",
@@ -1224,8 +1224,8 @@
           "message": "Select the Webflow site where you want to monitor for item update events"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.display_name": {
-          "source": "New Order",
-          "message": "New Order"
+          "source": "New order",
+          "message": "New order"
         },
         "app.V2ViZmxvdw.action.bmV3X29yZGVy.short_desc": {
           "source": "Triggered when a new order is placed",
@@ -1248,8 +1248,8 @@
           "message": "Select the Webflow site where you want to monitor for new order events"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.display_name": {
-          "source": "Updated Order",
-          "message": "Updated Order"
+          "source": "Updated order",
+          "message": "Updated order"
         },
         "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.short_desc": {
           "source": "Triggered when an order status is updated",

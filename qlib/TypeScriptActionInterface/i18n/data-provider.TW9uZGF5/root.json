@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Monday.com** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.TW9uZGF5.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.TW9uZGF5.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Monday\"",
@@ -460,8 +460,8 @@
           "message": "The table name"
         },
         "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.display_name": {
-          "source": "Archive Record",
-          "message": "Archive Record"
+          "source": "Archive record",
+          "message": "Archive record"
         },
         "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.short_desc": {
           "source": "Move a record to the archive.",
@@ -496,8 +496,8 @@
           "message": "The unique identifier of the record you want to archive."
         },
         "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.display_name": {
-          "source": "Clear Column Value",
-          "message": "Clear Column Value"
+          "source": "Clear column value",
+          "message": "Clear column value"
         },
         "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.short_desc": {
           "source": "Remove data from a column in a record.",
@@ -544,8 +544,8 @@
           "message": "The unique identifier of the column you want to clear."
         },
         "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
-          "message": "Create Record"
+          "source": "Create record",
+          "message": "Create record"
         },
         "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.short_desc": {
           "source": "Add a new record to a board.",
@@ -580,8 +580,8 @@
           "message": "The unique identifier of the group where you want to create a new record."
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.display_name": {
-          "source": "Custom Action",
-          "message": "Custom Action"
+          "source": "Custom action",
+          "message": "Custom action"
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.short_desc": {
           "source": "Perform a user-defined operation.",
@@ -604,8 +604,8 @@
           "message": "The payload for your custom action"
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.display_name": {
-          "source": "Action Name",
-          "message": "Action Name"
+          "source": "Action name",
+          "message": "Action name"
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.short_desc": {
           "source": "The name of the custom action to execute",
@@ -616,8 +616,8 @@
           "message": "The name of the custom action to execute"
         },
         "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
-          "message": "Delete Record"
+          "source": "Delete record",
+          "message": "Delete record"
         },
         "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.short_desc": {
           "source": "Permanently remove a record.",
@@ -652,8 +652,8 @@
           "message": "The unique identifier of the record you want to delete."
         },
         "app.TW9uZGF5.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
-          "message": "Get Record"
+          "source": "Get record",
+          "message": "Get record"
         },
         "app.TW9uZGF5.action.Z2V0X3JlY29yZA.short_desc": {
           "source": "Retrieve details of a specific record.",
@@ -688,8 +688,8 @@
           "message": "The unique identifier of the record you want to get."
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.display_name": {
-          "source": "Move Record",
-          "message": "Move Record"
+          "source": "Move record",
+          "message": "Move record"
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.short_desc": {
           "source": "Transfer a record to another group or board.",
@@ -724,8 +724,8 @@
           "message": "The unique identifier of the record you want to move."
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.display_name": {
-          "source": "Destination Group ID",
-          "message": "Destination Group ID"
+          "source": "Destination group ID",
+          "message": "Destination group ID"
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.short_desc": {
           "source": "The ID of the group to move the record to.",
@@ -736,8 +736,8 @@
           "message": "The unique identifier of the group you want to move the record to."
         },
         "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.short_desc": {
           "source": "Find records matching specific criteria.",
@@ -808,8 +808,8 @@
           "message": "The cursor to use for pagination."
         },
         "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.display_name": {
-          "source": "Update Record",
-          "message": "Update Record"
+          "source": "Update record",
+          "message": "Update record"
         },
         "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.short_desc": {
           "source": "Modify the values of a record's columns.",
@@ -844,8 +844,8 @@
           "message": "The unique identifier of the record you want to update."
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.display_name": {
-          "source": "New Record Moved To Group",
-          "message": "New Record Moved To Group"
+          "source": "New record moved to group",
+          "message": "New record moved to group"
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.short_desc": {
           "source": "Triggered when an item was moved to a group.",
@@ -880,8 +880,8 @@
           "message": "The unique identifier of the group you want to check for new records in."
         },
         "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.display_name": {
-          "source": "Record Column Value Updated",
-          "message": "Record Column Value Updated"
+          "source": "Record column value updated",
+          "message": "Record column value updated"
         },
         "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.short_desc": {
           "source": "Triggered when a record column value is updated.",
@@ -916,8 +916,8 @@
           "message": "The unique identifier of the column that should be checked for new value."
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
-          "message": "New Record"
+          "source": "New record",
+          "message": "New record"
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZA.short_desc": {
           "source": "Triggered when a new item is created.",
@@ -952,8 +952,8 @@
           "message": "The unique identifier of the group you want to check for new records in."
         },
         "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
-          "source": "Updated Record",
-          "message": "Updated Record"
+          "source": "Updated record",
+          "message": "Updated record"
         },
         "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
           "source": "Triggered when an item is updated.",

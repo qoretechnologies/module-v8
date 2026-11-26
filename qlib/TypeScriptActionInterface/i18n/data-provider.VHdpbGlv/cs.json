@@ -28,7 +28,7 @@
           "message": "Proveďte vlastní volání HTTP / REST API do služby **Twilio** s využitím autentizace nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci k dispozici jako samostatné akce."
         },
         "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "Get a Transcription",
+          "source": "Get a transcription",
           "message": "Získat přepis"
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) přepisu, který se má načíst. Identifikátory Transcription SID začínají na \"TR\"."
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
-          "source": "List Transcriptions",
+          "source": "List transcriptions",
           "message": "Zobrazit seznam přepisů"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Maximální počet vrácených záznamů přepisů. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Počet záznamů přepisů vrácených na stránku. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
-          "source": "Get a Recording",
+          "source": "Get a recording",
           "message": "Získat záznam"
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) záznamu, který se má načíst. Identifikátory Recording SID začínají na \"RE\"."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
-          "source": "List Recordings",
+          "source": "List recordings",
           "message": "Vypsat nahrávky"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Vrátit pouze nahrávky spojené s touto konkrétní konferencí. SID konference by mělo začínat na \"CF\"."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
-          "source": "Date Created After",
+          "source": "Date created after",
           "message": "Datum vytvoření od"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Vrátit pouze nahrávky vytvořené v toto datum nebo po něm. Zadejte datum ve formátu ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
-          "source": "Date Created Before",
+          "source": "Date created before",
           "message": "Datum vytvoření do"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vrátit pouze nahrávky vytvořené v toto datum nebo před ním. Zadejte datum ve formátu ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
-          "source": "Include Soft Deleted",
+          "source": "Include soft deleted",
           "message": "Zahrnout dočasně smazané"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Maximální počet záznamů nahrávek k vrácení. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Počet záznamů nahrávek k vrácení na stránku. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get a Message",
+          "source": "Get a message",
           "message": "Získat zprávu"
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) zprávy, která se má načíst. Identifikátory Message SID začínají na \"SM\" nebo \"MM\"."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "Seznam zpráv"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Vrátit pouze zprávy odeslané z tohoto telefonního čísla nebo alfanumerického ID odesílatele. Telefonní číslo by mělo být ve formátu E.164."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
-          "source": "Date Sent After",
+          "source": "Date sent after",
           "message": "Datum odeslání od"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Vrátit pouze zprávy odeslané v toto datum nebo po něm. Zadejte datum ve formátu ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
-          "source": "Date Sent Before",
+          "source": "Date sent before",
           "message": "Datum odeslání do"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Maximální počet záznamů zpráv k vrácení. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Počet záznamů zpráv k vrácení na stránku. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create a Message",
+          "source": "Create a message",
           "message": "Vytvořit zprávu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Seznam veřejně přístupných adres URL mediálních souborů k odeslání se zprávou. Podporováno pro zprávy MMS. Můžete zahrnout až 10 mediálních souborů."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
-          "source": "Messaging Service SID",
+          "source": "Messaging service SID",
           "message": "SID služby Messaging Service"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
@@ -724,7 +724,7 @@
           "message": "SID služby Messaging Service, která se má pro zprávu použít. Pokud je nastaveno, parametr from lze vynechat a Twilio vybere vhodné telefonní číslo z fondu Messaging Service."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "Adresa URL pro zpětné volání stavu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Adresa URL, na kterou Twilio provede POST pokaždé, když se změní stav zprávy. To vám umožní sledovat stav doručení vašich zpráv."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
-          "source": "Max Price",
+          "source": "Max price",
           "message": "Maximální cena"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Maximální celková přijatelná cena v USD za odeslání zprávy. Pokud náklady překročí tuto hodnotu, zpráva selže."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
-          "source": "Validity Period",
+          "source": "Validity period",
           "message": "Doba platnosti"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Počet sekund, po které může zpráva zůstat ve frontě. Pokud zpráva po této době nebude doručena, selže. Maximum je 14400 sekund (4 hodiny)."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
-          "source": "Schedule Type",
+          "source": "Schedule type",
           "message": "Typ plánování"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Pevný"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
-          "source": "Send At",
+          "source": "Send at",
           "message": "Odeslat v"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Čas, kdy má být naplánovaná zpráva odeslána, ve formátu ISO 8601. Tento parametr je povinný, pokud je parametr Schedule Type nastaven na hodnotu \"fixed\"."
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete a Message",
+          "source": "Delete a message",
           "message": "Smazat zprávu"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) zprávy, která se má smazat. Identifikátory Message SID začínají na \"SM\" nebo \"MM\"."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
-          "source": "List Message Media",
+          "source": "List message media",
           "message": "Vypsat média zprávy"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
@@ -848,7 +848,7 @@
           "message": "Maximální počet záznamů médií k vrácení. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
@@ -860,7 +860,7 @@
           "message": "Počet záznamů médií k vrácení na stránku. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
-          "source": "Create a Call",
+          "source": "Create a call",
           "message": "Vytvořit hovor"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Instrukce TwiML, které se mají provést při spojení hovoru. Pokud jsou zadány jak TwiML, tak URL, má TwiML přednost. Maximum je 4000 znaků."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
@@ -940,7 +940,7 @@
           "message": "POST"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "Adresa URL pro zpětné volání stavu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -952,7 +952,7 @@
           "message": "URL, na kterou Twilio odešle požadavek POST při změně stavu hovoru. Události, které spouštějí zpětná volání, můžete určit pomocí Status Callback Events."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
-          "source": "Status Callback Events",
+          "source": "Status callback events",
           "message": "Události zpětného volání stavu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
@@ -980,7 +980,7 @@
           "message": "Dokončeno"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
-          "source": "Status Callback Method",
+          "source": "Status callback method",
           "message": "Metoda zpětného volání stavu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Nastavte na true pro nahrávání celého hovoru. Záznam bude k dispozici po dokončení hovoru."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
-          "source": "Recording Channels",
+          "source": "Recording channels",
           "message": "Kanály záznamu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "Dual"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Recording Status Callback",
+          "source": "Recording status callback",
           "message": "Zpětné volání stavu záznamu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "URL, na kterou Twilio odešle požadavek POST, jakmile je záznam k dispozici. To vám umožní nahrávky okamžitě zpracovat nebo uložit."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
+          "source": "Machine detection",
           "message": "Detekce záznamníku"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Detekovat konec zprávy"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
-          "source": "Machine Detection Timeout",
+          "source": "Machine detection timeout",
           "message": "Časový limit detekce záznamníku"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "Počet sekund pro pokus o detekci záznamníku před vypršením časového limitu. Výchozí hodnota je 30 sekund."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
+          "source": "Send digits",
           "message": "Odeslat číslice"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "Řetězec kláves k vytočení po spojení. Platné znaky: 0-9, A-D, #, *, w (pauza 0,5 s), W (pauza 1 s). Například: \"W1234#\"."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
-          "source": "Time Limit",
+          "source": "Time limit",
           "message": "Časový limit"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
@@ -1112,7 +1112,7 @@
           "message": "Maximální doba trvání hovoru v sekundách. Po uplynutí této doby bude hovor automaticky ukončen."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
-          "source": "Create Call with Text-to-Speech",
+          "source": "Create call with text-to-speech",
           "message": "Vytvořit hovor s převodem textu na řeč"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Turečtina (Turecko)"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
-          "source": "Record Call",
+          "source": "Record call",
           "message": "Nahrát hovor"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "Nastavte na true pro nahrávání celého hovoru. Nahrávka bude k dispozici po dokončení hovoru a lze ji načíst pomocí akce List Recordings."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
-          "source": "Transcribe Recording",
+          "source": "Transcribe recording",
           "message": "Přepsat záznam"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
@@ -1480,7 +1480,7 @@
           "message": "Nastavte na true pro automatický přepis záznamu hovoru. To vyžaduje mít povolenou možnost Nahrát hovor. Přepis bude k dispozici po zpracování."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
-          "source": "Transcription Callback URL",
+          "source": "Transcription callback URL",
           "message": "URL zpětného volání přepisu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "URL adresa, na kterou Twilio odešle požadavek POST po dokončení přepisu. Umožňuje zpracovat nebo uložit přepisy ihned poté, co jsou k dispozici."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
+          "source": "Send digits",
           "message": "Odeslat číslice"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "Řetězec kláves k vytočení po spojení hovoru. Užitečné pro automatickou navigaci v telefonních nabídkách. Platné znaky: 0-9, #, *, w (čekání 0,5 sekundy). Například: \"w123#\" počká 0,5 sekundy a poté vytočí 123#."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "Adresa URL pro zpětné volání stavu"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -1528,7 +1528,7 @@
           "message": "Počet sekund čekání na přijetí hovoru před vypršením časového limitu. Výchozí hodnota je 60 sekund, maximum je 600 sekund."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
+          "source": "Machine detection",
           "message": "Detekce záznamníku"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "Detekovat konec zprávy"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
-          "source": "List Calls",
+          "source": "List calls",
           "message": "Zobrazit seznam hovorů"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "Bez odpovědi"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
-          "source": "Start Time After",
+          "source": "Start time after",
           "message": "Čas zahájení od"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
@@ -1640,7 +1640,7 @@
           "message": "Vrátit pouze hovory, které začaly v toto datum a čas nebo později. Zadejte datum ve formátu ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
-          "source": "Start Time Before",
+          "source": "Start time before",
           "message": "Čas zahájení do"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Vrátit pouze hovory, které začaly v toto datum a čas nebo dříve. Zadejte datum ve formátu ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
-          "source": "End Time After",
+          "source": "End time after",
           "message": "Čas ukončení od"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Vrátit pouze hovory, které skončily v toto datum a čas nebo později. Zadejte datum ve formátu ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
-          "source": "End Time Before",
+          "source": "End time before",
           "message": "Čas ukončení do"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
@@ -1688,7 +1688,7 @@
           "message": "Maximální počet vrácených záznamů hovorů. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "Počet záznamů hovorů vrácených na stránku. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
-          "source": "Get a Call",
+          "source": "Get a call",
           "message": "Získat hovor"
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) hovoru, který se má načíst. Identifikátory Call SID začínají na \"CA\"."
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
-          "source": "Delete a Call",
+          "source": "Delete a call",
           "message": "Smazat hovor"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
@@ -1748,7 +1748,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) hovoru, který má být smazán. Hodnoty SID hovoru začínají na \"CA\"."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Create an Execution",
+          "source": "Create an execution",
           "message": "Vytvořit spuštění"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Data JSON, která budou přidána do kontextu toku a přístupná jako proměnné. Například: objekt JSON s vlastností name bude v toku dostupný jako flow.data.name."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
-          "source": "List Executions",
+          "source": "List executions",
           "message": "Zobrazit seznam spuštění"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "SID Studio Flow, jehož spuštění chcete vypsat. Hodnoty SID Flow začínají na \"FW\"."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
-          "source": "Date Created From",
+          "source": "Date created from",
           "message": "Datum vytvoření od"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Vrátit pouze spuštění vytvořená v toto datum a čas nebo později, ve formátu ISO 8601."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
-          "source": "Date Created To",
+          "source": "Date created to",
           "message": "Datum vytvoření do"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
@@ -1868,7 +1868,7 @@
           "message": "Maximální počet vrácených záznamů spuštění. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Velikost stránky"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Počet záznamů spuštění vrácených na stránku. Výchozí hodnota je 50 a maximum je 1000."
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
-          "source": "Get an Execution",
+          "source": "Get an execution",
           "message": "Získat spuštění"
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
@@ -1916,7 +1916,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) spuštění, které se má načíst. Identifikátory Execution SID začínají na \"FN\"."
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Update an Execution",
+          "source": "Update an execution",
           "message": "Aktualizovat spuštění"
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -1972,7 +1972,7 @@
           "message": "Ukončeno"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Delete an Execution",
+          "source": "Delete an execution",
           "message": "Smazat spuštění"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "Jedinečný řetězcový identifikátor (SID) spuštění, které má být smazáno. Hodnoty SID spuštění začínají na \"FN\"."
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Nová zpráva"
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "Spouštět pouze pro zprávy odeslané z tohoto telefonního čísla nebo alfanumerického ID odesílatele. Telefonní číslo by mělo být ve formátu E.164 (např. +15551234567). Ponechte prázdné pro spouštění pro všechny odesílatele."
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
-          "source": "New Recording",
+          "source": "New recording",
           "message": "Nová nahrávka"
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
@@ -2080,7 +2080,7 @@
           "message": "Spouštět pouze pro nahrávky spojené s touto konkrétní konferencí. SID konference by mělo začínat na \"CF\". Ponechte prázdné pro spouštění pro všechny konference."
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "New Transcription",
+          "source": "New transcription",
           "message": "Nový přepis"
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {

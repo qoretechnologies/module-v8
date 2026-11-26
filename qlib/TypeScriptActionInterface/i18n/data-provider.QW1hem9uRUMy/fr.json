@@ -28,7 +28,7 @@
           "message": "Effectuer un appel d'API HTTP / REST personnalisé à **Amazon EC2** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est retournée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés comme des actions de premier ordre sur cette application."
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.display_name": {
-          "source": "Start Instance",
+          "source": "Start instance",
           "message": "Démarrer l'instance"
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Un ou plusieurs ID d'instances EC2 que vous souhaitez démarrer. Ces instances doivent être à l'état stopped."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.display_name": {
-          "source": "Stop Instance",
+          "source": "Stop instance",
           "message": "Arrêter l'instance"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Un ou plusieurs ID d'instances EC2 que vous souhaitez arrêter. Ces instances doivent être à l'état running."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.display_name": {
-          "source": "Force Stop",
+          "source": "Force stop",
           "message": "Forcer l'arrêt"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Lorsqu'il est activé, force les instances à s'arrêter immédiatement. Cela équivaut à débrancher la prise d'un ordinateur physique."
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.display_name": {
-          "source": "Reboot Instance",
+          "source": "Reboot instance",
           "message": "Redémarrer l'instance"
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Un ou plusieurs ID d'instances EC2 que vous souhaitez redémarrer. Ces instances doivent être à l'état running."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.display_name": {
-          "source": "Describe Instances",
+          "source": "Describe instances",
           "message": "Décrire les instances"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "La région AWS dans laquelle vous souhaitez récupérer les informations d'instance."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Résultats max"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Le nombre maximum d'instances à renvoyer dans une seule requête. Par défaut 100."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Jeton de page suivante"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Jeton utilisé pour la pagination afin de récupérer le groupe de résultats suivant lorsqu'il y a plus d'instances que la limite de résultats maximale."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.display_name": {
-          "source": "Describe Regions",
+          "source": "Describe regions",
           "message": "Décrire les régions"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Récupère des informations sur les régions AWS disponibles, y compris leurs points de terminaison et leur statut d'activation (opt-in)."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.display_name": {
-          "source": "All Regions",
+          "source": "All regions",
           "message": "Toutes les régions"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Lorsqu'il est activé, inclut toutes les régions AWS, y compris celles qui nécessitent une activation (opt-in) préalable."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.display_name": {
-          "source": "New Instance",
+          "source": "New instance",
           "message": "Nouvelle instance"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
@@ -568,7 +568,7 @@
           "message": "La région AWS dans laquelle vous souhaitez surveiller les nouvelles instances EC2. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.display_name": {
-          "source": "Instance States",
+          "source": "Instance states",
           "message": "États des instances"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Arrêtée"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.display_name": {
-          "source": "New Scheduled Event",
+          "source": "New scheduled event",
           "message": "Nouvel événement planifié"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Liste facultative d'ID d'instances EC2 spécifiques à surveiller. Si elle est laissée vide, toutes les instances de la région seront surveillées pour les événements planifiés."
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
+          "source": "Event types",
           "message": "Types d'événements"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.short_desc": {

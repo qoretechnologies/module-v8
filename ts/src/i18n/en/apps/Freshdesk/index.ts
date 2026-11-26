@@ -36,19 +36,19 @@ Your personal Freshdesk API key. This key is tied to your user account and inher
   },
   triggers: {
     new_ticket_trigger: {
-      displayName: 'New Ticket',
+      displayName: 'New ticket',
       shortDesc: 'Triggers when a new ticket is created in Freshdesk.',
       longDesc:
         'Fires whenever a new ticket is created in your Freshdesk instance. You can capture details such as subject, description, priority, and more, and use this data in subsequent actions or notifications.',
       options: {
         ticketStatus: {
-          displayName: 'Ticket Status Filter',
+          displayName: 'Ticket status filter',
           shortDesc: 'Filters by ticket status',
           longDesc:
             'Restrict or filter the trigger to only fire for tickets matching a certain status (e.g. Open, Pending, Resolved, etc.).',
         },
         ticketPriority: {
-          displayName: 'Ticket Priority Filter',
+          displayName: 'Ticket priority filter',
           shortDesc: 'Filters by ticket priority',
           longDesc:
             'Restrict or filter the trigger to only fire for tickets matching a certain priority (e.g. Low, Medium, High).',
@@ -60,7 +60,7 @@ Your personal Freshdesk API key. This key is tied to your user account and inher
     },
 
     new_contact_trigger: {
-      displayName: 'New Contact',
+      displayName: 'New contact',
       shortDesc: 'Triggers when a new contact is created in Freshdesk.',
       longDesc:
         'Fires whenever a new contact is added to your Freshdesk instance. Capture details such as name, email, phone, and any custom fields associated with the contact.',
@@ -70,7 +70,7 @@ Your personal Freshdesk API key. This key is tied to your user account and inher
     },
 
     updated_ticket_trigger: {
-      displayName: 'Updated Ticket',
+      displayName: 'Updated ticket',
       shortDesc: 'Triggers when an existing ticket is updated in Freshdesk.',
       longDesc:
         'Fires whenever an existing ticket is updated with new details in your Freshdesk instance. For example, changes to subject, priority, status, or assigned agent.',
@@ -80,7 +80,7 @@ Your personal Freshdesk API key. This key is tied to your user account and inher
     },
 
     updated_contact_trigger: {
-      displayName: 'Updated Contact',
+      displayName: 'Updated contact',
       shortDesc: 'Triggers when an existing contact is updated in Freshdesk.',
       longDesc:
         "Fires whenever an existing contact's details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields.",
@@ -91,7 +91,7 @@ Your personal Freshdesk API key. This key is tied to your user account and inher
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -127,27 +127,27 @@ Your personal Freshdesk API key. This key is tied to your user account and inher
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc: 'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc: 'Matches records where the field value is less than or equal to the specified value',
     },
@@ -157,12 +157,12 @@ Your personal Freshdesk API key. This key is tied to your user account and inher
       longDesc: 'Matches records where the field contains the specified substring',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a value (is not empty)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches records where the field has no value (is empty)',
     },

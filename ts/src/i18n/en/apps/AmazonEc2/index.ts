@@ -35,7 +35,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
   },
   triggers: {
     new_instance: {
-      displayName: 'New Instance',
+      displayName: 'New instance',
       shortDesc: 'Triggers when a new EC2 instance is created or reaches a specified state',
       longDesc:
         'This trigger monitors for newly created EC2 instances or instances that have transitioned to specific states like pending or running. It provides comprehensive instance information including networking details, tags, and configuration.',
@@ -47,7 +47,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
             'The AWS region where you want to monitor for new EC2 instances. Defaults to us-east-1 if not specified.',
         },
         instance_states: {
-          displayName: 'Instance States',
+          displayName: 'Instance states',
           shortDesc: 'Instance states to monitor',
           longDesc:
             'List of EC2 instance states to monitor. The trigger will fire when instances are in any of these states. Common states include pending, running, stopping, stopped, shutting-down, and terminated.',
@@ -55,7 +55,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
       },
     },
     new_scheduled_event: {
-      displayName: 'New Scheduled Event',
+      displayName: 'New scheduled event',
       shortDesc: 'Triggers when a new scheduled maintenance event is detected on EC2 instances',
       longDesc:
         'This trigger monitors for new scheduled events on EC2 instances such as system reboots, maintenance windows, or instance retirements. It helps you stay informed about upcoming AWS-initiated actions on your infrastructure.',
@@ -73,7 +73,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
             'Optional list of specific EC2 instance IDs to monitor. If left empty, all instances in the region will be monitored for scheduled events.',
         },
         event_types: {
-          displayName: 'Event Types',
+          displayName: 'Event types',
           shortDesc: 'Types of scheduled events to monitor',
           longDesc:
             'List of scheduled event types to monitor, such as system-reboot, system-maintenance, instance-retirement, or instance-stop.',
@@ -83,7 +83,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
   },
   actions: {
     start_instance: {
-      displayName: 'Start Instance',
+      displayName: 'Start instance',
       shortDesc: 'Start one or more stopped EC2 instances',
       longDesc:
         'Starts one or more Amazon EC2 instances that are currently in a stopped state. The instances will transition from stopped to pending and then to running state.',
@@ -102,7 +102,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
       },
     },
     stop_instance: {
-      displayName: 'Stop Instance',
+      displayName: 'Stop instance',
       shortDesc: 'Stop one or more running EC2 instances',
       longDesc:
         'Stops one or more Amazon EC2 instances. The instances will transition from running to stopping and then to stopped state. You can optionally force stop instances.',
@@ -119,7 +119,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
           longDesc: 'The AWS region where the EC2 instances are located.',
         },
         force: {
-          displayName: 'Force Stop',
+          displayName: 'Force stop',
           shortDesc: 'Force stop the instances',
           longDesc:
             'When enabled, forces the instances to stop immediately. This is equivalent to pulling the power plug on a physical computer.',
@@ -127,7 +127,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
       },
     },
     reboot_instance: {
-      displayName: 'Reboot Instance',
+      displayName: 'Reboot instance',
       shortDesc: 'Reboot one or more running EC2 instances',
       longDesc:
         'Performs a reboot of one or more Amazon EC2 instances. This is equivalent to performing a restart from within the operating system.',
@@ -146,7 +146,7 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
       },
     },
     describe_instances: {
-      displayName: 'Describe Instances',
+      displayName: 'Describe instances',
       shortDesc: 'Get detailed information about EC2 instances',
       longDesc:
         'Retrieves comprehensive information about one or more EC2 instances including their state, configuration, networking details, and tags.',
@@ -163,13 +163,13 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
           longDesc: 'The AWS region where you want to retrieve instance information.',
         },
         max_results: {
-          displayName: 'Max Results',
+          displayName: 'Max results',
           shortDesc: 'Maximum number of instances to return',
           longDesc:
             'The maximum number of instances to return in a single request. Defaults to 100.',
         },
         next_page_token: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'Token used for pagination to retrieve the next set of results when there are more instances than the max results limit.',
@@ -177,13 +177,13 @@ The AWS region for your EC2 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
       },
     },
     describe_regions: {
-      displayName: 'Describe Regions',
+      displayName: 'Describe regions',
       shortDesc: 'Get information about available AWS regions',
       longDesc:
         'Retrieves information about available AWS regions including their endpoints and opt-in status.',
       options: {
         all_regions: {
-          displayName: 'All Regions',
+          displayName: 'All regions',
           shortDesc: 'Include all regions including opt-in regions',
           longDesc:
             'When enabled, includes all AWS regions including those that require you to opt-in before you can use them.',

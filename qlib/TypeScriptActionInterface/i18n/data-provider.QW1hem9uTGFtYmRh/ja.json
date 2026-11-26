@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**AWS Lambda** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス (コネクションの API ベース URL 相対)、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対して、このアクションを使用します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
-          "source": "List Functions",
+          "source": "List functions",
           "message": "関数一覧"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Lambda 関数の一覧を取得する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
-          "source": "Function Version",
+          "source": "Function version",
           "message": "関数のバージョン"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
@@ -380,7 +380,7 @@
           "message": "すべてのバージョン"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
-          "source": "Master Region",
+          "source": "Master region",
           "message": "マスターリージョン"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
@@ -392,7 +392,7 @@
           "message": "Lambda@Edge 関数の場合は、結果を絞り込むためのマスターリージョンを指定します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "最大アイテム数"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -404,7 +404,7 @@
           "message": "単一のリクエストで返される関数の数を制限します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "次のマーカー"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -416,7 +416,7 @@
           "message": "前のレスポンスからのマーカーを使用して、次の結果ページを取得します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
-          "source": "List Layers",
+          "source": "List layers",
           "message": "レイヤーを一覧表示"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
@@ -440,7 +440,7 @@
           "message": "Lambda レイヤーを一覧表示する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "互換性のあるランタイム"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Amazon Linux 2 のカスタムランタイム"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "最大アイテム数"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
@@ -540,7 +540,7 @@
           "message": "単一のリクエストで返されるレイヤーの数を制限します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "次のマーカー"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -552,7 +552,7 @@
           "message": "前のレスポンスからのマーカーを使用して、次の結果ページを取得します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
-          "source": "List Layer Versions",
+          "source": "List layer versions",
           "message": "レイヤーバージョン一覧"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Lambda レイヤーが存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "レイヤー名"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -588,7 +588,7 @@
           "message": "バージョンを一覧表示する Lambda レイヤーの名前または ARN。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
-          "source": "Compatible Runtime",
+          "source": "Compatible runtime",
           "message": "互換性のあるランタイム"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Amazon Linux 2 のカスタムランタイム"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Maximum Items",
+          "source": "Maximum items",
           "message": "最大アイテム数"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
@@ -688,7 +688,7 @@
           "message": "単一のリクエストで返されるレイヤーバージョンの数を制限します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
-          "source": "Next Marker",
+          "source": "Next marker",
           "message": "次のマーカー"
         },
         "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
@@ -700,7 +700,7 @@
           "message": "前のレスポンスからのマーカーを使用して、次の結果ページを取得します。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
-          "source": "Get Function",
+          "source": "Get function",
           "message": "関数の取得"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Lambda 関数が存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "関数名"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "関数の特定バージョンに関する情報を取得するには、バージョン番号、エイリアス名、または $LATEST を指定します。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "Get Layer Version",
+          "source": "Get layer version",
           "message": "レイヤーバージョンの取得"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Lambda レイヤーが存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
-          "source": "Layer Name",
+          "source": "Layer name",
           "message": "レイヤー名"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
@@ -784,7 +784,7 @@
           "message": "バージョン情報を取得する Lambda レイヤーの名前または ARN。"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
-          "source": "Version Number",
+          "source": "Version number",
           "message": "バージョン番号"
         },
         "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
@@ -796,7 +796,7 @@
           "message": "詳細情報を取得するレイヤーのバージョン番号。"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
-          "source": "Invoke Function",
+          "source": "Invoke function",
           "message": "関数の呼び出し"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Lambda 関数が存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
-          "source": "Function Name",
+          "source": "Function name",
           "message": "関数名"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "呼び出す Lambda 関数の名前、ARN、または部分 ARN。"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
-          "source": "Invocation Type",
+          "source": "Invocation type",
           "message": "呼び出しタイプ"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "ドライラン (検証のみ)"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
-          "source": "Log Type",
+          "source": "Log type",
           "message": "ログタイプ"
         },
         "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "関数の特定バージョンを呼び出すには、バージョン番号、エイリアス名、または $LATEST を指定します。"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
-          "source": "New Function",
+          "source": "New function",
           "message": "新しい関数"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
@@ -924,7 +924,7 @@
           "message": "新しい Lambda 関数の作成を監視する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
-          "source": "New Layer Version",
+          "source": "New layer version",
           "message": "新しいレイヤーバージョン"
         },
         "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {

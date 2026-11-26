@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata a **Contentful** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come un hash contenente il codice di stato, le intestazioni della risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello su questa app."
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.display_name": {
-          "source": "Get an Entry",
+          "source": "Get an entry",
           "message": "Ottieni una voce"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Seleziona o inserisci l'ID della voce da recuperare."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.display_name": {
-          "source": "Get an Entry with Replacement",
+          "source": "Get an entry with replacement",
           "message": "Ottieni una voce con sostituzione"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Il testo che sostituirà tutte le occorrenze del tag."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.display_name": {
-          "source": "Create an Entry",
+          "source": "Create an entry",
           "message": "Crea una voce"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Se abilitato, la voce verrà pubblicata immediatamente dopo la creazione. In caso contrario, verrà salvata come bozza."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.display_name": {
-          "source": "Update an Entry",
+          "source": "Update an entry",
           "message": "Aggiorna una voce"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Fornisci i valori dei campi da aggiornare sotto forma di oggetto chiave-valore. Verranno modificati solo i campi specificati."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.display_name": {
-          "source": "Delete an Entry",
+          "source": "Delete an entry",
           "message": "Elimina una voce"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Seleziona o inserisci l'ID della voce da rimuovere in modo permanente."
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.display_name": {
-          "source": "Publish an Entry",
+          "source": "Publish an entry",
           "message": "Pubblica un'entry"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Seleziona o inserisci l'ID dell'entry da pubblicare."
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.display_name": {
-          "source": "Unpublish an Entry",
+          "source": "Unpublish an entry",
           "message": "Annulla la pubblicazione di un'entry"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Seleziona o inserisci l'ID dell'entry di cui annullare la pubblicazione."
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.display_name": {
-          "source": "Archive/Unarchive an Entry",
+          "source": "Archive/unarchive an entry",
           "message": "Archivia/Annulla archiviazione di una voce"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Quando abilitato, la voce verrà archiviata. Quando disabilitato, verrà annullata l'archiviazione della voce."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.display_name": {
-          "source": "Search Entries",
+          "source": "Search entries",
           "message": "Cerca voci"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Seleziona il tipo di contenuto in base al quale filtrare i risultati."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Query di ricerca"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Il numero di voci da ignorare per l'impaginazione. Il valore predefinito è 0."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.display_name": {
-          "source": "Get an Asset",
+          "source": "Get an asset",
           "message": "Ottieni un asset"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Seleziona o inserisci l'ID dell'asset da recuperare."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.display_name": {
-          "source": "Create an Asset",
+          "source": "Create an asset",
           "message": "Crea un asset"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Una descrizione opzionale per l'asset."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.display_name": {
-          "source": "File Name",
+          "source": "File name",
           "message": "Nome file"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "L'URL pubblicamente accessibile da cui Contentful scaricherà il file."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Se abilitato, l'asset verrà pubblicato immediatamente dopo l'elaborazione."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.display_name": {
-          "source": "Update an Asset",
+          "source": "Update an asset",
           "message": "Aggiorna un asset"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "La descrizione aggiornata dell'asset."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.display_name": {
-          "source": "Delete an Asset",
+          "source": "Delete an asset",
           "message": "Elimina un asset"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "Seleziona o inserisci l'ID dell'asset da rimuovere in modo permanente."
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.display_name": {
-          "source": "Publish an Asset",
+          "source": "Publish an asset",
           "message": "Pubblica un asset"
         },
         "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Seleziona o inserisci l'ID dell'asset da pubblicare."
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.display_name": {
-          "source": "Unpublish an Asset",
+          "source": "Unpublish an asset",
           "message": "Annulla la pubblicazione di un asset"
         },
         "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Seleziona o inserisci l'ID dell'asset di cui annullare la pubblicazione."
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.display_name": {
-          "source": "Archive/Unarchive an Asset",
+          "source": "Archive/unarchive an asset",
           "message": "Archivia/Annulla archiviazione di un asset"
         },
         "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Quando abilitato, l'asset verrà archiviato. Quando disabilitato, verrà annullata l'archiviazione dell'asset."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.display_name": {
-          "source": "Search Assets",
+          "source": "Search assets",
           "message": "Cerca asset"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Query di ricerca"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "Testo opzionale da cercare nei titoli e nelle descrizioni degli asset."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.display_name": {
-          "source": "MIME Type Group",
+          "source": "MIME type group",
           "message": "Gruppo tipo MIME"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "Il numero di asset da ignorare per l'impaginazione. Il valore predefinito è 0."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Get a Content Type",
+          "source": "Get a content type",
           "message": "Ottieni un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1620,7 +1620,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "Seleziona il tipo di contenuto di cui recuperare i dettagli."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Create a Content Type",
+          "source": "Create a content type",
           "message": "Crea un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "Se abilitato, il campo può avere valori diversi per impostazioni locali diverse."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Nome campo"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.bmFtZQ.short_desc": {
@@ -1752,7 +1752,7 @@
           "message": "Se abilitato, le voci devono fornire un valore per questo campo."
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "Tipo di campo"
         },
         "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.field.dHlwZQ.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "Il tipo di dato per il campo. Tipi supportati: Simbolo (testo breve), Testo (testo lungo), Interi, Numero, Data, Booleano, RichText, Link, Array, Oggetto, Posizione."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Content Type",
+          "source": "Update a content type",
           "message": "Aggiorna un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "La descrizione aggiornata per il tipo di contenuto."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Delete a Content Type",
+          "source": "Delete a content type",
           "message": "Elimina un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -1872,7 +1872,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1884,7 +1884,7 @@
           "message": "Seleziona il tipo di contenuto da rimuovere in modo permanente."
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.display_name": {
-          "source": "Activate a Content Type",
+          "source": "Activate a content type",
           "message": "Attiva un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.short_desc": {
@@ -1920,7 +1920,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "Seleziona il tipo di contenuto da attivare (pubblicare)."
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.display_name": {
-          "source": "Deactivate a Content Type",
+          "source": "Deactivate a content type",
           "message": "Disattiva un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -1980,7 +1980,7 @@
           "message": "Seleziona il tipo di contenuto da disattivare (annullare la pubblicazione)."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Add a Field to a Content Type",
+          "source": "Add a field to a content type",
           "message": "Aggiungi un campo a un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2016,7 +2016,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2040,7 +2040,7 @@
           "message": "Un ID univoco per il campo (ad es. \"heroImage\", \"publishDate\"). Deve essere univoco all'interno del tipo di contenuto."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Nome campo"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2052,7 +2052,7 @@
           "message": "Un nome leggibile per il campo (ad es. \"Hero Image\", \"Publish Date\")."
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "Tipo di campo"
         },
         "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.short_desc": {
@@ -2132,7 +2132,7 @@
           "message": "Se abilitato, il campo può avere valori diversi per impostazioni locali diverse."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.display_name": {
-          "source": "Update a Field of a Content Type",
+          "source": "Update a field of a content type",
           "message": "Aggiorna un campo di un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.short_desc": {
@@ -2168,7 +2168,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2192,7 +2192,7 @@
           "message": "Seleziona il campo da aggiornare."
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Nome campo"
         },
         "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
@@ -2228,7 +2228,7 @@
           "message": "Aggiorna se il campo può avere valori diversi per impostazioni locali diverse."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.display_name": {
-          "source": "Delete a Field from a Content Type",
+          "source": "Delete a field from a content type",
           "message": "Elimina un campo da un tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.short_desc": {
@@ -2264,7 +2264,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "Tipo di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
@@ -2288,7 +2288,7 @@
           "message": "Seleziona il campo da rimuovere in modo permanente dal tipo di contenuto."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.display_name": {
-          "source": "Search Content Types",
+          "source": "Search content types",
           "message": "Cerca tipi di contenuto"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.short_desc": {
@@ -2324,7 +2324,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Query di ricerca"
         },
         "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "Il numero di tipi di contenuto da ignorare per l'impaginazione. Il valore predefinito è 0."
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.display_name": {
-          "source": "Watch an Event",
+          "source": "Watch an event",
           "message": "Monitora un evento"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.short_desc": {
@@ -2396,7 +2396,7 @@
           "message": "Seleziona l'ambiente all'interno dello spazio. Il valore predefinito è \"master\" se non specificato."
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
+          "source": "Event types",
           "message": "Tipi di eventi"
         },
         "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.short_desc": {

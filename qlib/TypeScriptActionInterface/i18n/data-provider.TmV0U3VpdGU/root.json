@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **NetSuite** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.TmV0U3VpdGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.TmV0U3VpdGU.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"NetSuite\"",
@@ -460,8 +460,8 @@
           "message": "The table name"
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.display_name": {
-          "source": "Create Account",
-          "message": "Create Account"
+          "source": "Create account",
+          "message": "Create account"
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.short_desc": {
           "source": "Creates a new account.",
@@ -472,8 +472,8 @@
           "message": "Allows the user to create a new account record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.display_name": {
-          "source": "Delete Account",
-          "message": "Delete Account"
+          "source": "Delete account",
+          "message": "Delete account"
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.short_desc": {
           "source": "Deletes a specific account.",
@@ -484,8 +484,8 @@
           "message": "Removes an account record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.display_name": {
-          "source": "Get Account",
-          "message": "Get Account"
+          "source": "Get account",
+          "message": "Get account"
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.short_desc": {
           "source": "Retrieve details of a specific account.",
@@ -496,8 +496,8 @@
           "message": "Fetches detailed information of a single account by its ID."
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.display_name": {
-          "source": "Update Account",
-          "message": "Update Account"
+          "source": "Update account",
+          "message": "Update account"
         },
         "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.short_desc": {
           "source": "Updates an existing account.",
@@ -508,8 +508,8 @@
           "message": "Allows the user to update details of a specific account by its ID."
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.display_name": {
-          "source": "Create Contact",
-          "message": "Create Contact"
+          "source": "Create contact",
+          "message": "Create contact"
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.short_desc": {
           "source": "Creates a new contact.",
@@ -520,8 +520,8 @@
           "message": "Allows the user to create a new contact record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.display_name": {
-          "source": "Delete Contact",
-          "message": "Delete Contact"
+          "source": "Delete contact",
+          "message": "Delete contact"
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.short_desc": {
           "source": "Deletes a specific contact.",
@@ -532,8 +532,8 @@
           "message": "Removes a contact record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.display_name": {
-          "source": "Get Contact",
-          "message": "Get Contact"
+          "source": "Get contact",
+          "message": "Get contact"
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.short_desc": {
           "source": "Retrieve details of a specific contact.",
@@ -544,8 +544,8 @@
           "message": "Fetches detailed information of a single contact by its ID."
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.display_name": {
-          "source": "Update Contact",
-          "message": "Update Contact"
+          "source": "Update contact",
+          "message": "Update contact"
         },
         "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.short_desc": {
           "source": "Updates an existing contact.",
@@ -556,8 +556,8 @@
           "message": "Allows the user to update details of a specific contact by its ID."
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.display_name": {
-          "source": "Create Customer",
-          "message": "Create Customer"
+          "source": "Create customer",
+          "message": "Create customer"
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.short_desc": {
           "source": "Creates a new customer.",
@@ -568,8 +568,8 @@
           "message": "Allows the user to create a new customer record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.display_name": {
-          "source": "Delete Customer",
-          "message": "Delete Customer"
+          "source": "Delete customer",
+          "message": "Delete customer"
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.short_desc": {
           "source": "Deletes a specific customer.",
@@ -580,8 +580,8 @@
           "message": "Removes a customer record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.display_name": {
-          "source": "Get Customer",
-          "message": "Get Customer"
+          "source": "Get customer",
+          "message": "Get customer"
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.short_desc": {
           "source": "Retrieve details of a specific customer.",
@@ -592,8 +592,8 @@
           "message": "Fetches detailed information of a single customer by its ID."
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.display_name": {
-          "source": "Update Customer",
-          "message": "Update Customer"
+          "source": "Update customer",
+          "message": "Update customer"
         },
         "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.short_desc": {
           "source": "Updates an existing customer.",
@@ -604,8 +604,8 @@
           "message": "Allows the user to update details of a specific customer by its ID."
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.display_name": {
-          "source": "Create Invoice",
-          "message": "Create Invoice"
+          "source": "Create invoice",
+          "message": "Create invoice"
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.short_desc": {
           "source": "Creates a new invoice.",
@@ -616,8 +616,8 @@
           "message": "Allows the user to create a new invoice record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.display_name": {
-          "source": "Delete Invoice",
-          "message": "Delete Invoice"
+          "source": "Delete invoice",
+          "message": "Delete invoice"
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.short_desc": {
           "source": "Deletes a specific invoice.",
@@ -628,8 +628,8 @@
           "message": "Removes an invoice record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.display_name": {
-          "source": "Get Invoice",
-          "message": "Get Invoice"
+          "source": "Get invoice",
+          "message": "Get invoice"
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.short_desc": {
           "source": "Retrieve details of a specific invoice.",
@@ -640,8 +640,8 @@
           "message": "Fetches detailed information of a single invoice by its ID."
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.display_name": {
-          "source": "Update Invoice",
-          "message": "Update Invoice"
+          "source": "Update invoice",
+          "message": "Update invoice"
         },
         "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.short_desc": {
           "source": "Updates an existing invoice.",
@@ -652,8 +652,8 @@
           "message": "Allows the user to update details of a specific invoice by its ID."
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.display_name": {
-          "source": "Create Journal Entry",
-          "message": "Create Journal Entry"
+          "source": "Create journal entry",
+          "message": "Create journal entry"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.short_desc": {
           "source": "Creates a new journal entry.",
@@ -3484,8 +3484,8 @@
           "message": "Enter any other information you wish to track for this customer."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.Y29tcGFueU5hbWU.display_name": {
-          "source": "Company Name",
-          "message": "Company Name"
+          "source": "Company name",
+          "message": "Company name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.Y29tcGFueU5hbWU.short_desc": {
           "source": "Enter the legal name of the customer",
@@ -3680,8 +3680,8 @@
           "message": "Enter a fax number for this record. You should enter the fax number exactly as it must be dialed. If a '1' is required to fax to this number, be sure to include it at the beginning of the number. The number you enter automatically appears in the To Be Faxed field of transactions when you select this customer. To fax NetSuite forms, an administrator must first set up fax service at Setup > Set Up Printing, Fax and E-mail > Fax."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Enter the contact's name",
@@ -3748,8 +3748,8 @@
           "message": "Last Modified Date"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.bGFzdE5hbWU.short_desc": {
           "source": "Enter the contact's last name",
@@ -3760,8 +3760,8 @@
           "message": "Enter the contact's last name. What you enter here automatically appears last in the Contact field. This field is required for the Online Bill Pay feature."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.bWlkZGxlTmFtZQ.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.bWlkZGxlTmFtZQ.short_desc": {
           "source": "Enter the contact's middle name or initial",
@@ -3772,8 +3772,8 @@
           "message": "Enter the contact's middle name or initial. This field is optional. What you enter here automatically appears second in the Contact field."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0IzYwNTRiOGZhNDA0ZWZhNzVjZTBiNGRkYTliMjI5NzI3ODZiOWI4ZTgwYzNlNGRlNjI2NDNiNmY3Y2YzYjQ5ZTk.field.bW9iaWxlUGhvbmU.short_desc": {
           "source": "Enter the contact's mobile or cell phone number",
@@ -3860,8 +3860,8 @@
           "message": "Enter this contact's title at his or her company. On the record for this contact's company, in the Contacts section, this title appears next to the contacts name."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.Y29udGFjdExpc3Q.display_name": {
-          "source": "Contact List",
-          "message": "Contact List"
+          "source": "Contact list",
+          "message": "Contact list"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjb250YWN0Q29sbGVjdGlvbiM0YTE3ZTRiNGY3MjFhNWY5MTYwZjA5ZTEzODVjNGZhZWZjMmZmN2JjZWYwM2Y0MjQ4NWRlZmNmMTdmOTljZjQ3.field.aXRlbXM.display_name": {
           "source": "Items",
@@ -3984,8 +3984,8 @@
           "message": "Enter a fax number for this record. You should enter the fax number exactly as it must be dialed. If a '1' is required to fax to this number, be sure to include it at the beginning of the number. The number you enter automatically appears in the To Be Faxed field of transactions when you select this customer. To fax NetSuite forms, an administrator must first set up fax service at Setup > Set Up Printing, Fax and E-mail > Fax."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Enter the contact's name",
@@ -4052,8 +4052,8 @@
           "message": "Last Modified Date"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.bGFzdE5hbWU.short_desc": {
           "source": "Enter the contact's last name",
@@ -4064,8 +4064,8 @@
           "message": "Enter the contact's last name. What you enter here automatically appears last in the Contact field. This field is required for the Online Bill Pay feature."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.bWlkZGxlTmFtZQ.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.bWlkZGxlTmFtZQ.short_desc": {
           "source": "Enter the contact's middle name or initial",
@@ -4076,8 +4076,8 @@
           "message": "Enter the contact's middle name or initial. This field is optional. What you enter here automatically appears second in the Contact field."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmNvbnRhY3QjYjgxMmE0NDdkZTJjOWZiNzE4ODRkMjk5NjI3YTJlODA2MDQ4YzUzYTMzMzlhZWQ4NGZiZTgzMTViMDFlNDc5Yg.field.bW9iaWxlUGhvbmU.short_desc": {
           "source": "Enter the contact's mobile or cell phone number",
@@ -4536,8 +4536,8 @@
           "message": "ID"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjbGFzc2lmaWNhdGlvbiNlYWFhNjc1Y2I2M2Q1NDQwNmMxMTExZTBiMWM2MGFiMmM5N2M2NDc0NWU2MjVlYjMwODk1NjE1YmQ2Yzg0YjI1.field.aW5jbHVkZUNoaWxkcmVu.display_name": {
-          "source": "Include Children",
-          "message": "Include Children"
+          "source": "Include children",
+          "message": "Include children"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjbGFzc2lmaWNhdGlvbiNlYWFhNjc1Y2I2M2Q1NDQwNmMxMTExZTBiMWM2MGFiMmM5N2M2NDc0NWU2MjVlYjMwODk1NjE1YmQ2Yzg0YjI1.field.aW5jbHVkZUNoaWxkcmVu.short_desc": {
           "source": "Check the Include Children box to associate the class with all the…",
@@ -4980,8 +4980,8 @@
           "message": "Enter any other information you wish to track for this vendor."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.Y29tcGFueU5hbWU.display_name": {
-          "source": "Company Name",
-          "message": "Company Name"
+          "source": "Company name",
+          "message": "Company name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.Y29tcGFueU5hbWU.short_desc": {
           "source": "In the Company name field, enter the supplier's legal name",
@@ -4996,8 +4996,8 @@
           "message": "Contact"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.Y29udGFjdExpc3Q.display_name": {
-          "source": "Contact List",
-          "message": "Contact List"
+          "source": "Contact list",
+          "message": "Contact list"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.Y3JlZGl0TGltaXQ.display_name": {
           "source": "Credit Limit",
@@ -5216,8 +5216,8 @@
           "message": "Set a preferred transaction delivery method for this vendor. Choose to send transactions by regular mail, by email, by fax, or by a combination of the three. Then, when you select the vendor on a transaction, their preferred delivery method is marked by default. * Email – Check this box to check the To Be Emailed box by default on transactions when this vendor is selected. * Print – Check this box to check the To Be Printed box by default on transactions when this vendor is selected. * Fax – Check this box to check the To Be Faxed box by default on transactions when this vendor is selected. Once you enter these settings on the vendor record, these boxes are checked by default for transactions created from the vendor record or for transactions that are copied or converted. Note: These settings override any customized settings on transaction forms you use. There are also preferences to set default values for new vendor records at Setup > Company > Printing, Fax and Email Preferences. On the Print subtab, Fax subtab, or Email subtab, check Vendors Default to [Print/Fax/Email] Transactions. You can also set these fields using the Mass Update function. Go to Lists > Mass Update > Mass Updates > General and click Vendor."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Optionally enter a first name here",
@@ -5304,8 +5304,8 @@
           "message": "Returns the date on which the vendor record was last modified."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.bGFzdE5hbWU.short_desc": {
           "source": "Optionally enter a last name here",
@@ -5328,8 +5328,8 @@
           "message": "Enter the legal name for this vendor for financial purposes. If you entered a name in the Company Name field, that name appears here."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.bWlkZGxlTmFtZQ.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.bWlkZGxlTmFtZQ.short_desc": {
           "source": "Returns the vendor's middle name or initial, if one is entered on the vendor…",
@@ -5340,8 +5340,8 @@
           "message": "Returns the vendor's middle name or initial, if one is entered on the vendor record."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip2ZW5kb3IjZWNkZTFlZjRlMThhYzA3YTkzYTFlYmVhODZhZjZlNjdhYWEyMjA5NTQ3NGZkMDAyMGRlODNjZjg4M2Q0NmNhZA.field.b3BlbmluZ0JhbGFuY2U.display_name": {
           "source": "Opening Balance",
@@ -5748,8 +5748,8 @@
           "message": "ZIP"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROnN1YnNpZGlhcnkjYTliODk3NTJkNWRhZDg5MzVlN2ZkYzM0ODFlY2Y5NzQzNjIzYTI2NDllZWQ2YjAyMDdiNmUxYTY2NmI0YjJiYg.field.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
-          "message": "Shipping Address"
+          "source": "Shipping address",
+          "message": "Shipping address"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzdWJzaWRpYXJ5LXNoaXBwaW5nQWRkcmVzcyM0YjFmMTI5OTEwZGNiMWY1ODQ0MDk0Y2FiM2RmODk2MzFkY2U5NjkyNGU4OTE2ODRiNjIxMDJjMmQ5ZjM3ODMw.field.YWRkcjE.display_name": {
           "source": "Addr1",
@@ -5908,8 +5908,8 @@
           "message": "ID"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipkZXBhcnRtZW50IzAyNmNkMzc4NGFmNGZiNzlhNjJkZjNmNGIyNDQzMWMzNzA3YTM3YmFjNDc3NDU5ZjMwOWNjN2ZjM2FiYjVjYTk.field.aW5jbHVkZUNoaWxkcmVu.display_name": {
-          "source": "Include Children",
-          "message": "Include Children"
+          "source": "Include children",
+          "message": "Include children"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipkZXBhcnRtZW50IzAyNmNkMzc4NGFmNGZiNzlhNjJkZjNmNGIyNDQzMWMzNzA3YTM3YmFjNDc3NDU5ZjMwOWNjN2ZjM2FiYjVjYTk.field.aW5jbHVkZUNoaWxkcmVu.short_desc": {
           "source": "Check the Include Children box to associate the department with all the…",
@@ -6060,8 +6060,8 @@
           "message": "Returns the account's internal ID."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiphY2NvdW50I2FkNTg5NzU2ZWRjMGM1NDRkZjA0Nzg0ODE3OWU1ZTFiYmNjN2M5YzU1YWM4YjVlZWNiYzVkYTNmZjJkNjAwZDA.field.aW5jbHVkZUNoaWxkcmVu.display_name": {
-          "source": "Include Children",
-          "message": "Include Children"
+          "source": "Include children",
+          "message": "Include children"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiphY2NvdW50I2FkNTg5NzU2ZWRjMGM1NDRkZjA0Nzg0ODE3OWU1ZTFiYmNjN2M5YzU1YWM4YjVlZWNiYzVkYTNmZjJkNjAwZDA.field.aW5jbHVkZUNoaWxkcmVu.short_desc": {
           "source": "Check the Include Children box to share the account with all the…",
@@ -6224,8 +6224,8 @@
           "message": "ID"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipsb2NhdGlvbiMwMTUwNjI0N2ZmNTIwMGU1ZGVlMGFhMmMzMzAwZDU2NTM4MDI1YTNkMjFkNWFkMzFlODlmMzFhODcxYzM1NTM5.field.aW5jbHVkZUNoaWxkcmVu.display_name": {
-          "source": "Include Children",
-          "message": "Include Children"
+          "source": "Include children",
+          "message": "Include children"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipsb2NhdGlvbiMwMTUwNjI0N2ZmNTIwMGU1ZGVlMGFhMmMzMzAwZDU2NTM4MDI1YTNkMjFkNWFkMzFlODlmMzFhODcxYzM1NTM5.field.aW5jbHVkZUNoaWxkcmVu.short_desc": {
           "source": "Check the Include Children box to associate the location with all the…",
@@ -6268,8 +6268,8 @@
           "message": "Committed Qty per Serial Lot Number Location"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmxvY2F0aW9uLWludmVudG9yeUJhbGFuY2VFbGVtZW50IzA2NmI2NTkyNTBjNWY5YmI5NjgwYThlYzQ2NmQ5NDEyMmU4ZGQwNzQ1MGM3MjE2ZjUwYTIwZjY1NjBiMGY4YzE.field.Y3JlYXRlZERhdGU.display_name": {
-          "source": "Created Date",
-          "message": "Created Date"
+          "source": "Created date",
+          "message": "Created date"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmxvY2F0aW9uLWludmVudG9yeUJhbGFuY2VFbGVtZW50IzA2NmI2NTkyNTBjNWY5YmI5NjgwYThlYzQ2NmQ5NDEyMmU4ZGQwNzQ1MGM3MjE2ZjUwYTIwZjY1NjBiMGY4YzE.field.aXRlbQ.display_name": {
           "source": "Item",
@@ -6324,8 +6324,8 @@
           "message": "Enter the latitude coordinate of the location in decimal format, for example, \"37.5367\". Latitude is between -90 and 90. Use at least four decimal places to achieve a precise location. The decimal symbol you use depends on the number format in your user preferences."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipsb2NhdGlvbiMwMTUwNjI0N2ZmNTIwMGU1ZGVlMGFhMmMzMzAwZDU2NTM4MDI1YTNkMjFkNWFkMzFlODlmMzFhODcxYzM1NTM5.field.bG9jYXRpb25UeXBl.display_name": {
-          "source": "Location Type",
-          "message": "Location Type"
+          "source": "Location type",
+          "message": "Location type"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipsb2NhdGlvblR5cGUjZDdiMGVmY2Q4NTQ3YTJlNGE5MGY4YTU3Y2UyNGI2MjRhN2E5M2QwYWVhNjkxMzZiNjMyM2ExMDQyZDY5MjU1Yg.field.aWQ.display_name": {
           "source": "ID",
@@ -6512,8 +6512,8 @@
           "message": "Subsidiary"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipsb2NhdGlvbiMwMTUwNjI0N2ZmNTIwMGU1ZGVlMGFhMmMzMzAwZDU2NTM4MDI1YTNkMjFkNWFkMzFlODlmMzFhODcxYzM1NTM5.field.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
-          "message": "Time Zone"
+          "source": "Time zone",
+          "message": "Time zone"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip0aW1lWm9uZSM2M2UwNTU0OGQ1Njk1OGQ3NDA5MmEyM2UzZDQ2YWU4NjBkMWUzNzBhZGQ5MmJhOGY0NjcyZDVmYjFjMjAzOTQz.field.aWQ.display_name": {
           "source": "ID",
@@ -7500,8 +7500,8 @@
           "message": "Set a preferred transaction delivery method for this customer. Choose to send transactions by regular mail, by email, by fax, or by a combination of the three. Then, when you select the customer on a transaction, their preferred delivery method is marked by default. * Email – Check this box to check the To Be Emailed box by default on transactions when this customer is selected. * Print – Check this box to check the To Be Printed box by default on transactions when this customer is selected. * Fax – Check this box to check the To Be Faxed box by default on transactions when this customer is selected. Once you enter these settings on the customer record, these boxes are checked by default for transactions created from the customer record or for transactions that are copied or converted. Note: These settings override any customized settings on transaction forms you use. There are also preferences to set default values for new customer records at Setup > Company > Preferences > Printing, Fax,& Email Preferences. On the Print subtab, Fax subtab, or Email subtab, check Customers Default to [Print/Fax/Email] Transactions. You can also set these fields using the Mass Update function. Go to Lists > Mass Updates > Mass Updates > General and click Customer."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.ZW5kRGF0ZQ.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.ZW5kRGF0ZQ.short_desc": {
           "source": "If you have a contract with this customer, enter the end date here",
@@ -7672,8 +7672,8 @@
           "message": "Set a preferred transaction delivery method for this customer. Choose to send transactions by regular mail, by email, by fax, or by a combination of the three. Then, when you select the customer on a transaction, their preferred delivery method is marked by default. * Email – Check this box to check the To Be Emailed box by default on transactions when this customer is selected. * Print – Check this box to check the To Be Printed box by default on transactions when this customer is selected. * Fax – Check this box to check the To Be Faxed box by default on transactions when this customer is selected. Once you enter these settings on the customer record, these boxes are checked by default for transactions created from the customer record or for transactions that are copied or converted. Note: These settings override any customized settings on transaction forms you use. There are also preferences to set default values for new customer records at Setup > Company > Preferences > Printing, Fax,& Email Preferences. On the Print subtab, Fax subtab, or Email subtab, check Customers Default to [Print/Fax/Email] Transactions. You can also set these fields using the Mass Update function. Go to Lists > Mass Updates > Mass Updates > General and click Customer."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Enter this customer's name",
@@ -8244,8 +8244,8 @@
           "message": "Returns the date on which the customer record was last modified."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.bGFzdE5hbWU.short_desc": {
           "source": "Optionally enter a last name here",
@@ -8284,8 +8284,8 @@
           "message": "Lead Source"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.bWlkZGxlTmFtZQ.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.bWlkZGxlTmFtZQ.short_desc": {
           "source": "Returns the customer's middle name or initial, if one is entered on the…",
@@ -8296,8 +8296,8 @@
           "message": "Returns the customer's middle name or initial, if one is entered on the customer record."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.bW9iaWxlUGhvbmU.short_desc": {
           "source": "Enter a mobile or cell phone number for this person",
@@ -8552,8 +8552,8 @@
           "message": "Enter any other information you want to note about this partner."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.Y29tcGFueU5hbWU.display_name": {
-          "source": "Company Name",
-          "message": "Company Name"
+          "source": "Company name",
+          "message": "Company name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.Y29tcGFueU5hbWU.short_desc": {
           "source": "Enter the legal name of this partner",
@@ -8568,8 +8568,8 @@
           "message": "Contact"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.Y29udGFjdExpc3Q.display_name": {
-          "source": "Contact List",
-          "message": "Contact List"
+          "source": "Contact list",
+          "message": "Contact list"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.Y3VzdG9tRm9ybQ.display_name": {
           "source": "Custom Form",
@@ -8656,8 +8656,8 @@
           "message": "Enter a fax number for this record. You should enter the fax number exactly as it must be dialed. If a '1' is required to fax to this number, be sure to include it at the beginning of the number. The number you enter here automatically appears in the To Be Faxed field of transactions when you select this customer. To fax NetSuite forms, an administrator must first set up fax service at Setup > Set Up Printing, Fax and E-mail > Fax."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.aG9tZVBob25l.display_name": {
           "source": "Home Phone",
@@ -8708,16 +8708,16 @@
           "message": "Last Modified Date"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.bG9jYXRpb24.display_name": {
           "source": "Location",
           "message": "Location"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.bWlkZGxlTmFtZQ.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.bWlkZGxlTmFtZQ.short_desc": {
           "source": "Returns the partner's middle name or initial, if one is entered on the partner…",
@@ -8728,8 +8728,8 @@
           "message": "Returns the partner's middle name or initial, if one is entered on the partner record."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipwYXJ0bmVyI2UxMDc2MDQyNTUxMzcwYjMxYTZkNjE4ODBiZDUwNjlkY2I0MjdiODRlOTNiYzRiMTZlY2QzODA4MjZjMTkxMDU.field.cGFyZW50.display_name": {
           "source": "Parent",
@@ -12384,8 +12384,8 @@
           "message": "Enter a fax number for this record. You should enter the fax number exactly as it must be dialed. If a '1' is required to fax to this number, be sure to include it at the beginning of the number. The number you enter here automatically appears in the To Be Faxed field of transactions when you select this employee. To fax NetSuite forms, an administrator must first set up fax service at Setup > Company > Printing, Fax & Email Preferences."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.Zmlyc3ROYW1l.short_desc": {
           "source": "Enter the employee's first name here",
@@ -12584,8 +12584,8 @@
           "message": "Returns the date on which the employee record was last modified."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.bGFzdE5hbWU.short_desc": {
           "source": "Enter the employee's last name here",
@@ -12616,8 +12616,8 @@
           "message": "Maritalstatus"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.bWlkZGxlTmFtZQ.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.bWlkZGxlTmFtZQ.short_desc": {
           "source": "Enter a middle name or initial here",
@@ -12628,8 +12628,8 @@
           "message": "Enter a middle name or initial here. What you enter here automatically appears second in the Employee field. The first letter of what you enter here appears in the Initials field. Enter up to 25 characters in this field."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
-          "message": "Mobile Phone"
+          "source": "Mobile phone",
+          "message": "Mobile phone"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.bW9iaWxlUGhvbmU.short_desc": {
           "source": "Enter this employee's mobile or cell phone number here",
@@ -12820,8 +12820,8 @@
           "message": "Enter the employee's salutation, such as Mr. or Ms., here."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.c2VuZEVtYWls.display_name": {
-          "source": "Send Email",
-          "message": "Send Email"
+          "source": "Send email",
+          "message": "Send email"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROiplbXBsb3llZSM4MTMwODg0OTA5NjAxOTNlMTA3MjY3MTUxNjIzYzhkZTA5YWFjNDZlZWVjMTIxOGRjODFlMWQwZDBjZThlYTMz.field.c2VuZEVtYWls.short_desc": {
           "source": "Check this box to send an automatic email notifying this employee of access…",
@@ -12984,8 +12984,8 @@
           "message": "Enter a description for this shipping item."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzaGlwSXRlbSMzNzBkNWQwN2FmMTUwZTY5YWRiYTc2NWM5MGZjMDA4YTk0OGMxYjJhOGQ3YTdkN2UwNDc1ZWUzOTQxZWE5NDUw.field.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzaGlwSXRlbSMzNzBkNWQwN2FmMTUwZTY5YWRiYTc2NWM5MGZjMDA4YTk0OGMxYjJhOGQ3YTdkN2UwNDc1ZWUzOTQxZWE5NDUw.field.ZGlzcGxheU5hbWU.short_desc": {
           "source": "Enter the name for the shipping item that you want to appear on printed…",
@@ -13308,8 +13308,8 @@
           "message": "Enter a name for this shipping item. This name appears on transaction pages, lists and all other internal facing documents."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzaGlwSXRlbSMzNzBkNWQwN2FmMTUwZTY5YWRiYTc2NWM5MGZjMDA4YTk0OGMxYjJhOGQ3YTdkN2UwNDc1ZWUzOTQxZWE5NDUw.field.aXRlbVR5cGU.display_name": {
-          "source": "Item Type",
-          "message": "Item Type"
+          "source": "Item type",
+          "message": "Item type"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzaGlwSXRlbSMzNzBkNWQwN2FmMTUwZTY5YWRiYTc2NWM5MGZjMDA4YTk0OGMxYjJhOGQ3YTdkN2UwNDc1ZWUzOTQxZWE5NDUw.field.b21pdFBhY2thZ2luZw.display_name": {
           "source": "Omit Packaging",
@@ -13352,8 +13352,8 @@
           "message": "Items"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROnNoaXBJdGVtLXRyYW5zbGF0aW9uc0VsZW1lbnQjNDJiODg3ODUzMzI4NDJkMzYyMTkyMjY1OGExZmZmODMwMzBmNmFlZTU5Y2I3OGQwNGUyMmEyMjlkNDdkZTliZA.field.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROnNoaXBJdGVtLXRyYW5zbGF0aW9uc0VsZW1lbnQjNDJiODg3ODUzMzI4NDJkMzYyMTkyMjY1OGExZmZmODMwMzBmNmFlZTU5Y2I3OGQwNGUyMmEyMjlkNDdkZTliZA.field.bGFuZ3VhZ2U.display_name": {
           "source": "Language",
@@ -15588,8 +15588,8 @@
           "message": "Check this box to let customers enter a company name during the checkout process."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip3ZWJTaXRlIzNjZDVkMTU2Yzk0MjU5NWM3YmYyNTVkMDM1OTJkMjUwMjAyMDMyNTRhM2MwZGQ1N2Y4N2YwZGY2NzUxZGFiYjA.field.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
-          "message": "Display Name"
+          "source": "Display name",
+          "message": "Display name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROip3ZWJTaXRlIzNjZDVkMTU2Yzk0MjU5NWM3YmYyNTVkMDM1OTJkMjUwMjAyMDMyNTRhM2MwZGQ1N2Y4N2YwZGY2NzUxZGFiYjA.field.ZGlzcGxheU5hbWU.short_desc": {
           "source": "This is the name for your site that displays in the heading of your Web store…",
@@ -19420,8 +19420,8 @@
           "message": "Enter data for the header in this field. You can enter a script to capture web analytics. For information, see the Web Analytics Tools Preferences help topic. In this field, you can also add Meta Tag HTML to appear in the < head > section of all your Web store pages. Note that Meta tags entered on Category and Tab pages are more effective for the purpose of search engine optimization (SEO)."
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.c3RhcnREYXRl.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipjdXN0b21lciNlZDhlMWJlYjUwMzgxYzQwYzRlN2I2Y2ZkN2YxMDA1ZGIxNWFhMjhmMTYwOWI3OGI0OWVlMDE2ZjRlNjA2YTE5.field.c3RhcnREYXRl.short_desc": {
           "source": "Enter the date this person or company became a customer, lead or prospect",
@@ -20564,8 +20564,8 @@
           "message": "Return Address"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzdWJzaWRpYXJ5I2MxOGQ5NmY0ODY3NzE4Yjk1NjI2NDFiMDc2OTE3OWE5NDU5MTRiZDFkM2ZiM2ZjZjhmNDk1NDkxNzUyNjk3NjQ.field.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
-          "message": "Shipping Address"
+          "source": "Shipping address",
+          "message": "Shipping address"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzdWJzaWRpYXJ5I2MxOGQ5NmY0ODY3NzE4Yjk1NjI2NDFiMDc2OTE3OWE5NDU5MTRiZDFkM2ZiM2ZjZjhmNDk1NDkxNzUyNjk3NjQ.field.c3RhdGU.display_name": {
           "source": "State",
@@ -20676,8 +20676,8 @@
           "message": "ID"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y2xhc3M.field.aW5jbHVkZUNoaWxkcmVu.display_name": {
-          "source": "Include Children",
-          "message": "Include Children"
+          "source": "Include children",
+          "message": "Include children"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y2xhc3M.field.aW5jbHVkZUNoaWxkcmVu.short_desc": {
           "source": "Check the Include Children box to associate the class with all the…",
@@ -20732,8 +20732,8 @@
           "message": "Subsidiary"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZERhdGU.display_name": {
-          "source": "Created Date",
-          "message": "Created Date"
+          "source": "Created date",
+          "message": "Created date"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZEZyb20.display_name": {
           "source": "Created From",
@@ -20956,8 +20956,8 @@
           "message": "ID"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZGVwYXJ0bWVudA.field.aW5jbHVkZUNoaWxkcmVu.display_name": {
-          "source": "Include Children",
-          "message": "Include Children"
+          "source": "Include children",
+          "message": "Include children"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZGVwYXJ0bWVudA.field.aW5jbHVkZUNoaWxkcmVu.short_desc": {
           "source": "Check the Include Children box to associate the department with all the…",
@@ -21088,8 +21088,8 @@
           "message": "Eliminate"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmpvdXJuYWxFbnRyeS1saW5lRWxlbWVudCM2Zjk2MmIwNTNmMzA3YzcyMDQ5YzI3MzUwN2Y1YTRiYTkwNWJlNDM4YmJmYTZjY2YzYzNhZDA4YzkwNzBiOTNk.field.ZW5kRGF0ZQ.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmpvdXJuYWxFbnRyeS1saW5lRWxlbWVudCM2Zjk2MmIwNTNmMzA3YzcyMDQ5YzI3MzUwN2Y1YTRiYTkwNWJlNDM4YmJmYTZjY2YzYzNhZDA4YzkwNzBiOTNk.field.ZW50aXR5.display_name": {
           "source": "Entity",
@@ -21136,8 +21136,8 @@
           "message": "Schedule Num"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmpvdXJuYWxFbnRyeS1saW5lRWxlbWVudCM2Zjk2MmIwNTNmMzA3YzcyMDQ5YzI3MzUwN2Y1YTRiYTkwNWJlNDM4YmJmYTZjY2YzYzNhZDA4YzkwNzBiOTNk.field.c2NoZWR1bGVUeXBl.display_name": {
-          "source": "Schedule Type",
-          "message": "Schedule Type"
+          "source": "Schedule type",
+          "message": "Schedule type"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROipzY2hlZHVsZVR5cGUjZmJhNDcxN2Q2MWEzOTBkYTY3MDQ2NDE4MDNkZWZiM2U0NDdhYWNlNzc1MDI2OGZlM2E1OWUwYzhhODBkOWJkYg.field.aWQ.display_name": {
           "source": "ID",
@@ -21156,8 +21156,8 @@
           "message": "Ref Name"
         },
         "app.TmV0U3VpdGU.type.YWN0aW9uOmFtOTFjbTVoYkVWdWRISjVYM0J2YzNROmpvdXJuYWxFbnRyeS1saW5lRWxlbWVudCM2Zjk2MmIwNTNmMzA3YzcyMDQ5YzI3MzUwN2Y1YTRiYTkwNWJlNDM4YmJmYTZjY2YzYzNhZDA4YzkwNzBiOTNk.field.c3RhcnREYXRl.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.display_name": {
           "source": "Location",
@@ -21184,8 +21184,8 @@
           "message": "ID"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.field.aW5jbHVkZUNoaWxkcmVu.display_name": {
-          "source": "Include Children",
-          "message": "Include Children"
+          "source": "Include children",
+          "message": "Include children"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.field.aW5jbHVkZUNoaWxkcmVu.short_desc": {
           "source": "Check the Include Children box to associate the location with all the…",
@@ -21240,8 +21240,8 @@
           "message": "Enter the latitude coordinate of the location in decimal format, for example, \"37.5367\". Latitude is between -90 and 90. Use at least four decimal places to achieve a precise location. The decimal symbol you use depends on the number format in your user preferences."
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.field.bG9jYXRpb25UeXBl.display_name": {
-          "source": "Location Type",
-          "message": "Location Type"
+          "source": "Location type",
+          "message": "Location type"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.field.bG9nbw.display_name": {
           "source": "Logo",
@@ -21292,8 +21292,8 @@
           "message": "Subsidiary"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.field.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
-          "message": "Time Zone"
+          "source": "Time zone",
+          "message": "Time zone"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.field.dHJhbkludGVybmFsUHJlZml4.display_name": {
           "source": "Tran Internal Prefix",
@@ -21388,8 +21388,8 @@
           "message": "Closed on Date"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cG9zdGluZ1BlcmlvZA.field.ZW5kRGF0ZQ.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cG9zdGluZ1BlcmlvZA.field.ZW5kRGF0ZQ.short_desc": {
           "source": "Enter or pick this period's end date here",
@@ -21504,8 +21504,8 @@
           "message": "Ref Name"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cG9zdGluZ1BlcmlvZA.field.c3RhcnREYXRl.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cG9zdGluZ1BlcmlvZA.field.c3RhcnREYXRl.short_desc": {
           "source": "Enter or pick the date this period starts here",
@@ -21680,8 +21680,8 @@
           "message": "Return Address"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.c3Vic2lkaWFyeQ.field.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
-          "message": "Shipping Address"
+          "source": "Shipping address",
+          "message": "Shipping address"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.c3Vic2lkaWFyeQ.field.c3RhdGU.display_name": {
           "source": "State",
@@ -21856,8 +21856,8 @@
           "message": "Return Address"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dG9TdWJzaWRpYXJ5.field.c2hpcHBpbmdBZGRyZXNz.display_name": {
-          "source": "Shipping Address",
-          "message": "Shipping Address"
+          "source": "Shipping address",
+          "message": "Shipping address"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dG9TdWJzaWRpYXJ5.field.c3RhdGU.display_name": {
           "source": "State",
@@ -21984,8 +21984,8 @@
           "message": "Sets the strictness of property value validation."
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.display_name": {
-          "source": "Delete Journal Entry",
-          "message": "Delete Journal Entry"
+          "source": "Delete journal entry",
+          "message": "Delete journal entry"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.short_desc": {
           "source": "Deletes a specific journal entry.",
@@ -21996,8 +21996,8 @@
           "message": "Removes a journal entry record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.display_name": {
-          "source": "Get Journal Entry",
-          "message": "Get Journal Entry"
+          "source": "Get journal entry",
+          "message": "Get journal entry"
         },
         "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.short_desc": {
           "source": "Retrieve details of a specific journal entry.",
@@ -22020,8 +22020,8 @@
           "message": "Journal entry id patch"
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.display_name": {
-          "source": "Create Opportunity",
-          "message": "Create Opportunity"
+          "source": "Create opportunity",
+          "message": "Create opportunity"
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.short_desc": {
           "source": "Creates a new opportunity.",
@@ -22032,8 +22032,8 @@
           "message": "Allows the user to create a new opportunity record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.display_name": {
-          "source": "Delete Opportunity",
-          "message": "Delete Opportunity"
+          "source": "Delete opportunity",
+          "message": "Delete opportunity"
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.short_desc": {
           "source": "Deletes a specific opportunity.",
@@ -22044,8 +22044,8 @@
           "message": "Removes an opportunity record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.display_name": {
-          "source": "Get Opportunity",
-          "message": "Get Opportunity"
+          "source": "Get opportunity",
+          "message": "Get opportunity"
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.short_desc": {
           "source": "Retrieve details of a specific opportunity.",
@@ -22056,8 +22056,8 @@
           "message": "Fetches detailed information of a single opportunity by its ID."
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.display_name": {
-          "source": "Update Opportunity",
-          "message": "Update Opportunity"
+          "source": "Update opportunity",
+          "message": "Update opportunity"
         },
         "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.short_desc": {
           "source": "Updates an existing opportunity.",
@@ -22068,8 +22068,8 @@
           "message": "Allows the user to update details of a specific opportunity by its ID."
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.display_name": {
-          "source": "Create Purchase Order",
-          "message": "Create Purchase Order"
+          "source": "Create purchase order",
+          "message": "Create purchase order"
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.short_desc": {
           "source": "Creates a new purchase order.",
@@ -22080,8 +22080,8 @@
           "message": "Allows the user to create a new purchase order record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.display_name": {
-          "source": "Delete Purchase Order",
-          "message": "Delete Purchase Order"
+          "source": "Delete purchase order",
+          "message": "Delete purchase order"
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.short_desc": {
           "source": "Deletes a specific purchase order.",
@@ -22092,8 +22092,8 @@
           "message": "Removes a purchase order record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.display_name": {
-          "source": "Get Purchase Order",
-          "message": "Get Purchase Order"
+          "source": "Get purchase order",
+          "message": "Get purchase order"
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.short_desc": {
           "source": "Retrieve details of a specific purchase order.",
@@ -22104,8 +22104,8 @@
           "message": "Fetches detailed information of a single purchase order by its ID."
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.display_name": {
-          "source": "Update Purchase Order",
-          "message": "Update Purchase Order"
+          "source": "Update purchase order",
+          "message": "Update purchase order"
         },
         "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.short_desc": {
           "source": "Updates an existing purchase order.",
@@ -22116,8 +22116,8 @@
           "message": "Allows the user to update details of a specific purchase order by its ID."
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.display_name": {
-          "source": "Create Sales Order",
-          "message": "Create Sales Order"
+          "source": "Create sales order",
+          "message": "Create sales order"
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.short_desc": {
           "source": "Creates a new sales order.",
@@ -22128,8 +22128,8 @@
           "message": "Allows the user to create a new sales order record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.display_name": {
-          "source": "Delete Sales Order",
-          "message": "Delete Sales Order"
+          "source": "Delete sales order",
+          "message": "Delete sales order"
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.short_desc": {
           "source": "Deletes a specific sales order.",
@@ -22140,8 +22140,8 @@
           "message": "Removes a sales order record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.display_name": {
-          "source": "Get Sales Order",
-          "message": "Get Sales Order"
+          "source": "Get sales order",
+          "message": "Get sales order"
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.short_desc": {
           "source": "Retrieve details of a specific sales order.",
@@ -22152,8 +22152,8 @@
           "message": "Fetches detailed information of a single sales order by its ID."
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.display_name": {
-          "source": "Update Sales Order",
-          "message": "Update Sales Order"
+          "source": "Update sales order",
+          "message": "Update sales order"
         },
         "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.short_desc": {
           "source": "Updates an existing sales order.",
@@ -22164,8 +22164,8 @@
           "message": "Allows the user to update details of a specific sales order by its ID."
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.display_name": {
-          "source": "Create Vendor",
-          "message": "Create Vendor"
+          "source": "Create vendor",
+          "message": "Create vendor"
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.short_desc": {
           "source": "Creates a new vendor.",
@@ -22176,8 +22176,8 @@
           "message": "Allows the user to create a new vendor record in NetSuite."
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.display_name": {
-          "source": "Delete Vendor",
-          "message": "Delete Vendor"
+          "source": "Delete vendor",
+          "message": "Delete vendor"
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.short_desc": {
           "source": "Deletes a specific vendor.",
@@ -22188,8 +22188,8 @@
           "message": "Removes a vendor record from NetSuite based on its ID."
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.display_name": {
-          "source": "Get Vendor",
-          "message": "Get Vendor"
+          "source": "Get vendor",
+          "message": "Get vendor"
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.short_desc": {
           "source": "Retrieve details of a specific vendor.",
@@ -22200,8 +22200,8 @@
           "message": "Fetches detailed information of a single vendor by its ID."
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.display_name": {
-          "source": "Update Vendor",
-          "message": "Update Vendor"
+          "source": "Update vendor",
+          "message": "Update vendor"
         },
         "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.short_desc": {
           "source": "Updates an existing vendor.",
@@ -22312,8 +22312,8 @@
           "message": "The number of records to skip"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
-          "message": "List Records"
+          "source": "List records",
+          "message": "List records"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.short_desc": {
           "source": "Retrieve NetSuite records based on search criteria",
@@ -22324,8 +22324,8 @@
           "message": "Query NetSuite records by type with optional filtering, field selection, and pagination"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.display_name": {
-          "source": "Search Mode",
-          "message": "Search Mode"
+          "source": "Search mode",
+          "message": "Search mode"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.short_desc": {
           "source": "How multiple search criteria are combined",
@@ -22352,8 +22352,8 @@
           "message": "If multiple query fields are provided, the record must match at least one of them"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.display_name": {
-          "source": "Record Type",
-          "message": "Record Type"
+          "source": "Record type",
+          "message": "Record type"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.short_desc": {
           "source": "Type of NetSuite record to retrieve",
@@ -22376,8 +22376,8 @@
           "message": "List of field names to include in results (returns all fields if omitted)"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.display_name": {
-          "source": "Query Criteria",
-          "message": "Query Criteria"
+          "source": "Query criteria",
+          "message": "Query criteria"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.short_desc": {
           "source": "Search conditions for filtering records",
@@ -22388,8 +22388,8 @@
           "message": "Key-value pairs defining search criteria"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.field.a2V5.display_name": {
-          "source": "Field Name",
-          "message": "Field Name"
+          "source": "Field name",
+          "message": "Field name"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.field.a2V5.short_desc": {
           "source": "Name of the field to filter by",
@@ -22400,8 +22400,8 @@
           "message": "The name of the field to filter by"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.field.dmFsdWU.display_name": {
-          "source": "Field Value",
-          "message": "Field Value"
+          "source": "Field value",
+          "message": "Field value"
         },
         "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.field.dmFsdWU.short_desc": {
           "source": "Value to match for the field",
@@ -22436,8 +22436,8 @@
           "message": "Used for pagination to skip a specified number of records in the result set"
         },
         "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
-          "message": "New Record"
+          "source": "New record",
+          "message": "New record"
         },
         "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.short_desc": {
           "source": "Triggers when a new record is created",
@@ -22448,8 +22448,8 @@
           "message": "Triggers when a new record is created"
         },
         "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.display_name": {
-          "source": "Record Type",
-          "message": "Record Type"
+          "source": "Record type",
+          "message": "Record type"
         },
         "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.short_desc": {
           "source": "The type of record to monitor",

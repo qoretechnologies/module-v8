@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **Mautic** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú v tejto aplikácii sprístupnené ako prvotriedne akcie."
         },
         "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Vytvoriť kontakt"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Vytvorte v aplikácii Mautic nový kontakt so zadanými informáciami."
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "E-mailová adresa"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Hlavná e-mailová adresa kontaktu (povinné)"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Meno"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Meno kontaktu"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Priezvisko"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Pracovná pozícia kontaktu"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "1. riadok adresy"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Ulica a číslo kontaktu"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "2. riadok adresy"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Mesto adresy kontaktu"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "Štát/región"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Štát, provincia alebo región"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Poštové smerovacie číslo"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Zoznam značiek, ktoré sa majú priradiť ku kontaktu na účely organizácie a segmentácie"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastné polia"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Objekt obsahujúci aliasy vlastných polí a ich hodnoty. Ako kľúč použite alias poľa "
         },
         "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "Získať kontakt"
         },
         "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vyberte kontakt, pre ktorý chcete získať podrobnosti"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.display_name": {
-          "source": "Get Many Contacts",
+          "source": "Get many contacts",
           "message": "Získať viacero kontaktov"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Počiatočný riadok pre stránkovanie (predvolené: 0)"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Zoradiť podľa"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Naposledy aktívny"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.display_name": {
-          "source": "Order Direction",
+          "source": "Order direction",
           "message": "Smer zoradenia"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Zostupne"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Aktualizovať kontakt"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Vyberte kontakt, ktorý chcete aktualizovať"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "E-mailová adresa"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Nová e-mailová adresa kontaktu"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Meno"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Nové krstné meno kontaktu"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Priezvisko"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
@@ -780,7 +780,7 @@
           "message": "Nová pracovná pozícia"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "1. riadok adresy"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
@@ -792,7 +792,7 @@
           "message": "Nová ulica a číslo"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "2. riadok adresy"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Nové mesto"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "Štát/región"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Nový štát, provincia alebo región"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Poštové smerovacie číslo"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Značky, ktoré sa majú priradiť ku kontaktu. Ak chcete značku odstrániť, uveďte pred ňu predponu „-“ (napr. „-staraznacka“)."
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastné polia"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Objekt obsahujúci aliasy vlastných polí a ich hodnoty. Ako kľúč použite alias poľa "
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Vymazať kontakt"
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Vyberte kontakt, ktorý chcete odstrániť"
         },
         "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.display_name": {
-          "source": "Edit Contact Points",
+          "source": "Edit contact points",
           "message": "Upraviť body kontaktu"
         },
         "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Počet bodov, ktoré sa majú pridať alebo odpočítať od skóre kontaktu"
         },
         "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.display_name": {
-          "source": "Edit Do Not Contact List",
+          "source": "Edit do not contact list",
           "message": "Upraviť zoznam Nekontaktovať"
         },
         "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Ďalšie poznámky alebo komentáre k záznamu DNC"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.display_name": {
-          "source": "Send Email to Contact",
+          "source": "Send email to contact",
           "message": "Odoslať e-mail kontaktu"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Odoslať e-mailovú šablónu Mautic konkrétnemu kontaktu."
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.display_name": {
-          "source": "Email Template",
+          "source": "Email template",
           "message": "E-mailová šablóna"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.short_desc": {
@@ -1104,7 +1104,7 @@
           "message": "Vyberte kontakt, ktorému chcete odoslať e-mail"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
-          "source": "Create Company",
+          "source": "Create company",
           "message": "Vytvoriť spoločnosť"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Vytvorte v aplikácii Mautic nový záznam spoločnosti so zadanými údajmi."
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Názov spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "Názov spoločnosti (povinné)"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
-          "source": "Company Email",
+          "source": "Company email",
           "message": "E-mail spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Primárna e-mailová adresa spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
-          "source": "Company Phone",
+          "source": "Company phone",
           "message": "Telefón spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "URL adresa webovej stránky spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "1. riadok adresy"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Ulica a číslo spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "2. riadok adresy"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Mesto adresy spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "Štát/región"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Štát, provincia alebo región adresy spoločnosti"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Poštové smerovacie číslo"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Odvetvie alebo sektor, v ktorom spoločnosť pôsobí"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastné polia"
         },
         "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Objekt obsahujúci aliasy vlastných polí a ich hodnoty. Ako kľúč použite alias poľa"
         },
         "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.display_name": {
-          "source": "Get Company",
+          "source": "Get company",
           "message": "Získať spoločnosť"
         },
         "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "Vyberte spoločnosť, pre ktorú chcete získať podrobnosti"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.display_name": {
-          "source": "Get Many Companies",
+          "source": "Get many companies",
           "message": "Získať viacero spoločností"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Počiatočný riadok pre stránkovanie (predvolené: 0)"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Zoradiť podľa"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "Dátum pridania"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.display_name": {
-          "source": "Order Direction",
+          "source": "Order direction",
           "message": "Smer zoradenia"
         },
         "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.short_desc": {
@@ -1388,7 +1388,7 @@
           "message": "Zostupne"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.display_name": {
-          "source": "Update Company",
+          "source": "Update company",
           "message": "Aktualizovať spoločnosť"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
@@ -1412,7 +1412,7 @@
           "message": "Vyberte spoločnosť, ktorú chcete aktualizovať"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Názov spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
@@ -1424,7 +1424,7 @@
           "message": "Nový názov spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
-          "source": "Company Email",
+          "source": "Company email",
           "message": "E-mail spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
@@ -1436,7 +1436,7 @@
           "message": "Nová primárna e-mailová adresa spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
-          "source": "Company Phone",
+          "source": "Company phone",
           "message": "Telefón spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
@@ -1460,7 +1460,7 @@
           "message": "Nová URL adresa webovej stránky spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "1. riadok adresy"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
@@ -1472,7 +1472,7 @@
           "message": "Nová ulica spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "2. riadok adresy"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
@@ -1496,7 +1496,7 @@
           "message": "Nové mesto adresy spoločnosti"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
-          "source": "State/Region",
+          "source": "State/region",
           "message": "Štát/región"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
@@ -1508,7 +1508,7 @@
           "message": "Nový štát, provincia alebo región"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Poštové smerovacie číslo"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
@@ -1556,7 +1556,7 @@
           "message": "Nové odvetvie alebo sektor"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastné polia"
         },
         "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1568,7 +1568,7 @@
           "message": "Objekt obsahujúci aliasy vlastných polí a ich hodnoty. Ako kľúč použite alias poľa "
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
-          "source": "Delete Company",
+          "source": "Delete company",
           "message": "Odstrániť spoločnosť"
         },
         "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
@@ -1592,7 +1592,7 @@
           "message": "Vyberte spoločnosť, ktorú chcete odstrániť"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.display_name": {
-          "source": "Add Contact to Company",
+          "source": "Add contact to company",
           "message": "Pridať kontakt k spoločnosti"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "Vyberte kontakt, ktorý chcete priradiť k spoločnosti"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.display_name": {
-          "source": "Remove Contact from Company",
+          "source": "Remove contact from company",
           "message": "Odstrániť kontakt zo spoločnosti"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Vyberte kontakt, ktorý chcete odstrániť zo spoločnosti"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.display_name": {
-          "source": "Add Contact to Campaign",
+          "source": "Add contact to campaign",
           "message": "Pridať kontakt do kampane"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "Vyberte kontakt, ktorý chcete pridať do kampane"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.display_name": {
-          "source": "Remove Contact from Campaign",
+          "source": "Remove contact from campaign",
           "message": "Odstrániť kontakt z kampane"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "Vyberte kontakt, ktorý chcete odstrániť z kampane"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.display_name": {
-          "source": "Add Contact to Segment",
+          "source": "Add contact to segment",
           "message": "Pridať kontakt do segmentu"
         },
         "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.short_desc": {
@@ -1772,7 +1772,7 @@
           "message": "Vyberte kontakt, ktorý chcete pridať do segmentu"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.display_name": {
-          "source": "Remove Contact from Segment",
+          "source": "Remove contact from segment",
           "message": "Odstrániť kontakt zo segmentu"
         },
         "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Vyberte kontakt, ktorý chcete odstrániť zo segmentu"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.display_name": {
-          "source": "Send Email to Segment",
+          "source": "Send email to segment",
           "message": "Odoslať e-mail segmentu"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "Odoslať segmentový e-mail Mautic všetkým kontaktom v priradenom segmente. E-mail musí byť typu „list“ (segmentový e-mail)."
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.display_name": {
-          "source": "Segment Email",
+          "source": "Segment email",
           "message": "Segmentový e-mail"
         },
         "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.short_desc": {

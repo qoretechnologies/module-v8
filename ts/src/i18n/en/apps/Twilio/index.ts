@@ -11,7 +11,7 @@ const TwilioAppEn = {
   actions: {
     create_message: {
       groups: ['Messaging'],
-      displayName: 'Create a Message',
+      displayName: 'Create a message',
       shortDesc: 'Send a new SMS or MMS message',
       longDesc:
         'Create and send a new SMS or MMS message using Twilio. You can send text messages, include media attachments, schedule messages, and configure delivery options. This action supports both standard messaging and messaging services.',
@@ -41,37 +41,37 @@ const TwilioAppEn = {
             'A list of publicly accessible URLs of media files to send with the message. Supported for MMS messages. You can include up to 10 media files.',
         },
         messagingServiceSid: {
-          displayName: 'Messaging Service SID',
+          displayName: 'Messaging service SID',
           shortDesc: 'The SID of the Messaging Service to use',
           longDesc:
             'The SID of the Messaging Service to use for the message. When set, the from parameter can be omitted, and Twilio will select an appropriate phone number from the Messaging Service pool.',
         },
         statusCallback: {
-          displayName: 'Status Callback URL',
+          displayName: 'Status callback URL',
           shortDesc: 'URL to receive message status updates',
           longDesc:
             'The URL Twilio will POST to each time the status of the message changes. This allows you to track the delivery status of your messages.',
         },
         maxPrice: {
-          displayName: 'Max Price',
+          displayName: 'Max price',
           shortDesc: 'Maximum acceptable price for the message',
           longDesc:
             'The maximum total price in USD acceptable for the message to be sent. If the cost exceeds this value, the message will fail.',
         },
         validityPeriod: {
-          displayName: 'Validity Period',
+          displayName: 'Validity period',
           shortDesc: 'How long the message is valid for delivery',
           longDesc:
             'The number of seconds that the message can remain in the queue. After this time, if the message has not been delivered, it will fail. Maximum is 14400 seconds (4 hours).',
         },
         scheduleType: {
-          displayName: 'Schedule Type',
+          displayName: 'Schedule type',
           shortDesc: 'The type of message scheduling',
           longDesc:
             'Set to "fixed" to schedule the message to be sent at a specific time. Requires the Send At parameter to be set.',
         },
         sendAt: {
-          displayName: 'Send At',
+          displayName: 'Send at',
           shortDesc: 'When to send the scheduled message',
           longDesc:
             'The time when the scheduled message should be sent, in ISO 8601 format. This parameter is required when Schedule Type is set to "fixed".',
@@ -80,7 +80,7 @@ const TwilioAppEn = {
     },
     list_messages: {
       groups: ['Messaging'],
-      displayName: 'List Messages',
+      displayName: 'List messages',
       shortDesc: 'Retrieve a list of messages',
       longDesc:
         'Retrieve a list of messages from your Twilio account. You can filter messages by recipient, sender, date range, and other criteria. Results are returned in reverse chronological order.',
@@ -98,13 +98,13 @@ const TwilioAppEn = {
             'Only return messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format.',
         },
         dateSentAfter: {
-          displayName: 'Date Sent After',
+          displayName: 'Date sent after',
           shortDesc: 'Filter by minimum send date',
           longDesc:
             'Only return messages sent on or after this date. Provide the date in ISO 8601 format.',
         },
         dateSentBefore: {
-          displayName: 'Date Sent Before',
+          displayName: 'Date sent before',
           shortDesc: 'Filter by maximum send date',
           longDesc:
             'Only return messages sent on or before this date. Provide the date in ISO 8601 format.',
@@ -116,7 +116,7 @@ const TwilioAppEn = {
             'The maximum number of message records to return. The default is 50 and the maximum is 1000.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of messages per page',
           longDesc:
             'The number of message records to return per page. The default is 50 and the maximum is 1000.',
@@ -125,7 +125,7 @@ const TwilioAppEn = {
     },
     get_message: {
       groups: ['Messaging'],
-      displayName: 'Get a Message',
+      displayName: 'Get a message',
       shortDesc: 'Retrieve details of a specific message',
       longDesc:
         'Fetch detailed information about a specific message using its unique SID (String Identifier). This returns all available information about the message including status, content, pricing, and timestamps.',
@@ -140,7 +140,7 @@ const TwilioAppEn = {
     },
     delete_message: {
       groups: ['Messaging'],
-      displayName: 'Delete a Message',
+      displayName: 'Delete a message',
       shortDesc: 'Delete a message from your account',
       longDesc:
         'Permanently delete a message record from your Twilio account. This action cannot be undone. Note that deleting a message record does not redact the message content from Twilio logs.',
@@ -155,7 +155,7 @@ const TwilioAppEn = {
     },
     list_message_media: {
       groups: ['Messaging'],
-      displayName: 'List Message Media',
+      displayName: 'List message media',
       shortDesc: 'Retrieve media attached to a message',
       longDesc:
         'Retrieve a list of all media files attached to a specific message. This is useful for accessing MMS attachments or media sent via WhatsApp or other channels.',
@@ -173,7 +173,7 @@ const TwilioAppEn = {
             'The maximum number of media records to return. The default is 50 and the maximum is 1000.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of media items per page',
           longDesc:
             'The number of media records to return per page. The default is 50 and the maximum is 1000.',
@@ -182,7 +182,7 @@ const TwilioAppEn = {
     },
     create_call: {
       groups: ['Voice'],
-      displayName: 'Create a Call',
+      displayName: 'Create a call',
       shortDesc: 'Initiate an outbound phone call',
       longDesc:
         'Initiate an outbound phone call using Twilio. You can provide TwiML instructions via URL or directly, configure call recording, answering machine detection, and set up status callbacks to track call progress.',
@@ -212,25 +212,25 @@ const TwilioAppEn = {
             'TwiML instructions to execute when the call connects. If both TwiML and URL are provided, TwiML takes precedence. Maximum 4000 characters.',
         },
         method: {
-          displayName: 'HTTP Method',
+          displayName: 'HTTP method',
           shortDesc: 'HTTP method for fetching TwiML',
           longDesc:
             'The HTTP method to use when requesting the URL. Can be GET or POST. Defaults to POST.',
         },
         statusCallback: {
-          displayName: 'Status Callback URL',
+          displayName: 'Status callback URL',
           shortDesc: 'URL to receive call status updates',
           longDesc:
             'The URL Twilio will POST to when the call status changes. You can specify which events trigger callbacks using Status Callback Events.',
         },
         statusCallbackEvent: {
-          displayName: 'Status Callback Events',
+          displayName: 'Status callback events',
           shortDesc: 'Events that trigger status callbacks',
           longDesc:
             'The call progress events that will trigger a POST to the Status Callback URL. Options include: initiated, ringing, answered, and completed.',
         },
         statusCallbackMethod: {
-          displayName: 'Status Callback Method',
+          displayName: 'Status callback method',
           shortDesc: 'HTTP method for status callbacks',
           longDesc:
             'The HTTP method to use when POSTing to the Status Callback URL. Can be GET or POST. Defaults to POST.',
@@ -248,37 +248,37 @@ const TwilioAppEn = {
             'Set to true to record the entire call. The recording will be available after the call completes.',
         },
         recordingChannels: {
-          displayName: 'Recording Channels',
+          displayName: 'Recording channels',
           shortDesc: 'Number of channels in the recording',
           longDesc:
             'The number of channels in the final recording. "mono" records both legs in a single channel, "dual" records each leg separately.',
         },
         recordingStatusCallback: {
-          displayName: 'Recording Status Callback',
+          displayName: 'Recording status callback',
           shortDesc: 'URL to notify when recording is available',
           longDesc:
             'The URL Twilio will POST to when the recording is available. This allows you to process or store recordings immediately.',
         },
         machineDetection: {
-          displayName: 'Machine Detection',
+          displayName: 'Machine detection',
           shortDesc: 'Enable answering machine detection',
           longDesc:
             'Enable answering machine detection. "Enable" returns AnsweredBy immediately, "DetectMessageEnd" waits for the beep to leave a message.',
         },
         machineDetectionTimeout: {
-          displayName: 'Machine Detection Timeout',
+          displayName: 'Machine detection timeout',
           shortDesc: 'Seconds to wait for detection',
           longDesc:
             'The number of seconds to attempt answering machine detection before timing out. Default is 30 seconds.',
         },
         sendDigits: {
-          displayName: 'Send Digits',
+          displayName: 'Send digits',
           shortDesc: 'DTMF tones to send after connection',
           longDesc:
             'A string of keys to dial after connecting. Valid characters: 0-9, A-D, #, *, w (0.5s pause), W (1s pause). For example: "W1234#".',
         },
         timeLimit: {
-          displayName: 'Time Limit',
+          displayName: 'Time limit',
           shortDesc: 'Maximum call duration in seconds',
           longDesc:
             'The maximum duration of the call in seconds. The call will be automatically ended after this time.',
@@ -287,7 +287,7 @@ const TwilioAppEn = {
     },
     create_call_with_tts: {
       groups: ['Voice'],
-      displayName: 'Create Call with Text-to-Speech',
+      displayName: 'Create call with text-to-speech',
       shortDesc: 'Make a call with automated voice message',
       longDesc:
         'Initiate an outbound phone call with an automated text-to-speech message. This simplified action automatically generates TwiML based on your inputs, allowing you to quickly create calls with voice messages without writing TwiML code manually. You can customize the voice, language, record the call, and optionally transcribe recordings.',
@@ -323,31 +323,31 @@ const TwilioAppEn = {
             'The language and locale for text-to-speech. This should match the language of your message text. If not specified, defaults to en-US (English, United States).',
         },
         record: {
-          displayName: 'Record Call',
+          displayName: 'Record call',
           shortDesc: 'Whether to record the call',
           longDesc:
             'Set to true to record the entire call. The recording will be available after the call completes and can be retrieved using the List Recordings action.',
         },
         transcribe: {
-          displayName: 'Transcribe Recording',
+          displayName: 'Transcribe recording',
           shortDesc: 'Whether to transcribe the recording',
           longDesc:
             'Set to true to automatically transcribe the call recording. This requires the Record Call option to be enabled. The transcription will be available after processing.',
         },
         transcriptionCallback: {
-          displayName: 'Transcription Callback URL',
+          displayName: 'Transcription callback URL',
           shortDesc: 'URL to receive transcription results',
           longDesc:
             'The URL Twilio will POST to when the transcription is complete. This allows you to process or store transcriptions immediately after they are available.',
         },
         sendDigits: {
-          displayName: 'Send Digits',
+          displayName: 'Send digits',
           shortDesc: 'DTMF tones to send after connection',
           longDesc:
             'A string of keys to dial after the call connects. Useful for navigating phone menus automatically. Valid characters: 0-9, #, *, w (wait 0.5 seconds). For example: "w123#" waits 0.5 seconds then dials 123#.',
         },
         statusCallback: {
-          displayName: 'Status Callback URL',
+          displayName: 'Status callback URL',
           shortDesc: 'URL to receive call status updates',
           longDesc:
             'The URL Twilio will POST to when the call status changes. Use this to track call progress and completion.',
@@ -359,7 +359,7 @@ const TwilioAppEn = {
             'The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.',
         },
         machineDetection: {
-          displayName: 'Machine Detection',
+          displayName: 'Machine detection',
           shortDesc: 'Enable answering machine detection',
           longDesc:
             'Enable answering machine detection to determine if a human or machine answered the call. "Enable" returns the result immediately, "DetectMessageEnd" waits for the voicemail beep before playing your message.',
@@ -368,7 +368,7 @@ const TwilioAppEn = {
     },
     list_calls: {
       groups: ['Voice'],
-      displayName: 'List Calls',
+      displayName: 'List calls',
       shortDesc: 'Retrieve a list of calls',
       longDesc:
         'Retrieve a list of calls from your Twilio account. You can filter calls by participant phone numbers, status, date range, and other criteria. Results are returned in reverse chronological order.',
@@ -391,25 +391,25 @@ const TwilioAppEn = {
             'Only return calls with this status. Options include: queued, ringing, in-progress, canceled, completed, failed, busy, or no-answer.',
         },
         startTimeAfter: {
-          displayName: 'Start Time After',
+          displayName: 'Start time after',
           shortDesc: 'Filter by minimum start time',
           longDesc:
             'Only return calls that started on or after this date and time. Provide the date in ISO 8601 format.',
         },
         startTimeBefore: {
-          displayName: 'Start Time Before',
+          displayName: 'Start time before',
           shortDesc: 'Filter by maximum start time',
           longDesc:
             'Only return calls that started on or before this date and time. Provide the date in ISO 8601 format.',
         },
         endTimeAfter: {
-          displayName: 'End Time After',
+          displayName: 'End time after',
           shortDesc: 'Filter by minimum end time',
           longDesc:
             'Only return calls that ended on or after this date and time. Provide the date in ISO 8601 format.',
         },
         endTimeBefore: {
-          displayName: 'End Time Before',
+          displayName: 'End time before',
           shortDesc: 'Filter by maximum end time',
           longDesc:
             'Only return calls that ended on or before this date and time. Provide the date in ISO 8601 format.',
@@ -421,7 +421,7 @@ const TwilioAppEn = {
             'The maximum number of call records to return. The default is 50 and the maximum is 1000.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of calls per page',
           longDesc:
             'The number of call records to return per page. The default is 50 and the maximum is 1000.',
@@ -430,7 +430,7 @@ const TwilioAppEn = {
     },
     get_call: {
       groups: ['Voice'],
-      displayName: 'Get a Call',
+      displayName: 'Get a call',
       shortDesc: 'Retrieve details of a specific call',
       longDesc:
         'Fetch detailed information about a specific call using its unique SID. This returns all available information about the call including status, duration, pricing, and timestamps.',
@@ -445,7 +445,7 @@ const TwilioAppEn = {
     },
     delete_call: {
       groups: ['Voice'],
-      displayName: 'Delete a Call',
+      displayName: 'Delete a call',
       shortDesc: 'Delete a call record from your account',
       longDesc:
         'Permanently delete a call record from your Twilio account. This action cannot be undone. Note that deleting a call record does not redact the call data from Twilio logs.',
@@ -460,7 +460,7 @@ const TwilioAppEn = {
     },
     create_execution: {
       groups: ['Studio'],
-      displayName: 'Create an Execution',
+      displayName: 'Create an execution',
       shortDesc: 'Start a Studio Flow execution',
       longDesc:
         'Create and start a new execution of a Studio Flow. This triggers the flow to run with the specified contact information and optional parameters that can be accessed within the flow.',
@@ -492,7 +492,7 @@ const TwilioAppEn = {
     },
     list_executions: {
       groups: ['Studio'],
-      displayName: 'List Executions',
+      displayName: 'List executions',
       shortDesc: 'Retrieve executions for a Studio Flow',
       longDesc:
         'Retrieve a list of executions for a specific Studio Flow. You can filter executions by date range to find specific execution instances.',
@@ -504,13 +504,13 @@ const TwilioAppEn = {
             'The SID of the Studio Flow whose executions you want to list. Flow SIDs start with "FW".',
         },
         dateCreatedFrom: {
-          displayName: 'Date Created From',
+          displayName: 'Date created from',
           shortDesc: 'Filter by minimum creation date',
           longDesc:
             'Only return executions created on or after this date and time, in ISO 8601 format.',
         },
         dateCreatedTo: {
-          displayName: 'Date Created To',
+          displayName: 'Date created to',
           shortDesc: 'Filter by maximum creation date',
           longDesc: 'Only return executions created before this date and time, in ISO 8601 format.',
         },
@@ -521,7 +521,7 @@ const TwilioAppEn = {
             'The maximum number of execution records to return. The default is 50 and the maximum is 1000.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of executions per page',
           longDesc:
             'The number of execution records to return per page. The default is 50 and the maximum is 1000.',
@@ -530,7 +530,7 @@ const TwilioAppEn = {
     },
     get_execution: {
       groups: ['Studio'],
-      displayName: 'Get an Execution',
+      displayName: 'Get an execution',
       shortDesc: 'Retrieve details of a specific execution',
       longDesc:
         'Fetch detailed information about a specific Studio Flow execution including its current state, context data, and status.',
@@ -551,7 +551,7 @@ const TwilioAppEn = {
     },
     update_execution: {
       groups: ['Studio'],
-      displayName: 'Update an Execution',
+      displayName: 'Update an execution',
       shortDesc: 'Update the status of an execution',
       longDesc:
         'Update the status of a Studio Flow execution. This is typically used to end an active execution early.',
@@ -578,7 +578,7 @@ const TwilioAppEn = {
     },
     delete_execution: {
       groups: ['Studio'],
-      displayName: 'Delete an Execution',
+      displayName: 'Delete an execution',
       shortDesc: 'Delete an execution record',
       longDesc:
         'Permanently delete an execution record from your Twilio account. This action cannot be undone.',
@@ -599,7 +599,7 @@ const TwilioAppEn = {
     },
     list_recordings: {
       groups: ['Voice'],
-      displayName: 'List Recordings',
+      displayName: 'List recordings',
       shortDesc: 'Retrieve a list of call recordings',
       longDesc:
         'Retrieve a list of call recordings from your Twilio account. You can filter recordings by call SID, conference SID, date range, and include soft-deleted recordings.',
@@ -617,19 +617,19 @@ const TwilioAppEn = {
             'Only return recordings associated with this specific conference. The Conference SID should start with "CF".',
         },
         dateCreatedAfter: {
-          displayName: 'Date Created After',
+          displayName: 'Date created after',
           shortDesc: 'Filter by minimum creation date',
           longDesc:
             'Only return recordings created on or after this date. Provide the date in ISO 8601 format.',
         },
         dateCreatedBefore: {
-          displayName: 'Date Created Before',
+          displayName: 'Date created before',
           shortDesc: 'Filter by maximum creation date',
           longDesc:
             'Only return recordings created on or before this date. Provide the date in ISO 8601 format.',
         },
         includeSoftDeleted: {
-          displayName: 'Include Soft Deleted',
+          displayName: 'Include soft deleted',
           shortDesc: 'Include soft-deleted recordings',
           longDesc:
             'Whether to include soft-deleted recordings. Recording metadata is retained for 40 days after deletion.',
@@ -641,7 +641,7 @@ const TwilioAppEn = {
             'The maximum number of recording records to return. The default is 50 and the maximum is 1000.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of recordings per page',
           longDesc:
             'The number of recording records to return per page. The default is 50 and the maximum is 1000.',
@@ -650,7 +650,7 @@ const TwilioAppEn = {
     },
     get_recording: {
       groups: ['Voice'],
-      displayName: 'Get a Recording',
+      displayName: 'Get a recording',
       shortDesc: 'Retrieve details of a specific recording',
       longDesc:
         'Fetch detailed information about a specific call recording including duration, status, pricing, media URL, and encryption details.',
@@ -665,7 +665,7 @@ const TwilioAppEn = {
     },
     list_transcriptions: {
       groups: ['Voice'],
-      displayName: 'List Transcriptions',
+      displayName: 'List transcriptions',
       shortDesc: 'Retrieve transcriptions for a recording',
       longDesc:
         'Retrieve a list of transcriptions for a specific call recording. Transcriptions convert the audio from recordings into text.',
@@ -683,7 +683,7 @@ const TwilioAppEn = {
             'The maximum number of transcription records to return. The default is 50 and the maximum is 1000.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of transcriptions per page',
           longDesc:
             'The number of transcription records to return per page. The default is 50 and the maximum is 1000.',
@@ -692,7 +692,7 @@ const TwilioAppEn = {
     },
     get_transcription: {
       groups: ['Voice'],
-      displayName: 'Get a Transcription',
+      displayName: 'Get a transcription',
       shortDesc: 'Retrieve a specific transcription with text',
       longDesc:
         'Fetch detailed information about a specific transcription including the full transcribed text from the recording. This returns the transcriptionText field containing the actual transcription content.',
@@ -715,7 +715,7 @@ const TwilioAppEn = {
   triggers: {
     new_message: {
       groups: ['Messaging'],
-      displayName: 'New Message',
+      displayName: 'New message',
       shortDesc: 'Triggers when a new SMS or MMS message is received',
       longDesc:
         'Monitors your Twilio account for new incoming or outgoing messages. You can filter messages by recipient or sender phone number. The trigger fires whenever a new message is detected that matches your filters.',
@@ -736,7 +736,7 @@ const TwilioAppEn = {
     },
     new_recording: {
       groups: ['Voice'],
-      displayName: 'New Recording',
+      displayName: 'New recording',
       shortDesc: 'Triggers when a new call recording is created',
       longDesc:
         'Monitors your Twilio account for new call recordings. You can filter recordings by specific call SID or conference SID. The trigger fires whenever a new recording is detected that matches your filters.',
@@ -757,7 +757,7 @@ const TwilioAppEn = {
     },
     new_transcription: {
       groups: ['Voice'],
-      displayName: 'New Transcription',
+      displayName: 'New transcription',
       shortDesc: 'Triggers when a new recording transcription is created',
       longDesc:
         'Monitors your Twilio account for new transcriptions by checking the latest recordings. You can filter by specific call SID or conference SID. The trigger fires whenever a new transcription is detected for recordings that match your filters.',

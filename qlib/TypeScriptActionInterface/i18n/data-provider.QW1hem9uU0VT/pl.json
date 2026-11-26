@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Amazon SES** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec podstawowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji w przypadku punktów końcowych, które nie są jeszcze udostępnione jako akcje wyższego poziomu w tej aplikacji."
         },
         "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "Wyślij e-mail"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Wysyłaj wiadomości e-mail z obsługą treści HTML i tekstowych, odbiorców CC/BCC, adresów odpowiedzi, niestandardowych tagów do śledzenia i zaawansowanych opcji dostarczania. Obejmuje kompleksową walidację i obsługę błędów dla niezawodnego dostarczania wiadomości e-mail."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Region AWS"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Wybierz region AWS, w którym skonfigurowano usługę Amazon SES. Różne regiony mogą mieć różne zweryfikowane tożsamości i limity wysyłania."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.display_name": {
-          "source": "From Email Address",
+          "source": "From email address",
           "message": "Adres e-mail nadawcy"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Adres e-mail nadawcy, który musi zostać zweryfikowany na Twoim koncie Amazon SES. Ten adres pojawi się w polu Od wiadomości e-mail."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.display_name": {
-          "source": "To Email Addresses",
+          "source": "To email addresses",
           "message": "Adresy e-mail odbiorców"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Jeden lub więcej adresów e-mail, na które ma zostać wysłana wiadomość. Wiele adresów należy rozdzielić przecinkami. Wszystkie adresy muszą mieć prawidłowy format e-mail."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.display_name": {
-          "source": "CC Email Addresses",
+          "source": "CC email addresses",
           "message": "Adresy e-mail CC"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Opcjonalni odbiorcy kopii (CC), którzy otrzymają kopię wiadomości e-mail. Wiele adresów należy rozdzielić przecinkami."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.display_name": {
-          "source": "BCC Email Addresses",
+          "source": "BCC email addresses",
           "message": "Adresy e-mail BCC"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Opcjonalni odbiorcy ukrytej kopii (BCC), którzy otrzymają kopię bez wiedzy innych odbiorców. Wiele adresów należy rozdzielić przecinkami."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.display_name": {
-          "source": "Reply-To Addresses",
+          "source": "Reply-to addresses",
           "message": "Adresy do odpowiedzi"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Opcjonalne adresy e-mail, na które powinny być wysyłane odpowiedzi zamiast na adres nadawcy. Wiele adresów należy rozdzielić przecinkami."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "Temat wiadomości e-mail"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Wiersz tematu, który pojawi się w klincie pocztowym odbiorcy. Powinien być opisowy i zachęcający."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.display_name": {
-          "source": "Text Body",
+          "source": "Text body",
           "message": "Treść tekstowa"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Treść czystego tekstu wiadomości e-mail. Należy podać treść tekstową lub treść HTML. Wersja tekstowa zapewnia zgodność ze wszystkimi klientami poczty e-mail."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.display_name": {
-          "source": "HTML Body",
+          "source": "HTML body",
           "message": "Treść HTML"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Treść HTML wiadomości e-mail z formatowaniem, linkami i stylizacją. Należy podać treść tekstową lub treść HTML."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.display_name": {
-          "source": "Character Encoding",
+          "source": "Character encoding",
           "message": "Kodowanie znaków"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "US-ASCII"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.display_name": {
-          "source": "Return Path",
+          "source": "Return path",
           "message": "Ścieżka zwrotna"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Opcjonalny adres e-mail, na który będą wysyłane powiadomienia o zwrotach. Musi to być zweryfikowany adres na Twoim koncie SES."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.display_name": {
-          "source": "Configuration Set",
+          "source": "Configuration set",
           "message": "Zestaw konfiguracji"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Opcjonalna nazwa zestawu konfiguracji do użycia dla tej wiadomości e-mail. Zestawy konfiguracji umożliwiają publikowanie zdarzeń wysyłania wiadomości e-mail do innych usług AWS."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.display_name": {
-          "source": "Email Tags",
+          "source": "Email tags",
           "message": "Tagi e-mail"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Opcjonalne tagi do kategoryzowania i śledzenia wiadomości e-mail. Tagi mogą być używane do raportowania i analityki w panelu SES."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "Nazwa znacznika"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Opisowa nazwa tagu używana do kategoryzacji."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.display_name": {
-          "source": "Tag Value",
+          "source": "Tag value",
           "message": "Wartość znacznika"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Wartość skojarzona z nazwą tagu."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.display_name": {
-          "source": "Verify Email Address",
+          "source": "Verify email address",
           "message": "Zweryfikuj adres e-mail"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Rozpocznij proces weryfikacji adresu e-mail lub domeny. Amazon SES wyśle wiadomość e-mail z weryfikacją, w którą należy kliknąć, aby zakończyć proces weryfikacji."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Region AWS"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Wybierz region AWS, w którym chcesz zweryfikować adres e-mail. Zweryfikowana tożsamość będzie dostępna w tym regionie."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.display_name": {
-          "source": "Email Address to Verify",
+          "source": "Email address to verify",
           "message": "Adres e-mail do weryfikacji"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Adres e-mail, który chcesz zweryfikować jako tożsamość wysyłającą. Amazon SES wyśle wiadomość weryfikacyjną na ten adres."
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.display_name": {
-          "source": "Get Send Statistics",
+          "source": "Get send statistics",
           "message": "Pobierz statystyki wysyłania"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Pobieraj kompleksowe statystyki wysyłki, w tym próby dostarczenia, zwroty, skargi i współczynniki odrzuceń. Dane są udostępniane w formacie szeregów czasowych z obliczonymi wartościami procentowymi i podsumowaniami."
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Region AWS"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Wybierz region AWS, z którego chcesz pobrać statystyki wysyłania. Statystyki są specyficzne dla danego regionu."
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.display_name": {
-          "source": "New Verified Identity",
+          "source": "New verified identity",
           "message": "Nowa zweryfikowana tożsamość"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Monitoruje nowo zweryfikowane adresy e-mail i domeny na Twoim koncie SES. Uruchamia się, gdy proces weryfikacji zostanie zakończony dla nowych tożsamości wysyłających."
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Region AWS"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.short_desc": {

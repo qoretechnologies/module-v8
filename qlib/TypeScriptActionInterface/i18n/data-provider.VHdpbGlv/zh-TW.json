@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Twilio** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基本 URL)、選填的查詢參數、標頭及請求內文。回應將以包含狀態碼、回應標頭和回應內文的雜湊傳回。\n\n當端點尚未在此應用程式中以第一級動作公開時，請使用此動作。"
         },
         "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "Get a Transcription",
+          "source": "Get a transcription",
           "message": "取得逐字稿"
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
@@ -376,7 +376,7 @@
           "message": "要擷取的逐字稿唯一字串識別碼 (SID)。逐字稿 SID 以「TR」開頭。"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
-          "source": "List Transcriptions",
+          "source": "List transcriptions",
           "message": "列出逐字稿"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "要傳回的逐字稿記錄上限數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
@@ -424,7 +424,7 @@
           "message": "每頁傳回的逐字稿記錄數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
-          "source": "Get a Recording",
+          "source": "Get a recording",
           "message": "取得錄音"
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
@@ -448,7 +448,7 @@
           "message": "要擷取的錄音唯一字串識別碼 (SID)。錄音 SID 以「RE」開頭。"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
-          "source": "List Recordings",
+          "source": "List recordings",
           "message": "列出錄音"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
@@ -484,7 +484,7 @@
           "message": "僅傳回與此特定會議關聯的錄音。會議 SID 應以「CF」開頭。"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
-          "source": "Date Created After",
+          "source": "Date created after",
           "message": "建立日期晚於或等於"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
@@ -496,7 +496,7 @@
           "message": "僅傳回在此日期或之後建立的錄音。請以 ISO 8601 格式提供日期。"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
-          "source": "Date Created Before",
+          "source": "Date created before",
           "message": "建立日期早於或等於"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
@@ -508,7 +508,7 @@
           "message": "僅傳回在此日期或之前建立的錄音。請以 ISO 8601 格式提供日期。"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
-          "source": "Include Soft Deleted",
+          "source": "Include soft deleted",
           "message": "包含軟刪除項目"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "要傳回的錄音記錄最大數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "每頁要傳回的錄音記錄數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get a Message",
+          "source": "Get a message",
           "message": "取得訊息"
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -568,7 +568,7 @@
           "message": "要擷取的訊息唯一字串識別碼 (SID)。訊息 SID 以「SM」或「MM」開頭。"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "列出訊息"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -604,7 +604,7 @@
           "message": "僅傳回從此電話號碼或英數字元寄件者 ID 傳送的訊息。電話號碼格式應為 E.164。"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
-          "source": "Date Sent After",
+          "source": "Date sent after",
           "message": "傳送日期晚於或等於"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
@@ -616,7 +616,7 @@
           "message": "僅傳回在此日期或之後傳送的訊息。請以 ISO 8601 格式提供日期。"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
-          "source": "Date Sent Before",
+          "source": "Date sent before",
           "message": "傳送日期早於或等於"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
@@ -640,7 +640,7 @@
           "message": "要傳回的訊息記錄最大數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "每頁要傳回的訊息記錄數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create a Message",
+          "source": "Create a message",
           "message": "建立訊息"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -712,7 +712,7 @@
           "message": "要隨訊息傳送之公開存取媒體檔案的 URL 清單。適用於 MMS 訊息。最多可包含 10 個媒體檔案。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
-          "source": "Messaging Service SID",
+          "source": "Messaging service SID",
           "message": "Messaging Service SID"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
@@ -724,7 +724,7 @@
           "message": "用於該訊息的 Messaging Service SID。設定後可省略 from 參數，Twilio 將從 Messaging Service 集區中選取適當的電話號碼。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "狀態回呼 URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -736,7 +736,7 @@
           "message": "每次訊息狀態變更時 Twilio 將會 POST 的 URL。這可讓您追蹤訊息的傳送狀態。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
-          "source": "Max Price",
+          "source": "Max price",
           "message": "最高價格"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
@@ -748,7 +748,7 @@
           "message": "傳送訊息可接受的最高總價 (USD)。如果費用超過此值，訊息將無法傳送。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
-          "source": "Validity Period",
+          "source": "Validity period",
           "message": "有效期限"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
@@ -760,7 +760,7 @@
           "message": "訊息可留在佇列中的秒數。超過此時間後若訊息仍未送達，則會失敗。最大值為 14400 秒（4 小時）。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
-          "source": "Schedule Type",
+          "source": "Schedule type",
           "message": "排程類型"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
@@ -776,7 +776,7 @@
           "message": "固定"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
-          "source": "Send At",
+          "source": "Send at",
           "message": "傳送時間"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
@@ -788,7 +788,7 @@
           "message": "排程訊息應傳送的時間，採 ISO 8601 格式。當 Schedule Type 設為 \"fixed\" 時，此參數為必填。"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete a Message",
+          "source": "Delete a message",
           "message": "刪除訊息"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -812,7 +812,7 @@
           "message": "要刪除的訊息唯一字串識別碼 (SID)。訊息 SID 以「SM」或「MM」開頭。"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
-          "source": "List Message Media",
+          "source": "List message media",
           "message": "列出訊息媒體"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
@@ -848,7 +848,7 @@
           "message": "要傳回的媒體記錄最大數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
@@ -860,7 +860,7 @@
           "message": "每頁要傳回的媒體記錄數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
-          "source": "Create a Call",
+          "source": "Create a call",
           "message": "建立通話"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
@@ -920,7 +920,7 @@
           "message": "通話連線時要執行的 TwiML 指令。如果同時提供了 TwiML 和 URL，則以 TwiML 為優先。最多 4000 個字元。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
@@ -940,7 +940,7 @@
           "message": "POST"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "狀態回呼 URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -952,7 +952,7 @@
           "message": "通話狀態變更時 Twilio 將發送 POST 請求的 URL。您可以使用狀態回呼事件指定觸發回呼的事件。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
-          "source": "Status Callback Events",
+          "source": "Status callback events",
           "message": "狀態回呼事件"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
@@ -980,7 +980,7 @@
           "message": "已完成"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
-          "source": "Status Callback Method",
+          "source": "Status callback method",
           "message": "狀態回呼方法"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "設定為 true 以錄製整個通話。錄音將在通話結束後提供。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
-          "source": "Recording Channels",
+          "source": "Recording channels",
           "message": "錄音聲道"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "雙聲道"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Recording Status Callback",
+          "source": "Recording status callback",
           "message": "錄音狀態回呼"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "錄音可用時 Twilio 將發送 POST 請求的 URL。這讓您可以立即處理或儲存錄音。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
+          "source": "Machine detection",
           "message": "機器偵測"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "偵測訊息結束"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
-          "source": "Machine Detection Timeout",
+          "source": "Machine detection timeout",
           "message": "機器偵測逾時"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "逾時前嘗試答錄機偵測的秒數。預設值為 30 秒。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
+          "source": "Send digits",
           "message": "傳送按鍵號碼"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "連線後要撥打的按鍵字串。有效字元：0-9、A-D、#、*、w（暫停 0.5 秒）、W（暫停 1 秒）。例如：\"W1234#\"。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
-          "source": "Time Limit",
+          "source": "Time limit",
           "message": "時間限制"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
@@ -1112,7 +1112,7 @@
           "message": "通話的最長持續秒數。超過此時間後通話將自動結束。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
-          "source": "Create Call with Text-to-Speech",
+          "source": "Create call with text-to-speech",
           "message": "建立文字轉語音通話"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "土耳其語（土耳其）"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
-          "source": "Record Call",
+          "source": "Record call",
           "message": "錄製通話"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "設為 true 可錄製整個通話。錄音將在通話結束後提供，並可使用「列出錄音」動作進行檢索。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
-          "source": "Transcribe Recording",
+          "source": "Transcribe recording",
           "message": "轉錄錄音"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
@@ -1480,7 +1480,7 @@
           "message": "設為 true 可自動轉錄通話錄音。這需要啟用「錄製通話」選項。轉錄內容將在處理完成後提供。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
-          "source": "Transcription Callback URL",
+          "source": "Transcription callback URL",
           "message": "轉錄回呼 URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "轉錄完成時 Twilio 將發送 POST 請求的 URL。這讓您能夠在轉錄內容可用時立即進行處理或儲存。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
+          "source": "Send digits",
           "message": "傳送按鍵號碼"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "通話接通後要撥打的一組按鍵字串。適用於自動導覽電話語音選單。有效字元：0-9、#、*、w（等待 0.5 秒）。例如：「w123#」會等待 0.5 秒，然後撥打 123#。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
+          "source": "Status callback URL",
           "message": "狀態回呼 URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
@@ -1528,7 +1528,7 @@
           "message": "通話接聽前等待的逾時秒數。預設值為 60 秒，最大值為 600 秒。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
+          "source": "Machine detection",
           "message": "機器偵測"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "偵測訊息結束"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
-          "source": "List Calls",
+          "source": "List calls",
           "message": "列出通話"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "無人接聽"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
-          "source": "Start Time After",
+          "source": "Start time after",
           "message": "開始時間晚於"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
@@ -1640,7 +1640,7 @@
           "message": "僅傳回在此日期和時間或之後開始的通話。請以 ISO 8601 格式提供日期。"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
-          "source": "Start Time Before",
+          "source": "Start time before",
           "message": "開始時間早於"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "僅傳回在此日期和時間或之前開始的通話。請以 ISO 8601 格式提供日期。"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
-          "source": "End Time After",
+          "source": "End time after",
           "message": "結束時間晚於"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "僅傳回在此日期和時間或之後結束的通話。請以 ISO 8601 格式提供日期。"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
-          "source": "End Time Before",
+          "source": "End time before",
           "message": "結束時間早於"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
@@ -1688,7 +1688,7 @@
           "message": "要傳回的通話記錄上限數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "每頁傳回的通話記錄數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
-          "source": "Get a Call",
+          "source": "Get a call",
           "message": "取得通話"
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "要擷取的通話唯一字串識別碼 (SID)。通話 SID 以「CA」開頭。"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
-          "source": "Delete a Call",
+          "source": "Delete a call",
           "message": "刪除通話"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
@@ -1748,7 +1748,7 @@
           "message": "要刪除的通話唯一字串識別碼 (SID)。通話 SID 以「CA」開頭。"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Create an Execution",
+          "source": "Create an execution",
           "message": "建立執行"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "將新增至 Flow 上下文並可作為變數存取的 JSON 資料。例如：具有 name 屬性的 JSON 物件在 Flow 中將可作為 flow.data.name 使用。"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
-          "source": "List Executions",
+          "source": "List executions",
           "message": "列出執行"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "您要列出其執行的 Studio Flow SID。Flow SID 以「FW」開頭。"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
-          "source": "Date Created From",
+          "source": "Date created from",
           "message": "建立日期晚於"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "僅傳回在此日期和時間或之後建立的執行，格式為 ISO 8601。"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
-          "source": "Date Created To",
+          "source": "Date created to",
           "message": "建立日期早於"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
@@ -1868,7 +1868,7 @@
           "message": "要傳回的執行記錄上限數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "每頁傳回的執行記錄數量。預設值為 50，最大值為 1000。"
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
-          "source": "Get an Execution",
+          "source": "Get an execution",
           "message": "取得執行"
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
@@ -1916,7 +1916,7 @@
           "message": "要擷取的執行唯一字串識別碼 (SID)。執行 SID 以「FN」開頭。"
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Update an Execution",
+          "source": "Update an execution",
           "message": "更新執行"
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -1972,7 +1972,7 @@
           "message": "已結束"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Delete an Execution",
+          "source": "Delete an execution",
           "message": "刪除執行"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "要刪除的執行唯一字串識別碼 (SID)。執行 SID 以「FN」開頭。"
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "新訊息"
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "僅針對從此電話號碼或英數字元寄件者 ID 傳送的訊息觸發。電話號碼格式應為 E.164 (例如 +15551234567)。保留空白將針對所有寄件者觸發。"
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
-          "source": "New Recording",
+          "source": "New recording",
           "message": "新錄音"
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
@@ -2080,7 +2080,7 @@
           "message": "僅針對與此特定會議關聯的錄音觸發。會議 SID 應以「CF」開頭。保留空白將針對所有會議觸發。"
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "New Transcription",
+          "source": "New transcription",
           "message": "新轉錄"
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {

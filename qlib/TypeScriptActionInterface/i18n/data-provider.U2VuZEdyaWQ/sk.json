@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **SendGrid** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
+          "source": "List blocks",
           "message": "Zoznam blokov"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Načítať zoznam všetkých e-mailových adries, ktoré sú aktuálne vo vašom zozname blokovaní. Zablokované adresy sú e-maily, ktoré boli odmietnuté prijímacími servermi. Môžete filtrovať podľa časového rozsahu a stránkovať výsledky."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Čas začiatku"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Načítať blokovania, ktoré boli vytvorené po tomto časovom bode. Zadajte čas ako Unix timestamp (sekundy od začiatku epochy)."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Čas ukončenia"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Počiatočný bod v zozname výsledkov pre stránkovanie. Predvolená hodnota je 0."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.display_name": {
-          "source": "Get a Block",
+          "source": "Get a block",
           "message": "Získať blokovanie"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.short_desc": {
@@ -424,7 +424,7 @@
           "message": "E-mailová adresa, ktorú chcete načítať zo zoznamu blokovaní. Toto by mala byť presná e-mailová adresa, ktorá bola zablokovaná."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
+          "source": "Delete blocks",
           "message": "Odstrániť bloky"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Odstrániť e-mailové adresy zo zoznamu blokovaní. Môžete buď vymazať všetky blokovania naraz, alebo určiť konkrétne e-mailové adresy na odstránenie. Odstránenie blokovaní umožní týmto adresám opäť prijímať e-maily."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "Vymazať všetko"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Pole e-mailových adries na odstránenie zo zoznamu blokovaní. Povinné, ak nie je Delete All nastavené na true."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.display_name": {
-          "source": "Get All Bounces",
+          "source": "Get all bounces",
           "message": "Získať všetky vrátené e-maily"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Získať zoznam všetkých e-mailových adries, pri ktorých došlo k vráteniu. K vráteniu dochádza vtedy, keď e-mail nie je možné doručiť príjemcovi. Môžete filtrovať podľa časového rozsahu a stránkovať výsledky."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Čas začiatku"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Načítať odmietnuté e-maily (bounces), ktoré boli vytvorené po tomto časovom bode. Zadajte čas ako Unix timestamp (sekundy od začiatku epochy)."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Čas ukončenia"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Počiatočný bod v zozname výsledkov pre stránkovanie. Predvolená hodnota je 0."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.display_name": {
-          "source": "Delete Bounces",
+          "source": "Delete bounces",
           "message": "Vymazať odmietnutia"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Odstrániť e-mailové adresy zo zoznamu odmietnutí. Môžete buď vymazať všetky odmietnutia naraz, alebo určiť konkrétne e-mailové adresy na odstránenie. Odstránenie odmietnutí umožní týmto adresám opäť prijímať e-maily."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "Vymazať všetko"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Pole e-mailových adries na odstránenie zo zoznamu odmietnutí. Povinné, ak nie je Delete All nastavené na true."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.display_name": {
-          "source": "List Global Suppressions",
+          "source": "List global suppressions",
           "message": "Vypísať globálne potlačenia"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Načítať zoznam všetkých e-mailových adries, ktoré sa globálne odhlásili zo všetkých vašich e-mailov. Tieto adresy nebudú dostávať žiadne e-maily z vášho účtu, kým nebudú z tohto zoznamu odstránené."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Čas začiatku"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Získať potlačenia vytvorené po tomto čase. Čas zadajte ako časovú pečiatku Unixu (sekundy od začiatku epochy)."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Čas ukončenia"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Počiatočný bod v zozname výsledkov pre stránkovanie. Predvolená hodnota je 0."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Get a Global Suppression",
+          "source": "Get a global suppression",
           "message": "Získať globálne potlačenie"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -640,7 +640,7 @@
           "message": "E-mailová adresa, ktorú chcete vyhľadať v globálnom zozname potlačení. Ak sa nájde, vráti podrobnosti o potlačení."
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.display_name": {
-          "source": "Add Global Suppressions",
+          "source": "Add global suppressions",
           "message": "Pridať globálne potlačenia"
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Pole e-mailových adries, ktoré sa majú pridať do globálneho zoznamu potlačení. Týmto adresám bude zablokované doručovanie všetkých budúcich e-mailov."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Delete a Global Suppression",
+          "source": "Delete a global suppression",
           "message": "Vymazať globálne potlačenie"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "E-mailová adresa, ktorú chcete odstrániť z globálneho zoznamu potlačení. Po odstránení bude táto adresa opäť schopná prijímať e-maily."
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create a List",
+          "source": "Create a list",
           "message": "Vytvoriť zoznam"
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Popisný názov vášho zoznamu kontaktov. Vyberte názov, ktorý jasne identifikuje účel alebo cieľovú skupinu zoznamu."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.display_name": {
-          "source": "Get All Lists",
+          "source": "Get all lists",
           "message": "Získať všetky zoznamy"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Načítať všetky zoznamy príjemcov vo vašom SendGrid účte. Vracia podrobnosti o zozname vrátane názvu a počtu príjemcov."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete a List",
+          "source": "Delete a list",
           "message": "Vymazať zoznam"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Jedinečný identifikátor zoznamu, ktorý chcete vymazať. Vyberte zo svojich existujúcich zoznamov."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "Vymazať kontakty"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Keď je nastavené na true, všetky kontakty v zozname budú tiež natrvalo vymazané z vašej databázy kontaktov. Používajte opatrne."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.display_name": {
-          "source": "Add or Update a Contact",
+          "source": "Add or update a contact",
           "message": "Pridať alebo aktualizovať kontakt"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.short_desc": {
@@ -784,7 +784,7 @@
           "message": "E-mailová adresa kontaktu. Ide o jedinečný identifikátor – ak kontakt s týmto e-mailom existuje, bude aktualizovaný."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Meno"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Krstné meno kontaktu."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Priezvisko"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Jedno alebo viacero ID zoznamov, do ktorých sa má tento kontakt pridať. Kontakt bude pridaný do všetkých zadaných zoznamov."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Vlastné polia"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Objekt JSON obsahujúci názvy a hodnoty vlastných polí. Vlastné polia musia byť najprv vytvorené vo vašom účte SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
-          "source": "Search for Contacts",
+          "source": "Search for contacts",
           "message": "Vyhľadať kontakty"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Vyhľadajte vo svojej databáze kontaktov kontakty, ktoré zodpovedajú konkrétnej hodnote poľa. Môžete vyhľadávať podľa e-mailu, mena alebo ľubovoľného vlastného poľa."
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Názov poľa"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Hodnota, s ktorou sa má zhodovať zadané pole. Textové polia môžu vyžadovať kódovanie URL."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "Vymazať kontakty"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Pole ID kontaktov na vymazanie. Vyberte zo svojich existujúcich kontaktov. Všetky vybrané kontakty budú natrvalo odstránené."
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
-          "source": "Remove Contacts from List",
+          "source": "Remove contacts from list",
           "message": "Odstrániť kontakty zo zoznamu"
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Pole identifikátorov kontaktov (ID), ktoré sa majú odstrániť zo zoznamu. Kontakty zostanú vo vašej databáze, ale ich prepojenie s týmto zoznamom sa zruší."
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.display_name": {
-          "source": "Validate Email",
+          "source": "Validate email",
           "message": "Overiť e-mail"
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Voliteľný zdrojový reťazec, ktorý vám pomôže sledovať, odkiaľ požiadavka na overenie prišla."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "Odoslať e-mail"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Odošlite transakčný e-mail jednému alebo viacerým príjemcom. Môžete odoslať čistý text, HTML alebo oboje. Podporuje CC, BCC a vlastné adresy na odpoveď."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "E-mail príjemcu"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -988,7 +988,7 @@
           "message": "E-mailová adresa primárneho príjemcu."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "Meno príjemcu"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Voliteľné meno príjemcu na prispôsobenie poľa „Komu“."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "E-mail odosielateľa"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "E-mailová adresa, ktorá sa zobrazí ako odosielateľ. Musí ísť o overeného odosielateľa vo vašom účte SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "Meno odosielateľa"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Riadok predmetu e-mailu."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.display_name": {
-          "source": "Text Content",
+          "source": "Text content",
           "message": "Textový obsah"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Verzia obsahu e-mailu v čistom texte. Musí byť zadaný buď textový obsah, alebo HTML obsah (prípadne oboje)."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.display_name": {
-          "source": "HTML Content",
+          "source": "HTML content",
           "message": "HTML obsah"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "HTML verzia obsahu e-mailu. Musí byť zadaný buď textový obsah, alebo HTML obsah (prípadne oboje)."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "E-mail pre odpoveď"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "Voliteľná e-mailová adresa, na ktorú by mali príjemcovia odpovedať. Ak nie je zadaná, odpovede pôjdu na adresu odosielateľa."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "Meno pre odpoveď"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Voliteľné meno, ktoré sa zobrazí pre adresu na odpoveď."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "E-maily v kópii (CC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Pole e-mailových adries, ktoré sa majú zahrnúť ako príjemcovia v kópii (CC)."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "E-maily v skrytej kópii (BCC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Pole e-mailových adries, ktoré sa majú zahrnúť ako príjemcovia v skrytej kópii (BCC)."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.display_name": {
-          "source": "Send Template Email",
+          "source": "Send template email",
           "message": "Odoslať e-mail zo šablóny"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Odošlite transakčný e-mail pomocou preddefinovanej dynamickej šablóny SendGrid. Prispôsobte obsah e-mailu zadaním dynamických údajov šablóny na personalizáciu."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "E-mail príjemcu"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "E-mailová adresa primárneho príjemcu."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "Meno príjemcu"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Voliteľné meno príjemcu na prispôsobenie poľa „Komu“."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "E-mail odosielateľa"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "E-mailová adresa, ktorá sa zobrazí ako odosielateľ. Musí ísť o overeného odosielateľa vo vašom účte SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "Meno odosielateľa"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Vyberte dynamickú šablónu, ktorá sa má použiť pre tento e-mail. Šablóna musí byť vytvorená vo vašom účte SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.display_name": {
-          "source": "Template Values",
+          "source": "Template values",
           "message": "Hodnoty šablóny"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Objekt JSON obsahujúci páry kľúč – hodnota pre dynamické údaje šablóny. Tieto hodnoty nahradia príslušné zástupné symboly vo vybratej šablóne."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "E-mail pre odpoveď"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Voliteľná e-mailová adresa, na ktorú by mali príjemcovia odpovedať. Ak nie je zadaná, odpovede pôjdu na adresu odosielateľa."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "Meno pre odpoveď"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Voliteľné meno, ktoré sa zobrazí pre adresu na odpoveď."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "E-maily v kópii (CC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Pole e-mailových adries, ktoré sa majú zahrnúť ako príjemcovia v kópii (CC)."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "E-maily v skrytej kópii (BCC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.short_desc": {

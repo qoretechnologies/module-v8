@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do služby **Typeform** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API daného pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create Form",
+          "source": "Create form",
           "message": "Vytvoriť formulár"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Vytvorí nový komplexný Typeform s úplnými možnosťami prispôsobenia vrátane polí, uvítacích obrazoviek, ďakovných obrazoviek, podmienenej logiky, bodovania a pokročilých nastavení. Ideálne na vytváranie prieskumov, kvízov, kontaktných formulárov alebo akýchkoľvek interaktívnych formulárov so zložitou logikou vetvenia a vlastným štýlom."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
-          "source": "Form Title",
+          "source": "Form title",
           "message": "Názov formulára"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Hlavný názov, ktorý sa zobrazí v hornej časti formulára a v zozname formulárov."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.display_name": {
-          "source": "Form Fields",
+          "source": "Form fields",
           "message": "Polia formulára"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Pridajte do formulára otázky a vstupné polia. Každé pole je možné prispôsobiť pomocou rôznych typov, vlastností, validácií a možností bodovania."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.YXR0YWNobWVudA.display_name": {
-          "source": "Field Attachment",
+          "source": "Field attachment",
           "message": "Príloha poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.YXR0YWNobWVudA.short_desc": {
@@ -472,27 +472,27 @@
           "message": "URL alebo cesta k súboru médií."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNjZjAwOWRlMjA1NGNjOTFjNGU4NmExNjkxZWI1ZjlmNjNmZmE4ZWJhMWFhYjc3NDYxNmQwMDE4ZDI2MzM4MTky.field.c2NhbGU.display_name": {
-          "source": "Attachment Scale",
+          "source": "Attachment scale",
           "message": "Mierka prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5MmIxZDY1MDNhM2YwNTE4MTNmNzkyMjM1OTkxYjMxZGJkNWY4ZjJhNzk1YTQ3OWMwYmE5YjlhZWM5NTEyYWY2.field.c2NhbGU.display_name": {
-          "source": "Attachment Scale",
+          "source": "Attachment scale",
           "message": "Mierka prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkYTVhZjk4MWE5NDFlNTZmMWEyYzc3OTFlMDhjZDVmMGIxZDEwZWRjZWU0OGEwMWQ5ZTVlNTc1OGExZTVmNGQ4.field.c2NhbGU.display_name": {
-          "source": "Attachment Scale",
+          "source": "Attachment scale",
           "message": "Mierka prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNhZGI3M2NlOWQ4NTc0MDEyYzUyMjViMTNlZDU3ODdiMTQ2ODhhY2UwYjQ5Zjk3MDM0ODRjY2ZlZDI3YTU0YjEz.field.c2NhbGU.display_name": {
-          "source": "Attachment Scale",
+          "source": "Attachment scale",
           "message": "Mierka prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2OGQwNTkwOGQ5ZjhlMzVhYjNkYzRmMWIxMjQ3NTQ3Yjg5ZDRkZGZkNDU2OWZlZWQ2YmFhNjJlZjZhMzdhZWI4.field.c2NhbGU.display_name": {
-          "source": "Attachment Scale",
+          "source": "Attachment scale",
           "message": "Mierka prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMxNjk2YzkxNWVhN2RkYjU2ZDVlYzIxNjVhOTE0ZTM5NzhiMGZmNTc5YjUyZjQ4OWMxZWRkZmY4NTI3YWY3MjAx.field.c2NhbGU.display_name": {
-          "source": "Attachment Scale",
+          "source": "Attachment scale",
           "message": "Mierka prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNjZjAwOWRlMjA1NGNjOTFjNGU4NmExNjkxZWI1ZjlmNjNmZmE4ZWJhMWFhYjc3NDYxNmQwMDE4ZDI2MzM4MTky.field.c2NhbGU.short_desc": {
@@ -640,31 +640,31 @@
           "message": "1"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNjZjAwOWRlMjA1NGNjOTFjNGU4NmExNjkxZWI1ZjlmNjNmZmE4ZWJhMWFhYjc3NDYxNmQwMDE4ZDI2MzM4MTky.field.dHlwZQ.display_name": {
-          "source": "Attachment Type",
+          "source": "Attachment type",
           "message": "Typ prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5MmIxZDY1MDNhM2YwNTE4MTNmNzkyMjM1OTkxYjMxZGJkNWY4ZjJhNzk1YTQ3OWMwYmE5YjlhZWM5NTEyYWY2.field.dHlwZQ.display_name": {
-          "source": "Attachment Type",
+          "source": "Attachment type",
           "message": "Typ prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3MjQ0NjM3NjhmMzNiYjNlYzIyNmU3ZDFjN2IxZGU1ZWNlZDRkMmI4N2Q1MjM1MzVlMTJkOGIzODQ4Mzk4YmVi.field.dHlwZQ.display_name": {
-          "source": "Attachment Type",
+          "source": "Attachment type",
           "message": "Typ prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkYTVhZjk4MWE5NDFlNTZmMWEyYzc3OTFlMDhjZDVmMGIxZDEwZWRjZWU0OGEwMWQ5ZTVlNTc1OGExZTVmNGQ4.field.dHlwZQ.display_name": {
-          "source": "Attachment Type",
+          "source": "Attachment type",
           "message": "Typ prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNhZGI3M2NlOWQ4NTc0MDEyYzUyMjViMTNlZDU3ODdiMTQ2ODhhY2UwYjQ5Zjk3MDM0ODRjY2ZlZDI3YTU0YjEz.field.dHlwZQ.display_name": {
-          "source": "Attachment Type",
+          "source": "Attachment type",
           "message": "Typ prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2OGQwNTkwOGQ5ZjhlMzVhYjNkYzRmMWIxMjQ3NTQ3Yjg5ZDRkZGZkNDU2OWZlZWQ2YmFhNjJlZjZhMzdhZWI4.field.dHlwZQ.display_name": {
-          "source": "Attachment Type",
+          "source": "Attachment type",
           "message": "Typ prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMxNjk2YzkxNWVhN2RkYjU2ZDVlYzIxNjVhOTE0ZTM5NzhiMGZmNTc5YjUyZjQ4OWMxZWRkZmY4NTI3YWY3MjAx.field.dHlwZQ.display_name": {
-          "source": "Attachment Type",
+          "source": "Attachment type",
           "message": "Typ prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNjZjAwOWRlMjA1NGNjOTFjNGU4NmExNjkxZWI1ZjlmNjNmZmE4ZWJhMWFhYjc3NDYxNmQwMDE4ZDI2MzM4MTky.field.dHlwZQ.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Video"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.bGF5b3V0.display_name": {
-          "source": "Field Layout",
+          "source": "Field layout",
           "message": "Rozloženie poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.bGF5b3V0.short_desc": {
@@ -788,15 +788,15 @@
           "message": "Nastaviť spôsob zobrazenia príloh médií s týmto poľom."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNmMxY2JhNzdiM2I2ZTc0YmUyZjMzYjQwNThkMjFkMjMzNzdiODRlNTUwNGQ4YzliYTQ1NTY1ZWY5NjUxNTU2.field.YXR0YWNobWVudA.display_name": {
-          "source": "Layout Attachment",
+          "source": "Layout attachment",
           "message": "Príloha rozloženia"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2ZGM1MTFjYWQ5ZTZkMDRjMjk2MDlmM2ZmMjRkOWI0YjkzNDMwYzg1NjM1YjdmMWQxOWY5MzhiNmU3OGI0Mjhk.field.YXR0YWNobWVudA.display_name": {
-          "source": "Layout Attachment",
+          "source": "Layout attachment",
           "message": "Príloha rozloženia"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMxZTY0YzBjOTg5ZDY1NjZlNWNiYWY2OGQxNjdkMGZiYTcxNGViY2M5NmEzNDJkNzUxN2RkZTcxNGQzZGMwZDE4.field.YXR0YWNobWVudA.display_name": {
-          "source": "Layout Attachment",
+          "source": "Layout attachment",
           "message": "Príloha rozloženia"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNmMxY2JhNzdiM2I2ZTc0YmUyZjMzYjQwNThkMjFkMjMzNzdiODRlNTUwNGQ4YzliYTQ1NTY1ZWY5NjUxNTU2.field.YXR0YWNobWVudA.short_desc": {
@@ -884,15 +884,15 @@
           "message": "Vpravo"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNmMxY2JhNzdiM2I2ZTc0YmUyZjMzYjQwNThkMjFkMjMzNzdiODRlNTUwNGQ4YzliYTQ1NTY1ZWY5NjUxNTU2.field.dHlwZQ.display_name": {
-          "source": "Layout Type",
+          "source": "Layout type",
           "message": "Typ rozloženia"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2ZGM1MTFjYWQ5ZTZkMDRjMjk2MDlmM2ZmMjRkOWI0YjkzNDMwYzg1NjM1YjdmMWQxOWY5MzhiNmU3OGI0Mjhk.field.dHlwZQ.display_name": {
-          "source": "Layout Type",
+          "source": "Layout type",
           "message": "Typ rozloženia"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMxZTY0YzBjOTg5ZDY1NjZlNWNiYWY2OGQxNjdkMGZiYTcxNGViY2M5NmEzNDJkNzUxN2RkZTcxNGQzZGMwZDE4.field.dHlwZQ.display_name": {
-          "source": "Layout Type",
+          "source": "Layout type",
           "message": "Typ rozloženia"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNmMxY2JhNzdiM2I2ZTc0YmUyZjMzYjQwNThkMjFkMjMzNzdiODRlNTUwNGQ4YzliYTQ1NTY1ZWY5NjUxNTU2.field.dHlwZQ.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Zarovnať"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.cHJvcGVydGllcw.display_name": {
-          "source": "Field Properties",
+          "source": "Field properties",
           "message": "Vlastnosti poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.cHJvcGVydGllcw.short_desc": {
@@ -980,7 +980,7 @@
           "message": "Nastaviť vlastnosti pre pole, ako sú voľby, popisy a správanie."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YWxsb3dfbXVsdGlwbGVfc2VsZWN0aW9u.display_name": {
-          "source": "Allow Multiple Selection",
+          "source": "Allow multiple selection",
           "message": "Povoliť viacnásobný výber"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YWxsb3dfbXVsdGlwbGVfc2VsZWN0aW9u.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Povoliť, aby používatelia mohli vybrať viac ako jednu možnosť odpovede."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YWxsb3dfb3RoZXJfY2hvaWNl.display_name": {
-          "source": "Allow Other Choice",
+          "source": "Allow other choice",
           "message": "Povoliť inú možnosť"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YWxsb3dfb3RoZXJfY2hvaWNl.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "Pridajte možnosť „Iné“, ktorá umožní užívateľom zadať vlastnú vlastnú odpoveď."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YWxwaGFiZXRpY2FsX29yZGVy.display_name": {
-          "source": "Alphabetical Order",
+          "source": "Alphabetical order",
           "message": "Abecedné poradie"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YWxwaGFiZXRpY2FsX29yZGVy.short_desc": {
@@ -1016,15 +1016,15 @@
           "message": "Automatické triedenie možností odpovedí abecedne."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YnV0dG9uX3RleHQ.display_name": {
-          "source": "Button Text",
+          "source": "Button text",
           "message": "Text tlačidla"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0ZDRhNWZhNTQxNjM0MDA3NWNkMjZjYTllZDhlYjYzODAyODYzMTc0ZjhlYTc1NDZmODRjYzkwYzQxZjE4NmEx.field.YnV0dG9uX3RleHQ.display_name": {
-          "source": "Button Text",
+          "source": "Button text",
           "message": "Text tlačidla"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3OWE2YmRmOTNmNTE2YWVhYWU1NjE5NWYyYjkwZTdlYmFmMTkyMzE5YjBlYzNjOWQ0MmNjNzA3MWVlYzI0NmVk.field.YnV0dG9uX3RleHQ.display_name": {
-          "source": "Button Text",
+          "source": "Button text",
           "message": "Text tlačidla"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.YnV0dG9uX3RleHQ.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "Prispôsobte text, ktorý sa zobrazí na tlačidle pokračovať/odoslať pre toto pole."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.Y2hvaWNlcw.display_name": {
-          "source": "Answer Choices",
+          "source": "Answer choices",
           "message": "Možnosti odpovedí"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.Y2hvaWNlcw.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Definujte dostupné možnosti odpovedí pre polia s viacerými výbermi, zoznamom alebo obrázkami."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMyOTU3YmEyMTVhMmJjNjUwYzNkZGNkM2JlMDM4OTNlNWQzNTZhM2Y3MzY0MWQ3OWM0MDViYzMzYzYzNWM2YTg1.field.YXR0YWNobWVudA.display_name": {
-          "source": "Choice Attachment",
+          "source": "Choice attachment",
           "message": "Príloha voľby"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMyOTU3YmEyMTVhMmJjNjUwYzNkZGNkM2JlMDM4OTNlNWQzNTZhM2Y3MzY0MWQ3OWM0MDViYzMzYzYzNWM2YTg1.field.YXR0YWNobWVudA.short_desc": {
@@ -1064,7 +1064,7 @@
           "message": "Voliteľný obrázok alebo súbor médií príložený k tejto možnosti výberu."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3MjQ0NjM3NjhmMzNiYjNlYzIyNmU3ZDFjN2IxZGU1ZWNlZDRkMmI4N2Q1MjM1MzVlMTJkOGIzODQ4Mzk4YmVi.field.cHJvcGVydGllcw.display_name": {
-          "source": "Attachment Properties",
+          "source": "Attachment properties",
           "message": "Vlastnosti prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3MjQ0NjM3NjhmMzNiYjNlYzIyNmU3ZDFjN2IxZGU1ZWNlZDRkMmI4N2Q1MjM1MzVlMTJkOGIzODQ4Mzk4YmVi.field.cHJvcGVydGllcw.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Nastaviť ďalšie vlastnosti pre prílohu médií."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNhMjU3ZTE3YTBiMDgzYWExYWIwMjA2OTFlZTgxOGY4NWZjZDdmY2FhM2UzMzU5ZDg1YWI3NWNiODkyM2ZlYjk4.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Attachment Description",
+          "source": "Attachment description",
           "message": "Popis prílohy"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNhMjU3ZTE3YTBiMDgzYWExYWIwMjA2OTFlZTgxOGY4NWZjZDdmY2FhM2UzMzU5ZDg1YWI3NWNiODkyM2ZlYjk4.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "Voliteľný popis alebo alternatívny text pre prílohu médií."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMyOTU3YmEyMTVhMmJjNjUwYzNkZGNkM2JlMDM4OTNlNWQzNTZhM2Y3MzY0MWQ3OWM0MDViYzMzYzYzNWM2YTg1.field.bGFiZWw.display_name": {
-          "source": "Choice Label",
+          "source": "Choice label",
           "message": "Popis voľby"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMyOTU3YmEyMTVhMmJjNjUwYzNkZGNkM2JlMDM4OTNlNWQzNTZhM2Y3MzY0MWQ3OWM0MDViYzMzYzYzNWM2YTg1.field.bGFiZWw.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "Text, ktorý užívatelia uvidia pre túto odpoveď."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMyOTU3YmEyMTVhMmJjNjUwYzNkZGNkM2JlMDM4OTNlNWQzNTZhM2Y3MzY0MWQ3OWM0MDViYzMzYzYzNWM2YTg1.field.cmVm.display_name": {
-          "source": "Choice Reference",
+          "source": "Choice reference",
           "message": "Odkaz voľby"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMyOTU3YmEyMTVhMmJjNjUwYzNkZGNkM2JlMDM4OTNlNWQzNTZhM2Y3MzY0MWQ3OWM0MDViYzMzYzYzNWM2YTg1.field.cmVm.short_desc": {
@@ -1112,7 +1112,7 @@
           "message": "Voliteľný jedinečný identifikátor pre túto možnosť výberu."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.Y3VycmVuY3k.display_name": {
-          "source": "Payment Currency",
+          "source": "Payment currency",
           "message": "Mena platby"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.Y3VycmVuY3k.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "USD (americký dolár)"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.ZGVmYXVsdF9jb3VudHJ5X2NvZGU.display_name": {
-          "source": "Default Country Code",
+          "source": "Default country code",
           "message": "Predvolený kód krajiny"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.ZGVmYXVsdF9jb3VudHJ5X2NvZGU.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Voliteľný popisový text zobrazený pod otázkou pre poskytnutie ďalšieho kontextu alebo pokynov."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.aGlkZV9tYXJrcw.display_name": {
-          "source": "Hide Marks",
+          "source": "Hide marks",
           "message": "Skryť značky"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.aGlkZV9tYXJrcw.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "Skryť číselné značky na stupnici hodnotenia a názorov."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.bGFiZWxz.display_name": {
-          "source": "Scale Labels",
+          "source": "Scale labels",
           "message": "Popisy osí"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.bGFiZWxz.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Pridajte vlastné textové popisy pre ľavý, pravý a stredný bod stupníc."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkM2RmM2E5ZmI4NWJkNTVhODBjZmRlOTg3ZTFjZmI2MGI3ZjQ4NTdiMTUwYjJiMjcxYTlmYTQ5ZjAxOThmMTM2.field.Y2VudGVy.display_name": {
-          "source": "Center Label",
+          "source": "Center label",
           "message": "Štítky strediska"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkM2RmM2E5ZmI4NWJkNTVhODBjZmRlOTg3ZTFjZmI2MGI3ZjQ4NTdiMTUwYjJiMjcxYTlmYTQ5ZjAxOThmMTM2.field.Y2VudGVy.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Vlastný textový popis stredu stupnice."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkM2RmM2E5ZmI4NWJkNTVhODBjZmRlOTg3ZTFjZmI2MGI3ZjQ4NTdiMTUwYjJiMjcxYTlmYTQ5ZjAxOThmMTM2.field.bGVmdA.display_name": {
-          "source": "Left Label",
+          "source": "Left label",
           "message": "Popis pre ľavý okraj"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkM2RmM2E5ZmI4NWJkNTVhODBjZmRlOTg3ZTFjZmI2MGI3ZjQ4NTdiMTUwYjJiMjcxYTlmYTQ5ZjAxOThmMTM2.field.bGVmdA.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Vlastný textový popis ľavého (minimálneho) konca stupnice."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkM2RmM2E5ZmI4NWJkNTVhODBjZmRlOTg3ZTFjZmI2MGI3ZjQ4NTdiMTUwYjJiMjcxYTlmYTQ5ZjAxOThmMTM2.field.cmlnaHQ.display_name": {
-          "source": "Right Label",
+          "source": "Right label",
           "message": "Popis vpravo"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNkM2RmM2E5ZmI4NWJkNTVhODBjZmRlOTg3ZTFjZmI2MGI3ZjQ4NTdiMTUwYjJiMjcxYTlmYTQ5ZjAxOThmMTM2.field.cmlnaHQ.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Vlastný textový popis pravého (maximálneho) konca stupnice."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.cHJpY2U.display_name": {
-          "source": "Payment Price",
+          "source": "Payment price",
           "message": "Cena platby"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.cHJpY2U.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Nastaviť štruktúru cien pre poľa platby."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMzMzgxZTVjZWNjODdlYzVlYjIxYjg3NmFiMzQzMWIyNjljMGFkMDk1NjA0NjAyNzliOGExMWY3ZDhlNjkzYWU1.field.dHlwZQ.display_name": {
-          "source": "Price Type",
+          "source": "Price type",
           "message": "Typ ceny"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMzMzgxZTVjZWNjODdlYzVlYjIxYjg3NmFiMzQzMWIyNjljMGFkMDk1NjA0NjAyNzliOGExMWY3ZDhlNjkzYWU1.field.dHlwZQ.short_desc": {
@@ -1312,7 +1312,7 @@
           "message": "Premenná"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMzMzgxZTVjZWNjODdlYzVlYjIxYjg3NmFiMzQzMWIyNjljMGFkMDk1NjA0NjAyNzliOGExMWY3ZDhlNjkzYWU1.field.dmFsdWU.display_name": {
-          "source": "Price Value",
+          "source": "Price value",
           "message": "Hodnota ceny"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMzMzgxZTVjZWNjODdlYzVlYjIxYjg3NmFiMzQzMWIyNjljMGFkMDk1NjA0NjAyNzliOGExMWY3ZDhlNjkzYWU1.field.dmFsdWU.short_desc": {
@@ -1328,7 +1328,7 @@
           "message": "Cena"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.cmFuZG9taXpl.display_name": {
-          "source": "Randomize Choices",
+          "source": "Randomize choices",
           "message": "Náhodne vybrať možnosti"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.cmFuZG9taXpl.short_desc": {
@@ -1340,7 +1340,7 @@
           "message": "Zoradiť náhodne možnosti odpovedí pre každého respondentov."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2VwYXJhdG9y.display_name": {
-          "source": "Date Separator",
+          "source": "Date separator",
           "message": "Oddeľovač dátumu"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2VwYXJhdG9y.short_desc": {
@@ -1364,7 +1364,7 @@
           "message": "."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2hhcGU.display_name": {
-          "source": "Rating Shape",
+          "source": "Rating shape",
           "message": "Tvar hodnotenia"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2hhcGU.short_desc": {
@@ -1444,15 +1444,15 @@
           "message": "Používateľ"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2hvd19idXR0b24.display_name": {
-          "source": "Show Button",
+          "source": "Show button",
           "message": "Zobraziť tlačidlo"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0ZDRhNWZhNTQxNjM0MDA3NWNkMjZjYTllZDhlYjYzODAyODYzMTc0ZjhlYTc1NDZmODRjYzkwYzQxZjE4NmEx.field.c2hvd19idXR0b24.display_name": {
-          "source": "Show Button",
+          "source": "Show button",
           "message": "Zobraziť tlačidlo"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3OWE2YmRmOTNmNTE2YWVhYWU1NjE5NWYyYjkwZTdlYmFmMTkyMzE5YjBlYzNjOWQ0MmNjNzA3MWVlYzI0NmVk.field.c2hvd19idXR0b24.display_name": {
-          "source": "Show Button",
+          "source": "Show button",
           "message": "Zobraziť tlačidlo"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2hvd19idXR0b24.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "Zobraziť tlačidlo pokračovať alebo akciu pre toto pole."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2hvd19sYWJlbHM.display_name": {
-          "source": "Show Labels",
+          "source": "Show labels",
           "message": "Zobraziť popisky"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c2hvd19sYWJlbHM.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "Zobraziť textové popisky na stupniciach hodnotenia a stupniciach názorov."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c3RhcnRfYXRfb25l.display_name": {
-          "source": "Start at One",
+          "source": "Start at one",
           "message": "Začať od jednej"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c3RhcnRfYXRfb25l.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "Začať číslovanie škály od 1 namiesto predvoleného 0."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c3RlcHM.display_name": {
-          "source": "Scale Steps",
+          "source": "Scale steps",
           "message": "Kroky osi"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c3RlcHM.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "Definujte počet krokov alebo bodov v hodnotiacich a názorových stupniciach."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c3RydWN0dXJl.display_name": {
-          "source": "Date Structure",
+          "source": "Date structure",
           "message": "Štruktúra dátumu"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.c3RydWN0dXJl.short_desc": {
@@ -1536,7 +1536,7 @@
           "message": "Zobraziť odpoveďové možnosti v väčšom, výraznejšom formáte."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.dmVydGljYWxfYWxpZ25tZW50.display_name": {
-          "source": "Vertical Alignment",
+          "source": "Vertical alignment",
           "message": "Zvislé zarovnanie"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0NmMwZjZjOTBiYmMzM2YyYjNiOTU1ZmIxNmMzNTUwMGE2MDVmNjM4OTBmOWE3ZDRlYzFkZGM0NzE2ZDdhMGVj.field.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "Zobraziť možnosti odpovedí v zvislej liste namiesto vodorovnej"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.cmVm.display_name": {
-          "source": "Field Reference",
+          "source": "Field reference",
           "message": "Odkaz poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.cmVm.short_desc": {
@@ -1560,7 +1560,7 @@
           "message": "Voliteľný jedinečný identifikátor pre toto pole, ktorý sa dá použiť v logike a integráciách."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.c2NvcmluZw.display_name": {
-          "source": "Field Scoring",
+          "source": "Field scoring",
           "message": "Hodnotenie poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.c2NvcmluZw.short_desc": {
@@ -1572,7 +1572,7 @@
           "message": "Nastaviť pravidlá bodovania pre otázky kvízu a hodnotenia."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwYTZiNThmMTFjZDlmMzkyZmZiNTZkODNkNWRlZWRmZWMxODRkNzA2NThhZmI0ZDk1ZDJkYzQ2Y2UxNzExZGQw.field.Ym9vbGVhbl9jb3JyZWN0.display_name": {
-          "source": "Boolean Correct Scoring",
+          "source": "Boolean correct scoring",
           "message": "Skórovanie logických správnych odpovedí"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwYTZiNThmMTFjZDlmMzkyZmZiNTZkODNkNWRlZWRmZWMxODRkNzA2NThhZmI0ZDk1ZDJkYzQ2Y2UxNzExZGQw.field.Ym9vbGVhbl9jb3JyZWN0.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "Nastaviť bodovanie pre otázky s binárnou odpoveďou (pravda/nepatrne)."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OTU2NGMxMGE3MzA0NmZlZmI4ZTYwYzlkNjliMGI1MTQ2NjQ3NDcyNzdkODFkODc4MjBiMjZjYjc1NmVkYzdh.field.Ym9vbGVhbg.display_name": {
-          "source": "Correct Answer",
+          "source": "Correct answer",
           "message": "Správna odpoveď"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OTU2NGMxMGE3MzA0NmZlZmI4ZTYwYzlkNjliMGI1MTQ2NjQ3NDcyNzdkODFkODc4MjBiMjZjYjc1NmVkYzdh.field.Ym9vbGVhbg.short_desc": {
@@ -1596,11 +1596,11 @@
           "message": "Určiť, či je správna odpoveď pravda alebo nepravda."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OTU2NGMxMGE3MzA0NmZlZmI4ZTYwYzlkNjliMGI1MTQ2NjQ3NDcyNzdkODFkODc4MjBiMjZjYjc1NmVkYzdh.field.c2NvcmU.display_name": {
-          "source": "Score Points",
+          "source": "Score points",
           "message": "Body skóre"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNjZWMxYTFkNTg5YjlhNGZiOWU0NmRjMGJhZDZlM2QxODRmYzQxMDQyNDE5ZWI5OTkzMjA1MDRmOWJiMzY2YTBl.field.c2NvcmU.display_name": {
-          "source": "Score Points",
+          "source": "Score points",
           "message": "Body skóre"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OTU2NGMxMGE3MzA0NmZlZmI4ZTYwYzlkNjliMGI1MTQ2NjQ3NDcyNzdkODFkODc4MjBiMjZjYjc1NmVkYzdh.field.c2NvcmU.short_desc": {
@@ -1620,7 +1620,7 @@
           "message": "Počet bodov, ktoré sa vyhrávajú za správnu odpoveď."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwYTZiNThmMTFjZDlmMzkyZmZiNTZkODNkNWRlZWRmZWMxODRkNzA2NThhZmI0ZDk1ZDJkYzQ2Y2UxNzExZGQw.field.Y2hvaWNlc19hbGxfY29ycmVjdA.display_name": {
-          "source": "Multiple Choice Scoring",
+          "source": "Multiple choice scoring",
           "message": "Skórovanie viacnásobnej voľby"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwYTZiNThmMTFjZDlmMzkyZmZiNTZkODNkNWRlZWRmZWMxODRkNzA2NThhZmI0ZDk1ZDJkYzQ2Y2UxNzExZGQw.field.Y2hvaWNlc19hbGxfY29ycmVjdA.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "Nastaviť bodovanie pre otázky s viacerými možnosťami."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNjZWMxYTFkNTg5YjlhNGZiOWU0NmRjMGJhZDZlM2QxODRmYzQxMDQyNDE5ZWI5OTkzMjA1MDRmOWJiMzY2YTBl.field.Y2hvaWNlcw.display_name": {
-          "source": "Correct Choices",
+          "source": "Correct choices",
           "message": "Správne odpovede"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNjZWMxYTFkNTg5YjlhNGZiOWU0NmRjMGJhZDZlM2QxODRmYzQxMDQyNDE5ZWI5OTkzMjA1MDRmOWJiMzY2YTBl.field.Y2hvaWNlcw.short_desc": {
@@ -1644,7 +1644,7 @@
           "message": "Odkazy na správne možnosti odpovedí."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwYTZiNThmMTFjZDlmMzkyZmZiNTZkODNkNWRlZWRmZWMxODRkNzA2NThhZmI0ZDk1ZDJkYzQ2Y2UxNzExZGQw.field.dHlwZQ.display_name": {
-          "source": "Scoring Type",
+          "source": "Scoring type",
           "message": "Typ skóre"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwYTZiNThmMTFjZDlmMzkyZmZiNTZkODNkNWRlZWRmZWMxODRkNzA2NThhZmI0ZDk1ZDJkYzQ2Y2UxNzExZGQw.field.dHlwZQ.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Všetky voľby správne"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.dGl0bGU.display_name": {
-          "source": "Question Title",
+          "source": "Question title",
           "message": "Názov otázky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.dGl0bGU.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Hlavný text otázky, ktorý užívatelia uvidia pre toto pole."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.dHlwZQ.display_name": {
-          "source": "Field Type",
+          "source": "Field type",
           "message": "Typ poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.dHlwZQ.short_desc": {
@@ -1780,7 +1780,7 @@
           "message": "Áno/Nie"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.dmFsaWRhdGlvbnM.display_name": {
-          "source": "Field Validations",
+          "source": "Field validations",
           "message": "Overenie poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.field.dmFsaWRhdGlvbnM.short_desc": {
@@ -1792,7 +1792,7 @@
           "message": "Nastavte pravidlá overenia, ako sú povinné polia, minimálne/maximálne hodnoty a obmedzenia dĺžky."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWF4X2xlbmd0aA.display_name": {
-          "source": "Maximum Length",
+          "source": "Maximum length",
           "message": "Maximálna dĺžka"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWF4X2xlbmd0aA.short_desc": {
@@ -1804,7 +1804,7 @@
           "message": "Nastavte maximálny počet znakov, ktoré môžu používatelia zadať."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWF4X3NlbGVjdGlvbg.display_name": {
-          "source": "Maximum Selections",
+          "source": "Maximum selections",
           "message": "Maximálny počet výberov"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWF4X3NlbGVjdGlvbg.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "Obmedzte používateľov na výber najviac toľko možností."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWF4X3ZhbHVl.display_name": {
-          "source": "Maximum Value",
+          "source": "Maximum value",
           "message": "Maximálna hodnota"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWF4X3ZhbHVl.short_desc": {
@@ -1828,7 +1828,7 @@
           "message": "Nastavte maximálnu číselnú hodnotu pre číselné polia."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWluX3NlbGVjdGlvbg.display_name": {
-          "source": "Minimum Selections",
+          "source": "Minimum selections",
           "message": "Minimálny počet výberov"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWluX3NlbGVjdGlvbg.short_desc": {
@@ -1840,7 +1840,7 @@
           "message": "Vyžadovať, aby používatelia vybrali aspoň toľko možností."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWluX3ZhbHVl.display_name": {
-          "source": "Minimum Value",
+          "source": "Minimum value",
           "message": "Minimálna hodnota"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.bWluX3ZhbHVl.short_desc": {
@@ -1852,7 +1852,7 @@
           "message": "Nastavte minimálnu číselnú hodnotu pre číselné polia."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.cmVxdWlyZWQ.display_name": {
-          "source": "Required Field",
+          "source": "Required field",
           "message": "Povinné pole"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3Yjk2Zjg5NmQ0OTgyZDFiZDRmMTFlMzM0Zjk4NWFjMjdlODY3OTM3MGMwYzljOTYyZjMxYzIxNjI1NzVkNzEx.field.cmVxdWlyZWQ.short_desc": {
@@ -1864,7 +1864,7 @@
           "message": "Vyžadovať, aby používatelia vyplnili toto pole pred pokračovaním."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.display_name": {
-          "source": "Hidden Fields",
+          "source": "Hidden fields",
           "message": "Skryté polia"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.short_desc": {
@@ -1876,7 +1876,7 @@
           "message": "Zoznam názvov skrytých polí, ktoré možno použiť na odovzdávanie údajov prostredníctvom parametrov URL."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.display_name": {
-          "source": "Form Variables",
+          "source": "Form variables",
           "message": "Premenné formulára"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.short_desc": {
@@ -1888,7 +1888,7 @@
           "message": "Definujte vlastné premenné, ktoré možno použiť vo výpočtoch a podmienenej logike."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.field.cHJpY2U.display_name": {
-          "source": "Price Variable",
+          "source": "Price variable",
           "message": "Premenná ceny"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.field.cHJpY2U.short_desc": {
@@ -1900,7 +1900,7 @@
           "message": "Číselná premenná používaná na výpočet a sledovanie výšky platby."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.field.c2NvcmU.display_name": {
-          "source": "Score Variable",
+          "source": "Score variable",
           "message": "Premenná skóre"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.field.c2NvcmU.short_desc": {
@@ -1912,7 +1912,7 @@
           "message": "Číselná premenná používaná na výpočet a sledovanie skóre kvízu alebo hodnotenia."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.display_name": {
-          "source": "Welcome Screens",
+          "source": "Welcome screens",
           "message": "Uvítacie obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.short_desc": {
@@ -1924,7 +1924,7 @@
           "message": "Vytvorte uvítacie obrazovky na predstavenie formulára, vysvetlenie jeho účelu alebo poskytnutie pokynov."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.YXR0YWNobWVudA.display_name": {
-          "source": "Screen Attachment",
+          "source": "Screen attachment",
           "message": "Obrazová príloha"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.YXR0YWNobWVudA.short_desc": {
@@ -1936,7 +1936,7 @@
           "message": "Pridajte obrázok alebo video prílohu do tohto uvítacieho obrazového displeja."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.bGF5b3V0.display_name": {
-          "source": "Screen Layout",
+          "source": "Screen layout",
           "message": "Rozloženie obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.bGF5b3V0.short_desc": {
@@ -1948,7 +1948,7 @@
           "message": "Nastaviť spôsob zobrazenia príloh médií s touto uvítacou obrazovou stránkou."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.cHJvcGVydGllcw.display_name": {
-          "source": "Screen Properties",
+          "source": "Screen properties",
           "message": "Vlastnosti obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.cHJvcGVydGllcw.short_desc": {
@@ -1964,11 +1964,11 @@
           "message": "Prispôsobte text, ktorý sa zobrazí na tlačidle pokračovať."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0ZDRhNWZhNTQxNjM0MDA3NWNkMjZjYTllZDhlYjYzODAyODYzMTc0ZjhlYTc1NDZmODRjYzkwYzQxZjE4NmEx.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Screen Description",
+          "source": "Screen description",
           "message": "Popis obrazovky"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3OWE2YmRmOTNmNTE2YWVhYWU1NjE5NWYyYjkwZTdlYmFmMTkyMzE5YjBlYzNjOWQ0MmNjNzA3MWVlYzI0NmVk.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Screen Description",
+          "source": "Screen description",
           "message": "Popis obrazovky"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0ZDRhNWZhNTQxNjM0MDA3NWNkMjZjYTllZDhlYjYzODAyODYzMTc0ZjhlYTc1NDZmODRjYzkwYzQxZjE4NmEx.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -1992,7 +1992,7 @@
           "message": "Zobraziť tlačidlo pokračovať na tomto úvodnom okne."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.cmVm.display_name": {
-          "source": "Screen Reference",
+          "source": "Screen reference",
           "message": "Odkaz na obrazovku"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.cmVm.short_desc": {
@@ -2004,7 +2004,7 @@
           "message": "Voliteľný jedinečný identifikátor pre túto uvítaciu obrazovku."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.dGl0bGU.display_name": {
-          "source": "Screen Title",
+          "source": "Screen title",
           "message": "Názov obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.field.dGl0bGU.short_desc": {
@@ -2016,7 +2016,7 @@
           "message": "Hlavný názov textu zobrazeného na tejto uvítacej obrazovke."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.display_name": {
-          "source": "Thank You Screens",
+          "source": "Thank you screens",
           "message": "Ďakovné obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.short_desc": {
@@ -2028,7 +2028,7 @@
           "message": "Vytvorte vlastné ďakovné obrazovky na vyjadrenie vďaky, poskytnutie ďalších krokov alebo zobrazenie výsledkov."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.YXR0YWNobWVudA.display_name": {
-          "source": "Screen Attachment",
+          "source": "Screen attachment",
           "message": "Obrazová príloha"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.YXR0YWNobWVudA.short_desc": {
@@ -2040,7 +2040,7 @@
           "message": "Pridajte obrázok alebo video prílohu do tohto obrazového displeja poďakovania."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.bGF5b3V0.display_name": {
-          "source": "Screen Layout",
+          "source": "Screen layout",
           "message": "Rozloženie obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.bGF5b3V0.short_desc": {
@@ -2052,7 +2052,7 @@
           "message": "Nastaviť spôsob zobrazenia príloh médií s touto obrazovou stránkou počkávania."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.cHJvcGVydGllcw.display_name": {
-          "source": "Screen Properties",
+          "source": "Screen properties",
           "message": "Vlastnosti obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.cHJvcGVydGllcw.short_desc": {
@@ -2084,7 +2084,7 @@
           "message": "Zobraziť tlačidlo akcie na tomto okne po odoslaní."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.cmVm.display_name": {
-          "source": "Screen Reference",
+          "source": "Screen reference",
           "message": "Odkaz na obrazovku"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.cmVm.short_desc": {
@@ -2096,7 +2096,7 @@
           "message": "Voliteľný jedinečný identifikátor pre túto stránku poďakovania."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.dGl0bGU.display_name": {
-          "source": "Screen Title",
+          "source": "Screen title",
           "message": "Názov obrazovky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.field.dGl0bGU.short_desc": {
@@ -2108,7 +2108,7 @@
           "message": "Hlavný názov textu zobrazeného na tomto obrazovke poďakovania."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
-          "source": "Form Settings",
+          "source": "Form settings",
           "message": "Nastavenia formulára"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
@@ -2120,7 +2120,7 @@
           "message": "Nakonfigurujte nastavenia celého formulára, ako je jazyk, indikátor priebehu, branding a možnosti správania."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.YXV0b3NhdmVfcHJvZ3Jlc3M.display_name": {
-          "source": "Autosave Progress",
+          "source": "Autosave progress",
           "message": "Uloženie pokročilého stavu"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.YXV0b3NhdmVfcHJvZ3Jlc3M.short_desc": {
@@ -2144,7 +2144,7 @@
           "message": "Povoliť CAPTCHA na zabránenie odosielaniu spamu."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZHVwbGljYXRlX3ByZXZlbnRpb24.display_name": {
-          "source": "Duplicate Prevention",
+          "source": "Duplicate prevention",
           "message": "Prevencia duplikátov"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZHVwbGljYXRlX3ByZXZlbnRpb24.short_desc": {
@@ -2156,7 +2156,7 @@
           "message": "Nastaviť nastavenia, ktoré zabránia užívateľom odoslať viac ako jednu odpoveď."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwZGJlYjU3YTgyNzBhYjI0NGJmYjYyMzRmMjkwODY5MTc0Y2ZmMWM1ZjFiYTllZDAwOGY1MzMzNjJiNmJlMWE3.field.dHlwZQ.display_name": {
-          "source": "Prevention Type",
+          "source": "Prevention type",
           "message": "Typ prevencie"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwZGJlYjU3YTgyNzBhYjI0NGJmYjYyMzRmMjkwODY5MTc0Y2ZmMWM1ZjFiYTllZDAwOGY1MzMzNjJiNmJlMWE3.field.dHlwZQ.short_desc": {
@@ -2176,7 +2176,7 @@
           "message": "IP súboru cookie"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZmFjZWJvb2tfcGl4ZWw.display_name": {
-          "source": "Facebook Pixel ID",
+          "source": "Facebook pixel ID",
           "message": "ID Facebook Pixel"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZmFjZWJvb2tfcGl4ZWw.short_desc": {
@@ -2200,7 +2200,7 @@
           "message": "Sledovací kód Google Analytics pre analýzu formulárov."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.Z29vZ2xlX3RhZ19tYW5hZ2Vy.display_name": {
-          "source": "Google Tag Manager ID",
+          "source": "Google tag manager ID",
           "message": "ID Google Tag Manager"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.Z29vZ2xlX3RhZ19tYW5hZ2Vy.short_desc": {
@@ -2212,7 +2212,7 @@
           "message": "ID kontajnera Google Tag Manager pre pokročilé sledovanie."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aGlkZV9uYXZpZ2F0aW9u.display_name": {
-          "source": "Hide Navigation",
+          "source": "Hide navigation",
           "message": "Skryť navigáciu"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aGlkZV9uYXZpZ2F0aW9u.short_desc": {
@@ -2224,7 +2224,7 @@
           "message": "Skryť tlačidlá návratu a pokračovania."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcHVibGlj.display_name": {
-          "source": "Public Form",
+          "source": "Public form",
           "message": "Verejný formulár"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcHVibGlj.short_desc": {
@@ -2236,7 +2236,7 @@
           "message": "Povoliť každému s odkazom prístup a odoslanie formulára."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.bGFuZ3VhZ2U.display_name": {
-          "source": "Form Language",
+          "source": "Form language",
           "message": "Jazyk formulára"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.bGFuZ3VhZ2U.short_desc": {
@@ -2352,7 +2352,7 @@
           "message": "Divehi"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.cGVyaW9k.display_name": {
-          "source": "Limit Period",
+          "source": "Limit period",
           "message": "Obdobie obmedzenia"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.cGVyaW9k.short_desc": {
@@ -2380,7 +2380,7 @@
           "message": "Rok"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.cHJvZ3Jlc3NfYmFy.display_name": {
-          "source": "Progress Bar Type",
+          "source": "Progress bar type",
           "message": "Typ pokročilého prúdu"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.cHJvZ3Jlc3NfYmFy.short_desc": {
@@ -2412,7 +2412,7 @@
           "message": "URL, na ktorú sa používatelia presmerujú po odoslaní formulára."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.cmVzcG9uc2VzX2xpbWl0.display_name": {
-          "source": "Response Limit",
+          "source": "Response limit",
           "message": "Limit odpovedí"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.cmVzcG9uc2VzX2xpbWl0.short_desc": {
@@ -2424,7 +2424,7 @@
           "message": "Nastavte limit celkového počtu odpovedí, ktoré formulár prijme."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19jb29raWVfY29uc2VudA.display_name": {
-          "source": "Show Cookie Consent",
+          "source": "Show cookie consent",
           "message": "Zobraziť súhlas s cookies"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19jb29raWVfY29uc2VudA.short_desc": {
@@ -2436,7 +2436,7 @@
           "message": "Zobraziť upozornenie súhlasu s cookies pre dodržanie GDPR."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19rZXlfaGludF9vbl9jaG9pY2Vz.display_name": {
-          "source": "Show Keyboard Hints",
+          "source": "Show keyboard hints",
           "message": "Zobraziť nápovedy pre klávesnicu"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19rZXlfaGludF9vbl9jaG9pY2Vz.short_desc": {
@@ -2448,7 +2448,7 @@
           "message": "Zobraziť nápovedy pre klávesové skratky pre viacnásobné odpovede."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19udW1iZXJfb2Zfc3VibWlzc2lvbnM.display_name": {
-          "source": "Show Submission Count",
+          "source": "Show submission count",
           "message": "Zobraziť počet odoslaní formulára"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19udW1iZXJfb2Zfc3VibWlzc2lvbnM.short_desc": {
@@ -2460,7 +2460,7 @@
           "message": "Zobraziť, koľko ľudí už formulár odoslalo."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19wcm9ncmVzc19iYXI.display_name": {
-          "source": "Show Progress Bar",
+          "source": "Show progress bar",
           "message": "Zobraziť indikátor pokroku"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19wcm9ncmVzc19iYXI.short_desc": {
@@ -2472,7 +2472,7 @@
           "message": "Zobraziť indikátor pokroku, ktorý ukazuje, koľko formulára je dokončené."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19xdWVzdGlvbl9udW1iZXI.display_name": {
-          "source": "Show Question Numbers",
+          "source": "Show question numbers",
           "message": "Zobraziť čísla otázok"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd19xdWVzdGlvbl9udW1iZXI.short_desc": {
@@ -2484,7 +2484,7 @@
           "message": "Zobraziť čísla otázok vedľa každého poľa."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd190aW1lX3RvX2NvbXBsZXRl.display_name": {
-          "source": "Show Time to Complete",
+          "source": "Show time to complete",
           "message": "Zobraziť odhadovaný čas na dokončenie"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd190aW1lX3RvX2NvbXBsZXRl.short_desc": {
@@ -2496,7 +2496,7 @@
           "message": "Zobraziť odhadovaný čas na dokončenie formulára."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd190eXBlZm9ybV9icmFuZGluZw.display_name": {
-          "source": "Show Typeform Branding",
+          "source": "Show Typeform branding",
           "message": "Zobraziť značku Typeform"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.c2hvd190eXBlZm9ybV9icmFuZGluZw.short_desc": {
@@ -2508,7 +2508,7 @@
           "message": "Zobraziť prvky značky Typeform v formulári."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.display_name": {
-          "source": "Conditional Logic",
+          "source": "Conditional logic",
           "message": "Podmienená logika"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.short_desc": {
@@ -2520,7 +2520,7 @@
           "message": "Vytvorte pravidlá podmienenej logiky na zobrazenie/skrytie polí, prechod na iné sekcie alebo vykonávanie výpočtov na základe odpovedí používateľa."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.field.YWN0aW9ucw.display_name": {
-          "source": "Logic Actions",
+          "source": "Logic actions",
           "message": "Akcie logiky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.field.YWN0aW9ucw.short_desc": {
@@ -2532,7 +2532,7 @@
           "message": "Definujte akcie, ktoré sa majú vykonať, keď sú splnené zadané podmienky."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNGRjYzI2OWYwNzc1ZTFjY2QwNTZlYmY5MWJiY2JmZWIxYWRiNzAyYzM2MDExMjkwNTA0MzYyZDE3YjYxMjA4.field.YWN0aW9u.display_name": {
-          "source": "Action Type",
+          "source": "Action type",
           "message": "Typ akcie"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNGRjYzI2OWYwNzc1ZTFjY2QwNTZlYmY5MWJiY2JmZWIxYWRiNzAyYzM2MDExMjkwNTA0MzYyZDE3YjYxMjA4.field.YWN0aW9u.short_desc": {
@@ -2568,7 +2568,7 @@
           "message": "Nastaviť"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNGRjYzI2OWYwNzc1ZTFjY2QwNTZlYmY5MWJiY2JmZWIxYWRiNzAyYzM2MDExMjkwNTA0MzYyZDE3YjYxMjA4.field.Y29uZGl0aW9u.display_name": {
-          "source": "Action Condition",
+          "source": "Action condition",
           "message": "Podmienka akcie"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNGRjYzI2OWYwNzc1ZTFjY2QwNTZlYmY5MWJiY2JmZWIxYWRiNzAyYzM2MDExMjkwNTA0MzYyZDE3YjYxMjA4.field.Y29uZGl0aW9u.short_desc": {
@@ -2680,7 +2680,7 @@
           "message": "Premenné alebo hodnoty, ktoré sa majú porovnávať v tejto podmienke."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2YWZhNjk5YzkyNjBlZmMxZTRkZmY2ZTc4NWNhNjk3ODZiMjIzOGJjNjcyY2IxYjM0ZTBiMGIxOThiNzZmYWM3.field.dHlwZQ.display_name": {
-          "source": "Variable Type",
+          "source": "Variable type",
           "message": "Typ premennej"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2YWZhNjk5YzkyNjBlZmMxZTRkZmY2ZTc4NWNhNjk3ODZiMjIzOGJjNjcyY2IxYjM0ZTBiMGIxOThiNzZmYWM3.field.dHlwZQ.short_desc": {
@@ -2716,7 +2716,7 @@
           "message": "Voľba"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2YWZhNjk5YzkyNjBlZmMxZTRkZmY2ZTc4NWNhNjk3ODZiMjIzOGJjNjcyY2IxYjM0ZTBiMGIxOThiNzZmYWM3.field.dmFsdWU.display_name": {
-          "source": "Variable Value",
+          "source": "Variable value",
           "message": "Hodnota premennej"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM2YWZhNjk5YzkyNjBlZmMxZTRkZmY2ZTc4NWNhNjk3ODZiMjIzOGJjNjcyY2IxYjM0ZTBiMGIxOThiNzZmYWM3.field.dmFsdWU.short_desc": {
@@ -2728,7 +2728,7 @@
           "message": "Skutočná hodnota alebo odkaz na porovnanie."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNGRjYzI2OWYwNzc1ZTFjY2QwNTZlYmY5MWJiY2JmZWIxYWRiNzAyYzM2MDExMjkwNTA0MzYyZDE3YjYxMjA4.field.ZGV0YWlscw.display_name": {
-          "source": "Action Details",
+          "source": "Action details",
           "message": "Podrobnosti o akcii"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiNiNGRjYzI2OWYwNzc1ZTFjY2QwNTZlYmY5MWJiY2JmZWIxYWRiNzAyYzM2MDExMjkwNTA0MzYyZDE3YjYxMjA4.field.ZGV0YWlscw.short_desc": {
@@ -2740,7 +2740,7 @@
           "message": "Nastaviť špecifické parametre pre túto akciu."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OGJlZjY4MjMxNDdkNWEzZTRhYjU2ZDZiYmExYjU0OTM1NjE0NDIwMWRlMmVhMDY5NmVjYzRkMWE0ZWU1M2Vl.field.dGFyZ2V0.display_name": {
-          "source": "Calculation Target",
+          "source": "Calculation target",
           "message": "Cieľ výpočtu"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OGJlZjY4MjMxNDdkNWEzZTRhYjU2ZDZiYmExYjU0OTM1NjE0NDIwMWRlMmVhMDY5NmVjYzRkMWE0ZWU1M2Vl.field.dGFyZ2V0.short_desc": {
@@ -2752,11 +2752,11 @@
           "message": "Určiť cieľovú premennú pre výpočtové akcie."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3NmU2MjIzOWNlZmY2MTU3YmJlMjdhNzY5OTA5NjFiNDJiYjk2NzhkNzU5NDNmZWM3Njc2Y2IzMDYyMmVjNWY3.field.dHlwZQ.display_name": {
-          "source": "Target Type",
+          "source": "Target type",
           "message": "Typ cieľa"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0ZDVhNjliNjM0YzAxNWE3ZWM2NTg0NmE0NWZiMWQwYjNjY2MzYzY5MDFhYjJhZDNiMmUwOTk0ODM0NGY5OThj.field.dHlwZQ.display_name": {
-          "source": "Target Type",
+          "source": "Target type",
           "message": "Typ cieľa"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3NmU2MjIzOWNlZmY2MTU3YmJlMjdhNzY5OTA5NjFiNDJiYjk2NzhkNzU5NDNmZWM3Njc2Y2IzMDYyMmVjNWY3.field.dHlwZQ.short_desc": {
@@ -2768,7 +2768,7 @@
           "message": "Typ cieľa (obvykle premenná)."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3NmU2MjIzOWNlZmY2MTU3YmJlMjdhNzY5OTA5NjFiNDJiYjk2NzhkNzU5NDNmZWM3Njc2Y2IzMDYyMmVjNWY3.field.dmFsdWU.display_name": {
-          "source": "Target Variable",
+          "source": "Target variable",
           "message": "Premenná cieľa"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM3NmU2MjIzOWNlZmY2MTU3YmJlMjdhNzY5OTA5NjFiNDJiYjk2NzhkNzU5NDNmZWM3Njc2Y2IzMDYyMmVjNWY3.field.dmFsdWU.short_desc": {
@@ -2780,7 +2780,7 @@
           "message": "Názov premennej, ktorú sa má upraviť."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OGJlZjY4MjMxNDdkNWEzZTRhYjU2ZDZiYmExYjU0OTM1NjE0NDIwMWRlMmVhMDY5NmVjYzRkMWE0ZWU1M2Vl.field.dG8.display_name": {
-          "source": "Jump Target",
+          "source": "Jump target",
           "message": "Cieľ prechodu"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OGJlZjY4MjMxNDdkNWEzZTRhYjU2ZDZiYmExYjU0OTM1NjE0NDIwMWRlMmVhMDY5NmVjYzRkMWE0ZWU1M2Vl.field.dG8.short_desc": {
@@ -2808,7 +2808,7 @@
           "message": "Výsledok"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0ZDVhNjliNjM0YzAxNWE3ZWM2NTg0NmE0NWZiMWQwYjNjY2MzYzY5MDFhYjJhZDNiMmUwOTk0ODM0NGY5OThj.field.dmFsdWU.display_name": {
-          "source": "Target Value",
+          "source": "Target value",
           "message": "Hodnota cieľa"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM0ZDVhNjliNjM0YzAxNWE3ZWM2NTg0NmE0NWZiMWQwYjNjY2MzYzY5MDFhYjJhZDNiMmUwOTk0ODM0NGY5OThj.field.dmFsdWU.short_desc": {
@@ -2820,7 +2820,7 @@
           "message": "Referenčné ID cieľového poľa alebo obrazovky."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OGJlZjY4MjMxNDdkNWEzZTRhYjU2ZDZiYmExYjU0OTM1NjE0NDIwMWRlMmVhMDY5NmVjYzRkMWE0ZWU1M2Vl.field.dmFsdWU.display_name": {
-          "source": "Calculation Value",
+          "source": "Calculation value",
           "message": "Hodnota výpočtu"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiM5OGJlZjY4MjMxNDdkNWEzZTRhYjU2ZDZiYmExYjU0OTM1NjE0NDIwMWRlMmVhMDY5NmVjYzRkMWE0ZWU1M2Vl.field.dmFsdWU.short_desc": {
@@ -2832,7 +2832,7 @@
           "message": "Hodnota, ktorú použiť pri výpočtoch."
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwNzUyY2M3ZDM3ZjZhOTQzNTNlZWVmYmQwZTc1MjkyMWMzOTkwZGQ5NDZmMzU0NmQxZjg2NTcwMzVhMTBjZGFm.field.dHlwZQ.display_name": {
-          "source": "Value Type",
+          "source": "Value type",
           "message": "Typ hodnoty"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwNzUyY2M3ZDM3ZjZhOTQzNTNlZWVmYmQwZTc1MjkyMWMzOTkwZGQ5NDZmMzU0NmQxZjg2NTcwMzVhMTBjZGFm.field.dHlwZQ.short_desc": {
@@ -2848,7 +2848,7 @@
           "message": "Hodnotenie"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwNzUyY2M3ZDM3ZjZhOTQzNTNlZWVmYmQwZTc1MjkyMWMzOTkwZGQ5NDZmMzU0NmQxZjg2NTcwMzVhMTBjZGFm.field.dmFsdWU.display_name": {
-          "source": "Actual Value",
+          "source": "Actual value",
           "message": "Skutočná hodnota"
         },
         "app.VHlwZWZvcm0.type.YWN0aW9uOlkzSmxZWFJsWDJadmNtMDoqaGFzaDxhdXRvPiMwNzUyY2M3ZDM3ZjZhOTQzNTNlZWVmYmQwZTc1MjkyMWMzOTkwZGQ5NDZmMzU0NmQxZjg2NTcwMzVhMTBjZGFm.field.dmFsdWU.short_desc": {
@@ -2860,7 +2860,7 @@
           "message": "Skutočná hodnota, názov premenné alebo výraz použitý."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.field.cmVm.display_name": {
-          "source": "Field Reference",
+          "source": "Field reference",
           "message": "Odkaz poľa"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.field.cmVm.short_desc": {
@@ -2872,7 +2872,7 @@
           "message": "Referenčné ID poľa, ktorému sa aplikuje pravidlo podmieneného logického vyhodnotenia."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.field.dHlwZQ.display_name": {
-          "source": "Logic Type",
+          "source": "Logic type",
           "message": "Typ logiky"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.field.dHlwZQ.short_desc": {
@@ -2892,7 +2892,7 @@
           "message": "Skryté"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.display_name": {
-          "source": "Create Image",
+          "source": "Create image",
           "message": "Vytvoriť obrázok"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.short_desc": {
@@ -2916,7 +2916,7 @@
           "message": "URL adresa existujúceho obrázka na nahranie do vášho účtu Typeform. Použite ju, ak máte obrázok hostovaný inde."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.display_name": {
-          "source": "File Name",
+          "source": "File name",
           "message": "Názov súboru"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.short_desc": {
@@ -2928,7 +2928,7 @@
           "message": "Voliteľný vlastný názov pre nahraný obrázok. Ak nie je zadaný, použije sa pôvodný názov súboru."
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.display_name": {
-          "source": "Image File",
+          "source": "Image file",
           "message": "Súbor obrázka"
         },
         "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.short_desc": {
@@ -3060,7 +3060,7 @@
           "message": "Názov súboru"
         },
         "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.display_name": {
-          "source": "Delete Form",
+          "source": "Delete form",
           "message": "Odstrániť formulár"
         },
         "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.short_desc": {
@@ -3084,7 +3084,7 @@
           "message": "Vyberte Typeform, ktorý chcete natrvalo odstrániť zo svojho účtu."
         },
         "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.display_name": {
-          "source": "Delete Image",
+          "source": "Delete image",
           "message": "Odstrániť obrázok"
         },
         "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.short_desc": {
@@ -3108,7 +3108,7 @@
           "message": "Vyberte obrázok, ktorý chcete odstrániť zo svojho účtu Typeform."
         },
         "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get Form",
+          "source": "Get form",
           "message": "Získať formulár"
         },
         "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.short_desc": {
@@ -3132,7 +3132,7 @@
           "message": "Vyberte Typeform, o ktorom chcete získať podrobné informácie."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.display_name": {
-          "source": "List Forms",
+          "source": "List forms",
           "message": "Zoznam formulárov"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.short_desc": {
@@ -3168,7 +3168,7 @@
           "message": "Číslo stránky na načítanie. Použite na stránkovanie, ak máte veľa formulárov."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Veľkosť stránky"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.short_desc": {
@@ -3192,7 +3192,7 @@
           "message": "Voliteľné ID pracovného priestoru na filtrovanie formulárov, ktoré patria do konkrétneho pracovného priestoru."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.short_desc": {
@@ -3204,7 +3204,7 @@
           "message": "Zadajte spôsob zoradenia vrátených formulárov."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Smer zoradenia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.field.ZGlyZWN0aW9u.short_desc": {
@@ -3224,7 +3224,7 @@
           "message": "Zostupne"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole radenia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.field.ZmllbGQ.short_desc": {
@@ -3244,7 +3244,7 @@
           "message": "Aktualizované"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.display_name": {
-          "source": "List Images",
+          "source": "List images",
           "message": "Zoznam obrázkov"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.short_desc": {
@@ -3256,7 +3256,7 @@
           "message": "Načíta všetky obrázky nahrané do vášho účtu Typeform. Použite túto akciu na zobrazenie dostupných obrázkov pre vaše formuláre, správu knižnice obrázkov alebo získanie URL adries obrázkov na integračné účely."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.display_name": {
-          "source": "List Responses",
+          "source": "List responses",
           "message": "Zoznam odpovedí"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.short_desc": {
@@ -3280,7 +3280,7 @@
           "message": "Vyberte formulár Typeform, z ktorého chcete získať odpovede."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Veľkosť stránky"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.short_desc": {
@@ -3292,7 +3292,7 @@
           "message": "Počet odpovedí, ktoré sa majú vrátiť. Maximum je 1000, predvolená hodnota je 25."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.display_name": {
-          "source": "Since Date",
+          "source": "Since date",
           "message": "Dátum od"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.short_desc": {
@@ -3304,7 +3304,7 @@
           "message": "Filtrovať odpovede tak, aby zahŕňali iba tie, ktoré boli odoslané po zadanom dátume."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.display_name": {
-          "source": "Until Date",
+          "source": "Until date",
           "message": "Dátum do"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.short_desc": {
@@ -3316,7 +3316,7 @@
           "message": "Filtrovať odpovede tak, aby zahŕňali iba tie, ktoré boli odoslané pred zadaným dátumom."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.display_name": {
-          "source": "After Token",
+          "source": "After token",
           "message": "Token After"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.short_desc": {
@@ -3328,7 +3328,7 @@
           "message": "Použite tento token na stránkovanie pre získanie odpovedí nasledujúcich po konkrétnej odpovedi."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.display_name": {
-          "source": "Before Token",
+          "source": "Before token",
           "message": "Token Before"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.short_desc": {
@@ -3340,7 +3340,7 @@
           "message": "Použite tento token na stránkovanie pre získanie odpovedí predchádzajúcich konkrétnej odpovedi."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
-          "source": "Include Response IDs",
+          "source": "Include response IDs",
           "message": "Zahrnúť ID odpovedí"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
@@ -3352,7 +3352,7 @@
           "message": "Zoznam konkrétnych ID odpovedí, ktoré sa majú zahrnúť do výsledkov. Vrátené budú iba tieto odpovede."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
-          "source": "Exclude Response IDs",
+          "source": "Exclude response IDs",
           "message": "Vylúčiť ID odpovedí"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
@@ -3364,7 +3364,7 @@
           "message": "Zoznam konkrétnych ID odpovedí, ktoré sa majú vylúčiť z výsledkov."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.display_name": {
-          "source": "Response Types",
+          "source": "Response types",
           "message": "Typy odpovedí"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
@@ -3388,7 +3388,7 @@
           "message": "Dokončené"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.display_name": {
-          "source": "Completed Only",
+          "source": "Completed only",
           "message": "Iba dokončené"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.short_desc": {
@@ -3400,7 +3400,7 @@
           "message": "Nastavte na true, ak chcete vrátiť iba dokončené odpovede, alebo false pre nedokončené odpovede."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.short_desc": {
@@ -3412,7 +3412,7 @@
           "message": "Zadajte spôsob triedenia vrátených odpovedí."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Smer zoradenia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.field.ZGlyZWN0aW9u.short_desc": {
@@ -3432,7 +3432,7 @@
           "message": "Zostupne"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole radenia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.field.ZmllbGQ.short_desc": {
@@ -3468,7 +3468,7 @@
           "message": "Pokročilý vyhľadávací reťazec na filtrovanie odpovedí podľa hodnôt odpovedí."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.display_name": {
-          "source": "Include Fields",
+          "source": "Include fields",
           "message": "Zahrnúť polia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.short_desc": {
@@ -3480,7 +3480,7 @@
           "message": "Zoznam konkrétnych ID polí, ktoré sa majú zahrnúť do údajov odpovede."
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.display_name": {
-          "source": "Answered Fields",
+          "source": "Answered fields",
           "message": "Zodpovedané polia"
         },
         "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.short_desc": {
@@ -3492,7 +3492,7 @@
           "message": "Zoznam ID polí, ktoré museli byť zodpovedané, aby bola odpoveď zahrnutá."
         },
         "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
-          "source": "List Workspaces",
+          "source": "List workspaces",
           "message": "Zoznam pracovných priestorov"
         },
         "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
@@ -3528,7 +3528,7 @@
           "message": "Číslo stránky na načítanie. Použite na stránkovanie, ak máte veľa pracovných priestorov."
         },
         "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Veľkosť stránky"
         },
         "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.short_desc": {
@@ -3540,7 +3540,7 @@
           "message": "Počet pracovných priestorov, ktoré sa majú vrátiť na stránku. Maximum je 200, predvolená hodnota je 10."
         },
         "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
-          "source": "New Form Response",
+          "source": "New form response",
           "message": "Nová odpoveď formulára"
         },
         "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {

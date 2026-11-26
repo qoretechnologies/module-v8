@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP / REST API-Aufruf an **Slack** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfrage-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwort-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die auf dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.display_name": {
-          "source": "Add Reaction",
+          "source": "Add reaction",
           "message": "Reaktion hinzufügen"
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Wählen Sie den Kanal aus, in dem sich die Nachricht befindet."
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "Nachrichten-Zeitstempel"
         },
         "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Der Emoji-Name ohne Doppelpunkte (z. B. \"thumbsup\", \"fire\", \"smile\")."
         },
         "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.display_name": {
-          "source": "Archive Channel",
+          "source": "Archive channel",
           "message": "Kanal archivieren"
         },
         "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Wählen Sie den Kanal aus, den Sie archivieren möchten."
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.display_name": {
-          "source": "Create Channel",
+          "source": "Create channel",
           "message": "Kanal erstellen"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Erstellen Sie einen neuen öffentlichen oder privaten Kanal in Ihrem Slack-Workspace."
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "Kanalname"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Der Name für den neuen Kanal. Muss eindeutig sein und den Namensregeln von Slack entsprechen (Kleinbuchstaben, keine Leerzeichen)."
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.display_name": {
-          "source": "Private Channel",
+          "source": "Private channel",
           "message": "Privater Kanal"
         },
         "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Wenn aktiviert, wird ein privater Kanal anstelle eines öffentlichen erstellt."
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete Message",
+          "source": "Delete message",
           "message": "Nachricht löschen"
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Wählen Sie den Kanal aus, in dem die Nachricht gepostet wurde."
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "Nachrichten-Zeitstempel"
         },
         "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Der Zeitstempel (ts) der Nachricht, die Sie löschen möchten. Sie können auch einen Slack-Nachrichtenlink einfügen."
         },
         "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.display_name": {
-          "source": "Find User by Email",
+          "source": "Find user by email",
           "message": "Benutzer nach E-Mail suchen"
         },
         "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Die E-Mail-Adresse des Benutzers, den Sie suchen möchten."
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.display_name": {
-          "source": "Get Channel History",
+          "source": "Get channel history",
           "message": "Kanalverlauf abrufen"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Wählen Sie den Kanal aus, aus dem Nachrichten abgerufen werden sollen."
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.display_name": {
-          "source": "Oldest Timestamp",
+          "source": "Oldest timestamp",
           "message": "Ältester Zeitstempel"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Unix-Zeitstempel. Nur Nachrichten nach diesem Zeitpunkt werden eingeschlossen."
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.display_name": {
-          "source": "Latest Timestamp",
+          "source": "Latest timestamp",
           "message": "Neuester Zeitstempel"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Nachrichten mit den ältesten oder neuesten Zeitstempeln in die Ergebnisse einschließen."
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.display_name": {
-          "source": "Include All Metadata",
+          "source": "Include all metadata",
           "message": "Alle Metadaten einschließen"
         },
         "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Die maximale Anzahl der abzurufenden Nachrichten. Standard ist 200."
         },
         "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.display_name": {
-          "source": "Get User Info",
+          "source": "Get user info",
           "message": "Benutzerinformationen abrufen"
         },
         "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Wählen Sie den Benutzer aus, dessen Informationen Sie abrufen möchten."
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.display_name": {
-          "source": "List Channels",
+          "source": "List channels",
           "message": "Kanäle auflisten"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Rufen Sie eine Liste der Kanäle in Ihrem Slack-Workspace ab. Sie können nach Kanal-Typ filtern und angeben, ob archivierte Kanäle enthalten sein sollen."
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.display_name": {
-          "source": "Channel Types",
+          "source": "Channel types",
           "message": "Kanaltypen"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Kommagetrennte Liste von Kanaltypen. Optionen: public_channel, private_channel, mpim, im. Standard ist public_channel,private_channel."
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.display_name": {
-          "source": "Exclude Archived",
+          "source": "Exclude archived",
           "message": "Archivierte ausschließen"
         },
         "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Die maximale Anzahl der abzurufenden Kanäle. Standard ist 200."
         },
         "app.U2xhY2s.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Benutzer auflisten"
         },
         "app.U2xhY2s.action.bGlzdF91c2Vycw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Die maximale Anzahl der abzurufenden Benutzer. Standard ist 200."
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.display_name": {
-          "source": "Pin Message",
+          "source": "Pin message",
           "message": "Nachricht anheften"
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Wählen Sie den Kanal aus, in dem sich die Nachricht befindet."
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "Nachrichten-Zeitstempel"
         },
         "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Der Zeitstempel (ts) der Nachricht, die Sie anheften möchten. Sie können auch einen Slack-Nachrichtenlink einfügen."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.display_name": {
-          "source": "Send Action Message to User",
+          "source": "Send action message to user",
           "message": "Aktionsnachricht an Benutzer senden"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Wählen Sie den Benutzer aus, der die Aktionsnachricht erhalten soll."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Nachrichtentext"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Der Textinhalt, der über den Aktionsschaltflächen angezeigt wird."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.display_name": {
-          "source": "Action Buttons",
+          "source": "Action buttons",
           "message": "Aktionsschaltflächen"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Definieren Sie die Aktionsschaltflächen mit Titeln und URLs."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.field.dGl0bGU.display_name": {
-          "source": "Button Title",
+          "source": "Button title",
           "message": "Button-Titel"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.field.dGl0bGU.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Die URL, die geöffnet wird, wenn die Schaltfläche angeklickt wird."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "Bot-Benutzername"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Das Standard-Bot-Icon überschreiben."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.display_name": {
-          "source": "Send Action Message to Channel",
+          "source": "Send action message to channel",
           "message": "Aktionsnachricht an Kanal senden"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Wählen Sie den Kanal aus, in dem die Aktionsnachricht gepostet werden soll."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Nachrichtentext"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Der Textinhalt, der über den Aktionsschaltflächen angezeigt wird."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.display_name": {
-          "source": "Action Buttons",
+          "source": "Action buttons",
           "message": "Aktionsschaltflächen"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Definieren Sie die Aktionsschaltflächen mit Titeln und URLs. Jede Schaltfläche führt beim Anklicken zu einer bestimmten URL."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.field.dGl0bGU.display_name": {
-          "source": "Button Title",
+          "source": "Button title",
           "message": "Button-Titel"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.field.dGl0bGU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Die URL, die geöffnet wird, wenn die Schaltfläche angeklickt wird."
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "Bot-Benutzername"
         },
         "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Das Standard-Bot-Icon überschreiben."
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.display_name": {
-          "source": "Search Messages",
+          "source": "Search messages",
           "message": "Nachrichten suchen"
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Suche in deinem Slack-Workspace nach Nachrichten, die einer Suchanfrage entsprechen. Erfordert Benutzer-Token-Authentifizierung."
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Suchanfrage"
         },
         "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Anzahl der pro Seite zurückgegebenen Ergebnisse. Standardwert ist 100."
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.display_name": {
-          "source": "Send Direct Message",
+          "source": "Send direct message",
           "message": "Direktnachricht senden"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Wählen Sie den Benutzer aus, der die Direktnachricht erhalten soll."
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Nachrichtentext"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Der Haupttextinhalt Ihrer Direktnachricht."
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "Bot-Benutzername"
         },
         "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Fügen Sie Block Kit-Blöcke für reichhaltige, interaktive Inhalte hinzu."
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.display_name": {
-          "source": "Send Message to Channel",
+          "source": "Send message to channel",
           "message": "Nachricht in Kanal senden"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Wählen Sie den Kanal aus, in dem Sie die Nachricht veröffentlichen möchten. Stellen Sie sicher, dass der Bot Mitglied des Kanals ist."
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.display_name": {
-          "source": "Message Text",
+          "source": "Message text",
           "message": "Nachrichtentext"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Der Haupttextinhalt Ihrer Nachricht. Unterstützt Slack-Markdown-Formatierung."
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.display_name": {
-          "source": "Bot Username",
+          "source": "Bot username",
           "message": "Bot-Benutzername"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Überschreiben Sie das Standard-Bot-Icon mit einer benutzerdefinierten Bild-URL."
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.display_name": {
-          "source": "Thread Timestamp",
+          "source": "Thread timestamp",
           "message": "Thread-Zeitstempel"
         },
         "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Fügen Sie Block Kit-Blöcke für reichhaltige, interaktive Inhalte hinzu. Siehe https://api.slack.com/block-kit für Spezifikationen."
         },
         "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.display_name": {
-          "source": "Unarchive Channel",
+          "source": "Unarchive channel",
           "message": "Kanal-Archivierung aufheben"
         },
         "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Wählen Sie den archivierten Kanal aus, den Sie aus dem Archiv holen möchten."
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.display_name": {
-          "source": "Unpin Message",
+          "source": "Unpin message",
           "message": "Nachricht loslösen"
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Wählen Sie den Kanal aus, in dem sich die angepinnte Nachricht befindet."
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "Nachrichten-Zeitstempel"
         },
         "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Der Zeitstempel (ts) der Nachricht, die Sie entpinnen möchten. Sie können auch einen Link zu einer Slack-Nachricht einfügen."
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.display_name": {
-          "source": "Update Message",
+          "source": "Update message",
           "message": "Nachricht aktualisieren"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Wählen Sie den Kanal aus, in dem die Nachricht gepostet wurde."
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
-          "source": "Message Timestamp",
+          "source": "Message timestamp",
           "message": "Nachrichten-Zeitstempel"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Der Zeitstempel (ts) der Nachricht, die Sie aktualisieren möchten. Sie können auch einen Link zu einer Slack-Nachricht einfügen."
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.display_name": {
-          "source": "New Text",
+          "source": "New text",
           "message": "Neuer Text"
         },
         "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Neue Block Kit-Blöcke für die Nachricht."
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.display_name": {
-          "source": "Update Profile",
+          "source": "Update profile",
           "message": "Profil aktualisieren"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "Aktualisieren Sie grundlegende Profilfelder wie Name oder Titel. Erfordert Benutzer-Token-Authentifizierung."
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Vorname"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "Der im Profil festzulegende Vorname."
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Nachname"
         },
         "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.short_desc": {
@@ -1288,7 +1288,7 @@
           "message": "ID des zu aktualisierenden Benutzers. Nur Administratoren in kostenpflichtigen Teams können andere Benutzer aktualisieren."
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
+          "source": "Upload file",
           "message": "Datei hochladen"
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Der beim Hochladen zu verwendende Dateiname."
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.display_name": {
-          "source": "Initial Comment",
+          "source": "Initial comment",
           "message": "Initialer Kommentar"
         },
         "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "Ein optionaler Kommentar, der beim Teilen der Datei hinzugefügt werden soll."
         },
         "app.U2xhY2s.action.YXBwX21lbnRpb24.display_name": {
-          "source": "App Mention",
+          "source": "App mention",
           "message": "App-Erwähnung"
         },
         "app.U2xhY2s.action.YXBwX21lbnRpb24.short_desc": {
@@ -1492,7 +1492,7 @@
           "message": "Wählen Sie den Kanal aus, der auf Bot-Erwähnungen überwacht werden soll. Stellen Sie sicher, dass der Bot Mitglied des Kanals ist."
         },
         "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.display_name": {
-          "source": "Channel Created",
+          "source": "Channel created",
           "message": "Kanal erstellt"
         },
         "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "Dieser Auslöser wird ausgelöst, wenn ein neuer öffentlicher oder privater Kanal im Workspace erstellt wird."
         },
         "app.U2xhY2s.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Neue Nachricht"
         },
         "app.U2xhY2s.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -1528,7 +1528,7 @@
           "message": "Wählen Sie den Kanal aus, der auf neue Nachrichten überwacht werden soll. Stellen Sie sicher, dass der Bot Mitglied des Kanals ist."
         },
         "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.display_name": {
-          "source": "New Reaction",
+          "source": "New reaction",
           "message": "Neue Reaktion"
         },
         "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.short_desc": {

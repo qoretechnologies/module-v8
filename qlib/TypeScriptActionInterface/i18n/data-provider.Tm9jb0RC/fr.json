@@ -28,7 +28,7 @@
           "message": "Passez un appel d'API HTTP / REST personnalisé à **NocoDB** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code d'état, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.Tm9jb0RC.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Rechercher des enregistrements"
         },
         "app.Tm9jb0RC.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Le nom de la table"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.display_name": {
-          "source": "Count Records",
+          "source": "Count records",
           "message": "Compter les enregistrements"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Sélectionnez la table NocoDB dans laquelle compter les enregistrements."
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.display_name": {
-          "source": "Where Filter",
+          "source": "Where filter",
           "message": "Filtre Where"
         },
         "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Spécifiez éventuellement un filtre à l'aide de la syntaxe where de NocoDB (par ex., « (Status,eq,Active) ») pour ne compter que les enregistrements correspondant à des critères spécifiques."
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.display_name": {
-          "source": "Upload Attachment",
+          "source": "Upload attachment",
           "message": "Téléverser une pièce jointe"
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Spécifiez l'ID de l'enregistrement où le fichier doit être téléversé."
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.display_name": {
-          "source": "Attachment Field",
+          "source": "Attachment field",
           "message": "Champ de pièce jointe"
         },
         "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Le nom du fichier"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.display_name": {
-          "source": "Link Records",
+          "source": "Link records",
           "message": "Lier des enregistrements"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Sélectionnez la table NocoDB contenant l'enregistrement à partir duquel vous souhaitez établir le lien."
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.display_name": {
-          "source": "Link Field",
+          "source": "Link field",
           "message": "Champ de liaison"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Spécifiez l'ID de l'enregistrement dans la table source à partir duquel établir le lien."
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.display_name": {
-          "source": "Records to Link",
+          "source": "Records to link",
           "message": "Enregistrements à lier"
         },
         "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Fournissez les ID des enregistrements de la table liée à associer à l'enregistrement source."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.display_name": {
-          "source": "Unlink Records",
+          "source": "Unlink records",
           "message": "Dissocier des enregistrements"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Sélectionnez la table NocoDB contenant l'enregistrement duquel vous souhaitez dissocier."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.display_name": {
-          "source": "Link Field",
+          "source": "Link field",
           "message": "Champ de liaison"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Spécifiez l'ID de l'enregistrement dans la table source duquel dissocier."
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.display_name": {
-          "source": "Records to Unlink",
+          "source": "Records to unlink",
           "message": "Enregistrements à dissocier"
         },
         "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Fournissez les ID des enregistrements de la table liée à déconnecter de l'enregistrement source."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.display_name": {
-          "source": "Trigger Button",
+          "source": "Trigger button",
           "message": "Déclencher le bouton"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Sélectionnez la table NocoDB contenant le champ bouton à déclencher."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.display_name": {
-          "source": "Button Field",
+          "source": "Button field",
           "message": "Champ de bouton"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Fournissez les ID des enregistrements pour lesquels déclencher l'action du bouton. Maximum 25 enregistrements par requête."
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.display_name": {
-          "source": "Preview Mode",
+          "source": "Preview mode",
           "message": "Mode aperçu"
         },
         "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Lorsqu'elle est activée, l'action du bouton s'exécute en mode aperçu et les modifications ne sont pas enregistrées. Utile pour les tests."
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "Nouvelle ligne"
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Sélectionnez la table NocoDB à surveiller. Le déclencheur s'activera lorsque de nouvelles lignes seront ajoutées à cette table."
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.display_name": {
-          "source": "Where Filter",
+          "source": "Where filter",
           "message": "Filtre Where"
         },
         "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.short_desc": {

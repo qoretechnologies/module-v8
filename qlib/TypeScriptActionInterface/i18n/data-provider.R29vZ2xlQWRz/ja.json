@@ -4,7 +4,7 @@
     "ja": {
       "messages": {
         "app.R29vZ2xlQWRz.display_name": {
-          "source": "Google Ads",
+          "source": "Google ads",
           "message": "Google 広告"
         },
         "app.R29vZ2xlQWRz.short_desc": {
@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**Google Ads** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.display_name": {
-          "source": "Get Customer Info",
+          "source": "Get customer info",
           "message": "顧客情報の取得"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.short_desc": {
@@ -352,7 +352,7 @@
           "message": "認証された Google 広告顧客アカウントの詳細（アクセス可能な顧客 ID など）を返します。"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
+          "source": "List campaigns",
           "message": "キャンペーン一覧"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Google 広告アカウントからキャンペーンを取得します。指定した日付範囲のパフォーマンス メトリクスとオプションのステータス フィルタリングが含まれます。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
-          "source": "Status Filter",
+          "source": "Status filter",
           "message": "ステータスフィルタ"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
@@ -412,7 +412,7 @@
           "message": "すべて"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.display_name": {
-          "source": "Date Range",
+          "source": "Date range",
           "message": "日付範囲"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "返されるキャンペーンの最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
+          "source": "Get campaign",
           "message": "キャンペーンの取得"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.short_desc": {
@@ -472,7 +472,7 @@
           "message": "ID で特定のキャンペーンの詳細情報（ステータス、予算、入札戦略、パフォーマンス メトリクスなど）を取得します。"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "詳細を取得するキャンペーンの ID を選択または入力します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.display_name": {
-          "source": "Create Campaign",
+          "source": "Create campaign",
           "message": "キャンペーンを作成"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.short_desc": {
@@ -508,7 +508,7 @@
           "message": "指定されたチャネル タイプ、予算、入札戦略、ターゲティング設定を使用して Google 広告に新しいキャンペーンを作成します。キャンペーン予算は自動的に作成されます。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
-          "source": "Campaign Name",
+          "source": "Campaign name",
           "message": "キャンペーン名"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "キャンペーンのわかりやすい名前。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.display_name": {
-          "source": "Channel Type",
+          "source": "Channel type",
           "message": "チャネル タイプ"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.short_desc": {
@@ -564,7 +564,7 @@
           "message": "パフォーマンス マックス"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.display_name": {
-          "source": "Initial Status",
+          "source": "Initial status",
           "message": "初期ステータス"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.short_desc": {
@@ -584,7 +584,7 @@
           "message": "一時停止"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.display_name": {
-          "source": "Daily Budget",
+          "source": "Daily budget",
           "message": "1 日の予算"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.short_desc": {
@@ -596,7 +596,7 @@
           "message": "アカウントの通貨での 1 日あたりの予算額（例: 1 日あたり $50 の場合は 50.00）。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.display_name": {
-          "source": "Bidding Strategy",
+          "source": "Bidding strategy",
           "message": "入札戦略"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.short_desc": {
@@ -628,7 +628,7 @@
           "message": "目標インプレッション シェア"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.display_name": {
-          "source": "Target Google Search",
+          "source": "Target Google search",
           "message": "Google 検索をターゲット"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Google 検索結果ページに広告を表示するかどうか。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.display_name": {
-          "source": "Target Search Network",
+          "source": "Target search network",
           "message": "検索ネットワークをターゲット"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Google 検索パートナーのウェブサイトに広告を表示するかどうか。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.display_name": {
-          "source": "Update Campaign",
+          "source": "Update campaign",
           "message": "キャンペーンを更新"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.short_desc": {
@@ -664,7 +664,7 @@
           "message": "名前、ステータス（有効化/一時停止）、入札戦略などのキャンペーンプロパティを更新します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -688,7 +688,7 @@
           "message": "更新するキャンペーンの ID を選択または入力します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
-          "source": "Campaign Name",
+          "source": "Campaign name",
           "message": "キャンペーン名"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
@@ -724,7 +724,7 @@
           "message": "削除済み"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.display_name": {
-          "source": "Remove Campaign",
+          "source": "Remove campaign",
           "message": "キャンペーンを削除"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Google Ads アカウントからキャンペーンを削除（論理削除）します。キャンペーンは REMOVED としてマークされ、広告が配信されなくなります。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -760,7 +760,7 @@
           "message": "削除するキャンペーンを選択またはその ID を入力します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.display_name": {
-          "source": "List Ad Groups",
+          "source": "List ad groups",
           "message": "広告グループの一覧表示"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Google 広告アカウントから広告グループを取得します（オプションでキャンペーンごとにフィルタリング可能）。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -796,7 +796,7 @@
           "message": "このキャンペーンに属する広告グループのみを返します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
-          "source": "Status Filter",
+          "source": "Status filter",
           "message": "ステータスフィルタ"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
@@ -832,7 +832,7 @@
           "message": "返される広告グループの最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.display_name": {
-          "source": "Create Ad Group",
+          "source": "Create ad group",
           "message": "広告グループの作成"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.short_desc": {
@@ -844,7 +844,7 @@
           "message": "指定された名前、タイプ、ステータス、および CPC 入札単価を使用して、指定されたキャンペーン内に新しい広告グループを作成します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "新しい広告グループを作成するキャンペーンを選択します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
-          "source": "Ad Group Name",
+          "source": "Ad group name",
           "message": "広告グループ名"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
@@ -880,7 +880,7 @@
           "message": "広告グループのわかりやすい名前。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.display_name": {
-          "source": "Ad Group Type",
+          "source": "Ad group type",
           "message": "広告グループのタイプ"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.short_desc": {
@@ -900,7 +900,7 @@
           "message": "ディスプレイ標準"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.display_name": {
-          "source": "Initial Status",
+          "source": "Initial status",
           "message": "初期ステータス"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.short_desc": {
@@ -920,7 +920,7 @@
           "message": "一時停止"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
-          "source": "CPC Bid",
+          "source": "CPC bid",
           "message": "CPC 入札単価"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
@@ -932,7 +932,7 @@
           "message": "アカウントの通貨での上限 CPC 入札単価（例: $1.50 の場合は 1.50）。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.display_name": {
-          "source": "Update Ad Group",
+          "source": "Update ad group",
           "message": "広告グループを更新"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.short_desc": {
@@ -944,7 +944,7 @@
           "message": "名前、ステータス、CPC 入札額などの広告グループのプロパティを更新します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -956,7 +956,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -968,7 +968,7 @@
           "message": "更新する広告グループの ID を選択または入力します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
-          "source": "Ad Group Name",
+          "source": "Ad group name",
           "message": "広告グループ名"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "削除済み"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
-          "source": "CPC Bid",
+          "source": "CPC bid",
           "message": "CPC 入札単価"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "アカウントの通貨での更新後の上限 CPC 入札額。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.display_name": {
-          "source": "Remove Ad Group",
+          "source": "Remove ad group",
           "message": "広告グループを削除"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "広告グループを削除（論理削除）します。REMOVED としてマークされ、広告の配信が停止します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "削除する広告グループを選択またはその ID を入力します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.display_name": {
-          "source": "List Ads",
+          "source": "List ads",
           "message": "広告の一覧表示"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.short_desc": {
@@ -1064,7 +1064,7 @@
           "message": "Google 広告アカウントから広告を取得します（オプションでキャンペーン、広告グループ、またはステータスごとにフィルタリング可能）。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "このキャンペーンに属する広告のみを返します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1100,7 +1100,7 @@
           "message": "この広告グループに属する広告のみを返します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
-          "source": "Status Filter",
+          "source": "Status filter",
           "message": "ステータスフィルタ"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
@@ -1136,7 +1136,7 @@
           "message": "返される広告の最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.display_name": {
-          "source": "Create Responsive Search Ad",
+          "source": "Create responsive search ad",
           "message": "レスポンシブ 検索広告を作成"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.short_desc": {
@@ -1148,7 +1148,7 @@
           "message": "複数の見出し、説明文、最終ページ URL を指定して、指定した広告グループ内にレスポンシブ 検索広告（RSA）を作成します。Google 広告は自動的に組み合わせをテストして、最も効果の高い広告を見つけます。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1160,7 +1160,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1208,7 +1208,7 @@
           "message": "ユーザーが広告をクリックした後に移動する URL。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.display_name": {
-          "source": "Display Path 1",
+          "source": "Display path 1",
           "message": "表示 URL パス 1"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.short_desc": {
@@ -1220,7 +1220,7 @@
           "message": "広告に表示される表示 URL パスの前半部分（最大 15 文字）。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.display_name": {
-          "source": "Display Path 2",
+          "source": "Display path 2",
           "message": "表示 URL パス 2"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.short_desc": {
@@ -1232,7 +1232,7 @@
           "message": "広告に表示される表示 URL パスの後半部分（最大 15 文字）。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.display_name": {
-          "source": "Initial Status",
+          "source": "Initial status",
           "message": "初期ステータス"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "一時停止"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.display_name": {
-          "source": "Update Ad Status",
+          "source": "Update ad status",
           "message": "広告ステータスを更新"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.short_desc": {
@@ -1264,7 +1264,7 @@
           "message": "広告グループ内の広告のステータスを更新します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "削除済み"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.display_name": {
-          "source": "Remove Ad",
+          "source": "Remove ad",
           "message": "広告を削除"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "広告グループから広告を削除（論理削除）します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "削除する広告の ID。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.display_name": {
-          "source": "List Keywords",
+          "source": "List keywords",
           "message": "キーワードを一覧表示"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "Google 広告アカウントからキーワードを取得します。パフォーマンス メトリクスが含まれ、キャンペーンまたは広告グループによるフィルタリングも可能です。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "このキャンペーンに属するキーワードのみを返します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1420,7 +1420,7 @@
           "message": "この広告グループに属するキーワードのみを返します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.display_name": {
-          "source": "Date Range",
+          "source": "Date range",
           "message": "日付範囲"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "返されるキーワードの最大数。デフォルトは100です。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.display_name": {
-          "source": "Add Keywords",
+          "source": "Add keywords",
           "message": "キーワードを追加"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "指定したマッチタイプおよびオプションの CPC 入札単価で、1 つ以上のキーワードを指定した広告グループに追加します。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1512,7 +1512,7 @@
           "message": "追加するキーワード エントリのリスト。各エントリにはテキストとマッチ タイプが含まれます。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.field.Y3BjX2JpZA.display_name": {
-          "source": "CPC Bid",
+          "source": "CPC bid",
           "message": "CPC 入札単価"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.field.Y3BjX2JpZA.short_desc": {
@@ -1524,7 +1524,7 @@
           "message": "このキーワードのオプションのCPC入札額。広告グループの入札を上書きします。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.field.bWF0Y2hfdHlwZQ.display_name": {
-          "source": "Match Type",
+          "source": "Match type",
           "message": "一致タイプ"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.field.bWF0Y2hfdHlwZQ.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "正確"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.field.dGV4dA.display_name": {
-          "source": "Keyword Text",
+          "source": "Keyword text",
           "message": "キーワードテキスト"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.field.dGV4dA.short_desc": {
@@ -1560,7 +1560,7 @@
           "message": "ターゲットとするキーワードフレーズ"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.display_name": {
-          "source": "Update Keyword",
+          "source": "Update keyword",
           "message": "キーワードを更新"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.short_desc": {
@@ -1572,7 +1572,7 @@
           "message": "広告グループ内の既存のキーワードを更新し、そのステータスまたは CPC 入札額を変更できるようにします。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1596,7 +1596,7 @@
           "message": "更新するキーワードが含まれる広告グループを選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
-          "source": "Keyword Criterion ID",
+          "source": "Keyword criterion ID",
           "message": "キーワード基準 ID"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "削除済み"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.display_name": {
-          "source": "CPC Bid",
+          "source": "CPC bid",
           "message": "CPC 入札単価"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.short_desc": {
@@ -1644,7 +1644,7 @@
           "message": "アカウントの通貨での更新後の上限 CPC 入札額。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.display_name": {
-          "source": "Remove Keyword",
+          "source": "Remove keyword",
           "message": "キーワードを削除"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.short_desc": {
@@ -1656,7 +1656,7 @@
           "message": "指定した広告グループからキーワードを削除します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1668,7 +1668,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -1680,7 +1680,7 @@
           "message": "削除するキーワードが含まれている広告グループを選択します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
-          "source": "Keyword Criterion ID",
+          "source": "Keyword criterion ID",
           "message": "キーワード基準 ID"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "広告グループ内のキーワードの基準 ID。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.display_name": {
-          "source": "Add Negative Keywords",
+          "source": "Add negative keywords",
           "message": "除外キーワードを追加"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "キャンペーン レベルの除外キーワードを追加して、特定の検索語句で広告が表示されないようにします。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "除外キーワードを追加するキャンペーンを選択します。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.display_name": {
-          "source": "Negative Keywords",
+          "source": "Negative keywords",
           "message": "除外キーワード"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.short_desc": {
@@ -1740,7 +1740,7 @@
           "message": "追加する除外キーワード エントリのリスト。各エントリにはテキストとマッチタイプが含まれます。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.field.bWF0Y2hfdHlwZQ.display_name": {
-          "source": "Match Type",
+          "source": "Match type",
           "message": "一致タイプ"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.field.bWF0Y2hfdHlwZQ.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "正確"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.field.dGV4dA.display_name": {
-          "source": "Keyword Text",
+          "source": "Keyword text",
           "message": "キーワードテキスト"
         },
         "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.field.dGV4dA.short_desc": {
@@ -1776,7 +1776,7 @@
           "message": "除外するキーワードフレーズ"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.display_name": {
-          "source": "List Budgets",
+          "source": "List budgets",
           "message": "予算の一覧表示"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.short_desc": {
@@ -1788,7 +1788,7 @@
           "message": "Google 広告アカウント内のすべてのキャンペーン予算を取得します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "返される予算の最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.display_name": {
-          "source": "Create Budget",
+          "source": "Create budget",
           "message": "予算を作成"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.short_desc": {
@@ -1824,7 +1824,7 @@
           "message": "指定した日額で新しいキャンペーンの予算を作成します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
-          "source": "Budget Name",
+          "source": "Budget name",
           "message": "予算名"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
@@ -1848,7 +1848,7 @@
           "message": "キャンペーン予算のわかりやすい名前。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
-          "source": "Daily Amount",
+          "source": "Daily amount",
           "message": "1 日あたりの金額"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
@@ -1860,7 +1860,7 @@
           "message": "アカウントの通貨での 1 日あたりの予算額（例: 1 日あたり $50 の場合は 50.00）。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.display_name": {
-          "source": "Delivery Method",
+          "source": "Delivery method",
           "message": "配信方法"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "集中配信"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.display_name": {
-          "source": "Update Budget",
+          "source": "Update budget",
           "message": "予算を更新"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "既存のキャンペーン予算の一日の予算額または名前を更新します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1916,7 +1916,7 @@
           "message": "更新する予算の ID を選択または入力します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
-          "source": "Budget Name",
+          "source": "Budget name",
           "message": "予算名"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
@@ -1928,7 +1928,7 @@
           "message": "予算の新しい名前。現在の名前を保持する場合は空のままにしてください。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
-          "source": "Daily Amount",
+          "source": "Daily amount",
           "message": "1 日あたりの金額"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "アカウントの通貨での更新後の一日の予算額。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.display_name": {
-          "source": "List Bidding Strategies",
+          "source": "List bidding strategies",
           "message": "入札戦略の一覧表示"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.short_desc": {
@@ -1952,7 +1952,7 @@
           "message": "Google 広告アカウント内のすべてのポートフォリオ入札戦略を取得します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "返される入札戦略の最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
-          "source": "Create Bidding Strategy",
+          "source": "Create bidding strategy",
           "message": "入札戦略を作成"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
@@ -1988,7 +1988,7 @@
           "message": "複数のキャンペーンで共有できる新しいポートフォリオ入札戦略を作成します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2000,7 +2000,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
-          "source": "Strategy Name",
+          "source": "Strategy name",
           "message": "戦略名"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
@@ -2012,7 +2012,7 @@
           "message": "ポートフォリオ入札戦略のわかりやすい名前。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.display_name": {
-          "source": "Strategy Type",
+          "source": "Strategy type",
           "message": "戦略タイプ"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.short_desc": {
@@ -2064,7 +2064,7 @@
           "message": "比率としての目標 ROAS（例: 300% の ROAS の場合は 3.0）。戦略タイプが TARGET_ROAS の場合に必須です。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
-          "source": "Update Bidding Strategy",
+          "source": "Update bidding strategy",
           "message": "入札戦略を更新"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
@@ -2076,7 +2076,7 @@
           "message": "既存のポートフォリオ入札戦略を更新します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2088,7 +2088,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.display_name": {
-          "source": "Bidding Strategy",
+          "source": "Bidding strategy",
           "message": "入札戦略"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.short_desc": {
@@ -2100,7 +2100,7 @@
           "message": "更新する入札戦略の ID を選択または入力します。"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
-          "source": "Strategy Name",
+          "source": "Strategy name",
           "message": "戦略名"
         },
         "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "比率としての更新後の目標 ROAS。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.display_name": {
-          "source": "Run Campaign Report",
+          "source": "Run campaign report",
           "message": "キャンペーンレポートを実行"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "設定可能な指標、日付範囲、フィルターを使用して、キャンペーン全体のパフォーマンスレポートを実行します。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2160,7 +2160,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
-          "source": "Date Range",
+          "source": "Date range",
           "message": "日付範囲"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "カスタム"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -2208,7 +2208,7 @@
           "message": "YYYY-MM-DD 形式のカスタム開始日。日付範囲が CUSTOM に設定されている場合に使用されます。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "終了日"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "YYYY-MM-DD 形式のカスタム終了日。日付範囲が CUSTOM に設定されている場合に使用されます。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.display_name": {
-          "source": "Status Filter",
+          "source": "Status filter",
           "message": "ステータスフィルタ"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
@@ -2256,7 +2256,7 @@
           "message": "返される行数の最大値。デフォルトは100です。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.display_name": {
-          "source": "Run Ad Group Report",
+          "source": "Run ad group report",
           "message": "広告グループレポートを実行"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.short_desc": {
@@ -2268,7 +2268,7 @@
           "message": "設定可能な指標と日付範囲を使用して、広告グループ全体のパフォーマンスレポートを実行します。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2292,7 +2292,7 @@
           "message": "このキャンペーンの広告グループのみを含めます。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
-          "source": "Date Range",
+          "source": "Date range",
           "message": "日付範囲"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
@@ -2328,7 +2328,7 @@
           "message": "カスタム"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -2340,7 +2340,7 @@
           "message": "カスタム開始日。「日付範囲」が CUSTOM の場合に使用されます。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "終了日"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
@@ -2364,7 +2364,7 @@
           "message": "返される行数の最大値。デフォルトは100です。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.display_name": {
-          "source": "Run Keyword Report",
+          "source": "Run keyword report",
           "message": "キーワードレポートを実行"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.short_desc": {
@@ -2376,7 +2376,7 @@
           "message": "クリック数、インプレッション数、CPC、コンバージョン数などの指標を使用して、キーワード全体のパフォーマンスレポートを実行します。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2400,7 +2400,7 @@
           "message": "このキャンペーンのキーワードのみを含めます。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.display_name": {
-          "source": "Ad Group",
+          "source": "Ad group",
           "message": "広告グループ"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.short_desc": {
@@ -2412,7 +2412,7 @@
           "message": "この広告グループのキーワードのみを含めます。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.display_name": {
-          "source": "Date Range",
+          "source": "Date range",
           "message": "日付範囲"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.short_desc": {
@@ -2448,7 +2448,7 @@
           "message": "カスタム"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -2460,7 +2460,7 @@
           "message": "カスタム開始日。「日付範囲」が CUSTOM の場合に使用されます。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "終了日"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.short_desc": {
@@ -2484,7 +2484,7 @@
           "message": "返される行数の最大値。デフォルトは100です。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.display_name": {
-          "source": "Run Custom Report",
+          "source": "Run custom report",
           "message": "カスタムレポートを実行"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.short_desc": {
@@ -2496,7 +2496,7 @@
           "message": "高度なレポートを作成するために、未加工の Google Ads Query Language (GAQL) クエリを実行します。GAQL は SELECT、FROM、WHERE、ORDER BY、および LIMIT 句をサポートしています。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2508,7 +2508,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.display_name": {
-          "source": "GAQL Query",
+          "source": "GAQL query",
           "message": "GAQL クエリ"
         },
         "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.short_desc": {
@@ -2520,7 +2520,7 @@
           "message": "Google Ads Query Language クエリ。例: SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.display_name": {
-          "source": "Upload Click Conversion",
+          "source": "Upload click conversion",
           "message": "クリック コンバージョンのアップロード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.short_desc": {
@@ -2532,7 +2532,7 @@
           "message": "Google クリック ID（GCLID）に関連付けられたオフライン コンバージョンをアップロードします。これにより、広告クリックとオフラインでの売上/アクションのギャップを埋めることができます。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2556,7 +2556,7 @@
           "message": "コンバージョンに関連付けられた Google クリック ID（GCLID）。ユーザーが広告をクリックした後の URL に含まれます。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
-          "source": "Conversion Action",
+          "source": "Conversion action",
           "message": "コンバージョン アクション"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
@@ -2568,7 +2568,7 @@
           "message": "このコンバージョンを割り当てるコンバージョン アクションを選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
-          "source": "Conversion Date/Time",
+          "source": "Conversion date/time",
           "message": "コンバージョン日時"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
@@ -2580,7 +2580,7 @@
           "message": "コンバージョンの日時（形式: yyyy-mm-dd HH:mm:ss+|-HH:mm、例: 2026-03-01 12:00:00+00:00）。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
-          "source": "Conversion Value",
+          "source": "Conversion value",
           "message": "コンバージョン値"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
@@ -2592,7 +2592,7 @@
           "message": "アカウントの通貨でのコンバージョンの金額。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2616,7 +2616,7 @@
           "message": "注文またはトランザクションの一意の識別子。重複削除に使用されます。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.display_name": {
-          "source": "Upload Call Conversion",
+          "source": "Upload call conversion",
           "message": "通話コンバージョンのアップロード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.short_desc": {
@@ -2628,7 +2628,7 @@
           "message": "Google 広告の電話番号表示オプションからの通話に関連付けられたコンバージョンをアップロードします。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2652,7 +2652,7 @@
           "message": "発信者の電話番号（E.164 形式、例: +18005550100）。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
-          "source": "Conversion Action",
+          "source": "Conversion action",
           "message": "コンバージョン アクション"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
@@ -2664,7 +2664,7 @@
           "message": "このコンバージョンを割り当てるコンバージョン アクションを選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
-          "source": "Conversion Date/Time",
+          "source": "Conversion date/time",
           "message": "コンバージョン日時"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
@@ -2676,7 +2676,7 @@
           "message": "コンバージョンの日時（形式: yyyy-mm-dd HH:mm:ss+|-HH:mm）。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.display_name": {
-          "source": "Call Start Date/Time",
+          "source": "Call start date/time",
           "message": "通話開始日時"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.short_desc": {
@@ -2688,7 +2688,7 @@
           "message": "通話が開始された日時（形式: yyyy-mm-dd HH:mm:ss+|-HH:mm）。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
-          "source": "Conversion Value",
+          "source": "Conversion value",
           "message": "コンバージョン値"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
@@ -2700,7 +2700,7 @@
           "message": "コンバージョンの金額。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2712,7 +2712,7 @@
           "message": "コンバージョン値の通貨コード。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.display_name": {
-          "source": "Upload Enhanced Conversion",
+          "source": "Upload enhanced conversion",
           "message": "拡張コンバージョンのアップロード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.short_desc": {
@@ -2724,7 +2724,7 @@
           "message": "GCLID の代わりにハッシュ化されたファーストパーティ ユーザー データ（メールアドレス、電話番号）を使用してコンバージョンをアップロードします。プライバシー保護のため、ユーザー データはアップロード前に自動的に SHA-256 でハッシュ化されます。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2736,7 +2736,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
-          "source": "Conversion Action",
+          "source": "Conversion action",
           "message": "コンバージョン アクション"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
@@ -2748,7 +2748,7 @@
           "message": "このコンバージョンを割り当てるコンバージョン アクションを選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
-          "source": "Conversion Date/Time",
+          "source": "Conversion date/time",
           "message": "コンバージョン日時"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
@@ -2760,7 +2760,7 @@
           "message": "コンバージョンの日時（形式: yyyy-mm-dd HH:mm:ss+|-HH:mm）。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
-          "source": "Conversion Value",
+          "source": "Conversion value",
           "message": "コンバージョン値"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
@@ -2772,7 +2772,7 @@
           "message": "コンバージョンの金額。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2796,7 +2796,7 @@
           "message": "顧客のメールアドレス。アップロード前に正規化され、SHA-256 でハッシュ化されます。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.short_desc": {
@@ -2820,7 +2820,7 @@
           "message": "重複削除のための一意の識別子。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.display_name": {
-          "source": "Upload Conversion Adjustment",
+          "source": "Upload conversion adjustment",
           "message": "コンバージョン修正のアップロード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.short_desc": {
@@ -2832,7 +2832,7 @@
           "message": "以前アップロードしたコンバージョンの値を修正するか、完全に撤回します。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2844,7 +2844,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
-          "source": "Conversion Action",
+          "source": "Conversion action",
           "message": "コンバージョン アクション"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
@@ -2856,7 +2856,7 @@
           "message": "修正するコンバージョンのコンバージョン アクションを選択します。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.display_name": {
-          "source": "Adjustment Type",
+          "source": "Adjustment type",
           "message": "修正タイプ"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.short_desc": {
@@ -2900,7 +2900,7 @@
           "message": "元のコンバージョンに関連付けられた GCLID。注文 ID が設定されていなかった場合に必須です。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.display_name": {
-          "source": "Adjustment Date/Time",
+          "source": "Adjustment date/time",
           "message": "修正日時"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.short_desc": {
@@ -2912,7 +2912,7 @@
           "message": "修正の日時（形式: yyyy-mm-dd HH:mm:ss+|-HH:mm）。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.display_name": {
-          "source": "Adjusted Value",
+          "source": "Adjusted value",
           "message": "修正後の値"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.short_desc": {
@@ -2924,7 +2924,7 @@
           "message": "新しいコンバージョン値。RESTATE 調整の場合に必須です。"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "通貨コード"
         },
         "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2936,7 +2936,7 @@
           "message": "修正後の値の通貨コード。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.display_name": {
-          "source": "List Conversion Actions",
+          "source": "List conversion actions",
           "message": "コンバージョン アクションの一覧表示"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.short_desc": {
@@ -2948,7 +2948,7 @@
           "message": "Google 広告アカウントで設定されているすべてのコンバージョン アクションを取得します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -2972,7 +2972,7 @@
           "message": "返されるコンバージョン アクションの最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.display_name": {
-          "source": "List Customer Lists",
+          "source": "List customer lists",
           "message": "顧客リストの一覧表示"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.short_desc": {
@@ -2984,7 +2984,7 @@
           "message": "Google 広告アカウント内のすべてのユーザー リスト（カスタマー マッチ リスト）を取得します。"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -3008,7 +3008,7 @@
           "message": "返される顧客リストの最大数。デフォルトは 100 です。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.display_name": {
-          "source": "Create Customer List",
+          "source": "Create customer list",
           "message": "顧客リストを作成"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.short_desc": {
@@ -3020,7 +3020,7 @@
           "message": "カスタマー マッチ ターゲティング用に新しい CRM ベースのユーザーリストを作成します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -3032,7 +3032,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "List Name",
+          "source": "List name",
           "message": "リスト名"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -3056,7 +3056,7 @@
           "message": "顧客リストとその用途の説明。"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.display_name": {
-          "source": "Membership Life Span",
+          "source": "Membership life span",
           "message": "有効期間"
         },
         "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.short_desc": {
@@ -3068,7 +3068,7 @@
           "message": "ユーザーがリストに保持される日数。無期限にするには 10000 に設定します。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.display_name": {
-          "source": "Add Contacts to Customer List",
+          "source": "Add contacts to customer list",
           "message": "顧客リストに連絡先を追加"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.short_desc": {
@@ -3080,7 +3080,7 @@
           "message": "ハッシュ化されたユーザーデータを使用して、カスタマー マッチ リストに連絡先を追加します。メールアドレスと電話番号はアップロード前に自動的に正規化され、SHA-256 でハッシュ化されます。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -3092,7 +3092,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.display_name": {
-          "source": "Customer List",
+          "source": "Customer list",
           "message": "顧客リスト"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.short_desc": {
@@ -3128,7 +3128,7 @@
           "message": "連絡先の電子メールアドレス。アップロード前に正規化され、SHA-256ハッシュ化されます"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.field.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.field.cGhvbmVfbnVtYmVy.short_desc": {
@@ -3140,7 +3140,7 @@
           "message": "E.164形式の連絡先電話番号（例：+18005550100）。SHA-256ハッシュ化されます"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.display_name": {
-          "source": "Remove Contacts from Customer List",
+          "source": "Remove contacts from customer list",
           "message": "顧客リストから連絡先を削除"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.short_desc": {
@@ -3152,7 +3152,7 @@
           "message": "識別情報を使用してカスタマー マッチ リストから連絡先を削除します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.short_desc": {
@@ -3164,7 +3164,7 @@
           "message": "このアクションに使用する Google 広告カスタマーアカウント（カスタマー ID）を選択します。"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.display_name": {
-          "source": "Customer List",
+          "source": "Customer list",
           "message": "顧客リスト"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.short_desc": {
@@ -3200,7 +3200,7 @@
           "message": "削除対象として一致させる連絡先の電子メールアドレス"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.field.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.field.cGhvbmVfbnVtYmVy.short_desc": {
@@ -3212,7 +3212,7 @@
           "message": "削除対象として一致させる連絡先電話番号"
         },
         "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.display_name": {
-          "source": "New Lead Form Submission",
+          "source": "New lead form submission",
           "message": "新しいリードフォームの送信"
         },
         "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.short_desc": {
@@ -3224,7 +3224,7 @@
           "message": "Google Ads のリードフォーム表示オプションの新規送信を監視します。リードフォーム送信データをポーリングし、新しいリードごとにトリガーします。"
         },
         "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.display_name": {
-          "source": "Customer Account",
+          "source": "Customer account",
           "message": "顧客アカウント"
         },
         "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.short_desc": {

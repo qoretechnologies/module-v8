@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Trello** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用查詢參數、標頭與請求內文。回應將以包含狀態碼、回應標頭和回應內文的雜湊形式返回。\n\n針對此應用程式尚未公開為一級動作的端點使用此動作。"
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.VHJlbGxv.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
@@ -736,7 +736,7 @@
           "message": "建立新工作區"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "搜尋 Trello 成員。"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
-          "source": "Card Due",
+          "source": "Card due",
           "message": "卡片到期"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
@@ -948,7 +948,7 @@
           "message": "選取要監控逾期卡片的特定清單。僅在 Source 設為「list」時需要。"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
-          "source": "Include Completed Cards",
+          "source": "Include completed cards",
           "message": "包含已完成的卡片"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
@@ -960,7 +960,7 @@
           "message": "啟用時，觸發器將包含已標記為完成的逾期卡片。預設情況下，僅包含未完成的逾期卡片。"
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
-          "source": "New Board",
+          "source": "New board",
           "message": "新看板"
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
@@ -972,7 +972,7 @@
           "message": "當建立新 Trello 看板或與已驗證使用者共用時觸發此觸發程序。"
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
-          "source": "New Card",
+          "source": "New card",
           "message": "新卡片"
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "選取要監控新卡片的特定清單。僅在 Source 設為「list」時需要。"
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
-          "source": "New Label",
+          "source": "New label",
           "message": "新標籤"
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "選取您要監控建立新標籤的 Trello 看板。"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "新增清單"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "選取您要監控建立新清單的 Trello 看板。"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
-          "source": "Include Archived Lists",
+          "source": "Include archived lists",
           "message": "包含已封存清單"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "啟用時，觸發程序將包含已封存的新清單。預設情況下僅包含已開啟的清單。"
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
-          "source": "New Member",
+          "source": "New member",
           "message": "新成員"
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {

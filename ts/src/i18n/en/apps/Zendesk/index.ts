@@ -133,7 +133,7 @@ const ZendeskAppEn = {
   },
   triggers: {
     new_user: {
-      displayName: 'New User',
+      displayName: 'New user',
       shortDesc: 'Triggers when a new user is created',
       longDesc: 'Triggers when a new user is created',
       event_info: {
@@ -152,12 +152,12 @@ const ZendeskAppEn = {
               type: {
                 fields: {
                   created_at: {
-                    displayName: 'Created At',
+                    displayName: 'Created at',
                     shortDesc: 'User creation time',
                     longDesc: 'Timestamp of user creation',
                   },
                   default_group_id: {
-                    displayName: 'Default Group ID',
+                    displayName: 'Default group ID',
                     shortDesc: 'Default group ID',
                     longDesc: 'ID of the default group for the user',
                   },
@@ -187,7 +187,7 @@ const ZendeskAppEn = {
                     longDesc: 'Role of the user in the system',
                   },
                   updated_at: {
-                    displayName: 'Updated At',
+                    displayName: 'Updated at',
                     shortDesc: 'User update time',
                     longDesc: 'Last update timestamp for the user',
                   },
@@ -215,12 +215,12 @@ const ZendeskAppEn = {
               longDesc: 'Timestamp of the event occurrence',
             },
             type: {
-              displayName: 'Event Type',
+              displayName: 'Event type',
               shortDesc: 'Event type',
               longDesc: 'Type of the event',
             },
             zendesk_event_version: {
-              displayName: 'Zendesk Event Version',
+              displayName: 'Zendesk event version',
               shortDesc: 'Event version',
               longDesc: 'Version of the Zendesk event format',
             },
@@ -229,7 +229,7 @@ const ZendeskAppEn = {
       },
     },
     new_ticket: {
-      displayName: 'New Ticket',
+      displayName: 'New ticket',
       shortDesc: 'Triggers when a new ticket is created',
       longDesc: 'Triggers when a new ticket is created',
       event_info: {
@@ -237,32 +237,32 @@ const ZendeskAppEn = {
         type: {
           fields: {
             assignee_email: {
-              displayName: 'Assignee Email',
+              displayName: 'Assignee email',
               shortDesc: 'Assignee email',
               longDesc: 'Email of the assignee',
             },
             assignee_name: {
-              displayName: 'Assignee Name',
+              displayName: 'Assignee name',
               shortDesc: 'Assignee name',
               longDesc: 'Name of the assignee',
             },
             group_name: {
-              displayName: 'Group Name',
+              displayName: 'Group name',
               shortDesc: 'Group name',
               longDesc: 'Name of the group handling the ticket',
             },
             organization_name: {
-              displayName: 'Organization Name',
+              displayName: 'Organization name',
               shortDesc: 'Organization name',
               longDesc: 'Name of the associated organization',
             },
             requester_email: {
-              displayName: 'Requester Email',
+              displayName: 'Requester email',
               shortDesc: 'Requester email',
               longDesc: 'Email of the requester',
             },
             requester_name: {
-              displayName: 'Requester Name',
+              displayName: 'Requester name',
               shortDesc: 'Requester name',
               longDesc: 'Name of the requester',
             },
@@ -272,7 +272,7 @@ const ZendeskAppEn = {
               longDesc: 'Tags associated with the ticket',
             },
             ticket_description: {
-              displayName: 'Ticket Description',
+              displayName: 'Ticket description',
               shortDesc: 'Ticket description',
               longDesc: 'Description of the ticket',
             },
@@ -282,22 +282,22 @@ const ZendeskAppEn = {
               longDesc: 'Unique identifier for the ticket',
             },
             ticket_priority: {
-              displayName: 'Ticket Priority',
+              displayName: 'Ticket priority',
               shortDesc: 'Ticket priority',
               longDesc: 'Priority level of the ticket',
             },
             ticket_status: {
-              displayName: 'Ticket Status',
+              displayName: 'Ticket status',
               shortDesc: 'Ticket status',
               longDesc: 'Current status of the ticket',
             },
             ticket_subject: {
-              displayName: 'Ticket Subject',
+              displayName: 'Ticket subject',
               shortDesc: 'Ticket subject',
               longDesc: 'Subject of the ticket',
             },
             ticket_type: {
-              displayName: 'Ticket Type',
+              displayName: 'Ticket type',
               shortDesc: 'Ticket type',
               longDesc: 'Type of the ticket',
             },
@@ -311,7 +311,7 @@ const ZendeskAppEn = {
       },
     },
     new_organization: {
-      displayName: 'New Organization',
+      displayName: 'New organization',
       shortDesc: 'Triggers when a new organization is created',
       longDesc: 'Triggers when a new organization is created',
       event_info: {
@@ -330,7 +330,7 @@ const ZendeskAppEn = {
               type: {
                 fields: {
                   created_at: {
-                    displayName: 'Created At',
+                    displayName: 'Created at',
                     shortDesc: 'Organization creation time',
                     longDesc: 'Timestamp of organization creation',
                   },
@@ -355,17 +355,17 @@ const ZendeskAppEn = {
                     longDesc: 'Name of the organization',
                   },
                   shared_comments: {
-                    displayName: 'Shared Comments',
+                    displayName: 'Shared comments',
                     shortDesc: 'Shared comments',
                     longDesc: 'Indicates if comments are shared',
                   },
                   shared_tickets: {
-                    displayName: 'Shared Tickets',
+                    displayName: 'Shared tickets',
                     shortDesc: 'Shared tickets',
                     longDesc: 'Indicates if tickets are shared',
                   },
                   updated_at: {
-                    displayName: 'Updated At',
+                    displayName: 'Updated at',
                     shortDesc: 'Organization update time',
                     longDesc: 'Last update timestamp for the organization',
                   },
@@ -393,12 +393,12 @@ const ZendeskAppEn = {
               longDesc: 'Timestamp of the event occurrence',
             },
             type: {
-              displayName: 'Event Type',
+              displayName: 'Event type',
               shortDesc: 'Event type',
               longDesc: 'Type of the event',
             },
             zendesk_event_version: {
-              displayName: 'Zendesk Event Version',
+              displayName: 'Zendesk event version',
               shortDesc: 'Event version',
               longDesc: 'Version of the Zendesk event format',
             },
@@ -407,12 +407,12 @@ const ZendeskAppEn = {
       },
     },
     new_custom_object_record: {
-      displayName: 'New Custom Object Record',
+      displayName: 'New custom object record',
       shortDesc: 'Triggers when a new custom object record is created',
       longDesc: 'Triggers when a new custom object record is created in Zendesk',
       options: {
         custom_object: {
-          displayName: 'Custom Object',
+          displayName: 'Custom object',
           shortDesc: 'The custom object to monitor for new records',
           longDesc: 'Select the custom object type to monitor for new records',
         },
@@ -437,12 +437,12 @@ const ZendeskAppEn = {
               longDesc: 'External identifier for the record',
             },
             created_at: {
-              displayName: 'Created At',
+              displayName: 'Created at',
               shortDesc: 'Record creation time',
               longDesc: 'Timestamp of record creation',
             },
             updated_at: {
-              displayName: 'Updated At',
+              displayName: 'Updated at',
               shortDesc: 'Record update time',
               longDesc: 'Last update timestamp for the record',
             },
@@ -729,7 +729,7 @@ const ZendeskAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {

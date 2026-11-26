@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Asana** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anforderungstext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.QXNhbmE.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Datensätze suchen"
         },
         "app.QXNhbmE.action.c2VhcmNo.short_desc": {
@@ -1720,7 +1720,7 @@
           "message": "Ein bestimmter, bestehender Workspace kann aktualisiert werden, indem eine PUT-Anforderung an die URL für diesen Workspace gesendet wird. Nur die im Datenblock angegebenen Felder werden aktualisiert; alle nicht angegebenen Felder bleiben unverändert.\nDerzeit ist das einzige Feld, das für einen Workspace geändert werden kann, sein Name.\nGibt den vollständigen, aktualisierten Workspace-Datensatz zurück."
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
-          "source": "Attachment Added",
+          "source": "Attachment added",
           "message": "Anhang hinzugefügt"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
@@ -1756,7 +1756,7 @@
           "message": "Die eindeutige Kennung des Projekts, in dem Anhangsaktivitäten überwacht werden"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
-          "source": "Task ID (Optional)",
+          "source": "Task ID (optional)",
           "message": "Aufgaben-ID (Optional)"
         },
         "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
@@ -1768,7 +1768,7 @@
           "message": "Die eindeutige Kennung einer bestimmten zu überwachenden Aufgabe. Wenn nicht angegeben, lösen Anhänge von allen Aufgaben im Projekt den Workflow aus"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Subtask Completed",
+          "source": "Subtask completed",
           "message": "Teilaufgabe abgeschlossen"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1804,7 +1804,7 @@
           "message": "Eindeutige Kennung des Projekts, in dem sich die übergeordnete Aufgabe befindet"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID der übergeordneten Aufgabe"
         },
         "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "Eindeutige Kennung der übergeordneten Aufgabe, deren Teilaufgaben auf Fertigstellung überwacht werden"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
-          "source": "Task Completed",
+          "source": "Task completed",
           "message": "Aufgabe abgeschlossen"
         },
         "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
@@ -1852,7 +1852,7 @@
           "message": "Eindeutige Kennung des Projekts, in dem Aufgabenabschlüsse überwacht werden"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
-          "source": "Project Task Added",
+          "source": "Project task added",
           "message": "Projektaufgabe hinzugefügt"
         },
         "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
@@ -1888,7 +1888,7 @@
           "message": "Eindeutige Kennung des Projekts, in dem die Erstellung neuer Aufgaben überwacht wird"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
-          "source": "Project Added",
+          "source": "Project added",
           "message": "Projekt hinzugefügt"
         },
         "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
@@ -1912,7 +1912,7 @@
           "message": "Eindeutige Kennung des Workspaces, in dem die Erstellung neuer Projekte überwacht wird"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
-          "source": "Task Comment Added",
+          "source": "Task comment added",
           "message": "Aufgabenkommentar hinzugefügt"
         },
         "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
@@ -1960,7 +1960,7 @@
           "message": "Eindeutige Kennung der Aufgabe, bei der Kommentare überwacht werden"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
-          "source": "Task Story Added",
+          "source": "Task story added",
           "message": "Story zu Aufgabe hinzugefügt"
         },
         "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
@@ -2008,7 +2008,7 @@
           "message": "Die eindeutige Kennung der Aufgabe, bei der alle Aktivitäten überwacht werden"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
-          "source": "Task Subtask Added",
+          "source": "Task subtask added",
           "message": "Unteraufgabe zu Aufgabe hinzugefügt"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
@@ -2044,7 +2044,7 @@
           "message": "Eindeutige Kennung des Projekts, in dem sich die übergeordnete Aufgabe befindet"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
-          "source": "Parent Task ID",
+          "source": "Parent task ID",
           "message": "ID der übergeordneten Aufgabe"
         },
         "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
@@ -2056,7 +2056,7 @@
           "message": "Die eindeutige Kennung der übergeordneten Aufgabe, bei der die Erstellung von Unteraufgaben überwacht wird"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
-          "source": "Task Tag Added",
+          "source": "Task tag added",
           "message": "Aufgaben-Tag hinzugefügt"
         },
         "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
@@ -2104,7 +2104,7 @@
           "message": "Eindeutige Kennung der Aufgabe, bei der das Hinzufügen von Tags überwacht wird"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
-          "source": "Team Added",
+          "source": "Team added",
           "message": "Team hinzugefügt"
         },
         "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
@@ -2128,7 +2128,7 @@
           "message": "Die eindeutige Kennung des Workspace, in dem die Erstellung neuer Teams überwacht wird"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
-          "source": "User Added",
+          "source": "User added",
           "message": "Benutzer hinzugefügt"
         },
         "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
@@ -2152,7 +2152,7 @@
           "message": "Die eindeutige Kennung des Workspace, in dem das Hinzufügen neuer Benutzer überwacht wird"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
-          "source": "Tag Created",
+          "source": "Tag created",
           "message": "Tag erstellt"
         },
         "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
@@ -2176,7 +2176,7 @@
           "message": "Eindeutige Kennung des Workspaces, in dem die Erstellung neuer Tags überwacht wird"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
-          "source": "Task Moved to Section",
+          "source": "Task moved to section",
           "message": "Aufgabe in Abschnitt verschoben"
         },
         "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {

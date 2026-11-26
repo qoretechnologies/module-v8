@@ -28,7 +28,7 @@
           "message": "Виконати власний виклик HTTP / REST API до **Figma**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для ендпоінтів, які ще не представлені як стандартні дії в цьому додатку."
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Отримати список проєктів"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Введіть ID команди Figma, проєкти якої потрібно отримати"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.display_name": {
-          "source": "List Project Files",
+          "source": "List project files",
           "message": "Список файлів проєкту"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Виберіть конкретний проєкт Figma, файли з якого потрібно отримати"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.display_name": {
-          "source": "List File Version History",
+          "source": "List file version history",
           "message": "Список історії версій файлу"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Виберіть конкретний проєкт у команді, який містить цей файл"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Ключ файлу"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Виберіть конкретний файл дизайну Figma, історію версій якого потрібно отримати"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.display_name": {
-          "source": "Next Page URL",
+          "source": "Next page URL",
           "message": "URL-адреса наступної сторінки"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Необов'язкова URL-адреса для отримання наступної сторінки результатів історії версій для великих файлів із багатьма версіями"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.display_name": {
-          "source": "List Comments",
+          "source": "List comments",
           "message": "Список коментарів"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Виберіть конкретний проєкт у команді, який містить цей файл"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Ключ файлу"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Виберіть конкретний файл дизайну Figma, коментарі з якого потрібно отримати"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.display_name": {
-          "source": "Create Comment",
+          "source": "Create comment",
           "message": "Створити коментар"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Виберіть конкретний проєкт у команді, який містить цей файл"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Ключ файлу"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Введіть текстовий вміст коментаря, який потрібно опублікувати у файлі Figma"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.display_name": {
-          "source": "Parent Comment ID",
+          "source": "Parent comment ID",
           "message": "ID батьківського коментаря"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Необов'язковий ID наявного коментаря для відповіді; залиште порожнім, щоб створити новий коментар верхнього рівня"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.display_name": {
-          "source": "New File Comment",
+          "source": "New file comment",
           "message": "Новий коментар до файлу"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Виберіть конкретний проєкт у команді, який містить файл для відстеження"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Ключ файлу"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Виберіть файл дизайну Figma, який потрібно відстежувати на появу нових коментарів"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.display_name": {
-          "source": "New File Version",
+          "source": "New file version",
           "message": "Нова версія файлу"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Виберіть конкретний проєкт у команді, який містить файл для відстеження"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Ключ файлу"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.short_desc": {

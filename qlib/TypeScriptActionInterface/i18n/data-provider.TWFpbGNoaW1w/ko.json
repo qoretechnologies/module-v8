@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **Mailchimp**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 기본 액션으로 아직 노출되지 않은 엔드포인트에 이 액션을 사용하세요."
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "레코드 검색"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "테이블 이름"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
-          "source": "Get Campaigns",
+          "source": "Get campaigns",
           "message": "캠페인 가져오기"
         },
         "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
@@ -496,7 +496,7 @@
           "message": "상태, 설정, 성과 지표를 포함한 세부 정보와 함께 Mailchimp 계정에서 모든 이메일 캠페인을 가져옵니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
-          "source": "Create Campaign",
+          "source": "Create campaign",
           "message": "캠페인 만들기"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
@@ -508,7 +508,7 @@
           "message": "지정된 설정, 콘텐츠 및 오디언스 타겟팅 옵션으로 Mailchimp에서 새 이메일 캠페인을 생성합니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
-          "source": "Send Campaign",
+          "source": "Send campaign",
           "message": "캠페인 전송"
         },
         "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "이전에 생성된 이메일 캠페인을 타겟 오디언스에게 즉시 전송하거나 나중에 전송하도록 예약합니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
-          "source": "Create Audience",
+          "source": "Create audience",
           "message": "오디언스 생성"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "지정된 설정 및 구성 옵션으로 Mailchimp에 새 오디언스(메일링 리스트)를 생성합니다."
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
-          "source": "Search Tags by Name",
+          "source": "Search tags by name",
           "message": "이름으로 태그 검색"
         },
         "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "오디언스 멤버를 정리하고 세그먼트화하는 데 도움이 되도록 이름으로 구독자 태그를 검색합니다."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
-          "source": "Get Audience Members",
+          "source": "Get audience members",
           "message": "오디언스 멤버 가져오기"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
@@ -556,7 +556,7 @@
           "message": "연락처 정보 및 구독 세부 정보와 함께 특정 오디언스의 모든 멤버(구독자)를 가져옵니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
-          "source": "Add Audience Member",
+          "source": "Add audience member",
           "message": "오디언스 멤버 추가"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "연락처 정보 및 구독 기본 설정과 함께 특정 오디언스에 새 구독자를 추가합니다."
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Get Audience Member",
+          "source": "Get audience member",
           "message": "오디언스 멤버 가져오기"
         },
         "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "프로필 및 활동 데이터를 포함하여 오디언스의 특정 멤버(구독자)에 대한 세부 정보를 가져옵니다."
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Update Audience Member",
+          "source": "Update audience member",
           "message": "오디언스 멤버 업데이트"
         },
         "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -592,7 +592,7 @@
           "message": "오디언스에 있는 기존 멤버의 정보 및 구독 기본 설정을 업데이트합니다."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
-          "source": "Remove Audience Member",
+          "source": "Remove audience member",
           "message": "오디언스 멤버 제거"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "규정 준수를 위해 데이터를 보존하면서 오디언스에서 구독자를 제거합니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
-          "source": "Add Member Tags",
+          "source": "Add member tags",
           "message": "멤버 태그 추가"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "더 나은 세그먼트화 및 구성을 위해 오디언스 멤버에게 하나 이상의 태그를 추가합니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
-          "source": "Add Member Events",
+          "source": "Add member events",
           "message": "멤버 이벤트 추가"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
@@ -628,7 +628,7 @@
           "message": "오디언스 멤버의 행동 및 브랜드와의 상호작용을 추적하기 위해 커스텀 이벤트를 기록합니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
-          "source": "Add Member Note",
+          "source": "Add member note",
           "message": "멤버 메모 추가"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
@@ -640,7 +640,7 @@
           "message": "내부 추적 및 고객 관계 관리를 위해 특정 오디언스 멤버에 메모를 추가합니다."
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
-          "source": "Update Member Note",
+          "source": "Update member note",
           "message": "멤버 메모 업데이트"
         },
         "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "오디언스 멤버에 첨부된 기존 메모를 새 정보나 수정 사항으로 업데이트합니다."
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
-          "source": "Delete Member Note",
+          "source": "Delete member note",
           "message": "멤버 노트 삭제"
         },
         "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
@@ -664,7 +664,7 @@
           "message": "오디언스 멤버의 프로필에서 노트를 영구적으로 제거합니다."
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
-          "source": "Permanently Delete Member",
+          "source": "Permanently delete member",
           "message": "멤버 영구 삭제"
         },
         "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Mailchimp에서 오디언스 멤버 및 모든 관련 데이터를 영구적으로 제거합니다. 이 작업은 취소할 수 없습니다."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
-          "source": "Get Campaign Reports",
+          "source": "Get campaign reports",
           "message": "캠페인 보고서 가져오기"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "설정된 시간 이후에 전송된 캠페인으로 응답을 제한합니다. ISO 8601 시간 형식을 사용합니다: 2015-10-21T15:41:36+00:00."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
-          "source": "Get Campaign Report",
+          "source": "Get campaign report",
           "message": "캠페인 보고서 가져오기"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
@@ -784,7 +784,7 @@
           "message": "특정 이메일 캠페인에 대한 상세 성과 지표 및 분석 정보를 가져옵니다."
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
-          "source": "Get Campaign Click Details",
+          "source": "Get campaign click details",
           "message": "캠페인 클릭 상세 정보 가져오기"
         },
         "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
@@ -796,7 +796,7 @@
           "message": "어떤 링크가 누구에 의해 클릭되었는지를 포함하여 특정 캠페인의 클릭에 대한 상세 정보를 가져옵니다."
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
-          "source": "Get Store Customer",
+          "source": "Get store customer",
           "message": "스토어 고객 가져오기"
         },
         "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "연결된 전자상거래 스토어에서 특정 고객에 대한 세부 정보를 가져옵니다."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
-          "source": "Search Campaigns",
+          "source": "Search campaigns",
           "message": "캠페인 검색"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
@@ -856,7 +856,7 @@
           "message": "결과를 필터링하는 데 사용되는 검색 쿼리입니다."
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
-          "source": "Search Audience Members",
+          "source": "Search audience members",
           "message": "오디언스 멤버 검색"
         },
         "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "특정 구독자를 찾기 위해 이메일, 이름, 태그 등 다양한 기준을 사용하여 오디언스 멤버를 검색합니다."
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.display_name": {
-          "source": "Email Opened",
+          "source": "Email opened",
           "message": "이메일 열림"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.short_desc": {
@@ -892,7 +892,7 @@
           "message": "이메일 열림을 추적할 Mailchimp 오디언스(메일링 리스트)를 선택합니다."
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.display_name": {
-          "source": "Campaign Type",
+          "source": "Campaign type",
           "message": "캠페인 유형"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Automation"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.display_name": {
-          "source": "Trigger on Subscriber",
+          "source": "Trigger on subscriber",
           "message": "구독자 기준 트리거"
         },
         "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.short_desc": {
@@ -924,7 +924,7 @@
           "message": "선택 사항으로, 특정 구독자에 대해서만 트리거되도록 하나 이상의 이메일 주소를 지정합니다."
         },
         "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.display_name": {
-          "source": "New Subscriber",
+          "source": "New subscriber",
           "message": "새 구독자"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.short_desc": {
@@ -948,7 +948,7 @@
           "message": "새 구독자를 추적할 Mailchimp 오디언스를 선택합니다."
         },
         "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.display_name": {
-          "source": "New Unsubscriber",
+          "source": "New unsubscriber",
           "message": "새 구독 취소자"
         },
         "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.short_desc": {

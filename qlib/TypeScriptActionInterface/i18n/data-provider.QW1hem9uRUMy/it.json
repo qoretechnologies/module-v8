@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata ad **Amazon EC2** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni principali su questa app."
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.display_name": {
-          "source": "Start Instance",
+          "source": "Start instance",
           "message": "Avvia istanza"
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Uno o più ID di istanza EC2 che desideri avviare. Queste istanze devono essere nello stato arrestato (stopped)."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.display_name": {
-          "source": "Stop Instance",
+          "source": "Stop instance",
           "message": "Arresta istanza"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Uno o più ID di istanza EC2 che desideri arrestare. Queste istanze dovrebbero essere nello stato in esecuzione (running)."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.display_name": {
-          "source": "Force Stop",
+          "source": "Force stop",
           "message": "Arresto forzato"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Se abilitato, forza l'arresto immediato delle istanze. Questo equivale a staccare la spina di alimentazione da un computer fisico."
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.display_name": {
-          "source": "Reboot Instance",
+          "source": "Reboot instance",
           "message": "Riavvia istanza"
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Uno o più ID di istanza EC2 che desideri riavviare. Queste istanze dovrebbero essere nello stato in esecuzione (running)."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.display_name": {
-          "source": "Describe Instances",
+          "source": "Describe instances",
           "message": "Descrivi istanze"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.short_desc": {
@@ -496,7 +496,7 @@
           "message": "La regione AWS da cui desideri recuperare le informazioni sulle istanze."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Risultati massimi"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Il numero massimo di istanze da restituire in un'unica richiesta. Il valore predefinito è 100."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Token pagina successiva"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Token utilizzato per la paginazione per recuperare il set di risultati successivo quando ci sono più istanze rispetto al limite massimo di risultati."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.display_name": {
-          "source": "Describe Regions",
+          "source": "Describe regions",
           "message": "Descrivi regioni"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Recupera informazioni sulle regioni AWS disponibili, inclusi i relativi endpoint e lo stato di consenso (opt-in)."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.display_name": {
-          "source": "All Regions",
+          "source": "All regions",
           "message": "Tutte le regioni"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Se abilitato, include tutte le regioni AWS, comprese quelle che richiedono l'abilitazione (opt-in) prima di poter essere utilizzate."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.display_name": {
-          "source": "New Instance",
+          "source": "New instance",
           "message": "Nuova istanza"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
@@ -568,7 +568,7 @@
           "message": "La regione AWS in cui desideri monitorare le nuove istanze EC2. Il valore predefinito è us-east-1 se non specificato."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.display_name": {
-          "source": "Instance States",
+          "source": "Instance states",
           "message": "Stati dell'istanza"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Arrestata"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.display_name": {
-          "source": "New Scheduled Event",
+          "source": "New scheduled event",
           "message": "Nuovo evento pianificato"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Elenco opzionale di ID istanza EC2 specifici da monitorare. Se lasciato vuoto, tutte le istanze nella regione saranno monitorate per gli eventi pianificati."
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
+          "source": "Event types",
           "message": "Tipi di eventi"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.short_desc": {

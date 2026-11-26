@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **Microsoft Teams**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에서 기본 작업으로 아직 제공되지 않는 엔드포인트에 이 작업을 사용하세요."
         },
         "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.display_name": {
-          "source": "Create Channel",
+          "source": "Create channel",
           "message": "채널 생성"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "새 채널이 생성될 팀의 고유 식별자(GUID)입니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "채널 이름"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "채널의 목적이나 주제를 설명하는 선택적 설명입니다. 최대 1024자까지 가능합니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.display_name": {
-          "source": "Membership Type",
+          "source": "Membership type",
           "message": "멤버십 유형"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.short_desc": {
@@ -424,7 +424,7 @@
           "message": "공유 채널"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.display_name": {
-          "source": "Create Meeting",
+          "source": "Create meeting",
           "message": "회의 만들기"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.short_desc": {
@@ -448,7 +448,7 @@
           "message": "일정 초대 및 모임 목록에 표시될 모임의 제목 또는 주제입니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "시작 시간"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "모임이 시작되는 날짜 및 시간(ISO 8601 형식: YYYY-MM-DDTHH:MM:SS)입니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "종료 시간"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -496,7 +496,7 @@
           "message": "모임이 팀 내 특정 채널과 연결된 경우의 선택적 채널 식별자입니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
+          "source": "Meeting content",
           "message": "회의 내용"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "모임에 초대할 사용자의 이메일 주소 또는 사용자 ID 목록입니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "온라인 모임"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -544,7 +544,7 @@
           "message": "true로 설정하면 화상 회의 기능 및 참가 링크가 포함된 Teams 온라인 모임을 만듭니다."
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "표준 시간대"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "모임 시작 및 종료 시간의 표준 시간대(예: \"Pacific Standard Time\" 또는 \"UTC\")입니다."
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.display_name": {
-          "source": "Delete Meeting",
+          "source": "Delete meeting",
           "message": "모임 삭제"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.short_desc": {
@@ -580,7 +580,7 @@
           "message": "취소할 모임의 고유 식별자(GUID)입니다."
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
+          "source": "Meeting source",
           "message": "모임 소스"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
@@ -600,7 +600,7 @@
           "message": "팀"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.display_name": {
-          "source": "Send Channel Message",
+          "source": "Send channel message",
           "message": "채널 메시지 보내기"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.short_desc": {
@@ -648,7 +648,7 @@
           "message": "채널에 게시할 메시지의 텍스트 내용입니다."
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "콘텐츠 유형"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
@@ -668,7 +668,7 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.display_name": {
-          "source": "Send Chat Message",
+          "source": "Send chat message",
           "message": "채팅 메시지 보내기"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.short_desc": {
@@ -704,7 +704,7 @@
           "message": "채팅으로 보낼 메시지의 텍스트 내용입니다."
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "콘텐츠 유형"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
@@ -724,7 +724,7 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.display_name": {
-          "source": "Update Channel",
+          "source": "Update channel",
           "message": "채널 업데이트"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "업데이트할 채널의 고유 식별자입니다."
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "채널 이름"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -784,7 +784,7 @@
           "message": "채널의 목적이나 주제를 설명하는 업데이트된 설명입니다. 최대 1024자까지 가능합니다."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.display_name": {
-          "source": "Update Meeting",
+          "source": "Update meeting",
           "message": "모임 업데이트"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.short_desc": {
@@ -820,7 +820,7 @@
           "message": "일정 초대 및 모임 목록에 표시될 새 모임 제목 또는 주제입니다."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "시작 시간"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "모임이 시작되는 새 날짜 및 시간(ISO 8601 형식: YYYY-MM-DDTHH:MM:SS)입니다."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "종료 시간"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -868,7 +868,7 @@
           "message": "모임이 팀 내 특정 채널과 연결된 경우 업데이트된 채널 식별자입니다."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
+          "source": "Meeting content",
           "message": "회의 내용"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
@@ -904,7 +904,7 @@
           "message": "모임에 초대할 사람들의 업데이트된 이메일 주소 또는 사용자 ID 목록입니다."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "온라인 모임"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -916,7 +916,7 @@
           "message": "true로 설정하면 모임에 화상 회의 및 참가 링크를 포함한 Teams 온라인 모임 기능이 활성화됩니다."
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "표준 시간대"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "모임 시작 및 종료 시간의 새 표준 시간대입니다(예: \"Pacific Standard Time\" 또는 \"UTC\")."
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.display_name": {
-          "source": "New Channel Message",
+          "source": "New channel message",
           "message": "새 채널 메시지"
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "새 메시지를 모니터링할 채널의 고유 식별자입니다."
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.display_name": {
-          "source": "New Chat Message",
+          "source": "New chat message",
           "message": "새 채팅 메시지"
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "새 메시지를 모니터링할 1:1 채팅 또는 그룹 채팅의 고유 식별자입니다."
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "새 모임"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "지정된 기준과 일치하는 새 모임이 예약될 때 이 트리거가 실행됩니다."
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
+          "source": "Meeting source",
           "message": "모임 소스"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {

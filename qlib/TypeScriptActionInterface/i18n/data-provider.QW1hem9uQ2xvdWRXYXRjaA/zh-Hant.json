@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Amazon CloudWatch** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、可選的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式返回。\n\n對尚未在此應用程式上作為一級動作公開的端點使用此動作。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.display_name": {
-          "source": "Disable Alarm Actions",
+          "source": "Disable alarm actions",
           "message": "停用警報動作"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.short_desc": {
@@ -352,7 +352,7 @@
           "message": "暫時停用指定 CloudWatch 警報的動作（通知、自動縮放等）。適用於維護期間、測試期間，或是需要抑制警報通知而不刪除警報時。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.cmVnaW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "指定目標警報所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.YWxhcm1fbmFtZXM.display_name": {
-          "source": "Alarm Names",
+          "source": "Alarm names",
           "message": "警報名稱"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.YWxhcm1fbmFtZXM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "選擇一個或多個要停用動作的 CloudWatch 警報。動作包括 SNS 通知、Auto Scaling 原則及 EC2 動作。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.display_name": {
-          "source": "Enable Alarm Actions",
+          "source": "Enable alarm actions",
           "message": "啟用警報動作"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.short_desc": {
@@ -388,7 +388,7 @@
           "message": "重新啟用指定 CloudWatch 警報的動作（通知、自動縮放等）。用於在維護或測試期間結束後恢復警報功能。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.cmVnaW9u.short_desc": {
@@ -400,7 +400,7 @@
           "message": "指定目標警報所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.YWxhcm1fbmFtZXM.display_name": {
-          "source": "Alarm Names",
+          "source": "Alarm names",
           "message": "警報名稱"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.YWxhcm1fbmFtZXM.short_desc": {
@@ -412,7 +412,7 @@
           "message": "選擇一個或多個要啟用動作的 CloudWatch 警報。這將恢復 SNS 通知、Auto Scaling 原則及 EC2 動作。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.display_name": {
-          "source": "Set Alarm State",
+          "source": "Set alarm state",
           "message": "設定警報狀態"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.short_desc": {
@@ -424,7 +424,7 @@
           "message": "透過手動設定為 OK、ALARM 或 INSUFFICIENT_DATA 來覆寫 CloudWatch 警報的當前狀態。適用於測試警報工作流程、清除誤報或出於運作目的強制指定特定的警報狀態。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.cmVnaW9u.short_desc": {
@@ -436,7 +436,7 @@
           "message": "指定目標警報所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.YWxhcm1fbmFtZQ.display_name": {
-          "source": "Alarm Name",
+          "source": "Alarm name",
           "message": "警報名稱"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.YWxhcm1fbmFtZQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "選擇您想要手動設定狀態的 CloudWatch 警報。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfdmFsdWU.display_name": {
-          "source": "State Value",
+          "source": "State value",
           "message": "狀態值"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfdmFsdWU.short_desc": {
@@ -472,7 +472,7 @@
           "message": "INSUFFICIENT_DATA"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfcmVhc29u.display_name": {
-          "source": "State Reason",
+          "source": "State reason",
           "message": "狀態原因"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfcmVhc29u.short_desc": {
@@ -500,7 +500,7 @@
           "message": "OK"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.display_name": {
-          "source": "Get Alarm",
+          "source": "Get alarm",
           "message": "取得警報"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.short_desc": {
@@ -512,7 +512,7 @@
           "message": "擷取特定 CloudWatch 警報的完整詳細資料，包含其目前狀態、設定、閾值、維度與動作。非常適合用於警報稽核、疑難排解和設定驗證。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.cmVnaW9u.short_desc": {
@@ -524,7 +524,7 @@
           "message": "指定目標警報所在的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.YWxhcm1fbmFtZQ.display_name": {
-          "source": "Alarm Name",
+          "source": "Alarm name",
           "message": "警報名稱"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.YWxhcm1fbmFtZQ.short_desc": {
@@ -536,7 +536,7 @@
           "message": "選擇您要檢索其詳細資料的 CloudWatch 警報。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.display_name": {
-          "source": "List Alarms",
+          "source": "List alarms",
           "message": "列出警報"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.short_desc": {
@@ -548,7 +548,7 @@
           "message": "檢索您 AWS 帳戶中的 CloudWatch 警報清單，可選擇依狀態、名稱字首及動作狀態進行篩選。包含摘要統計資料和詳細的警報資訊，用於監控和管理用途。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.cmVnaW9u.short_desc": {
@@ -560,7 +560,7 @@
           "message": "指定您想要列出 CloudWatch 警報的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "警報名稱前綴"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -572,7 +572,7 @@
           "message": "可選的篩選條件，僅返回名稱以指定字首開頭的警報。留空可列出所有警報。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.c3RhdGVfZmlsdGVy.display_name": {
-          "source": "State Filter",
+          "source": "State filter",
           "message": "狀態篩選條件"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.c3RhdGVfZmlsdGVy.short_desc": {
@@ -596,7 +596,7 @@
           "message": "INSUFFICIENT_DATA"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.bWF4X3JlY29yZHM.display_name": {
-          "source": "Maximum Records",
+          "source": "Maximum records",
           "message": "最大記錄數"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.bWF4X3JlY29yZHM.short_desc": {
@@ -608,7 +608,7 @@
           "message": "限制回應中返回的警報數量。預設為 50，最大值為 100。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.display_name": {
-          "source": "New Alarm",
+          "source": "New alarm",
           "message": "新警報"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.short_desc": {
@@ -620,7 +620,7 @@
           "message": "監控您 AWS 帳戶中新建立的 CloudWatch 警報，讓您能夠對新的監控設定做出自動回應。適用於稽核軌跡、通知設定和自動化警報設定工作流程。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.cmVnaW9u.short_desc": {
@@ -632,7 +632,7 @@
           "message": "指定您想要監控新 CloudWatch 警報的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "警報名稱前綴"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -644,7 +644,7 @@
           "message": "選用篩選條件，僅監控名稱以指定前綴開頭的警報。留空以監控所有警報。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.display_name": {
-          "source": "Alarm State Change",
+          "source": "Alarm state change",
           "message": "警報狀態變更"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.short_desc": {
@@ -656,7 +656,7 @@
           "message": "監控 CloudWatch 警報在 OK、ALARM 和 INSUFFICIENT_DATA 狀態之間的狀態變更。對於自動化事件回應、升級工作流程和即時監控通知至關重要。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.cmVnaW9u.short_desc": {
@@ -668,7 +668,7 @@
           "message": "指定您要監控警報狀態變更的 AWS 區域。如果未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "警報名稱前綴"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -680,7 +680,7 @@
           "message": "選用篩選條件，僅監控名稱以指定前綴開頭的警報。留空以監控所有警報。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.c3RhdGVfZmlsdGVy.display_name": {
-          "source": "State Filter",
+          "source": "State filter",
           "message": "狀態篩選條件"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.c3RhdGVfZmlsdGVy.short_desc": {

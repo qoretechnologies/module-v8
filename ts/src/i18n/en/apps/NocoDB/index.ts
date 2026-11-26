@@ -30,7 +30,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
   },
   triggers: {
     new_document: {
-      displayName: 'New Row',
+      displayName: 'New row',
       shortDesc: 'Trigger when a new row is added to a NocoDB table',
       longDesc:
         'Monitors a NocoDB table for new rows and triggers when new records are detected. You can optionally filter which rows trigger the event using a where clause.',
@@ -52,7 +52,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
             'Select the NocoDB table to monitor. The trigger will fire when new rows are added to this table.',
         },
         where: {
-          displayName: 'Where Filter',
+          displayName: 'Where filter',
           shortDesc: 'Optional filter for new rows',
           longDesc:
             'Optionally specify a filter using NocoDB where syntax (e.g., "(Status,eq,Active)") to only trigger for rows matching specific criteria.',
@@ -62,7 +62,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -83,7 +83,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
   },
   actions: {
     count_records: {
-      displayName: 'Count Records',
+      displayName: 'Count records',
       shortDesc: 'Get the count of records in a table',
       longDesc:
         'Returns the total number of records in a NocoDB table. You can optionally filter the count using a where clause to count only records matching specific criteria.',
@@ -104,7 +104,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Select the NocoDB table to count records from.',
         },
         where: {
-          displayName: 'Where Filter',
+          displayName: 'Where filter',
           shortDesc: 'Optional filter to count specific records',
           longDesc:
             'Optionally specify a filter using NocoDB where syntax (e.g., "(Status,eq,Active)") to only count records matching specific criteria.',
@@ -112,7 +112,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
       },
     },
     upload_attachment: {
-      displayName: 'Upload Attachment',
+      displayName: 'Upload attachment',
       shortDesc: 'Upload a file to an attachment field',
       longDesc:
         'Uploads a file to a specific attachment field in a NocoDB record. The file will be stored in NocoDB and associated with the specified record.',
@@ -138,7 +138,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Specify the ID of the record where the file should be uploaded.',
         },
         attachmentField: {
-          displayName: 'Attachment Field',
+          displayName: 'Attachment field',
           shortDesc: 'The attachment field to upload to',
           longDesc: 'Select the attachment field in the table where the file will be stored.',
         },
@@ -150,7 +150,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
       },
     },
     link_records: {
-      displayName: 'Link Records',
+      displayName: 'Link records',
       shortDesc: 'Create relationships between records',
       longDesc:
         'Links records from another table to a record via a link field. This creates a relationship between the records without affecting existing links.',
@@ -171,7 +171,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Select the NocoDB table containing the record you want to link from.',
         },
         linkField: {
-          displayName: 'Link Field',
+          displayName: 'Link field',
           shortDesc: 'The link field to use for the relationship',
           longDesc: 'Select the link field (Link to Another Record) that defines the relationship between tables.',
         },
@@ -181,14 +181,14 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Specify the ID of the record in the source table to link from.',
         },
         linkedRecordIds: {
-          displayName: 'Records to Link',
+          displayName: 'Records to link',
           shortDesc: 'IDs of records to link',
           longDesc: 'Provide the IDs of records from the linked table to connect to the source record.',
         },
       },
     },
     unlink_records: {
-      displayName: 'Unlink Records',
+      displayName: 'Unlink records',
       shortDesc: 'Remove relationships between records',
       longDesc:
         'Removes the link between records via a link field. This breaks the relationship without deleting any records.',
@@ -209,7 +209,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Select the NocoDB table containing the record you want to unlink from.',
         },
         linkField: {
-          displayName: 'Link Field',
+          displayName: 'Link field',
           shortDesc: 'The link field with the relationship',
           longDesc: 'Select the link field (Link to Another Record) that defines the relationship to remove.',
         },
@@ -219,14 +219,14 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Specify the ID of the record in the source table to unlink from.',
         },
         linkedRecordIds: {
-          displayName: 'Records to Unlink',
+          displayName: 'Records to unlink',
           shortDesc: 'IDs of records to unlink',
           longDesc: 'Provide the IDs of records from the linked table to disconnect from the source record.',
         },
       },
     },
     trigger_button: {
-      displayName: 'Trigger Button',
+      displayName: 'Trigger button',
       shortDesc: 'Trigger a button action on records',
       longDesc:
         'Programmatically triggers a button action (such as AI generation or webhook) for specified records. Maximum of 25 records can be processed at a time.',
@@ -247,7 +247,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Select the NocoDB table containing the button field to trigger.',
         },
         buttonField: {
-          displayName: 'Button Field',
+          displayName: 'Button field',
           shortDesc: 'The button field to trigger',
           longDesc: 'Select the button field whose action should be triggered for the specified records.',
         },
@@ -257,7 +257,7 @@ Your API token that grants access to NocoDB. Tokens can be created in your accou
           longDesc: 'Provide the IDs of records to trigger the button action for. Maximum 25 records per request.',
         },
         preview: {
-          displayName: 'Preview Mode',
+          displayName: 'Preview mode',
           shortDesc: 'Run in preview mode without saving changes',
           longDesc: 'When enabled, the button action runs in preview mode and changes are not saved. Useful for testing.',
         },

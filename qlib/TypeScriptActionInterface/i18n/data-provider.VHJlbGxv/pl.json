@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Trello** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako natywne akcje w tej aplikacji."
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.VHJlbGxv.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Wyszukaj rekordy"
         },
         "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Utwórz nowy obszar roboczy"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Wyszukaj członków Trello."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
-          "source": "Card Due",
+          "source": "Card due",
           "message": "Termin karty"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Wybierz określoną listę do monitorowania pod kątem przeterminowanych kart. Wymagane tylko wtedy, gdy pole Source jest ustawione na „list”."
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
-          "source": "Include Completed Cards",
+          "source": "Include completed cards",
           "message": "Uwzględnij ukończone karty"
         },
         "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Gdy ta opcja jest włączona, wyzwalacz uwzględni przeterminowane karty, które zostały oznaczone jako ukończone. Domyślnie uwzględniane są tylko nieukończone przeterminowane karty."
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
-          "source": "New Board",
+          "source": "New board",
           "message": "Nowa tablica"
         },
         "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Ten wyzwalacz uruchamia się, gdy zostanie utworzona nowa tablica Trello lub udostępniona uwierzytelnionemu użytkownikowi."
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
-          "source": "New Card",
+          "source": "New card",
           "message": "Nowa karta"
         },
         "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Wybierz konkretną listę do monitorowania pod kątem nowych kart. Wymagane tylko wtedy, gdy parametr Source jest ustawiony na „list”."
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
-          "source": "New Label",
+          "source": "New label",
           "message": "Nowa etykieta"
         },
         "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "Wybierz tablicę Trello, na której chcesz monitorować tworzenie nowych etykiet."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "Nowa lista"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "Wybierz tablicę Trello, na której chcesz monitorować tworzenie nowych list."
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
-          "source": "Include Archived Lists",
+          "source": "Include archived lists",
           "message": "Uwzględnij zarchiwizowane listy"
         },
         "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
@@ -1088,7 +1088,7 @@
           "message": "Po włączeniu wyzwalacz uwzględni nowe listy, które zostały zarchiwizowane. Domyślnie uwzględniane są tylko otwarte listy."
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
-          "source": "New Member",
+          "source": "New member",
           "message": "Nowy członek"
         },
         "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {

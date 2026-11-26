@@ -28,7 +28,7 @@
           "message": "使用已設定連線的身份驗證對 **Baserow** 進行自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選填的查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊（hash）形式傳回。\n\n當端點尚未在此應用程式上顯示為一級動作時，請使用此動作。"
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.QmFzZXJvdw.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.QmFzZXJvdw.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "表格名稱"
         },
         "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.display_name": {
-          "source": "Create Row",
+          "source": "Create row",
           "message": "建立列"
         },
         "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.short_desc": {
@@ -484,7 +484,7 @@
           "message": "選擇要插入新列的目標 Baserow 資料表。可用欄位將根據所選資料表架構動態載入。"
         },
         "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.display_name": {
-          "source": "Row Data",
+          "source": "Row data",
           "message": "列資料"
         },
         "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "提供資料表各欄的值。結構會根據所選資料表架構動態生成，顯示所有可用欄及其資料類型和限制。"
         },
         "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.display_name": {
-          "source": "Before Row ID",
+          "source": "Before row ID",
           "message": "插入於此列 ID 之前"
         },
         "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.short_desc": {
@@ -508,7 +508,7 @@
           "message": "可選擇指定列 ID，以在資料表順序中將新列插入其前方。留空則附加在末尾。"
         },
         "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.display_name": {
-          "source": "Delete Row",
+          "source": "Delete row",
           "message": "刪除列"
         },
         "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "根據 ID 選擇要從資料表中刪除的特定列。此列將被永久移除。"
         },
         "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.display_name": {
-          "source": "Get Table Row",
+          "source": "Get table row",
           "message": "取得資料表列"
         },
         "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.short_desc": {
@@ -580,7 +580,7 @@
           "message": "透過 ID 選擇要從資料表中擷取的特定列。將傳回此列的所有資料。"
         },
         "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.display_name": {
-          "source": "Get Table Fields",
+          "source": "Get table fields",
           "message": "取得資料表欄位"
         },
         "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.short_desc": {
@@ -604,7 +604,7 @@
           "message": "選擇您要擷取其欄位定義的 Baserow 資料表。將傳回所有欄位及其設定。"
         },
         "app.QmFzZXJvdw.action.bGlzdF9yb3dz.display_name": {
-          "source": "List Rows",
+          "source": "List rows",
           "message": "列出資料列"
         },
         "app.QmFzZXJvdw.action.bGlzdF9yb3dz.short_desc": {
@@ -720,7 +720,7 @@
           "message": "套用多個篩選條件，僅檢索符合特定條件的列。支援各種比較運算子和邏輯組合。"
         },
         "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.field.ZmlsdGVyX3R5cGU.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "過濾類型"
         },
         "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.field.ZmlsdGVyX3R5cGU.short_desc": {
@@ -824,7 +824,7 @@
           "message": "使用所選運算子與欄位比較的值"
         },
         "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
+          "source": "List tables",
           "message": "列出資料表"
         },
         "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.short_desc": {
@@ -836,7 +836,7 @@
           "message": "從您的 Baserow 資料庫中檢索所有資料表的清單及其基本詮釋資料，包含資料表 ID、名稱、順序和關聯的資料庫 ID。"
         },
         "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.display_name": {
-          "source": "Update Row",
+          "source": "Update row",
           "message": "更新列"
         },
         "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.short_desc": {
@@ -872,7 +872,7 @@
           "message": "根據 ID 選擇要更新的特定列。此列的目前值將被修改。"
         },
         "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.display_name": {
-          "source": "Row Data",
+          "source": "Row data",
           "message": "列資料"
         },
         "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
@@ -884,7 +884,7 @@
           "message": "為您想要更新的資料表欄位提供新值。結構會根據所選的資料表結構圖（schema）動態產生。"
         },
         "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
+          "source": "Upload file",
           "message": "上傳檔案"
         },
         "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "檔案名稱"
         },
         "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
+          "source": "New row",
           "message": "新增列"
         },
         "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.short_desc": {
@@ -1076,7 +1076,7 @@
           "message": "套用篩選條件以僅針對符合特定條件的新列觸發。留空則針對所有新列觸發。"
         },
         "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.field.ZmlsdGVyX3R5cGU.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "過濾類型"
         },
         "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.field.ZmlsdGVyX3R5cGU.short_desc": {

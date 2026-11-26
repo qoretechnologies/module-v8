@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Magento** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -352,8 +352,8 @@
           "message": "Retrieves detailed information about a customer account using the customer ID. Returns all customer attributes including address information, account status, and custom attributes."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Update Customer",
-          "message": "Update Customer"
+          "source": "Update customer",
+          "message": "Update customer"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
           "source": "Update an existing customer account",
@@ -364,8 +364,8 @@
           "message": "Updates customer information for an existing account. This endpoint allows modification of personal information, addresses, custom attributes, and other account details. The customer ID must be included in the request."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
-          "source": "Delete Customer",
-          "message": "Delete Customer"
+          "source": "Delete customer",
+          "message": "Delete customer"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
           "source": "Remove a customer account by ID",
@@ -376,8 +376,8 @@
           "message": "Permanently deletes a customer account from the system. This operation cannot be undone and will remove all customer data associated with the specified ID, including addresses and order history references."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Customers",
-          "message": "List Customers"
+          "source": "List customers",
+          "message": "List customers"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
           "source": "Retrieve a list of customer accounts",
@@ -388,8 +388,8 @@
           "message": "Returns a list of customer accounts that match specified search criteria. Results can be filtered, sorted, and paginated. Use search criteria parameters to narrow results by email, name, creation date, or other customer attributes."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
-          "source": "Create Customer Account",
-          "message": "Create Customer Account"
+          "source": "Create customer account",
+          "message": "Create customer account"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
           "source": "Register a new customer account",
@@ -400,8 +400,8 @@
           "message": "Creates a new customer account with the provided information. Required fields include email, password, and first/last name. Optional details include addresses, date of birth, and custom attributes. Returns the newly created customer ID upon success."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
-          "source": "Create Product",
-          "message": "Create Product"
+          "source": "Create product",
+          "message": "Create product"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
           "source": "Add a new product to the catalog",
@@ -412,8 +412,8 @@
           "message": "Creates a new product in the catalog with specified attributes, pricing, and inventory information. Products can be simple, configurable, bundled, grouped, virtual, or downloadable. Media gallery entries, tier prices, and custom options can also be defined."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
-          "source": "List Products",
-          "message": "List Products"
+          "source": "List products",
+          "message": "List products"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
           "source": "Retrieve a list of products from the catalog",
@@ -424,8 +424,8 @@
           "message": "Returns a collection of products that match the specified search criteria. Results can be filtered by attributes like name, SKU, price, and status. Supports pagination, sorting, and inclusion of custom attributes in the response."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
-          "source": "Update Product",
-          "message": "Update Product"
+          "source": "Update product",
+          "message": "Update product"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
           "source": "Modify an existing product",
@@ -436,8 +436,8 @@
           "message": "Updates an existing product in the catalog. Can modify any product attribute including name, price, description, images, inventory, and category assignments. The product SKU or ID must be specified in the request."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
-          "source": "Delete Product",
-          "message": "Delete Product"
+          "source": "Delete product",
+          "message": "Delete product"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
           "source": "Remove a product from the catalog",
@@ -448,8 +448,8 @@
           "message": "Permanently removes a product from the catalog by ID or SKU. This operation cannot be undone and may affect existing orders and carts that reference the deleted product."
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
-          "source": "Get Product Details",
-          "message": "Get Product Details"
+          "source": "Get product details",
+          "message": "Get product details"
         },
         "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
           "source": "Retrieve detailed information about a specific product",
@@ -460,8 +460,8 @@
           "message": "Retrieves comprehensive information about a specific product by SKU or ID. The response includes all product attributes, images, pricing information, inventory status, and category assignments. Additional parameters can control which data is included."
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Shopping Carts",
-          "message": "List Shopping Carts"
+          "source": "List shopping carts",
+          "message": "List shopping carts"
         },
         "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
           "source": "Retrieve a list of active shopping carts",
@@ -472,8 +472,8 @@
           "message": "Returns a collection of active shopping carts that match the specified search criteria. Results can be filtered by customer ID, creation date, and cart status. Each cart includes items, applied coupons, and shipping/billing information if available."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
-          "source": "Get Order Details",
-          "message": "Get Order Details"
+          "source": "Get order details",
+          "message": "Get order details"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
           "source": "Retrieve detailed information about a specific order",
@@ -484,8 +484,8 @@
           "message": "Retrieves comprehensive information about a specific order by ID. Includes order items, billing and shipping addresses, payment information, applied discounts, and order status history. Useful for order processing and customer service inquiries."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Orders",
-          "message": "List Orders"
+          "source": "List orders",
+          "message": "List orders"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
           "source": "Retrieve a list of orders based on search criteria",
@@ -496,8 +496,8 @@
           "message": "Returns a collection of orders that match the specified search criteria. Results can be filtered by customer, status, date range, and total amount. Supports pagination and sorting to efficiently browse large order volumes."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
-          "source": "Create Order",
-          "message": "Create Order"
+          "source": "Create order",
+          "message": "Create order"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
           "source": "Persists order information to the system",
@@ -508,8 +508,8 @@
           "message": "Performs persist operations for a specified order. Saves the order data to the database, including customer information, line items, payment details, shipping information, and other relevant order metadata."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
-          "source": "Add Order Comment",
-          "message": "Add Order Comment"
+          "source": "Add order comment",
+          "message": "Add order comment"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
           "source": "Append a comment to an existing order",
@@ -520,8 +520,8 @@
           "message": "Adds a comment to the order history. Comments can be internal (visible only to administrators) or customer-visible. Each comment is timestamped and attributed to the author. Useful for documenting order processing steps and customer communications."
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
-          "source": "Get Order Comments",
-          "message": "Get Order Comments"
+          "source": "Get order comments",
+          "message": "Get order comments"
         },
         "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
           "source": "Retrieve the comment history for an order",
@@ -532,8 +532,8 @@
           "message": "Returns the complete comment history for a specific order. Results include comment text, timestamp, author information, and visibility status (customer-visible or admin-only). Comments are returned in chronological order."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
-          "source": "List Invoices",
-          "message": "List Invoices"
+          "source": "List invoices",
+          "message": "List invoices"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
           "source": "Retrieve a collection of invoices",
@@ -544,8 +544,8 @@
           "message": "Returns a list of invoices based on specified search criteria. Results can be filtered by order ID, customer, date, and amount. Each invoice includes line items, payment information, and related order details. Supports pagination and sorting."
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
-          "source": "Create Invoice",
-          "message": "Create Invoice"
+          "source": "Create invoice",
+          "message": "Create invoice"
         },
         "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
           "source": "Creates a new invoice for an order",
@@ -556,8 +556,8 @@
           "message": "Creates a new invoice record for an existing order, documenting the financial transaction and payment request. Allows for specifying line items to be invoiced, payment details, and comments that will appear on the customer's invoice."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Shipments",
-          "message": "List Shipments"
+          "source": "List shipments",
+          "message": "List shipments"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
           "source": "Retrieve a collection of order shipments",
@@ -568,8 +568,8 @@
           "message": "Returns a list of shipments based on specified search criteria. Results can be filtered by order ID, customer, creation date, and tracking information. Each shipment includes items shipped, quantities, tracking numbers, and carrier information."
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
-          "source": "Create Shipment",
-          "message": "Create Shipment"
+          "source": "Create shipment",
+          "message": "Create shipment"
         },
         "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
           "source": "Creates a new shipment for an order",
@@ -580,8 +580,8 @@
           "message": "Creates a new shipment record for an existing order, allowing you to document and track the physical sending of order items to the customer. Includes options for specifying tracking numbers, shipping carriers, and shipped items with their quantities."
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
-          "source": "List Payment Transactions",
-          "message": "List Payment Transactions"
+          "source": "List payment transactions",
+          "message": "List payment transactions"
         },
         "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
           "source": "Retrieve a collection of payment transactions",
@@ -592,8 +592,8 @@
           "message": "Returns a list of payment transactions based on specified search criteria. Results can be filtered by order ID, payment method, transaction type, and status. Each transaction includes amount, status, and related payment gateway information."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.display_name": {
-          "source": "Customer Created or Updated",
-          "message": "Customer Created or Updated"
+          "source": "Customer created or updated",
+          "message": "Customer created or updated"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.short_desc": {
           "source": "Triggers when a customer is created or updated in Magento",
@@ -604,8 +604,8 @@
           "message": "This trigger activates when a new customer is created in your Magento store or when an existing customer's information is updated."
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Specify when this trigger should activate",
@@ -624,8 +624,8 @@
           "message": "Updated"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Invoice Created or Updated",
-          "message": "Invoice Created or Updated"
+          "source": "Invoice created or updated",
+          "message": "Invoice created or updated"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
           "source": "Triggers when an invoice is created or updated in Magento",
@@ -636,8 +636,8 @@
           "message": "This trigger activates when a new invoice is generated in your Magento store or when an existing invoice is modified."
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Specify when this trigger should activate",
@@ -656,8 +656,8 @@
           "message": "Updated"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.display_name": {
-          "source": "Order Created",
-          "message": "Order Created"
+          "source": "Order created",
+          "message": "Order created"
         },
         "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.short_desc": {
           "source": "Triggers when a new order is placed in Magento",
@@ -668,8 +668,8 @@
           "message": "This trigger activates when a customer completes the checkout process and places a new order in your Magento store."
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.display_name": {
-          "source": "Shipment Created",
-          "message": "Shipment Created"
+          "source": "Shipment created",
+          "message": "Shipment created"
         },
         "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.short_desc": {
           "source": "Triggers when a new shipment is created in Magento",
@@ -680,8 +680,8 @@
           "message": "This trigger activates when a new shipment is created for an order in your Magento store, indicating that products have been shipped to the customer."
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
-          "source": "Product Created or Updated",
-          "message": "Product Created or Updated"
+          "source": "Product created or updated",
+          "message": "Product created or updated"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
           "source": "Triggers when a product is created or updated in Magento",
@@ -692,8 +692,8 @@
           "message": "This trigger activates when a new product is added to your Magento catalog or when an existing product's information is modified."
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
-          "message": "Activation Criteria"
+          "source": "Activation criteria",
+          "message": "Activation criteria"
         },
         "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
           "source": "Specify when this trigger should activate",

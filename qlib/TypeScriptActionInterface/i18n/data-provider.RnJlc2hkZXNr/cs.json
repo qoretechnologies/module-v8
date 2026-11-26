@@ -28,7 +28,7 @@
           "message": "Provést vlastní volání HTTP / REST API do **Freshdesk** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci zatím nejsou k dispozici jako předdefinované akce."
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhledat záznamy"
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Tikety patřící k danému ID společnosti."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Seřadit podle"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Seřadit výsledky."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
+          "source": "Order type",
           "message": "Typ řazení"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Číslo stránky výsledků, která se má vrátit."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "Na stránku"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Pomocí tohoto rozhraní API můžete načíst seznam všech společností."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
+          "source": "Per page",
           "message": "Na stránku"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Api v2 custom objects schemas schema id records id put"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Nový kontakt"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Spustí se pokaždé, když je do vaší instance Freshdesku přidán nový kontakt. Zachyťte podrobnosti jako jméno, e-mail, telefon a jakákoli vlastní pole spojená s kontaktem."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.display_name": {
-          "source": "Updated Contact",
+          "source": "Updated contact",
           "message": "Aktualizovaný kontakt"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Spustí se vždy, když jsou ve vaší instanci Freshdesk aktualizovány údaje existujícího kontaktu. Například při změnách jména, telefonního čísla, e-mailu nebo vlastních polí."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.display_name": {
-          "source": "Updated Ticket",
+          "source": "Updated ticket",
           "message": "Aktualizovaný tiket"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Spustí se vždy, když je existující tiket ve vaší instanci Freshdesk aktualizován o nové podrobnosti. Například při změnách předmětu, priority, stavu nebo přiřazeného agenta."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.display_name": {
-          "source": "New Ticket",
+          "source": "New ticket",
           "message": "Nový tiket"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Spustí se pokaždé, když je ve vaší instanci Freshdesku vytvořen nový tiket. Můžete zachytit podrobnosti jako předmět, popis, prioritu a další a použít tato data v následných akcích nebo oznámeních."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.display_name": {
-          "source": "Ticket Status Filter",
+          "source": "Ticket status filter",
           "message": "Filtr stavu tiketu"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Omezit nebo filtrovat trigger tak, aby se spouštěl pouze pro tikety odpovídající určitému stavu (např. Open, Pending, Resolved atd.)."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.display_name": {
-          "source": "Ticket Priority Filter",
+          "source": "Ticket priority filter",
           "message": "Filtr priority tiketu"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.short_desc": {

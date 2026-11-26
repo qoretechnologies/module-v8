@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Amazon SQS** 發送自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選用查詢參數、標頭和請求主體。回應將以雜湊傳回，包含狀態碼、回應標頭和回應主體。\n\n對此應用程式上尚未公開為一級動作的端點使用此動作。"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "建立訊息"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -352,7 +352,7 @@
           "message": "傳送文字訊息至 Amazon SQS 佇列，包含選擇性的訊息屬性、延遲設定和 FIFO 佇列參數。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -376,7 +376,7 @@
           "message": "將要傳送訊息之 Amazon SQS 佇列的完整 URL。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "訊息內文"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
@@ -388,7 +388,7 @@
           "message": "要傳送的訊息內容。可以是純文字或上限為 256 KB 的任何字串格式。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "延遲（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "延遲傳送訊息的時間長度（0-900 秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "訊息屬性"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -412,7 +412,7 @@
           "message": "隨訊息包含的自訂屬性，用於篩選和處理。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "訊息群組 ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -424,7 +424,7 @@
           "message": "指定訊息屬於特定訊息群組的標籤（僅限 FIFO 佇列）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "訊息重複資料刪除 ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "用於已傳送訊息去重複的權杖（僅限 FIFO 佇列）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "建立 JSON 訊息"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "傳送結構化 JSON 資料至 Amazon SQS 佇列。JSON 物件將會自動序列化至訊息內文中。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -472,7 +472,7 @@
           "message": "將要傳送 JSON 訊息之 Amazon SQS 佇列的完整 URL。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
-          "source": "Message Data",
+          "source": "Message data",
           "message": "訊息資料"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
@@ -484,7 +484,7 @@
           "message": "將序列化為 JSON 並作為訊息內文傳送的結構化資料物件。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "延遲（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "延遲傳送訊息的時間長度（0-900 秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "訊息屬性"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "隨訊息包含的自訂屬性，用於篩選和處理。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "訊息群組 ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -520,7 +520,7 @@
           "message": "指定訊息屬於特定訊息群組的標籤（僅限 FIFO 佇列）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "訊息重複資料刪除 ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "用於已傳送訊息去重複的權杖（僅限 FIFO 佇列）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
-          "source": "Create Queue",
+          "source": "Create queue",
           "message": "建立佇列"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
@@ -544,7 +544,7 @@
           "message": "建立包含可設定設定（包括 FIFO 功能、無效信件佇列和加密選項）的新 Amazon SQS 佇列。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -556,7 +556,7 @@
           "message": "選擇要建立新 SQS 佇列的 AWS 區域。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
-          "source": "Queue Name",
+          "source": "Queue name",
           "message": "佇列名稱"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "佇列的名稱。FIFO 佇列名稱必須以 .fifo 字尾結尾。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
-          "source": "FIFO Queue",
+          "source": "FIFO queue",
           "message": "FIFO 佇列"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "是否建立可確保訊息按照傳送的精確順序恰好處理一次的 FIFO 佇列。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "基於內容的重複資料刪除"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -592,7 +592,7 @@
           "message": "針對 FIFO 佇列，啟用使用訊息內文之 SHA-256 雜湊的去重複功能。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "可見性逾時（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -604,7 +604,7 @@
           "message": "訊息在接收後對其他消費者不可見的時間長度（0-43200 秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
-          "source": "Message Retention Period (Seconds)",
+          "source": "Message retention period (seconds)",
           "message": "訊息保留期間（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
@@ -616,7 +616,7 @@
           "message": "訊息保留在佇列中的時間長度（60-1209600 秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "延遲（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "新增至此佇列之訊息的預設延遲（0-900 秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
-          "source": "Receive Wait Time (Seconds)",
+          "source": "Receive wait time (seconds)",
           "message": "接收等待時間（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
@@ -640,7 +640,7 @@
           "message": "ReceiveMessage 呼叫等待訊息到達的時間（0-20 秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
-          "source": "Max Receive Count",
+          "source": "Max receive count",
           "message": "最大接收次數"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "訊息在移至無效信件佇列之前可以接收的次數。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
-          "source": "Dead Letter Queue URL",
+          "source": "Dead letter queue URL",
           "message": "無效信件佇列 URL"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
@@ -664,7 +664,7 @@
           "message": "用作訊息處理失敗之無效信件佇列的佇列 URL。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "KMS 主金鑰 ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "用於佇列訊息伺服器端加密的 AWS KMS 金鑰 ID。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
-          "source": "KMS Data Key Reuse Period (Seconds)",
+          "source": "KMS data key reuse period (seconds)",
           "message": "KMS 資料金鑰重複使用期間（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Amazon SQS 可以重複使用資料金鑰的時間長度（60-86400 秒）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
-          "source": "List Queues",
+          "source": "List queues",
           "message": "列出佇列"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
@@ -700,7 +700,7 @@
           "message": "擷取指定區域中所有 Amazon SQS 佇列的清單，並包含選用篩選和詳細佇列屬性。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
@@ -712,7 +712,7 @@
           "message": "選擇要擷取 SQS 佇列清單的 AWS 區域。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
-          "source": "Queue Name Prefix",
+          "source": "Queue name prefix",
           "message": "佇列名稱前綴"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
@@ -724,7 +724,7 @@
           "message": "用來篩選佇列名稱的選用前綴。僅傳回名稱以此前綴開頭的佇列。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "最大結果數"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -736,7 +736,7 @@
           "message": "要傳回的最大佇列結果數量（1-1000）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "包含屬性"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -748,7 +748,7 @@
           "message": "是否包含詳細佇列屬性，例如訊息數量、時間戳記和設定值。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "列出訊息"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "從 Amazon SQS 佇列擷取訊息，包含可設定的輪詢選項和訊息屬性擷取。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
@@ -784,7 +784,7 @@
           "message": "要從中接收訊息的 Amazon SQS 佇列完整 URL。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
-          "source": "Max Number of Messages",
+          "source": "Max number of messages",
           "message": "最大訊息數量"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
@@ -796,7 +796,7 @@
           "message": "單一請求中要傳回的最大訊息數量（1-10）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "等待時間（秒）"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -808,7 +808,7 @@
           "message": "呼叫等待訊息到達的持續時間（0-20 秒）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "可見性逾時（秒）"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -820,7 +820,7 @@
           "message": "已接收訊息對後續擷取請求隱藏的持續時間。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
-          "source": "Message Attribute Names",
+          "source": "Message attribute names",
           "message": "訊息屬性名稱"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
@@ -832,7 +832,7 @@
           "message": "要傳回的訊息屬性名稱。使用 \"All\" 傳回所有屬性。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "屬性名稱"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "隨每則訊息傳回的系統屬性名稱。使用 \"All\" 傳回所有屬性。"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
-          "source": "Get Queue",
+          "source": "Get queue",
           "message": "取得佇列"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "擷取特定 Amazon SQS 佇列的詳細資訊和屬性，包含設定、訊息數量與時間戳記。"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -880,7 +880,7 @@
           "message": "要擷取資訊的 Amazon SQS 佇列完整 URL。"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "屬性名稱"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "要傳回的佇列屬性名稱。使用 \"All\" 傳回所有可用的屬性。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "新訊息"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -904,7 +904,7 @@
           "message": "監視 Amazon SQS 佇列中的新訊息，並在有可用訊息時觸發。支援長輪詢與訊息屬性擷取。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -928,7 +928,7 @@
           "message": "要從中接收訊息的 Amazon SQS 佇列完整 URL。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "等待時間（秒）"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "呼叫在傳回之前等待訊息到達佇列的持續時間（0-20 秒）。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "最大訊息數"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -952,7 +952,7 @@
           "message": "要傳回的最大訊息數量（1-10）。請注意，傳回的訊息數量可能會較少。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "New JSON Message",
+          "source": "New JSON message",
           "message": "新 JSON 訊息"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "監視 Amazon SQS 佇列中包含有效 JSON 資料的新訊息。僅對含有可解析 JSON 內容的訊息觸發。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -988,7 +988,7 @@
           "message": "接收 JSON 訊息的 Amazon SQS 佇列完整 URL。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "等待時間（秒）"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "呼叫在傳回之前等待訊息到達佇列的持續時間（0-20 秒）。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "最大訊息數"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "要傳回的最大訊息數量（1-10）。請注意，傳回的訊息數量可能會較少。"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
-          "source": "New Queue",
+          "source": "New queue",
           "message": "新建佇列"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "監視指定區域中新建立的 Amazon SQS 佇列，並在偵測到新佇列時觸發。"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {

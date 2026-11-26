@@ -35,7 +35,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
   },
   actions: {
     create_row: {
-      displayName: 'Create Row',
+      displayName: 'Create row',
       shortDesc: 'Insert a new row into a Baserow table',
       longDesc:
         'Creates a new record in the specified Baserow table. The action dynamically presents the table schema, allowing you to provide values for each column. Optionally specify a row ID to insert the new row before it. Returns the newly created row with all its data.',
@@ -47,13 +47,13 @@ Your database token that grants access to specific workspaces and tables. Tokens
             'Select the target Baserow table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.',
         },
         data: {
-          displayName: 'Row Data',
+          displayName: 'Row data',
           shortDesc: 'The data to insert into the new row',
           longDesc:
             'Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.',
         },
         before_row_id: {
-          displayName: 'Before Row ID',
+          displayName: 'Before row ID',
           shortDesc: 'Insert the new row before this row',
           longDesc:
             'Optionally specify a row ID to insert the new row before it in the table order. Leave empty to append the row at the end.',
@@ -61,7 +61,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
       },
     },
     delete_row: {
-      displayName: 'Delete Row',
+      displayName: 'Delete row',
       shortDesc: 'Delete a specific row from a Baserow table',
       longDesc:
         'Removes a single row from a Baserow table by its ID. Use with caution as this operation is irreversible and permanently deletes the specified row.',
@@ -81,7 +81,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
       },
     },
     get_table_row: {
-      displayName: 'Get Table Row',
+      displayName: 'Get table row',
       shortDesc: 'Retrieve a specific row from a Baserow table',
       longDesc:
         'Fetches detailed data for a single row in a Baserow table by its ID. Returns all column values for the specified row with dynamically loaded field types.',
@@ -101,7 +101,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
       },
     },
     get_table_fields: {
-      displayName: 'Get Table Fields',
+      displayName: 'Get table fields',
       shortDesc: 'Retrieve all field definitions from a Baserow table',
       longDesc:
         'Fetches comprehensive metadata for all fields in a specific Baserow table including field types, order, descriptions, default values, and properties. This action helps you understand the structure and configuration of your database tables.',
@@ -115,7 +115,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
       },
     },
     list_rows: {
-      displayName: 'List Rows',
+      displayName: 'List rows',
       shortDesc: 'Query and retrieve rows from a Baserow table',
       longDesc:
         'Fetches rows from a Baserow table with support for filtering, sorting, pagination, and search. Returns a list of records matching your query criteria along with total count and pagination information.',
@@ -202,7 +202,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
                 },
               },
               filter_type: {
-                displayName: 'Filter Type',
+                displayName: 'Filter type',
                 shortDesc: 'Logical operator for combining filters',
                 longDesc:
                   'Choose AND to require all filter conditions to match, or OR to match any filter condition.',
@@ -213,13 +213,13 @@ Your database token that grants access to specific workspaces and tables. Tokens
       },
     },
     list_tables: {
-      displayName: 'List Tables',
+      displayName: 'List tables',
       shortDesc: 'Get all tables in your Baserow database',
       longDesc:
         'Retrieves a list of all tables from your Baserow database with their basic metadata including table IDs, names, order, and associated database IDs.',
     },
     update_row: {
-      displayName: 'Update Row',
+      displayName: 'Update row',
       shortDesc: 'Update an existing row in a Baserow table',
       longDesc:
         'Updates the values of an existing row in a Baserow table. The action dynamically presents the table schema, allowing you to modify values for each column. Returns the updated row with all its current data.',
@@ -237,7 +237,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
             'Select the specific row to update by its ID. The current values of this row will be modified.',
         },
         data: {
-          displayName: 'Row Data',
+          displayName: 'Row data',
           shortDesc: 'The new data for the row',
           longDesc:
             'Provide new values for the table columns you want to update. The structure is dynamically generated based on the selected table schema.',
@@ -245,7 +245,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
       },
     },
     upload_file: {
-      displayName: 'Upload File',
+      displayName: 'Upload file',
       shortDesc: 'Upload a file to Baserow storage',
       longDesc:
         "Uploads a file to Baserow's file storage system. Returns the uploaded file's metadata including URL, size, MIME type, and generated thumbnails for images. The uploaded file can then be referenced in file fields within your tables.",
@@ -261,7 +261,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
   },
   triggers: {
     new_document: {
-      displayName: 'New Row',
+      displayName: 'New row',
       shortDesc: 'Triggers when a new row is added to a Baserow table',
       longDesc:
         'Monitors a Baserow table for new rows and triggers when new records are inserted. Supports optional filtering and search to trigger only for rows matching specific criteria.',
@@ -315,7 +315,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
                 },
               },
               filter_type: {
-                displayName: 'Filter Type',
+                displayName: 'Filter type',
                 shortDesc: 'Logical operator for combining filters',
                 longDesc:
                   'Choose AND to require all filter conditions to match, or OR to match any filter condition.',
@@ -328,7 +328,7 @@ Your database token that grants access to specific workspaces and tables. Tokens
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {

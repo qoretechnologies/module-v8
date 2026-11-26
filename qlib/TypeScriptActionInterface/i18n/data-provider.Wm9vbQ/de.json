@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Zoom** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwortheader und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Erstellt und übermittelt die Registrierung eines Benutzers für ein Webinar. Zoom-Benutzer mit einem [Webinar-Plan](https:-zoom.us-webinar) haben Zugriff auf das Erstellen und Verwalten von Webinaren. Webinare ermöglichen es Hosts, ein Zoom-Meeting an bis zu 10.000 Teilnehmer zu übertragen. Das Planen eines [Webinars mit Registrierung](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) erfordert, dass Ihre Registrierten ein kurzes Formular ausfüllen, bevor sie den Link zum Beitritt zum Webinar erhalten. \n\n**Voraussetzungen:** \n* Ein Pro- oder höherwertiger Plan mit dem Webinar-Add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "Neue Besprechung"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Überwacht Zoom-Meetings und löst aus, wenn Meetings basierend auf dem ausgewählten Ereignistyp erstellt, gestartet (live) oder beendet (vergangene Meetings) werden. Gibt Meeting-Details einschließlich Thema, Dauer, Beitritts-URL und Meeting-Typ zurück."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
-          "source": "Meeting Event Type",
+          "source": "Meeting event type",
           "message": "Meeting-Ereignistyp"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Löst aus, wenn ein Meeting gestartet wird"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
-          "source": "New Webinar",
+          "source": "New webinar",
           "message": "Neues Webinar"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Überwacht Zoom-Webinare und löst aus, wenn neue Webinare erstellt werden. Gibt Webinar-Details einschließlich Thema, Dauer, Beitritts-URL, Registrierungs-URL und Webinar-Typ zurück."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
-          "source": "New Meeting Summary",
+          "source": "New meeting summary",
           "message": "Neue Meeting-Zusammenfassung"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {

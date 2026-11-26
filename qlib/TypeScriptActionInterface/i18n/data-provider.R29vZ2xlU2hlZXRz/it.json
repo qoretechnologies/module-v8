@@ -28,7 +28,7 @@
           "message": "Esegue una chiamata API HTTP / REST personalizzata a **Google Sheets** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint non ancora esposti come azioni di prim'ordine su questa app."
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Cerca record"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Il nome della tabella"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Add Rows to Spreadsheet",
+          "source": "Add rows to spreadsheet",
           "message": "Aggiungi righe al foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Il foglio di lavoro specifico all'interno del foglio di calcolo in cui verranno aggiunte le righe"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
-          "source": "Insert at Start",
+          "source": "Insert at start",
           "message": "Inserisci all'inizio"
         },
         "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Se selezionato, le nuove righe verranno inserite all'inizio della tabella. Se non selezionato, le righe verranno aggiunte alla fine della tabella."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
-          "source": "Clear Spreadsheet Row(s)",
+          "source": "Clear spreadsheet row(s)",
           "message": "Cancella riga/righe del foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Il foglio specifico all'interno del foglio di calcolo in cui verranno cancellate le righe"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
-          "source": "Rows to Clear",
+          "source": "Rows to clear",
           "message": "Righe da cancellare"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Elenco degli indici di riga da cancellare (in base 1, come mostrato nel foglio di calcolo)"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
-          "source": "Copy Worksheet",
+          "source": "Copy worksheet",
           "message": "Copia foglio di lavoro"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Crea una copia di un foglio di lavoro da un foglio di calcolo di origine a un foglio di calcolo di destinazione con personalizzazione facoltativa"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "Foglio di calcolo di origine"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Il foglio di calcolo Google Sheets contenente il foglio di lavoro che desideri copiare"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
-          "source": "Source Worksheet",
+          "source": "Source worksheet",
           "message": "Foglio di lavoro di origine"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Il foglio di lavoro specifico all'interno del foglio di calcolo di origine che verrà copiato"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
-          "source": "Destination Spreadsheet",
+          "source": "Destination spreadsheet",
           "message": "Foglio di calcolo di destinazione"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Il foglio di calcolo di Google Sheets in cui verrà copiato il foglio di lavoro"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
-          "source": "New Worksheet Name",
+          "source": "New worksheet name",
           "message": "Nome del nuovo foglio di lavoro"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Specificare un nome personalizzato per il foglio di lavoro copiato. Se non fornito, verrà utilizzato il nome originale con il prefisso \"Copia di\""
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Insert Position",
+          "source": "Insert position",
           "message": "Posizione di inserimento"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -628,7 +628,7 @@
           "message": "L'indice in base zero in cui inserire il nuovo foglio di lavoro. Se non specificato, il foglio di lavoro viene aggiunto alla fine del foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
-          "source": "Create Spreadsheet",
+          "source": "Create spreadsheet",
           "message": "Crea foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Crea un nuovo foglio di calcolo Google Sheets. È possibile crearlo da zero con intestazioni personalizzate o copiare un foglio di calcolo esistente. Quando vengono fornite le intestazioni, queste vengono formattate in grassetto con bordi e la riga di intestazione viene bloccata."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
-          "source": "Spreadsheet Title",
+          "source": "Spreadsheet title",
           "message": "Titolo del foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Il nome che verrà assegnato al foglio di calcolo Google Sheets appena creato."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
-          "source": "Source Spreadsheet",
+          "source": "Source spreadsheet",
           "message": "Foglio di calcolo di origine"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Facoltativo. Un elenco di intestazioni di colonna da aggiungere alla prima riga del nuovo foglio di calcolo. Le intestazioni saranno formattate in grassetto con bordi e la riga di intestazione verrà bloccata. Questa opzione viene ignorata se viene fornito un foglio di calcolo di origine."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
-          "source": "Create Worksheet",
+          "source": "Create worksheet",
           "message": "Crea foglio di lavoro"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "L'ID del foglio di calcolo Google Sheets in cui creare il nuovo foglio di lavoro."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
-          "source": "Worksheet Title",
+          "source": "Worksheet title",
           "message": "Titolo del foglio di lavoro"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Il nome che apparirà sulla scheda del nuovo foglio di lavoro."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
-          "source": "Overwrite Existing",
+          "source": "Overwrite existing",
           "message": "Sovrascrivi esistente"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Un elenco di intestazioni di colonna che verranno aggiunte alla prima riga del nuovo foglio di lavoro e formattate in grassetto."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
-          "source": "Sheet Position",
+          "source": "Sheet position",
           "message": "Posizione foglio"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
@@ -748,7 +748,7 @@
           "message": "La posizione (indice in base zero) in cui inserire il nuovo foglio di lavoro nel foglio di calcolo. Se non specificato, il foglio di lavoro verrà aggiunto alla fine."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
-          "source": "Delete Row",
+          "source": "Delete row",
           "message": "Elimina riga"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "L'ID del foglio di lavoro (scheda) all'interno del foglio di calcolo contenente la riga da eliminare."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
-          "source": "Row Index",
+          "source": "Row index",
           "message": "Indice riga"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
@@ -796,7 +796,7 @@
           "message": "La posizione della riga da eliminare, a partire da 1 (non da 0). Corrisponde ai numeri di riga visualizzati nell'interfaccia utente di Google Sheets. Ad esempio, per eliminare la prima riga in assoluto, usa 1."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
-          "source": "Find Spreadsheet Rows",
+          "source": "Find spreadsheet rows",
           "message": "Trova righe del foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Il numero di righe corrispondenti da saltare prima di restituire i risultati. Utilizzato per la paginazione. Il valore predefinito è 0."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
-          "source": "Search From Last Row",
+          "source": "Search from last row",
           "message": "Cerca dall'ultima riga"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Se abilitato, cerca dal fondo del foglio verso l'alto anziché dall'alto verso il basso. Utile per trovare le voci più recenti nei fogli in cui i nuovi dati vengono aggiunti in fondo."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
-          "source": "Maximum Rows to Search",
+          "source": "Maximum rows to search",
           "message": "Numero massimo di righe da cercare"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Limita il numero totale di righe in cui eseguire la ricerca per controllare le prestazioni con fogli di grandi dimensioni. Il valore predefinito è 5000."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.display_name": {
-          "source": "Header Row",
+          "source": "Header row",
           "message": "Riga di intestazione"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.aGVhZGVyX3Jvdw.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Il numero della riga che contiene le intestazioni di colonna, per fogli con titoli o note sopra la tabella. Le intestazioni vengono lette da questa riga, e le righe vengono lette e cercate solo al di sotto; `row_index` nel risultato resta il numero di riga nel foglio. Il valore predefinito è 1, la prima riga."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.display_name": {
-          "source": "Values Returned",
+          "source": "Values returned",
           "message": "Valori restituiti"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.dmFsdWVfcmVuZGVy.short_desc": {
@@ -928,7 +928,7 @@
           "message": "La formula di ogni cella con formula; le altre celle così come sono memorizzate"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.display_name": {
-          "source": "Dates Returned",
+          "source": "Dates returned",
           "message": "Date restituite"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.ZGF0ZV9yZW5kZXI.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Date e ore come testo, come le visualizza il foglio"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
-          "source": "Response Format",
+          "source": "Response format",
           "message": "Formato di risposta"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Restituisce i valori mappati sulle lettere delle colonne (A, B, C, ecc.)"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
-          "source": "Search Criteria",
+          "source": "Search criteria",
           "message": "Criteri di ricerca"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "Definisce i criteri di ricerca da utilizzare per trovare le righe corrispondenti."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.display_name": {
-          "source": "Column Letter",
+          "source": "Column letter",
           "message": "Lettera colonna"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.Y29sdW1u.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "La designazione lettera della colonna da cercare (ad esempio A, B, C). Usa questo o Intestazione colonna, non entrambi."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.display_name": {
-          "source": "Column Header",
+          "source": "Column header",
           "message": "Intestazione colonna"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.aGVhZGVy.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "Il testo dell'intestazione della colonna da cercare. Usa questo o Lettera colonna, non entrambi."
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Tipo di ricerca"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dHlwZQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Contiene"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.display_name": {
-          "source": "Search Value",
+          "source": "Search value",
           "message": "Valore di ricerca"
         },
         "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.field.dmFsdWU.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Il valore da cercare nella colonna specificata. Verranno restituite solo le righe con questo valore esatto."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Format Spreadsheet Rows",
+          "source": "Format spreadsheet rows",
           "message": "Formatta righe del foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Elenco dei numeri di riga da formattare (indicizzazione in base 1). Ad esempio, [1, 2, 5] formatterà la prima, la seconda e la quinta riga."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
-          "source": "Background Color",
+          "source": "Background color",
           "message": "Colore di sfondo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Componente colore rosso come intero da `0` a `255`"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
-          "source": "Text Color",
+          "source": "Text color",
           "message": "Colore testo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "Indica se sottolineare il testo nelle righe specificate."
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
-          "source": "Horizontal Alignment",
+          "source": "Horizontal alignment",
           "message": "Allineamento orizzontale"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "A destra"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
-          "source": "Vertical Alignment",
+          "source": "Vertical alignment",
           "message": "Allineamento verticale"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "In basso"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
-          "source": "Font Size",
+          "source": "Font size",
           "message": "Dimensione carattere"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "Dimensione del carattere in punti"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
-          "source": "Wrap Text",
+          "source": "Wrap text",
           "message": "Testo a capo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Indica se mandare a capo il testo nelle celle"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
-          "source": "Search Worksheets",
+          "source": "Search worksheets",
           "message": "Cerca fogli di lavoro"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "L'identificatore univoco del foglio di calcolo Google in cui cercare i fogli di lavoro. Può essere trovato nell'URL del foglio di calcolo."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
-          "source": "Sheet Title",
+          "source": "Sheet title",
           "message": "Titolo del foglio"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "Cerca i fogli di lavoro i cui titoli contengono questo testo. Lascia vuoto per elencare tutti i fogli di lavoro nel foglio di calcolo. La ricerca non fa distinzione tra maiuscole e minuscole per impostazione predefinita."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
-          "source": "Exact Match",
+          "source": "Exact match",
           "message": "Corrispondenza esatta"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Se abilitato, verranno restituiti solo i fogli di lavoro con titoli esattamente corrispondenti. Se disabilitato (predefinito), nei risultati saranno inclusi i fogli di lavoro i cui titoli contengono il testo di ricerca."
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
-          "source": "Update Spreadsheet Rows",
+          "source": "Update spreadsheet rows",
           "message": "Aggiorna righe del foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "L'identificatore univoco del foglio specifico all'interno del foglio di calcolo in cui verranno aggiornate le righe."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
-          "source": "Search Spreadsheets",
+          "source": "Search spreadsheets",
           "message": "Cerca fogli di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "Il nome o parte del nome del foglio di calcolo Google Sheets da cercare."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Tipo di ricerca"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "L'ID della cartella di Google Drive a cui limitare la ricerca. Se non specificato, cerca in tutte le cartelle accessibili."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Ordina per"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Recenza"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Dimensione pagina"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Il numero massimo di fogli di calcolo da restituire in una singola richiesta. Il valore predefinito è 100."
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
-          "source": "Custom Query",
+          "source": "Custom query",
           "message": "Query personalizzata"
         },
         "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "Query di ricerca personalizzata di Google Drive per aggiungere ulteriori criteri di filtro oltre alle opzioni di base."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
-          "source": "Create Spreadsheet Column",
+          "source": "Create spreadsheet column",
           "message": "Crea colonna del foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "L'ID del foglio specifico all'interno del foglio di calcolo in cui verrà aggiunta la colonna."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
-          "source": "Column Title",
+          "source": "Column title",
           "message": "Titolo colonna"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "Il testo dell'intestazione che apparirà nella parte superiore della nuova colonna."
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
-          "source": "Column Index",
+          "source": "Column index",
           "message": "Indice colonna"
         },
         "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
@@ -1636,7 +1636,7 @@
           "message": "Indice in base zero della posizione in cui inserire la nuova colonna. Ad esempio, 0 indica che la colonna verrà inserita all'inizio del foglio, 1 indica dopo la prima colonna, ecc."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
-          "source": "New Spreadsheet Row",
+          "source": "New spreadsheet row",
           "message": "Nuova riga nel foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
@@ -1672,7 +1672,7 @@
           "message": "L'identificatore univoco del foglio specifico all'interno del foglio di calcolo che desideri monitorare per le nuove righe. L'ID del foglio può essere trovato nell'URL del foglio di calcolo."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
-          "source": "New Spreadsheet",
+          "source": "New spreadsheet",
           "message": "Nuovo foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "Monitora Google Drive per individuare i fogli di calcolo Google appena creati. Il trigger fornisce i metadati relativi al foglio di calcolo appena creato, inclusi ID, nome, URL, data/ora di creazione e informazioni sul proprietario."
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
-          "source": "New Spreadsheet Sheet",
+          "source": "New spreadsheet sheet",
           "message": "Nuovo foglio nel foglio di calcolo"
         },
         "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {

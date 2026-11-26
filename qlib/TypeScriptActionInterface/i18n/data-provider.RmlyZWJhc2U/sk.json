@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **Firebase** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Zoznam používateľov"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Vyberte projekt Firebase, z ktorého chcete získať používateľov. Projekt musí mať povolenú službu Firebase Authentication."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Maximálny počet výsledkov"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Zadajte maximálny počet používateľov, ktorí sa majú získať v rámci jednej požiadavky. Ak nie je zadané, predvolená hodnota je 100. Pre väčšie množiny údajov použite stránkovanie."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Token nasledujúcej stránky"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Zadajte token stránkovania z predchádzajúcej odpovede na získanie ďalšej sady používateľov. Pre prvú stránku nechajte prázdne."
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
+          "source": "Get user",
           "message": "Získať používateľa"
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Zadajte ID používateľa Firebase (localId) pre používateľa, ktorého podrobnosti chcete získať. Ide o jedinečný identifikátor priradený službou Firebase Authentication."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.display_name": {
-          "source": "Send Push Notification",
+          "source": "Send push notification",
           "message": "Odoslať push notifikáciu"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Vyberte projekt Firebase, ktorý odošle push notifikáciu. Projekt musí mať nakonfigurovanú službu Firebase Cloud Messaging."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.display_name": {
-          "source": "Token or Topic",
+          "source": "Token or topic",
           "message": "Token alebo téma"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Normálne"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
+          "source": "Upload file",
           "message": "Odoslať súbor"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Vyberte projekt Firebase, v ktorom bude súbor uložený. Projekt musí mať povolené Firebase Cloud Storage."
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Cesta k súboru"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Voliteľné vlastné metaúdaje, ktoré sa priradia k nahranému súboru. Zadajte vo forme párov kľúč – hodnota, ktoré je možné neskôr získať s informáciami o súbore."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.display_name": {
-          "source": "Get File Metadata",
+          "source": "Get file metadata",
           "message": "Získať metaúdaje súboru"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Vyberte bucket úložiska Cloud Storage, v ktorom sa súbor nachádza. Bucket musí existovať vo vybranom projekte Firebase."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Cesta k súboru"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.short_desc": {
@@ -768,7 +768,7 @@
           "message": "Zadajte úplnú cestu k súboru v buckete vrátane názvu súboru a akejkoľvek adresárovej štruktúry."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.display_name": {
-          "source": "List Files in Bucket",
+          "source": "List files in bucket",
           "message": "Zoznam súborov v buckete"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Filtrujte výsledky tak, aby zahŕňali iba súbory, ktorých cesty začínajú touto predponou. Užitočné na zobrazenie zoznamu súborov v konkrétnom adresári alebo so špecifickým vzorom pomenovania."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Maximálny počet výsledkov"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Zadajte maximálny počet súborov, ktoré sa majú získať v rámci jednej požiadavky. Ak nie je zadané, predvolená hodnota je 100. Pre väčšie množiny výsledkov použite stránkovanie."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Zadajte token stránkovania z predchádzajúcej odpovede na získanie ďalšej sady súborov. Pre prvú stránku nechajte prázdne."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Buckets",
+          "source": "List buckets",
           "message": "Zoznam bucketov"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Vyberte projekt Firebase, ktorého buckety úložiska chcete zobraziť. Projekt musí mať povolené úložisko Firebase Cloud Storage."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.display_name": {
-          "source": "Delete File",
+          "source": "Delete file",
           "message": "Odstrániť súbor"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Vyberte bucket v Cloud Storage, kde sa nachádza súbor určený na odstránenie. Bucket musí v zvolenom projekte Firebase existovať."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Cesta k súboru"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Zadajte úplnú cestu k súboru v buckete, ktorý sa má odstrániť, vrátane názvu súboru a akejkoľvek adresárovej štruktúry. Táto operácia je trvalá a nie je možné ju vrátiť späť."
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "Nový používateľ"
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.short_desc": {

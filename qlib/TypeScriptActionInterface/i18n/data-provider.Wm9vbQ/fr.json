@@ -28,7 +28,7 @@
           "message": "Passez un appel d'API HTTP / REST personnalisé à **Zoom** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hash contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Créez et soumettez l'inscription d'un utilisateur à un webinaire. Les utilisateurs de Zoom disposant d'un [forfait Webinaire](https:-zoom.us-webinar) ont accès à la création et à la gestion de webinaires. Les webinaires permettent aux hôtes de diffuser une réunion Zoom à un maximum de 10 000 participants. La programmation d'un [webinaire avec inscription](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) nécessite que vos personnes inscrites remplissent un court formulaire avant de recevoir le lien pour rejoindre le webinaire. \n\n**Prérequis :** \n* Un forfait Pro ou supérieur avec le module complémentaire Webinaire.\n\n**[Portées](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-) :** `webinar:write:admin`,`webinar:write`\n\n**[Portées granulaires](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-) :** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Étiquette de limite de débit](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits) :** `LIGHT`"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "Nouvelle réunion"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Surveille les réunions Zoom et se déclenche lorsque des réunions sont créées, démarrées (en direct) ou terminées (réunions précédentes) en fonction du type d'événement sélectionné. Renvoie les détails de la réunion, notamment le sujet, la durée, l'URL de participation et le type de réunion."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
-          "source": "Meeting Event Type",
+          "source": "Meeting event type",
           "message": "Type d'événement de réunion"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Se déclenche lorsqu'une réunion est démarrée"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
-          "source": "New Webinar",
+          "source": "New webinar",
           "message": "Nouveau webinaire"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Surveille les webinaires Zoom et se déclenche lorsque de nouveaux webinaires sont créés. Renvoie les détails du webinaire, notamment le sujet, la durée, l'URL de participation, l'URL d'inscription et le type de webinaire."
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
-          "source": "New Meeting Summary",
+          "source": "New meeting summary",
           "message": "Nouveau résumé de réunion"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {

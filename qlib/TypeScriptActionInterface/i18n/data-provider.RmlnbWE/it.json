@@ -28,7 +28,7 @@
           "message": "Esegui una chiamata API HTTP / REST personalizzata a **Figma** usando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query facoltativi, intestazioni e corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine in questa app."
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Elenca progetti"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Inserisci l'ID del team Figma di cui desideri recuperare i progetti"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.display_name": {
-          "source": "List Project Files",
+          "source": "List project files",
           "message": "Elenca file di progetto"
         },
         "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Scegli il progetto Figma specifico di cui desideri recuperare i file"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.display_name": {
-          "source": "List File Version History",
+          "source": "List file version history",
           "message": "Elenca cronologia versioni file"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Scegli il progetto specifico all'interno del team che contiene il file"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Chiave del file"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Seleziona il file di progettazione Figma specifico di cui desideri recuperare la cronologia delle versioni"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.display_name": {
-          "source": "Next Page URL",
+          "source": "Next page URL",
           "message": "URL pagina successiva"
         },
         "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.short_desc": {
@@ -460,7 +460,7 @@
           "message": "URL facoltativo per recuperare la pagina successiva dei risultati della cronologia delle versioni per file di grandi dimensioni con molte versioni"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.display_name": {
-          "source": "List Comments",
+          "source": "List comments",
           "message": "Elenca commenti"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Scegli il progetto specifico all'interno del team che contiene il file"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Chiave del file"
         },
         "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Seleziona il file di progettazione Figma specifico di cui desideri recuperare i commenti"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.display_name": {
-          "source": "Create Comment",
+          "source": "Create comment",
           "message": "Crea commento"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Scegli il progetto specifico all'interno del team che contiene il file"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Chiave del file"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Inserisci il contenuto testuale del commento che desideri pubblicare sul file Figma"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.display_name": {
-          "source": "Parent Comment ID",
+          "source": "Parent comment ID",
           "message": "ID commento padre"
         },
         "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "ID facoltativo di un commento esistente a cui rispondere; lascia vuoto per creare un nuovo commento di primo livello"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.display_name": {
-          "source": "New File Comment",
+          "source": "New file comment",
           "message": "Nuovo commento sul file"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Scegli il progetto specifico all'interno del team che contiene il file da monitorare"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Chiave del file"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Seleziona il file di progettazione Figma che desideri monitorare per rilevare nuove attività relative ai commenti"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.display_name": {
-          "source": "New File Version",
+          "source": "New file version",
           "message": "Nuova versione file"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Scegli il progetto specifico all'interno del team che contiene il file da monitorare"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.display_name": {
-          "source": "File Key",
+          "source": "File key",
           "message": "Chiave del file"
         },
         "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.short_desc": {

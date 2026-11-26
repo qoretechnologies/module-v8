@@ -28,7 +28,7 @@
           "message": "Виконати довільний виклик HTTP / REST API до **Zendesk**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базового URL API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код статусу, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не реалізовані як окремі дії в цьому застосунку."
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Пошук записів"
         },
         "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Змінна шляху URI \"attachment_id\""
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Отримати список груп"
         },
         "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Чи виключати видалені сутності"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
-          "source": "Create Group",
+          "source": "Create group",
           "message": "Створити групу"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "#### Дозволено для\n\n* Адміністратори\n* Агенти, призначені на спеціальну роль із дозволами на керування групами (лише Enterprise)\n"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
-          "source": "Delete Group",
+          "source": "Delete group",
           "message": "Видалити групу"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
@@ -556,7 +556,7 @@
           "message": "#### Дозволено для\n\n* Адміністраторів\n* Агентів\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
-          "source": "Update Group",
+          "source": "Update group",
           "message": "Оновити групу"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Повертає конкретну метрику або метрики конкретного тікета.\n\n#### Пагінація\n\n- Курсорна пагінація (рекомендовано)\n- Пагінація зі зміщенням\n\nДив. [Pagination](-api-reference-introduction-pagination-).\n\nПовертає щонайбільше 100 записів на сторінку.\n\n#### Дозволено для\n\n* Агентів\n"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
-          "source": "List Tickets",
+          "source": "List tickets",
           "message": "Список тікетів"
         },
         "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Повертає список тікетів за зовнішнім ідентифікатором. Зовнішні ідентифікатори не обов'язково мають бути унікальними для кожного тікета. Внаслідок цього запит може повернути кілька тікетів з однаковим зовнішнім ідентифікатором."
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
-          "source": "Create Ticket",
+          "source": "Create ticket",
           "message": "Створити тікет"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Повертає приблизну кількість тікетів в обліковому записі. Якщо кількість перевищує 100 000, вона оновлюється кожні 24 години.\n\n`ccd` містить список тікетів, у копії яких зазначено вказаного користувача.\n\nВластивість `count[refreshed_at]` — це мітка часу, яка вказує, коли кількість оновлювалася востаннє.\n\n**Примітка**: коли кількість перевищує 100 000, `count[refreshed_at]` іноді може мати значення null.\nЦе вказує на те, що підрахунок оновлюється у фоновому режимі, а `count[value]` обмежено 100 000 до завершення оновлення.\n\n#### Дозволено для\n* Агенти"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
-          "source": "Delete Ticket",
+          "source": "Delete ticket",
           "message": "Видалити тікет"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Повертає низку властивостей тікета, але без коментарів до нього. Щоб отримати коментарі, скористайтеся [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Дозволено для\n* Агентів"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
-          "source": "Update Ticket",
+          "source": "Update ticket",
           "message": "Оновити тікет"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Змінна шляху URI \"token\""
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Список користувачів"
         },
         "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
@@ -784,7 +784,7 @@
           "message": "#### Пагінація\n\n* Курсорна пагінація (рекомендовано)\n* Пагінація зі зміщенням\n\nДив. [Pagination](-api-reference-introduction-pagination-).\n\nПовертає щонайбільше 100 записів на сторінку.\n\n#### Дозволено для\n\n* Адміністраторів, агентів та агентів з обмеженими правами (Light Agents)\n"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
-          "source": "Create User",
+          "source": "Create user",
           "message": "Створити користувача"
         },
         "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Створити користувача"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
-          "source": "Delete User",
+          "source": "Delete user",
           "message": "Видалити користувача"
         },
         "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "#### Дозволено для\n\n* Агентів\n"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
-          "source": "Update User",
+          "source": "Update user",
           "message": "Оновити користувача"
         },
         "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Оновити користувача"
         },
         "app.WmVuZGVzaw.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "Новий користувач"
         },
         "app.WmVuZGVzaw.action.bmV3X3VzZXI.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Спрацьовує при створенні нового користувача"
         },
         "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
-          "source": "New Organization",
+          "source": "New organization",
           "message": "Нова організація"
         },
         "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Спрацьовує, коли створюється нова організація"
         },
         "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.display_name": {
-          "source": "New Ticket",
+          "source": "New ticket",
           "message": "Новий тікет"
         },
         "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Спрацьовує при створенні нового тікета"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.display_name": {
-          "source": "New Custom Object Record",
+          "source": "New custom object record",
           "message": "Новий запис настроюваного об'єкта"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Спрацьовує при створенні нового запису настроюваного об'єкта в Zendesk"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.display_name": {
-          "source": "Custom Object",
+          "source": "Custom object",
           "message": "Настроюваний об'єкт"
         },
         "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.short_desc": {

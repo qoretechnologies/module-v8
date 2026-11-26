@@ -28,7 +28,7 @@
           "message": "Effectuez un appel d'API HTTP / REST personnalisé à **Amazon SQS** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hash contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés sous forme d'actions de premier ordre sur cette application."
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Méthode HTTP"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "Créer un message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Envoyer un message texte à une file d'attente Amazon SQS avec des attributs de message facultatifs, des paramètres de délai et des paramètres de file d'attente FIFO."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -376,7 +376,7 @@
           "message": "L'URL complète de la file d'attente Amazon SQS où le message sera envoyé."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "Corps du message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Le contenu du message à envoyer. Peut être du texte brut ou n'importe quel format de chaîne jusqu'à 256 Ko."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "Délai (secondes)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "La durée (0 à 900 secondes) pendant laquelle retarder la livraison du message."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Attributs du message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Attributs personnalisés à inclure avec le message pour le filtrage et le traitement."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "ID de groupe de messages"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -424,7 +424,7 @@
           "message": "La balise qui spécifie qu'un message appartient à un groupe de messages spécifique (files d'attente FIFO uniquement)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "ID de déduplication du message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Le jeton utilisé pour la déduplication des messages envoyés (files d'attente FIFO uniquement)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "Créer un message JSON"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Envoyer des données JSON structurées à une file d'attente Amazon SQS. L'objet JSON sera automatiquement sérialisé dans le corps du message."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -472,7 +472,7 @@
           "message": "L'URL complète de la file d'attente Amazon SQS où le message JSON sera envoyé."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
-          "source": "Message Data",
+          "source": "Message data",
           "message": "Données du message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
@@ -484,7 +484,7 @@
           "message": "L'objet de données structurées qui sera sérialisé en JSON et envoyé comme corps du message."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "Délai (secondes)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "La durée (0 à 900 secondes) pendant laquelle retarder la livraison du message."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Attributs du message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Attributs personnalisés à inclure avec le message pour le filtrage et le traitement."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "ID de groupe de messages"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -520,7 +520,7 @@
           "message": "La balise qui spécifie qu'un message appartient à un groupe de messages spécifique (files d'attente FIFO uniquement)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "ID de déduplication du message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Le jeton utilisé pour la déduplication des messages envoyés (files d'attente FIFO uniquement)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
-          "source": "Create Queue",
+          "source": "Create queue",
           "message": "Créer une file d'attente"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Créer une nouvelle file d'attente Amazon SQS avec des paramètres configurables, notamment des capacités FIFO, des files d'attente d'invalides et des options de chiffrement."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Sélectionnez la région AWS où vous souhaitez créer la nouvelle file d'attente SQS."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
-          "source": "Queue Name",
+          "source": "Queue name",
           "message": "Nom de la file d'attente"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Le nom de la file d'attente. Les noms de files d'attente FIFO doivent se terminer par le suffixe .fifo."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
-          "source": "FIFO Queue",
+          "source": "FIFO queue",
           "message": "File d'attente FIFO"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Indique s'il faut créer une file d'attente FIFO qui garantit que les messages sont traités exactement une fois dans l'ordre exact d'envoi."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "Déduplication basée sur le contenu"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Pour les files d'attente FIFO, active la déduplication à l'aide d'un hachage SHA-256 du corps du message."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "Délai de visibilité (secondes)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -604,7 +604,7 @@
           "message": "La durée (0 à 43200 secondes) pendant laquelle un message est invisible pour les autres consommateurs après avoir été reçu."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
-          "source": "Message Retention Period (Seconds)",
+          "source": "Message retention period (seconds)",
           "message": "Période de conservation des messages (secondes)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
@@ -616,7 +616,7 @@
           "message": "La durée (60 à 1209600 secondes) pendant laquelle les messages sont conservés dans la file d'attente."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "Délai (secondes)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Le délai par défaut (0 à 900 secondes) pour les messages ajoutés à cette file d'attente."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
-          "source": "Receive Wait Time (Seconds)",
+          "source": "Receive wait time (seconds)",
           "message": "Temps d'attente de réception (secondes)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
@@ -640,7 +640,7 @@
           "message": "La durée (0 à 20 secondes) pendant laquelle les appels ReceiveMessage attendent l'arrivée de messages."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
-          "source": "Max Receive Count",
+          "source": "Max receive count",
           "message": "Nombre maximal de réceptions"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Le nombre de fois qu'un message peut être reçu avant d'être déplacé vers la file d'attente d'invalides."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
-          "source": "Dead Letter Queue URL",
+          "source": "Dead letter queue URL",
           "message": "URL de la file d'attente d'invalides"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
@@ -664,7 +664,7 @@
           "message": "L'URL de la file d'attente à utiliser comme file d'attente d'invalides pour les traitements de messages échoués."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "ID de clé maître KMS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "L'ID d'une clé AWS KMS pour le chiffrement côté serveur des messages de la file d'attente."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
-          "source": "KMS Data Key Reuse Period (Seconds)",
+          "source": "KMS data key reuse period (seconds)",
           "message": "Période de réutilisation de la clé de données KMS (secondes)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "La durée (60 à 86400 secondes) pendant laquelle Amazon SQS peut réutiliser une clé de données."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
-          "source": "List Queues",
+          "source": "List queues",
           "message": "Lister les files d'attente"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Récupérer une liste de toutes les files d'attente Amazon SQS dans la région spécifiée avec filtrage optionnel et attributs détaillés de file d'attente."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Sélectionnez la région AWS à partir de laquelle récupérer la liste des files d'attente SQS."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
-          "source": "Queue Name Prefix",
+          "source": "Queue name prefix",
           "message": "Préfixe du nom de la file d'attente"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Préfixe optionnel pour filtrer les noms de files d'attente. Seules les files d'attente dont le nom commence par ce préfixe seront renvoyées."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Résultats max"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Le nombre maximal de résultats de files d'attente à renvoyer (1-1000)."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "Inclure les attributs"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Indique s'il faut inclure des attributs détaillés de file d'attente tels que le nombre de messages, les horodatages et les paramètres de configuration."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "Lister les messages"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Récupérer des messages d'une file d'attente Amazon SQS avec des options de sondage configurables et la récupération d'attributs de message."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
@@ -784,7 +784,7 @@
           "message": "L'URL complète de la file d'attente Amazon SQS à partir de laquelle recevoir des messages."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
-          "source": "Max Number of Messages",
+          "source": "Max number of messages",
           "message": "Nombre maximal de messages"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Le nombre maximal de messages à renvoyer dans une seule requête (1-10)."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "Temps d'attente (secondes)"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -808,7 +808,7 @@
           "message": "La durée (0 à 20 secondes) pendant laquelle l'appel attend l'arrivée de messages."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "Délai de visibilité (secondes)"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -820,7 +820,7 @@
           "message": "La durée pendant laquelle les messages reçus sont masqués des demandes de récupération ultérieures."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
-          "source": "Message Attribute Names",
+          "source": "Message attribute names",
           "message": "Noms d'attributs de message"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Les noms des attributs de message à renvoyer. Utilisez \"All\" pour renvoyer tous les attributs."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "Noms des attributs"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Les noms des attributs système à renvoyer avec chaque message. Utilisez \"All\" pour renvoyer tous les attributs."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
-          "source": "Get Queue",
+          "source": "Get queue",
           "message": "Obtenir la file d'attente"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Obtenir des informations détaillées et des attributs pour une file d'attente Amazon SQS spécifique, y compris la configuration, le nombre de messages et les horodatages."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -880,7 +880,7 @@
           "message": "L'URL complète de la file d'attente Amazon SQS pour laquelle récupérer des informations."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "Noms des attributs"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Les noms des attributs de file d'attente à renvoyer. Utilisez \"All\" pour renvoyer tous les attributs disponibles."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Nouveau message"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Surveille une file d'attente Amazon SQS pour détecter de nouveaux messages et se déclenche lorsque des messages sont disponibles. Prend en charge le long polling et la récupération des attributs de message."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -928,7 +928,7 @@
           "message": "L'URL complète de la file d'attente Amazon SQS à partir de laquelle recevoir des messages."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "Temps d'attente (secondes)"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "La durée (0 à 20 secondes) pendant laquelle l'appel attend qu'un message arrive dans la file d'attente avant de revenir."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "Messages max"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Le nombre maximal de messages à renvoyer (1-10). Notez que moins de messages peuvent être renvoyés."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "New JSON Message",
+          "source": "New JSON message",
           "message": "Nouveau message JSON"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Surveille une file d'attente Amazon SQS pour détecter de nouveaux messages contenant des données JSON valides. Se déclenche uniquement pour les messages avec un contenu JSON analysable."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -988,7 +988,7 @@
           "message": "L'URL complète de la file d'attente Amazon SQS à partir de laquelle recevoir des messages JSON."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "Temps d'attente (secondes)"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "La durée (0 à 20 secondes) pendant laquelle l'appel attend qu'un message arrive dans la file d'attente avant de revenir."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "Messages max"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Le nombre maximal de messages à renvoyer (1-10). Notez que moins de messages peuvent être renvoyés."
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
-          "source": "New Queue",
+          "source": "New queue",
           "message": "Nouvelle file d'attente"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Surveille les files d'attente Amazon SQS nouvellement créées dans la région spécifiée et s'exécute lorsque de nouvelles files d'attente sont détectées."
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {

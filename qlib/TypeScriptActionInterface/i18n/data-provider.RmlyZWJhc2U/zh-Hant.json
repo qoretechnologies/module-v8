@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Firebase** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n當端點尚未在此應用程式上作為第一級動作公開時，請使用此動作。"
         },
         "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "列出使用者"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "選取要從中擷取使用者的 Firebase 專案。該專案必須已啟用 Firebase Authentication。"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "最大結果數"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "指定單一請求中要擷取的使用者最大數量。若未指定，預設為 100。對於較大的資料集，請使用分頁。"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "下一頁權杖"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "提供前一次回應中的分頁權杖以擷取下一組使用者。第一頁請保留空白。"
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
+          "source": "Get user",
           "message": "取得使用者"
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.short_desc": {
@@ -424,7 +424,7 @@
           "message": "指定要擷取詳細資料的使用者 Firebase 使用者 ID (localId)。這是 Firebase Authentication 指派的唯一識別碼。"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.display_name": {
-          "source": "Send Push Notification",
+          "source": "Send push notification",
           "message": "發送推播通知"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.short_desc": {
@@ -448,7 +448,7 @@
           "message": "選取將發送推播通知的 Firebase 專案。該專案必須已設定 Firebase Cloud Messaging。"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.display_name": {
-          "source": "Token or Topic",
+          "source": "Token or topic",
           "message": "權杖或主題"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.short_desc": {
@@ -528,7 +528,7 @@
           "message": "標準"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
+          "source": "Upload file",
           "message": "上傳檔案"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.short_desc": {
@@ -552,7 +552,7 @@
           "message": "選取用來儲存檔案的 Firebase 專案。該專案必須已啟用 Firebase Cloud Storage。"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "檔案路徑"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -720,7 +720,7 @@
           "message": "與已上傳檔案建立關聯的選填自訂中繼資料。以鍵值組形式提供，以便稍後與檔案資訊一起擷取。"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.display_name": {
-          "source": "Get File Metadata",
+          "source": "Get file metadata",
           "message": "取得檔案中繼資料"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.short_desc": {
@@ -756,7 +756,7 @@
           "message": "選取檔案所在的 Cloud Storage 儲存貯體。該儲存貯體必須存在於選取的 Firebase 專案中。"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "檔案路徑"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.short_desc": {
@@ -768,7 +768,7 @@
           "message": "指定儲存貯體中檔案的完整路徑，包含檔案名稱與任何目錄結構。"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.display_name": {
-          "source": "List Files in Bucket",
+          "source": "List files in bucket",
           "message": "列出儲存貯體中的檔案"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.short_desc": {
@@ -816,7 +816,7 @@
           "message": "篩選結果，僅包含路徑以此前綴開頭的檔案。適用於列出特定目錄中或具有特定命名模式的檔案。"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "最大結果數"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -828,7 +828,7 @@
           "message": "指定單一請求中要擷取的檔案最大數量。若未指定，預設為 100。對於較大的結果集，請使用分頁。"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "頁面標記"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.short_desc": {
@@ -840,7 +840,7 @@
           "message": "提供前一次回應中的分頁權杖以擷取下一組檔案。第一頁請保留空白。"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Buckets",
+          "source": "List buckets",
           "message": "列出儲存貯體"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
@@ -864,7 +864,7 @@
           "message": "選取要列出其儲存貯體的 Firebase 專案。該專案必須已啟用 Firebase Cloud Storage。"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.display_name": {
-          "source": "Delete File",
+          "source": "Delete file",
           "message": "刪除檔案"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "選取要刪除的檔案所在的 Cloud Storage 儲存貯體。該儲存貯體必須存在於所選的 Firebase 專案中。"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "檔案路徑"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -912,7 +912,7 @@
           "message": "指定儲存貯體中要刪除之檔案的完整路徑，包含檔案名稱與任何目錄結構。此操作為永久性且無法復原。"
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "新使用者"
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.short_desc": {

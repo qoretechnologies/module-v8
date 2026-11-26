@@ -28,7 +28,7 @@
           "message": "Uskutočnite vlastné volanie HTTP / REST API do služby **Attio** s použitím overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci kód stavu, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.QXR0aW8.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.QXR0aW8.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Názov tabuľky"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Create Object Record",
+          "source": "Create object record",
           "message": "Vytvoriť záznam objektu"
         },
         "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vyberte typ objektu, v ktorom chcete vytvoriť nový záznam. Môže to byť vlastný objekt alebo štandardný objekt vo vašom pracovnom priestore Attio."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
-          "source": "Find Object Records",
+          "source": "Find object records",
           "message": "Nájsť záznamy objektu"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Vyhľadáva záznamy zo špecifického objektu Attio s podporou filtrovania podľa hodnôt atribútov, zoradenia podľa atribútov a stránkovania. Vráti zoznam záznamov zodpovedajúcich zadaným kritériám."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ objektu"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Počet záznamov, ktoré sa majú preskočiť pred začatím vracania výsledkov. Používa sa na stránkovanie. Predvolená hodnota je 0."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Atribút zoradenia"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Atribút, podľa ktorého sa majú výsledky zoradiť. Predvolená hodnota je \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Smer zoradenia"
         },
         "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Hodnota na filtrovanie."
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Update Object Record",
+          "source": "Update object record",
           "message": "Aktualizovať záznam objektu"
         },
         "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Jedinečný identifikátor záznamu na aktualizáciu."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Create List Entry",
+          "source": "Create list entry",
           "message": "Vytvoriť položku zoznamu"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "API slug zoznamu Attio, v ktorom bude vytvorená nová položka."
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID nadradeného záznamu"
         },
         "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Unikátny identifikátor nadradeného záznamu, ku ktorému bude táto položka zoznamu pripojená."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
-          "source": "Find List Entries",
+          "source": "Find list entries",
           "message": "Nájsť položky zoznamu"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
@@ -744,7 +744,7 @@
           "message": "Počet položiek, ktoré sa majú preskočiť pred začatím vracania výsledkov. Používa sa na stránkovanie. Predvolená hodnota je 0."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
-          "source": "Sort Attribute",
+          "source": "Sort attribute",
           "message": "Atribút zoradenia"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Atribút, podľa ktorého sa majú výsledky zoradiť. Predvolená hodnota je \"created_at\"."
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Smer zoradenia"
         },
         "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Hodnota na filtrovanie."
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
-          "source": "Update List Entry",
+          "source": "Update list entry",
           "message": "Aktualizovať položku zoznamu"
         },
         "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
@@ -848,7 +848,7 @@
           "message": "Jedinečný identifikátor položky zoznamu na aktualizáciu."
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
-          "source": "Get Single List Entry",
+          "source": "Get single list entry",
           "message": "Získať jednu položku zoznamu"
         },
         "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
@@ -884,7 +884,7 @@
           "message": "Zadajte unikátny identifikátor položky, ktorú chcete získať. Toto ID je špecifické pre zoznam, ktorý ste vybrali, a načíta dostupné položky na základe výberu zoznamu."
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
-          "source": "Get Single Object Record",
+          "source": "Get single object record",
           "message": "Získať jeden záznam objektu"
         },
         "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Zadajte unikátny identifikátor záznamu, ktorý chcete získať. Toto ID je špecifické pre objekt, ktorý ste vybrali, a načíta dostupné záznamy na základe výberu objektu."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Zoznam úloh"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Zadajte počet úloh, ktoré sa majú preskočiť pred začatím vracania výsledkov. Užitočné na stránkovanie. Predvolená hodnota je 0."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
-          "source": "Linked Object",
+          "source": "Linked object",
           "message": "Prepojený objekt"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Filtrujte úlohy tak, aby zahŕňali iba tie, ktoré sú prepojené s konkrétnym typom objektu v Attio. Po výbere môžete výber ďalej spresniť špecifikovaním konkrétneho záznamu."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
-          "source": "Linked Record ID",
+          "source": "Linked record ID",
           "message": "ID prepojeného záznamu"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
@@ -992,7 +992,7 @@
           "message": "Filtrujte úlohy na základe toho, či sú dokončené alebo nie. Predvolená hodnota je false (zobrazuje nedokončené úlohy)."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Filtrujte úlohy tak, aby zahŕňali iba tie, ktoré sú priradené konkrétnemu členovi pracovného priestoru."
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Získať úlohu"
         },
         "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Zadajte unikátny identifikátor úlohy, ktorú chcete získať. Dostupné ID úloh sa načítajú na základe vášho predchádzajúceho výberu objektu."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
-          "source": "Get Notes",
+          "source": "Get notes",
           "message": "Získať poznámky"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Počet poznámok, ktoré sa majú preskočiť pred začatím vracania výsledkov. Používa sa na stránkovanie. Predvolená hodnota je 0."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Nadradený objekt"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Typ nadradeného objektu, ku ktorému je táto poznámka pripojená. Vyžaduje sa na filtrovanie poznámok podľa ich nadradeného objektu."
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID nadradeného záznamu"
         },
         "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Unikátny identifikátor nadradeného záznamu, ku ktorému je táto poznámka pripojená. Vyžaduje sa na filtrovanie poznámok podľa ich nadradeného záznamu."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Vytvoriť úlohu"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Táto akcia vytvorí novú úlohu v Attio s obsahom, termínom, stavom dokončenia a voliteľnými priradenými osobami. Môžete nastaviť obsah úlohy, určiť termín dokončenia, označiť ju ako dokončenú alebo nedokončenú a priradiť ju jednému alebo viacerým členom pracovného priestoru."
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
-          "source": "Task Content",
+          "source": "Task content",
           "message": "Obsah úlohy"
         },
         "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Vyberte jedného alebo viacerých členov pracovného priestoru, ktorým bude táto úloha priradená. Títo členovia budú zodpovední za dokončenie úlohy a budú o nej dostávať oznámenia."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
-          "source": "Create Note",
+          "source": "Create note",
           "message": "Vytvoriť poznámku"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Táto akcia vytvorí novú poznámku a priloží ju ku konkrétnemu záznamu v objekte Attio. Poznámky môžu byť napísané ako čistý text alebo vo formáte markdown a obsahujú názov a telo obsahu. Slúžia na dokumentovanie dôležitých informácií o záznamoch vo vašom pracovnom priestore."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
-          "source": "Parent Object",
+          "source": "Parent object",
           "message": "Nadradený objekt"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Vyberte objekt Attio, ktorý obsahuje záznam, ku ktorému chcete priložiť túto poznámku. Tým sa definuje, s ktorým typom objektu bude poznámka spojená."
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
-          "source": "Parent Record ID",
+          "source": "Parent record ID",
           "message": "ID nadradeného záznamu"
         },
         "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Zadajte obsah pre svoju poznámku. Formátovať ho možno podľa zvoleného typu formátu (čistý text alebo markdown)."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
-          "source": "New List Entry Created",
+          "source": "New list entry created",
           "message": "Vytvorená nová položka zoznamu"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "API slug zoznamu Attio, ktorý sa má sledovať na nové položky."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
-          "source": "List Entry Deleted",
+          "source": "List entry deleted",
           "message": "Položka zoznamu odstránená"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "API slug zoznamu Attio, ktorý sa má sledovať na odstránené položky."
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
-          "source": "List Entry Updated",
+          "source": "List entry updated",
           "message": "Položka zoznamu aktualizovaná"
         },
         "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "API slug zoznamu Attio, ktorý sa má sledovať na aktualizované položky."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
-          "source": "New Object Record Created",
+          "source": "New object record created",
           "message": "Vytvorený nový záznam objektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Tento spúšťač sa aktivuje pri každom vytvorení nového záznamu pre určený objekt Attio. Poskytuje podrobnosti o vytvorenom zázname vrátane jeho ID, typu objektu a aktéra, ktorý ho vytvoril."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ objektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "API slug typu objektu Attio, ktorý sa má sledovať na nové záznamy."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
-          "source": "Object Record Deleted",
+          "source": "Object record deleted",
           "message": "Záznam objektu odstránený"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Tento spúšťač sa aktivuje pri každom odstránení záznamu zo určeného objektu Attio. Poskytuje podrobnosti o odstránenom zázname vrátane jeho ID, typu objektu a aktéra, ktorý odstránenie vykonal."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ objektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "API slug typu objektu Attio, ktorý sa má sledovať na odstránené záznamy."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
-          "source": "Object Record Updated",
+          "source": "Object record updated",
           "message": "Záznam objektu aktualizovaný"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "Tento spúšťač sa aktivuje pri každej aktualizácii záznamu pre určený objekt Attio. Poskytuje podrobnosti o aktualizovanom zázname vrátane jeho ID, typu objektu, aktéra, ktorý aktualizáciu vykonal, a konkrétnych zmien, ktoré boli vykonané."
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
+          "source": "Object type",
           "message": "Typ objektu"
         },
         "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
@@ -1392,7 +1392,7 @@
           "message": "API slug typu objektu Attio, ktorý sa má sledovať na aktualizované záznamy."
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
-          "source": "New Task Created",
+          "source": "New task created",
           "message": "Vytvorená nová úloha"
         },
         "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {

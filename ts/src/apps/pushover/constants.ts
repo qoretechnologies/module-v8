@@ -16,14 +16,14 @@ export class PushoverError extends Error {
 
 export const PUSHOVER_CONN_OPTIONS = {
   token: {
-    display_name: 'Application API Token',
+    display_name: 'Application API token',
     short_desc: 'Your Pushover Application API Token',
     desc: 'Create an application at https://pushover.net/apps/build to get your API token. The token is a 30-character string.',
     type: 'string',
     sensitive: true,
   },
   user: {
-    display_name: 'User Key',
+    display_name: 'User key',
     short_desc: 'Your Pushover User Key',
     desc: 'Find your User Key on your Pushover dashboard at https://pushover.net. It is a 30-character string.',
     type: 'string',

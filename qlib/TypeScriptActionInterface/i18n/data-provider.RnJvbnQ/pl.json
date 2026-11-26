@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Front** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki oraz treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako dedykowane akcje w tej aplikacji."
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
+          "source": "List accounts",
           "message": "Lista kont"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Maksymalna liczba zwracanych rekordów kont. Wartość domyślna to 50. W przypadku większych zestawów danych użyj stronicowania."
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
+          "source": "Get account",
           "message": "Pobierz konto"
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Wybierz lub wprowadź identyfikator konta, które chcesz pobrać. Identyfikatory kont zaczynają się od \"acc_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
-          "source": "Create Account",
+          "source": "Create account",
           "message": "Utwórz konto"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Opcjonalny zewnętrzny identyfikator służący do powiązania tego konta z rekordem w innym systemie, takim jak CRM lub platforma rozliczeniowa."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Pola niestandardowe"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Obiekt zawierający wartości pól niestandardowych dla konta. Klucze powinny odpowiadać skonfigurowanym nazwom pól niestandardowych."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
-          "source": "Update Account",
+          "source": "Update account",
           "message": "Zaktualizuj konto"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Zaktualizuj identyfikator w systemie zewnętrznym dla tego konta."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Pola niestandardowe"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Zaktualizuj wartości pól niestandardowych dla konta."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
-          "source": "Delete Account",
+          "source": "Delete account",
           "message": "Usuń konto"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Wybierz lub wprowadź identyfikator konta, które chcesz usunąć."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
-          "source": "List Account Contacts",
+          "source": "List account contacts",
           "message": "Pobierz listę kontaktów konta"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Maksymalna liczba zwracanych rekordów kontaktów. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
-          "source": "Add Contact to Account",
+          "source": "Add contact to account",
           "message": "Dodaj kontakt do konta"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Wybierz jeden lub więcej kontaktów do dodania do konta. Identyfikatory kontaktów zaczynają się od \"crd_\"."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
-          "source": "Remove Contact from Account",
+          "source": "Remove contact from account",
           "message": "Usuń kontakt z konta"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Wybierz jeden lub więcej kontaktów do usunięcia z konta."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Lista kontaktów"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Pobierz listę wszystkich kontaktów w Twoim obszarze roboczym Front. Kontakty reprezentują osoby, z którymi się komunikujesz. Wyniki można sortować według daty utworzenia lub aktualizacji."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Sortuj według"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Data aktualizacji"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Kolejność sortowania"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
@@ -740,7 +740,7 @@
           "message": "Maksymalna liczba zwracanych rekordów kontaktów. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "Pobierz kontakt"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Wybierz lub wprowadź identyfikator kontaktu, który chcesz pobrać. Identyfikatory kontaktów zaczynają się od \"crd_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Utwórz kontakt"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Lista adresów URL powiązanych z tym kontaktem, takich jak profile w mediach społecznościowych lub strony internetowe firm."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
-          "source": "Group Names",
+          "source": "Group names",
           "message": "Nazwy grup"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Lista nazw grup, do których ma zostać dodany kontakt. Grupy pomagają organizować kontakty w kategorie."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Pola niestandardowe"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Obiekt zawierający wartości pól niestandardowych dla kontaktu. Klucze powinny odpowiadać skonfigurowanym nazwom pól niestandardowych."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Zaktualizuj kontakt"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Lista adresów URL powiązanych z tym kontaktem, takich jak profile w mediach społecznościowych lub strony internetowe firm."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Pola niestandardowe"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Zaktualizuj wartości pól niestandardowych dla kontaktu."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Usuń kontakt"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Wybierz lub wprowadź identyfikator kontaktu, który chcesz usunąć."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "List Contact Conversations",
+          "source": "List contact conversations",
           "message": "Pobierz listę konwersacji kontaktu"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Maksymalna liczba zwracanych rekordów konwersacji. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
-          "source": "List Contact Notes",
+          "source": "List contact notes",
           "message": "Pobierz listę notatek kontaktu"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Maksymalna liczba zwracanych rekordów notatek. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "Add Note to Contact",
+          "source": "Add note to contact",
           "message": "Dodaj notatkę do kontaktu"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Wybierz lub wprowadź identyfikator kontaktu, do którego chcesz dodać notatkę."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
-          "source": "Note Body",
+          "source": "Note body",
           "message": "Treść notatki"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Wybierz członka zespołu, który zostanie zapisany jako autor tej notatki. To pole jest wymagane."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "Pobierz listę list kontaktów"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Maksymalna liczba zwracanych rekordów list kontaktów. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "Utwórz listę kontaktów"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Opcjonalny opis wyjaśniający cel listy kontaktów lub kryteria dla znajdujących się na niej kontaktów."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Delete Contact List",
+          "source": "Delete contact list",
           "message": "Usuń listę kontaktów"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Usuń listę kontaktów z Front. Spowoduje to usunięcie listy, ale nie usunie kontaktów, które się na niej znajdowały. Kontakty pozostaną w Twoim obszarze roboczym."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Lista kontaktów"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Wybierz lub wprowadź identyfikator listy kontaktów, którą chcesz usunąć."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
-          "source": "List Contacts in Contact List",
+          "source": "List contacts in contact list",
           "message": "Pobierz listę kontaktów na liście kontaktów"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Pobierz wszystkie kontakty należące do określonej listy kontaktów. Pomaga to sprawdzić, które kontakty znajdują się na danej liście lub w danym segmencie."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Lista kontaktów"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Maksymalna liczba zwracanych rekordów kontaktów. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Add Contacts to Contact List",
+          "source": "Add contacts to contact list",
           "message": "Dodaj kontakty do listy kontaktów"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Dodaj jeden lub więcej kontaktów do listy kontaktów w Front. Pomaga to organizować kontakty w logiczne grupy w celu łatwiejszego zarządzania i ukierunkowanej komunikacji."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Lista kontaktów"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Wybierz jeden lub więcej kontaktów do dodania do listy kontaktów."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
-          "source": "Remove Contacts from Contact List",
+          "source": "Remove contacts from contact list",
           "message": "Usuń kontakty z listy kontaktów"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Usuń jeden lub więcej kontaktów z listy kontaktów we Front. Usuwa to kontakty z listy, ale nie usuwa samych kontaktów."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Lista kontaktów"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Wybierz jeden lub więcej kontaktów do usunięcia z listy kontaktów."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
+          "source": "List conversations",
           "message": "Pobierz listę konwersacji"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Maksymalna liczba zwracanych rekordów konwersacji. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
+          "source": "Get conversation",
           "message": "Pobierz konwersację"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Wybierz lub wprowadź identyfikator konwersacji, którą chcesz pobrać. Identyfikatory konwersacji zaczynają się od \"cnv_\"."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "Search Conversations",
+          "source": "Search conversations",
           "message": "Wyszukaj konwersacje"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "Wyszukuj konwersacje we Front za pomocą zapytania wyszukiwania. Zwraca pasujące konwersacje w kolejności malejącej według ostatniej aktywności wraz z łączną liczbą dopasowań."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Zapytanie wyszukiwania"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "Maksymalna liczba rekordów konwersacji do zwrócenia. Wartość domyślna to 25."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
+          "source": "Update conversation",
           "message": "Zaktualizuj konwersację"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1496,7 +1496,7 @@
           "message": "Przenieś konwersację do innej skrzynki odbiorczej."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Pola niestandardowe"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -1508,7 +1508,7 @@
           "message": "Zaktualizuj wartości pól niestandardowych dla konwersacji."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
-          "source": "Update Conversation Assignee",
+          "source": "Update conversation assignee",
           "message": "Zaktualizuj osobę przypisaną do konwersacji"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
@@ -1544,7 +1544,7 @@
           "message": "Wybierz członka zespołu, do którego ma zostać przypisana konwersacja. Pozostaw puste, aby cofnąć przypisanie konwersacji."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Add Tag to Conversation",
+          "source": "Add tag to conversation",
           "message": "Dodaj tag do konwersacji"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "Wybierz jeden lub więcej tagów do dodania do konwersacji."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Remove Tag from Conversation",
+          "source": "Remove tag from conversation",
           "message": "Usuń tag z konwersacji"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "Wybierz jeden lub więcej tagów do usunięcia z konwersacji."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
-          "source": "Add Conversation Followers",
+          "source": "Add conversation followers",
           "message": "Dodaj obserwatorów konwersacji"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Wybierz jednego lub więcej członków zespołu, aby dodać ich jako obserwatorów do konwersacji."
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "Pobierz wiadomość"
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Wprowadź identyfikator wiadomości, którą chcesz pobrać. Identyfikatory wiadomości zaczynają się od \"msg_\"."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
-          "source": "List Conversation Messages",
+          "source": "List conversation messages",
           "message": "Pobierz listę wiadomości konwersacji"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
@@ -1712,7 +1712,7 @@
           "message": "Maksymalna liczba zwracanych rekordów wiadomości. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
-          "source": "Reply to Conversation",
+          "source": "Reply to conversation",
           "message": "Odpowiedz na konwersację"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "Wybierz lub wprowadź identyfikator konwersacji, na którą chcesz odpowiedzieć."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "Treść wiadomości"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
@@ -1796,7 +1796,7 @@
           "message": "Lista adresów e-mail do dodania jako UDW w odpowiedzi."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
-          "source": "Save as Draft",
+          "source": "Save as draft",
           "message": "Zapisz jako wersję roboczą"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Jeśli ma wartość true, wiadomość zostanie zapisana jako wersja robocza zamiast zostać natychmiast wysłana. Domyślnie false."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
-          "source": "Add Comment to Conversation",
+          "source": "Add comment to conversation",
           "message": "Dodaj komentarz do konwersacji"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "Wybierz lub wprowadź identyfikator konwersacji, do której chcesz dodać komentarz."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
-          "source": "Comment Body",
+          "source": "Comment body",
           "message": "Treść komentarza"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Treść tekstowa wewnętrznego komentarza. Będzie widoczna dla wszystkich członków zespołu mających dostęp do konwersacji."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
-          "source": "List Conversation Comments",
+          "source": "List conversation comments",
           "message": "Pobierz listę komentarzy do konwersacji"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Maksymalna liczba zwracanych rekordów komentarzy. Wartość domyślna to 50."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
+          "source": "New conversation",
           "message": "Nowa konwersacja"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "Spam"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Nowy kontakt"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -1944,7 +1944,7 @@
           "message": "Ten wyzwalacz jest uruchamiany za każdym razem, gdy we Front zostanie utworzony nowy kontakt. Użyj go do automatyzacji przepływów pracy po dodaniu nowych kontaktów do Twojego obszaru roboczego."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "New Contact Note",
+          "source": "New contact note",
           "message": "Nowa notatka do kontaktu"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "Wybierz lub wprowadź identyfikator kontaktu, który chcesz monitorować pod kątem nowych notatek. Wyzwalacz zostanie uruchomiony za każdym razem, gdy do tego kontaktu zostanie dodana nowa notatka."
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
-          "source": "New Comment",
+          "source": "New comment",
           "message": "Nowy komentarz"
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {

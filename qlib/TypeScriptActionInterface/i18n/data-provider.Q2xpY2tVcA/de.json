@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **ClickUp** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfrage-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwort-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App bereitgestellt werden."
         },
         "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.Q2xpY2tVcA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.Q2xpY2tVcA.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Datensätze suchen"
         },
         "app.Q2xpY2tVcA.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Der Tabellenname"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.display_name": {
-          "source": "Add Task Comment",
+          "source": "Add task comment",
           "message": "Aufgabenkommentar hinzufügen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Die ClickUp-Aufgabe, zu der der Kommentar hinzugefügt werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Y29tbWVudF90ZXh0.display_name": {
-          "source": "Comment Text",
+          "source": "Comment text",
           "message": "Kommentartext"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Y29tbWVudF90ZXh0.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Der Textinhalt des Kommentars, der der Aufgabe hinzugefügt werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Alle benachrichtigen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.bm90aWZ5X2FsbA.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Benutzer, dem der Kommentar zugewiesen werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Z3JvdXBfYXNzaWduZWU.display_name": {
-          "source": "Group Assignee",
+          "source": "Group assignee",
           "message": "Zugewiesene Gruppe"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2tfY29tbWVudA.option.Z3JvdXBfYXNzaWduZWU.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Gruppe, der der Kommentar zugewiesen werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.display_name": {
-          "source": "Create Document Page",
+          "source": "Create document page",
           "message": "Dokumentenseite erstellen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Das ClickUp-Dokument, zu dem die Seite hinzugefügt werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.bmFtZQ.display_name": {
-          "source": "Page Name",
+          "source": "Page name",
           "message": "Seitenname"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.bmFtZQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Ein optionaler Untertitel für die Seite"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.Y29udGVudF9mb3JtYXQ.display_name": {
-          "source": "Content Format",
+          "source": "Content format",
           "message": "Inhaltsformat"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50X3BhZ2U.option.Y29udGVudF9mb3JtYXQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Klartext"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
-          "source": "Create Document",
+          "source": "Create document",
           "message": "Dokument erstellen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Der ClickUp-Workspace, in dem das Dokument erstellt wird"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.bmFtZQ.display_name": {
-          "source": "Document Name",
+          "source": "Document name",
           "message": "Dokumentenname"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.bmFtZQ.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Der Name/Titel für das neue Dokument"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.display_name": {
-          "source": "Parent Location",
+          "source": "Parent location",
           "message": "Übergeordneter Speicherort"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Der übergeordnete Container (Space, Ordner, Liste usw.), in dem das Dokument abgelegt wird"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.field.dHlwZQ.display_name": {
-          "source": "Parent Type",
+          "source": "Parent type",
           "message": "Übergeordneter Typ"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.cGFyZW50.field.dHlwZQ.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Privat"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.Y3JlYXRlX3BhZ2U.display_name": {
-          "source": "Create Page",
+          "source": "Create page",
           "message": "Seite erstellen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2RvY3VtZW50.option.Y3JlYXRlX3BhZ2U.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Ob eine erste Seite innerhalb des Dokuments erstellt werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.display_name": {
-          "source": "Create Folder",
+          "source": "Create folder",
           "message": "Ordner erstellen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Der ClickUp-Space, in dem der Ordner erstellt wird"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.option.bmFtZQ.display_name": {
-          "source": "Folder Name",
+          "source": "Folder name",
           "message": "Ordnername"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2ZvbGRlcg.option.bmFtZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Der Name für den neuen Ordner"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create List",
+          "source": "Create list",
           "message": "Liste erstellen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Der ClickUp-Ordner, in dem die Liste erstellt wird"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "List Name",
+          "source": "List name",
           "message": "Listenname"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Prioritätsstufe für die Liste"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Fälligkeitsdatum"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.ZHVlX2RhdGU.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Fälligkeitsdatum für die Liste"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Markdown-Inhalt"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX2xpc3Q.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Beschreibungsinhalt im Markdown-Format"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
+          "source": "Create task",
           "message": "Aufgabe erstellen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Die ClickUp-Liste, in der die Aufgabe erstellt wird"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "Aufgabenname"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Ob die Aufgabe im archivierten Zustand erstellt werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.display_name": {
-          "source": "Group Assignees",
+          "source": "Group assignees",
           "message": "Zugewiesene Gruppen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Prioritätsstufe für die Aufgabe"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Fälligkeitsdatum"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Wann die Aufgabe fällig ist"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Startdatum"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Wann die Arbeit an der Aufgabe beginnen soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.display_name": {
-          "source": "Time Estimate",
+          "source": "Time estimate",
           "message": "Zeitschätzung"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Der Aufgabe zugewiesener Punktewert"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Alle benachrichtigen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Ob alle relevanten Teammitglieder über die neue Aufgabe benachrichtigt werden sollen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
+          "source": "Parent task",
           "message": "Übergeordnete Aufgabe"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Übergeordnete Aufgabe, um diese als Unteraufgabe zu erstellen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Markdown-Inhalt"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Aufgabenbeschreibung im Markdown-Format"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bGlua3NfdG8.display_name": {
-          "source": "Links To",
+          "source": "Links to",
           "message": "Verknüpft mit"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.bGlua3NfdG8.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Aufgabe, zu der eine Verknüpfung hergestellt werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Check Required Custom Fields",
+          "source": "Check required custom fields",
           "message": "Erforderliche benutzerdefinierte Felder prüfen"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Ob überprüft werden soll, ob alle erforderlichen benutzerdefinierten Felder angegeben sind"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Benutzerdefinierte Felder"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Die eindeutige Kennung des benutzerdefinierten Felds"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Feldwert"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.short_desc": {
@@ -1240,7 +1240,7 @@
           "message": "Der Wert, der für dieses benutzerdefinierte Feld festgelegt werden soll"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.display_name": {
-          "source": "Custom Item ID",
+          "source": "Custom item ID",
           "message": "Benutzerdefinierte Element-ID"
         },
         "app.Q2xpY2tVcA.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "Kennung des benutzerdefinierten Aufgabentyps"
         },
         "app.Q2xpY2tVcA.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
+          "source": "Delete task",
           "message": "Aufgabe löschen"
         },
         "app.Q2xpY2tVcA.action.ZGVsZXRlX3Rhc2s.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Die zu löschende ClickUp-Aufgabe"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2RvY3VtZW50.display_name": {
-          "source": "Get Document",
+          "source": "Get document",
           "message": "Dokument abrufen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2RvY3VtZW50.short_desc": {
@@ -1360,7 +1360,7 @@
           "message": "Das abzurufende ClickUp-Dokument"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2ZvbGRlcg.display_name": {
-          "source": "Get Folder",
+          "source": "Get folder",
           "message": "Ordner abrufen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2ZvbGRlcg.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "Der ClickUp-Ordner, für den Informationen abgerufen werden sollen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2xpc3Rz.display_name": {
-          "source": "Get List",
+          "source": "Get list",
           "message": "Liste abrufen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X2xpc3Rz.short_desc": {
@@ -1468,7 +1468,7 @@
           "message": "Die ClickUp-Liste, für die Informationen abgerufen werden sollen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "Task abrufen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.short_desc": {
@@ -1540,7 +1540,7 @@
           "message": "Die abzurufende ClickUp-Aufgabe"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Include Markdown Description",
+          "source": "Include markdown description",
           "message": "Markdown-Beschreibung einschließen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.short_desc": {
@@ -1552,7 +1552,7 @@
           "message": "Gibt an, ob die Aufgabenbeschreibung im Markdown-Format enthalten sein soll"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.c3VidGFza3M.display_name": {
-          "source": "Include Subtasks",
+          "source": "Include subtasks",
           "message": "Teilaufgaben einschließen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3Rhc2s.option.c3VidGFza3M.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Gibt an, ob Teilaufgaben in der Antwort enthalten sein sollen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3dvcmtzcGFjZQ.display_name": {
-          "source": "Get Workspace",
+          "source": "Get workspace",
           "message": "Workspace abrufen"
         },
         "app.Q2xpY2tVcA.action.Z2V0X3dvcmtzcGFjZQ.short_desc": {
@@ -1588,7 +1588,7 @@
           "message": "Der ClickUp-Workspace, für den Informationen abgerufen werden sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.display_name": {
-          "source": "List Channels",
+          "source": "List channels",
           "message": "Kanäle auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "Der ClickUp-Workspace, aus dem Kanäle aufgelistet werden sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.ZGVzY3JpcHRpb25fZm9ybWF0.display_name": {
-          "source": "Description Format",
+          "source": "Description format",
           "message": "Beschreibungsformat"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.ZGVzY3JpcHRpb25fZm9ybWF0.short_desc": {
@@ -1656,7 +1656,7 @@
           "message": "Maximale Anzahl zurückzugebender Kanäle"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aXNfZm9sbG93ZXI.display_name": {
-          "source": "Is Follower",
+          "source": "Is follower",
           "message": "Ist Follower"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aXNfZm9sbG93ZXI.short_desc": {
@@ -1668,7 +1668,7 @@
           "message": "Gibt an, ob Kanäle nach Follower-Status gefiltert werden sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aW5jbHVkZV9oaWRkZW4.display_name": {
-          "source": "Include Hidden",
+          "source": "Include hidden",
           "message": "Ausgeblendete einschließen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
@@ -1680,7 +1680,7 @@
           "message": "Gibt an, ob ausgeblendete Kanäle in den Ergebnissen enthalten sein sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.cm9vbV90eXBlcw.display_name": {
-          "source": "Room Types",
+          "source": "Room types",
           "message": "Raumtypen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jaGFubmVscw.option.cm9vbV90eXBlcw.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "Gruppen-Direktnachricht"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jdXN0b21fZmllbGRz.display_name": {
-          "source": "List Custom Fields",
+          "source": "List custom fields",
           "message": "Benutzerdefinierte Felder auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9jdXN0b21fZmllbGRz.short_desc": {
@@ -1728,7 +1728,7 @@
           "message": "Der ClickUp-Workspace, aus dem benutzerdefinierte Felder aufgelistet werden sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
+          "source": "List documents",
           "message": "Dokumente auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.short_desc": {
@@ -1800,7 +1800,7 @@
           "message": "Maximale Anzahl zurückzugebender Dokumente"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.bmV4dF9jdXJzb3I.display_name": {
-          "source": "Next Cursor",
+          "source": "Next cursor",
           "message": "Nächster Cursor"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.bmV4dF9jdXJzb3I.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "Cursor zum Abrufen der nächsten Ergebnisseite"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.cGFyZW50X3R5cGU.display_name": {
-          "source": "Parent Type",
+          "source": "Parent type",
           "message": "Übergeordneter Typ"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9kb2N1bWVudHM.option.cGFyZW50X3R5cGU.short_desc": {
@@ -1856,7 +1856,7 @@
           "message": "ID des übergeordneten Containers, nach dem Dokumente gefiltert werden sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.display_name": {
-          "source": "List Folders",
+          "source": "List folders",
           "message": "Ordner auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "Der ClickUp-Space, aus dem Ordner abgerufen werden sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.option.YXJjaGl2ZWQ.display_name": {
-          "source": "Include Archived",
+          "source": "Include archived",
           "message": "Archivierte einschließen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9mb2xkZXJz.option.YXJjaGl2ZWQ.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "Gibt an, ob archivierte Ordner in den Ergebnissen enthalten sein sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Gruppen auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9ncm91cHM.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "Spezifische abzurufende Gruppen-IDs (kommagetrennt)"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.display_name": {
-          "source": "List Lists",
+          "source": "List lists",
           "message": "Listen auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.short_desc": {
@@ -1988,7 +1988,7 @@
           "message": "Der ClickUp-Ordner, aus dem Listen abgerufen werden sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.option.YXJjaGl2ZWQ.display_name": {
-          "source": "Include Archived",
+          "source": "Include archived",
           "message": "Archivierte einschließen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF9saXN0cw.option.YXJjaGl2ZWQ.short_desc": {
@@ -2000,7 +2000,7 @@
           "message": "Ob archivierte Listen in den Ergebnissen enthalten sein sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "Tasks auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.short_desc": {
@@ -2072,7 +2072,7 @@
           "message": "Gibt an, ob archivierte Aufgaben enthalten sein sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Include Markdown Description",
+          "source": "Include markdown description",
           "message": "Markdown-Beschreibung einschließen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9tYXJrZG93bl9kZXNjcmlwdGlvbg.short_desc": {
@@ -2096,7 +2096,7 @@
           "message": "Seitennummer für die Paginierung"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Sortieren nach"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.b3JkZXJfYnk.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "Gibt an, ob die Sortierreihenfolge umgekehrt werden soll"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.c3VidGFza3M.display_name": {
-          "source": "Include Subtasks",
+          "source": "Include subtasks",
           "message": "Teilaufgaben einschließen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.c3VidGFza3M.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "Gibt an, ob Teilaufgaben in den Ergebnissen enthalten sein sollen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9jbG9zZWQ.display_name": {
-          "source": "Include Closed",
+          "source": "Include closed",
           "message": "Geschlossene einschließen"
         },
         "app.Q2xpY2tVcA.action.bGlzdF90YXNrcw.option.aW5jbHVkZV9jbG9zZWQ.short_desc": {
@@ -2172,7 +2172,7 @@
           "message": "Spezifische Aufgabenstatus zum Filtern"
         },
         "app.Q2xpY2tVcA.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
-          "source": "List Workspaces",
+          "source": "List workspaces",
           "message": "Workspaces auflisten"
         },
         "app.Q2xpY2tVcA.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
@@ -2184,7 +2184,7 @@
           "message": "Alle ClickUp-Workspaces abrufen, auf die der authentifizierte Benutzer Zugriff hat"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.display_name": {
-          "source": "Send Channel Message",
+          "source": "Send channel message",
           "message": "Kanalnachricht senden"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "Benutzer, dem die Nachricht zugewiesen werden soll"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Z3JvdXBfYXNzaWduZWU.display_name": {
-          "source": "Group Assignee",
+          "source": "Group assignee",
           "message": "Zugewiesene Gruppe"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Z3JvdXBfYXNzaWduZWU.short_desc": {
@@ -2244,7 +2244,7 @@
           "message": "Gruppe, der die Nachricht zugewiesen werden soll"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.dHlwZQ.display_name": {
-          "source": "Message Type",
+          "source": "Message type",
           "message": "Nachrichtentyp"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.dHlwZQ.short_desc": {
@@ -2288,7 +2288,7 @@
           "message": "Benutzer, die als Follower der Nachricht hinzugefügt werden sollen"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Y29udGVudF9mb3JtYXQ.display_name": {
-          "source": "Content Format",
+          "source": "Content format",
           "message": "Inhaltsformat"
         },
         "app.Q2xpY2tVcA.action.c2VuZF9jaGFubmVsX21lc3NhZ2U.option.Y29udGVudF9mb3JtYXQ.short_desc": {
@@ -2308,7 +2308,7 @@
           "message": "Markdown"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
+          "source": "Update task",
           "message": "Aufgabe aktualisieren"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.short_desc": {
@@ -2380,7 +2380,7 @@
           "message": "Die zu aktualisierende ClickUp-Aufgabe"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
+          "source": "Task name",
           "message": "Aufgabenname"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
@@ -2428,7 +2428,7 @@
           "message": "Ob die Aufgabe archiviert werden soll"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.display_name": {
-          "source": "Group Assignees",
+          "source": "Group assignees",
           "message": "Zugewiesene Gruppen"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Z3JvdXBfYXNzaWduZWVz.short_desc": {
@@ -2452,7 +2452,7 @@
           "message": "Aktualisierte Prioritätsstufe für die Aufgabe"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
+          "source": "Due date",
           "message": "Fälligkeitsdatum"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
@@ -2464,7 +2464,7 @@
           "message": "Aktualisiertes Fälligkeitsdatum für die Aufgabe"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Startdatum"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -2476,7 +2476,7 @@
           "message": "Aktualisiertes Startdatum für die Aufgabe"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.display_name": {
-          "source": "Time Estimate",
+          "source": "Time estimate",
           "message": "Zeitschätzung"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.dGltZV9lc3RpbWF0ZQ.short_desc": {
@@ -2500,7 +2500,7 @@
           "message": "Aktualisierter Punktewert für die Aufgabe"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.display_name": {
-          "source": "Notify All",
+          "source": "Notify all",
           "message": "Alle benachrichtigen"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bm90aWZ5X2FsbA.short_desc": {
@@ -2512,7 +2512,7 @@
           "message": "Ob alle relevanten Teammitglieder über die Aufgabenaktualisierung benachrichtigt werden sollen"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
-          "source": "Parent Task",
+          "source": "Parent task",
           "message": "Übergeordnete Aufgabe"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "Aktualisierte übergeordnete Aufgabe, um diese zu einer Unteraufgabe zu machen"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.display_name": {
-          "source": "Markdown Content",
+          "source": "Markdown content",
           "message": "Markdown-Inhalt"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd25fY29udGVudA.short_desc": {
@@ -2536,7 +2536,7 @@
           "message": "Aktualisierte Aufgabenbeschreibung im Markdown-Format"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bGlua3NfdG8.display_name": {
-          "source": "Links To",
+          "source": "Links to",
           "message": "Verknüpft mit"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.bGlua3NfdG8.short_desc": {
@@ -2548,7 +2548,7 @@
           "message": "Aufgabe, mit der eine Link-Verknüpfung erstellt oder aktualisiert werden soll"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Check Required Custom Fields",
+          "source": "Check required custom fields",
           "message": "Erforderliche benutzerdefinierte Felder prüfen"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y2hlY2tfcmVxdWlyZWRfY3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -2560,7 +2560,7 @@
           "message": "Ob überprüft werden soll, ob alle erforderlichen benutzerdefinierten Felder angegeben sind"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Benutzerdefinierte Felder"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
@@ -2584,7 +2584,7 @@
           "message": "Die eindeutige Kennung des benutzerdefinierten Felds"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Feldwert"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.field.dmFsdWU.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "Der aktualisierte Wert für dieses benutzerdefinierte Feld"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.display_name": {
-          "source": "Custom Item ID",
+          "source": "Custom item ID",
           "message": "Benutzerdefinierte Element-ID"
         },
         "app.Q2xpY2tVcA.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2l0ZW1faWQ.short_desc": {
@@ -2608,7 +2608,7 @@
           "message": "Aktualisierte Kennung für benutzerdefinierten Aufgabentyp"
         },
         "app.Q2xpY2tVcA.action.bmV3X2ZvbGRlcg.display_name": {
-          "source": "New Folder",
+          "source": "New folder",
           "message": "Neuer Ordner"
         },
         "app.Q2xpY2tVcA.action.bmV3X2ZvbGRlcg.short_desc": {
@@ -2632,7 +2632,7 @@
           "message": "Der ClickUp-Workspace, der auf Ereignisse zur Erstellung neuer Ordner überwacht werden soll"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
+          "source": "New task",
           "message": "Neue Aufgabe"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2s.short_desc": {
@@ -2656,7 +2656,7 @@
           "message": "Der ClickUp-Workspace, der auf Ereignisse zur Erstellung neuer Aufgaben überwacht werden soll"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2tfY29tbWVudA.display_name": {
-          "source": "New Task Comment",
+          "source": "New task comment",
           "message": "Neuer Aufgabenkommentar"
         },
         "app.Q2xpY2tVcA.action.bmV3X3Rhc2tfY29tbWVudA.short_desc": {
@@ -2728,7 +2728,7 @@
           "message": "Optional: Nur für Kommentare zu dieser spezifischen Aufgabe auslösen"
         },
         "app.Q2xpY2tVcA.action.dGFza191cGRhdGVk.display_name": {
-          "source": "Task Updated",
+          "source": "Task updated",
           "message": "Aufgabe aktualisiert"
         },
         "app.Q2xpY2tVcA.action.dGFza191cGRhdGVk.short_desc": {
@@ -2752,7 +2752,7 @@
           "message": "Der ClickUp-Workspace, der auf Aufgabenaktualisierungs-Ereignisse überwacht werden soll"
         },
         "app.Q2xpY2tVcA.action.dGFza190aW1lX3RyYWNrZWRfdXBkYXRlZA.display_name": {
-          "source": "Task Time Tracked Updated",
+          "source": "Task time tracked updated",
           "message": "Aufgabenzeitnachverfolgung aktualisiert"
         },
         "app.Q2xpY2tVcA.action.dGFza190aW1lX3RyYWNrZWRfdXBkYXRlZA.short_desc": {
@@ -2776,7 +2776,7 @@
           "message": "Der ClickUp-Workspace, der auf Zeiterfassungsaktualisierungen von Aufgaben überwacht werden soll"
         },
         "app.Q2xpY2tVcA.action.bmV3X2xpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "Neue Liste"
         },
         "app.Q2xpY2tVcA.action.bmV3X2xpc3Q.short_desc": {

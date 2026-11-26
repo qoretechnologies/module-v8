@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Help Scout** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.display_name": {
-          "source": "Add Note to Conversation",
+          "source": "Add note to conversation",
           "message": "Notiz zu Konversation hinzufügen"
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, zu der Sie die Notiz hinzufügen möchten. Sie können nach Konversationen anhand der Nummer oder des Betreffs suchen."
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.display_name": {
-          "source": "Note Text",
+          "source": "Note text",
           "message": "Notiztext"
         },
         "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.short_desc": {
@@ -420,7 +420,7 @@
           "message": "Spam"
         },
         "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.display_name": {
-          "source": "Add Tags to Conversation",
+          "source": "Add tags to conversation",
           "message": "Tags zu Konversation hinzufügen"
         },
         "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.short_desc": {
@@ -456,7 +456,7 @@
           "message": "Eine Liste von Tag-Namen, die der Konversation hinzugefügt werden sollen. Bei Tags wird nicht zwischen Groß- und Kleinschreibung unterschieden; sie werden erstellt, falls sie noch nicht existieren."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Create Conversation",
+          "source": "Create conversation",
           "message": "Konversation erstellen"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Wählen Sie einen bestehenden Kunden aus Help Scout aus. Es muss entweder die Kunden-ID oder die E-Mail-Adresse des Kunden angegeben werden."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.display_name": {
-          "source": "Customer Email",
+          "source": "Customer email",
           "message": "Kunden-E-Mail"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.short_desc": {
@@ -564,7 +564,7 @@
           "message": "Die E-Mail-Adresse des Kunden. Wenn der Kunde nicht existiert, wird er erstellt. Es muss entweder die Kunden-ID oder die E-Mail-Adresse des Kunden angegeben werden."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.display_name": {
-          "source": "Thread Type",
+          "source": "Thread type",
           "message": "Thread-Typ"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.short_desc": {
@@ -596,7 +596,7 @@
           "message": "Chat"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.display_name": {
-          "source": "Thread Text",
+          "source": "Thread text",
           "message": "Thread-Text"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.short_desc": {
@@ -608,7 +608,7 @@
           "message": "Der Textinhalt der ersten Nachricht in der Konversation. Dies kann HTML-Formatierung enthalten."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
-          "source": "Assign To",
+          "source": "Assign to",
           "message": "Zuweisen an"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
@@ -632,7 +632,7 @@
           "message": "Eine Liste von Tag-Namen, die der Konversation hinzugefügt werden sollen. Tags helfen beim Organisieren und Kategorisieren von Konversationen für einfacheres Filtern und Berichten."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.display_name": {
-          "source": "Auto Reply",
+          "source": "Auto reply",
           "message": "Automatische Antwort"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.short_desc": {
@@ -644,7 +644,7 @@
           "message": "Wenn dies auf true gesetzt ist, sendet Help Scout eine automatische Antwort an den Kunden, falls eine für das Postfach konfiguriert ist. Auf false setzen, um automatische Antworten zu verhindern."
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Delete Conversation",
+          "source": "Delete conversation",
           "message": "Konversation löschen"
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie löschen möchten."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
+          "source": "Get conversation",
           "message": "Konversation abrufen"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -692,7 +692,7 @@
           "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie abrufen möchten."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
+          "source": "List conversations",
           "message": "Unterhaltungen auflisten"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
@@ -752,7 +752,7 @@
           "message": "Spam"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.display_name": {
-          "source": "Assigned To",
+          "source": "Assigned to",
           "message": "Zugewiesen an"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.short_desc": {
@@ -776,7 +776,7 @@
           "message": "Nur Konversationen mit diesem Tag zurückgeben. Sie können mehrere Tags durch Kommas getrennt angeben."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.display_name": {
-          "source": "Modified Since",
+          "source": "Modified since",
           "message": "Geändert seit"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Nur Konversationen zurückgeben, die an oder nach diesem Datum geändert wurden."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Sortierfeld"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Betreff"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Sortierreihenfolge"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Unterhaltungsdatensätzen. Standard ist 50."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
+          "source": "Update conversation",
           "message": "Konversation aktualisieren"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -936,7 +936,7 @@
           "message": "Ausstehend"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
-          "source": "Assign To",
+          "source": "Assign to",
           "message": "Zuweisen an"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
@@ -948,7 +948,7 @@
           "message": "Die Konversation einem bestimmten Help Scout-Benutzer zuweisen oder neu zuweisen."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.display_name": {
-          "source": "Get Customer",
+          "source": "Get customer",
           "message": "Kunde abrufen"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Wählen Sie die ID des Kunden aus oder geben Sie sie ein, dessen Profil Sie abrufen möchten."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.display_name": {
-          "source": "Create Customer",
+          "source": "Create customer",
           "message": "Kunde erstellen"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.short_desc": {
@@ -984,7 +984,7 @@
           "message": "Erstellen Sie ein neues Kundenprofil in Help Scout. Kunden repräsentieren die Personen, die Ihr Support-Team kontaktieren. Sie können deren Kontaktdaten, Unternehmensdetails und andere relevante Daten speichern."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Vorname"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Der Vorname des Kunden. Maximal 40 Zeichen."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Nachname"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "Die primäre E-Mail-Adresse des Kunden. Diese wird verwendet, um den Kunden zu identifizieren, wenn er E-Mails an Ihre Support-Adresse sendet."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.display_name": {
-          "source": "Email Type",
+          "source": "Email type",
           "message": "E-Mail-Typ"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Die Telefonnummer des Kunden."
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.display_name": {
-          "source": "Phone Type",
+          "source": "Phone type",
           "message": "Telefonnummerntyp"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Sonstige"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "Berufsbezeichnung"
         },
         "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Das Alter des Kunden als Zeichenfolge."
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.display_name": {
-          "source": "Delete Customer",
+          "source": "Delete customer",
           "message": "Kunde löschen"
         },
         "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Wählen Sie die ID des Kunden aus oder geben Sie sie ein, den Sie löschen möchten."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.display_name": {
-          "source": "List Customers",
+          "source": "List customers",
           "message": "Kunden auflisten"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "Nur Kunden zurückgeben, die Konversationen in diesem Postfach zugeordnet sind."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Vorname"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Nur Kunden mit diesem Vornamen zurückgeben."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Nachname"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Nur Kunden mit dieser E-Mail-Adresse zurückgeben."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.display_name": {
-          "source": "Modified Since",
+          "source": "Modified since",
           "message": "Geändert seit"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Nur Kunden zurückgeben, die an oder nach diesem Datum geändert wurden."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Sortierfeld"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "Geändert am"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Sortierreihenfolge"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Die maximale Anzahl der zurückzugebenden Kundendatensätze. Standardwert ist 50."
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.display_name": {
-          "source": "Search Customers",
+          "source": "Search customers",
           "message": "Kunden suchen"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Die Suchabfrage unter Verwendung der Help Scout-Abfragesyntax. Beispiele: (email:\"john@example.com\"), (firstName:\"John\"), (phone:\"555-1234\"). Sie können mehrere Bedingungen mit AND/OR-Operatoren kombinieren."
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Sortierfeld"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "Geändert am"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Sortierreihenfolge"
         },
         "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.short_desc": {
@@ -1416,7 +1416,7 @@
           "message": "Die maximale Anzahl der zurückzugebenden Kundendatensätze. Standardwert ist 50."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.display_name": {
-          "source": "Update Customer",
+          "source": "Update customer",
           "message": "Kunde aktualisieren"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.short_desc": {
@@ -1440,7 +1440,7 @@
           "message": "Wählen Sie den Kunden aus, dessen Profil Sie aktualisieren möchten."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Vorname"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
@@ -1452,7 +1452,7 @@
           "message": "Den Vornamen des Kunden aktualisieren. Maximal 40 Zeichen."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Nachname"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "Den Nachnamen des Kunden aktualisieren. Maximal 40 Zeichen."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "Berufsbezeichnung"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "Das Alter des Kunden aktualisieren."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.display_name": {
-          "source": "Get Company Report",
+          "source": "Get company report",
           "message": "Unternehmensbericht abrufen"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.short_desc": {
@@ -1560,7 +1560,7 @@
           "message": "Rufen Sie einen unternehmensweiten Leistungsbericht aus Help Scout ab. Enthält Metriken wie betreute Kunden, geschlossene Konversationen, Gesamtzahl der Antworten und Zufriedenheitswerte. Nur in Plus- und Pro-Plänen verfügbar."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Startdatum"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.short_desc": {
@@ -1572,7 +1572,7 @@
           "message": "Das Startdatum und die Startzeit für den Berichtszeitraum im ISO 8601-Format."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Enddatum"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "Das Enddatum und die Endzeit für den Berichtszeitraum im ISO 8601-Format."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.display_name": {
-          "source": "Previous Start",
+          "source": "Previous start",
           "message": "Vorheriger Beginn"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.short_desc": {
@@ -1596,7 +1596,7 @@
           "message": "Das Startdatum für einen vorherigen Zeitraum zum Vergleich. Wird zur Berechnung von Deltas verwendet."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.display_name": {
-          "source": "Previous End",
+          "source": "Previous end",
           "message": "Vorheriges Ende"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.short_desc": {
@@ -1668,7 +1668,7 @@
           "message": "Kommagetrennte Liste von Ordner-IDs, nach denen der Bericht gefiltert werden soll."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.display_name": {
-          "source": "Get Email Report",
+          "source": "Get email report",
           "message": "E-Mail-Bericht abrufen"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.short_desc": {
@@ -1680,7 +1680,7 @@
           "message": "Rufen Sie einen Leistungsbericht für den E-Mail-Kanal aus Help Scout ab. Enthält Volumenmetriken, Lösungszeiten, Antwortzeiten und Zeitverteilungsdaten. Nur in den Tarifen Plus und Pro verfügbar."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "Startdatum"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.short_desc": {
@@ -1692,7 +1692,7 @@
           "message": "Das Startdatum und die Startzeit für den Berichtszeitraum im ISO 8601-Format."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "Enddatum"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.short_desc": {
@@ -1704,7 +1704,7 @@
           "message": "Das Enddatum und die Endzeit für den Berichtszeitraum im ISO 8601-Format."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.display_name": {
-          "source": "Previous Start",
+          "source": "Previous start",
           "message": "Vorheriger Beginn"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.short_desc": {
@@ -1716,7 +1716,7 @@
           "message": "Das Startdatum für einen vorherigen Zeitraum zum Vergleich. Wird zur Berechnung von Deltas verwendet."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.display_name": {
-          "source": "Previous End",
+          "source": "Previous end",
           "message": "Vorheriges Ende"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.short_desc": {
@@ -1764,7 +1764,7 @@
           "message": "Kommagetrennte Liste von Ordner-IDs, nach denen der Bericht gefiltert werden soll."
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.display_name": {
-          "source": "Office Hours",
+          "source": "Office hours",
           "message": "Geschäftszeiten"
         },
         "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.short_desc": {
@@ -1776,7 +1776,7 @@
           "message": "Wenn auf true gesetzt, berücksichtigen zeitbasierte Metriken nur die Geschäftszeiten. Standardmäßig false."
         },
         "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.display_name": {
-          "source": "List Threads",
+          "source": "List threads",
           "message": "Threads auflisten"
         },
         "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "Die maximale Anzahl der zurückzugebenden Thread-Datensätze. Standard ist 50."
         },
         "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.display_name": {
-          "source": "Get Thread",
+          "source": "Get thread",
           "message": "Thread abrufen"
         },
         "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.short_desc": {
@@ -1848,7 +1848,7 @@
           "message": "Geben Sie die ID des spezifischen Threads ein, den Sie abrufen möchten."
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.display_name": {
-          "source": "Send Reply",
+          "source": "Send reply",
           "message": "Antwort senden"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.short_desc": {
@@ -1884,7 +1884,7 @@
           "message": "Wählen Sie den Kunden aus, der diese Antwort erhalten soll. Dies sollte mit dem der Konversation zugeordneten Kunden übereinstimmen."
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.display_name": {
-          "source": "Reply Text",
+          "source": "Reply text",
           "message": "Antworttext"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "Spam"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.display_name": {
-          "source": "Save as Draft",
+          "source": "Save as draft",
           "message": "Als Entwurf speichern"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "Eine Liste von E-Mail-Adressen, die bei der Antwort in BCC gesetzt werden sollen. Diese Empfänger erhalten eine Kopie der E-Mail, ohne dass andere Empfänger davon erfahren."
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.display_name": {
-          "source": "Assign To",
+          "source": "Assign to",
           "message": "Zuweisen an"
         },
         "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.short_desc": {
@@ -1988,7 +1988,7 @@
           "message": "Die Konversation nach dem Senden der Antwort optional einem anderen Help Scout-Benutzer zuweisen."
         },
         "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.display_name": {
-          "source": "List Saved Replies",
+          "source": "List saved replies",
           "message": "Gespeicherte Antworten auflisten"
         },
         "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.short_desc": {
@@ -2024,7 +2024,7 @@
           "message": "Die maximale Anzahl der zurückzugebenden Datensätze gespeicherter Antworten. Standardwert ist 50."
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.display_name": {
-          "source": "Find Mailbox by Name",
+          "source": "Find mailbox by name",
           "message": "Mailbox nach Name suchen"
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.short_desc": {
@@ -2036,7 +2036,7 @@
           "message": "Suchen Sie in Help Scout anhand ihres Namens nach einer Mailbox. Gibt die Mailbox-Details zurück, falls gefunden. Die Suche unterscheidet nicht zwischen Groß- und Kleinschreibung und unterstützt Teilübereinstimmungen."
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.display_name": {
-          "source": "Mailbox Name",
+          "source": "Mailbox name",
           "message": "Mailbox-Name"
         },
         "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.short_desc": {
@@ -2048,7 +2048,7 @@
           "message": "Der Name der Mailbox, nach der gesucht werden soll. Die Suche unterscheidet nicht zwischen Groß- und Kleinschreibung und findet auch Teilnamen oder Slugs."
         },
         "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Benutzer auflisten"
         },
         "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.short_desc": {
@@ -2096,7 +2096,7 @@
           "message": "Die maximale Anzahl der zurückzugebenden Benutzerdatensätze. Standard ist 50."
         },
         "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.display_name": {
-          "source": "New Customer",
+          "source": "New customer",
           "message": "Neuer Kunde"
         },
         "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.short_desc": {
@@ -2108,7 +2108,7 @@
           "message": "Dieser Trigger wird ausgelöst, sobald ein neuer Kunde in Help Scout erstellt wird. Er stellt das vollständige Kundenprofil einschließlich Kontaktinformationen, Organisation und benutzerdefinierten Feldern bereit."
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.display_name": {
-          "source": "Updated Customer",
+          "source": "Updated customer",
           "message": "Aktualisierter Kunde"
         },
         "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.short_desc": {
@@ -2120,7 +2120,7 @@
           "message": "Dieser Trigger wird ausgelöst, wenn ein Kundenprofil in Help Scout aktualisiert wird. Er liefert die aktualisierten Kundendaten einschließlich aller geänderten Felder."
         },
         "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
-          "source": "New Organization",
+          "source": "New organization",
           "message": "Neue Organisation"
         },
         "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
@@ -2132,7 +2132,7 @@
           "message": "Dieser Trigger wird ausgelöst, sobald eine neue Organisation in Help Scout erstellt wird. Organisationen helfen dabei, Kunden desselben Unternehmens zu gruppieren."
         },
         "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
+          "source": "New conversation",
           "message": "Neue Unterhaltung"
         },
         "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -2156,7 +2156,7 @@
           "message": "Optional filtern, um nur für Konversationen in einem bestimmten Postfach auszulösen. Leer lassen, um für alle Postfächer auszulösen."
         },
         "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.display_name": {
-          "source": "Assigned Conversation",
+          "source": "Assigned conversation",
           "message": "Zugewiesene Konversation"
         },
         "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.short_desc": {

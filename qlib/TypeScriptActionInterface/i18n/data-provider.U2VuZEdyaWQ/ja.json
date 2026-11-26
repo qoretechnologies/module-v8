@@ -28,7 +28,7 @@
           "message": "設定された接続の認証情報を使用して、**SendGrid** に対するカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメーター、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
+          "source": "List blocks",
           "message": "ブロックの一覧表示"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.short_desc": {
@@ -352,7 +352,7 @@
           "message": "現在ブロックリストに登録されているすべてのメールアドレスのリストを取得します。ブロックされたアドレスは、受信サーバーによって拒否されたメールアドレスです。時間の範囲で絞り込み、結果をページネーションできます。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時刻"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.short_desc": {
@@ -364,7 +364,7 @@
           "message": "この時点より後に作成されたブロックを取得します。時間はUnixタイムスタンプ（エポックからの秒数）で指定してください。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "終了時刻"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.short_desc": {
@@ -400,7 +400,7 @@
           "message": "ページネーション用の結果リストの開始位置。デフォルトは0です。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.display_name": {
-          "source": "Get a Block",
+          "source": "Get a block",
           "message": "ブロックを取得"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.short_desc": {
@@ -424,7 +424,7 @@
           "message": "ブロックリストから取得するメールアドレス。ブロックされた正確なメールアドレスである必要があります。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
+          "source": "Delete blocks",
           "message": "ブロックの削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "ブロックリストからメールアドレスを削除します。すべてのブロックを一度に削除するか、削除する個別のメールアドレスを指定できます。ブロックを削除すると、それらのアドレス宛にメールを再送できるようになります。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "すべて削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.short_desc": {
@@ -460,7 +460,7 @@
           "message": "ブロックリストから削除するメールアドレスの配列。「すべて削除」が true に設定されていない場合は必須です。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.display_name": {
-          "source": "Get All Bounces",
+          "source": "Get all bounces",
           "message": "すべてのバウンスを取得"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.short_desc": {
@@ -472,7 +472,7 @@
           "message": "バウンスしたすべてのメールアドレスのリストを取得します。バウンスは、メールを受信者に配信できない場合に発生します。期間でフィルタリングし、結果をページネーションできます。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時刻"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.short_desc": {
@@ -484,7 +484,7 @@
           "message": "この時点より後に作成されたバウンスを取得します。時間はUnixタイムスタンプ（エポックからの秒数）で指定してください。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "終了時刻"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "ページネーション用の結果リストの開始位置。デフォルトは0です。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.display_name": {
-          "source": "Delete Bounces",
+          "source": "Delete bounces",
           "message": "バウンスを削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.short_desc": {
@@ -532,7 +532,7 @@
           "message": "バウンスリストからメールアドレスを削除します。すべてのバウンスを一度に削除するか、削除する個別のメールアドレスを指定できます。バウンスを削除すると、それらのアドレス宛にメールを再送できるようになります。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "すべて削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.short_desc": {
@@ -556,7 +556,7 @@
           "message": "バウンスリストから削除するメールアドレスの配列。「すべて削除」が true に設定されていない場合は必須です。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.display_name": {
-          "source": "List Global Suppressions",
+          "source": "List global suppressions",
           "message": "グローバルサプレッションの一覧"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.short_desc": {
@@ -568,7 +568,7 @@
           "message": "すべてのメールからグローバルに配信停止されたすべてのメールアドレスのリストを取得します。これらのアドレスは、このリストから削除されるまでアカウントからのメールを受信しません。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時刻"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.short_desc": {
@@ -580,7 +580,7 @@
           "message": "この時点以降に作成されたサプレッションを取得します。時間はUnixタイムスタンプ（エポックからの秒数）で指定してください。"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "終了時刻"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "ページネーション用の結果リストの開始位置。デフォルトは0です。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Get a Global Suppression",
+          "source": "Get a global suppression",
           "message": "グローバルサプレッションを取得"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -640,7 +640,7 @@
           "message": "グローバルサプレッションリストで検索するメールアドレス。見つかった場合はサプレッションの詳細を返します。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.display_name": {
-          "source": "Add Global Suppressions",
+          "source": "Add global suppressions",
           "message": "グローバル抑制を追加"
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.short_desc": {
@@ -664,7 +664,7 @@
           "message": "グローバル抑制リストに追加するメールアドレスの配列。これらのアドレスは今後のすべてのメールの受信がブロックされます。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Delete a Global Suppression",
+          "source": "Delete a global suppression",
           "message": "グローバルサプレッションを削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "グローバルサプレッションリストから削除するメールアドレス。削除されると、このアドレスは再度メールを受信できるようになります。"
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create a List",
+          "source": "Create a list",
           "message": "リストを作成"
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -712,7 +712,7 @@
           "message": "連絡先リストのわかりやすい名前。リストの目的や対象者を明確に特定できる名前を選択してください。"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.display_name": {
-          "source": "Get All Lists",
+          "source": "Get all lists",
           "message": "すべてのリストを取得"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.short_desc": {
@@ -724,7 +724,7 @@
           "message": "SendGridアカウント内のすべての宛先リストを取得します。名前や宛先数などのリスト詳細を返します。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete a List",
+          "source": "Delete a list",
           "message": "リストを削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -748,7 +748,7 @@
           "message": "削除するリストの一意の識別子。既存のリストから選択してください。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "連絡先を削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.short_desc": {
@@ -760,7 +760,7 @@
           "message": "true に設定すると、リスト内のすべての連絡先も連絡先データベースから完全に削除されます。注意して使用してください。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.display_name": {
-          "source": "Add or Update a Contact",
+          "source": "Add or update a contact",
           "message": "連絡先を追加または更新"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.short_desc": {
@@ -784,7 +784,7 @@
           "message": "連絡先のメールアドレス。これは一意の識別子です。このメールアドレスを持つ連絡先が存在する場合、その連絡先が更新されます。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.short_desc": {
@@ -796,7 +796,7 @@
           "message": "連絡先の名。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.short_desc": {
@@ -820,7 +820,7 @@
           "message": "この連絡先を追加する1つ以上のリストID。連絡先は指定されたすべてのリストに追加されます。"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -832,7 +832,7 @@
           "message": "カスタムフィールドの名前と値を含むJSONオブジェクト。カスタムフィールドは事前にSendGridアカウントで作成しておく必要があります。"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
-          "source": "Search for Contacts",
+          "source": "Search for contacts",
           "message": "連絡先の検索"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "特定のフィールド値に一致する連絡先を連絡先データベースから検索します。メールアドレス、名前、または任意のカスタムフィールドで検索できます。"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "フィールド名"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.short_desc": {
@@ -868,7 +868,7 @@
           "message": "指定したフィールドと一致させる値。テキストフィールドはURLエンコードが必要な場合があります。"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "連絡先を削除"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "削除する連絡先IDの配列。既存の連絡先から選択してください。選択されたすべての連絡先が完全に削除されます。"
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
-          "source": "Remove Contacts from List",
+          "source": "Remove contacts from list",
           "message": "リストから連絡先を削除"
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "リストから削除する連絡先IDの配列。連絡先はデータベースに残りますが、このリストとのリンクは解除されます。"
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.display_name": {
-          "source": "Validate Email",
+          "source": "Validate email",
           "message": "メールアドレスを検証"
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.short_desc": {
@@ -964,7 +964,7 @@
           "message": "検証リクエストの発生元を追跡するための任意のソース文字列。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "メールの送信"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.short_desc": {
@@ -976,7 +976,7 @@
           "message": "1人以上の受信者にトランザクションメールを送信します。プレーンテキスト、HTML、またはその両方を送信できます。CC、BCC、カスタム返信先アドレスをサポートしています。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "宛先メールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -988,7 +988,7 @@
           "message": "メインの受信者のメールアドレス。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "宛先名"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "'To'フィールドをパーソナライズするための受信者のオプションの名前。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "送信者メールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "送信者として表示されるメールアドレス。SendGridアカウントで認証済みの送信者である必要があります。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "送信者名"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "メールの件名。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.display_name": {
-          "source": "Text Content",
+          "source": "Text content",
           "message": "テキストコンテンツ"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "メールコンテンツのプレーンテキストバージョン。テキストコンテンツまたはHTMLコンテンツ（あるいはその両方）を指定する必要があります。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.display_name": {
-          "source": "HTML Content",
+          "source": "HTML content",
           "message": "HTMLコンテンツ"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "メールコンテンツのHTMLバージョン。テキストコンテンツまたはHTMLコンテンツ（あるいはその両方）を指定する必要があります。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "返信先メールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "受信者が返信すべきオプションのメールアドレス。指定しない場合、返信は送信者アドレスに送信されます。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "返信先名"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "返信先アドレスに表示するオプションの名前。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "CCメールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "CC受信者として含めるメールアドレスの配列。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "BCCメールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "BCC受信者として含めるメールアドレスの配列。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.display_name": {
-          "source": "Send Template Email",
+          "source": "Send template email",
           "message": "テンプレートメールを送信"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "事前定義されたSendGridダイナミックテンプレートを使用してトランザクションメールを送信します。パーソナライズ用のダイナミックテンプレートデータを指定してメールコンテンツをカスタマイズします。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "宛先メールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "メインの受信者のメールアドレス。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "宛先名"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "'To'フィールドをパーソナライズするための受信者のオプションの名前。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "送信者メールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "送信者として表示されるメールアドレス。SendGridアカウントで認証済みの送信者である必要があります。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "送信者名"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "このメールに使用するダイナミックテンプレートを選択します。テンプレートはSendGridアカウントで作成されている必要があります。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.display_name": {
-          "source": "Template Values",
+          "source": "Template values",
           "message": "テンプレート値"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "ダイナミックテンプレートデータ用のキーと値のペアを含むJSONオブジェクト。これらの値は、選択したテンプレート内の対応するプレースホルダーを置き換えます。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "返信先メールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "受信者が返信すべきオプションのメールアドレス。指定しない場合、返信は送信者アドレスに送信されます。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "返信先名"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "返信先アドレスに表示するオプションの名前。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "CCメールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "CC受信者として含めるメールアドレスの配列。"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "BCCメールアドレス"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.short_desc": {

@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**Amazon SQS**にカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "メッセージを作成"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -352,7 +352,7 @@
           "message": "オプショナルなメッセージ属性、遅延設定、FIFOキューパラメータを使用して、Amazon SQSキューにテキストメッセージを送信します。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -376,7 +376,7 @@
           "message": "メッセージが送信されるAmazon SQSキューの完全なURL。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "メッセージボディ"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
@@ -388,7 +388,7 @@
           "message": "送信するメッセージ内容。プレーンテキストまたは最大256 KBまでの任意の文字列形式が可能です。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "遅延（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "メッセージの配信を遅延させる時間（0〜900秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "メッセージ属性"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -412,7 +412,7 @@
           "message": "フィルタリングや処理のためにメッセージに含めるカスタム属性。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "メッセージグループ ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -424,7 +424,7 @@
           "message": "メッセージが特定のメッセージグループに属していることを指定するタグ（FIFOキューのみ）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "メッセージ重複排除 ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "送信メッセージの重複排除に使用されるトークン（FIFOキューのみ）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "JSONメッセージを作成"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "構造化されたJSONデータをAmazon SQSキューに送信します。JSONオブジェクトはメッセージ本文に自動的にシリアル化されます。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -472,7 +472,7 @@
           "message": "JSONメッセージが送信されるAmazon SQSキューの完全なURL。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
-          "source": "Message Data",
+          "source": "Message data",
           "message": "メッセージデータ"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
@@ -484,7 +484,7 @@
           "message": "JSONにシリアル化され、メッセージ本文として送信される構造化データオブジェクト。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "遅延（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "メッセージの配信を遅延させる時間（0〜900秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "メッセージ属性"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "フィルタリングや処理のためにメッセージに含めるカスタム属性。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "メッセージグループ ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -520,7 +520,7 @@
           "message": "メッセージが特定のメッセージグループに属していることを指定するタグ（FIFOキューのみ）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "メッセージ重複排除 ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "送信メッセージの重複排除に使用されるトークン（FIFOキューのみ）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
-          "source": "Create Queue",
+          "source": "Create queue",
           "message": "キューの作成"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
@@ -544,7 +544,7 @@
           "message": "FIFO機能、デッドレターキュー、暗号化オプションを含む構成可能な設定で、新しいAmazon SQSキューを作成します。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -556,7 +556,7 @@
           "message": "新しいSQSキューを作成するAWSリージョンを選択します。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
-          "source": "Queue Name",
+          "source": "Queue name",
           "message": "キュー名"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "キューの名前。FIFOキュー名は末尾が.fifoサフィックスで終わる必要があります。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
-          "source": "FIFO Queue",
+          "source": "FIFO queue",
           "message": "FIFOキュー"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "メッセージが送信された正確な順序で一度だけ処理されることを保証するFIFOキューを作成するかどうか。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "コンテンツに基づく重複排除"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -592,7 +592,7 @@
           "message": "FIFOキューの場合、メッセージ本文のSHA-256ハッシュを使用した重複排除を有効にします。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "可視性タイムアウト（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -604,7 +604,7 @@
           "message": "メッセージの受信後、他のコンシューマーから非表示になる時間（0〜43200秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
-          "source": "Message Retention Period (Seconds)",
+          "source": "Message retention period (seconds)",
           "message": "メッセージ保持期間（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
@@ -616,7 +616,7 @@
           "message": "メッセージがキューに保持される時間（60〜1209600秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "遅延（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "このキューに追加されるメッセージのデフォルト遅延時間（0〜900秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
-          "source": "Receive Wait Time (Seconds)",
+          "source": "Receive wait time (seconds)",
           "message": "受信待機時間（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
@@ -640,7 +640,7 @@
           "message": "ReceiveMessage呼び出しがメッセージの到着を待機する時間（0〜20秒）。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
-          "source": "Max Receive Count",
+          "source": "Max receive count",
           "message": "最大受信数"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "メッセージがデッドレターキューに移動されるまでに受信できる回数。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
-          "source": "Dead Letter Queue URL",
+          "source": "Dead letter queue URL",
           "message": "デッドレターキューURL"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
@@ -664,7 +664,7 @@
           "message": "失敗したメッセージ処理のデッドレターキューとして使用するキューのURL。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "KMSマスターキーID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "キューメッセージのサーバー側暗号化用のAWS KMSキーのID。"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
-          "source": "KMS Data Key Reuse Period (Seconds)",
+          "source": "KMS data key reuse period (seconds)",
           "message": "KMSデータキーの再利用期間（秒）"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Amazon SQSがデータキーを再利用できる時間（60〜86400秒）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
-          "source": "List Queues",
+          "source": "List queues",
           "message": "キューを一覧表示"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
@@ -700,7 +700,7 @@
           "message": "オプションのフィルタリングと詳細なキュー属性を使用して、指定されたリージョン内のすべてのAmazon SQSキューのリストを取得します。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
@@ -712,7 +712,7 @@
           "message": "SQSキューのリストを取得するAWSリージョンを選択します。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
-          "source": "Queue Name Prefix",
+          "source": "Queue name prefix",
           "message": "キュー名のプレフィックス"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
@@ -724,7 +724,7 @@
           "message": "キュー名をフィルタリングするためのオプションのプレフィックス。このプレフィックスで始まる名前のキューのみが返されます。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "最大結果数"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -736,7 +736,7 @@
           "message": "返されるキュー結果の最大数（1〜1000）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "属性を含める"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -748,7 +748,7 @@
           "message": "メッセージ数、タイムスタンプ、設定などの詳細なキュー属性を含めるかどうか。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "メッセージを一覧表示"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "設定可能なポーリングオプションとメッセージ属性の取得を使用して、Amazon SQSキューからメッセージを取得します。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
@@ -784,7 +784,7 @@
           "message": "メッセージを受信するAmazon SQSキューの完全なURL。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
-          "source": "Max Number of Messages",
+          "source": "Max number of messages",
           "message": "最大メッセージ数"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
@@ -796,7 +796,7 @@
           "message": "単一のリクエストで返すメッセージの最大数（1〜10）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "待機時間（秒）"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -808,7 +808,7 @@
           "message": "呼び出しがメッセージの到着を待機する時間（0〜20秒）。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "可視性タイムアウト（秒）"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -820,7 +820,7 @@
           "message": "受信したメッセージが後続の取得リクエストから非表示になる期間。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
-          "source": "Message Attribute Names",
+          "source": "Message attribute names",
           "message": "メッセージ属性名"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
@@ -832,7 +832,7 @@
           "message": "返されるメッセージ属性の名前。すべての属性を返すには「All」を使用します。"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "属性名"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "各メッセージとともに返すシステム属性の名前。すべての属性を返すには「All」を使用します。"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
-          "source": "Get Queue",
+          "source": "Get queue",
           "message": "キューを取得"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "設定、メッセージ数、タイムスタンプを含む、特定のAmazon SQSキューの詳細情報と属性を取得します。"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -880,7 +880,7 @@
           "message": "情報を取得するAmazon SQSキューの完全なURL。"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "属性名"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "返されるキュー属性の名前。利用可能なすべての属性を返すには「All」を使用します。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "新しいメッセージ"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Amazon SQSキューを監視して新しいメッセージがないか確認し、メッセージが利用可能になるとトリガーされます。ロングポーリングとメッセージ属性の取得をサポートしています。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -928,7 +928,7 @@
           "message": "メッセージを受信するAmazon SQSキューの完全なURL。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "待機時間（秒）"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "呼び出しが返される前に、メッセージがキューに到着するのを待機する時間（0〜20秒）。"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "最大メッセージ数"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -952,7 +952,7 @@
           "message": "返されるメッセージの最大数（1〜10）。返されるメッセージ数がこれより少ない場合もあることに注意してください。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "New JSON Message",
+          "source": "New JSON message",
           "message": "新しいJSONメッセージ"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "有効なJSONデータを含む新しいメッセージがないかAmazon SQSキューを監視します。解析可能なJSONコンテンツを含むメッセージに対してのみトリガーされます。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -988,7 +988,7 @@
           "message": "JSON メッセージを受信する Amazon SQS キューの完全な URL。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "待機時間（秒）"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "呼び出しが返される前に、メッセージがキューに到着するのを待機する時間（0〜20秒）。"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "最大メッセージ数"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "返されるメッセージの最大数（1〜10）。返されるメッセージ数がこれより少ない場合もあることに注意してください。"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
-          "source": "New Queue",
+          "source": "New queue",
           "message": "新しいキュー"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "指定したリージョンで新規作成された Amazon SQS キューを監視し、新しいキューが検出されたときにトリガーします。"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {

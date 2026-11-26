@@ -8,13 +8,13 @@ const TodoistAppEn = {
   actions: {
     add_comment_to_project: {
       groups: ['Comments'],
-      displayName: 'Add Comment to Project',
+      displayName: 'Add comment to project',
       shortDesc: 'Add a comment to a Todoist project',
       longDesc:
         'Creates a new comment on a specified Todoist project. Comments can be used to provide updates, notes, or collaborate with team members on project-related discussions.',
       options: {
         content: {
-          displayName: 'Comment Content',
+          displayName: 'Comment content',
           shortDesc: 'The text content of the comment',
           longDesc:
             'The message or note you want to add to the project. Supports Markdown formatting for rich text.',
@@ -28,13 +28,13 @@ const TodoistAppEn = {
     },
     add_comment_to_task: {
       groups: ['Comments'],
-      displayName: 'Add Comment to Task',
+      displayName: 'Add comment to task',
       shortDesc: 'Add a comment to a Todoist task',
       longDesc:
         'Creates a new comment on a specified Todoist task. Use comments to add notes, updates, or collaborate with team members on specific tasks.',
       options: {
         content: {
-          displayName: 'Comment Content',
+          displayName: 'Comment content',
           shortDesc: 'The text content of the comment',
           longDesc:
             'The message or note you want to add to the task. Supports Markdown formatting for rich text.',
@@ -48,7 +48,7 @@ const TodoistAppEn = {
     },
     complete_task: {
       groups: ['Tasks'],
-      displayName: 'Complete Task',
+      displayName: 'Complete task',
       shortDesc: 'Mark a Todoist task as complete',
       longDesc:
         'Closes a task by marking it as completed. This action moves the task to the completed tasks list and updates its status accordingly.',
@@ -62,13 +62,13 @@ const TodoistAppEn = {
     },
     create_project: {
       groups: ['Projects'],
-      displayName: 'Create Project',
+      displayName: 'Create project',
       shortDesc: 'Create a new Todoist project',
       longDesc:
         'Creates a new project in Todoist. Projects help you organize related tasks and collaborate with team members.',
       options: {
         name: {
-          displayName: 'Project Name',
+          displayName: 'Project name',
           shortDesc: 'The name of the project',
           longDesc: 'A descriptive name for your new Todoist project.',
         },
@@ -84,13 +84,13 @@ const TodoistAppEn = {
           longDesc: 'The color used to visually identify the project in the Todoist interface.',
         },
         view_style: {
-          displayName: 'View Style',
+          displayName: 'View style',
           shortDesc: 'How the project is displayed',
           longDesc:
             'Choose how tasks in this project are displayed: as a list, board (Kanban), or calendar view.',
         },
         is_favorite: {
-          displayName: 'Is Favorite',
+          displayName: 'Is favorite',
           shortDesc: 'Mark project as favorite',
           longDesc:
             'When enabled, the project will appear in your favorites section for quick access.',
@@ -99,13 +99,13 @@ const TodoistAppEn = {
     },
     create_task: {
       groups: ['Tasks'],
-      displayName: 'Create Task',
+      displayName: 'Create task',
       shortDesc: 'Create a new Todoist task',
       longDesc:
         'Creates a new task in Todoist. Tasks can be assigned to projects, sections, given labels, priorities, due dates, and more.',
       options: {
         content: {
-          displayName: 'Task Content',
+          displayName: 'Task content',
           shortDesc: 'The task description',
           longDesc:
             'The main text describing what needs to be done. This is the primary content of the task.',
@@ -152,7 +152,7 @@ const TodoistAppEn = {
             'Set the priority level for the task. Higher priority tasks are displayed with color-coded flags: 1 (urgent), 2 (high), 3 (normal), 4 (low).',
         },
         due_datetime: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'When the task is due',
           longDesc: 'Set a due date and optionally a time for when the task should be completed.',
         },
@@ -180,7 +180,7 @@ const TodoistAppEn = {
     },
     delete_task: {
       groups: ['Tasks'],
-      displayName: 'Delete Task',
+      displayName: 'Delete task',
       shortDesc: 'Permanently delete a Todoist task',
       longDesc:
         'Permanently removes a task from Todoist. This action cannot be undone. Use with caution.',
@@ -194,7 +194,7 @@ const TodoistAppEn = {
     },
     get_project: {
       groups: ['Projects'],
-      displayName: 'Get Project',
+      displayName: 'Get project',
       shortDesc: 'Retrieve details of a Todoist project',
       longDesc:
         'Fetches detailed information about a specific Todoist project, including its properties, metadata, and settings.',
@@ -208,7 +208,7 @@ const TodoistAppEn = {
     },
     get_project_collaborators: {
       groups: ['Projects'],
-      displayName: 'Get Project Collaborators',
+      displayName: 'Get project collaborators',
       shortDesc: 'List collaborators in a project',
       longDesc:
         'Retrieves a list of all collaborators who have access to a specific Todoist project. Useful for managing team assignments and permissions.',
@@ -234,7 +234,7 @@ const TodoistAppEn = {
     },
     get_task: {
       groups: ['Tasks'],
-      displayName: 'Get Task',
+      displayName: 'Get task',
       shortDesc: 'Retrieve details of a Todoist task',
       longDesc:
         'Fetches detailed information about a specific Todoist task, including all its properties, labels, due dates, and metadata.',
@@ -248,7 +248,7 @@ const TodoistAppEn = {
     },
     get_tasks_by_filter: {
       groups: ['Tasks'],
-      displayName: 'Get Tasks by Filter',
+      displayName: 'Get tasks by filter',
       shortDesc: 'Search tasks using Todoist filter queries',
       longDesc:
         'Retrieves tasks that match a specific filter query. Todoist filters allow powerful searches using keywords, dates, priorities, labels, and more. See Todoist filter documentation for advanced query syntax.',
@@ -265,7 +265,7 @@ const TodoistAppEn = {
           longDesc: 'The maximum number of tasks to return in a single request. Default is 50.',
         },
         query: {
-          displayName: 'Filter Query',
+          displayName: 'Filter query',
           shortDesc: 'The filter expression',
           longDesc:
             'The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details',
@@ -274,7 +274,7 @@ const TodoistAppEn = {
     },
     list_labels: {
       groups: ['Labels'],
-      displayName: 'List Labels',
+      displayName: 'List labels',
       shortDesc: 'Retrieve all Todoist labels',
       longDesc:
         'Fetches a list of all labels in your Todoist account. Labels are used to categorize and filter tasks across projects.',
@@ -294,7 +294,7 @@ const TodoistAppEn = {
     },
     list_projects: {
       groups: ['Projects'],
-      displayName: 'List Projects',
+      displayName: 'List projects',
       shortDesc: 'Retrieve all Todoist projects',
       longDesc:
         'Fetches a list of all projects in your Todoist account, including shared and personal projects. Use this to discover available projects for task organization.',
@@ -314,7 +314,7 @@ const TodoistAppEn = {
     },
     list_sections: {
       groups: ['Sections'],
-      displayName: 'List Sections',
+      displayName: 'List sections',
       shortDesc: 'Retrieve sections from projects',
       longDesc:
         'Fetches a list of sections. Sections are used within projects to organize tasks into logical groups or categories.',
@@ -339,7 +339,7 @@ const TodoistAppEn = {
     },
     list_tasks: {
       groups: ['Tasks'],
-      displayName: 'List Tasks',
+      displayName: 'List tasks',
       shortDesc: 'Retrieve Todoist tasks',
       longDesc:
         'Fetches a list of tasks with optional filtering by project, section, or label. Use this to retrieve tasks for processing or display.',
@@ -379,7 +379,7 @@ const TodoistAppEn = {
     },
     move_task_to_section: {
       groups: ['Tasks'],
-      displayName: 'Move Task to Section',
+      displayName: 'Move task to section',
       shortDesc: 'Move a task to a different section or project',
       longDesc:
         'Moves a task to a different section within the same project, or to a different project entirely. Useful for reorganizing tasks and workflows.',
@@ -405,7 +405,7 @@ const TodoistAppEn = {
     },
     update_task: {
       groups: ['Tasks'],
-      displayName: 'Update Task',
+      displayName: 'Update task',
       shortDesc: 'Update an existing Todoist task',
       longDesc:
         'Modifies the properties of an existing Todoist task. You can update content, description, due dates, labels, priority, and more.',
@@ -416,7 +416,7 @@ const TodoistAppEn = {
           longDesc: 'Select the Todoist task you want to modify.',
         },
         content: {
-          displayName: 'Task Content',
+          displayName: 'Task content',
           shortDesc: 'Updated task description',
           longDesc: 'The new main text describing what needs to be done.',
         },
@@ -452,7 +452,7 @@ const TodoistAppEn = {
           longDesc: 'Change the priority level: 1 (urgent), 2 (high), 3 (normal), 4 (low).',
         },
         due_datetime: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'Updated due date',
           longDesc: 'Change the due date and optionally the time for the task.',
         },
@@ -480,7 +480,7 @@ const TodoistAppEn = {
   },
   triggers: {
     new_completed_task: {
-      displayName: 'New Completed Task',
+      displayName: 'New completed task',
       shortDesc: 'Triggers when a task is completed in Todoist',
       longDesc:
         'Monitors your Todoist account for newly completed tasks. This trigger fires whenever any task is marked as complete, with optional filtering by project, section, or custom query. Perfect for tracking productivity, logging completions, or triggering follow-up workflows based on task completion.',
@@ -498,7 +498,7 @@ const TodoistAppEn = {
             'Optionally monitor only completed tasks from a specific section within a project. This allows you to track completions in specific areas of your workflow.',
         },
         query: {
-          displayName: 'Filter Query',
+          displayName: 'Filter query',
           shortDesc: 'Custom filter expression',
           longDesc:
             'The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details',

@@ -28,7 +28,7 @@
           "message": "Uskutočnite vlastné volanie HTTP / REST API do **Brevo** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Vytvoriť kontakt"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Vytvorte nový kontakt v službe Brevo. Kontakty možno vytvoriť pomocou e-mailovej adresy, telefónneho čísla (s kódmi krajiny) alebo externého ID. Súčasťou môžu byť aj vlastné atribúty a priradenia do zoznamov."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "E-mailová adresa"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Pole ID zoznamov, do ktorých sa má kontakt po vytvorení automaticky pridať."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
-          "source": "Email Blacklisted",
+          "source": "Email blacklisted",
           "message": "E-mail na čiernej listine"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Nastavte na true na zaradenie kontaktu na čiernu listinu pre prijímanie e-mailových kampaní."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
-          "source": "SMS Blacklisted",
+          "source": "SMS blacklisted",
           "message": "SMS na čiernej listine"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Nastavte na true na zaradenie kontaktu na čiernu listinu pre prijímanie SMS kampaní."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Contact Attributes",
+          "source": "Contact attributes",
           "message": "Atribúty kontaktu"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Vlastné atribúty pre kontakt vrátane mena, firmy, telefónneho čísla a všetkých vlastných polí definovaných vo vašom účte."
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Vymazať kontakt"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Trvalo vymazať kontakt z vášho účtu Brevo. Túto akciu nie je možné vrátiť späť. Kontakt bude odstránený zo všetkých zoznamov a kampaní."
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
-          "source": "Contact Identifier",
+          "source": "Contact identifier",
           "message": "Identifikátor kontaktu"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Jedinečný identifikátor kontaktu, ktorý sa má trvalo vymazať. Môže to byť e-mailová adresa, ID kontaktu, telefónne číslo, externé ID, WhatsApp ID alebo číslo pevnej linky."
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "Získať kontakt"
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Získať podrobné informácie o špecifickom kontakte. Kontakty môžete identifikovať pomocou e-mailovej adresy, ID kontaktu, telefónneho čísla, externého ID, WhatsApp ID alebo čísla pevnej linky."
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
-          "source": "Contact Identifier",
+          "source": "Contact identifier",
           "message": "Identifikátor kontaktu"
         },
         "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Jedinečný identifikátor kontaktu. Môže to byť e-mailová adresa, ID kontaktu, telefónne číslo (SMS), externé ID, WhatsApp ID alebo číslo pevnej linky."
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Zoznam kontaktov"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Získať zoznam všetkých kontaktov vo vašom účte s možnosťami stránkovania, triedenia a filtrovania. Filtrujte podľa zoznamov, atribútov alebo iných kritérií."
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "Limit výsledkov"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Maximálny počet kontaktov na stranu. Predvolená hodnota je 10, maximum je 100."
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "Posun strany"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Počet kontaktov na preskočenie pre stránkovanie. Použite s limitom pre stránkovanie."
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Najstaršie ako prvé"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.display_name": {
-          "source": "Filter by Lists",
+          "source": "Filter by lists",
           "message": "Filtrovať podľa zoznamov"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Pole ID zoznamov na filtrovanie kontaktov. Vrátia sa iba kontakty patriace do týchto zoznamov."
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.display_name": {
-          "source": "Attribute Filter",
+          "source": "Attribute filter",
           "message": "Filter atribútov"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Filtrovať kontakty na základe konkrétnych hodnôt atribútov pomocou operátora rovnosti."
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Attribute Field",
+          "source": "Attribute field",
           "message": "Pole atribútu"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -564,7 +564,7 @@
           "message": "Názov poľa atribútu kontaktu pre filtrovanie."
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Hodnota filtrovania"
         },
         "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -576,7 +576,7 @@
           "message": "Hodnota, ktorú musí atribút rovnať."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Aktualizovať kontakt"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -588,7 +588,7 @@
           "message": "Aktualizovať informácie o kontakte vrátane atribútov, preferencií e-mailu, členstva v zoznamoch a vlastných údajov. Kontakt je možné identifikovať podľa e-mailu, ID alebo iných identifikátorov."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
-          "source": "Contact Identifier",
+          "source": "Contact identifier",
           "message": "Identifikátor kontaktu"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
@@ -600,7 +600,7 @@
           "message": "Jedinečný identifikátor kontaktu, ktorý sa má aktualizovať. Môže to byť e-mailová adresa, ID kontaktu, telefónne číslo, externé ID, WhatsApp ID alebo číslo pevnej linky."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "New Email Address",
+          "source": "New email address",
           "message": "Nová e-mailová adresa"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Vlastný externý identifikátor pre kontakt z vášho systému."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
-          "source": "Add to Lists",
+          "source": "Add to lists",
           "message": "Pridať do zoznamov"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
@@ -636,7 +636,7 @@
           "message": "Pole ID zoznamov, do ktorých sa má kontakt pridať."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.display_name": {
-          "source": "Remove from Lists",
+          "source": "Remove from lists",
           "message": "Odstrániť zo zoznamov"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Pole ID zoznamov, z ktorých sa má kontakt odstrániť."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
-          "source": "Email Blacklisted",
+          "source": "Email blacklisted",
           "message": "E-mail na čiernej listine"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Nastaviť stav e-mailovej čiernej listiny pre kontakt."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
-          "source": "SMS Blacklisted",
+          "source": "SMS blacklisted",
           "message": "SMS na čiernej listine"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Nastaviť stav SMS čiernej listiny pre kontakt."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Contact Attributes",
+          "source": "Contact attributes",
           "message": "Atribúty kontaktu"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Aktualizovať vlastné atribúty kontaktu vrátane mena, spoločnosti, telefónneho čísla a akýchkoľvek vlastných polí."
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.display_name": {
-          "source": "List Folders",
+          "source": "List folders",
           "message": "Zoznam priečinkov"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Získať všetky priečinky používané na organizáciu zoznamov kontaktov s počtom odberateľov a informáciami o vytvorení."
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "Limit výsledkov"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Maximálny počet priečinkov na vrátenie na stránku. Predvolená hodnota je 10."
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "Posun strany"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Počet priečinkov na preskočenie pre stránkovanie."
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.short_desc": {
@@ -740,7 +740,7 @@
           "message": "Najstaršie ako prvé"
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
+          "source": "Add contacts to list",
           "message": "Pridať kontakty do zoznamu"
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Jedinečný identifikátor zoznamu, do ktorého sa majú pridať kontakty."
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "E-mailové adresy"
         },
         "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Pole ID kontaktov, ktoré sa majú pridať do zoznamu."
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create List",
+          "source": "Create list",
           "message": "Vytvoriť zoznam"
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -800,7 +800,7 @@
           "message": "Vytvorte nový zoznam kontaktov v určenej zložke. Zoznamy sa používajú na organizáciu a segmentáciu vašich kontaktov pre cielené kampane."
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "List Name",
+          "source": "List name",
           "message": "Názov zoznamu"
         },
         "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -824,7 +824,7 @@
           "message": "Zložka, v ktorej sa zoznam vytvorí. Povinné pre organizáciu zoznamu."
         },
         "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete List",
+          "source": "Delete list",
           "message": "Vymazať zoznam"
         },
         "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -848,7 +848,7 @@
           "message": "Jedinečný identifikátor zoznamu kontaktov, ktorý sa má trvalo vymazať."
         },
         "app.QnJldm8.action.Z2V0X2xpc3Q.display_name": {
-          "source": "Get List",
+          "source": "Get list",
           "message": "Získať zoznam"
         },
         "app.QnJldm8.action.Z2V0X2xpc3Q.short_desc": {
@@ -872,7 +872,7 @@
           "message": "Jedinečný identifikátor zoznamu kontaktov, pre ktorý sa majú získať podrobnosti."
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.display_name": {
-          "source": "List All Lists",
+          "source": "List all lists",
           "message": "Zobraziť všetky zoznamy"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.short_desc": {
@@ -884,7 +884,7 @@
           "message": "Získať všetky zoznamy kontaktov vo vašom účte s možnosťami stránkovania a triedenia. Obsahuje počty odberateľov a dátumy vytvorenia."
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "Limit výsledkov"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.short_desc": {
@@ -896,7 +896,7 @@
           "message": "Maximálny počet zoznamov na vrátenie na stránku. Predvolená hodnota je 10."
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "Posun strany"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.short_desc": {
@@ -908,7 +908,7 @@
           "message": "Počet zoznamov na preskočenie pre stránkovanie."
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Najstaršie ako prvé"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
-          "source": "Remove Contacts from List",
+          "source": "Remove contacts from list",
           "message": "Odstrániť kontakty zo zoznamu"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Jedinečný identifikátor zoznamu, z ktorého sa majú odstrániť kontakty."
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "E-mailové adresy"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Pole ID kontaktov na odstránenie zo zoznamu."
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.display_name": {
-          "source": "Remove All",
+          "source": "Remove all",
           "message": "Odstrániť všetko"
         },
         "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Nastavte na true na odstránenie všetkých kontaktov zo zoznamu."
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.display_name": {
-          "source": "Update List",
+          "source": "Update list",
           "message": "Aktualizovať zoznam"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Jedinečný identifikátor zoznamu kontaktov, ktorý sa má aktualizovať."
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.display_name": {
-          "source": "New Name",
+          "source": "New name",
           "message": "Nový názov"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Nový zobrazovaný názov pre zoznam kontaktov."
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.display_name": {
-          "source": "New Folder",
+          "source": "New folder",
           "message": "Nový priečinok"
         },
         "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Nové ID priečinka, do ktorého sa má zoznam presunúť."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
-          "source": "Create Company",
+          "source": "Create company",
           "message": "Vytvoriť spoločnosť"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Vytvorte nový záznam firmy s vlastnými atribútmi a voliteľnými väzbami na existujúce kontakty a obchody."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Názov spoločnosti"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Obchodný názov firmy. Povinné pole."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Company Attributes",
+          "source": "Company attributes",
           "message": "Atribúty firmy"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Hlavný doména pridružená k spoločnosti."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "Prepojené kontakty"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Pole ID kontaktov na prepojenie s touto firmou."
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
-          "source": "Associated Deals",
+          "source": "Associated deals",
           "message": "Prepojené obchody"
         },
         "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Pole ID obchodov na prepojenie s touto firmou."
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
-          "source": "Delete Company",
+          "source": "Delete company",
           "message": "Odstrániť spoločnosť"
         },
         "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Jedinečný identifikátor spoločnosti, ktorú chcete trvalo vymazať zo svojho účtu."
         },
         "app.QnJldm8.action.Z2V0X2NvbXBhbnk.display_name": {
-          "source": "Get Company",
+          "source": "Get company",
           "message": "Získať spoločnosť"
         },
         "app.QnJldm8.action.Z2V0X2NvbXBhbnk.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Jedinečný identifikátor firmy, pre ktorú sa majú získať podrobnosti."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.display_name": {
-          "source": "List Companies",
+          "source": "List companies",
           "message": "Zoznam spoločností"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Získať zoznam všetkých spoločností s možnosťami stránkovania, triedenia a filtrovania. Filtrujte podľa pridružených kontaktov, obchodov alebo vlastných atribútov."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "Limit výsledkov"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Maximálny počet spoločností na stranu. Predvolená hodnota je 10."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "Číslo stránky"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Číslo strany na získanie (začína od 1)."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Zostupne"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.display_name": {
-          "source": "Sort By Field",
+          "source": "Sort by field",
           "message": "Zoradiť podľa poľa"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "Atribút spoločnosti, podľa ktorého sa majú zoradiť výsledky."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contact",
+          "source": "Filter by contact",
           "message": "Filtrovať podľa kontaktu"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Filtrovať spoločnosti, ktoré sú pridružené k špecifickému kontaktu."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.display_name": {
-          "source": "Filter by Deal",
+          "source": "Filter by deal",
           "message": "Filtrovať podľa obchodu"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Filtrovať spoločnosti, ktoré sú pridružené k špecifickému obchodu."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.display_name": {
-          "source": "Attribute Filter",
+          "source": "Attribute filter",
           "message": "Filter atribútov"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "Filtrovať spoločnosti na základe konkrétnych hodnôt atribútov."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Attribute Field",
+          "source": "Attribute field",
           "message": "Pole atribútu"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Názov poľa atribútu spoločnosti pre filtrovanie."
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Hodnota filtrovania"
         },
         "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Hodnota, ktorú musí atribút rovnať."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.display_name": {
-          "source": "Update Company",
+          "source": "Update company",
           "message": "Aktualizovať spoločnosť"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Jedinečný identifikátor spoločnosti, ktorá sa má aktualizovať."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Názov spoločnosti"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "Nový obchodný názov spoločnosti."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Company Attributes",
+          "source": "Company attributes",
           "message": "Atribúty firmy"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "Aktualizovať vlastné atribúty spoločnosti vrátane odvetvia, veľkosti, webovej lokality a akýchkoľvek vlastných polí."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "Prepojené kontakty"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "Pole ID kontaktov na prepojenie s touto spoločnosťou. Nahradí existujúce prepojenia."
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
-          "source": "Associated Deals",
+          "source": "Associated deals",
           "message": "Prepojené obchody"
         },
         "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "Pole ID obchodných prípadov na prepojenie s touto spoločnosťou. Nahradí existujúce prepojenia."
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.display_name": {
-          "source": "Create Deal",
+          "source": "Create deal",
           "message": "Vytvoriť obchodný prípad"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "Vytvorte nový obchod vo vašom predajnom kanáli s vlastnými atribútmi a voliteľnými väzbami na existujúce kontakty a firmy."
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.display_name": {
-          "source": "Deal Name",
+          "source": "Deal name",
           "message": "Názov obchodu"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "Popisný názov pre obchodnú príležitosť. Povinné pole."
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Deal Attributes",
+          "source": "Deal attributes",
           "message": "Atribúty obchodu"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
@@ -1392,7 +1392,7 @@
           "message": "Vlastné atribúty pre obchod vrátane hodnoty, fáz, dátumu uzavretia a všetkých vlastných polí definovaných vo vašom účte."
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "Prepojené kontakty"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1404,7 +1404,7 @@
           "message": "Pole ID kontaktov na prepojenie s týmto obchodom."
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
-          "source": "Associated Companies",
+          "source": "Associated companies",
           "message": "Prepojené firmy"
         },
         "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
@@ -1416,7 +1416,7 @@
           "message": "Pole ID firiem na prepojenie s týmto obchodom."
         },
         "app.QnJldm8.action.ZGVsZXRlX2RlYWw.display_name": {
-          "source": "Delete Deal",
+          "source": "Delete deal",
           "message": "Vymazať obchod"
         },
         "app.QnJldm8.action.ZGVsZXRlX2RlYWw.short_desc": {
@@ -1440,7 +1440,7 @@
           "message": "Jedinečný identifikátor obchodu, ktorý sa má trvalo vymazať z vášho predajného kanála."
         },
         "app.QnJldm8.action.Z2V0X2RlYWw.display_name": {
-          "source": "Get Deal",
+          "source": "Get deal",
           "message": "Získať obchod"
         },
         "app.QnJldm8.action.Z2V0X2RlYWw.short_desc": {
@@ -1464,7 +1464,7 @@
           "message": "Jedinečný identifikátor obchodu, pre ktorý sa majú získať podrobnosti."
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.display_name": {
-          "source": "List Deals",
+          "source": "List deals",
           "message": "Zoznam obchodných prípadov"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.short_desc": {
@@ -1476,7 +1476,7 @@
           "message": "Získať zoznam všetkých obchodov vo vašej pipeline s možnosťami stránkovania, triedenia a filtrovania. Filtrujte podľa pridružených kontaktov, spoločností alebo názvu obchodu."
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.display_name": {
-          "source": "Results Limit",
+          "source": "Results limit",
           "message": "Limit výsledkov"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "Maximálny počet obchodov na vrátenie na stránku. Predvolená hodnota je 10."
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.display_name": {
-          "source": "Page Offset",
+          "source": "Page offset",
           "message": "Posun strany"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.short_desc": {
@@ -1500,7 +1500,7 @@
           "message": "Počet obchodov na preskočenie pre stránkovanie."
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Poradie zoradenia"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.short_desc": {
@@ -1520,7 +1520,7 @@
           "message": "Najstaršie najprv"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contact",
+          "source": "Filter by contact",
           "message": "Filtrovať podľa kontaktu"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1532,7 +1532,7 @@
           "message": "Filtrovať obchody, ktoré sú spojené s konkrétnym kontaktom."
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
-          "source": "Filter by Company",
+          "source": "Filter by company",
           "message": "Filtrovať podľa spoločnosti"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {
@@ -1544,7 +1544,7 @@
           "message": "Filtrovať obchody, ktoré sú spojené s konkrétnou spoločnosťou."
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.display_name": {
-          "source": "Deal Name Filter",
+          "source": "Deal name filter",
           "message": "Filter názvu obchodu"
         },
         "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.short_desc": {
@@ -1556,7 +1556,7 @@
           "message": "Filtrovať obchody podľa názvu obsahujúceho zadaný text."
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.display_name": {
-          "source": "Update Deal",
+          "source": "Update deal",
           "message": "Aktualizovať obchod"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "Jedinečný identifikátor obchodného prípadu, ktorý sa má aktualizovať."
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.display_name": {
-          "source": "Deal Name",
+          "source": "Deal name",
           "message": "Názov obchodu"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.short_desc": {
@@ -1592,7 +1592,7 @@
           "message": "Nový popisný názov pre obchodný prípad."
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
-          "source": "Deal Attributes",
+          "source": "Deal attributes",
           "message": "Atribúty obchodu"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
@@ -1604,7 +1604,7 @@
           "message": "Aktualizovať vlastné atribúty obchodného prípadu vrátane hodnoty, fáz, dátumu uzavretia a akýchkoľvek vlastných polí."
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
-          "source": "Associated Contacts",
+          "source": "Associated contacts",
           "message": "Prepojené kontakty"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "Pole ID kontaktov na prepojenie s týmto obchodným prípadom. Nahradí existujúce prepojenia."
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
-          "source": "Associated Companies",
+          "source": "Associated companies",
           "message": "Prepojené firmy"
         },
         "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "Pole ID spoločností na prepojenie s týmto obchodným prípadom. Nahradí existujúce prepojenia."
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.display_name": {
-          "source": "New Company",
+          "source": "New company",
           "message": "Nová spoločnosť"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.short_desc": {
@@ -1640,7 +1640,7 @@
           "message": "Monitoruje váš účet Brevo na novovytvorené spoločnosti. Voliteľne filtruje podľa spoločností prepojených s konkrétnymi kontaktmi alebo obchodmi."
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contact",
+          "source": "Filter by contact",
           "message": "Filtrovať podľa kontaktu"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Voliteľný filter na spustenie iba vtedy, keď sú vytvorené spoločnosti prepojené s konkrétnym kontaktom."
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.display_name": {
-          "source": "Filter by Deal",
+          "source": "Filter by deal",
           "message": "Filtrovať podľa obchodu"
         },
         "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "Voliteľný filter na spustenie iba vtedy, keď sú vytvorené spoločnosti prepojené s konkrétnym obchodom."
         },
         "app.QnJldm8.action.bmV3X2xpc3Q.display_name": {
-          "source": "New List",
+          "source": "New list",
           "message": "Nový zoznam"
         },
         "app.QnJldm8.action.bmV3X2xpc3Q.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Monitoruje váš účet Brevo na novovytvorené zoznamy kontaktov. Spustí sa vždy, keď sa v akomkoľvek priečinku vytvorí nový zoznam."
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Nový kontakt"
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -1688,7 +1688,7 @@
           "message": "Monitoruje váš účet Brevo na novovytvorené kontakty. Voliteľne filtruje podľa konkrétnych zoznamov na spustenie iba vtedy, keď sú kontakty pridané do konkrétnych zoznamov."
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
-          "source": "Filter by Lists",
+          "source": "Filter by lists",
           "message": "Filtrovať podľa zoznamov"
         },
         "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "Voliteľný filter na spustenie iba vtedy, keď sú kontakty vytvorené v špecifikovaných zoznamoch. Ak je prázdne, spúšťa sa pre všetky nové kontakty."
         },
         "app.QnJldm8.action.bmV3X2RlYWw.display_name": {
-          "source": "New Deal",
+          "source": "New deal",
           "message": "Nový obchodný prípad"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.short_desc": {
@@ -1712,7 +1712,7 @@
           "message": "Monitoruje váš účet Brevo na novovytvorené obchody v obchodnej pipeline. Voliteľne filtruje podľa obchodov prepojených s konkrétnymi kontaktmi alebo spoločnosťami."
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
-          "source": "Filter by Contacts",
+          "source": "Filter by contacts",
           "message": "Filtrovať podľa kontaktov"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "Voliteľný filter na spustenie iba vtedy, keď sú vytvorené obchody prepojené so špecifikovanými kontaktmi."
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
-          "source": "Filter by Companies",
+          "source": "Filter by companies",
           "message": "Filtrovať podľa spoločností"
         },
         "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {

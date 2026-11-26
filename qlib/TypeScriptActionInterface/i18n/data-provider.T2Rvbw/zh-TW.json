@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Odoo CRM** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選填查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n當端點尚未在此應用程式中作為第一級動作公開時，請使用此動作。"
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.display_name": {
-          "source": "Create Lead",
+          "source": "Create lead",
           "message": "建立潛在客戶"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "識別此潛在客戶或商機的主要標題或名稱。此為必填欄位，將顯示於潛在客戶清單和報告中。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
-          "source": "Contact Name",
+          "source": "Contact name",
           "message": "聯絡人姓名"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
@@ -376,7 +376,7 @@
           "message": "與此潛在客戶相關聯的主要聯絡人全名。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "公司名稱"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "此潛在客戶所代表的公司或組織名稱。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "聯絡資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -424,7 +424,7 @@
           "message": "用於聯絡此潛在客戶的主要電子郵件地址"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Position",
+          "source": "Job position",
           "message": "職位"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -460,7 +460,7 @@
           "message": "公司或聯絡人的網站URL"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "地址資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -544,7 +544,7 @@
           "message": "地址的郵遞區號或 ZIP 碼。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
-          "source": "Sales Information",
+          "source": "Sales information",
           "message": "銷售資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
@@ -556,7 +556,7 @@
           "message": "銷售管理資訊，包含指派的銷售人員、團隊、階段、優先順序及預期結案詳細資料。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.ZGF0ZV9kZWFkbGluZQ.display_name": {
-          "source": "Expected Closing",
+          "source": "Expected closing",
           "message": "預期關閉"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.ZGF0ZV9kZWFkbGluZQ.short_desc": {
@@ -620,7 +620,7 @@
           "message": "此潛在客戶銷售管道中目前階段的 ID。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "銷售團隊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.short_desc": {
@@ -644,7 +644,7 @@
           "message": "指派為此潛在客戶銷售人員之使用者的 ID。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
-          "source": "Marketing Information",
+          "source": "Marketing information",
           "message": "行銷資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
@@ -704,7 +704,7 @@
           "message": "產生此潛在客戶之特定來源的 ID。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
-          "source": "Activity Information",
+          "source": "Activity information",
           "message": "活動資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
@@ -716,7 +716,7 @@
           "message": "有關此潛在客戶的下一個計劃活動或後續跟進動作的資訊。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.display_name": {
-          "source": "Next Activity Summary",
+          "source": "Next activity summary",
           "message": "下次活動摘要"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.short_desc": {
@@ -728,7 +728,7 @@
           "message": "此潛在客戶接下來計畫活動的簡要描述或摘要。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.display_name": {
-          "source": "Next Activity Type",
+          "source": "Next activity type",
           "message": "下次活動類型"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.short_desc": {
@@ -764,7 +764,7 @@
           "message": "關於此潛在客戶的內部備註與評論。此資訊僅供內部使用，客戶無法查看。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.display_name": {
-          "source": "Color Index",
+          "source": "Color index",
           "message": "色彩索引"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.short_desc": {
@@ -844,7 +844,7 @@
           "message": "針對此潛在客戶電子郵件地址所記錄的退信次數。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
-          "source": "Lost Reason",
+          "source": "Lost reason",
           "message": "失去原因"
         },
         "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
@@ -868,7 +868,7 @@
           "message": "與此潛在客戶溝通時偏好的語言代碼（例如 en_US 代表英文，fr_FR 代表法文）。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.display_name": {
-          "source": "Create Partner",
+          "source": "Create partner",
           "message": "建立合作夥伴"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.short_desc": {
@@ -892,7 +892,7 @@
           "message": "合作夥伴名稱（個人或公司名稱）。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.display_name": {
-          "source": "Is Company",
+          "source": "Is company",
           "message": "是否為公司"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.short_desc": {
@@ -904,7 +904,7 @@
           "message": "若此合作夥伴代表公司／組織請設為 true，個別聯絡人請設為 false。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "聯絡資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -928,7 +928,7 @@
           "message": "合作夥伴的主要電子郵件地址。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Function",
+          "source": "Job function",
           "message": "工作職能"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -996,7 +996,7 @@
           "message": "合作夥伴或公司的網站網址"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "地址資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "街道地址的額外欄位（公寓、套房等）。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.field.emlw.display_name": {
-          "source": "ZIP Code",
+          "source": "ZIP code",
           "message": "郵遞區號"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.field.emlw.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "郵遞區號或郵政編碼。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.display_name": {
-          "source": "Business Information",
+          "source": "Business information",
           "message": "業務資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "合作夥伴的內部參考代碼或識別碼。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.field.dmF0.display_name": {
-          "source": "VAT Number",
+          "source": "VAT number",
           "message": "VAT 證書號碼"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.field.dmF0.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "合作夥伴的 VAT 或稅務識別號碼"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.display_name": {
-          "source": "Relationship Information",
+          "source": "Relationship information",
           "message": "關聯資訊"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "與其他合作夥伴之關聯及使用者指派的相關資訊。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.cGFyZW50X2lk.display_name": {
-          "source": "Parent Company",
+          "source": "Parent company",
           "message": "母公司"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.cGFyZW50X2lk.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "此合作夥伴所屬的母公司或組織。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.dXNlcl9pZA.display_name": {
-          "source": "Assigned User",
+          "source": "Assigned user",
           "message": "指派使用者"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.field.dXNlcl9pZA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "設為 false 可將合作夥伴封存而不刪除。"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.display_name": {
-          "source": "Internal Notes",
+          "source": "Internal notes",
           "message": "內部備註"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.short_desc": {
@@ -1268,7 +1268,7 @@
           "message": "澳洲/雪梨"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.display_name": {
-          "source": "Profile Image",
+          "source": "Profile image",
           "message": "個人資料圖片"
         },
         "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.short_desc": {
@@ -1280,7 +1280,7 @@
           "message": "合作夥伴的個人資料圖片（Base64 編碼）。"
         },
         "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.display_name": {
-          "source": "Delete Lead",
+          "source": "Delete lead",
           "message": "刪除潛在客戶"
         },
         "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.short_desc": {
@@ -1304,7 +1304,7 @@
           "message": "要從 Odoo CRM 永久刪除的潛在客戶記錄唯一識別碼。"
         },
         "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.display_name": {
-          "source": "Delete Partner",
+          "source": "Delete partner",
           "message": "刪除合作夥伴"
         },
         "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.short_desc": {
@@ -1328,7 +1328,7 @@
           "message": "要從 Odoo 刪除的合作夥伴記錄唯一識別碼。"
         },
         "app.T2Rvbw.action.Z2V0X2xlYWQ.display_name": {
-          "source": "Get Lead",
+          "source": "Get lead",
           "message": "取得潛在客戶"
         },
         "app.T2Rvbw.action.Z2V0X2xlYWQ.short_desc": {
@@ -1364,7 +1364,7 @@
           "message": "要從潛在客戶記錄中擷取的欄位名稱清單。已預先選取常見欄位。"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.display_name": {
-          "source": "Get Partner",
+          "source": "Get partner",
           "message": "取得合作夥伴"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.short_desc": {
@@ -1388,7 +1388,7 @@
           "message": "要從 Odoo 擷取的合作夥伴記錄唯一識別碼。"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.display_name": {
-          "source": "Fields to Retrieve",
+          "source": "Fields to retrieve",
           "message": "要擷取的欄位"
         },
         "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.short_desc": {
@@ -1400,7 +1400,7 @@
           "message": "要擷取的特定合作夥伴欄位清單。若未指定，則傳回基本合作夥伴資訊，包括 ID、名稱、電子郵件、電話和公司狀態。"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.display_name": {
-          "source": "List Companies",
+          "source": "List companies",
           "message": "列出公司"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.short_desc": {
@@ -1516,7 +1516,7 @@
           "message": "套用篩選條件的欄位名稱"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "搜尋類型"
         },
         "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "要與欄位比較的值"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.display_name": {
-          "source": "List Leads",
+          "source": "List leads",
           "message": "列出潛在客戶"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "套用篩選條件的欄位名稱"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "搜尋類型"
         },
         "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1696,7 +1696,7 @@
           "message": "要與欄位比較的值"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.display_name": {
-          "source": "List Partners",
+          "source": "List partners",
           "message": "列出合作夥伴"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.short_desc": {
@@ -1812,7 +1812,7 @@
           "message": "套用篩選條件的欄位名稱"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "搜尋類型"
         },
         "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.field.c2VhcmNoVHlwZQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "要與欄位比較的值"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.display_name": {
-          "source": "Update Lead",
+          "source": "Update lead",
           "message": "更新潛在客戶"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "線索的標題或主旨。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
-          "source": "Contact Name",
+          "source": "Contact name",
           "message": "聯絡人姓名"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "此線索主要聯絡人的姓名。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
-          "source": "Partner Name",
+          "source": "Partner name",
           "message": "合作夥伴名稱"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "與此線索關聯的合作夥伴或公司名稱。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
-          "source": "Contact Information",
+          "source": "Contact information",
           "message": "聯絡資訊"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
@@ -1916,7 +1916,7 @@
           "message": "電子郵件地址、電話號碼、職務和網站資訊。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZW1haWxfY2M.display_name": {
-          "source": "CC Email",
+          "source": "CC email",
           "message": "CC Email"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZW1haWxfY2M.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "聯絡人的主要電子郵件地址。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.display_name": {
-          "source": "Job Function",
+          "source": "Job function",
           "message": "工作職能"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.field.ZnVuY3Rpb24.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "聯絡人或公司的網站URL"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
-          "source": "Address Information",
+          "source": "Address information",
           "message": "地址資訊"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
@@ -2048,7 +2048,7 @@
           "message": "額外地址資訊（如公寓、套房等）。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.field.emlw.display_name": {
-          "source": "ZIP Code",
+          "source": "ZIP code",
           "message": "郵遞區號"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.field.emlw.short_desc": {
@@ -2060,7 +2060,7 @@
           "message": "聯絡人地址的郵遞區號或 ZIP 碼。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
-          "source": "Sales Information",
+          "source": "Sales information",
           "message": "銷售資訊"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "潛在客戶在銷售流程中的目前階段或階段"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "銷售團隊"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.field.dGVhbV9pZA.short_desc": {
@@ -2160,7 +2160,7 @@
           "message": "指派給此潛在客戶的業務員。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
-          "source": "Marketing Information",
+          "source": "Marketing information",
           "message": "行銷資訊"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "使用的行銷媒介（電子郵件、社交媒體等）"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.field.cmVmZXJyZWQ.display_name": {
-          "source": "Referred By",
+          "source": "Referred by",
           "message": "推薦人"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.field.cmVmZXJyZWQ.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "產生此潛在客戶的特定來源。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
-          "source": "Activity Information",
+          "source": "Activity information",
           "message": "活動資訊"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "有關此線索下一個計劃活動的資訊。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.display_name": {
-          "source": "Activity Summary",
+          "source": "Activity summary",
           "message": "活動摘要"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfc3VtbWFyeQ.short_desc": {
@@ -2244,7 +2244,7 @@
           "message": "接下來計畫活動的簡要摘要。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.display_name": {
-          "source": "Activity Type",
+          "source": "Activity type",
           "message": "活動類型"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.field.YWN0aXZpdHlfdHlwZV9pZA.short_desc": {
@@ -2348,7 +2348,7 @@
           "message": "商機"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.display_name": {
-          "source": "Email Bounce Count",
+          "source": "Email bounce count",
           "message": "電子郵件退信次數"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "寄給此聯絡人的電子郵件退信次數。"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
-          "source": "Lost Reason",
+          "source": "Lost reason",
           "message": "失去原因"
         },
         "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "與此聯絡人通訊的首選語言。"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.display_name": {
-          "source": "New Lead",
+          "source": "New lead",
           "message": "新潛在客戶"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.short_desc": {
@@ -2408,7 +2408,7 @@
           "message": "僅針對屬於指定公司的線索觸發。留空以監控所有公司。"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "銷售團隊"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "僅針對處於指定階段的線索觸發。留空以監控所有階段。"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.display_name": {
-          "source": "Lead Type",
+          "source": "Lead type",
           "message": "線索類型"
         },
         "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.short_desc": {
@@ -2480,7 +2480,7 @@
           "message": "僅針對具有任何指定標籤的線索觸發。留空以監控所有線索（不論標籤為何）。"
         },
         "app.T2Rvbw.action.bmV3X3BhcnRuZXI.display_name": {
-          "source": "New Partner",
+          "source": "New partner",
           "message": "新合作夥伴"
         },
         "app.T2Rvbw.action.bmV3X3BhcnRuZXI.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "監控 Odoo 中 res.partner 模型中新建立的合作夥伴記錄。每當新合作夥伴實體新增至您的 Odoo 系統時，此觸發程序即會引發，提供包括地址、聯絡資訊和組織資訊在內的合作夥伴設定詳細資訊。"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.display_name": {
-          "source": "Updated Lead",
+          "source": "Updated lead",
           "message": "已更新線索"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.short_desc": {
@@ -2516,7 +2516,7 @@
           "message": "僅針對屬於指定公司的線索觸發。留空以監控所有公司。"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.display_name": {
-          "source": "Sales Team",
+          "source": "Sales team",
           "message": "銷售團隊"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.short_desc": {
@@ -2552,7 +2552,7 @@
           "message": "僅針對處於指定階段的線索觸發。留空以監控所有階段。"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.display_name": {
-          "source": "Lead Type",
+          "source": "Lead type",
           "message": "線索類型"
         },
         "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.short_desc": {

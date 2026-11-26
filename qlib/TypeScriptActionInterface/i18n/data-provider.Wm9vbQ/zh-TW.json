@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證，向 **Zoom** 發送自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用的查詢參數、標頭以及請求內文。回應將以包含狀態碼、回應標頭和回應內文的雜湊形式傳回。\n\n此動作適用於尚未在此應用程式中作為一級動作公開的端點。"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -580,7 +580,7 @@
           "message": "建立並提交使用者的網路研討會註冊。擁有 [Webinar 方案](https:-zoom.us-webinar) 的 Zoom 使用者有權限建立和管理網路研討會。網路研討會允許主持人向最多 10,000 名出席者廣播 Zoom 會議。排程[需要註冊的網路研討會](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration)時，註冊者必須先填寫簡短表單，然後才能收到加入網路研討會的連結。\n\n**先決條件：** \n* 具備 Webinar 附加元件的 Pro 或更高方案。\n\n**[範圍](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-)：** `webinar:write:admin`,`webinar:write`\n\n**[精細範圍](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-)：** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[速率限制標籤](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits)：** `LIGHT`"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "新會議"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
@@ -592,7 +592,7 @@
           "message": "監控 Zoom 會議，並根據所選的事件類型在建立、開始（進行中）或結束（過往會議）會議時觸發。傳回會議詳細資訊，包括主題、持續時間、加入 URL 和會議類型。"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
-          "source": "Meeting Event Type",
+          "source": "Meeting event type",
           "message": "會議事件類型"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
@@ -616,7 +616,7 @@
           "message": "在會議開始時觸發"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
-          "source": "New Webinar",
+          "source": "New webinar",
           "message": "新增網路研討會"
         },
         "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
@@ -628,7 +628,7 @@
           "message": "監控 Zoom 網路研討會，並在建立新網路研討會時觸發。傳回網路研討會詳細資訊，包括主題、持續時間、加入 URL、註冊 URL 和網路研討會類型。"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
-          "source": "New Meeting Summary",
+          "source": "New meeting summary",
           "message": "新增會議摘要"
         },
         "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {

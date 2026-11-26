@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **SeaTable** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.U2VhVGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.U2VhVGFibGU.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"SeaTable\"",
@@ -460,8 +460,8 @@
           "message": "The table name"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.display_name": {
-          "source": "Run SQL Query",
-          "message": "Run SQL Query"
+          "source": "Run SQL query",
+          "message": "Run SQL query"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.short_desc": {
           "source": "Execute a SQL query on the SeaTable base",
@@ -472,8 +472,8 @@
           "message": "Executes a SQL query on your SeaTable base and returns the results. Supports SELECT, INSERT, UPDATE, and DELETE statements. Maximum of 10,000 rows can be returned for SELECT queries."
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.display_name": {
-          "source": "SQL Query",
-          "message": "SQL Query"
+          "source": "SQL query",
+          "message": "SQL query"
         },
         "app.U2VhVGFibGU.action.cnVuX3NxbA.option.c3Fs.short_desc": {
           "source": "The SQL query to execute",
@@ -484,8 +484,8 @@
           "message": "Enter your SQL query. Use backticks around column names with special characters (e.g., `My Column`). Example: SELECT * FROM `Table1` WHERE `Status` = 'Active' LIMIT 100"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Row",
-          "message": "New Row"
+          "source": "New row",
+          "message": "New row"
         },
         "app.U2VhVGFibGU.action.bmV3X2RvY3VtZW50.short_desc": {
           "source": "Trigger when a new row is added to a SeaTable table",

@@ -28,7 +28,7 @@
           "message": "구성된 연결의 인증을 사용하여 **PayPal**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL에 대한 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 아직 최고 수준 작업으로 노출되지 않은 엔드포인트에 이 작업을 사용하세요."
         },
         "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 메서드"
         },
         "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.display_name": {
-          "source": "List Transactions",
+          "source": "List transactions",
           "message": "거래 목록 조회"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "지정된 날짜 범위 내의 PayPal 계정 거래 목록을 검색합니다. 특정 거래를 찾거나 보고서를 생성할 수 있도록 거래 유형, 상태, 금액 범위, 통화 및 결제 수단별 필터링을 지원합니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "시작일"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "거래 검색에 포함할 가장 빠른 날짜입니다. 이 날짜 또는 그 이후의 거래가 결과에 포함됩니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "종료 날짜"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "거래 검색에 포함할 가장 늦은 날짜입니다. 이 날짜 또는 그 이전의 거래가 결과에 포함됩니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
-          "source": "Transaction Type",
+          "source": "Transaction type",
           "message": "거래 유형"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
@@ -1532,7 +1532,7 @@
           "message": "기타."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.display_name": {
-          "source": "Transaction Status",
+          "source": "Transaction status",
           "message": "거래 상태"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.short_desc": {
@@ -1568,7 +1568,7 @@
           "message": "성공한 거래가 취소되었으며 원래 발신자에게 자금이 환불되었습니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.display_name": {
-          "source": "Transaction Amount Range",
+          "source": "Transaction amount range",
           "message": "거래 금액 범위"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "결과를 필터링할 거래 금액 범위를 지정합니다. 특정 금액 범위 내의 거래를 찾는 데 유용합니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.display_name": {
-          "source": "Minimum Amount",
+          "source": "Minimum amount",
           "message": "최소 금액"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.short_desc": {
@@ -1592,7 +1592,7 @@
           "message": "결과에 포함할 최소 거래 금액입니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.display_name": {
-          "source": "Maximum Amount",
+          "source": "Maximum amount",
           "message": "최대 금액"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.short_desc": {
@@ -1604,7 +1604,7 @@
           "message": "결과에 포함할 최대 거래 금액입니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.display_name": {
-          "source": "Transaction Currency",
+          "source": "Transaction currency",
           "message": "거래 통화"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "미국 달러"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.display_name": {
-          "source": "Payment Method Type",
+          "source": "Payment method type",
           "message": "결제 수단 유형"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "직불 카드"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "페이지 크기"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.short_desc": {
@@ -1848,7 +1848,7 @@
           "message": "단일 응답으로 반환할 최대 거래 수입니다. 대량 결과 집합의 페이지 매김에 사용됩니다."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "페이지 번호"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.short_desc": {
@@ -1860,7 +1860,7 @@
           "message": "대량의 결과 집합을 페이지 매김하여 탐색할 때 검색할 페이지 번호입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.display_name": {
-          "source": "Create Order",
+          "source": "Create order",
           "message": "주문 생성"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.short_desc": {
@@ -1872,7 +1872,7 @@
           "message": "지정된 결제 금액, 품목, 배송 세부 정보 및 결제 기본 설정으로 새 PayPal 주문을 생성합니다. 주문은 둘 이상의 당사자 간의 결제를 나타내며 즉시 승인하거나 나중에 캡처할 수 있습니다. PayPal, 카드 및 대체 결제 수단을 포함한 다양한 결제 소스를 지원합니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.display_name": {
-          "source": "Payment Intent",
+          "source": "Payment intent",
           "message": "결제 의도"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.short_desc": {
@@ -1900,7 +1900,7 @@
           "message": "가맹점이 고객의 결제 후 결제를 승인하고 자금을 보류하려고 합니다. 승인된 결제는 3일 이내에 매입하는 것이 가장 좋으나 최대 29일까지 매입할 수 있습니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "통화 코드"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2112,7 +2112,7 @@
           "message": "미국 달러"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.display_name": {
-          "source": "Total Amount",
+          "source": "Total amount",
           "message": "총 금액"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.short_desc": {
@@ -2124,7 +2124,7 @@
           "message": "이 주문의 총 금액입니다. 양수여야 하며, 제공된 경우 모든 세부 내역 구성 요소의 합계와 일치해야 합니다. 통화에 맞는 적절한 소수점 자릿수의 문자열로 형식을 지정하세요."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.display_name": {
-          "source": "Item Total",
+          "source": "Item total",
           "message": "품목 총액"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "세금, 배송비, 취급 수수료, 보험료 또는 할인이 적용되기 전 주문 내 모든 품목의 총비용입니다. 모든 품목의 (수량 × unit_amount) 합계와 같아야 합니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.display_name": {
-          "source": "Shipping Amount",
+          "source": "Shipping amount",
           "message": "배송비"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "이 주문의 품목을 배송하는 데 드는 배송비입니다. 이 금액은 총 주문 금액에 추가됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.display_name": {
-          "source": "Handling Amount",
+          "source": "Handling amount",
           "message": "취급 수수료"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.short_desc": {
@@ -2160,7 +2160,7 @@
           "message": "이 주문을 처리하는 데 부과되는 추가 취급 수수료입니다. 포장 및 주문 처리와 같은 비용이 포함됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.display_name": {
-          "source": "Tax Total",
+          "source": "Tax total",
           "message": "세금 합계"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.short_desc": {
@@ -2172,7 +2172,7 @@
           "message": "이 주문의 모든 품목에 대한 총 세금 금액입니다. 배송 주소 및 현지 규정에 따라 판매세, VAT 또는 기타 적용 가능한 세금이 포함됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.display_name": {
-          "source": "Insurance Amount",
+          "source": "Insurance amount",
           "message": "보험 금액"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.short_desc": {
@@ -2184,7 +2184,7 @@
           "message": "배송물을 보호하기 위한 선택적 보험 금액입니다. 배송 중 분실 또는 파손 시 품목 가치를 보장합니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.display_name": {
-          "source": "Shipping Discount",
+          "source": "Shipping discount",
           "message": "배송 할인"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "무료 배송 프로모션이나 대량 주문 시 배송비 할인과 같이 배송비에 구체적으로 적용되는 모든 할인입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.display_name": {
-          "source": "Discount Amount",
+          "source": "Discount amount",
           "message": "할인 금액"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.short_desc": {
@@ -2208,7 +2208,7 @@
           "message": "쿠폰 코드, 프로모션 또는 대량 할인을 포함하여 이 주문에 적용된 총 할인 금액입니다. 이 금액만큼 전체 주문 총액이 차감됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Payee Email",
+          "source": "Payee email",
           "message": "수취인 이메일"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "결제 대금을 수령할 가맹점 또는 판매자의 이메일 주소입니다. 마켓플레이스 거래 시 또는 다른 수취인을 지정할 때 필요합니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Payee Merchant ID",
+          "source": "Payee merchant ID",
           "message": "수취인 판매자 ID"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "결제를 받을 계정의 PayPal 판매자 ID입니다. 마켓플레이스 거래 또는 특정 판매자에게 결제를 라우팅할 때 사용됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Order Description",
+          "source": "Order description",
           "message": "주문 설명"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.short_desc": {
@@ -2268,7 +2268,7 @@
           "message": "이 주문의 인보이스 번호입니다. 주문을 회계 시스템과 매칭하고 중복 결제를 방지하는 데 도움이 됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.display_name": {
-          "source": "Soft Descriptor",
+          "source": "Soft descriptor",
           "message": "소프트 디스크립터"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.short_desc": {
@@ -2280,7 +2280,7 @@
           "message": "고객의 신용카드 또는 은행 명세서에 표시되는 텍스트입니다. 지불 거절(차지백)을 방지하려면 짧고 알아보기 쉽게 작성하세요."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.display_name": {
-          "source": "Order Items",
+          "source": "Order items",
           "message": "주문 품목"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.short_desc": {
@@ -2316,7 +2316,7 @@
           "message": "기부"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Item Description",
+          "source": "Item description",
           "message": "품목 설명"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -2328,7 +2328,7 @@
           "message": "선택적 상세 설명으로, 이 항목에 대한 보다 자세한 정보를 제공합니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.display_name": {
-          "source": "Item Name",
+          "source": "Item name",
           "message": "품목 이름"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.short_desc": {
@@ -2364,7 +2364,7 @@
           "message": "재고 추적을 위한 내부 재고 식별자."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.display_name": {
-          "source": "Tax Amount",
+          "source": "Tax amount",
           "message": "세액"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.short_desc": {
@@ -2376,7 +2376,7 @@
           "message": "이 항목에 대해 계산된 구체적인 세금 금액, 수량 및 적용 가능한 세율 기반."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "단가"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.short_desc": {
@@ -2400,7 +2400,7 @@
           "message": "선택적 URL로, 고객이 이 항목에 대한 자세한 정보를 볼 수 있는 제품 페이지로 연결됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.display_name": {
-          "source": "Shipping Type",
+          "source": "Shipping type",
           "message": "배송 유형"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "직접 수령"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.display_name": {
-          "source": "Shipping Name",
+          "source": "Shipping name",
           "message": "수령인 이름"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.short_desc": {
@@ -2432,7 +2432,7 @@
           "message": "배송지 주소에서 배송물을 수령할 사람의 전체 이름입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.display_name": {
-          "source": "Shipping Address Line 1",
+          "source": "Shipping address line 1",
           "message": "배송지 주소 1"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "일반적으로 도로명 및 건물 번호가 포함된 배송지 주소의 첫 번째 줄입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.display_name": {
-          "source": "Shipping Address Line 2",
+          "source": "Shipping address line 2",
           "message": "배송지 주소 2"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.short_desc": {
@@ -2456,7 +2456,7 @@
           "message": "동/호수, 사무실 번호 또는 추가 위치 세부 정보를 위한 배송지 주소의 선택적 두 번째 줄입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.display_name": {
-          "source": "Shipping City",
+          "source": "Shipping city",
           "message": "배송 도시"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.short_desc": {
@@ -2468,7 +2468,7 @@
           "message": "품목이 배송될 도시입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.display_name": {
-          "source": "Shipping State",
+          "source": "Shipping state",
           "message": "배송 시/도"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.short_desc": {
@@ -2480,7 +2480,7 @@
           "message": "배송지 주소의 주, 도 또는 지역입니다. 해당 국가에 적합한 코드를 사용하세요."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.display_name": {
-          "source": "Shipping Postal Code",
+          "source": "Shipping postal code",
           "message": "배송 우편번호"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "배송지 주소의 우편번호 또는 이에 상응하는 코드입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.display_name": {
-          "source": "Shipping Country Code",
+          "source": "Shipping country code",
           "message": "배송 국가 코드"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.short_desc": {
@@ -2504,7 +2504,7 @@
           "message": "배송지 주소의 2자리 ISO 3166-1 국가 코드입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.display_name": {
-          "source": "Platform Fees",
+          "source": "Platform fees",
           "message": "플랫폼 수수료"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.short_desc": {
@@ -2516,7 +2516,7 @@
           "message": "이 거래에서 징수할 플랫폼 수수료의 배열입니다. 마켓플레이스에서 자사 플랫폼을 통해 처리된 거래로부터 수수료를 징수하는 데 사용됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.display_name": {
-          "source": "Fee Amount",
+          "source": "Fee amount",
           "message": "수수료 금액"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.short_desc": {
@@ -2528,7 +2528,7 @@
           "message": "이 거래에서 수취할 플랫폼 수수료 금액"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Fee Recipient Email",
+          "source": "Fee recipient email",
           "message": "수수료 수령인 이메일"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.short_desc": {
@@ -2540,7 +2540,7 @@
           "message": "플랫폼 수수료를 받을 계정의 이메일 주소"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Fee Recipient Merchant ID",
+          "source": "Fee recipient merchant ID",
           "message": "수수료 수령인 마이너스 ID"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
@@ -2552,7 +2552,7 @@
           "message": "플랫폼 수수료를 수령할 PayPal 상인 ID입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
+          "source": "Disbursement mode",
           "message": "지급 모드"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "고객이 결제 프로세스를 취소할 경우 리디렉션될 URL입니다. 취소된 거래 및 다음 단계에 대한 정보를 제공해야 합니다."
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.display_name": {
-          "source": "Capture Order",
+          "source": "Capture order",
           "message": "주문 매입"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.short_desc": {
@@ -2620,7 +2620,7 @@
           "message": "매입할 승인된 주문의 ID"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.display_name": {
-          "source": "Final Capture",
+          "source": "Final capture",
           "message": "최종 캡처"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.short_desc": {
@@ -2632,7 +2632,7 @@
           "message": "해당 주문에 대한 최종 매입인지 여부"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.display_name": {
-          "source": "Payment Instructions",
+          "source": "Payment instructions",
           "message": "결제 지침"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.short_desc": {
@@ -2644,7 +2644,7 @@
           "message": "지급 시기 또는 플랫폼 수수료 징수와 같이 이 결제를 처리하기 위한 특별 지침입니다."
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
+          "source": "Disbursement mode",
           "message": "지급 모드"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
@@ -2664,7 +2664,7 @@
           "message": "지연"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
+          "source": "Get order",
           "message": "주문 가져오기"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.short_desc": {
@@ -2688,7 +2688,7 @@
           "message": "세부 정보를 검색할 주문의 고유 식별자입니다."
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.display_name": {
-          "source": "Authorize Order",
+          "source": "Authorize order",
           "message": "주문 승인"
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.short_desc": {
@@ -2712,7 +2712,7 @@
           "message": "매입할 승인된 주문의 ID"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.display_name": {
-          "source": "Refund Payment",
+          "source": "Refund payment",
           "message": "결제 환불"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.short_desc": {
@@ -2736,7 +2736,7 @@
           "message": "환불하려는 캡처된 결제의 고유 식별자입니다. 캡처 응답 또는 주문 세부 정보에서 찾을 수 있습니다."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.display_name": {
-          "source": "Refund Amount",
+          "source": "Refund amount",
           "message": "환불 금액"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.short_desc": {
@@ -2748,7 +2748,7 @@
           "message": "환불할 금액입니다. 지정하지 않으면 캡처된 전액이 환불됩니다. 부분 환불의 경우 통화와 금액을 지정하세요."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "통화 코드"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2960,7 +2960,7 @@
           "message": "미국 달러"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.display_name": {
-          "source": "Refund Value",
+          "source": "Refund value",
           "message": "환불 금액"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.short_desc": {
@@ -2972,7 +2972,7 @@
           "message": "환불할 금액으로, 적절한 소수점 정밀도를 가진 문자열 형식입니다."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.display_name": {
-          "source": "Note to Payer",
+          "source": "Note to payer",
           "message": "결제자 메모"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.short_desc": {
@@ -2996,7 +2996,7 @@
           "message": "회계 및 추적 목적으로 이 환불과 연결할 선택적 청구서 ID입니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.display_name": {
-          "source": "List Disputes",
+          "source": "List disputes",
           "message": "분쟁 목록 조회"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.short_desc": {
@@ -3008,7 +3008,7 @@
           "message": "계정의 고객 분쟁 목록을 검색합니다. 분쟁은 고객이 거래에 이의를 제기할 때 발생하며, 이 API를 통해 분쟁을 효과적으로 관리하고 대응할 수 있습니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "시작 시간"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.short_desc": {
@@ -3020,7 +3020,7 @@
           "message": "이 날짜 및 시간 이후에 생성된 분쟁을 필터링합니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.display_name": {
-          "source": "Disputed Transaction ID",
+          "source": "Disputed transaction ID",
           "message": "분쟁 거래 ID"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.short_desc": {
@@ -3032,7 +3032,7 @@
           "message": "특정 거래 ID와 관련된 분쟁만 표시합니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.display_name": {
-          "source": "Dispute States",
+          "source": "Dispute states",
           "message": "분쟁 상태"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.short_desc": {
@@ -3092,7 +3092,7 @@
           "message": "분쟁이 해결되어 종료되었습니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "페이지 크기"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.short_desc": {
@@ -3104,7 +3104,7 @@
           "message": "단일 응답에서 반환할 분쟁의 최대 개수입니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "다음 페이지 토큰"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -3116,7 +3116,7 @@
           "message": "다음 분쟁 페이지를 검색하기 위한 페이지네이션 토큰입니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.display_name": {
-          "source": "Updated Before",
+          "source": "Updated before",
           "message": "이전 업데이트됨"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.short_desc": {
@@ -3128,7 +3128,7 @@
           "message": "이 날짜 및 시간 이전에 마지막으로 업데이트된 분쟁을 필터링합니다."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.display_name": {
-          "source": "Updated After",
+          "source": "Updated after",
           "message": "이후 업데이트됨"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.short_desc": {
@@ -3140,7 +3140,7 @@
           "message": "이 날짜 및 시간 이후에 마지막으로 업데이트된 분쟁을 필터링합니다."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.display_name": {
-          "source": "List Invoices",
+          "source": "List invoices",
           "message": "청구서 목록 조회"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.short_desc": {
@@ -3152,7 +3152,7 @@
           "message": "계정의 청구서 목록을 페이지별로 가져옵니다. 많은 수의 청구서를 탐색하려면 페이지네이션 매개변수를 사용하세요."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "페이지 번호"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.short_desc": {
@@ -3164,7 +3164,7 @@
           "message": "청구서를 페이지네이션할 때 가져올 페이지 번호입니다."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "페이지 크기"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.short_desc": {
@@ -3176,7 +3176,7 @@
           "message": "단일 응답에서 반환할 청구서의 최대 개수입니다."
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.display_name": {
-          "source": "Get Invoice",
+          "source": "Get invoice",
           "message": "인보이스 가져오기"
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.short_desc": {
@@ -3200,7 +3200,7 @@
           "message": "세부 정보를 검색할 청구서의 고유 식별자입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.display_name": {
-          "source": "Create Invoice",
+          "source": "Create invoice",
           "message": "인보이스 생성"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
@@ -3212,7 +3212,7 @@
           "message": "고객에게 결제를 요청하기 위해 보낼 수 있는 새 인보이스를 생성합니다. 품목 세부 정보, 가격, 세금 정보 및 결제 조건이 포함됩니다. 인보이스는 수취인에게 자동으로 전송되거나 수동으로 공유될 수 있습니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.display_name": {
-          "source": "Invoice Number",
+          "source": "Invoice number",
           "message": "인보이스 번호"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.short_desc": {
@@ -3224,7 +3224,7 @@
           "message": "이 인보이스의 고유 식별자입니다. 제공되지 않으면 PayPal에서 자동으로 생성합니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "통화 코드"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -3448,7 +3448,7 @@
           "message": "인보이스에 포함할 선택적 참고 사항 또는 메모입니다. 수취인에게 표시됩니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.display_name": {
-          "source": "Recipient Email",
+          "source": "Recipient email",
           "message": "수취인 이메일"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.short_desc": {
@@ -3460,7 +3460,7 @@
           "message": "인보이스가 전송될 이메일 주소입니다. 결제 요청을 수신할 기본 수취인입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.display_name": {
-          "source": "Recipient First Name",
+          "source": "Recipient first name",
           "message": "수취인 이름"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.short_desc": {
@@ -3472,7 +3472,7 @@
           "message": "인보이스를 수령하는 개인 또는 비즈니스 담당자의 이름(이름)입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.display_name": {
-          "source": "Recipient Last Name",
+          "source": "Recipient last name",
           "message": "수취인 성"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.short_desc": {
@@ -3484,7 +3484,7 @@
           "message": "인보이스를 수령하는 사람의 성입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.display_name": {
-          "source": "Item Name",
+          "source": "Item name",
           "message": "품목 이름"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.short_desc": {
@@ -3496,7 +3496,7 @@
           "message": "청구 대상 제품 또는 서비스에 대한 설명 명칭입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Item Description",
+          "source": "Item description",
           "message": "품목 설명"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.short_desc": {
@@ -3508,7 +3508,7 @@
           "message": "제품 또는 서비스에 대한 추가 정보를 제공하는 선택적 상세 설명입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.display_name": {
-          "source": "Item Quantity",
+          "source": "Item quantity",
           "message": "품목 수량"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.short_desc": {
@@ -3520,7 +3520,7 @@
           "message": "청구되는 품목의 수량입니다. 지정하지 않으면 기본값은 1입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "단가"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.short_desc": {
@@ -3532,7 +3532,7 @@
           "message": "품목 또는 서비스의 개별 단위당 비용입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.display_name": {
-          "source": "Tax Percentage",
+          "source": "Tax percentage",
           "message": "세율 백분율"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.short_desc": {
@@ -3544,7 +3544,7 @@
           "message": "품목 금액에 적용할 백분율 기준 세율입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.display_name": {
-          "source": "Tax Name",
+          "source": "Tax name",
           "message": "세금 이름"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.short_desc": {
@@ -3556,7 +3556,7 @@
           "message": "적용되는 세금에 대한 설명 명칭(예: \"Sales Tax\", \"VAT\" 또는 \"GST\")입니다."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.display_name": {
-          "source": "Payment Terms",
+          "source": "Payment terms",
           "message": "결제 조건"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.short_desc": {
@@ -3596,7 +3596,7 @@
           "message": "90일 이내 결제"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.display_name": {
-          "source": "Send to Recipient",
+          "source": "Send to recipient",
           "message": "수취인에게 전송"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.short_desc": {
@@ -3608,7 +3608,7 @@
           "message": "true인 경우 인보이스가 수취인의 이메일 주소로 자동 전송됩니다. false인 경우 나중에 수동으로 전송할 수 있습니다."
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.display_name": {
-          "source": "Subscription Events",
+          "source": "Subscription events",
           "message": "구독 이벤트"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.short_desc": {
@@ -3620,7 +3620,7 @@
           "message": "구독 생성, 활성화, 업데이트, 취소, 만료 또는 일시 중단을 포함하여 구독 관련 이벤트가 발생할 때 트리거됩니다. 정기 결제 관리 및 구독 라이프사이클 자동화에 필수적입니다."
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Subscription Event Type",
+          "source": "Subscription event type",
           "message": "구독 이벤트 유형"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3680,7 +3680,7 @@
           "message": "구독이 일시 중단되었습니다."
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
-          "source": "Invoice Events",
+          "source": "Invoice events",
           "message": "청구서 이벤트"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
@@ -3692,7 +3692,7 @@
           "message": "청구서 생성, 결제, 취소, 환불 또는 업데이트와 같은 청구서 관련 이벤트가 발생할 때 트리거됩니다. 청구 워크플로를 관리하고 시스템과 청구서 상태를 동기화하는 데 필수적입니다."
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Invoice Event Type",
+          "source": "Invoice event type",
           "message": "청구서 이벤트 유형"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3752,7 +3752,7 @@
           "message": "청구서가 업데이트되었습니다."
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.display_name": {
-          "source": "Dispute Events",
+          "source": "Dispute events",
           "message": "분쟁 이벤트"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.short_desc": {
@@ -3764,7 +3764,7 @@
           "message": "새 분쟁이 생성, 업데이트 또는 해결되는 등 고객 분쟁 이벤트가 발생할 때 트리거됩니다. 고객 서비스 워크플로를 관리하고 결제 분쟁에 신속하게 대응하는 데 필수적입니다."
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Dispute Event Type",
+          "source": "Dispute event type",
           "message": "분쟁 이벤트 유형"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3800,7 +3800,7 @@
           "message": "분쟁이 업데이트되었습니다."
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.display_name": {
-          "source": "Order Events",
+          "source": "Order events",
           "message": "주문 이벤트"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.short_desc": {
@@ -3812,7 +3812,7 @@
           "message": "고객의 주문 승인, 완료 또는 결제 승인 취소와 같은 특정 주문 관련 이벤트가 발생할 때 트리거됩니다. 주문 처리 워크플로를 자동화하고 주문 상태 변경을 처리할 때 사용합니다."
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Order Event Type",
+          "source": "Order event type",
           "message": "주문 이벤트 유형"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.short_desc": {

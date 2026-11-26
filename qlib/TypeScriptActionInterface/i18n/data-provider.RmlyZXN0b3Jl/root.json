@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
-          "message": "List Projects"
+          "source": "List projects",
+          "message": "List projects"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
           "source": "List all Google Cloud projects accessible with the current credentials",
@@ -352,8 +352,8 @@
           "message": "Retrieves a list of all Google Cloud projects that are accessible with your credentials. You can filter projects by name and use pagination to navigate through large result sets. This is useful for discovering which projects contain Firestore databases."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
-          "source": "Project Name",
-          "message": "Project Name"
+          "source": "Project name",
+          "message": "Project name"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
           "source": "Filter projects by name",
@@ -364,8 +364,8 @@
           "message": "Optional filter to search for projects containing this name. The search is case-insensitive and matches partial names."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
           "source": "Number of projects to return per page",
@@ -376,8 +376,8 @@
           "message": "The maximum number of projects to return in a single request. Default is 100. Use this with pagination tokens to retrieve large result sets."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
           "source": "Token for retrieving the next page of results",
@@ -388,8 +388,8 @@
           "message": "Pagination token obtained from a previous request. Use this to retrieve the next page of projects when there are more results than the page size."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
-          "source": "Create Document",
-          "message": "Create Document"
+          "source": "Create document",
+          "message": "Create document"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
           "source": "Create a new document in a Firestore collection",
@@ -412,8 +412,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
-          "message": "Collection Path"
+          "source": "Collection path",
+          "message": "Collection path"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
           "source": "The path to the Firestore collection",
@@ -436,8 +436,8 @@
           "message": "Optional custom identifier for the document. If not provided, Firestore will auto-generate a unique ID. Document IDs must be valid UTF-8 strings and cannot contain forward slashes."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
-          "message": "Document Data"
+          "source": "Document data",
+          "message": "Document data"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
           "source": "The data to store in the document",
@@ -448,8 +448,8 @@
           "message": "The structured data to store in the document. This will be dynamically typed based on the collection schema if available. Each field will be stored with its appropriate Firestore data type."
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
-          "message": "Additional Data"
+          "source": "Additional data",
+          "message": "Additional data"
         },
         "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
           "source": "Additional fields to include in the document",
@@ -460,8 +460,8 @@
           "message": "Optional additional fields to merge with the structured data. Use this to add fields that are not part of the predefined schema or to include dynamic fields."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
-          "source": "Get Document",
-          "message": "Get Document"
+          "source": "Get document",
+          "message": "Get document"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
           "source": "Retrieve a specific document from a Firestore collection",
@@ -484,8 +484,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
-          "message": "Collection Path"
+          "source": "Collection path",
+          "message": "Collection path"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
           "source": "The path to the Firestore collection",
@@ -508,8 +508,8 @@
           "message": "The unique identifier of the document you want to retrieve. This is the document ID that was either auto-generated or specified when the document was created."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
-          "source": "Update Document",
-          "message": "Update Document"
+          "source": "Update document",
+          "message": "Update document"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
           "source": "Update an existing document in a Firestore collection",
@@ -532,8 +532,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
-          "message": "Collection Path"
+          "source": "Collection path",
+          "message": "Collection path"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
           "source": "The path to the Firestore collection",
@@ -556,8 +556,8 @@
           "message": "The unique identifier of the document you want to update. The document must exist or the operation will fail."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
-          "source": "Document Data",
-          "message": "Document Data"
+          "source": "Document data",
+          "message": "Document data"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
           "source": "The new data for the document",
@@ -568,8 +568,8 @@
           "message": "The data to update in the document. When merge is enabled, only the specified fields will be updated. When merge is disabled, this data will replace the entire document."
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
-          "source": "Additional Data",
-          "message": "Additional Data"
+          "source": "Additional data",
+          "message": "Additional data"
         },
         "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
           "source": "Additional fields to update",
@@ -592,8 +592,8 @@
           "message": "When true (default), only the specified fields are updated and other fields remain unchanged. When false, the entire document is replaced with the new data."
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
-          "source": "Delete Document",
-          "message": "Delete Document"
+          "source": "Delete document",
+          "message": "Delete document"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
           "source": "Delete a document from a Firestore collection",
@@ -616,8 +616,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
-          "message": "Collection Path"
+          "source": "Collection path",
+          "message": "Collection path"
         },
         "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
           "source": "The path to the Firestore collection",
@@ -640,8 +640,8 @@
           "message": "The unique identifier of the document you want to delete. The document must exist or the operation will fail."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
-          "message": "List Documents"
+          "source": "List documents",
+          "message": "List documents"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
           "source": "List all documents in a Firestore collection",
@@ -664,8 +664,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
-          "message": "Collection Path"
+          "source": "Collection path",
+          "message": "Collection path"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
           "source": "The path to the Firestore collection",
@@ -688,8 +688,8 @@
           "message": "The maximum number of documents to retrieve. Default is 100. Use this to control the size of the result set and improve performance."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
           "source": "Field to order documents by",
@@ -700,8 +700,8 @@
           "message": "Optional field name to use for ordering the documents. The field must exist in the documents and be of a comparable type (string, number, date)."
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
-          "source": "Order Direction",
-          "message": "Order Direction"
+          "source": "Order direction",
+          "message": "Order direction"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
           "source": "Sort direction for ordering",
@@ -720,8 +720,8 @@
           "message": "Descending"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
-          "message": "List Collections"
+          "source": "List collections",
+          "message": "List collections"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
           "source": "List all collections in a Firestore database or document",
@@ -744,8 +744,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
-          "message": "Parent Document Path"
+          "source": "Parent document path",
+          "message": "Parent document path"
         },
         "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
           "source": "Path to the parent document (optional)",
@@ -756,8 +756,8 @@
           "message": "Optional path to a document whose subcollections you want to list. If not specified, lists root-level collections. Format: collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
-          "source": "Get Collection",
-          "message": "Get Collection"
+          "source": "Get collection",
+          "message": "Get collection"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
           "source": "Get information about a Firestore collection",
@@ -792,8 +792,8 @@
           "message": "The identifier of the collection you want to retrieve information about. This is the collection name without any parent path."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
-          "source": "Parent Document Path",
-          "message": "Parent Document Path"
+          "source": "Parent document path",
+          "message": "Parent document path"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
           "source": "Path to the parent document (optional)",
@@ -804,8 +804,8 @@
           "message": "Optional path to the parent document if this is a subcollection. If not specified, assumes this is a root-level collection. Format: collection_id/document_id"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
-          "source": "Include Sample Documents",
-          "message": "Include Sample Documents"
+          "source": "Include sample documents",
+          "message": "Include sample documents"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
           "source": "Whether to include sample documents",
@@ -816,8 +816,8 @@
           "message": "When true, includes sample documents from the collection in the response. This helps you understand the structure and content of the collection."
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
-          "source": "Sample Limit",
-          "message": "Sample Limit"
+          "source": "Sample limit",
+          "message": "Sample limit"
         },
         "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
           "source": "Number of sample documents to include",
@@ -828,8 +828,8 @@
           "message": "The maximum number of sample documents to retrieve when include_sample_documents is true. Default is 5."
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
-          "source": "Query Documents",
-          "message": "Query Documents"
+          "source": "Query documents",
+          "message": "Query documents"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
           "source": "Query documents in a Firestore collection with filters and ordering",
@@ -852,8 +852,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
-          "message": "Collection Path"
+          "source": "Collection path",
+          "message": "Collection path"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
           "source": "The path to the Firestore collection",
@@ -952,8 +952,8 @@
           "message": "The value to use in the comparison. The value type should match the field type in the documents (string, number, boolean, etc.)."
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
           "source": "Ordering criteria for results",
@@ -1008,8 +1008,8 @@
           "message": "The maximum number of documents to retrieve. Default is 100. Use this to control query performance and result set size."
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Backup to Google Cloud Storage",
-          "message": "Backup to Google Cloud Storage"
+          "source": "Backup to Google cloud storage",
+          "message": "Backup to Google cloud storage"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
           "source": "Export Firestore data to Google Cloud Storage",
@@ -1032,8 +1032,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database to backup"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
-          "source": "Output URI Prefix",
-          "message": "Output URI Prefix"
+          "source": "Output URI prefix",
+          "message": "Output URI prefix"
         },
         "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
           "source": "GCS bucket URI where backup will be stored",
@@ -1056,8 +1056,8 @@
           "message": "Optional list of collection IDs to backup. If not specified, the entire database will be backed up. Use this to create selective backups of specific collections."
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
-          "source": "Restore from Google Cloud Storage",
-          "message": "Restore from Google Cloud Storage"
+          "source": "Restore from Google cloud storage",
+          "message": "Restore from Google cloud storage"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
           "source": "Import Firestore data from Google Cloud Storage",
@@ -1080,8 +1080,8 @@
           "message": "The unique identifier for your Google Cloud project where the data will be restored"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
-          "source": "Input URI Prefix",
-          "message": "Input URI Prefix"
+          "source": "Input URI prefix",
+          "message": "Input URI prefix"
         },
         "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
           "source": "GCS bucket URI where backup is stored",
@@ -1104,8 +1104,8 @@
           "message": "Optional list of collection IDs to restore from the backup. If not specified, all collections in the backup will be restored. Use this to selectively restore specific collections."
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
-          "source": "New Document",
-          "message": "New Document"
+          "source": "New document",
+          "message": "New document"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
           "source": "Triggers when a new document is created in a Firestore collection",
@@ -1128,8 +1128,8 @@
           "message": "The unique identifier for your Google Cloud project containing the Firestore database"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
-          "source": "Collection Path",
-          "message": "Collection Path"
+          "source": "Collection path",
+          "message": "Collection path"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
           "source": "The path to the Firestore collection",
@@ -1228,8 +1228,8 @@
           "message": "The value to use in the comparison. The value will be automatically converted to the appropriate type (string, number, boolean, or null)"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {
           "source": "Specify how to order documents",

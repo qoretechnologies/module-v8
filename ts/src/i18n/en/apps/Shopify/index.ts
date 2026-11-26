@@ -7,7 +7,7 @@ const ShopifyAppEn = {
     'Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales.',
   actions: {
     'find-product': {
-      displayName: 'Find Products',
+      displayName: 'Find products',
       shortDesc: 'Search for products in your store',
       longDesc:
         'Search and filter products in your Shopify store based on various criteria including title, vendor, product type, and more.',
@@ -23,7 +23,7 @@ const ShopifyAppEn = {
           longDesc: 'Find products from specific vendors or suppliers in your store.',
         },
         productTypeQuery: {
-          displayName: 'Product Type',
+          displayName: 'Product type',
           shortDesc: 'Filter by product type',
           longDesc: 'Search for products based on their assigned product type category.',
         },
@@ -53,41 +53,41 @@ const ShopifyAppEn = {
           longDesc: 'Find products that belong to a specific collection in your store.',
         },
         sortKey: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Sort the results',
           longDesc: 'Choose how to order the results (e.g., by title, price, created date).',
         },
         reverse: {
-          displayName: 'Reverse Order',
+          displayName: 'Reverse order',
           shortDesc: 'Reverse the sort order',
           longDesc: 'Toggle between ascending and descending sort order for the results.',
         },
         rawQuery: {
-          displayName: 'Advanced Query',
+          displayName: 'Advanced query',
           shortDesc: 'Use custom search syntax',
           longDesc:
             'Enter a custom search query for advanced filtering using Shopify search syntax.',
         },
         limit: {
-          displayName: 'Results Limit',
+          displayName: 'Results limit',
           shortDesc: 'Maximum number of results',
           longDesc: 'Specify the maximum number of products to return in the search results.',
         },
         cursor: {
-          displayName: 'Pagination Cursor',
+          displayName: 'Pagination cursor',
           shortDesc: 'Navigate through pages of results',
           longDesc: 'Use a cursor to paginate through large sets of search results.',
         },
       },
     },
     'find-order': {
-      displayName: 'Find Orders',
+      displayName: 'Find orders',
       shortDesc: 'Search for customer orders',
       longDesc:
         'Search and filter orders in your Shopify store based on various criteria including customer name, email, order number, and more.',
       options: {
         name: {
-          displayName: 'Order Number',
+          displayName: 'Order number',
           shortDesc: 'Search by order number',
           longDesc: 'Look up orders using their confirmation or order number.',
         },
@@ -103,7 +103,7 @@ const ShopifyAppEn = {
             'Find all orders placed by a specific customer using their Shopify customer ID.',
         },
         confirmation_number: {
-          displayName: 'Confirmation Number',
+          displayName: 'Confirmation number',
           shortDesc: 'Search by confirmation number',
           longDesc: 'Find orders by their unique confirmation number provided to customers.',
         },
@@ -113,18 +113,18 @@ const ShopifyAppEn = {
           longDesc: 'Look up a specific order using its unique Shopify order ID.',
         },
         financial_status: {
-          displayName: 'Payment Status',
+          displayName: 'Payment status',
           shortDesc: 'Filter by payment status',
           longDesc: 'Find orders with a specific payment status (paid, pending, refunded, etc.).',
         },
         fulfillment_status: {
-          displayName: 'Fulfillment Status',
+          displayName: 'Fulfillment status',
           shortDesc: 'Filter by shipping status',
           longDesc:
             'Find orders with a specific fulfillment status (fulfilled, unfulfilled, shipped, etc.).',
         },
         status: {
-          displayName: 'Order Status',
+          displayName: 'Order status',
           shortDesc: 'Filter by order status',
           longDesc: 'Find orders based on their overall status (open, closed, cancelled).',
         },
@@ -134,7 +134,7 @@ const ShopifyAppEn = {
           longDesc: 'Find orders from specific sources (e.g., web, draft orders, POS).',
         },
         sales_channel: {
-          displayName: 'Sales Channel',
+          displayName: 'Sales channel',
           shortDesc: 'Filter by sales channel',
           longDesc: 'Find orders from specific sales channels configured in your Shopify store.',
         },
@@ -144,18 +144,18 @@ const ShopifyAppEn = {
           longDesc: 'Find orders containing products with a specific SKU.',
         },
         created_at: {
-          displayName: 'Created Date',
+          displayName: 'Created date',
           shortDesc: 'Filter by creation date',
           longDesc:
             'Find orders created on a specific date or within a date range (e.g., 2021-01-01, <now, <=2024).',
         },
         updated_at: {
-          displayName: 'Updated Date',
+          displayName: 'Updated date',
           shortDesc: 'Filter by last update date',
           longDesc: 'Find orders last updated on a specific date or within a date range.',
         },
         processed_at: {
-          displayName: 'Processed Date',
+          displayName: 'Processed date',
           shortDesc: 'Filter by processed date',
           longDesc: 'Find orders processed on a specific date or within a date range.',
         },
@@ -165,7 +165,7 @@ const ShopifyAppEn = {
           longDesc: 'Find orders that have been tagged with specific labels in Shopify.',
         },
         test: {
-          displayName: 'Test Orders',
+          displayName: 'Test orders',
           shortDesc: 'Include/exclude test orders',
           longDesc: 'Filter to show only test orders (true) or exclude test orders (false).',
         },
@@ -175,74 +175,74 @@ const ShopifyAppEn = {
           longDesc: 'Find orders associated with a specific store location or fulfillment center.',
         },
         po_number: {
-          displayName: 'Purchase Order Number',
+          displayName: 'Purchase order number',
           shortDesc: 'Search by PO number',
           longDesc: 'Find orders associated with a specific purchase order number.',
         },
         rawQuery: {
-          displayName: 'Advanced Query',
+          displayName: 'Advanced query',
           shortDesc: 'Use custom search syntax',
           longDesc:
             'Enter a custom search query for advanced filtering using Shopify search syntax.',
         },
         sortKey: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Sort the results',
           longDesc: 'Choose how to order the results (e.g., by date, order number, total value).',
         },
         reverse: {
-          displayName: 'Reverse Order',
+          displayName: 'Reverse order',
           shortDesc: 'Reverse the sort order',
           longDesc: 'Toggle between ascending and descending sort order for the results.',
         },
         limit: {
-          displayName: 'Results Limit',
+          displayName: 'Results limit',
           shortDesc: 'Maximum number of results',
           longDesc:
             'Specify the maximum number of orders to return in the search results (max: 250).',
         },
         cursor: {
-          displayName: 'Pagination Cursor',
+          displayName: 'Pagination cursor',
           shortDesc: 'Navigate through pages of results',
           longDesc: 'Use a cursor to paginate through large sets of search results.',
         },
       },
     },
     'find-customer': {
-      displayName: 'Find Customers',
+      displayName: 'Find customers',
       shortDesc: 'Search for customers',
       longDesc:
         'Search and filter customers in your Shopify store based on names, emails, or other attributes.',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Search by name or email',
           longDesc: 'Search for customers by their name, email, or other identifying information.',
         },
         limit: {
-          displayName: 'Results Limit',
+          displayName: 'Results limit',
           shortDesc: 'Maximum number of results',
           longDesc: 'Specify the maximum number of customers to return in the search results.',
         },
         cursor: {
-          displayName: 'Pagination Cursor',
+          displayName: 'Pagination cursor',
           shortDesc: 'Navigate through pages of results',
           longDesc: 'Use a cursor to paginate through large sets of search results.',
         },
         sortKey: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Sort the results',
           longDesc: 'Choose how to order the results (e.g., by name, date created, total spent).',
         },
         reverse: {
-          displayName: 'Reverse Order',
+          displayName: 'Reverse order',
           shortDesc: 'Reverse the sort order',
           longDesc: 'Toggle between ascending and descending sort order for the results.',
         },
       },
     },
     'find-variant': {
-      displayName: 'Find Product Variants',
+      displayName: 'Find product variants',
       shortDesc: 'Search for specific product variants',
       longDesc:
         'Search and filter product variants in your Shopify store based on criteria like SKU, barcode, price, or inventory status.',
@@ -254,7 +254,7 @@ const ShopifyAppEn = {
             'Find variants that belong to a specific parent product using its Shopify product ID.',
         },
         title: {
-          displayName: 'Variant Title',
+          displayName: 'Variant title',
           shortDesc: 'Search by variant title',
           longDesc: 'Filter variants by matching text in their titles or option values.',
         },
@@ -274,29 +274,29 @@ const ShopifyAppEn = {
           longDesc: 'Look up a specific variant using its unique Shopify variant ID.',
         },
         inventoryQuantity: {
-          displayName: 'Inventory Quantity',
+          displayName: 'Inventory quantity',
           shortDesc: 'Filter by inventory quantity',
           longDesc:
             'Find variants based on their exact inventory quantity or range (e.g., "inventory_quantity:10" or "inventory_quantity:>5").',
         },
         productStatus: {
-          displayName: 'Product Status',
+          displayName: 'Product status',
           shortDesc: 'Filter by product status',
           longDesc:
             'Find variants based on whether their parent product is active, draft, or archived.',
         },
         productType: {
-          displayName: 'Product Type',
+          displayName: 'Product type',
           shortDesc: 'Filter by product type',
           longDesc: 'Find variants belonging to products of a specific type or category.',
         },
         tag: {
-          displayName: 'Product Tag',
+          displayName: 'Product tag',
           shortDesc: 'Filter by product tag',
           longDesc: 'Find variants belonging to products that have a specific tag.',
         },
         tagNot: {
-          displayName: 'Exclude Tag',
+          displayName: 'Exclude tag',
           shortDesc: 'Filter out products with tag',
           longDesc: 'Find variants belonging to products that do not have a specific tag.',
         },
@@ -333,42 +333,42 @@ const ShopifyAppEn = {
           longDesc: 'Find variants based on whether they are taxable or non-taxable.',
         },
         updatedAt: {
-          displayName: 'Updated At',
+          displayName: 'Updated at',
           shortDesc: 'Filter by update time',
           longDesc:
             'Find variants based on when they were last updated (e.g., "updated_at:>2023-01-01" or "updated_at:<now").',
         },
         rawQuery: {
-          displayName: 'Advanced Query',
+          displayName: 'Advanced query',
           shortDesc: 'Use custom search syntax',
           longDesc:
             'Enter a custom search query for advanced filtering using Shopify search syntax.',
         },
         sortKey: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Order results by field',
           longDesc: 'Specify which field to use for sorting the results.',
         },
         reverse: {
-          displayName: 'Reverse Order',
+          displayName: 'Reverse order',
           shortDesc: 'Reverse the sort order',
           longDesc: 'When enabled, reverses the order of the results (e.g., Z-A instead of A-Z).',
         },
         limit: {
-          displayName: 'Results Limit',
+          displayName: 'Results limit',
           shortDesc: 'Maximum number of results',
           longDesc:
             'Specify the maximum number of variants to return in the search results (max: 250).',
         },
         cursor: {
-          displayName: 'Pagination Cursor',
+          displayName: 'Pagination cursor',
           shortDesc: 'Navigate through pages of results',
           longDesc: 'Use a cursor to paginate through large sets of search results.',
         },
       },
     },
     'add-line-item-to-order': {
-      displayName: 'Add Line Item to Order',
+      displayName: 'Add line item to order',
       shortDesc: 'Add a new product line to an existing order',
       longDesc:
         'Allows adding a new line item to an existing order, with options for quantity, pricing, and other product details',
@@ -379,7 +379,7 @@ const ShopifyAppEn = {
           longDesc: 'The specific order to which the line item will be added',
         },
         type: {
-          displayName: 'Line Item Type',
+          displayName: 'Line item type',
           shortDesc: 'Type of line item being added',
           longDesc: 'Specifies the nature of the line item (e.g., product, shipping, tax)',
         },
@@ -399,7 +399,7 @@ const ShopifyAppEn = {
           longDesc: 'Explanation for why the line item is being added to the order',
         },
         notifyCustomer: {
-          displayName: 'Notify Customer',
+          displayName: 'Notify customer',
           shortDesc: 'Send notification about order change',
           longDesc:
             'Determines whether the customer should be notified about the line item addition',
@@ -410,12 +410,12 @@ const ShopifyAppEn = {
           longDesc: 'Unique identifier for the specific product variant being added',
         },
         allowDuplicates: {
-          displayName: 'Allow Duplicates',
+          displayName: 'Allow duplicates',
           shortDesc: 'Permit duplicate line items',
           longDesc: 'Whether identical line items can be added multiple times to the order',
         },
         itemName: {
-          displayName: 'Item Name',
+          displayName: 'Item name',
           shortDesc: 'Name of the product',
           longDesc: 'The display name or title of the product being added',
         },
@@ -430,25 +430,25 @@ const ShopifyAppEn = {
           longDesc: 'The currency in which the price is specified',
         },
         isTaxable: {
-          displayName: 'Is Taxable',
+          displayName: 'Is taxable',
           shortDesc: 'Whether item is subject to tax',
           longDesc: 'Indicates if the line item should have tax applied',
         },
         isPhysical: {
-          displayName: 'Is Physical',
+          displayName: 'Is physical',
           shortDesc: 'Physical vs digital product',
           longDesc: 'Specifies whether the item is a physical product requiring shipping',
         },
       },
     },
     'create-gift-card': {
-      displayName: 'Create Gift Card',
+      displayName: 'Create gift card',
       shortDesc: 'Generate a new gift card',
       longDesc:
         'Create a gift card with customizable parameters like initial value, expiration, and recipient details',
       options: {
         initialValue: {
-          displayName: 'Initial Value',
+          displayName: 'Initial value',
           shortDesc: 'Starting balance of gift card',
           longDesc: 'The initial monetary amount loaded onto the gift card',
         },
@@ -463,22 +463,22 @@ const ShopifyAppEn = {
           longDesc: 'A personal message or additional details about the gift card',
         },
         expiresOn: {
-          displayName: 'Expiration Date',
+          displayName: 'Expiration date',
           shortDesc: 'Date when gift card expires',
           longDesc: 'The date after which the gift card will no longer be valid',
         },
         code: {
-          displayName: 'Gift Card Code',
+          displayName: 'Gift card code',
           shortDesc: 'Unique gift card identifier',
           longDesc: 'The specific code used to redeem the gift card',
         },
         templateSuffix: {
-          displayName: 'Template Suffix',
+          displayName: 'Template suffix',
           shortDesc: 'Customization of gift card template',
           longDesc: "Optional suffix to customize the gift card's appearance or template",
         },
         recipientAttributes: {
-          displayName: 'Recipient Attributes',
+          displayName: 'Recipient attributes',
           shortDesc: 'Details about gift card recipient',
           longDesc: 'Additional information about the person receiving the gift card',
           type: {
@@ -489,17 +489,17 @@ const ShopifyAppEn = {
                 longDesc: 'A unique identifier for the gift card recipient',
               },
               message: {
-                displayName: 'Recipient Message',
+                displayName: 'Recipient message',
                 shortDesc: 'Personal message to recipient',
                 longDesc: 'A personalized message to accompany the gift card',
               },
               preferredName: {
-                displayName: 'Preferred Name',
+                displayName: 'Preferred name',
                 shortDesc: "Recipient's preferred name",
                 longDesc: 'The name the recipient prefers to be called',
               },
               sendNotificationAt: {
-                displayName: 'Notification Timing',
+                displayName: 'Notification timing',
                 shortDesc: 'When to send gift card notification',
                 longDesc: 'The specific time or date to send the gift card notification',
               },
@@ -509,24 +509,24 @@ const ShopifyAppEn = {
       },
     },
     'create-fulfillment': {
-      displayName: 'Create Fulfillment',
+      displayName: 'Create fulfillment',
       shortDesc: 'Process and ship an order',
       longDesc: 'Create a fulfillment for an order, handling shipping and tracking information',
       options: {
         fulfillmentOrderId: {
-          displayName: 'Fulfillment Order ID',
+          displayName: 'Fulfillment order ID',
           shortDesc: 'Unique fulfillment order identifier',
           longDesc: 'The specific fulfillment order being processed',
         },
         fulfillmentOrderLineItems: {
-          displayName: 'Fulfillment Order Line Items',
+          displayName: 'Fulfillment order line items',
           shortDesc: 'Items in the fulfillment order',
           longDesc: 'Specific line items within the fulfillment order',
           type: {
             element_type: {
               fields: {
               id: {
-                displayName: 'Line Item ID',
+                displayName: 'Line item ID',
                 shortDesc: 'Unique identifier for line item',
                 longDesc: 'The specific identifier for an individual line item',
               },
@@ -540,19 +540,19 @@ const ShopifyAppEn = {
           },
         },
         notifyCustomer: {
-          displayName: 'Notify Customer',
+          displayName: 'Notify customer',
           shortDesc: 'Send shipping notification',
           longDesc:
             'Determines whether to send a notification to the customer about the fulfillment',
         },
         trackingInfo: {
-          displayName: 'Tracking Information',
+          displayName: 'Tracking information',
           shortDesc: 'Shipping tracking details',
           longDesc: 'Information for tracking the shipment',
           type: {
             fields: {
               number: {
-                displayName: 'Tracking Number',
+                displayName: 'Tracking number',
                 shortDesc: 'Shipment tracking number',
                 longDesc: 'The unique identifier for tracking the shipment',
               },
@@ -562,7 +562,7 @@ const ShopifyAppEn = {
                 longDesc: 'The web address where the shipment can be tracked',
               },
               company: {
-                displayName: 'Shipping Company',
+                displayName: 'Shipping company',
                 shortDesc: 'Name of shipping carrier',
                 longDesc: 'The name of the company responsible for shipping',
               },
@@ -575,18 +575,18 @@ const ShopifyAppEn = {
           longDesc: 'Any additional information or notes about the fulfillment',
         },
         originAddress: {
-          displayName: 'Origin Address',
+          displayName: 'Origin address',
           shortDesc: 'Shipping origin location',
           longDesc: 'The address from which the items are being shipped',
           type: {
             fields: {
               address1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'Primary address line',
                 longDesc: 'The first line of the shipping origin address',
               },
               address2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'Secondary address line',
                 longDesc: 'Optional additional address information',
               },
@@ -596,17 +596,17 @@ const ShopifyAppEn = {
                 longDesc: 'The city from which the shipment originates',
               },
               countryCode: {
-                displayName: 'Country Code',
+                displayName: 'Country code',
                 shortDesc: 'Origin country code',
                 longDesc: 'The two-letter country code for the shipping origin',
               },
               provinceCode: {
-                displayName: 'Province Code',
+                displayName: 'Province code',
                 shortDesc: 'State or province code',
                 longDesc: 'The code representing the state or province of origin',
               },
               zip: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'Origin postal code',
                 longDesc: 'The postal code of the shipping origin',
               },
@@ -616,7 +616,7 @@ const ShopifyAppEn = {
       },
     },
     'create-draft-order': {
-      displayName: 'Create Draft Order',
+      displayName: 'Create draft order',
       shortDesc: 'Creates a new draft order in Shopify',
       longDesc:
         'Generates a draft order that can be used to create an order manually, send invoices, or process payments later. Draft orders are useful for custom sales, wholesale orders, or pre-orders.',
@@ -646,19 +646,19 @@ const ShopifyAppEn = {
             'A field for adding internal notes about the draft order, such as special instructions or context.',
         },
         taxExempt: {
-          displayName: 'Tax Exempt',
+          displayName: 'Tax exempt',
           shortDesc: 'Exempt order from taxes',
           longDesc:
             'Indicates whether the entire order is exempt from taxes. Set to true for tax-exempt customers.',
         },
         taxExemptions: {
-          displayName: 'Tax Exemptions',
+          displayName: 'Tax exemptions',
           shortDesc: 'Specific tax exemptions',
           longDesc:
             'List of specific tax exemptions applied to the draft order, such as regional or product-specific exemptions.',
           type: {
             element_type: {
-              displayName: 'Tax Exemption Type',
+              displayName: 'Tax exemption type',
               shortDesc: 'Type of tax exemption',
               longDesc: 'Defines the specific tax exemption applied, e.g., GST, VAT, or sales tax.',
             },
@@ -679,19 +679,19 @@ const ShopifyAppEn = {
           },
         },
         shippingAddress: {
-          displayName: 'Shipping Address',
+          displayName: 'Shipping address',
           shortDesc: 'Customer shipping address',
           longDesc:
             'The full shipping address where the order will be delivered, including all relevant fields.',
           type: {
             fields: {
               address1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'Primary address line',
                 longDesc: 'The street address or PO Box for shipping.',
               },
               address2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'Secondary address line',
                 longDesc: 'Additional address information like apartment or suite number.',
               },
@@ -701,7 +701,7 @@ const ShopifyAppEn = {
                 longDesc: 'The city for the shipping address.',
               },
               province: {
-                displayName: 'Province/State',
+                displayName: 'Province/state',
                 shortDesc: 'Shipping province or state',
                 longDesc: 'The province, state, or region for the shipping address.',
               },
@@ -711,17 +711,17 @@ const ShopifyAppEn = {
                 longDesc: 'The country for the shipping address.',
               },
               zip: {
-                displayName: 'ZIP/Postal Code',
+                displayName: 'ZIP/postal code',
                 shortDesc: 'Shipping postal code',
                 longDesc: 'The ZIP or postal code for the shipping address.',
               },
               firstName: {
-                displayName: 'First Name',
+                displayName: 'First name',
                 shortDesc: 'Recipient first name',
                 longDesc: 'The first name of the shipping recipient.',
               },
               lastName: {
-                displayName: 'Last Name',
+                displayName: 'Last name',
                 shortDesc: 'Recipient last name',
                 longDesc: 'The last name of the shipping recipient.',
               },
@@ -739,19 +739,19 @@ const ShopifyAppEn = {
           },
         },
         billingAddress: {
-          displayName: 'Billing Address',
+          displayName: 'Billing address',
           shortDesc: 'Customer billing address',
           longDesc:
             'The address used for billing purposes, which may differ from the shipping address.',
           type: {
             fields: {
               address1: {
-                displayName: 'Address Line 1',
+                displayName: 'Address line 1',
                 shortDesc: 'Primary billing address line',
                 longDesc: 'The street address or PO Box for billing.',
               },
               address2: {
-                displayName: 'Address Line 2',
+                displayName: 'Address line 2',
                 shortDesc: 'Secondary billing address line',
                 longDesc: 'Additional billing address information like apartment or suite number.',
               },
@@ -761,7 +761,7 @@ const ShopifyAppEn = {
                 longDesc: 'The city for the billing address.',
               },
               province: {
-                displayName: 'Province/State',
+                displayName: 'Province/state',
                 shortDesc: 'Billing province or state',
                 longDesc: 'The province, state, or region for the billing address.',
               },
@@ -771,17 +771,17 @@ const ShopifyAppEn = {
                 longDesc: 'The country for the billing address.',
               },
               zip: {
-                displayName: 'ZIP/Postal Code',
+                displayName: 'ZIP/postal code',
                 shortDesc: 'Billing postal code',
                 longDesc: 'The ZIP or postal code for the billing address.',
               },
               firstName: {
-                displayName: 'First Name',
+                displayName: 'First name',
                 shortDesc: 'Billing first name',
                 longDesc: 'The first name of the billing contact.',
               },
               lastName: {
-                displayName: 'Last Name',
+                displayName: 'Last name',
                 shortDesc: 'Billing last name',
                 longDesc: 'The last name of the billing contact.',
               },
@@ -799,13 +799,13 @@ const ShopifyAppEn = {
           },
         },
         useCustomerDefaultAddress: {
-          displayName: 'Use Customer Default Address',
+          displayName: 'Use customer default address',
           shortDesc: 'Use customer’s default address',
           longDesc:
             'If true, uses the customer’s default shipping and billing address instead of custom ones.',
         },
         lineItems: {
-          displayName: 'Line Items',
+          displayName: 'Line items',
           shortDesc: 'Products in the draft order',
           longDesc:
             'A list of products or variants included in the draft order, with details like quantity and price.',
@@ -829,12 +829,12 @@ const ShopifyAppEn = {
                     'The display name of the line item, typically the product or variant name.',
                 },
                 originalUnitPrice: {
-                  displayName: 'Original Unit Price',
+                  displayName: 'Original unit price',
                   shortDesc: 'Price per unit',
                   longDesc: 'The original price per unit of the item before discounts.',
                 },
                 originalUnitPriceWithCurrency: {
-                  displayName: 'Original Unit Price with Currency',
+                  displayName: 'Original unit price with currency',
                   shortDesc: 'Price with currency details',
                   longDesc: 'The original unit price including currency specification.',
                   type: {
@@ -845,7 +845,7 @@ const ShopifyAppEn = {
                         longDesc: 'The numerical value of the unit price.',
                       },
                       currencyCode: {
-                        displayName: 'Currency Code',
+                        displayName: 'Currency code',
                         shortDesc: 'Currency code',
                         longDesc: 'The ISO 4217 currency code for the price, e.g., USD, EUR.',
                       },
@@ -858,7 +858,7 @@ const ShopifyAppEn = {
                   longDesc: 'The stock keeping unit identifier for the product variant.',
                 },
                 requiresShipping: {
-                  displayName: 'Requires Shipping',
+                  displayName: 'Requires shipping',
                   shortDesc: 'Needs shipping',
                   longDesc: 'Indicates if the item requires physical shipping.',
                 },
@@ -874,12 +874,12 @@ const ShopifyAppEn = {
                   type: {
                     fields: {
                       value: {
-                        displayName: 'Weight Value',
+                        displayName: 'Weight value',
                         shortDesc: 'Numerical weight',
                         longDesc: 'The numerical value of the item’s weight.',
                       },
                       unit: {
-                        displayName: 'Weight Unit',
+                        displayName: 'Weight unit',
                         shortDesc: 'Unit of weight',
                         longDesc: 'The unit of measurement for the weight, e.g., kg, lb.',
                       },
@@ -887,7 +887,7 @@ const ShopifyAppEn = {
                   },
                 },
                 customAttributes: {
-                  displayName: 'Custom Attributes',
+                  displayName: 'Custom attributes',
                   shortDesc: 'Additional item attributes',
                   longDesc: 'Key-value pairs for adding custom metadata to the line item.',
                   type: {
@@ -908,35 +908,35 @@ const ShopifyAppEn = {
                   },
                 },
                 appliedDiscount: {
-                  displayName: 'Applied Discount',
+                  displayName: 'Applied discount',
                   shortDesc: 'Discount on item',
                   longDesc: 'Details of any discount applied to this specific line item.',
                   type: {
                     fields: {
                       title: {
-                        displayName: 'Discount Title',
+                        displayName: 'Discount title',
                         shortDesc: 'Discount name',
                         longDesc: 'The name or title of the discount.',
                       },
                       description: {
-                        displayName: 'Discount Description',
+                        displayName: 'Discount description',
                         shortDesc: 'Discount details',
                         longDesc: 'A description of the discount applied.',
                       },
                       value: {
-                        displayName: 'Discount Value',
+                        displayName: 'Discount value',
                         shortDesc: 'Discount amount or percentage',
                         longDesc:
                           'The numerical value of the discount, either as a fixed amount or percentage.',
                       },
                       valueType: {
-                        displayName: 'Value Type',
+                        displayName: 'Value type',
                         shortDesc: 'Type of discount value',
                         longDesc:
                           'Specifies if the discount is a fixed amount or percentage (e.g., "FIXED_AMOUNT", "PERCENTAGE").',
                       },
                       amountWithCurrency: {
-                        displayName: 'Amount with Currency',
+                        displayName: 'Amount with currency',
                         shortDesc: 'Discount amount with currency',
                         longDesc: 'The discount amount including currency details.',
                         type: {
@@ -947,7 +947,7 @@ const ShopifyAppEn = {
                               longDesc: 'The numerical value of the discount.',
                             },
                             currencyCode: {
-                              displayName: 'Currency Code',
+                              displayName: 'Currency code',
                               shortDesc: 'Discount currency',
                               longDesc: 'The ISO 4217 currency code for the discount amount.',
                             },
@@ -958,13 +958,13 @@ const ShopifyAppEn = {
                   },
                 },
                 generatePriceOverride: {
-                  displayName: 'Generate Price Override',
+                  displayName: 'Generate price override',
                   shortDesc: 'Override item price',
                   longDesc:
                     'If true, allows setting a custom price for the item instead of the original price.',
                 },
                 priceOverride: {
-                  displayName: 'Price Override',
+                  displayName: 'Price override',
                   shortDesc: 'Custom item price',
                   longDesc: 'The custom price to override the original unit price.',
                   type: {
@@ -975,7 +975,7 @@ const ShopifyAppEn = {
                         longDesc: 'The numerical value of the custom price.',
                       },
                       currencyCode: {
-                        displayName: 'Currency Code',
+                        displayName: 'Currency code',
                         shortDesc: 'Override currency',
                         longDesc: 'The ISO 4217 currency code for the custom price.',
                       },
@@ -1014,35 +1014,35 @@ const ShopifyAppEn = {
           },
         },
         appliedDiscount: {
-          displayName: 'Applied Discount',
+          displayName: 'Applied discount',
           shortDesc: 'Order-wide discount',
           longDesc: 'Details of a discount applied to the entire draft order.',
           type: {
             fields: {
               title: {
-                displayName: 'Discount Title',
+                displayName: 'Discount title',
                 shortDesc: 'Discount name',
                 longDesc: 'The name or title of the order-wide discount.',
               },
               description: {
-                displayName: 'Discount Description',
+                displayName: 'Discount description',
                 shortDesc: 'Discount details',
                 longDesc: 'A description of the order-wide discount.',
               },
               value: {
-                displayName: 'Discount Value',
+                displayName: 'Discount value',
                 shortDesc: 'Discount amount or percentage',
                 longDesc:
                   'The numerical value of the discount, either as a fixed amount or percentage.',
               },
               valueType: {
-                displayName: 'Value Type',
+                displayName: 'Value type',
                 shortDesc: 'Type of discount value',
                 longDesc:
                   'Specifies if the discount is a fixed amount or percentage (e.g., "FIXED_AMOUNT", "PERCENTAGE").',
               },
               amountWithCurrency: {
-                displayName: 'Amount with Currency',
+                displayName: 'Amount with currency',
                 shortDesc: 'Discount amount with currency',
                 longDesc: 'The discount amount including currency details.',
                 type: {
@@ -1053,7 +1053,7 @@ const ShopifyAppEn = {
                       longDesc: 'The numerical value of the discount.',
                     },
                     currencyCode: {
-                      displayName: 'Currency Code',
+                      displayName: 'Currency code',
                       shortDesc: 'Discount currency',
                       longDesc: 'The ISO 4217 currency code for the discount amount.',
                     },
@@ -1064,7 +1064,7 @@ const ShopifyAppEn = {
           },
         },
         shippingLine: {
-          displayName: 'Shipping Line',
+          displayName: 'Shipping line',
           shortDesc: 'Shipping details',
           longDesc: 'Details about the shipping method and cost for the draft order.',
           type: {
@@ -1075,7 +1075,7 @@ const ShopifyAppEn = {
                 longDesc: 'The cost of shipping as a numerical value.',
               },
               priceWithCurrency: {
-                displayName: 'Price with Currency',
+                displayName: 'Price with currency',
                 shortDesc: 'Shipping cost with currency',
                 longDesc: 'The shipping cost including currency specification.',
                 type: {
@@ -1086,7 +1086,7 @@ const ShopifyAppEn = {
                       longDesc: 'The numerical value of the shipping cost.',
                     },
                     currencyCode: {
-                      displayName: 'Currency Code',
+                      displayName: 'Currency code',
                       shortDesc: 'Shipping currency',
                       longDesc: 'The ISO 4217 currency code for the shipping cost.',
                     },
@@ -1099,7 +1099,7 @@ const ShopifyAppEn = {
                 longDesc: 'The name of the shipping method, e.g., "Standard Shipping".',
               },
               shippingRateHandle: {
-                displayName: 'Shipping Rate Handle',
+                displayName: 'Shipping rate handle',
                 shortDesc: 'Shipping rate identifier',
                 longDesc:
                   'A unique identifier for the shipping rate, often tied to a predefined rate in Shopify.',
@@ -1108,7 +1108,7 @@ const ShopifyAppEn = {
           },
         },
         customAttributes: {
-          displayName: 'Custom Attributes',
+          displayName: 'Custom attributes',
           shortDesc: 'Order custom attributes',
           longDesc: 'Key-value pairs for adding custom metadata to the draft order.',
           type: {
@@ -1129,24 +1129,24 @@ const ShopifyAppEn = {
           },
         },
         allowDiscountCodesInCheckout: {
-          displayName: 'Allow Discount Codes in Checkout',
+          displayName: 'Allow discount codes in checkout',
           shortDesc: 'Enable discount codes',
           longDesc:
             'If true, allows customers to apply discount codes during checkout from this draft order.',
         },
         acceptAutomaticDiscounts: {
-          displayName: 'Accept Automatic Discounts',
+          displayName: 'Accept automatic discounts',
           shortDesc: 'Apply automatic discounts',
           longDesc:
             'If true, automatically applies any eligible store-wide discounts to the draft order.',
         },
         discountCodes: {
-          displayName: 'Discount Codes',
+          displayName: 'Discount codes',
           shortDesc: 'List of discount codes',
           longDesc: 'A list of discount codes to apply to the draft order.',
           type: {
             element_type: {
-              displayName: 'Discount Code',
+              displayName: 'Discount code',
               shortDesc: 'Single discount code',
               longDesc: 'A specific discount code to apply to the order.',
             },
@@ -1185,7 +1185,7 @@ const ShopifyAppEn = {
           },
         },
         localizedFields: {
-          displayName: 'Localized Fields',
+          displayName: 'Localized fields',
           shortDesc: 'Localized content',
           longDesc: 'Fields that support localized content for different regions or languages.',
           type: {
@@ -1211,38 +1211,38 @@ const ShopifyAppEn = {
           },
         },
         presentmentCurrencyCode: {
-          displayName: 'Presentment Currency Code',
+          displayName: 'Presentment currency code',
           shortDesc: 'Display currency',
           longDesc:
             'The ISO 4217 currency code for displaying prices to the customer, e.g., USD, CAD.',
         },
         poNumber: {
-          displayName: 'PO Number',
+          displayName: 'PO number',
           shortDesc: 'Purchase order number',
           longDesc:
             'The purchase order number associated with the draft order, often used for B2B transactions.',
         },
         paymentTerms: {
-          displayName: 'Payment Terms',
+          displayName: 'Payment terms',
           shortDesc: 'Payment conditions',
           longDesc:
             'Defines the payment terms for the draft order, such as due dates or schedules.',
           type: {
             fields: {
               paymentTermsTemplateId: {
-                displayName: 'Payment Terms Template ID',
+                displayName: 'Payment terms template ID',
                 shortDesc: 'Template identifier',
                 longDesc: 'The ID of a predefined payment terms template in Shopify.',
               },
               paymentSchedules: {
-                displayName: 'Payment Schedules',
+                displayName: 'Payment schedules',
                 shortDesc: 'Payment due dates',
                 longDesc: 'A list of scheduled payments with due dates and amounts.',
                 type: {
                   element_type: {
                     fields: {
                       dueAt: {
-                        displayName: 'Due At',
+                        displayName: 'Due at',
                         shortDesc: 'Due date',
                         longDesc: 'The date when the payment is due.',
                       },
@@ -1252,12 +1252,12 @@ const ShopifyAppEn = {
                         longDesc: 'The numerical value of the payment due.',
                       },
                       currencyCode: {
-                        displayName: 'Currency Code',
+                        displayName: 'Currency code',
                         shortDesc: 'Payment currency',
                         longDesc: 'The ISO 4217 currency code for the payment amount.',
                       },
                       issuedAt: {
-                        displayName: 'Issued At',
+                        displayName: 'Issued at',
                         shortDesc: 'Issue date',
                         longDesc: 'The date when the payment schedule was issued.',
                       },
@@ -1269,7 +1269,7 @@ const ShopifyAppEn = {
           },
         },
         purchasingEntity: {
-          displayName: 'Purchasing Entity',
+          displayName: 'Purchasing entity',
           shortDesc: 'Buyer details',
           longDesc:
             'Details about the entity making the purchase, such as a company or individual.',
@@ -1286,12 +1286,12 @@ const ShopifyAppEn = {
                 longDesc: 'The ID of the company making the purchase.',
               },
               companyLocationId: {
-                displayName: 'Company Location ID',
+                displayName: 'Company location ID',
                 shortDesc: 'Company location ID',
                 longDesc: 'The ID of the specific company location making the purchase.',
               },
               companyContactId: {
-                displayName: 'Company Contact ID',
+                displayName: 'Company contact ID',
                 shortDesc: 'Contact ID',
                 longDesc: 'The ID of the company contact responsible for the purchase.',
               },
@@ -1299,24 +1299,24 @@ const ShopifyAppEn = {
           },
         },
         reserveInventoryUntil: {
-          displayName: 'Reserve Inventory Until',
+          displayName: 'Reserve inventory until',
           shortDesc: 'Inventory reservation deadline',
           longDesc: 'The date and time until which the inventory is reserved for this draft order.',
         },
         sourceName: {
-          displayName: 'Source Name',
+          displayName: 'Source name',
           shortDesc: 'Order source',
           longDesc: 'The source of the draft order, e.g., "web", "manual", or an app name.',
         },
         visibleToCustomer: {
-          displayName: 'Visible to Customer',
+          displayName: 'Visible to customer',
           shortDesc: 'Customer visibility',
           longDesc: 'If true, the draft order is visible to the customer, e.g., in their account.',
         },
       },
     },
     'create-customer': {
-      displayName: 'Create Customer',
+      displayName: 'Create customer',
       shortDesc: 'Creates a new customer in Shopify',
       longDesc:
         'Adds a new customer to the Shopify store, allowing you to store their contact information, addresses, and marketing preferences for future orders and engagement.',
@@ -1334,12 +1334,12 @@ const ShopifyAppEn = {
             'The customer’s phone number, useful for contact purposes and SMS marketing if consented.',
         },
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'Customer first name',
           longDesc: 'The first name of the customer, used for personalization and address details.',
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'Customer last name',
           longDesc:
             'The last name of the customer, completing their full name for identification and shipping.',
@@ -1357,19 +1357,19 @@ const ShopifyAppEn = {
             'Internal notes about the customer, such as preferences, special instructions, or account details.',
         },
         taxExempt: {
-          displayName: 'Tax Exempt',
+          displayName: 'Tax exempt',
           shortDesc: 'Exempt customer from taxes',
           longDesc:
             'Indicates whether the customer is exempt from taxes on all purchases. Set to true for tax-exempt entities.',
         },
         taxExemptions: {
-          displayName: 'Tax Exemptions',
+          displayName: 'Tax exemptions',
           shortDesc: 'Specific tax exemptions',
           longDesc:
             'A list of specific tax exemptions applied to the customer, such as regional or category-specific exemptions.',
           type: {
             element_type: {
-              displayName: 'Tax Exemption Type',
+              displayName: 'Tax exemption type',
               shortDesc: 'Type of tax exemption',
               longDesc: 'Defines the specific tax exemption applied, e.g., GST, VAT, or sales tax.',
             },
@@ -1398,12 +1398,12 @@ const ShopifyAppEn = {
             element_type: {
               fields: {
                 address1: {
-                  displayName: 'Address Line 1',
+                  displayName: 'Address line 1',
                   shortDesc: 'Primary address line',
                   longDesc: 'The street address or PO Box for the customer.',
                 },
                 address2: {
-                  displayName: 'Address Line 2',
+                  displayName: 'Address line 2',
                   shortDesc: 'Secondary address line',
                   longDesc: 'Additional address information like apartment or suite number.',
                 },
@@ -1413,7 +1413,7 @@ const ShopifyAppEn = {
                   longDesc: 'The city associated with the customer’s address.',
                 },
                 province: {
-                  displayName: 'Province/State',
+                  displayName: 'Province/state',
                   shortDesc: 'Customer province or state',
                   longDesc: 'The province, state, or region for the customer’s address.',
                 },
@@ -1423,17 +1423,17 @@ const ShopifyAppEn = {
                   longDesc: 'The country for the customer’s address.',
                 },
                 zip: {
-                  displayName: 'ZIP/Postal Code',
+                  displayName: 'ZIP/postal code',
                   shortDesc: 'Customer postal code',
                   longDesc: 'The ZIP or postal code for the customer’s address.',
                 },
                 firstName: {
-                  displayName: 'First Name',
+                  displayName: 'First name',
                   shortDesc: 'Address first name',
                   longDesc: 'The first name associated with this specific address.',
                 },
                 lastName: {
-                  displayName: 'Last Name',
+                  displayName: 'Last name',
                   shortDesc: 'Address last name',
                   longDesc: 'The last name associated with this specific address.',
                 },
@@ -1452,20 +1452,20 @@ const ShopifyAppEn = {
           },
         },
         emailMarketingConsent: {
-          displayName: 'Email Marketing Consent',
+          displayName: 'Email marketing consent',
           shortDesc: 'Email marketing preferences',
           longDesc:
             'Details about the customer’s consent to receive email marketing communications.',
           type: {
             fields: {
               marketingState: {
-                displayName: 'Marketing State',
+                displayName: 'Marketing state',
                 shortDesc: 'Consent status',
                 longDesc:
                   'The current state of email marketing consent, e.g., "SUBSCRIBED", "UNSUBSCRIBED", or "PENDING".',
               },
               marketingOptInLevel: {
-                displayName: 'Marketing Opt-In Level',
+                displayName: 'Marketing opt-in level',
                 shortDesc: 'Opt-in level',
                 longDesc:
                   'The level of consent provided, e.g., "SINGLE_OPT_IN" or "CONFIRMED_OPT_IN", based on how consent was obtained.',
@@ -1474,19 +1474,19 @@ const ShopifyAppEn = {
           },
         },
         smsMarketingConsent: {
-          displayName: 'SMS Marketing Consent',
+          displayName: 'SMS marketing consent',
           shortDesc: 'SMS marketing preferences',
           longDesc: 'Details about the customer’s consent to receive SMS marketing messages.',
           type: {
             fields: {
               marketingState: {
-                displayName: 'Marketing State',
+                displayName: 'Marketing state',
                 shortDesc: 'Consent status',
                 longDesc:
                   'The current state of SMS marketing consent, e.g., "SUBSCRIBED", "UNSUBSCRIBED", or "PENDING".',
               },
               marketingOptInLevel: {
-                displayName: 'Marketing Opt-In Level',
+                displayName: 'Marketing opt-in level',
                 shortDesc: 'Opt-in level',
                 longDesc:
                   'The level of consent provided for SMS, e.g., "SINGLE_OPT_IN" or "CONFIRMED_OPT_IN".',
@@ -1531,7 +1531,7 @@ const ShopifyAppEn = {
       },
     },
     'create-blog-entry': {
-      displayName: 'Create Blog Entry',
+      displayName: 'Create blog entry',
       shortDesc: 'Creates a new blog post in Shopify',
       longDesc:
         'Adds a new blog post to a specified blog in your Shopify store, allowing you to publish content such as articles, news, or updates for customers.',
@@ -1593,7 +1593,7 @@ const ShopifyAppEn = {
           type: {
             fields: {
               altText: {
-                displayName: 'Alt Text',
+                displayName: 'Alt text',
                 shortDesc: 'Image alt text',
                 longDesc:
                   'Descriptive text for the image, used for accessibility and SEO purposes.',
@@ -1610,7 +1610,7 @@ const ShopifyAppEn = {
       },
     },
     'add-tag-to-customer': {
-      displayName: 'Add Tag to Customer',
+      displayName: 'Add tag to customer',
       shortDesc: 'Adds tags to an existing customer',
       longDesc:
         'Appends or replaces tags for a specified customer in Shopify, useful for categorization, segmentation, or tracking purposes.',
@@ -1636,7 +1636,7 @@ const ShopifyAppEn = {
       },
     },
     'create-transaction': {
-      displayName: 'Create Transaction',
+      displayName: 'Create transaction',
       shortDesc: 'Creates a transaction for an order',
       longDesc:
         'Records a financial transaction (e.g., payment, refund) for a specific order in Shopify, linked to a payment gateway.',
@@ -1664,7 +1664,7 @@ const ShopifyAppEn = {
             'The type of transaction, such as "authorization", "capture", "sale", or "refund". Defines the transaction’s purpose.',
         },
         parentTransactionId: {
-          displayName: 'Parent Transaction ID',
+          displayName: 'Parent transaction ID',
           shortDesc: 'ID of parent transaction',
           longDesc:
             'The ID of a previous transaction this one relates to, e.g., for refunds or captures linked to an authorization.',
@@ -1676,7 +1676,7 @@ const ShopifyAppEn = {
             'The payment gateway used for the transaction, e.g., "shopify_payments", "paypal", or a custom gateway name.',
         },
         finalCapture: {
-          displayName: 'Final Capture',
+          displayName: 'Final capture',
           shortDesc: 'Complete capture flag',
           longDesc:
             'If true, indicates this is the final capture of funds for an authorization; if false, partial captures may follow.',
@@ -1684,7 +1684,7 @@ const ShopifyAppEn = {
       },
     },
     'create-company': {
-      displayName: 'Create Company',
+      displayName: 'Create company',
       shortDesc: 'Creates a new company in Shopify',
       longDesc:
         'Adds a new company entity to Shopify, typically for B2B purposes, including contact and location details for wholesale or enterprise customers.',
@@ -1708,24 +1708,24 @@ const ShopifyAppEn = {
             'Internal notes about the company, such as account details or special instructions.',
         },
         customerSince: {
-          displayName: 'Customer Since',
+          displayName: 'Customer since',
           shortDesc: 'Start date',
           longDesc:
             'The date the company became a customer, formatted as a timestamp, useful for tracking tenure.',
         },
         contactProperties: {
-          displayName: 'Contact Properties',
+          displayName: 'Contact properties',
           shortDesc: 'Primary contact details',
           longDesc: 'Details about the primary contact person for the company.',
           type: {
             fields: {
               firstName: {
-                displayName: 'First Name',
+                displayName: 'First name',
                 shortDesc: 'Contact first name',
                 longDesc: 'The first name of the company’s primary contact.',
               },
               lastName: {
-                displayName: 'Last Name',
+                displayName: 'Last name',
                 shortDesc: 'Contact last name',
                 longDesc: 'The last name of the company’s primary contact.',
               },
@@ -1753,14 +1753,14 @@ const ShopifyAppEn = {
           },
         },
         locationProperties: {
-          displayName: 'Location Properties',
+          displayName: 'Location properties',
           shortDesc: 'Company location details',
           longDesc:
             'Details about the company’s physical location, including shipping and billing addresses.',
           type: {
             fields: {
               locationName: {
-                displayName: 'Location Name',
+                displayName: 'Location name',
                 shortDesc: 'Name of location',
                 longDesc: 'A descriptive name for this company location, e.g., "Headquarters".',
               },
@@ -1781,22 +1781,22 @@ const ShopifyAppEn = {
                   'An external identifier for this location, useful for integration with other systems.',
               },
               taxExempt: {
-                displayName: 'Tax Exempt',
+                displayName: 'Tax exempt',
                 shortDesc: 'Tax exemption status',
                 longDesc: 'Indicates if this location is exempt from taxes.',
               },
               taxRegistrationId: {
-                displayName: 'Tax Registration ID',
+                displayName: 'Tax registration ID',
                 shortDesc: 'Tax ID',
                 longDesc: 'The tax registration number for this location, e.g., VAT or EIN.',
               },
               taxExemptions: {
-                displayName: 'Tax Exemptions',
+                displayName: 'Tax exemptions',
                 shortDesc: 'Specific tax exemptions',
                 longDesc: 'A list of specific tax exemptions applied to this location.',
                 type: {
                   element_type: {
-                    displayName: 'Tax Exemption Type',
+                    displayName: 'Tax exemption type',
                     shortDesc: 'Type of exemption',
                     longDesc: 'Defines the specific tax exemption, e.g., "GST", "VAT".',
                   },
@@ -1809,18 +1809,18 @@ const ShopifyAppEn = {
                   'The preferred language and region code for this location, e.g., "en-CA".',
               },
               shippingAddress: {
-                displayName: 'Shipping Address',
+                displayName: 'Shipping address',
                 shortDesc: 'Shipping address',
                 longDesc: 'The address where goods are shipped for this company location.',
                 type: {
                   fields: {
                     address1: {
-                      displayName: 'Address Line 1',
+                      displayName: 'Address line 1',
                       shortDesc: 'Primary shipping line',
                       longDesc: 'The street address or PO Box for shipping.',
                     },
                     address2: {
-                      displayName: 'Address Line 2',
+                      displayName: 'Address line 2',
                       shortDesc: 'Secondary shipping line',
                       longDesc: 'Additional shipping address details, e.g., suite number.',
                     },
@@ -1830,17 +1830,17 @@ const ShopifyAppEn = {
                       longDesc: 'The city for the shipping address.',
                     },
                     zoneCode: {
-                      displayName: 'Zone Code',
+                      displayName: 'Zone code',
                       shortDesc: 'Province/state code',
                       longDesc: 'The code for the province or state, e.g., "CA" for California.',
                     },
                     countryCode: {
-                      displayName: 'Country Code',
+                      displayName: 'Country code',
                       shortDesc: 'Country code',
                       longDesc: 'The ISO 3166-1 alpha-2 country code, e.g., "US".',
                     },
                     zip: {
-                      displayName: 'ZIP/Postal Code',
+                      displayName: 'ZIP/postal code',
                       shortDesc: 'Shipping postal code',
                       longDesc: 'The ZIP or postal code for the shipping address.',
                     },
@@ -1848,23 +1848,23 @@ const ShopifyAppEn = {
                 },
               },
               billingSameAsShipping: {
-                displayName: 'Billing Same as Shipping',
+                displayName: 'Billing same as shipping',
                 shortDesc: 'Use shipping for billing',
                 longDesc: 'If true, the shipping address is also used as the billing address.',
               },
               billingAddress: {
-                displayName: 'Billing Address',
+                displayName: 'Billing address',
                 shortDesc: 'Billing address',
                 longDesc: 'The address used for billing purposes, if different from shipping.',
                 type: {
                   fields: {
                     address1: {
-                      displayName: 'Address Line 1',
+                      displayName: 'Address line 1',
                       shortDesc: 'Primary billing line',
                       longDesc: 'The street address or PO Box for billing.',
                     },
                     address2: {
-                      displayName: 'Address Line 2',
+                      displayName: 'Address line 2',
                       shortDesc: 'Secondary billing line',
                       longDesc: 'Additional billing address details, e.g., apartment number.',
                     },
@@ -1874,17 +1874,17 @@ const ShopifyAppEn = {
                       longDesc: 'The city for the billing address.',
                     },
                     zoneCode: {
-                      displayName: 'Zone Code',
+                      displayName: 'Zone code',
                       shortDesc: 'Province/state code',
                       longDesc: 'The code for the province or state, e.g., "NY".',
                     },
                     countryCode: {
-                      displayName: 'Country Code',
+                      displayName: 'Country code',
                       shortDesc: 'Country code',
                       longDesc: 'The ISO 3166-1 alpha-2 country code, e.g., "CA".',
                     },
                     zip: {
-                      displayName: 'ZIP/Postal Code',
+                      displayName: 'ZIP/postal code',
                       shortDesc: 'Billing postal code',
                       longDesc: 'The ZIP or postal code for the billing address.',
                     },
@@ -1914,27 +1914,27 @@ const ShopifyAppEn = {
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc: 'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc: 'Matches records where the field value is less than or equal to the specified value',
     },
@@ -1944,19 +1944,19 @@ const ShopifyAppEn = {
       longDesc: 'Matches records where the field contains the specified text (case-insensitive)',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a non-empty value',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field is empty',
       longDesc: 'Matches records where the field is empty or not set',
     },
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -1977,13 +1977,13 @@ const ShopifyAppEn = {
   },
   triggers: {
     'shopify-abandoned-cart-trigger': {
-      displayName: 'Shopify New Abandoned Cart',
+      displayName: 'Shopify new abandoned cart',
       shortDesc: 'Triggers when a customer abandons a checkout in Shopify',
       longDesc:
         'This trigger activates when a Shopify checkout is created but not completed within the specified time window. Use this to send recovery emails, offer discounts, or analyze cart abandonment patterns.',
       options: {
         abandonedHours: {
-          displayName: 'Abandoned Hours',
+          displayName: 'Abandoned hours',
           shortDesc: 'Time window to consider a cart abandoned',
           longDesc:
             'Specify how many hours must pass since cart creation without completion for it to be considered abandoned. Values range from 1 hour to 168 hours (one week).',
@@ -1991,13 +1991,13 @@ const ShopifyAppEn = {
       },
     },
     'shopify-blog-trigger': {
-      displayName: 'Shopify Blog Created',
+      displayName: 'Shopify blog created',
       shortDesc: 'Triggers when a new blog is created in Shopify',
       longDesc:
         'This trigger activates whenever a new blog (not an article) is created in your Shopify store. Use this to monitor blog creation or automate follow-up tasks.',
     },
     'shopify-blog-entry-trigger': {
-      displayName: 'Shopify New Blog Article',
+      displayName: 'Shopify new blog article',
       shortDesc: 'Triggers when a blog article is created or published',
       longDesc:
         'This trigger activates when a new article is created or published in a specified Shopify blog. Use this to automate social media sharing, email notifications, or content distribution workflows.',
@@ -2008,7 +2008,7 @@ const ShopifyAppEn = {
           longDesc: 'Choose which Shopify blog to monitor for new articles.',
         },
         entryStatus: {
-          displayName: 'Article Status',
+          displayName: 'Article status',
           shortDesc: 'Filter articles by publication status',
           longDesc:
             'Choose whether to trigger on all articles, only published articles, or only draft articles.',
@@ -2016,25 +2016,25 @@ const ShopifyAppEn = {
       },
     },
     'shopify-customer-created-trigger': {
-      displayName: 'Shopify Customer Created',
+      displayName: 'Shopify customer created',
       shortDesc: 'Triggers when a new customer account is created',
       longDesc:
         'This trigger activates whenever a new customer registers or is created in your Shopify store. Use this to send welcome emails, add customers to marketing lists, or create records in other systems.',
     },
     'shopify-customer-updated-trigger': {
-      displayName: 'Shopify Customer Updated',
+      displayName: 'Shopify customer updated',
       shortDesc: 'Triggers when customer information is modified',
       longDesc:
         'This trigger activates whenever customer information is updated in your Shopify store. Use this to sync customer data with other systems, track specific customer changes, or update marketing preferences.',
     },
     'shopify-new-order-trigger': {
-      displayName: 'Shopify New Order',
+      displayName: 'Shopify new order',
       shortDesc: 'Triggers when a new order is placed with the specified status',
       longDesc:
         'This trigger activates when a new order is created in your Shopify store that matches the specified status filter. Use this to process orders, update inventory in other systems, or send custom notifications based on order status.',
       options: {
         orderStatus: {
-          displayName: 'Order Status',
+          displayName: 'Order status',
           shortDesc: 'Filter orders by their status',
           longDesc:
             'Select which type of orders to monitor based on their status (e.g., any, paid, fulfilled, cancelled). This lets you create different workflows for different order conditions.',

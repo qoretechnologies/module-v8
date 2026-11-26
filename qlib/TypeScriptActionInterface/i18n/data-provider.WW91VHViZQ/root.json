@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **YouTube** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.display_name": {
-          "source": "Add Video to Playlist",
-          "message": "Add Video to Playlist"
+          "source": "Add video to playlist",
+          "message": "Add video to playlist"
         },
         "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.short_desc": {
           "source": "Add a video to an existing YouTube playlist",
@@ -388,8 +388,8 @@
           "message": "Optional position (0-based index) where the video should be inserted in the playlist. If not specified, the video will be added to the end"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.display_name": {
-          "source": "Create Playlist",
-          "message": "Create Playlist"
+          "source": "Create playlist",
+          "message": "Create playlist"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.short_desc": {
           "source": "Create a new YouTube playlist",
@@ -424,8 +424,8 @@
           "message": "Optional description text for the playlist explaining its content or purpose"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
-          "message": "Privacy Status"
+          "source": "Privacy status",
+          "message": "Privacy status"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.short_desc": {
           "source": "The privacy setting for the playlist",
@@ -460,8 +460,8 @@
           "message": "Optional list of tags/keywords to help categorize and make the playlist discoverable"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.display_name": {
-          "source": "Default Language",
-          "message": "Default Language"
+          "source": "Default language",
+          "message": "Default language"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.short_desc": {
           "source": "The default language for the playlist",
@@ -472,8 +472,8 @@
           "message": "Optional default language code for the playlist content (e.g., \"en\" for English)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.display_name": {
-          "source": "Search Videos",
-          "message": "Search Videos"
+          "source": "Search videos",
+          "message": "Search videos"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.short_desc": {
           "source": "Search for YouTube videos",
@@ -484,8 +484,8 @@
           "message": "Search for YouTube videos using various filters including keywords, duration, quality, upload date, and more"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.display_name": {
-          "source": "Search Query",
-          "message": "Search Query"
+          "source": "Search query",
+          "message": "Search query"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.short_desc": {
           "source": "Keywords to search for",
@@ -496,8 +496,8 @@
           "message": "Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either \"boating\" or \"sailing\", set the q parameter value to boating|sailing. Similarly, to search for videos matching either \"boating\" or \"sailing\" but not \"fishing\", set the q parameter value to boating|sailing -fishing."
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
-          "message": "Sort Order"
+          "source": "Sort order",
+          "message": "Sort order"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.short_desc": {
           "source": "How to sort the search results",
@@ -528,8 +528,8 @@
           "message": "View Count"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.display_name": {
-          "source": "Published After",
-          "message": "Published After"
+          "source": "Published after",
+          "message": "Published after"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.short_desc": {
           "source": "Only return videos published after this date",
@@ -540,8 +540,8 @@
           "message": "Filter to only include videos published after the specified date (ISO 8601 format)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.display_name": {
-          "source": "Published Before",
-          "message": "Published Before"
+          "source": "Published before",
+          "message": "Published before"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.short_desc": {
           "source": "Only return videos published before this date",
@@ -552,8 +552,8 @@
           "message": "Filter to only include videos published before the specified date (ISO 8601 format)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.display_name": {
-          "source": "Video Duration",
-          "message": "Video Duration"
+          "source": "Video duration",
+          "message": "Video duration"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.short_desc": {
           "source": "Filter by video length",
@@ -580,8 +580,8 @@
           "message": "Long (> 20 minutes)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.display_name": {
-          "source": "Video Definition",
-          "message": "Video Definition"
+          "source": "Video definition",
+          "message": "Video definition"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.short_desc": {
           "source": "Filter by video quality",
@@ -604,8 +604,8 @@
           "message": "High Definition"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.display_name": {
-          "source": "Video Dimension",
-          "message": "Video Dimension"
+          "source": "Video dimension",
+          "message": "Video dimension"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.short_desc": {
           "source": "Filter by 2D or 3D videos",
@@ -628,8 +628,8 @@
           "message": "3D"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.display_name": {
-          "source": "Video Caption",
-          "message": "Video Caption"
+          "source": "Video caption",
+          "message": "Video caption"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.short_desc": {
           "source": "Filter by caption availability",
@@ -652,8 +652,8 @@
           "message": "None"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.display_name": {
-          "source": "Video License",
-          "message": "Video License"
+          "source": "Video license",
+          "message": "Video license"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.short_desc": {
           "source": "Filter by video license type",
@@ -676,8 +676,8 @@
           "message": "Creative Commons"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.display_name": {
-          "source": "Safe Search",
-          "message": "Safe Search"
+          "source": "Safe search",
+          "message": "Safe search"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.short_desc": {
           "source": "Safe search filtering level",
@@ -700,8 +700,8 @@
           "message": "Strict"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.display_name": {
-          "source": "Region Code",
-          "message": "Region Code"
+          "source": "Region code",
+          "message": "Region code"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.short_desc": {
           "source": "Country code to search within",
@@ -712,8 +712,8 @@
           "message": "Optional two-letter country code to restrict search results to a specific region"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.display_name": {
-          "source": "Relevance Language",
-          "message": "Relevance Language"
+          "source": "Relevance language",
+          "message": "Relevance language"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.short_desc": {
           "source": "Language for relevance ranking",
@@ -724,8 +724,8 @@
           "message": "Language code to use for relevance ranking of search results"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.display_name": {
-          "source": "Video Category",
-          "message": "Video Category"
+          "source": "Video category",
+          "message": "Video category"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.short_desc": {
           "source": "Filter by video category",
@@ -736,8 +736,8 @@
           "message": "Optional category ID to filter videos by specific YouTube category"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
-          "message": "Maximum Results"
+          "source": "Maximum results",
+          "message": "Maximum results"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of results to return",
@@ -748,8 +748,8 @@
           "message": "The maximum number of search results to return (default is 25)"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -760,8 +760,8 @@
           "message": "Token for retrieving a specific page of results (used for pagination)"
         },
         "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.display_name": {
-          "source": "Get Channel ID from URL",
-          "message": "Get Channel ID from URL"
+          "source": "Get channel ID from URL",
+          "message": "Get channel ID from URL"
         },
         "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.short_desc": {
           "source": "Extract YouTube channel ID from various URL formats",
@@ -784,8 +784,8 @@
           "message": "Any valid YouTube URL format including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), or video URLs"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.display_name": {
-          "source": "Get Analytics Report",
-          "message": "Get Analytics Report"
+          "source": "Get analytics report",
+          "message": "Get analytics report"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.short_desc": {
           "source": "Get YouTube Analytics report data",
@@ -796,8 +796,8 @@
           "message": "Retrieve YouTube Analytics data for a specific channel within a date range, including metrics like views, watch time, and engagement"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.short_desc": {
           "source": "The start date for the report",
@@ -808,8 +808,8 @@
           "message": "The start date for the analytics report in YYYY-MM-DD format"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.short_desc": {
           "source": "The end date for the report",
@@ -944,8 +944,8 @@
           "message": "The YouTube channel ID to retrieve analytics data for"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
-          "message": "Maximum Results"
+          "source": "Maximum results",
+          "message": "Maximum results"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of results to return",
@@ -956,8 +956,8 @@
           "message": "The maximum number of data points to return in the report (default is 10)"
         },
         "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.display_name": {
-          "source": "List Video Categories",
-          "message": "List Video Categories"
+          "source": "List video categories",
+          "message": "List video categories"
         },
         "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.short_desc": {
           "source": "Get list of YouTube video categories",
@@ -968,8 +968,8 @@
           "message": "Retrieve the list of available YouTube video categories that can be assigned to videos"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.display_name": {
-          "source": "List User Channels",
-          "message": "List User Channels"
+          "source": "List user channels",
+          "message": "List user channels"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.short_desc": {
           "source": "Get list of authenticated user's YouTube channels",
@@ -980,8 +980,8 @@
           "message": "Retrieve information about the authenticated user's YouTube channels including statistics and branding settings"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
-          "message": "Maximum Results"
+          "source": "Maximum results",
+          "message": "Maximum results"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of channels to return",
@@ -992,8 +992,8 @@
           "message": "The maximum number of channels to return (default is 5)"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
           "source": "Token for pagination",
@@ -1004,8 +1004,8 @@
           "message": "Token for retrieving the next page of results"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.display_name": {
-          "source": "List User Subscriptions",
-          "message": "List User Subscriptions"
+          "source": "List user subscriptions",
+          "message": "List user subscriptions"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.short_desc": {
           "source": "Get a list of YouTube channel subscriptions for the authenticated user",
@@ -1016,8 +1016,8 @@
           "message": "Retrieves a paginated list of YouTube channels that the authenticated user is subscribed to, including channel details and thumbnails"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
-          "message": "Maximum Results"
+          "source": "Maximum results",
+          "message": "Maximum results"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of subscriptions to return",
@@ -1028,8 +1028,8 @@
           "message": "The maximum number of subscription items to return in the response (1-50, default is 25)"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
           "source": "Token for pagination to get the next page of results",
@@ -1040,8 +1040,8 @@
           "message": "The token that can be used as the value of the pageToken parameter to retrieve the next page in the result set"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.display_name": {
-          "source": "List Video Comments",
-          "message": "List Video Comments"
+          "source": "List video comments",
+          "message": "List video comments"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.short_desc": {
           "source": "Get comments for a YouTube video",
@@ -1064,8 +1064,8 @@
           "message": "The unique identifier of the YouTube video to retrieve comments from"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
-          "message": "Sort Order"
+          "source": "Sort order",
+          "message": "Sort order"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.short_desc": {
           "source": "How to sort the comments",
@@ -1084,8 +1084,8 @@
           "message": "Relevance"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.display_name": {
-          "source": "Search Terms",
-          "message": "Search Terms"
+          "source": "Search terms",
+          "message": "Search terms"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.short_desc": {
           "source": "Filter comments by search terms",
@@ -1096,8 +1096,8 @@
           "message": "Optional search terms to filter comments that contain specific keywords"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.display_name": {
-          "source": "Text Format",
-          "message": "Text Format"
+          "source": "Text format",
+          "message": "Text format"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.short_desc": {
           "source": "Format of the comment text",
@@ -1116,8 +1116,8 @@
           "message": "Plain Text"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
-          "message": "Maximum Results"
+          "source": "Maximum results",
+          "message": "Maximum results"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of comments to return",
@@ -1128,8 +1128,8 @@
           "message": "The maximum number of comment threads to return (default is 20)"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -1140,8 +1140,8 @@
           "message": "Token for retrieving a specific page of comments"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.display_name": {
-          "source": "List User Videos",
-          "message": "List User Videos"
+          "source": "List user videos",
+          "message": "List user videos"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.short_desc": {
           "source": "Get list of authenticated user's YouTube videos",
@@ -1152,8 +1152,8 @@
           "message": "Retrieve a list of videos uploaded by the authenticated user to their YouTube channel"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
-          "message": "Maximum Results"
+          "source": "Maximum results",
+          "message": "Maximum results"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
           "source": "Maximum number of videos to return",
@@ -1164,8 +1164,8 @@
           "message": "The maximum number of videos to return (default is 10)"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
           "source": "Token for pagination",
@@ -1176,8 +1176,8 @@
           "message": "Token for retrieving the next page of videos"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
-          "source": "Create or Reply to Comment",
-          "message": "Create or Reply to Comment"
+          "source": "Create or reply to comment",
+          "message": "Create or reply to comment"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
           "source": "Reply to a YouTube comment or create one",
@@ -1188,8 +1188,8 @@
           "message": "Post a reply to an existing comment or create a new one on a YouTube video"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.display_name": {
-          "source": "Parent Comment ID",
-          "message": "Parent Comment ID"
+          "source": "Parent comment ID",
+          "message": "Parent comment ID"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.short_desc": {
           "source": "The ID of the comment to reply to",
@@ -1200,8 +1200,8 @@
           "message": "The unique identifier of the comment or comment thread to reply to"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.display_name": {
-          "source": "Reply Text",
-          "message": "Reply Text"
+          "source": "Reply text",
+          "message": "Reply text"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.short_desc": {
           "source": "The text content of the reply",
@@ -1212,8 +1212,8 @@
           "message": "The text content of your reply to the comment"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.display_name": {
-          "source": "Update Video Details",
-          "message": "Update Video Details"
+          "source": "Update video details",
+          "message": "Update video details"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.short_desc": {
           "source": "Update details of a YouTube video",
@@ -1260,8 +1260,8 @@
           "message": "Optional new category for the video (numeric category ID)"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
-          "message": "Privacy Status"
+          "source": "Privacy status",
+          "message": "Privacy status"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.short_desc": {
           "source": "Privacy setting for the video",
@@ -1296,8 +1296,8 @@
           "message": "Optional new description for the video (leave empty to keep current description)"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.display_name": {
-          "source": "Made for Kids",
-          "message": "Made for Kids"
+          "source": "Made for kids",
+          "message": "Made for kids"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.short_desc": {
           "source": "Whether the video is made for kids",
@@ -1320,8 +1320,8 @@
           "message": "Optional list of tags/keywords to help categorize the video"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.display_name": {
-          "source": "Upload Video",
-          "message": "Upload Video"
+          "source": "Upload video",
+          "message": "Upload video"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.short_desc": {
           "source": "Upload a video to YouTube",
@@ -1344,8 +1344,8 @@
           "message": "The title/name for the video being uploaded"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.display_name": {
-          "source": "Video File",
-          "message": "Video File"
+          "source": "Video file",
+          "message": "Video file"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.short_desc": {
           "source": "The video file to upload",
@@ -1488,8 +1488,8 @@
           "message": "The YouTube category for the video (numeric category ID)"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
-          "message": "Privacy Status"
+          "source": "Privacy status",
+          "message": "Privacy status"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.short_desc": {
           "source": "Privacy setting for the video",
@@ -1524,8 +1524,8 @@
           "message": "Optional description text for the video explaining its content"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.display_name": {
-          "source": "Made for Kids",
-          "message": "Made for Kids"
+          "source": "Made for kids",
+          "message": "Made for kids"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.short_desc": {
           "source": "Whether the video is made for kids",
@@ -1548,8 +1548,8 @@
           "message": "Optional list of tags/keywords to help categorize and make the video discoverable"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.display_name": {
-          "source": "New Video by Search",
-          "message": "New Video by Search"
+          "source": "New video by search",
+          "message": "New video by search"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.short_desc": {
           "source": "Triggers when new videos match a search query",
@@ -1560,8 +1560,8 @@
           "message": "Monitors YouTube search results for a specific query and triggers when new videos matching the search terms are found."
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.display_name": {
-          "source": "Search Query",
-          "message": "Search Query"
+          "source": "Search query",
+          "message": "Search query"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.short_desc": {
           "source": "The search terms to monitor",
@@ -1572,8 +1572,8 @@
           "message": "Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either \"boating\" or \"sailing\", set the q parameter value to boating|sailing. Similarly, to search for videos matching either \"boating\" or \"sailing\" but not \"fishing\", set the q parameter value to boating|sailing -fishing."
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.display_name": {
-          "source": "New Video Comment",
-          "message": "New Video Comment"
+          "source": "New video comment",
+          "message": "New video comment"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.short_desc": {
           "source": "Triggers when a new comment is posted on a video",
@@ -1596,8 +1596,8 @@
           "message": "Select the YouTube video to monitor for new comments"
         },
         "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.display_name": {
-          "source": "New Channel Video",
-          "message": "New Channel Video"
+          "source": "New channel video",
+          "message": "New channel video"
         },
         "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.short_desc": {
           "source": "Triggers when a new video is uploaded to a channel",
@@ -1632,8 +1632,8 @@
           "message": "Enter the full URL of the YouTube channel to monitor for new video uploads"
         },
         "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.display_name": {
-          "source": "New Playlist Video",
-          "message": "New Playlist Video"
+          "source": "New playlist video",
+          "message": "New playlist video"
         },
         "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.short_desc": {
           "source": "Triggers when a new video is added to a playlist",
@@ -1656,8 +1656,8 @@
           "message": "Enter the YouTube playlist ID to monitor for new videos being added"
         },
         "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.display_name": {
-          "source": "New Livestream",
-          "message": "New Livestream"
+          "source": "New livestream",
+          "message": "New livestream"
         },
         "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.short_desc": {
           "source": "Triggers when a new livestream starts",

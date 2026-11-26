@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Freshdesk** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.RnJlc2hkZXNr.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
-          "message": "Search Records"
+          "source": "Search records",
+          "message": "Search records"
         },
         "app.RnJlc2hkZXNr.action.c2VhcmNo.short_desc": {
           "source": "Search for matching records in the given table in app \"Freshdesk\"",
@@ -520,8 +520,8 @@
           "message": "Tickets that belong to the given company ID."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfYnk.short_desc": {
           "source": "Sort the results",
@@ -532,8 +532,8 @@
           "message": "Sort the results."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
-          "message": "Order Type"
+          "source": "Order type",
+          "message": "Order type"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.b3JkZXJfdHlwZQ.short_desc": {
           "source": "Sort order",
@@ -568,8 +568,8 @@
           "message": "The page number of results to return."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
-          "message": "Per Page"
+          "source": "Per page",
+          "message": "Per page"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX3RpY2tldHNfZ2V0.option.cGVyX3BhZ2U.short_desc": {
           "source": "The number of objects returned per page",
@@ -952,8 +952,8 @@
           "message": "Use this API to fetch a list of all companies."
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
-          "message": "Per Page"
+          "source": "Per page",
+          "message": "Per page"
         },
         "app.RnJlc2hkZXNr.action.YXBpX3YyX2NvbXBhbmllc19nZXQ.option.cGVyX3BhZ2U.short_desc": {
           "source": "Number of results per page",
@@ -1084,8 +1084,8 @@
           "message": "Api v2 custom objects schemas schema id records id put"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.display_name": {
-          "source": "New Contact",
-          "message": "New Contact"
+          "source": "New contact",
+          "message": "New contact"
         },
         "app.RnJlc2hkZXNr.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when a new contact is created in Freshdesk.",
@@ -1096,8 +1096,8 @@
           "message": "Fires whenever a new contact is added to your Freshdesk instance. Capture details such as name, email, phone, and any custom fields associated with the contact."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.display_name": {
-          "source": "Updated Contact",
-          "message": "Updated Contact"
+          "source": "Updated contact",
+          "message": "Updated contact"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF9jb250YWN0X3RyaWdnZXI.short_desc": {
           "source": "Triggers when an existing contact is updated in Freshdesk.",
@@ -1108,8 +1108,8 @@
           "message": "Fires whenever an existing contact's details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields."
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.display_name": {
-          "source": "Updated Ticket",
-          "message": "Updated Ticket"
+          "source": "Updated ticket",
+          "message": "Updated ticket"
         },
         "app.RnJlc2hkZXNr.action.dXBkYXRlZF90aWNrZXRfdHJpZ2dlcg.short_desc": {
           "source": "Triggers when an existing ticket is updated in Freshdesk.",
@@ -1120,8 +1120,8 @@
           "message": "Fires whenever an existing ticket is updated with new details in your Freshdesk instance. For example, changes to subject, priority, status, or assigned agent."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.display_name": {
-          "source": "New Ticket",
-          "message": "New Ticket"
+          "source": "New ticket",
+          "message": "New ticket"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a new ticket is created in Freshdesk.",
@@ -1132,8 +1132,8 @@
           "message": "Fires whenever a new ticket is created in your Freshdesk instance. You can capture details such as subject, description, priority, and more, and use this data in subsequent actions or notifications."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.display_name": {
-          "source": "Ticket Status Filter",
-          "message": "Ticket Status Filter"
+          "source": "Ticket status filter",
+          "message": "Ticket status filter"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0U3RhdHVz.short_desc": {
           "source": "Filters by ticket status",
@@ -1144,8 +1144,8 @@
           "message": "Restrict or filter the trigger to only fire for tickets matching a certain status (e.g. Open, Pending, Resolved, etc.)."
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.display_name": {
-          "source": "Ticket Priority Filter",
-          "message": "Ticket Priority Filter"
+          "source": "Ticket priority filter",
+          "message": "Ticket priority filter"
         },
         "app.RnJlc2hkZXNr.action.bmV3X3RpY2tldF90cmlnZ2Vy.option.dGlja2V0UHJpb3JpdHk.short_desc": {
           "source": "Filters by ticket priority",

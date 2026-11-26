@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **SurveyMonkey** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
-          "message": "Create Contact"
+          "source": "Create contact",
+          "message": "Create contact"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
           "source": "Create a new contact",
@@ -352,8 +352,8 @@
           "message": "Create a new contact in SurveyMonkey with first name, last name, email, or phone number"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
           "source": "The contact's first name",
@@ -364,8 +364,8 @@
           "message": "The first name of the contact"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
           "source": "The contact's last name",
@@ -388,8 +388,8 @@
           "message": "The email address for the contact (either email or phone number is required)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
           "source": "The contact's phone number",
@@ -400,8 +400,8 @@
           "message": "The phone number for the contact (either email or phone number is required)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
-          "message": "List Contacts"
+          "source": "List contacts",
+          "message": "List contacts"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
           "source": "Retrieve a list of contacts",
@@ -424,8 +424,8 @@
           "message": "The page number for pagination (starts at 1)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Per Page",
-          "message": "Per Page"
+          "source": "Per page",
+          "message": "Per page"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
           "source": "Number of contacts per page",
@@ -448,8 +448,8 @@
           "message": "The maximum total number of contacts to retrieve across all pages (default: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Create Collector",
-          "message": "Create Collector"
+          "source": "Create collector",
+          "message": "Create collector"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
           "source": "Create a collector for a survey",
@@ -472,8 +472,8 @@
           "message": "Select the survey that you want to create a collector for"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
-          "source": "Collector Type",
-          "message": "Collector Type"
+          "source": "Collector type",
+          "message": "Collector type"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
           "source": "The type of collector",
@@ -500,8 +500,8 @@
           "message": "Embedded Survey"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
-          "source": "Collector Name",
-          "message": "Collector Name"
+          "source": "Collector name",
+          "message": "Collector name"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
           "source": "The name of the collector",
@@ -512,8 +512,8 @@
           "message": "A descriptive name for the collector"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
-          "source": "List Collectors",
-          "message": "List Collectors"
+          "source": "List collectors",
+          "message": "List collectors"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
           "source": "Retrieve collectors for a survey",
@@ -548,8 +548,8 @@
           "message": "The maximum total number of collectors to retrieve (default: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
-          "source": "List Responses",
-          "message": "List Responses"
+          "source": "List responses",
+          "message": "List responses"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
           "source": "Retrieve survey responses",
@@ -584,8 +584,8 @@
           "message": "The maximum total number of responses to retrieve (default: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
-          "source": "Get Response",
-          "message": "Get Response"
+          "source": "Get response",
+          "message": "Get response"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
           "source": "Retrieve a specific survey response",
@@ -620,8 +620,8 @@
           "message": "The unique identifier of the response you want to retrieve"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
-          "message": "Include Answers"
+          "source": "Include answers",
+          "message": "Include answers"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
           "source": "Include detailed answer data",
@@ -632,8 +632,8 @@
           "message": "When enabled, retrieves the full response details including all question answers"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
-          "source": "Get Collector",
-          "message": "Get Collector"
+          "source": "Get collector",
+          "message": "Get collector"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
           "source": "Retrieve collector details",
@@ -668,8 +668,8 @@
           "message": "Select the collector you want to get detailed information for"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
-          "source": "Get Survey",
-          "message": "Get Survey"
+          "source": "Get survey",
+          "message": "Get survey"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
           "source": "Retrieve survey details",
@@ -692,8 +692,8 @@
           "message": "Select the survey you want to get detailed information for"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
-          "source": "List Surveys",
-          "message": "List Surveys"
+          "source": "List surveys",
+          "message": "List surveys"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
           "source": "Retrieve a list of surveys",
@@ -716,8 +716,8 @@
           "message": "The maximum total number of surveys to retrieve (default: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
-          "source": "Send Survey",
-          "message": "Send Survey"
+          "source": "Send survey",
+          "message": "Send survey"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
           "source": "Send survey invitation via collector",
@@ -752,8 +752,8 @@
           "message": "Select the email collector to send the survey through"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
-          "message": "Email Subject"
+          "source": "Email subject",
+          "message": "Email subject"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
           "source": "The subject line for the invitation email",
@@ -764,8 +764,8 @@
           "message": "The subject line that will appear in the invitation email"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
-          "source": "Email Body",
-          "message": "Email Body"
+          "source": "Email body",
+          "message": "Email body"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
           "source": "The body text for the invitation email",
@@ -776,8 +776,8 @@
           "message": "The message body that will appear in the invitation email"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
-          "source": "Recipient Emails",
-          "message": "Recipient Emails"
+          "source": "Recipient emails",
+          "message": "Recipient emails"
         },
         "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
           "source": "List of recipient email addresses",
@@ -788,8 +788,8 @@
           "message": "A list of email addresses to send the survey invitation to"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
-          "source": "Create Survey",
-          "message": "Create Survey"
+          "source": "Create survey",
+          "message": "Create survey"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
           "source": "Create a new survey",
@@ -860,8 +860,8 @@
           "message": "The ID of a template to use as the basis for the new survey"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
-          "source": "Copy Survey",
-          "message": "Copy Survey"
+          "source": "Copy survey",
+          "message": "Copy survey"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
           "source": "Create a copy of an existing survey",
@@ -896,8 +896,8 @@
           "message": "The title that will be displayed for the copied survey"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Update Collector",
-          "message": "Update Collector"
+          "source": "Update collector",
+          "message": "Update collector"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
           "source": "Update collector settings",
@@ -964,8 +964,8 @@
           "message": "Closed"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
-          "message": "Close Date"
+          "source": "Close date",
+          "message": "Close date"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
           "source": "When to automatically close the collector",
@@ -988,8 +988,8 @@
           "message": "The URL where respondents will be redirected after completing the survey"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
-          "source": "Response Limit",
-          "message": "Response Limit"
+          "source": "Response limit",
+          "message": "Response limit"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
           "source": "Maximum number of responses",
@@ -1000,8 +1000,8 @@
           "message": "The maximum number of responses to accept before closing the collector"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
-          "source": "Delete Collector",
-          "message": "Delete Collector"
+          "source": "Delete collector",
+          "message": "Delete collector"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
           "source": "Delete a collector from a survey",
@@ -1036,8 +1036,8 @@
           "message": "Select the collector you want to permanently delete"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
-          "source": "Get Response Counts",
-          "message": "Get Response Counts"
+          "source": "Get response counts",
+          "message": "Get response counts"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
           "source": "Get total response count for a survey",
@@ -1060,8 +1060,8 @@
           "message": "Select the survey you want to get response counts for"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
-          "message": "Update Contact"
+          "source": "Update contact",
+          "message": "Update contact"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
           "source": "Update an existing contact",
@@ -1084,8 +1084,8 @@
           "message": "The unique identifier of the contact you want to update"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
           "source": "The contact's first name",
@@ -1096,8 +1096,8 @@
           "message": "The new first name for the contact"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
           "source": "The contact's last name",
@@ -1120,8 +1120,8 @@
           "message": "The new email address for the contact"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
           "source": "The contact's phone number",
@@ -1132,8 +1132,8 @@
           "message": "The new phone number for the contact"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
-          "message": "Delete Contact"
+          "source": "Delete contact",
+          "message": "Delete contact"
         },
         "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
           "source": "Delete a contact",
@@ -1156,8 +1156,8 @@
           "message": "The unique identifier of the contact you want to delete"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
-          "message": "List Contact Lists"
+          "source": "List contact lists",
+          "message": "List contact lists"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
           "source": "Retrieve all contact lists",
@@ -1180,8 +1180,8 @@
           "message": "The maximum total number of contact lists to retrieve (default: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
-          "message": "Create Contact List"
+          "source": "Create contact list",
+          "message": "Create contact list"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
           "source": "Create a new contact list",
@@ -1204,8 +1204,8 @@
           "message": "A descriptive name for the new contact list"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
-          "source": "Add Contacts to List",
-          "message": "Add Contacts to List"
+          "source": "Add contacts to list",
+          "message": "Add contacts to list"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
           "source": "Add contacts to a contact list",
@@ -1216,8 +1216,8 @@
           "message": "Add one or more existing contacts to a contact list in bulk"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
-          "source": "Contact List ID",
-          "message": "Contact List ID"
+          "source": "Contact list ID",
+          "message": "Contact list ID"
         },
         "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
           "source": "The contact list to add contacts to",
@@ -1240,8 +1240,8 @@
           "message": "A list of contact IDs to add to the contact list"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
-          "source": "Get Survey Rollup",
-          "message": "Get Survey Rollup"
+          "source": "Get survey rollup",
+          "message": "Get survey rollup"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
           "source": "Get aggregated survey statistics",
@@ -1264,8 +1264,8 @@
           "message": "Select the survey you want to get aggregated statistics for"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
-          "source": "Get User Details",
-          "message": "Get User Details"
+          "source": "Get user details",
+          "message": "Get user details"
         },
         "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
           "source": "Get authenticated user information",
@@ -1276,8 +1276,8 @@
           "message": "Retrieve details about the authenticated SurveyMonkey user including account type and permissions"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
-          "source": "List Survey Folders",
-          "message": "List Survey Folders"
+          "source": "List survey folders",
+          "message": "List survey folders"
         },
         "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
           "source": "Retrieve all survey folders",
@@ -1300,8 +1300,8 @@
           "message": "The maximum total number of survey folders to retrieve (default: 500)"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
-          "source": "Create Survey Folder",
-          "message": "Create Survey Folder"
+          "source": "Create survey folder",
+          "message": "Create survey folder"
         },
         "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
           "source": "Create a new survey folder",
@@ -1324,8 +1324,8 @@
           "message": "A descriptive title for the new survey folder"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
-          "source": "New Response",
-          "message": "New Response"
+          "source": "New response",
+          "message": "New response"
         },
         "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
           "source": "Triggers when a new survey response is completed",
@@ -1348,8 +1348,8 @@
           "message": "Select the specific survey that you want to monitor for completed responses"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
-          "source": "Response Disqualified",
-          "message": "Response Disqualified"
+          "source": "Response disqualified",
+          "message": "Response disqualified"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
           "source": "Triggers when a respondent is disqualified from a survey",
@@ -1372,8 +1372,8 @@
           "message": "Select the specific survey that you want to monitor for disqualified responses"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
-          "source": "Response Updated",
-          "message": "Response Updated"
+          "source": "Response updated",
+          "message": "Response updated"
         },
         "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
           "source": "Triggers when a survey response is updated",
@@ -1396,8 +1396,8 @@
           "message": "Select the specific survey that you want to monitor for updated responses"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
-          "source": "Collector Updated",
-          "message": "Collector Updated"
+          "source": "Collector updated",
+          "message": "Collector updated"
         },
         "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {
           "source": "Triggers when a collector is updated",

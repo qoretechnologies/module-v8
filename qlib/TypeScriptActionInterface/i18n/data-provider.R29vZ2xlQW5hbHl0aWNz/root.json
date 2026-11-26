@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **Google Analytics** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.display_name": {
-          "source": "Run Report",
-          "message": "Run Report"
+          "source": "Run report",
+          "message": "Run report"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.short_desc": {
           "source": "Execute a standard Google Analytics 4 report",
@@ -364,8 +364,8 @@
           "message": "Select the GA4 property from which to retrieve analytics data."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
-          "message": "Date Ranges"
+          "source": "Date ranges",
+          "message": "Date ranges"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.short_desc": {
           "source": "The date ranges for the report",
@@ -376,8 +376,8 @@
           "message": "Specify one or more date ranges for the report. Dates can be in YYYY-MM-DD format or relative values like \"7daysAgo\", \"yesterday\", \"today\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.ZW5kX2RhdGU.short_desc": {
           "source": "The end date of the range",
@@ -388,8 +388,8 @@
           "message": "The inclusive end date for the query in YYYY-MM-DD format, or relative date like \"today\", \"yesterday\"."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.field.c3RhcnRfZGF0ZQ.short_desc": {
           "source": "The start date of the range",
@@ -412,8 +412,8 @@
           "message": "Select the quantitative measurements to include (e.g., activeUsers, sessions, pageViews). You can include up to 10 metrics per report."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
-          "message": "Metric Name"
+          "source": "Metric name",
+          "message": "Metric name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
           "source": "The API name of the metric",
@@ -812,8 +812,8 @@
           "message": "Select the attributes to segment your data by (e.g., country, browser, pagePath). Dimensions are optional and allow you to break down metrics by specific categories."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
-          "message": "Dimension Name"
+          "source": "Dimension name",
+          "message": "Dimension name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
           "source": "The API name of the dimension",
@@ -1248,8 +1248,8 @@
           "message": "The ID of the e-commerce transaction"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
-          "message": "Dimension Filter"
+          "source": "Dimension filter",
+          "message": "Dimension filter"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
           "source": "Filter expression for dimensions",
@@ -1260,8 +1260,8 @@
           "message": "An advanced filter expression to filter report data based on dimension values. Use the GA4 filter expression syntax."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
-          "message": "Metric Filter"
+          "source": "Metric filter",
+          "message": "Metric filter"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
           "source": "Filter expression for metrics",
@@ -1272,8 +1272,8 @@
           "message": "An advanced filter expression to filter report data based on metric values. Use the GA4 filter expression syntax."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
           "source": "Sorting specification for the report",
@@ -1296,8 +1296,8 @@
           "message": "If true, sorts in descending order. If false, sorts in ascending order."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
-          "message": "Field Name"
+          "source": "Field name",
+          "message": "Field name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
           "source": "The dimension or metric name to sort by",
@@ -1308,8 +1308,8 @@
           "message": "The name of the dimension or metric to use for sorting."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
-          "message": "Order Type"
+          "source": "Order type",
+          "message": "Order type"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
           "source": "Whether to sort by dimension or metric",
@@ -1352,8 +1352,8 @@
           "message": "The number of rows to skip before returning results. Used for pagination."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.display_name": {
-          "source": "Keep Empty Rows",
-          "message": "Keep Empty Rows"
+          "source": "Keep empty rows",
+          "message": "Keep empty rows"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.short_desc": {
           "source": "Include rows with all zero metric values",
@@ -1364,8 +1364,8 @@
           "message": "If true, includes rows where all metrics have zero values. If false (default), such rows are excluded."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.display_name": {
-          "source": "Return Property Quota",
-          "message": "Return Property Quota"
+          "source": "Return property quota",
+          "message": "Return property quota"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.short_desc": {
           "source": "Include API quota information in response",
@@ -1376,8 +1376,8 @@
           "message": "If true, returns information about API quota usage for this property in the response."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.display_name": {
-          "source": "Run Real-time Report",
-          "message": "Run Real-time Report"
+          "source": "Run real-time report",
+          "message": "Run real-time report"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.short_desc": {
           "source": "Get live analytics data from the last 30 minutes",
@@ -1412,8 +1412,8 @@
           "message": "Select the real-time metrics to include in the report (e.g., activeUsers, screenPageViews, eventCount)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
-          "message": "Metric Name"
+          "source": "Metric name",
+          "message": "Metric name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
           "source": "The API name of the metric",
@@ -1476,8 +1476,8 @@
           "message": "Select the real-time dimensions to segment your data by (e.g., country, city, deviceCategory, unifiedScreenName)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
-          "message": "Dimension Name"
+          "source": "Dimension name",
+          "message": "Dimension name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
           "source": "The API name of the dimension",
@@ -1552,8 +1552,8 @@
           "message": "How many minutes ago the event occurred"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.display_name": {
-          "source": "Minute Ranges",
-          "message": "Minute Ranges"
+          "source": "Minute ranges",
+          "message": "Minute ranges"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.short_desc": {
           "source": "Custom time ranges within the last 30 minutes",
@@ -1564,8 +1564,8 @@
           "message": "Specify custom time ranges for the real-time data. By default, data from the last 30 minutes is returned."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.display_name": {
-          "source": "End Minutes Ago",
-          "message": "End Minutes Ago"
+          "source": "End minutes ago",
+          "message": "End minutes ago"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.ZW5kX21pbnV0ZXNfYWdv.short_desc": {
           "source": "End of the range in minutes ago",
@@ -1576,8 +1576,8 @@
           "message": "The end of the minute range, expressed as minutes ago (e.g., 0 for current minute)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.display_name": {
-          "source": "Range Name",
-          "message": "Range Name"
+          "source": "Range name",
+          "message": "Range name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.bmFtZQ.short_desc": {
           "source": "A name for this time range",
@@ -1588,8 +1588,8 @@
           "message": "An optional name to identify this time range in the response."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.display_name": {
-          "source": "Start Minutes Ago",
-          "message": "Start Minutes Ago"
+          "source": "Start minutes ago",
+          "message": "Start minutes ago"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.field.c3RhcnRfbWludXRlc19hZ28.short_desc": {
           "source": "Start of the range in minutes ago",
@@ -1600,8 +1600,8 @@
           "message": "The start of the minute range, expressed as minutes ago (e.g., 29 for 29 minutes ago)."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
-          "source": "Dimension Filter",
-          "message": "Dimension Filter"
+          "source": "Dimension filter",
+          "message": "Dimension filter"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
           "source": "Filter expression for dimensions",
@@ -1612,8 +1612,8 @@
           "message": "An advanced filter expression to filter real-time data based on dimension values."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
-          "source": "Metric Filter",
-          "message": "Metric Filter"
+          "source": "Metric filter",
+          "message": "Metric filter"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
           "source": "Filter expression for metrics",
@@ -1624,8 +1624,8 @@
           "message": "An advanced filter expression to filter real-time data based on metric values."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
           "source": "Sorting specification for the report",
@@ -1648,8 +1648,8 @@
           "message": "If true, sorts in descending order."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.display_name": {
-          "source": "Field Name",
-          "message": "Field Name"
+          "source": "Field name",
+          "message": "Field name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.ZmllbGRfbmFtZQ.short_desc": {
           "source": "The dimension or metric name to sort by",
@@ -1660,8 +1660,8 @@
           "message": "The name of the dimension or metric to use for sorting."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.display_name": {
-          "source": "Order Type",
-          "message": "Order Type"
+          "source": "Order type",
+          "message": "Order type"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.field.b3JkZXJfdHlwZQ.short_desc": {
           "source": "Whether to sort by dimension or metric",
@@ -1692,8 +1692,8 @@
           "message": "The maximum number of rows to return. Default is 10,000."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.display_name": {
-          "source": "Get Metadata",
-          "message": "Get Metadata"
+          "source": "Get metadata",
+          "message": "Get metadata"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.short_desc": {
           "source": "Discover available dimensions and metrics for a property",
@@ -1716,8 +1716,8 @@
           "message": "Select the GA4 property to retrieve metadata for. The response will include both standard and custom dimensions/metrics."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.display_name": {
-          "source": "Batch Run Reports",
-          "message": "Batch Run Reports"
+          "source": "Batch run reports",
+          "message": "Batch run reports"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.short_desc": {
           "source": "Run multiple reports in a single API call",
@@ -1740,8 +1740,8 @@
           "message": "Select the GA4 property from which to retrieve analytics data for all reports."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.display_name": {
-          "source": "Report Requests",
-          "message": "Report Requests"
+          "source": "Report requests",
+          "message": "Report requests"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.short_desc": {
           "source": "The individual report configurations",
@@ -1752,8 +1752,8 @@
           "message": "An array of report request configurations. Each request can have its own date ranges, metrics, dimensions, and limits. Maximum 5 requests per batch."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.display_name": {
-          "source": "Date Ranges",
-          "message": "Date Ranges"
+          "source": "Date ranges",
+          "message": "Date ranges"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.field.ZGF0ZV9yYW5nZXM.short_desc": {
           "source": "The date ranges for this report",
@@ -1764,8 +1764,8 @@
           "message": "The date ranges for this specific report in the batch."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.ZW5kX2RhdGU.short_desc": {
           "source": "The end date of the range",
@@ -1776,8 +1776,8 @@
           "message": "The end date in YYYY-MM-DD format or relative format."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzI2MDA0NGM3MzU4ZmFmMzZmYzA5ZjRmNzEyYjVjYWMxZjc3YmFkNjcxOTMyNjRkYzU3N2M3MTE4ZjZhMjI0YTM.field.c3RhcnRfZGF0ZQ.short_desc": {
           "source": "The start date of the range",
@@ -1800,8 +1800,8 @@
           "message": "The dimensions to include in this specific report."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
-          "message": "Dimension Name"
+          "source": "Dimension name",
+          "message": "Dimension name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzgxZDNiZThjNzBlNmI1MjE0NDEwZTBkMTNkMzg0YjIzMjdhZTVmNzEzY2FiZDM0NGJjMDhlNThiN2IwYTU5ZjI.field.bmFtZQ.short_desc": {
           "source": "The API name of the dimension",
@@ -2260,8 +2260,8 @@
           "message": "The metrics to include in this specific report."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
-          "message": "Metric Name"
+          "source": "Metric name",
+          "message": "Metric name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.type.YWN0aW9uOlltRjBZMmhmY25WdVgzSmxjRzl5ZEhNOipoYXNoPGF1dG8-IzRkOTk0OGRjOWNlY2YzZGZhYmQ1NGU1MTJkODVhYmVkN2M1MWFkYzhlZTM2M2MyM2UwYzdjY2VjODkxODUwN2Y.field.bmFtZQ.short_desc": {
           "source": "The API name of the metric",
@@ -2648,8 +2648,8 @@
           "message": "Number of ad impressions on your property"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.display_name": {
-          "source": "Check Compatibility",
-          "message": "Check Compatibility"
+          "source": "Check compatibility",
+          "message": "Check compatibility"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.short_desc": {
           "source": "Validate dimension and metric combinations",
@@ -2684,8 +2684,8 @@
           "message": "The dimensions you want to verify can be used together."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.display_name": {
-          "source": "Dimension Name",
-          "message": "Dimension Name"
+          "source": "Dimension name",
+          "message": "Dimension name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.field.bmFtZQ.short_desc": {
           "source": "The API name of the dimension",
@@ -3132,8 +3132,8 @@
           "message": "The metrics you want to verify can be used together."
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.display_name": {
-          "source": "Metric Name",
-          "message": "Metric Name"
+          "source": "Metric name",
+          "message": "Metric name"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.field.bmFtZQ.short_desc": {
           "source": "The API name of the metric",
@@ -3520,8 +3520,8 @@
           "message": "Number of ad impressions on your property"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.display_name": {
-          "source": "Compatibility Filter",
-          "message": "Compatibility Filter"
+          "source": "Compatibility filter",
+          "message": "Compatibility filter"
         },
         "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.short_desc": {
           "source": "Filter results by compatibility status",

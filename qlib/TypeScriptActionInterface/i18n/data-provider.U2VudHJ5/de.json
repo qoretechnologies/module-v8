@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Sentry** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Request-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Response-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "Projekte auflisten"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Verwenden Sie den Cursor aus einer vorherigen Antwort, um die nächste oder vorherige Ergebnisseite abzurufen. Leer lassen, um von vorne zu beginnen."
         },
         "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.display_name": {
-          "source": "Get Project Details",
+          "source": "Get project details",
           "message": "Projektdetails abrufen"
         },
         "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Wählen Sie die Slug-Kennung des Projekts aus oder geben Sie sie ein, dessen Details Sie abrufen möchten."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.display_name": {
-          "source": "List Project Events",
+          "source": "List project events",
           "message": "Projekt-Events auflisten"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Wählen Sie das Projekt aus, dessen Events Sie auflisten möchten."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.display_name": {
-          "source": "Full Details",
+          "source": "Full details",
           "message": "Vollständige Details"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Verwenden Sie den Cursor aus einer vorherigen Antwort, um durch die Event-Seiten zu navigieren."
         },
         "app.U2VudHJ5.action.Z2V0X2V2ZW50.display_name": {
-          "source": "Get Event Details",
+          "source": "Get event details",
           "message": "Event-Details abrufen"
         },
         "app.U2VudHJ5.action.Z2V0X2V2ZW50.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Geben Sie die Event-ID (Hexadezimal-String) ein, die Sie abrufen möchten. Event-IDs finden Sie in den Issue-Details oder Event-Listen."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.display_name": {
-          "source": "List Project Issues",
+          "source": "List project issues",
           "message": "Projekt-Issues auflisten"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Wählen Sie das Projekt aus, dessen Issues Sie auflisten möchten."
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Abfragefilter"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Verwenden Sie die Sentry-Abfragesyntax, um Issues nach Eigenschaften wie Status, Zugewiesenem, Tags, Plattform oder Zeitraum zu filtern. Beispiel: \"is:unresolved assigned:me\""
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Statistikzeitraum"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -536,7 +536,7 @@
           "message": "7 Tage"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.display_name": {
-          "source": "Short ID Lookup",
+          "source": "Short ID lookup",
           "message": "Kurz-ID-Suche"
         },
         "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.short_desc": {
@@ -560,7 +560,7 @@
           "message": "Verwenden Sie den Cursor aus einer vorherigen Antwort, um durch Seiten von Issues zu navigieren."
         },
         "app.U2VudHJ5.action.Z2V0X2lzc3Vl.display_name": {
-          "source": "Get Issue Details",
+          "source": "Get issue details",
           "message": "Issue-Details abrufen"
         },
         "app.U2VudHJ5.action.Z2V0X2lzc3Vl.short_desc": {
@@ -584,7 +584,7 @@
           "message": "Geben Sie die Issue-ID ein, die Sie abrufen möchten. Issue-IDs sind numerische Werte, die in der Sentry-Benutzeroberfläche oder über Listenoperationen zu finden sind."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.display_name": {
-          "source": "Update Issue",
+          "source": "Update issue",
           "message": "Issue aktualisieren"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Im nächsten Release behoben"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.display_name": {
-          "source": "Assigned To",
+          "source": "Assigned to",
           "message": "Zugewiesen an"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Weisen Sie das Issue einem bestimmten Benutzer oder Team für Zuständigkeit und Verantwortlichkeit zu. Geben Sie einen Team-Slug (z. B. „team:backend“) oder eine Benutzer-ID ein."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.display_name": {
-          "source": "Has Seen",
+          "source": "Has seen",
           "message": "Wurde gesehen"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Markieren Sie das Issue als gesehen (überprüft) oder ungesehen. Dies hilft dabei nachzuverfolgen, welche Issues von Ihrem Team triagiert wurden."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.display_name": {
-          "source": "Is Bookmarked",
+          "source": "Is bookmarked",
           "message": "Mit Lesezeichen versehen"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.short_desc": {
@@ -684,7 +684,7 @@
           "message": "Fügen Sie dem Issue ein Lesezeichen für einfachen Zugriff und einfaches Filtern hinzu. Mit Lesezeichen versehene Issues werden in Ihrer persönlichen Issue-Liste angezeigt."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.display_name": {
-          "source": "Is Subscribed",
+          "source": "Is subscribed",
           "message": "Ist abonniert"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Abonnieren Sie Benachrichtigungen zu diesem Issue oder bestellen Sie diese ab. Wenn Sie das Issue abonniert haben, erhalten Sie Benachrichtigungen, wenn sich das Issue ändert oder eskaliert."
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.display_name": {
-          "source": "Is Public",
+          "source": "Is public",
           "message": "Ist öffentlich"
         },
         "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Steuern Sie, ob das Issue über einen Freigabelink öffentlich sichtbar ist. Öffentliche Issues können von jedem mit dem Link eingesehen werden, auch ohne Sentry-Zugriff."
         },
         "app.U2VudHJ5.action.bGlzdF90ZWFtcw.display_name": {
-          "source": "List Teams",
+          "source": "List teams",
           "message": "Teams auflisten"
         },
         "app.U2VudHJ5.action.bGlzdF90ZWFtcw.short_desc": {
@@ -732,7 +732,7 @@
           "message": "Verwenden Sie den Cursor aus einer vorherigen Antwort, um durch die Team-Seiten zu navigieren."
         },
         "app.U2VudHJ5.action.Z2V0X3RlYW0.display_name": {
-          "source": "Get Team Details",
+          "source": "Get team details",
           "message": "Team-Details abrufen"
         },
         "app.U2VudHJ5.action.Z2V0X3RlYW0.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Geben Sie den Team-Slug (URL-freundliche Kennung) des Teams ein, dessen Details Sie abrufen möchten."
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.display_name": {
-          "source": "List Organization Issues",
+          "source": "List organization issues",
           "message": "Organisations-Issues auflisten"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.short_desc": {
@@ -768,7 +768,7 @@
           "message": "Ruft eine paginierte Liste von Issues aus allen Projekten innerhalb Ihrer Organisation ab. Dies bietet organisationsweite Transparenz über Probleme in allen Anwendungen und Diensten hinweg. Verwenden Sie Abfragefilter, um die Ergebnisse nach Projekt, Plattform, Status oder anderen Kriterien einzugrenzen."
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Abfragefilter"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.short_desc": {
@@ -780,7 +780,7 @@
           "message": "Verwenden Sie die Sentry-Abfragesyntax, um Issues über alle Projekte hinweg zu filtern. Filtern Sie nach Projekt, Plattform, Umgebung, Status, Tags oder jeder anderen Issue-Eigenschaft."
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Statistikzeitraum"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -808,7 +808,7 @@
           "message": "7 Tage"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.display_name": {
-          "source": "Short ID Lookup",
+          "source": "Short ID lookup",
           "message": "Kurz-ID-Suche"
         },
         "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Verwenden Sie den Cursor aus einer vorherigen Antwort, um weitere Seiten organisationsweiter Issues abzurufen."
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.display_name": {
-          "source": "New Project Issue",
+          "source": "New project issue",
           "message": "Neues Projekt-Issue"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Wählen Sie das Sentry-Projekt aus, das Sie überwachen möchten. Projekte repräsentieren einzelne Anwendungen oder Dienste innerhalb Ihrer Organisation."
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Abfragefilter"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Verwenden Sie die Sentry-Abfragesyntax, um zu filtern, welche Issues dieses Ereignis auslösen. Filtern Sie beispielsweise nach Browser, Gerät, Tags oder danach, ob Fehler unbehandelt sind."
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Statistikzeitraum"
         },
         "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.short_desc": {
@@ -896,7 +896,7 @@
           "message": "7 Tage"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.display_name": {
-          "source": "New Organization Issue",
+          "source": "New organization issue",
           "message": "Neues Organisations-Issue"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.short_desc": {
@@ -908,7 +908,7 @@
           "message": "Überwacht alle Projekte innerhalb Ihrer Sentry-Organisation und löst aus, wenn in einem beliebigen Projekt ein neues Issue erkannt wird. Dies bietet organisationsweite Transparenz über Probleme in allen Anwendungen und Diensten. Verwenden Sie Abfragefilter, um sich auf bestimmte Issue-Typen oder -Merkmale zu konzentrieren."
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.display_name": {
-          "source": "Query Filter",
+          "source": "Query filter",
           "message": "Abfragefilter"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.short_desc": {
@@ -920,7 +920,7 @@
           "message": "Verwenden Sie die Sentry-Abfragesyntax, um zu filtern, welche Issues dieses Ereignis über alle Projekte hinweg auslösen. Filtern Sie nach Eigenschaften wie Plattform, Umgebung, Release oder benutzerdefinierten Tags."
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.display_name": {
-          "source": "Statistics Period",
+          "source": "Statistics period",
           "message": "Statistikzeitraum"
         },
         "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.short_desc": {

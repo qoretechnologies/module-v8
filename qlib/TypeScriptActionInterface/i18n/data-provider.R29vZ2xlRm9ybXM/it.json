@@ -28,7 +28,7 @@
           "message": "Effettua una chiamata API HTTP / REST personalizzata a **Google Forms** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query facoltativi, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine in questa app."
         },
         "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metodo HTTP"
         },
         "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create Form",
+          "source": "Create form",
           "message": "Crea modulo"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Una descrizione opzionale visualizzata sotto il titolo del modulo per fornire ulteriore contesto."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.display_name": {
-          "source": "Document Title",
+          "source": "Document title",
           "message": "Titolo del documento"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Il titolo del documento visualizzato nella scheda del browser. Se non specificato, verrà utilizzato il titolo del modulo."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
-          "source": "Form Settings",
+          "source": "Form settings",
           "message": "Impostazioni modulo"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Configura impostazioni aggiuntive del modulo come la raccolta delle email e la modalità quiz."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZW1haWxfY29sbGVjdGlvbg.display_name": {
-          "source": "Email Collection",
+          "source": "Email collection",
           "message": "Raccolta email"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZW1haWxfY29sbGVjdGlvbg.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Il modulo raccoglie indirizzi email utilizzando un campo che il rispondente completa nel modulo."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcXVpeg.display_name": {
-          "source": "Quiz Mode",
+          "source": "Quiz mode",
           "message": "Modalità quiz"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcXVpeg.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Elenco di domande da aggiungere al modulo. Ogni domanda può avere tipi e proprietà differenti."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y2hvaWNlcw.display_name": {
-          "source": "Answer Choices",
+          "source": "Answer choices",
           "message": "Scelte risposta"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y2hvaWNlcw.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Per domande a scelta multipla, caselle di controllo e menu a tendina, questi sono gli elementi tra cui i rispondenti possono scegliere."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y29ycmVjdF9hbnN3ZXI.display_name": {
-          "source": "Correct Answer",
+          "source": "Correct answer",
           "message": "Risposta corretta"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y29ycmVjdF9hbnN3ZXI.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Per domande del quiz, il feedback da mostrare ai rispondenti dopo aver risposto."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.aGVscF90ZXh0.display_name": {
-          "source": "Help Text",
+          "source": "Help text",
           "message": "Testo Guida"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.aGVscF90ZXh0.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Quando abilitato, gli utenti devono rispondere a questa domanda per inviare il modulo."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4.display_name": {
-          "source": "Scale Maximum",
+          "source": "Scale maximum",
           "message": "Massimo scala"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Per domande a scala, il valore massimo sulla scala. Deve essere compreso tra 0 e 10."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4X2xhYmVs.display_name": {
-          "source": "Scale Maximum Label",
+          "source": "Scale maximum label",
           "message": "Etichetta massimo scala"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4X2xhYmVs.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Etichetta opzionale per descrivere il valore massimo in una domanda a scala."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWlu.display_name": {
-          "source": "Scale Minimum",
+          "source": "Scale minimum",
           "message": "Minimo scala"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWlu.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Per domande a scala, il valore minimo sulla scala. Deve essere compreso tra 0 e 10."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWluX2xhYmVs.display_name": {
-          "source": "Scale Minimum Label",
+          "source": "Scale minimum label",
           "message": "Etichetta minimo scala"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWluX2xhYmVs.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Etichetta opzionale per descrivere il valore minimo in una domanda a scala."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2h1ZmZsZV9jaG9pY2Vz.display_name": {
-          "source": "Shuffle Choices",
+          "source": "Shuffle choices",
           "message": "Rimescola scelte"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2h1ZmZsZV9jaG9pY2Vz.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Quando abilitato, l'ordine delle scelte di risposta verrà randomizzato per ogni rispondente."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dGl0bGU.display_name": {
-          "source": "Question Title",
+          "source": "Question title",
           "message": "Titolo domanda"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dGl0bGU.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Il testo principale della domanda che verrà mostrato ai rispondenti."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dHlwZQ.display_name": {
-          "source": "Question Type",
+          "source": "Question type",
           "message": "Tipo domanda"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dHlwZQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Tempo"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get Form",
+          "source": "Get form",
           "message": "Ottieni modulo"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.short_desc": {
@@ -672,7 +672,7 @@
           "message": "L'identificatore univoco del modulo Google da recuperare."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Includi domande"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Cerca moduli Google nel tuo Google Drive con opzioni per filtrare per nome file, specificare il tipo di ricerca e impaginare i risultati."
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.display_name": {
-          "source": "Form Name",
+          "source": "Form name",
           "message": "Nome del modulo"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Il nome o parte del nome dei moduli Google da cercare. Lascia vuoto per recuperare tutti i moduli."
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Tipo di ricerca"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -740,7 +740,7 @@
           "message": "Il numero massimo di moduli da restituire in una singola richiesta. Il valore massimo è 1000."
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token di pagina"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.short_desc": {
@@ -752,7 +752,7 @@
           "message": "Un token restituito da una ricerca precedente per continuare la paginazione. Usa il next_page_token da una risposta precedente."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.display_name": {
-          "source": "Get Form Responses",
+          "source": "Get form responses",
           "message": "Ottieni risposte del modulo"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Il numero massimo di risposte da restituire per richiesta. Il valore predefinito è 50, il massimo è 1000."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token di pagina"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.short_desc": {
@@ -800,7 +800,7 @@
           "message": "Un token per recuperare la pagina successiva di risultati. Utilizzato per la paginazione di grandi set di risposte."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.display_name": {
-          "source": "Respondent Email",
+          "source": "Respondent email",
           "message": "Email del rispondente"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Filtra le risposte per includere solo quelle provenienti da rispondenti con email che contengono questo valore."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.display_name": {
-          "source": "Filter Answers",
+          "source": "Filter answers",
           "message": "Filtra risposte"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.short_desc": {
@@ -824,7 +824,7 @@
           "message": "Filtra le risposte in base a risposte a domande specifiche. Ogni filtro specifica un ID domanda, il tipo di filtro e il valore previsto."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.ZmlsdGVyX3R5cGU.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "Tipo filtro"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.ZmlsdGVyX3R5cGU.short_desc": {
@@ -856,7 +856,7 @@
           "message": "L'identificativo univoco della domanda per filtrare le risposte."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Valore filtro"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.dmFsdWU.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Il valore da corrispondere con le risposte della domanda."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Includi domande"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Indica se includere le domande del modulo e i metadati nella risposta. Il valore predefinito è false."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "Includi risposte"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Indica se includere i dati di risposta dettagliati per ogni risposta. Il valore predefinito è true."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.display_name": {
-          "source": "Get Form Response",
+          "source": "Get form response",
           "message": "Ottieni risposta del modulo"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.short_desc": {
@@ -928,7 +928,7 @@
           "message": "L'identificatore univoco della risposta del modulo da recuperare."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Includi domande"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Indica se includere le domande del modulo e i metadati nella risposta. Il valore predefinito è false."
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
-          "source": "New Form Response",
+          "source": "New form response",
           "message": "Nuova risposta del modulo"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
@@ -964,7 +964,7 @@
           "message": "L'identificatore univoco del modulo Google da monitorare per nuove risposte."
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Includi domande"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Indica se includere le domande del modulo e i metadati in ogni evento attivato. Il valore predefinito è false."
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "Includi risposte"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {

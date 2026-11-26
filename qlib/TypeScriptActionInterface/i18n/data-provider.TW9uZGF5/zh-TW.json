@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Monday.com** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基礎 URL)、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對於此應用程式中尚未公開為一級動作的端點，請使用此動作。"
         },
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.TW9uZGF5.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.TW9uZGF5.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "資料表名稱"
         },
         "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.display_name": {
-          "source": "Archive Record",
+          "source": "Archive record",
           "message": "封存記錄"
         },
         "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "要封存之記錄的唯一識別碼。"
         },
         "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.display_name": {
-          "source": "Clear Column Value",
+          "source": "Clear column value",
           "message": "清除欄位值"
         },
         "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.short_desc": {
@@ -544,7 +544,7 @@
           "message": "您要清除之欄位的唯一識別碼。"
         },
         "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "建立記錄"
         },
         "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -580,7 +580,7 @@
           "message": "您要建立新記錄的群組唯一識別碼。"
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.display_name": {
-          "source": "Custom Action",
+          "source": "Custom action",
           "message": "自訂動作"
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.short_desc": {
@@ -604,7 +604,7 @@
           "message": "自訂動作的有效負載"
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.display_name": {
-          "source": "Action Name",
+          "source": "Action name",
           "message": "動作名稱"
         },
         "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "要執行的自訂動作名稱"
         },
         "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "刪除記錄"
         },
         "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -652,7 +652,7 @@
           "message": "要刪除之記錄的唯一識別碼。"
         },
         "app.TW9uZGF5.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "取得記錄"
         },
         "app.TW9uZGF5.action.Z2V0X3JlY29yZA.short_desc": {
@@ -688,7 +688,7 @@
           "message": "要取得之記錄的唯一識別碼。"
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.display_name": {
-          "source": "Move Record",
+          "source": "Move record",
           "message": "移動記錄"
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.short_desc": {
@@ -724,7 +724,7 @@
           "message": "要移動之記錄的唯一識別碼。"
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.display_name": {
-          "source": "Destination Group ID",
+          "source": "Destination group ID",
           "message": "目標群組 ID"
         },
         "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.short_desc": {
@@ -736,7 +736,7 @@
           "message": "要將記錄移至的群組唯一識別碼。"
         },
         "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "搜尋記錄"
         },
         "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.short_desc": {
@@ -808,7 +808,7 @@
           "message": "用於分頁的游標。"
         },
         "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.display_name": {
-          "source": "Update Record",
+          "source": "Update record",
           "message": "更新記錄"
         },
         "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.short_desc": {
@@ -844,7 +844,7 @@
           "message": "要更新之記錄的唯一識別碼。"
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.display_name": {
-          "source": "New Record Moved To Group",
+          "source": "New record moved to group",
           "message": "新記錄已移至群組"
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.short_desc": {
@@ -880,7 +880,7 @@
           "message": "要檢查是否有新記錄的群組唯一識別碼。"
         },
         "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.display_name": {
-          "source": "Record Column Value Updated",
+          "source": "Record column value updated",
           "message": "記錄欄位值已更新"
         },
         "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.short_desc": {
@@ -916,7 +916,7 @@
           "message": "應檢查是否有新值的欄位唯一識別碼。"
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "新增記錄"
         },
         "app.TW9uZGF5.action.bmV3X3JlY29yZA.short_desc": {
@@ -952,7 +952,7 @@
           "message": "要檢查是否有新記錄的群組唯一識別碼。"
         },
         "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
-          "source": "Updated Record",
+          "source": "Updated record",
           "message": "已更新記錄"
         },
         "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {

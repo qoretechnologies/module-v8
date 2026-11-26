@@ -19,7 +19,7 @@ export const PAYPAL_CONN_OPTIONS = {
     type: 'string',
   },
   oauth2_client_secret: {
-    display_name: 'Client Secret',
+    display_name: 'Client secret',
     short_desc: 'Your PayPal client secret',
     desc: 'You can see how to get your PayPal client ID and secret in the [docs](https://developer.paypal.com/api/rest/#link-getclientidandclientsecret).',
     type: 'string',

@@ -28,7 +28,7 @@
           "message": "Vykonať vlastné volanie HTTP / REST API pre **Airtable** pomocou overenia nakonfigurovaného pripojenia.\n\nŠpecifikujte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú dostupné ako primárne akcie v tejto aplikácii."
         },
         "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.QWlydGFibGU.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.QWlydGFibGU.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Názov tabuľky"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
+          "source": "List records",
           "message": "Zoznam záznamov"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vyberte, ktoré polia sa majú zahrnúť do odpovede. Ak nie sú špecifikované, vrátia sa všetky polia"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Veľkosť stránky"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.short_desc": {
@@ -2272,7 +2272,7 @@
           "message": "Pacific/Wallis"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.display_name": {
-          "source": "User Locale",
+          "source": "User locale",
           "message": "Miestne nastavenie používateľa"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.short_desc": {
@@ -2296,7 +2296,7 @@
           "message": "Nakonfigurujte spôsob triedenia vrátených záznamov"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Smer zoradenia"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -2316,7 +2316,7 @@
           "message": "Zostupne"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole radenia"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -2328,7 +2328,7 @@
           "message": "Vyberte pole, ktoré chcete použiť na triedenie záznamov"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.display_name": {
-          "source": "Cell Format",
+          "source": "Cell format",
           "message": "Formát bunky"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.short_desc": {
@@ -2360,7 +2360,7 @@
           "message": "Nakonfigurujte kritériá filtrovania na obmedzenie vrátených záznamov"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Filter Field",
+          "source": "Filter field",
           "message": "Filtrované pole"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -2372,7 +2372,7 @@
           "message": "Vyberte pole, ktoré chcete použiť na filtrovanie záznamov"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.Zm9ybXVsYQ.display_name": {
-          "source": "Filter Formula",
+          "source": "Filter formula",
           "message": "Filtrovaný vzorec"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.Zm9ybXVsYQ.short_desc": {
@@ -2384,7 +2384,7 @@
           "message": "Vlastný vzorec Airtable pre filtrovanie záznamov"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dHlwZQ.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "Typ filtrovania"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dHlwZQ.short_desc": {
@@ -2404,7 +2404,7 @@
           "message": "Rovná sa"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Hodnota filtrovania"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.field.dmFsdWU.short_desc": {
@@ -2416,7 +2416,7 @@
           "message": "Hodnota, s ktorou sa má porovnávať pri filtrovaní záznamov"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.display_name": {
-          "source": "Return Fields by Field ID",
+          "source": "Return fields by field ID",
           "message": "Vrátiť polia podľa ID poľa"
         },
         "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.short_desc": {
@@ -2440,7 +2440,7 @@
           "message": "Vyberte konkrétne zobrazenie z tabuľky, aby sa použilo jeho filtrovanie a triedenie"
         },
         "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "Získať záznam"
         },
         "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.short_desc": {
@@ -2488,7 +2488,7 @@
           "message": "Vyberte alebo zadajte ID konkrétneho záznamu, ktorý chcete získať"
         },
         "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "Vytvoriť záznam"
         },
         "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "Vyberte konkrétnu tabuľku v rámci bázy, kde sa záznam vytvorí"
         },
         "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "Odstrániť záznam"
         },
         "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -2572,7 +2572,7 @@
           "message": "Vyberte alebo zadajte ID konkrétneho záznamu, ktorý chcete odstrániť"
         },
         "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.display_name": {
-          "source": "List Bases",
+          "source": "List bases",
           "message": "Zoznam báz"
         },
         "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "Použite posun z predchádzajúcej odpovede na získanie ďalšej stránky báz"
         },
         "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
+          "source": "List tables",
           "message": "Zoznam tabuliek"
         },
         "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.short_desc": {
@@ -2620,7 +2620,7 @@
           "message": "Vyberte bázu Airtable, pre ktorú chcete zobraziť zoznam všetkých dostupných tabuliek"
         },
         "app.QWlydGFibGU.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "Nový záznam"
         },
         "app.QWlydGFibGU.action.bmV3X3JlY29yZA.short_desc": {
@@ -2668,7 +2668,7 @@
           "message": "Vyberte konkrétne zobrazenie z tabuľky, aby sa sledovali iba záznamy, ktoré zodpovedajú kritériám filtrovania a triedenia tohto zobrazenia"
         },
         "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
-          "source": "Updated Record",
+          "source": "Updated record",
           "message": "Aktualizovaný záznam"
         },
         "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **Google Forms** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú vystavené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.display_name": {
-          "source": "Create Form",
+          "source": "Create form",
           "message": "Vytvoriť formulár"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Voliteľný popis, ktorý sa zobrazuje pod názvom formulára na poskytnutie dodatočného kontextu."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.display_name": {
-          "source": "Document Title",
+          "source": "Document title",
           "message": "Názov dokumentu"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Názov dokumentu, ktorý sa zobrazuje na karte prehliadača. Ak nie je zadané, použije sa názov formulára."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
-          "source": "Form Settings",
+          "source": "Form settings",
           "message": "Nastavenia formulára"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Nakonfigurujte dodatočné nastavenia formulára, ako je zhromažďovanie e-mailov a režim kvízu."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZW1haWxfY29sbGVjdGlvbg.display_name": {
-          "source": "Email Collection",
+          "source": "Email collection",
           "message": "Zbieranie e-mailov"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.ZW1haWxfY29sbGVjdGlvbg.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Formulár zbiera e-mailové adresy prostredníctvom poľa, ktoré vyplní respondent."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcXVpeg.display_name": {
-          "source": "Quiz Mode",
+          "source": "Quiz mode",
           "message": "Režim kvízu"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.field.aXNfcXVpeg.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Zoznam otázok, ktoré sa majú pridať do formulára. Každá otázka môže mať rôzne typy a vlastnosti."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y2hvaWNlcw.display_name": {
-          "source": "Answer Choices",
+          "source": "Answer choices",
           "message": "Možnosti odpovedí"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y2hvaWNlcw.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Pre otázky s viacerými možnosťami, zaškrtávané políčka a rozbaľovacie zoznamy sú možnosti, ktoré môžu respondenti vybrať."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y29ycmVjdF9hbnN3ZXI.display_name": {
-          "source": "Correct Answer",
+          "source": "Correct answer",
           "message": "Správna odpoveď"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.Y29ycmVjdF9hbnN3ZXI.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Pre otázky kvízu spätná väzba, ktorú zobrazíte respondentom po odpovedi."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.aGVscF90ZXh0.display_name": {
-          "source": "Help Text",
+          "source": "Help text",
           "message": "Nápoveda"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.aGVscF90ZXh0.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Keď je povolené, musí používateľ odpovedať na túto otázku, aby mohol odoslať formulár."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4.display_name": {
-          "source": "Scale Maximum",
+          "source": "Scale maximum",
           "message": "Maximálna hodnota osi"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Pre škálové otázky najvyššia hodnota na škále. Musí byť medzi 0 a 10."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4X2xhYmVs.display_name": {
-          "source": "Scale Maximum Label",
+          "source": "Scale maximum label",
           "message": "Popis maximálnej hodnoty osi"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWF4X2xhYmVs.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Voliteľný popis pre najvyššiu hodnotu na škále."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWlu.display_name": {
-          "source": "Scale Minimum",
+          "source": "Scale minimum",
           "message": "Minimálna hodnota osi"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWlu.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Pre škálové otázky najnižšia hodnota na škále. Musí byť medzi 0 a 10."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWluX2xhYmVs.display_name": {
-          "source": "Scale Minimum Label",
+          "source": "Scale minimum label",
           "message": "Popis minimálnej hodnoty osi"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2NhbGVfbWluX2xhYmVs.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Voliteľný popis pre najnižšiu hodnotu na škále."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2h1ZmZsZV9jaG9pY2Vz.display_name": {
-          "source": "Shuffle Choices",
+          "source": "Shuffle choices",
           "message": "Zamiešať možnosti"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.c2h1ZmZsZV9jaG9pY2Vz.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Keď je povolené, poradie odpovedí bude náhodné pre každého respondentov."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dGl0bGU.display_name": {
-          "source": "Question Title",
+          "source": "Question title",
           "message": "Názov otázky"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dGl0bGU.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Hlavný text otázky, ktorý sa zobrazí respondentom."
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dHlwZQ.display_name": {
-          "source": "Question Type",
+          "source": "Question type",
           "message": "Typ otázky"
         },
         "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.field.dHlwZQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Čas"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get Form",
+          "source": "Get form",
           "message": "Získať formulár"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.short_desc": {
@@ -672,7 +672,7 @@
           "message": "Jedinečný identifikátor formulára Google Forms, ktorý sa má načítať."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Zahrnúť otázky"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -696,7 +696,7 @@
           "message": "Vyhľadávajte formuláre Google Forms vo svojom Google Disku s možnosťami filtrovania podľa názvu súboru, určenia typu vyhľadávania a stránkovania výsledkov."
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.display_name": {
-          "source": "Form Name",
+          "source": "Form name",
           "message": "Názov formulára"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Názov alebo časť názvu formulárov Google Forms, ktoré sa majú vyhľadať. Ak chcete získať všetky formuláre, nechajte prázdne."
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.display_name": {
-          "source": "Search Type",
+          "source": "Search type",
           "message": "Typ vyhľadávania"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.short_desc": {
@@ -740,7 +740,7 @@
           "message": "Maximálny počet formulárov, ktoré sa majú vrátiť v jednej požiadavke. Maximálna hodnota je 1000."
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.short_desc": {
@@ -752,7 +752,7 @@
           "message": "Token vrátený z predchádzajúceho vyhľadávania na pokračovanie v stránkovaní. Použite next_page_token z predchádzajúcej odpovede."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.display_name": {
-          "source": "Get Form Responses",
+          "source": "Get form responses",
           "message": "Získať odpovede formulára"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.short_desc": {
@@ -788,7 +788,7 @@
           "message": "Maximálny počet odpovedí, ktoré sa majú vrátiť na požiadavku. Predvolená hodnota je 50, maximum je 1000."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.short_desc": {
@@ -800,7 +800,7 @@
           "message": "Token na získanie ďalšej stránky výsledkov. Používa sa na stránkovanie cez veľké množiny odpovedí."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.display_name": {
-          "source": "Respondent Email",
+          "source": "Respondent email",
           "message": "E-mail respondenta"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.short_desc": {
@@ -812,7 +812,7 @@
           "message": "Filtrujte odpovede tak, aby zahŕňali iba tie od respondentov s e-mailami obsahujúcimi túto hodnotu."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.display_name": {
-          "source": "Filter Answers",
+          "source": "Filter answers",
           "message": "Filtrovať odpovede"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.short_desc": {
@@ -824,7 +824,7 @@
           "message": "Filtrujte odpovede na základe konkrétnych odpovedí na otázky. Každý filter určuje ID otázky, typ filtra a očakávanú hodnotu."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.ZmlsdGVyX3R5cGU.display_name": {
-          "source": "Filter Type",
+          "source": "Filter type",
           "message": "Typ filtrovania"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.ZmlsdGVyX3R5cGU.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Jedinečný identifikátor otázky, podľa ktorej sa filtrovajú odpovede."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.dmFsdWU.display_name": {
-          "source": "Filter Value",
+          "source": "Filter value",
           "message": "Hodnota filtrovania"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.field.dmFsdWU.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Hodnota, s ktorou sa má porovnávať odpovede na otázku."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Zahrnúť otázky"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Či sa majú do odpovede zahrnúť otázky a metadáta formulára. Predvolená hodnota je false."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "Zahrnúť odpovede"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Či sa majú zahrnúť podrobné údaje odpovedí pre každú odpoveď. Predvolená hodnota je true."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.display_name": {
-          "source": "Get Form Response",
+          "source": "Get form response",
           "message": "Získať odpoveď formulára"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Jedinečný identifikátor odpovede formulára, ktorá sa má získať."
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Zahrnúť otázky"
         },
         "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Či sa majú do odpovede zahrnúť otázky a metadáta formulára. Predvolená hodnota je false."
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
-          "source": "New Form Response",
+          "source": "New form response",
           "message": "Nová odpoveď formulára"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Jedinečný identifikátor formulára Google Forms, ktorý sa má monitorovať na prítomnosť nových odpovedí."
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
-          "source": "Include Questions",
+          "source": "Include questions",
           "message": "Zahrnúť otázky"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Či sa majú do každej spustenej udalosti zahrnúť otázky a metadáta formulára. Predvolená hodnota je false."
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
-          "source": "Include Answers",
+          "source": "Include answers",
           "message": "Zahrnúť odpovede"
         },
         "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {

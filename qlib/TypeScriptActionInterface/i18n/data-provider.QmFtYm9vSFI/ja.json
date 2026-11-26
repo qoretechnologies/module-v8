@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**BambooHR**へのカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "レコードの検索"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNo.short_desc": {
@@ -436,7 +436,7 @@
           "message": "テーブル名"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.display_name": {
-          "source": "Get Employee",
+          "source": "Get employee",
           "message": "従業員の取得"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.short_desc": {
@@ -472,7 +472,7 @@
           "message": "従業員に対して取得するフィールドを選択します。利用可能なすべてのフィールド（最大 400 フィールド）を取得する場合は空のままにしてください。"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.display_name": {
-          "source": "Create Employee",
+          "source": "Create employee",
           "message": "従業員の作成"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.short_desc": {
@@ -484,7 +484,7 @@
           "message": "BambooHR に新しい従業員レコードを作成します。最低限、firstName と lastName が必要です。このアクションは、カスタムフィールドを含め、BambooHR の設定に基づいて利用可能なすべてのフィールドを動的に提示します。"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
+          "source": "Employee data",
           "message": "従業員データ"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "従業員フィールドの値を指定します。利用可能なフィールドは BambooHR アカウントから動的に読み込まれ、標準フィールドとカスタムフィールドの両方が含まれます。firstName と lastName は必須です。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.display_name": {
-          "source": "Update Employee",
+          "source": "Update employee",
           "message": "従業員を更新"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.short_desc": {
@@ -520,7 +520,7 @@
           "message": "更新する従業員の固有識別子を入力します。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
+          "source": "Employee data",
           "message": "従業員データ"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "更新する従業員フィールドの新しい値を入力します。利用可能なフィールドは、BambooHRアカウントから動的に読み込まれます。"
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.display_name": {
-          "source": "List Employees",
+          "source": "List employees",
           "message": "従業員一覧"
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.short_desc": {
@@ -568,7 +568,7 @@
           "message": "指定された日付範囲について、不在（休暇、病気休暇など）の従業員のリストおよび会社の祝日を取得します。日付が指定されていない場合は、当日とそれ以降の 14 日間を返します。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "クエリの開始日。指定しない場合、デフォルトは今日になります。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "終了日"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.short_desc": {
@@ -592,7 +592,7 @@
           "message": "クエリの終了日。指定しない場合、デフォルトは開始日から 14 日後になります。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.display_name": {
-          "source": "Search Time Off Requests",
+          "source": "Search time off requests",
           "message": "休暇申請の検索"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "さまざまなフィルターを使用してBambooHR内の休暇申請を検索します。日付範囲、従業員、ステータス、休暇タイプなどの指定された条件に一致する申請を返します。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "この日付以降の休暇申請のみを表示します。"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "終了日"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.short_desc": {
@@ -672,7 +672,7 @@
           "message": "差し替え済み"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.display_name": {
-          "source": "Time Off Type",
+          "source": "Time off type",
           "message": "休暇タイプ"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.short_desc": {
@@ -684,7 +684,7 @@
           "message": "BambooHRアカウントで設定されている1つ以上の休暇タイプでフィルターします。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.display_name": {
-          "source": "Get All Employee Files",
+          "source": "Get all employee files",
           "message": "すべての従業員ファイルの取得"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.short_desc": {
@@ -708,7 +708,7 @@
           "message": "ファイルを取得したい従業員の ID。"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.display_name": {
-          "source": "Download Employee File",
+          "source": "Download employee file",
           "message": "従業員ファイルのダウンロード"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.short_desc": {
@@ -744,7 +744,7 @@
           "message": "ダウンロードするファイルのID。"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Upload Employee File",
+          "source": "Upload employee file",
           "message": "従業員ファイルをアップロード"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -912,7 +912,7 @@
           "message": "ファイル名"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
+          "source": "Share with employee",
           "message": "従業員と共有"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
@@ -924,7 +924,7 @@
           "message": "セルフサービスポータルでこのファイルを従業員に公開するかどうか。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Update Employee File",
+          "source": "Update employee file",
           "message": "従業員ファイルを更新"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -984,7 +984,7 @@
           "message": "ファイルを別のカテゴリに移動します。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
+          "source": "Share with employee",
           "message": "従業員と共有"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
@@ -996,7 +996,7 @@
           "message": "このファイルを従業員に公開するかどうか。"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Delete Employee File",
+          "source": "Delete employee file",
           "message": "従業員ファイルの削除"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "削除するファイルのID。"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.display_name": {
-          "source": "Get All Company Files",
+          "source": "Get all company files",
           "message": "すべての会社ファイルの取得"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.short_desc": {
@@ -1044,7 +1044,7 @@
           "message": "カテゴリ別に整理されたすべての会社ファイルを取得します。名前、サイズ、アップロード日、共有ステータスなどのファイルメタデータを返します。"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.display_name": {
-          "source": "Download Company File",
+          "source": "Download company file",
           "message": "会社ファイルのダウンロード"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "ダウンロードする会社ファイルのID。"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Upload Company File",
+          "source": "Upload company file",
           "message": "会社ファイルをアップロード"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1224,7 +1224,7 @@
           "message": "ファイル名"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
+          "source": "Share with employees",
           "message": "従業員と共有"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "このファイルをすべての従業員に公開するかどうか。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Update Company File",
+          "source": "Update company file",
           "message": "会社ファイルの更新"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "ファイルを別のカテゴリに移動します。"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
+          "source": "Share with employees",
           "message": "従業員と共有"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "このファイルをすべての従業員に公開するかどうか。"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Delete Company File",
+          "source": "Delete company file",
           "message": "会社ファイルの削除"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "削除する会社ファイルのID。"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.display_name": {
-          "source": "New Time Off Request",
+          "source": "New time off request",
           "message": "新規休暇申請"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "特定の従業員からの休暇申請に対してのみトリガーします。"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.display_name": {
-          "source": "New Time Off",
+          "source": "New time off",
           "message": "新規休暇"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "承認された新しい休暇エントリーがWho's Outリストに表示されたときに起動します。これには従業員の休暇と会社の祝日の両方が含まれます。"
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.display_name": {
-          "source": "New Employee",
+          "source": "New employee",
           "message": "新規従業員"
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.short_desc": {

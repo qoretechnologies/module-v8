@@ -28,7 +28,7 @@
           "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Calendly** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfrage-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwort-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
         },
         "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP-Methode"
         },
         "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.display_name": {
-          "source": "List Event Invitees",
+          "source": "List event invitees",
           "message": "Ereigniseingeladene auflisten"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Die maximale Anzahl an Eingeladenen, die in der Antwort zurückgegeben werden soll (Standard ist 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Verwenden Sie dieses Token, um die nächste Ergebnisseite abzurufen, wenn mehr Eingeladene vorhanden sind als das Anzahl-Limit."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "E-Mail-Filter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Die Ergebnisse so filtern, dass nur Eingeladene mit dieser spezifischen E-Mail-Adresse enthalten sind."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "Sortieroptionen"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Konfigurieren, wie die Liste der Eingeladenen sortiert werden soll."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Sortierrichtung"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -432,7 +432,7 @@
           "message": "Absteigend"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Sortierfeld"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Erstellt am"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.display_name": {
-          "source": "Status Filter",
+          "source": "Status filter",
           "message": "Statusfilter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.short_desc": {
@@ -468,7 +468,7 @@
           "message": "Storniert"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.display_name": {
-          "source": "List Events",
+          "source": "List events",
           "message": "Ereignisse auflisten"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.short_desc": {
@@ -492,7 +492,7 @@
           "message": "Die maximale Anzahl an Ereignissen, die in der Antwort zurückgegeben werden soll (Standard ist 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.display_name": {
-          "source": "Group Filter",
+          "source": "Group filter",
           "message": "Gruppenfilter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.short_desc": {
@@ -504,7 +504,7 @@
           "message": "Die Ergebnisse so filtern, dass nur Ereignisse enthalten sind, die einer bestimmten Gruppe zugeordnet sind."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.display_name": {
-          "source": "Invitee Email Filter",
+          "source": "Invitee email filter",
           "message": "E-Mail-Filter für Eingeladene"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.short_desc": {
@@ -516,7 +516,7 @@
           "message": "Die Ergebnisse so filtern, dass nur Ereignisse enthalten sind, bei denen die angegebene E-Mail-Adresse ein Eingeladener ist."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.display_name": {
-          "source": "Maximum Start Time",
+          "source": "Maximum start time",
           "message": "Maximale Startzeit"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Ereignisse so filtern, dass nur solche enthalten sind, die vor diesem Datum und dieser Uhrzeit beginnen."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.display_name": {
-          "source": "Minimum Start Time",
+          "source": "Minimum start time",
           "message": "Minimale Startzeit"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.short_desc": {
@@ -540,7 +540,7 @@
           "message": "Ereignisse so filtern, dass nur solche enthalten sind, die nach diesem Datum und dieser Uhrzeit beginnen."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Verwenden Sie dieses Token, um die nächste Ergebnisseite abzurufen, wenn mehr Ereignisse vorhanden sind als das Anzahl-Limit."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "Sortieroptionen"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.short_desc": {
@@ -564,7 +564,7 @@
           "message": "Konfigurieren, wie die Liste der Ereignisse sortiert werden soll."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Sortierrichtung"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -584,7 +584,7 @@
           "message": "Absteigend"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Sortierfeld"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Ereignisse so filtern, dass nur solche einer bestimmten Organisation enthalten sind."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.display_name": {
-          "source": "User Filter",
+          "source": "User filter",
           "message": "Benutzerfilter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Die Ergebnisse so filtern, dass nur Ereignisse enthalten sind, die einem bestimmten Benutzer zugeordnet sind."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.display_name": {
-          "source": "List Groups",
+          "source": "List groups",
           "message": "Gruppen auflisten"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Die maximale Anzahl an Gruppen, die in der Antwort zurückgegeben werden soll (Standard ist 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Die Organisation, aus der die Liste der Gruppen abgerufen werden soll."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.display_name": {
-          "source": "Get Event Invitee",
+          "source": "Get event invitee",
           "message": "Ereigniseingeladenen abrufen"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Wählen Sie den spezifischen Eingeladenen aus, dessen Informationen Sie abrufen möchten."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.display_name": {
-          "source": "Get Event",
+          "source": "Get event",
           "message": "Ereignis abrufen"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Wählen Sie das spezifische Ereignis aus, dessen Details Sie abrufen möchten."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.display_name": {
-          "source": "Get Group",
+          "source": "Get group",
           "message": "Gruppe abrufen"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Wählen Sie die spezifische Gruppe aus Ihrer Organisation aus, deren Details Sie abrufen möchten."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.display_name": {
-          "source": "List Event Types",
+          "source": "List event types",
           "message": "Ereignistypen auflisten"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Die maximale Anzahl an Ereignistypen, die in der Antwort zurückgegeben werden sollen (Standard ist 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Verwenden Sie dieses Token, um die nächste Ergebnisseite abzurufen, wenn mehr Ereignistypen vorhanden sind als das Anzahl-Limit."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "Sortieroptionen"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Konfigurieren, wie die Liste der Ereignistypen sortiert werden soll."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Sortierrichtung"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Absteigend"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Sortierfeld"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Ereignistypen so filtern, dass nur solche einer bestimmten Organisation enthalten sind."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.display_name": {
-          "source": "User Filter",
+          "source": "User filter",
           "message": "Benutzerfilter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Die Ergebnisse so filtern, dass nur Ereignistypen enthalten sind, die einem bestimmten Benutzer zugeordnet sind."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.display_name": {
-          "source": "Admin Managed Filter",
+          "source": "Admin managed filter",
           "message": "Administratorverwaltet-Filter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Filtern Sie Ereignistypen danach, ob sie von einem Administrator verwaltet werden."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.display_name": {
-          "source": "Active Filter",
+          "source": "Active filter",
           "message": "Aktiv-Filter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Filtern Sie Ereignistypen danach, ob sie derzeit aktiv und für Buchungen verfügbar sind."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.display_name": {
-          "source": "User Availability Schedule",
+          "source": "User availability schedule",
           "message": "Verfügbarkeitszeitplan des Benutzers"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Ereignistypen basierend auf einem bestimmten Verfügbarkeitszeitplan des Benutzers filtern."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.display_name": {
-          "source": "Get Event Type",
+          "source": "Get event type",
           "message": "Ereignistyp abrufen"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Ruft umfassende Informationen zu einem Ereignistyp ab, einschließlich Dauer, Einstellungen und Konfiguration."
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.display_name": {
-          "source": "Event Type ID",
+          "source": "Event type ID",
           "message": "Ereignistyp-ID"
         },
         "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Wählen Sie den spezifischen Ereignistyp aus, dessen Details Sie abrufen möchten."
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.display_name": {
-          "source": "Create Scheduling Link",
+          "source": "Create scheduling link",
           "message": "Buchungs-Link erstellen"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Erstellt einen Buchungs-Link, der mit anderen geteilt werden kann, um Termine für einen bestimmten Ereignistyp zu buchen."
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.display_name": {
-          "source": "Maximum Event Count",
+          "source": "Maximum event count",
           "message": "Maximale Ereignisanzahl"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Die maximale Anzahl von Ereignissen, die über diesen Link geplant werden können, bevor er inaktiv wird."
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.display_name": {
-          "source": "Event Type",
+          "source": "Event type",
           "message": "Ereignistyp"
         },
         "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Wählen Sie den Ereignistyp aus, den Personen über diesen Buchungs-Link buchen können."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.display_name": {
-          "source": "List Organization Members",
+          "source": "List organization members",
           "message": "Organisationsmitglieder auflisten"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Die maximale Anzahl von Organisationsmitgliedern, die in der Antwort zurückgegeben werden soll (Standard ist 20)."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Verwenden Sie dieses Token, um die nächste Seite mit Ergebnissen abzurufen, wenn mehr Mitglieder vorhanden sind als das Anzahl-Limit."
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "E-Mail-Filter"
         },
         "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Die Organisation, aus der die Liste der Mitglieder abgerufen werden soll."
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.display_name": {
-          "source": "Cancel Event",
+          "source": "Cancel event",
           "message": "Ereignis absagen"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "Wählen Sie das spezifische Ereignis aus Ihren geplanten Ereignissen aus, das Sie absagen möchten."
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.display_name": {
-          "source": "Cancellation Reason",
+          "source": "Cancellation reason",
           "message": "Absagegrund"
         },
         "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "Optionaler Grund, der in die an die Teilnehmer gesendete Absagebenachrichtigung aufgenommen wird."
         },
         "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.display_name": {
-          "source": "Event Canceled",
+          "source": "Event canceled",
           "message": "Ereignis abgesagt"
         },
         "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Dieser Auslöser wird aktiviert, wenn ein geplantes Ereignis in Ihrem Calendly-Konto entweder vom Organisator oder vom Eingeladenen abgesagt wird."
         },
         "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.display_name": {
-          "source": "New Form Submission Created",
+          "source": "New form submission created",
           "message": "Neue Formularübermittlung erstellt"
         },
         "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Dieser Auslöser wird aktiviert, wenn jemand ein Routing-Formular absendet, das hilft, die Person zur passenden Terminoption zu leiten."
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.display_name": {
-          "source": "Invitee Created",
+          "source": "Invitee created",
           "message": "Eingeladener erstellt"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Gruppe"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.display_name": {
-          "source": "Invitee Canceled",
+          "source": "Invitee canceled",
           "message": "Eingeladener hat abgesagt"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "Gruppe"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.display_name": {
-          "source": "Invitee No-Show Created",
+          "source": "Invitee no-show created",
           "message": "Eingeladener als Nicht erschienen markiert"
         },
         "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.short_desc": {

@@ -28,7 +28,7 @@
           "message": "Виконати спеціальний виклик HTTP / REST API до **SendGrid**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається як хеш, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
+          "source": "List blocks",
           "message": "Список блоків"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Отримати список усіх адрес електронної пошти, які зараз перебувають у списку блокувань. Заблоковані адреси — це електронні адреси, які були відхилені серверами одержувачів. Ви можете фільтрувати за часовим діапазоном і застосовувати пагінацію результатів."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Час початку"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Отримати блокування, створені після цього моменту часу. Вкажіть час як мітку часу Unix (кількість секунд з початку епохи)."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Час завершення"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Початкова позиція у списку результатів для пагінації. За замовчуванням 0."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.display_name": {
-          "source": "Get a Block",
+          "source": "Get a block",
           "message": "Отримати блокування"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Адреса електронної пошти, яку потрібно отримати зі списку блокувань. Це має бути точна заблокована адреса електронної пошти."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
+          "source": "Delete blocks",
           "message": "Видалити блоки"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Видалити адреси електронної пошти зі списку блокувань. Ви можете або видалити всі блокування одночасно, або вказати окремі адреси електронної пошти для видалення. Видалення блокувань дозволяє цим адресам знову отримувати листи."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "Видалити все"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Масив адрес електронної пошти для видалення зі списку блокувань. Обов'язково, якщо Delete All не встановлено у true."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.display_name": {
-          "source": "Get All Bounces",
+          "source": "Get all bounces",
           "message": "Отримати всі повернення"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Отримати список усіх електронних адрес, доставка на які завершилася поверненням (bounce). Повернення виникають, коли електронний лист не вдалося доставити одержувачу. Ви можете фільтрувати за діапазоном часу та розбивати результати на сторінки."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Час початку"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Отримати повернення листів, створені після цього моменту часу. Вкажіть час як мітку часу Unix (кількість секунд з початку епохи)."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Час завершення"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Початкова позиція у списку результатів для пагінації. За замовчуванням 0."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.display_name": {
-          "source": "Delete Bounces",
+          "source": "Delete bounces",
           "message": "Видалити повернення"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Видалити адреси електронної пошти зі списку повернень. Ви можете або видалити всі повернення одночасно, або вказати окремі адреси електронної пошти для видалення. Видалення повернень дозволяє цим адресам знову отримувати листи."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.display_name": {
-          "source": "Delete All",
+          "source": "Delete all",
           "message": "Видалити все"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Масив адрес електронної пошти для видалення зі списку повернень. Обов'язково, якщо Delete All не встановлено у true."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.display_name": {
-          "source": "List Global Suppressions",
+          "source": "List global suppressions",
           "message": "Список глобальних відхилень"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Отримати список усіх адрес електронної пошти, які глобально відписалися від усіх ваших листів. Ці адреси не отримуватимуть листів із вашого облікового запису, доки їх не буде видалено з цього списку."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Час початку"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Отримати блокування, створені після цього моменту часу. Вкажіть час як мітку часу Unix (кількість секунд з початку епохи)."
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Час завершення"
         },
         "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Початкова позиція у списку результатів для пагінації. За замовчуванням 0."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Get a Global Suppression",
+          "source": "Get a global suppression",
           "message": "Отримати глобальне відхилення"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Адреса електронної пошти для пошуку у списку глобальних відхилень. Повертає відомості про відхилення, якщо знайдено."
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.display_name": {
-          "source": "Add Global Suppressions",
+          "source": "Add global suppressions",
           "message": "Додати глобальні придушення"
         },
         "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.short_desc": {
@@ -664,7 +664,7 @@
           "message": "Масив електронних адрес для додавання до списку глобального придушення. Отримання всіх майбутніх електронних листів цими адресами буде заблоковано."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
-          "source": "Delete a Global Suppression",
+          "source": "Delete a global suppression",
           "message": "Видалити глобальне відхилення"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Адреса електронної пошти для видалення зі списку глобальних відхилень. Після видалення ця адреса знову зможе отримувати листи."
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.display_name": {
-          "source": "Create a List",
+          "source": "Create a list",
           "message": "Створити список"
         },
         "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Описова назва для вашого списку контактів. Виберіть назву, яка чітко визначає призначення або аудиторію списку."
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.display_name": {
-          "source": "Get All Lists",
+          "source": "Get all lists",
           "message": "Отримати всі списки"
         },
         "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Отримати всі списки одержувачів у вашому обліковому записі SendGrid. Повертає відомості про список, зокрема назву та кількість одержувачів."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.display_name": {
-          "source": "Delete a List",
+          "source": "Delete a list",
           "message": "Видалити список"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Унікальний ідентифікатор списку, який ви хочете видалити. Виберіть з наявних списків."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "Видалити контакти"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Якщо встановлено значення true, усі контакти у списку також будуть остаточно видалені з вашої бази контактів. Використовуйте з обережністю."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.display_name": {
-          "source": "Add or Update a Contact",
+          "source": "Add or update a contact",
           "message": "Додати або оновити контакт"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Електронна адреса для контакту. Це унікальний ідентифікатор — якщо контакт із цією електронною адресою існує, його буде оновлено."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "Ім'я"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Ім'я контакту."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "Прізвище"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Один або кілька ID списків, до яких слід додати цей контакт. Контакт буде додано до всіх указаних списків."
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Настроювані поля"
         },
         "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Об'єкт JSON, що містить назви та значення користувацьких полів. Користувацькі поля спочатку мають бути створені у вашому обліковому записі SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
-          "source": "Search for Contacts",
+          "source": "Search for contacts",
           "message": "Пошук контактів"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Шукати у вашій базі контактів контакти, що відповідають певному значенню поля. Ви можете шукати за адресою електронної пошти, іменем або будь-яким настроюваним полем."
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Назва поля"
         },
         "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Значення для зіставлення з указаним полем. Для текстових полів може знадобитися кодування URL-адрес."
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.display_name": {
-          "source": "Delete Contacts",
+          "source": "Delete contacts",
           "message": "Видалити контакти"
         },
         "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Масив ідентифікаторів контактів для видалення. Виберіть з наявних контактів. Усі вибрані контакти будуть остаточно видалені."
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
-          "source": "Remove Contacts from List",
+          "source": "Remove contacts from list",
           "message": "Видалити контакти зі списку"
         },
         "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Масив ідентифікаторів контактів для видалення зі списку. Контакти залишаться у вашій базі даних, але будуть відв'язані від цього списку."
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.display_name": {
-          "source": "Validate Email",
+          "source": "Validate email",
           "message": "Перевірити електронну пошту"
         },
         "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Необов'язковий рядок джерела, який допоможе відстежити, звідки надійшов запит на перевірку."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "Надіслати електронний лист"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Надіслати транзакційний лист одному або кільком одержувачам. Можна надіслати звичайний текст, HTML або обидва варіанти. Підтримує CC, BCC та настроювані адреси для відповіді."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "Електронна пошта одержувача"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Адреса електронної пошти основного одержувача."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "Ім'я одержувача"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Необов'язкове ім'я одержувача для персоналізації поля «Кому»."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "Електронна пошта відправника"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Адреса електронної пошти, яка відображатиметься як відправник. Має бути підтвердженим відправником у вашому обліковому записі SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "Ім'я відправника"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "Тема електронного листа."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.display_name": {
-          "source": "Text Content",
+          "source": "Text content",
           "message": "Текстовий вміст"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "Текстова версія вмісту листа. Необхідно надати текстовий вміст, HTML-вміст (або обидва)."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.display_name": {
-          "source": "HTML Content",
+          "source": "HTML content",
           "message": "Вміст HTML"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.short_desc": {
@@ -1060,7 +1060,7 @@
           "message": "HTML-версія вмісту листа. Необхідно надати текстовий вміст, HTML-вміст (або обидва)."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "Електронна пошта для відповіді"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "Необов'язкова адреса електронної пошти, на яку одержувачі мають надсилати відповіді. Якщо не вказано, відповіді надходитимуть на адресу відправника."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "Ім'я для відповіді"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "Необов'язкове ім'я для відображення адреси для відповіді."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "Адреси копії (CC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "Масив адрес електронної пошти для додавання як одержувачів копії."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "Адреси прихованої копії (BCC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
@@ -1108,7 +1108,7 @@
           "message": "Масив адрес електронної пошти для додавання як одержувачів прихованої копії."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.display_name": {
-          "source": "Send Template Email",
+          "source": "Send template email",
           "message": "Надіслати шаблонний лист"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.short_desc": {
@@ -1120,7 +1120,7 @@
           "message": "Надіслати транзакційний лист за допомогою попередньо визначеного динамічного шаблону SendGrid. Налаштуйте вміст листа, надавши динамічні дані шаблону для персоналізації."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.display_name": {
-          "source": "To Email",
+          "source": "To email",
           "message": "Електронна пошта одержувача"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "Адреса електронної пошти основного одержувача."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.display_name": {
-          "source": "To Name",
+          "source": "To name",
           "message": "Ім'я одержувача"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "Необов'язкове ім'я одержувача для персоналізації поля «Кому»."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
-          "source": "From Email",
+          "source": "From email",
           "message": "Електронна пошта відправника"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "Адреса електронної пошти, яка відображатиметься як відправник. Має бути підтвердженим відправником у вашому обліковому записі SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
-          "source": "From Name",
+          "source": "From name",
           "message": "Ім'я відправника"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "Виберіть динамічний шаблон для використання в цьому листі. Шаблон має бути створений у вашому обліковому записі SendGrid."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.display_name": {
-          "source": "Template Values",
+          "source": "Template values",
           "message": "Значення шаблону"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Об'єкт JSON, що містить пари «ключ-значення» для динамічних даних шаблону. Ці значення замінять відповідні заповнювачі у вибраному шаблоні."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
-          "source": "Reply-To Email",
+          "source": "Reply-to email",
           "message": "Електронна пошта для відповіді"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "Необов'язкова адреса електронної пошти, на яку одержувачі мають надсилати відповіді. Якщо не вказано, відповіді надходитимуть на адресу відправника."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
-          "source": "Reply-To Name",
+          "source": "Reply-to name",
           "message": "Ім'я для відповіді"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "Необов'язкове ім'я для відображення адреси для відповіді."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
-          "source": "CC Emails",
+          "source": "CC emails",
           "message": "Адреси копії (CC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "Масив адрес електронної пошти для додавання як одержувачів копії."
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.display_name": {
-          "source": "BCC Emails",
+          "source": "BCC emails",
           "message": "Адреси прихованої копії (BCC)"
         },
         "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.short_desc": {

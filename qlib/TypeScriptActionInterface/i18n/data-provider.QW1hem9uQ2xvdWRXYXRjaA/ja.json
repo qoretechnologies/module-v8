@@ -28,7 +28,7 @@
           "message": "設定されたコネクションの認証を使用して、**Amazon CloudWatch** にカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（コネクションの API ベース URL 相対）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.display_name": {
-          "source": "Disable Alarm Actions",
+          "source": "Disable alarm actions",
           "message": "アラームアクションを無効化"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.short_desc": {
@@ -352,7 +352,7 @@
           "message": "指定した CloudWatch アラームのアクション（通知、オートスケーリングなど）を一時的に無効化します。メンテナンスウィンドウやテスト期間中、またはアラームを削除せずにアラーム通知を抑制したい場合に便利です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.cmVnaW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "対象のアラームが配置されている AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.YWxhcm1fbmFtZXM.display_name": {
-          "source": "Alarm Names",
+          "source": "Alarm names",
           "message": "アラーム名"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.YWxhcm1fbmFtZXM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "アクションを無効化する CloudWatch アラームを 1 つ以上選択します。アクションには SNS 通知、Auto Scaling ポリシー、EC2 アクションが含まれます。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.display_name": {
-          "source": "Enable Alarm Actions",
+          "source": "Enable alarm actions",
           "message": "アラームアクションを有効化"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.short_desc": {
@@ -388,7 +388,7 @@
           "message": "指定した CloudWatch アラームのアクション（通知、オートスケーリングなど）を再有効化します。メンテナンスやテストの期間が終了した後にアラーム機能を復元するために使用します。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.cmVnaW9u.short_desc": {
@@ -400,7 +400,7 @@
           "message": "対象のアラームが配置されている AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.YWxhcm1fbmFtZXM.display_name": {
-          "source": "Alarm Names",
+          "source": "Alarm names",
           "message": "アラーム名"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.YWxhcm1fbmFtZXM.short_desc": {
@@ -412,7 +412,7 @@
           "message": "アクションを有効化する CloudWatch アラームを 1 つ以上選択します。これにより、SNS 通知、Auto Scaling ポリシー、EC2 アクションが復元されます。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.display_name": {
-          "source": "Set Alarm State",
+          "source": "Set alarm state",
           "message": "アラームステータスを設定"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.short_desc": {
@@ -424,7 +424,7 @@
           "message": "手動で OK、ALARM、または INSUFFICIENT_DATA に設定することにより、CloudWatch アラームの現在のステータスをオーバーライドします。アラームワークフローのテスト、誤アラームのクリア、または運用目的での特定の非アラーム/アラームステータスの強制に便利です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.cmVnaW9u.short_desc": {
@@ -436,7 +436,7 @@
           "message": "対象のアラームが配置されている AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.YWxhcm1fbmFtZQ.display_name": {
-          "source": "Alarm Name",
+          "source": "Alarm name",
           "message": "アラーム名"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.YWxhcm1fbmFtZQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "ステータスを手動で設定する CloudWatch アラームを選択します。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfdmFsdWU.display_name": {
-          "source": "State Value",
+          "source": "State value",
           "message": "ステータス値"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfdmFsdWU.short_desc": {
@@ -472,7 +472,7 @@
           "message": "INSUFFICIENT_DATA"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfcmVhc29u.display_name": {
-          "source": "State Reason",
+          "source": "State reason",
           "message": "ステータスの理由"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfcmVhc29u.short_desc": {
@@ -500,7 +500,7 @@
           "message": "OK"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.display_name": {
-          "source": "Get Alarm",
+          "source": "Get alarm",
           "message": "アラームの取得"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.short_desc": {
@@ -512,7 +512,7 @@
           "message": "現在の状態、設定、しきい値、ディメンション、アクションなど、特定の CloudWatch アラームに関する詳細な情報を取得します。アラームの監査、トラブルシューティング、設定の検証に最適です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.cmVnaW9u.short_desc": {
@@ -524,7 +524,7 @@
           "message": "対象のアラームが配置されている AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.YWxhcm1fbmFtZQ.display_name": {
-          "source": "Alarm Name",
+          "source": "Alarm name",
           "message": "アラーム名"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.YWxhcm1fbmFtZQ.short_desc": {
@@ -536,7 +536,7 @@
           "message": "詳細を取得する CloudWatch アラームを選択します。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.display_name": {
-          "source": "List Alarms",
+          "source": "List alarms",
           "message": "アラーム一覧"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.short_desc": {
@@ -548,7 +548,7 @@
           "message": "AWS アカウント内の CloudWatch アラームのリストを取得します。ステータス、名前の接頭辞、アクションのステータスによるオプションのフィルタリングが可能です。監視および管理目的の要約統計と詳細なアラーム情報が含まれます。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.cmVnaW9u.short_desc": {
@@ -560,7 +560,7 @@
           "message": "CloudWatch アラームを一覧表示する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "アラーム名のプレフィックス"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -572,7 +572,7 @@
           "message": "名前が指定した接頭辞で始まるアラームのみを返すオプションのフィルター。すべてのアラームを一覧表示するには空のままにします。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.c3RhdGVfZmlsdGVy.display_name": {
-          "source": "State Filter",
+          "source": "State filter",
           "message": "状態フィルター"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.c3RhdGVfZmlsdGVy.short_desc": {
@@ -596,7 +596,7 @@
           "message": "INSUFFICIENT_DATA"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.bWF4X3JlY29yZHM.display_name": {
-          "source": "Maximum Records",
+          "source": "Maximum records",
           "message": "最大レコード数"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.bWF4X3JlY29yZHM.short_desc": {
@@ -608,7 +608,7 @@
           "message": "レスポンスで返されるアラームの数を制限します。デフォルトは 50、最大は 100 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.display_name": {
-          "source": "New Alarm",
+          "source": "New alarm",
           "message": "新しいアラーム"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.short_desc": {
@@ -620,7 +620,7 @@
           "message": "AWS アカウントを監視して新しく作成された CloudWatch アラームを検知し、新しい監視設定に自動で対応できるようにします。監査証跡、通知セットアップ、および自動化されたアラーム設定ワークフローに便利です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.cmVnaW9u.short_desc": {
@@ -632,7 +632,7 @@
           "message": "新しい CloudWatch アラームを監視する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "アラーム名のプレフィックス"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -644,7 +644,7 @@
           "message": "指定されたプレフィックスで始まる名前のアラームのみを監視するオプションのフィルター。すべてのアラームを監視する場合は空のままにします。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.display_name": {
-          "source": "Alarm State Change",
+          "source": "Alarm state change",
           "message": "アラーム状態の変更"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.short_desc": {
@@ -656,7 +656,7 @@
           "message": "OK、ALARM、INSUFFICIENT_DATA の各状態間における CloudWatch アラームの状態変化を監視します。自動インシデント対応、エスカレーションワークフロー、リアルタイムの監視通知に不可欠です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.cmVnaW9u.short_desc": {
@@ -668,7 +668,7 @@
           "message": "アラーム状態の変更を監視する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "アラーム名のプレフィックス"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -680,7 +680,7 @@
           "message": "指定されたプレフィックスで始まる名前のアラームのみを監視するオプションのフィルター。すべてのアラームを監視する場合は空のままにします。"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.c3RhdGVfZmlsdGVy.display_name": {
-          "source": "State Filter",
+          "source": "State filter",
           "message": "状態フィルター"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.c3RhdGVfZmlsdGVy.short_desc": {

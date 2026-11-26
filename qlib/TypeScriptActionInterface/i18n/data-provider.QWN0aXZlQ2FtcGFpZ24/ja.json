@@ -28,7 +28,7 @@
           "message": "設定された接続の認証を使用して、**ActiveCampaign**にカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTPメソッド"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "レコードの検索"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.short_desc": {
@@ -460,7 +460,7 @@
           "message": "テーブル名"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "Add Contact Note",
+          "source": "Add contact note",
           "message": "コンタクトのノートを追加"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "ノートを追加するコンタクトを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
-          "source": "Add Contact to Account",
+          "source": "Add contact to account",
           "message": "コンタクトをアカウントに追加"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "アカウントに関連付けるコンタクトを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "役職"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "アカウント内でのコンタクトの役職または役割（任意）"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.display_name": {
-          "source": "Add Tag to Contact",
+          "source": "Add tag to contact",
           "message": "コンタクトにタグを追加"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.short_desc": {
@@ -580,7 +580,7 @@
           "message": "タグを追加するコンタクトを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.display_name": {
-          "source": "Create Account",
+          "source": "Create account",
           "message": "アカウントを作成"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
@@ -592,7 +592,7 @@
           "message": "ActiveCampaign に新しいアカウント（会社/組織）を作成します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
-          "source": "Account Name",
+          "source": "Account name",
           "message": "アカウント名"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
@@ -616,7 +616,7 @@
           "message": "アカウントのオプションの Web サイト URL またはドメイン"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.display_name": {
-          "source": "Account Owner",
+          "source": "Account owner",
           "message": "アカウント所有者"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.short_desc": {
@@ -628,7 +628,7 @@
           "message": "このアカウントの管理を担当するユーザーを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.short_desc": {
@@ -640,7 +640,7 @@
           "message": "アカウント用に設定されたカスタムフィールドの値を設定します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "コンタクトを作成"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -652,7 +652,7 @@
           "message": "基本情報とカスタムフィールドの値を使用して ActiveCampaign に新しいコンタクトを作成します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "メールアドレス"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "コンタクトのプライマリメールアドレス（必須）"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.short_desc": {
@@ -676,7 +676,7 @@
           "message": "コンタクトの名"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.short_desc": {
@@ -688,7 +688,7 @@
           "message": "コンタクトの姓"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
@@ -700,7 +700,7 @@
           "message": "コンタクトの電話番号"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.display_name": {
-          "source": "Custom Field Values",
+          "source": "Custom field values",
           "message": "カスタムフィールド値"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.short_desc": {
@@ -712,7 +712,7 @@
           "message": "コンタクト用に設定されたカスタムフィールドの値を設定します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
+          "source": "Get account",
           "message": "アカウントの取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.short_desc": {
@@ -736,7 +736,7 @@
           "message": "詳細情報を取得するアカウントを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
+          "source": "Get campaign",
           "message": "キャンペーンの取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.short_desc": {
@@ -760,7 +760,7 @@
           "message": "詳細情報を取得するキャンペーンを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "連絡先の取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -784,7 +784,7 @@
           "message": "詳細情報を取得する連絡先を選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.display_name": {
-          "source": "Get Deal",
+          "source": "Get deal",
           "message": "取引の取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.short_desc": {
@@ -808,7 +808,7 @@
           "message": "詳細情報を取得する取引を選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.display_name": {
-          "source": "Get Form",
+          "source": "Get form",
           "message": "フォームの取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.short_desc": {
@@ -832,7 +832,7 @@
           "message": "詳細情報を取得するフォームを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.display_name": {
-          "source": "Get List",
+          "source": "Get list",
           "message": "リストを取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.short_desc": {
@@ -856,7 +856,7 @@
           "message": "詳細情報を取得するリストを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
+          "source": "Get task",
           "message": "タスクの取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.short_desc": {
@@ -880,7 +880,7 @@
           "message": "詳細情報を取得するタスクを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
+          "source": "Get user",
           "message": "ユーザーの取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.short_desc": {
@@ -904,7 +904,7 @@
           "message": "詳細情報を取得するユーザーを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
+          "source": "List accounts",
           "message": "アカウント一覧"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.short_desc": {
@@ -928,7 +928,7 @@
           "message": "名前またはその他の検索可能フィールドでアカウントを検索"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.display_name": {
-          "source": "Count Deals",
+          "source": "Count deals",
           "message": "取引数をカウント"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.short_desc": {
@@ -964,7 +964,7 @@
           "message": "ページネーションでスキップするアカウント数"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
+          "source": "List campaigns",
           "message": "キャンペーン一覧"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "ページネーションでスキップするキャンペーン数"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "連絡先一覧"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "メールアドレスの完全一致で連絡先を絞り込み"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.display_name": {
-          "source": "Email Like",
+          "source": "Email like",
           "message": "類似メールアドレス"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "特定のリストのメンバーである連絡先を絞り込み"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.display_name": {
-          "source": "Sort Options",
+          "source": "Sort options",
           "message": "並び替えオプション"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "連絡先結果の並べ替え方法を設定"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "並べ替えフィールド"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "スコア"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.field.b3JkZXI.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "ページネーションでスキップする連絡先数"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.display_name": {
-          "source": "List Deals",
+          "source": "List deals",
           "message": "商談一覧"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "ページネーションでスキップする商談の数"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.display_name": {
-          "source": "Search Options",
+          "source": "Search options",
           "message": "検索オプション"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "さまざまなフィールドで商談を検索する方法を設定"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.field.ZmllbGQ.display_name": {
-          "source": "Search Field",
+          "source": "Search field",
           "message": "検索フィールド"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.field.ZmllbGQ.short_desc": {
@@ -1288,7 +1288,7 @@
           "message": "組織"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.field.dmFsdWU.display_name": {
-          "source": "Search Value",
+          "source": "Search value",
           "message": "検索値"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.field.dmFsdWU.short_desc": {
@@ -1300,7 +1300,7 @@
           "message": "指定されたフィールド内で検索する検索語"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.display_name": {
-          "source": "List Forms",
+          "source": "List forms",
           "message": "フォーム一覧"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "ページネーションでスキップするフォームの数"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.display_name": {
-          "source": "List Lists",
+          "source": "List lists",
           "message": "リストを一覧表示"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.short_desc": {
@@ -1384,7 +1384,7 @@
           "message": "名前でリストをフィルタリング"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.display_name": {
-          "source": "List Tags",
+          "source": "List tags",
           "message": "タグのリスト取得"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "名前または説明でタグを検索"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
+          "source": "List tasks",
           "message": "タスクの一覧表示"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "タイトルでタスクをフィルタリング"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "ユーザー一覧"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.short_desc": {
@@ -1540,7 +1540,7 @@
           "message": "ページネーションでスキップするユーザー数"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.display_name": {
-          "source": "Remove Tag from Contact",
+          "source": "Remove tag from contact",
           "message": "連絡先からタグを削除"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "連絡先から削除するタグを選択"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.display_name": {
-          "source": "Update Account",
+          "source": "Update account",
           "message": "アカウントを更新"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.short_desc": {
@@ -1600,7 +1600,7 @@
           "message": "更新するアカウントを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
-          "source": "Account Name",
+          "source": "Account name",
           "message": "アカウント名"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
@@ -1624,7 +1624,7 @@
           "message": "アカウントの新しいWebサイトURLまたはドメイン"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.display_name": {
-          "source": "Account Owner",
+          "source": "Account owner",
           "message": "アカウント所有者"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.short_desc": {
@@ -1636,7 +1636,7 @@
           "message": "このアカウントの管理を担当するユーザーを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "カスタムフィールド"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.short_desc": {
@@ -1648,7 +1648,7 @@
           "message": "アカウント用に設定されたカスタムフィールドの値を更新します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "連絡先を更新"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -1672,7 +1672,7 @@
           "message": "更新する連絡先を選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "メールアドレス"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "連絡先の新しいメールアドレス"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.short_desc": {
@@ -1696,7 +1696,7 @@
           "message": "連絡先の新しい名"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.short_desc": {
@@ -1708,7 +1708,7 @@
           "message": "連絡先の新しい姓"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "電話番号"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
@@ -1720,7 +1720,7 @@
           "message": "連絡先の新しい電話番号"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.display_name": {
-          "source": "Custom Field Values",
+          "source": "Custom field values",
           "message": "カスタムフィールド値"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.short_desc": {
@@ -1732,7 +1732,7 @@
           "message": "連絡先用に設定されたカスタムフィールドの値を更新します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.display_name": {
-          "source": "Add Deal Note",
+          "source": "Add deal note",
           "message": "案件のノートを追加"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.short_desc": {
@@ -1768,7 +1768,7 @@
           "message": "ノートを追加する案件を選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.display_name": {
-          "source": "List Deal Stages",
+          "source": "List deal stages",
           "message": "取引ステージ一覧"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "ページネーションでスキップする取引ステージ数"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.display_name": {
-          "source": "Update Deal",
+          "source": "Update deal",
           "message": "案件を更新"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.short_desc": {
@@ -1840,7 +1840,7 @@
           "message": "更新する案件を選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.display_name": {
-          "source": "Deal Title",
+          "source": "Deal title",
           "message": "案件のタイトル"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.short_desc": {
@@ -1876,7 +1876,7 @@
           "message": "この案件の新しい主要連絡先を選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.display_name": {
-          "source": "Deal Value",
+          "source": "Deal value",
           "message": "案件の金額"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "INR"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.display_name": {
-          "source": "Deal Stage",
+          "source": "Deal stage",
           "message": "案件のステージ"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.short_desc": {
@@ -1944,7 +1944,7 @@
           "message": "案件の現在のステータスを表す新しいパイプラインステージを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.display_name": {
-          "source": "Pipeline Group",
+          "source": "Pipeline group",
           "message": "パイプライングループ"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.short_desc": {
@@ -1956,7 +1956,7 @@
           "message": "この案件が所属する新しいパイプライングループを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.display_name": {
-          "source": "Deal Owner",
+          "source": "Deal owner",
           "message": "案件の所有者"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "この案件の管理を担当する新しいユーザーを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.display_name": {
-          "source": "Completion Percentage",
+          "source": "Completion percentage",
           "message": "完了パーセンテージ"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.short_desc": {
@@ -1980,7 +1980,7 @@
           "message": "案件の完了までの近さを表す新しいパーセンテージ値"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Deal Description",
+          "source": "Deal description",
           "message": "案件の説明"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.short_desc": {
@@ -1992,7 +1992,7 @@
           "message": "案件の新しい説明または詳細情報"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.display_name": {
-          "source": "Deal Status",
+          "source": "Deal status",
           "message": "案件のステータス"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.short_desc": {
@@ -2016,7 +2016,7 @@
           "message": "失注"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.display_name": {
-          "source": "Create Deal",
+          "source": "Create deal",
           "message": "案件を作成"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.short_desc": {
@@ -2028,7 +2028,7 @@
           "message": "すべての関連詳細を含む新しい営業案件を ActiveCampaign に作成します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.display_name": {
-          "source": "Deal Title",
+          "source": "Deal title",
           "message": "案件のタイトル"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.short_desc": {
@@ -2064,7 +2064,7 @@
           "message": "この案件の主担当コンタクトを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.display_name": {
-          "source": "Deal Value",
+          "source": "Deal value",
           "message": "案件の金額"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.short_desc": {
@@ -2120,7 +2120,7 @@
           "message": "INR"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.display_name": {
-          "source": "Deal Stage",
+          "source": "Deal stage",
           "message": "案件のステージ"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.short_desc": {
@@ -2132,7 +2132,7 @@
           "message": "案件の現在のステータスを表すパイプラインステージを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.display_name": {
-          "source": "Pipeline Group",
+          "source": "Pipeline group",
           "message": "パイプライングループ"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.short_desc": {
@@ -2144,7 +2144,7 @@
           "message": "この案件が所属するパイプライングループを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.display_name": {
-          "source": "Deal Owner",
+          "source": "Deal owner",
           "message": "案件の所有者"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.short_desc": {
@@ -2156,7 +2156,7 @@
           "message": "この案件の管理を担当するユーザーを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.display_name": {
-          "source": "Completion Percentage",
+          "source": "Completion percentage",
           "message": "完了パーセンテージ"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.short_desc": {
@@ -2168,7 +2168,7 @@
           "message": "案件の完了にどれだけ近いかを表すパーセンテージ値"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Deal Description",
+          "source": "Deal description",
           "message": "案件の説明"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.short_desc": {
@@ -2180,7 +2180,7 @@
           "message": "案件に関する説明または詳細情報（任意）"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.display_name": {
-          "source": "Deal Status",
+          "source": "Deal status",
           "message": "案件のステータス"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.short_desc": {
@@ -2204,7 +2204,7 @@
           "message": "失注"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.display_name": {
-          "source": "Contact Added to List",
+          "source": "Contact added to list",
           "message": "リストに追加されたコンタクト"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.short_desc": {
@@ -2228,7 +2228,7 @@
           "message": "新しいコンタクトの追加を監視する特定のリストを選択します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.display_name": {
-          "source": "Contact Updated",
+          "source": "Contact updated",
           "message": "連絡先が更新されました"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.short_desc": {
@@ -2240,7 +2240,7 @@
           "message": "このトリガーは、ActiveCampaign 内で連絡先情報が更新されたときに発火します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.display_name": {
-          "source": "New Campaign Bounce",
+          "source": "New campaign bounce",
           "message": "新規キャンペーンバウンス"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.short_desc": {
@@ -2252,7 +2252,7 @@
           "message": "このトリガーは、キャンペーンからのメールがバウンスし、配信失敗を示したときに発生します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.display_name": {
-          "source": "New Campaign Link Click",
+          "source": "New campaign link click",
           "message": "新規キャンペーンリンククリック"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.short_desc": {
@@ -2264,7 +2264,7 @@
           "message": "このトリガーは、受信者がキャンペーンメール内のリンクをクリックしたときに発生します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.display_name": {
-          "source": "New Campaign Reply",
+          "source": "New campaign reply",
           "message": "新規キャンペーン返信"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.short_desc": {
@@ -2276,7 +2276,7 @@
           "message": "このトリガーは、受信者がキャンペーンメールに返信したときに発生します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "New Contact Note",
+          "source": "New contact note",
           "message": "新規連絡先ノート"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -2300,7 +2300,7 @@
           "message": "連絡先にノートが追加されたときに監視する特定のリストを選択"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "新規連絡先"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -2312,7 +2312,7 @@
           "message": "このトリガーは、ActiveCampaignで新しい連絡先が登録または作成されたときに発生します"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.display_name": {
-          "source": "Deal Note Added",
+          "source": "Deal note added",
           "message": "取引ノートが追加されました"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.short_desc": {
@@ -2336,7 +2336,7 @@
           "message": "取引にノートが追加されたときに監視する特定のリストを選択してください"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.display_name": {
-          "source": "New Deal",
+          "source": "New deal",
           "message": "新規商談"
         },
         "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.short_desc": {

@@ -28,8 +28,8 @@
           "message": "Make a custom HTTP / REST API call to **CopperCRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
         },
         "app.Q29wcGVyQ3Jt.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.Q29wcGVyQ3Jt.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
           "source": "The HTTP method to use for the request",
@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.display_name": {
-          "source": "Create Lead",
-          "message": "Create Lead"
+          "source": "Create lead",
+          "message": "Create lead"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.short_desc": {
           "source": "Create a new lead in CopperCRM",
@@ -352,8 +352,8 @@
           "message": "Create a new lead record in CopperCRM with contact information and details. Leads represent potential customers who have shown interest in your products or services."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.short_desc": {
           "source": "Lead's first name",
@@ -364,8 +364,8 @@
           "message": "The first name of the lead"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bGFzdF9uYW1l.short_desc": {
           "source": "Lead's last name",
@@ -376,8 +376,8 @@
           "message": "The last name of the lead"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.short_desc": {
           "source": "Lead's middle name",
@@ -412,8 +412,8 @@
           "message": "The CopperCRM user who will be assigned to manage this lead"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.display_name": {
-          "source": "Company Name",
-          "message": "Company Name"
+          "source": "Company name",
+          "message": "Company name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.short_desc": {
           "source": "Lead's company name",
@@ -508,8 +508,8 @@
           "message": "The full URL of the website"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.c29jaWFscw.short_desc": {
           "source": "Social media profiles",
@@ -612,8 +612,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.display_name": {
-          "source": "Email Address",
-          "message": "Email Address"
+          "source": "Email address",
+          "message": "Email address"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.short_desc": {
           "source": "The email address",
@@ -624,8 +624,8 @@
           "message": "The email address of the lead"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
-          "message": "Phone Numbers"
+          "source": "Phone numbers",
+          "message": "Phone numbers"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.short_desc": {
           "source": "Contact phone numbers",
@@ -648,8 +648,8 @@
           "message": "The category or type of this phone number"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
           "source": "The phone number",
@@ -696,8 +696,8 @@
           "message": "The country"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -732,8 +732,8 @@
           "message": "The street address"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
-          "message": "Customer Source"
+          "source": "Customer source",
+          "message": "Customer source"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
           "source": "How the lead was acquired",
@@ -744,8 +744,8 @@
           "message": "The source or channel through which this lead was acquired"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Custom field values",
@@ -756,8 +756,8 @@
           "message": "Custom field values specific to your CopperCRM lead configuration"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2xlYWQ.display_name": {
-          "source": "Get Lead",
-          "message": "Get Lead"
+          "source": "Get lead",
+          "message": "Get lead"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2xlYWQ.short_desc": {
           "source": "Retrieve a lead from CopperCRM",
@@ -780,8 +780,8 @@
           "message": "Select the lead you want to retrieve from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.display_name": {
-          "source": "Update Lead",
-          "message": "Update Lead"
+          "source": "Update lead",
+          "message": "Update lead"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.short_desc": {
           "source": "Update an existing lead in CopperCRM",
@@ -804,8 +804,8 @@
           "message": "Select the lead you want to update"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Zmlyc3RfbmFtZQ.short_desc": {
           "source": "Updated first name",
@@ -816,8 +816,8 @@
           "message": "The updated first name of the lead"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bGFzdF9uYW1l.short_desc": {
           "source": "Updated last name",
@@ -828,8 +828,8 @@
           "message": "The updated last name of the lead"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.bWlkZGxlX25hbWU.short_desc": {
           "source": "Updated middle name",
@@ -864,8 +864,8 @@
           "message": "The new CopperCRM user to assign to this lead"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.display_name": {
-          "source": "Company Name",
-          "message": "Company Name"
+          "source": "Company name",
+          "message": "Company name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9uYW1l.short_desc": {
           "source": "Updated company name",
@@ -960,8 +960,8 @@
           "message": "The full URL of the website"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.c29jaWFscw.short_desc": {
           "source": "Updated social profiles",
@@ -1064,8 +1064,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.display_name": {
-          "source": "Email Address",
-          "message": "Email Address"
+          "source": "Email address",
+          "message": "Email address"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.ZW1haWw.field.ZW1haWw.short_desc": {
           "source": "The email address",
@@ -1076,8 +1076,8 @@
           "message": "The email address of the lead"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
-          "message": "Phone Numbers"
+          "source": "Phone numbers",
+          "message": "Phone numbers"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.short_desc": {
           "source": "Updated phone numbers",
@@ -1100,8 +1100,8 @@
           "message": "The category or type of this phone number"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
           "source": "The phone number",
@@ -1148,8 +1148,8 @@
           "message": "The country"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -1184,8 +1184,8 @@
           "message": "The street address"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
-          "message": "Customer Source"
+          "source": "Customer source",
+          "message": "Customer source"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
           "source": "Updated source",
@@ -1196,8 +1196,8 @@
           "message": "The updated source or channel"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2xlYWQ.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Updated custom fields",
@@ -1208,8 +1208,8 @@
           "message": "Updated custom field values"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2xlYWQ.display_name": {
-          "source": "Delete Lead",
-          "message": "Delete Lead"
+          "source": "Delete lead",
+          "message": "Delete lead"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2xlYWQ.short_desc": {
           "source": "Delete a lead from CopperCRM",
@@ -1232,8 +1232,8 @@
           "message": "Select the lead you want to delete from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.display_name": {
-          "source": "Search Leads",
-          "message": "Search Leads"
+          "source": "Search leads",
+          "message": "Search leads"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.short_desc": {
           "source": "Search for leads in CopperCRM",
@@ -1256,8 +1256,8 @@
           "message": "List of specific lead IDs to retrieve"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -1268,8 +1268,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -1280,8 +1280,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -1292,8 +1292,8 @@
           "message": "The field to use for sorting the results"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -1324,8 +1324,8 @@
           "message": "Search for leads with names matching this value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cGhvbmVfbnVtYmVy.short_desc": {
           "source": "Phone number to search",
@@ -1372,8 +1372,8 @@
           "message": "Filter leads by status"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
-          "message": "Customer Sources"
+          "source": "Customer sources",
+          "message": "Customer sources"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
           "source": "Lead sources",
@@ -1408,8 +1408,8 @@
           "message": "Filter leads by state or province"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -1444,8 +1444,8 @@
           "message": "Filter leads that have any of these tags"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.c29jaWFscw.short_desc": {
           "source": "Social media filter",
@@ -1488,8 +1488,8 @@
           "message": "Filter leads by their age in days"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
-          "message": "Minimum Value"
+          "source": "Minimum value",
+          "message": "Minimum value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Minimum monetary value",
@@ -1500,8 +1500,8 @@
           "message": "Filter leads with at least this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
-          "message": "Maximum Value"
+          "source": "Maximum value",
+          "message": "Maximum value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Maximum monetary value",
@@ -1512,8 +1512,8 @@
           "message": "Filter leads with no more than this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -1524,8 +1524,8 @@
           "message": "Filter leads with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -1536,8 +1536,8 @@
           "message": "Filter leads with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.display_name": {
-          "source": "Include Converted Leads",
-          "message": "Include Converted Leads"
+          "source": "Include converted leads",
+          "message": "Include converted leads"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2xlYWRz.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.short_desc": {
           "source": "Include converted leads",
@@ -1548,8 +1548,8 @@
           "message": "Whether to include leads that have been converted to opportunities"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.display_name": {
-          "source": "Create Person",
-          "message": "Create Person"
+          "source": "Create person",
+          "message": "Create person"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.short_desc": {
           "source": "Create a new person contact in CopperCRM",
@@ -1584,8 +1584,8 @@
           "message": "Name prefix such as Mr., Mrs., Dr., etc."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.short_desc": {
           "source": "First name",
@@ -1596,8 +1596,8 @@
           "message": "The first name of the person"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.short_desc": {
           "source": "Middle name",
@@ -1608,8 +1608,8 @@
           "message": "The middle name or initial of the person"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.short_desc": {
           "source": "Last name",
@@ -1668,8 +1668,8 @@
           "message": "The state or province"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -1716,8 +1716,8 @@
           "message": "The company where this person works"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
-          "message": "Contact Type"
+          "source": "Contact type",
+          "message": "Contact type"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.short_desc": {
           "source": "Type of contact relationship",
@@ -1740,8 +1740,8 @@
           "message": "Additional notes, description, or important details about the person"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
-          "message": "Email Addresses"
+          "source": "Email addresses",
+          "message": "Email addresses"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.short_desc": {
           "source": "Email addresses",
@@ -1776,8 +1776,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.display_name": {
-          "source": "Email Address",
-          "message": "Email Address"
+          "source": "Email address",
+          "message": "Email address"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.short_desc": {
           "source": "The email address",
@@ -1788,8 +1788,8 @@
           "message": "Email address"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
-          "message": "Phone Numbers"
+          "source": "Phone numbers",
+          "message": "Phone numbers"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.short_desc": {
           "source": "Contact phone numbers",
@@ -1828,8 +1828,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
           "source": "The phone number",
@@ -1840,8 +1840,8 @@
           "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.c29jaWFscw.short_desc": {
           "source": "Social media profiles",
@@ -1980,8 +1980,8 @@
           "message": "Website URL"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Custom field values",
@@ -1992,8 +1992,8 @@
           "message": "Custom field values specific to your CopperCRM person configuration"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3BlcnNvbg.display_name": {
-          "source": "Get Person",
-          "message": "Get Person"
+          "source": "Get person",
+          "message": "Get person"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3BlcnNvbg.short_desc": {
           "source": "Retrieve a person contact from CopperCRM",
@@ -2016,8 +2016,8 @@
           "message": "Select the person contact you want to retrieve from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.display_name": {
-          "source": "Update Person",
-          "message": "Update Person"
+          "source": "Update person",
+          "message": "Update person"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.short_desc": {
           "source": "Update an existing person contact in CopperCRM",
@@ -2064,8 +2064,8 @@
           "message": "Updated name prefix"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.display_name": {
-          "source": "First Name",
-          "message": "First Name"
+          "source": "First name",
+          "message": "First name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Zmlyc3RfbmFtZQ.short_desc": {
           "source": "Updated first name",
@@ -2076,8 +2076,8 @@
           "message": "The updated first name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
-          "message": "Middle Name"
+          "source": "Middle name",
+          "message": "Middle name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bWlkZGxlX25hbWU.short_desc": {
           "source": "Updated middle name",
@@ -2088,8 +2088,8 @@
           "message": "The updated middle name or initial"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.display_name": {
-          "source": "Last Name",
-          "message": "Last Name"
+          "source": "Last name",
+          "message": "Last name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.bGFzdF9uYW1l.short_desc": {
           "source": "Updated last name",
@@ -2148,8 +2148,8 @@
           "message": "The updated state or province"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "Updated postal code",
@@ -2196,8 +2196,8 @@
           "message": "The updated company where this person works"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
-          "message": "Contact Type"
+          "source": "Contact type",
+          "message": "Contact type"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y29udGFjdF90eXBlX2lk.short_desc": {
           "source": "Updated contact type",
@@ -2220,8 +2220,8 @@
           "message": "Updated notes, description, or important details"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.display_name": {
-          "source": "Email Addresses",
-          "message": "Email Addresses"
+          "source": "Email addresses",
+          "message": "Email addresses"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.short_desc": {
           "source": "Updated emails",
@@ -2256,8 +2256,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.display_name": {
-          "source": "Email Address",
-          "message": "Email Address"
+          "source": "Email address",
+          "message": "Email address"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.ZW1haWxz.field.ZW1haWw.short_desc": {
           "source": "The email address",
@@ -2268,8 +2268,8 @@
           "message": "Email address"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
-          "message": "Phone Numbers"
+          "source": "Phone numbers",
+          "message": "Phone numbers"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.short_desc": {
           "source": "Updated phone numbers",
@@ -2308,8 +2308,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
           "source": "The phone number",
@@ -2320,8 +2320,8 @@
           "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.c29jaWFscw.short_desc": {
           "source": "Updated social profiles",
@@ -2460,8 +2460,8 @@
           "message": "Website URL"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3BlcnNvbg.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Updated custom fields",
@@ -2472,8 +2472,8 @@
           "message": "Updated custom field values"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3BlcnNvbg.display_name": {
-          "source": "Delete Person",
-          "message": "Delete Person"
+          "source": "Delete person",
+          "message": "Delete person"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3BlcnNvbg.short_desc": {
           "source": "Delete a person contact from CopperCRM",
@@ -2496,8 +2496,8 @@
           "message": "Select the person contact you want to delete from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.display_name": {
-          "source": "Search People",
-          "message": "Search People"
+          "source": "Search people",
+          "message": "Search people"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.short_desc": {
           "source": "Search for person contacts in CopperCRM",
@@ -2592,8 +2592,8 @@
           "message": "Filter people by state or province"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -2628,8 +2628,8 @@
           "message": "Filter people by assigned users"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
-          "message": "Contact Types"
+          "source": "Contact types",
+          "message": "Contact types"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
           "source": "Contact type filter",
@@ -2664,8 +2664,8 @@
           "message": "Filter people that have any of these tags"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29jaWFscw.short_desc": {
           "source": "Social media profiles",
@@ -2676,8 +2676,8 @@
           "message": "Filter people by social media profiles"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -2688,8 +2688,8 @@
           "message": "Filter people with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -2700,8 +2700,8 @@
           "message": "Filter people with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
-          "message": "Created After"
+          "source": "Created after",
+          "message": "Created after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Earliest creation date",
@@ -2712,8 +2712,8 @@
           "message": "Filter people created on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
-          "message": "Created Before"
+          "source": "Created before",
+          "message": "Created before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Latest creation date",
@@ -2724,8 +2724,8 @@
           "message": "Filter people created on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
-          "message": "Modified After"
+          "source": "Modified after",
+          "message": "Modified after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Earliest modification date",
@@ -2736,8 +2736,8 @@
           "message": "Filter people modified on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
-          "message": "Modified Before"
+          "source": "Modified before",
+          "message": "Modified before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Latest modification date",
@@ -2748,8 +2748,8 @@
           "message": "Filter people modified on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -2804,8 +2804,8 @@
           "message": "Date Modified"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -2824,8 +2824,8 @@
           "message": "Descending"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -2836,8 +2836,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Blb3BsZQ.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -2848,8 +2848,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
-          "message": "Create Task"
+          "source": "Create task",
+          "message": "Create task"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.short_desc": {
           "source": "Create a new task in CopperCRM",
@@ -2860,8 +2860,8 @@
           "message": "Create a new task in CopperCRM with details, due dates, and assignments. Tasks help you track action items and follow-ups."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
-          "message": "Task Name"
+          "source": "Task name",
+          "message": "Task name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
           "source": "Name of the task",
@@ -2872,8 +2872,8 @@
           "message": "A descriptive name for the task"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.display_name": {
-          "source": "Related Resource",
-          "message": "Related Resource"
+          "source": "Related resource",
+          "message": "Related resource"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.short_desc": {
           "source": "Associated record",
@@ -2896,8 +2896,8 @@
           "message": "The ID of the related CRM record"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.display_name": {
-          "source": "Resource Type",
-          "message": "Resource Type"
+          "source": "Resource type",
+          "message": "Resource type"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.short_desc": {
           "source": "Type of related record",
@@ -2940,8 +2940,8 @@
           "message": "The CopperCRM user who will be assigned to complete this task"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
-          "message": "Due Date"
+          "source": "Due date",
+          "message": "Due date"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
           "source": "When the task is due",
@@ -2952,8 +2952,8 @@
           "message": "The date when this task should be completed"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.display_name": {
-          "source": "Reminder Date",
-          "message": "Reminder Date"
+          "source": "Reminder date",
+          "message": "Reminder date"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.short_desc": {
           "source": "When to send reminder",
@@ -3036,8 +3036,8 @@
           "message": "Tags to categorize and organize the task. You can create new tags or select from existing ones."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Custom field values",
@@ -3048,8 +3048,8 @@
           "message": "Custom field values specific to your CopperCRM task configuration"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3Rhc2s.display_name": {
-          "source": "Get Task",
-          "message": "Get Task"
+          "source": "Get task",
+          "message": "Get task"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X3Rhc2s.short_desc": {
           "source": "Retrieve a task from CopperCRM",
@@ -3072,8 +3072,8 @@
           "message": "Select the task you want to retrieve from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
-          "message": "Update Task"
+          "source": "Update task",
+          "message": "Update task"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.short_desc": {
           "source": "Update an existing task in CopperCRM",
@@ -3096,8 +3096,8 @@
           "message": "Select the task you want to update"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.display_name": {
-          "source": "Task Name",
-          "message": "Task Name"
+          "source": "Task name",
+          "message": "Task name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.bmFtZQ.short_desc": {
           "source": "Updated name",
@@ -3108,8 +3108,8 @@
           "message": "The updated name for the task"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.display_name": {
-          "source": "Related Resource",
-          "message": "Related Resource"
+          "source": "Related resource",
+          "message": "Related resource"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.short_desc": {
           "source": "Updated related record",
@@ -3132,8 +3132,8 @@
           "message": "The ID of the related CRM record"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.display_name": {
-          "source": "Resource Type",
-          "message": "Resource Type"
+          "source": "Resource type",
+          "message": "Resource type"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVsYXRlZF9yZXNvdXJjZQ.field.dHlwZQ.short_desc": {
           "source": "Type of related record",
@@ -3176,8 +3176,8 @@
           "message": "The new CopperCRM user to assign to this task"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.display_name": {
-          "source": "Due Date",
-          "message": "Due Date"
+          "source": "Due date",
+          "message": "Due date"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGU.short_desc": {
           "source": "Updated due date",
@@ -3188,8 +3188,8 @@
           "message": "The updated date when this task should be completed"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.display_name": {
-          "source": "Reminder Date",
-          "message": "Reminder Date"
+          "source": "Reminder date",
+          "message": "Reminder date"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.cmVtaW5kZXJfZGF0ZQ.short_desc": {
           "source": "Updated reminder date",
@@ -3272,8 +3272,8 @@
           "message": "Updated tags to categorize and organize the task"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX3Rhc2s.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Updated custom fields",
@@ -3284,8 +3284,8 @@
           "message": "Updated custom field values"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3Rhc2s.display_name": {
-          "source": "Delete Task",
-          "message": "Delete Task"
+          "source": "Delete task",
+          "message": "Delete task"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX3Rhc2s.short_desc": {
           "source": "Delete a task from CopperCRM",
@@ -3308,8 +3308,8 @@
           "message": "Select the task you want to delete from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.display_name": {
-          "source": "Search Tasks",
-          "message": "Search Tasks"
+          "source": "Search tasks",
+          "message": "Search tasks"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.short_desc": {
           "source": "Search for tasks in CopperCRM",
@@ -3332,8 +3332,8 @@
           "message": "List of specific task IDs to retrieve"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -3344,8 +3344,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -3356,8 +3356,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -3408,8 +3408,8 @@
           "message": "Date Modified"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -3520,8 +3520,8 @@
           "message": "Not Followed"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9kdWVfZGF0ZQ.display_name": {
-          "source": "Due Date After",
-          "message": "Due Date After"
+          "source": "Due date after",
+          "message": "Due date after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9kdWVfZGF0ZQ.short_desc": {
           "source": "Earliest due date",
@@ -3532,8 +3532,8 @@
           "message": "Filter tasks with due date on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9kdWVfZGF0ZQ.display_name": {
-          "source": "Due Date Before",
-          "message": "Due Date Before"
+          "source": "Due date before",
+          "message": "Due date before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9kdWVfZGF0ZQ.short_desc": {
           "source": "Latest due date",
@@ -3544,8 +3544,8 @@
           "message": "Filter tasks with due date on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9yZW1pbmRlcl9kYXRl.display_name": {
-          "source": "Reminder After",
-          "message": "Reminder After"
+          "source": "Reminder after",
+          "message": "Reminder after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9yZW1pbmRlcl9kYXRl.short_desc": {
           "source": "Earliest reminder date",
@@ -3556,8 +3556,8 @@
           "message": "Filter tasks with reminder date on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9yZW1pbmRlcl9kYXRl.display_name": {
-          "source": "Reminder Before",
-          "message": "Reminder Before"
+          "source": "Reminder before",
+          "message": "Reminder before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9yZW1pbmRlcl9kYXRl.short_desc": {
           "source": "Latest reminder date",
@@ -3568,8 +3568,8 @@
           "message": "Filter tasks with reminder date on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jb21wbGV0ZWRfZGF0ZQ.display_name": {
-          "source": "Completed After",
-          "message": "Completed After"
+          "source": "Completed after",
+          "message": "Completed after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jb21wbGV0ZWRfZGF0ZQ.short_desc": {
           "source": "Earliest completion date",
@@ -3580,8 +3580,8 @@
           "message": "Filter tasks completed on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jb21wbGV0ZWRfZGF0ZQ.display_name": {
-          "source": "Completed Before",
-          "message": "Completed Before"
+          "source": "Completed before",
+          "message": "Completed before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jb21wbGV0ZWRfZGF0ZQ.short_desc": {
           "source": "Latest completion date",
@@ -3592,8 +3592,8 @@
           "message": "Filter tasks completed on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
-          "message": "Created After"
+          "source": "Created after",
+          "message": "Created after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Earliest creation date",
@@ -3604,8 +3604,8 @@
           "message": "Filter tasks created on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
-          "message": "Created Before"
+          "source": "Created before",
+          "message": "Created before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Latest creation date",
@@ -3616,8 +3616,8 @@
           "message": "Filter tasks created on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
-          "message": "Modified After"
+          "source": "Modified after",
+          "message": "Modified after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Earliest modification date",
@@ -3628,8 +3628,8 @@
           "message": "Filter tasks modified on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
-          "message": "Modified Before"
+          "source": "Modified before",
+          "message": "Modified before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX3Rhc2tz.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Latest modification date",
@@ -3640,8 +3640,8 @@
           "message": "Filter tasks modified on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
-          "source": "Create Company",
-          "message": "Create Company"
+          "source": "Create company",
+          "message": "Create company"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
           "source": "Create a new company in CopperCRM",
@@ -3652,8 +3652,8 @@
           "message": "Create a new company record in CopperCRM with details like name, address, contact information, and custom fields. Companies represent organizations in your CRM."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
-          "message": "Company Name"
+          "source": "Company name",
+          "message": "Company name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
           "source": "The name of the company",
@@ -3700,8 +3700,8 @@
           "message": "The country where the company is located"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -3748,8 +3748,8 @@
           "message": "The CopperCRM user who will be assigned to manage this company"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
-          "message": "Contact Type"
+          "source": "Contact type",
+          "message": "Contact type"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.short_desc": {
           "source": "Type of contact relationship",
@@ -3772,8 +3772,8 @@
           "message": "Additional notes, description, or important details about the company"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.display_name": {
-          "source": "Email Domain",
-          "message": "Email Domain"
+          "source": "Email domain",
+          "message": "Email domain"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.short_desc": {
           "source": "Company email domain",
@@ -3784,8 +3784,8 @@
           "message": "The primary email domain used by the company (e.g., example.com)"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
-          "message": "Phone Numbers"
+          "source": "Phone numbers",
+          "message": "Phone numbers"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.short_desc": {
           "source": "Company phone numbers",
@@ -3824,8 +3824,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
           "source": "The phone number",
@@ -3836,8 +3836,8 @@
           "message": "The phone number in any format"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
-          "message": "Primary Contact"
+          "source": "Primary contact",
+          "message": "Primary contact"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
           "source": "Main contact person",
@@ -3848,8 +3848,8 @@
           "message": "The primary contact person associated with this company"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.c29jaWFscw.short_desc": {
           "source": "Social media profiles",
@@ -3976,8 +3976,8 @@
           "message": "The full URL of the website"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Custom field values",
@@ -3988,8 +3988,8 @@
           "message": "Custom field values specific to your CopperCRM company configuration"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2NvbXBhbnk.display_name": {
-          "source": "Get Company",
-          "message": "Get Company"
+          "source": "Get company",
+          "message": "Get company"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X2NvbXBhbnk.short_desc": {
           "source": "Retrieve a company from CopperCRM",
@@ -4012,8 +4012,8 @@
           "message": "Select the company you want to retrieve from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.display_name": {
-          "source": "Update Company",
-          "message": "Update Company"
+          "source": "Update company",
+          "message": "Update company"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
           "source": "Update an existing company in CopperCRM",
@@ -4036,8 +4036,8 @@
           "message": "Select the company you want to update"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
-          "source": "Company Name",
-          "message": "Company Name"
+          "source": "Company name",
+          "message": "Company name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
           "source": "Updated company name",
@@ -4084,8 +4084,8 @@
           "message": "The country where the company is located"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.YWRkcmVzcw.field.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -4132,8 +4132,8 @@
           "message": "The new CopperCRM user to assign to this company"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.display_name": {
-          "source": "Contact Type",
-          "message": "Contact Type"
+          "source": "Contact type",
+          "message": "Contact type"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lk.short_desc": {
           "source": "Updated contact type",
@@ -4156,8 +4156,8 @@
           "message": "Updated notes, description, or important details"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.display_name": {
-          "source": "Email Domain",
-          "message": "Email Domain"
+          "source": "Email domain",
+          "message": "Email domain"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.ZW1haWxfZG9tYWlu.short_desc": {
           "source": "Updated email domain",
@@ -4168,8 +4168,8 @@
           "message": "The updated primary email domain"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.display_name": {
-          "source": "Phone Numbers",
-          "message": "Phone Numbers"
+          "source": "Phone numbers",
+          "message": "Phone numbers"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.short_desc": {
           "source": "Updated phone numbers",
@@ -4208,8 +4208,8 @@
           "message": "Other"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cGhvbmVfbnVtYmVycw.field.bnVtYmVy.short_desc": {
           "source": "The phone number",
@@ -4220,8 +4220,8 @@
           "message": "The phone number in any format"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
-          "message": "Primary Contact"
+          "source": "Primary contact",
+          "message": "Primary contact"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
           "source": "Updated primary contact",
@@ -4232,8 +4232,8 @@
           "message": "The new primary contact person for this company"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.c29jaWFscw.short_desc": {
           "source": "Updated social profiles",
@@ -4360,8 +4360,8 @@
           "message": "The full URL of the website"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Updated custom fields",
@@ -4372,8 +4372,8 @@
           "message": "Updated custom field values"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
-          "source": "Delete Company",
-          "message": "Delete Company"
+          "source": "Delete company",
+          "message": "Delete company"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
           "source": "Delete a company from CopperCRM",
@@ -4396,8 +4396,8 @@
           "message": "Select the company you want to delete from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.display_name": {
-          "source": "Search Companies",
-          "message": "Search Companies"
+          "source": "Search companies",
+          "message": "Search companies"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.short_desc": {
           "source": "Search for companies in CopperCRM",
@@ -4420,8 +4420,8 @@
           "message": "List of specific company IDs to retrieve"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -4432,8 +4432,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -4444,8 +4444,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -4488,8 +4488,8 @@
           "message": "Date Created"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -4532,8 +4532,8 @@
           "message": "Filter companies by assigned users"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
-          "message": "Contact Types"
+          "source": "Contact types",
+          "message": "Contact types"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
           "source": "Contact type filter",
@@ -4568,8 +4568,8 @@
           "message": "Filter companies by state or province"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code",
@@ -4604,8 +4604,8 @@
           "message": "Filter companies that have any of these tags"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.c29jaWFscw.short_desc": {
           "source": "Social media filter",
@@ -4636,8 +4636,8 @@
           "message": "Not Followed"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -4648,8 +4648,8 @@
           "message": "Filter companies with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -4660,8 +4660,8 @@
           "message": "Filter companies with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Minimum Inactive Days",
-          "message": "Minimum Inactive Days"
+          "source": "Minimum inactive days",
+          "message": "Minimum inactive days"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
           "source": "Minimum days inactive",
@@ -4672,8 +4672,8 @@
           "message": "Filter companies inactive for at least this many days"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Maximum Inactive Days",
-          "message": "Maximum Inactive Days"
+          "source": "Maximum inactive days",
+          "message": "Maximum inactive days"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
           "source": "Maximum days inactive",
@@ -4684,8 +4684,8 @@
           "message": "Filter companies inactive for no more than this many days"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
-          "message": "Created After"
+          "source": "Created after",
+          "message": "Created after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Earliest creation date",
@@ -4696,8 +4696,8 @@
           "message": "Filter companies created on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
-          "message": "Created Before"
+          "source": "Created before",
+          "message": "Created before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Latest creation date",
@@ -4708,8 +4708,8 @@
           "message": "Filter companies created on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
-          "message": "Modified After"
+          "source": "Modified after",
+          "message": "Modified after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Earliest modification date",
@@ -4720,8 +4720,8 @@
           "message": "Filter companies modified on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
-          "message": "Modified Before"
+          "source": "Modified before",
+          "message": "Modified before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX2NvbXBhbmllcw.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Latest modification date",
@@ -4732,8 +4732,8 @@
           "message": "Filter companies modified on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.display_name": {
-          "source": "Create Opportunity",
-          "message": "Create Opportunity"
+          "source": "Create opportunity",
+          "message": "Create opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.short_desc": {
           "source": "Create a new opportunity in CopperCRM",
@@ -4744,8 +4744,8 @@
           "message": "Create a new sales opportunity in CopperCRM with details like value, stage, and associated contacts. Opportunities represent potential deals in your sales pipeline."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.display_name": {
-          "source": "Opportunity Name",
-          "message": "Opportunity Name"
+          "source": "Opportunity name",
+          "message": "Opportunity name"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.short_desc": {
           "source": "Name of the opportunity",
@@ -4756,8 +4756,8 @@
           "message": "A descriptive name for the sales opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
-          "message": "Primary Contact"
+          "source": "Primary contact",
+          "message": "Primary contact"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
           "source": "Main contact person",
@@ -4780,8 +4780,8 @@
           "message": "The CopperCRM user who will be assigned to manage this opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
-          "message": "Close Date"
+          "source": "Close date",
+          "message": "Close date"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.short_desc": {
           "source": "Expected close date",
@@ -4804,8 +4804,8 @@
           "message": "The company associated with this opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
-          "message": "Customer Source"
+          "source": "Customer source",
+          "message": "Customer source"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
           "source": "How the opportunity was acquired",
@@ -4828,8 +4828,8 @@
           "message": "Additional notes, description, or important details about the opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.display_name": {
-          "source": "Loss Reason",
-          "message": "Loss Reason"
+          "source": "Loss reason",
+          "message": "Loss reason"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.short_desc": {
           "source": "Reason for losing",
@@ -4840,8 +4840,8 @@
           "message": "The reason why this opportunity was lost (if applicable)"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.display_name": {
-          "source": "Monetary Value",
-          "message": "Monetary Value"
+          "source": "Monetary value",
+          "message": "Monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.short_desc": {
           "source": "Deal value",
@@ -4864,8 +4864,8 @@
           "message": "The sales pipeline this opportunity belongs to"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.display_name": {
-          "source": "Pipeline Stage",
-          "message": "Pipeline Stage"
+          "source": "Pipeline stage",
+          "message": "Pipeline stage"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.short_desc": {
           "source": "Current stage",
@@ -4944,8 +4944,8 @@
           "message": "Tags to categorize and organize the opportunity. You can create new tags or select from existing ones."
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.display_name": {
-          "source": "Win Probability",
-          "message": "Win Probability"
+          "source": "Win probability",
+          "message": "Win probability"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.short_desc": {
           "source": "Probability of winning",
@@ -4956,8 +4956,8 @@
           "message": "The estimated probability (0-100) of winning this opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.Y3JlYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Custom field values",
@@ -4968,8 +4968,8 @@
           "message": "Custom field values specific to your CopperCRM opportunity configuration"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X29wcG9ydHVuaXR5.display_name": {
-          "source": "Get Opportunity",
-          "message": "Get Opportunity"
+          "source": "Get opportunity",
+          "message": "Get opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.Z2V0X29wcG9ydHVuaXR5.short_desc": {
           "source": "Retrieve an opportunity from CopperCRM",
@@ -4992,8 +4992,8 @@
           "message": "Select the opportunity you want to retrieve from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.display_name": {
-          "source": "Update Opportunity",
-          "message": "Update Opportunity"
+          "source": "Update opportunity",
+          "message": "Update opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.short_desc": {
           "source": "Update an existing opportunity in CopperCRM",
@@ -5016,8 +5016,8 @@
           "message": "Select the opportunity you want to update"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.display_name": {
-          "source": "Opportunity Name",
-          "message": "Opportunity Name"
+          "source": "Opportunity name",
+          "message": "Opportunity name"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bmFtZQ.short_desc": {
           "source": "Updated name",
@@ -5028,8 +5028,8 @@
           "message": "The updated name for the opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.display_name": {
-          "source": "Primary Contact",
-          "message": "Primary Contact"
+          "source": "Primary contact",
+          "message": "Primary contact"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lk.short_desc": {
           "source": "Updated primary contact",
@@ -5052,8 +5052,8 @@
           "message": "The new CopperCRM user to assign to this opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.display_name": {
-          "source": "Close Date",
-          "message": "Close Date"
+          "source": "Close date",
+          "message": "Close date"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y2xvc2VfZGF0ZQ.short_desc": {
           "source": "Updated close date",
@@ -5076,8 +5076,8 @@
           "message": "The updated associated company"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.display_name": {
-          "source": "Customer Source",
-          "message": "Customer Source"
+          "source": "Customer source",
+          "message": "Customer source"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lk.short_desc": {
           "source": "Updated source",
@@ -5100,8 +5100,8 @@
           "message": "Updated notes, description, or important details"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.display_name": {
-          "source": "Loss Reason",
-          "message": "Loss Reason"
+          "source": "Loss reason",
+          "message": "Loss reason"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWQ.short_desc": {
           "source": "Updated loss reason",
@@ -5112,8 +5112,8 @@
           "message": "The updated reason for losing"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.display_name": {
-          "source": "Monetary Value",
-          "message": "Monetary Value"
+          "source": "Monetary value",
+          "message": "Monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.bW9uZXRhcnlfdmFsdWU.short_desc": {
           "source": "Updated value",
@@ -5136,8 +5136,8 @@
           "message": "The updated sales pipeline"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.display_name": {
-          "source": "Pipeline Stage",
-          "message": "Pipeline Stage"
+          "source": "Pipeline stage",
+          "message": "Pipeline stage"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWQ.short_desc": {
           "source": "Updated stage",
@@ -5216,8 +5216,8 @@
           "message": "Updated tags to categorize and organize the opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.display_name": {
-          "source": "Win Probability",
-          "message": "Win Probability"
+          "source": "Win probability",
+          "message": "Win probability"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.d2luX3Byb2JhYmlsaXR5.short_desc": {
           "source": "Updated win probability",
@@ -5228,8 +5228,8 @@
           "message": "The updated estimated probability of winning"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.Q29wcGVyQ3Jt.action.dXBkYXRlX29wcG9ydHVuaXR5.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
           "source": "Updated custom fields",
@@ -5240,8 +5240,8 @@
           "message": "Updated custom field values"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX29wcG9ydHVuaXR5.display_name": {
-          "source": "Delete Opportunity",
-          "message": "Delete Opportunity"
+          "source": "Delete opportunity",
+          "message": "Delete opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.ZGVsZXRlX29wcG9ydHVuaXR5.short_desc": {
           "source": "Delete an opportunity from CopperCRM",
@@ -5264,8 +5264,8 @@
           "message": "Select the opportunity you want to delete from CopperCRM"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.display_name": {
-          "source": "Search Opportunities",
-          "message": "Search Opportunities"
+          "source": "Search opportunities",
+          "message": "Search opportunities"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.short_desc": {
           "source": "Search for opportunities in CopperCRM",
@@ -5288,8 +5288,8 @@
           "message": "List of specific opportunity IDs to retrieve"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -5300,8 +5300,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -5312,8 +5312,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -5376,8 +5376,8 @@
           "message": "Close Date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -5432,8 +5432,8 @@
           "message": "Filter opportunities by associated companies"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
-          "message": "Customer Sources"
+          "source": "Customer sources",
+          "message": "Customer sources"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
           "source": "Opportunity sources",
@@ -5444,8 +5444,8 @@
           "message": "Filter opportunities by customer source"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bG9zc19yZWFzb25faWRz.display_name": {
-          "source": "Loss Reasons",
-          "message": "Loss Reasons"
+          "source": "Loss reasons",
+          "message": "Loss reasons"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bG9zc19yZWFzb25faWRz.short_desc": {
           "source": "Reasons for loss",
@@ -5468,8 +5468,8 @@
           "message": "Filter opportunities by pipeline"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGlwZWxpbmVfc3RhZ2VfaWRz.display_name": {
-          "source": "Pipeline Stages",
-          "message": "Pipeline Stages"
+          "source": "Pipeline stages",
+          "message": "Pipeline stages"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cGlwZWxpbmVfc3RhZ2VfaWRz.short_desc": {
           "source": "Current stages",
@@ -5480,8 +5480,8 @@
           "message": "Filter opportunities by pipeline stage"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cHJpbWFyeV9jb250YWN0X2lkcw.display_name": {
-          "source": "Primary Contacts",
-          "message": "Primary Contacts"
+          "source": "Primary contacts",
+          "message": "Primary contacts"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.cHJpbWFyeV9jb250YWN0X2lkcw.short_desc": {
           "source": "Main contacts",
@@ -5580,8 +5580,8 @@
           "message": "Not Followed"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
-          "message": "Minimum Value"
+          "source": "Minimum value",
+          "message": "Minimum value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Minimum deal value",
@@ -5592,8 +5592,8 @@
           "message": "Filter opportunities with at least this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
-          "message": "Maximum Value"
+          "source": "Maximum value",
+          "message": "Maximum value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Maximum deal value",
@@ -5604,8 +5604,8 @@
           "message": "Filter opportunities with no more than this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Minimum Win Probability",
-          "message": "Minimum Win Probability"
+          "source": "Minimum win probability",
+          "message": "Minimum win probability"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
           "source": "Minimum win chance",
@@ -5616,8 +5616,8 @@
           "message": "Filter opportunities with at least this win probability"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Maximum Win Probability",
-          "message": "Maximum Win Probability"
+          "source": "Maximum win probability",
+          "message": "Maximum win probability"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
           "source": "Maximum win chance",
@@ -5628,8 +5628,8 @@
           "message": "Filter opportunities with no more than this win probability"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -5640,8 +5640,8 @@
           "message": "Filter opportunities with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -5652,8 +5652,8 @@
           "message": "Filter opportunities with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jbG9zZV9kYXRl.display_name": {
-          "source": "Close Date After",
-          "message": "Close Date After"
+          "source": "Close date after",
+          "message": "Close date after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jbG9zZV9kYXRl.short_desc": {
           "source": "Earliest close date",
@@ -5664,8 +5664,8 @@
           "message": "Filter opportunities with close date on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jbG9zZV9kYXRl.display_name": {
-          "source": "Close Date Before",
-          "message": "Close Date Before"
+          "source": "Close date before",
+          "message": "Close date before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jbG9zZV9kYXRl.short_desc": {
           "source": "Latest close date",
@@ -5676,8 +5676,8 @@
           "message": "Filter opportunities with close date on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created After",
-          "message": "Created After"
+          "source": "Created after",
+          "message": "Created after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Earliest creation date",
@@ -5688,8 +5688,8 @@
           "message": "Filter opportunities created on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.display_name": {
-          "source": "Created Before",
-          "message": "Created Before"
+          "source": "Created before",
+          "message": "Created before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9jcmVhdGVkX2RhdGU.short_desc": {
           "source": "Latest creation date",
@@ -5700,8 +5700,8 @@
           "message": "Filter opportunities created on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified After",
-          "message": "Modified After"
+          "source": "Modified after",
+          "message": "Modified after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Earliest modification date",
@@ -5712,8 +5712,8 @@
           "message": "Filter opportunities modified on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.display_name": {
-          "source": "Modified Before",
-          "message": "Modified Before"
+          "source": "Modified before",
+          "message": "Modified before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9tb2RpZmllZF9kYXRl.short_desc": {
           "source": "Latest modification date",
@@ -5724,8 +5724,8 @@
           "message": "Filter opportunities modified on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.display_name": {
-          "source": "Stage Changed After",
-          "message": "Stage Changed After"
+          "source": "Stage changed after",
+          "message": "Stage changed after"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWluaW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.short_desc": {
           "source": "Earliest stage change",
@@ -5736,8 +5736,8 @@
           "message": "Filter opportunities with stage changed on or after this date"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.display_name": {
-          "source": "Stage Changed Before",
-          "message": "Stage Changed Before"
+          "source": "Stage changed before",
+          "message": "Stage changed before"
         },
         "app.Q29wcGVyQ3Jt.action.c2VhcmNoX29wcG9ydHVuaXRpZXM.option.bWF4aW11bV9zdGFnZV9jaGFuZ2VfZGF0ZQ.short_desc": {
           "source": "Latest stage change",
@@ -5748,8 +5748,8 @@
           "message": "Filter opportunities with stage changed on or before this date"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.display_name": {
-          "source": "New Lead",
-          "message": "New Lead"
+          "source": "New lead",
+          "message": "New lead"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.short_desc": {
           "source": "Triggered when a new lead is created",
@@ -5772,8 +5772,8 @@
           "message": "Only trigger for these specific lead IDs"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -5784,8 +5784,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -5796,8 +5796,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -5808,8 +5808,8 @@
           "message": "The field to use for sorting the results"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -5840,8 +5840,8 @@
           "message": "Only trigger for leads with names matching this value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGhvbmVfbnVtYmVy.display_name": {
-          "source": "Phone Number",
-          "message": "Phone Number"
+          "source": "Phone number",
+          "message": "Phone number"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cGhvbmVfbnVtYmVy.short_desc": {
           "source": "Phone number filter",
@@ -5888,8 +5888,8 @@
           "message": "Only trigger for leads with these statuses"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
-          "message": "Customer Sources"
+          "source": "Customer sources",
+          "message": "Customer sources"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
           "source": "Filter by source",
@@ -5924,8 +5924,8 @@
           "message": "Only trigger for leads in this state or province"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "Postal code filter",
@@ -5960,8 +5960,8 @@
           "message": "Only trigger for leads that have any of these tags"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.c29jaWFscw.short_desc": {
           "source": "Social media filter",
@@ -6004,8 +6004,8 @@
           "message": "Only trigger for leads of this age in days"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
-          "message": "Minimum Value"
+          "source": "Minimum value",
+          "message": "Minimum value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Minimum monetary value",
@@ -6016,8 +6016,8 @@
           "message": "Only trigger for leads with at least this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
-          "message": "Maximum Value"
+          "source": "Maximum value",
+          "message": "Maximum value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Maximum monetary value",
@@ -6028,8 +6028,8 @@
           "message": "Only trigger for leads with no more than this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -6040,8 +6040,8 @@
           "message": "Only trigger for leads with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -6052,8 +6052,8 @@
           "message": "Only trigger for leads with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.display_name": {
-          "source": "Include Converted Leads",
-          "message": "Include Converted Leads"
+          "source": "Include converted leads",
+          "message": "Include converted leads"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2xlYWQ.option.aW5jbHVkZV9jb252ZXJ0ZWRfbGVhZHM.short_desc": {
           "source": "Include converted leads",
@@ -6064,8 +6064,8 @@
           "message": "Whether to trigger for leads that have been converted to opportunities"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.display_name": {
-          "source": "New Person",
-          "message": "New Person"
+          "source": "New person",
+          "message": "New person"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.short_desc": {
           "source": "Triggered when a new person contact is created",
@@ -6160,8 +6160,8 @@
           "message": "Only trigger for people in this state or province"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "Postal code filter",
@@ -6196,8 +6196,8 @@
           "message": "Only trigger for people assigned to these users"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
-          "message": "Contact Types"
+          "source": "Contact types",
+          "message": "Contact types"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
           "source": "Filter by contact type",
@@ -6232,8 +6232,8 @@
           "message": "Only trigger for people that have any of these tags"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29jaWFscw.short_desc": {
           "source": "Social media filter",
@@ -6244,8 +6244,8 @@
           "message": "Only trigger for people with these social media profiles"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -6256,8 +6256,8 @@
           "message": "Only trigger for people with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -6268,8 +6268,8 @@
           "message": "Only trigger for people with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -6280,8 +6280,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -6292,8 +6292,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -6304,8 +6304,8 @@
           "message": "The field to use for sorting the results"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3BlcnNvbg.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -6324,8 +6324,8 @@
           "message": "Descending"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.display_name": {
-          "source": "New Opportunity",
-          "message": "New Opportunity"
+          "source": "New opportunity",
+          "message": "New opportunity"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.short_desc": {
           "source": "Triggered when a new opportunity is created",
@@ -6348,8 +6348,8 @@
           "message": "Only trigger for these specific opportunity IDs"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -6360,8 +6360,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -6372,8 +6372,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -6384,8 +6384,8 @@
           "message": "The field to use for sorting the results"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -6440,8 +6440,8 @@
           "message": "Only trigger for opportunities associated with these companies"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lkcw.display_name": {
-          "source": "Customer Sources",
-          "message": "Customer Sources"
+          "source": "Customer sources",
+          "message": "Customer sources"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.Y3VzdG9tZXJfc291cmNlX2lkcw.short_desc": {
           "source": "Filter by source",
@@ -6452,8 +6452,8 @@
           "message": "Only trigger for opportunities from these customer sources"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWRz.display_name": {
-          "source": "Loss Reasons",
-          "message": "Loss Reasons"
+          "source": "Loss reasons",
+          "message": "Loss reasons"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bG9zc19yZWFzb25faWRz.short_desc": {
           "source": "Filter by loss reason",
@@ -6476,8 +6476,8 @@
           "message": "Only trigger for opportunities in these pipelines"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWRz.display_name": {
-          "source": "Pipeline Stages",
-          "message": "Pipeline Stages"
+          "source": "Pipeline stages",
+          "message": "Pipeline stages"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cGlwZWxpbmVfc3RhZ2VfaWRz.short_desc": {
           "source": "Filter by stage",
@@ -6488,8 +6488,8 @@
           "message": "Only trigger for opportunities in these pipeline stages"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lkcw.display_name": {
-          "source": "Primary Contacts",
-          "message": "Primary Contacts"
+          "source": "Primary contacts",
+          "message": "Primary contacts"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.cHJpbWFyeV9jb250YWN0X2lkcw.short_desc": {
           "source": "Filter by primary contact",
@@ -6588,8 +6588,8 @@
           "message": "Not Followed"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Minimum Value",
-          "message": "Minimum Value"
+          "source": "Minimum value",
+          "message": "Minimum value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Minimum deal value",
@@ -6600,8 +6600,8 @@
           "message": "Only trigger for opportunities with at least this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.display_name": {
-          "source": "Maximum Value",
-          "message": "Maximum Value"
+          "source": "Maximum value",
+          "message": "Maximum value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9tb25ldGFyeV92YWx1ZQ.short_desc": {
           "source": "Maximum deal value",
@@ -6612,8 +6612,8 @@
           "message": "Only trigger for opportunities with no more than this monetary value"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Minimum Win Probability",
-          "message": "Minimum Win Probability"
+          "source": "Minimum win probability",
+          "message": "Minimum win probability"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
           "source": "Minimum win chance",
@@ -6624,8 +6624,8 @@
           "message": "Only trigger for opportunities with at least this win probability"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.display_name": {
-          "source": "Maximum Win Probability",
-          "message": "Maximum Win Probability"
+          "source": "Maximum win probability",
+          "message": "Maximum win probability"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV93aW5fcHJvYmFiaWxpdHk.short_desc": {
           "source": "Maximum win chance",
@@ -6636,8 +6636,8 @@
           "message": "Only trigger for opportunities with no more than this win probability"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -6648,8 +6648,8 @@
           "message": "Only trigger for opportunities with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X29wcG9ydHVuaXR5.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -6660,8 +6660,8 @@
           "message": "Only trigger for opportunities with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.display_name": {
-          "source": "New Company",
-          "message": "New Company"
+          "source": "New company",
+          "message": "New company"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.short_desc": {
           "source": "Triggered when a new company is created",
@@ -6684,8 +6684,8 @@
           "message": "Only trigger for these specific company IDs"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -6696,8 +6696,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -6708,8 +6708,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -6720,8 +6720,8 @@
           "message": "The field to use for sorting the results"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",
@@ -6764,8 +6764,8 @@
           "message": "Only trigger for companies assigned to these users"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lkcw.display_name": {
-          "source": "Contact Types",
-          "message": "Contact Types"
+          "source": "Contact types",
+          "message": "Contact types"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.Y29udGFjdF90eXBlX2lkcw.short_desc": {
           "source": "Filter by contact type",
@@ -6800,8 +6800,8 @@
           "message": "Only trigger for companies in this state or province"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cG9zdGFsX2NvZGU.display_name": {
-          "source": "Postal Code",
-          "message": "Postal Code"
+          "source": "Postal code",
+          "message": "Postal code"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.cG9zdGFsX2NvZGU.short_desc": {
           "source": "Postal code filter",
@@ -6836,8 +6836,8 @@
           "message": "Only trigger for companies that have any of these tags"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29jaWFscw.display_name": {
-          "source": "Social Media",
-          "message": "Social Media"
+          "source": "Social media",
+          "message": "Social media"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.c29jaWFscw.short_desc": {
           "source": "Social media filter",
@@ -6868,8 +6868,8 @@
           "message": "Not Followed"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Minimum Interactions",
-          "message": "Minimum Interactions"
+          "source": "Minimum interactions",
+          "message": "Minimum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Minimum interaction count",
@@ -6880,8 +6880,8 @@
           "message": "Only trigger for companies with at least this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.display_name": {
-          "source": "Maximum Interactions",
-          "message": "Maximum Interactions"
+          "source": "Maximum interactions",
+          "message": "Maximum interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbnRlcmFjdGlvbl9jb3VudA.short_desc": {
           "source": "Maximum interaction count",
@@ -6892,8 +6892,8 @@
           "message": "Only trigger for companies with no more than this many interactions"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Minimum Inactive Days",
-          "message": "Minimum Inactive Days"
+          "source": "Minimum inactive days",
+          "message": "Minimum inactive days"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWluaW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
           "source": "Minimum days inactive",
@@ -6904,8 +6904,8 @@
           "message": "Only trigger for companies inactive for at least this many days"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.display_name": {
-          "source": "Maximum Inactive Days",
-          "message": "Maximum Inactive Days"
+          "source": "Maximum inactive days",
+          "message": "Maximum inactive days"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X2NvbXBhbnk.option.bWF4aW11bV9pbmFjdGl2ZV9kYXlz.short_desc": {
           "source": "Maximum days inactive",
@@ -6916,8 +6916,8 @@
           "message": "Only trigger for companies inactive for no more than this many days"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.display_name": {
-          "source": "New Task",
-          "message": "New Task"
+          "source": "New task",
+          "message": "New task"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.short_desc": {
           "source": "Triggered when a new task is created",
@@ -6940,8 +6940,8 @@
           "message": "Only trigger for these specific task IDs"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9udW1iZXI.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9udW1iZXI.short_desc": {
           "source": "Which page of results",
@@ -6952,8 +6952,8 @@
           "message": "The page number of results to retrieve for pagination"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.cGFnZV9zaXpl.short_desc": {
           "source": "Results per page",
@@ -6964,8 +6964,8 @@
           "message": "The number of results to return per page"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9ieQ.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9ieQ.short_desc": {
           "source": "Field to sort by",
@@ -6976,8 +6976,8 @@
           "message": "The field to use for sorting the results"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9kaXJlY3Rpb24.display_name": {
-          "source": "Sort Direction",
-          "message": "Sort Direction"
+          "source": "Sort direction",
+          "message": "Sort direction"
         },
         "app.Q29wcGVyQ3Jt.action.bmV3X3Rhc2s.option.c29ydF9kaXJlY3Rpb24.short_desc": {
           "source": "Sort order",

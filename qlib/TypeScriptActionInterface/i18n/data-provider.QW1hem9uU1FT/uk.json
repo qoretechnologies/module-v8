@@ -28,7 +28,7 @@
           "message": "Зробіть настроюваний виклик HTTP / REST API до **Amazon SQS**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть метод HTTP, шлях URI (відносно базового URL API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Метод HTTP"
         },
         "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "Створити повідомлення"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Надіслати текстове повідомлення до черги Amazon SQS із необов'язковими атрибутами повідомлення, налаштуваннями затримки та параметрами черги FIFO."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Повний URL-адрес черги Amazon SQS, куди буде надіслано повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "Тіло повідомлення"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Вміст повідомлення для надсилання. Може бути звичайним текстом або будь-яким строковим форматом розміром до 256 КБ."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "Затримка (секунди)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Тривалість часу (0–900 секунд), на який відкладається доставка повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Атрибути повідомлення"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Настійні атрибути для включення до повідомлення з метою фільтрації та обробки."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "ID групи повідомлень"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Тег, який вказує, що повідомлення належить до певної групи повідомлень (лише для черг FIFO)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "ID дедуплікації повідомлення"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Токен, який використовується для дедуплікації надісланих повідомлень (лише для черг FIFO)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "Створити повідомлення JSON"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Надіслати структуровані дані JSON до черги Amazon SQS. Об'єкт JSON буде автоматично серіалізовано в тіло повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Повний URL-адрес черги Amazon SQS, куди буде надіслано JSON-повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
-          "source": "Message Data",
+          "source": "Message data",
           "message": "Дані повідомлення"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Об'єкт структурованих даних, який буде серіалізовано в JSON і надіслано як тіло повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "Затримка (секунди)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Тривалість часу (0–900 секунд), на який відкладається доставка повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "Атрибути повідомлення"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Настійні атрибути для включення до повідомлення з метою фільтрації та обробки."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "ID групи повідомлень"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Тег, який вказує, що повідомлення належить до певної групи повідомлень (лише для черг FIFO)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "ID дедуплікації повідомлення"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Токен, який використовується для дедуплікації надісланих повідомлень (лише для черг FIFO)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
-          "source": "Create Queue",
+          "source": "Create queue",
           "message": "Створити чергу"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Створити нову чергу Amazon SQS із налаштовуваними параметрами, у тому числі можливостями FIFO, чергами недійсних повідомлень (dead letter queues) і параметрами шифрування."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Оберіть регіон AWS, у якому ви хочете створити нову чергу SQS."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
-          "source": "Queue Name",
+          "source": "Queue name",
           "message": "Назва черги"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Назва черги. Назви черг FIFO повинні закінчуватися суфіксом .fifo."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
-          "source": "FIFO Queue",
+          "source": "FIFO queue",
           "message": "Черга FIFO"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Чи створювати чергу FIFO, яка гарантує, що повідомлення будуть оброблені рівно один раз у точній послідовності надсилання."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "Дедуплікація на основі вмісту"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Для черг FIFO вмикає дедуплікацію за допомогою хешу SHA-256 тіла повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "Таймаут видимості (у секундах)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Тривалість (0–43200 секунд), протягом якої повідомлення залишається невидимим для інших отримувачів після отримання."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
-          "source": "Message Retention Period (Seconds)",
+          "source": "Message retention period (seconds)",
           "message": "Період зберігання повідомлень (секунди)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Тривалість часу (60–1 209 600 секунд), протягом якого повідомлення зберігаються в черзі."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
+          "source": "Delay (seconds)",
           "message": "Затримка (секунди)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Затримка за замовчуванням (0–900 секунд) для повідомлень, доданих до цієї черги."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
-          "source": "Receive Wait Time (Seconds)",
+          "source": "Receive wait time (seconds)",
           "message": "Час очікування отримання (у секундах)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Час (0–20 секунд), протягом якого виклики ReceiveMessage очікують на надходження повідомлень."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
-          "source": "Max Receive Count",
+          "source": "Max receive count",
           "message": "Максимальна кількість отримувань"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Кількість отримувань повідомлення перед його переміщенням до черги недійсних повідомлень."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
-          "source": "Dead Letter Queue URL",
+          "source": "Dead letter queue URL",
           "message": "URL черги недійсних повідомлень"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
@@ -664,7 +664,7 @@
           "message": "URL-адреса черги, яка використовуватиметься як черга недійсних повідомлень (dead letter queue) у разі невдалої обробки повідомлення."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "ID основного ключа KMS"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Ідентифікатор ключа AWS KMS для шифрування повідомлень черги на стороні сервера."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
-          "source": "KMS Data Key Reuse Period (Seconds)",
+          "source": "KMS data key reuse period (seconds)",
           "message": "Період повторного використання ключа даних KMS (секунди)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Тривалість часу (60–86 400 секунд), протягом якого Amazon SQS може повторно використовувати ключ даних."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
-          "source": "List Queues",
+          "source": "List queues",
           "message": "Список черг"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
@@ -700,7 +700,7 @@
           "message": "Отримати список усіх черг Amazon SQS у вказаному регіоні з опціональною фільтрацією та детальними атрибутами черг."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Оберіть регіон AWS, з якого потрібно отримати список черг SQS."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
-          "source": "Queue Name Prefix",
+          "source": "Queue name prefix",
           "message": "Префікс назви черги"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
@@ -724,7 +724,7 @@
           "message": "Необов'язковий префікс для фільтрації назв черг. Будуть повернені лише черги, назви яких починаються з цього префікса."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Макс. результатів"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -736,7 +736,7 @@
           "message": "Максимальна кількість результатів черг для повернення (1–1000)."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "Включити атрибути"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Чи включати детальні атрибути черги, такі як кількість повідомлень, часові мітки та налаштування конфігурації."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
+          "source": "List messages",
           "message": "Список повідомлень"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Отримати повідомлення з черги Amazon SQS із налаштовуваними параметрами опитування та отриманням атрибутів повідомлень."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
@@ -784,7 +784,7 @@
           "message": "Повна URL-адреса черги Amazon SQS, з якої потрібно отримувати повідомлення."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
-          "source": "Max Number of Messages",
+          "source": "Max number of messages",
           "message": "Максимальна кількість повідомлень"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Максимальна кількість повідомлень для повернення в одному запиті (1–10)."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "Час очікування (у секундах)"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -808,7 +808,7 @@
           "message": "Тривалість (0–20 секунд), протягом якої виклик очікує на надходження повідомлень."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
+          "source": "Visibility timeout (seconds)",
           "message": "Таймаут видимості (у секундах)"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
@@ -820,7 +820,7 @@
           "message": "Тривалість, протягом якої отримані повідомлення приховані від наступних запитів на отримання."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
-          "source": "Message Attribute Names",
+          "source": "Message attribute names",
           "message": "Назви атрибутів повідомлень"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Назви атрибутів повідомлень для повернення. Використовуйте \"All\", щоб повернути всі атрибути."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "Назви атрибутів"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Назви системних атрибутів, які слід повертати з кожним повідомленням. Використовуйте \"All\", щоб повернути всі атрибути."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
-          "source": "Get Queue",
+          "source": "Get queue",
           "message": "Отримати чергу"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Отримати детальну інформацію та атрибути для конкретної черги Amazon SQS, включаючи конфігурацію, кількість повідомлень і часові мітки."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Повна URL-адреса черги Amazon SQS, про яку потрібно отримати інформацію."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
+          "source": "Attribute names",
           "message": "Назви атрибутів"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Назви атрибутів черги для повернення. Використовуйте \"All\", щоб повернути всі доступні атрибути."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "Нове повідомлення"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Відстежує чергу Amazon SQS на наявність нових повідомлень і спрацьовує, коли повідомлення доступні. Підтримує тривале опитування та отримання атрибутів повідомлень."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Повна URL-адреса черги Amazon SQS, з якої потрібно отримувати повідомлення."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "Час очікування (у секундах)"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Тривалість (0–20 секунд), протягом якої виклик очікує на надходження повідомлення в чергу перед поверненням."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "Максимальна кількість повідомлень"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Максимальна кількість повідомлень для повернення (1–10). Зверніть увагу, що може бути повернено менше повідомлень."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "New JSON Message",
+          "source": "New JSON message",
           "message": "Нове повідомлення JSON"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Відстежує чергу Amazon SQS на наявність нових повідомлень, що містять коректні дані JSON. Спрацьовує лише для повідомлень із вмістом JSON, який можна розібрати."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Повна URL-адреса черги Amazon SQS, з якої потрібно отримувати повідомлення JSON."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
+          "source": "Wait time (seconds)",
           "message": "Час очікування (у секундах)"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "Тривалість (0–20 секунд), протягом якої виклик очікує на надходження повідомлення в чергу перед поверненням."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
+          "source": "Max messages",
           "message": "Максимальна кількість повідомлень"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Максимальна кількість повідомлень для повернення (1–10). Зверніть увагу, що може бути повернено менше повідомлень."
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
-          "source": "New Queue",
+          "source": "New queue",
           "message": "Нова черга"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Відстежує новостворені черги Amazon SQS у вказаному регіоні та спрацьовує під час виявлення нових черг."
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Регіон AWS"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {

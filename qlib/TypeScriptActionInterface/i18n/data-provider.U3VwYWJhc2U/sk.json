@@ -28,7 +28,7 @@
           "message": "Vykonajte vlastné volanie HTTP / REST API do **Supabase** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vracia ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
         },
         "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metóda HTTP"
         },
         "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.U3VwYWJhc2U.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Vyhľadať záznamy"
         },
         "app.U3VwYWJhc2U.action.c2VhcmNo.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Názov tabuľky"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.display_name": {
-          "source": "Get Table",
+          "source": "Get table",
           "message": "Získať tabuľku"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Získa komplexné metaúdaje pre konkrétnu tabuľku vrátane definícií stĺpcov, dátových typov, povinných polí a popisov. Táto akcia vám pomôže pochopiť štruktúru vašich databázových tabuliek."
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Názov tabuľky"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vyberte tabuľku Supabase, ktorej informácie o schéme chcete získať. Tabuľka musí existovať vo vašom projekte Supabase."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
+          "source": "List tables",
           "message": "Zoznam tabuliek"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Získa všetky tabuľky z vašej databázy Supabase s ich základnými metaúdajmi vrátane informácií o stĺpcoch a popisov. Voliteľne zahrnie systémové tabuľky do výsledkov."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.display_name": {
-          "source": "Include System Tables",
+          "source": "Include system tables",
           "message": "Zahrnúť systémové tabuľky"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Keď je povolené, odpoveď bude zahŕňať systémové tabuľky (tie, ktoré začínajú podčiarknutím). Systémové tabuľky obsahujú interné údaje Supabase a zvyčajne sú skryté pred bežnými dopytmi."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.display_name": {
-          "source": "Create Row",
+          "source": "Create row",
           "message": "Vytvoriť riadok"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Vytvorí nový záznam v zadanej tabuľke Supabase. Akcia dynamicky zobrazuje schému tabuľky, čo vám umožňuje zadať hodnoty pre jednotlivé stĺpce. Vracia novo vytvorený riadok so všetkými jeho údajmi."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Názov tabuľky"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Vyberte cieľovú tabuľku Supabase na vloženie nového riadka. Dostupné polia sa dynamicky načítajú na základe schémy vybratej tabuľky."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
+          "source": "Row values",
           "message": "Hodnoty riadka"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Zadajte hodnoty pre stĺpce tabuľky. Štruktúra sa dynamicky generuje na základe vybranej schémy tabuľky a zobrazuje všetky dostupné stĺpce s ich dátovými typmi a obmedzeniami."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.display_name": {
-          "source": "List Rows",
+          "source": "List rows",
           "message": "Zoznam riadkov"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Načíta riadky z tabuľky Supabase s podporou filtrovania, triedenia, stránkovania a zoradenia. Vráti zoznam záznamov zodpovedajúcich kritériám vášho dopytu spolu s informáciou o celkovom počte."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Názov tabuľky"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Preskočiť tento počet riadkov pred začatím vracania výsledkov. Používa sa v kombinácii s limitom na stránkovanie naprieč veľkými množinami údajov."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Zoradiť podľa"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Hodnota, s ktorou sa má porovnávať stĺpec pomocou vybraného operátora. Pre operátor \"v\" zadajte hodnoty oddelené čiarkami."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.display_name": {
-          "source": "Delete Rows",
+          "source": "Delete rows",
           "message": "Odstrániť riadky"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Odstráni riadky z tabuľky Supabase, ktoré zodpovedajú zadaným kritériám filtra. Vracia počet odstránených riadkov a ich údaje. Používajte opatrne, pretože táto operácia je nevratná."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Názov tabuľky"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Hodnota, s ktorou sa má porovnávať. Riadky, ktoré s touto podmienkou zodpovedajú, budú odstránené."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.display_name": {
-          "source": "Upsert Row",
+          "source": "Upsert row",
           "message": "Upsertovať riadok"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Vykoná operáciu upsert (vloženie alebo aktualizáciu) v tabuľke Supabase. Ak riadok so zadaným jedinečným obmedzením existuje, bude aktualizovaný; v opačnom prípade sa vloží nový riadok."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Názov tabuľky"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Vyberte cieľovú tabuľku Supabase. Dostupné polia sa dynamicky načítajú na základe schémy tabuľky."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
+          "source": "Row values",
           "message": "Hodnoty riadka"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Zadajte hodnoty pre stĺpce tabuľky. Ak riadok so zodpovedajúcimi jedinečnými obmedzeniami existuje, tieto hodnoty ho aktualizujú; v opačnom prípade sa vytvorí nový riadok."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.display_name": {
-          "source": "On Conflict",
+          "source": "On conflict",
           "message": "Pri konflikte"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Zadajte stĺpec alebo čiarkami oddelený zoznam stĺpcov, ktoré sa majú použiť na detekciu konfliktov. Ak nie je zadané, použije sa primárny kľúč tabuľky."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.display_name": {
-          "source": "Ignore Duplicates",
+          "source": "Ignore duplicates",
           "message": "Ignorovať duplikáty"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Keď je povolené, ak existuje konfliktný riadok, operácia sa potichu ignoruje. Keď je zakázané (predvolené), konfliktné riadky sa aktualizujú novými hodnotami."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.display_name": {
-          "source": "Create Storage Bucket",
+          "source": "Create storage bucket",
           "message": "Vytvoriť úložný bucket"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Vytvorí nový úložný bucket v službe Supabase Storage na organizovanie a ukladanie súborov. Nakonfigurujte prístupové oprávnenia, limity veľkosti súborov a povolené typy MIME."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.display_name": {
-          "source": "Bucket Name",
+          "source": "Bucket name",
           "message": "Názov bucketu"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Zadajte jedinečný názov pre úložný bucket. Názov musí byť bezpečný pre adresy URL a jedinečný v rámci vášho projektu Supabase."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.display_name": {
-          "source": "Public Access",
+          "source": "Public access",
           "message": "Verejný prístup"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Keď je táto možnosť povolená, k súborom v tomto buckete je možné pristupovať verejne bez overenia totožnosti. Keď je zakázaná (predvolené), prístup k súborom vyžaduje overenie."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.display_name": {
-          "source": "File Size Limit",
+          "source": "File size limit",
           "message": "Limit veľkosti súboru"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Nastavte maximálnu veľkosť súboru v bajtoch, ktorý možno nahrať do tohto bucketu. Ponechajte prázdne, ak nechcete nastaviť limit."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.display_name": {
-          "source": "Allowed MIME Types",
+          "source": "Allowed MIME types",
           "message": "Povolené typy MIME"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Zadajte, ktoré typy súborov možno nahrať do tohto bucketu, poskytnutím zoznamu typov MIME (napr. image/png, application/pdf). Ak chcete povoliť všetky typy súborov, nechajte pole prázdne."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Storage Buckets",
+          "source": "List storage buckets",
           "message": "Zoznam bucketov úložiska"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Získa zoznam všetkých storage bucketov vo vašom projekte Supabase s ich konfiguráciami vrátane prístupových oprávnení, limitov veľkosti súborov a povolených typov MIME."
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.display_name": {
-          "source": "Get Storage Bucket",
+          "source": "Get storage bucket",
           "message": "Získať úložný bucket"
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Vyberte úložný bucket, ktorého podrobnosti chcete získať zo svojho projektu Supabase."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.display_name": {
-          "source": "New Table Row",
+          "source": "New table row",
           "message": "Nový riadok tabuľky"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Monitoruje tabuľku Supabase na výskyt nových riadkov a spúšťa sa pri vložení nových záznamov. Podporuje voliteľné filtrovanie na spúšťanie iba pre riadky zodpovedajúce konkrétnym kritériám."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Názov tabuľky"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.short_desc": {

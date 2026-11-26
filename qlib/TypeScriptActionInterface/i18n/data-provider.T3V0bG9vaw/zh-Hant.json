@@ -28,7 +28,7 @@
           "message": "使用已設定連線的驗證向 **Microsoft Outlook** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n若端點尚未在此應用程式中公開為一級動作，可使用此動作。"
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "HTTP 方法"
         },
         "app.T3V0bG9vaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "建立聯絡人"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.short_desc": {
@@ -352,7 +352,7 @@
           "message": "在您的 Microsoft Outlook 聯絡人中建立新聯絡人，包含姓名、電子郵件、電話號碼和職務資訊等詳細資料。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.short_desc": {
@@ -364,7 +364,7 @@
           "message": "輸入聯絡人的名字。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.short_desc": {
@@ -376,7 +376,7 @@
           "message": "輸入聯絡人的姓氏。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.short_desc": {
@@ -388,7 +388,7 @@
           "message": "輸入聯絡人的一或多個電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.short_desc": {
@@ -400,7 +400,7 @@
           "message": "輸入此聯絡人的有效電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.short_desc": {
@@ -412,7 +412,7 @@
           "message": "輸入您希望此電子郵件地址的名稱如何顯示"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.display_name": {
-          "source": "Business Phones",
+          "source": "Business phones",
           "message": "商務電話"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.short_desc": {
@@ -424,7 +424,7 @@
           "message": "輸入聯絡人的一或多個商務電話號碼。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
+          "source": "Mobile phone",
           "message": "行動電話"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "輸入聯絡人的行動電話或手機號碼。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "職稱"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.short_desc": {
@@ -448,7 +448,7 @@
           "message": "輸入聯絡人的職稱或角色。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "公司名稱"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.short_desc": {
@@ -472,7 +472,7 @@
           "message": "輸入聯絡人在公司內工作的部門或單位。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.display_name": {
-          "source": "Office Location",
+          "source": "Office location",
           "message": "辦公室位置"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.short_desc": {
@@ -484,7 +484,7 @@
           "message": "輸入聯絡人工作的實體位置或辦公室。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.display_name": {
-          "source": "Business Address",
+          "source": "Business address",
           "message": "商務地址"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.short_desc": {
@@ -508,7 +508,7 @@
           "message": "輸入企業地址的城市或城鎮。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.display_name": {
-          "source": "Country/Region",
+          "source": "Country/region",
           "message": "國家/地區"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.short_desc": {
@@ -520,7 +520,7 @@
           "message": "輸入企業地址的國家或地區。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵遞區號"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "輸入商業地址的郵政編碼或郵遞區號。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "州/省"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "輸入街道地址，包括建築物編號與街道名稱。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.display_name": {
-          "source": "Create Event",
+          "source": "Create event",
           "message": "建立事件"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.short_desc": {
@@ -592,7 +592,7 @@
           "message": "輸入將顯示在行事曆中的事件標題或主旨。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.c3RhcnQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.c3RhcnQ.short_desc": {
@@ -604,7 +604,7 @@
           "message": "輸入事件開始的日期與時間。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.dGltZXpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "時區"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.dGltZXpvbmU.short_desc": {
@@ -616,7 +616,7 @@
           "message": "選取套用於事件開始與結束時間的時區。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.ZW5k.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "結束時間"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.ZW5k.short_desc": {
@@ -652,7 +652,7 @@
           "message": "新增一或多名要邀請參加事件的出席者。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.YWRkcmVzcw.short_desc": {
@@ -664,7 +664,7 @@
           "message": "輸入您想要邀請的人的電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.YXR0ZW5kZWVz.field.bmFtZQ.short_desc": {
@@ -688,7 +688,7 @@
           "message": "輸入出席者將在邀請中看到的事件說明或詳細資訊。"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.Ym9keUNvbnRlbnRUeXBl.display_name": {
-          "source": "Body Content Type",
+          "source": "Body content type",
           "message": "本文內容類型"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.Ym9keUNvbnRlbnRUeXBl.short_desc": {
@@ -708,7 +708,7 @@
           "message": "HTML"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "線上會議"
         },
         "app.T3V0bG9vaw.action.Y3JlYXRlLWV2ZW50.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -720,7 +720,7 @@
           "message": "啟用此選項可將此事件設為線上會議並產生會議連結。"
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWNvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "刪除聯絡人"
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWNvbnRhY3Q.short_desc": {
@@ -744,7 +744,7 @@
           "message": "選取要刪除之聯絡人的唯一識別碼。"
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWV2ZW50.display_name": {
-          "source": "Delete Event",
+          "source": "Delete event",
           "message": "刪除事件"
         },
         "app.T3V0bG9vaw.action.ZGVsZXRlLWV2ZW50.short_desc": {
@@ -780,7 +780,7 @@
           "message": "選取要刪除之事件的唯一識別碼。"
         },
         "app.T3V0bG9vaw.action.bGlzdC1jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "列出聯絡人"
         },
         "app.T3V0bG9vaw.action.bGlzdC1jb250YWN0cw.short_desc": {
@@ -816,7 +816,7 @@
           "message": "輸入文字以依姓名或電子郵件地址篩選聯絡人。僅會傳回符合篩選條件的聯絡人。"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.display_name": {
-          "source": "List Events",
+          "source": "List events",
           "message": "列出活動"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.short_desc": {
@@ -840,7 +840,7 @@
           "message": "選取您要從中擷取活動的行事曆。"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Date and Time",
+          "source": "Start date and time",
           "message": "開始日期和時間"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -852,7 +852,7 @@
           "message": "輸入日期和時間，以擷取在此時間或之後開始的活動。"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Date and Time",
+          "source": "End date and time",
           "message": "結束日期和時間"
         },
         "app.T3V0bG9vaw.action.bGlzdC1ldmVudHM.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -876,7 +876,7 @@
           "message": "指定要從 Outlook 行事曆擷取的活動數量上限。"
         },
         "app.T3V0bG9vaw.action.bWFuYWdlLWVtYWls.display_name": {
-          "source": "Manage Email",
+          "source": "Manage email",
           "message": "管理電子郵件"
         },
         "app.T3V0bG9vaw.action.bWFuYWdlLWVtYWls.short_desc": {
@@ -920,7 +920,7 @@
           "message": "移動"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.display_name": {
-          "source": "Search Emails",
+          "source": "Search emails",
           "message": "搜尋電子郵件"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.short_desc": {
@@ -944,7 +944,7 @@
           "message": "設定要傳回的電子郵件結果數量上限。預設為 50。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日期"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -956,7 +956,7 @@
           "message": "僅包含在此日期與時間或之後收到的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "結束日期"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -968,7 +968,7 @@
           "message": "僅包含在此日期與時間或之前收到的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZnJvbVNlbmRlcg.display_name": {
-          "source": "From Sender",
+          "source": "From sender",
           "message": "寄件者"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.ZnJvbVNlbmRlcg.short_desc": {
@@ -980,7 +980,7 @@
           "message": "僅包含來自此特定寄件者電子郵件地址的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.dG9SZWNpcGllbnQ.display_name": {
-          "source": "To Recipient",
+          "source": "To recipient",
           "message": "收件者"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.dG9SZWNpcGllbnQ.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "僅包含主旨行含有此文字的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aGFzQXR0YWNobWVudHM.display_name": {
-          "source": "Has Attachments",
+          "source": "Has attachments",
           "message": "包含附件"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aGFzQXR0YWNobWVudHM.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "設為 true 時，僅包含含有附件的電子郵件。設為 false 時，僅包含沒有附件的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aXNSZWFk.display_name": {
-          "source": "Is Read",
+          "source": "Is read",
           "message": "已讀"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aXNSZWFk.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "設為 true 時，僅包含已讀取的電子郵件。設為 false 時，僅包含未讀取的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE5hbWVz.display_name": {
-          "source": "Attachment Names",
+          "source": "Attachment names",
           "message": "附件名稱"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE5hbWVz.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "僅包含帶有這些檔案名稱之附件的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudEZpbGVuYW1lUGF0dGVybg.display_name": {
-          "source": "Attachment Filename Pattern",
+          "source": "Attachment filename pattern",
           "message": "附件檔案名稱模式"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudEZpbGVuYW1lUGF0dGVybg.short_desc": {
@@ -1052,7 +1052,7 @@
           "message": "依符合附件檔案名稱的規則運算式模式篩選電子郵件。範例：\".*\\.pdf$\" 會符合所有 PDF 檔案。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pbWVUeXBlcw.display_name": {
-          "source": "Attachment MIME Types",
+          "source": "Attachment MIME types",
           "message": "附件 MIME 類型"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pbWVUeXBlcw.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "XML"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pblNpemU.display_name": {
-          "source": "Attachment Minimum Size",
+          "source": "Attachment minimum size",
           "message": "附件大小下限"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1pblNpemU.short_desc": {
@@ -1156,7 +1156,7 @@
           "message": "僅包含附件大小大於或等於此位元組大小的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1heFNpemU.display_name": {
-          "source": "Attachment Maximum Size",
+          "source": "Attachment maximum size",
           "message": "附件大小上限"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.YXR0YWNobWVudE1heFNpemU.short_desc": {
@@ -1168,7 +1168,7 @@
           "message": "僅包含附件大小小於或等於此位元組大小的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.Ym9keUNvbnRhaW5z.display_name": {
-          "source": "Body Contains",
+          "source": "Body contains",
           "message": "內文包含"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.Ym9keUNvbnRhaW5z.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "僅包含內文內容含有此文字的電子郵件。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aW5jbHVkZUF0dGFjaG1lbnRz.display_name": {
-          "source": "Include Attachments",
+          "source": "Include attachments",
           "message": "包含附件"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.aW5jbHVkZUF0dGFjaG1lbnRz.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "依特定欄位排序電子郵件結果。預設依接收日期降冪排序。"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "排序欄位"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "重要性"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "排序順序"
         },
         "app.T3V0bG9vaw.action.c2VhcmNoLWVtYWlscw.option.c29ydA.field.b3JkZXI.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "降序"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "傳送電子郵件"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "從您的 Microsoft Outlook 帳戶撰寫並傳送電子郵件給一或多個收件者。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.display_name": {
-          "source": "To Recipients",
+          "source": "To recipients",
           "message": "收件者"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "輸入一個或多個主要收件者的電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.YWRkcmVzcw.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "輸入收件人的電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.dG9SZWNpcGllbnRz.field.bmFtZQ.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "可選地輸入收件人的顯示名稱"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.display_name": {
-          "source": "CC Recipients",
+          "source": "CC recipients",
           "message": "副本收件者"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.short_desc": {
@@ -1332,7 +1332,7 @@
           "message": "選擇性輸入一或多個要副本抄送的收件者電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.YWRkcmVzcw.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "輸入 CC 收件人的電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Y2NSZWNpcGllbnRz.field.bmFtZQ.short_desc": {
@@ -1356,7 +1356,7 @@
           "message": "可選地輸入 CC 收件人的顯示名稱"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.display_name": {
-          "source": "BCC Recipients",
+          "source": "BCC recipients",
           "message": "密件副本收件者"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.short_desc": {
@@ -1368,7 +1368,7 @@
           "message": "可選擇輸入一個或多個電子郵件地址，以便密件副本傳送給收件者。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.YWRkcmVzcw.short_desc": {
@@ -1380,7 +1380,7 @@
           "message": "輸入 BCC 收件人的電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.YmNjUmVjaXBpZW50cw.field.bmFtZQ.short_desc": {
@@ -1416,7 +1416,7 @@
           "message": "輸入電子郵件的主要郵件內容。"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Ym9keUNvbnRlbnRUeXBl.display_name": {
-          "source": "Body Content Type",
+          "source": "Body content type",
           "message": "本文內容類型"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.Ym9keUNvbnRlbnRUeXBl.short_desc": {
@@ -1436,7 +1436,7 @@
           "message": "HTML"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.c2F2ZVRvU2VudEl0ZW1z.display_name": {
-          "source": "Save to Sent Items",
+          "source": "Save to sent items",
           "message": "儲存至寄件備份"
         },
         "app.T3V0bG9vaw.action.c2VuZC1lbWFpbA.option.c2F2ZVRvU2VudEl0ZW1z.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "檔案名稱"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "更新聯絡人"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.short_desc": {
@@ -1604,7 +1604,7 @@
           "message": "選取要更新的聯絡人唯一識別碼。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.display_name": {
-          "source": "First Name",
+          "source": "First name",
           "message": "名字"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Z2l2ZW5OYW1l.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "更新該聯絡人的名字。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.display_name": {
-          "source": "Last Name",
+          "source": "Last name",
           "message": "姓氏"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.c3VybmFtZQ.short_desc": {
@@ -1628,7 +1628,7 @@
           "message": "更新該聯絡人的姓氏。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.display_name": {
-          "source": "Email Addresses",
+          "source": "Email addresses",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.short_desc": {
@@ -1640,7 +1640,7 @@
           "message": "更新該聯絡人的一個或多個電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "電子郵件地址"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.YWRkcmVzcw.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "輸入此聯絡人的有效電子郵件地址。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.ZW1haWxBZGRyZXNzZXM.field.bmFtZQ.short_desc": {
@@ -1664,7 +1664,7 @@
           "message": "輸入您希望此電子郵件地址的名稱如何顯示"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.display_name": {
-          "source": "Business Phones",
+          "source": "Business phones",
           "message": "商務電話"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NQaG9uZXM.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "更新該聯絡人的一個或多個商務電話號碼。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.display_name": {
-          "source": "Mobile Phone",
+          "source": "Mobile phone",
           "message": "行動電話"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.bW9iaWxlUGhvbmU.short_desc": {
@@ -1688,7 +1688,7 @@
           "message": "更新該聯絡人的行動電話號碼。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.display_name": {
-          "source": "Job Title",
+          "source": "Job title",
           "message": "職稱"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.am9iVGl0bGU.short_desc": {
@@ -1700,7 +1700,7 @@
           "message": "更新該聯絡人的職稱或角色。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "公司名稱"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.Y29tcGFueU5hbWU.short_desc": {
@@ -1724,7 +1724,7 @@
           "message": "更新該聯絡人在公司內任職的部門或組別。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.display_name": {
-          "source": "Office Location",
+          "source": "Office location",
           "message": "辦公室位置"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.b2ZmaWNlTG9jYXRpb24.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "更新該聯絡人工作的實際位置或辦公室。"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.display_name": {
-          "source": "Business Address",
+          "source": "Business address",
           "message": "商務地址"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.short_desc": {
@@ -1760,7 +1760,7 @@
           "message": "更新企業地址的城市或鎮"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.display_name": {
-          "source": "Country/Region",
+          "source": "Country/region",
           "message": "國家/地區"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.Y291bnRyeU9yUmVnaW9u.short_desc": {
@@ -1772,7 +1772,7 @@
           "message": "更新企業地址的國家或地區"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "郵遞區號"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.cG9zdGFsQ29kZQ.short_desc": {
@@ -1784,7 +1784,7 @@
           "message": "更新企業地址的郵政編碼或郵遞區號"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "州/省"
         },
         "app.T3V0bG9vaw.action.dXBkYXRlLWNvbnRhY3Q.option.YnVzaW5lc3NBZGRyZXNz.field.c3RhdGU.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "更新包含建築物編號和街道名稱的街道地址"
         },
         "app.T3V0bG9vaw.action.bmV3LWNvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "新聯絡人"
         },
         "app.T3V0bG9vaw.action.bmV3LWNvbnRhY3Q.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "每當有新聯絡人新增至您的 Microsoft Outlook 聯絡人時，即會啟動此觸發程序。"
         },
         "app.T3V0bG9vaw.action.bmV3LWV2ZW50.display_name": {
-          "source": "New Event",
+          "source": "New event",
           "message": "新事件"
         },
         "app.T3V0bG9vaw.action.bmV3LWV2ZW50.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "可選擇選取要監視的特定行事曆。如果未指定，將監視所有行事曆。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.display_name": {
-          "source": "New Email Trigger",
+          "source": "New email trigger",
           "message": "新電子郵件觸發程序"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.short_desc": {
@@ -1856,7 +1856,7 @@
           "message": "監視您的 Outlook 收件匣並在新郵件到達時觸發。支援依寄件者、主旨或附件進行篩選，並可選擇刪除或移動已處理的電子郵件。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c2VuZGVyRmlsdGVy.display_name": {
-          "source": "Sender Filter",
+          "source": "Sender filter",
           "message": "寄件者篩選條件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c2VuZGVyRmlsdGVy.short_desc": {
@@ -1868,7 +1868,7 @@
           "message": "僅針對來自此特定寄件者電子郵件地址的郵件觸發。留空以對所有寄件者觸發。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c3ViamVjdEZpbHRlcg.display_name": {
-          "source": "Subject Filter",
+          "source": "Subject filter",
           "message": "主旨篩選條件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.c3ViamVjdEZpbHRlcg.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "僅針對主旨行包含此文字的電子郵件觸發。留空以符合任何主旨。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aGFzQXR0YWNobWVudHM.display_name": {
-          "source": "Has Attachments",
+          "source": "Has attachments",
           "message": "包含附件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aGFzQXR0YWNobWVudHM.short_desc": {
@@ -1892,7 +1892,7 @@
           "message": "根據電子郵件是否有附件進行篩選。設為 true 僅針對有附件的郵件觸發，設為 false 針對沒有附件的郵件觸發，或留空以對兩者皆觸發。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aW5jbHVkZUF0dGFjaG1lbnREYXRh.display_name": {
-          "source": "Include Attachment Data",
+          "source": "Include attachment data",
           "message": "包含附件資料"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.aW5jbHVkZUF0dGFjaG1lbnREYXRh.short_desc": {
@@ -1904,7 +1904,7 @@
           "message": "啟用時，觸發程序將擷取實際的附件內容並包含在觸發資料中。對於大型附件，這可能會增加處理時間。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.YWN0aW9u.display_name": {
-          "source": "Email Action",
+          "source": "Email action",
           "message": "電子郵件動作"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWls.option.YWN0aW9u.short_desc": {
@@ -1928,7 +1928,7 @@
           "message": "移動電子郵件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.display_name": {
-          "source": "New Email with Attachment",
+          "source": "New email with attachment",
           "message": "含附件的新電子郵件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.short_desc": {
@@ -1940,7 +1940,7 @@
           "message": "監視 Outlook 信箱是否有含附件的新電子郵件。收到含有附件的郵件時，每個符合指定篩選條件的附件都將觸發獨立的事件。這允許在保留完整電子郵件上下文的同時處理個別附件。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c2VuZGVyRmlsdGVy.display_name": {
-          "source": "Sender Filter",
+          "source": "Sender filter",
           "message": "寄件者篩選條件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c2VuZGVyRmlsdGVy.short_desc": {
@@ -1952,7 +1952,7 @@
           "message": "若有指定，將僅處理來自此確切寄件者電子郵件地址的電子郵件。留空以處理來自任何寄件者的電子郵件。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c3ViamVjdEZpbHRlcg.display_name": {
-          "source": "Subject Filter",
+          "source": "Subject filter",
           "message": "主旨篩選條件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.c3ViamVjdEZpbHRlcg.short_desc": {
@@ -1964,7 +1964,7 @@
           "message": "若有指定，將僅處理主旨行包含此文字的電子郵件。留空以處理包含任何主旨的電子郵件。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.ZmlsZW5hbWVGaWx0ZXJz.display_name": {
-          "source": "Filename Filters",
+          "source": "Filename filters",
           "message": "檔案名稱篩選條件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.ZmlsZW5hbWVGaWx0ZXJz.short_desc": {
@@ -1976,7 +1976,7 @@
           "message": "用於比對附件檔案名稱的文字字串清單。若提供，則僅會處理檔案名稱包含任何此類字串的附件。比對不區分大小寫。留空以處理所有附件，無論檔案名稱為何。"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.bWltZVR5cGVGaWx0ZXJz.display_name": {
-          "source": "MIME Type Filters",
+          "source": "MIME type filters",
           "message": "MIME 類型篩選條件"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.bWltZVR5cGVGaWx0ZXJz.short_desc": {
@@ -2068,7 +2068,7 @@
           "message": "XML"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.YWN0aW9u.display_name": {
-          "source": "Email Action",
+          "source": "Email action",
           "message": "電子郵件動作"
         },
         "app.T3V0bG9vaw.action.bmV3LWVtYWlsLXdpdGgtYXR0YWNobWVudA.option.YWN0aW9u.short_desc": {

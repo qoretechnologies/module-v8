@@ -28,7 +28,7 @@
           "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **QuickBooks** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną w stosunku do bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi oraz treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako pierwszorzędne akcje w tej aplikacji."
         },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
+          "source": "HTTP method",
           "message": "Metoda HTTP"
         },
         "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
@@ -340,7 +340,7 @@
           "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNo.display_name": {
-          "source": "Search Records",
+          "source": "Search records",
           "message": "Wyszukaj rekordy"
         },
         "app.UXVpY2tib29rcw.action.c2VhcmNo.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Pobierz informacje o firmie"
         },
         "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.display_name": {
-          "source": "Void Transaction",
+          "source": "Void transaction",
           "message": "Unieważnij transakcję"
         },
         "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Unieważnij transakcję w QuickBooks, zerując wszystkie kwoty i oznaczając ją jako unieważnioną. Obsługuje faktury, płatności, paragony sprzedaży i płatności rachunków"
         },
         "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
-          "source": "Transaction Type",
+          "source": "Transaction type",
           "message": "Typ transakcji"
         },
         "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
@@ -524,7 +524,7 @@
           "message": "Identyfikator QuickBooks transakcji, którą chcesz unieważnić"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
+          "source": "Get account",
           "message": "Pobierz konto"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.short_desc": {
@@ -548,7 +548,7 @@
           "message": "Identyfikator konta QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
+          "source": "List accounts",
           "message": "Lista kont"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.short_desc": {
@@ -560,7 +560,7 @@
           "message": "Pobierz wiele kont z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i stronicowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmV0Y2hBbGw.short_desc": {
@@ -772,7 +772,7 @@
           "message": "Określ sposób sortowania zwróconej listy kont"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -792,7 +792,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Czas ostatniej aktualizacji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.display_name": {
-          "source": "Create Bill",
+          "source": "Create bill",
           "message": "Utwórz rachunek"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Unikalny identyfikator dostawcy wystawiającego ten rachunek"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.display_name": {
-          "source": "Line Item Type",
+          "source": "Line item type",
           "message": "Typ pozycji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.short_desc": {
@@ -908,7 +908,7 @@
           "message": "Szczegóły pozycji wydatku na podstawie pozycji"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.display_name": {
-          "source": "Delete Bill",
+          "source": "Delete bill",
           "message": "Usuń rachunek"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.short_desc": {
@@ -932,7 +932,7 @@
           "message": "Identyfikator rachunku w QuickBooks, który chcesz trwale usunąć"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.display_name": {
-          "source": "Get Bill",
+          "source": "Get bill",
           "message": "Pobierz rachunek"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.short_desc": {
@@ -956,7 +956,7 @@
           "message": "Identyfikator rachunku QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.display_name": {
-          "source": "List Bills",
+          "source": "List bills",
           "message": "Pobierz listę rachunków"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.short_desc": {
@@ -968,7 +968,7 @@
           "message": "Pobierz wiele rachunków z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i stronicowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmV0Y2hBbGw.short_desc": {
@@ -1172,7 +1172,7 @@
           "message": "Określ sposób sortowania zwróconej listy rachunków"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -1192,7 +1192,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -1256,7 +1256,7 @@
           "message": "Łączna kwota"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.display_name": {
-          "source": "Update Bill",
+          "source": "Update bill",
           "message": "Zaktualizuj rachunek"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.short_desc": {
@@ -1292,7 +1292,7 @@
           "message": "Unikalny identyfikator dostawcy, który wystawił rachunek"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.display_name": {
-          "source": "Line Item Type",
+          "source": "Line item type",
           "message": "Typ pozycji"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.short_desc": {
@@ -1312,7 +1312,7 @@
           "message": "Szczegóły pozycji wydatku na podstawie pozycji"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.display_name": {
-          "source": "Get Credit Memo",
+          "source": "Get credit memo",
           "message": "Pobierz notę kredytową"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "Pobierz szczegółowe informacje o określonej nocie kredytowej za pomocą jej identyfikatora"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.option.aWQ.display_name": {
-          "source": "Credit Memo ID",
+          "source": "Credit memo ID",
           "message": "Identyfikator noty kredytowej"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.option.aWQ.short_desc": {
@@ -1336,7 +1336,7 @@
           "message": "Identyfikator noty kredytowej QuickBooks, dla której mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.display_name": {
-          "source": "List Credit Memos",
+          "source": "List credit memos",
           "message": "Lista not kredytowych"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.short_desc": {
@@ -1348,7 +1348,7 @@
           "message": "Pobiera wiele not kredytowych z QuickBooks z opcjonalnym filtrowaniem, sortowaniem i stronicowaniem"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmV0Y2hBbGw.short_desc": {
@@ -1564,7 +1564,7 @@
           "message": "Określ sposób sortowania zwróconej listy not kredytowych"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -1584,7 +1584,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -1660,7 +1660,7 @@
           "message": "Saldo"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.display_name": {
-          "source": "Create Customer",
+          "source": "Create customer",
           "message": "Utwórz klienta"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.short_desc": {
@@ -1672,7 +1672,7 @@
           "message": "Utwórz nowy rekord klienta z danymi osobowymi, danymi kontaktowymi i adresami"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "Nazwa, która będzie wyświetlana dla tego klienta w QuickBooks"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.display_name": {
-          "source": "Given Name",
+          "source": "Given name",
           "message": "Imię"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.short_desc": {
@@ -1696,7 +1696,7 @@
           "message": "Imię klienta"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
+          "source": "Middle name",
           "message": "Drugie imię"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.short_desc": {
@@ -1708,7 +1708,7 @@
           "message": "Drugie imię lub inicjał drugiego imienia klienta"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.display_name": {
-          "source": "Family Name",
+          "source": "Family name",
           "message": "Nazwisko"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.short_desc": {
@@ -1744,7 +1744,7 @@
           "message": "Sufiks klienta (np. Jr., Sr., III itp.)"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Nazwa firmy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.short_desc": {
@@ -1768,7 +1768,7 @@
           "message": "Główny adres e-mail klienta"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.display_name": {
-          "source": "Billing Address",
+          "source": "Billing address",
           "message": "Adres rozliczeniowy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.short_desc": {
@@ -1804,7 +1804,7 @@
           "message": "Kraj, w którym znajduje się klient"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "Skrót stanu lub województwa (np. CA, NY, ON)"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "Wiersz adresu 1"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTE.short_desc": {
@@ -1828,7 +1828,7 @@
           "message": "Adres uliczny lub numer skrytki pocztowej"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "Wiersz adresu 2"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTI.short_desc": {
@@ -1840,7 +1840,7 @@
           "message": "Dodatkowe informacje o adresie, takie jak numer mieszkania lub apteki"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.UG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.UG9zdGFsQ29kZQ.short_desc": {
@@ -1852,7 +1852,7 @@
           "message": "Kod pocztowy lub kod pocztowy dla adresu rozliczeniowego"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.display_name": {
-          "source": "Shipping Address",
+          "source": "Shipping address",
           "message": "Adres wysyłki"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.short_desc": {
@@ -1888,7 +1888,7 @@
           "message": "Kraj, do którego towary powinny być wysłane"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.short_desc": {
@@ -1900,7 +1900,7 @@
           "message": "Skrót stanu lub województwa (np. CA, NY, ON)"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "Wiersz adresu 1"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTE.short_desc": {
@@ -1912,7 +1912,7 @@
           "message": "Adres uliczny lub numer skrytki pocztowej"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "Wiersz adresu 2"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTI.short_desc": {
@@ -1924,7 +1924,7 @@
           "message": "Dodatkowe informacje o adresie, takie jak numer mieszkania lub apteki"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.UG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.UG9zdGFsQ29kZQ.short_desc": {
@@ -1936,7 +1936,7 @@
           "message": "Kod pocztowy lub kod pocztowy dla adresu wysyłki"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.display_name": {
-          "source": "Get Customer",
+          "source": "Get customer",
           "message": "Pobierz klienta"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.short_desc": {
@@ -1960,7 +1960,7 @@
           "message": "Identyfikator klienta QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.display_name": {
-          "source": "List Customers",
+          "source": "List customers",
           "message": "Wyświetl listę klientów"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.short_desc": {
@@ -1972,7 +1972,7 @@
           "message": "Pobiera wielu klientów z QuickBooks z opcjonalnym filtrowaniem, sortowaniem i stronicowaniem"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmV0Y2hBbGw.short_desc": {
@@ -2212,7 +2212,7 @@
           "message": "Określ sposób sortowania zwróconej listy klientów"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -2332,7 +2332,7 @@
           "message": "Pseudonim ID V4"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.display_name": {
-          "source": "Update Customer",
+          "source": "Update customer",
           "message": "Zaktualizuj klienta"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.short_desc": {
@@ -2356,7 +2356,7 @@
           "message": "Identyfikator klienta QuickBooks, który chcesz zaktualizować"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -2368,7 +2368,7 @@
           "message": "Nazwa, która będzie wyświetlana dla tego klienta w QuickBooks"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.display_name": {
-          "source": "Given Name",
+          "source": "Given name",
           "message": "Imię"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.short_desc": {
@@ -2380,7 +2380,7 @@
           "message": "Imię klienta"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.display_name": {
-          "source": "Middle Name",
+          "source": "Middle name",
           "message": "Drugie imię"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.short_desc": {
@@ -2392,7 +2392,7 @@
           "message": "Drugie imię lub inicjał drugiego imienia klienta"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.display_name": {
-          "source": "Family Name",
+          "source": "Family name",
           "message": "Nazwisko"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.short_desc": {
@@ -2428,7 +2428,7 @@
           "message": "Sufiks klienta (np. Jr., Sr., III itp.)"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.display_name": {
-          "source": "Company Name",
+          "source": "Company name",
           "message": "Nazwa firmy"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.short_desc": {
@@ -2452,7 +2452,7 @@
           "message": "Główny adres e-mail klienta"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.display_name": {
-          "source": "Billing Address",
+          "source": "Billing address",
           "message": "Adres rozliczeniowy"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.short_desc": {
@@ -2488,7 +2488,7 @@
           "message": "Kraj, w którym znajduje się klient"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.short_desc": {
@@ -2500,7 +2500,7 @@
           "message": "Skrót stanu lub województwa (np. CA, NY, ON)"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "Wiersz adresu 1"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTE.short_desc": {
@@ -2512,7 +2512,7 @@
           "message": "Adres uliczny lub numer skrytki pocztowej"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "Wiersz adresu 2"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.TGluZTI.short_desc": {
@@ -2524,7 +2524,7 @@
           "message": "Dodatkowe informacje o adresie, takie jak numer mieszkania lub apteki"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.UG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.field.UG9zdGFsQ29kZQ.short_desc": {
@@ -2536,7 +2536,7 @@
           "message": "Kod pocztowy lub kod pocztowy dla adresu rozliczeniowego"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.display_name": {
-          "source": "Shipping Address",
+          "source": "Shipping address",
           "message": "Adres wysyłki"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.short_desc": {
@@ -2572,7 +2572,7 @@
           "message": "Kraj, do którego towary powinny być wysłane"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.short_desc": {
@@ -2584,7 +2584,7 @@
           "message": "Skrót stanu lub województwa (np. CA, NY, ON)"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "Wiersz adresu 1"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTE.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "Adres uliczny lub numer skrytki pocztowej"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "Wiersz adresu 2"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.TGluZTI.short_desc": {
@@ -2608,7 +2608,7 @@
           "message": "Dodatkowe informacje o adresie, takie jak numer mieszkania lub apteki"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.UG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.field.UG9zdGFsQ29kZQ.short_desc": {
@@ -2620,7 +2620,7 @@
           "message": "Kod pocztowy lub kod pocztowy dla adresu wysyłki"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.display_name": {
-          "source": "Get Deposit",
+          "source": "Get deposit",
           "message": "Pobierz depozyt"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.short_desc": {
@@ -2644,7 +2644,7 @@
           "message": "Identyfikator depozytu QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.display_name": {
-          "source": "List Deposits",
+          "source": "List deposits",
           "message": "Lista wpłat"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.short_desc": {
@@ -2656,7 +2656,7 @@
           "message": "Pobiera wiele wpłat z QuickBooks z opcjonalnym filtrowaniem, sortowaniem i stronicowaniem"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmV0Y2hBbGw.short_desc": {
@@ -2840,7 +2840,7 @@
           "message": "Określ sposób sortowania zwróconej listy wpłat"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -2860,7 +2860,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -2904,7 +2904,7 @@
           "message": "Data transakcji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.display_name": {
-          "source": "Create Estimate",
+          "source": "Create estimate",
           "message": "Utwórz kosztorys"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.short_desc": {
@@ -2928,7 +2928,7 @@
           "message": "Unikalny identyfikator klienta, który otrzyma ten kosztorys"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.display_name": {
-          "source": "Line Items",
+          "source": "Line items",
           "message": "Pozycje"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.short_desc": {
@@ -3000,7 +3000,7 @@
           "message": "Liczba jednostek towaru, które są szacowane"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.field.c2VydmljZV9kYXRl.display_name": {
-          "source": "Service Date",
+          "source": "Service date",
           "message": "Data usługi"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.field.c2VydmljZV9kYXRl.short_desc": {
@@ -3012,7 +3012,7 @@
           "message": "Konkretna data, w której usługa lub produkt zostanie dostarczona"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.field.dGF4X2NvZGVfaWQ.display_name": {
-          "source": "Tax Code ID",
+          "source": "Tax code ID",
           "message": "Identyfikator kodu podatku"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.field.dGF4X2NvZGVfaWQ.short_desc": {
@@ -3024,7 +3024,7 @@
           "message": "Unikalny identyfikator kodu podatku do zastosowania do tej pozycji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "Cena jednostkowa"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.field.dW5pdF9wcmljZQ.short_desc": {
@@ -3036,7 +3036,7 @@
           "message": "Koszt jednostkowy produktu"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.display_name": {
-          "source": "Delete Estimate",
+          "source": "Delete estimate",
           "message": "Usuń kosztorys"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.short_desc": {
@@ -3060,7 +3060,7 @@
           "message": "Identyfikator kosztorysu w QuickBooks, który chcesz trwale usunąć"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.display_name": {
-          "source": "Get Estimate",
+          "source": "Get estimate",
           "message": "Pobierz kosztorys"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.short_desc": {
@@ -3084,7 +3084,7 @@
           "message": "Identyfikator kosztorysu QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.display_name": {
-          "source": "List Estimates",
+          "source": "List estimates",
           "message": "Lista kosztorysów"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.short_desc": {
@@ -3096,7 +3096,7 @@
           "message": "Pobiera wiele kosztorysów z QuickBooks z opcjonalnym filtrowaniem, sortowaniem i stronicowaniem"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmV0Y2hBbGw.short_desc": {
@@ -3312,7 +3312,7 @@
           "message": "Określ sposób sortowania zwróconej listy kosztorysów"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -3332,7 +3332,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -3408,7 +3408,7 @@
           "message": "Status e-mail"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.display_name": {
-          "source": "Create Invoice",
+          "source": "Create invoice",
           "message": "Utwórz fakturę"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
@@ -3432,7 +3432,7 @@
           "message": "Unikalny identyfikator klienta, który otrzyma tę fakturę"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.display_name": {
-          "source": "Line Items",
+          "source": "Line items",
           "message": "Pozycje"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.short_desc": {
@@ -3504,7 +3504,7 @@
           "message": "Liczba jednostek towaru, które są rozliczane"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.field.c2VydmljZV9kYXRl.display_name": {
-          "source": "Service Date",
+          "source": "Service date",
           "message": "Data usługi"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.field.c2VydmljZV9kYXRl.short_desc": {
@@ -3516,7 +3516,7 @@
           "message": "Konkretna data dostarczenia usługi lub produktu"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.field.dGF4X2NvZGVfaWQ.display_name": {
-          "source": "Tax Code ID",
+          "source": "Tax code ID",
           "message": "Identyfikator kodu podatku"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.field.dGF4X2NvZGVfaWQ.short_desc": {
@@ -3528,7 +3528,7 @@
           "message": "Unikalny identyfikator kodu podatku do zastosowania do tej pozycji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "Cena jednostkowa"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.field.dW5pdF9wcmljZQ.short_desc": {
@@ -3540,7 +3540,7 @@
           "message": "Koszt jednostkowy produktu"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.display_name": {
-          "source": "Create Invoice from Estimate",
+          "source": "Create invoice from estimate",
           "message": "Utwórz fakturę z kosztorysu"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.short_desc": {
@@ -3564,7 +3564,7 @@
           "message": "Unikalny identyfikator kosztorysu do przekształcenia w fakturę. Przekształcić można wyłącznie kosztorysy o statusie Pending i Accepted"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.display_name": {
-          "source": "Delete Invoice",
+          "source": "Delete invoice",
           "message": "Usuń fakturę"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.short_desc": {
@@ -3588,7 +3588,7 @@
           "message": "Identyfikator faktury w QuickBooks, którą chcesz trwale usunąć"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.display_name": {
-          "source": "Get Invoice",
+          "source": "Get invoice",
           "message": "Pobierz fakturę"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.short_desc": {
@@ -3612,7 +3612,7 @@
           "message": "Identyfikator faktury w QuickBooks, dla której mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.display_name": {
-          "source": "List Invoices",
+          "source": "List invoices",
           "message": "Pobierz listę faktur"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.short_desc": {
@@ -3624,7 +3624,7 @@
           "message": "Pobiera wiele faktur z QuickBooks z opcjonalnym filtrowaniem, sortowaniem i stronicowaniem"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmV0Y2hBbGw.short_desc": {
@@ -3876,7 +3876,7 @@
           "message": "Określ sposób sortowania zwróconej listy faktur"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -3896,7 +3896,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -4008,7 +4008,7 @@
           "message": "Saldo"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.display_name": {
-          "source": "Update Invoice",
+          "source": "Update invoice",
           "message": "Zaktualizuj fakturę"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.short_desc": {
@@ -4044,7 +4044,7 @@
           "message": "Unikalny identyfikator klienta, który otrzyma tę fakturę"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.display_name": {
-          "source": "Line Items",
+          "source": "Line items",
           "message": "Pozycje"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.short_desc": {
@@ -4116,7 +4116,7 @@
           "message": "Liczba jednostek towaru, które są rozliczane"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.field.c2VydmljZV9kYXRl.display_name": {
-          "source": "Service Date",
+          "source": "Service date",
           "message": "Data usługi"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.field.c2VydmljZV9kYXRl.short_desc": {
@@ -4128,7 +4128,7 @@
           "message": "Konkretna data dostarczenia usługi lub produktu"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.field.dGF4X2NvZGVfaWQ.display_name": {
-          "source": "Tax Code ID",
+          "source": "Tax code ID",
           "message": "Identyfikator kodu podatku"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.field.dGF4X2NvZGVfaWQ.short_desc": {
@@ -4140,7 +4140,7 @@
           "message": "Unikalny identyfikator kodu podatku do zastosowania do tej pozycji"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "Cena jednostkowa"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.field.dW5pdF9wcmljZQ.short_desc": {
@@ -4152,7 +4152,7 @@
           "message": "Koszt jednostkowy produktu"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.display_name": {
-          "source": "Create Item",
+          "source": "Create item",
           "message": "Utwórz pozycję"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.short_desc": {
@@ -4164,7 +4164,7 @@
           "message": "Utwórz nową pozycję dla produktów lub usług, która może być używana na fakturach, kosztorysach i innych transakcjach"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.bmFtZQ.display_name": {
-          "source": "Item Name",
+          "source": "Item name",
           "message": "Nazwa pozycji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.bmFtZQ.short_desc": {
@@ -4176,7 +4176,7 @@
           "message": "Nazwa wyświetlana tej pozycji, w postaci w jakiej będzie widoczna na transakcjach"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.display_name": {
-          "source": "Item Type",
+          "source": "Item type",
           "message": "Typ pozycji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.short_desc": {
@@ -4200,7 +4200,7 @@
           "message": "Inventory"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.aW5jb21lX2FjY291bnRfaWQ.display_name": {
-          "source": "Income Account ID",
+          "source": "Income account ID",
           "message": "Identyfikator konta przychodów"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.aW5jb21lX2FjY291bnRfaWQ.short_desc": {
@@ -4212,7 +4212,7 @@
           "message": "Unikalny identyfikator konta, które zostanie uznane w momencie sprzedaży tej pozycji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.ZXhwZW5zZV9hY2NvdW50X2lk.display_name": {
-          "source": "Expense Account ID",
+          "source": "Expense account ID",
           "message": "Identyfikator konta kosztów"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.ZXhwZW5zZV9hY2NvdW50X2lk.short_desc": {
@@ -4224,7 +4224,7 @@
           "message": "Unikalny identyfikator konta, które zostanie obciążone w momencie zakupu tej pozycji"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.display_name": {
-          "source": "Get Item",
+          "source": "Get item",
           "message": "Pobierz pozycję"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.short_desc": {
@@ -4248,7 +4248,7 @@
           "message": "Identyfikator pozycji w QuickBooks, dla której mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.display_name": {
-          "source": "List Items",
+          "source": "List items",
           "message": "Wyświetl listę pozycji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.short_desc": {
@@ -4260,7 +4260,7 @@
           "message": "Pobieraj wiele pozycji z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i paginacji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmV0Y2hBbGw.short_desc": {
@@ -4468,7 +4468,7 @@
           "message": "Określ sposób sortowania zwróconej listy pozycji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -4488,7 +4488,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -4556,7 +4556,7 @@
           "message": "Czas ostatniej aktualizacji"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.display_name": {
-          "source": "Get Journal Entry",
+          "source": "Get journal entry",
           "message": "Pobierz wpis do księgi głównej"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.short_desc": {
@@ -4568,7 +4568,7 @@
           "message": "Pobierz szczegółowe informacje o określonym wpisie w dzienniku przy użyciu jego identyfikatora"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.option.aWQ.display_name": {
-          "source": "Journal Entry ID",
+          "source": "Journal entry ID",
           "message": "Identyfikator wpisu w dzienniku"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.option.aWQ.short_desc": {
@@ -4580,7 +4580,7 @@
           "message": "Identyfikator wpisu w dzienniku w QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.display_name": {
-          "source": "List Journal Entries",
+          "source": "List journal entries",
           "message": "Wyświetl listę wpisów do księgi głównej"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.short_desc": {
@@ -4592,7 +4592,7 @@
           "message": "Pobieraj wiele wpisów do księgi głównej z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i paginacji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmV0Y2hBbGw.short_desc": {
@@ -4792,7 +4792,7 @@
           "message": "Określ sposób sortowania zwróconej listy wpisów do księgi głównej"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -4812,7 +4812,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -4872,7 +4872,7 @@
           "message": "Szczegóły podatku transakcji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.display_name": {
-          "source": "Create Payment",
+          "source": "Create payment",
           "message": "Utwórz płatność"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.short_desc": {
@@ -4896,7 +4896,7 @@
           "message": "Unikalny identyfikator klienta dokonującego tej płatności"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.dG90YWxfYW1vdW50.display_name": {
-          "source": "Total Amount",
+          "source": "Total amount",
           "message": "Łączna kwota"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.dG90YWxfYW1vdW50.short_desc": {
@@ -4920,7 +4920,7 @@
           "message": "Lista identyfikatorów faktur, z którymi ma zostać powiązana ta płatność. Kwota płatności zostanie rozdzielona równomiernie pomiędzy wskazane faktury"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.cGF5bWVudF9kYXRl.display_name": {
-          "source": "Payment Date",
+          "source": "Payment date",
           "message": "Data płatności"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.cGF5bWVudF9kYXRl.short_desc": {
@@ -4944,7 +4944,7 @@
           "message": "Wewnętrzna notatka dotycząca tej płatności, niewidoczna dla klienta"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.display_name": {
-          "source": "Get Payment",
+          "source": "Get payment",
           "message": "Pobierz płatność"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.short_desc": {
@@ -4968,7 +4968,7 @@
           "message": "Identyfikator płatności w QuickBooks, dla której mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.display_name": {
-          "source": "List Payments",
+          "source": "List payments",
           "message": "Wyświetl listę płatności"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.short_desc": {
@@ -4980,7 +4980,7 @@
           "message": "Pobieraj wiele płatności z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i paginacji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmV0Y2hBbGw.short_desc": {
@@ -5180,7 +5180,7 @@
           "message": "Określ sposób sortowania zwróconej listy płatności"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -5200,7 +5200,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -5260,7 +5260,7 @@
           "message": "Pozycje"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.display_name": {
-          "source": "Delete Payment",
+          "source": "Delete payment",
           "message": "Usuń płatność"
         },
         "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.short_desc": {
@@ -5284,7 +5284,7 @@
           "message": "Identyfikator płatności QuickBooks, który chcesz trwale usunąć"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.display_name": {
-          "source": "Get Purchase Order",
+          "source": "Get purchase order",
           "message": "Pobierz zamówienie zakupu"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.short_desc": {
@@ -5296,7 +5296,7 @@
           "message": "Pobierz szczegółowe informacje o określonym zamówieniu zakupu przy użyciu jego identyfikatora"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.option.aWQ.display_name": {
-          "source": "Purchase Order ID",
+          "source": "Purchase order ID",
           "message": "Identyfikator zamówienia zakupu"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.option.aWQ.short_desc": {
@@ -5308,7 +5308,7 @@
           "message": "Identyfikator zamówienia zakupu w QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.display_name": {
-          "source": "List Purchase Orders",
+          "source": "List purchase orders",
           "message": "Wyświetl listę zamówień zakupu"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.short_desc": {
@@ -5320,7 +5320,7 @@
           "message": "Pobieraj wiele zamówień zakupu z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i paginacji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmV0Y2hBbGw.short_desc": {
@@ -5516,7 +5516,7 @@
           "message": "Określ sposób sortowania zwróconej listy zamówień zakupu"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -5536,7 +5536,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -5592,7 +5592,7 @@
           "message": "Łączna kwota"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.display_name": {
-          "source": "Get Purchase",
+          "source": "Get purchase",
           "message": "Pobierz zakup"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.short_desc": {
@@ -5616,7 +5616,7 @@
           "message": "Identyfikator zakupu w QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.display_name": {
-          "source": "List Purchases",
+          "source": "List purchases",
           "message": "Wyświetl listę zakupów"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.short_desc": {
@@ -5628,7 +5628,7 @@
           "message": "Pobieraj wiele zakupów z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i paginacji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmV0Y2hBbGw.short_desc": {
@@ -5824,7 +5824,7 @@
           "message": "Określ sposób sortowania zwróconej listy zakupów"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -5844,7 +5844,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -5900,7 +5900,7 @@
           "message": "Data transakcji"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.display_name": {
-          "source": "Create Refund Receipt",
+          "source": "Create refund receipt",
           "message": "Utwórz potwierdzenie zwrotu"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.short_desc": {
@@ -5924,7 +5924,7 @@
           "message": "Unikalny identyfikator klienta, który otrzyma ten zwrot"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.display_name": {
-          "source": "Line Items",
+          "source": "Line items",
           "message": "Pozycje"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.short_desc": {
@@ -5996,7 +5996,7 @@
           "message": "Liczba jednostek towaru, które są zwrotne"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.field.dGF4X2NvZGVfaWQ.display_name": {
-          "source": "Tax Code ID",
+          "source": "Tax code ID",
           "message": "Identyfikator kodu podatku"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.field.dGF4X2NvZGVfaWQ.short_desc": {
@@ -6008,7 +6008,7 @@
           "message": "Unikalny identyfikator kodu podatku do zastosowania do tej pozycji zwrotu"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "Cena jednostkowa"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.field.dW5pdF9wcmljZQ.short_desc": {
@@ -6032,7 +6032,7 @@
           "message": "Wewnętrzne memo lub notatka dotycząca tego pokwitowania zwrotu"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.display_name": {
-          "source": "Get Refund Receipt",
+          "source": "Get refund receipt",
           "message": "Pobierz potwierdzenie zwrotu"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.short_desc": {
@@ -6044,7 +6044,7 @@
           "message": "Pobierz szczegółowe informacje o określonym potwierdzeniu zwrotu przy użyciu jego identyfikatora"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.option.aWQ.display_name": {
-          "source": "Refund Receipt ID",
+          "source": "Refund receipt ID",
           "message": "Identyfikator potwierdzenia zwrotu"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.option.aWQ.short_desc": {
@@ -6056,7 +6056,7 @@
           "message": "Identyfikator potwierdzenia zwrotu w QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.display_name": {
-          "source": "List Refund Receipts",
+          "source": "List refund receipts",
           "message": "Lista potwierdzeń zwrotu"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.short_desc": {
@@ -6068,7 +6068,7 @@
           "message": "Pobierz wiele potwierdzeń zwrotu z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i paginacji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmV0Y2hBbGw.short_desc": {
@@ -6272,7 +6272,7 @@
           "message": "Określ sposób sortowania zwracanej listy potwierdzeń zwrotu"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -6292,7 +6292,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -6356,7 +6356,7 @@
           "message": "Saldo"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.display_name": {
-          "source": "Get Sales Receipt",
+          "source": "Get sales receipt",
           "message": "Pobierz paragon sprzedaży"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.short_desc": {
@@ -6368,7 +6368,7 @@
           "message": "Pobierz szczegółowe informacje o określonym paragonie sprzedaży przy użyciu jego identyfikatora"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.option.aWQ.display_name": {
-          "source": "Sales Receipt ID",
+          "source": "Sales receipt ID",
           "message": "Identyfikator paragonu sprzedaży"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.option.aWQ.short_desc": {
@@ -6380,7 +6380,7 @@
           "message": "Identyfikator paragonu sprzedaży w QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.display_name": {
-          "source": "List Sales Receipts",
+          "source": "List sales receipts",
           "message": "Lista paragonów sprzedaży"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.short_desc": {
@@ -6392,7 +6392,7 @@
           "message": "Pobierz wiele paragonów sprzedaży z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i paginacji"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmV0Y2hBbGw.short_desc": {
@@ -6604,7 +6604,7 @@
           "message": "Określ sposób sortowania zwracanej listy paragonów sprzedaży"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -6624,7 +6624,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -6696,7 +6696,7 @@
           "message": "Numer referencyjny płatności"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.display_name": {
-          "source": "Create Vendor",
+          "source": "Create vendor",
           "message": "Utwórz dostawcę"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.short_desc": {
@@ -6708,7 +6708,7 @@
           "message": "Utwórz nowy rekord dostawcy z danymi kontaktowymi, adresem i innymi szczegółami firmy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -6720,7 +6720,7 @@
           "message": "Nazwa, która będzie wyświetlana dla tego dostawcy w QuickBooks"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.cGhvbmU.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Numer telefonu"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.cGhvbmU.short_desc": {
@@ -6732,7 +6732,7 @@
           "message": "Główny numer telefonu kontaktowego do dostawcy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Adres e-mail"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZW1haWw.short_desc": {
@@ -6792,7 +6792,7 @@
           "message": "Kraj, w którym znajduje się dostawca"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.short_desc": {
@@ -6804,7 +6804,7 @@
           "message": "Skrót stanu lub województwa (np. CA, NY, ON)"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "Wiersz adresu 1"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTE.short_desc": {
@@ -6816,7 +6816,7 @@
           "message": "Adres uliczny lub numer skrytki pocztowej"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "Wiersz adresu 2"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTI.short_desc": {
@@ -6828,7 +6828,7 @@
           "message": "Dodatkowe informacje o adresie, takie jak numer mieszkania lub apteki"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.UG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.UG9zdGFsQ29kZQ.short_desc": {
@@ -6840,7 +6840,7 @@
           "message": "Kod pocztowy lub kod pocztowy dla adresu dostawcy"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.display_name": {
-          "source": "Get Vendor",
+          "source": "Get vendor",
           "message": "Pobierz dostawcę"
         },
         "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.short_desc": {
@@ -6864,7 +6864,7 @@
           "message": "Identyfikator dostawcy w QuickBooks, dla którego mają zostać pobrane szczegółowe informacje"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.display_name": {
-          "source": "List Vendors",
+          "source": "List vendors",
           "message": "Pobierz listę dostawców"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.short_desc": {
@@ -6876,7 +6876,7 @@
           "message": "Pobierz wielu dostawców z QuickBooks z opcjonalnymi możliwościami filtrowania, sortowania i stronicowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmV0Y2hBbGw.display_name": {
-          "source": "Fetch All",
+          "source": "Fetch all",
           "message": "Pobierz wszystko"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmV0Y2hBbGw.short_desc": {
@@ -7092,7 +7092,7 @@
           "message": "Określ sposób sortowania zwróconej listy dostawców"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.c29ydA.field.ZGlyZWN0aW9u.display_name": {
-          "source": "Sort Direction",
+          "source": "Sort direction",
           "message": "Kierunek sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.c29ydA.field.ZGlyZWN0aW9u.short_desc": {
@@ -7112,7 +7112,7 @@
           "message": "Malejąco"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.c29ydA.field.ZmllbGQ.display_name": {
-          "source": "Sort Field",
+          "source": "Sort field",
           "message": "Pole sortowania"
         },
         "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.c29ydA.field.ZmllbGQ.short_desc": {
@@ -7188,7 +7188,7 @@
           "message": "Pseudonim ID V4"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.display_name": {
-          "source": "Update Vendor",
+          "source": "Update vendor",
           "message": "Zaktualizuj dostawcę"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.short_desc": {
@@ -7212,7 +7212,7 @@
           "message": "Identyfikator dostawcy QuickBooks, który chcesz zaktualizować"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "Nazwa wyświetlana"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -7224,7 +7224,7 @@
           "message": "Nazwa, która będzie wyświetlana dla tego dostawcy w QuickBooks"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.cGhvbmU.display_name": {
-          "source": "Phone Number",
+          "source": "Phone number",
           "message": "Numer telefonu"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.cGhvbmU.short_desc": {
@@ -7236,7 +7236,7 @@
           "message": "Główny numer telefonu kontaktowego do dostawcy"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZW1haWw.display_name": {
-          "source": "Email Address",
+          "source": "Email address",
           "message": "Adres e-mail"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZW1haWw.short_desc": {
@@ -7296,7 +7296,7 @@
           "message": "Kraj, w którym znajduje się dostawca"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.display_name": {
-          "source": "State/Province",
+          "source": "State/province",
           "message": "Stan/prowincja"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.Q291bnRyeVN1YkRpdmlzaW9uQ29kZQ.short_desc": {
@@ -7308,7 +7308,7 @@
           "message": "Skrót stanu lub województwa (np. CA, NY, ON)"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTE.display_name": {
-          "source": "Address Line 1",
+          "source": "Address line 1",
           "message": "Wiersz adresu 1"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTE.short_desc": {
@@ -7320,7 +7320,7 @@
           "message": "Adres uliczny lub numer skrytki pocztowej"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTI.display_name": {
-          "source": "Address Line 2",
+          "source": "Address line 2",
           "message": "Wiersz adresu 2"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.TGluZTI.short_desc": {
@@ -7332,7 +7332,7 @@
           "message": "Dodatkowe informacje o adresie, takie jak numer mieszkania lub apteki"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.UG9zdGFsQ29kZQ.display_name": {
-          "source": "Postal Code",
+          "source": "Postal code",
           "message": "Kod pocztowy"
         },
         "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.field.UG9zdGFsQ29kZQ.short_desc": {
@@ -7344,7 +7344,7 @@
           "message": "Kod pocztowy lub kod pocztowy dla adresu dostawcy"
         },
         "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.display_name": {
-          "source": "Credit Memo Trigger",
+          "source": "Credit memo trigger",
           "message": "Wyzwalacz noty kredytowej"
         },
         "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.short_desc": {
@@ -7356,7 +7356,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych not kredytowych lub aktualizacji istniejących not kredytowych. Ten wyzwalacz pozwala reagować na zdarzenia dotyczące not kredytowych w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
@@ -7376,7 +7376,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.display_name": {
-          "source": "Customer Trigger",
+          "source": "Customer trigger",
           "message": "Wyzwalacz klienta"
         },
         "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.short_desc": {
@@ -7388,7 +7388,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych klientów lub aktualizacji istniejących klientów. Ten wyzwalacz pozwala reagować na zdarzenia dotyczące klientów w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
@@ -7408,7 +7408,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.display_name": {
-          "source": "Deposit Trigger",
+          "source": "Deposit trigger",
           "message": "Wyzwalacz depozytów"
         },
         "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.short_desc": {
@@ -7420,7 +7420,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych depozytów lub aktualizacji istniejących depozytów. Ten wyzwalacz pozwala reagować na zdarzenia depozytów w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
@@ -7440,7 +7440,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.display_name": {
-          "source": "Estimate Trigger",
+          "source": "Estimate trigger",
           "message": "Wyzwalacz kosztorysów"
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.short_desc": {
@@ -7452,7 +7452,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych kosztorysów lub aktualizacji istniejących kosztorysów. Ten wyzwalacz pozwala reagować na zdarzenia kosztorysów w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
@@ -7472,7 +7472,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
-          "source": "Invoice Trigger",
+          "source": "Invoice trigger",
           "message": "Wyzwalacz faktur"
         },
         "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
@@ -7484,7 +7484,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych faktur lub aktualizacji istniejących faktur. Ten wyzwalacz pozwala reagować na zdarzenia faktur w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
@@ -7504,7 +7504,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.display_name": {
-          "source": "Item Trigger",
+          "source": "Item trigger",
           "message": "Wyzwalacz pozycji"
         },
         "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.short_desc": {
@@ -7516,7 +7516,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych pozycji lub aktualizacji istniejących pozycji. Ten wyzwalacz pozwala reagować na zdarzenia pozycji w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
@@ -7536,7 +7536,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.display_name": {
-          "source": "Journal Entry Trigger",
+          "source": "Journal entry trigger",
           "message": "Wyzwalacz wpisów do księgi"
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.short_desc": {
@@ -7548,7 +7548,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych wpisów do księgi lub aktualizacji istniejących wpisów do księgi. Ten wyzwalacz pozwala reagować na zdarzenia wpisów do księgi w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
@@ -7568,7 +7568,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.display_name": {
-          "source": "Payment Trigger",
+          "source": "Payment trigger",
           "message": "Wyzwalacz płatności"
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.short_desc": {
@@ -7580,7 +7580,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych płatności lub aktualizacji istniejących płatności. Ten wyzwalacz pozwala reagować na zdarzenia płatności w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
@@ -7600,7 +7600,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.display_name": {
-          "source": "Purchase Order Trigger",
+          "source": "Purchase order trigger",
           "message": "Wyzwalacz zamówienia zakupu"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.short_desc": {
@@ -7612,7 +7612,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych zamówień zakupu lub aktualizacji istniejących zamówień zakupu. Ten wyzwalacz pozwala reagować na zdarzenia dotyczące zamówień zakupu w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
@@ -7632,7 +7632,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.display_name": {
-          "source": "Purchase Trigger",
+          "source": "Purchase trigger",
           "message": "Wyzwalacz zakupu"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.short_desc": {
@@ -7644,7 +7644,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych zakupów lub aktualizacji istniejących zakupów. Ten wyzwalacz pozwala reagować na zdarzenia dotyczące zakupów w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
@@ -7664,7 +7664,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.display_name": {
-          "source": "Refund Receipt Trigger",
+          "source": "Refund receipt trigger",
           "message": "Wyzwalacz potwierdzenia zwrotu"
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.short_desc": {
@@ -7676,7 +7676,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych potwierdzeń zwrotu lub aktualizacji istniejących potwierdzeń zwrotu. Ten wyzwalacz pozwala reagować na zdarzenia dotyczące potwierdzeń zwrotu w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
@@ -7696,7 +7696,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.display_name": {
-          "source": "Sales Receipt Trigger",
+          "source": "Sales receipt trigger",
           "message": "Wyzwalacz paragonu sprzedaży"
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.short_desc": {
@@ -7708,7 +7708,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych paragonów sprzedaży lub aktualizacji istniejących paragonów sprzedaży. Ten wyzwalacz pozwala reagować na zdarzenia dotyczące paragonów sprzedaży w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
@@ -7728,7 +7728,7 @@
           "message": "Zaktualizowano"
         },
         "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.display_name": {
-          "source": "Vendor Trigger",
+          "source": "Vendor trigger",
           "message": "Wyzwalacz dostawcy"
         },
         "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.short_desc": {
@@ -7740,7 +7740,7 @@
           "message": "Monitoruj QuickBooks pod kątem nowych dostawców lub aktualizacji istniejących dostawców. Ten wyzwalacz pozwala reagować na zdarzenia dotyczące dostawców w czasie rzeczywistym."
         },
         "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.display_name": {
-          "source": "Trigger Action",
+          "source": "Trigger action",
           "message": "Działanie wyzwalacza"
         },
         "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.short_desc": {
