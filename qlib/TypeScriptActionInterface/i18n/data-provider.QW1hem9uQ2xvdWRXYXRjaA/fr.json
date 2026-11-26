@@ -340,7 +340,7 @@
           "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.display_name": {
-          "source": "Disable Alarm Actions",
+          "source": "Disable alarm actions",
           "message": "Désactiver les actions d'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.short_desc": {
@@ -352,7 +352,7 @@
           "message": "Désactiver temporairement les actions (notifications, auto-scaling, etc.) pour les alarmes CloudWatch spécifiées. Utile pendant les fenêtres de maintenance, les périodes de test ou lorsque vous devez supprimer les notifications d'alarme sans supprimer les alarmes."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.cmVnaW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Spécifiez la région AWS où se trouvent les alarmes cibles. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.YWxhcm1fbmFtZXM.display_name": {
-          "source": "Alarm Names",
+          "source": "Alarm names",
           "message": "Noms d'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZGlzYWJsZV9hbGFybV9hY3Rpb25z.option.YWxhcm1fbmFtZXM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Sélectionnez une ou plusieurs alarmes CloudWatch pour lesquelles désactiver les actions. Les actions incluent les notifications SNS, les politiques d'Auto Scaling et les actions EC2."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.display_name": {
-          "source": "Enable Alarm Actions",
+          "source": "Enable alarm actions",
           "message": "Activer les actions d'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Réactiver les actions (notifications, auto-scaling, etc.) pour les alarmes CloudWatch spécifiées. Utilisez cette option pour restaurer les fonctionnalités d'alarme après des périodes de maintenance ou de test."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.cmVnaW9u.short_desc": {
@@ -400,7 +400,7 @@
           "message": "Spécifiez la région AWS où se trouvent les alarmes cibles. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.YWxhcm1fbmFtZXM.display_name": {
-          "source": "Alarm Names",
+          "source": "Alarm names",
           "message": "Noms d'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.ZW5hYmxlX2FsYXJtX2FjdGlvbnM.option.YWxhcm1fbmFtZXM.short_desc": {
@@ -412,7 +412,7 @@
           "message": "Sélectionnez une ou plusieurs alarmes CloudWatch pour lesquelles activer les actions. Cela restaurera les notifications SNS, les politiques d'Auto Scaling et les actions EC2."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.display_name": {
-          "source": "Set Alarm State",
+          "source": "Set alarm state",
           "message": "Définir l'état de l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Remplacer l'état actuel d'une alarme CloudWatch en le définissant manuellement sur OK, ALARM ou INSUFFICIENT_DATA. Utile pour tester les flux de travail d'alarme, effacer les fausses alarmes ou forcer des états d'alarme spécifiques à des fins opérationnelles."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.cmVnaW9u.short_desc": {
@@ -436,7 +436,7 @@
           "message": "Spécifiez la région AWS où se trouve l'alarme cible. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.YWxhcm1fbmFtZQ.display_name": {
-          "source": "Alarm Name",
+          "source": "Alarm name",
           "message": "Nom de l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.YWxhcm1fbmFtZQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Sélectionnez l'alarme CloudWatch dont vous souhaitez définir l'état manuellement."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfdmFsdWU.display_name": {
-          "source": "State Value",
+          "source": "State value",
           "message": "Valeur de l'état"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfdmFsdWU.short_desc": {
@@ -472,7 +472,7 @@
           "message": "INSUFFICIENT_DATA"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfcmVhc29u.display_name": {
-          "source": "State Reason",
+          "source": "State reason",
           "message": "Raison de l'état"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.c2V0X2FsYXJtX3N0YXRl.option.c3RhdGVfcmVhc29u.short_desc": {
@@ -500,7 +500,7 @@
           "message": "OK"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.display_name": {
-          "source": "Get Alarm",
+          "source": "Get alarm",
           "message": "Obtenir l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.short_desc": {
@@ -512,7 +512,7 @@
           "message": "Récupère des détails complets sur une alarme CloudWatch spécifique, y compris son état actuel, sa configuration, ses seuils, ses dimensions et ses actions. Parfait pour l'audit d'alarmes, le dépannage et la vérification de configuration."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.cmVnaW9u.short_desc": {
@@ -524,7 +524,7 @@
           "message": "Spécifiez la région AWS où se trouve l'alarme cible. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.YWxhcm1fbmFtZQ.display_name": {
-          "source": "Alarm Name",
+          "source": "Alarm name",
           "message": "Nom de l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.Z2V0X2FsYXJt.option.YWxhcm1fbmFtZQ.short_desc": {
@@ -536,7 +536,7 @@
           "message": "Sélectionnez l'alarme CloudWatch dont vous souhaitez récupérer les détails."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.display_name": {
-          "source": "List Alarms",
+          "source": "List alarms",
           "message": "Lister les alarmes"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.short_desc": {
@@ -548,7 +548,7 @@
           "message": "Récupérer une liste d'alarmes CloudWatch dans votre compte AWS avec un filtrage optionnel par état, préfixe de nom et statut d'action. Inclut des statistiques récapitulatives et des informations détaillées sur les alarmes à des fins de surveillance et de gestion."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.cmVnaW9u.short_desc": {
@@ -560,7 +560,7 @@
           "message": "Spécifiez la région AWS dans laquelle vous souhaitez lister les alarmes CloudWatch. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "Préfixe du nom de l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -572,7 +572,7 @@
           "message": "Filtre optionnel pour ne renvoyer que les alarmes dont le nom commence par le préfixe spécifié. Laisser vide pour lister toutes les alarmes."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.c3RhdGVfZmlsdGVy.display_name": {
-          "source": "State Filter",
+          "source": "State filter",
           "message": "Filtre d'état"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.c3RhdGVfZmlsdGVy.short_desc": {
@@ -596,7 +596,7 @@
           "message": "INSUFFICIENT_DATA"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.bWF4X3JlY29yZHM.display_name": {
-          "source": "Maximum Records",
+          "source": "Maximum records",
           "message": "Enregistrements maximum"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bGlzdF9hbGFybXM.option.bWF4X3JlY29yZHM.short_desc": {
@@ -608,7 +608,7 @@
           "message": "Limiter le nombre d'alarmes renvoyées dans la réponse. La valeur par défaut est 50, le maximum est 100."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.display_name": {
-          "source": "New Alarm",
+          "source": "New alarm",
           "message": "Nouvelle alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.short_desc": {
@@ -620,7 +620,7 @@
           "message": "Surveille votre compte AWS à la recherche d'alarmes CloudWatch nouvellement créées, vous permettant de répondre automatiquement aux nouvelles configurations de surveillance. Utile pour les pistes d'audit, les configurations de notification et les flux de travail de configuration d'alarme automatisés."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.cmVnaW9u.short_desc": {
@@ -632,7 +632,7 @@
           "message": "Spécifiez la région AWS dans laquelle vous souhaitez surveiller les nouvelles alarmes CloudWatch. Par défaut us-east-1 si non spécifiée."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "Préfixe du nom de l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.bmV3X2FsYXJt.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -644,7 +644,7 @@
           "message": "Filtre optionnel pour surveiller uniquement les alarmes dont les noms commencent par le préfixe spécifié. Laissez vide pour surveiller toutes les alarmes."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.display_name": {
-          "source": "Alarm State Change",
+          "source": "Alarm state change",
           "message": "Changement d'état de l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.short_desc": {
@@ -656,7 +656,7 @@
           "message": "Surveille les alarmes CloudWatch pour les changements d'état entre les états OK, ALARM et INSUFFICIENT_DATA. Essentiel pour la réponse automatisée aux incidents, les flux de travail d'escalade et les notifications de surveillance en temps réel."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "Région AWS"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.cmVnaW9u.short_desc": {
@@ -668,7 +668,7 @@
           "message": "Spécifiez la région AWS dans laquelle vous souhaitez surveiller les changements d'état d'alarme. La valeur par défaut est us-east-1 si non spécifiée."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.YWxhcm1fbmFtZV9wcmVmaXg.display_name": {
-          "source": "Alarm Name Prefix",
+          "source": "Alarm name prefix",
           "message": "Préfixe du nom de l'alarme"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.YWxhcm1fbmFtZV9wcmVmaXg.short_desc": {
@@ -680,7 +680,7 @@
           "message": "Filtre optionnel pour surveiller uniquement les alarmes dont les noms commencent par le préfixe spécifié. Laissez vide pour surveiller toutes les alarmes."
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.c3RhdGVfZmlsdGVy.display_name": {
-          "source": "State Filter",
+          "source": "State filter",
           "message": "Filtre d'état"
         },
         "app.QW1hem9uQ2xvdWRXYXRjaA.action.YWxhcm1fc3RhdGVfY2hhbmdl.option.c3RhdGVfZmlsdGVy.short_desc": {

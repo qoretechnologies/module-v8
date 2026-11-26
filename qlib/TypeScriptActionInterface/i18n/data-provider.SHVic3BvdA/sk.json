@@ -4144,7 +4144,7 @@
           "message": "Nahradí všetky polia definície formulára HubSpot poskytnutým obsahom. Všetky nezahrnuté vlastnosti sa obnovia na predvolené hodnoty."
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.display_name": {
-          "source": "Get List Records",
+          "source": "Get list records",
           "message": "Získať záznamy zoznamu"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.short_desc": {
@@ -4216,7 +4216,7 @@
           "message": "Konkrétne vlastnosti, ktoré sa majú zahrnúť do odpovede pre každý záznam. Ak nie sú zadané, vrátia sa predvolené vlastnosti."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.display_name": {
-          "source": "Get Form Submissions",
+          "source": "Get form submissions",
           "message": "Získať odoslané záznamy formulára"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.short_desc": {
@@ -4240,7 +4240,7 @@
           "message": "Jedinečný identifikátor (GUID) formulára HubSpot, ktorého odoslané záznamy sa majú načítať."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Veľkosť stránky"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.short_desc": {
@@ -4252,7 +4252,7 @@
           "message": "Počet odoslaných záznamov na načítanie na požiadavku. HubSpot vyžaduje maximum 50; akcia automaticky stránkuje, kým sa nedosiahne `Max Results` alebo kým nezostanú žiadne ďalšie stránky."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Maximálny počet výsledkov"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.short_desc": {
@@ -4288,7 +4288,7 @@
           "message": "Voliteľná časová pečiatka ISO 8601. Akcia zastaví stránkovanie, keď narazí na odoslaný záznam starší ako táto hodnota. Aplikuje sa na strane klienta, pretože starší koncový bod nepodporuje filtrovanie na strane servera."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.display_name": {
-          "source": "Submit Form",
+          "source": "Submit form",
           "message": "Odoslať formulár"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.short_desc": {
@@ -4324,7 +4324,7 @@
           "message": "Zoznam polí formulára na odoslanie. Každá položka musí obsahovať interný `name` (zodpovedajúci poľu v definícii formulára) a `value` na odoslanie. Parameter `objectTypeId` je voliteľný a predvolene je nastavený na objekt kontaktu (`0-1`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Názov poľa"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.short_desc": {
@@ -4336,7 +4336,7 @@
           "message": "Vnútorný názov poľa formulára, ako je definovaný na formulári HubSpot (napr. `email`, `firstname`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
+          "source": "Object type ID",
           "message": "ID typu objektu"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -4348,7 +4348,7 @@
           "message": "Voliteľný identifikátor typu objektu HubSpot, ku ktorému patrí pole. Predvolené je kontaktový objekt (`0-1`); explicitne nastavte pre polia patriace inému typu objektu."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Hodnota poľa"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.short_desc": {
@@ -4360,7 +4360,7 @@
           "message": "Hodnota, ktorú odoslať pre toto pole. Musí byť reťazec."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.display_name": {
-          "source": "Submission Context",
+          "source": "Submission context",
           "message": "Kontext odoslania"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.short_desc": {
@@ -4372,7 +4372,7 @@
           "message": "Voliteľný kontext odoslania vrátane súboru cookie HubSpot na sledovanie používateľov (`hutk`), adresy IP, identifikátora/názvu/URI stránky, ID kampane v Salesforce a kľúča GoToWebinar."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.display_name": {
-          "source": "GoToWebinar Webinar Key",
+          "source": "GoToWebinar webinar key",
           "message": "Kľúč GoToWebinar pre webinár"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.short_desc": {
@@ -4384,7 +4384,7 @@
           "message": "Kľúč GoToWebinar. Používa sa, keď je tento vstup registráciou na webinár; HubSpot zaregistruje kontakt na príslušný udalosť GoToWebinar."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.display_name": {
-          "source": "HubSpot User Token (hutk)",
+          "source": "HubSpot user token (hutk)",
           "message": "Token používateľa HubSpot (hutk)"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.short_desc": {
@@ -4396,7 +4396,7 @@
           "message": "Hodnota `hubspotutk` súboru cookie nastaveného sledovacím skriptom HubSpot v prehliadači návštevníka. Používa sa na priradenie odoslaného údaju k existujúcemu návštevníkovi."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.display_name": {
-          "source": "IP Address",
+          "source": "IP address",
           "message": "IP adresa"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.short_desc": {
@@ -4420,7 +4420,7 @@
           "message": "ID stránky HubSpot, na ktorej bol formulár odoslaný (iba keď sa odosielá z webovej stránky hostovaného HubSpotom)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.display_name": {
-          "source": "Page Name",
+          "source": "Page name",
           "message": "Názov stránky"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.short_desc": {
@@ -4444,7 +4444,7 @@
           "message": "Plná URL stránky, kde bol formulár odoslaný."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.display_name": {
-          "source": "Salesforce Campaign ID",
+          "source": "Salesforce campaign ID",
           "message": "ID kampane v Salesforce"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.short_desc": {
@@ -4456,7 +4456,7 @@
           "message": "ID kampane v Salesforce. Používa sa, keď je účet HubSpot prepojený s organizáciou Salesforce, aby sa táto odoslaná požiadavka priradila k kampani."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal Consent Options",
+          "source": "Legal consent options",
           "message": "Možnosti právneho súhlasu"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.short_desc": {
@@ -4468,7 +4468,7 @@
           "message": "Voliteľný dátový balík súhlasu GDPR odovzdaný do HubSpotu. Presný formát `consent` alebo `legitimateInterest` požadovaný vaším formulárom nájdete v dokumentácii HubSpotu."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.display_name": {
-          "source": "Submitted At",
+          "source": "Submitted at",
           "message": "Čas odoslania"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.short_desc": {
@@ -4480,7 +4480,7 @@
           "message": "Voliteľná časová pečiatka ISO 8601, ktorá sa zaznamená ako čas odoslania. Predvolene je nastavený čas, kedy HubSpot prijal požiadavku."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.display_name": {
-          "source": "Skip Validation",
+          "source": "Skip validation",
           "message": "Preskočiť validáciu"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.short_desc": {
@@ -4492,7 +4492,7 @@
           "message": "Ak je true, HubSpot prijme odoslanie, aj keď niektoré hodnoty polí neprejdú validáciou. Používajte opatrne."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Company Created or Updated",
+          "source": "Company created or updated",
           "message": "Spoločnosť vytvorená alebo aktualizovaná"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4504,7 +4504,7 @@
           "message": "Tento spúšťač sa aktivuje vždy, keď je v službe HubSpot vytvorený alebo upravený záznam spoločnosti, čo vám umožňuje automatizovať pracovné postupy na základe zmien údajov o spoločnosti."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4532,7 +4532,7 @@
           "message": "Spustí sa pri aktualizácii existujúceho objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4544,7 +4544,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Contact Created or Updated",
+          "source": "Contact created or updated",
           "message": "Kontakt vytvorený alebo aktualizovaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4556,7 +4556,7 @@
           "message": "Aktivujte pracovné postupy vždy, keď je v službe HubSpot vytvorený nový kontakt alebo aktualizovaný existujúci kontakt. Ideálne na efektívnu správu informácií o zákazníkoch."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4584,7 +4584,7 @@
           "message": "Spustí sa pri aktualizácii existujúceho objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4596,7 +4596,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Custom Object Created or Updated",
+          "source": "Custom object created or updated",
           "message": "Vlastný objekt vytvorený alebo aktualizovaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4608,7 +4608,7 @@
           "message": "Použite tento spúšťač na zachytenie zmien vo vlastných objektoch v službe HubSpot, čím zaistíte, že aktualizácie vlastných dátových štruktúr budú okamžite spracované na účely automatizácie alebo integrácie."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4648,7 +4648,7 @@
           "message": "Vyberte vlastný objekt, ktorý chcete monitorovať na prítomnosť nových alebo aktualizovaných záznamov."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4660,7 +4660,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Deal Created or Updated",
+          "source": "Deal created or updated",
           "message": "Obchod vytvorený alebo aktualizovaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4672,7 +4672,7 @@
           "message": "Tento spúšťač sa aktivuje pri vytvorení alebo úprave obchodu v službe HubSpot, čo vám umožňuje sledovať obchodné príležitosti a integrovať ich s automatizovanými pracovnými postupmi predajného lievika."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4700,7 +4700,7 @@
           "message": "Spustí sa pri aktualizácii existujúceho objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4712,7 +4712,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Lead Created or Updated",
+          "source": "Lead created or updated",
           "message": "Potenciálny zákazník vytvorený alebo aktualizovaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4724,7 +4724,7 @@
           "message": "Monitorujte nových potenciálnych zákazníkov a aktualizácie existujúcich potenciálnych zákazníkov v službe HubSpot pomocou tohto spúšťača, čo umožňuje efektívnu správu potenciálnych zákazníkov a procesy nadväzovania kontaktu."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4752,7 +4752,7 @@
           "message": "Spustí sa pri aktualizácii existujúceho objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4764,7 +4764,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Product Created or Updated",
+          "source": "Product created or updated",
           "message": "Produkt vytvorený alebo aktualizovaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4776,7 +4776,7 @@
           "message": "Tento spúšťač vás upozorní na akékoľvek nové alebo aktualizované produkty vo vašom účte HubSpot, čím zaistí synchronizáciu údajov o produktoch s vašimi pracovnými postupmi a externými systémami."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4804,7 +4804,7 @@
           "message": "Spustí sa pri aktualizácii existujúceho objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4816,7 +4816,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.display_name": {
-          "source": "Ticket Created or Updated",
+          "source": "Ticket created or updated",
           "message": "Tiket vytvorený alebo aktualizovaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.short_desc": {
@@ -4828,7 +4828,7 @@
           "message": "Automaticky spúšťať pracovné postupy pri vytvorení alebo aktualizácii tiketu podpory v službe HubSpot. Ideálne na správu operácií zákazníckej podpory a zefektívnenie riešenia problémov."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4856,7 +4856,7 @@
           "message": "Spustí sa pri aktualizácii existujúceho objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4868,7 +4868,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "User Created or Updated",
+          "source": "User created or updated",
           "message": "Používateľ vytvorený alebo aktualizovaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4880,7 +4880,7 @@
           "message": "Tento spúšťač sa aktivuje pri vytvorení alebo aktualizácii používateľa v službe HubSpot, čo vám pomáha sledovať používateľské účty a udržiavať aktuálnu kontrolu prístupu pre váš tím."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Kritériá aktivácie"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4908,7 +4908,7 @@
           "message": "Spustí sa pri aktualizácii existujúceho objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Ďalšie vlastnosti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4920,7 +4920,7 @@
           "message": "Vyberte ďalšie vlastnosti, ktoré sa majú pridať k vráteným údajom objektu"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.display_name": {
-          "source": "Form Submitted",
+          "source": "Form submitted",
           "message": "Formulár odoslaný"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.short_desc": {

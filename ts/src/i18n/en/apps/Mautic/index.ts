@@ -35,7 +35,7 @@ Your Mautic login password
     // Campaign Contact Actions
     add_contact_to_campaign: {
       groups: ['Campaign Management'],
-      displayName: 'Add Contact to Campaign',
+      displayName: 'Add contact to campaign',
       shortDesc: 'Manually add a contact to a campaign',
       longDesc:
         'Add a specific contact to a campaign in Mautic. This allows you to manually include contacts in campaign workflows.',
@@ -54,7 +54,7 @@ Your Mautic login password
     },
     remove_contact_from_campaign: {
       groups: ['Campaign Management'],
-      displayName: 'Remove Contact from Campaign',
+      displayName: 'Remove contact from campaign',
       shortDesc: 'Remove a contact from a campaign',
       longDesc:
         'Remove a specific contact from a campaign in Mautic. This stops the contact from receiving further campaign actions.',
@@ -75,22 +75,22 @@ Your Mautic login password
     // Company Actions
     create_company: {
       groups: ['Company Management'],
-      displayName: 'Create Company',
+      displayName: 'Create company',
       shortDesc: 'Create a new company',
       longDesc: 'Create a new company record in Mautic with the specified details.',
       options: {
         companyname: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'The name of the company',
           longDesc: 'The name of the company (required)',
         },
         companyemail: {
-          displayName: 'Company Email',
+          displayName: 'Company email',
           shortDesc: 'The email address of the company',
           longDesc: 'The primary email address for the company',
         },
         companyphone: {
-          displayName: 'Company Phone',
+          displayName: 'Company phone',
           shortDesc: 'The phone number of the company',
           longDesc: 'The primary phone number for the company',
         },
@@ -100,12 +100,12 @@ Your Mautic login password
           longDesc: 'The company website URL',
         },
         companyaddress1: {
-          displayName: 'Address Line 1',
+          displayName: 'Address line 1',
           shortDesc: 'The first line of the company address',
           longDesc: 'The street address of the company',
         },
         companyaddress2: {
-          displayName: 'Address Line 2',
+          displayName: 'Address line 2',
           shortDesc: 'The second line of the company address',
           longDesc: 'Additional address information (suite, floor, etc.)',
         },
@@ -115,12 +115,12 @@ Your Mautic login password
           longDesc: 'The city of the company address',
         },
         companystate: {
-          displayName: 'State/Region',
+          displayName: 'State/region',
           shortDesc: 'The state or region of the company',
           longDesc: 'The state, province, or region of the company address',
         },
         companyzipcode: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'The postal/ZIP code of the company',
           longDesc: 'The postal or ZIP code of the company address',
         },
@@ -140,7 +140,7 @@ Your Mautic login password
           longDesc: 'The industry or sector the company operates in',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc:
             'An object containing custom field aliases and their values. Use the field alias as the key',
@@ -149,7 +149,7 @@ Your Mautic login password
     },
     delete_company: {
       groups: ['Company Management'],
-      displayName: 'Delete Company',
+      displayName: 'Delete company',
       shortDesc: 'Delete a company',
       longDesc: 'Permanently delete a company record from Mautic.',
       options: {
@@ -162,7 +162,7 @@ Your Mautic login password
     },
     get_company: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Company',
+      displayName: 'Get company',
       shortDesc: 'Retrieve company details',
       longDesc: 'Retrieve detailed information about a specific company in Mautic.',
       options: {
@@ -175,7 +175,7 @@ Your Mautic login password
     },
     get_many_companies: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Many Companies',
+      displayName: 'Get many companies',
       shortDesc: 'Retrieve a list of companies',
       longDesc:
         'Retrieve a paginated list of companies from Mautic with optional search and filtering.',
@@ -196,12 +196,12 @@ Your Mautic login password
           longDesc: 'The starting row for pagination (default: 0)',
         },
         orderBy: {
-          displayName: 'Order By',
+          displayName: 'Order by',
           shortDesc: 'Field to sort results by',
           longDesc: 'The field to use for sorting the results',
         },
         orderByDir: {
-          displayName: 'Order Direction',
+          displayName: 'Order direction',
           shortDesc: 'Sort direction (asc or desc)',
           longDesc: 'The direction to sort results: ascending or descending',
         },
@@ -209,7 +209,7 @@ Your Mautic login password
     },
     update_company: {
       groups: ['Company Management'],
-      displayName: 'Update Company',
+      displayName: 'Update company',
       shortDesc: 'Update an existing company',
       longDesc: 'Update the information of an existing company in Mautic.',
       options: {
@@ -219,17 +219,17 @@ Your Mautic login password
           longDesc: 'Select the company that you want to update',
         },
         companyname: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'The updated name of the company',
           longDesc: 'The new name for the company',
         },
         companyemail: {
-          displayName: 'Company Email',
+          displayName: 'Company email',
           shortDesc: 'The updated email address',
           longDesc: 'The new primary email address for the company',
         },
         companyphone: {
-          displayName: 'Company Phone',
+          displayName: 'Company phone',
           shortDesc: 'The updated phone number',
           longDesc: 'The new primary phone number for the company',
         },
@@ -239,12 +239,12 @@ Your Mautic login password
           longDesc: 'The new company website URL',
         },
         companyaddress1: {
-          displayName: 'Address Line 1',
+          displayName: 'Address line 1',
           shortDesc: 'The updated first line of the address',
           longDesc: 'The new street address of the company',
         },
         companyaddress2: {
-          displayName: 'Address Line 2',
+          displayName: 'Address line 2',
           shortDesc: 'The updated second line of the address',
           longDesc: 'New additional address information',
         },
@@ -254,12 +254,12 @@ Your Mautic login password
           longDesc: 'The new city of the company address',
         },
         companystate: {
-          displayName: 'State/Region',
+          displayName: 'State/region',
           shortDesc: 'The updated state or region',
           longDesc: 'The new state, province, or region',
         },
         companyzipcode: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'The updated postal/ZIP code',
           longDesc: 'The new postal or ZIP code',
         },
@@ -279,7 +279,7 @@ Your Mautic login password
           longDesc: 'The new industry or sector',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc:
             'An object containing custom field aliases and their values. Use the field alias as the key ',
@@ -290,7 +290,7 @@ Your Mautic login password
     // Company Contact Actions
     add_contact_to_company: {
       groups: ['Company Management'],
-      displayName: 'Add Contact to Company',
+      displayName: 'Add contact to company',
       shortDesc: 'Associate a contact with a company',
       longDesc: 'Create an association between a contact and a company in Mautic.',
       options: {
@@ -308,7 +308,7 @@ Your Mautic login password
     },
     remove_contact_from_company: {
       groups: ['Company Management'],
-      displayName: 'Remove Contact from Company',
+      displayName: 'Remove contact from company',
       shortDesc: 'Remove a contact from a company',
       longDesc: 'Remove the association between a contact and a company in Mautic.',
       options: {
@@ -328,22 +328,22 @@ Your Mautic login password
     // Contact Actions
     create_contact: {
       groups: ['Contact Management'],
-      displayName: 'Create Contact',
+      displayName: 'Create contact',
       shortDesc: 'Create a new contact',
       longDesc: 'Create a new contact in Mautic with the specified information.',
       options: {
         email: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: "The contact's email address",
           longDesc: 'The primary email address for the contact (required)',
         },
         firstname: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "The contact's first name",
           longDesc: 'The first name of the contact',
         },
         lastname: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "The contact's last name",
           longDesc: 'The last name of the contact',
         },
@@ -368,12 +368,12 @@ Your Mautic login password
           longDesc: 'The job title or position of the contact',
         },
         address1: {
-          displayName: 'Address Line 1',
+          displayName: 'Address line 1',
           shortDesc: 'The first line of the address',
           longDesc: 'The street address of the contact',
         },
         address2: {
-          displayName: 'Address Line 2',
+          displayName: 'Address line 2',
           shortDesc: 'The second line of the address',
           longDesc: 'Additional address information',
         },
@@ -383,12 +383,12 @@ Your Mautic login password
           longDesc: 'The city of the contact address',
         },
         state: {
-          displayName: 'State/Region',
+          displayName: 'State/region',
           shortDesc: 'The state or region',
           longDesc: 'The state, province, or region',
         },
         zipcode: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'The postal/ZIP code',
           longDesc: 'The postal or ZIP code',
         },
@@ -408,7 +408,7 @@ Your Mautic login password
           longDesc: 'A list of tags to apply to the contact for organization and segmentation',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc:
             'An object containing custom field aliases and their values. Use the field alias as the key ',
@@ -417,7 +417,7 @@ Your Mautic login password
     },
     delete_contact: {
       groups: ['Contact Management'],
-      displayName: 'Delete Contact',
+      displayName: 'Delete contact',
       shortDesc: 'Delete a contact',
       longDesc: 'Permanently delete a contact from Mautic.',
       options: {
@@ -430,7 +430,7 @@ Your Mautic login password
     },
     edit_contact_points: {
       groups: ['Contact Management'],
-      displayName: 'Edit Contact Points',
+      displayName: 'Edit contact points',
       shortDesc: "Add or subtract points from a contact's score",
       longDesc:
         'Modify the points score of a contact in Mautic. You can add points to reward engagement or subtract points to de-qualify leads.',
@@ -455,7 +455,7 @@ Your Mautic login password
     },
     edit_do_not_contact: {
       groups: ['Contact Management'],
-      displayName: 'Edit Do Not Contact List',
+      displayName: 'Edit do not contact list',
       shortDesc: 'Add or remove a contact from the do not contact list',
       longDesc:
         'Manage the Do Not Contact (DNC) status for a contact on a specific channel (email, SMS, etc.).',
@@ -490,7 +490,7 @@ Your Mautic login password
     },
     get_contact: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Contact',
+      displayName: 'Get contact',
       shortDesc: 'Retrieve contact details',
       longDesc:
         'Retrieve detailed information about a specific contact in Mautic including fields, tags, and DNC status.',
@@ -504,7 +504,7 @@ Your Mautic login password
     },
     get_many_contacts: {
       groups: ['Data Retrieval'],
-      displayName: 'Get Many Contacts',
+      displayName: 'Get many contacts',
       shortDesc: 'Retrieve a list of contacts',
       longDesc:
         'Retrieve a paginated list of contacts from Mautic with optional search and filtering.',
@@ -525,12 +525,12 @@ Your Mautic login password
           longDesc: 'The starting row for pagination (default: 0)',
         },
         orderBy: {
-          displayName: 'Order By',
+          displayName: 'Order by',
           shortDesc: 'Field to sort results by',
           longDesc: 'The field to use for sorting the results',
         },
         orderByDir: {
-          displayName: 'Order Direction',
+          displayName: 'Order direction',
           shortDesc: 'Sort direction (asc or desc)',
           longDesc: 'The direction to sort results: ascending or descending',
         },
@@ -538,12 +538,12 @@ Your Mautic login password
     },
     send_email_to_contact: {
       groups: ['Email'],
-      displayName: 'Send Email to Contact',
+      displayName: 'Send email to contact',
       shortDesc: 'Send an email to a specific contact',
       longDesc: 'Send a Mautic email template to a specific contact.',
       options: {
         email: {
-          displayName: 'Email Template',
+          displayName: 'Email template',
           shortDesc: 'The email template to send',
           longDesc: 'Select the Mautic email template that you want to send',
         },
@@ -556,7 +556,7 @@ Your Mautic login password
     },
     update_contact: {
       groups: ['Contact Management'],
-      displayName: 'Update Contact',
+      displayName: 'Update contact',
       shortDesc: 'Update an existing contact',
       longDesc: 'Update the information of an existing contact in Mautic.',
       options: {
@@ -566,17 +566,17 @@ Your Mautic login password
           longDesc: 'Select the contact that you want to update',
         },
         email: {
-          displayName: 'Email Address',
+          displayName: 'Email address',
           shortDesc: 'The updated email address',
           longDesc: 'The new email address for the contact',
         },
         firstname: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'The updated first name',
           longDesc: 'The new first name of the contact',
         },
         lastname: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'The updated last name',
           longDesc: 'The new last name of the contact',
         },
@@ -601,12 +601,12 @@ Your Mautic login password
           longDesc: 'The new job title or position',
         },
         address1: {
-          displayName: 'Address Line 1',
+          displayName: 'Address line 1',
           shortDesc: 'The updated first line of the address',
           longDesc: 'The new street address',
         },
         address2: {
-          displayName: 'Address Line 2',
+          displayName: 'Address line 2',
           shortDesc: 'The updated second line of the address',
           longDesc: 'New additional address information',
         },
@@ -616,12 +616,12 @@ Your Mautic login password
           longDesc: 'The new city',
         },
         state: {
-          displayName: 'State/Region',
+          displayName: 'State/region',
           shortDesc: 'The updated state or region',
           longDesc: 'The new state, province, or region',
         },
         zipcode: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'The updated postal/ZIP code',
           longDesc: 'The new postal or ZIP code',
         },
@@ -642,7 +642,7 @@ Your Mautic login password
             'Tags to apply to the contact. Prefix with "-" to remove a tag (e.g., "-oldtag")',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc:
             'An object containing custom field aliases and their values. Use the field alias as the key ',
@@ -653,7 +653,7 @@ Your Mautic login password
     // Segment Actions
     add_contact_to_segment: {
       groups: ['Segment Management'],
-      displayName: 'Add Contact to Segment',
+      displayName: 'Add contact to segment',
       shortDesc: 'Add a contact to a segment',
       longDesc: 'Manually add a specific contact to a segment in Mautic.',
       options: {
@@ -671,7 +671,7 @@ Your Mautic login password
     },
     remove_contact_from_segment: {
       groups: ['Segment Management'],
-      displayName: 'Remove Contact from Segment',
+      displayName: 'Remove contact from segment',
       shortDesc: 'Remove a contact from a segment',
       longDesc: 'Remove a specific contact from a segment in Mautic.',
       options: {
@@ -689,13 +689,13 @@ Your Mautic login password
     },
     send_email_to_segment: {
       groups: ['Email'],
-      displayName: 'Send Email to Segment',
+      displayName: 'Send email to segment',
       shortDesc: 'Send an email to all contacts in a segment',
       longDesc:
         'Send a Mautic segment email to all contacts in the associated segment. The email must be of type "list" (segment email).',
       options: {
         email: {
-          displayName: 'Segment Email',
+          displayName: 'Segment email',
           shortDesc: 'The segment email to send',
           longDesc:
             'Select the segment email that you want to send. This must be a "list" type email associated with a segment.',

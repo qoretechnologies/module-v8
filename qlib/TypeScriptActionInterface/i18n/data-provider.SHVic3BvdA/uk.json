@@ -4144,7 +4144,7 @@
           "message": "Замінює всі поля визначення форми HubSpot наданими даними. Усі невключені властивості буде скинуто до значень за замовчуванням."
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.display_name": {
-          "source": "Get List Records",
+          "source": "Get list records",
           "message": "Отримати записи списку"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.short_desc": {
@@ -4216,7 +4216,7 @@
           "message": "Певні властивості, які слід включити у відповідь для кожного запису. Якщо не вказано, повертатимуться властивості за замовчуванням."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.display_name": {
-          "source": "Get Form Submissions",
+          "source": "Get form submissions",
           "message": "Отримати відповіді форми"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.short_desc": {
@@ -4240,7 +4240,7 @@
           "message": "Унікальний ідентифікатор (GUID) форми HubSpot, відповіді якої потрібно зчитати."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Розмір сторінки"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.short_desc": {
@@ -4252,7 +4252,7 @@
           "message": "Кількість відповідей для отримання за один запит. HubSpot обмежує максимум 50; дія автоматично виконує пагінацію, доки не буде досягнуто `Max Results` або не закінчаться сторінки."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Макс. результатів"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.short_desc": {
@@ -4288,7 +4288,7 @@
           "message": "Необов'язкова мітка часу у форматі ISO 8601. Дія припиняє пагінацію, коли натрапляє на відповідь, старішу за це значення. Застосовується на стороні клієнта, оскільки застаріла кінцева точка не підтримує фільтрацію на стороні сервера."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.display_name": {
-          "source": "Submit Form",
+          "source": "Submit form",
           "message": "Надіслати форму"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.short_desc": {
@@ -4324,7 +4324,7 @@
           "message": "Список полів форми для надсилання. Кожен запис повинен містити внутрішнє `name` (відповідає полю у визначенні форми) та `value` для надсилання. `objectTypeId` є необов'язковим і за замовчуванням встановлюється на об'єкт контакту (`0-1`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Назва поля"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.short_desc": {
@@ -4336,7 +4336,7 @@
           "message": "Внутрішній назва поля форми, як визначено на формі HubSpot (наприклад, `email`, `firstname`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
+          "source": "Object type ID",
           "message": "ID типу об’єкта"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -4348,7 +4348,7 @@
           "message": "Необов’язковий ідентифікатор типу об’єкта HubSpot, до якого належить поле. За замовчуванням — об’єкт контактів (`0-1`); явно встановлюється для полів, що належать іншому типу об’єкта."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Значення поля"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.short_desc": {
@@ -4360,7 +4360,7 @@
           "message": "Значення, яке потрібно надіслати для цього поля. Має бути рядком."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.display_name": {
-          "source": "Submission Context",
+          "source": "Submission context",
           "message": "Контекст надсилання"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.short_desc": {
@@ -4372,7 +4372,7 @@
           "message": "Необов'язковий контекст надсилання, включаючи файл cookie відстеження користувачів HubSpot (`hutk`), IP-адресу, URI/назву/ID сторінки, ID кампанії Salesforce та ключ GoToWebinar."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.display_name": {
-          "source": "GoToWebinar Webinar Key",
+          "source": "GoToWebinar webinar key",
           "message": "Ключ вебінару GoToWebinar"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.short_desc": {
@@ -4384,7 +4384,7 @@
           "message": "Ключ GoToWebinar. Використовується, коли ця заявка — реєстрація на вебінар; HubSpot зареєструє контакт на відповідний подію GoToWebinar."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.display_name": {
-          "source": "HubSpot User Token (hutk)",
+          "source": "HubSpot user token (hutk)",
           "message": "Токен користувача HubSpot (hutk)"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.short_desc": {
@@ -4396,7 +4396,7 @@
           "message": "Значення `hubspotutk` cookie, встановлене скриптом відстеження HubSpot у браузері відвідувача. Використовується для зв’язку надсилання з існуючим відвідувачем."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.display_name": {
-          "source": "IP Address",
+          "source": "IP address",
           "message": "IP-адреса"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.short_desc": {
@@ -4420,7 +4420,7 @@
           "message": "ID сторінки HubSpot, де була надіслана форма (тільки коли форма надсилається зі сторінки, що розміщена на HubSpot)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.display_name": {
-          "source": "Page Name",
+          "source": "Page name",
           "message": "Назва сторінки"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.short_desc": {
@@ -4444,7 +4444,7 @@
           "message": "Повна URL-адреса сторінки, з якої було надіслано форму."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.display_name": {
-          "source": "Salesforce Campaign ID",
+          "source": "Salesforce campaign ID",
           "message": "ID кампанії Salesforce"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.short_desc": {
@@ -4456,7 +4456,7 @@
           "message": "ID кампанії Salesforce. Використовується, коли обліковий запис HubSpot пов’язаний з організацією Salesforce, щоб асоціювати цю заявку з кампанією."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal Consent Options",
+          "source": "Legal consent options",
           "message": "Параметри юридичної згоди"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.short_desc": {
@@ -4468,7 +4468,7 @@
           "message": "Необов'язкове корисне навантаження згоди GDPR, що передається до HubSpot. Зверніться до документації HubSpot щодо точної структури `consent` або `legitimateInterest`, необхідної для вашої форми."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.display_name": {
-          "source": "Submitted At",
+          "source": "Submitted at",
           "message": "Час надсилання"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.short_desc": {
@@ -4480,7 +4480,7 @@
           "message": "Необов'язкова мітка часу ISO 8601 для запису як часу надсилання. За замовчуванням використовується час отримання запиту HubSpot."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.display_name": {
-          "source": "Skip Validation",
+          "source": "Skip validation",
           "message": "Пропустити перевірку"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.short_desc": {
@@ -4492,7 +4492,7 @@
           "message": "Якщо має значення true, HubSpot прийме відправлені дані, навіть якщо деякі значення полів не пройдуть перевірку. Використовуйте з обережністю."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Company Created or Updated",
+          "source": "Company created or updated",
           "message": "Компанію створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4504,7 +4504,7 @@
           "message": "Цей тригер активується щоразу, коли запис компанії створюється або змінюється в HubSpot, дозволяючи автоматизувати робочі процеси на основі змін даних компанії."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4532,7 +4532,7 @@
           "message": "Спрацьовує під час оновлення наявного об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4544,7 +4544,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Contact Created or Updated",
+          "source": "Contact created or updated",
           "message": "Контакт створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4556,7 +4556,7 @@
           "message": "Активуйте робочі процеси щоразу, коли новий контакт створюється або наявний контакт оновлюється в HubSpot. Ідеально підходить для ефективного керування інформацією про клієнтів."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4584,7 +4584,7 @@
           "message": "Спрацьовує під час оновлення наявного об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4596,7 +4596,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Custom Object Created or Updated",
+          "source": "Custom object created or updated",
           "message": "Настроюваний об'єкт створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4608,7 +4608,7 @@
           "message": "Використовуйте цей тригер для фіксації змін у настроюваних об'єктах у HubSpot, гарантуючи, що оновлення настроюваних структур даних обробляються негайно для автоматизації чи інтеграції."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4648,7 +4648,7 @@
           "message": "Виберіть настроюваний об'єкт, який потрібно відстежувати на наявність нових або оновлених записів."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4660,7 +4660,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Deal Created or Updated",
+          "source": "Deal created or updated",
           "message": "Угоду створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4672,7 +4672,7 @@
           "message": "Цей тригер спрацьовує під час створення або змінення угоди в HubSpot, дозволяючи відстежувати потенційні продажі та інтегрувати їх із робочими процесами автоматизації воронки продажів."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4700,7 +4700,7 @@
           "message": "Спрацьовує під час оновлення наявного об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4712,7 +4712,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Lead Created or Updated",
+          "source": "Lead created or updated",
           "message": "Лід створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4724,7 +4724,7 @@
           "message": "Відстежуйте нові ліди та оновлення наявних лідів у HubSpot за допомогою цього тригера, забезпечуючи ефективне керування лідами та процеси подальшої взаємодії."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4752,7 +4752,7 @@
           "message": "Спрацьовує під час оновлення наявного об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4764,7 +4764,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Product Created or Updated",
+          "source": "Product created or updated",
           "message": "Товар створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4776,7 +4776,7 @@
           "message": "Цей тригер сповіщає вас про будь-які нові або оновлені товари у вашому обліковому записі HubSpot, забезпечуючи синхронізацію даних про товари з вашими робочими процесами та зовнішніми системами."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4804,7 +4804,7 @@
           "message": "Спрацьовує під час оновлення наявного об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4816,7 +4816,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.display_name": {
-          "source": "Ticket Created or Updated",
+          "source": "Ticket created or updated",
           "message": "Тікет створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.short_desc": {
@@ -4828,7 +4828,7 @@
           "message": "Автоматично запускає робочі процеси під час створення або оновлення тікета підтримки в HubSpot; ідеально підходить для керування операціями підтримки клієнтів і оптимізації вирішення проблем."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4856,7 +4856,7 @@
           "message": "Спрацьовує під час оновлення наявного об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4868,7 +4868,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "User Created or Updated",
+          "source": "User created or updated",
           "message": "Користувача створено або оновлено"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4880,7 +4880,7 @@
           "message": "Цей тригер спрацьовує під час створення або оновлення користувача в HubSpot, допомагаючи відстежувати облікові записи користувачів і підтримувати актуальний контроль доступу для вашої команди."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Критерії активації"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4908,7 +4908,7 @@
           "message": "Спрацьовує під час оновлення наявного об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Додаткові властивості"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4920,7 +4920,7 @@
           "message": "Виберіть додаткові властивості для додавання до повернутих даних об'єкта"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.display_name": {
-          "source": "Form Submitted",
+          "source": "Form submitted",
           "message": "Форму надіслано"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.short_desc": {

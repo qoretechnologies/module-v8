@@ -153,7 +153,7 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       page_name: {
         type: 'string',
-        display_name: 'Page Name',
+        display_name: 'Page name',
         short_desc: 'The name of the page',
       },
       post_id: {
@@ -163,27 +163,27 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       parent_comment_id: {
         type: 'string',
-        display_name: 'Parent Comment ID',
+        display_name: 'Parent comment ID',
         short_desc: 'The ID of the comment being replied to',
       },
       parent_comment_message: {
         type: 'string',
-        display_name: 'Parent Comment Message',
+        display_name: 'Parent comment message',
         short_desc: 'The text of the comment being replied to',
       },
       parent_comment_author: {
         type: 'string',
-        display_name: 'Parent Comment Author',
+        display_name: 'Parent comment author',
         short_desc: 'The author of the comment being replied to',
       },
       parent_comment_replies_before: {
         type: 'integer',
-        display_name: 'Parent Comment Replies Before',
+        display_name: 'Parent comment replies before',
         short_desc: 'Number of replies before this reply was added',
       },
       parent_comment_replies_after: {
         type: 'integer',
-        display_name: 'Parent Comment Replies After',
+        display_name: 'Parent comment replies after',
         short_desc: 'Number of replies after this reply was added',
       },
       reply_id: {
@@ -193,7 +193,7 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       reply_message: {
         type: 'string',
-        display_name: 'Reply Message',
+        display_name: 'Reply message',
         short_desc: 'The text content of the reply',
       },
       reply_details: {
@@ -223,7 +223,7 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
-        display_name: 'Reply Details',
+        display_name: 'Reply details',
         short_desc: 'Complete details of the created reply',
       },
       reply_url: {
@@ -233,12 +233,12 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       created_at: {
         type: 'string',
-        display_name: 'Created At',
+        display_name: 'Created at',
         short_desc: 'When the reply was created',
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When this response was generated',
       },
     },

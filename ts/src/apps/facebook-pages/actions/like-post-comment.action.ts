@@ -170,7 +170,7 @@ const likeComment = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       page_name: {
         type: 'string',
-        display_name: 'Page Name',
+        display_name: 'Page name',
         short_desc: 'The name of the page',
       },
       post_id: {
@@ -185,54 +185,54 @@ const likeComment = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       comment_message: {
         type: 'string',
-        display_name: 'Comment Message',
+        display_name: 'Comment message',
         short_desc: 'The text content of the comment',
       },
       comment_author: {
         type: 'string',
-        display_name: 'Comment Author',
+        display_name: 'Comment author',
         short_desc: 'The name of the comment author',
       },
       comment_created_time: {
         type: 'string',
-        display_name: 'Comment Created Time',
+        display_name: 'Comment created time',
         short_desc: 'When the comment was created',
       },
       like_count_before: {
         type: 'integer',
-        display_name: 'Like Count Before',
+        display_name: 'Like count before',
         short_desc: 'Number of likes before the action',
       },
       like_count_after: {
         type: 'integer',
-        display_name: 'Like Count After',
+        display_name: 'Like count after',
         short_desc: 'Number of likes after the action',
       },
       user_likes: {
         type: 'bool',
-        display_name: 'User Likes',
+        display_name: 'User likes',
         short_desc: 'Whether the current user likes this comment after the action',
       },
       already_liked: {
         type: 'bool',
-        display_name: 'Already Liked',
+        display_name: 'Already liked',
         short_desc: 'Whether the comment was already liked (when trying to like)',
       },
       already_unliked: {
         type: 'bool',
-        display_name: 'Already Unliked',
+        display_name: 'Already unliked',
         short_desc: 'Whether the comment was already not liked (when trying to unlike)',
       },
       response_data: {
         type: {
           type: 'hash',
         },
-        display_name: 'Response Data',
+        display_name: 'Response data',
         short_desc: 'Raw response data from Facebook API',
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When this response was generated',
       },
     },

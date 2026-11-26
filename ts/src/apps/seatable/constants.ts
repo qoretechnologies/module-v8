@@ -14,14 +14,14 @@ export const SEATABLE_APP_LOGO =
 export const SEATABLE_CONN_OPTIONS = {
   url: {
     type: 'string',
-    display_name: 'SeaTable Server URL',
+    display_name: 'SeaTable server URL',
     short_desc: 'The URL of the SeaTable server to connect to.',
     desc: 'Please enter your SeaTable server URL. For SeaTable Cloud, use https://cloud.seatable.io. For self-hosted instances, use your custom URL.',
     default_value: 'https://cloud.seatable.io',
   },
   token: {
     type: 'string',
-    display_name: 'SeaTable API Token',
+    display_name: 'SeaTable API token',
     short_desc: 'Please enter your SeaTable API token.',
     desc: 'The API token grants access to a specific base. Create one in SeaTable by right-clicking a base and selecting "API Token".',
     sensitive: true,

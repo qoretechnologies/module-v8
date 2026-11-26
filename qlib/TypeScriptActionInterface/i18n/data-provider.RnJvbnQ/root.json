@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
-          "message": "List Accounts"
+          "source": "List accounts",
+          "message": "List accounts"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
           "source": "Retrieve a list of accounts",
@@ -364,8 +364,8 @@
           "message": "The maximum number of account records to return. Default is 50. Use pagination for larger datasets."
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
-          "message": "Get Account"
+          "source": "Get account",
+          "message": "Get account"
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
           "source": "Retrieve a single account by ID",
@@ -388,8 +388,8 @@
           "message": "Select or enter the ID of the account you want to retrieve. Account IDs start with \"acc_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
-          "source": "Create Account",
-          "message": "Create Account"
+          "source": "Create account",
+          "message": "Create account"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
           "source": "Create a new account",
@@ -448,8 +448,8 @@
           "message": "An optional external ID to link this account to a record in another system, such as a CRM or billing platform."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
           "source": "Custom field values",
@@ -460,8 +460,8 @@
           "message": "An object containing custom field values for the account. The keys should match your configured custom field names."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
-          "source": "Update Account",
-          "message": "Update Account"
+          "source": "Update account",
+          "message": "Update account"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
           "source": "Update an existing account",
@@ -532,8 +532,8 @@
           "message": "Update the external system identifier for this account."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
           "source": "Updated custom field values",
@@ -544,8 +544,8 @@
           "message": "Update custom field values for the account."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
-          "source": "Delete Account",
-          "message": "Delete Account"
+          "source": "Delete account",
+          "message": "Delete account"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
           "source": "Delete an account",
@@ -568,8 +568,8 @@
           "message": "Select or enter the ID of the account you want to delete."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
-          "source": "List Account Contacts",
-          "message": "List Account Contacts"
+          "source": "List account contacts",
+          "message": "List account contacts"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
           "source": "List contacts associated with an account",
@@ -604,8 +604,8 @@
           "message": "The maximum number of contact records to return. Default is 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
-          "source": "Add Contact to Account",
-          "message": "Add Contact to Account"
+          "source": "Add contact to account",
+          "message": "Add contact to account"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
           "source": "Add contacts to an account",
@@ -640,8 +640,8 @@
           "message": "Select one or more contacts to add to the account. Contact IDs start with \"crd_\"."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
-          "source": "Remove Contact from Account",
-          "message": "Remove Contact from Account"
+          "source": "Remove contact from account",
+          "message": "Remove contact from account"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
           "source": "Remove contacts from an account",
@@ -676,8 +676,8 @@
           "message": "Select one or more contacts to remove from the account."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
-          "message": "List Contacts"
+          "source": "List contacts",
+          "message": "List contacts"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
           "source": "Retrieve a list of contacts",
@@ -688,8 +688,8 @@
           "message": "Retrieve a list of all contacts in your Front workspace. Contacts represent the people you communicate with. Results can be sorted by creation or update date."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
-          "message": "Sort By"
+          "source": "Sort by",
+          "message": "Sort by"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
           "source": "Field to sort by",
@@ -708,8 +708,8 @@
           "message": "Updated At"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
-          "message": "Sort Order"
+          "source": "Sort order",
+          "message": "Sort order"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
           "source": "Sort order direction",
@@ -740,8 +740,8 @@
           "message": "The maximum number of contact records to return. Default is 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
-          "message": "Get Contact"
+          "source": "Get contact",
+          "message": "Get contact"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
           "source": "Retrieve a single contact by ID",
@@ -764,8 +764,8 @@
           "message": "Select or enter the ID of the contact you want to retrieve. Contact IDs start with \"crd_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
-          "message": "Create Contact"
+          "source": "Create contact",
+          "message": "Create contact"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
           "source": "Create a new contact",
@@ -876,8 +876,8 @@
           "message": "A list of URLs associated with this contact, such as social media profiles or company websites."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
-          "source": "Group Names",
-          "message": "Group Names"
+          "source": "Group names",
+          "message": "Group names"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
           "source": "Groups to add the contact to",
@@ -888,8 +888,8 @@
           "message": "A list of group names to add the contact to. Groups help organize contacts into categories."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
           "source": "Custom field values",
@@ -900,8 +900,8 @@
           "message": "An object containing custom field values for the contact. The keys should match your configured custom field names."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
-          "message": "Update Contact"
+          "source": "Update contact",
+          "message": "Update contact"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
           "source": "Update an existing contact",
@@ -960,8 +960,8 @@
           "message": "A list of URLs associated with this contact, such as social media profiles or company websites."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
           "source": "Updated custom field values",
@@ -972,8 +972,8 @@
           "message": "Update custom field values for the contact."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
-          "message": "Delete Contact"
+          "source": "Delete contact",
+          "message": "Delete contact"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
           "source": "Delete a contact",
@@ -996,8 +996,8 @@
           "message": "Select or enter the ID of the contact you want to delete."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "List Contact Conversations",
-          "message": "List Contact Conversations"
+          "source": "List contact conversations",
+          "message": "List contact conversations"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
           "source": "List conversations for a contact",
@@ -1032,8 +1032,8 @@
           "message": "The maximum number of conversation records to return. Default is 50."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
-          "source": "List Contact Notes",
-          "message": "List Contact Notes"
+          "source": "List contact notes",
+          "message": "List contact notes"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
           "source": "List notes for a contact",
@@ -1068,8 +1068,8 @@
           "message": "The maximum number of note records to return. Default is 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "Add Note to Contact",
-          "message": "Add Note to Contact"
+          "source": "Add note to contact",
+          "message": "Add note to contact"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
           "source": "Add a note to a contact",
@@ -1092,8 +1092,8 @@
           "message": "Select or enter the ID of the contact you want to add a note to."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
-          "source": "Note Body",
-          "message": "Note Body"
+          "source": "Note body",
+          "message": "Note body"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
           "source": "The content of the note",
@@ -1116,8 +1116,8 @@
           "message": "Select the teammate who will be recorded as the author of this note. This is a required field."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
-          "message": "List Contact Lists"
+          "source": "List contact lists",
+          "message": "List contact lists"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
           "source": "Retrieve all contact lists",
@@ -1140,8 +1140,8 @@
           "message": "The maximum number of contact list records to return. Default is 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
-          "message": "Create Contact List"
+          "source": "Create contact list",
+          "message": "Create contact list"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
           "source": "Create a new contact list",
@@ -1176,8 +1176,8 @@
           "message": "An optional description explaining the purpose of the contact list or the criteria for contacts in it."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Delete Contact List",
-          "message": "Delete Contact List"
+          "source": "Delete contact list",
+          "message": "Delete contact list"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
           "source": "Delete a contact list",
@@ -1188,8 +1188,8 @@
           "message": "Delete a contact list from Front. This removes the list but does not delete the contacts that were in it. The contacts will remain in your workspace."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
-          "message": "Contact List"
+          "source": "Contact list",
+          "message": "Contact list"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
           "source": "The contact list to delete",
@@ -1200,8 +1200,8 @@
           "message": "Select or enter the ID of the contact list you want to delete."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
-          "source": "List Contacts in Contact List",
-          "message": "List Contacts in Contact List"
+          "source": "List contacts in contact list",
+          "message": "List contacts in contact list"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
           "source": "List contacts in a specific contact list",
@@ -1212,8 +1212,8 @@
           "message": "Retrieve all contacts that belong to a specific contact list. This helps you see which contacts are included in a particular list or segment."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
-          "message": "Contact List"
+          "source": "Contact list",
+          "message": "Contact list"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
           "source": "The contact list to retrieve contacts from",
@@ -1236,8 +1236,8 @@
           "message": "The maximum number of contact records to return. Default is 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Add Contacts to Contact List",
-          "message": "Add Contacts to Contact List"
+          "source": "Add contacts to contact list",
+          "message": "Add contacts to contact list"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
           "source": "Add contacts to a contact list",
@@ -1248,8 +1248,8 @@
           "message": "Add one or more contacts to a contact list in Front. This helps you organize contacts into logical groups for easier management and targeted communication."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
-          "message": "Contact List"
+          "source": "Contact list",
+          "message": "Contact list"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
           "source": "The contact list to add contacts to",
@@ -1272,8 +1272,8 @@
           "message": "Select one or more contacts to add to the contact list."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
-          "source": "Remove Contacts from Contact List",
-          "message": "Remove Contacts from Contact List"
+          "source": "Remove contacts from contact list",
+          "message": "Remove contacts from contact list"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
           "source": "Remove contacts from a contact list",
@@ -1284,8 +1284,8 @@
           "message": "Remove one or more contacts from a contact list in Front. This removes the contacts from the list but does not delete the contacts themselves."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
-          "message": "Contact List"
+          "source": "Contact list",
+          "message": "Contact list"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
           "source": "The contact list to remove contacts from",
@@ -1308,8 +1308,8 @@
           "message": "Select one or more contacts to remove from the contact list."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
-          "message": "List Conversations"
+          "source": "List conversations",
+          "message": "List conversations"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
           "source": "Retrieve a list of conversations",
@@ -1372,8 +1372,8 @@
           "message": "The maximum number of conversation records to return. Default is 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
-          "message": "Get Conversation"
+          "source": "Get conversation",
+          "message": "Get conversation"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
           "source": "Retrieve a single conversation by ID",
@@ -1396,8 +1396,8 @@
           "message": "Select or enter the ID of the conversation you want to retrieve. Conversation IDs start with \"cnv_\"."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "Search Conversations",
-          "message": "Search Conversations"
+          "source": "Search conversations",
+          "message": "Search conversations"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
           "source": "Search for conversations",
@@ -1408,8 +1408,8 @@
           "message": "Search for conversations in Front using a search query. Returns matching conversations in descending order by last activity along with a count of total matches."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
-          "message": "Search Query"
+          "source": "Search query",
+          "message": "Search query"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
           "source": "The search query",
@@ -1432,8 +1432,8 @@
           "message": "The maximum number of conversation records to return. Default is 25."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
-          "message": "Update Conversation"
+          "source": "Update conversation",
+          "message": "Update conversation"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
           "source": "Update a conversation",
@@ -1496,8 +1496,8 @@
           "message": "Move the conversation to a different inbox."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
-          "message": "Custom Fields"
+          "source": "Custom fields",
+          "message": "Custom fields"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
           "source": "Updated custom field values",
@@ -1508,8 +1508,8 @@
           "message": "Update custom field values for the conversation."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
-          "source": "Update Conversation Assignee",
-          "message": "Update Conversation Assignee"
+          "source": "Update conversation assignee",
+          "message": "Update conversation assignee"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
           "source": "Assign or unassign a conversation",
@@ -1544,8 +1544,8 @@
           "message": "Select a teammate to assign the conversation to. Leave empty to unassign the conversation."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Add Tag to Conversation",
-          "message": "Add Tag to Conversation"
+          "source": "Add tag to conversation",
+          "message": "Add tag to conversation"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
           "source": "Add tags to a conversation",
@@ -1580,8 +1580,8 @@
           "message": "Select one or more tags to add to the conversation."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Remove Tag from Conversation",
-          "message": "Remove Tag from Conversation"
+          "source": "Remove tag from conversation",
+          "message": "Remove tag from conversation"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
           "source": "Remove tags from a conversation",
@@ -1616,8 +1616,8 @@
           "message": "Select one or more tags to remove from the conversation."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
-          "source": "Add Conversation Followers",
-          "message": "Add Conversation Followers"
+          "source": "Add conversation followers",
+          "message": "Add conversation followers"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
           "source": "Add followers to a conversation",
@@ -1652,8 +1652,8 @@
           "message": "Select one or more teammates to add as followers to the conversation."
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
-          "message": "Get Message"
+          "source": "Get message",
+          "message": "Get message"
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
           "source": "Retrieve a single message by ID",
@@ -1676,8 +1676,8 @@
           "message": "Enter the ID of the message you want to retrieve. Message IDs start with \"msg_\"."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
-          "source": "List Conversation Messages",
-          "message": "List Conversation Messages"
+          "source": "List conversation messages",
+          "message": "List conversation messages"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
           "source": "List messages in a conversation",
@@ -1712,8 +1712,8 @@
           "message": "The maximum number of message records to return. Default is 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
-          "source": "Reply to Conversation",
-          "message": "Reply to Conversation"
+          "source": "Reply to conversation",
+          "message": "Reply to conversation"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
           "source": "Send a reply message to a conversation",
@@ -1736,8 +1736,8 @@
           "message": "Select or enter the ID of the conversation you want to reply to."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
-          "source": "Message Body",
-          "message": "Message Body"
+          "source": "Message body",
+          "message": "Message body"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
           "source": "The content of the reply",
@@ -1796,8 +1796,8 @@
           "message": "A list of email addresses to BCC on the reply."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
-          "source": "Save as Draft",
-          "message": "Save as Draft"
+          "source": "Save as draft",
+          "message": "Save as draft"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
           "source": "Save as draft instead of sending",
@@ -1808,8 +1808,8 @@
           "message": "If true, the message will be saved as a draft instead of being sent immediately. Default is false."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
-          "source": "Add Comment to Conversation",
-          "message": "Add Comment to Conversation"
+          "source": "Add comment to conversation",
+          "message": "Add comment to conversation"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
           "source": "Add an internal comment to a conversation",
@@ -1832,8 +1832,8 @@
           "message": "Select or enter the ID of the conversation you want to add a comment to."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
-          "source": "Comment Body",
-          "message": "Comment Body"
+          "source": "Comment body",
+          "message": "Comment body"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
           "source": "The content of the comment",
@@ -1844,8 +1844,8 @@
           "message": "The text content of the internal comment. This will be visible to all teammates who can access the conversation."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
-          "source": "List Conversation Comments",
-          "message": "List Conversation Comments"
+          "source": "List conversation comments",
+          "message": "List conversation comments"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
           "source": "List comments in a conversation",
@@ -1880,8 +1880,8 @@
           "message": "The maximum number of comment records to return. Default is 50."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
-          "message": "New Conversation"
+          "source": "New conversation",
+          "message": "New conversation"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
           "source": "Triggers when a new conversation is created",
@@ -1932,8 +1932,8 @@
           "message": "Spam"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
-          "message": "New Contact"
+          "source": "New contact",
+          "message": "New contact"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
           "source": "Triggers when a new contact is created",
@@ -1944,8 +1944,8 @@
           "message": "This trigger fires whenever a new contact is created in Front. Use this to automate workflows when new contacts are added to your workspace."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "New Contact Note",
-          "message": "New Contact Note"
+          "source": "New contact note",
+          "message": "New contact note"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
           "source": "Triggers when a new note is added to a contact",
@@ -1968,8 +1968,8 @@
           "message": "Select or enter the ID of the contact you want to monitor for new notes. The trigger will fire whenever a new note is added to this contact."
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
-          "source": "New Comment",
-          "message": "New Comment"
+          "source": "New comment",
+          "message": "New comment"
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {
           "source": "Triggers when a new comment is added to a conversation",

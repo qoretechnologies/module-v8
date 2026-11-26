@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
-          "message": "Send Email"
+          "source": "Send email",
+          "message": "Send email"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.short_desc": {
           "source": "Send an email through Amazon SES with full customization options.",
@@ -352,8 +352,8 @@
           "message": "Send emails with support for HTML and text content, CC/BCC recipients, reply-to addresses, custom tags for tracking, and advanced delivery options. Includes comprehensive validation and error handling for reliable email delivery."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where your SES service is configured.",
@@ -364,8 +364,8 @@
           "message": "Select the AWS region where your Amazon SES service is set up. Different regions may have different verified identities and sending limits."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.display_name": {
-          "source": "From Email Address",
-          "message": "From Email Address"
+          "source": "From email address",
+          "message": "From email address"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.short_desc": {
           "source": "The verified email address to send from.",
@@ -376,8 +376,8 @@
           "message": "The sender email address that must be verified in your Amazon SES account. This address will appear in the From field of the email."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.display_name": {
-          "source": "To Email Addresses",
-          "message": "To Email Addresses"
+          "source": "To email addresses",
+          "message": "To email addresses"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.short_desc": {
           "source": "Comma-separated list of recipient email addresses.",
@@ -388,8 +388,8 @@
           "message": "One or more email addresses to send the message to. Multiple addresses should be separated by commas. All addresses must be valid email formats."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.display_name": {
-          "source": "CC Email Addresses",
-          "message": "CC Email Addresses"
+          "source": "CC email addresses",
+          "message": "CC email addresses"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.short_desc": {
           "source": "Comma-separated list of CC recipient email addresses.",
@@ -400,8 +400,8 @@
           "message": "Optional carbon copy recipients who will receive a copy of the email. Multiple addresses should be separated by commas."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.display_name": {
-          "source": "BCC Email Addresses",
-          "message": "BCC Email Addresses"
+          "source": "BCC email addresses",
+          "message": "BCC email addresses"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.short_desc": {
           "source": "Comma-separated list of BCC recipient email addresses.",
@@ -412,8 +412,8 @@
           "message": "Optional blind carbon copy recipients who will receive a copy without other recipients knowing. Multiple addresses should be separated by commas."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.display_name": {
-          "source": "Reply-To Addresses",
-          "message": "Reply-To Addresses"
+          "source": "Reply-to addresses",
+          "message": "Reply-to addresses"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.short_desc": {
           "source": "Comma-separated list of reply-to email addresses.",
@@ -424,8 +424,8 @@
           "message": "Optional email addresses that replies should be sent to instead of the from address. Multiple addresses should be separated by commas."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
-          "message": "Email Subject"
+          "source": "Email subject",
+          "message": "Email subject"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
           "source": "The subject line of the email.",
@@ -436,8 +436,8 @@
           "message": "The subject line that will appear in the recipient's email client. Should be descriptive and engaging."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.display_name": {
-          "source": "Text Body",
-          "message": "Text Body"
+          "source": "Text body",
+          "message": "Text body"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.short_desc": {
           "source": "Plain text version of the email content.",
@@ -448,8 +448,8 @@
           "message": "The plain text content of the email. Either text body or HTML body must be provided. Text version ensures compatibility with all email clients."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.display_name": {
-          "source": "HTML Body",
-          "message": "HTML Body"
+          "source": "HTML body",
+          "message": "HTML body"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.short_desc": {
           "source": "HTML version of the email content.",
@@ -460,8 +460,8 @@
           "message": "The HTML content of the email with formatting, links, and styling. Either text body or HTML body must be provided."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.display_name": {
-          "source": "Character Encoding",
-          "message": "Character Encoding"
+          "source": "Character encoding",
+          "message": "Character encoding"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.short_desc": {
           "source": "Character encoding for the email content.",
@@ -484,8 +484,8 @@
           "message": "US-ASCII"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.display_name": {
-          "source": "Return Path",
-          "message": "Return Path"
+          "source": "Return path",
+          "message": "Return path"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.short_desc": {
           "source": "Email address for bounce notifications.",
@@ -496,8 +496,8 @@
           "message": "Optional email address where bounce notifications will be sent. Must be a verified address in your SES account."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.display_name": {
-          "source": "Configuration Set",
-          "message": "Configuration Set"
+          "source": "Configuration set",
+          "message": "Configuration set"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.short_desc": {
           "source": "SES configuration set name for tracking.",
@@ -508,8 +508,8 @@
           "message": "Optional configuration set name to use for this email. Configuration sets allow you to publish email sending events to other AWS services."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.display_name": {
-          "source": "Email Tags",
-          "message": "Email Tags"
+          "source": "Email tags",
+          "message": "Email tags"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.short_desc": {
           "source": "Key-value pairs for email categorization and tracking.",
@@ -520,8 +520,8 @@
           "message": "Optional tags to categorize and track your emails. Tags can be used for reporting and analytics in your SES dashboard."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
-          "message": "Tag Name"
+          "source": "Tag name",
+          "message": "Tag name"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.short_desc": {
           "source": "The name of the tag.",
@@ -532,8 +532,8 @@
           "message": "A descriptive name for the tag that will be used for categorization."
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.display_name": {
-          "source": "Tag Value",
-          "message": "Tag Value"
+          "source": "Tag value",
+          "message": "Tag value"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.short_desc": {
           "source": "The value of the tag.",
@@ -544,8 +544,8 @@
           "message": "The value associated with this tag name."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.display_name": {
-          "source": "Verify Email Address",
-          "message": "Verify Email Address"
+          "source": "Verify email address",
+          "message": "Verify email address"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.short_desc": {
           "source": "Verify an email address for sending through Amazon SES.",
@@ -556,8 +556,8 @@
           "message": "Initiate the verification process for an email address or domain. Amazon SES will send a verification email that must be clicked to complete the verification process."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where your SES service is configured.",
@@ -568,8 +568,8 @@
           "message": "Select the AWS region where you want to verify the email address. The verified identity will be available in this region."
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.display_name": {
-          "source": "Email Address to Verify",
-          "message": "Email Address to Verify"
+          "source": "Email address to verify",
+          "message": "Email address to verify"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.short_desc": {
           "source": "The email address you want to verify for sending.",
@@ -580,8 +580,8 @@
           "message": "The email address that you want to verify as a sending identity. Amazon SES will send a verification email to this address."
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.display_name": {
-          "source": "Get Send Statistics",
-          "message": "Get Send Statistics"
+          "source": "Get send statistics",
+          "message": "Get send statistics"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.short_desc": {
           "source": "Retrieve detailed sending statistics from Amazon SES.",
@@ -592,8 +592,8 @@
           "message": "Get comprehensive sending statistics including delivery attempts, bounces, complaints, and rejection rates. Data is provided in time-series format with calculated percentages and summaries."
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.short_desc": {
           "source": "The AWS region to retrieve statistics from.",
@@ -604,8 +604,8 @@
           "message": "Select the AWS region where you want to retrieve sending statistics. Statistics are region-specific."
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.display_name": {
-          "source": "New Verified Identity",
-          "message": "New Verified Identity"
+          "source": "New verified identity",
+          "message": "New verified identity"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.short_desc": {
           "source": "Triggers when a new email address or domain is verified.",
@@ -616,8 +616,8 @@
           "message": "Monitors for newly verified email addresses and domains in your SES account. Triggers when the verification process is completed for new sending identities."
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.short_desc": {
           "source": "The AWS region to monitor for new verified identities.",

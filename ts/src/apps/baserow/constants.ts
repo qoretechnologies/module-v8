@@ -21,7 +21,7 @@ export const BASEROW_CONN_OPTIONS = {
   },
   token: {
     type: 'string',
-    display_name: 'Baserow API Token',
+    display_name: 'Baserow API token',
     short_desc: 'Please enter your Baserow API token.',
     desc: `Can be found by clicking on your account in the top left corner -> Settings -> API tokens.`,
   },

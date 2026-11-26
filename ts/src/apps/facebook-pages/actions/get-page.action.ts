@@ -225,7 +225,7 @@ const getPage = QoreAppCreator.createLocalizedAction<typeof options>({
             unseen_message_count: { type: 'integer' },
           },
         },
-        display_name: 'Page Data',
+        display_name: 'Page data',
         short_desc: 'The complete page data with requested fields',
       },
       fields_requested: {
@@ -233,12 +233,12 @@ const getPage = QoreAppCreator.createLocalizedAction<typeof options>({
           type: 'list',
           element_type: 'string',
         },
-        display_name: 'Fields Requested',
+        display_name: 'Fields requested',
         short_desc: 'The fields that were requested for the page',
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When this response was generated',
       },
     },

@@ -7,13 +7,13 @@ const AmazonSNSAppEn = {
     'The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.',
   triggers: {
     new_message: {
-      displayName: 'New Message',
+      displayName: 'New message',
       shortDesc: 'Triggers when a new message is published to an SNS topic.',
       longDesc:
         'This trigger subscribes to an Amazon SNS topic and fires when a new message is published. It automatically handles subscription management and provides the complete message payload.',
       options: {
         region: {
-          displayName: 'AWS Region',
+          displayName: 'AWS region',
           shortDesc: 'The AWS region where the SNS topic is located.',
           longDesc:
             'Specify the AWS region where your SNS topic is hosted. If not provided, defaults to us-east-1.',
@@ -27,7 +27,7 @@ const AmazonSNSAppEn = {
       },
     },
     new_topic: {
-      displayName: 'New Topic',
+      displayName: 'New topic',
       shortDesc: 'Triggers when a new SNS topic is created',
       longDesc:
         'Monitors your Amazon SNS service for newly created topics and triggers when a new topic is detected in your specified region.',
@@ -43,13 +43,13 @@ const AmazonSNSAppEn = {
   },
   actions: {
     create_topic: {
-      displayName: 'Create Topic',
+      displayName: 'Create topic',
       shortDesc: 'Create a new SNS topic',
       longDesc:
         'Creates a new Amazon SNS topic with optional configuration for FIFO topics, encryption, and delivery policies.',
       options: {
         topic_name: {
-          displayName: 'Topic Name',
+          displayName: 'Topic name',
           shortDesc: 'Name for the new topic',
           longDesc:
             'The name for the SNS topic. For FIFO topics, the name must end with .fifo suffix.',
@@ -61,13 +61,13 @@ const AmazonSNSAppEn = {
             'The AWS region where the topic will be created. Defaults to us-east-1 if not specified.',
         },
         display_name: {
-          displayName: 'Display Name',
+          displayName: 'Display name',
           shortDesc: 'Human-readable name for the topic',
           longDesc:
             'A human-readable name for the topic that appears in email notifications and other contexts.',
         },
         delivery_policy: {
-          displayName: 'Delivery Policy',
+          displayName: 'Delivery policy',
           shortDesc: 'JSON delivery policy for the topic',
           longDesc:
             'A JSON string that defines the delivery policy for the topic, controlling retry behavior and delivery settings.',
@@ -79,19 +79,19 @@ const AmazonSNSAppEn = {
             'A JSON string that defines the access policy for the topic, controlling who can publish to or subscribe to the topic.',
         },
         kms_master_key_id: {
-          displayName: 'KMS Master Key ID',
+          displayName: 'KMS master key ID',
           shortDesc: 'KMS key for topic encryption',
           longDesc:
             'The ID of an AWS KMS key to use for encrypting messages published to this topic.',
         },
         fifo_topic: {
-          displayName: 'FIFO Topic',
+          displayName: 'FIFO topic',
           shortDesc: 'Create as FIFO topic',
           longDesc:
             'Whether to create a FIFO (First-In-First-Out) topic that preserves message ordering and prevents duplicates.',
         },
         content_based_deduplication: {
-          displayName: 'Content-Based Deduplication',
+          displayName: 'Content-based deduplication',
           shortDesc: 'Enable content-based deduplication',
           longDesc:
             'Whether to enable content-based deduplication for FIFO topics, which prevents duplicate messages based on message content.',
@@ -99,7 +99,7 @@ const AmazonSNSAppEn = {
       },
     },
     create_message: {
-      displayName: 'Create Message',
+      displayName: 'Create message',
       shortDesc: 'Send a message to an SNS topic',
       longDesc:
         'Publishes a text message to an Amazon SNS topic, which will be delivered to all subscribers of the topic.',
@@ -127,19 +127,19 @@ const AmazonSNSAppEn = {
             'An optional subject line for the message, used primarily for email notifications.',
         },
         message_attributes: {
-          displayName: 'Message Attributes',
+          displayName: 'Message attributes',
           shortDesc: 'Additional message metadata',
           longDesc:
             'A hash of additional attributes to include with the message for filtering and routing purposes.',
         },
         message_deduplication_id: {
-          displayName: 'Message Deduplication ID',
+          displayName: 'Message deduplication ID',
           shortDesc: 'Deduplication ID for FIFO topics',
           longDesc:
             'A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.',
         },
         message_group_id: {
-          displayName: 'Message Group ID',
+          displayName: 'Message group ID',
           shortDesc: 'Group ID for FIFO topics',
           longDesc:
             'A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.',
@@ -147,7 +147,7 @@ const AmazonSNSAppEn = {
       },
     },
     create_json_message: {
-      displayName: 'Create JSON Message',
+      displayName: 'Create JSON message',
       shortDesc: 'Send a structured JSON message to an SNS topic',
       longDesc:
         'Publishes a JSON-structured message to an Amazon SNS topic, allowing for rich content and structured data delivery to subscribers.',
@@ -164,7 +164,7 @@ const AmazonSNSAppEn = {
             'The Amazon Resource Name (ARN) of the SNS topic where the JSON message will be published.',
         },
         json_message: {
-          displayName: 'JSON Message',
+          displayName: 'JSON message',
           shortDesc: 'JSON object to send',
           longDesc:
             'The JSON object containing the structured data to be sent to all topic subscribers.',
@@ -176,19 +176,19 @@ const AmazonSNSAppEn = {
             'An optional subject line for the message, used primarily for email notifications.',
         },
         message_attributes: {
-          displayName: 'Message Attributes',
+          displayName: 'Message attributes',
           shortDesc: 'Additional message metadata',
           longDesc:
             'A hash of additional attributes to include with the message for filtering and routing purposes.',
         },
         message_deduplication_id: {
-          displayName: 'Message Deduplication ID',
+          displayName: 'Message deduplication ID',
           shortDesc: 'Deduplication ID for FIFO topics',
           longDesc:
             'A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.',
         },
         message_group_id: {
-          displayName: 'Message Group ID',
+          displayName: 'Message group ID',
           shortDesc: 'Group ID for FIFO topics',
           longDesc:
             'A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.',
@@ -196,7 +196,7 @@ const AmazonSNSAppEn = {
       },
     },
     list_topics: {
-      displayName: 'List Topics',
+      displayName: 'List topics',
       shortDesc: 'List all SNS topics',
       longDesc:
         'Retrieves a list of all Amazon SNS topics in the specified region, optionally including detailed attributes for each topic.',
@@ -207,13 +207,13 @@ const AmazonSNSAppEn = {
           longDesc: 'The AWS region from which to retrieve the list of SNS topics.',
         },
         include_attributes: {
-          displayName: 'Include Attributes',
+          displayName: 'Include attributes',
           shortDesc: 'Include detailed topic attributes',
           longDesc:
             'Whether to include detailed attributes for each topic, such as subscription counts and policies.',
         },
         next_token: {
-          displayName: 'Next Token',
+          displayName: 'Next token',
           shortDesc: 'Pagination token',
           longDesc:
             'A token for paginating through large lists of topics. Use the token returned from a previous call.',
@@ -221,7 +221,7 @@ const AmazonSNSAppEn = {
       },
     },
     get_topic: {
-      displayName: 'Get Topic',
+      displayName: 'Get topic',
       shortDesc: 'Get details of a specific SNS topic',
       longDesc:
         'Retrieves detailed information about a specific Amazon SNS topic, including attributes, subscription statistics, and configuration details.',
@@ -239,7 +239,7 @@ const AmazonSNSAppEn = {
       },
     },
     add_subscriber: {
-      displayName: 'Add Subscriber',
+      displayName: 'Add subscriber',
       shortDesc: 'Add a subscriber to an SNS topic',
       longDesc:
         'Creates a new subscription to an Amazon SNS topic, allowing the specified endpoint to receive messages published to the topic.',

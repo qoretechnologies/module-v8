@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.display_name": {
-          "source": "Create Topic",
+          "source": "Create topic",
           "message": "建立主題"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.short_desc": {
@@ -352,7 +352,7 @@
           "message": "建立新的 Amazon SNS 主題，並提供 FIFO 主題、加密與交付策略的選填設定。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.display_name": {
-          "source": "Topic Name",
+          "source": "Topic name",
           "message": "主題名稱"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.short_desc": {
@@ -376,7 +376,7 @@
           "message": "將要在其中建立主題的 AWS 區域。若未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.display_name": {
-          "source": "Display Name",
+          "source": "Display name",
           "message": "顯示名稱"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.short_desc": {
@@ -388,7 +388,7 @@
           "message": "主題的易讀名稱，會顯示在電子郵件通知與其他情境中。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.display_name": {
-          "source": "Delivery Policy",
+          "source": "Delivery policy",
           "message": "交付策略"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.short_desc": {
@@ -412,7 +412,7 @@
           "message": "定義主題存取策略的 JSON 字串，用於控制誰可以發布至此主題或訂閱此主題。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
+          "source": "KMS master key ID",
           "message": "KMS 主金鑰 ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "用於加密發布至此主題之訊息的 AWS KMS 金鑰 ID。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.display_name": {
-          "source": "FIFO Topic",
+          "source": "FIFO topic",
           "message": "FIFO 主題"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.short_desc": {
@@ -436,7 +436,7 @@
           "message": "是否建立可保留訊息順序並防止重複的 FIFO (先進先出) 主題。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
+          "source": "Content-based deduplication",
           "message": "基於內容的重複消除"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
@@ -448,7 +448,7 @@
           "message": "是否為 FIFO 主題啟用基於內容的重複消除，這會根據訊息內容防止重複訊息。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
+          "source": "Create message",
           "message": "建立訊息"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
@@ -508,7 +508,7 @@
           "message": "訊息的選填主旨行，主要用於電子郵件通知。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "訊息屬性"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -520,7 +520,7 @@
           "message": "包含在訊息中用於篩選和路由目的之額外屬性雜湊。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "訊息去重 ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -532,7 +532,7 @@
           "message": "FIFO 主題中用於訊息去重的唯一識別碼。未開啟基於內容去重的 FIFO 主題為必填。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "訊息群組 ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -544,7 +544,7 @@
           "message": "指定訊息屬於 FIFO 主題特定訊息群組的標記。FIFO 主題為必填。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
+          "source": "Create JSON message",
           "message": "建立 JSON 訊息"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
@@ -580,7 +580,7 @@
           "message": "將發布 JSON 訊息之 SNS 主題的 Amazon 資源名稱 (ARN)。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.display_name": {
-          "source": "JSON Message",
+          "source": "JSON message",
           "message": "JSON 訊息"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.short_desc": {
@@ -604,7 +604,7 @@
           "message": "訊息的選填主旨行，主要用於電子郵件通知。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
+          "source": "Message attributes",
           "message": "訊息屬性"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
@@ -616,7 +616,7 @@
           "message": "包含在訊息中用於篩選和路由目的之額外屬性雜湊。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
+          "source": "Message deduplication ID",
           "message": "訊息去重 ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
@@ -628,7 +628,7 @@
           "message": "FIFO 主題中用於訊息去重的唯一識別碼。未開啟基於內容去重的 FIFO 主題為必填。"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
+          "source": "Message group ID",
           "message": "訊息群組 ID"
         },
         "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "指定訊息屬於 FIFO 主題特定訊息群組的標記。FIFO 主題為必填。"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.display_name": {
-          "source": "List Topics",
+          "source": "List topics",
           "message": "列出主題"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.short_desc": {
@@ -664,7 +664,7 @@
           "message": "要從中檢索 SNS 主題清單的 AWS 區域。"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
+          "source": "Include attributes",
           "message": "包含屬性"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
@@ -676,7 +676,7 @@
           "message": "是否包含每個主題的詳細屬性，例如訂閱數與策略。"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.display_name": {
-          "source": "Next Token",
+          "source": "Next token",
           "message": "下一個標記"
         },
         "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "用於對大型主題清單進行分頁的標記。請使用先前呼叫傳回的標記。"
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.display_name": {
-          "source": "Get Topic",
+          "source": "Get topic",
           "message": "取得主題"
         },
         "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.short_desc": {
@@ -724,7 +724,7 @@
           "message": "要取得其詳細資訊之 SNS 主題的 Amazon 資源名稱 (ARN)。"
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.display_name": {
-          "source": "Add Subscriber",
+          "source": "Add subscriber",
           "message": "新增訂閱者"
         },
         "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.short_desc": {
@@ -816,7 +816,7 @@
           "message": "將接收訊息的端點。格式取決於協定 (HTTP/HTTPS 為 URL，電子郵件為電子郵件地址，SMS 為電話號碼等)。"
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.display_name": {
-          "source": "New Topic",
+          "source": "New topic",
           "message": "新主題"
         },
         "app.QW1hem9uU05T.action.bmV3X3RvcGlj.short_desc": {
@@ -840,7 +840,7 @@
           "message": "您想要監控新 SNS 主題的 AWS 區域。如果未指定，預設為 us-east-1。"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
+          "source": "New message",
           "message": "新訊息"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.short_desc": {
@@ -852,7 +852,7 @@
           "message": "此觸發條件會訂閱 Amazon SNS 主題，並在發布新訊息時觸發。它會自動處理訂閱管理並提供完整的訊息酬載。"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {

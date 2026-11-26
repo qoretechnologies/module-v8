@@ -17,7 +17,7 @@ export const AsanaEventInfo = {
               type: 'string',
             },
             parent: {
-              displayName: 'Parent Resource',
+              displayName: 'Parent resource',
               shortDesc: 'Parent resource details',
               longDesc:
                 'Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.',
@@ -30,14 +30,14 @@ export const AsanaEventInfo = {
                     type: 'string',
                   },
                   resource_type: {
-                    displayName: 'Parent Resource Type',
+                    displayName: 'Parent resource type',
                     shortDesc: 'Type of the parent resource',
                     longDesc:
                       "The specific type of the parent resource, such as 'project' or 'task'.",
                     type: 'string',
                   },
                   resource_subtype: {
-                    displayName: 'Parent Resource Subtype',
+                    displayName: 'Parent resource subtype',
                     shortDesc: 'Subtype of the parent resource',
                     longDesc:
                       'The subtype classification of the parent resource, providing more specific categorization.',
@@ -60,14 +60,14 @@ export const AsanaEventInfo = {
                     type: 'string',
                   },
                   resource_type: {
-                    displayName: 'Resource Type',
+                    displayName: 'Resource type',
                     shortDesc: 'Type of the resource',
                     longDesc:
                       "The specific type of the resource, which would be 'task' for task completion events.",
                     type: 'string',
                   },
                   resource_subtype: {
-                    displayName: 'Resource Subtype',
+                    displayName: 'Resource subtype',
                     shortDesc: 'Subtype of the resource',
                     longDesc:
                       'The subtype classification of the resource, providing more specific categorization.',
@@ -77,21 +77,21 @@ export const AsanaEventInfo = {
               },
             },
             change: {
-              displayName: 'Change Details',
+              displayName: 'Change details',
               shortDesc: 'Details of the change',
               longDesc:
                 'Specific information about the change that occurred, including the field affected and the nature of the change.',
               type: {
                 fields: {
                   field: {
-                    displayName: 'Changed Field',
+                    displayName: 'Changed field',
                     shortDesc: 'Field that was changed',
                     longDesc:
                       "The specific field within the resource that was modified; for task completion, this is 'completed'.",
                     type: 'string',
                   },
                   action: {
-                    displayName: 'Change Action',
+                    displayName: 'Change action',
                     shortDesc: 'Nature of the change',
                     longDesc:
                       "Describes how the field was changed; for task completion, this is 'changed'.",
@@ -114,7 +114,7 @@ export const AsanaEventInfo = {
                     type: 'string',
                   },
                   resource_type: {
-                    displayName: 'User Resource Type',
+                    displayName: 'User resource type',
                     shortDesc: 'Type of the user resource',
                     longDesc:
                       "The resource type, typically 'user', indicating the entity is a user.",
@@ -124,7 +124,7 @@ export const AsanaEventInfo = {
               },
             },
             created_at: {
-              displayName: 'Creation Timestamp',
+              displayName: 'Creation timestamp',
               shortDesc: 'Event creation time',
               longDesc: 'The timestamp indicating when the event was created.',
               type: 'string',

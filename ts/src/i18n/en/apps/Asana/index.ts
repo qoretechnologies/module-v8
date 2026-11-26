@@ -10,7 +10,7 @@ const AsanaAppEn = {
     'Connect to Asana to automate task management, project monitoring, and team collaboration workflows. Use these triggers to respond to changes in tasks, projects, and workspaces.',
   triggers: {
     task_completed: {
-      displayName: 'Task Completed',
+      displayName: 'Task completed',
       shortDesc: 'Triggers when a task is marked complete in a specific project',
       longDesc:
         'Initiates a workflow when any task within the specified project is marked as completed. Use this to automate follow-up actions or notifications upon task completion.',
@@ -29,7 +29,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     attachment_added: {
-      displayName: 'Attachment Added',
+      displayName: 'Attachment added',
       shortDesc: 'Triggers when an attachment is uploaded to a task',
       longDesc:
         'Initiates a workflow when a file is attached to any task within the specified project. Optionally filter by a specific task. Use this to process or track files as they are added to tasks.',
@@ -41,7 +41,7 @@ const AsanaAppEn = {
             'The unique identifier of the project where attachment activities will be monitored',
         },
         task: {
-          displayName: 'Task ID (Optional)',
+          displayName: 'Task ID (optional)',
           shortDesc: 'Specific task to monitor for attachments',
           longDesc:
             'The unique identifier of a specific task to monitor. If not provided, attachments from all tasks in the project will trigger the workflow',
@@ -55,7 +55,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     subtask_completed: {
-      displayName: 'Subtask Completed',
+      displayName: 'Subtask completed',
       shortDesc: 'Triggers when a subtask is marked complete',
       longDesc:
         'Initiates a workflow when a subtask within a specific parent task is marked as completed. Use this to track progress on multi-stage tasks or to trigger the next steps in a workflow.',
@@ -71,7 +71,7 @@ const AsanaAppEn = {
           longDesc: 'The unique identifier of the workspace where the project exists',
         },
         task: {
-          displayName: 'Parent Task ID',
+          displayName: 'Parent task ID',
           shortDesc: 'The parent task containing the subtasks',
           longDesc:
             'The unique identifier of the parent task whose subtasks will be monitored for completion',
@@ -80,7 +80,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     project_task_added: {
-      displayName: 'Project Task Added',
+      displayName: 'Project task added',
       shortDesc: 'Triggers when a new task is created in a project',
       longDesc:
         'Initiates a workflow whenever a new task is added to the specified project. Use this to automatically process, categorize, or assign new tasks as they are created.',
@@ -100,7 +100,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     project_added: {
-      displayName: 'Project Added',
+      displayName: 'Project added',
       shortDesc: 'Triggers when a new project is created in a workspace',
       longDesc:
         'Initiates a workflow whenever a new project is created within the specified workspace. Use this to automate project setup, create standard templates, or notify team members about new initiatives.',
@@ -115,7 +115,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     task_comment_added: {
-      displayName: 'Task Comment Added',
+      displayName: 'Task comment added',
       shortDesc: 'Triggers when a comment is added to a specific task',
       longDesc:
         'Initiates a workflow when a new comment is posted on the specified task. Use this to monitor discussions, notify stakeholders, or track communication around critical tasks.',
@@ -139,7 +139,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     task_story_added: {
-      displayName: 'Task Story Added',
+      displayName: 'Task story added',
       shortDesc: 'Triggers when any activity occurs on a task',
       longDesc:
         'Initiates a workflow when any story (comment, status update, field change) is added to a task. This captures all activity including automated system updates. Use this for comprehensive task activity monitoring.',
@@ -163,7 +163,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     task_subtask_added: {
-      displayName: 'Task Subtask Added',
+      displayName: 'Task subtask added',
       shortDesc: 'Triggers when a subtask is created under a parent task',
       longDesc:
         'Initiates a workflow when a new subtask is added to the specified parent task. Use this to track task breakdown or to automate subtask assignments and deadlines.',
@@ -179,7 +179,7 @@ const AsanaAppEn = {
           longDesc: 'The unique identifier of the workspace where the project exists',
         },
         task: {
-          displayName: 'Parent Task ID',
+          displayName: 'Parent task ID',
           shortDesc: 'The parent task to monitor for new subtasks',
           longDesc:
             'The unique identifier of the parent task where subtask creation will be monitored',
@@ -188,7 +188,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     task_tag_added: {
-      displayName: 'Task Tag Added',
+      displayName: 'Task tag added',
       shortDesc: 'Triggers when a tag is applied to a task',
       longDesc:
         'Initiates a workflow when a tag is added to the specified task. Use this to automate actions based on task categorization or to monitor how tasks are being classified.',
@@ -212,7 +212,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     team_added: {
-      displayName: 'Team Added',
+      displayName: 'Team added',
       shortDesc: 'Triggers when a new team is created in a workspace',
       longDesc:
         'Initiates a workflow when a new team is formed within the specified workspace. Use this to automate team onboarding processes or to set up default team resources.',
@@ -227,7 +227,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     user_added: {
-      displayName: 'User Added',
+      displayName: 'User added',
       shortDesc: 'Triggers when a user joins a workspace',
       longDesc:
         'Initiates a workflow when a new user is added to the specified workspace. Use this to automate user onboarding, permission assignments, or welcome notifications.',
@@ -242,7 +242,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     tag_created: {
-      displayName: 'Tag Created',
+      displayName: 'Tag created',
       shortDesc: 'Triggers when a new tag is created in a workspace',
       longDesc:
         'Initiates a workflow when a new tag is created within the specified workspace. Use this to monitor taxonomy changes or to standardize tag usage across projects.',
@@ -257,7 +257,7 @@ const AsanaAppEn = {
       event_info: AsanaEventInfo,
     },
     task_moved_to_section: {
-      displayName: 'Task Moved to Section',
+      displayName: 'Task moved to section',
       shortDesc: 'Triggers when a task is moved to a different section',
       longDesc:
         'Initiates a workflow when a task is moved between sections in the specified project. Use this to track task progress through different stages or to automate actions based on task status changes.',
@@ -331,7 +331,7 @@ const AsanaAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -367,37 +367,37 @@ const AsanaAppEn = {
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc: 'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc: 'Matches records where the field value is less than or equal to the specified value',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a value (is not empty)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches records where the field has no value (is empty)',
     },
@@ -407,12 +407,12 @@ const AsanaAppEn = {
       longDesc: 'Matches records where the field contains the specified substring',
     },
     'starts-with': {
-      displayName: 'Starts With',
+      displayName: 'Starts with',
       shortDesc: 'Field starts with value',
       longDesc: 'Matches records where the field value starts with the specified prefix',
     },
     'ends-with': {
-      displayName: 'Ends With',
+      displayName: 'Ends with',
       shortDesc: 'Field ends with value',
       longDesc: 'Matches records where the field value ends with the specified suffix',
     },

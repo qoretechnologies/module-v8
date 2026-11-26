@@ -4144,7 +4144,7 @@
           "message": "Sostituisce tutti i campi di una definizione di modulo HubSpot con il payload fornito. Tutte le proprietà non incluse verranno ripristinate ai relativi valori predefiniti."
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.display_name": {
-          "source": "Get List Records",
+          "source": "Get list records",
           "message": "Recupera record dell'elenco"
         },
         "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.short_desc": {
@@ -4216,7 +4216,7 @@
           "message": "Proprietà specifiche da includere nella risposta per ciascun record. Se non specificato, verranno restituite le proprietà predefinite."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.display_name": {
-          "source": "Get Form Submissions",
+          "source": "Get form submissions",
           "message": "Recupera invii modulo"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.short_desc": {
@@ -4240,7 +4240,7 @@
           "message": "L'identificatore univoco (GUID) del modulo HubSpot di cui leggere gli invii."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "Dimensione pagina"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.short_desc": {
@@ -4252,7 +4252,7 @@
           "message": "Numero di invii da recuperare per richiesta. HubSpot impone un massimo di 50; l'azione impagina automaticamente fino al raggiungimento di `Max Results` o fino all'esaurimento delle pagine."
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Risultati massimi"
         },
         "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.short_desc": {
@@ -4288,7 +4288,7 @@
           "message": "Timestamp ISO 8601 facoltativo. L'azione interrompe la paginazione quando incontra un invio precedente a questo valore. Applicato sul lato client poiché l'endpoint legacy non supporta un filtro lato server."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.display_name": {
-          "source": "Submit Form",
+          "source": "Submit form",
           "message": "Invia modulo"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.short_desc": {
@@ -4324,7 +4324,7 @@
           "message": "Elenco dei campi del modulo da inviare. Ciascuna voce deve includere il parametro interno `name` (corrispondente al campo nella definizione del modulo) e il valore `value` da inviare. `objectTypeId` è facoltativo e per impostazione predefinita corrisponde all'oggetto contatto (`0-1`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Nome campo"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.bmFtZQ.short_desc": {
@@ -4336,7 +4336,7 @@
           "message": "Il nome interno del campo del modulo, come definito nel modulo HubSpot (ad esempio `email`, `firstname`)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.display_name": {
-          "source": "Object Type ID",
+          "source": "Object type ID",
           "message": "ID tipo oggetto"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.b2JqZWN0VHlwZUlk.short_desc": {
@@ -4348,7 +4348,7 @@
           "message": "Identificativo opzionale dell'oggetto HubSpot a cui appartiene il campo. Predefinito all'oggetto contatto (`0-1`); impostare esplicitamente per i campi appartenenti a un tipo di oggetto diverso."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Valore del campo"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.field.dmFsdWU.short_desc": {
@@ -4360,7 +4360,7 @@
           "message": "Il valore da inviare per questo campo. Deve essere una stringa."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.display_name": {
-          "source": "Submission Context",
+          "source": "Submission context",
           "message": "Contesto di invio"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.short_desc": {
@@ -4372,7 +4372,7 @@
           "message": "Contesto di invio facoltativo, inclusi il cookie di tracciamento utenti HubSpot (`hutk`), l'indirizzo IP, URI/nome/ID della pagina, l'ID campagna Salesforce e la chiave GoToWebinar."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.display_name": {
-          "source": "GoToWebinar Webinar Key",
+          "source": "GoToWebinar webinar key",
           "message": "Chiave Webinar GoToWebinar"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.Z29Ub1dlYmluYXJXZWJpbmFyS2V5.short_desc": {
@@ -4384,7 +4384,7 @@
           "message": "Chiave GoToWebinar del webinar. Utilizzata quando questa sottoscrizione è un'iscrizione a un webinar; HubSpot registrerà il contatto per l'evento GoToWebinar corrispondente."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.display_name": {
-          "source": "HubSpot User Token (hutk)",
+          "source": "HubSpot user token (hutk)",
           "message": "Token Utente HubSpot (hutk)"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aHV0aw.short_desc": {
@@ -4396,7 +4396,7 @@
           "message": "Valore del cookie `hubspotutk` impostato dallo script di tracciamento HubSpot nel browser del visitatore. Utilizzato per associare la registrazione a un visitatore esistente."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.display_name": {
-          "source": "IP Address",
+          "source": "IP address",
           "message": "Indirizzo IP"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.aXBBZGRyZXNz.short_desc": {
@@ -4420,7 +4420,7 @@
           "message": "ID pagina HubSpot in cui è stato inviato il modulo (solo quando si invia da una pagina ospitata da HubSpot)."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.display_name": {
-          "source": "Page Name",
+          "source": "Page name",
           "message": "Nome della pagina"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.cGFnZU5hbWU.short_desc": {
@@ -4444,7 +4444,7 @@
           "message": "URL completo della pagina in cui è stato inviato il modulo."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.display_name": {
-          "source": "Salesforce Campaign ID",
+          "source": "Salesforce campaign ID",
           "message": "ID campagna Salesforce"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.field.c2ZkY0NhbXBhaWduSWQ.short_desc": {
@@ -4456,7 +4456,7 @@
           "message": "ID campagna Salesforce. Utilizzato quando l'account HubSpot è collegato a un'organizzazione Salesforce per associare questa registrazione alla campagna."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
-          "source": "Legal Consent Options",
+          "source": "Legal consent options",
           "message": "Opzioni di consenso legale"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.short_desc": {
@@ -4468,7 +4468,7 @@
           "message": "Payload di consenso GDPR facoltativo passato a HubSpot. Fare riferimento alla documentazione di HubSpot per il formato esatto di `consent` o `legitimateInterest` richiesto dal modulo."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.display_name": {
-          "source": "Submitted At",
+          "source": "Submitted at",
           "message": "Inviato il"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.short_desc": {
@@ -4480,7 +4480,7 @@
           "message": "Timestamp ISO 8601 facoltativo da registrare come ora di invio. Il valore predefinito corrisponde all'ora in cui HubSpot riceve la richiesta."
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.display_name": {
-          "source": "Skip Validation",
+          "source": "Skip validation",
           "message": "Ignora convalida"
         },
         "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.short_desc": {
@@ -4492,7 +4492,7 @@
           "message": "Se true, HubSpot accetterà l'invio anche se alcuni valori di campo non superano la convalida. Usare con cautela."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Company Created or Updated",
+          "source": "Company created or updated",
           "message": "Azienda creata o aggiornata"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4504,7 +4504,7 @@
           "message": "Questo trigger si attiva ogni volta che un record aziendale viene creato o modificato in HubSpot, consentendo di automatizzare i workflow in base alle modifiche dei dati aziendali."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4532,7 +4532,7 @@
           "message": "Si attiva quando un oggetto esistente viene aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4544,7 +4544,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Contact Created or Updated",
+          "source": "Contact created or updated",
           "message": "Contatto creato o aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4556,7 +4556,7 @@
           "message": "Attiva i workflow ogni volta che viene creato un nuovo contatto o ne viene aggiornato uno esistente all'interno di HubSpot. Ideale per gestire in modo efficiente le informazioni sui clienti."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4584,7 +4584,7 @@
           "message": "Si attiva quando un oggetto esistente viene aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4596,7 +4596,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Custom Object Created or Updated",
+          "source": "Custom object created or updated",
           "message": "Oggetto personalizzato creato o aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4608,7 +4608,7 @@
           "message": "Utilizza questo trigger per rilevare le modifiche agli oggetti personalizzati in HubSpot, assicurando che gli aggiornamenti alle strutture dati personalizzate vengano elaborati immediatamente per l'automazione o l'integrazione."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4648,7 +4648,7 @@
           "message": "Seleziona l'oggetto personalizzato di cui desideri monitorare i record nuovi o aggiornati."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4660,7 +4660,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Deal Created or Updated",
+          "source": "Deal created or updated",
           "message": "Trattativa creata o aggiornata"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4672,7 +4672,7 @@
           "message": "Questo trigger si attiva quando una trattativa viene creata o modificata in HubSpot, consentendo di monitorare le opportunità di vendita e integrarsi con i workflow di automazione della pipeline di vendita."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4700,7 +4700,7 @@
           "message": "Si attiva quando un oggetto esistente viene aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4712,7 +4712,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Lead Created or Updated",
+          "source": "Lead created or updated",
           "message": "Lead creato o aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4724,7 +4724,7 @@
           "message": "Monitora i nuovi lead e gli aggiornamenti a quelli esistenti in HubSpot con questo trigger, consentendo processi efficienti di gestione e follow-up dei lead."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4752,7 +4752,7 @@
           "message": "Si attiva quando un oggetto esistente viene aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4764,7 +4764,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "Product Created or Updated",
+          "source": "Product created or updated",
           "message": "Prodotto creato o aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4776,7 +4776,7 @@
           "message": "Questo trigger segnala qualsiasi prodotto nuovo o aggiornato all'interno del tuo account HubSpot, garantendo che i dati di prodotto rimangano sincronizzati con i tuoi workflow e i sistemi esterni."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4804,7 +4804,7 @@
           "message": "Si attiva quando un oggetto esistente viene aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4816,7 +4816,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.display_name": {
-          "source": "Ticket Created or Updated",
+          "source": "Ticket created or updated",
           "message": "Ticket creato o aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.short_desc": {
@@ -4828,7 +4828,7 @@
           "message": "Attiva automaticamente i workflow quando un ticket di supporto viene creato o aggiornato in HubSpot, ideale per gestire le operazioni di assistenza clienti e ottimizzare la risoluzione dei problemi."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4856,7 +4856,7 @@
           "message": "Si attiva quando un oggetto esistente viene aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4868,7 +4868,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
-          "source": "User Created or Updated",
+          "source": "User created or updated",
           "message": "Utente creato o aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
@@ -4880,7 +4880,7 @@
           "message": "Questo trigger si attiva alla creazione o all'aggiornamento di un utente all'interno di HubSpot, aiutandoti a tenere traccia degli account utente e a mantenere aggiornato il controllo degli accessi per il tuo team."
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
-          "source": "Activation Criteria",
+          "source": "Activation criteria",
           "message": "Criteri di attivazione"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
@@ -4908,7 +4908,7 @@
           "message": "Si attiva quando un oggetto esistente viene aggiornato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
-          "source": "Additional Properties",
+          "source": "Additional properties",
           "message": "Proprietà aggiuntive"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
@@ -4920,7 +4920,7 @@
           "message": "Seleziona ulteriori proprietà da aggiungere ai dati dell'oggetto restituiti"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.display_name": {
-          "source": "Form Submitted",
+          "source": "Form submitted",
           "message": "Modulo inviato"
         },
         "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.short_desc": {

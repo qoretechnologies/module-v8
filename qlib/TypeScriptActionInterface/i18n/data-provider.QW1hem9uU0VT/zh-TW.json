@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "傳送電子郵件"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.short_desc": {
@@ -352,7 +352,7 @@
           "message": "傳送電子郵件，支援 HTML 與純文字內容、副本 (CC)/密件副本 (BCC) 收件人、回覆地址、用於追蹤的自訂標籤以及進階交付選項。包含完整的驗證與錯誤處理，以確保可靠的電子郵件交付。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "選擇設定 Amazon SES 服務的 AWS 區域。不同的區域可能具有不同的已驗證身分與傳送限制。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.display_name": {
-          "source": "From Email Address",
+          "source": "From email address",
           "message": "寄件者電子郵件地址"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.short_desc": {
@@ -376,7 +376,7 @@
           "message": "必須在您的 Amazon SES 帳戶中經過驗證的寄件者電子郵件地址。此地址將顯示在電子郵件的「寄件者」欄位中。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.display_name": {
-          "source": "To Email Addresses",
+          "source": "To email addresses",
           "message": "收件者電子郵件地址"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.short_desc": {
@@ -388,7 +388,7 @@
           "message": "傳送訊息的一個或多個電子郵件地址。多個地址應以逗號分隔。所有地址必須為有效的電子郵件格式。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.display_name": {
-          "source": "CC Email Addresses",
+          "source": "CC email addresses",
           "message": "副本電子郵件地址"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "將接收電子郵件副本的可選副本收件人。多個地址應以逗號分隔。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.display_name": {
-          "source": "BCC Email Addresses",
+          "source": "BCC email addresses",
           "message": "密件副本電子郵件地址"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "可選的密件副本收件人，他們將在其他收件人不知情的情況下收到副本。多個地址應以逗號分隔。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.display_name": {
-          "source": "Reply-To Addresses",
+          "source": "Reply-to addresses",
           "message": "回覆地址"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "應將回覆傳送至的選填電子郵件地址（而非寄件者地址）。多個地址應以逗號分隔。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "電子郵件主旨"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "將顯示在收件人電子郵件用戶端中的主旨行。應具描述性且吸引人。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.display_name": {
-          "source": "Text Body",
+          "source": "Text body",
           "message": "文字內文"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.short_desc": {
@@ -448,7 +448,7 @@
           "message": "電子郵件的純文字內容。必須提供文字內文或 HTML 內文其中之一。文字版本可確保與所有電子郵件用戶端相容。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.display_name": {
-          "source": "HTML Body",
+          "source": "HTML body",
           "message": "HTML 內文"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.short_desc": {
@@ -460,7 +460,7 @@
           "message": "包含格式、連結與樣式的電子郵件 HTML 內容。必須提供文字內文或 HTML 內文其中之一。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.display_name": {
-          "source": "Character Encoding",
+          "source": "Character encoding",
           "message": "字元編碼"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "US-ASCII"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.display_name": {
-          "source": "Return Path",
+          "source": "Return path",
           "message": "退回路徑"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.short_desc": {
@@ -496,7 +496,7 @@
           "message": "將傳送退信通知的可選電子郵件地址。必須是您的 SES 帳戶中已驗證的地址。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.display_name": {
-          "source": "Configuration Set",
+          "source": "Configuration set",
           "message": "設定組"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "此電子郵件可使用的選填設定組名稱。設定組允許您將電子郵件傳送事件發布至其他 AWS 服務。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.display_name": {
-          "source": "Email Tags",
+          "source": "Email tags",
           "message": "電子郵件標籤"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "用於分類和追蹤電子郵件的選擇性標籤。標籤可用於 SES 儀表板中的報表和分析。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "標籤名稱"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "用於分類的標籤描述性名稱。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.display_name": {
-          "source": "Tag Value",
+          "source": "Tag value",
           "message": "標籤值"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "與此標籤名稱相關的值"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.display_name": {
-          "source": "Verify Email Address",
+          "source": "Verify email address",
           "message": "驗證電子郵件地址"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.short_desc": {
@@ -556,7 +556,7 @@
           "message": "啟動電子郵件地址或網域的驗證程序。Amazon SES 將傳送一封驗證電子郵件，必須點擊該郵件以完成驗證程序。"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.short_desc": {
@@ -568,7 +568,7 @@
           "message": "選擇您想要驗證電子郵件地址的 AWS 區域。驗證後的身分將在此區域中可用。"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.display_name": {
-          "source": "Email Address to Verify",
+          "source": "Email address to verify",
           "message": "要驗證的電子郵件地址"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.short_desc": {
@@ -580,7 +580,7 @@
           "message": "您想要驗證為傳送身分的電子郵件地址。Amazon SES 將傳送一封驗證電子郵件至此地址。"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.display_name": {
-          "source": "Get Send Statistics",
+          "source": "Get send statistics",
           "message": "取得傳送統計資料"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "取得完整的傳送統計資料，包含交付嘗試、退信、投訴與拒絕率。資料以時間序列格式提供，並附帶計算後的百分比與摘要。"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.short_desc": {
@@ -604,7 +604,7 @@
           "message": "選擇您要擷取傳送統計資料的 AWS 區域。統計資料因區域而異。"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.display_name": {
-          "source": "New Verified Identity",
+          "source": "New verified identity",
           "message": "新驗證身分"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.short_desc": {
@@ -616,7 +616,7 @@
           "message": "監視您的 SES 帳戶中新驗證的電子郵件地址與網域。在新傳送身分的驗證程序完成時觸發。"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS 區域"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.short_desc": {

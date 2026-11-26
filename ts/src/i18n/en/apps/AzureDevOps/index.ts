@@ -8,7 +8,7 @@ const AzureDevOpsAppEn = {
     'The Azure DevOps integration provides comprehensive actions and triggers to interact with Azure DevOps Services. Manage work items, repositories, builds, releases, and team projects efficiently. Automate your development workflow by connecting Azure DevOps with other tools and services in your automation pipeline.',
   actions: {
     create_work_item: {
-      displayName: 'Create Work Item',
+      displayName: 'Create work item',
       shortDesc: 'Create a new work item in Azure DevOps',
       longDesc:
         'Create a new work item such as a task, bug, epic, or user story in a specified Azure DevOps project with customizable properties and fields.',
@@ -20,13 +20,13 @@ const AzureDevOpsAppEn = {
             'Select the target project from your Azure DevOps organization where the new work item should be created.',
         },
         itemType: {
-          displayName: 'Work Item Type',
+          displayName: 'Work item type',
           shortDesc: 'The type of work item to create',
           longDesc:
             'Choose the specific type of work item you want to create, such as Task, Bug, Epic, User Story, or other available types in your project.',
         },
         properties: {
-          displayName: 'Work Item Properties',
+          displayName: 'Work item properties',
           shortDesc: 'Fields and values for the work item',
           longDesc:
             'Configure the properties and field values for the work item, including title, description, and other custom fields based on the selected work item type.',
@@ -50,7 +50,7 @@ const AzureDevOpsAppEn = {
     },
 
     delete_work_item: {
-      displayName: 'Delete Work Item',
+      displayName: 'Delete work item',
       shortDesc: 'Delete a work item from Azure DevOps',
       longDesc:
         'Permanently remove a work item from the specified Azure DevOps project. This action cannot be undone.',
@@ -61,7 +61,7 @@ const AzureDevOpsAppEn = {
           longDesc: 'Select the project where the work item to be deleted is located.',
         },
         id: {
-          displayName: 'Work Item ID',
+          displayName: 'Work item ID',
           shortDesc: 'The unique identifier of the work item to delete',
           longDesc:
             'Enter or select the ID of the specific work item you want to permanently delete from the project.',
@@ -70,7 +70,7 @@ const AzureDevOpsAppEn = {
     },
 
     get_work_item: {
-      displayName: 'Get Work Item',
+      displayName: 'Get work item',
       shortDesc: 'Retrieve details of a specific work item',
       longDesc:
         'Fetch comprehensive information about a work item including its current state, assigned users, and all field values.',
@@ -81,7 +81,7 @@ const AzureDevOpsAppEn = {
           longDesc: 'Select the project where the work item is located to retrieve its details.',
         },
         id: {
-          displayName: 'Work Item ID',
+          displayName: 'Work item ID',
           shortDesc: 'The unique identifier of the work item',
           longDesc: 'Enter or select the ID of the work item whose details you want to retrieve.',
         },
@@ -89,7 +89,7 @@ const AzureDevOpsAppEn = {
     },
 
     list_projects: {
-      displayName: 'List Projects',
+      displayName: 'List projects',
       shortDesc: 'Get a list of Azure DevOps projects',
       longDesc:
         'Retrieve a list of all accessible projects in your Azure DevOps organization with optional filtering and pagination.',
@@ -107,7 +107,7 @@ const AzureDevOpsAppEn = {
             'Specify how many projects to skip from the beginning of the list for pagination purposes.',
         },
         stateFilter: {
-          displayName: 'State Filter',
+          displayName: 'State filter',
           shortDesc: 'Filter projects by their current state',
           longDesc:
             'Filter the project list based on project state such as active, deleted, or other available states.',
@@ -116,7 +116,7 @@ const AzureDevOpsAppEn = {
     },
 
     list_users: {
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'Get a list of users in the Azure DevOps organization',
       longDesc:
         'Retrieve a list of all users who have access to your Azure DevOps organization with pagination support.',
@@ -128,7 +128,7 @@ const AzureDevOpsAppEn = {
             'Set the maximum number of users to include in the response for pagination control.',
         },
         continuationToken: {
-          displayName: 'Continuation Token',
+          displayName: 'Continuation token',
           shortDesc: 'Token for retrieving the next page of results',
           longDesc:
             'Provide the continuation token from a previous request to get the next set of users in the paginated results.',
@@ -137,7 +137,7 @@ const AzureDevOpsAppEn = {
     },
 
     list_work_items: {
-      displayName: 'List Work Items',
+      displayName: 'List work items',
       shortDesc: 'Get a list of work items from a project',
       longDesc:
         'Retrieve work items from a specified project with filtering options by type, state, title, and pagination support.',
@@ -154,7 +154,7 @@ const AzureDevOpsAppEn = {
             'Set the maximum number of work items to include in the response for better performance and pagination.',
         },
         itemType: {
-          displayName: 'Work Item Type',
+          displayName: 'Work item type',
           shortDesc: 'Filter by work item type',
           longDesc:
             'Filter the results to include only work items of a specific type such as Task, Bug, Epic, or User Story.',
@@ -166,7 +166,7 @@ const AzureDevOpsAppEn = {
             'Filter work items based on their current state such as New, Active, Resolved, or Closed.',
         },
         title: {
-          displayName: 'Title Filter',
+          displayName: 'Title filter',
           shortDesc: 'Filter by work item title',
           longDesc: 'Search for work items that contain the specified text in their title.',
         },
@@ -174,7 +174,7 @@ const AzureDevOpsAppEn = {
     },
 
     update_work_item: {
-      displayName: 'Update Work Item',
+      displayName: 'Update work item',
       shortDesc: 'Update an existing work item',
       longDesc:
         'Modify the properties and field values of an existing work item in Azure DevOps with the ability to update any available fields.',
@@ -185,12 +185,12 @@ const AzureDevOpsAppEn = {
           longDesc: 'Select the project where the work item to be updated is located.',
         },
         itemId: {
-          displayName: 'Work Item ID',
+          displayName: 'Work item ID',
           shortDesc: 'The unique identifier of the work item to update',
           longDesc: 'Enter or select the ID of the work item you want to modify.',
         },
         properties: {
-          displayName: 'Updated Properties',
+          displayName: 'Updated properties',
           shortDesc: 'New values for work item fields',
           longDesc:
             'Specify the fields and their new values that you want to update in the work item. Available fields depend on the work item type.',
@@ -216,7 +216,7 @@ const AzureDevOpsAppEn = {
 
   triggers: {
     new_work_item: {
-      displayName: 'New Work Item',
+      displayName: 'New work item',
       shortDesc: 'Triggers when a new work item is created',
       longDesc:
         'Receive real-time notifications whenever a new work item is created in the specified Azure DevOps project, with optional filtering by work item type.',
@@ -228,7 +228,7 @@ const AzureDevOpsAppEn = {
             'Select the project where you want to monitor for new work items being created.',
         },
         itemType: {
-          displayName: 'Work Item Type Filter',
+          displayName: 'Work item type filter',
           shortDesc: 'Filter by specific work item types',
           longDesc:
             'Optionally filter the trigger to only fire for specific types of work items such as Tasks, Bugs, or User Stories.',
@@ -237,7 +237,7 @@ const AzureDevOpsAppEn = {
     },
 
     updated_work_item: {
-      displayName: 'Updated Work Item',
+      displayName: 'Updated work item',
       shortDesc: 'Triggers when a work item is updated',
       longDesc:
         'Receive real-time notifications whenever a work item is modified in the specified Azure DevOps project, with optional filtering by work item type and changed fields.',
@@ -248,13 +248,13 @@ const AzureDevOpsAppEn = {
           longDesc: 'Select the project where you want to monitor for work item updates.',
         },
         itemType: {
-          displayName: 'Work Item Type Filter',
+          displayName: 'Work item type filter',
           shortDesc: 'Filter by specific work item types',
           longDesc:
             'Optionally filter the trigger to only fire for updates to specific types of work items.',
         },
         changedFields: {
-          displayName: 'Changed Fields Filter',
+          displayName: 'Changed fields filter',
           shortDesc: 'Filter by specific field changes',
           longDesc:
             'Optionally specify which field changes should trigger this webhook. Leave empty to trigger on any field change.',

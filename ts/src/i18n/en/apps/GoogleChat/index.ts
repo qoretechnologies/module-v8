@@ -21,18 +21,18 @@ const GoogleChatAppEn = {
     list_spaces: {
       options: {
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of spaces to return per page',
           longDesc: 'The maximum number of spaces to return in a single page. Default is 20.',
         },
         pageToken: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'A page token, received from a previous list spaces call. Provide this to retrieve the subsequent page.',
         },
         spaceType: {
-          displayName: 'Space Type',
+          displayName: 'Space type',
           shortDesc: 'Filter spaces by type',
           longDesc:
             'Filter the list of spaces by their type: Space, Group Chat, or Direct Message.',
@@ -58,12 +58,12 @@ const GoogleChatAppEn = {
             'The unique identifier of the Google Chat space whose members you want to list.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of members to return per page',
           longDesc: 'The maximum number of members to return in a single page. Default is 20.',
         },
         pageToken: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'A page token, received from a previous list members call. Provide this to retrieve the subsequent page.',
@@ -76,12 +76,12 @@ const GoogleChatAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Filter Field',
+                displayName: 'Filter field',
                 shortDesc: 'The field to filter by',
                 longDesc: 'Choose the field to filter members by: role or member type.',
               },
               value: {
-                displayName: 'Filter Value',
+                displayName: 'Filter value',
                 shortDesc: 'The value to filter by',
                 longDesc: 'The specific value to filter members by, based on the selected field.',
               },
@@ -89,17 +89,17 @@ const GoogleChatAppEn = {
           },
         },
         showGroups: {
-          displayName: 'Show Groups',
+          displayName: 'Show groups',
           shortDesc: 'Include group memberships in results',
           longDesc: 'Whether to include group memberships in the results.',
         },
         showInvited: {
-          displayName: 'Show Invited',
+          displayName: 'Show invited',
           shortDesc: 'Include invited members in results',
           longDesc: 'Whether to include members who have been invited but not yet joined.',
         },
         useAdminAccess: {
-          displayName: 'Use Admin Access',
+          displayName: 'Use admin access',
           shortDesc: 'Use admin privileges for the request',
           longDesc: 'Whether to use admin access privileges when listing members.',
         },
@@ -128,12 +128,12 @@ const GoogleChatAppEn = {
             'The unique identifier of the Google Chat space whose messages you want to list.',
         },
         pageSize: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of messages to return per page',
           longDesc: 'The maximum number of messages to return in a single page. Default is 25.',
         },
         pageToken: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'A page token, received from a previous list messages call. Provide this to retrieve the subsequent page.',
@@ -146,12 +146,12 @@ const GoogleChatAppEn = {
           type: {
             fields: {
               field: {
-                displayName: 'Filter Field',
+                displayName: 'Filter field',
                 shortDesc: 'The field to filter by',
                 longDesc: 'Choose the field to filter messages by: create time or thread name.',
               },
               value: {
-                displayName: 'Filter Value',
+                displayName: 'Filter value',
                 shortDesc: 'The value to filter by',
                 longDesc: 'The specific value to filter messages by, based on the selected field.',
               },
@@ -159,12 +159,12 @@ const GoogleChatAppEn = {
           },
         },
         showDeleted: {
-          displayName: 'Show Deleted',
+          displayName: 'Show deleted',
           shortDesc: 'Include deleted messages in results',
           longDesc: 'Whether to include deleted messages in the results.',
         },
         sortOrder: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'Order to sort messages by create time',
           longDesc: 'The order to sort messages by their creation time: ascending or descending.',
         },
@@ -197,7 +197,7 @@ const GoogleChatAppEn = {
           longDesc: 'The unique identifier of the message you want to delete.',
         },
         force: {
-          displayName: 'Force Delete',
+          displayName: 'Force delete',
           shortDesc: 'Force deletion of the message',
           longDesc: 'Whether to force delete the message even if it cannot be normally deleted.',
         },
@@ -218,7 +218,7 @@ const GoogleChatAppEn = {
             'The plain text content of the message. This is the main text that will be displayed in the chat.',
         },
         formattedText: {
-          displayName: 'Formatted Text',
+          displayName: 'Formatted text',
           shortDesc: 'Formatted text content using markdown',
           longDesc:
             'Rich text content formatted with markdown syntax. This allows for bold, italic, links, and other formatting.',
@@ -230,25 +230,25 @@ const GoogleChatAppEn = {
             'The ID of an existing message to reply to or update. Leave empty to send a new message.',
         },
         cardTitle: {
-          displayName: 'Card Title',
+          displayName: 'Card title',
           shortDesc: 'Title for the message card',
           longDesc:
             'The title to display in the card header. This creates a visually prominent header for your message.',
         },
         cardSubtitle: {
-          displayName: 'Card Subtitle',
+          displayName: 'Card subtitle',
           shortDesc: 'Subtitle for the message card',
           longDesc:
             'The subtitle to display below the card title. This provides additional context or description.',
         },
         cardImageUrl: {
-          displayName: 'Card Image URL',
+          displayName: 'Card image URL',
           shortDesc: 'Image URL to display in the card header',
           longDesc:
             'A URL pointing to an image that will be displayed in the card header. The image should be publicly accessible.',
         },
         buttonText: {
-          displayName: 'Button Text',
+          displayName: 'Button text',
           shortDesc: 'Text to display on the action button',
           longDesc: 'The text that will appear on the clickable button in the message card.',
         },

@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
-          "message": "List Campaigns"
+          "source": "List campaigns",
+          "message": "List campaigns"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
           "source": "Retrieve a list of campaigns for the authenticated creator",
@@ -376,8 +376,8 @@
           "message": "Use the cursor returned from a previous request to fetch the next page of campaigns. Leave empty for the first page."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
-          "source": "List Campaign Members",
-          "message": "List Campaign Members"
+          "source": "List campaign members",
+          "message": "List campaign members"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
           "source": "Retrieve members of a specific campaign",
@@ -424,8 +424,8 @@
           "message": "Use the cursor returned from a previous request to fetch the next page of members. Leave empty for the first page."
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
-          "message": "Get Campaign"
+          "source": "Get campaign",
+          "message": "Get campaign"
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
           "source": "Retrieve detailed information about a specific campaign",
@@ -448,8 +448,8 @@
           "message": "Select the campaign you want to get detailed information about. This is a required field."
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
-          "message": "Get Member"
+          "source": "Get member",
+          "message": "Get member"
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
           "source": "Retrieve detailed information about a specific member",
@@ -484,8 +484,8 @@
           "message": "Select or enter the ID of the member (patron) whose details you want to retrieve. This is a required field."
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
-          "source": "List Posts",
-          "message": "List Posts"
+          "source": "List posts",
+          "message": "List posts"
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
           "source": "Retrieve posts from a specific campaign",
@@ -532,8 +532,8 @@
           "message": "Use the cursor returned from a previous request to fetch the next page of posts. Leave empty for the first page."
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
-          "source": "Get Post",
-          "message": "Get Post"
+          "source": "Get post",
+          "message": "Get post"
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
           "source": "Retrieve detailed information about a specific post",
@@ -568,8 +568,8 @@
           "message": "Select or enter the ID of the post whose details you want to retrieve. This is a required field."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
-          "source": "Pledge Event",
-          "message": "Pledge Event"
+          "source": "Pledge event",
+          "message": "Pledge event"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
           "source": "Triggers when a pledge is created, updated, or deleted",
@@ -592,8 +592,8 @@
           "message": "Select the campaign you want to monitor for pledge-related events. This is a required field."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
-          "message": "Trigger Event"
+          "source": "Trigger event",
+          "message": "Trigger event"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
           "source": "The specific pledge event to monitor",
@@ -628,8 +628,8 @@
           "message": "Triggered when a member deletes their pledge."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
-          "source": "Member Event",
-          "message": "Member Event"
+          "source": "Member event",
+          "message": "Member event"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
           "source": "Triggers when a member is created, updated, or deleted",
@@ -652,8 +652,8 @@
           "message": "Select the campaign you want to monitor for member-related events. This is a required field."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
-          "message": "Trigger Event"
+          "source": "Trigger event",
+          "message": "Trigger event"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
           "source": "The specific member event to monitor",
@@ -688,8 +688,8 @@
           "message": "Triggered when a membership is deleted. Note that you may get more than one of these per patron if they delete and renew their membership. Deletion only occurs if no prior payment happened, otherwise pledge deletion is an update to member status."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
-          "source": "Post Event",
-          "message": "Post Event"
+          "source": "Post event",
+          "message": "Post event"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
           "source": "Triggers when a post is published, updated, or deleted",
@@ -712,8 +712,8 @@
           "message": "Select the campaign you want to monitor for post-related events. This is a required field."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
-          "message": "Trigger Event"
+          "source": "Trigger event",
+          "message": "Trigger event"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {
           "source": "The specific post event to monitor",

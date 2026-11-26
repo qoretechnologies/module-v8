@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "Get a Transcription",
-          "message": "Get a Transcription"
+          "source": "Get a transcription",
+          "message": "Get a transcription"
         },
         "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
           "source": "Retrieve a specific transcription with text",
@@ -376,8 +376,8 @@
           "message": "The unique string identifier (SID) of the transcription to retrieve. Transcription SIDs start with \"TR\"."
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
-          "source": "List Transcriptions",
-          "message": "List Transcriptions"
+          "source": "List transcriptions",
+          "message": "List transcriptions"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
           "source": "Retrieve transcriptions for a recording",
@@ -412,8 +412,8 @@
           "message": "The maximum number of transcription records to return. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
           "source": "Number of transcriptions per page",
@@ -424,8 +424,8 @@
           "message": "The number of transcription records to return per page. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
-          "source": "Get a Recording",
-          "message": "Get a Recording"
+          "source": "Get a recording",
+          "message": "Get a recording"
         },
         "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
           "source": "Retrieve details of a specific recording",
@@ -448,8 +448,8 @@
           "message": "The unique string identifier (SID) of the recording to retrieve. Recording SIDs start with \"RE\"."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
-          "source": "List Recordings",
-          "message": "List Recordings"
+          "source": "List recordings",
+          "message": "List recordings"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
           "source": "Retrieve a list of call recordings",
@@ -484,8 +484,8 @@
           "message": "Only return recordings associated with this specific conference. The Conference SID should start with \"CF\"."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
-          "source": "Date Created After",
-          "message": "Date Created After"
+          "source": "Date created after",
+          "message": "Date created after"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
           "source": "Filter by minimum creation date",
@@ -496,8 +496,8 @@
           "message": "Only return recordings created on or after this date. Provide the date in ISO 8601 format."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
-          "source": "Date Created Before",
-          "message": "Date Created Before"
+          "source": "Date created before",
+          "message": "Date created before"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
           "source": "Filter by maximum creation date",
@@ -508,8 +508,8 @@
           "message": "Only return recordings created on or before this date. Provide the date in ISO 8601 format."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
-          "source": "Include Soft Deleted",
-          "message": "Include Soft Deleted"
+          "source": "Include soft deleted",
+          "message": "Include soft deleted"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
           "source": "Include soft-deleted recordings",
@@ -532,8 +532,8 @@
           "message": "The maximum number of recording records to return. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
           "source": "Number of recordings per page",
@@ -544,8 +544,8 @@
           "message": "The number of recording records to return per page. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get a Message",
-          "message": "Get a Message"
+          "source": "Get a message",
+          "message": "Get a message"
         },
         "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
           "source": "Retrieve details of a specific message",
@@ -568,8 +568,8 @@
           "message": "The unique string identifier (SID) of the message to retrieve. Message SIDs start with \"SM\" or \"MM\"."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
-          "message": "List Messages"
+          "source": "List messages",
+          "message": "List messages"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
           "source": "Retrieve a list of messages",
@@ -604,8 +604,8 @@
           "message": "Only return messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
-          "source": "Date Sent After",
-          "message": "Date Sent After"
+          "source": "Date sent after",
+          "message": "Date sent after"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
           "source": "Filter by minimum send date",
@@ -616,8 +616,8 @@
           "message": "Only return messages sent on or after this date. Provide the date in ISO 8601 format."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
-          "source": "Date Sent Before",
-          "message": "Date Sent Before"
+          "source": "Date sent before",
+          "message": "Date sent before"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
           "source": "Filter by maximum send date",
@@ -640,8 +640,8 @@
           "message": "The maximum number of message records to return. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
           "source": "Number of messages per page",
@@ -652,8 +652,8 @@
           "message": "The number of message records to return per page. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create a Message",
-          "message": "Create a Message"
+          "source": "Create a message",
+          "message": "Create a message"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
           "source": "Send a new SMS or MMS message",
@@ -712,8 +712,8 @@
           "message": "A list of publicly accessible URLs of media files to send with the message. Supported for MMS messages. You can include up to 10 media files."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
-          "source": "Messaging Service SID",
-          "message": "Messaging Service SID"
+          "source": "Messaging service SID",
+          "message": "Messaging service SID"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
           "source": "The SID of the Messaging Service to use",
@@ -724,8 +724,8 @@
           "message": "The SID of the Messaging Service to use for the message. When set, the from parameter can be omitted, and Twilio will select an appropriate phone number from the Messaging Service pool."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
-          "message": "Status Callback URL"
+          "source": "Status callback URL",
+          "message": "Status callback URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
           "source": "URL to receive message status updates",
@@ -736,8 +736,8 @@
           "message": "The URL Twilio will POST to each time the status of the message changes. This allows you to track the delivery status of your messages."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
-          "source": "Max Price",
-          "message": "Max Price"
+          "source": "Max price",
+          "message": "Max price"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
           "source": "Maximum acceptable price for the message",
@@ -748,8 +748,8 @@
           "message": "The maximum total price in USD acceptable for the message to be sent. If the cost exceeds this value, the message will fail."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
-          "source": "Validity Period",
-          "message": "Validity Period"
+          "source": "Validity period",
+          "message": "Validity period"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
           "source": "How long the message is valid for delivery",
@@ -760,8 +760,8 @@
           "message": "The number of seconds that the message can remain in the queue. After this time, if the message has not been delivered, it will fail. Maximum is 14400 seconds (4 hours)."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
-          "source": "Schedule Type",
-          "message": "Schedule Type"
+          "source": "Schedule type",
+          "message": "Schedule type"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
           "source": "The type of message scheduling",
@@ -776,8 +776,8 @@
           "message": "Fixed"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
-          "source": "Send At",
-          "message": "Send At"
+          "source": "Send at",
+          "message": "Send at"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
           "source": "When to send the scheduled message",
@@ -788,8 +788,8 @@
           "message": "The time when the scheduled message should be sent, in ISO 8601 format. This parameter is required when Schedule Type is set to \"fixed\"."
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
-          "source": "Delete a Message",
-          "message": "Delete a Message"
+          "source": "Delete a message",
+          "message": "Delete a message"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
           "source": "Delete a message from your account",
@@ -812,8 +812,8 @@
           "message": "The unique string identifier (SID) of the message to delete. Message SIDs start with \"SM\" or \"MM\"."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
-          "source": "List Message Media",
-          "message": "List Message Media"
+          "source": "List message media",
+          "message": "List message media"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
           "source": "Retrieve media attached to a message",
@@ -848,8 +848,8 @@
           "message": "The maximum number of media records to return. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
           "source": "Number of media items per page",
@@ -860,8 +860,8 @@
           "message": "The number of media records to return per page. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
-          "source": "Create a Call",
-          "message": "Create a Call"
+          "source": "Create a call",
+          "message": "Create a call"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
           "source": "Initiate an outbound phone call",
@@ -920,8 +920,8 @@
           "message": "TwiML instructions to execute when the call connects. If both TwiML and URL are provided, TwiML takes precedence. Maximum 4000 characters."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
-          "source": "HTTP Method",
-          "message": "HTTP Method"
+          "source": "HTTP method",
+          "message": "HTTP method"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
           "source": "HTTP method for fetching TwiML",
@@ -940,8 +940,8 @@
           "message": "POST"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
-          "message": "Status Callback URL"
+          "source": "Status callback URL",
+          "message": "Status callback URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
           "source": "URL to receive call status updates",
@@ -952,8 +952,8 @@
           "message": "The URL Twilio will POST to when the call status changes. You can specify which events trigger callbacks using Status Callback Events."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
-          "source": "Status Callback Events",
-          "message": "Status Callback Events"
+          "source": "Status callback events",
+          "message": "Status callback events"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
           "source": "Events that trigger status callbacks",
@@ -980,8 +980,8 @@
           "message": "Completed"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
-          "source": "Status Callback Method",
-          "message": "Status Callback Method"
+          "source": "Status callback method",
+          "message": "Status callback method"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
           "source": "HTTP method for status callbacks",
@@ -1024,8 +1024,8 @@
           "message": "Set to true to record the entire call. The recording will be available after the call completes."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
-          "source": "Recording Channels",
-          "message": "Recording Channels"
+          "source": "Recording channels",
+          "message": "Recording channels"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
           "source": "Number of channels in the recording",
@@ -1044,8 +1044,8 @@
           "message": "Dual"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Recording Status Callback",
-          "message": "Recording Status Callback"
+          "source": "Recording status callback",
+          "message": "Recording status callback"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
           "source": "URL to notify when recording is available",
@@ -1056,8 +1056,8 @@
           "message": "The URL Twilio will POST to when the recording is available. This allows you to process or store recordings immediately."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
-          "message": "Machine Detection"
+          "source": "Machine detection",
+          "message": "Machine detection"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
           "source": "Enable answering machine detection",
@@ -1076,8 +1076,8 @@
           "message": "Detect Message End"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
-          "source": "Machine Detection Timeout",
-          "message": "Machine Detection Timeout"
+          "source": "Machine detection timeout",
+          "message": "Machine detection timeout"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
           "source": "Seconds to wait for detection",
@@ -1088,8 +1088,8 @@
           "message": "The number of seconds to attempt answering machine detection before timing out. Default is 30 seconds."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
-          "message": "Send Digits"
+          "source": "Send digits",
+          "message": "Send digits"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
           "source": "DTMF tones to send after connection",
@@ -1100,8 +1100,8 @@
           "message": "A string of keys to dial after connecting. Valid characters: 0-9, A-D, #, *, w (0.5s pause), W (1s pause). For example: \"W1234#\"."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
-          "source": "Time Limit",
-          "message": "Time Limit"
+          "source": "Time limit",
+          "message": "Time limit"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
           "source": "Maximum call duration in seconds",
@@ -1112,8 +1112,8 @@
           "message": "The maximum duration of the call in seconds. The call will be automatically ended after this time."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
-          "source": "Create Call with Text-to-Speech",
-          "message": "Create Call with Text-to-Speech"
+          "source": "Create call with text-to-speech",
+          "message": "Create call with text-to-speech"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
           "source": "Make a call with automated voice message",
@@ -1456,8 +1456,8 @@
           "message": "Turkish (Turkey)"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
-          "source": "Record Call",
-          "message": "Record Call"
+          "source": "Record call",
+          "message": "Record call"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
           "source": "Whether to record the call",
@@ -1468,8 +1468,8 @@
           "message": "Set to true to record the entire call. The recording will be available after the call completes and can be retrieved using the List Recordings action."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
-          "source": "Transcribe Recording",
-          "message": "Transcribe Recording"
+          "source": "Transcribe recording",
+          "message": "Transcribe recording"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
           "source": "Whether to transcribe the recording",
@@ -1480,8 +1480,8 @@
           "message": "Set to true to automatically transcribe the call recording. This requires the Record Call option to be enabled. The transcription will be available after processing."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
-          "source": "Transcription Callback URL",
-          "message": "Transcription Callback URL"
+          "source": "Transcription callback URL",
+          "message": "Transcription callback URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
           "source": "URL to receive transcription results",
@@ -1492,8 +1492,8 @@
           "message": "The URL Twilio will POST to when the transcription is complete. This allows you to process or store transcriptions immediately after they are available."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
-          "source": "Send Digits",
-          "message": "Send Digits"
+          "source": "Send digits",
+          "message": "Send digits"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
           "source": "DTMF tones to send after connection",
@@ -1504,8 +1504,8 @@
           "message": "A string of keys to dial after the call connects. Useful for navigating phone menus automatically. Valid characters: 0-9, #, *, w (wait 0.5 seconds). For example: \"w123#\" waits 0.5 seconds then dials 123#."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
-          "source": "Status Callback URL",
-          "message": "Status Callback URL"
+          "source": "Status callback URL",
+          "message": "Status callback URL"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
           "source": "URL to receive call status updates",
@@ -1528,8 +1528,8 @@
           "message": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
-          "source": "Machine Detection",
-          "message": "Machine Detection"
+          "source": "Machine detection",
+          "message": "Machine detection"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
           "source": "Enable answering machine detection",
@@ -1548,8 +1548,8 @@
           "message": "Detect Message End"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
-          "source": "List Calls",
-          "message": "List Calls"
+          "source": "List calls",
+          "message": "List calls"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
           "source": "Retrieve a list of calls",
@@ -1628,8 +1628,8 @@
           "message": "No Answer"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
-          "source": "Start Time After",
-          "message": "Start Time After"
+          "source": "Start time after",
+          "message": "Start time after"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
           "source": "Filter by minimum start time",
@@ -1640,8 +1640,8 @@
           "message": "Only return calls that started on or after this date and time. Provide the date in ISO 8601 format."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
-          "source": "Start Time Before",
-          "message": "Start Time Before"
+          "source": "Start time before",
+          "message": "Start time before"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
           "source": "Filter by maximum start time",
@@ -1652,8 +1652,8 @@
           "message": "Only return calls that started on or before this date and time. Provide the date in ISO 8601 format."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
-          "source": "End Time After",
-          "message": "End Time After"
+          "source": "End time after",
+          "message": "End time after"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
           "source": "Filter by minimum end time",
@@ -1664,8 +1664,8 @@
           "message": "Only return calls that ended on or after this date and time. Provide the date in ISO 8601 format."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
-          "source": "End Time Before",
-          "message": "End Time Before"
+          "source": "End time before",
+          "message": "End time before"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
           "source": "Filter by maximum end time",
@@ -1688,8 +1688,8 @@
           "message": "The maximum number of call records to return. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
           "source": "Number of calls per page",
@@ -1700,8 +1700,8 @@
           "message": "The number of call records to return per page. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
-          "source": "Get a Call",
-          "message": "Get a Call"
+          "source": "Get a call",
+          "message": "Get a call"
         },
         "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
           "source": "Retrieve details of a specific call",
@@ -1724,8 +1724,8 @@
           "message": "The unique string identifier (SID) of the call to retrieve. Call SIDs start with \"CA\"."
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
-          "source": "Delete a Call",
-          "message": "Delete a Call"
+          "source": "Delete a call",
+          "message": "Delete a call"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
           "source": "Delete a call record from your account",
@@ -1748,8 +1748,8 @@
           "message": "The unique string identifier (SID) of the call to delete. Call SIDs start with \"CA\"."
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Create an Execution",
-          "message": "Create an Execution"
+          "source": "Create an execution",
+          "message": "Create an execution"
         },
         "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
           "source": "Start a Studio Flow execution",
@@ -1808,8 +1808,8 @@
           "message": "JSON data that will be added to the flow's context and accessible as variables. For example: a JSON object with name property becomes available as flow.data.name in the flow."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
-          "source": "List Executions",
-          "message": "List Executions"
+          "source": "List executions",
+          "message": "List executions"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
           "source": "Retrieve executions for a Studio Flow",
@@ -1832,8 +1832,8 @@
           "message": "The SID of the Studio Flow whose executions you want to list. Flow SIDs start with \"FW\"."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
-          "source": "Date Created From",
-          "message": "Date Created From"
+          "source": "Date created from",
+          "message": "Date created from"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
           "source": "Filter by minimum creation date",
@@ -1844,8 +1844,8 @@
           "message": "Only return executions created on or after this date and time, in ISO 8601 format."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
-          "source": "Date Created To",
-          "message": "Date Created To"
+          "source": "Date created to",
+          "message": "Date created to"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
           "source": "Filter by maximum creation date",
@@ -1868,8 +1868,8 @@
           "message": "The maximum number of execution records to return. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
           "source": "Number of executions per page",
@@ -1880,8 +1880,8 @@
           "message": "The number of execution records to return per page. The default is 50 and the maximum is 1000."
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
-          "source": "Get an Execution",
-          "message": "Get an Execution"
+          "source": "Get an execution",
+          "message": "Get an execution"
         },
         "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
           "source": "Retrieve details of a specific execution",
@@ -1916,8 +1916,8 @@
           "message": "The unique string identifier (SID) of the execution to retrieve. Execution SIDs start with \"FN\"."
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Update an Execution",
-          "message": "Update an Execution"
+          "source": "Update an execution",
+          "message": "Update an execution"
         },
         "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
           "source": "Update the status of an execution",
@@ -1972,8 +1972,8 @@
           "message": "Ended"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
-          "source": "Delete an Execution",
-          "message": "Delete an Execution"
+          "source": "Delete an execution",
+          "message": "Delete an execution"
         },
         "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
           "source": "Delete an execution record",
@@ -2008,8 +2008,8 @@
           "message": "The unique string identifier (SID) of the execution to delete. Execution SIDs start with \"FN\"."
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
-          "message": "New Message"
+          "source": "New message",
+          "message": "New message"
         },
         "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
           "source": "Triggers when a new SMS or MMS message is received",
@@ -2044,8 +2044,8 @@
           "message": "Only trigger for messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all senders."
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
-          "source": "New Recording",
-          "message": "New Recording"
+          "source": "New recording",
+          "message": "New recording"
         },
         "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
           "source": "Triggers when a new call recording is created",
@@ -2080,8 +2080,8 @@
           "message": "Only trigger for recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences."
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
-          "source": "New Transcription",
-          "message": "New Transcription"
+          "source": "New transcription",
+          "message": "New transcription"
         },
         "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {
           "source": "Triggers when a new recording transcription is created",

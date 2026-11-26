@@ -8,13 +8,13 @@ export const JIRA_CONN_OPTIONS = {
     type: 'string',
   },
   ping_path: {
-    display_name: 'Ping Path',
+    display_name: 'Ping path',
     short_desc: 'The custom ping path for oauth',
     desc: 'The path to ping',
     type: 'string',
   },
   swagger_base_path: {
-    display_name: 'Swagger Base Path',
+    display_name: 'Swagger base path',
     short_desc: 'The custom base path for swagger',
     desc: 'The base path for swagger',
     type: 'string',

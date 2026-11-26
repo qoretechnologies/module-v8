@@ -109,7 +109,7 @@ const NewEmployeeTrigger = QoreAppCreator.createLocalizedTrigger({
         id: '123',
         first_name: 'John',
         last_name: 'Doe',
-        display_name: 'John Doe',
+        display_name: 'John doe',
         email: 'john.doe@example.com',
         department: 'Engineering',
         job_title: 'Software Developer',

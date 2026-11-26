@@ -29,19 +29,19 @@ Your BigML API key that authenticates requests to the API. This key is unique to
   },
   actions: {
     create_anomaly_score: {
-      displayName: 'Create Anomaly Score',
+      displayName: 'Create anomaly score',
       shortDesc: 'Create an anomaly score for detecting outliers in data',
       longDesc:
         'Generate an anomaly score by applying a trained anomaly detector to input data. This helps identify unusual patterns or outliers in your dataset.',
       options: {
         anomaly: {
-          displayName: 'Anomaly Detector',
+          displayName: 'Anomaly detector',
           shortDesc: 'The anomaly detector to use for scoring',
           longDesc:
             'Select the trained anomaly detector model that will be used to generate the anomaly score for the input data.',
         },
         input_data: {
-          displayName: 'Input Data',
+          displayName: 'Input data',
           shortDesc: 'The data to analyze for anomalies',
           longDesc:
             'Provide the input data that you want to analyze for anomalies. The data should match the format expected by the selected anomaly detector.',
@@ -73,13 +73,13 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     create_batch_anomaly_score: {
-      displayName: 'Create Batch Anomaly Score',
+      displayName: 'Create batch anomaly score',
       shortDesc: 'Create anomaly scores for multiple data points in batch',
       longDesc:
         'Generate anomaly scores for multiple data points at once by applying an anomaly detector to a dataset. This is efficient for processing large amounts of data.',
       options: {
         anomaly: {
-          displayName: 'Anomaly Detector',
+          displayName: 'Anomaly detector',
           shortDesc: 'The anomaly detector to use for batch scoring',
           longDesc:
             'Select the trained anomaly detector model that will be used to generate anomaly scores for all data points in the dataset.',
@@ -117,19 +117,19 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     create_centroid: {
-      displayName: 'Create Centroid',
+      displayName: 'Create centroid',
       shortDesc: 'Find the closest cluster centroid for input data',
       longDesc:
         'Determine which cluster centroid is closest to the provided input data using a trained cluster model. This helps classify new data points into existing clusters.',
       options: {
         cluster: {
-          displayName: 'Cluster Model',
+          displayName: 'Cluster model',
           shortDesc: 'The cluster model to use for centroid calculation',
           longDesc:
             'Select the trained cluster model that will be used to find the closest centroid for the input data.',
         },
         input_data: {
-          displayName: 'Input Data',
+          displayName: 'Input data',
           shortDesc: 'The data to find the closest centroid for',
           longDesc:
             'Provide the input data for which you want to find the closest cluster centroid. The data should match the format used to train the cluster model.',
@@ -161,7 +161,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     create_prediction: {
-      displayName: 'Create Prediction',
+      displayName: 'Create prediction',
       shortDesc: 'Generate predictions using trained models',
       longDesc:
         'Create predictions for new data using trained machine learning models, ensembles, or deep networks. This allows you to apply your trained models to make predictions on new data.',
@@ -179,13 +179,13 @@ Your BigML API key that authenticates requests to the API. This key is unique to
             'Select the trained ensemble that will be used to generate predictions for the input data.',
         },
         deepnet: {
-          displayName: 'Deep Network',
+          displayName: 'Deep network',
           shortDesc: 'The deep network to use for prediction',
           longDesc:
             'Select the trained deep network that will be used to generate predictions for the input data.',
         },
         input_data: {
-          displayName: 'Input Data',
+          displayName: 'Input data',
           shortDesc: 'The data to make predictions for',
           longDesc:
             'Provide the input data for which you want to generate predictions. The data should match the format used to train the selected model.',
@@ -217,19 +217,19 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     create_topic_distribution: {
-      displayName: 'Create Topic Distribution',
+      displayName: 'Create topic distribution',
       shortDesc: 'Generate topic distributions for text data',
       longDesc:
         'Create topic distributions for text data using a trained topic model. This helps understand the main topics present in your text and their relative importance.',
       options: {
         topicmodel: {
-          displayName: 'Topic Model',
+          displayName: 'Topic model',
           shortDesc: 'The topic model to use for distribution analysis',
           longDesc:
             'Select the trained topic model that will be used to generate topic distributions for the input text data.',
         },
         input_data: {
-          displayName: 'Input Data',
+          displayName: 'Input data',
           shortDesc: 'The text data to analyze for topics',
           longDesc:
             'Provide the text data for which you want to generate topic distributions. The data should match the format used to train the topic model.',
@@ -261,7 +261,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_anomaly_detectors: {
-      displayName: 'List Anomaly Detectors',
+      displayName: 'List anomaly detectors',
       shortDesc: 'Retrieve a list of anomaly detectors',
       longDesc:
         'Get a paginated list of all anomaly detectors in your BigML account with filtering and sorting options.',
@@ -324,7 +324,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_clusters: {
-      displayName: 'List Clusters',
+      displayName: 'List clusters',
       shortDesc: 'Retrieve a list of cluster models',
       longDesc:
         'Get a paginated list of all cluster models in your BigML account with filtering and sorting options.',
@@ -387,7 +387,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_datasets: {
-      displayName: 'List Datasets',
+      displayName: 'List datasets',
       shortDesc: 'Retrieve a list of datasets',
       longDesc:
         'Get a paginated list of all datasets in your BigML account with filtering and sorting options.',
@@ -449,7 +449,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_deepnets: {
-      displayName: 'List Deep Networks',
+      displayName: 'List deep networks',
       shortDesc: 'Retrieve a list of deep networks',
       longDesc:
         'Get a paginated list of all deep networks in your BigML account with filtering and sorting options.',
@@ -512,7 +512,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_ensembles: {
-      displayName: 'List Ensembles',
+      displayName: 'List ensembles',
       shortDesc: 'Retrieve a list of ensemble models',
       longDesc:
         'Get a paginated list of all ensemble models in your BigML account with filtering and sorting options.',
@@ -575,7 +575,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_models: {
-      displayName: 'List Models',
+      displayName: 'List models',
       shortDesc: 'Retrieve a list of machine learning models',
       longDesc:
         'Get a paginated list of all machine learning models in your BigML account with filtering and sorting options.',
@@ -637,7 +637,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_projects: {
-      displayName: 'List Projects',
+      displayName: 'List projects',
       shortDesc: 'Retrieve a list of projects',
       longDesc:
         'Get a paginated list of all projects in your BigML account with filtering and sorting options.',
@@ -699,7 +699,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_sources: {
-      displayName: 'List Sources',
+      displayName: 'List sources',
       shortDesc: 'Retrieve a list of data sources',
       longDesc:
         'Get a paginated list of all data sources in your BigML account with filtering and sorting options.',
@@ -762,7 +762,7 @@ Your BigML API key that authenticates requests to the API. This key is unique to
       },
     },
     list_topic_models: {
-      displayName: 'List Topic Models',
+      displayName: 'List topic models',
       shortDesc: 'Retrieve a list of topic models',
       longDesc:
         'Get a paginated list of all topic models in your BigML account with filtering and sorting options.',
@@ -827,31 +827,31 @@ Your BigML API key that authenticates requests to the API. This key is unique to
   },
   triggers: {
     new_resource: {
-      displayName: 'New Resource',
+      displayName: 'New resource',
       shortDesc: 'Triggers when a new BigML resource is created',
       longDesc:
         'Monitor your BigML account for newly created resources such as models, datasets, clusters, and other machine learning resources. This trigger allows you to automate workflows when specific types of resources are created.',
       options: {
         type: {
-          displayName: 'Resource Type',
+          displayName: 'Resource type',
           shortDesc: 'Type of BigML resource to monitor',
           longDesc:
             'Select the specific type of BigML resource you want to monitor for new creations. The trigger will only fire when resources of this type are created.',
         },
         name: {
-          displayName: 'Name Filter',
+          displayName: 'Name filter',
           shortDesc: 'Filter resources by name pattern',
           longDesc:
             'Optional filter to only trigger for resources whose names contain this text. Leave empty to monitor all resources of the selected type.',
         },
         project: {
-          displayName: 'Project Filter',
+          displayName: 'Project filter',
           shortDesc: 'Filter resources by project',
           longDesc:
             'Optional filter to only trigger for resources created within a specific project. Leave empty to monitor resources across all projects.',
         },
         tags: {
-          displayName: 'Tags Filter',
+          displayName: 'Tags filter',
           shortDesc: 'Filter resources by tags',
           longDesc:
             'Optional filter to only trigger for resources that have any of the specified tags. Leave empty to monitor all resources regardless of tags.',

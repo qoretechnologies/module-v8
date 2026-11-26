@@ -13,7 +13,7 @@ export const BROWSE_AI_APP_LOGO =
 
 export const BROWSE_AI_CONN_OPTIONS = {
   api_key: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your Browser AI account API key',
     desc:
       `To get your API key:\n` +

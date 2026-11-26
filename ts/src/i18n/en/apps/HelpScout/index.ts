@@ -12,7 +12,7 @@ const HelpScoutAppEn = {
   actions: {
     add_note: {
       groups: ['Conversations'],
-      displayName: 'Add Note to Conversation',
+      displayName: 'Add note to conversation',
       shortDesc: 'Add an internal note to a conversation',
       longDesc:
         'Add an internal note to an existing conversation in Help Scout. Notes are only visible to your team members and are not sent to the customer. Use notes to document internal discussions, research, or context about a customer issue.',
@@ -24,7 +24,7 @@ const HelpScoutAppEn = {
             'Select or enter the ID of the conversation where you want to add the note. You can search for conversations by number or subject.',
         },
         text: {
-          displayName: 'Note Text',
+          displayName: 'Note text',
           shortDesc: 'The content of the note',
           longDesc:
             'The text content of the internal note. This can include HTML formatting. The note will only be visible to your team members.',
@@ -45,7 +45,7 @@ const HelpScoutAppEn = {
     },
     create_conversation: {
       groups: ['Conversations'],
-      displayName: 'Create Conversation',
+      displayName: 'Create conversation',
       shortDesc: 'Create a new conversation',
       longDesc:
         'Create a new conversation in Help Scout. A conversation represents an email thread or support ticket with a customer. You must specify the mailbox, customer, and initial message content.',
@@ -81,25 +81,25 @@ const HelpScoutAppEn = {
             'Select an existing customer from Help Scout. Either Customer ID or Customer Email must be provided.',
         },
         customerEmail: {
-          displayName: 'Customer Email',
+          displayName: 'Customer email',
           shortDesc: 'The email address of the customer',
           longDesc:
             'The email address of the customer. If the customer does not exist, they will be created. Either Customer ID or Customer Email must be provided.',
         },
         threadType: {
-          displayName: 'Thread Type',
+          displayName: 'Thread type',
           shortDesc: 'The type of the initial thread',
           longDesc:
             'The type of the first message in the conversation. Customer means the message is from the customer, reply means it is from your team, and note is an internal note.',
         },
         threadText: {
-          displayName: 'Thread Text',
+          displayName: 'Thread text',
           shortDesc: 'The content of the initial message',
           longDesc:
             'The text content of the first message in the conversation. This can include HTML formatting.',
         },
         assignTo: {
-          displayName: 'Assign To',
+          displayName: 'Assign to',
           shortDesc: 'Assign the conversation to a user',
           longDesc:
             'Optionally assign the conversation to a specific Help Scout user. If not specified, the conversation will be unassigned or follow your mailbox routing rules.',
@@ -111,7 +111,7 @@ const HelpScoutAppEn = {
             'A list of tag names to add to the conversation. Tags help organize and categorize conversations for easier filtering and reporting.',
         },
         autoReply: {
-          displayName: 'Auto Reply',
+          displayName: 'Auto reply',
           shortDesc: 'Enable auto-reply for this conversation',
           longDesc:
             'When set to true, Help Scout will send an auto-reply to the customer if one is configured for the mailbox. Set to false to prevent auto-replies.',
@@ -120,18 +120,18 @@ const HelpScoutAppEn = {
     },
     create_customer: {
       groups: ['Customers'],
-      displayName: 'Create Customer',
+      displayName: 'Create customer',
       shortDesc: 'Create a new customer',
       longDesc:
         'Create a new customer profile in Help Scout. Customers represent the people who contact your support team. You can store their contact information, company details, and other relevant data.',
       options: {
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'The customer first name',
           longDesc: 'The first name of the customer. Maximum 40 characters.',
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'The customer last name',
           longDesc: 'The last name of the customer. Maximum 40 characters.',
         },
@@ -142,7 +142,7 @@ const HelpScoutAppEn = {
             'The primary email address for the customer. This is used to identify the customer when they send emails to your support address.',
         },
         emailType: {
-          displayName: 'Email Type',
+          displayName: 'Email type',
           shortDesc: 'The type of email address',
           longDesc:
             'Categorize the email address type: work (business email), home (personal email), or other.',
@@ -153,12 +153,12 @@ const HelpScoutAppEn = {
           longDesc: 'The phone number for the customer.',
         },
         phoneType: {
-          displayName: 'Phone Type',
+          displayName: 'Phone type',
           shortDesc: 'The type of phone number',
           longDesc: 'Categorize the phone number type: work, home, mobile, fax, pager, or other.',
         },
         jobTitle: {
-          displayName: 'Job Title',
+          displayName: 'Job title',
           shortDesc: 'The customer job title',
           longDesc: 'The job title or position of the customer. Maximum 60 characters.',
         },
@@ -192,7 +192,7 @@ const HelpScoutAppEn = {
     },
     update_customer: {
       groups: ['Customers'],
-      displayName: 'Update Customer',
+      displayName: 'Update customer',
       shortDesc: 'Update an existing customer',
       longDesc:
         'Update the profile information of an existing customer in Help Scout. You can modify their name, contact details, organization, and other profile fields.',
@@ -203,17 +203,17 @@ const HelpScoutAppEn = {
           longDesc: 'Select the customer whose profile you want to update.',
         },
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'The new first name',
           longDesc: 'Update the first name of the customer. Maximum 40 characters.',
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'The new last name',
           longDesc: 'Update the last name of the customer. Maximum 40 characters.',
         },
         jobTitle: {
-          displayName: 'Job Title',
+          displayName: 'Job title',
           shortDesc: 'The new job title',
           longDesc: 'Update the job title of the customer. Maximum 60 characters.',
         },
@@ -247,7 +247,7 @@ const HelpScoutAppEn = {
     },
     send_reply: {
       groups: ['Conversations'],
-      displayName: 'Send Reply',
+      displayName: 'Send reply',
       shortDesc: 'Send a reply to a conversation',
       longDesc:
         'Send a reply to an existing conversation in Help Scout. The reply will be sent to the customer via email. You can optionally CC/BCC additional recipients, save as draft, or change the conversation status.',
@@ -264,7 +264,7 @@ const HelpScoutAppEn = {
             'Select the customer who will receive this reply. This should match the customer associated with the conversation.',
         },
         text: {
-          displayName: 'Reply Text',
+          displayName: 'Reply text',
           shortDesc: 'The content of the reply',
           longDesc:
             'The text content of the reply message. This can include HTML formatting. The reply will be sent to the customer via email.',
@@ -282,7 +282,7 @@ const HelpScoutAppEn = {
             'Optionally change the conversation status after sending the reply. For example, set to closed after resolving an issue.',
         },
         draft: {
-          displayName: 'Save as Draft',
+          displayName: 'Save as draft',
           shortDesc: 'Save the reply as a draft',
           longDesc:
             'When set to true, the reply is saved as a draft and not sent to the customer. You can review and send it later from Help Scout.',
@@ -300,7 +300,7 @@ const HelpScoutAppEn = {
             'A list of email addresses to BCC on the reply. These recipients will receive a copy of the email without other recipients knowing.',
         },
         assignTo: {
-          displayName: 'Assign To',
+          displayName: 'Assign to',
           shortDesc: 'Assign the conversation after replying',
           longDesc:
             'Optionally assign the conversation to a different Help Scout user after sending the reply.',
@@ -309,7 +309,7 @@ const HelpScoutAppEn = {
     },
     list_customers: {
       groups: ['Customers'],
-      displayName: 'List Customers',
+      displayName: 'List customers',
       shortDesc: 'Retrieve a list of customers',
       longDesc:
         'Retrieve a list of customers from Help Scout. You can filter customers by mailbox, name, email, or modification date. Results can be sorted and paginated.',
@@ -320,12 +320,12 @@ const HelpScoutAppEn = {
           longDesc: 'Only return customers associated with conversations in this mailbox.',
         },
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'Filter by first name',
           longDesc: 'Only return customers with this first name.',
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'Filter by last name',
           longDesc: 'Only return customers with this last name.',
         },
@@ -335,17 +335,17 @@ const HelpScoutAppEn = {
           longDesc: 'Only return customers with this email address.',
         },
         modifiedSince: {
-          displayName: 'Modified Since',
+          displayName: 'Modified since',
           shortDesc: 'Filter by modification date',
           longDesc: 'Only return customers modified on or after this date.',
         },
         sortField: {
-          displayName: 'Sort Field',
+          displayName: 'Sort field',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to sort results by: createdAt, firstName, lastName, or modifiedAt.',
         },
         sortOrder: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'Sort order direction',
           longDesc: 'The direction to sort results: desc (newest first) or asc (oldest first).',
         },
@@ -358,7 +358,7 @@ const HelpScoutAppEn = {
     },
     list_conversations: {
       groups: ['Conversations'],
-      displayName: 'List Conversations',
+      displayName: 'List conversations',
       shortDesc: 'Retrieve a list of conversations',
       longDesc:
         'Retrieve a list of conversations from Help Scout. You can filter by mailbox, status, assignee, tags, and more. Results can be sorted and paginated.',
@@ -375,7 +375,7 @@ const HelpScoutAppEn = {
             'Only return conversations with this status: all, active, closed, open, pending, or spam.',
         },
         assignedTo: {
-          displayName: 'Assigned To',
+          displayName: 'Assigned to',
           shortDesc: 'Filter by assignee',
           longDesc: 'Only return conversations assigned to this user.',
         },
@@ -386,18 +386,18 @@ const HelpScoutAppEn = {
             'Only return conversations with this tag. You can specify multiple tags separated by commas.',
         },
         modifiedSince: {
-          displayName: 'Modified Since',
+          displayName: 'Modified since',
           shortDesc: 'Filter by modification date',
           longDesc: 'Only return conversations modified on or after this date.',
         },
         sortField: {
-          displayName: 'Sort Field',
+          displayName: 'Sort field',
           shortDesc: 'Field to sort by',
           longDesc:
             'The field to sort results by: createdAt, customerEmail, customerName, mailboxid, modifiedAt, number, status, or subject.',
         },
         sortOrder: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'Sort order direction',
           longDesc: 'The direction to sort results: desc (newest first) or asc (oldest first).',
         },
@@ -416,13 +416,13 @@ const HelpScoutAppEn = {
     },
     find_mailbox: {
       groups: ['Mailboxes'],
-      displayName: 'Find Mailbox by Name',
+      displayName: 'Find mailbox by name',
       shortDesc: 'Find a mailbox by its name',
       longDesc:
         'Search for a mailbox in Help Scout by its name. Returns the mailbox details if found. The search is case-insensitive and supports partial matching.',
       options: {
         name: {
-          displayName: 'Mailbox Name',
+          displayName: 'Mailbox name',
           shortDesc: 'The name of the mailbox to find',
           longDesc:
             'The name of the mailbox to search for. The search is case-insensitive and will match partial names or slugs.',
@@ -431,7 +431,7 @@ const HelpScoutAppEn = {
     },
     list_users: {
       groups: ['Users'],
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'Retrieve a list of Help Scout users',
       longDesc:
         'Retrieve a list of users from your Help Scout account. You can filter users by email address or mailbox. Returns all user types including those who have not yet accepted their invitations.',
@@ -455,29 +455,29 @@ const HelpScoutAppEn = {
     },
     get_company_report: {
       groups: ['Reports'],
-      displayName: 'Get Company Report',
+      displayName: 'Get company report',
       shortDesc: 'Get company-wide performance report',
       longDesc:
         'Retrieve a company-wide performance report from Help Scout. Includes metrics like customers helped, closed conversations, total replies, and happiness scores. Only available on Plus and Pro plans.',
       options: {
         start: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'Start of the reporting period',
           longDesc: 'The start date and time for the reporting period in ISO 8601 format.',
         },
         end: {
-          displayName: 'End Date',
+          displayName: 'End date',
           shortDesc: 'End of the reporting period',
           longDesc: 'The end date and time for the reporting period in ISO 8601 format.',
         },
         previousStart: {
-          displayName: 'Previous Start',
+          displayName: 'Previous start',
           shortDesc: 'Start of the comparison period',
           longDesc:
             'The start date for a previous period to compare against. Used to calculate deltas.',
         },
         previousEnd: {
-          displayName: 'Previous End',
+          displayName: 'Previous end',
           shortDesc: 'End of the comparison period',
           longDesc:
             'The end date for a previous period to compare against. Used to calculate deltas.',
@@ -506,29 +506,29 @@ const HelpScoutAppEn = {
     },
     get_email_report: {
       groups: ['Reports'],
-      displayName: 'Get Email Report',
+      displayName: 'Get email report',
       shortDesc: 'Get email channel performance report',
       longDesc:
         'Retrieve an email channel performance report from Help Scout. Includes volume metrics, resolution times, response times, and time distribution data. Only available on Plus and Pro plans.',
       options: {
         start: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'Start of the reporting period',
           longDesc: 'The start date and time for the reporting period in ISO 8601 format.',
         },
         end: {
-          displayName: 'End Date',
+          displayName: 'End date',
           shortDesc: 'End of the reporting period',
           longDesc: 'The end date and time for the reporting period in ISO 8601 format.',
         },
         previousStart: {
-          displayName: 'Previous Start',
+          displayName: 'Previous start',
           shortDesc: 'Start of the comparison period',
           longDesc:
             'The start date for a previous period to compare against. Used to calculate deltas.',
         },
         previousEnd: {
-          displayName: 'Previous End',
+          displayName: 'Previous end',
           shortDesc: 'End of the comparison period',
           longDesc:
             'The end date for a previous period to compare against. Used to calculate deltas.',
@@ -549,7 +549,7 @@ const HelpScoutAppEn = {
           longDesc: 'Comma-separated list of folder IDs to filter the report by.',
         },
         officeHours: {
-          displayName: 'Office Hours',
+          displayName: 'Office hours',
           shortDesc: 'Consider office hours in calculations',
           longDesc:
             'When set to true, time-based metrics will only consider office hours. Defaults to false.',
@@ -558,7 +558,7 @@ const HelpScoutAppEn = {
     },
     get_conversation: {
       groups: ['Conversations'],
-      displayName: 'Get Conversation',
+      displayName: 'Get conversation',
       shortDesc: 'Retrieve a single conversation by ID',
       longDesc:
         'Retrieve the full details of a specific conversation from Help Scout by its ID. Returns all conversation data including subject, status, customer information, tags, and custom fields.',
@@ -572,7 +572,7 @@ const HelpScoutAppEn = {
     },
     update_conversation: {
       groups: ['Conversations'],
-      displayName: 'Update Conversation',
+      displayName: 'Update conversation',
       shortDesc: 'Update an existing conversation',
       longDesc:
         'Update the properties of an existing conversation in Help Scout. You can change the subject, status, or assignee. At least one field must be provided to update.',
@@ -595,7 +595,7 @@ const HelpScoutAppEn = {
             'Update the status of the conversation. Options include active, closed, or pending.',
         },
         assignTo: {
-          displayName: 'Assign To',
+          displayName: 'Assign to',
           shortDesc: 'Assign to a user',
           longDesc: 'Assign or reassign the conversation to a specific Help Scout user.',
         },
@@ -603,7 +603,7 @@ const HelpScoutAppEn = {
     },
     delete_conversation: {
       groups: ['Conversations'],
-      displayName: 'Delete Conversation',
+      displayName: 'Delete conversation',
       shortDesc: 'Delete a conversation',
       longDesc:
         'Delete a conversation from Help Scout. This action moves the conversation to the trash. Be cautious as this action may be irreversible depending on your Help Scout settings.',
@@ -617,7 +617,7 @@ const HelpScoutAppEn = {
     },
     add_tags: {
       groups: ['Conversations'],
-      displayName: 'Add Tags to Conversation',
+      displayName: 'Add tags to conversation',
       shortDesc: 'Add tags to a conversation',
       longDesc:
         'Add one or more tags to an existing conversation in Help Scout. Tags help organize and categorize conversations for easier filtering, reporting, and workflow automation.',
@@ -637,7 +637,7 @@ const HelpScoutAppEn = {
     },
     list_threads: {
       groups: ['Threads'],
-      displayName: 'List Threads',
+      displayName: 'List threads',
       shortDesc: 'List all threads in a conversation',
       longDesc:
         'Retrieve all threads (messages) within a specific conversation. Threads include customer messages, agent replies, notes, and other conversation activities.',
@@ -657,7 +657,7 @@ const HelpScoutAppEn = {
     },
     get_thread: {
       groups: ['Threads'],
-      displayName: 'Get Thread',
+      displayName: 'Get thread',
       shortDesc: 'Retrieve a specific thread by ID',
       longDesc:
         'Retrieve the full details of a specific thread (message) within a conversation. Returns the thread content, type, status, and metadata.',
@@ -676,7 +676,7 @@ const HelpScoutAppEn = {
     },
     get_customer: {
       groups: ['Customers'],
-      displayName: 'Get Customer',
+      displayName: 'Get customer',
       shortDesc: 'Retrieve a single customer by ID',
       longDesc:
         'Retrieve the full details of a specific customer from Help Scout by their ID. Returns all customer data including contact information, organization, and custom fields.',
@@ -690,7 +690,7 @@ const HelpScoutAppEn = {
     },
     delete_customer: {
       groups: ['Customers'],
-      displayName: 'Delete Customer',
+      displayName: 'Delete customer',
       shortDesc: 'Delete a customer',
       longDesc:
         'Delete a customer profile from Help Scout. Be cautious as this action may affect conversation history and is typically irreversible.',
@@ -704,7 +704,7 @@ const HelpScoutAppEn = {
     },
     search_customers: {
       groups: ['Customers'],
-      displayName: 'Search Customers',
+      displayName: 'Search customers',
       shortDesc: 'Search for customers using a query',
       longDesc:
         'Search for customers in Help Scout using a query string. You can search by email, name, phone number, or other customer properties using Help Scout query syntax.',
@@ -716,12 +716,12 @@ const HelpScoutAppEn = {
             'The search query using Help Scout query syntax. Examples: (email:"john@example.com"), (firstName:"John"), (phone:"555-1234"). You can combine multiple conditions with AND/OR operators.',
         },
         sortField: {
-          displayName: 'Sort Field',
+          displayName: 'Sort field',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to sort results by: createdAt, firstName, lastName, or modifiedAt.',
         },
         sortOrder: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'Sort order direction',
           longDesc: 'The direction to sort results: desc (newest first) or asc (oldest first).',
         },
@@ -734,7 +734,7 @@ const HelpScoutAppEn = {
     },
     list_saved_replies: {
       groups: ['Saved Replies'],
-      displayName: 'List Saved Replies',
+      displayName: 'List saved replies',
       shortDesc: 'List saved replies for a mailbox',
       longDesc:
         'Retrieve a list of saved reply templates for a specific mailbox. Saved replies are pre-written response templates that agents can use to quickly respond to common questions.',
@@ -756,7 +756,7 @@ const HelpScoutAppEn = {
   triggers: {
     new_customer: {
       groups: ['Customers'],
-      displayName: 'New Customer',
+      displayName: 'New customer',
       shortDesc: 'Triggers when a new customer is created',
       longDesc:
         'This trigger fires whenever a new customer is created in Help Scout. It provides the full customer profile including contact information, organization, and custom fields.',
@@ -764,7 +764,7 @@ const HelpScoutAppEn = {
     },
     updated_customer: {
       groups: ['Customers'],
-      displayName: 'Updated Customer',
+      displayName: 'Updated customer',
       shortDesc: 'Triggers when a customer is updated',
       longDesc:
         'This trigger fires whenever a customer profile is updated in Help Scout. It provides the updated customer data including any changed fields.',
@@ -772,7 +772,7 @@ const HelpScoutAppEn = {
     },
     new_organization: {
       groups: ['Organizations'],
-      displayName: 'New Organization',
+      displayName: 'New organization',
       shortDesc: 'Triggers when a new organization is created',
       longDesc:
         'This trigger fires whenever a new organization is created in Help Scout. Organizations help group customers from the same company.',
@@ -780,7 +780,7 @@ const HelpScoutAppEn = {
     },
     new_conversation: {
       groups: ['Conversations'],
-      displayName: 'New Conversation',
+      displayName: 'New conversation',
       shortDesc: 'Triggers when a new conversation is created',
       longDesc:
         'This trigger fires whenever a new conversation (support ticket) is created in Help Scout. You can optionally filter by mailbox to only receive events from specific inboxes.',
@@ -795,7 +795,7 @@ const HelpScoutAppEn = {
     },
     assigned_conversation: {
       groups: ['Conversations'],
-      displayName: 'Assigned Conversation',
+      displayName: 'Assigned conversation',
       shortDesc: 'Triggers when a conversation is assigned',
       longDesc:
         'This trigger fires whenever a conversation is assigned to a user in Help Scout. This includes both new assignments and reassignments.',

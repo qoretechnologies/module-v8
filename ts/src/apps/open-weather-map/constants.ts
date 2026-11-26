@@ -15,7 +15,7 @@ export const OPEN_WEATHER_MAP_LOGO =
 
 export const OPEN_WEATHER_MAP_CONN_OPTIONS = {
   token: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your OpenWeatherMap API key',
     desc:
       `To get your API key:\n` +

@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
-          "source": "Create Message",
-          "message": "Create Message"
+          "source": "Create message",
+          "message": "Create message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
           "source": "Send a text message to an SQS queue",
@@ -352,8 +352,8 @@
           "message": "Send a text message to an Amazon SQS queue with optional message attributes, delay settings, and FIFO queue parameters."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where the SQS queue is located",
@@ -376,8 +376,8 @@
           "message": "The complete URL of the Amazon SQS queue where the message will be sent."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
-          "source": "Message Body",
-          "message": "Message Body"
+          "source": "Message body",
+          "message": "Message body"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
           "source": "The text content of the message",
@@ -388,8 +388,8 @@
           "message": "The message content to send. Can be plain text or any string format up to 256 KB."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
-          "message": "Delay (Seconds)"
+          "source": "Delay (seconds)",
+          "message": "Delay (seconds)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
           "source": "Number of seconds to delay message delivery",
@@ -400,8 +400,8 @@
           "message": "The length of time (0-900 seconds) for which to delay delivery of the message."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
-          "message": "Message Attributes"
+          "source": "Message attributes",
+          "message": "Message attributes"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
           "source": "Additional metadata for the message",
@@ -412,8 +412,8 @@
           "message": "Custom attributes to include with the message for filtering and processing."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
-          "message": "Message Group ID"
+          "source": "Message group ID",
+          "message": "Message group ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
           "source": "Group ID for FIFO queues",
@@ -424,8 +424,8 @@
           "message": "The tag that specifies that a message belongs to a specific message group (FIFO queues only)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
-          "message": "Message Deduplication ID"
+          "source": "Message deduplication ID",
+          "message": "Message deduplication ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
           "source": "Deduplication ID for FIFO queues",
@@ -436,8 +436,8 @@
           "message": "The token used for deduplication of sent messages (FIFO queues only)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "Create JSON Message",
-          "message": "Create JSON Message"
+          "source": "Create JSON message",
+          "message": "Create JSON message"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
           "source": "Send a JSON message to an SQS queue",
@@ -448,8 +448,8 @@
           "message": "Send structured JSON data to an Amazon SQS queue. The JSON object will be automatically serialized into the message body."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where the SQS queue is located",
@@ -472,8 +472,8 @@
           "message": "The complete URL of the Amazon SQS queue where the JSON message will be sent."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
-          "source": "Message Data",
-          "message": "Message Data"
+          "source": "Message data",
+          "message": "Message data"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
           "source": "The JSON object to send",
@@ -484,8 +484,8 @@
           "message": "The structured data object that will be serialized to JSON and sent as the message body."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
-          "message": "Delay (Seconds)"
+          "source": "Delay (seconds)",
+          "message": "Delay (seconds)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
           "source": "Number of seconds to delay message delivery",
@@ -496,8 +496,8 @@
           "message": "The length of time (0-900 seconds) for which to delay delivery of the message."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Message Attributes",
-          "message": "Message Attributes"
+          "source": "Message attributes",
+          "message": "Message attributes"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
           "source": "Additional metadata for the message",
@@ -508,8 +508,8 @@
           "message": "Custom attributes to include with the message for filtering and processing."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
-          "source": "Message Group ID",
-          "message": "Message Group ID"
+          "source": "Message group ID",
+          "message": "Message group ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
           "source": "Group ID for FIFO queues",
@@ -520,8 +520,8 @@
           "message": "The tag that specifies that a message belongs to a specific message group (FIFO queues only)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
-          "source": "Message Deduplication ID",
-          "message": "Message Deduplication ID"
+          "source": "Message deduplication ID",
+          "message": "Message deduplication ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
           "source": "Deduplication ID for FIFO queues",
@@ -532,8 +532,8 @@
           "message": "The token used for deduplication of sent messages (FIFO queues only)."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
-          "source": "Create Queue",
-          "message": "Create Queue"
+          "source": "Create queue",
+          "message": "Create queue"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
           "source": "Create a new SQS queue",
@@ -544,8 +544,8 @@
           "message": "Create a new Amazon SQS queue with configurable settings including FIFO capabilities, dead letter queues, and encryption options."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where the queue will be created",
@@ -556,8 +556,8 @@
           "message": "Select the AWS region where you want to create the new SQS queue."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
-          "source": "Queue Name",
-          "message": "Queue Name"
+          "source": "Queue name",
+          "message": "Queue name"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
           "source": "The name of the new queue",
@@ -568,8 +568,8 @@
           "message": "The name for the queue. FIFO queue names must end with .fifo suffix."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
-          "source": "FIFO Queue",
-          "message": "FIFO Queue"
+          "source": "FIFO queue",
+          "message": "FIFO queue"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
           "source": "Create as a FIFO (First-In-First-Out) queue",
@@ -580,8 +580,8 @@
           "message": "Whether to create a FIFO queue that ensures messages are processed exactly once in the exact order sent."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
-          "source": "Content-Based Deduplication",
-          "message": "Content-Based Deduplication"
+          "source": "Content-based deduplication",
+          "message": "Content-based deduplication"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
           "source": "Enable automatic deduplication based on message content",
@@ -592,8 +592,8 @@
           "message": "For FIFO queues, enables deduplication using a SHA-256 hash of the message body."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
-          "message": "Visibility Timeout (Seconds)"
+          "source": "Visibility timeout (seconds)",
+          "message": "Visibility timeout (seconds)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
           "source": "Time a message is invisible after being received",
@@ -604,8 +604,8 @@
           "message": "The length of time (0-43200 seconds) that a message is invisible to other consumers after being received."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
-          "source": "Message Retention Period (Seconds)",
-          "message": "Message Retention Period (Seconds)"
+          "source": "Message retention period (seconds)",
+          "message": "Message retention period (seconds)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
           "source": "How long messages are retained in the queue",
@@ -616,8 +616,8 @@
           "message": "The length of time (60-1209600 seconds) that messages are retained in the queue."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
-          "source": "Delay (Seconds)",
-          "message": "Delay (Seconds)"
+          "source": "Delay (seconds)",
+          "message": "Delay (seconds)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
           "source": "Default delay for new messages",
@@ -628,8 +628,8 @@
           "message": "The default delay (0-900 seconds) for messages added to this queue."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
-          "source": "Receive Wait Time (Seconds)",
-          "message": "Receive Wait Time (Seconds)"
+          "source": "Receive wait time (seconds)",
+          "message": "Receive wait time (seconds)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
           "source": "Long polling wait time for receive operations",
@@ -640,8 +640,8 @@
           "message": "The time (0-20 seconds) for which ReceiveMessage calls wait for messages to arrive."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
-          "source": "Max Receive Count",
-          "message": "Max Receive Count"
+          "source": "Max receive count",
+          "message": "Max receive count"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
           "source": "Maximum receives before moving to dead letter queue",
@@ -652,8 +652,8 @@
           "message": "The number of times a message can be received before being moved to the dead letter queue."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
-          "source": "Dead Letter Queue URL",
-          "message": "Dead Letter Queue URL"
+          "source": "Dead letter queue URL",
+          "message": "Dead letter queue URL"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
           "source": "URL of the dead letter queue",
@@ -664,8 +664,8 @@
           "message": "The URL of the queue to use as a dead letter queue for failed message processing."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
-          "source": "KMS Master Key ID",
-          "message": "KMS Master Key ID"
+          "source": "KMS master key ID",
+          "message": "KMS master key ID"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
           "source": "KMS key for server-side encryption",
@@ -676,8 +676,8 @@
           "message": "The ID of an AWS KMS key for server-side encryption of queue messages."
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
-          "source": "KMS Data Key Reuse Period (Seconds)",
-          "message": "KMS Data Key Reuse Period (Seconds)"
+          "source": "KMS data key reuse period (seconds)",
+          "message": "KMS data key reuse period (seconds)"
         },
         "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
           "source": "How long to reuse KMS data keys",
@@ -688,8 +688,8 @@
           "message": "The length of time (60-86400 seconds) for which Amazon SQS can reuse a data key."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
-          "source": "List Queues",
-          "message": "List Queues"
+          "source": "List queues",
+          "message": "List queues"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
           "source": "List all SQS queues in a region",
@@ -700,8 +700,8 @@
           "message": "Retrieve a list of all Amazon SQS queues in the specified region with optional filtering and detailed queue attributes."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
           "source": "The AWS region to list queues from",
@@ -712,8 +712,8 @@
           "message": "Select the AWS region from which to retrieve the list of SQS queues."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
-          "source": "Queue Name Prefix",
-          "message": "Queue Name Prefix"
+          "source": "Queue name prefix",
+          "message": "Queue name prefix"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
           "source": "Filter queues by name prefix",
@@ -724,8 +724,8 @@
           "message": "Optional prefix to filter queue names. Only queues with names starting with this prefix will be returned."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
-          "message": "Max Results"
+          "source": "Max results",
+          "message": "Max results"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
           "source": "Maximum number of queues to return",
@@ -736,8 +736,8 @@
           "message": "The maximum number of queue results to return (1-1000)."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
-          "source": "Include Attributes",
-          "message": "Include Attributes"
+          "source": "Include attributes",
+          "message": "Include attributes"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
           "source": "Include detailed queue attributes in the response",
@@ -748,8 +748,8 @@
           "message": "Whether to include detailed queue attributes like message counts, timestamps, and configuration settings."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
-          "source": "List Messages",
-          "message": "List Messages"
+          "source": "List messages",
+          "message": "List messages"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
           "source": "Receive messages from an SQS queue",
@@ -760,8 +760,8 @@
           "message": "Retrieve messages from an Amazon SQS queue with configurable polling options and message attribute retrieval."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where the SQS queue is located",
@@ -784,8 +784,8 @@
           "message": "The complete URL of the Amazon SQS queue from which to receive messages."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
-          "source": "Max Number of Messages",
-          "message": "Max Number of Messages"
+          "source": "Max number of messages",
+          "message": "Max number of messages"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
           "source": "Maximum messages to receive (1-10)",
@@ -796,8 +796,8 @@
           "message": "The maximum number of messages to return in a single request (1-10)."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
-          "message": "Wait Time (Seconds)"
+          "source": "Wait time (seconds)",
+          "message": "Wait time (seconds)"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
           "source": "Long polling wait time",
@@ -808,8 +808,8 @@
           "message": "The duration (0-20 seconds) for which the call waits for messages to arrive."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
-          "source": "Visibility Timeout (Seconds)",
-          "message": "Visibility Timeout (Seconds)"
+          "source": "Visibility timeout (seconds)",
+          "message": "Visibility timeout (seconds)"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
           "source": "Override the queue default visibility timeout",
@@ -820,8 +820,8 @@
           "message": "The duration for which received messages are hidden from subsequent retrieve requests."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
-          "source": "Message Attribute Names",
-          "message": "Message Attribute Names"
+          "source": "Message attribute names",
+          "message": "Message attribute names"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
           "source": "List of message attribute names to retrieve",
@@ -832,8 +832,8 @@
           "message": "The names of message attributes to return. Use \"All\" to return all attributes."
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
-          "message": "Attribute Names"
+          "source": "Attribute names",
+          "message": "Attribute names"
         },
         "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
           "source": "List of message system attribute names to retrieve",
@@ -844,8 +844,8 @@
           "message": "The names of system attributes to return with each message. Use \"All\" to return all attributes."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
-          "source": "Get Queue",
-          "message": "Get Queue"
+          "source": "Get queue",
+          "message": "Get queue"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
           "source": "Get details about a specific SQS queue",
@@ -856,8 +856,8 @@
           "message": "Retrieve detailed information and attributes for a specific Amazon SQS queue including configuration, message counts, and timestamps."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where the SQS queue is located",
@@ -880,8 +880,8 @@
           "message": "The complete URL of the Amazon SQS queue to retrieve information about."
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
-          "source": "Attribute Names",
-          "message": "Attribute Names"
+          "source": "Attribute names",
+          "message": "Attribute names"
         },
         "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
           "source": "List of queue attributes to retrieve",
@@ -892,8 +892,8 @@
           "message": "The names of queue attributes to return. Use \"All\" to return all available attributes."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
-          "source": "New Message",
-          "message": "New Message"
+          "source": "New message",
+          "message": "New message"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
           "source": "Triggers when a new message is received in an SQS queue",
@@ -904,8 +904,8 @@
           "message": "Monitors an Amazon SQS queue for new messages and triggers when messages are available. Supports long polling and message attributes retrieval."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where the SQS queue is located",
@@ -928,8 +928,8 @@
           "message": "The complete URL of the Amazon SQS queue from which to receive messages."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
-          "message": "Wait Time (Seconds)"
+          "source": "Wait time (seconds)",
+          "message": "Wait time (seconds)"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
           "source": "Long polling wait time in seconds",
@@ -940,8 +940,8 @@
           "message": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning."
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
-          "message": "Max Messages"
+          "source": "Max messages",
+          "message": "Max messages"
         },
         "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
           "source": "Maximum number of messages to receive per poll",
@@ -952,8 +952,8 @@
           "message": "The maximum number of messages to return (1-10). Note that fewer messages might be returned."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
-          "source": "New JSON Message",
-          "message": "New JSON Message"
+          "source": "New JSON message",
+          "message": "New JSON message"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
           "source": "Triggers when a new JSON message is received in an SQS queue",
@@ -964,8 +964,8 @@
           "message": "Monitors an Amazon SQS queue for new messages containing valid JSON data. Only triggers for messages with parseable JSON content."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
           "source": "The AWS region where the SQS queue is located",
@@ -988,8 +988,8 @@
           "message": "The complete URL of the Amazon SQS queue from which to receive JSON messages."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
-          "source": "Wait Time (Seconds)",
-          "message": "Wait Time (Seconds)"
+          "source": "Wait time (seconds)",
+          "message": "Wait time (seconds)"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
           "source": "Long polling wait time in seconds",
@@ -1000,8 +1000,8 @@
           "message": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning."
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
-          "source": "Max Messages",
-          "message": "Max Messages"
+          "source": "Max messages",
+          "message": "Max messages"
         },
         "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
           "source": "Maximum number of messages to receive per poll",
@@ -1012,8 +1012,8 @@
           "message": "The maximum number of messages to return (1-10). Note that fewer messages might be returned."
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
-          "source": "New Queue",
-          "message": "New Queue"
+          "source": "New queue",
+          "message": "New queue"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
           "source": "Triggers when a new SQS queue is created",
@@ -1024,8 +1024,8 @@
           "message": "Monitors for newly created Amazon SQS queues in the specified region and triggers when new queues are detected."
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
-          "message": "AWS Region"
+          "source": "AWS region",
+          "message": "AWS region"
         },
         "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {
           "source": "The AWS region to monitor for new queues",

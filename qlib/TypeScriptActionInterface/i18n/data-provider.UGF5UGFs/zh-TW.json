@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.display_name": {
-          "source": "List Transactions",
+          "source": "List transactions",
           "message": "列出交易"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.short_desc": {
@@ -352,7 +352,7 @@
           "message": "擷取指定日期範圍內 PayPal 帳戶的交易清單。支援依交易類型、狀態、金額範圍、貨幣和付款方式進行篩選，以協助您尋找特定交易或產生報告。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日期"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "交易搜尋中包含的最早日期。此日期或之後的交易將包含在結果中。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "結束日期"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.short_desc": {
@@ -376,7 +376,7 @@
           "message": "交易搜尋中包含的最晚日期。結果中將包含此日期或此日期之前的交易。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
-          "source": "Transaction Type",
+          "source": "Transaction type",
           "message": "交易類型"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
@@ -1532,7 +1532,7 @@
           "message": "其他。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.display_name": {
-          "source": "Transaction Status",
+          "source": "Transaction status",
           "message": "交易狀態"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.short_desc": {
@@ -1568,7 +1568,7 @@
           "message": "成功的交易已撤銷，款項已退還給原始付款人。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.display_name": {
-          "source": "Transaction Amount Range",
+          "source": "Transaction amount range",
           "message": "交易金額範圍"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "指定交易金額範圍以篩選結果。適用於尋找特定金額範圍內的交易。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.display_name": {
-          "source": "Minimum Amount",
+          "source": "Minimum amount",
           "message": "最小金額"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.short_desc": {
@@ -1592,7 +1592,7 @@
           "message": "包含在結果中的最小交易金額。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.display_name": {
-          "source": "Maximum Amount",
+          "source": "Maximum amount",
           "message": "最大金額"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.short_desc": {
@@ -1604,7 +1604,7 @@
           "message": "包含在結果中的最大交易金額。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.display_name": {
-          "source": "Transaction Currency",
+          "source": "Transaction currency",
           "message": "交易貨幣"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.short_desc": {
@@ -1816,7 +1816,7 @@
           "message": "美元"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.display_name": {
-          "source": "Payment Method Type",
+          "source": "Payment method type",
           "message": "付款方式類型"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.short_desc": {
@@ -1836,7 +1836,7 @@
           "message": "簽帳金融卡"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.short_desc": {
@@ -1848,7 +1848,7 @@
           "message": "單次回應中傳回的最大交易筆數。用於大量結果集的分頁。"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "頁碼"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.short_desc": {
@@ -1860,7 +1860,7 @@
           "message": "分頁瀏覽大量結果集時要擷取的頁碼。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.display_name": {
-          "source": "Create Order",
+          "source": "Create order",
           "message": "建立訂單"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.short_desc": {
@@ -1872,7 +1872,7 @@
           "message": "使用指定的付款金額、品項、物流運送詳細資訊和付款偏好設定建立新的 PayPal 訂單。訂單代表兩方或多方之間的付款，可以立即授權或稍後請款。支援各種付款來源，包括 PayPal、卡片和替代付款方式。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.display_name": {
-          "source": "Payment Intent",
+          "source": "Payment intent",
           "message": "付款意圖"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.short_desc": {
@@ -1900,7 +1900,7 @@
           "message": "商家打算在顧客付款後授權付款並保留款項。授權的付款最好在三天內請款，但最長可在 29 天內請款。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2112,7 +2112,7 @@
           "message": "美元"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.display_name": {
-          "source": "Total Amount",
+          "source": "Total amount",
           "message": "總金額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.short_desc": {
@@ -2124,7 +2124,7 @@
           "message": "此訂單的總金額。必須為正數，且若提供明細項目，必須與所有項目的總和相符。請格式化為符合貨幣適當小數位數的字串。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.display_name": {
-          "source": "Item Total",
+          "source": "Item total",
           "message": "商品總計"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.short_desc": {
@@ -2136,7 +2136,7 @@
           "message": "在計入稅金、運費、手續費、保險或折扣之前，訂單中所有項目的總費用。應等於所有項目的 (quantity × unit_amount) 總和。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.display_name": {
-          "source": "Shipping Amount",
+          "source": "Shipping amount",
           "message": "運費金額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.short_desc": {
@@ -2148,7 +2148,7 @@
           "message": "遞送此訂單項目的運費。此金額會加至訂單總金額中。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.display_name": {
-          "source": "Handling Amount",
+          "source": "Handling amount",
           "message": "手續費金額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.short_desc": {
@@ -2160,7 +2160,7 @@
           "message": "處理此訂單所收取的額外手續費。這涵蓋包裝和訂單處理等費用。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.display_name": {
-          "source": "Tax Total",
+          "source": "Tax total",
           "message": "稅金總額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.short_desc": {
@@ -2172,7 +2172,7 @@
           "message": "此訂單中所有品項的總稅額。這包括根據運送地址及當地法規適用的營業稅、增值稅 (VAT) 或其他適用稅款。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.display_name": {
-          "source": "Insurance Amount",
+          "source": "Insurance amount",
           "message": "保險金額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.short_desc": {
@@ -2184,7 +2184,7 @@
           "message": "保護運送貨件的選填保險金額。此費用涵蓋運送過程中物品遺失或損壞的價值。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.display_name": {
-          "source": "Shipping Discount",
+          "source": "Shipping discount",
           "message": "運費折扣"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.short_desc": {
@@ -2196,7 +2196,7 @@
           "message": "專門套用至運費的任何折扣，例如免運費促銷活動或大宗訂單的運費減免。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.display_name": {
-          "source": "Discount Amount",
+          "source": "Discount amount",
           "message": "折扣金額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.short_desc": {
@@ -2208,7 +2208,7 @@
           "message": "套用至此訂單的總折扣金額，包括優惠券代碼、促銷活動或大宗折扣。這會減少訂單總金額。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Payee Email",
+          "source": "Payee email",
           "message": "收款人電子郵件"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.short_desc": {
@@ -2220,7 +2220,7 @@
           "message": "將接收付款的商家或賣家電子郵件地址。市集交易或指定不同收款人時為必填。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Payee Merchant ID",
+          "source": "Payee merchant ID",
           "message": "收款人商家 ID"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
@@ -2232,7 +2232,7 @@
           "message": "將接收付款之帳戶的 PayPal 商家 ID。用於市集交易或將付款路由至特定商家。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Order Description",
+          "source": "Order description",
           "message": "訂單說明"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.short_desc": {
@@ -2268,7 +2268,7 @@
           "message": "此訂單的帳單編號。有助於與您的會計系統對帳並防止重複付款。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.display_name": {
-          "source": "Soft Descriptor",
+          "source": "Soft descriptor",
           "message": "動態帳單描述"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.short_desc": {
@@ -2280,7 +2280,7 @@
           "message": "顯示在顧客信用卡或銀行對帳單上的文字。請保持簡短且易於識別，以避免拒付。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.display_name": {
-          "source": "Order Items",
+          "source": "Order items",
           "message": "訂單項目"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.short_desc": {
@@ -2316,7 +2316,7 @@
           "message": "捐款"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Item Description",
+          "source": "Item description",
           "message": "品項說明"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.short_desc": {
@@ -2328,7 +2328,7 @@
           "message": "可選的詳細描述，提供有關此項目的更多資訊"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.display_name": {
-          "source": "Item Name",
+          "source": "Item name",
           "message": "品項名稱"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.short_desc": {
@@ -2364,7 +2364,7 @@
           "message": "您內部用於庫存追蹤的庫存單位識別碼。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.display_name": {
-          "source": "Tax Amount",
+          "source": "Tax amount",
           "message": "稅額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.short_desc": {
@@ -2376,7 +2376,7 @@
           "message": "此物品的稅額，根據數量和適用稅率計算。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "單價"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.short_desc": {
@@ -2400,7 +2400,7 @@
           "message": "可選的連結至產品頁面的 URL，客戶可於此查看此項目的更多詳細資訊。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.display_name": {
-          "source": "Shipping Type",
+          "source": "Shipping type",
           "message": "運送類型"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.short_desc": {
@@ -2420,7 +2420,7 @@
           "message": "專人自取"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.display_name": {
-          "source": "Shipping Name",
+          "source": "Shipping name",
           "message": "收件人姓名"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.short_desc": {
@@ -2432,7 +2432,7 @@
           "message": "將在送達地址收取貨件的人員完整姓名。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.display_name": {
-          "source": "Shipping Address Line 1",
+          "source": "Shipping address line 1",
           "message": "運送地址第 1 行"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.short_desc": {
@@ -2444,7 +2444,7 @@
           "message": "運送地址的第一行，通常包含門牌號碼和街道名稱。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.display_name": {
-          "source": "Shipping Address Line 2",
+          "source": "Shipping address line 2",
           "message": "運送地址第 2 行"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.short_desc": {
@@ -2456,7 +2456,7 @@
           "message": "運送地址的選填第二行，用於填寫公寓號碼、套房號碼或其他地點詳細資訊。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.display_name": {
-          "source": "Shipping City",
+          "source": "Shipping city",
           "message": "運送城市"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.short_desc": {
@@ -2468,7 +2468,7 @@
           "message": "商品將送達的城市。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.display_name": {
-          "source": "Shipping State",
+          "source": "Shipping state",
           "message": "運送州/省"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.short_desc": {
@@ -2480,7 +2480,7 @@
           "message": "運送地址的州、省或地區。請使用該國家的相應代碼。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.display_name": {
-          "source": "Shipping Postal Code",
+          "source": "Shipping postal code",
           "message": "運送郵遞區號"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.short_desc": {
@@ -2492,7 +2492,7 @@
           "message": "運送地址的郵遞區號或同等代碼。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.display_name": {
-          "source": "Shipping Country Code",
+          "source": "Shipping country code",
           "message": "運送國家代碼"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.short_desc": {
@@ -2504,7 +2504,7 @@
           "message": "運送地址的雙字元 ISO 3166-1 國家代碼。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.display_name": {
-          "source": "Platform Fees",
+          "source": "Platform fees",
           "message": "平台手續費"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.short_desc": {
@@ -2516,7 +2516,7 @@
           "message": "此交易要收取的平台手續費陣列。由市集用於從其平台上處理的交易中收取費用。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.display_name": {
-          "source": "Fee Amount",
+          "source": "Fee amount",
           "message": "費用金額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.short_desc": {
@@ -2528,7 +2528,7 @@
           "message": "從此交易中收取的平台手續費金額"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Fee Recipient Email",
+          "source": "Fee recipient email",
           "message": "費用收款人電子郵件"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.short_desc": {
@@ -2540,7 +2540,7 @@
           "message": "接收平台手續費的帳戶電子郵件地址"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Fee Recipient Merchant ID",
+          "source": "Fee recipient merchant ID",
           "message": "費用收款人商家 ID"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
@@ -2552,7 +2552,7 @@
           "message": "接收平台手續費之PayPal商家ID。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
+          "source": "Disbursement mode",
           "message": "撥款模式"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
@@ -2596,7 +2596,7 @@
           "message": "如果客戶取消付款流程將重新導向至的 URL。應提供有關已取消交易和後續步驟的資訊。"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.display_name": {
-          "source": "Capture Order",
+          "source": "Capture order",
           "message": "請款訂單"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.short_desc": {
@@ -2620,7 +2620,7 @@
           "message": "要請款的已核准訂單 ID"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.display_name": {
-          "source": "Final Capture",
+          "source": "Final capture",
           "message": "最終請款"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.short_desc": {
@@ -2632,7 +2632,7 @@
           "message": "這是否為該訂單的最後一次請款"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.display_name": {
-          "source": "Payment Instructions",
+          "source": "Payment instructions",
           "message": "付款指示"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.short_desc": {
@@ -2644,7 +2644,7 @@
           "message": "處理此付款的特殊指示，例如撥款時間或平台費用收取。"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
+          "source": "Disbursement mode",
           "message": "撥款模式"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
@@ -2664,7 +2664,7 @@
           "message": "延遲"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
+          "source": "Get order",
           "message": "取得訂單"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.short_desc": {
@@ -2688,7 +2688,7 @@
           "message": "要擷取詳細資料之訂單的唯一識別碼。"
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.display_name": {
-          "source": "Authorize Order",
+          "source": "Authorize order",
           "message": "授權訂單"
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.short_desc": {
@@ -2712,7 +2712,7 @@
           "message": "要請款的已核准訂單 ID"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.display_name": {
-          "source": "Refund Payment",
+          "source": "Refund payment",
           "message": "退還款項"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.short_desc": {
@@ -2736,7 +2736,7 @@
           "message": "您要退款的已請款款項專屬識別碼。可以在請款回應或訂單詳細資料中找到。"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.display_name": {
-          "source": "Refund Amount",
+          "source": "Refund amount",
           "message": "退款金額"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.short_desc": {
@@ -2748,7 +2748,7 @@
           "message": "要退款的金額。如果未指定，將退還全部請款金額。對於部分退款，請指定幣別和金額。"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -2960,7 +2960,7 @@
           "message": "美元"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.display_name": {
-          "source": "Refund Value",
+          "source": "Refund value",
           "message": "退款金額"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.short_desc": {
@@ -2972,7 +2972,7 @@
           "message": "應退還的金額，以具有適當小數精度的字串格式表示"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.display_name": {
-          "source": "Note to Payer",
+          "source": "Note to payer",
           "message": "給付款人的備註"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.short_desc": {
@@ -2996,7 +2996,7 @@
           "message": "用於會計和追蹤目的、與此退款建立關聯的選填發票 ID。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.display_name": {
-          "source": "List Disputes",
+          "source": "List disputes",
           "message": "列出爭議"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.short_desc": {
@@ -3008,7 +3008,7 @@
           "message": "擷取您帳戶的客戶爭議清單。當客戶對交易提出異議時會產生爭議，此 API 可協助您有效管理並回應爭議。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.short_desc": {
@@ -3020,7 +3020,7 @@
           "message": "篩選在此日期和時間或之後建立的爭議。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.display_name": {
-          "source": "Disputed Transaction ID",
+          "source": "Disputed transaction ID",
           "message": "爭議交易 ID"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.short_desc": {
@@ -3032,7 +3032,7 @@
           "message": "僅顯示與特定交易 ID 相關的爭議。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.display_name": {
-          "source": "Dispute States",
+          "source": "Dispute states",
           "message": "爭議狀態"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.short_desc": {
@@ -3092,7 +3092,7 @@
           "message": "爭議已解決並關閉。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.short_desc": {
@@ -3104,7 +3104,7 @@
           "message": "單次回應中傳回的最大爭議數量。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "下一頁權標"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -3116,7 +3116,7 @@
           "message": "用於分頁以擷取下一頁爭議的權杖。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.display_name": {
-          "source": "Updated Before",
+          "source": "Updated before",
           "message": "更新時間早於"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.short_desc": {
@@ -3128,7 +3128,7 @@
           "message": "篩選在此日期和時間之前最後更新的爭議。"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.display_name": {
-          "source": "Updated After",
+          "source": "Updated after",
           "message": "更新時間晚於"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.short_desc": {
@@ -3140,7 +3140,7 @@
           "message": "篩選在此日期和時間之後最後更新的爭議。"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.display_name": {
-          "source": "List Invoices",
+          "source": "List invoices",
           "message": "列出發票"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.short_desc": {
@@ -3152,7 +3152,7 @@
           "message": "擷取您帳戶中發票的分頁清單。使用分頁參數可瀏覽大量發票。"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "頁碼"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.short_desc": {
@@ -3164,7 +3164,7 @@
           "message": "分頁瀏覽發票時要擷取的頁碼。"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
+          "source": "Page size",
           "message": "頁面大小"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.short_desc": {
@@ -3176,7 +3176,7 @@
           "message": "單次回應中傳回的最大發票數量。"
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.display_name": {
-          "source": "Get Invoice",
+          "source": "Get invoice",
           "message": "取得發票"
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.short_desc": {
@@ -3200,7 +3200,7 @@
           "message": "要擷取詳細資料之發票的唯一識別碼。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.display_name": {
-          "source": "Create Invoice",
+          "source": "Create invoice",
           "message": "建立發票"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
@@ -3212,7 +3212,7 @@
           "message": "建立可傳送給顧客以進行付款的新發票。包含品項詳細資訊、定價、稅務資訊與付款條件。發票可自動傳送給收件人或手動分享。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.display_name": {
-          "source": "Invoice Number",
+          "source": "Invoice number",
           "message": "發票號碼"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.short_desc": {
@@ -3224,7 +3224,7 @@
           "message": "此發票的唯一識別碼。若未提供，PayPal 將自動產生一個。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
+          "source": "Currency code",
           "message": "貨幣代碼"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.short_desc": {
@@ -3448,7 +3448,7 @@
           "message": "要包含在發票中的選填附註或備忘。收件人可見。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.display_name": {
-          "source": "Recipient Email",
+          "source": "Recipient email",
           "message": "收件人電子郵件"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.short_desc": {
@@ -3460,7 +3460,7 @@
           "message": "發票將傳送至的電子郵件地址。這是將接收付款請求的主要收件人。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.display_name": {
-          "source": "Recipient First Name",
+          "source": "Recipient first name",
           "message": "收件人名字"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.short_desc": {
@@ -3472,7 +3472,7 @@
           "message": "接收發票的人員或商家聯絡人的名字。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.display_name": {
-          "source": "Recipient Last Name",
+          "source": "Recipient last name",
           "message": "收件人姓氏"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.short_desc": {
@@ -3484,7 +3484,7 @@
           "message": "接收發票的人員的姓氏。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.display_name": {
-          "source": "Item Name",
+          "source": "Item name",
           "message": "品項名稱"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.short_desc": {
@@ -3496,7 +3496,7 @@
           "message": "所開立發票之產品或服務的描述性名稱。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Item Description",
+          "source": "Item description",
           "message": "品項說明"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.short_desc": {
@@ -3508,7 +3508,7 @@
           "message": "提供產品或服務更多資訊的選填詳細說明。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.display_name": {
-          "source": "Item Quantity",
+          "source": "Item quantity",
           "message": "品項數量"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.short_desc": {
@@ -3520,7 +3520,7 @@
           "message": "所開立發票品項的數量。若未指定，預設為 1。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.display_name": {
-          "source": "Unit Price",
+          "source": "Unit price",
           "message": "單價"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.short_desc": {
@@ -3532,7 +3532,7 @@
           "message": "品項或服務的每單位費用。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.display_name": {
-          "source": "Tax Percentage",
+          "source": "Tax percentage",
           "message": "稅率百分比"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.short_desc": {
@@ -3544,7 +3544,7 @@
           "message": "要套用至項目金額的稅率百分比。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.display_name": {
-          "source": "Tax Name",
+          "source": "Tax name",
           "message": "稅金名稱"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.short_desc": {
@@ -3556,7 +3556,7 @@
           "message": "所套用稅款的描述性名稱，例如「Sales Tax」、「VAT」或「GST」。"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.display_name": {
-          "source": "Payment Terms",
+          "source": "Payment terms",
           "message": "付款條件"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.short_desc": {
@@ -3596,7 +3596,7 @@
           "message": "90 天內付款"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.display_name": {
-          "source": "Send to Recipient",
+          "source": "Send to recipient",
           "message": "傳送給收件人"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.short_desc": {
@@ -3608,7 +3608,7 @@
           "message": "若為 true，發票將自動傳送至收件人的電子郵件地址。若為 false，您可以稍後手動傳送。"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.display_name": {
-          "source": "Subscription Events",
+          "source": "Subscription events",
           "message": "訂閱事件"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.short_desc": {
@@ -3620,7 +3620,7 @@
           "message": "在發生與訂閱相關的事件時觸發，包括訂閱建立、啟用、更新、取消、過期或暫停。對於管理定期計費和訂閱生命週期自動化至關重要。"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Subscription Event Type",
+          "source": "Subscription event type",
           "message": "訂閱事件類型"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3680,7 +3680,7 @@
           "message": "訂閱已暫停。"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
-          "source": "Invoice Events",
+          "source": "Invoice events",
           "message": "發票事件"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
@@ -3692,7 +3692,7 @@
           "message": "當發生發票相關事件時觸發，例如建立、付款、取消、退款或更新發票時。對於管理計費工作流程以及保持發票狀態與您的系統同步至關重要。"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Invoice Event Type",
+          "source": "Invoice event type",
           "message": "發票事件類型"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3752,7 +3752,7 @@
           "message": "發票已更新。"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.display_name": {
-          "source": "Dispute Events",
+          "source": "Dispute events",
           "message": "爭議事件"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.short_desc": {
@@ -3764,7 +3764,7 @@
           "message": "當發生顧客爭議事件時觸發，例如建立、更新或解決新爭議時。對於管理客戶服務工作流程和及時回應付款爭議至關重要。"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Dispute Event Type",
+          "source": "Dispute event type",
           "message": "爭議事件類型"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
@@ -3800,7 +3800,7 @@
           "message": "爭議已更新。"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.display_name": {
-          "source": "Order Events",
+          "source": "Order events",
           "message": "訂單事件"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.short_desc": {
@@ -3812,7 +3812,7 @@
           "message": "當發生特定的訂單相關事件時觸發，例如顧客核准訂單、訂單完成或撤銷付款核准時。可用於自動化訂單處理工作流程並處理訂單狀態變更。"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Order Event Type",
+          "source": "Order event type",
           "message": "訂單事件類型"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.short_desc": {

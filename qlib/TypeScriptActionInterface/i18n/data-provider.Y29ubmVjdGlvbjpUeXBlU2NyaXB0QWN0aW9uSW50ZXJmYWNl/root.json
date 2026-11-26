@@ -36,8 +36,8 @@
           "message": "For example, `https://<your_account>.activehosted.com`.\n\nTo get your ActiveCampaign instance URL:\n- Go to your ActiveCampaign account settings\n- Go to developer settings\n- Copy the url value"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWFjdGl2ZWNhbXBhaWdu.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWFjdGl2ZWNhbXBhaWdu.option.dG9rZW4.short_desc": {
           "source": "Your ActiveCampaign account API key",
@@ -312,8 +312,8 @@
           "message": "The BambooHR integration provides comprehensive access to your HR operations. Create, read, update, and list employees with dynamic field support. The integration automatically discovers available fields in your BambooHR account, including custom fields, and provides intelligent type handling for dates, lists, and other field types."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJhbWJvb2hy.option.Y29tcGFueV9kb21haW4.display_name": {
-          "source": "Company Domain",
-          "message": "Company Domain"
+          "source": "Company domain",
+          "message": "Company domain"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJhbWJvb2hy.option.Y29tcGFueV9kb21haW4.short_desc": {
           "source": "Your BambooHR company subdomain.",
@@ -344,8 +344,8 @@
           "message": "To connect to Baserow, you will need your **Baserow URL** and a **Database Token**.\n\n## Getting Your Database Token\n\n1. Log in to your Baserow instance\n2. Click on your **profile icon** in the top right corner\n3. Select **Settings** from the dropdown menu\n4. Navigate to **Database tokens** in the left sidebar\n5. Click **Create token**\n6. Give your token a descriptive name (e.g., \"Qore Integration\")\n7. Select the **workspace** the token should have access to\n8. Configure **table-level permissions** (create, read, update, delete) as needed\n9. Click **Create token** and copy the generated token\n\n## Connection Details\n\n### Baserow URL\nThe base URL of your Baserow instance:\n- **Baserow Cloud**: Use `https://api.baserow.io`\n- **Self-hosted**: Use your instance URL (e.g., `https://baserow.yourcompany.com`)\n\n### Database Token\nYour database token that grants access to specific workspaces and tables. Tokens are scoped to a single workspace with granular table-level permissions.\n\n**Note:** Database tokens provide more granular control than API tokens. Each token can be restricted to specific operations (create, read, update, delete) on individual tables within a workspace."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJhc2Vyb3c.option.dG9rZW4.display_name": {
-          "source": "Baserow API Token",
-          "message": "Baserow API Token"
+          "source": "Baserow API token",
+          "message": "Baserow API token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJhc2Vyb3c.option.dG9rZW4.short_desc": {
           "source": "Please enter your Baserow API token.",
@@ -388,8 +388,8 @@
           "message": "To connect to BigML, you will need your **Username** and **API Key**.\n\n## Getting Your API Key\n\n1. Log in to your [BigML Dashboard](https://bigml.com/dashboard)\n2. Click on the **gear icon** (configuration) in the top right corner\n3. Select **API Key** from the menu\n4. Your API key will be displayed on this page\n\nYou can also access your API key directly at [bigml.com/account/apikey](https://bigml.com/account/apikey)\n\n## Connection Details\n\n### Username\nYour BigML username or the email address you use to log in to BigML.\n\n### API Key\nYour BigML API key that authenticates requests to the API. This key is unique to your account and should be kept secure.\n\n**Note:** Your API key provides full access to your BigML resources. Keep it secure and never share it publicly. If you suspect your key has been compromised, you can regenerate it from the API Key settings page."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJpZ21s.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJpZ21s.option.dG9rZW4.short_desc": {
           "source": "Your BigML account API key",
@@ -424,8 +424,8 @@
           "message": "To connect your Brevo account, you will need your **API Key**.\n\n## Getting Your API Key\n\n1. Sign in to your [Brevo account](https://app.brevo.com/)\n2. Navigate to **Settings** → **SMTP & API** → **API Keys**\n3. Click **Generate a new API key**\n4. Give your API key a descriptive name (e.g., \"Qore Integration\")\n5. Copy the generated API key immediately (it won't be shown again)\n\nYou can also access the API keys page directly at [app.brevo.com/settings/keys/api](https://app.brevo.com/settings/keys/api)\n\n## Connection Details\n\n### API Key\nYour Brevo API key starting with `xkeysib-`. This key authenticates all API requests to your Brevo account.\n\n**Note:** Keep your API key secure and never share it publicly. You can revoke and regenerate keys at any time from the API Keys settings page."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJyZXZv.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJyZXZv.option.dG9rZW4.short_desc": {
           "source": "Your Brevo account API key",
@@ -456,8 +456,8 @@
           "message": "To connect your Browse AI account, you will need your **API Key**.\n\n## Getting Your API Key\n\n1. Sign in to your [Browse AI dashboard](https://www.browse.ai/dashboard/)\n2. Click on your profile icon or account settings\n3. Navigate to the **API** tab\n4. Click **Create API Key** or copy your existing API key\n5. Give your API key a descriptive name if creating a new one\n\n## Connection Details\n\n### API Key\nYour Browse AI API key that authenticates requests to the Browse AI service. This key allows you to manage robots, run tasks, and retrieve extracted data programmatically.\n\n**Note:** Keep your API key secure and never share it publicly. You can manage and revoke API keys from your Browse AI dashboard at any time."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJyb3dzZWFp.option.YXBpX2tleQ.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWJyb3dzZWFp.option.YXBpX2tleQ.short_desc": {
           "source": "Your Browser AI account API key",
@@ -524,8 +524,8 @@
           "message": "To connect to Contentful, you will need a **Content Management API (CMA) Token**.\n\n## Getting Your CMA Token\n\n1. Log in to your [Contentful](https://app.contentful.com) account\n2. Go to **Settings** (gear icon in the top navigation)\n3. Select **CMA tokens** from the left sidebar\n4. Click **Create personal access token**\n5. Give your token a descriptive name (e.g., \"Qore Integration\")\n6. Click **Generate** and copy the generated token\n\n**Important:** The token is only shown once. Make sure to copy and save it securely.\n\n## Authorizing Your Token for an Organization\n\nIf your Contentful account belongs to an organization, you must **authorize your token** for that organization before it can access spaces:\n\n1. Go to your [Personal Access Tokens](https://app.contentful.com/account/profile/cma_tokens) page\n2. Find your token in the list\n3. Click **Authorize** next to the organization you want the token to access\n\nWithout this step, API requests will fail with an `OrganizationAccessGrantRequired` error, even though the token is valid.\n\n## Permissions\n\nThe CMA token inherits the permissions of the user who created it. Ensure the user has appropriate access to the spaces and environments you want to manage."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWNvbnRlbnRmdWw.option.dG9rZW4.display_name": {
-          "source": "Content Management API Token",
-          "message": "Content Management API Token"
+          "source": "Content management API token",
+          "message": "Content management API token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWNvbnRlbnRmdWw.option.dG9rZW4.short_desc": {
           "source": "Your Contentful Content Management API access token.",
@@ -568,8 +568,8 @@
           "message": "To connect to Craft, you will need to create an **API connection** in the Craft app.\n\n## Creating Your API Connection\n\n1. Open the **Craft** app on your Mac or iOS device\n2. Navigate to the **Imagine** tab (AI features section)\n3. Click **Add Your First API Connection** or **+ Add API**\n4. Choose the type of API you want to create:\n   - **Daily notes & Tasks**: For task management and daily note operations\n   - **Selected Documents**: For document, collection, and block operations\n5. Follow the prompts to configure your API connection\n6. Copy the generated **API URL** and **Token** (if provided)\n\n## Connection Details\n\n### API URL\nThe URL provided by Craft for your API connection. This URL is specific to your account and the type of API you created.\n\n### API Token (Optional)\nSome API configurations may include a token for additional authentication. If provided, include it in your connection settings.\n\n## API Types and Capabilities\n\n### Daily Notes & Tasks API\nRequired for:\n- List Tasks, Create Task, Update Task, Delete Tasks\n- Get Daily Note Blocks\n\n### Selected Documents API\nRequired for:\n- Documents: List Documents\n- Collections: List Collections, Create/Update/Delete Collection Items\n- Blocks: List Blocks, Insert Block, Delete Blocks\n\n**Note:** You may need to create multiple API connections if you want to use both task-related actions and document-related actions. Each API type provides access to different sets of functionality."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWNyYWZ0.option.dG9rZW4.display_name": {
-          "source": "Craft API Token (Optional)",
-          "message": "Craft API Token (Optional)"
+          "source": "Craft API token (optional)",
+          "message": "Craft API token (optional)"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWNyYWZ0.option.dG9rZW4.short_desc": {
           "source": "Craft API key for API Key access mode",
@@ -600,8 +600,8 @@
           "message": "Collection of actions to interact with the Docusign eSignature API"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWRvY3VzaWduZXNpZ25hdHVyZQ.option.YWNjb3VudF9pZA.display_name": {
-          "source": "Default Account ID",
-          "message": "Default Account ID"
+          "source": "Default account ID",
+          "message": "Default account ID"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWRvY3VzaWduZXNpZ25hdHVyZQ.option.YWNjb3VudF9pZA.short_desc": {
           "source": "Default account ID selected during authorization",
@@ -612,8 +612,8 @@
           "message": "The default account ID set when the connection is authorized"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWRvY3VzaWduZXNpZ25hdHVyZQ.option.YWNjb3VudHM.display_name": {
-          "source": "Account Info",
-          "message": "Account Info"
+          "source": "Account info",
+          "message": "Account info"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWRvY3VzaWduZXNpZ25hdHVyZQ.option.YWNjb3VudHM.short_desc": {
           "source": "Account info set when the connection is authorized",
@@ -624,8 +624,8 @@
           "message": "Account info set when the connection is authorized"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWRvY3VzaWduZXNpZ25hdHVyZQ.option.YmFzZV91cmk.display_name": {
-          "source": "Default Base URI",
-          "message": "Default Base URI"
+          "source": "Default base URI",
+          "message": "Default base URI"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWRvY3VzaWduZXNpZ25hdHVyZQ.option.YmFzZV91cmk.short_desc": {
           "source": "The default base URI set when the connection is authorized",
@@ -724,8 +724,8 @@
           "message": "To connect to Freshdesk, you will need your **Subdomain** and **API Key**.\n\n## Finding Your Subdomain\n\nYour Freshdesk subdomain is the unique identifier in your Freshdesk URL:\n- If your Freshdesk URL is `https://yourcompany.freshdesk.com`, your subdomain is `yourcompany`\n\n## Getting Your API Key\n\n1. Log in to your Freshdesk account\n2. Click on your **profile icon** in the top right corner\n3. Select **Profile settings**\n4. Scroll down to find your **API Key** section\n5. Click **View API Key** to reveal your key\n6. Copy the API key\n\n## Connection Details\n\n### Subdomain\nYour Freshdesk subdomain (e.g., `yourcompany` from `yourcompany.freshdesk.com`). Do not include the full URL, just the subdomain portion.\n\n### API Key\nYour personal Freshdesk API key. This key is tied to your user account and inherits your permissions within Freshdesk.\n\n**Note:** Your API key provides access based on your user role and permissions in Freshdesk. For production integrations, consider using a dedicated service account with appropriate permissions. Keep your API key secure and never share it publicly."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWZyZXNoZGVzaw.option.YXBpS2V5.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWZyZXNoZGVzaw.option.YXBpS2V5.short_desc": {
           "source": "Your Freshdesk account API key",
@@ -760,8 +760,8 @@
           "message": "Integrate with Front to manage your team shared inboxes, contacts, accounts, and customer conversations. Front is a customer communication platform that brings email and messaging into a shared inbox. This integration enables you to automate contact management, organize accounts, and streamline team collaboration."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWdvb2dsZWFkcw.display_name": {
-          "source": "Google Ads",
-          "message": "Google Ads"
+          "source": "Google ads",
+          "message": "Google ads"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWdvb2dsZWFkcw.short_desc": {
           "source": "Connect with Google Ads to manage campaigns, conversions, and audiences",
@@ -780,8 +780,8 @@
           "message": "To connect to Google Ads, you need a **Google OAuth2 connection** and a following additional options:\n\n## Developer Token\nA developer token is required to access the Google Ads API. To obtain one:\n1. Sign in to your **Google Ads Manager Account**\n2. Navigate to **Tools & Settings** > **API Center**\n3. Apply for a developer token if you don't have one\n4. Copy the 22-character alphanumeric token\n\n## Manager Account ID (Optional)\nIf you're using a Manager Account (MCC) to access client accounts, enter the Manager Account ID (10 digits, without hyphens).\n\n**Note:** The Google Ads Customer Account is selected per action. After connecting, you will be able to choose from your accessible customer accounts when configuring each action."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWdvb2dsZWFkcw.option.ZGV2ZWxvcGVyX3Rva2Vu.display_name": {
-          "source": "Developer Token",
-          "message": "Developer Token"
+          "source": "Developer token",
+          "message": "Developer token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWdvb2dsZWFkcw.option.ZGV2ZWxvcGVyX3Rva2Vu.short_desc": {
           "source": "Your Google Ads API developer token",
@@ -792,8 +792,8 @@
           "message": "A 22-character alphanumeric developer token obtained from your Google Ads Manager Account API Center."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWdvb2dsZWFkcw.option.bG9naW5fY3VzdG9tZXJfaWQ.display_name": {
-          "source": "Manager Account ID",
-          "message": "Manager Account ID"
+          "source": "Manager account ID",
+          "message": "Manager account ID"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWdvb2dsZWFkcw.option.bG9naW5fY3VzdG9tZXJfaWQ.short_desc": {
           "source": "Manager (MCC) account ID for accessing client accounts",
@@ -955,6 +955,10 @@
           "source": "The cloud ID",
           "message": "The cloud ID"
         },
+        "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWppcmE.option.cGluZ19wYXRo.display_name": {
+          "source": "Ping path",
+          "message": "Ping path"
+        },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWppcmE.option.cGluZ19wYXRo.short_desc": {
           "source": "The custom ping path for oauth",
           "message": "The custom ping path for oauth"
@@ -964,8 +968,8 @@
           "message": "The path to ping"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWppcmE.option.c3dhZ2dlcl9iYXNlX3BhdGg.display_name": {
-          "source": "Swagger Base Path",
-          "message": "Swagger Base Path"
+          "source": "Swagger base path",
+          "message": "Swagger base path"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LWppcmE.option.c3dhZ2dlcl9iYXNlX3BhdGg.short_desc": {
           "source": "The custom base path for swagger",
@@ -1088,8 +1092,8 @@
           "message": "To connect to 360 Messenger for WhatsApp, you will need your **API Key**.\n\n## Getting Your API Key\n\n1. Sign in to your [360 Messenger Dashboard](https://360messenger.com/)\n2. Navigate to **Settings** or **API Settings**\n3. Locate your API key or generate a new one\n4. Copy the API key for use in your integration\n\n## Connection Details\n\n### API Key\nYour 360 Messenger API key that authenticates requests to send and receive WhatsApp messages through the platform.\n\n**Note:** Keep your API key secure and never share it publicly. Your API key grants full access to send messages on behalf of your WhatsApp Business account."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW1lc3NlbmdlcjM2MA.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW1lc3NlbmdlcjM2MA.option.dG9rZW4.short_desc": {
           "source": "API Key for 360 Messenger Whatsapp",
@@ -1147,6 +1151,10 @@
           "source": "The company",
           "message": "The company"
         },
+        "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW5ldHN1aXRl.option.b2F1dGgyX3Rva2VuX3VybA.display_name": {
+          "source": "OAuth2 token URL",
+          "message": "OAuth2 token URL"
+        },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW5ldHN1aXRl.option.b2F1dGgyX3Rva2VuX3VybA.short_desc": {
           "source": "The custom OAuth2 token URL",
           "message": "The custom OAuth2 token URL"
@@ -1176,8 +1184,8 @@
           "message": "To connect to NocoDB, you will need your **NocoDB URL** and an **API Token**.\n\n## Getting Your API Token\n\n1. Log in to your NocoDB instance\n2. Click on your **profile icon** in the top right corner\n3. Select **Copy Auth Token** from the dropdown menu\n4. Alternatively, go to **Account Settings** → **Tokens** to create a new API token\n\n## Connection Details\n\n### NocoDB URL\nThe base URL of your NocoDB instance:\n- **NocoDB Cloud**: Use `https://app.nocodb.com`\n- **Self-hosted**: Use your instance URL (e.g., `https://nocodb.yourcompany.com`)\n\n### API Token\nYour API token that grants access to NocoDB. Tokens can be created in your account settings and provide access to all operations within the authorized workspaces and bases.\n\n**Note:** API tokens provide full access to the workspaces and bases you have permissions for. Ensure you keep your tokens secure and only use them in trusted environments."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW5vY29kYg.option.dG9rZW4.display_name": {
-          "source": "NocoDB API Token",
-          "message": "NocoDB API Token"
+          "source": "NocoDB API token",
+          "message": "NocoDB API token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW5vY29kYg.option.dG9rZW4.short_desc": {
           "source": "Please enter your NocoDB API token.",
@@ -1272,8 +1280,8 @@
           "message": "To connect to OpenWeatherMap, you will need your **API Key**.\n\n## Getting Your API Key\n\n1. Sign up for a free account at [OpenWeatherMap](https://openweathermap.org/)\n2. After signing in, go to your account → **My API keys**\n3. You'll see a default API key, or click **Generate** to create a new one\n4. Give your API key a descriptive name\n5. Copy the API key\n\nYou can access the API keys page directly at [home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys)\n\n## Connection Details\n\n### API Key\nYour OpenWeatherMap API key that authenticates requests to the weather data APIs.\n\n**Note:** New API keys may take a few hours to activate. The free tier includes access to current weather and 5-day forecasts with limited calls per minute. Paid plans offer additional features and higher rate limits."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW9wZW53ZWF0aGVybWFw.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW9wZW53ZWF0aGVybWFw.option.dG9rZW4.short_desc": {
           "source": "Your OpenWeatherMap API key",
@@ -1304,8 +1312,8 @@
           "message": "To connect to OpenRouter, you will need your **API Key**.\n\n## Getting Your API Key\n\n1. Sign in to your [OpenRouter account](https://openrouter.ai/)\n2. Navigate to **Settings** → **Keys** or go directly to the keys page\n3. Click **Create Key**\n4. Give your API key a descriptive name (e.g., \"Qore Integration\")\n5. Optionally set a credit limit for the key\n6. Copy the generated API key immediately\n\nYou can access the API keys page directly at [openrouter.ai/settings/keys](https://openrouter.ai/settings/keys)\n\n## Connection Details\n\n### API Key\nYour OpenRouter API key starting with `sk-or-`. This key authenticates all requests to access AI models through OpenRouter.\n\n**Note:** Keep your API key secure and never share it publicly. OpenRouter operates on a pay-per-use model. You can add credits and set spending limits in your account settings."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW9wZW5yb3V0ZXI.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LW9wZW5yb3V0ZXI.option.dG9rZW4.short_desc": {
           "source": "Your Openrouter account API key",
@@ -1380,8 +1388,8 @@
           "message": "You can see how to get your PayPal client ID and secret in the [docs](https://developer.paypal.com/api/rest/#link-getclientidandclientsecret)."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXBheXBhbA.option.b2F1dGgyX2NsaWVudF9zZWNyZXQ.display_name": {
-          "source": "Client Secret",
-          "message": "Client Secret"
+          "source": "Client secret",
+          "message": "Client secret"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXBheXBhbA.option.b2F1dGgyX2NsaWVudF9zZWNyZXQ.short_desc": {
           "source": "Your PayPal client secret",
@@ -1424,8 +1432,8 @@
           "message": "To connect your Pushover account, you will need your **Application API Token** and **User Key**.\n\n1. Create an application at https://pushover.net/apps/build to get your API token\n2. Find your User Key on your Pushover dashboard at https://pushover.net\n\nBoth values are 30-character alphanumeric strings."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXB1c2hvdmVy.option.dG9rZW4.display_name": {
-          "source": "Application API Token",
-          "message": "Application API Token"
+          "source": "Application API token",
+          "message": "Application API token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXB1c2hvdmVy.option.dG9rZW4.short_desc": {
           "source": "Your Pushover Application API Token",
@@ -1436,8 +1444,8 @@
           "message": "Create an application at https://pushover.net/apps/build to get your API token. The token is a 30-character string."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXB1c2hvdmVy.option.dXNlcg.display_name": {
-          "source": "User Key",
-          "message": "User Key"
+          "source": "User key",
+          "message": "User key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXB1c2hvdmVy.option.dXNlcg.short_desc": {
           "source": "Your Pushover User Key",
@@ -1504,8 +1512,8 @@
           "message": "To connect to SeaTable, you will need your **SeaTable Server URL** and an **API Token**.\n\n## Getting Your API Token\n\n1. Log in to your SeaTable instance\n2. Open the base you want to connect to\n3. Click on the **dropdown arrow** next to the base name\n4. Select **API Token** from the menu\n5. Create a new token with the desired permissions (read or read/write)\n\nFor detailed instructions, see the [SeaTable API Token Guide](https://seatable.com/help/create-api-tokens/).\n\n## Connection Details\n\n### SeaTable Server URL\nThe base URL of your SeaTable instance:\n- **SeaTable Cloud**: Use `https://cloud.seatable.io`\n- **Self-hosted**: Use your instance URL (e.g., `https://seatable.yourcompany.com`)\n\n### API Token\nYour API token grants access to a specific base. Each token can have read-only or read-write permissions.\n\n**Note:** API tokens are scoped to a single base. If you need to access multiple bases, you'll need to create separate connections for each one."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlYXRhYmxl.option.dG9rZW4.display_name": {
-          "source": "SeaTable API Token",
-          "message": "SeaTable API Token"
+          "source": "SeaTable API token",
+          "message": "SeaTable API token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlYXRhYmxl.option.dG9rZW4.short_desc": {
           "source": "Please enter your SeaTable API token.",
@@ -1516,8 +1524,8 @@
           "message": "The API token grants access to a specific base. Create one in SeaTable by right-clicking a base and selecting \"API Token\"."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlYXRhYmxl.option.dXJs.display_name": {
-          "source": "SeaTable Server URL",
-          "message": "SeaTable Server URL"
+          "source": "SeaTable server URL",
+          "message": "SeaTable server URL"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlYXRhYmxl.option.dXJs.short_desc": {
           "source": "The URL of the SeaTable server to connect to.",
@@ -1548,8 +1556,8 @@
           "message": "To connect your SendGrid account, you'll need an API key. You can create one in your SendGrid dashboard at https://app.sendgrid.com/settings/api_keys. Ensure your API key has the appropriate permissions for the features you want to use: Mail Send for sending emails, Email Validation for deliverability checks, Suppressions for managing blocks/bounces/unsubscribes, and Marketing for contact management."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlbmRncmlk.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlbmRncmlk.option.dG9rZW4.short_desc": {
           "source": "Your SendGrid API key.",
@@ -1580,8 +1588,8 @@
           "message": "To connect to Sentry, you will need an **Auth Token** and your **Organization Slug**.\n\n## Getting Your Auth Token\n\n### Option 1: User Auth Token (Recommended for personal use)\n1. Log in to [Sentry](https://sentry.io/)\n2. Go to **Settings** → **Account** → **API** → **Auth Tokens**\n3. Click **Create New Token**\n4. Select the required scopes:\n   - `project:read` - Read project information\n   - `project:write` - Modify projects\n   - `org:read` - Read organization data\n   - `event:read` - Read events\n   - `member:read` - Read team members\n5. Click **Create Token** and copy it immediately\n\nDirect link: [sentry.io/settings/account/api/auth-tokens/](https://sentry.io/settings/account/api/auth-tokens/)\n\n### Option 2: Internal Integration Token (Recommended for production)\n1. Go to **Settings** → **Developer Settings** → **Custom Integrations**\n2. Click **Create New Integration** → **Internal Integration**\n3. Configure the name and required permissions\n4. After saving, copy the generated token\n\n## Finding Your Organization Slug\n\nYour organization slug is in your Sentry URL:\n- If your Sentry URL is `https://your-org.sentry.io/`, your slug is `your-org`\n- For sentry.io hosted accounts: `https://sentry.io/organizations/your-org/` → slug is `your-org`\n\n## Connection Details\n\n### Auth Token\nYour Sentry authentication token. Starts with `sntrys_` for newer tokens or may have different prefixes for legacy tokens.\n\n### Organization Slug\nThe URL-friendly identifier for your organization (found in your Sentry URL).\n\n**Note:** Auth tokens inherit permissions based on your user role and the scopes you selected. For production integrations, use Internal Integration tokens which can be scoped to specific permissions and managed at the organization level."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlbnRyeQ.option.b3JnYW5pemF0aW9u.display_name": {
-          "source": "Organization Slug",
-          "message": "Organization Slug"
+          "source": "Organization slug",
+          "message": "Organization slug"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlbnRyeQ.option.b3JnYW5pemF0aW9u.short_desc": {
           "source": "The slug of your Sentry organization",
@@ -1592,8 +1600,8 @@
           "message": "Find the organization slug in your Sentry URL: for example, `qorus-dev` in `https://qorus-dev.sentry.io/`."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlbnRyeQ.option.dG9rZW4.display_name": {
-          "source": "Auth Token",
-          "message": "Auth Token"
+          "source": "Auth token",
+          "message": "Auth token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlbnRyeQ.option.dG9rZW4.short_desc": {
           "source": "Your Sentry authentication token",
@@ -1624,8 +1632,8 @@
           "message": "To connect to Serenity AI Hub, you will need your **API Key**.\n\n## Getting Your API Key\n\n1. Sign in to your [Serenity AI Hub](https://serenity.qore.ai/) account\n2. Navigate to **Developer Tools** or **API Settings**\n3. Generate a new API key or copy your existing key\n4. Give your API key a descriptive name for identification\n\n## Connection Details\n\n### API Key\nYour Serenity API key that authenticates requests to execute agents, manage conversations, and interact with the Serenity AI Hub platform.\n\n**Note:** Keep your API key secure and never share it publicly. Your API key grants access to your organization's AI agents and conversations."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlcmVuaXR5.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNlcmVuaXR5.option.dG9rZW4.short_desc": {
           "source": "Your Serenity AI Hub API Key",
@@ -1648,8 +1656,8 @@
           "message": "Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNob3BpZnk.option.c2hvcA.display_name": {
-          "source": "Shop Domain",
-          "message": "Shop Domain"
+          "source": "Shop domain",
+          "message": "Shop domain"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXNob3BpZnk.option.c2hvcA.short_desc": {
           "source": "Your Shopify store domain",
@@ -1708,8 +1716,8 @@
           "message": "You can find the project ID in the URL when you are in your project on Supabase or in the project settings."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXN1cGFiYXNl.option.dG9rZW4.display_name": {
-          "source": "API Key",
-          "message": "API Key"
+          "source": "API key",
+          "message": "API key"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXN1cGFiYXNl.option.dG9rZW4.short_desc": {
           "source": "Project API key from the project settings",
@@ -1764,8 +1772,8 @@
           "message": "To connect to Telegram, you will need your **Bot Token** from BotFather.\n\n## Creating a Telegram Bot\n\n1. Open Telegram and search for [@BotFather](https://t.me/BotFather)\n2. Start a chat and send the command `/newbot`\n3. Follow the prompts to:\n   - Choose a **display name** for your bot (e.g., \"My Automation Bot\")\n   - Choose a **username** for your bot (must end in \"bot\", e.g., \"my_automation_bot\")\n4. BotFather will respond with your **Bot Token**\n5. Copy the token (format: `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`)\n\n## Managing Existing Bots\n\nTo get the token for an existing bot:\n1. Open [@BotFather](https://t.me/BotFather)\n2. Send `/mybots`\n3. Select your bot\n4. Click **API Token** to view or regenerate the token\n\n## Connection Details\n\n### Bot Token\nYour Telegram Bot Token in the format `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`. This token authenticates your bot with the Telegram API.\n\n**Note:** Keep your bot token secure and never share it publicly. Anyone with your token can control your bot. If compromised, regenerate it immediately via BotFather."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXRlbGVncmFt.option.dG9rZW4.display_name": {
-          "source": "Bot Token",
-          "message": "Bot Token"
+          "source": "Bot token",
+          "message": "Bot token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXRlbGVncmFt.option.dG9rZW4.short_desc": {
           "source": "Token for an existing or newly created bot",
@@ -1832,8 +1840,8 @@
           "message": "To connect your Twilio account, you'll need your Account SID and Auth Token. You can find these credentials in your Twilio Console under the \"Account Info\" section on Account Dashboard. https://www.twilio.com/console"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXR3aWxpbw.option.cGFzc3dvcmQ.display_name": {
-          "source": "Auth Token",
-          "message": "Auth Token"
+          "source": "Auth token",
+          "message": "Auth token"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXR3aWxpbw.option.cGFzc3dvcmQ.short_desc": {
           "source": "Found directly below your Account SID.",
@@ -1928,8 +1936,8 @@
           "message": "The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers."
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXpvaG9jcm0.option.YWNjb3VudHMtc2VydmVy.display_name": {
-          "source": "Accounts Server",
-          "message": "Accounts Server"
+          "source": "Accounts server",
+          "message": "Accounts server"
         },
         "connection.VHlwZVNjcmlwdEFjdGlvbkludGVyZmFjZQ.scheme.dHNyZXN0LXpvaG9jcm0.option.YWNjb3VudHMtc2VydmVy.short_desc": {
           "source": "Accounts Server URL (used for OAuth2)",

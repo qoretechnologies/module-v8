@@ -7,7 +7,7 @@ const TrelloAppEn = {
     'Trello is a collaboration tool that organizes your projects into boards. It is a web-based Kanban-style list-making application and is a subsidiary of Atlassian.',
   triggers: {
     'card-due': {
-      displayName: 'Card Due',
+      displayName: 'Card due',
       shortDesc: 'Triggers when a card becomes overdue.',
       longDesc:
         'This trigger fires when a card has passed its due date and has not been marked as complete.',
@@ -31,7 +31,7 @@ const TrelloAppEn = {
             'Select a specific list to monitor for overdue cards. Only required if Source is set to "list".',
         },
         includeDueComplete: {
-          displayName: 'Include Completed Cards',
+          displayName: 'Include completed cards',
           shortDesc: 'Include cards marked as complete.',
           longDesc:
             'When enabled, the trigger will include overdue cards that have been marked as complete. By default, only incomplete overdue cards are included.',
@@ -39,13 +39,13 @@ const TrelloAppEn = {
       },
     },
     'new-board': {
-      displayName: 'New Board',
+      displayName: 'New board',
       shortDesc: 'Triggers when a new board is created.',
       longDesc:
         'This trigger fires when a new Trello board is created or shared with the authenticated user.',
     },
     'new-card': {
-      displayName: 'New Card',
+      displayName: 'New card',
       shortDesc: 'Triggers when a new card is created.',
       longDesc:
         'This trigger fires when a new card is added to a specified board or list in Trello.',
@@ -71,7 +71,7 @@ const TrelloAppEn = {
       },
     },
     'new-label': {
-      displayName: 'New Label',
+      displayName: 'New label',
       shortDesc: 'Triggers when a new label is created.',
       longDesc: 'This trigger fires when a new label is created on a specified Trello board.',
       options: {
@@ -84,7 +84,7 @@ const TrelloAppEn = {
       },
     },
     'new-list': {
-      displayName: 'New List',
+      displayName: 'New list',
       shortDesc: 'Triggers when a new list is created.',
       longDesc: 'This trigger fires when a new list is added to a specified Trello board.',
       options: {
@@ -95,7 +95,7 @@ const TrelloAppEn = {
             'Select the Trello board where you want to monitor for new lists being created.',
         },
         includeArchivedLists: {
-          displayName: 'Include Archived Lists',
+          displayName: 'Include archived lists',
           shortDesc: 'Include lists that are archived.',
           longDesc:
             'When enabled, the trigger will include new lists that are archived. By default, only open lists are included.',
@@ -103,7 +103,7 @@ const TrelloAppEn = {
       },
     },
     'new-member': {
-      displayName: 'New Member',
+      displayName: 'New member',
       shortDesc: 'Triggers when a new member is added to a board.',
       longDesc: 'This trigger fires when a new member is added to a specified Trello board.',
       options: {
@@ -133,39 +133,39 @@ const TrelloAppEn = {
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc:
         'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc:
         'Matches records where the field value is less than or equal to the specified value',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a value (is not empty)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches records where the field has no value (is empty)',
     },
@@ -177,7 +177,7 @@ const TrelloAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {

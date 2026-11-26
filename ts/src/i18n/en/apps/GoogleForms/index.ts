@@ -8,7 +8,7 @@ const GoogleFormsAppEn = {
     'Integrate with Google Forms to create, update, and manage your forms and responses. This integration allows you to perform actions and respond to events in your Google Forms account, enabling you to automate form management and data collection workflows.',
   triggers: {
     new_form_response: {
-      displayName: 'New Form Response',
+      displayName: 'New form response',
       shortDesc: 'Triggers when a new response is submitted to a Google Form.',
       longDesc:
         'Monitors a Google Form for new responses and triggers when someone submits a new response. Optionally includes form questions and metadata in the event data.',
@@ -19,13 +19,13 @@ const GoogleFormsAppEn = {
           longDesc: 'The unique identifier of the Google Form to monitor for new responses.',
         },
         include_questions: {
-          displayName: 'Include Questions',
+          displayName: 'Include questions',
           shortDesc: 'Include form questions in the event data',
           longDesc:
             'Whether to include the form questions and metadata in each triggered event. Default is false.',
         },
         include_answers: {
-          displayName: 'Include Answers',
+          displayName: 'Include answers',
           shortDesc: 'Include detailed answers in the event data',
           longDesc:
             'Whether to include the form answers in each triggered event. Default is false.',
@@ -38,7 +38,7 @@ const GoogleFormsAppEn = {
   },
   actions: {
     get_form_response: {
-      displayName: 'Get Form Response',
+      displayName: 'Get form response',
       shortDesc: 'Retrieve a specific response from a Google Form by its ID.',
       longDesc:
         'Retrieves a single response from a specified Google Form using the response ID. Optionally includes form questions and metadata for additional context.',
@@ -54,7 +54,7 @@ const GoogleFormsAppEn = {
           longDesc: 'The unique identifier of the form response to retrieve.',
         },
         include_questions: {
-          displayName: 'Include Questions',
+          displayName: 'Include questions',
           shortDesc: 'Include form questions in response',
           longDesc:
             'Whether to include the form questions and metadata in the response. Default is false.',
@@ -62,7 +62,7 @@ const GoogleFormsAppEn = {
       },
     },
     update_form_publish_settings: {
-      displayName: 'Update Form Publish Settings',
+      displayName: 'Update form publish settings',
       shortDesc: 'Update the publishing settings of a Google Form.',
       longDesc:
         'Updates the publish settings of a Google Form, including whether it is accepting responses and whether it is published. At least one setting must be provided.',
@@ -74,13 +74,13 @@ const GoogleFormsAppEn = {
             'The unique identifier of the Google Form whose publish settings will be updated.',
         },
         is_accepting_responses: {
-          displayName: 'Is Accepting Responses',
+          displayName: 'Is accepting responses',
           shortDesc: 'Whether the form should accept new responses',
           longDesc:
             'Set to true to allow new responses, false to stop accepting responses. Leave empty to keep current setting.',
         },
         is_published: {
-          displayName: 'Is Published',
+          displayName: 'Is published',
           shortDesc: 'Whether the form should be published',
           longDesc:
             'Set to true to publish the form, false to unpublish it. Leave empty to keep current setting.',
@@ -88,7 +88,7 @@ const GoogleFormsAppEn = {
       },
     },
     get_form: {
-      displayName: 'Get Form',
+      displayName: 'Get form',
       shortDesc: 'Retrieve details of a Google Form by ID.',
       longDesc:
         'Fetches comprehensive information about a Google Form, including its metadata, questions, and optionally its responses.',
@@ -99,13 +99,13 @@ const GoogleFormsAppEn = {
           longDesc: 'The unique identifier of the Google Form to retrieve.',
         },
         include_questions: {
-          displayName: 'Include Questions',
+          displayName: 'Include questions',
           shortDesc: 'Include form questions in the response',
           longDesc:
             'When enabled, returns the complete list of questions in the form with their properties.',
         },
         include_responses: {
-          displayName: 'Include Responses',
+          displayName: 'Include responses',
           shortDesc: 'Include form responses in the result',
           longDesc:
             'When enabled, fetches all submitted responses for the form. May increase response time for forms with many submissions.',
@@ -113,7 +113,7 @@ const GoogleFormsAppEn = {
       },
     },
     get_form_responses: {
-      displayName: 'Get Form Responses',
+      displayName: 'Get form responses',
       shortDesc: 'Retrieve responses from a Google Form with filtering and pagination.',
       longDesc:
         'Retrieves all responses from a specified Google Form. Supports filtering by respondent email and answer values, pagination with page tokens, and optional inclusion of form questions and metadata.',
@@ -130,19 +130,19 @@ const GoogleFormsAppEn = {
             'The maximum number of responses to return per request. Default is 50, maximum is 1000.',
         },
         page_token: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'A token to retrieve the next page of results. Used for pagination through large response sets.',
         },
         respondent_email: {
-          displayName: 'Respondent Email',
+          displayName: 'Respondent email',
           shortDesc: 'Filter by respondent email',
           longDesc:
             'Filter responses to only include those from respondents with emails containing this value.',
         },
         filter_answers: {
-          displayName: 'Filter Answers',
+          displayName: 'Filter answers',
           shortDesc: 'Filter responses by specific answer values',
           longDesc:
             'Filter responses based on specific question answers. Each filter specifies a question ID, filter type, and expected value.',
@@ -155,12 +155,12 @@ const GoogleFormsAppEn = {
                   longDesc: 'The unique identifier of the question to filter responses by.',
                 },
                 filter_type: {
-                  displayName: 'Filter Type',
+                  displayName: 'Filter type',
                   shortDesc: 'Type of filter to apply',
                   longDesc: 'Whether the answer should contain or exactly equal the filter value.',
                 },
                 value: {
-                  displayName: 'Filter Value',
+                  displayName: 'Filter value',
                   shortDesc: 'Value to filter by',
                   longDesc: 'The value to match against the question answers.',
                 },
@@ -169,13 +169,13 @@ const GoogleFormsAppEn = {
           },
         },
         include_questions: {
-          displayName: 'Include Questions',
+          displayName: 'Include questions',
           shortDesc: 'Include form questions in response',
           longDesc:
             'Whether to include the form questions and metadata in the response. Default is false.',
         },
         include_answers: {
-          displayName: 'Include Answers',
+          displayName: 'Include answers',
           shortDesc: 'Include detailed answers in response',
           longDesc:
             'Whether to include the detailed answer data for each response. Default is true.',
@@ -189,13 +189,13 @@ const GoogleFormsAppEn = {
         'Search for Google Forms in your Google Drive with options to filter by filename, specify search type, and paginate results.',
       options: {
         filename: {
-          displayName: 'Form Name',
+          displayName: 'Form name',
           shortDesc: 'Name of the form to search for',
           longDesc:
             'The name or part of the name of the Google Forms to search for. Leave empty to retrieve all forms.',
         },
         search_type: {
-          displayName: 'Search Type',
+          displayName: 'Search type',
           shortDesc: 'Type of search to perform',
           longDesc:
             'Specify whether to search for forms where the name contains the search term or matches it exactly.',
@@ -207,7 +207,7 @@ const GoogleFormsAppEn = {
             'The maximum number of forms to return in a single request. Maximum value is 1000.',
         },
         page_token: {
-          displayName: 'Page Token',
+          displayName: 'Page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'A token returned from a previous search to continue pagination. Use the next_page_token from a previous response.',
@@ -215,7 +215,7 @@ const GoogleFormsAppEn = {
       },
     },
     create_form: {
-      displayName: 'Create Form',
+      displayName: 'Create form',
       shortDesc: 'Create a new Google Form with customizable questions and settings.',
       longDesc:
         'Creates a new Google Form with specified title, description, and optional questions. Supports various question types, quiz functionality, and custom form settings.',
@@ -232,24 +232,24 @@ const GoogleFormsAppEn = {
             'An optional description that appears below the form title to provide additional context.',
         },
         document_title: {
-          displayName: 'Document Title',
+          displayName: 'Document title',
           shortDesc: 'Title for the document',
           longDesc:
             'The document title that appears in the browser tab. If not specified, the form title will be used.',
         },
         settings: {
-          displayName: 'Form Settings',
+          displayName: 'Form settings',
           shortDesc: 'Additional form settings',
           longDesc: 'Configure additional form settings like email collection and quiz mode.',
           type: {
             fields: {
               email_collection: {
-                displayName: 'Email Collection',
+                displayName: 'Email collection',
                 shortDesc: 'Email collection settings',
                 longDesc: 'Controls how email addresses are collected from form respondents.',
               },
               is_quiz: {
-                displayName: 'Quiz Mode',
+                displayName: 'Quiz mode',
                 shortDesc: 'Enable quiz functionality',
                 longDesc: 'When enabled, allows setting correct answers and points for questions.',
               },
@@ -265,12 +265,12 @@ const GoogleFormsAppEn = {
             element_type: {
               fields: {
                 title: {
-                  displayName: 'Question Title',
+                  displayName: 'Question title',
                   shortDesc: 'The question text',
                   longDesc: 'The main text of the question that will be shown to respondents.',
                 },
                 type: {
-                  displayName: 'Question Type',
+                  displayName: 'Question type',
                   shortDesc: 'Type of question',
                   longDesc:
                     'The type of question to create (e.g., text, multiple-choice, checkbox, etc.).',
@@ -282,41 +282,41 @@ const GoogleFormsAppEn = {
                     'When enabled, respondents must answer this question to submit the form.',
                 },
                 help_text: {
-                  displayName: 'Help Text',
+                  displayName: 'Help text',
                   shortDesc: 'Additional guidance text',
                   longDesc:
                     'Optional text that appears below the question to provide additional guidance to respondents.',
                 },
                 choices: {
-                  displayName: 'Answer Choices',
+                  displayName: 'Answer choices',
                   shortDesc: 'List of possible answers',
                   longDesc:
                     'For multiple-choice, checkbox, and dropdown questions, these are the options respondents can select from.',
                 },
                 scale_min: {
-                  displayName: 'Scale Minimum',
+                  displayName: 'Scale minimum',
                   shortDesc: 'Minimum value for scale',
                   longDesc:
                     'For scale questions, the lowest value on the scale. Must be between 0 and 10.',
                 },
                 scale_max: {
-                  displayName: 'Scale Maximum',
+                  displayName: 'Scale maximum',
                   shortDesc: 'Maximum value for scale',
                   longDesc:
                     'For scale questions, the highest value on the scale. Must be between 0 and 10.',
                 },
                 scale_min_label: {
-                  displayName: 'Scale Minimum Label',
+                  displayName: 'Scale minimum label',
                   shortDesc: 'Label for minimum scale value',
                   longDesc: 'Optional label to describe the lowest value on a scale question.',
                 },
                 scale_max_label: {
-                  displayName: 'Scale Maximum Label',
+                  displayName: 'Scale maximum label',
                   shortDesc: 'Label for maximum scale value',
                   longDesc: 'Optional label to describe the highest value on a scale question.',
                 },
                 correct_answer: {
-                  displayName: 'Correct Answer',
+                  displayName: 'Correct answer',
                   shortDesc: 'The correct answer for quiz questions',
                   longDesc:
                     'For quiz questions, specifies the correct answer. For checkbox questions, multiple answers can be provided as a comma-separated list.',
@@ -333,7 +333,7 @@ const GoogleFormsAppEn = {
                   longDesc: 'For quiz questions, feedback to show respondents after they answer.',
                 },
                 shuffle_choices: {
-                  displayName: 'Shuffle Choices',
+                  displayName: 'Shuffle choices',
                   shortDesc: 'Randomize answer choices',
                   longDesc:
                     'When enabled, the order of answer choices will be randomized for each respondent.',

@@ -38,7 +38,7 @@ const getGroups = QoreAppCreator.createLocalizedAction({
         },
         name: {
           type: 'string',
-          display_name: 'Group Name',
+          display_name: 'Group name',
           short_desc: 'The name of the group',
         },
       },

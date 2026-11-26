@@ -11,7 +11,7 @@ export const FRESHDESK_CONN_OPTIONS = {
     type: 'string',
   },
   apiKey: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your Freshdesk account API key',
     desc:
       `To get your API key:\n\n` +

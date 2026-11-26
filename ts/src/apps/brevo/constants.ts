@@ -13,7 +13,7 @@ export const BREVO_APP_LOGO =
 
 export const BREVO_CONN_OPTIONS = {
   token: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your Brevo account API key',
     desc:
       `To get your API key:\n` +

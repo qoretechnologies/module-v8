@@ -484,7 +484,7 @@
           "message": "Nazwa tabeli"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.display_name": {
-          "source": "Get Table",
+          "source": "Get table",
           "message": "Pobierz tabelę"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Pobiera kompleksowe metadane dla określonej tabeli, w tym definicje kolumn, typy danych, wymagane pola i opisy. Ta akcja ułatwia zrozumienie struktury tabel w bazie danych."
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nazwa tabeli"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Wybierz tabelę Supabase, której informacje o schemacie chcesz pobrać. Tabela musi istnieć w Twoim projekcie Supabase."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
+          "source": "List tables",
           "message": "Lista tabel"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Pobiera wszystkie tabele z bazy danych Supabase wraz z ich podstawowymi metadanymi, w tym informacjami o kolumnach i opisami. Opcjonalnie uwzględnia tabele systemowe w wynikach."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.display_name": {
-          "source": "Include System Tables",
+          "source": "Include system tables",
           "message": "Uwzględnij tabele systemowe"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Gdy włączone, odpowiedź będzie zawierać tabele systemowe (rozpoczynające się od znaku podkreślenia). Tabele systemowe zawierają wewnętrzne dane Supabase i są zazwyczaj ukryte przed zwykłymi zapytaniami."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.display_name": {
-          "source": "Create Row",
+          "source": "Create row",
           "message": "Utwórz wiersz"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Tworzy nowy rekord w określonej tabeli Supabase. Akcja dynamicznie prezentuje schemat tabeli, umożliwiając podanie wartości dla każdej kolumny. Zwraca nowo utworzony wiersz ze wszystkimi danymi."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nazwa tabeli"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Wybierz docelową tabelę Supabase do wstawienia nowego wiersza. Dostępne pola zostaną załadowane dynamicznie na podstawie schematu wybranej tabeli."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
+          "source": "Row values",
           "message": "Wartości wiersza"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Podaj wartości dla kolumn tabeli. Struktura jest generowana dynamicznie na podstawie wybranego schematu tabeli, pokazując wszystkie dostępne kolumny wraz z ich typami danych i ograniczeniami."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.display_name": {
-          "source": "List Rows",
+          "source": "List rows",
           "message": "Wyświetl listę wierszy"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.short_desc": {
@@ -580,7 +580,7 @@
           "message": "Pobiera wiersze z tabeli Supabase z obsługą filtrowania, sortowania, stronicowania i porządkowania. Zwraca listę rekordów spełniających kryteria zapytania wraz z informacją o łącznej liczbie."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nazwa tabeli"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.short_desc": {
@@ -616,7 +616,7 @@
           "message": "Pomiń określoną liczbę wierszy przed rozpoczęciem zwracania wyników. Używane w połączeniu z limitem do stronicowania dużych zbiorów danych."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
+          "source": "Order by",
           "message": "Sortuj według"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Wartość do porównania kolumny przy użyciu wybranego operatora. Dla operatora \"in\" podaj wartości oddzielone przecinkami."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.display_name": {
-          "source": "Delete Rows",
+          "source": "Delete rows",
           "message": "Usuń wiersze"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Usuwa wiersze z tabeli Supabase, które spełniają określone kryteria filtrowania. Zwraca liczbę usuniętych wierszy oraz ich dane. Używaj ostrożnie, ponieważ ta operacja jest nieodwracalna."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nazwa tabeli"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Wartość do porównania. Wiersze spełniające ten warunek zostaną usunięte."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.display_name": {
-          "source": "Upsert Row",
+          "source": "Upsert row",
           "message": "Wstaw lub zaktualizuj wiersz"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Wykonuje operację upsert (wstawienie lub aktualizacja) w tabeli Supabase. Jeśli wiersz o określonym ograniczeniu unikalności istnieje, zostanie zaktualizowany; w przeciwnym razie zostanie wstawiony nowy wiersz."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nazwa tabeli"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.short_desc": {
@@ -880,7 +880,7 @@
           "message": "Wybierz docelową tabelę Supabase. Dostępne pola zostaną załadowane dynamicznie na podstawie schematu tabeli."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
+          "source": "Row values",
           "message": "Wartości wiersza"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.short_desc": {
@@ -892,7 +892,7 @@
           "message": "Podaj wartości dla kolumn tabeli. Jeśli istnieje wiersz spełniający ograniczenia unikalności, te wartości go zaktualizują; w przeciwnym razie zostanie utworzony nowy wiersz."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.display_name": {
-          "source": "On Conflict",
+          "source": "On conflict",
           "message": "W przypadku konfliktu (On Conflict)"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.short_desc": {
@@ -904,7 +904,7 @@
           "message": "Określ kolumnę lub listę kolumn rozdzielonych przecinkami, które mają być używane do wykrywania konfliktów. Jeśli nie określono, używany jest klucz główny tabeli."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.display_name": {
-          "source": "Ignore Duplicates",
+          "source": "Ignore duplicates",
           "message": "Ignoruj duplikaty"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.short_desc": {
@@ -916,7 +916,7 @@
           "message": "Gdy włączone, w przypadku wystąpienia konfliktu wiersza operacja jest po cichu ignorowana. Gdy wyłączone (domyślnie), wiersze wchodzące w konflikt są aktualizowane o nowe wartości."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.display_name": {
-          "source": "Create Storage Bucket",
+          "source": "Create storage bucket",
           "message": "Utwórz zasobnik pamięci masowej"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
@@ -928,7 +928,7 @@
           "message": "Tworzy nowy zasobnik pamięci masowej w Supabase Storage do organizowania i przechowywania plików. Skonfiguruj uprawnienia dostępu, limity rozmiaru plików i dozwolone typy MIME."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.display_name": {
-          "source": "Bucket Name",
+          "source": "Bucket name",
           "message": "Nazwa zasobnika"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.short_desc": {
@@ -940,7 +940,7 @@
           "message": "Określ unikalną nazwę zasobnika pamięci masowej. Nazwa musi być bezpieczna dla adresów URL i unikalna w obrębie projektu Supabase."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.display_name": {
-          "source": "Public Access",
+          "source": "Public access",
           "message": "Dostęp publiczny"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.short_desc": {
@@ -952,7 +952,7 @@
           "message": "Gdy ta opcja jest włączona, dostęp do plików w tym zasobniku jest publiczny bez uwierzytelniania. Gdy jest wyłączona (domyślnie), dostęp do plików wymaga uwierzytelnienia."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.display_name": {
-          "source": "File Size Limit",
+          "source": "File size limit",
           "message": "Limit rozmiaru pliku"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.short_desc": {
@@ -964,7 +964,7 @@
           "message": "Ustaw maksymalny rozmiar pliku, który można przesłać do tego zasobnika, podany w bajtach. Pozostaw puste, aby nie stosować limitu."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.display_name": {
-          "source": "Allowed MIME Types",
+          "source": "Allowed MIME types",
           "message": "Dozwolone typy MIME"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.short_desc": {
@@ -976,7 +976,7 @@
           "message": "Określ, które typy plików mogą być przesyłane do tego zasobnika, podając listę typów MIME (np. image/png, application/pdf). Pozostaw puste, aby zezwolić na wszystkie typy plików."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Storage Buckets",
+          "source": "List storage buckets",
           "message": "Wyświetl zasobniki pamięci masowej"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
@@ -988,7 +988,7 @@
           "message": "Pobiera listę wszystkich zasobników pamięci masowej (storage buckets) w projekcie Supabase wraz z ich konfiguracjami, w tym uprawnieniami dostępu, limitami rozmiaru plików i dozwolonymi typami MIME."
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.display_name": {
-          "source": "Get Storage Bucket",
+          "source": "Get storage bucket",
           "message": "Pobierz zasobnik pamięci masowej"
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.short_desc": {
@@ -1012,7 +1012,7 @@
           "message": "Wybierz zasobnik pamięci masowej z projektu Supabase, którego szczegóły chcesz pobrać."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.display_name": {
-          "source": "New Table Row",
+          "source": "New table row",
           "message": "Nowy wiersz tabeli"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.short_desc": {
@@ -1024,7 +1024,7 @@
           "message": "Monitoruje tabelę Supabase pod kątem nowych wierszy i uruchamia wyzwalacz po wstawieniu nowych rekordów. Obsługuje opcjonalne filtrowanie, aby wyzwalać tylko dla wierszy spełniających określone kryteria."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
+          "source": "Table name",
           "message": "Nazwa tabeli"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.short_desc": {

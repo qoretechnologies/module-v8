@@ -106,7 +106,7 @@ export const response_type = {
       type: 'number',
     },
     hasMore: {
-      display_name: 'Has More',
+      display_name: 'Has more',
       short_desc: 'Whether there are more results',
       desc: 'Whether there are more results',
       type: 'bool',

@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
-          "message": "List Users"
+          "source": "List users",
+          "message": "List users"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.short_desc": {
           "source": "Retrieve a list of users from Firebase Authentication",
@@ -364,8 +364,8 @@
           "message": "Select the Firebase project from which you want to retrieve users. The project must have Firebase Authentication enabled."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
-          "message": "Max Results"
+          "source": "Max results",
+          "message": "Max results"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.short_desc": {
           "source": "Maximum number of users to return",
@@ -376,8 +376,8 @@
           "message": "Specify the maximum number of users to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger datasets."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
           "source": "Token for retrieving the next page of results",
@@ -388,8 +388,8 @@
           "message": "Provide the pagination token from a previous response to retrieve the next set of users. Leave empty for the first page."
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
-          "message": "Get User"
+          "source": "Get user",
+          "message": "Get user"
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.short_desc": {
           "source": "Retrieve detailed information about a specific Firebase user",
@@ -424,8 +424,8 @@
           "message": "Specify the Firebase user ID (localId) of the user whose details you want to retrieve. This is the unique identifier assigned by Firebase Authentication."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.display_name": {
-          "source": "Send Push Notification",
-          "message": "Send Push Notification"
+          "source": "Send push notification",
+          "message": "Send push notification"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.short_desc": {
           "source": "Send a push notification via Firebase Cloud Messaging",
@@ -448,8 +448,8 @@
           "message": "Select the Firebase project that will send the push notification. The project must have Firebase Cloud Messaging configured."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.display_name": {
-          "source": "Token or Topic",
-          "message": "Token or Topic"
+          "source": "Token or topic",
+          "message": "Token or topic"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.short_desc": {
           "source": "Device token or topic name",
@@ -528,8 +528,8 @@
           "message": "Normal"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
-          "message": "Upload File"
+          "source": "Upload file",
+          "message": "Upload file"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.short_desc": {
           "source": "Upload a file to Firebase Cloud Storage",
@@ -552,8 +552,8 @@
           "message": "Select the Firebase project where the file will be stored. The project must have Firebase Cloud Storage enabled."
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
-          "message": "File Path"
+          "source": "File path",
+          "message": "File path"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
           "source": "Destination path in storage",
@@ -720,8 +720,8 @@
           "message": "Optional custom metadata to associate with the uploaded file. Provide as key-value pairs that can be retrieved later with the file information."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.display_name": {
-          "source": "Get File Metadata",
-          "message": "Get File Metadata"
+          "source": "Get file metadata",
+          "message": "Get file metadata"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.short_desc": {
           "source": "Retrieve metadata for a specific file in Cloud Storage",
@@ -756,8 +756,8 @@
           "message": "Select the Cloud Storage bucket where the file is located. The bucket must exist in the selected Firebase project."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
-          "message": "File Path"
+          "source": "File path",
+          "message": "File path"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.short_desc": {
           "source": "Path to the file in storage",
@@ -768,8 +768,8 @@
           "message": "Specify the full path to the file in the bucket, including the filename and any directory structure."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.display_name": {
-          "source": "List Files in Bucket",
-          "message": "List Files in Bucket"
+          "source": "List files in bucket",
+          "message": "List files in bucket"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.short_desc": {
           "source": "List all files in a Cloud Storage bucket",
@@ -816,8 +816,8 @@
           "message": "Filter results to only include files whose paths start with this prefix. Useful for listing files in a specific directory or with a specific naming pattern."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
-          "message": "Max Results"
+          "source": "Max results",
+          "message": "Max results"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.short_desc": {
           "source": "Maximum number of files to return",
@@ -828,8 +828,8 @@
           "message": "Specify the maximum number of files to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger result sets."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
-          "message": "Page Token"
+          "source": "Page token",
+          "message": "Page token"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.short_desc": {
           "source": "Token for retrieving the next page",
@@ -840,8 +840,8 @@
           "message": "Provide the pagination token from a previous response to retrieve the next set of files. Leave empty for the first page."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Buckets",
-          "message": "List Buckets"
+          "source": "List buckets",
+          "message": "List buckets"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
           "source": "List all Cloud Storage buckets in a Firebase project",
@@ -864,8 +864,8 @@
           "message": "Select the Firebase project whose storage buckets you want to list. The project must have Firebase Cloud Storage enabled."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.display_name": {
-          "source": "Delete File",
-          "message": "Delete File"
+          "source": "Delete file",
+          "message": "Delete file"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.short_desc": {
           "source": "Delete a file from Cloud Storage",
@@ -900,8 +900,8 @@
           "message": "Select the Cloud Storage bucket where the file to be deleted is located. The bucket must exist in the selected Firebase project."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
-          "message": "File Path"
+          "source": "File path",
+          "message": "File path"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
           "source": "Path to the file to delete",
@@ -912,8 +912,8 @@
           "message": "Specify the full path to the file in the bucket that should be deleted, including the filename and any directory structure. This operation is permanent and cannot be undone."
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
-          "message": "New User"
+          "source": "New user",
+          "message": "New user"
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.short_desc": {
           "source": "Triggers when a new user is created in Firebase Authentication",

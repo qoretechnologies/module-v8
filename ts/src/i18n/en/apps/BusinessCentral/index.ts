@@ -55,7 +55,7 @@ The Business Central environment name (e.g., \`Production\`, \`Sandbox\`).
   },
   triggers: {
     new_record: {
-      displayName: 'New Record',
+      displayName: 'New record',
       shortDesc: 'Triggers when a new record is created in Business Central.',
       longDesc:
         'Monitors for newly created records in a specified Business Central object. The trigger polls for records based on their creation timestamp and can be filtered by specific field criteria. Useful for automating workflows when new data is added to your Business Central system.',
@@ -96,7 +96,7 @@ The Business Central environment name (e.g., \`Production\`, \`Sandbox\`).
     },
 
     updated_record: {
-      displayName: 'Updated Record',
+      displayName: 'Updated record',
       shortDesc: 'Triggers when an existing record is modified in Business Central.',
       longDesc:
         'Monitors for recently updated records in a specified Business Central object. The trigger polls for records based on their modification timestamp and can be filtered by specific field criteria. Ideal for tracking changes and automating workflows when existing data is modified in your Business Central system.',

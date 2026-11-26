@@ -7,12 +7,12 @@ const CanvaAppEn = {
     'Canva is a graphic design platform that allows users to create social media graphics, presentations, posters, documents and other visual content. It provides a drag-and-drop interface and access to millions of photographs, graphics and fonts.',
   actions: {
     upload_image: {
-      displayName: 'Upload Image',
+      displayName: 'Upload image',
       shortDesc: 'Upload an image file to Canva',
       longDesc: 'Upload an image file to your Canva account and optionally set a name and tags',
       options: {
         image: {
-          displayName: 'Image File',
+          displayName: 'Image file',
           shortDesc: 'The image file to upload',
           longDesc: 'Select an image file from your device to upload to Canva',
         },
@@ -30,7 +30,7 @@ const CanvaAppEn = {
       },
     },
     get_image: {
-      displayName: 'Get Image',
+      displayName: 'Get image',
       shortDesc: 'Retrieve image details from Canva',
       longDesc: 'Get detailed information about a specific image asset in your Canva account',
       options: {
@@ -42,7 +42,7 @@ const CanvaAppEn = {
       },
     },
     delete_image: {
-      displayName: 'Delete Image',
+      displayName: 'Delete image',
       shortDesc: 'Delete an image from Canva',
       longDesc: 'Permanently delete an image asset from your Canva account',
       options: {
@@ -54,7 +54,7 @@ const CanvaAppEn = {
       },
     },
     update_image: {
-      displayName: 'Update Image',
+      displayName: 'Update image',
       shortDesc: 'Update image name and tags',
       longDesc: 'Update the name and tags of an existing image in your Canva account',
       options: {
@@ -76,7 +76,7 @@ const CanvaAppEn = {
       },
     },
     upload_image_by_url: {
-      displayName: 'Upload Image by URL',
+      displayName: 'Upload image by URL',
       shortDesc: 'Upload an image from a URL to Canva',
       longDesc: 'Upload an image to your Canva account by providing a URL to the image',
       options: {
@@ -99,35 +99,35 @@ const CanvaAppEn = {
       },
     },
     list_designs: {
-      displayName: 'List Designs',
+      displayName: 'List designs',
       shortDesc: 'List your Canva designs',
       longDesc: 'Retrieve a list of your Canva designs with optional filtering and sorting',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Search term to filter designs',
           longDesc: 'Enter a search term to find specific designs by title or content',
         },
         continuation: {
-          displayName: 'Continuation Token',
+          displayName: 'Continuation token',
           shortDesc: 'Token for pagination',
           longDesc: 'Use this token to continue from where the previous request left off',
         },
         ownership: {
-          displayName: 'Ownership Filter',
+          displayName: 'Ownership filter',
           shortDesc: 'Filter by ownership type',
           longDesc:
             'Choose whether to show all designs, only owned designs, or only shared designs',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'How to sort the results',
           longDesc: 'Choose how to sort the returned designs list',
         },
       },
     },
     create_thread: {
-      displayName: 'Create Comment Thread',
+      displayName: 'Create comment thread',
       shortDesc: 'Create a new comment thread on a design',
       longDesc: 'Start a new comment thread on a Canva design to collaborate with team members',
       options: {
@@ -149,7 +149,7 @@ const CanvaAppEn = {
       },
     },
     create_reply: {
-      displayName: 'Create Reply',
+      displayName: 'Create reply',
       shortDesc: 'Reply to an existing comment thread',
       longDesc: 'Add a reply to an existing comment thread on a Canva design',
       options: {
@@ -171,7 +171,7 @@ const CanvaAppEn = {
       },
     },
     list_replies: {
-      displayName: 'List Thread Replies',
+      displayName: 'List thread replies',
       shortDesc: 'List replies in a comment thread',
       longDesc: 'Retrieve all replies from a specific comment thread on a Canva design',
       options: {
@@ -181,7 +181,7 @@ const CanvaAppEn = {
           longDesc: 'Set the maximum number of replies to retrieve (default: 50)',
         },
         continuation: {
-          displayName: 'Continuation Token',
+          displayName: 'Continuation token',
           shortDesc: 'Token for pagination',
           longDesc: 'Use this token to continue from where the previous request left off',
         },
@@ -200,19 +200,19 @@ const CanvaAppEn = {
   },
   triggers: {
     new_design: {
-      displayName: 'New Design',
+      displayName: 'New design',
       shortDesc: 'Triggers when a new design is created',
       longDesc:
         'This trigger fires when a new design is created in your Canva account, with optional filtering by ownership and search query',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Filter designs by search term',
           longDesc:
             'Optional search term to filter which designs trigger the event. Only designs matching this query will trigger the event',
         },
         ownership: {
-          displayName: 'Ownership Filter',
+          displayName: 'Ownership filter',
           shortDesc: 'Filter by ownership type',
           longDesc:
             'Choose whether to monitor all designs, only your owned designs, or only shared designs',
@@ -220,7 +220,7 @@ const CanvaAppEn = {
       },
     },
     new_thread_reply: {
-      displayName: 'New Thread Reply',
+      displayName: 'New thread reply',
       shortDesc: 'Triggers when a new reply is added to a comment thread',
       longDesc:
         'This trigger fires when someone adds a new reply to a specific comment thread on a Canva design',

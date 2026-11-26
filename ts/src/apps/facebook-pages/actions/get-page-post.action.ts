@@ -113,7 +113,7 @@ const getPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       page_name: {
         type: 'string',
-        display_name: 'Page Name',
+        display_name: 'Page name',
         short_desc: 'The name of the page',
       },
       post_id: {
@@ -162,7 +162,7 @@ const getPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
-        display_name: 'Post Data',
+        display_name: 'Post data',
         short_desc: 'The complete post data with requested fields',
       },
       fields_requested: {
@@ -170,12 +170,12 @@ const getPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
           type: 'list',
           element_type: 'string',
         },
-        display_name: 'Fields Requested',
+        display_name: 'Fields requested',
         short_desc: 'The fields that were requested for the post',
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When this response was generated',
       },
     },

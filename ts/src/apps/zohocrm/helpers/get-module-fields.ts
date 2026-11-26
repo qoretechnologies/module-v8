@@ -324,14 +324,14 @@ export const getZohoCrmModuleFieldsResponseType: TQoreGetDynamicTypeFunction = a
 
   qoreOptions['Created_Time'] = {
     type: 'date',
-    display_name: 'Created Time',
+    display_name: 'Created time',
     desc: 'Date and time the record was created',
     required: false,
   };
 
   qoreOptions['Modified_Time'] = {
     type: 'date',
-    display_name: 'Modified Time',
+    display_name: 'Modified time',
     desc: 'Date and time the record was last modified',
     required: false,
   };

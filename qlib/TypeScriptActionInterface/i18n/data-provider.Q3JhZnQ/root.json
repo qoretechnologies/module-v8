@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.display_name": {
-          "source": "Get Daily Note Blocks",
-          "message": "Get Daily Note Blocks"
+          "source": "Get daily note blocks",
+          "message": "Get daily note blocks"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.short_desc": {
           "source": "Retrieve blocks from a daily note",
@@ -388,8 +388,8 @@
           "message": "Tomorrow"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
-          "message": "Maximum Depth"
+          "source": "Maximum depth",
+          "message": "Maximum depth"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.short_desc": {
           "source": "Maximum depth for nested blocks",
@@ -400,8 +400,8 @@
           "message": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit how deep the nested block structure should be retrieved."
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
-          "message": "Fetch Metadata"
+          "source": "Fetch metadata",
+          "message": "Fetch metadata"
         },
         "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
           "source": "Include metadata in the response",
@@ -412,8 +412,8 @@
           "message": "Enable this option to include additional metadata such as creation date, last modified date, and author information for each block in the response."
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.display_name": {
-          "source": "List Documents",
-          "message": "List Documents"
+          "source": "List documents",
+          "message": "List documents"
         },
         "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.short_desc": {
           "source": "Retrieve all documents",
@@ -424,8 +424,8 @@
           "message": "Get a list of all documents in your Craft workspace. This includes document IDs, titles, and their deletion status, providing a complete overview of your document library."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
-          "source": "List Collections",
-          "message": "List Collections"
+          "source": "List collections",
+          "message": "List collections"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
           "source": "Retrieve all collections",
@@ -448,8 +448,8 @@
           "message": "The document IDs to filter. If not provided, collections in all documents will be listed."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.display_name": {
-          "source": "Document Filter Mode",
-          "message": "Document Filter Mode"
+          "source": "Document filter mode",
+          "message": "Document filter mode"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.short_desc": {
           "source": "How to filter by documents",
@@ -468,8 +468,8 @@
           "message": "Exclude"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Create Collection Item",
-          "message": "Create Collection Item"
+          "source": "Create collection item",
+          "message": "Create collection item"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
           "source": "Add a new item to a collection",
@@ -516,8 +516,8 @@
           "message": "Add custom properties to the collection item. The available properties are dynamically determined based on the schema of the selected collection."
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.display_name": {
-          "source": "Delete Collection Items",
-          "message": "Delete Collection Items"
+          "source": "Delete collection items",
+          "message": "Delete collection items"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.short_desc": {
           "source": "Remove items from a collection",
@@ -552,8 +552,8 @@
           "message": "Provide a list of item IDs that you want to remove from the collection. You can select multiple items to delete in a single operation."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "Update Collection Item",
-          "message": "Update Collection Item"
+          "source": "Update collection item",
+          "message": "Update collection item"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
           "source": "Modify an existing collection item",
@@ -612,8 +612,8 @@
           "message": "Update the custom properties of the collection item. Only the properties you specify will be updated; others will remain unchanged."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.display_name": {
-          "source": "List Collection Items",
-          "message": "List Collection Items"
+          "source": "List collection items",
+          "message": "List collection items"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.short_desc": {
           "source": "Retrieve all items in a collection",
@@ -636,8 +636,8 @@
           "message": "Select the Craft collection whose items you want to list. All items in the collection will be returned."
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
-          "message": "Maximum Depth"
+          "source": "Maximum depth",
+          "message": "Maximum depth"
         },
         "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.short_desc": {
           "source": "Maximum depth for nested content",
@@ -648,8 +648,8 @@
           "message": "The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.display_name": {
-          "source": "List Blocks",
-          "message": "List Blocks"
+          "source": "List blocks",
+          "message": "List blocks"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.short_desc": {
           "source": "Retrieve blocks from a document",
@@ -660,8 +660,8 @@
           "message": "Fetch all blocks from a specific Craft document or page. This allows you to access the structured content of your documents, including nested blocks, with control over depth and metadata."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.display_name": {
-          "source": "Document/Page ID",
-          "message": "Document/Page ID"
+          "source": "Document/page ID",
+          "message": "Document/page ID"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.short_desc": {
           "source": "The document or page to retrieve blocks from",
@@ -672,8 +672,8 @@
           "message": "The ID of the page block to fetch. Required for multi-document operations. Accepts IDs for documents, pages and blocks."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
-          "message": "Maximum Depth"
+          "source": "Maximum depth",
+          "message": "Maximum depth"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.short_desc": {
           "source": "Maximum depth for nested blocks",
@@ -684,8 +684,8 @@
           "message": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit the nesting level."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
-          "source": "Fetch Metadata",
-          "message": "Fetch Metadata"
+          "source": "Fetch metadata",
+          "message": "Fetch metadata"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
           "source": "Include metadata in the response",
@@ -696,8 +696,8 @@
           "message": "Whether to fetch metadata (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) for the blocks."
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.display_name": {
-          "source": "Get Markdown String",
-          "message": "Get Markdown String"
+          "source": "Get markdown string",
+          "message": "Get markdown string"
         },
         "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.short_desc": {
           "source": "Retrieve the markdown string representation of blocks",
@@ -708,8 +708,8 @@
           "message": "Whether to retrieve the markdown string representation of the blocks."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.display_name": {
-          "source": "Insert Block",
-          "message": "Insert Block"
+          "source": "Insert block",
+          "message": "Insert block"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.short_desc": {
           "source": "Add a new block to a document",
@@ -720,8 +720,8 @@
           "message": "Insert a new block with markdown content into a Craft document. You can specify whether to insert the block at the start or end of the target page."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.display_name": {
-          "source": "Markdown Content",
-          "message": "Markdown Content"
+          "source": "Markdown content",
+          "message": "Markdown content"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.short_desc": {
           "source": "The markdown content for the block",
@@ -756,8 +756,8 @@
           "message": "ID of the block to insert children into. Required for multi-document operations. Only page, text, and card type blocks can be parent blocks. Text blocks are auto-converted to page type when they receive children. Collection items are implicitly pages."
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.display_name": {
-          "source": "Insert Position",
-          "message": "Insert Position"
+          "source": "Insert position",
+          "message": "Insert position"
         },
         "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.field.cG9zaXRpb24.short_desc": {
           "source": "Insert at start or end",
@@ -776,8 +776,8 @@
           "message": "End"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
-          "source": "Delete Blocks",
-          "message": "Delete Blocks"
+          "source": "Delete blocks",
+          "message": "Delete blocks"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
           "source": "Remove blocks from a document",
@@ -800,8 +800,8 @@
           "message": "Provide a list of block IDs that you want to remove from the document. You can delete multiple blocks in a single operation."
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.display_name": {
-          "source": "List Tasks",
-          "message": "List Tasks"
+          "source": "List tasks",
+          "message": "List tasks"
         },
         "app.Q3JhZnQ.action.bGlzdF90YXNrcw.short_desc": {
           "source": "Retrieve tasks based on scope",
@@ -840,8 +840,8 @@
           "message": "Logbook"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.display_name": {
-          "source": "Create Task",
-          "message": "Create Task"
+          "source": "Create task",
+          "message": "Create task"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.short_desc": {
           "source": "Add a new task",
@@ -852,8 +852,8 @@
           "message": "Create a new task in Craft with markdown content, optional task information (state, schedule, deadline), and a location (inbox or daily note)."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
-          "message": "Task Content"
+          "source": "Task content",
+          "message": "Task content"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
           "source": "The markdown content for the task",
@@ -864,8 +864,8 @@
           "message": "The task content in markdown format. This will be the task's text."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.display_name": {
-          "source": "Task Information",
-          "message": "Task Information"
+          "source": "Task information",
+          "message": "Task information"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.short_desc": {
           "source": "Additional task details",
@@ -876,8 +876,8 @@
           "message": "Optional task metadata including state, schedule date, and deadline date"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
-          "message": "Deadline Date"
+          "source": "Deadline date",
+          "message": "Deadline date"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.ZGVhZGxpbmVEYXRl.short_desc": {
           "source": "When the task is due",
@@ -888,8 +888,8 @@
           "message": "Due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
-          "message": "Schedule Date"
+          "source": "Schedule date",
+          "message": "Schedule date"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.field.c2NoZWR1bGVEYXRl.short_desc": {
           "source": "When the task is scheduled",
@@ -948,8 +948,8 @@
           "message": "The daily note date where the task is located. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Defaults to 'today' if not provided."
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.display_name": {
-          "source": "Location Type",
-          "message": "Location Type"
+          "source": "Location type",
+          "message": "Location type"
         },
         "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.field.dHlwZQ.short_desc": {
           "source": "Type of location",
@@ -968,8 +968,8 @@
           "message": "Daily Note"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.display_name": {
-          "source": "Update Task",
-          "message": "Update Task"
+          "source": "Update task",
+          "message": "Update task"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.short_desc": {
           "source": "Modify an existing task",
@@ -992,8 +992,8 @@
           "message": "Select the task you want to modify. Only active tasks are available for selection."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
-          "source": "Task Content",
-          "message": "Task Content"
+          "source": "Task content",
+          "message": "Task content"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
           "source": "Updated markdown content",
@@ -1028,8 +1028,8 @@
           "message": "Canceled"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.display_name": {
-          "source": "Schedule Date",
-          "message": "Schedule Date"
+          "source": "Schedule date",
+          "message": "Schedule date"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.short_desc": {
           "source": "Updated schedule date",
@@ -1040,8 +1040,8 @@
           "message": "Updated planned execution date. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing schedule."
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.display_name": {
-          "source": "Deadline Date",
-          "message": "Deadline Date"
+          "source": "Deadline date",
+          "message": "Deadline date"
         },
         "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.short_desc": {
           "source": "Updated deadline date",
@@ -1052,8 +1052,8 @@
           "message": "Updated due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing deadline."
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.display_name": {
-          "source": "Delete Tasks",
-          "message": "Delete Tasks"
+          "source": "Delete tasks",
+          "message": "Delete tasks"
         },
         "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.short_desc": {
           "source": "Remove tasks",
@@ -1076,8 +1076,8 @@
           "message": "Provide a list of task IDs that you want to remove. You can delete multiple tasks in a single operation."
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.display_name": {
-          "source": "New Collection Item",
-          "message": "New Collection Item"
+          "source": "New collection item",
+          "message": "New collection item"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.short_desc": {
           "source": "Triggers when a new item is added to a collection",
@@ -1100,8 +1100,8 @@
           "message": "Select the Craft collection you want to monitor for new items. When a new item is added to this collection, the trigger will fire."
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.display_name": {
-          "source": "Maximum Depth",
-          "message": "Maximum Depth"
+          "source": "Maximum depth",
+          "message": "Maximum depth"
         },
         "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.short_desc": {
           "source": "Maximum depth for nested content retrieval",

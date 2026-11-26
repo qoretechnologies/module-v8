@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
+          "source": "List campaigns",
           "message": "キャンペーン一覧"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "前のリクエストから返されたカーソルを使用して、キャンペーンの次のページを取得します。最初のページの場合は空のままにします。"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
-          "source": "List Campaign Members",
+          "source": "List campaign members",
           "message": "キャンペーンメンバーの一覧表示"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "前のリクエストから返されたカーソルを使用して、メンバーの次のページを取得します。最初のページの場合は空のままにします。"
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
+          "source": "Get campaign",
           "message": "キャンペーンの取得"
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
@@ -448,7 +448,7 @@
           "message": "詳細情報を取得するキャンペーンを選択してください。これは必須フィールドです。"
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "メンバーを取得"
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "詳細情報を取得するメンバー（パトロン）のIDを選択または入力してください。これは必須フィールドです。"
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
-          "source": "List Posts",
+          "source": "List posts",
           "message": "投稿の一覧表示"
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "前のリクエストから返されたカーソルを使用して、投稿の次のページを取得します。最初のページの場合は空のままにします。"
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
-          "source": "Get Post",
+          "source": "Get post",
           "message": "投稿を取得"
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
@@ -568,7 +568,7 @@
           "message": "詳細情報を取得する投稿のIDを選択または入力してください。これは必須フィールドです。"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
-          "source": "Pledge Event",
+          "source": "Pledge event",
           "message": "プレッジイベント"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
@@ -592,7 +592,7 @@
           "message": "プレッジ関連のイベントを監視するキャンペーンを選択します。これは必須項目です。"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "トリガーイベント"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "メンバーがプレッジを削除したときにトリガーされます。"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
-          "source": "Member Event",
+          "source": "Member event",
           "message": "メンバーイベント"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
@@ -652,7 +652,7 @@
           "message": "メンバー関連のイベントを監視するキャンペーンを選択します。これは必須項目です。"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "トリガーイベント"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "メンバーシップが削除されたときにトリガーされます。パトロンがメンバーシップを削除して更新した場合、パトロンごとにこれが複数回発生することがある点に注意してください。削除は事前の支払いが発生していない場合にのみ発生し、それ以外の場合、プレッジの削除はメンバーステータスの更新となります。"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
-          "source": "Post Event",
+          "source": "Post event",
           "message": "投稿イベント"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "投稿関連のイベントを監視するキャンペーンを選択します。これは必須項目です。"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "トリガーイベント"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {

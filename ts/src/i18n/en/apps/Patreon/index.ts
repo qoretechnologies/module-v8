@@ -8,7 +8,7 @@ const PatreonAppEn = {
     'The Patreon integration enables creators to automate their patron management workflows. Access patron data, manage memberships, track campaigns, and engage with your community through comprehensive API actions and real-time triggers for patron activities.',
   actions: {
     list_campaigns: {
-      displayName: 'List Campaigns',
+      displayName: 'List campaigns',
       shortDesc: 'Retrieve a list of campaigns for the authenticated creator',
       longDesc:
         'Fetches a paginated list of campaigns associated with the authenticated Patreon account. Returns comprehensive campaign information including patron counts, settings, and metadata.',
@@ -28,7 +28,7 @@ const PatreonAppEn = {
       },
     },
     list_campaign_members: {
-      displayName: 'List Campaign Members',
+      displayName: 'List campaign members',
       shortDesc: 'Retrieve members of a specific campaign',
       longDesc:
         'Fetches a paginated list of members (patrons) for a specified campaign. Returns detailed member information including pledge amounts, payment status, and membership details.',
@@ -54,7 +54,7 @@ const PatreonAppEn = {
       },
     },
     get_campaign: {
-      displayName: 'Get Campaign',
+      displayName: 'Get campaign',
       shortDesc: 'Retrieve detailed information about a specific campaign',
       longDesc:
         'Fetches comprehensive details about a single campaign including summary, creation details, social media integration, RSS feed settings, and patron statistics.',
@@ -68,7 +68,7 @@ const PatreonAppEn = {
       },
     },
     get_member: {
-      displayName: 'Get Member',
+      displayName: 'Get member',
       shortDesc: 'Retrieve detailed information about a specific member',
       longDesc:
         'Fetches comprehensive details about a single campaign member (patron) including pledge amounts, payment history, membership status, and relationship timeline.',
@@ -88,7 +88,7 @@ const PatreonAppEn = {
       },
     },
     list_posts: {
-      displayName: 'List Posts',
+      displayName: 'List posts',
       shortDesc: 'Retrieve posts from a specific campaign',
       longDesc:
         'Fetches a paginated list of posts from a specified campaign, sorted by publish date. Returns post content, metadata, and engagement information.',
@@ -114,7 +114,7 @@ const PatreonAppEn = {
       },
     },
     get_post: {
-      displayName: 'Get Post',
+      displayName: 'Get post',
       shortDesc: 'Retrieve detailed information about a specific post',
       longDesc:
         'Fetches comprehensive details about a single post including content, publish information, access settings, and engagement metrics.',
@@ -136,7 +136,7 @@ const PatreonAppEn = {
   },
   triggers: {
     pledge_trigger: {
-      displayName: 'Pledge Event',
+      displayName: 'Pledge event',
       shortDesc: 'Triggers when a pledge is created, updated, or deleted',
       longDesc:
         'Monitors pledge events for a specific campaign using Patreon webhooks. This trigger fires when a member creates, updates, or deletes their pledge, allowing you to automate workflows based on patron pledge activity.',
@@ -148,7 +148,7 @@ const PatreonAppEn = {
             'Select the campaign you want to monitor for pledge-related events. This is a required field.',
         },
         trigger: {
-          displayName: 'Trigger Event',
+          displayName: 'Trigger event',
           shortDesc: 'The specific pledge event to monitor',
           longDesc:
             'Select which type of pledge event should trigger this workflow. Choose from pledge creation (when a member first pledges or a follower becomes a patron), pledge updates (upgrades or downgrades), or pledge deletion.',
@@ -156,7 +156,7 @@ const PatreonAppEn = {
       },
     },
     member_trigger: {
-      displayName: 'Member Event',
+      displayName: 'Member event',
       shortDesc: 'Triggers when a member is created, updated, or deleted',
       longDesc:
         'Monitors member events for a specific campaign using Patreon webhooks. This trigger fires when a member is created, their information is updated (including payment charging events), or their membership is deleted.',
@@ -168,7 +168,7 @@ const PatreonAppEn = {
             'Select the campaign you want to monitor for member-related events. This is a required field.',
         },
         trigger: {
-          displayName: 'Trigger Event',
+          displayName: 'Trigger event',
           shortDesc: 'The specific member event to monitor',
           longDesc:
             'Select which type of member event should trigger this workflow. Member creation occurs only if there was no prior payment between patron and creator. Updates include payment charging events. Deletion only occurs if no prior payment happened.',
@@ -176,7 +176,7 @@ const PatreonAppEn = {
       },
     },
     post_trigger: {
-      displayName: 'Post Event',
+      displayName: 'Post event',
       shortDesc: 'Triggers when a post is published, updated, or deleted',
       longDesc:
         'Monitors post events for a specific campaign using Patreon webhooks. This trigger fires when a post is published, updated, or deleted on the campaign, allowing you to automate content distribution and notifications.',
@@ -188,7 +188,7 @@ const PatreonAppEn = {
             'Select the campaign you want to monitor for post-related events. This is a required field.',
         },
         trigger: {
-          displayName: 'Trigger Event',
+          displayName: 'Trigger event',
           shortDesc: 'The specific post event to monitor',
           longDesc:
             'Select which type of post event should trigger this workflow. Choose from post publication, post updates, or post deletion events.',

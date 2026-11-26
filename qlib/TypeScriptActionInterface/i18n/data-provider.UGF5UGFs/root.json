@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.display_name": {
-          "source": "List Transactions",
-          "message": "List Transactions"
+          "source": "List transactions",
+          "message": "List transactions"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.short_desc": {
           "source": "Get transaction history for your account",
@@ -352,8 +352,8 @@
           "message": "Retrieves a list of transactions for your PayPal account within a specified date range. Supports filtering by transaction type, status, amount range, currency, and payment method to help you find specific transactions or generate reports."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.short_desc": {
           "source": "Beginning date for transaction search",
@@ -364,8 +364,8 @@
           "message": "The earliest date to include in the transaction search. Transactions on or after this date will be included in the results."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.short_desc": {
           "source": "Ending date for transaction search",
@@ -376,8 +376,8 @@
           "message": "The latest date to include in the transaction search. Transactions on or before this date will be included in the results."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
-          "source": "Transaction Type",
-          "message": "Transaction Type"
+          "source": "Transaction type",
+          "message": "Transaction type"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
           "source": "Type of transactions to retrieve",
@@ -1532,8 +1532,8 @@
           "message": "Other."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.display_name": {
-          "source": "Transaction Status",
-          "message": "Transaction Status"
+          "source": "Transaction status",
+          "message": "Transaction status"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.short_desc": {
           "source": "Status of transactions to include",
@@ -1568,8 +1568,8 @@
           "message": "A successful transaction was reversed and funds were refunded to the original sender."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.display_name": {
-          "source": "Transaction Amount Range",
-          "message": "Transaction Amount Range"
+          "source": "Transaction amount range",
+          "message": "Transaction amount range"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.short_desc": {
           "source": "Filter by transaction amount range",
@@ -1580,8 +1580,8 @@
           "message": "Specify a range of transaction amounts to filter results. Useful for finding transactions within specific value ranges."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.display_name": {
-          "source": "Minimum Amount",
-          "message": "Minimum Amount"
+          "source": "Minimum amount",
+          "message": "Minimum amount"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.ZnJvbQ.short_desc": {
           "source": "Minimum transaction amount",
@@ -1592,8 +1592,8 @@
           "message": "The minimum transaction amount to include in results."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.display_name": {
-          "source": "Maximum Amount",
-          "message": "Maximum Amount"
+          "source": "Maximum amount",
+          "message": "Maximum amount"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.field.dG8.short_desc": {
           "source": "Maximum transaction amount",
@@ -1604,8 +1604,8 @@
           "message": "The maximum transaction amount to include in results."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.display_name": {
-          "source": "Transaction Currency",
-          "message": "Transaction Currency"
+          "source": "Transaction currency",
+          "message": "Transaction currency"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.short_desc": {
           "source": "Filter by currency code",
@@ -1816,8 +1816,8 @@
           "message": "United States dollar"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.display_name": {
-          "source": "Payment Method Type",
-          "message": "Payment Method Type"
+          "source": "Payment method type",
+          "message": "Payment method type"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.short_desc": {
           "source": "Filter by payment method used",
@@ -1836,8 +1836,8 @@
           "message": "Debit Card"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.short_desc": {
           "source": "Number of transactions per page",
@@ -1848,8 +1848,8 @@
           "message": "The maximum number of transactions to return in a single response. Use for pagination of large result sets."
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.short_desc": {
           "source": "Page number for pagination",
@@ -1860,8 +1860,8 @@
           "message": "The page number to retrieve when paginating through large result sets."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.display_name": {
-          "source": "Create Order",
-          "message": "Create Order"
+          "source": "Create order",
+          "message": "Create order"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.short_desc": {
           "source": "Create a new payment order with purchase details",
@@ -1872,8 +1872,8 @@
           "message": "Creates a new PayPal order with specified payment amount, items, shipping details, and payment preferences. Orders represent a payment between two or more parties and can be authorized immediately or captured later. Supports various payment sources including PayPal, cards, and alternative payment methods."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.display_name": {
-          "source": "Payment Intent",
-          "message": "Payment Intent"
+          "source": "Payment intent",
+          "message": "Payment intent"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.short_desc": {
           "source": "Whether to capture payment immediately or authorize for later capture",
@@ -1900,8 +1900,8 @@
           "message": "The merchant intends to authorize a payment and place funds on hold after the customer makes a payment. Authorized payments are best captured within three days but are available to capture for up to 29 days."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.short_desc": {
           "source": "Three-letter ISO currency code for the transaction",
@@ -2112,8 +2112,8 @@
           "message": "United States dollar"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.display_name": {
-          "source": "Total Amount",
-          "message": "Total Amount"
+          "source": "Total amount",
+          "message": "Total amount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.short_desc": {
           "source": "Total payment amount as a string",
@@ -2124,8 +2124,8 @@
           "message": "The total amount for this order. Must be a positive number and match the sum of all breakdown components if provided. Format as a string with appropriate decimal precision for the currency."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.display_name": {
-          "source": "Item Total",
-          "message": "Item Total"
+          "source": "Item total",
+          "message": "Item total"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.short_desc": {
           "source": "Total cost of all items before taxes and fees",
@@ -2136,8 +2136,8 @@
           "message": "The total cost of all items in the order before applying taxes, shipping, handling, insurance, or discounts. Should equal the sum of (quantity × unit_amount) for all items."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.display_name": {
-          "source": "Shipping Amount",
-          "message": "Shipping Amount"
+          "source": "Shipping amount",
+          "message": "Shipping amount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.short_desc": {
           "source": "Cost of shipping for this order",
@@ -2148,8 +2148,8 @@
           "message": "The shipping cost for delivering the items in this order. This amount is added to the total order amount."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.display_name": {
-          "source": "Handling Amount",
-          "message": "Handling Amount"
+          "source": "Handling amount",
+          "message": "Handling amount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.short_desc": {
           "source": "Handling fee for processing this order",
@@ -2160,8 +2160,8 @@
           "message": "Additional handling fee charged for processing this order. This covers costs like packaging and order processing."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.display_name": {
-          "source": "Tax Total",
-          "message": "Tax Total"
+          "source": "Tax total",
+          "message": "Tax total"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.short_desc": {
           "source": "Total tax amount for this order",
@@ -2172,8 +2172,8 @@
           "message": "The total tax amount for all items in this order. This includes sales tax, VAT, or other applicable taxes based on the shipping address and local regulations."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.display_name": {
-          "source": "Insurance Amount",
-          "message": "Insurance Amount"
+          "source": "Insurance amount",
+          "message": "Insurance amount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.short_desc": {
           "source": "Insurance cost for this shipment",
@@ -2184,8 +2184,8 @@
           "message": "Optional insurance amount to protect the shipment. This covers the value of items in case of loss or damage during shipping."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.display_name": {
-          "source": "Shipping Discount",
-          "message": "Shipping Discount"
+          "source": "Shipping discount",
+          "message": "Shipping discount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.short_desc": {
           "source": "Discount applied to shipping costs",
@@ -2196,8 +2196,8 @@
           "message": "Any discount applied specifically to shipping costs, such as free shipping promotions or reduced shipping fees for bulk orders."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.display_name": {
-          "source": "Discount Amount",
-          "message": "Discount Amount"
+          "source": "Discount amount",
+          "message": "Discount amount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.short_desc": {
           "source": "Total discount applied to the order",
@@ -2208,8 +2208,8 @@
           "message": "The total discount amount applied to this order, including coupon codes, promotions, or bulk discounts. This reduces the overall order total."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Payee Email",
-          "message": "Payee Email"
+          "source": "Payee email",
+          "message": "Payee email"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.short_desc": {
           "source": "Email address of the payment recipient",
@@ -2220,8 +2220,8 @@
           "message": "The email address of the merchant or seller who will receive the payment. Required for marketplace transactions or when specifying a different recipient."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Payee Merchant ID",
-          "message": "Payee Merchant ID"
+          "source": "Payee merchant ID",
+          "message": "Payee merchant ID"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
           "source": "PayPal merchant ID of the payment recipient",
@@ -2232,8 +2232,8 @@
           "message": "The PayPal merchant ID of the account that will receive the payment. Used for marketplace transactions or when routing payments to specific merchants."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Order Description",
-          "message": "Order Description"
+          "source": "Order description",
+          "message": "Order description"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.short_desc": {
           "source": "Description of the order or purchase",
@@ -2268,8 +2268,8 @@
           "message": "The invoice number for this order. Helps match orders with your accounting system and prevents duplicate payments."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.display_name": {
-          "source": "Soft Descriptor",
-          "message": "Soft Descriptor"
+          "source": "Soft descriptor",
+          "message": "Soft descriptor"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.short_desc": {
           "source": "Text that appears on customer's credit card statement",
@@ -2280,8 +2280,8 @@
           "message": "The text that appears on the customer's credit card or bank statement. Keep it short and recognizable to avoid chargebacks."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.display_name": {
-          "source": "Order Items",
-          "message": "Order Items"
+          "source": "Order items",
+          "message": "Order items"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.short_desc": {
           "source": "List of items being purchased",
@@ -2316,8 +2316,8 @@
           "message": "Donation"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.display_name": {
-          "source": "Item Description",
-          "message": "Item Description"
+          "source": "Item description",
+          "message": "Item description"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.ZGVzY3JpcHRpb24.short_desc": {
           "source": "Detailed description of the item",
@@ -2328,8 +2328,8 @@
           "message": "Optional detailed description providing more information about this item."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.display_name": {
-          "source": "Item Name",
-          "message": "Item Name"
+          "source": "Item name",
+          "message": "Item name"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.bmFtZQ.short_desc": {
           "source": "Name of the item",
@@ -2364,8 +2364,8 @@
           "message": "Your internal stock keeping unit identifier for inventory tracking."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.display_name": {
-          "source": "Tax Amount",
-          "message": "Tax Amount"
+          "source": "Tax amount",
+          "message": "Tax amount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dGF4X2Ftb3VudA.short_desc": {
           "source": "Tax amount for this item",
@@ -2376,8 +2376,8 @@
           "message": "The tax amount specifically for this item, calculated based on quantity and applicable tax rates."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.display_name": {
-          "source": "Unit Price",
-          "message": "Unit Price"
+          "source": "Unit price",
+          "message": "Unit price"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.field.dW5pdF9wcmljZQ.short_desc": {
           "source": "Price per individual item",
@@ -2400,8 +2400,8 @@
           "message": "Optional URL linking to the product page where customers can view more details about this item."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.display_name": {
-          "source": "Shipping Type",
-          "message": "Shipping Type"
+          "source": "Shipping type",
+          "message": "Shipping type"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.short_desc": {
           "source": "Method of delivery for this order",
@@ -2420,8 +2420,8 @@
           "message": "Pickup in Person"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.display_name": {
-          "source": "Shipping Name",
-          "message": "Shipping Name"
+          "source": "Shipping name",
+          "message": "Shipping name"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.short_desc": {
           "source": "Full name for shipping address",
@@ -2432,8 +2432,8 @@
           "message": "The complete name of the person who will receive the shipment at the delivery address."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.display_name": {
-          "source": "Shipping Address Line 1",
-          "message": "Shipping Address Line 1"
+          "source": "Shipping address line 1",
+          "message": "Shipping address line 1"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.short_desc": {
           "source": "Primary shipping address",
@@ -2444,8 +2444,8 @@
           "message": "The first line of the shipping address, typically containing street number and name."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.display_name": {
-          "source": "Shipping Address Line 2",
-          "message": "Shipping Address Line 2"
+          "source": "Shipping address line 2",
+          "message": "Shipping address line 2"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.short_desc": {
           "source": "Secondary shipping address line",
@@ -2456,8 +2456,8 @@
           "message": "Optional second line of the shipping address for apartment numbers, suite numbers, or additional location details."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.display_name": {
-          "source": "Shipping City",
-          "message": "Shipping City"
+          "source": "Shipping city",
+          "message": "Shipping city"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.short_desc": {
           "source": "City for shipping address",
@@ -2468,8 +2468,8 @@
           "message": "The city where the items will be delivered."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.display_name": {
-          "source": "Shipping State",
-          "message": "Shipping State"
+          "source": "Shipping state",
+          "message": "Shipping state"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.short_desc": {
           "source": "State or province for shipping",
@@ -2480,8 +2480,8 @@
           "message": "The state, province, or region for the shipping address. Use appropriate codes for the country."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.display_name": {
-          "source": "Shipping Postal Code",
-          "message": "Shipping Postal Code"
+          "source": "Shipping postal code",
+          "message": "Shipping postal code"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.short_desc": {
           "source": "ZIP or postal code for shipping",
@@ -2492,8 +2492,8 @@
           "message": "The ZIP code, postal code, or equivalent for the shipping address."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.display_name": {
-          "source": "Shipping Country Code",
-          "message": "Shipping Country Code"
+          "source": "Shipping country code",
+          "message": "Shipping country code"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.short_desc": {
           "source": "Two-letter country code for shipping",
@@ -2504,8 +2504,8 @@
           "message": "The two-character ISO 3166-1 country code for the shipping address."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.display_name": {
-          "source": "Platform Fees",
-          "message": "Platform Fees"
+          "source": "Platform fees",
+          "message": "Platform fees"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.short_desc": {
           "source": "Fees collected by the platform",
@@ -2516,8 +2516,8 @@
           "message": "Array of platform fees to be collected on this transaction. Used by marketplaces to collect fees from transactions processed on their platform."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.display_name": {
-          "source": "Fee Amount",
-          "message": "Fee Amount"
+          "source": "Fee amount",
+          "message": "Fee amount"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.ZmVlX2Ftb3VudA.short_desc": {
           "source": "Platform fee amount",
@@ -2528,8 +2528,8 @@
           "message": "The amount of the platform fee to be collected from this transaction."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.display_name": {
-          "source": "Fee Recipient Email",
-          "message": "Fee Recipient Email"
+          "source": "Fee recipient email",
+          "message": "Fee recipient email"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfZW1haWw.short_desc": {
           "source": "Email of fee recipient",
@@ -2540,8 +2540,8 @@
           "message": "Email address of the account that will receive the platform fee."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
-          "source": "Fee Recipient Merchant ID",
-          "message": "Fee Recipient Merchant ID"
+          "source": "Fee recipient merchant ID",
+          "message": "Fee recipient merchant ID"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.field.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
           "source": "Merchant ID of fee recipient",
@@ -2552,8 +2552,8 @@
           "message": "PayPal merchant ID of the account that will receive the platform fee."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
-          "message": "Disbursement Mode"
+          "source": "Disbursement mode",
+          "message": "Disbursement mode"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
           "source": "When to release funds to the seller",
@@ -2596,8 +2596,8 @@
           "message": "The URL where customers will be redirected if they cancel the payment process. Should provide information about the cancelled transaction and next steps."
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.display_name": {
-          "source": "Capture Order",
-          "message": "Capture Order"
+          "source": "Capture order",
+          "message": "Capture order"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.short_desc": {
           "source": "Capture payment for an approved order",
@@ -2620,8 +2620,8 @@
           "message": "The ID of the approved order to capture"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.display_name": {
-          "source": "Final Capture",
-          "message": "Final Capture"
+          "source": "Final capture",
+          "message": "Final capture"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.short_desc": {
           "source": "Whether this is the final capture for the order",
@@ -2632,8 +2632,8 @@
           "message": "Whether this is the final capture for the order"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.display_name": {
-          "source": "Payment Instructions",
-          "message": "Payment Instructions"
+          "source": "Payment instructions",
+          "message": "Payment instructions"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.short_desc": {
           "source": "Additional payment processing instructions",
@@ -2644,8 +2644,8 @@
           "message": "Special instructions for processing this payment, such as disbursement timing or platform fee collection."
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
-          "source": "Disbursement Mode",
-          "message": "Disbursement Mode"
+          "source": "Disbursement mode",
+          "message": "Disbursement mode"
         },
         "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.field.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
           "source": "When to disburse funds",
@@ -2664,8 +2664,8 @@
           "message": "Delayed"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.display_name": {
-          "source": "Get Order",
-          "message": "Get Order"
+          "source": "Get order",
+          "message": "Get order"
         },
         "app.UGF5UGFs.action.Z2V0X29yZGVy.short_desc": {
           "source": "Retrieve order details by ID",
@@ -2688,8 +2688,8 @@
           "message": "The unique identifier of the order you want to retrieve details for."
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.display_name": {
-          "source": "Authorize Order",
-          "message": "Authorize Order"
+          "source": "Authorize order",
+          "message": "Authorize order"
         },
         "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.short_desc": {
           "source": "Authorize payment for an approved order",
@@ -2712,8 +2712,8 @@
           "message": "The ID of the approved order to capture"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.display_name": {
-          "source": "Refund Payment",
-          "message": "Refund Payment"
+          "source": "Refund payment",
+          "message": "Refund payment"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.short_desc": {
           "source": "Process a refund for a captured payment",
@@ -2736,8 +2736,8 @@
           "message": "The unique identifier of the captured payment that you want to refund. This can be found in the capture response or order details."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.display_name": {
-          "source": "Refund Amount",
-          "message": "Refund Amount"
+          "source": "Refund amount",
+          "message": "Refund amount"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.short_desc": {
           "source": "Amount to refund (optional for full refund)",
@@ -2748,8 +2748,8 @@
           "message": "The amount to refund. If not specified, the full captured amount will be refunded. For partial refunds, specify the currency and amount."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.Y3VycmVuY3lfY29kZQ.short_desc": {
           "source": "Currency for the refund amount",
@@ -2960,8 +2960,8 @@
           "message": "United States dollar"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.display_name": {
-          "source": "Refund Value",
-          "message": "Refund Value"
+          "source": "Refund value",
+          "message": "Refund value"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.field.dmFsdWU.short_desc": {
           "source": "The refund amount as a string",
@@ -2972,8 +2972,8 @@
           "message": "The amount to refund, formatted as a string with appropriate decimal precision."
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.display_name": {
-          "source": "Note to Payer",
-          "message": "Note to Payer"
+          "source": "Note to payer",
+          "message": "Note to payer"
         },
         "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.short_desc": {
           "source": "Optional note explaining the refund",
@@ -2996,8 +2996,8 @@
           "message": "Optional invoice ID to associate with this refund for accounting and tracking purposes."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.display_name": {
-          "source": "List Disputes",
-          "message": "List Disputes"
+          "source": "List disputes",
+          "message": "List disputes"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.short_desc": {
           "source": "Get a list of customer disputes",
@@ -3008,8 +3008,8 @@
           "message": "Retrieves a list of customer disputes for your account. Disputes occur when customers challenge transactions, and this API helps you manage and respond to them effectively."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.display_name": {
-          "source": "Start Time",
-          "message": "Start Time"
+          "source": "Start time",
+          "message": "Start time"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.short_desc": {
           "source": "Earliest dispute creation time to include",
@@ -3020,8 +3020,8 @@
           "message": "Filter disputes created on or after this date and time."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.display_name": {
-          "source": "Disputed Transaction ID",
-          "message": "Disputed Transaction ID"
+          "source": "Disputed transaction ID",
+          "message": "Disputed transaction ID"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.short_desc": {
           "source": "Filter by specific transaction ID",
@@ -3032,8 +3032,8 @@
           "message": "Show only disputes related to a specific transaction ID."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.display_name": {
-          "source": "Dispute States",
-          "message": "Dispute States"
+          "source": "Dispute states",
+          "message": "Dispute states"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.short_desc": {
           "source": "Filter by dispute states",
@@ -3092,8 +3092,8 @@
           "message": "The dispute has been resolved and closed."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.short_desc": {
           "source": "Number of disputes per page",
@@ -3104,8 +3104,8 @@
           "message": "The maximum number of disputes to return in a single response."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
           "source": "Token for retrieving the next page",
@@ -3116,8 +3116,8 @@
           "message": "Token for pagination to retrieve the next page of disputes."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.display_name": {
-          "source": "Updated Before",
-          "message": "Updated Before"
+          "source": "Updated before",
+          "message": "Updated before"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.short_desc": {
           "source": "Include disputes updated before this date",
@@ -3128,8 +3128,8 @@
           "message": "Filter disputes that were last updated before this date and time."
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.display_name": {
-          "source": "Updated After",
-          "message": "Updated After"
+          "source": "Updated after",
+          "message": "Updated after"
         },
         "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.short_desc": {
           "source": "Include disputes updated after this date",
@@ -3140,8 +3140,8 @@
           "message": "Filter disputes that were last updated after this date and time."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.display_name": {
-          "source": "List Invoices",
-          "message": "List Invoices"
+          "source": "List invoices",
+          "message": "List invoices"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.short_desc": {
           "source": "Get a list of your invoices",
@@ -3152,8 +3152,8 @@
           "message": "Retrieves a paginated list of invoices in your account. Use pagination parameters to navigate through large numbers of invoices."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
-          "message": "Page Number"
+          "source": "Page number",
+          "message": "Page number"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.short_desc": {
           "source": "Page number for pagination",
@@ -3164,8 +3164,8 @@
           "message": "The page number to retrieve when paginating through invoices."
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.display_name": {
-          "source": "Page Size",
-          "message": "Page Size"
+          "source": "Page size",
+          "message": "Page size"
         },
         "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.short_desc": {
           "source": "Number of invoices per page",
@@ -3176,8 +3176,8 @@
           "message": "The maximum number of invoices to return in a single response."
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.display_name": {
-          "source": "Get Invoice",
-          "message": "Get Invoice"
+          "source": "Get invoice",
+          "message": "Get invoice"
         },
         "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.short_desc": {
           "source": "Retrieve invoice details by ID",
@@ -3200,8 +3200,8 @@
           "message": "The unique identifier of the invoice you want to retrieve details for."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.display_name": {
-          "source": "Create Invoice",
-          "message": "Create Invoice"
+          "source": "Create invoice",
+          "message": "Create invoice"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
           "source": "Create a new invoice for payment",
@@ -3212,8 +3212,8 @@
           "message": "Creates a new invoice that can be sent to customers for payment. Includes item details, pricing, tax information, and payment terms. Invoices can be automatically sent to recipients or manually shared."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.display_name": {
-          "source": "Invoice Number",
-          "message": "Invoice Number"
+          "source": "Invoice number",
+          "message": "Invoice number"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.short_desc": {
           "source": "Unique invoice number for tracking",
@@ -3224,8 +3224,8 @@
           "message": "A unique identifier for this invoice. If not provided, PayPal will generate one automatically."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.display_name": {
-          "source": "Currency Code",
-          "message": "Currency Code"
+          "source": "Currency code",
+          "message": "Currency code"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.short_desc": {
           "source": "Currency for the invoice amount",
@@ -3448,8 +3448,8 @@
           "message": "Optional note or memo to include with the invoice. Visible to the recipient."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.display_name": {
-          "source": "Recipient Email",
-          "message": "Recipient Email"
+          "source": "Recipient email",
+          "message": "Recipient email"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.short_desc": {
           "source": "Email address of the invoice recipient",
@@ -3460,8 +3460,8 @@
           "message": "The email address where the invoice will be sent. This is the primary recipient who will receive payment requests."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.display_name": {
-          "source": "Recipient First Name",
-          "message": "Recipient First Name"
+          "source": "Recipient first name",
+          "message": "Recipient first name"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.short_desc": {
           "source": "First name of the invoice recipient",
@@ -3472,8 +3472,8 @@
           "message": "The first name of the person or business contact receiving the invoice."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.display_name": {
-          "source": "Recipient Last Name",
-          "message": "Recipient Last Name"
+          "source": "Recipient last name",
+          "message": "Recipient last name"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.short_desc": {
           "source": "Last name of the invoice recipient",
@@ -3484,8 +3484,8 @@
           "message": "The last name of the person receiving the invoice."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.display_name": {
-          "source": "Item Name",
-          "message": "Item Name"
+          "source": "Item name",
+          "message": "Item name"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.short_desc": {
           "source": "Name of the item or service",
@@ -3496,8 +3496,8 @@
           "message": "A descriptive name for the product or service being invoiced."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.display_name": {
-          "source": "Item Description",
-          "message": "Item Description"
+          "source": "Item description",
+          "message": "Item description"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.short_desc": {
           "source": "Detailed description of the item",
@@ -3508,8 +3508,8 @@
           "message": "Optional detailed description providing more information about the product or service."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.display_name": {
-          "source": "Item Quantity",
-          "message": "Item Quantity"
+          "source": "Item quantity",
+          "message": "Item quantity"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.short_desc": {
           "source": "Number of items or units",
@@ -3520,8 +3520,8 @@
           "message": "The quantity of the item being invoiced. Defaults to 1 if not specified."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.display_name": {
-          "source": "Unit Price",
-          "message": "Unit Price"
+          "source": "Unit price",
+          "message": "Unit price"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.short_desc": {
           "source": "Price per unit of the item",
@@ -3532,8 +3532,8 @@
           "message": "The cost per individual unit of the item or service."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.display_name": {
-          "source": "Tax Percentage",
-          "message": "Tax Percentage"
+          "source": "Tax percentage",
+          "message": "Tax percentage"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.short_desc": {
           "source": "Tax rate to apply to the item",
@@ -3544,8 +3544,8 @@
           "message": "The tax rate as a percentage to be applied to the item amount."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.display_name": {
-          "source": "Tax Name",
-          "message": "Tax Name"
+          "source": "Tax name",
+          "message": "Tax name"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.short_desc": {
           "source": "Name for the tax (e.g., \"Sales Tax\")",
@@ -3556,8 +3556,8 @@
           "message": "A descriptive name for the tax being applied, such as \"Sales Tax\", \"VAT\", or \"GST\"."
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.display_name": {
-          "source": "Payment Terms",
-          "message": "Payment Terms"
+          "source": "Payment terms",
+          "message": "Payment terms"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.short_desc": {
           "source": "When payment is due",
@@ -3596,8 +3596,8 @@
           "message": "Net 90 Days"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.display_name": {
-          "source": "Send to Recipient",
-          "message": "Send to Recipient"
+          "source": "Send to recipient",
+          "message": "Send to recipient"
         },
         "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.short_desc": {
           "source": "Automatically send the invoice via email",
@@ -3608,8 +3608,8 @@
           "message": "If true, the invoice will be automatically sent to the recipient's email address. If false, you can send it manually later."
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.display_name": {
-          "source": "Subscription Events",
-          "message": "Subscription Events"
+          "source": "Subscription events",
+          "message": "Subscription events"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.short_desc": {
           "source": "Receive notifications when subscription events occur",
@@ -3620,8 +3620,8 @@
           "message": "Triggers when subscription-related events happen, including subscription creation, activation, updates, cancellation, expiration, or suspension. Critical for managing recurring billing and subscription lifecycle automation."
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Subscription Event Type",
-          "message": "Subscription Event Type"
+          "source": "Subscription event type",
+          "message": "Subscription event type"
         },
         "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.short_desc": {
           "source": "The specific subscription event to listen for",
@@ -3680,8 +3680,8 @@
           "message": "A subscription is suspended."
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
-          "source": "Invoice Events",
-          "message": "Invoice Events"
+          "source": "Invoice events",
+          "message": "Invoice events"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
           "source": "Receive notifications when invoice events occur",
@@ -3692,8 +3692,8 @@
           "message": "Triggers when invoice-related events happen, such as when an invoice is created, paid, cancelled, refunded, or updated. Essential for managing billing workflows and keeping invoice status synchronized with your systems."
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Invoice Event Type",
-          "message": "Invoice Event Type"
+          "source": "Invoice event type",
+          "message": "Invoice event type"
         },
         "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
           "source": "The specific invoice event to listen for",
@@ -3752,8 +3752,8 @@
           "message": "An invoice is updated."
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.display_name": {
-          "source": "Dispute Events",
-          "message": "Dispute Events"
+          "source": "Dispute events",
+          "message": "Dispute events"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.short_desc": {
           "source": "Receive notifications when dispute events occur",
@@ -3764,8 +3764,8 @@
           "message": "Triggers when customer dispute events occur, such as when a new dispute is created, updated, or resolved. Essential for managing customer service workflows and responding to payment disputes promptly."
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Dispute Event Type",
-          "message": "Dispute Event Type"
+          "source": "Dispute event type",
+          "message": "Dispute event type"
         },
         "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
           "source": "The specific dispute event to listen for",
@@ -3800,8 +3800,8 @@
           "message": "A dispute is updated."
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.display_name": {
-          "source": "Order Events",
-          "message": "Order Events"
+          "source": "Order events",
+          "message": "Order events"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.short_desc": {
           "source": "Receive notifications when order events occur",
@@ -3812,8 +3812,8 @@
           "message": "Triggers when specific order-related events happen, such as when an order is approved by the customer, completed, or when payment approval is reversed. Use this to automate order processing workflows and handle order status changes."
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.display_name": {
-          "source": "Order Event Type",
-          "message": "Order Event Type"
+          "source": "Order event type",
+          "message": "Order event type"
         },
         "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.short_desc": {
           "source": "The specific order event to listen for",

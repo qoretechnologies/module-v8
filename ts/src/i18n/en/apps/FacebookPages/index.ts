@@ -6,7 +6,7 @@ const FacebookPagesAppEn = {
   longDesc: `Connect your Facebook account to manage your pages, posts, and comments directly from Qore. You can create, read, update, and delete posts on your Facebook pages, as well as manage comments and reactions.`,
   actions: {
     create_page_post: {
-      displayName: 'Create Page Post',
+      displayName: 'Create page post',
       shortDesc: 'Create a new post on a Facebook page',
       longDesc:
         'Creates a new post on a Facebook page with support for text, links, photos, scheduling, and visibility settings. Can create both immediate and scheduled posts.',
@@ -40,18 +40,18 @@ const FacebookPagesAppEn = {
             'If true, the post will be published immediately. If false, it will be saved as a draft or scheduled.',
         },
         scheduled_publish_time: {
-          displayName: 'Scheduled Publish Time',
+          displayName: 'Scheduled publish time',
           shortDesc: 'When to publish the post',
           longDesc:
             'ISO timestamp for when the post should be published. Requires published to be false.',
         },
         feed_story_visibility: {
-          displayName: 'Feed Story Visibility',
+          displayName: 'Feed story visibility',
           shortDesc: 'Visibility in news feed',
           longDesc: 'Controls whether the post appears in the news feed.',
         },
         timeline_visibility: {
-          displayName: 'Timeline Visibility',
+          displayName: 'Timeline visibility',
           shortDesc: 'Visibility on timeline',
           longDesc: 'Controls whether the post appears on the page timeline.',
         },
@@ -59,7 +59,7 @@ const FacebookPagesAppEn = {
     },
 
     get_page_post_insights: {
-      displayName: 'Get Page Post Insights',
+      displayName: 'Get page post insights',
       shortDesc: 'Get analytics data for a Facebook page post',
       longDesc:
         'Retrieves detailed insights and analytics data for a specific Facebook page post, including impressions, clicks, engagement metrics, and time-series data.',
@@ -90,7 +90,7 @@ const FacebookPagesAppEn = {
     },
 
     get_page_post: {
-      displayName: 'Get Page Post',
+      displayName: 'Get page post',
       shortDesc: 'Get details of a Facebook page post',
       longDesc:
         'Retrieves detailed information about a specific Facebook page post, including content, metadata, engagement counts, and other post properties.',
@@ -115,7 +115,7 @@ const FacebookPagesAppEn = {
     },
 
     get_page: {
-      displayName: 'Get Page',
+      displayName: 'Get page',
       shortDesc: 'Get details of a Facebook page',
       longDesc:
         'Retrieves detailed information about a Facebook page, including basic information, contact details, location, statistics, and other page properties.',
@@ -135,7 +135,7 @@ const FacebookPagesAppEn = {
     },
 
     search_page_posts: {
-      displayName: 'Search Page Posts',
+      displayName: 'Search page posts',
       shortDesc: 'Search and filter posts on a Facebook page',
       longDesc:
         'Searches for posts on a Facebook page with support for text filtering, date ranges, visibility options, and field selection. Returns a list of matching posts.',
@@ -164,13 +164,13 @@ const FacebookPagesAppEn = {
             'ISO timestamp or date string for the latest post creation date to include in results.',
         },
         search_text: {
-          displayName: 'Search Text',
+          displayName: 'Search text',
           shortDesc: 'Text to search for in posts',
           longDesc:
             'Text string to search for within post messages and stories. Case-insensitive search.',
         },
         include_hidden: {
-          displayName: 'Include Hidden',
+          displayName: 'Include hidden',
           shortDesc: 'Whether to include hidden posts',
           longDesc:
             'If true, includes posts that are hidden from the timeline in the search results.',
@@ -184,7 +184,7 @@ const FacebookPagesAppEn = {
     },
 
     get_post_comments: {
-      displayName: 'Get Post Comments',
+      displayName: 'Get post comments',
       shortDesc: 'Get comments on a Facebook page post',
       longDesc:
         'Retrieves comments on a specific Facebook page post with support for filtering, ordering, pagination, and optional reply inclusion.',
@@ -223,7 +223,7 @@ const FacebookPagesAppEn = {
             'Whether to return only top-level comments or all comments including replies in a stream format.',
         },
         include_replies: {
-          displayName: 'Include Replies',
+          displayName: 'Include replies',
           shortDesc: 'Whether to include replies to comments',
           longDesc: 'If true, includes replies to each top-level comment in the results.',
         },
@@ -231,7 +231,7 @@ const FacebookPagesAppEn = {
     },
 
     like_comment: {
-      displayName: 'Like Comment',
+      displayName: 'Like comment',
       shortDesc: 'Like or unlike a comment on a Facebook post',
       longDesc:
         'Likes or unlikes a specific comment on a Facebook page post. Can toggle the like status and returns updated engagement metrics.',
@@ -260,7 +260,7 @@ const FacebookPagesAppEn = {
     },
 
     reply_to_comment: {
-      displayName: 'Reply to Comment',
+      displayName: 'Reply to comment',
       shortDesc: 'Reply to a comment on a Facebook page post',
       longDesc:
         'Creates a reply to a specific comment on a Facebook page post. Supports text replies and optional attachment URLs.',
@@ -296,7 +296,7 @@ const FacebookPagesAppEn = {
   },
   triggers: {
     new_post: {
-      displayName: 'New Post',
+      displayName: 'New post',
       shortDesc: 'Triggers when a new post is created on a Facebook page.',
       longDesc:
         'Monitors a Facebook page for new posts and triggers when a post is created. Supports filtering by visibility and customizable fields to retrieve specific post data.',
@@ -313,7 +313,7 @@ const FacebookPagesAppEn = {
             'List of post fields to include in the trigger data. Default includes id, message, created_time, permalink_url, full_picture, is_published, and is_hidden.',
         },
         include_hidden: {
-          displayName: 'Include Hidden Posts',
+          displayName: 'Include hidden posts',
           shortDesc: 'Whether to include hidden posts',
           longDesc:
             'When enabled, the trigger will also fire for posts that are hidden from the page timeline. Default is false.',
@@ -321,7 +321,7 @@ const FacebookPagesAppEn = {
       },
     },
     new_post_comment: {
-      displayName: 'New Post Comment',
+      displayName: 'New post comment',
       shortDesc: 'Triggers when a new comment is added to a Facebook post.',
       longDesc:
         'Monitors a specific Facebook post for new comments and triggers when a comment is added. Supports filtering by visibility, including replies, and customizable fields to retrieve specific comment data.',
@@ -343,13 +343,13 @@ const FacebookPagesAppEn = {
             'List of comment fields to include in the trigger data. Default includes id, message, created_time, from, like_count, comment_count, and permalink_url.',
         },
         include_hidden: {
-          displayName: 'Include Hidden Comments',
+          displayName: 'Include hidden comments',
           shortDesc: 'Whether to include hidden comments',
           longDesc:
             'When enabled, the trigger will also fire for comments that are hidden. Default is false.',
         },
         include_replies: {
-          displayName: 'Include Replies',
+          displayName: 'Include replies',
           shortDesc: 'Whether to include comment replies',
           longDesc:
             'When enabled, the trigger will include replies to comments in addition to top-level comments. Default is true.',

@@ -11,7 +11,7 @@ const SlackAppEn = {
     // Message actions
     send_message: {
       groups: ['Messages'],
-      displayName: 'Send Message to Channel',
+      displayName: 'Send message to channel',
       shortDesc: 'Send a message to a Slack channel',
       longDesc:
         'Post a message to a specific channel in your Slack workspace. Supports text, attachments, and Block Kit blocks for rich formatting.',
@@ -23,12 +23,12 @@ const SlackAppEn = {
             'Select the channel where you want to post the message. Make sure the bot is a member of the channel.',
         },
         text: {
-          displayName: 'Message Text',
+          displayName: 'Message text',
           shortDesc: 'The text content of the message',
           longDesc: 'The main text content of your message. Supports Slack markdown formatting.',
         },
         username: {
-          displayName: 'Bot Username',
+          displayName: 'Bot username',
           shortDesc: 'Custom username for the bot',
           longDesc: 'Override the default bot username for this message.',
         },
@@ -38,7 +38,7 @@ const SlackAppEn = {
           longDesc: 'Override the default bot icon with a custom image URL.',
         },
         threadTs: {
-          displayName: 'Thread Timestamp',
+          displayName: 'Thread timestamp',
           shortDesc: 'Reply to a thread',
           longDesc:
             'Provide the timestamp of a parent message to post this message as a reply in a thread.',
@@ -53,7 +53,7 @@ const SlackAppEn = {
     },
     send_direct_message: {
       groups: ['Messages'],
-      displayName: 'Send Direct Message',
+      displayName: 'Send direct message',
       shortDesc: 'Send a direct message to a user',
       longDesc: 'Send a private message directly to a user in your Slack workspace.',
       options: {
@@ -63,12 +63,12 @@ const SlackAppEn = {
           longDesc: 'Select the user who should receive the direct message.',
         },
         text: {
-          displayName: 'Message Text',
+          displayName: 'Message text',
           shortDesc: 'The text content of the message',
           longDesc: 'The main text content of your direct message.',
         },
         username: {
-          displayName: 'Bot Username',
+          displayName: 'Bot username',
           shortDesc: 'Custom username for the bot',
           longDesc: 'Override the default bot username for this message.',
         },
@@ -86,7 +86,7 @@ const SlackAppEn = {
     },
     update_message: {
       groups: ['Messages'],
-      displayName: 'Update Message',
+      displayName: 'Update message',
       shortDesc: 'Update an existing message',
       longDesc:
         'Update the content of an existing message in a channel. You need the message timestamp to identify which message to update.',
@@ -97,13 +97,13 @@ const SlackAppEn = {
           longDesc: 'Select the channel where the message was posted.',
         },
         timestamp: {
-          displayName: 'Message Timestamp',
+          displayName: 'Message timestamp',
           shortDesc: 'Timestamp of the message to update',
           longDesc:
             'The timestamp (ts) of the message you want to update. You can also paste a Slack message link.',
         },
         text: {
-          displayName: 'New Text',
+          displayName: 'New text',
           shortDesc: 'The updated message text',
           longDesc: 'The new text content for the message.',
         },
@@ -116,7 +116,7 @@ const SlackAppEn = {
     },
     get_channel_history: {
       groups: ['Messages'],
-      displayName: 'Get Channel History',
+      displayName: 'Get channel history',
       shortDesc: 'Retrieve messages from a channel',
       longDesc:
         'Fetch the message history of a channel. You can filter by time range and control the number of messages returned.',
@@ -127,12 +127,12 @@ const SlackAppEn = {
           longDesc: 'Select the channel to retrieve messages from.',
         },
         oldest: {
-          displayName: 'Oldest Timestamp',
+          displayName: 'Oldest timestamp',
           shortDesc: 'Only messages after this time',
           longDesc: 'Unix timestamp. Only messages after this time will be included.',
         },
         latest: {
-          displayName: 'Latest Timestamp',
+          displayName: 'Latest timestamp',
           shortDesc: 'Only messages before this time',
           longDesc:
             'Unix timestamp. Only messages before this time will be included. Default is current time.',
@@ -143,7 +143,7 @@ const SlackAppEn = {
           longDesc: 'Include messages with oldest or latest timestamps in results.',
         },
         includeAllMetadata: {
-          displayName: 'Include All Metadata',
+          displayName: 'Include all metadata',
           shortDesc: 'Return full message metadata',
           longDesc: 'Return all metadata associated with each message.',
         },
@@ -156,13 +156,13 @@ const SlackAppEn = {
     },
     search_messages: {
       groups: ['Messages'],
-      displayName: 'Search Messages',
+      displayName: 'Search messages',
       shortDesc: 'Search for messages in the workspace',
       longDesc:
         'Search for messages matching a query across your Slack workspace. Requires user token authentication.',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'The search query',
           longDesc:
             'Enter your search query. Supports Slack search operators like "from:", "in:", etc.',
@@ -176,7 +176,7 @@ const SlackAppEn = {
     },
     delete_message: {
       groups: ['Messages'],
-      displayName: 'Delete Message',
+      displayName: 'Delete message',
       shortDesc: 'Delete a message from a channel',
       longDesc:
         'Delete a specific message from a Slack channel. You need the message timestamp to identify which message to delete.',
@@ -187,7 +187,7 @@ const SlackAppEn = {
           longDesc: 'Select the channel where the message was posted.',
         },
         timestamp: {
-          displayName: 'Message Timestamp',
+          displayName: 'Message timestamp',
           shortDesc: 'Timestamp of the message to delete',
           longDesc:
             'The timestamp (ts) of the message you want to delete. You can also paste a Slack message link.',
@@ -196,7 +196,7 @@ const SlackAppEn = {
     },
     pin_message: {
       groups: ['Messages'],
-      displayName: 'Pin Message',
+      displayName: 'Pin message',
       shortDesc: 'Pin a message to a channel',
       longDesc:
         'Pin a specific message to a channel so it appears in the channel details. Pinned messages are easily accessible for all channel members.',
@@ -207,7 +207,7 @@ const SlackAppEn = {
           longDesc: 'Select the channel where the message is located.',
         },
         timestamp: {
-          displayName: 'Message Timestamp',
+          displayName: 'Message timestamp',
           shortDesc: 'Timestamp of the message to pin',
           longDesc:
             'The timestamp (ts) of the message you want to pin. You can also paste a Slack message link.',
@@ -216,7 +216,7 @@ const SlackAppEn = {
     },
     unpin_message: {
       groups: ['Messages'],
-      displayName: 'Unpin Message',
+      displayName: 'Unpin message',
       shortDesc: 'Unpin a message from a channel',
       longDesc:
         'Remove a pin from a specific message in a channel. The message itself is not deleted.',
@@ -227,7 +227,7 @@ const SlackAppEn = {
           longDesc: 'Select the channel where the pinned message is located.',
         },
         timestamp: {
-          displayName: 'Message Timestamp',
+          displayName: 'Message timestamp',
           shortDesc: 'Timestamp of the message to unpin',
           longDesc:
             'The timestamp (ts) of the message you want to unpin. You can also paste a Slack message link.',
@@ -237,18 +237,18 @@ const SlackAppEn = {
     // Channel actions
     create_channel: {
       groups: ['Channels'],
-      displayName: 'Create Channel',
+      displayName: 'Create channel',
       shortDesc: 'Create a new Slack channel',
       longDesc: 'Create a new public or private channel in your Slack workspace.',
       options: {
         channelName: {
-          displayName: 'Channel Name',
+          displayName: 'Channel name',
           shortDesc: 'Name for the new channel',
           longDesc:
             'The name for the new channel. Must be unique and follow Slack naming rules (lowercase, no spaces).',
         },
         isPrivate: {
-          displayName: 'Private Channel',
+          displayName: 'Private channel',
           shortDesc: 'Make the channel private',
           longDesc: 'If enabled, create a private channel instead of a public one.',
         },
@@ -256,7 +256,7 @@ const SlackAppEn = {
     },
     archive_channel: {
       groups: ['Channels'],
-      displayName: 'Archive Channel',
+      displayName: 'Archive channel',
       shortDesc: 'Archive a Slack channel',
       longDesc:
         'Archive a channel in your Slack workspace. Archived channels are read-only and hidden from the channel list by default.',
@@ -270,7 +270,7 @@ const SlackAppEn = {
     },
     unarchive_channel: {
       groups: ['Channels'],
-      displayName: 'Unarchive Channel',
+      displayName: 'Unarchive channel',
       shortDesc: 'Unarchive a Slack channel',
       longDesc:
         'Restore an archived channel so it becomes active again. Members will be able to post messages once the channel is unarchived.',
@@ -284,19 +284,19 @@ const SlackAppEn = {
     },
     list_channels: {
       groups: ['Channels'],
-      displayName: 'List Channels',
+      displayName: 'List channels',
       shortDesc: 'List channels in the workspace',
       longDesc:
         'Retrieve a list of channels in your Slack workspace. You can filter by channel type and whether to include archived channels.',
       options: {
         types: {
-          displayName: 'Channel Types',
+          displayName: 'Channel types',
           shortDesc: 'Types of channels to include',
           longDesc:
             'Comma-separated list of channel types. Options: public_channel, private_channel, mpim, im. Default is public_channel,private_channel.',
         },
         excludeArchived: {
-          displayName: 'Exclude Archived',
+          displayName: 'Exclude archived',
           shortDesc: 'Exclude archived channels',
           longDesc: 'If enabled, archived channels are excluded from the results. Default is true.',
         },
@@ -310,7 +310,7 @@ const SlackAppEn = {
     // Reaction actions
     add_reaction: {
       groups: ['Reactions'],
-      displayName: 'Add Reaction',
+      displayName: 'Add reaction',
       shortDesc: 'Add an emoji reaction to a message',
       longDesc: 'Add an emoji reaction to a specific message in a channel.',
       options: {
@@ -320,7 +320,7 @@ const SlackAppEn = {
           longDesc: 'Select the channel where the message is located.',
         },
         timestamp: {
-          displayName: 'Message Timestamp',
+          displayName: 'Message timestamp',
           shortDesc: 'Timestamp of the message',
           longDesc:
             'The timestamp (ts) of the message to react to. You can also paste a Slack message link.',
@@ -335,7 +335,7 @@ const SlackAppEn = {
     // User actions
     find_user_by_email: {
       groups: ['Users'],
-      displayName: 'Find User by Email',
+      displayName: 'Find user by email',
       shortDesc: 'Find a Slack user by their email address',
       longDesc:
         'Look up a Slack user using their email address. Returns the user profile if found.',
@@ -349,18 +349,18 @@ const SlackAppEn = {
     },
     update_profile: {
       groups: ['Users'],
-      displayName: 'Update Profile',
+      displayName: 'Update profile',
       shortDesc: 'Update user profile information',
       longDesc:
         'Update basic profile fields such as name or title. Requires user token authentication.',
       options: {
         firstName: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'User first name',
           longDesc: 'The first name to set in the profile.',
         },
         lastName: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'User last name',
           longDesc: 'The last name to set in the profile.',
         },
@@ -379,7 +379,7 @@ const SlackAppEn = {
     },
     list_users: {
       groups: ['Users'],
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'List users in the workspace',
       longDesc:
         'Retrieve a list of users in your Slack workspace including their profile information.',
@@ -393,7 +393,7 @@ const SlackAppEn = {
     },
     get_user_info: {
       groups: ['Users'],
-      displayName: 'Get User Info',
+      displayName: 'Get user info',
       shortDesc: 'Get detailed information about a user',
       longDesc:
         'Retrieve detailed profile and account information for a specific Slack user by their user ID.',
@@ -408,7 +408,7 @@ const SlackAppEn = {
     // File actions
     upload_file: {
       groups: ['Files'],
-      displayName: 'Upload File',
+      displayName: 'Upload file',
       shortDesc: 'Upload a file to Slack',
       longDesc:
         'Upload a file to a Slack channel. Supports various file types and optional initial comment.',
@@ -429,7 +429,7 @@ const SlackAppEn = {
           longDesc: 'The filename to use when uploading.',
         },
         comment: {
-          displayName: 'Initial Comment',
+          displayName: 'Initial comment',
           shortDesc: 'Comment with the file',
           longDesc: 'An optional comment to include when sharing the file.',
         },
@@ -438,7 +438,7 @@ const SlackAppEn = {
     // Action button messages
     request_action_message: {
       groups: ['Messages'],
-      displayName: 'Send Action Message to Channel',
+      displayName: 'Send action message to channel',
       shortDesc: 'Send a message with action buttons',
       longDesc: 'Send a message to a channel with interactive action buttons that link to URLs.',
       options: {
@@ -448,12 +448,12 @@ const SlackAppEn = {
           longDesc: 'Select the channel where the action message should be posted.',
         },
         text: {
-          displayName: 'Message Text',
+          displayName: 'Message text',
           shortDesc: 'The message content',
           longDesc: 'The text content displayed above the action buttons.',
         },
         actions: {
-          displayName: 'Action Buttons',
+          displayName: 'Action buttons',
           shortDesc: 'Buttons to display',
           longDesc:
             'Define the action buttons with titles and URLs. Each button links to a specific URL when clicked.',
@@ -461,7 +461,7 @@ const SlackAppEn = {
             element_type: {
               fields: {
                 title: {
-                  displayName: 'Button Title',
+                  displayName: 'Button title',
                   shortDesc: 'Text displayed on the button',
                   longDesc: 'The text that will be shown on the action button.',
                 },
@@ -475,7 +475,7 @@ const SlackAppEn = {
           },
         },
         username: {
-          displayName: 'Bot Username',
+          displayName: 'Bot username',
           shortDesc: 'Custom bot name',
           longDesc: 'Override the default bot username.',
         },
@@ -488,7 +488,7 @@ const SlackAppEn = {
     },
     request_action_dm: {
       groups: ['Messages'],
-      displayName: 'Send Action Message to User',
+      displayName: 'Send action message to user',
       shortDesc: 'Send a direct message with action buttons',
       longDesc:
         'Send a direct message to a user with interactive action buttons that link to URLs.',
@@ -499,19 +499,19 @@ const SlackAppEn = {
           longDesc: 'Select the user to receive the action message.',
         },
         text: {
-          displayName: 'Message Text',
+          displayName: 'Message text',
           shortDesc: 'The message content',
           longDesc: 'The text content displayed above the action buttons.',
         },
         actions: {
-          displayName: 'Action Buttons',
+          displayName: 'Action buttons',
           shortDesc: 'Buttons to display',
           longDesc: 'Define the action buttons with titles and URLs.',
           type: {
             element_type: {
               fields: {
                 title: {
-                  displayName: 'Button Title',
+                  displayName: 'Button title',
                   shortDesc: 'Text displayed on the button',
                   longDesc: 'The text that will be shown on the action button.',
                 },
@@ -525,7 +525,7 @@ const SlackAppEn = {
           },
         },
         username: {
-          displayName: 'Bot Username',
+          displayName: 'Bot username',
           shortDesc: 'Custom bot name',
           longDesc: 'Override the default bot username.',
         },
@@ -540,7 +540,7 @@ const SlackAppEn = {
   triggers: {
     new_message: {
       groups: ['Messages'],
-      displayName: 'New Message',
+      displayName: 'New message',
       shortDesc: 'Triggers when a new message is posted to a channel',
       longDesc:
         'This trigger fires whenever a new message is posted to the specified channel. Use this to react to incoming messages.',
@@ -555,7 +555,7 @@ const SlackAppEn = {
     },
     new_reaction: {
       groups: ['Reactions'],
-      displayName: 'New Reaction',
+      displayName: 'New reaction',
       shortDesc: 'Triggers when a reaction is added to a message',
       longDesc:
         'This trigger fires whenever a reaction is added to any message. You can filter by specific emojis or channels.',
@@ -576,7 +576,7 @@ const SlackAppEn = {
     },
     channel_created: {
       groups: ['Channels'],
-      displayName: 'Channel Created',
+      displayName: 'Channel created',
       shortDesc: 'Triggers when a new channel is created',
       longDesc:
         'This trigger fires whenever a new public or private channel is created in the workspace.',
@@ -584,7 +584,7 @@ const SlackAppEn = {
     },
     app_mention: {
       groups: ['Messages'],
-      displayName: 'App Mention',
+      displayName: 'App mention',
       shortDesc: 'Triggers when the bot is mentioned in a channel',
       longDesc:
         'This trigger fires whenever someone mentions the bot in a message in the specified channel. Use this to respond to direct requests.',

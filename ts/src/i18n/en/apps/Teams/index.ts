@@ -8,7 +8,7 @@ const TeamsAppEn = {
     'Microsoft Teams is a collaboration platform that enables messaging, file sharing, video meetings, and app integration within your organization.',
   actions: {
     'create-channel': {
-      displayName: 'Create Channel',
+      displayName: 'Create channel',
       shortDesc: 'Create a new channel in a team',
       longDesc:
         'Create a new channel within a specified team where members can collaborate through conversations, files, and integrated apps.',
@@ -20,7 +20,7 @@ const TeamsAppEn = {
             'The unique identifier (GUID) for the team where the new channel will be created.',
         },
         displayName: {
-          displayName: 'Channel Name',
+          displayName: 'Channel name',
           shortDesc: 'Name of the new channel',
           longDesc:
             'The display name for the new channel. Must be unique within the team and between 1-50 characters.',
@@ -32,7 +32,7 @@ const TeamsAppEn = {
             'Optional description explaining the purpose or topic of the channel. Limited to 1024 characters.',
         },
         membershipType: {
-          displayName: 'Membership Type',
+          displayName: 'Membership type',
           shortDesc: 'Channel privacy setting',
           longDesc:
             'Defines the privacy level of the channel. Options include "standard" (visible to all team members) or "private" (visible only to specific members).',
@@ -40,7 +40,7 @@ const TeamsAppEn = {
       },
     },
     'create-meeting': {
-      displayName: 'Create Meeting',
+      displayName: 'Create meeting',
       shortDesc: 'Schedule a new Teams meeting',
       longDesc:
         'Schedule a new meeting in Microsoft Teams with specified participants, time, location, and other meeting details.',
@@ -52,13 +52,13 @@ const TeamsAppEn = {
             'The title or subject of the meeting that will appear in calendar invitations and the meeting list.',
         },
         startDateTime: {
-          displayName: 'Start Time',
+          displayName: 'Start time',
           shortDesc: 'Meeting start date and time',
           longDesc:
             'The date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).',
         },
         endDateTime: {
-          displayName: 'End Time',
+          displayName: 'End time',
           shortDesc: 'Meeting end date and time',
           longDesc:
             'The date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).',
@@ -75,7 +75,7 @@ const TeamsAppEn = {
             'Optional channel identifier if the meeting is associated with a specific channel within a team.',
         },
         content: {
-          displayName: 'Meeting Content',
+          displayName: 'Meeting content',
           shortDesc: 'Meeting agenda or notes',
           longDesc:
             'Optional text describing the meeting agenda, preparation materials, or other relevant information.',
@@ -93,13 +93,13 @@ const TeamsAppEn = {
             'List of email addresses or user IDs for people who should be invited to the meeting.',
         },
         isOnlineMeeting: {
-          displayName: 'Online Meeting',
+          displayName: 'Online meeting',
           shortDesc: 'Enable Teams online meeting features',
           longDesc:
             'When set to true, creates a Teams online meeting with video conferencing capabilities and a join link.',
         },
         timeZone: {
-          displayName: 'Time Zone',
+          displayName: 'Time zone',
           shortDesc: 'Meeting time zone',
           longDesc:
             'The time zone for the meeting start and end times, such as "Pacific Standard Time" or "UTC".',
@@ -107,7 +107,7 @@ const TeamsAppEn = {
       },
     },
     'delete-meeting': {
-      displayName: 'Delete Meeting',
+      displayName: 'Delete meeting',
       shortDesc: 'Cancel an existing meeting',
       longDesc:
         "Permanently cancels and removes a scheduled meeting from all participants' calendars.",
@@ -118,7 +118,7 @@ const TeamsAppEn = {
           longDesc: 'The unique identifier (GUID) of the meeting to be canceled.',
         },
         meetingSource: {
-          displayName: 'Meeting Source',
+          displayName: 'Meeting source',
           shortDesc: 'Origin of the meeting',
           longDesc: 'Specifies where the meeting was created, such as "private" or "team".',
         },
@@ -130,7 +130,7 @@ const TeamsAppEn = {
       },
     },
     'send-channel-message': {
-      displayName: 'Send Channel Message',
+      displayName: 'Send channel message',
       shortDesc: 'Post a message to a team channel',
       longDesc:
         'Send a new message to a specific channel within a team that all channel members can view and respond to.',
@@ -151,7 +151,7 @@ const TeamsAppEn = {
           longDesc: 'The text content of the message to be posted in the channel.',
         },
         contentType: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'Format of the message content',
           longDesc:
             'Specifies the format of the message content, such as "text" for plain text or "html" for formatted content.',
@@ -159,7 +159,7 @@ const TeamsAppEn = {
       },
     },
     'send-chat-message': {
-      displayName: 'Send Chat Message',
+      displayName: 'Send chat message',
       shortDesc: 'Send a message to a chat conversation',
       longDesc:
         'Send a new message to a direct chat or group chat conversation outside of a team channel.',
@@ -176,7 +176,7 @@ const TeamsAppEn = {
           longDesc: 'The text content of the message to be sent in the chat.',
         },
         contentType: {
-          displayName: 'Content Type',
+          displayName: 'Content type',
           shortDesc: 'Format of the message content',
           longDesc:
             'Specifies the format of the message content, such as "text" for plain text or "html" for formatted content.',
@@ -184,7 +184,7 @@ const TeamsAppEn = {
       },
     },
     'update-channel': {
-      displayName: 'Update Channel',
+      displayName: 'Update channel',
       shortDesc: 'Modify an existing channel',
       longDesc: 'Update the properties or membership of an existing channel within a team.',
       options: {
@@ -199,7 +199,7 @@ const TeamsAppEn = {
           longDesc: 'The unique identifier of the team containing the channel to be updated.',
         },
         displayName: {
-          displayName: 'Channel Name',
+          displayName: 'Channel name',
           shortDesc: 'New channel name',
           longDesc:
             'The new display name for the channel. Must be unique within the team and between 1-50 characters.',
@@ -211,13 +211,13 @@ const TeamsAppEn = {
             'Updated description explaining the purpose or topic of the channel. Limited to 1024 characters.',
         },
         addMembers: {
-          displayName: 'Add Members',
+          displayName: 'Add members',
           shortDesc: 'Users to add to the channel',
           longDesc:
             'List of user IDs to add as members to the channel. Only applicable for private channels.',
         },
         removeMembers: {
-          displayName: 'Remove Members',
+          displayName: 'Remove members',
           shortDesc: 'Users to remove from the channel',
           longDesc:
             'List of user IDs to remove from the channel membership. Only applicable for private channels.',
@@ -225,7 +225,7 @@ const TeamsAppEn = {
       },
     },
     'update-meeting': {
-      displayName: 'Update Meeting',
+      displayName: 'Update meeting',
       shortDesc: 'Modify an existing meeting',
       longDesc:
         'Update the details of a scheduled meeting, such as time, location, attendees, or other properties.',
@@ -242,13 +242,13 @@ const TeamsAppEn = {
             'The new title or subject of the meeting that will appear in calendar invitations and the meeting list.',
         },
         startDateTime: {
-          displayName: 'Start Time',
+          displayName: 'Start time',
           shortDesc: 'Updated meeting start time',
           longDesc:
             'The new date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).',
         },
         endDateTime: {
-          displayName: 'End Time',
+          displayName: 'End time',
           shortDesc: 'Updated meeting end time',
           longDesc:
             'The new date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).',
@@ -265,7 +265,7 @@ const TeamsAppEn = {
             'Updated channel identifier if the meeting is associated with a specific channel within a team.',
         },
         content: {
-          displayName: 'Meeting Content',
+          displayName: 'Meeting content',
           shortDesc: 'Updated meeting agenda or notes',
           longDesc:
             'Updated text describing the meeting agenda, preparation materials, or other relevant information.',
@@ -283,13 +283,13 @@ const TeamsAppEn = {
             'Updated list of email addresses or user IDs for people who should be invited to the meeting.',
         },
         isOnlineMeeting: {
-          displayName: 'Online Meeting',
+          displayName: 'Online meeting',
           shortDesc: 'Enable/disable Teams online meeting features',
           longDesc:
             'When set to true, ensures the meeting has Teams online meeting capabilities with video conferencing and a join link.',
         },
         timeZone: {
-          displayName: 'Time Zone',
+          displayName: 'Time zone',
           shortDesc: 'Updated meeting time zone',
           longDesc:
             'The new time zone for the meeting start and end times, such as "Pacific Standard Time" or "UTC".',
@@ -299,7 +299,7 @@ const TeamsAppEn = {
   },
   triggers: {
     'new-channel-message': {
-      displayName: 'New Channel Message',
+      displayName: 'New channel message',
       shortDesc: 'Trigger when a message is posted in a channel',
       longDesc:
         'This trigger fires when a new message is posted in a specified channel within a team.',
@@ -317,7 +317,7 @@ const TeamsAppEn = {
       },
     },
     'new-chat-message': {
-      displayName: 'New Chat Message',
+      displayName: 'New chat message',
       shortDesc: 'Trigger when a message is sent in a chat',
       longDesc:
         'This trigger fires when a new message is sent in a direct chat or group chat conversation.',
@@ -331,13 +331,13 @@ const TeamsAppEn = {
       },
     },
     'new-meeting': {
-      displayName: 'New Meeting',
+      displayName: 'New meeting',
       shortDesc: 'Trigger when a meeting is created',
       longDesc:
         'This trigger fires when a new meeting is scheduled that matches the specified criteria.',
       options: {
         meetingSource: {
-          displayName: 'Meeting Source',
+          displayName: 'Meeting source',
           shortDesc: 'Origin of the meeting',
           longDesc:
             'Specifies which type of meetings to monitor, such as "private" or "team" meetings.',

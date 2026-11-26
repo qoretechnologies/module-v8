@@ -340,7 +340,7 @@
           "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
+          "source": "List campaigns",
           "message": "Zoznam kampaní"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Použite kurzor vrátený z predchádzajúcej požiadavky na načítanie ďalšej stránky kampaní. Pre prvú stránku nechajte prázdne."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
-          "source": "List Campaign Members",
+          "source": "List campaign members",
           "message": "Zoznam členov kampane"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Použite kurzor vrátený z predchádzajúcej požiadavky na načítanie ďalšej stránky členov. Pre prvú stránku nechajte prázdne."
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
+          "source": "Get campaign",
           "message": "Získať kampaň"
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Vyberte kampaň, o ktorej chcete získať podrobné informácie. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "Získať člena"
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Vyberte alebo zadajte ID člena (patróna), ktorého podrobnosti chcete získať. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
-          "source": "List Posts",
+          "source": "List posts",
           "message": "Zoznam príspevkov"
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Použite kurzor vrátený z predchádzajúcej požiadavky na načítanie ďalšej stránky príspevkov. Pre prvú stránku nechajte prázdne."
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
-          "source": "Get Post",
+          "source": "Get post",
           "message": "Získať príspevok"
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Vyberte alebo zadajte ID príspevku, ktorého podrobnosti chcete získať. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
-          "source": "Pledge Event",
+          "source": "Pledge event",
           "message": "Udalosť príspevku (pledge)"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Vyberte kampaň, ktorú chcete monitorovať na udalosti súvisiace s príspevkami (pledge). Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Spúšťacia udalosť"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Spustí sa, keď člen zruší svoj príspevok (pledge)."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
-          "source": "Member Event",
+          "source": "Member event",
           "message": "Udalosť člena"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Vyberte kampaň, ktorú chcete monitorovať na udalosti súvisiace s členmi. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Spúšťacia udalosť"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Spustí sa pri zmazaní členstva. Upozorňujeme, že pre jedného podporovateľa ich môžete získať viac, ak zruší a obnoví svoje členstvo. K zmazaniu dôjde iba vtedy, ak predtým neprebehla žiadna platba, inak je zmazanie príspevku (pledge) aktualizáciou stavu člena."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
-          "source": "Post Event",
+          "source": "Post event",
           "message": "Udalosť príspevku"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Vyberte kampaň, ktorú chcete monitorovať na udalosti súvisiace s príspevkami. Toto pole je povinné."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Spúšťacia udalosť"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {

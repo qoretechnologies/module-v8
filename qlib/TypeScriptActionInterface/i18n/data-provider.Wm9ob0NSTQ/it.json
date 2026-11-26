@@ -484,7 +484,7 @@
           "message": "Il nome della tabella"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "Crea record"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Seleziona il modulo Zoho CRM di destinazione (come Leads, Contacts, Deals, Accounts, Products, Vendors o moduli personalizzati) in cui desideri creare il nuovo record. Utilizza l'API Modules per ottenere l'elenco dei moduli disponibili e i relativi nomi API."
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Record Properties",
+          "source": "Record properties",
           "message": "Proprietà del record"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Fornisci i valori dei campi per il nuovo record sotto forma di coppie chiave-valore in cui le chiavi sono i nomi API dei campi. I campi disponibili e i relativi tipi vengono caricati dinamicamente in base al modulo selezionato. I campi obbligatori devono essere inclusi e i valori dei campi devono corrispondere ai tipi di dati previsti (text, number, date, picklist, lookup, ecc.)."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
+          "source": "List records",
           "message": "Elenca record"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) da cui desideri recuperare i record. Il modulo deve supportare le operazioni API e l'utente deve disporre delle autorizzazioni di lettura."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
-          "source": "Fields to Return",
+          "source": "Fields to return",
           "message": "Campi da restituire"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Seleziona i nomi API dei campi che desideri recuperare per ciascun record. È possibile includere un massimo di 50 nomi API di campo. Utilizza l'API Fields Metadata per ottenere l'elenco dei campi disponibili. Per impostazione predefinita, viene restituito solo il campo ID. Aggiungi campi come Last_Name, Email, Created_Time o nomi di campi personalizzati in base alle esigenze."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
-          "source": "Records Per Page",
+          "source": "Records per page",
           "message": "Record per pagina"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Specifica quanti record restituire in una singola richiesta API. I valori validi vanno da 1 a 200. Il valore predefinito è 20. Usa questo parametro insieme a page_token per l'impaginazione di set di risultati di grandi dimensioni."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token di pagina"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Elenco opzionale di ID record specifici da recuperare. Se fornito, verranno restituiti solo i record con questi ID. Ciò è utile per recuperare uno specifico set di record invece di scorrere tutti i record tramite paginazione."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
-          "source": "Sort Configuration",
+          "source": "Sort configuration",
           "message": "Configurazione di ordinamento"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Specifica come devono essere ordinati i record nella risposta. È possibile ordinare in base a campi come id, Created_Time o Modified_Time in ordine crescente (dal meno recente al più recente) o decrescente (dal più recente al meno recente)."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Criterio di ordinamento"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Decrescente"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.display_name": {
-          "source": "Sort By Field",
+          "source": "Sort by field",
           "message": "Campo per ordinamento"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Ora modificato"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
-          "source": "List Modules",
+          "source": "List modules",
           "message": "Elenca moduli"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Recupera i metadati per tutti i moduli nella tua organizzazione Zoho CRM, inclusi sia i moduli standard (Leads, Contacts, Deals, Accounts, ecc.) sia i moduli personalizzati. Restituisce dettagli completi tra cui autorizzazioni del modulo, nomi API, etichette di visualizzazione e funzionalità come se il modulo è creabile, modificabile, eliminabile o supporta funzionalità come la ricerca globale e la creazione rapida."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
-          "source": "Module Status Filter",
+          "source": "Module status filter",
           "message": "Filtro stato modulo"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Visibile"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
-          "source": "List Module Fields",
+          "source": "List module fields",
           "message": "Elenca campi modulo"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Seleziona il modulo Zoho CRM di cui desideri recuperare i metadati dei campi. L'API restituisce informazioni dettagliate su tutti i campi, inclusi i campi standard (definiti dal sistema) e i campi personalizzati (definiti dall'utente) nel modulo."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
-          "source": "Update Record",
+          "source": "Update record",
           "message": "Aggiorna record"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Inserisci o seleziona l'ID record univoco del record da aggiornare. Gli ID record possono essere recuperati utilizzando l'API Get Records o dalle notifiche webhook. Il record deve esistere nel modulo specificato."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Updated Properties",
+          "source": "Updated properties",
           "message": "Proprietà aggiornate"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Fornisci i valori dei campi da aggiornare come coppie chiave-valore dove le chiavi sono i nomi API dei campi. Includi solo i campi che desideri modificare; i campi non specificati manterranno i loro valori correnti. I valori dei campi devono corrispondere ai tipi di dati previsti e alle regole di convalida."
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "Elimina record"
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Inserisci o seleziona l'ID record univoco del record che desideri eliminare. Gli ID record possono essere recuperati utilizzando l'API Get Records. L'eliminazione di un record già eliminato genererà un errore."
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "Ottieni record"
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Inserisci o seleziona l'ID record univoco del record che desideri recuperare. Gli ID record possono essere ottenuti dall'API Get Records, dai risultati di ricerca o dalle notifiche webhook. Il record deve esistere nel modulo specificato."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Elenca utenti"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Recupera un elenco di utenti nella tua organizzazione Zoho CRM con supporto per la paginazione e il filtraggio per tipo di utente. Restituisce informazioni complete sull'utente tra cui nome, email, ruolo, profilo, fuso orario, impostazioni internazionali, preferenze di personalizzazione e stato dell'account. Utilizza il parametro type per filtrare gli utenti in base al loro profilo e stato."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Users Per Page",
+          "source": "Users per page",
           "message": "Utenti per pagina"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Specifica quanti utenti restituire in una singola richiesta API. I valori validi sono compresi tra 1 e 200. Il valore predefinito è 20. Utilizza questo parametro insieme al parametro page per la paginazione attraverso set di risultati di grandi dimensioni."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "Numero di pagina"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Specifica quale pagina di risultati recuperare, a partire da 1 per la prima pagina. Utilizza questo parametro insieme a per_page per navigare tra più pagine di dati utente."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
-          "source": "User Type Filter",
+          "source": "User type filter",
           "message": "Filtro tipo utente"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Recupera l'utente CRM attualmente connesso."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
-          "source": "List Tags",
+          "source": "List tags",
           "message": "Elenca tag"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
@@ -984,7 +984,7 @@
           "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals o moduli personalizzati) di cui desideri recuperare i tag. Ogni modulo gestisce il proprio set di tag."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
-          "source": "My Tags Only",
+          "source": "My tags only",
           "message": "Solo i miei tag"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Se impostato su true, verranno restituiti solo i tag creati dall'utente corrente. Se impostato su false o non specificato, verranno restituiti tutti i tag nel modulo, indipendentemente da chi li ha creati."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
-          "source": "Add Tags to Records",
+          "source": "Add tags to records",
           "message": "Aggiungi tag ai record"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) che contiene i record a cui desideri aggiungere tag. I tag sono specifici del modulo e devono esistere nel modulo prima di poter essere aggiunti ai record."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
-          "source": "Tags to Add",
+          "source": "Tags to add",
           "message": "Tag da aggiungere"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Specifica i tag che desideri aggiungere ai record. Ogni tag deve includere un ID e un nome. L'ID del tag ha la precedenza sul nome se vengono forniti entrambi. È possibile includere facoltativamente un color_code (valore esadecimale). Utilizza l'azione List Tags per recuperare i tag disponibili e i relativi ID."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.display_name": {
-          "source": "Color Code",
+          "source": "Color code",
           "message": "Codice colore"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "L'ID univoco di un tag esistente nel modulo. Questo ID ha priorità sul campo nome. Utilizza l'azione Elenco Tag per recuperare gli ID dei tag. Il tag deve già esistere nel modulo."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "Nome Tag"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Elenco di ID record univoci a cui desideri aggiungere tag. È possibile specificare un massimo di 500 ID record per chiamata API. Utilizza l'API Get Records o l'API di ricerca per recuperare ID record validi."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
-          "source": "Overwrite Existing Tags",
+          "source": "Overwrite existing tags",
           "message": "Sovrascrivi tag esistenti"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Se impostato su true, sostituisce tutti i tag esistenti sui record specificati con i nuovi tag. Se impostato su false (predefinito), aggiunge i nuovi tag mantenendo quelli esistenti. Utilizza questa opzione con cautela poiché impostarla su true rimuoverà tutti i tag attuali."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "Nuovo record"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) in cui monitorare i record appena creati. Usa il nome API del modulo restituito dall'API Modules Metadata."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
-          "source": "Phone Filter",
+          "source": "Phone filter",
           "message": "Filtro telefono"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "Numero di telefono opzionale da cercare nei record. Se specificato, solo i record contenenti questo numero di telefono attiveranno l'evento. Utilizza l'API di ricerca di Zoho CRM per trovare i record corrispondenti."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "Filtro email"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Indirizzo email opzionale da cercare nei record. Se specificato, solo i record contenenti questo indirizzo email attiveranno l'evento. Utilizza l'API di ricerca di Zoho CRM per trovare i record corrispondenti."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
-          "source": "Keyword Search",
+          "source": "Keyword search",
           "message": "Ricerca per parola chiave"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Parola chiave opzionale da cercare in tutti i campi ricercabili dei record. Se specificata, solo i record contenenti questa parola chiave attiveranno l'evento. Utilizza l'API di ricerca di Zoho CRM per eseguire una ricerca testuale completa."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
-          "source": "Field Filters",
+          "source": "Field filters",
           "message": "Filtri di campo"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Elenco opzionale di coppie campo-valore per creare criteri di ricerca. Se specificato, solo i record in cui TUTTI i campi specificati corrispondono ai rispettivi valori attiveranno l'evento. Utilizza l'operatore \"equals\" per ciascun confronto di campo."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Nome campo"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Seleziona o immetti il nome API del campo dal modulo. I nomi dei campi disponibili possono essere recuperati tramite l'API dei metadati dei campi. Il campo deve essere ricercabile per essere utilizzato nel filtraggio."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Valore del campo"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.short_desc": {

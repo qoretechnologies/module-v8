@@ -272,7 +272,7 @@ const AttioAppEn = {
   },
   triggers: {
     list_entry_created: {
-      displayName: 'New List Entry Created',
+      displayName: 'New list entry created',
       shortDesc: 'Triggers when a new entry is created in an Attio list.',
       longDesc:
         'This trigger fires whenever a new entry is created in a specified Attio list. It provides details about the created entry including its ID, parent object, and the actor who created it.',
@@ -285,7 +285,7 @@ const AttioAppEn = {
       },
     },
     list_entry_updated: {
-      displayName: 'List Entry Updated',
+      displayName: 'List entry updated',
       shortDesc: 'Triggers when an entry is updated in an Attio list.',
       longDesc:
         'This trigger fires whenever an entry is updated in a specified Attio list. It provides details about the updated entry including its ID, parent object, the actor who made the update, and the specific changes that were made.',
@@ -298,7 +298,7 @@ const AttioAppEn = {
       },
     },
     list_entry_deleted: {
-      displayName: 'List Entry Deleted',
+      displayName: 'List entry deleted',
       shortDesc: 'Triggers when an entry is deleted from an Attio list.',
       longDesc:
         'This trigger fires whenever an entry is deleted from a specified Attio list. It provides details about the deleted entry including its ID, parent object, and the actor who performed the deletion.',
@@ -311,46 +311,46 @@ const AttioAppEn = {
       },
     },
     object_record_created: {
-      displayName: 'New Object Record Created',
+      displayName: 'New object record created',
       shortDesc: 'Triggers when a new record is created for an Attio object.',
       longDesc:
         'This trigger fires whenever a new record is created for a specified Attio object. It provides details about the created record including its ID, object type, and the actor who created it.',
       options: {
         object: {
-          displayName: 'Object Type',
+          displayName: 'Object type',
           shortDesc: 'The Attio object to monitor for new records',
           longDesc: 'The API slug of the Attio object type to monitor for new records.',
         },
       },
     },
     object_record_updated: {
-      displayName: 'Object Record Updated',
+      displayName: 'Object record updated',
       shortDesc: 'Triggers when a record is updated for an Attio object.',
       longDesc:
         'This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made.',
       options: {
         object: {
-          displayName: 'Object Type',
+          displayName: 'Object type',
           shortDesc: 'The Attio object to monitor for updated records',
           longDesc: 'The API slug of the Attio object type to monitor for updated records.',
         },
       },
     },
     object_record_deleted: {
-      displayName: 'Object Record Deleted',
+      displayName: 'Object record deleted',
       shortDesc: 'Triggers when a record is deleted from an Attio object.',
       longDesc:
         'This trigger fires whenever a record is deleted from a specified Attio object. It provides details about the deleted record including its ID, object type, and the actor who performed the deletion.',
       options: {
         object: {
-          displayName: 'Object Type',
+          displayName: 'Object type',
           shortDesc: 'The Attio object to monitor for deleted records',
           longDesc: 'The API slug of the Attio object type to monitor for deleted records.',
         },
       },
     },
     task_created: {
-      displayName: 'New Task Created',
+      displayName: 'New task created',
       shortDesc: 'Triggers when a new task is created in Attio.',
       longDesc:
         'This trigger fires whenever a new task is created in your Attio workspace. It provides details about the created task including its ID, title, description, assignees, due date, and the actor who created it.',
@@ -359,19 +359,19 @@ const AttioAppEn = {
   actions: {
     create_note: {
       groups: ['Notes'],
-      displayName: 'Create Note',
+      displayName: 'Create note',
       shortDesc: 'Creates a new note attached to a specific record in Attio.',
       longDesc:
         'This action creates a new note and attaches it to a specific record within an Attio object. Notes can be written in plain text or markdown format and include a title and content body. They serve as a way to document important information about records in your workspace.',
       options: {
         parent_object: {
-          displayName: 'Parent Object',
+          displayName: 'Parent object',
           shortDesc: 'The object that contains the record to attach the note to',
           longDesc:
             'Select the Attio object that contains the record you want to attach this note to. This defines which object type the note will be associated with.',
         },
         parent_record_id: {
-          displayName: 'Parent Record ID',
+          displayName: 'Parent record ID',
           shortDesc: 'The specific record to attach the note to',
           longDesc:
             'Select the specific record within the parent object that this note should be attached to. Available options will be based on the parent object you selected.',
@@ -398,13 +398,13 @@ const AttioAppEn = {
     },
     create_task: {
       groups: ['Tasks'],
-      displayName: 'Create Task',
+      displayName: 'Create task',
       shortDesc: 'Creates a new task in Attio with specified details.',
       longDesc:
         'This action creates a new task in Attio with content, deadline, completion status, and optional assignees. You can set the task content, specify a deadline date, mark it as completed or not, and assign it to one or more workspace members.',
       options: {
         content: {
-          displayName: 'Task Content',
+          displayName: 'Task content',
           shortDesc: 'The content or description of the task',
           longDesc:
             'Enter the content or description for the task. This will be the main text describing what needs to be done.',
@@ -431,7 +431,7 @@ const AttioAppEn = {
     },
     get_tasks: {
       groups: ['Tasks'],
-      displayName: 'List Tasks',
+      displayName: 'List tasks',
       shortDesc: 'Retrieves a list of tasks from Attio with filtering options.',
       longDesc:
         'This action retrieves a list of tasks from Attio with various filtering, sorting, and pagination options. You can filter tasks by linked records, completion status, and assignee, as well as control the order and number of results returned.',
@@ -449,13 +449,13 @@ const AttioAppEn = {
             'Specify the number of tasks to skip before starting to return results. Useful for pagination. Default is 0.',
         },
         linked_object: {
-          displayName: 'Linked Object',
+          displayName: 'Linked object',
           shortDesc: 'Filter tasks by linked object type',
           longDesc:
             'Filter tasks to only include those linked to a specific object type in Attio. When selected, you can further refine by specifying a particular record.',
         },
         linked_record_id: {
-          displayName: 'Linked Record ID',
+          displayName: 'Linked record ID',
           shortDesc: 'Filter tasks by specific linked record',
           longDesc:
             'Filter tasks to only include those linked to a specific record in the selected linked object. This option is only available after selecting a linked object.',
@@ -467,7 +467,7 @@ const AttioAppEn = {
             'Filter tasks based on whether they are completed or not. Default is false (shows incomplete tasks).',
         },
         sort: {
-          displayName: 'Sort Order',
+          displayName: 'Sort order',
           shortDesc: 'Order of returned tasks',
           longDesc:
             "Specify the order in which tasks should be returned. 'Oldest First' sorts by creation date ascending, 'Newest First' sorts by creation date descending.",
@@ -481,7 +481,7 @@ const AttioAppEn = {
     },
     get_notes: {
       groups: ['Notes'],
-      displayName: 'Get Notes',
+      displayName: 'Get notes',
       shortDesc: 'Retrieves Notes from Attio.',
       longDesc: 'Retrieve Notes from your Attio workspace. ',
       options: {
@@ -498,13 +498,13 @@ const AttioAppEn = {
             'The number of notes to skip before starting to return results. Used for pagination. Default is 0.',
         },
         parent_object: {
-          displayName: 'Parent Object',
+          displayName: 'Parent object',
           shortDesc: 'The parent object type',
           longDesc:
             'The type of the parent object that this note is linked to. This is required to filter notes by their parent object.',
         },
         parent_record_id: {
-          displayName: 'Parent Record ID',
+          displayName: 'Parent record ID',
           shortDesc: 'ID of the parent record',
           longDesc:
             'The unique identifier of the parent record to which this note is linked. This is required to filter notes by their parent record.',
@@ -513,7 +513,7 @@ const AttioAppEn = {
     },
     get_task: {
       groups: ['Tasks'],
-      displayName: 'Get Task',
+      displayName: 'Get task',
       shortDesc: 'Retrieves a specific task from Attio by its ID.',
       longDesc:
         'This action retrieves a single task from Attio using its unique task ID. The response includes all task details such as content, completion status, deadline, linked records, assignees, and creation information.',
@@ -528,7 +528,7 @@ const AttioAppEn = {
     },
     get_object_record: {
       groups: ['Object Records'],
-      displayName: 'Get Single Object Record',
+      displayName: 'Get single object record',
       shortDesc: 'Retrieves a specific record from an Attio object.',
       longDesc:
         'This action retrieves a single record from an Attio object by its record ID. You must specify both the object and the specific record ID you want to retrieve. This provides detailed information about the record including all its attributes and values.',
@@ -549,7 +549,7 @@ const AttioAppEn = {
     },
     get_list_entry: {
       groups: ['List Entries'],
-      displayName: 'Get Single List Entry',
+      displayName: 'Get single list entry',
       shortDesc: 'Retrieves a specific entry from an Attio list.',
       longDesc:
         'This action retrieves a single entry from an Attio list by its entry ID. You must specify both the list and the specific entry ID you want to retrieve. This provides detailed information about the entry including all its attributes and values.',
@@ -570,7 +570,7 @@ const AttioAppEn = {
     },
     find_list_entries: {
       groups: ['List Entries'],
-      displayName: 'Find List Entries',
+      displayName: 'Find list entries',
       shortDesc: 'Search for entries in an Attio list with filtering and sorting options.',
       longDesc:
         'Queries entries from a specific Attio list with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of entries matching the specified criteria.',
@@ -592,12 +592,12 @@ const AttioAppEn = {
             'The number of entries to skip before starting to return results. Used for pagination. Default is 0.',
         },
         sort_attribute: {
-          displayName: 'Sort Attribute',
+          displayName: 'Sort attribute',
           shortDesc: 'Attribute to sort by',
           longDesc: 'The attribute to sort the results by. Default is "created_at".',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort direction',
           longDesc:
             'The direction to sort the results. Can be either ascending or descending. Default is ascending.',
@@ -625,7 +625,7 @@ const AttioAppEn = {
     },
     update_list_entry: {
       groups: ['List Entries'],
-      displayName: 'Update List Entry',
+      displayName: 'Update list entry',
       shortDesc: 'Update an existing entry in an Attio list.',
       longDesc:
         'Updates the attribute values of an existing entry in a specified Attio list. Requires the list identifier, entry ID, and the attribute values to update.',
@@ -649,7 +649,7 @@ const AttioAppEn = {
     },
     create_list_entry: {
       groups: ['List Entries'],
-      displayName: 'Create List Entry',
+      displayName: 'Create list entry',
       shortDesc: 'Create a new entry in an Attio list.',
       longDesc:
         'Creates a new entry in a specified Attio list. Requires the list identifier, parent object reference, and attribute values to populate the entry.',
@@ -660,12 +660,12 @@ const AttioAppEn = {
           longDesc: 'The API slug of the Attio list where the new entry will be created.',
         },
         parent_object: {
-          displayName: 'Parent Object',
+          displayName: 'Parent object',
           shortDesc: 'The parent object type',
           longDesc: 'The type of the parent object that this list entry belongs to.',
         },
         parent_record_id: {
-          displayName: 'Parent Record ID',
+          displayName: 'Parent record ID',
           shortDesc: 'ID of the parent record',
           longDesc:
             'The unique identifier of the parent record to which this list entry will be linked.',
@@ -679,13 +679,13 @@ const AttioAppEn = {
     },
     update_object_record: {
       groups: ['Object Records'],
-      displayName: 'Update Object Record',
+      displayName: 'Update object record',
       shortDesc: 'Update an existing record in an Attio object.',
       longDesc:
         'Updates the values of an existing record in a specified Attio object. Requires the object type, record ID, and the attribute values to update.',
       options: {
         object: {
-          displayName: 'Object Type',
+          displayName: 'Object type',
           shortDesc: 'The Attio object to update',
           longDesc: 'The API slug of the Attio object type containing the record to update.',
         },
@@ -703,13 +703,13 @@ const AttioAppEn = {
     },
     find_object_records: {
       groups: ['Object Records'],
-      displayName: 'Find Object Records',
+      displayName: 'Find object records',
       shortDesc: 'Search for records in an Attio object with filtering and sorting options.',
       longDesc:
         'Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.',
       options: {
         object: {
-          displayName: 'Object Type',
+          displayName: 'Object type',
           shortDesc: 'The Attio object to search',
           longDesc: 'The API slug of the Attio object type to search in.',
         },
@@ -725,12 +725,12 @@ const AttioAppEn = {
             'The number of records to skip before starting to return results. Used for pagination. Default is 0.',
         },
         sort_attribute: {
-          displayName: 'Sort Attribute',
+          displayName: 'Sort attribute',
           shortDesc: 'Attribute to sort by',
           longDesc: 'The attribute to sort the results by. Default is "created_at".',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort direction',
           longDesc:
             'The direction to sort the results. Can be either ascending or descending. Default is ascending.',
@@ -758,7 +758,7 @@ const AttioAppEn = {
     },
     create_object_record: {
       groups: ['Object Records'],
-      displayName: 'Create Object Record',
+      displayName: 'Create object record',
       shortDesc: 'Create a new record in a specified object',
       longDesc:
         'Create a new record in a specified object within your Attio workspace. This action allows you to define the object type and the attributes for the new record.',
@@ -780,7 +780,7 @@ const AttioAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -799,7 +799,7 @@ const AttioAppEn = {
       },
     },
     limit: {
-      displayName: 'Maximum Records',
+      displayName: 'Maximum records',
       shortDesc: 'Maximum number of records to return',
       longDesc:
         'The maximum total number of records to return across all pages. If not specified, all matching records will be returned.',
@@ -807,7 +807,7 @@ const AttioAppEn = {
   },
   upsertOptions: {
     matching_attribute: {
-      displayName: 'Matching Attribute',
+      displayName: 'Matching attribute',
       shortDesc: 'Attribute to match for upsert. Must be a unique attribute.',
       longDesc:
         'The attribute used to determine if a record already exists for updating. If no existing record is found, a new record will be created.',

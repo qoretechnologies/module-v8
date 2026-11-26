@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Listar usuarios"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Seleccione el proyecto de Firebase del cual desea recuperar usuarios. El proyecto debe tener habilitado Firebase Authentication."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Resultados máximos"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Especifique el número máximo de usuarios que se recuperarán en una sola solicitud. El valor predeterminado es 100 si no se especifica. Utilice la paginación para conjuntos de datos más grandes."
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Token de página siguiente"
         },
         "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Proporcione el token de paginación de una respuesta anterior para recuperar el siguiente conjunto de usuarios. Déjelo vacío para la primera página."
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.display_name": {
-          "source": "Get User",
+          "source": "Get user",
           "message": "Obtener usuario"
         },
         "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Especifique el ID de usuario de Firebase (localId) del usuario cuyos detalles desea recuperar. Este es el identificador único asignado por Firebase Authentication."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.display_name": {
-          "source": "Send Push Notification",
+          "source": "Send push notification",
           "message": "Enviar notificación push"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Seleccione el proyecto de Firebase que enviará la notificación push. El proyecto debe tener configurado Firebase Cloud Messaging."
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.display_name": {
-          "source": "Token or Topic",
+          "source": "Token or topic",
           "message": "Token o tema"
         },
         "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.short_desc": {
@@ -528,7 +528,7 @@
           "message": "Normal"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.display_name": {
-          "source": "Upload File",
+          "source": "Upload file",
           "message": "Cargar archivo"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.short_desc": {
@@ -552,7 +552,7 @@
           "message": "Seleccione el proyecto de Firebase donde se almacenará el archivo. El proyecto debe tener habilitado Firebase Cloud Storage."
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Ruta del archivo"
         },
         "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -720,7 +720,7 @@
           "message": "Metadatos personalizados opcionales para asociar con el archivo cargado. Proporciónelos como pares clave-valor que se puedan recuperar más tarde con la información del archivo."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.display_name": {
-          "source": "Get File Metadata",
+          "source": "Get file metadata",
           "message": "Obtener metadatos del archivo"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.short_desc": {
@@ -756,7 +756,7 @@
           "message": "Seleccione el bucket de Cloud Storage donde se encuentra el archivo. El bucket debe existir en el proyecto de Firebase seleccionado."
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Ruta del archivo"
         },
         "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.short_desc": {
@@ -768,7 +768,7 @@
           "message": "Especifique la ruta completa al archivo en el bucket, incluyendo el nombre del archivo y cualquier estructura de directorios."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.display_name": {
-          "source": "List Files in Bucket",
+          "source": "List files in bucket",
           "message": "Listar archivos en el bucket"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.short_desc": {
@@ -816,7 +816,7 @@
           "message": "Filtre los resultados para incluir solo archivos cuyas rutas comiencen con este prefijo. Útil para listar archivos en un directorio específico o con un patrón de nombre específico."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
+          "source": "Max results",
           "message": "Resultados máximos"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.short_desc": {
@@ -828,7 +828,7 @@
           "message": "Especifique el número máximo de archivos que se recuperarán en una sola solicitud. El valor predeterminado es 100 si no se especifica. Utilice la paginación para conjuntos de resultados más grandes."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token de página"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.short_desc": {
@@ -840,7 +840,7 @@
           "message": "Proporcione el token de paginación de una respuesta anterior para recuperar el siguiente conjunto de archivos. Déjelo vacío para la primera página."
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Buckets",
+          "source": "List buckets",
           "message": "Listar buckets"
         },
         "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
@@ -864,7 +864,7 @@
           "message": "Seleccione el proyecto de Firebase cuyos buckets de almacenamiento desea listar. El proyecto debe tener habilitado Firebase Cloud Storage."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.display_name": {
-          "source": "Delete File",
+          "source": "Delete file",
           "message": "Eliminar archivo"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Seleccione el bucket de Cloud Storage donde se encuentra el archivo que se va a eliminar. El bucket debe existir en el proyecto de Firebase seleccionado."
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
-          "source": "File Path",
+          "source": "File path",
           "message": "Ruta del archivo"
         },
         "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
@@ -912,7 +912,7 @@
           "message": "Especifique la ruta completa al archivo en el bucket que debe ser eliminado, incluyendo el nombre del archivo y cualquier estructura de directorios. Esta operación es permanente y no se puede deshacer."
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.display_name": {
-          "source": "New User",
+          "source": "New user",
           "message": "Nuevo usuario"
         },
         "app.RmlyZWJhc2U.action.bmV3X3VzZXI.short_desc": {

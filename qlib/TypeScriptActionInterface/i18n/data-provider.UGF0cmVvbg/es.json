@@ -340,7 +340,7 @@
           "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
-          "source": "List Campaigns",
+          "source": "List campaigns",
           "message": "Listar campañas"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Usa el cursor devuelto en una solicitud anterior para obtener la siguiente página de campañas. Déjalo vacío para la primera página."
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
-          "source": "List Campaign Members",
+          "source": "List campaign members",
           "message": "Listar miembros de la campaña"
         },
         "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "Usa el cursor devuelto en una solicitud anterior para obtener la siguiente página de miembros. Déjalo vacío para la primera página."
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
-          "source": "Get Campaign",
+          "source": "Get campaign",
           "message": "Obtener campaña"
         },
         "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Seleccione la campaña sobre la que desea obtener información detallada. Este es un campo obligatorio."
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
-          "source": "Get Member",
+          "source": "Get member",
           "message": "Obtener miembro"
         },
         "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Seleccione o introduzca el ID del miembro (patrocinador) cuyos detalles desea recuperar. Este es un campo obligatorio."
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
-          "source": "List Posts",
+          "source": "List posts",
           "message": "Listar publicaciones"
         },
         "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Usa el cursor devuelto en una solicitud anterior para obtener la siguiente página de publicaciones. Déjalo vacío para la primera página."
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
-          "source": "Get Post",
+          "source": "Get post",
           "message": "Obtener publicación"
         },
         "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Seleccione o introduzca el ID de la publicación cuyos detalles desea recuperar. Este es un campo obligatorio."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
-          "source": "Pledge Event",
+          "source": "Pledge event",
           "message": "Evento de aportación"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Selecciona la campaña que deseas supervisar para eventos relacionados con aportaciones. Este es un campo obligatorio."
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Evento disparador"
         },
         "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -628,7 +628,7 @@
           "message": "Se activa cuando un miembro elimina su aportación."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
-          "source": "Member Event",
+          "source": "Member event",
           "message": "Evento de miembro"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
@@ -652,7 +652,7 @@
           "message": "Selecciona la campaña que deseas supervisar para eventos relacionados con miembros. Este es un campo obligatorio."
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Evento disparador"
         },
         "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Se activa cuando se elimina una membresía. Ten en cuenta que puedes recibir más de uno de estos por mecenas si eliminan y renuevan su membresía. La eliminación solo ocurre si no se produjo ningún pago previo; de lo contrario, la eliminación de la aportación es una actualización del estado del miembro."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
-          "source": "Post Event",
+          "source": "Post event",
           "message": "Evento de publicación"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Selecciona la campaña que deseas supervisar para eventos relacionados con publicaciones. Este es un campo obligatorio."
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
-          "source": "Trigger Event",
+          "source": "Trigger event",
           "message": "Evento disparador"
         },
         "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {

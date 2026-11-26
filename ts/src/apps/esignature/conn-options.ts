@@ -24,19 +24,19 @@ export const ESIGNATURE_CONN_OPTIONS = {
     default_value: 'account-d',
   },
   accounts: {
-    display_name: 'Account Info',
+    display_name: 'Account info',
     short_desc: 'Account info set when the connection is authorized',
     desc: 'Account info set when the connection is authorized',
     type: 'list',
   },
   account_id: {
-    display_name: 'Default Account ID',
+    display_name: 'Default account ID',
     short_desc: 'Default account ID selected during authorization',
     desc: 'The default account ID set when the connection is authorized',
     type: 'string',
   },
   base_uri: {
-    display_name: 'Default Base URI',
+    display_name: 'Default base URI',
     short_desc: 'The default base URI set when the connection is authorized',
     desc: 'The default base URI set when the connection is authorized',
     type: 'string',

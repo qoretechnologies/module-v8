@@ -340,7 +340,7 @@
           "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.display_name": {
-          "source": "Get Conference Participants",
+          "source": "Get conference participants",
           "message": "Ottieni partecipanti conferenza"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Termine di ricerca facoltativo per filtrare i partecipanti per nome o altri attributi. Verranno restituiti solo i partecipanti corrispondenti al termine di ricerca."
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.display_name": {
-          "source": "Include Time Spent",
+          "source": "Include time spent",
           "message": "Includi tempo trascorso"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Se abilitato, include informazioni sul tempo trascorso da ciascun partecipante nella conferenza. Il valore predefinito è true."
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.display_name": {
-          "source": "Get Conference Recordings",
+          "source": "Get conference recordings",
           "message": "Ottieni registrazioni conferenza"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "L'identificatore o il codice riunione della conferenza Google Meet per cui recuperare le informazioni sulla registrazione. Può essere un ID conferenza o un codice riunione nel formato XXX-XXXX-XXX."
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.display_name": {
-          "source": "Get Conference Transcript",
+          "source": "Get conference transcript",
           "message": "Ottieni trascrizione conferenza"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.short_desc": {
@@ -448,7 +448,7 @@
           "message": "L'identificatore della trascrizione specifica da recuperare dalla conferenza Google Meet."
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.display_name": {
-          "source": "List Conferences",
+          "source": "List conferences",
           "message": "Elenca conferenze"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.short_desc": {
@@ -472,7 +472,7 @@
           "message": "Il numero massimo di record di conferenze da restituire in una singola risposta. Il valore predefinito è 100."
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "Token pagina successiva"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -484,7 +484,7 @@
           "message": "Un token da una risposta precedente che consente di recuperare la pagina successiva di risultati. Lasciare vuoto per la prima richiesta."
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.display_name": {
-          "source": "Meeting Code",
+          "source": "Meeting code",
           "message": "Codice riunione"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.short_desc": {
@@ -496,7 +496,7 @@
           "message": "Filtra i risultati per includere solo le conferenze con il codice riunione specificato."
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "Ora di inizio"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Filtra i risultati per includere solo le conferenze iniziate a partire dalla data e dall'ora specificate."
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "Ora di fine"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Filtra i risultati per includere solo le conferenze terminate entro o prima della data e dell'ora specificate."
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.display_name": {
-          "source": "Space Name",
+          "source": "Space name",
           "message": "Nome spazio"
         },
         "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Filtra i risultati per includere solo le conferenze associate al nome dello spazio specificato."
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.display_name": {
-          "source": "Get Conference",
+          "source": "Get conference",
           "message": "Ottieni conferenza"
         },
         "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.short_desc": {
@@ -556,7 +556,7 @@
           "message": "L'ID conferenza o il codice riunione della conferenza Google Meet di cui recuperare le informazioni dettagliate."
         },
         "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.display_name": {
-          "source": "Conference Ended",
+          "source": "Conference ended",
           "message": "Conferenza terminata"
         },
         "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Monitora le conferenze di Google Meet e si attiva quando una conferenza è terminata. Restituisce dettagli sulla conferenza completata inclusi nome, ora di inizio, ora di fine, ora di scadenza e informazioni sullo spazio."
         },
         "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.display_name": {
-          "source": "Recording Created",
+          "source": "Recording created",
           "message": "Registrazione creata"
         },
         "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.short_desc": {
@@ -592,7 +592,7 @@
           "message": "L'identificatore o il codice riunione della conferenza Google Meet da monitorare per nuove registrazioni. Può essere un ID conferenza o un codice riunione nel formato XXX-XXXX-XXX."
         },
         "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.display_name": {
-          "source": "Transcript Created",
+          "source": "Transcript created",
           "message": "Trascrizione creata"
         },
         "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.short_desc": {

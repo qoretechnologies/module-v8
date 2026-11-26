@@ -8,7 +8,7 @@ const GoogleMeetAppEn = {
     'Integrate with Google Meet to manage your meetings and events. This integration allows you to perform actions and respond to events in your Google Meet account, enabling you to automate meeting management and scheduling workflows.',
   actions: {
     list_conferences: {
-      displayName: 'List Conferences',
+      displayName: 'List conferences',
       shortDesc: 'Retrieves a list of Google Meet conferences with filtering options.',
       longDesc:
         'Retrieves a paginated list of Google Meet conferences with support for filtering by meeting code, time range, and space name. Returns conference details including ID, start time, end time, expiration time, and space information.',
@@ -20,30 +20,30 @@ const GoogleMeetAppEn = {
             'The maximum number of conference records to return in a single response. Default is 100.',
         },
         nextPageToken: {
-          displayName: 'Next Page Token',
+          displayName: 'Next page token',
           shortDesc: 'Token for pagination',
           longDesc:
             'A token from a previous response that allows retrieving the next page of results. Leave empty for the first request.',
         },
         meeting_code: {
-          displayName: 'Meeting Code',
+          displayName: 'Meeting code',
           shortDesc: 'Filter by meeting code',
           longDesc: 'Filter results to only include conferences with the specified meeting code.',
         },
         start_time: {
-          displayName: 'Start Time',
+          displayName: 'Start time',
           shortDesc: 'Filter by start time',
           longDesc:
             'Filter results to only include conferences that started on or after the specified date and time.',
         },
         end_time: {
-          displayName: 'End Time',
+          displayName: 'End time',
           shortDesc: 'Filter by end time',
           longDesc:
             'Filter results to only include conferences that ended on or before the specified date and time.',
         },
         space_name: {
-          displayName: 'Space Name',
+          displayName: 'Space name',
           shortDesc: 'Filter by space name',
           longDesc:
             'Filter results to only include conferences associated with the specified space name.',
@@ -51,7 +51,7 @@ const GoogleMeetAppEn = {
       },
     },
     get_conference_participants: {
-      displayName: 'Get Conference Participants',
+      displayName: 'Get conference participants',
       shortDesc: 'Retrieves participant information for a specific Google Meet conference.',
       longDesc:
         'Retrieves detailed information about participants who attended a specific Google Meet conference. Can filter participants by search term and include time spent metrics.',
@@ -69,7 +69,7 @@ const GoogleMeetAppEn = {
             'Optional search term to filter participants by name or other attributes. Only participants matching the search term will be returned.',
         },
         include_time_spent: {
-          displayName: 'Include Time Spent',
+          displayName: 'Include time spent',
           shortDesc: 'Include participant time metrics',
           longDesc:
             'When enabled, includes information about how long each participant spent in the conference. Default is true.',
@@ -77,7 +77,7 @@ const GoogleMeetAppEn = {
       },
     },
     get_conference: {
-      displayName: 'Get Conference',
+      displayName: 'Get conference',
       shortDesc: 'Retrieve detailed information about a Google Meet conference.',
       longDesc:
         'Fetches comprehensive details about a specific Google Meet conference including basic information, recordings, participants, and transcripts. Returns all related data in a single response.',
@@ -91,7 +91,7 @@ const GoogleMeetAppEn = {
       },
     },
     get_conference_recordings: {
-      displayName: 'Get Conference Recordings',
+      displayName: 'Get conference recordings',
       shortDesc: 'Retrieves recordings for a specific Google Meet conference.',
       longDesc:
         'Retrieves all available recordings associated with a specific Google Meet conference. Returns details about each recording including state, timing information, and storage location.',
@@ -105,7 +105,7 @@ const GoogleMeetAppEn = {
       },
     },
     get_conference_transcript: {
-      displayName: 'Get Conference Transcript',
+      displayName: 'Get conference transcript',
       shortDesc: 'Retrieves a specific transcript from a Google Meet conference.',
       longDesc:
         'Retrieves the detailed content of a specific transcript created for a Google Meet conference. Requires either a conference ID and transcript ID or just a transcript ID if it is already known.',
@@ -127,14 +127,14 @@ const GoogleMeetAppEn = {
   },
   triggers: {
     conference_ended: {
-      displayName: 'Conference Ended',
+      displayName: 'Conference ended',
       shortDesc: 'Triggers when a Google Meet conference has ended.',
       longDesc:
         'Monitors Google Meet conferences and triggers when a conference has ended. Returns details about the completed conference including name, start time, end time, expiration time, and space information.',
       options: {},
     },
     recording_created: {
-      displayName: 'Recording Created',
+      displayName: 'Recording created',
       shortDesc: 'Triggers when a new recording is created for a Google Meet conference.',
       longDesc:
         'Monitors a specific Google Meet conference and triggers when a new recording has been generated. Returns details about the recording including its name, state, timing information, and Drive destination details.',
@@ -148,7 +148,7 @@ const GoogleMeetAppEn = {
       },
     },
     transcript_created: {
-      displayName: 'Transcript Created',
+      displayName: 'Transcript created',
       shortDesc: 'Triggers when a new transcript is created for a Google Meet conference.',
       longDesc:
         'Monitors a specific Google Meet conference and triggers when a new transcript has been generated. Returns details about the transcript including its name, state, timing information, and Google Docs destination details.',

@@ -541,7 +541,7 @@ describe('Telegram', () => {
     it('Should localize the get_file action and all of its options', () => {
       const actionLocale = TelegramAppEn.actions.get_file;
 
-      expect(actionLocale.displayName).toBe('Get File');
+      expect(actionLocale.displayName).toBe('Get file');
       expect(actionLocale.shortDesc).toBeTruthy();
       expect(actionLocale.longDesc).toBeTruthy();
       expect(actionLocale.groups).toEqual(['Message Management']);

@@ -8,7 +8,7 @@ const NotionAppEn = {
 
   triggers: {
     new_database_item: {
-      displayName: 'New Database Item',
+      displayName: 'New database item',
       shortDesc: 'Triggers when a new item is created in a Notion database',
       longDesc:
         'This trigger monitors a specific Notion database and fires when a new item (page) is added to it. You can filter items based on property values.',
@@ -19,14 +19,14 @@ const NotionAppEn = {
           longDesc: 'Select the Notion database that you want to monitor for new items',
         },
         filter_properties: {
-          displayName: 'Filter Properties',
+          displayName: 'Filter properties',
           shortDesc: 'Optional filters to apply to database items',
           longDesc: 'Set property filters to only trigger for items that match specific criteria',
         },
       },
     },
     updated_database_item: {
-      displayName: 'Updated Database Item',
+      displayName: 'Updated database item',
       shortDesc: 'Triggers when a database item is updated in Notion',
       longDesc:
         'This trigger monitors a specific Notion database and fires when an existing item (page) is modified. You can filter items based on property values.',
@@ -37,14 +37,14 @@ const NotionAppEn = {
           longDesc: 'Select the Notion database that you want to monitor for updated items',
         },
         filter_properties: {
-          displayName: 'Filter Properties',
+          displayName: 'Filter properties',
           shortDesc: 'Optional filters to apply to database items',
           longDesc: 'Set property filters to only trigger for items that match specific criteria',
         },
       },
     },
     updated_page: {
-      displayName: 'Updated Page',
+      displayName: 'Updated page',
       shortDesc: 'Triggers when a specific Notion page is updated',
       longDesc:
         'This trigger monitors a specific Notion page and fires when the page is modified. It tracks changes to the page content, properties, or metadata.',
@@ -62,7 +62,7 @@ const NotionAppEn = {
   actions: {
     add_comment_to_discussion: {
       groups: ['Comments'],
-      displayName: 'Add Comment to Discussion',
+      displayName: 'Add comment to discussion',
       shortDesc: 'Add a reply to an existing discussion thread in Notion',
       longDesc:
         'Reply to an existing discussion thread on a Notion page or block. This creates a new comment within the selected discussion.',
@@ -73,7 +73,7 @@ const NotionAppEn = {
           longDesc: 'Select the discussion thread where you want to add your comment',
         },
         text: {
-          displayName: 'Comment Text',
+          displayName: 'Comment text',
           shortDesc: 'The text content of your comment',
           longDesc:
             'Enter the text content for your comment. This will be added as a plain text comment to the discussion.',
@@ -82,7 +82,7 @@ const NotionAppEn = {
     },
     add_comment_to_page: {
       groups: ['Comments'],
-      displayName: 'Add Comment to Page',
+      displayName: 'Add comment to page',
       shortDesc: 'Add a new comment to a Notion page',
       longDesc:
         'Create a new comment on a Notion page. This starts a new discussion thread on the selected page.',
@@ -93,7 +93,7 @@ const NotionAppEn = {
           longDesc: 'Select the Notion page where you want to add a comment',
         },
         text: {
-          displayName: 'Comment Text',
+          displayName: 'Comment text',
           shortDesc: 'The text content of your comment',
           longDesc:
             'Enter the text content for your comment. This will create a new discussion on the page.',
@@ -102,7 +102,7 @@ const NotionAppEn = {
     },
     append_to_page: {
       groups: ['Pages'],
-      displayName: 'Append to Page',
+      displayName: 'Append to page',
       shortDesc: 'Add content to the end of a Notion page',
       longDesc:
         'Append new content blocks to the end of an existing Notion page. The content will be added as new blocks at the bottom of the page.',
@@ -122,7 +122,7 @@ const NotionAppEn = {
     },
     create_database_item: {
       groups: ['Databases'],
-      displayName: 'Create Database Item',
+      displayName: 'Create database item',
       shortDesc: 'Create a new item in a Notion database',
       longDesc:
         'Create a new page (item) in a Notion database with specified property values and optional content.',
@@ -139,7 +139,7 @@ const NotionAppEn = {
             'Set the property values for the new database item. Available properties depend on the selected database schema.',
         },
         content: {
-          displayName: 'Page Content',
+          displayName: 'Page content',
           shortDesc: 'Optional content for the database item page',
           longDesc:
             'Add content to the database item page. This will be added as a paragraph block in the page.',
@@ -148,23 +148,23 @@ const NotionAppEn = {
     },
     create_page: {
       groups: ['Pages'],
-      displayName: 'Create Page',
+      displayName: 'Create page',
       shortDesc: 'Create a new page in Notion',
       longDesc:
         'Create a new page as a child of an existing page in Notion with a title and content.',
       options: {
         page: {
-          displayName: 'Parent Page',
+          displayName: 'Parent page',
           shortDesc: 'The parent page where the new page will be created',
           longDesc: 'Select the parent page under which the new page will be created',
         },
         title: {
-          displayName: 'Page Title',
+          displayName: 'Page title',
           shortDesc: 'The title of the new page',
           longDesc: 'Enter the title for the new page',
         },
         content: {
-          displayName: 'Page Content',
+          displayName: 'Page content',
           shortDesc: 'The initial content of the new page',
           longDesc:
             'Enter the initial content for the new page. This will be added as paragraph blocks.',
@@ -173,7 +173,7 @@ const NotionAppEn = {
     },
     get_data_source: {
       groups: ['Databases'],
-      displayName: 'Get Database',
+      displayName: 'Get database',
       shortDesc: 'Retrieve information about a Notion database',
       longDesc:
         'Get detailed information about a specific Notion database including its properties, title, description, and metadata.',
@@ -187,7 +187,7 @@ const NotionAppEn = {
     },
     get_database: {
       groups: ['Databases'],
-      displayName: 'Get Database Info',
+      displayName: 'Get database info',
       shortDesc: 'Retrieve database information by ID',
       longDesc: 'Get detailed information about a Notion database by providing its ID directly.',
       options: {
@@ -200,7 +200,7 @@ const NotionAppEn = {
     },
     get_page: {
       groups: ['Pages'],
-      displayName: 'Get Page',
+      displayName: 'Get page',
       shortDesc: 'Retrieve information about a Notion page',
       longDesc:
         'Get detailed information about a specific Notion page including its properties, title, and metadata.',
@@ -214,7 +214,7 @@ const NotionAppEn = {
     },
     get_user: {
       groups: ['Users'],
-      displayName: 'Get User',
+      displayName: 'Get user',
       shortDesc: 'Retrieve information about a Notion user',
       longDesc:
         'Get detailed information about a specific Notion user including their name, type, and contact information.',
@@ -228,23 +228,23 @@ const NotionAppEn = {
     },
     list_comments: {
       groups: ['Comments'],
-      displayName: 'List Comments',
+      displayName: 'List comments',
       shortDesc: 'List comments on a Notion page or block',
       longDesc:
         'Retrieve a list of comments on a specific Notion page or block. Returns all unresolved comments with pagination support.',
       options: {
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of comments to retrieve per page',
           longDesc: 'Set the number of comments to retrieve in a single request (maximum 100)',
         },
         next_cursor: {
-          displayName: 'Next Cursor',
+          displayName: 'Next cursor',
           shortDesc: 'Pagination cursor for retrieving next page',
           longDesc: 'Use this cursor to retrieve the next page of comments in a paginated response',
         },
         block_id: {
-          displayName: 'Page or Block',
+          displayName: 'Page or block',
           shortDesc: 'The page or block to list comments for',
           longDesc: 'Select the Notion page or block you want to retrieve comments from',
         },
@@ -252,7 +252,7 @@ const NotionAppEn = {
     },
     list_datasource_items: {
       groups: ['Databases'],
-      displayName: 'List Database Items',
+      displayName: 'List database items',
       shortDesc: 'List items from a Notion database',
       longDesc:
         'Retrieve a list of items (pages) from a Notion database with filtering and sorting options.',
@@ -263,22 +263,22 @@ const NotionAppEn = {
           longDesc: 'Select the Notion database you want to retrieve items from',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of items to retrieve per page',
           longDesc: 'Set the number of database items to retrieve in a single request',
         },
         next_cursor: {
-          displayName: 'Next Cursor',
+          displayName: 'Next cursor',
           shortDesc: 'Pagination cursor for retrieving next page',
           longDesc: 'Use this cursor to retrieve the next page of items in a paginated response',
         },
         filter_properties: {
-          displayName: 'Filter Properties',
+          displayName: 'Filter properties',
           shortDesc: 'Property filters to apply to the results',
           longDesc: 'Set property filters to only return items that match specific criteria',
         },
         sorts: {
-          displayName: 'Sort Options',
+          displayName: 'Sort options',
           shortDesc: 'How to sort the returned items',
           longDesc: 'Configure how the database items should be sorted in the response',
           type: {
@@ -308,30 +308,30 @@ const NotionAppEn = {
     },
     list_pages: {
       groups: ['Pages'],
-      displayName: 'List Pages',
+      displayName: 'List pages',
       shortDesc: 'Search and list Notion pages',
       longDesc:
         'Search for and retrieve a list of Notion pages with optional query filtering and sorting.',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Text to search for in page titles and content',
           longDesc:
             'Enter text to search for in page titles and content. Leave empty to retrieve all accessible pages.',
         },
         last_edited: {
-          displayName: 'Sort by Last Edited',
+          displayName: 'Sort by last edited',
           shortDesc: 'How to sort pages by last edited time',
           longDesc:
             'Choose whether to sort pages by last edited time in ascending or descending order',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of pages to retrieve per request',
           longDesc: 'Set the number of pages to retrieve in a single request',
         },
         next_cursor: {
-          displayName: 'Next Cursor',
+          displayName: 'Next cursor',
           shortDesc: 'Pagination cursor for retrieving next page',
           longDesc: 'Use this cursor to retrieve the next page of results in a paginated response',
         },
@@ -339,19 +339,19 @@ const NotionAppEn = {
     },
     list_datasources: {
       groups: ['Databases'],
-      displayName: 'List Databases',
+      displayName: 'List databases',
       shortDesc: 'List all Notion databases',
       longDesc:
         'Retrieve a list of all accessible Notion databases in your workspace with optional search filtering.',
       options: {
         query: {
-          displayName: 'Search Query',
+          displayName: 'Search query',
           shortDesc: 'Text to search for in database titles',
           longDesc:
             'Enter text to search for in database titles. Leave empty to retrieve all accessible databases.',
         },
         last_edited: {
-          displayName: 'Sort by Last Edited',
+          displayName: 'Sort by last edited',
           shortDesc: 'How to sort databases by last edited time',
           longDesc:
             'Choose whether to sort databases by last edited time in ascending or descending order',
@@ -360,17 +360,17 @@ const NotionAppEn = {
     },
     list_users: {
       groups: ['Users'],
-      displayName: 'List Users',
+      displayName: 'List users',
       shortDesc: 'List users in the Notion workspace',
       longDesc: 'Retrieve a list of all users in the Notion workspace including people and bots.',
       options: {
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Number of users to retrieve per page',
           longDesc: 'Set the number of users to retrieve in a single request',
         },
         next_cursor: {
-          displayName: 'Next Cursor',
+          displayName: 'Next cursor',
           shortDesc: 'Pagination cursor for retrieving next page',
           longDesc: 'Use this cursor to retrieve the next page of users in a paginated response',
         },
@@ -378,7 +378,7 @@ const NotionAppEn = {
     },
     update_database_item: {
       groups: ['Databases'],
-      displayName: 'Update Database Item',
+      displayName: 'Update database item',
       shortDesc: 'Update an existing item in a Notion database',
       longDesc: 'Update the property values of an existing item (page) in a Notion database.',
       options: {
@@ -388,7 +388,7 @@ const NotionAppEn = {
           longDesc: 'Select the Notion database that contains the item you want to update',
         },
         item_id: {
-          displayName: 'Database Item',
+          displayName: 'Database item',
           shortDesc: 'The database item to update',
           longDesc: 'Select the specific database item (page) you want to update',
         },
@@ -707,7 +707,7 @@ const NotionAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {

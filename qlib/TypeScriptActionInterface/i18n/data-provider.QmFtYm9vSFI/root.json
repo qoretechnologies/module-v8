@@ -436,8 +436,8 @@
           "message": "The table name"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.display_name": {
-          "source": "Get Employee",
-          "message": "Get Employee"
+          "source": "Get employee",
+          "message": "Get employee"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.short_desc": {
           "source": "Retrieve a single employee by ID",
@@ -472,8 +472,8 @@
           "message": "Select which fields to retrieve for the employee. Leave empty to retrieve all available fields (up to 400 fields)."
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.display_name": {
-          "source": "Create Employee",
-          "message": "Create Employee"
+          "source": "Create employee",
+          "message": "Create employee"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.short_desc": {
           "source": "Create a new employee in BambooHR",
@@ -484,8 +484,8 @@
           "message": "Creates a new employee record in BambooHR. At minimum, firstName and lastName are required. The action dynamically presents all available fields based on your BambooHR configuration, including custom fields."
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
-          "message": "Employee Data"
+          "source": "Employee data",
+          "message": "Employee data"
         },
         "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
           "source": "The data for the new employee",
@@ -496,8 +496,8 @@
           "message": "Provide values for the employee fields. The available fields are dynamically loaded from your BambooHR account and include both standard and custom fields. firstName and lastName are required."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.display_name": {
-          "source": "Update Employee",
-          "message": "Update Employee"
+          "source": "Update employee",
+          "message": "Update employee"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.short_desc": {
           "source": "Update an existing employee in BambooHR",
@@ -520,8 +520,8 @@
           "message": "Enter the unique identifier of the employee you want to update."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
-          "source": "Employee Data",
-          "message": "Employee Data"
+          "source": "Employee data",
+          "message": "Employee data"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
           "source": "The data to update",
@@ -532,8 +532,8 @@
           "message": "Provide new values for the employee fields you want to update. The available fields are dynamically loaded from your BambooHR account."
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.display_name": {
-          "source": "List Employees",
-          "message": "List Employees"
+          "source": "List employees",
+          "message": "List employees"
         },
         "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.short_desc": {
           "source": "Retrieve a list of all employees",
@@ -568,8 +568,8 @@
           "message": "Retrieves a list of employees who are out (vacation, sick leave, etc.) and company holidays for a given date range. If no dates are specified, returns the current day plus the next 14 days."
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.short_desc": {
           "source": "Start of the date range",
@@ -580,8 +580,8 @@
           "message": "The start date for the query. Defaults to today if not specified."
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.short_desc": {
           "source": "End of the date range",
@@ -592,8 +592,8 @@
           "message": "The end date for the query. Defaults to 14 days from the start date if not specified."
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.display_name": {
-          "source": "Search Time Off Requests",
-          "message": "Search Time Off Requests"
+          "source": "Search time off requests",
+          "message": "Search time off requests"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.short_desc": {
           "source": "Search and filter time off requests",
@@ -604,8 +604,8 @@
           "message": "Searches time off requests in BambooHR with various filters. Returns requests matching the specified criteria including date range, employee, status, and time off type."
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.display_name": {
-          "source": "Start Date",
-          "message": "Start Date"
+          "source": "Start date",
+          "message": "Start date"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.short_desc": {
           "source": "Filter by start date",
@@ -616,8 +616,8 @@
           "message": "Only show time off requests on or after this date."
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.display_name": {
-          "source": "End Date",
-          "message": "End Date"
+          "source": "End date",
+          "message": "End date"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.short_desc": {
           "source": "Filter by end date",
@@ -672,8 +672,8 @@
           "message": "Superceded"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.display_name": {
-          "source": "Time Off Type",
-          "message": "Time Off Type"
+          "source": "Time off type",
+          "message": "Time off type"
         },
         "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.short_desc": {
           "source": "Filter by time off type",
@@ -684,8 +684,8 @@
           "message": "Filter by one or more time off types configured in your BambooHR account."
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.display_name": {
-          "source": "Get All Employee Files",
-          "message": "Get All Employee Files"
+          "source": "Get all employee files",
+          "message": "Get all employee files"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.short_desc": {
           "source": "List all files for an employee",
@@ -708,8 +708,8 @@
           "message": "The ID of the employee whose files you want to retrieve."
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.display_name": {
-          "source": "Download Employee File",
-          "message": "Download Employee File"
+          "source": "Download employee file",
+          "message": "Download employee file"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.short_desc": {
           "source": "Download an employee file",
@@ -744,8 +744,8 @@
           "message": "The ID of the file to download."
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Upload Employee File",
-          "message": "Upload Employee File"
+          "source": "Upload employee file",
+          "message": "Upload employee file"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.short_desc": {
           "source": "Upload a file to an employee",
@@ -912,8 +912,8 @@
           "message": "The filename"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
-          "message": "Share with Employee"
+          "source": "Share with employee",
+          "message": "Share with employee"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
           "source": "Make file visible to employee",
@@ -924,8 +924,8 @@
           "message": "Whether to make this file visible to the employee in their self-service portal."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Update Employee File",
-          "message": "Update Employee File"
+          "source": "Update employee file",
+          "message": "Update employee file"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
           "source": "Update employee file metadata",
@@ -984,8 +984,8 @@
           "message": "Move the file to a different category."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
-          "source": "Share with Employee",
-          "message": "Share with Employee"
+          "source": "Share with employee",
+          "message": "Share with employee"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
           "source": "Update sharing setting",
@@ -996,8 +996,8 @@
           "message": "Whether to make this file visible to the employee."
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.display_name": {
-          "source": "Delete Employee File",
-          "message": "Delete Employee File"
+          "source": "Delete employee file",
+          "message": "Delete employee file"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
           "source": "Delete an employee file",
@@ -1032,8 +1032,8 @@
           "message": "The ID of the file to delete."
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.display_name": {
-          "source": "Get All Company Files",
-          "message": "Get All Company Files"
+          "source": "Get all company files",
+          "message": "Get all company files"
         },
         "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.short_desc": {
           "source": "List all company files",
@@ -1044,8 +1044,8 @@
           "message": "Retrieves all company files organized by category. Returns file metadata including name, size, upload date, and sharing status."
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.display_name": {
-          "source": "Download Company File",
-          "message": "Download Company File"
+          "source": "Download company file",
+          "message": "Download company file"
         },
         "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.short_desc": {
           "source": "Download a company file",
@@ -1068,8 +1068,8 @@
           "message": "The ID of the company file to download."
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Upload Company File",
-          "message": "Upload Company File"
+          "source": "Upload company file",
+          "message": "Upload company file"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.short_desc": {
           "source": "Upload a company file",
@@ -1224,8 +1224,8 @@
           "message": "The filename"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
-          "message": "Share with Employees"
+          "source": "Share with employees",
+          "message": "Share with employees"
         },
         "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
           "source": "Make file visible to employees",
@@ -1236,8 +1236,8 @@
           "message": "Whether to make this file visible to all employees."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Update Company File",
-          "message": "Update Company File"
+          "source": "Update company file",
+          "message": "Update company file"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
           "source": "Update company file metadata",
@@ -1284,8 +1284,8 @@
           "message": "Move the file to a different category."
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
-          "source": "Share with Employees",
-          "message": "Share with Employees"
+          "source": "Share with employees",
+          "message": "Share with employees"
         },
         "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
           "source": "Update sharing setting",
@@ -1296,8 +1296,8 @@
           "message": "Whether to make this file visible to all employees."
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.display_name": {
-          "source": "Delete Company File",
-          "message": "Delete Company File"
+          "source": "Delete company file",
+          "message": "Delete company file"
         },
         "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
           "source": "Delete a company file",
@@ -1320,8 +1320,8 @@
           "message": "The ID of the company file to delete."
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.display_name": {
-          "source": "New Time Off Request",
-          "message": "New Time Off Request"
+          "source": "New time off request",
+          "message": "New time off request"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.short_desc": {
           "source": "Triggers when a new time off request is submitted",
@@ -1344,8 +1344,8 @@
           "message": "Only trigger for time off requests from a specific employee."
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.display_name": {
-          "source": "New Time Off",
-          "message": "New Time Off"
+          "source": "New time off",
+          "message": "New time off"
         },
         "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.short_desc": {
           "source": "Triggers when new approved time off appears",
@@ -1356,8 +1356,8 @@
           "message": "Fires when a new approved time off entry appears in the Who's Out list. This includes both employee time off and company holidays."
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.display_name": {
-          "source": "New Employee",
-          "message": "New Employee"
+          "source": "New employee",
+          "message": "New employee"
         },
         "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.short_desc": {
           "source": "Triggers when a new employee is created",

@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.display_name": {
-          "source": "Send Email",
+          "source": "Send email",
           "message": "メールの送信"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.short_desc": {
@@ -352,7 +352,7 @@
           "message": "HTMLおよびテキストコンテンツ、CC/BCC受信者、返信先アドレス、トラッキング用のカスタムタグ、高度な配信オプションをサポートしてメールを送信します。信頼性の高いメール配信のために、包括的な検証とエラー処理が含まれています。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Amazon SESサービスが設定されているAWSリージョンを選択します。リージョンによって、検証済みアイデンティティや送信制限が異なる場合があります。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.display_name": {
-          "source": "From Email Address",
+          "source": "From email address",
           "message": "差出人メールアドレス"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.short_desc": {
@@ -376,7 +376,7 @@
           "message": "Amazon SESアカウントで検証されている必要がある送信者メールアドレス。このアドレスはメールの送信元 (From) フィールドに表示されます。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.display_name": {
-          "source": "To Email Addresses",
+          "source": "To email addresses",
           "message": "送信先メールアドレス"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.short_desc": {
@@ -388,7 +388,7 @@
           "message": "メッセージの送信先となる1つ以上のメールアドレス。複数のアドレスはカンマで区切る必要があります。すべてのアドレスは有効なメール形式である必要があります。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.display_name": {
-          "source": "CC Email Addresses",
+          "source": "CC email addresses",
           "message": "CCメールアドレス"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.short_desc": {
@@ -400,7 +400,7 @@
           "message": "メールのコピーを受信するオプションのCC受信者。複数のアドレスはカンマで区切る必要があります。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.display_name": {
-          "source": "BCC Email Addresses",
+          "source": "BCC email addresses",
           "message": "BCCメールアドレス"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.short_desc": {
@@ -412,7 +412,7 @@
           "message": "他の受信者に知られることなくコピーを受信するオプションのBCC受信者。複数のアドレスはカンマで区切る必要があります。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.display_name": {
-          "source": "Reply-To Addresses",
+          "source": "Reply-to addresses",
           "message": "返信先アドレス"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.short_desc": {
@@ -424,7 +424,7 @@
           "message": "送信元アドレスの代わりに返信を受信するオプションのメールアドレス。複数のアドレスはカンマで区切る必要があります。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
-          "source": "Email Subject",
+          "source": "Email subject",
           "message": "メールの件名"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
@@ -436,7 +436,7 @@
           "message": "受信者のメールクライアントに表示される件名。具体的でわかりやすい内容にしてください。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.display_name": {
-          "source": "Text Body",
+          "source": "Text body",
           "message": "テキスト本文"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.short_desc": {
@@ -448,7 +448,7 @@
           "message": "メールのプレーンテキストコンテンツ。テキスト本文またはHTML本文のいずれかを指定する必要があります。テキストバージョンにより、すべてのメールクライアントとの互換性が確保されます。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.display_name": {
-          "source": "HTML Body",
+          "source": "HTML body",
           "message": "HTML本文"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.short_desc": {
@@ -460,7 +460,7 @@
           "message": "書式設定、リンク、スタイリングを含むメールのHTMLコンテンツ。テキスト本文またはHTML本文のいずれかを指定する必要があります。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.display_name": {
-          "source": "Character Encoding",
+          "source": "Character encoding",
           "message": "文字エンコーディング"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.short_desc": {
@@ -484,7 +484,7 @@
           "message": "US-ASCII"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.display_name": {
-          "source": "Return Path",
+          "source": "Return path",
           "message": "リターンパス"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.short_desc": {
@@ -496,7 +496,7 @@
           "message": "バウンス通知が送信されるオプションのメールアドレス。SESアカウントで検証されたアドレスである必要があります。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.display_name": {
-          "source": "Configuration Set",
+          "source": "Configuration set",
           "message": "設定セット"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "このメールに使用するオプションの設定セット名。設定セットを使用すると、他のAWSサービスにメール送信イベントを公開できます。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.display_name": {
-          "source": "Email Tags",
+          "source": "Email tags",
           "message": "メールタグ"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "メールの分類および追跡用のオプションのタグ。タグはSESダッシュボードでのレポート作成や分析に使用できます。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "タグ名"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "分類に使用されるタグの説明的な名前。"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.display_name": {
-          "source": "Tag Value",
+          "source": "Tag value",
           "message": "タグ値"
         },
         "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.field.dmFsdWU.short_desc": {
@@ -544,7 +544,7 @@
           "message": "このタグ名に関連する値。"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.display_name": {
-          "source": "Verify Email Address",
+          "source": "Verify email address",
           "message": "メールアドレスの検証"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.short_desc": {
@@ -556,7 +556,7 @@
           "message": "メールアドレスまたはドメインの検証プロセスを開始します。Amazon SESが検証メールを送信するため、記載されたリンクをクリックして検証プロセスを完了する必要があります。"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.short_desc": {
@@ -568,7 +568,7 @@
           "message": "メールアドレスを検証するAWSリージョンを選択します。検証されたアイデンティティはこのリージョンで使用可能になります。"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.display_name": {
-          "source": "Email Address to Verify",
+          "source": "Email address to verify",
           "message": "検証するメールアドレス"
         },
         "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.short_desc": {
@@ -580,7 +580,7 @@
           "message": "送信アイデンティティとして検証するメールアドレス。Amazon SESはこのアドレスに検証メールを送信します。"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.display_name": {
-          "source": "Get Send Statistics",
+          "source": "Get send statistics",
           "message": "送信統計の取得"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.short_desc": {
@@ -592,7 +592,7 @@
           "message": "配信試行回数、バウンス、苦情、拒否率など、包括的な送信統計を取得します。データは計算された割合と要約を含む時系列形式で提供されます。"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.short_desc": {
@@ -604,7 +604,7 @@
           "message": "送信統計を取得するAWSリージョンを選択します。統計はリージョン固有です。"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.display_name": {
-          "source": "New Verified Identity",
+          "source": "New verified identity",
           "message": "新しい検証済みアイデンティティ"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.short_desc": {
@@ -616,7 +616,7 @@
           "message": "SESアカウントで新規に検証されたメールアドレスおよびドメインを監視します。新しい送信アイデンティティの検証プロセスが完了したときにトリガーします。"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.display_name": {
-          "source": "AWS Region",
+          "source": "AWS region",
           "message": "AWS リージョン"
         },
         "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.short_desc": {

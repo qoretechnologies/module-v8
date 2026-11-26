@@ -107,17 +107,17 @@ const searchWorksheets = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       spreadsheet_title: {
         type: 'string',
-        display_name: 'Spreadsheet Title',
+        display_name: 'Spreadsheet title',
         short_desc: 'The title of the spreadsheet',
       },
       total_sheets: {
         type: 'integer',
-        display_name: 'Total Sheets',
+        display_name: 'Total sheets',
         short_desc: 'The total number of sheets in the spreadsheet',
       },
       matching_sheets: {
         type: 'integer',
-        display_name: 'Matching Sheets',
+        display_name: 'Matching sheets',
         short_desc: 'The number of sheets matching the search criteria',
       },
       worksheets: {
@@ -143,32 +143,32 @@ const searchWorksheets = QoreAppCreator.createLocalizedAction<typeof options>({
               },
               row_count: {
                 type: 'integer',
-                display_name: 'Row Count',
+                display_name: 'Row count',
                 short_desc: 'The number of rows in the sheet',
               },
               column_count: {
                 type: 'integer',
-                display_name: 'Column Count',
+                display_name: 'Column count',
                 short_desc: 'The number of columns in the sheet',
               },
               frozen_row_count: {
                 type: 'integer',
-                display_name: 'Frozen Row Count',
+                display_name: 'Frozen row count',
                 short_desc: 'The number of frozen rows in the sheet',
               },
               frozen_column_count: {
                 type: 'integer',
-                display_name: 'Frozen Column Count',
+                display_name: 'Frozen column count',
                 short_desc: 'The number of frozen columns in the sheet',
               },
               is_hidden: {
                 type: 'bool',
-                display_name: 'Is Hidden',
+                display_name: 'Is hidden',
                 short_desc: 'Whether the sheet is hidden',
               },
               is_tab_color_set: {
                 type: 'bool',
-                display_name: 'Has Tab Color',
+                display_name: 'Has tab color',
                 short_desc: 'Whether the sheet has a tab color set',
               },
               tab_color: {
@@ -180,7 +180,7 @@ const searchWorksheets = QoreAppCreator.createLocalizedAction<typeof options>({
                     blue: { type: 'number' },
                   },
                 },
-                display_name: 'Tab Color',
+                display_name: 'Tab color',
                 short_desc: 'The RGB color of the sheet tab',
               },
             },

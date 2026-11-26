@@ -484,7 +484,7 @@
           "message": "Der Tabellenname"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "Datensatz erstellen"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Wählen Sie das Zoho CRM-Zielmodul aus (wie Leads, Contacts, Deals, Accounts, Products, Vendors oder benutzerdefinierte Module), in dem Sie den neuen Datensatz erstellen möchten. Verwenden Sie die Modules-API, um die Liste der verfügbaren Module und deren API-Namen abzurufen."
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Record Properties",
+          "source": "Record properties",
           "message": "Datensatzeigenschaften"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Geben Sie die Feldwerte für den neuen Datensatz als Schlüssel-Wert-Paare an, wobei Schlüssel die API-Namen der Felder sind. Verfügbare Felder und deren Typen werden dynamisch basierend auf dem ausgewählten Modul geladen. Pflichtfelder müssen angegeben werden und Feldwerte müssen ihren erwarteten Datentypen entsprechen (Text, Zahl, Datum, Auswahlliste, Lookup usw.)."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
+          "source": "List records",
           "message": "Datensätze auflisten"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module) aus, aus dem Sie Datensätze abrufen möchten. Das Modul muss API-Operationen unterstützen und der Benutzer muss über Leseberechtigungen verfügen."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
-          "source": "Fields to Return",
+          "source": "Fields to return",
           "message": "Zurückzugebende Felder"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Wählen Sie die Feld-API-Namen aus, die Sie für jeden Datensatz abrufen möchten. Sie können maximal 50 Feld-API-Namen angeben. Verwenden Sie die Fields Metadata-API, um die Liste der verfügbaren Felder abzurufen. Standardmäßig wird nur das ID-Feld zurückgegeben. Fügen Sie nach Bedarf Felder wie Last_Name, Email, Created_Time oder benutzerdefinierte Feldnamen hinzu."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
-          "source": "Records Per Page",
+          "source": "Records per page",
           "message": "Datensätze pro Seite"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Geben Sie an, wie viele Datensätze in einer einzelnen API-Anfrage zurückgegeben werden sollen. Gültige Werte sind 1 bis 200. Der Standardwert ist 20. Verwenden Sie diesen Parameter zusammen mit page_token zur Paginierung durch große Ergebnismengen."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Seiten-Token"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Optionale Liste bestimmter Datensatz-IDs, die abgerufen werden sollen. Wenn angegeben, werden nur Datensätze mit diesen IDs zurückgegeben. Dies ist nützlich, um eine bestimmte Menge von Datensätzen abzurufen, anstatt alle Datensätze zu paginieren."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
-          "source": "Sort Configuration",
+          "source": "Sort configuration",
           "message": "Sortierkonfiguration"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Geben Sie an, wie Datensätze in der Antwort sortiert werden sollen. Sie können nach Feldern wie id, Created_Time oder Modified_Time in aufsteigender (älteste zuerst) oder absteigender (neueste zuerst) Reihenfolge sortieren."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Sortierreihenfolge"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Absteigend"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.display_name": {
-          "source": "Sort By Field",
+          "source": "Sort by field",
           "message": "Nach Feld sortieren"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Geändert am"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
-          "source": "List Modules",
+          "source": "List modules",
           "message": "Module auflisten"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Ruft Metadaten für alle Module in Ihrer Zoho CRM-Organisation ab, einschließlich Standardmodulen (Leads, Contacts, Deals, Accounts usw.) und benutzerdefinierten Modulen. Gibt umfassende Details zurück, einschließlich Modulberechtigungen, API-Namen, Anzeigenamen und Funktionen wie z. B. ob das Modul erstellt, bearbeitet, gelöscht werden kann oder Funktionen wie die globale Suche und Schnellerstellung unterstützt."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
-          "source": "Module Status Filter",
+          "source": "Module status filter",
           "message": "Modulstatus-Filter"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Sichtbar"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
-          "source": "List Module Fields",
+          "source": "List module fields",
           "message": "Modulfelder auflisten"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Wählen Sie das Zoho CRM-Modul aus, dessen Feldmetadaten Sie abrufen möchten. Die API gibt detaillierte Informationen zu allen Feldern zurück, einschließlich Standardfeldern (systemdefiniert) und benutzerdefinierten Feldern (benutzerdefiniert) im Modul."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
-          "source": "Update Record",
+          "source": "Update record",
           "message": "Datensatz aktualisieren"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Geben Sie die eindeutige Datensatz-ID des Datensatzes ein, den Sie aktualisieren möchten, oder wählen Sie diese aus. Datensatz-IDs können über die Get Records API oder aus Webhook-Benachrichtigungen abgerufen werden. Der Datensatz muss im angegebenen Modul vorhanden sein."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Updated Properties",
+          "source": "Updated properties",
           "message": "Aktualisierte Eigenschaften"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Geben Sie die Feldwerte, die Sie aktualisieren möchten, als Schlüssel-Wert-Paare an, wobei die Schlüssel die Feld-API-Namen sind. Fügen Sie nur die Felder ein, die Sie ändern möchten; nicht angegebene Felder behalten ihre aktuellen Werte bei. Feldwerte müssen ihren erwarteten Datentypen und Validierungsregeln entsprechen."
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "Datensatz löschen"
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Geben Sie die eindeutige Datensatz-ID des Datensatzes ein oder wählen Sie sie aus, den Sie löschen möchten. Datensatz-IDs können über die Get Records-API abgerufen werden. Das Löschen eines bereits gelöschten Datensatzes führt zu einem Fehler."
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "Datensatz abrufen"
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Geben Sie die eindeutige Datensatz-ID des Datensatzes ein oder wählen Sie sie aus, den Sie abrufen möchten. Datensatz-IDs können über die Get Records-API, Suchergebnisse oder Webhook-Benachrichtigungen abgerufen werden. Der Datensatz muss im angegebenen Modul existieren."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Benutzer auflisten"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Ruft eine Liste von Benutzern in Ihrer Zoho CRM-Organisation ab, mit Unterstützung für Paginierung und Filterung nach Benutzertyp. Gibt umfassende Benutzerinformationen zurück, einschließlich Name, E-Mail, Rolle, Profil, Zeitzone, Gebietsschema-Einstellungen, Anpassungseinstellungen und Kontostatus. Verwenden Sie den type-Parameter, um Benutzer nach ihrem Profil und Status zu filtern."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Users Per Page",
+          "source": "Users per page",
           "message": "Benutzer pro Seite"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Geben Sie an, wie viele Benutzer in einer einzelnen API-Anforderung zurückgegeben werden sollen. Gültige Werte sind 1 bis 200. Der Standardwert ist 20. Verwenden Sie diesen Parameter zusammen mit dem page-Parameter für die Paginierung durch große Ergebnismengen."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "Seitennummer"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Geben Sie an, welche Ergebnisseite abgerufen werden soll, beginnend mit 1 für die erste Seite. Verwenden Sie diesen Parameter zusammen mit per_page, um durch mehrere Seiten von Benutzerdaten zu navigieren."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
-          "source": "User Type Filter",
+          "source": "User type filter",
           "message": "Benutzertyp-Filter"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Ruft den aktuell angemeldeten CRM-Benutzer ab."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
-          "source": "List Tags",
+          "source": "List tags",
           "message": "Tags auflisten"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
@@ -984,7 +984,7 @@
           "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals oder benutzerdefinierte Module) aus, dessen Tags Sie abrufen möchten. Jedes Modul verwaltet seine eigenen Tags."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
-          "source": "My Tags Only",
+          "source": "My tags only",
           "message": "Nur meine Tags"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Wenn auf true gesetzt, werden nur Tags zurückgegeben, die vom aktuellen Benutzer erstellt wurden. Wenn auf false gesetzt oder nicht angegeben, werden alle Tags im Modul zurückgegeben, unabhängig davon, wer sie erstellt hat."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
-          "source": "Add Tags to Records",
+          "source": "Add tags to records",
           "message": "Tags zu Datensätzen hinzufügen"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "Wählen Sie das Zoho CRM-Modul aus (wie Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module), das die Datensätze enthält, die Sie taggen möchten. Tags sind modulspezifisch und müssen im Modul existieren, bevor sie Datensätzen hinzugefügt werden können."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
-          "source": "Tags to Add",
+          "source": "Tags to add",
           "message": "Hinzuzufügende Tags"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Geben Sie die Tags an, die Sie den Datensätzen hinzufügen möchten. Jedes Tag sollte eine ID und einen Namen enthalten. Die Tag-ID hat Vorrang vor dem Namen, wenn beides angegeben ist. Sie können optional einen color_code (Hex-Wert) angeben. Verwenden Sie die Aktion List Tags, um verfügbare Tags und deren IDs abzurufen."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.display_name": {
-          "source": "Color Code",
+          "source": "Color code",
           "message": "Farbcodierung"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Die eindeutige ID eines vorhandenen Tags im Modul. Diese ID hat Vorrang vor dem Namensfeld. Verwenden Sie die Aktion \"Tags auflisten\", um Tag-IDs abzurufen. Das Tag muss bereits im Modul existieren."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "Tag-Name"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Liste eindeutiger Datensatz-IDs, denen Sie Tags hinzufügen möchten. Sie können maximal 500 Datensatz-IDs pro API-Aufruf angeben. Verwenden Sie die Get Records-API oder die Such-API, um gültige Datensatz-IDs abzurufen."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
-          "source": "Overwrite Existing Tags",
+          "source": "Overwrite existing tags",
           "message": "Bestehende Tags überschreiben"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Wenn auf true gesetzt, werden alle vorhandenen Tags auf den angegebenen Datensätzen durch die neuen Tags ersetzt. Wenn auf false gesetzt (Standard), werden die neuen Tags hinzugefügt, während bestehende Tags beibehalten werden. Verwenden Sie diese Option mit Vorsicht, da das Setzen auf true alle aktuellen Tags entfernt."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "Neuer Datensatz"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module) aus, in dem Sie nach neu erstellten Datensätzen suchen möchten. Verwenden Sie den Modul-API-Namen, wie er von der Modules Metadata API zurückgegeben wird."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
-          "source": "Phone Filter",
+          "source": "Phone filter",
           "message": "Telefonnummernfilter"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "Optionale Telefonnummer, nach der in Datensätzen gesucht werden soll. Wenn angegeben, lösen nur Datensätze das Ereignis aus, die diese Telefonnummer enthalten. Dies verwendet die Zoho CRM-Such-API, um übereinstimmende Datensätze zu finden."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "E-Mail-Filter"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Optionale E-Mail-Adresse, nach der in Datensätzen gesucht werden soll. Wenn angegeben, lösen nur Datensätze das Ereignis aus, die diese E-Mail-Adresse enthalten. Dies verwendet die Zoho CRM-Such-API, um übereinstimmende Datensätze zu finden."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
-          "source": "Keyword Search",
+          "source": "Keyword search",
           "message": "Schlüsselwortsuche"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Optionales Schlüsselwort, nach dem in allen durchsuchbaren Feldern von Datensätzen gesucht werden soll. Wenn angegeben, lösen nur Datensätze das Ereignis aus, die dieses Schlüsselwort enthalten. Dies verwendet die Zoho CRM-Such-API, um eine umfassende Textsuche durchzuführen."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
-          "source": "Field Filters",
+          "source": "Field filters",
           "message": "Feldfilter"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Optionale Liste von Feld-Wert-Paaren zum Erstellen von Suchkriterien. Wenn angegeben, lösen nur Datensätze das Ereignis aus, bei denen ALLE angegebenen Felder mit ihren entsprechenden Werten übereinstimmen. Verwendet den Operator „equals“ für jeden Feldvergleich."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Feldname"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Wählen Sie den Feld-API-Namen aus dem Modul aus oder geben Sie ihn ein. Verfügbare Feldnamen können über die Feld-Metadaten-API abgerufen werden. Das Feld muss suchbar sein, um für die Filterung verwendet zu werden."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Feldwert"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.short_desc": {

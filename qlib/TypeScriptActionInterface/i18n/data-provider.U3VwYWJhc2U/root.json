@@ -484,8 +484,8 @@
           "message": "The table name"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.display_name": {
-          "source": "Get Table",
-          "message": "Get Table"
+          "source": "Get table",
+          "message": "Get table"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.short_desc": {
           "source": "Retrieve detailed schema information about a specific Supabase table",
@@ -496,8 +496,8 @@
           "message": "Fetches comprehensive metadata for a specific table including column definitions, data types, required fields, and descriptions. This action helps you understand the structure of your database tables."
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
-          "message": "Table Name"
+          "source": "Table name",
+          "message": "Table name"
         },
         "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.short_desc": {
           "source": "The name of the table to retrieve",
@@ -508,8 +508,8 @@
           "message": "Select the Supabase table whose schema information you want to fetch. The table must exist in your Supabase project."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.display_name": {
-          "source": "List Tables",
-          "message": "List Tables"
+          "source": "List tables",
+          "message": "List tables"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.short_desc": {
           "source": "Get a list of all tables in your Supabase database",
@@ -520,8 +520,8 @@
           "message": "Retrieves all tables from your Supabase database with their basic metadata including column information and descriptions. Optionally include system tables in the results."
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.display_name": {
-          "source": "Include System Tables",
-          "message": "Include System Tables"
+          "source": "Include system tables",
+          "message": "Include system tables"
         },
         "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.short_desc": {
           "source": "Include internal Supabase system tables in the results",
@@ -532,8 +532,8 @@
           "message": "When enabled, the response will include system tables (those starting with underscore). System tables contain Supabase internal data and are typically hidden from regular queries."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.display_name": {
-          "source": "Create Row",
-          "message": "Create Row"
+          "source": "Create row",
+          "message": "Create row"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.short_desc": {
           "source": "Insert a new row into a Supabase table",
@@ -544,8 +544,8 @@
           "message": "Creates a new record in the specified Supabase table. The action dynamically presents the table schema, allowing you to provide values for each column. Returns the newly created row with all its data."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
-          "message": "Table Name"
+          "source": "Table name",
+          "message": "Table name"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
           "source": "The table where the row will be inserted",
@@ -556,8 +556,8 @@
           "message": "Select the target Supabase table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
-          "message": "Row Values"
+          "source": "Row values",
+          "message": "Row values"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.short_desc": {
           "source": "The data to insert into the new row",
@@ -568,8 +568,8 @@
           "message": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.display_name": {
-          "source": "List Rows",
-          "message": "List Rows"
+          "source": "List rows",
+          "message": "List rows"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.short_desc": {
           "source": "Query and retrieve rows from a Supabase table",
@@ -580,8 +580,8 @@
           "message": "Fetches rows from a Supabase table with support for filtering, sorting, pagination, and ordering. Returns a list of records matching your query criteria along with total count information."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
-          "message": "Table Name"
+          "source": "Table name",
+          "message": "Table name"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.short_desc": {
           "source": "The table to query",
@@ -616,8 +616,8 @@
           "message": "Skip this many rows before starting to return results. Used in combination with limit for pagination through large datasets."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.display_name": {
-          "source": "Order By",
-          "message": "Order By"
+          "source": "Order by",
+          "message": "Order by"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.short_desc": {
           "source": "Sort the results by a specific column",
@@ -748,8 +748,8 @@
           "message": "The value to compare the column against using the selected operator. For \"in\" operator, provide comma-separated values."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.display_name": {
-          "source": "Delete Rows",
-          "message": "Delete Rows"
+          "source": "Delete rows",
+          "message": "Delete rows"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.short_desc": {
           "source": "Delete rows from a Supabase table based on a filter",
@@ -760,8 +760,8 @@
           "message": "Removes rows from a Supabase table that match the specified filter criteria. Returns the count of deleted rows and their data. Use with caution as this operation is irreversible."
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
-          "message": "Table Name"
+          "source": "Table name",
+          "message": "Table name"
         },
         "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.short_desc": {
           "source": "The table to delete rows from",
@@ -856,8 +856,8 @@
           "message": "The value to compare against. Rows matching this condition will be deleted."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.display_name": {
-          "source": "Upsert Row",
-          "message": "Upsert Row"
+          "source": "Upsert row",
+          "message": "Upsert row"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.short_desc": {
           "source": "Insert a new row or update an existing one",
@@ -868,8 +868,8 @@
           "message": "Performs an upsert operation (insert or update) on a Supabase table. If a row with the specified unique constraint exists, it will be updated; otherwise, a new row is inserted."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
-          "message": "Table Name"
+          "source": "Table name",
+          "message": "Table name"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.short_desc": {
           "source": "The table for the upsert operation",
@@ -880,8 +880,8 @@
           "message": "Select the target Supabase table. The available fields will be dynamically loaded based on the table schema."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.display_name": {
-          "source": "Row Values",
-          "message": "Row Values"
+          "source": "Row values",
+          "message": "Row values"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.short_desc": {
           "source": "The data to upsert",
@@ -892,8 +892,8 @@
           "message": "Provide values for the table columns. If a row with matching unique constraints exists, these values will update it; otherwise, a new row is created."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.display_name": {
-          "source": "On Conflict",
-          "message": "On Conflict"
+          "source": "On conflict",
+          "message": "On conflict"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.short_desc": {
           "source": "The column(s) used to detect conflicts",
@@ -904,8 +904,8 @@
           "message": "Specify the column or comma-separated list of columns that should be used to detect conflicts. If not specified, uses the table's primary key."
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.display_name": {
-          "source": "Ignore Duplicates",
-          "message": "Ignore Duplicates"
+          "source": "Ignore duplicates",
+          "message": "Ignore duplicates"
         },
         "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.short_desc": {
           "source": "Skip the operation if a duplicate exists",
@@ -916,8 +916,8 @@
           "message": "When enabled, if a conflicting row exists, the operation is silently ignored. When disabled (default), conflicting rows are updated with the new values."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.display_name": {
-          "source": "Create Storage Bucket",
-          "message": "Create Storage Bucket"
+          "source": "Create storage bucket",
+          "message": "Create storage bucket"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
           "source": "Create a new storage bucket in Supabase",
@@ -928,8 +928,8 @@
           "message": "Creates a new storage bucket in Supabase Storage for organizing and storing files. Configure access permissions, file size limits, and allowed MIME types."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.display_name": {
-          "source": "Bucket Name",
-          "message": "Bucket Name"
+          "source": "Bucket name",
+          "message": "Bucket name"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.short_desc": {
           "source": "The name for the new bucket",
@@ -940,8 +940,8 @@
           "message": "Specify a unique name for the storage bucket. The name must be URL-safe and unique within your Supabase project."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.display_name": {
-          "source": "Public Access",
-          "message": "Public Access"
+          "source": "Public access",
+          "message": "Public access"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.short_desc": {
           "source": "Allow public access to bucket contents",
@@ -952,8 +952,8 @@
           "message": "When enabled, files in this bucket can be accessed publicly without authentication. When disabled (default), files require authentication to access."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.display_name": {
-          "source": "File Size Limit",
-          "message": "File Size Limit"
+          "source": "File size limit",
+          "message": "File size limit"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.short_desc": {
           "source": "Maximum file size in bytes",
@@ -964,8 +964,8 @@
           "message": "Set the maximum file size that can be uploaded to this bucket, specified in bytes. Leave empty for no limit."
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.display_name": {
-          "source": "Allowed MIME Types",
-          "message": "Allowed MIME Types"
+          "source": "Allowed MIME types",
+          "message": "Allowed MIME types"
         },
         "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.short_desc": {
           "source": "List of allowed file MIME types",
@@ -976,8 +976,8 @@
           "message": "Specify which file types can be uploaded to this bucket by providing a list of MIME types (e.g., image/png, application/pdf). Leave empty to allow all file types."
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
-          "source": "List Storage Buckets",
-          "message": "List Storage Buckets"
+          "source": "List storage buckets",
+          "message": "List storage buckets"
         },
         "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
           "source": "Get all storage buckets in your Supabase project",
@@ -988,8 +988,8 @@
           "message": "Retrieves a list of all storage buckets in your Supabase project with their configurations including access permissions, file size limits, and allowed MIME types."
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.display_name": {
-          "source": "Get Storage Bucket",
-          "message": "Get Storage Bucket"
+          "source": "Get storage bucket",
+          "message": "Get storage bucket"
         },
         "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.short_desc": {
           "source": "Retrieve details of a specific storage bucket",
@@ -1012,8 +1012,8 @@
           "message": "Select the storage bucket whose details you want to fetch from your Supabase project."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.display_name": {
-          "source": "New Table Row",
-          "message": "New Table Row"
+          "source": "New table row",
+          "message": "New table row"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.short_desc": {
           "source": "Triggers when a new row is added to a Supabase table",
@@ -1024,8 +1024,8 @@
           "message": "Monitors a Supabase table for new rows and triggers when new records are inserted. Supports optional filtering to trigger only for rows matching specific criteria."
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.display_name": {
-          "source": "Table Name",
-          "message": "Table Name"
+          "source": "Table name",
+          "message": "Table name"
         },
         "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
           "source": "The table to monitor for new rows",

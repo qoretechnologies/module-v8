@@ -8,13 +8,13 @@ const CopperCrmAppEn = {
   actions: {
     create_company: {
       groups: ['Companies'],
-      displayName: 'Create Company',
+      displayName: 'Create company',
       shortDesc: 'Create a new company in CopperCRM',
       longDesc:
         'Create a new company record in CopperCRM with details like name, address, contact information, and custom fields. Companies represent organizations in your CRM.',
       options: {
         name: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'The name of the company',
           longDesc: 'The official name of the company you want to create in CopperCRM',
         },
@@ -41,7 +41,7 @@ const CopperCrmAppEn = {
                 longDesc: 'The state or province where the company is located',
               },
               postal_code: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'ZIP or postal code',
                 longDesc: 'The postal code or ZIP code of the company address',
               },
@@ -59,7 +59,7 @@ const CopperCrmAppEn = {
           longDesc: 'The CopperCRM user who will be assigned to manage this company',
         },
         contact_type_id: {
-          displayName: 'Contact Type',
+          displayName: 'Contact type',
           shortDesc: 'Type of contact relationship',
           longDesc: 'The type of contact relationship this company has with your organization',
         },
@@ -69,19 +69,19 @@ const CopperCrmAppEn = {
           longDesc: 'Additional notes, description, or important details about the company',
         },
         email_domain: {
-          displayName: 'Email Domain',
+          displayName: 'Email domain',
           shortDesc: 'Company email domain',
           longDesc: 'The primary email domain used by the company (e.g., example.com)',
         },
         phone_numbers: {
-          displayName: 'Phone Numbers',
+          displayName: 'Phone numbers',
           shortDesc: 'Company phone numbers',
           longDesc: 'List of phone numbers associated with the company',
           type: {
             element_type: {
               fields: {
                 number: {
-                  displayName: 'Phone Number',
+                  displayName: 'Phone number',
                   shortDesc: 'The phone number',
                   longDesc: 'The phone number in any format',
                 },
@@ -96,12 +96,12 @@ const CopperCrmAppEn = {
           },
         },
         primary_contact_id: {
-          displayName: 'Primary Contact',
+          displayName: 'Primary contact',
           shortDesc: 'Main contact person',
           longDesc: 'The primary contact person associated with this company',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media profiles',
           longDesc: 'List of social media profiles for the company',
           type: {
@@ -150,7 +150,7 @@ const CopperCrmAppEn = {
           },
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc: 'Custom field values specific to your CopperCRM company configuration',
         },
@@ -158,23 +158,23 @@ const CopperCrmAppEn = {
     },
     create_lead: {
       groups: ['Leads'],
-      displayName: 'Create Lead',
+      displayName: 'Create lead',
       shortDesc: 'Create a new lead in CopperCRM',
       longDesc:
         'Create a new lead record in CopperCRM with contact information and details. Leads represent potential customers who have shown interest in your products or services.',
       options: {
         first_name: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: "Lead's first name",
           longDesc: 'The first name of the lead',
         },
         last_name: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: "Lead's last name",
           longDesc: 'The last name of the lead',
         },
         middle_name: {
-          displayName: 'Middle Name',
+          displayName: 'Middle name',
           shortDesc: "Lead's middle name",
           longDesc: 'The middle name or initial of the lead',
         },
@@ -189,7 +189,7 @@ const CopperCrmAppEn = {
           longDesc: 'The CopperCRM user who will be assigned to manage this lead',
         },
         company_name: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: "Lead's company name",
           longDesc: 'The name of the company where the lead works',
         },
@@ -231,7 +231,7 @@ const CopperCrmAppEn = {
           },
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media profiles',
           longDesc: 'List of social media profiles for the lead',
           type: {
@@ -259,7 +259,7 @@ const CopperCrmAppEn = {
           type: {
             fields: {
               email: {
-                displayName: 'Email Address',
+                displayName: 'Email address',
                 shortDesc: 'The email address',
                 longDesc: 'The email address of the lead',
               },
@@ -272,14 +272,14 @@ const CopperCrmAppEn = {
           },
         },
         phone_numbers: {
-          displayName: 'Phone Numbers',
+          displayName: 'Phone numbers',
           shortDesc: 'Contact phone numbers',
           longDesc: 'List of phone numbers for the lead',
           type: {
             element_type: {
               fields: {
                 number: {
-                  displayName: 'Phone Number',
+                  displayName: 'Phone number',
                   shortDesc: 'The phone number',
                   longDesc: 'The phone number in any format',
                 },
@@ -315,7 +315,7 @@ const CopperCrmAppEn = {
                 longDesc: 'The state or province',
               },
               postal_code: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'ZIP or postal code',
                 longDesc: 'The postal code or ZIP code',
               },
@@ -328,12 +328,12 @@ const CopperCrmAppEn = {
           },
         },
         customer_source_id: {
-          displayName: 'Customer Source',
+          displayName: 'Customer source',
           shortDesc: 'How the lead was acquired',
           longDesc: 'The source or channel through which this lead was acquired',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc: 'Custom field values specific to your CopperCRM lead configuration',
         },
@@ -341,18 +341,18 @@ const CopperCrmAppEn = {
     },
     create_opportunity: {
       groups: ['Opportunities'],
-      displayName: 'Create Opportunity',
+      displayName: 'Create opportunity',
       shortDesc: 'Create a new opportunity in CopperCRM',
       longDesc:
         'Create a new sales opportunity in CopperCRM with details like value, stage, and associated contacts. Opportunities represent potential deals in your sales pipeline.',
       options: {
         name: {
-          displayName: 'Opportunity Name',
+          displayName: 'Opportunity name',
           shortDesc: 'Name of the opportunity',
           longDesc: 'A descriptive name for the sales opportunity',
         },
         primary_contact_id: {
-          displayName: 'Primary Contact',
+          displayName: 'Primary contact',
           shortDesc: 'Main contact person',
           longDesc: 'The primary contact person associated with this opportunity',
         },
@@ -362,7 +362,7 @@ const CopperCrmAppEn = {
           longDesc: 'The CopperCRM user who will be assigned to manage this opportunity',
         },
         close_date: {
-          displayName: 'Close Date',
+          displayName: 'Close date',
           shortDesc: 'Expected close date',
           longDesc: 'The expected date when this opportunity will be closed or won',
         },
@@ -372,7 +372,7 @@ const CopperCrmAppEn = {
           longDesc: 'The company associated with this opportunity',
         },
         customer_source_id: {
-          displayName: 'Customer Source',
+          displayName: 'Customer source',
           shortDesc: 'How the opportunity was acquired',
           longDesc: 'The source or channel through which this opportunity was acquired',
         },
@@ -382,12 +382,12 @@ const CopperCrmAppEn = {
           longDesc: 'Additional notes, description, or important details about the opportunity',
         },
         loss_reason_id: {
-          displayName: 'Loss Reason',
+          displayName: 'Loss reason',
           shortDesc: 'Reason for losing',
           longDesc: 'The reason why this opportunity was lost (if applicable)',
         },
         monetary_value: {
-          displayName: 'Monetary Value',
+          displayName: 'Monetary value',
           shortDesc: 'Deal value',
           longDesc: 'The monetary value of the opportunity in your default currency',
         },
@@ -397,7 +397,7 @@ const CopperCrmAppEn = {
           longDesc: 'The sales pipeline this opportunity belongs to',
         },
         pipeline_stage_id: {
-          displayName: 'Pipeline Stage',
+          displayName: 'Pipeline stage',
           shortDesc: 'Current stage',
           longDesc: 'The current stage of the opportunity in the sales pipeline',
         },
@@ -418,12 +418,12 @@ const CopperCrmAppEn = {
             'Tags to categorize and organize the opportunity. You can create new tags or select from existing ones.',
         },
         win_probability: {
-          displayName: 'Win Probability',
+          displayName: 'Win probability',
           shortDesc: 'Probability of winning',
           longDesc: 'The estimated probability (0-100) of winning this opportunity',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc: 'Custom field values specific to your CopperCRM opportunity configuration',
         },
@@ -431,7 +431,7 @@ const CopperCrmAppEn = {
     },
     create_person: {
       groups: ['People'],
-      displayName: 'Create Person',
+      displayName: 'Create person',
       shortDesc: 'Create a new person contact in CopperCRM',
       longDesc:
         'Create a new person contact in CopperCRM with complete contact information. People represent individual contacts in your CRM.',
@@ -447,17 +447,17 @@ const CopperCrmAppEn = {
           longDesc: 'Name prefix such as Mr., Mrs., Dr., etc.',
         },
         first_name: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'First name',
           longDesc: 'The first name of the person',
         },
         middle_name: {
-          displayName: 'Middle Name',
+          displayName: 'Middle name',
           shortDesc: 'Middle name',
           longDesc: 'The middle name or initial of the person',
         },
         last_name: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'Last name',
           longDesc: 'The last name of the person',
         },
@@ -482,7 +482,7 @@ const CopperCrmAppEn = {
           longDesc: 'The state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'ZIP or postal code',
           longDesc: 'The postal code or ZIP code',
         },
@@ -502,7 +502,7 @@ const CopperCrmAppEn = {
           longDesc: 'The company where this person works',
         },
         contact_type_id: {
-          displayName: 'Contact Type',
+          displayName: 'Contact type',
           shortDesc: 'Type of contact relationship',
           longDesc: 'The type of contact relationship this person has with your organization',
         },
@@ -512,14 +512,14 @@ const CopperCrmAppEn = {
           longDesc: 'Additional notes, description, or important details about the person',
         },
         emails: {
-          displayName: 'Email Addresses',
+          displayName: 'Email addresses',
           shortDesc: 'Email addresses',
           longDesc: 'List of email addresses for the person',
           type: {
             element_type: {
               fields: {
                 email: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: 'The email address',
                   longDesc: 'Email address',
                 },
@@ -533,14 +533,14 @@ const CopperCrmAppEn = {
           },
         },
         phone_numbers: {
-          displayName: 'Phone Numbers',
+          displayName: 'Phone numbers',
           shortDesc: 'Contact phone numbers',
           longDesc: 'List of phone numbers for the person',
           type: {
             element_type: {
               fields: {
                 number: {
-                  displayName: 'Phone Number',
+                  displayName: 'Phone number',
                   shortDesc: 'The phone number',
                   longDesc: 'Phone number',
                 },
@@ -555,7 +555,7 @@ const CopperCrmAppEn = {
           },
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media profiles',
           longDesc: 'List of social media profiles for the person',
           type: {
@@ -608,7 +608,7 @@ const CopperCrmAppEn = {
           },
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc: 'Custom field values specific to your CopperCRM person configuration',
         },
@@ -616,18 +616,18 @@ const CopperCrmAppEn = {
     },
     create_task: {
       groups: ['Tasks'],
-      displayName: 'Create Task',
+      displayName: 'Create task',
       shortDesc: 'Create a new task in CopperCRM',
       longDesc:
         'Create a new task in CopperCRM with details, due dates, and assignments. Tasks help you track action items and follow-ups.',
       options: {
         name: {
-          displayName: 'Task Name',
+          displayName: 'Task name',
           shortDesc: 'Name of the task',
           longDesc: 'A descriptive name for the task',
         },
         related_resource: {
-          displayName: 'Related Resource',
+          displayName: 'Related resource',
           shortDesc: 'Associated record',
           longDesc:
             'The CRM record (lead, person, company, opportunity, or project) this task is related to',
@@ -639,7 +639,7 @@ const CopperCrmAppEn = {
                 longDesc: 'The ID of the related CRM record',
               },
               type: {
-                displayName: 'Resource Type',
+                displayName: 'Resource type',
                 shortDesc: 'Type of related record',
                 longDesc:
                   'The type of CRM record this task is related to (lead, person, company, opportunity, or project)',
@@ -653,12 +653,12 @@ const CopperCrmAppEn = {
           longDesc: 'The CopperCRM user who will be assigned to complete this task',
         },
         due_date: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'When the task is due',
           longDesc: 'The date when this task should be completed',
         },
         reminder_date: {
-          displayName: 'Reminder Date',
+          displayName: 'Reminder date',
           shortDesc: 'When to send reminder',
           longDesc: 'The date when a reminder should be sent for this task',
         },
@@ -684,7 +684,7 @@ const CopperCrmAppEn = {
             'Tags to categorize and organize the task. You can create new tags or select from existing ones.',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc: 'Custom field values specific to your CopperCRM task configuration',
         },
@@ -692,7 +692,7 @@ const CopperCrmAppEn = {
     },
     delete_company: {
       groups: ['Companies'],
-      displayName: 'Delete Company',
+      displayName: 'Delete company',
       shortDesc: 'Delete a company from CopperCRM',
       longDesc: 'Permanently delete a company record from CopperCRM. This action cannot be undone.',
       options: {
@@ -705,7 +705,7 @@ const CopperCrmAppEn = {
     },
     delete_lead: {
       groups: ['Leads'],
-      displayName: 'Delete Lead',
+      displayName: 'Delete lead',
       shortDesc: 'Delete a lead from CopperCRM',
       longDesc: 'Permanently delete a lead record from CopperCRM. This action cannot be undone.',
       options: {
@@ -718,7 +718,7 @@ const CopperCrmAppEn = {
     },
     delete_opportunity: {
       groups: ['Opportunities'],
-      displayName: 'Delete Opportunity',
+      displayName: 'Delete opportunity',
       shortDesc: 'Delete an opportunity from CopperCRM',
       longDesc:
         'Permanently delete an opportunity record from CopperCRM. This action cannot be undone.',
@@ -732,7 +732,7 @@ const CopperCrmAppEn = {
     },
     delete_person: {
       groups: ['People'],
-      displayName: 'Delete Person',
+      displayName: 'Delete person',
       shortDesc: 'Delete a person contact from CopperCRM',
       longDesc:
         'Permanently delete a person contact record from CopperCRM. This action cannot be undone.',
@@ -746,7 +746,7 @@ const CopperCrmAppEn = {
     },
     delete_task: {
       groups: ['Tasks'],
-      displayName: 'Delete Task',
+      displayName: 'Delete task',
       shortDesc: 'Delete a task from CopperCRM',
       longDesc: 'Permanently delete a task from CopperCRM. This action cannot be undone.',
       options: {
@@ -759,7 +759,7 @@ const CopperCrmAppEn = {
     },
     get_company: {
       groups: ['Companies'],
-      displayName: 'Get Company',
+      displayName: 'Get company',
       shortDesc: 'Retrieve a company from CopperCRM',
       longDesc:
         'Retrieve detailed information about a specific company record from CopperCRM including all fields and custom data.',
@@ -773,7 +773,7 @@ const CopperCrmAppEn = {
     },
     get_lead: {
       groups: ['Leads'],
-      displayName: 'Get Lead',
+      displayName: 'Get lead',
       shortDesc: 'Retrieve a lead from CopperCRM',
       longDesc:
         'Retrieve detailed information about a specific lead record from CopperCRM including all fields and custom data.',
@@ -787,7 +787,7 @@ const CopperCrmAppEn = {
     },
     get_opportunity: {
       groups: ['Opportunities'],
-      displayName: 'Get Opportunity',
+      displayName: 'Get opportunity',
       shortDesc: 'Retrieve an opportunity from CopperCRM',
       longDesc:
         'Retrieve detailed information about a specific opportunity record from CopperCRM including all fields and custom data.',
@@ -801,7 +801,7 @@ const CopperCrmAppEn = {
     },
     get_person: {
       groups: ['People'],
-      displayName: 'Get Person',
+      displayName: 'Get person',
       shortDesc: 'Retrieve a person contact from CopperCRM',
       longDesc:
         'Retrieve detailed information about a specific person contact record from CopperCRM including all fields and custom data.',
@@ -815,7 +815,7 @@ const CopperCrmAppEn = {
     },
     get_task: {
       groups: ['Tasks'],
-      displayName: 'Get Task',
+      displayName: 'Get task',
       shortDesc: 'Retrieve a task from CopperCRM',
       longDesc:
         'Retrieve detailed information about a specific task from CopperCRM including all fields and custom data.',
@@ -829,7 +829,7 @@ const CopperCrmAppEn = {
     },
     search_companies: {
       groups: ['Companies'],
-      displayName: 'Search Companies',
+      displayName: 'Search companies',
       shortDesc: 'Search for companies in CopperCRM',
       longDesc:
         'Search and filter companies in CopperCRM using various criteria including name, location, tags, and custom fields. Returns a list of matching companies.',
@@ -840,22 +840,22 @@ const CopperCrmAppEn = {
           longDesc: 'List of specific company IDs to retrieve',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
@@ -870,7 +870,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter companies by assigned users',
         },
         contact_type_ids: {
-          displayName: 'Contact Types',
+          displayName: 'Contact types',
           shortDesc: 'Contact type filter',
           longDesc: 'Filter companies by contact type',
         },
@@ -885,7 +885,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter companies by state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'ZIP or postal code',
           longDesc: 'Filter companies by postal code',
         },
@@ -900,7 +900,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter companies that have any of these tags',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media filter',
           longDesc: 'Filter companies by social media profiles',
         },
@@ -910,42 +910,42 @@ const CopperCrmAppEn = {
           longDesc: 'Filter companies by whether they are followed or not',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Filter companies with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Filter companies with no more than this many interactions',
         },
         minimum_inactive_days: {
-          displayName: 'Minimum Inactive Days',
+          displayName: 'Minimum inactive days',
           shortDesc: 'Minimum days inactive',
           longDesc: 'Filter companies inactive for at least this many days',
         },
         maximum_inactive_days: {
-          displayName: 'Maximum Inactive Days',
+          displayName: 'Maximum inactive days',
           shortDesc: 'Maximum days inactive',
           longDesc: 'Filter companies inactive for no more than this many days',
         },
         minimum_created_date: {
-          displayName: 'Created After',
+          displayName: 'Created after',
           shortDesc: 'Earliest creation date',
           longDesc: 'Filter companies created on or after this date',
         },
         maximum_created_date: {
-          displayName: 'Created Before',
+          displayName: 'Created before',
           shortDesc: 'Latest creation date',
           longDesc: 'Filter companies created on or before this date',
         },
         minimum_modified_date: {
-          displayName: 'Modified After',
+          displayName: 'Modified after',
           shortDesc: 'Earliest modification date',
           longDesc: 'Filter companies modified on or after this date',
         },
         maximum_modified_date: {
-          displayName: 'Modified Before',
+          displayName: 'Modified before',
           shortDesc: 'Latest modification date',
           longDesc: 'Filter companies modified on or before this date',
         },
@@ -953,7 +953,7 @@ const CopperCrmAppEn = {
     },
     search_leads: {
       groups: ['Leads'],
-      displayName: 'Search Leads',
+      displayName: 'Search leads',
       shortDesc: 'Search for leads in CopperCRM',
       longDesc:
         'Search and filter leads in CopperCRM using various criteria including name, email, phone, status, and custom fields. Returns a list of matching leads.',
@@ -964,22 +964,22 @@ const CopperCrmAppEn = {
           longDesc: 'List of specific lead IDs to retrieve',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
@@ -989,7 +989,7 @@ const CopperCrmAppEn = {
           longDesc: 'Search for leads with names matching this value',
         },
         phone_number: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: 'Phone number to search',
           longDesc: 'Search for leads with this phone number',
         },
@@ -1009,7 +1009,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter leads by status',
         },
         customer_source_ids: {
-          displayName: 'Customer Sources',
+          displayName: 'Customer sources',
           shortDesc: 'Lead sources',
           longDesc: 'Filter leads by customer source',
         },
@@ -1024,7 +1024,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter leads by state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'ZIP or postal code',
           longDesc: 'Filter leads by postal code',
         },
@@ -1039,7 +1039,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter leads that have any of these tags',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media filter',
           longDesc: 'Filter leads by social media profiles',
         },
@@ -1054,27 +1054,27 @@ const CopperCrmAppEn = {
           longDesc: 'Filter leads by their age in days',
         },
         minimum_monetary_value: {
-          displayName: 'Minimum Value',
+          displayName: 'Minimum value',
           shortDesc: 'Minimum monetary value',
           longDesc: 'Filter leads with at least this monetary value',
         },
         maximum_monetary_value: {
-          displayName: 'Maximum Value',
+          displayName: 'Maximum value',
           shortDesc: 'Maximum monetary value',
           longDesc: 'Filter leads with no more than this monetary value',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Filter leads with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Filter leads with no more than this many interactions',
         },
         include_converted_leads: {
-          displayName: 'Include Converted Leads',
+          displayName: 'Include converted leads',
           shortDesc: 'Include converted leads',
           longDesc: 'Whether to include leads that have been converted to opportunities',
         },
@@ -1082,7 +1082,7 @@ const CopperCrmAppEn = {
     },
     search_opportunities: {
       groups: ['Opportunities'],
-      displayName: 'Search Opportunities',
+      displayName: 'Search opportunities',
       shortDesc: 'Search for opportunities in CopperCRM',
       longDesc:
         'Search and filter opportunities in CopperCRM using various criteria including name, pipeline, status, value, and custom fields. Returns a list of matching opportunities.',
@@ -1093,22 +1093,22 @@ const CopperCrmAppEn = {
           longDesc: 'List of specific opportunity IDs to retrieve',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
@@ -1128,12 +1128,12 @@ const CopperCrmAppEn = {
           longDesc: 'Filter opportunities by associated companies',
         },
         customer_source_ids: {
-          displayName: 'Customer Sources',
+          displayName: 'Customer sources',
           shortDesc: 'Opportunity sources',
           longDesc: 'Filter opportunities by customer source',
         },
         loss_reason_ids: {
-          displayName: 'Loss Reasons',
+          displayName: 'Loss reasons',
           shortDesc: 'Reasons for loss',
           longDesc: 'Filter opportunities by loss reason',
         },
@@ -1143,12 +1143,12 @@ const CopperCrmAppEn = {
           longDesc: 'Filter opportunities by pipeline',
         },
         pipeline_stage_ids: {
-          displayName: 'Pipeline Stages',
+          displayName: 'Pipeline stages',
           shortDesc: 'Current stages',
           longDesc: 'Filter opportunities by pipeline stage',
         },
         primary_contact_ids: {
-          displayName: 'Primary Contacts',
+          displayName: 'Primary contacts',
           shortDesc: 'Main contacts',
           longDesc: 'Filter opportunities by primary contact',
         },
@@ -1173,72 +1173,72 @@ const CopperCrmAppEn = {
           longDesc: 'Filter opportunities by whether they are followed or not',
         },
         minimum_monetary_value: {
-          displayName: 'Minimum Value',
+          displayName: 'Minimum value',
           shortDesc: 'Minimum deal value',
           longDesc: 'Filter opportunities with at least this monetary value',
         },
         maximum_monetary_value: {
-          displayName: 'Maximum Value',
+          displayName: 'Maximum value',
           shortDesc: 'Maximum deal value',
           longDesc: 'Filter opportunities with no more than this monetary value',
         },
         minimum_win_probability: {
-          displayName: 'Minimum Win Probability',
+          displayName: 'Minimum win probability',
           shortDesc: 'Minimum win chance',
           longDesc: 'Filter opportunities with at least this win probability',
         },
         maximum_win_probability: {
-          displayName: 'Maximum Win Probability',
+          displayName: 'Maximum win probability',
           shortDesc: 'Maximum win chance',
           longDesc: 'Filter opportunities with no more than this win probability',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Filter opportunities with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Filter opportunities with no more than this many interactions',
         },
         minimum_close_date: {
-          displayName: 'Close Date After',
+          displayName: 'Close date after',
           shortDesc: 'Earliest close date',
           longDesc: 'Filter opportunities with close date on or after this date',
         },
         maximum_close_date: {
-          displayName: 'Close Date Before',
+          displayName: 'Close date before',
           shortDesc: 'Latest close date',
           longDesc: 'Filter opportunities with close date on or before this date',
         },
         minimum_created_date: {
-          displayName: 'Created After',
+          displayName: 'Created after',
           shortDesc: 'Earliest creation date',
           longDesc: 'Filter opportunities created on or after this date',
         },
         maximum_created_date: {
-          displayName: 'Created Before',
+          displayName: 'Created before',
           shortDesc: 'Latest creation date',
           longDesc: 'Filter opportunities created on or before this date',
         },
         minimum_modified_date: {
-          displayName: 'Modified After',
+          displayName: 'Modified after',
           shortDesc: 'Earliest modification date',
           longDesc: 'Filter opportunities modified on or after this date',
         },
         maximum_modified_date: {
-          displayName: 'Modified Before',
+          displayName: 'Modified before',
           shortDesc: 'Latest modification date',
           longDesc: 'Filter opportunities modified on or before this date',
         },
         minimum_stage_change_date: {
-          displayName: 'Stage Changed After',
+          displayName: 'Stage changed after',
           shortDesc: 'Earliest stage change',
           longDesc: 'Filter opportunities with stage changed on or after this date',
         },
         maximum_stage_change_date: {
-          displayName: 'Stage Changed Before',
+          displayName: 'Stage changed before',
           shortDesc: 'Latest stage change',
           longDesc: 'Filter opportunities with stage changed on or before this date',
         },
@@ -1246,7 +1246,7 @@ const CopperCrmAppEn = {
     },
     search_people: {
       groups: ['People'],
-      displayName: 'Search People',
+      displayName: 'Search people',
       shortDesc: 'Search for person contacts in CopperCRM',
       longDesc:
         'Search and filter people in CopperCRM using various criteria including name, email, phone, company, and custom fields. Returns a list of matching person contacts.',
@@ -1287,7 +1287,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter people by state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'ZIP or postal code',
           longDesc: 'Filter people by postal code',
         },
@@ -1302,7 +1302,7 @@ const CopperCrmAppEn = {
           longDesc: 'Filter people by assigned users',
         },
         contact_type_ids: {
-          displayName: 'Contact Types',
+          displayName: 'Contact types',
           shortDesc: 'Contact type filter',
           longDesc: 'Filter people by contact type',
         },
@@ -1317,57 +1317,57 @@ const CopperCrmAppEn = {
           longDesc: 'Filter people that have any of these tags',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media profiles',
           longDesc: 'Filter people by social media profiles',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Filter people with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Filter people with no more than this many interactions',
         },
         minimum_created_date: {
-          displayName: 'Created After',
+          displayName: 'Created after',
           shortDesc: 'Earliest creation date',
           longDesc: 'Filter people created on or after this date',
         },
         maximum_created_date: {
-          displayName: 'Created Before',
+          displayName: 'Created before',
           shortDesc: 'Latest creation date',
           longDesc: 'Filter people created on or before this date',
         },
         minimum_modified_date: {
-          displayName: 'Modified After',
+          displayName: 'Modified after',
           shortDesc: 'Earliest modification date',
           longDesc: 'Filter people modified on or after this date',
         },
         maximum_modified_date: {
-          displayName: 'Modified Before',
+          displayName: 'Modified before',
           shortDesc: 'Latest modification date',
           longDesc: 'Filter people modified on or before this date',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'Field to sort results by',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
@@ -1375,7 +1375,7 @@ const CopperCrmAppEn = {
     },
     search_tasks: {
       groups: ['Tasks'],
-      displayName: 'Search Tasks',
+      displayName: 'Search tasks',
       shortDesc: 'Search for tasks in CopperCRM',
       longDesc:
         'Search and filter tasks in CopperCRM using various criteria including assignee, status, priority, due date, and custom fields. Returns a list of matching tasks.',
@@ -1386,22 +1386,22 @@ const CopperCrmAppEn = {
           longDesc: 'List of specific task IDs to retrieve',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
@@ -1431,52 +1431,52 @@ const CopperCrmAppEn = {
           longDesc: 'Filter tasks by whether they are followed or not',
         },
         minimum_due_date: {
-          displayName: 'Due Date After',
+          displayName: 'Due date after',
           shortDesc: 'Earliest due date',
           longDesc: 'Filter tasks with due date on or after this date',
         },
         maximum_due_date: {
-          displayName: 'Due Date Before',
+          displayName: 'Due date before',
           shortDesc: 'Latest due date',
           longDesc: 'Filter tasks with due date on or before this date',
         },
         minimum_reminder_date: {
-          displayName: 'Reminder After',
+          displayName: 'Reminder after',
           shortDesc: 'Earliest reminder date',
           longDesc: 'Filter tasks with reminder date on or after this date',
         },
         maximum_reminder_date: {
-          displayName: 'Reminder Before',
+          displayName: 'Reminder before',
           shortDesc: 'Latest reminder date',
           longDesc: 'Filter tasks with reminder date on or before this date',
         },
         minimum_completed_date: {
-          displayName: 'Completed After',
+          displayName: 'Completed after',
           shortDesc: 'Earliest completion date',
           longDesc: 'Filter tasks completed on or after this date',
         },
         maximum_completed_date: {
-          displayName: 'Completed Before',
+          displayName: 'Completed before',
           shortDesc: 'Latest completion date',
           longDesc: 'Filter tasks completed on or before this date',
         },
         minimum_created_date: {
-          displayName: 'Created After',
+          displayName: 'Created after',
           shortDesc: 'Earliest creation date',
           longDesc: 'Filter tasks created on or after this date',
         },
         maximum_created_date: {
-          displayName: 'Created Before',
+          displayName: 'Created before',
           shortDesc: 'Latest creation date',
           longDesc: 'Filter tasks created on or before this date',
         },
         minimum_modified_date: {
-          displayName: 'Modified After',
+          displayName: 'Modified after',
           shortDesc: 'Earliest modification date',
           longDesc: 'Filter tasks modified on or after this date',
         },
         maximum_modified_date: {
-          displayName: 'Modified Before',
+          displayName: 'Modified before',
           shortDesc: 'Latest modification date',
           longDesc: 'Filter tasks modified on or before this date',
         },
@@ -1484,7 +1484,7 @@ const CopperCrmAppEn = {
     },
     update_company: {
       groups: ['Companies'],
-      displayName: 'Update Company',
+      displayName: 'Update company',
       shortDesc: 'Update an existing company in CopperCRM',
       longDesc:
         'Update the details of an existing company record in CopperCRM including name, address, contact information, and custom fields.',
@@ -1495,7 +1495,7 @@ const CopperCrmAppEn = {
           longDesc: 'Select the company you want to update',
         },
         name: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'Updated company name',
           longDesc: 'The new name for the company',
         },
@@ -1521,7 +1521,7 @@ const CopperCrmAppEn = {
                 longDesc: 'The state or province where the company is located',
               },
               postal_code: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'ZIP or postal code',
                 longDesc: 'The postal code or ZIP code of the company address',
               },
@@ -1539,7 +1539,7 @@ const CopperCrmAppEn = {
           longDesc: 'The new CopperCRM user to assign to this company',
         },
         contact_type_id: {
-          displayName: 'Contact Type',
+          displayName: 'Contact type',
           shortDesc: 'Updated contact type',
           longDesc: 'The updated type of contact relationship',
         },
@@ -1549,19 +1549,19 @@ const CopperCrmAppEn = {
           longDesc: 'Updated notes, description, or important details',
         },
         email_domain: {
-          displayName: 'Email Domain',
+          displayName: 'Email domain',
           shortDesc: 'Updated email domain',
           longDesc: 'The updated primary email domain',
         },
         phone_numbers: {
-          displayName: 'Phone Numbers',
+          displayName: 'Phone numbers',
           shortDesc: 'Updated phone numbers',
           longDesc: 'Updated list of phone numbers',
           type: {
             element_type: {
               fields: {
                 number: {
-                  displayName: 'Phone Number',
+                  displayName: 'Phone number',
                   shortDesc: 'The phone number',
                   longDesc: 'The phone number in any format',
                 },
@@ -1575,12 +1575,12 @@ const CopperCrmAppEn = {
           },
         },
         primary_contact_id: {
-          displayName: 'Primary Contact',
+          displayName: 'Primary contact',
           shortDesc: 'Updated primary contact',
           longDesc: 'The new primary contact person for this company',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Updated social profiles',
           longDesc: 'Updated list of social media profiles',
           type: {
@@ -1627,7 +1627,7 @@ const CopperCrmAppEn = {
           },
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom fields',
           longDesc: 'Updated custom field values',
         },
@@ -1635,7 +1635,7 @@ const CopperCrmAppEn = {
     },
     update_lead: {
       groups: ['Leads'],
-      displayName: 'Update Lead',
+      displayName: 'Update lead',
       shortDesc: 'Update an existing lead in CopperCRM',
       longDesc:
         'Update the details of an existing lead record in CopperCRM including contact information, status, and custom fields.',
@@ -1646,17 +1646,17 @@ const CopperCrmAppEn = {
           longDesc: 'Select the lead you want to update',
         },
         first_name: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'Updated first name',
           longDesc: 'The updated first name of the lead',
         },
         last_name: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'Updated last name',
           longDesc: 'The updated last name of the lead',
         },
         middle_name: {
-          displayName: 'Middle Name',
+          displayName: 'Middle name',
           shortDesc: 'Updated middle name',
           longDesc: 'The updated middle name or initial',
         },
@@ -1671,7 +1671,7 @@ const CopperCrmAppEn = {
           longDesc: 'The new CopperCRM user to assign to this lead',
         },
         company_name: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'Updated company name',
           longDesc: 'The updated company name where the lead works',
         },
@@ -1712,7 +1712,7 @@ const CopperCrmAppEn = {
           },
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Updated social profiles',
           longDesc: 'Updated list of social media profiles',
           type: {
@@ -1739,7 +1739,7 @@ const CopperCrmAppEn = {
           type: {
             fields: {
               email: {
-                displayName: 'Email Address',
+                displayName: 'Email address',
                 shortDesc: 'The email address',
                 longDesc: 'The email address of the lead',
               },
@@ -1752,14 +1752,14 @@ const CopperCrmAppEn = {
           },
         },
         phone_numbers: {
-          displayName: 'Phone Numbers',
+          displayName: 'Phone numbers',
           shortDesc: 'Updated phone numbers',
           longDesc: 'Updated list of phone numbers',
           type: {
             element_type: {
               fields: {
                 number: {
-                  displayName: 'Phone Number',
+                  displayName: 'Phone number',
                   shortDesc: 'The phone number',
                   longDesc: 'The phone number in any format',
                 },
@@ -1794,7 +1794,7 @@ const CopperCrmAppEn = {
                 longDesc: 'The state or province',
               },
               postal_code: {
-                displayName: 'Postal Code',
+                displayName: 'Postal code',
                 shortDesc: 'ZIP or postal code',
                 longDesc: 'The postal code or ZIP code',
               },
@@ -1807,12 +1807,12 @@ const CopperCrmAppEn = {
           },
         },
         customer_source_id: {
-          displayName: 'Customer Source',
+          displayName: 'Customer source',
           shortDesc: 'Updated source',
           longDesc: 'The updated source or channel',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom fields',
           longDesc: 'Updated custom field values',
         },
@@ -1820,7 +1820,7 @@ const CopperCrmAppEn = {
     },
     update_opportunity: {
       groups: ['Opportunities'],
-      displayName: 'Update Opportunity',
+      displayName: 'Update opportunity',
       shortDesc: 'Update an existing opportunity in CopperCRM',
       longDesc:
         'Update the details of an existing sales opportunity in CopperCRM including value, stage, status, and custom fields.',
@@ -1831,12 +1831,12 @@ const CopperCrmAppEn = {
           longDesc: 'Select the opportunity you want to update',
         },
         name: {
-          displayName: 'Opportunity Name',
+          displayName: 'Opportunity name',
           shortDesc: 'Updated name',
           longDesc: 'The updated name for the opportunity',
         },
         primary_contact_id: {
-          displayName: 'Primary Contact',
+          displayName: 'Primary contact',
           shortDesc: 'Updated primary contact',
           longDesc: 'The updated primary contact person',
         },
@@ -1846,7 +1846,7 @@ const CopperCrmAppEn = {
           longDesc: 'The new CopperCRM user to assign to this opportunity',
         },
         close_date: {
-          displayName: 'Close Date',
+          displayName: 'Close date',
           shortDesc: 'Updated close date',
           longDesc: 'The updated expected close date',
         },
@@ -1856,7 +1856,7 @@ const CopperCrmAppEn = {
           longDesc: 'The updated associated company',
         },
         customer_source_id: {
-          displayName: 'Customer Source',
+          displayName: 'Customer source',
           shortDesc: 'Updated source',
           longDesc: 'The updated source or channel',
         },
@@ -1866,12 +1866,12 @@ const CopperCrmAppEn = {
           longDesc: 'Updated notes, description, or important details',
         },
         loss_reason_id: {
-          displayName: 'Loss Reason',
+          displayName: 'Loss reason',
           shortDesc: 'Updated loss reason',
           longDesc: 'The updated reason for losing',
         },
         monetary_value: {
-          displayName: 'Monetary Value',
+          displayName: 'Monetary value',
           shortDesc: 'Updated value',
           longDesc: 'The updated monetary value',
         },
@@ -1881,7 +1881,7 @@ const CopperCrmAppEn = {
           longDesc: 'The updated sales pipeline',
         },
         pipeline_stage_id: {
-          displayName: 'Pipeline Stage',
+          displayName: 'Pipeline stage',
           shortDesc: 'Updated stage',
           longDesc: 'The updated current stage',
         },
@@ -1901,12 +1901,12 @@ const CopperCrmAppEn = {
           longDesc: 'Updated tags to categorize and organize the opportunity',
         },
         win_probability: {
-          displayName: 'Win Probability',
+          displayName: 'Win probability',
           shortDesc: 'Updated win probability',
           longDesc: 'The updated estimated probability of winning',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom fields',
           longDesc: 'Updated custom field values',
         },
@@ -1914,7 +1914,7 @@ const CopperCrmAppEn = {
     },
     update_person: {
       groups: ['People'],
-      displayName: 'Update Person',
+      displayName: 'Update person',
       shortDesc: 'Update an existing person contact in CopperCRM',
       longDesc:
         'Update the details of an existing person contact in CopperCRM including contact information, company, and custom fields.',
@@ -1935,17 +1935,17 @@ const CopperCrmAppEn = {
           longDesc: 'Updated name prefix',
         },
         first_name: {
-          displayName: 'First Name',
+          displayName: 'First name',
           shortDesc: 'Updated first name',
           longDesc: 'The updated first name',
         },
         middle_name: {
-          displayName: 'Middle Name',
+          displayName: 'Middle name',
           shortDesc: 'Updated middle name',
           longDesc: 'The updated middle name or initial',
         },
         last_name: {
-          displayName: 'Last Name',
+          displayName: 'Last name',
           shortDesc: 'Updated last name',
           longDesc: 'The updated last name',
         },
@@ -1970,7 +1970,7 @@ const CopperCrmAppEn = {
           longDesc: 'The updated state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'Updated postal code',
           longDesc: 'The updated postal code or ZIP code',
         },
@@ -1990,7 +1990,7 @@ const CopperCrmAppEn = {
           longDesc: 'The updated company where this person works',
         },
         contact_type_id: {
-          displayName: 'Contact Type',
+          displayName: 'Contact type',
           shortDesc: 'Updated contact type',
           longDesc: 'The updated type of contact relationship',
         },
@@ -2000,14 +2000,14 @@ const CopperCrmAppEn = {
           longDesc: 'Updated notes, description, or important details',
         },
         emails: {
-          displayName: 'Email Addresses',
+          displayName: 'Email addresses',
           shortDesc: 'Updated emails',
           longDesc: 'Updated list of email addresses',
           type: {
             element_type: {
               fields: {
                 email: {
-                  displayName: 'Email Address',
+                  displayName: 'Email address',
                   shortDesc: 'The email address',
                   longDesc: 'Email address',
                 },
@@ -2021,14 +2021,14 @@ const CopperCrmAppEn = {
           },
         },
         phone_numbers: {
-          displayName: 'Phone Numbers',
+          displayName: 'Phone numbers',
           shortDesc: 'Updated phone numbers',
           longDesc: 'Updated list of phone numbers',
           type: {
             element_type: {
               fields: {
                 number: {
-                  displayName: 'Phone Number',
+                  displayName: 'Phone number',
                   shortDesc: 'The phone number',
                   longDesc: 'Phone number',
                 },
@@ -2042,7 +2042,7 @@ const CopperCrmAppEn = {
           },
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Updated social profiles',
           longDesc: 'Updated list of social media profiles',
           type: {
@@ -2094,7 +2094,7 @@ const CopperCrmAppEn = {
           },
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom fields',
           longDesc: 'Updated custom field values',
         },
@@ -2102,7 +2102,7 @@ const CopperCrmAppEn = {
     },
     update_task: {
       groups: ['Tasks'],
-      displayName: 'Update Task',
+      displayName: 'Update task',
       shortDesc: 'Update an existing task in CopperCRM',
       longDesc:
         'Update the details of an existing task in CopperCRM including name, due dates, status, priority, and custom fields.',
@@ -2113,12 +2113,12 @@ const CopperCrmAppEn = {
           longDesc: 'Select the task you want to update',
         },
         name: {
-          displayName: 'Task Name',
+          displayName: 'Task name',
           shortDesc: 'Updated name',
           longDesc: 'The updated name for the task',
         },
         related_resource: {
-          displayName: 'Related Resource',
+          displayName: 'Related resource',
           shortDesc: 'Updated related record',
           longDesc: 'The updated CRM record this task is related to',
           type: {
@@ -2129,7 +2129,7 @@ const CopperCrmAppEn = {
                 longDesc: 'The ID of the related CRM record',
               },
               type: {
-                displayName: 'Resource Type',
+                displayName: 'Resource type',
                 shortDesc: 'Type of related record',
                 longDesc: 'The type of CRM record this task is related to',
               },
@@ -2142,12 +2142,12 @@ const CopperCrmAppEn = {
           longDesc: 'The new CopperCRM user to assign to this task',
         },
         due_date: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'Updated due date',
           longDesc: 'The updated date when this task should be completed',
         },
         reminder_date: {
-          displayName: 'Reminder Date',
+          displayName: 'Reminder date',
           shortDesc: 'Updated reminder date',
           longDesc: 'The updated date when a reminder should be sent',
         },
@@ -2172,7 +2172,7 @@ const CopperCrmAppEn = {
           longDesc: 'Updated tags to categorize and organize the task',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Updated custom fields',
           longDesc: 'Updated custom field values',
         },
@@ -2181,7 +2181,7 @@ const CopperCrmAppEn = {
   },
   triggers: {
     new_company: {
-      displayName: 'New Company',
+      displayName: 'New company',
       shortDesc: 'Triggered when a new company is created',
       longDesc:
         'Triggers when a new company is created in CopperCRM. You can filter which companies trigger this event using various criteria like assignee, location, tags, and more.',
@@ -2192,22 +2192,22 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for these specific company IDs',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
@@ -2222,7 +2222,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for companies assigned to these users',
         },
         contact_type_ids: {
-          displayName: 'Contact Types',
+          displayName: 'Contact types',
           shortDesc: 'Filter by contact type',
           longDesc: 'Only trigger for companies with these contact types',
         },
@@ -2237,7 +2237,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for companies in this state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'Postal code filter',
           longDesc: 'Only trigger for companies with this postal code',
         },
@@ -2252,7 +2252,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for companies that have any of these tags',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media filter',
           longDesc: 'Only trigger for companies with matching social media profiles',
         },
@@ -2262,29 +2262,29 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for companies that are followed or not followed',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Only trigger for companies with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Only trigger for companies with no more than this many interactions',
         },
         minimum_inactive_days: {
-          displayName: 'Minimum Inactive Days',
+          displayName: 'Minimum inactive days',
           shortDesc: 'Minimum days inactive',
           longDesc: 'Only trigger for companies inactive for at least this many days',
         },
         maximum_inactive_days: {
-          displayName: 'Maximum Inactive Days',
+          displayName: 'Maximum inactive days',
           shortDesc: 'Maximum days inactive',
           longDesc: 'Only trigger for companies inactive for no more than this many days',
         },
       },
     },
     new_lead: {
-      displayName: 'New Lead',
+      displayName: 'New lead',
       shortDesc: 'Triggered when a new lead is created',
       longDesc:
         'Triggers when a new lead is created in CopperCRM. You can filter which leads trigger this event using various criteria like assignee, status, location, and more.',
@@ -2295,22 +2295,22 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for these specific lead IDs',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
@@ -2320,7 +2320,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for leads with names matching this value',
         },
         phone_number: {
-          displayName: 'Phone Number',
+          displayName: 'Phone number',
           shortDesc: 'Phone number filter',
           longDesc: 'Only trigger for leads with this phone number',
         },
@@ -2340,7 +2340,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for leads with these statuses',
         },
         customer_source_ids: {
-          displayName: 'Customer Sources',
+          displayName: 'Customer sources',
           shortDesc: 'Filter by source',
           longDesc: 'Only trigger for leads from these customer sources',
         },
@@ -2355,7 +2355,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for leads in this state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'Postal code filter',
           longDesc: 'Only trigger for leads with this postal code',
         },
@@ -2370,7 +2370,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for leads that have any of these tags',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media filter',
           longDesc: 'Only trigger for leads with matching social media profiles',
         },
@@ -2385,34 +2385,34 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for leads of this age in days',
         },
         minimum_monetary_value: {
-          displayName: 'Minimum Value',
+          displayName: 'Minimum value',
           shortDesc: 'Minimum monetary value',
           longDesc: 'Only trigger for leads with at least this monetary value',
         },
         maximum_monetary_value: {
-          displayName: 'Maximum Value',
+          displayName: 'Maximum value',
           shortDesc: 'Maximum monetary value',
           longDesc: 'Only trigger for leads with no more than this monetary value',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Only trigger for leads with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Only trigger for leads with no more than this many interactions',
         },
         include_converted_leads: {
-          displayName: 'Include Converted Leads',
+          displayName: 'Include converted leads',
           shortDesc: 'Include converted leads',
           longDesc: 'Whether to trigger for leads that have been converted to opportunities',
         },
       },
     },
     new_opportunity: {
-      displayName: 'New Opportunity',
+      displayName: 'New opportunity',
       shortDesc: 'Triggered when a new opportunity is created',
       longDesc:
         'Triggers when a new opportunity is created in CopperCRM. You can filter which opportunities trigger this event using various criteria like pipeline, stage, status, value, and more.',
@@ -2423,22 +2423,22 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for these specific opportunity IDs',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
@@ -2458,12 +2458,12 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for opportunities associated with these companies',
         },
         customer_source_ids: {
-          displayName: 'Customer Sources',
+          displayName: 'Customer sources',
           shortDesc: 'Filter by source',
           longDesc: 'Only trigger for opportunities from these customer sources',
         },
         loss_reason_ids: {
-          displayName: 'Loss Reasons',
+          displayName: 'Loss reasons',
           shortDesc: 'Filter by loss reason',
           longDesc: 'Only trigger for opportunities with these loss reasons',
         },
@@ -2473,12 +2473,12 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for opportunities in these pipelines',
         },
         pipeline_stage_ids: {
-          displayName: 'Pipeline Stages',
+          displayName: 'Pipeline stages',
           shortDesc: 'Filter by stage',
           longDesc: 'Only trigger for opportunities in these pipeline stages',
         },
         primary_contact_ids: {
-          displayName: 'Primary Contacts',
+          displayName: 'Primary contacts',
           shortDesc: 'Filter by primary contact',
           longDesc: 'Only trigger for opportunities with these primary contacts',
         },
@@ -2503,39 +2503,39 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for opportunities that are followed or not followed',
         },
         minimum_monetary_value: {
-          displayName: 'Minimum Value',
+          displayName: 'Minimum value',
           shortDesc: 'Minimum deal value',
           longDesc: 'Only trigger for opportunities with at least this monetary value',
         },
         maximum_monetary_value: {
-          displayName: 'Maximum Value',
+          displayName: 'Maximum value',
           shortDesc: 'Maximum deal value',
           longDesc: 'Only trigger for opportunities with no more than this monetary value',
         },
         minimum_win_probability: {
-          displayName: 'Minimum Win Probability',
+          displayName: 'Minimum win probability',
           shortDesc: 'Minimum win chance',
           longDesc: 'Only trigger for opportunities with at least this win probability',
         },
         maximum_win_probability: {
-          displayName: 'Maximum Win Probability',
+          displayName: 'Maximum win probability',
           shortDesc: 'Maximum win chance',
           longDesc: 'Only trigger for opportunities with no more than this win probability',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Only trigger for opportunities with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Only trigger for opportunities with no more than this many interactions',
         },
       },
     },
     new_person: {
-      displayName: 'New Person',
+      displayName: 'New person',
       shortDesc: 'Triggered when a new person contact is created',
       longDesc:
         'Triggers when a new person contact is created in CopperCRM. You can filter which people trigger this event using various criteria like assignee, company, location, and more.',
@@ -2576,7 +2576,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for people in this state or province',
         },
         postal_code: {
-          displayName: 'Postal Code',
+          displayName: 'Postal code',
           shortDesc: 'Postal code filter',
           longDesc: 'Only trigger for people with this postal code',
         },
@@ -2591,7 +2591,7 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for people assigned to these users',
         },
         contact_type_ids: {
-          displayName: 'Contact Types',
+          displayName: 'Contact types',
           shortDesc: 'Filter by contact type',
           longDesc: 'Only trigger for people with these contact types',
         },
@@ -2606,44 +2606,44 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for people that have any of these tags',
         },
         socials: {
-          displayName: 'Social Media',
+          displayName: 'Social media',
           shortDesc: 'Social media filter',
           longDesc: 'Only trigger for people with these social media profiles',
         },
         minimum_interaction_count: {
-          displayName: 'Minimum Interactions',
+          displayName: 'Minimum interactions',
           shortDesc: 'Minimum interaction count',
           longDesc: 'Only trigger for people with at least this many interactions',
         },
         maximum_interaction_count: {
-          displayName: 'Maximum Interactions',
+          displayName: 'Maximum interactions',
           shortDesc: 'Maximum interaction count',
           longDesc: 'Only trigger for people with no more than this many interactions',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },
       },
     },
     new_task: {
-      displayName: 'New Task',
+      displayName: 'New task',
       shortDesc: 'Triggered when a new task is created',
       longDesc:
         'Triggers when a new task is created in CopperCRM. You can filter which tasks trigger this event using various criteria like assignee, status, priority, and more.',
@@ -2654,22 +2654,22 @@ const CopperCrmAppEn = {
           longDesc: 'Only trigger for these specific task IDs',
         },
         page_number: {
-          displayName: 'Page Number',
+          displayName: 'Page number',
           shortDesc: 'Which page of results',
           longDesc: 'The page number of results to retrieve for pagination',
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Results per page',
           longDesc: 'The number of results to return per page',
         },
         sort_by: {
-          displayName: 'Sort By',
+          displayName: 'Sort by',
           shortDesc: 'Field to sort by',
           longDesc: 'The field to use for sorting the results',
         },
         sort_direction: {
-          displayName: 'Sort Direction',
+          displayName: 'Sort direction',
           shortDesc: 'Sort order',
           longDesc: 'The direction to sort results (ascending or descending)',
         },

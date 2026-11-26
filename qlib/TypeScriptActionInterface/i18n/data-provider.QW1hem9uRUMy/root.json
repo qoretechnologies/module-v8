@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.display_name": {
-          "source": "Start Instance",
-          "message": "Start Instance"
+          "source": "Start instance",
+          "message": "Start instance"
         },
         "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.short_desc": {
           "source": "Start one or more stopped EC2 instances",
@@ -376,8 +376,8 @@
           "message": "One or more EC2 instance IDs that you want to start. These instances must be in a stopped state."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.display_name": {
-          "source": "Stop Instance",
-          "message": "Stop Instance"
+          "source": "Stop instance",
+          "message": "Stop instance"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.short_desc": {
           "source": "Stop one or more running EC2 instances",
@@ -412,8 +412,8 @@
           "message": "One or more EC2 instance IDs that you want to stop. These instances should be in a running state."
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.display_name": {
-          "source": "Force Stop",
-          "message": "Force Stop"
+          "source": "Force stop",
+          "message": "Force stop"
         },
         "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.short_desc": {
           "source": "Force stop the instances",
@@ -424,8 +424,8 @@
           "message": "When enabled, forces the instances to stop immediately. This is equivalent to pulling the power plug on a physical computer."
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.display_name": {
-          "source": "Reboot Instance",
-          "message": "Reboot Instance"
+          "source": "Reboot instance",
+          "message": "Reboot instance"
         },
         "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.short_desc": {
           "source": "Reboot one or more running EC2 instances",
@@ -460,8 +460,8 @@
           "message": "One or more EC2 instance IDs that you want to reboot. These instances should be in a running state."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.display_name": {
-          "source": "Describe Instances",
-          "message": "Describe Instances"
+          "source": "Describe instances",
+          "message": "Describe instances"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.short_desc": {
           "source": "Get detailed information about EC2 instances",
@@ -496,8 +496,8 @@
           "message": "The AWS region where you want to retrieve instance information."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.display_name": {
-          "source": "Max Results",
-          "message": "Max Results"
+          "source": "Max results",
+          "message": "Max results"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.short_desc": {
           "source": "Maximum number of instances to return",
@@ -508,8 +508,8 @@
           "message": "The maximum number of instances to return in a single request. Defaults to 100."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
-          "source": "Next Page Token",
-          "message": "Next Page Token"
+          "source": "Next page token",
+          "message": "Next page token"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
           "source": "Token for pagination",
@@ -520,8 +520,8 @@
           "message": "Token used for pagination to retrieve the next set of results when there are more instances than the max results limit."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.display_name": {
-          "source": "Describe Regions",
-          "message": "Describe Regions"
+          "source": "Describe regions",
+          "message": "Describe regions"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.short_desc": {
           "source": "Get information about available AWS regions",
@@ -532,8 +532,8 @@
           "message": "Retrieves information about available AWS regions including their endpoints and opt-in status."
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.display_name": {
-          "source": "All Regions",
-          "message": "All Regions"
+          "source": "All regions",
+          "message": "All regions"
         },
         "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.short_desc": {
           "source": "Include all regions including opt-in regions",
@@ -544,8 +544,8 @@
           "message": "When enabled, includes all AWS regions including those that require you to opt-in before you can use them."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.display_name": {
-          "source": "New Instance",
-          "message": "New Instance"
+          "source": "New instance",
+          "message": "New instance"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
           "source": "Triggers when a new EC2 instance is created or reaches a specified state",
@@ -568,8 +568,8 @@
           "message": "The AWS region where you want to monitor for new EC2 instances. Defaults to us-east-1 if not specified."
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.display_name": {
-          "source": "Instance States",
-          "message": "Instance States"
+          "source": "Instance states",
+          "message": "Instance states"
         },
         "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.short_desc": {
           "source": "Instance states to monitor",
@@ -604,8 +604,8 @@
           "message": "Stopped"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.display_name": {
-          "source": "New Scheduled Event",
-          "message": "New Scheduled Event"
+          "source": "New scheduled event",
+          "message": "New scheduled event"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
           "source": "Triggers when a new scheduled maintenance event is detected on EC2 instances",
@@ -640,8 +640,8 @@
           "message": "Optional list of specific EC2 instance IDs to monitor. If left empty, all instances in the region will be monitored for scheduled events."
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.display_name": {
-          "source": "Event Types",
-          "message": "Event Types"
+          "source": "Event types",
+          "message": "Event types"
         },
         "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.short_desc": {
           "source": "Types of scheduled events to monitor",

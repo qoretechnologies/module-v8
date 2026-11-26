@@ -7,7 +7,7 @@ const GoogleSheetsAppEn = {
     'Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.',
   triggers: {
     new_spreadsheet_row: {
-      displayName: 'New Spreadsheet Row',
+      displayName: 'New spreadsheet row',
       shortDesc: 'Triggers when a new row is added to a Google Sheet.',
       longDesc:
         'Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names.',
@@ -30,7 +30,7 @@ const GoogleSheetsAppEn = {
       },
     },
     new_spreadsheet_sheet: {
-      displayName: 'New Spreadsheet Sheet',
+      displayName: 'New spreadsheet sheet',
       shortDesc: 'Triggers when a new sheet is added to a Google Spreadsheet.',
       longDesc:
         'Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions.',
@@ -47,7 +47,7 @@ const GoogleSheetsAppEn = {
       },
     },
     new_spreadsheet: {
-      displayName: 'New Spreadsheet',
+      displayName: 'New spreadsheet',
       shortDesc: 'Triggers when a new Google Spreadsheet is created.',
       longDesc:
         'Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information.',
@@ -58,7 +58,7 @@ const GoogleSheetsAppEn = {
   },
   actions: {
     search_spreadsheets: {
-      displayName: 'Search Spreadsheets',
+      displayName: 'Search spreadsheets',
       shortDesc:
         'Search for Google Sheets spreadsheets with advanced filtering and sorting options.',
       longDesc:
@@ -70,7 +70,7 @@ const GoogleSheetsAppEn = {
           longDesc: 'The name or partial name of the Google Sheets spreadsheet to search for.',
         },
         search_type: {
-          displayName: 'Search Type',
+          displayName: 'Search type',
           shortDesc: 'Type of filename matching',
           longDesc:
             'How to match the filename - either contains the text or exact match. Default is contains.',
@@ -82,7 +82,7 @@ const GoogleSheetsAppEn = {
             'The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.',
         },
         order_by: {
-          displayName: 'Order By',
+          displayName: 'Order by',
           shortDesc: 'Sorting criteria for results',
           longDesc:
             'List of sorting criteria to apply to the search results. Each item specifies a field and direction.',
@@ -105,13 +105,13 @@ const GoogleSheetsAppEn = {
           },
         },
         page_size: {
-          displayName: 'Page Size',
+          displayName: 'Page size',
           shortDesc: 'Maximum number of results to return',
           longDesc:
             'The maximum number of spreadsheets to return in a single request. Default is 100.',
         },
         custom_query: {
-          displayName: 'Custom Query',
+          displayName: 'Custom query',
           shortDesc: 'Additional search criteria',
           longDesc:
             'Custom Google Drive search query to add additional filtering criteria beyond the basic options.',
@@ -119,7 +119,7 @@ const GoogleSheetsAppEn = {
       },
     },
     find_spreadsheet_rows: {
-      displayName: 'Find Spreadsheet Rows',
+      displayName: 'Find spreadsheet rows',
       shortDesc: 'Search for rows in a Google Sheets spreadsheet that match specific criteria.',
       longDesc:
         'Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, a header row below titles, pagination, values as stored, as displayed, or as formulas, and different response formats.',
@@ -148,67 +148,67 @@ const GoogleSheetsAppEn = {
             'The number of matching rows to skip before returning results. Used for pagination. Default is 0.',
         },
         search_from_last_row: {
-          displayName: 'Search From Last Row',
+          displayName: 'Search from last row',
           shortDesc: 'Start searching from the bottom of the sheet',
           longDesc:
             'When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom.',
         },
         max_rows_to_search: {
-          displayName: 'Maximum Rows to Search',
+          displayName: 'Maximum rows to search',
           shortDesc: 'Maximum number of rows to search through',
           longDesc:
             'Limits the total number of rows to search to control performance with large sheets. Default is 5000.',
         },
         header_row: {
-          displayName: 'Header Row',
+          displayName: 'Header row',
           shortDesc: 'Number of the row holding the column headers',
           longDesc:
             'The number of the row that holds the column headers, for sheets with titles or notes above the table. Headers are read from this row, and rows are read and searched only below it; `row_index` in the result is still the row number in the sheet. Default is 1, the first row.',
         },
         value_render: {
-          displayName: 'Values Returned',
+          displayName: 'Values returned',
           shortDesc: 'Whether values, displayed text, or formulas are returned',
           longDesc:
             'How cell values are returned and searched:\n\n- `unformatted` (the default): numbers, booleans, and text as stored in the cells; dates and times as serial numbers\n- `formatted`: each value as text, exactly as the sheet displays it, such as `1,234.50` or `10/07/2026`\n- `formula`: the formula of each formula cell, such as `=SUM(B2:B9)`; other cells as stored\n\nColumn headers are always read as displayed.',
         },
         date_render: {
-          displayName: 'Dates Returned',
+          displayName: 'Dates returned',
           shortDesc: 'Whether dates are returned as serial numbers or as displayed text',
           longDesc:
             'How dates and times are returned and searched when values or formulas are returned:\n\n- `serial_number` (the default): as serial numbers, the days since 30 December 1899 with the time of day as the fraction, such as `46302.5` for 7 October 2026 at noon\n- `formatted_string`: as text, exactly as the sheet displays them, such as `10/7/2026`\n\nWith `value_render` set to `formatted`, every value, including dates, is returned as displayed.',
         },
         response_type: {
-          displayName: 'Response Format',
+          displayName: 'Response format',
           shortDesc: 'Format of the returned rows',
           longDesc:
             'Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters.',
         },
         search: {
-          displayName: 'Search Criteria',
+          displayName: 'Search criteria',
           shortDesc: 'Criteria for finding matching rows',
           longDesc: 'Defines the search criteria to use when looking for matching rows.',
           type: {
             fields: {
               header: {
-                displayName: 'Column Header',
+                displayName: 'Column header',
                 shortDesc: 'Header of the column to search in',
                 longDesc:
                   'The header text of the column to search in. Use this or Column Letter, not both.',
               },
               column: {
-                displayName: 'Column Letter',
+                displayName: 'Column letter',
                 shortDesc: 'Letter of the column to search in (A, B, C, etc.)',
                 longDesc:
                   'The letter designation of the column to search in (e.g., A, B, C). Use this or Column Header, not both.',
               },
               type: {
-                displayName: 'Search Type',
+                displayName: 'Search type',
                 shortDesc: 'Type of search to perform',
                 longDesc:
                   'Determines how the search value is matched against the column data. Options include exact match, contains.',
               },
               value: {
-                displayName: 'Search Value',
+                displayName: 'Search value',
                 shortDesc: 'Value to search for',
                 longDesc:
                   'The value to look for in the specified column. Rows with this exact value will be returned.',
@@ -219,7 +219,7 @@ const GoogleSheetsAppEn = {
       },
     },
     search_worksheets: {
-      displayName: 'Search Worksheets',
+      displayName: 'Search worksheets',
       shortDesc: 'Find worksheets within a Google Spreadsheet by title.',
       longDesc:
         'Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.',
@@ -231,13 +231,13 @@ const GoogleSheetsAppEn = {
             'The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL.',
         },
         title: {
-          displayName: 'Sheet Title',
+          displayName: 'Sheet title',
           shortDesc: 'Title text to search for (case-insensitive)',
           longDesc:
             'Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default.',
         },
         exact_match: {
-          displayName: 'Exact Match',
+          displayName: 'Exact match',
           shortDesc: 'Whether to match the title exactly',
           longDesc:
             'If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results.',
@@ -245,7 +245,7 @@ const GoogleSheetsAppEn = {
       },
     },
     update_spreadsheet_rows: {
-      displayName: 'Update Spreadsheet Rows',
+      displayName: 'Update spreadsheet rows',
       shortDesc: 'Update existing rows in a Google Sheets spreadsheet.',
       longDesc:
         'Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.',
@@ -263,7 +263,7 @@ const GoogleSheetsAppEn = {
             'The unique identifier of the specific sheet within the spreadsheet where rows will be updated.',
         },
         rows: {
-          displayName: 'Rows to Update',
+          displayName: 'Rows to update',
           shortDesc: 'List of rows with their indices and data to update.',
           longDesc:
             'A list of rows to update, each containing a row index (starting from 2, as row 1 contains headers) and the data to update in that row. The data should match the headers in the spreadsheet.',
@@ -271,7 +271,7 @@ const GoogleSheetsAppEn = {
             element_type: {
               fields: {
                 row_index: {
-                  displayName: 'Row Index',
+                  displayName: 'Row index',
                   shortDesc: 'The index of the row to update.',
                   longDesc:
                     'The row number to update, starting from 2 (row 1 is reserved for headers). This number must refer to an existing row in the spreadsheet.',
@@ -283,7 +283,7 @@ const GoogleSheetsAppEn = {
       },
     },
     format_spreadsheet_rows: {
-      displayName: 'Format Spreadsheet Rows',
+      displayName: 'Format spreadsheet rows',
       shortDesc: 'Apply formatting to specific rows in a Google Sheets spreadsheet.',
       longDesc:
         'Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling.',
@@ -307,13 +307,13 @@ const GoogleSheetsAppEn = {
             'List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows.',
         },
         background_color: {
-          displayName: 'Background Color',
+          displayName: 'Background color',
           shortDesc: 'Background color for the cells',
           longDesc:
             'The background color to apply to the cells in the specified rows. Uses RGB color format.',
         },
         text_color: {
-          displayName: 'Text Color',
+          displayName: 'Text color',
           shortDesc: 'Color for the text in the cells',
           longDesc:
             'The color to apply to the text in the cells of the specified rows. Uses RGB color format.',
@@ -339,24 +339,24 @@ const GoogleSheetsAppEn = {
           longDesc: 'Whether to underline the text in the specified rows.',
         },
         horizontal_alignment: {
-          displayName: 'Horizontal Alignment',
+          displayName: 'Horizontal alignment',
           shortDesc: 'Horizontal alignment of content',
           longDesc:
             'The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right).',
         },
         vertical_alignment: {
-          displayName: 'Vertical Alignment',
+          displayName: 'Vertical alignment',
           shortDesc: 'Vertical alignment of content',
           longDesc:
             'The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom).',
         },
         font_size: {
-          displayName: 'Font Size',
+          displayName: 'Font size',
           shortDesc: 'Text font size in points',
           longDesc: 'The font size in points to apply to the text in the specified rows.',
         },
         wrap_text: {
-          displayName: 'Wrap Text',
+          displayName: 'Wrap text',
           shortDesc: 'Whether to wrap text in cells',
           longDesc:
             'If enabled, text will wrap within cells rather than overflowing into adjacent cells.',
@@ -364,7 +364,7 @@ const GoogleSheetsAppEn = {
       },
     },
     delete_row: {
-      displayName: 'Delete Row',
+      displayName: 'Delete row',
       shortDesc: 'Delete a specific row from a Google Sheets worksheet.',
       longDesc:
         'Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI.',
@@ -382,7 +382,7 @@ const GoogleSheetsAppEn = {
             'The ID of the worksheet (tab) within the spreadsheet that contains the row to delete.',
         },
         row_index: {
-          displayName: 'Row Index',
+          displayName: 'Row index',
           shortDesc: 'The index of the row to delete (starting from 1)',
           longDesc:
             'The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1.',
@@ -390,7 +390,7 @@ const GoogleSheetsAppEn = {
       },
     },
     create_worksheet: {
-      displayName: 'Create Worksheet',
+      displayName: 'Create worksheet',
       shortDesc: 'Create a new worksheet in a Google Sheets spreadsheet with optional headers.',
       longDesc:
         'Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name.',
@@ -401,12 +401,12 @@ const GoogleSheetsAppEn = {
           longDesc: 'The ID of the Google Sheets spreadsheet in which to create the new worksheet.',
         },
         title: {
-          displayName: 'Worksheet Title',
+          displayName: 'Worksheet title',
           shortDesc: 'Title for the new worksheet',
           longDesc: 'The name that will appear on the tab of the new worksheet.',
         },
         overwrite_existing: {
-          displayName: 'Overwrite Existing',
+          displayName: 'Overwrite existing',
           shortDesc: 'Whether to replace an existing worksheet with the same title',
           longDesc:
             'If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail.',
@@ -418,7 +418,7 @@ const GoogleSheetsAppEn = {
             'A list of column headers that will be added to the first row of the new worksheet and formatted in bold.',
         },
         insert_sheet_index: {
-          displayName: 'Sheet Position',
+          displayName: 'Sheet position',
           shortDesc: 'Position where the new worksheet should be placed',
           longDesc:
             'The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end.',
@@ -426,7 +426,7 @@ const GoogleSheetsAppEn = {
       },
     },
     create_spreadsheet_column: {
-      displayName: 'Create Spreadsheet Column',
+      displayName: 'Create spreadsheet column',
       shortDesc: 'Insert a new column into a Google Sheets spreadsheet.',
       longDesc:
         'Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.',
@@ -443,12 +443,12 @@ const GoogleSheetsAppEn = {
             'The ID of the specific sheet within the spreadsheet where the column will be added.',
         },
         column_title: {
-          displayName: 'Column Title',
+          displayName: 'Column title',
           shortDesc: 'The title for the new column',
           longDesc: 'The header text that will appear at the top of the new column.',
         },
         column_index: {
-          displayName: 'Column Index',
+          displayName: 'Column index',
           shortDesc: 'The position where the column will be inserted',
           longDesc:
             'Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc.',
@@ -456,19 +456,19 @@ const GoogleSheetsAppEn = {
       },
     },
     create_spreadsheet: {
-      displayName: 'Create Spreadsheet',
+      displayName: 'Create spreadsheet',
       shortDesc:
         'Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.',
       longDesc:
         'Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.',
       options: {
         title: {
-          displayName: 'Spreadsheet Title',
+          displayName: 'Spreadsheet title',
           shortDesc: 'The title for the new spreadsheet',
           longDesc: 'The name that will be given to the newly created Google Sheets spreadsheet.',
         },
         source_spreadsheet_id: {
-          displayName: 'Source Spreadsheet',
+          displayName: 'Source spreadsheet',
           shortDesc: 'ID of an existing spreadsheet to copy',
           longDesc:
             'Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided.',
@@ -482,7 +482,7 @@ const GoogleSheetsAppEn = {
       },
     },
     add_spreadsheet_rows: {
-      displayName: 'Add Rows to Spreadsheet',
+      displayName: 'Add rows to spreadsheet',
       shortDesc: 'Add one or more rows to the end of a Google Sheets table',
       longDesc:
         'Append new rows to an existing Google Sheets table with data mapped to the table headers',
@@ -498,13 +498,13 @@ const GoogleSheetsAppEn = {
           longDesc: 'The specific worksheet within the spreadsheet where the rows will be added',
         },
         insert_at_start: {
-          displayName: 'Insert at Start',
+          displayName: 'Insert at start',
           shortDesc: 'Insert rows at the start of the table',
           longDesc:
             'If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table.',
         },
         rows: {
-          displayName: 'Rows to Add',
+          displayName: 'Rows to add',
           shortDesc: 'The data to add as new rows',
           longDesc:
             'Specify the data for each row to add. Values should match the headers in the first row of the sheet. Each row is a set of key-value pairs where keys are column headers and values are the data to insert.',
@@ -512,34 +512,34 @@ const GoogleSheetsAppEn = {
       },
     },
     copy_worksheet: {
-      displayName: 'Copy Worksheet',
+      displayName: 'Copy worksheet',
       shortDesc: 'Copy a worksheet from one Google Sheets spreadsheet to another',
       longDesc:
         'Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization',
       options: {
         source_spreadsheet_id: {
-          displayName: 'Source Spreadsheet',
+          displayName: 'Source spreadsheet',
           shortDesc: 'Select the source Google Sheets spreadsheet',
           longDesc: 'The Google Sheets spreadsheet containing the worksheet you want to copy',
         },
         source_sheet_id: {
-          displayName: 'Source Worksheet',
+          displayName: 'Source worksheet',
           shortDesc: 'Select the worksheet to copy',
           longDesc: 'The specific worksheet within the source spreadsheet that will be copied',
         },
         destination_spreadsheet_id: {
-          displayName: 'Destination Spreadsheet',
+          displayName: 'Destination spreadsheet',
           shortDesc: 'Select the destination Google Sheets spreadsheet',
           longDesc: 'The Google Sheets spreadsheet where the worksheet will be copied to',
         },
         new_sheet_name: {
-          displayName: 'New Worksheet Name',
+          displayName: 'New worksheet name',
           shortDesc: 'Optional new name for the copied worksheet',
           longDesc:
             'Specify a custom name for the copied worksheet. If not provided, the original name will be used with "Copy of" prefix',
         },
         insert_sheet_index: {
-          displayName: 'Insert Position',
+          displayName: 'Insert position',
           shortDesc: 'Optional position to insert the new worksheet',
           longDesc:
             'The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet',
@@ -547,7 +547,7 @@ const GoogleSheetsAppEn = {
       },
     },
     clear_spreadsheet_rows: {
-      displayName: 'Clear Spreadsheet Row(s)',
+      displayName: 'Clear spreadsheet row(s)',
       shortDesc: 'Clear content from specific rows in a Google Sheets spreadsheet',
       longDesc:
         'Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting',
@@ -563,7 +563,7 @@ const GoogleSheetsAppEn = {
           longDesc: 'The specific sheet within the spreadsheet where rows will be cleared',
         },
         rows: {
-          displayName: 'Rows to Clear',
+          displayName: 'Rows to clear',
           shortDesc: 'The row numbers to clear (1-based)',
           longDesc:
             'Specify which rows to clear. Row numbers start at 1 as seen in the spreadsheet. For example, [1, 3, 5] will clear rows 1, 3, and 5.',

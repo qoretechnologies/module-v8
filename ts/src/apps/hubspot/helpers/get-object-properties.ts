@@ -169,13 +169,13 @@ export const getHubspotContactPropertiesType: TQoreGetDynamicTypeFunction =
       },
       firstname: {
         type: 'string',
-        display_name: 'First Name',
+        display_name: 'First name',
         short_desc: 'The first name of the contact',
         preselected: true,
       },
       lastname: {
         type: 'string',
-        display_name: 'Last Name',
+        display_name: 'Last name',
         short_desc: 'The last name of the contact',
         preselected: true,
       },
@@ -257,7 +257,7 @@ export const getHubspotLeadPropertiesType: TQoreGetDynamicTypeFunction =
       },
       hs_pipeline_stage: {
         type: 'softstring',
-        display_name: 'Pipeline Stage',
+        display_name: 'Pipeline stage',
         short_desc: 'The pipeline stage of the lead',
         depends_on: ['hs_pipeline'],
         get_allowed_values: getHubspotLeadPipelineStageAllowedValues,
@@ -265,14 +265,14 @@ export const getHubspotLeadPropertiesType: TQoreGetDynamicTypeFunction =
       },
       hs_lead_type: {
         type: 'softstring',
-        display_name: 'Lead Type',
+        display_name: 'Lead type',
         short_desc: 'The lead type',
         required: false,
         preselected: true,
       },
       hs_lead_label: {
         type: 'softstring',
-        display_name: 'Lead Label',
+        display_name: 'Lead label',
         short_desc: 'The lead label',
         required: false,
         preselected: true,
@@ -299,7 +299,7 @@ export const getHubspotProductPropertiesType: TQoreGetDynamicTypeFunction =
       },
       hs_product_type: {
         type: 'softstring',
-        display_name: 'Product Type',
+        display_name: 'Product type',
         short_desc: 'The type of the product',
         preselected: true,
         required: false,

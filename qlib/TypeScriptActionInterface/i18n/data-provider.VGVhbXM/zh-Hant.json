@@ -340,7 +340,7 @@
           "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.display_name": {
-          "source": "Create Channel",
+          "source": "Create channel",
           "message": "建立頻道"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "將建立新頻道的團隊專屬識別碼 (GUID)。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "頻道名稱"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -388,7 +388,7 @@
           "message": "說明頻道用途或主題的選填描述。限制 1024 個字元以內。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.display_name": {
-          "source": "Membership Type",
+          "source": "Membership type",
           "message": "成員資格類型"
         },
         "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.short_desc": {
@@ -424,7 +424,7 @@
           "message": "共用頻道"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.display_name": {
-          "source": "Create Meeting",
+          "source": "Create meeting",
           "message": "建立會議"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.short_desc": {
@@ -448,7 +448,7 @@
           "message": "將顯示在行事曆邀請與會議清單中的會議標題或主旨。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "會議開始的日期與時間，採用 ISO 8601 格式 (YYYY-MM-DDTHH:MM:SS)。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "結束時間"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -496,7 +496,7 @@
           "message": "若會議與團隊中的特定頻道相關聯，則為選填的頻道識別碼。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
+          "source": "Meeting content",
           "message": "會議內容"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
@@ -532,7 +532,7 @@
           "message": "應受邀參加會議的人員電子郵件地址或使用者 ID 清單。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "線上會議"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -544,7 +544,7 @@
           "message": "設為 true 時，將建立具備視訊會議功能及加入連結的 Teams 線上會議。"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "時區"
         },
         "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
@@ -556,7 +556,7 @@
           "message": "會議開始與結束時間的時區，例如 \"Pacific Standard Time\" 或 \"UTC\"。"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.display_name": {
-          "source": "Delete Meeting",
+          "source": "Delete meeting",
           "message": "刪除會議"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.short_desc": {
@@ -580,7 +580,7 @@
           "message": "要取消之會議的專屬識別碼 (GUID)。"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
+          "source": "Meeting source",
           "message": "會議來源"
         },
         "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
@@ -600,7 +600,7 @@
           "message": "團隊"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.display_name": {
-          "source": "Send Channel Message",
+          "source": "Send channel message",
           "message": "傳送頻道訊息"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.short_desc": {
@@ -648,7 +648,7 @@
           "message": "要在頻道中發布的訊息文字內容。"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
@@ -668,7 +668,7 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.display_name": {
-          "source": "Send Chat Message",
+          "source": "Send chat message",
           "message": "傳送聊天訊息"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.short_desc": {
@@ -704,7 +704,7 @@
           "message": "要在聊天中傳送的訊息文字內容。"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
-          "source": "Content Type",
+          "source": "Content type",
           "message": "內容型別"
         },
         "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
@@ -724,7 +724,7 @@
           "message": "HTML"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.display_name": {
-          "source": "Update Channel",
+          "source": "Update channel",
           "message": "更新頻道"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "要更新之頻道的專屬識別碼。"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
-          "source": "Channel Name",
+          "source": "Channel name",
           "message": "頻道名稱"
         },
         "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
@@ -784,7 +784,7 @@
           "message": "說明頻道目的或主題的已更新描述。限制 1024 個字元以內。"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.display_name": {
-          "source": "Update Meeting",
+          "source": "Update meeting",
           "message": "更新會議"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.short_desc": {
@@ -820,7 +820,7 @@
           "message": "將顯示在行事曆邀請與會議清單中的新會議標題或主旨。"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
-          "source": "Start Time",
+          "source": "Start time",
           "message": "開始時間"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
@@ -832,7 +832,7 @@
           "message": "會議開始的新日期與時間，採用 ISO 8601 格式 (YYYY-MM-DDTHH:MM:SS)。"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
-          "source": "End Time",
+          "source": "End time",
           "message": "結束時間"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
@@ -868,7 +868,7 @@
           "message": "如果會議與團隊內的特定頻道相關聯，則為已更新的頻道識別碼。"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
-          "source": "Meeting Content",
+          "source": "Meeting content",
           "message": "會議內容"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
@@ -904,7 +904,7 @@
           "message": "應受邀參加會議之人員的已更新電子郵件地址或使用者識別碼清單。"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
-          "source": "Online Meeting",
+          "source": "Online meeting",
           "message": "線上會議"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
@@ -916,7 +916,7 @@
           "message": "設定為 true 時，可確保會議具備包含視訊會議及加入連結的 Teams 線上會議功能。"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
-          "source": "Time Zone",
+          "source": "Time zone",
           "message": "時區"
         },
         "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
@@ -928,7 +928,7 @@
           "message": "會議開始和結束時間的新時區，例如「Pacific Standard Time」或「UTC」。"
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.display_name": {
-          "source": "New Channel Message",
+          "source": "New channel message",
           "message": "新頻道訊息"
         },
         "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.short_desc": {
@@ -964,7 +964,7 @@
           "message": "要監控新訊息之頻道的專屬識別碼。"
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.display_name": {
-          "source": "New Chat Message",
+          "source": "New chat message",
           "message": "新聊天訊息"
         },
         "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.short_desc": {
@@ -988,7 +988,7 @@
           "message": "要監控新訊息的一對一聊天或群組聊天的專屬識別碼。"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.display_name": {
-          "source": "New Meeting",
+          "source": "New meeting",
           "message": "新會議"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.short_desc": {
@@ -1000,7 +1000,7 @@
           "message": "當排程了符合指定條件的新會議時，將觸發此觸發器。"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
-          "source": "Meeting Source",
+          "source": "Meeting source",
           "message": "會議來源"
         },
         "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {

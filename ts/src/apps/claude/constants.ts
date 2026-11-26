@@ -13,7 +13,7 @@ export const CLAUDE_APP_LOGO =
 
 export const CLAUDE_CONN_OPTIONS = {
   token: {
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Your Claude account API key',
     desc:
       `To get your API key:\n` +

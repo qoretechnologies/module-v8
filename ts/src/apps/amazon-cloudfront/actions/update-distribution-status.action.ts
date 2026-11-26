@@ -23,7 +23,7 @@ const options = {
     required: true,
     type: 'bool',
     preselected: true,
-    display_name: 'Enable Distribution',
+    display_name: 'Enable distribution',
     short_desc: 'Set to true to enable the distribution, false to disable it',
   },
 } satisfies TQoreOptions;

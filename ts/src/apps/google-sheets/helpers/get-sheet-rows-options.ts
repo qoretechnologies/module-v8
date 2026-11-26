@@ -22,7 +22,7 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
           type: 'list',
           element_type: 'hash',
         },
-        display_name: 'Rows to Add',
+        display_name: 'Rows to add',
         desc:
           `The rows to add to the worksheet.` +
           ` Select a spreadsheet and worksheet first to see the available columns.`,
@@ -172,7 +172,7 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
           type: 'list',
           element_type: 'hash',
         },
-        display_name: 'Rows to Add',
+        display_name: 'Rows to add',
         desc: 'No valid headers found in the first row. Please ensure the sheet has headers.',
       },
     };
@@ -198,7 +198,7 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
           },
         },
       },
-      display_name: 'Rows to Add',
+      display_name: 'Rows to add',
       desc: 'The rows to add to the end of the table. Each row should include values for the corresponding columns.',
     },
   };

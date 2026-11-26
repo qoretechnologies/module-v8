@@ -8,7 +8,7 @@ const MondayAppEn = {
     'The Monday.com integration provides comprehensive access to your work operating system. Create and manage boards, items, groups, and columns. Track work progress, update item statuses, manage column values, and monitor board changes. Automate workflows by creating items, updating records, moving items between groups, and receiving notifications when boards or items are modified. Perfect for project management, task tracking, team collaboration, and workflow automation across your organization.',
   actions: {
     archive_record: {
-      displayName: 'Archive Record',
+      displayName: 'Archive record',
       shortDesc: 'Move a record to the archive.',
       longDesc:
         'This action allows you to archive a specific record (item) on a Monday.com board, helping you keep your workspace organized by removing completed or inactive items from view without permanently deleting them.',
@@ -26,7 +26,7 @@ const MondayAppEn = {
       },
     },
     clear_column_value: {
-      displayName: 'Clear Column Value',
+      displayName: 'Clear column value',
       shortDesc: 'Remove data from a column in a record.',
       longDesc:
         'Use this action to clear the content of a specified column within a record, resetting its value to empty.',
@@ -49,7 +49,7 @@ const MondayAppEn = {
       },
     },
     create_record: {
-      displayName: 'Create Record',
+      displayName: 'Create record',
       shortDesc: 'Add a new record to a board.',
       longDesc:
         'This action enables you to create a new record (item) in a specified board, allowing you to define initial column values upon creation.',
@@ -65,19 +65,19 @@ const MondayAppEn = {
           longDesc: 'The unique identifier of the group where you want to create a new record.',
         },
         item_name: {
-          displayName: 'Item Name',
+          displayName: 'Item name',
           shortDesc: 'The name of the new record.',
           longDesc: 'The name of the new record you want to create.',
         },
         column_values: {
-          displayName: 'Column Values',
+          displayName: 'Column values',
           shortDesc: 'The values to set for the record columns.',
           longDesc: 'The values to set for the columns of the record you want to create.',
         },
       },
     },
     custom_action: {
-      displayName: 'Custom Action',
+      displayName: 'Custom action',
       shortDesc: 'Perform a user-defined operation.',
       longDesc:
         'This action allows you to execute a custom operation defined by your integration or automation setup, providing flexibility for various tasks.',
@@ -88,14 +88,14 @@ const MondayAppEn = {
           longDesc: 'The payload for your custom action',
         },
         actionName: {
-          displayName: 'Action Name',
+          displayName: 'Action name',
           shortDesc: 'The name of the custom action to execute',
           longDesc: 'The name of the custom action to execute',
         },
       },
     },
     delete_record: {
-      displayName: 'Delete Record',
+      displayName: 'Delete record',
       shortDesc: 'Permanently remove a record.',
       longDesc:
         'Use this action to permanently delete a specific record from a board, removing all associated data.',
@@ -113,7 +113,7 @@ const MondayAppEn = {
       },
     },
     get_record: {
-      displayName: 'Get Record',
+      displayName: 'Get record',
       shortDesc: 'Retrieve details of a specific record.',
       longDesc:
         'This action fetches the details of a specified record, including all column values and associated metadata.',
@@ -131,7 +131,7 @@ const MondayAppEn = {
       },
     },
     move_record: {
-      displayName: 'Move Record',
+      displayName: 'Move record',
       shortDesc: 'Transfer a record to another group or board.',
       longDesc:
         'Use this action to move a record from its current group or board to another specified group or board, maintaining its data and history.',
@@ -147,14 +147,14 @@ const MondayAppEn = {
           longDesc: 'The unique identifier of the record you want to move.',
         },
         destination_group_id: {
-          displayName: 'Destination Group ID',
+          displayName: 'Destination group ID',
           shortDesc: 'The ID of the group to move the record to.',
           longDesc: 'The unique identifier of the group you want to move the record to.',
         },
       },
     },
     search_records: {
-      displayName: 'Search Records',
+      displayName: 'Search records',
       shortDesc: 'Find records matching specific criteria.',
       longDesc:
         'This action allows you to search for records that meet defined criteria, such as specific column values or statuses, and returns a list of matching records.',
@@ -188,7 +188,7 @@ const MondayAppEn = {
       },
     },
     update_record: {
-      displayName: 'Update Record',
+      displayName: 'Update record',
       shortDesc: `Modify the values of a record's columns.`,
       longDesc:
         'Use this action to update one or more column values of a specific record, allowing you to change its data as needed.',
@@ -204,7 +204,7 @@ const MondayAppEn = {
           longDesc: 'The unique identifier of the record you want to update.',
         },
         column_values: {
-          displayName: 'Column Values',
+          displayName: 'Column values',
           shortDesc: 'The values to set for the record columns.',
           longDesc: 'The values to set for the columns of the record you want to update.',
         },
@@ -213,7 +213,7 @@ const MondayAppEn = {
   },
   triggers: {
     new_record: {
-      displayName: 'New Record',
+      displayName: 'New record',
       shortDesc: 'Triggered when a new item is created.',
       longDesc: 'Triggered when a new record is created.',
       options: {
@@ -230,7 +230,7 @@ const MondayAppEn = {
       },
     },
     new_record_moved_to_group: {
-      displayName: 'New Record Moved To Group',
+      displayName: 'New record moved to group',
       shortDesc: 'Triggered when an item was moved to a group.',
       longDesc: 'Triggered when a new record is created.',
       options: {
@@ -247,7 +247,7 @@ const MondayAppEn = {
       },
     },
     record_column_value_updated: {
-      displayName: 'Record Column Value Updated',
+      displayName: 'Record column value updated',
       shortDesc: 'Triggered when a record column value is updated.',
       longDesc: 'Triggered when a record column value is updated.',
       options: {
@@ -265,7 +265,7 @@ const MondayAppEn = {
       },
     },
     updated_record: {
-      displayName: 'Updated Record',
+      displayName: 'Updated record',
       shortDesc: 'Triggered when an item is updated.',
       longDesc: 'Triggered when an item on the board is updated.',
       options: {
@@ -479,12 +479,12 @@ const MondayAppEn = {
           longDesc: 'The field whose value will be checked',
         },
         {
-          displayName: 'Lower Value',
+          displayName: 'Lower value',
           shortDesc: 'Lower bound',
           longDesc: 'The lower bound value',
         },
         {
-          displayName: 'Upper Value',
+          displayName: 'Upper value',
           shortDesc: 'Upper bound',
           longDesc: 'The upper bound value',
         },
@@ -614,7 +614,7 @@ const MondayAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {

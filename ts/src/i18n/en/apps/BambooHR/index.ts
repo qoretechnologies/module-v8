@@ -7,7 +7,7 @@ const BambooHRAppEn = {
   actions: {
     get_employee: {
       groups: ['Employees'],
-      displayName: 'Get Employee',
+      displayName: 'Get employee',
       shortDesc: 'Retrieve a single employee by ID',
       longDesc:
         'Fetches detailed data for a single employee in BambooHR by their ID. Returns all requested fields with dynamically loaded field types. You can specify which fields to retrieve or fetch all available fields.',
@@ -28,13 +28,13 @@ const BambooHRAppEn = {
     },
     create_employee: {
       groups: ['Employees'],
-      displayName: 'Create Employee',
+      displayName: 'Create employee',
       shortDesc: 'Create a new employee in BambooHR',
       longDesc:
         'Creates a new employee record in BambooHR. At minimum, firstName and lastName are required. The action dynamically presents all available fields based on your BambooHR configuration, including custom fields.',
       options: {
         employee_data: {
-          displayName: 'Employee Data',
+          displayName: 'Employee data',
           shortDesc: 'The data for the new employee',
           longDesc:
             'Provide values for the employee fields. The available fields are dynamically loaded from your BambooHR account and include both standard and custom fields. firstName and lastName are required.',
@@ -43,7 +43,7 @@ const BambooHRAppEn = {
     },
     update_employee: {
       groups: ['Employees'],
-      displayName: 'Update Employee',
+      displayName: 'Update employee',
       shortDesc: 'Update an existing employee in BambooHR',
       longDesc:
         'Updates an existing employee record in BambooHR. The action dynamically presents all available fields based on your BambooHR configuration. Only provide the fields you want to update.',
@@ -54,7 +54,7 @@ const BambooHRAppEn = {
           longDesc: 'Enter the unique identifier of the employee you want to update.',
         },
         employee_data: {
-          displayName: 'Employee Data',
+          displayName: 'Employee data',
           shortDesc: 'The data to update',
           longDesc:
             'Provide new values for the employee fields you want to update. The available fields are dynamically loaded from your BambooHR account.',
@@ -63,7 +63,7 @@ const BambooHRAppEn = {
     },
     list_employees: {
       groups: ['Employees'],
-      displayName: 'List Employees',
+      displayName: 'List employees',
       shortDesc: 'Retrieve a list of all employees',
       longDesc:
         'Fetches a list of all employees from BambooHR. You can specify which fields to retrieve for each employee. Uses the custom report endpoint for efficient bulk retrieval.',
@@ -85,12 +85,12 @@ const BambooHRAppEn = {
         "Retrieves a list of employees who are out (vacation, sick leave, etc.) and company holidays for a given date range. If no dates are specified, returns the current day plus the next 14 days.",
       options: {
         start_date: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'Start of the date range',
           longDesc: 'The start date for the query. Defaults to today if not specified.',
         },
         end_date: {
-          displayName: 'End Date',
+          displayName: 'End date',
           shortDesc: 'End of the date range',
           longDesc:
             'The end date for the query. Defaults to 14 days from the start date if not specified.',
@@ -99,18 +99,18 @@ const BambooHRAppEn = {
     },
     search_time_off_requests: {
       groups: ['Time Off'],
-      displayName: 'Search Time Off Requests',
+      displayName: 'Search time off requests',
       shortDesc: 'Search and filter time off requests',
       longDesc:
         'Searches time off requests in BambooHR with various filters. Returns requests matching the specified criteria including date range, employee, status, and time off type.',
       options: {
         start_date: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'Filter by start date',
           longDesc: 'Only show time off requests on or after this date.',
         },
         end_date: {
-          displayName: 'End Date',
+          displayName: 'End date',
           shortDesc: 'Filter by end date',
           longDesc: 'Only show time off requests on or before this date.',
         },
@@ -126,7 +126,7 @@ const BambooHRAppEn = {
             'Filter by one or more statuses: approved, denied, requested, canceled, superceded.',
         },
         type: {
-          displayName: 'Time Off Type',
+          displayName: 'Time off type',
           shortDesc: 'Filter by time off type',
           longDesc: 'Filter by one or more time off types configured in your BambooHR account.',
         },
@@ -135,7 +135,7 @@ const BambooHRAppEn = {
     // Employee File Actions
     get_all_employee_files: {
       groups: ['Employee Files'],
-      displayName: 'Get All Employee Files',
+      displayName: 'Get all employee files',
       shortDesc: 'List all files for an employee',
       longDesc:
         'Retrieves all files associated with a specific employee, organized by category. Returns file metadata including name, size, upload date, and sharing status.',
@@ -149,7 +149,7 @@ const BambooHRAppEn = {
     },
     download_employee_file: {
       groups: ['Employee Files'],
-      displayName: 'Download Employee File',
+      displayName: 'Download employee file',
       shortDesc: 'Download an employee file',
       longDesc:
         'Downloads a specific file from an employee record. Returns the file content as base64-encoded binary along with the MIME type.',
@@ -168,7 +168,7 @@ const BambooHRAppEn = {
     },
     upload_employee_file: {
       groups: ['Employee Files'],
-      displayName: 'Upload Employee File',
+      displayName: 'Upload employee file',
       shortDesc: 'Upload a file to an employee',
       longDesc:
         'Uploads a new file to an employee record in BambooHR. The file will be placed in the specified category.',
@@ -189,7 +189,7 @@ const BambooHRAppEn = {
           longDesc: 'The file to upload. Must include name, MIME type, and base64-encoded content.',
         },
         share_with_employee: {
-          displayName: 'Share with Employee',
+          displayName: 'Share with employee',
           shortDesc: 'Make file visible to employee',
           longDesc: 'Whether to make this file visible to the employee in their self-service portal.',
         },
@@ -197,7 +197,7 @@ const BambooHRAppEn = {
     },
     update_employee_file: {
       groups: ['Employee Files'],
-      displayName: 'Update Employee File',
+      displayName: 'Update employee file',
       shortDesc: 'Update employee file metadata',
       longDesc:
         'Updates the metadata for an existing employee file, such as name, category, or sharing settings.',
@@ -223,7 +223,7 @@ const BambooHRAppEn = {
           longDesc: 'Move the file to a different category.',
         },
         share_with_employee: {
-          displayName: 'Share with Employee',
+          displayName: 'Share with employee',
           shortDesc: 'Update sharing setting',
           longDesc: 'Whether to make this file visible to the employee.',
         },
@@ -231,7 +231,7 @@ const BambooHRAppEn = {
     },
     delete_employee_file: {
       groups: ['Employee Files'],
-      displayName: 'Delete Employee File',
+      displayName: 'Delete employee file',
       shortDesc: 'Delete an employee file',
       longDesc: 'Permanently deletes a file from an employee record. This action cannot be undone.',
       options: {
@@ -250,7 +250,7 @@ const BambooHRAppEn = {
     // Company File Actions
     get_all_company_files: {
       groups: ['Company Files'],
-      displayName: 'Get All Company Files',
+      displayName: 'Get all company files',
       shortDesc: 'List all company files',
       longDesc:
         'Retrieves all company files organized by category. Returns file metadata including name, size, upload date, and sharing status.',
@@ -258,7 +258,7 @@ const BambooHRAppEn = {
     },
     download_company_file: {
       groups: ['Company Files'],
-      displayName: 'Download Company File',
+      displayName: 'Download company file',
       shortDesc: 'Download a company file',
       longDesc:
         'Downloads a specific company file. Returns the file content as base64-encoded binary along with the MIME type.',
@@ -272,7 +272,7 @@ const BambooHRAppEn = {
     },
     upload_company_file: {
       groups: ['Company Files'],
-      displayName: 'Upload Company File',
+      displayName: 'Upload company file',
       shortDesc: 'Upload a company file',
       longDesc:
         'Uploads a new file to the company files in BambooHR. The file will be placed in the specified category.',
@@ -288,7 +288,7 @@ const BambooHRAppEn = {
           longDesc: 'The file to upload. Must include name, MIME type, and base64-encoded content.',
         },
         share_with_employees: {
-          displayName: 'Share with Employees',
+          displayName: 'Share with employees',
           shortDesc: 'Make file visible to employees',
           longDesc: 'Whether to make this file visible to all employees.',
         },
@@ -296,7 +296,7 @@ const BambooHRAppEn = {
     },
     update_company_file: {
       groups: ['Company Files'],
-      displayName: 'Update Company File',
+      displayName: 'Update company file',
       shortDesc: 'Update company file metadata',
       longDesc:
         'Updates the metadata for an existing company file, such as name, category, or sharing settings.',
@@ -317,7 +317,7 @@ const BambooHRAppEn = {
           longDesc: 'Move the file to a different category.',
         },
         share_with_employees: {
-          displayName: 'Share with Employees',
+          displayName: 'Share with employees',
           shortDesc: 'Update sharing setting',
           longDesc: 'Whether to make this file visible to all employees.',
         },
@@ -325,7 +325,7 @@ const BambooHRAppEn = {
     },
     delete_company_file: {
       groups: ['Company Files'],
-      displayName: 'Delete Company File',
+      displayName: 'Delete company file',
       shortDesc: 'Delete a company file',
       longDesc: 'Permanently deletes a company file. This action cannot be undone.',
       options: {
@@ -354,28 +354,28 @@ const BambooHRAppEn = {
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc:
         'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc:
         'Matches records where the field value is less than or equal to the specified value',
@@ -386,19 +386,19 @@ const BambooHRAppEn = {
       longDesc: 'Matches records where the field contains the specified text (case-insensitive)',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a value (is not empty)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches records where the field has no value (is empty)',
     },
   },
   triggers: {
     new_time_off_request: {
-      displayName: 'New Time Off Request',
+      displayName: 'New time off request',
       shortDesc: 'Triggers when a new time off request is submitted',
       longDesc:
         'Fires when a new time off request is created in BambooHR with status "requested". Useful for building approval workflows or notifications.',
@@ -411,14 +411,14 @@ const BambooHRAppEn = {
       },
     },
     new_time_off: {
-      displayName: 'New Time Off',
+      displayName: 'New time off',
       shortDesc: 'Triggers when new approved time off appears',
       longDesc:
         "Fires when a new approved time off entry appears in the Who's Out list. This includes both employee time off and company holidays.",
       options: {},
     },
     new_employee: {
-      displayName: 'New Employee',
+      displayName: 'New employee',
       shortDesc: 'Triggers when a new employee is created',
       longDesc:
         'Fires when a new active employee is added to BambooHR. Returns basic employee information including name, email, department, and job title.',

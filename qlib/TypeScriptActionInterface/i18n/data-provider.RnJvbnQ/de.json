@@ -340,7 +340,7 @@
           "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
-          "source": "List Accounts",
+          "source": "List accounts",
           "message": "Konten auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
@@ -364,7 +364,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Account-Datensätzen. Standard ist 50. Verwenden Sie die Paginierung für größere Datensätze."
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
-          "source": "Get Account",
+          "source": "Get account",
           "message": "Konto abrufen"
         },
         "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
@@ -388,7 +388,7 @@
           "message": "Wählen Sie die ID des Kontos aus oder geben Sie sie ein, das Sie abrufen möchten. Konto-IDs beginnen mit \"acc_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
-          "source": "Create Account",
+          "source": "Create account",
           "message": "Konto erstellen"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
@@ -448,7 +448,7 @@
           "message": "Eine optionale externe ID, um dieses Konto mit einem Datensatz in einem anderen System zu verknüpfen, wie z. B. einem CRM oder einer Abrechnungsplattform."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Benutzerdefinierte Felder"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -460,7 +460,7 @@
           "message": "Ein Objekt, das benutzerdefinierte Feldwerte für das Konto enthält. Die Schlüssel sollten Ihren konfigurierten benutzerdefinierten Feldnamen entsprechen."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
-          "source": "Update Account",
+          "source": "Update account",
           "message": "Konto aktualisieren"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
@@ -532,7 +532,7 @@
           "message": "Aktualisieren Sie die externe Systemkennung für dieses Konto."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Benutzerdefinierte Felder"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Aktualisieren Sie benutzerdefinierte Feldwerte für das Konto."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
-          "source": "Delete Account",
+          "source": "Delete account",
           "message": "Konto löschen"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Wählen Sie die ID des Accounts aus oder geben Sie sie ein, den Sie löschen möchten."
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
-          "source": "List Account Contacts",
+          "source": "List account contacts",
           "message": "Account-Kontakte auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Kontaktdatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
-          "source": "Add Contact to Account",
+          "source": "Add contact to account",
           "message": "Kontakt zu Konto hinzufügen"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
@@ -640,7 +640,7 @@
           "message": "Wählen Sie einen oder mehrere Kontakte aus, die dem Konto hinzugefügt werden sollen. Kontakt-IDs beginnen mit \"crd_\"."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
-          "source": "Remove Contact from Account",
+          "source": "Remove contact from account",
           "message": "Kontakt aus Konto entfernen"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
@@ -676,7 +676,7 @@
           "message": "Wählen Sie einen oder mehrere Kontakte aus, die aus dem Konto entfernt werden sollen."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
-          "source": "List Contacts",
+          "source": "List contacts",
           "message": "Kontakte auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Rufen Sie eine Liste aller Kontakte in Ihrem Front-Workspace ab. Kontakte repräsentieren die Personen, mit denen Sie kommunizieren. Ergebnisse können nach Erstellungs- oder Aktualisierungsdatum sortiert werden."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
-          "source": "Sort By",
+          "source": "Sort by",
           "message": "Sortieren nach"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
@@ -708,7 +708,7 @@
           "message": "Aktualisiert am"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Sortierreihenfolge"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
@@ -740,7 +740,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Kontaktdatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
-          "source": "Get Contact",
+          "source": "Get contact",
           "message": "Kontakt abrufen"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
@@ -764,7 +764,7 @@
           "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, den Sie abrufen möchten. Kontakt-IDs beginnen mit \"crd_\"."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Create Contact",
+          "source": "Create contact",
           "message": "Kontakt erstellen"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
@@ -876,7 +876,7 @@
           "message": "Eine Liste von URLs, die diesem Kontakt zugeordnet sind, wie z. B. Social-Media-Profile oder Unternehmenswebsites."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
-          "source": "Group Names",
+          "source": "Group names",
           "message": "Gruppennamen"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
@@ -888,7 +888,7 @@
           "message": "Eine Liste von Gruppennamen, zu denen der Kontakt hinzugefügt werden soll. Gruppen helfen dabei, Kontakte in Kategorien zu organisieren."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Benutzerdefinierte Felder"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -900,7 +900,7 @@
           "message": "Ein Objekt, das benutzerdefinierte Feldwerte für den Kontakt enthält. Die Schlüssel sollten Ihren konfigurierten benutzerdefinierten Feldnamen entsprechen."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
-          "source": "Update Contact",
+          "source": "Update contact",
           "message": "Kontakt aktualisieren"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Eine Liste von URLs, die diesem Kontakt zugeordnet sind, wie z. B. Social-Media-Profile oder Unternehmenswebsites."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Benutzerdefinierte Felder"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -972,7 +972,7 @@
           "message": "Aktualisieren Sie benutzerdefinierte Feldwerte für den Kontakt."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
-          "source": "Delete Contact",
+          "source": "Delete contact",
           "message": "Kontakt löschen"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, den Sie löschen möchten."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "List Contact Conversations",
+          "source": "List contact conversations",
           "message": "Kontaktunterhaltungen auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Unterhaltungsdatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
-          "source": "List Contact Notes",
+          "source": "List contact notes",
           "message": "Kontaktnotizen auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
@@ -1068,7 +1068,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Notizdatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "Add Note to Contact",
+          "source": "Add note to contact",
           "message": "Notiz zu Kontakt hinzufügen"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, dem Sie eine Notiz hinzufügen möchten."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
-          "source": "Note Body",
+          "source": "Note body",
           "message": "Notiztext"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Wählen Sie das Teammitglied aus, das als Autor dieser Notiz erfasst wird. Dies ist ein Pflichtfeld."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
-          "source": "List Contact Lists",
+          "source": "List contact lists",
           "message": "Kontaktlisten auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Kontaktlistendatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Create Contact List",
+          "source": "Create contact list",
           "message": "Kontaktliste erstellen"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Eine optionale Beschreibung, die den Zweck der Kontaktliste oder die Kriterien für die darin enthaltenen Kontakte erläutert."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Delete Contact List",
+          "source": "Delete contact list",
           "message": "Kontaktliste löschen"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "Löschen Sie eine Kontaktliste aus Front. Dadurch wird die Liste entfernt, jedoch nicht die darin enthaltenen Kontakte. Die Kontakte verbleiben in Ihrem Workspace."
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Kontaktliste"
         },
         "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "Wählen Sie die ID der Kontaktliste aus oder geben Sie sie ein, die Sie löschen möchten."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
-          "source": "List Contacts in Contact List",
+          "source": "List contacts in contact list",
           "message": "Kontakte in Kontaktliste auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "Rufen Sie alle Kontakte ab, die zu einer bestimmten Kontaktliste gehören. Dies hilft Ihnen zu sehen, welche Kontakte in einer bestimmten Liste oder einem bestimmten Segment enthalten sind."
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Kontaktliste"
         },
         "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1236,7 +1236,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Kontaktdatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
-          "source": "Add Contacts to Contact List",
+          "source": "Add contacts to contact list",
           "message": "Kontakte zu Kontaktliste hinzufügen"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
@@ -1248,7 +1248,7 @@
           "message": "Fügen Sie einer Kontaktliste in Front einen oder mehrere Kontakte hinzu. Dies hilft Ihnen, Kontakte in logische Gruppen zu unterteilen, um die Verwaltung und gezielte Kommunikation zu erleichtern."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Kontaktliste"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1272,7 +1272,7 @@
           "message": "Wählen Sie einen oder mehrere Kontakte aus, die der Kontaktliste hinzugefügt werden sollen."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
-          "source": "Remove Contacts from Contact List",
+          "source": "Remove contacts from contact list",
           "message": "Kontakte aus Kontaktliste entfernen"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
@@ -1284,7 +1284,7 @@
           "message": "Entfernen Sie einen oder mehrere Kontakte aus einer Kontaktliste in Front. Dies entfernt die Kontakte aus der Liste, löscht die Kontakte selbst jedoch nicht."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
-          "source": "Contact List",
+          "source": "Contact list",
           "message": "Kontaktliste"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
@@ -1308,7 +1308,7 @@
           "message": "Wählen Sie einen oder mehrere Kontakte aus, die aus der Kontaktliste entfernt werden sollen."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
-          "source": "List Conversations",
+          "source": "List conversations",
           "message": "Unterhaltungen auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Unterhaltungsdatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Get Conversation",
+          "source": "Get conversation",
           "message": "Konversation abrufen"
         },
         "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1396,7 +1396,7 @@
           "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie abrufen möchten. Konversations-IDs beginnen mit \"cnv_\"."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
-          "source": "Search Conversations",
+          "source": "Search conversations",
           "message": "Unterhaltungen suchen"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "Suchen Sie mithilfe einer Suchanfrage nach Unterhaltungen in Front. Gibt übereinstimmende Unterhaltungen in absteigender Reihenfolge nach der letzten Aktivität zusammen mit einer Anzahl aller Treffer zurück."
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "Suchanfrage"
         },
         "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
@@ -1432,7 +1432,7 @@
           "message": "Die maximale Anzahl der zurückzugebenden Unterhaltungsdatensätze. Standard ist 25."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "Update Conversation",
+          "source": "Update conversation",
           "message": "Konversation aktualisieren"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1496,7 +1496,7 @@
           "message": "Verschieben Sie die Konversation in einen anderen Posteingang."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
-          "source": "Custom Fields",
+          "source": "Custom fields",
           "message": "Benutzerdefinierte Felder"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
@@ -1508,7 +1508,7 @@
           "message": "Aktualisieren Sie benutzerdefinierte Feldwerte für die Konversation."
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
-          "source": "Update Conversation Assignee",
+          "source": "Update conversation assignee",
           "message": "Konversationsbearbeiter aktualisieren"
         },
         "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
@@ -1544,7 +1544,7 @@
           "message": "Wählen Sie ein Teammitglied aus, dem die Konversation zugewiesen werden soll. Lassen Sie das Feld leer, um die Zuweisung der Konversation aufzuheben."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Add Tag to Conversation",
+          "source": "Add tag to conversation",
           "message": "Tag zu Konversation hinzufügen"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1580,7 +1580,7 @@
           "message": "Wählen Sie einen oder mehrere Tags aus, die der Konversation hinzugefügt werden sollen."
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
-          "source": "Remove Tag from Conversation",
+          "source": "Remove tag from conversation",
           "message": "Tag aus Unterhaltung entfernen"
         },
         "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
@@ -1616,7 +1616,7 @@
           "message": "Wählen Sie ein oder mehrere Tags aus, die aus der Unterhaltung entfernt werden sollen."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
-          "source": "Add Conversation Followers",
+          "source": "Add conversation followers",
           "message": "Konversations-Follower hinzufügen"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
@@ -1652,7 +1652,7 @@
           "message": "Wählen Sie ein oder mehrere Teammitglieder aus, die als Follower zur Konversation hinzugefügt werden sollen."
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
-          "source": "Get Message",
+          "source": "Get message",
           "message": "Nachricht abrufen"
         },
         "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
@@ -1676,7 +1676,7 @@
           "message": "Geben Sie die ID der Nachricht ein, die Sie abrufen möchten. Nachrichten-IDs beginnen mit \"msg_\"."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
-          "source": "List Conversation Messages",
+          "source": "List conversation messages",
           "message": "Unterhaltungsnachrichten auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
@@ -1712,7 +1712,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Nachrichtendatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
-          "source": "Reply to Conversation",
+          "source": "Reply to conversation",
           "message": "Auf Unterhaltung antworten"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
@@ -1736,7 +1736,7 @@
           "message": "Wählen Sie die ID der Unterhaltung aus oder geben Sie sie ein, auf die Sie antworten möchten."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
-          "source": "Message Body",
+          "source": "Message body",
           "message": "Nachrichtentext"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
@@ -1796,7 +1796,7 @@
           "message": "Eine Liste von E-Mail-Adressen, die bei der Antwort in BCC gesetzt werden sollen."
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
-          "source": "Save as Draft",
+          "source": "Save as draft",
           "message": "Als Entwurf speichern"
         },
         "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
@@ -1808,7 +1808,7 @@
           "message": "Wenn true, wird die Nachricht als Entwurf gespeichert, anstatt sofort gesendet zu werden. Standardwert ist false."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
-          "source": "Add Comment to Conversation",
+          "source": "Add comment to conversation",
           "message": "Kommentar zu Konversation hinzufügen"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
@@ -1832,7 +1832,7 @@
           "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, der Sie einen Kommentar hinzufügen möchten."
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
-          "source": "Comment Body",
+          "source": "Comment body",
           "message": "Kommentartext"
         },
         "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
@@ -1844,7 +1844,7 @@
           "message": "Der Textinhalt des internen Kommentars. Dieser ist für alle Teammitglieder sichtbar, die Zugriff auf die Konversation haben."
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
-          "source": "List Conversation Comments",
+          "source": "List conversation comments",
           "message": "Unterhaltungskommentare auflisten"
         },
         "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
@@ -1880,7 +1880,7 @@
           "message": "Die maximale Anzahl an zurückzugebenden Kommentardatensätzen. Standard ist 50."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
-          "source": "New Conversation",
+          "source": "New conversation",
           "message": "Neue Unterhaltung"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
@@ -1932,7 +1932,7 @@
           "message": "Spam"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
-          "source": "New Contact",
+          "source": "New contact",
           "message": "Neuer Kontakt"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
@@ -1944,7 +1944,7 @@
           "message": "Dieser Auslöser wird ausgelöst, wenn ein neuer Kontakt in Front erstellt wird. Verwenden Sie dies, um Arbeitsabläufe zu automatisieren, wenn neue Kontakte zu Ihrem Arbeitsbereich hinzugefügt werden."
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
-          "source": "New Contact Note",
+          "source": "New contact note",
           "message": "Neue Kontaktnotiz"
         },
         "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
@@ -1968,7 +1968,7 @@
           "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, den Sie auf neue Notizen überwachen möchten. Der Auslöser wird ausgelöst, wenn diesem Kontakt eine neue Notiz hinzugefügt wird."
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
-          "source": "New Comment",
+          "source": "New comment",
           "message": "Neuer Kommentar"
         },
         "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {

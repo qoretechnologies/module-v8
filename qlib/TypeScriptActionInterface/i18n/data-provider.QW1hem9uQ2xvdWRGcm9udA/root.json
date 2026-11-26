@@ -340,8 +340,8 @@
           "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.display_name": {
-          "source": "List Distributions",
-          "message": "List Distributions"
+          "source": "List distributions",
+          "message": "List distributions"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.short_desc": {
           "source": "Retrieve a list of CloudFront distributions",
@@ -352,8 +352,8 @@
           "message": "Fetches a list of all CloudFront distributions in your AWS account, including their status, domain names, and configuration details. You can control the number of results and use pagination for large sets of distributions."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
-          "message": "Max Items"
+          "source": "Max items",
+          "message": "Max items"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9kaXN0cmlidXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
           "source": "Maximum number of distributions to return",
@@ -376,8 +376,8 @@
           "message": "Use this marker to continue pagination from a previous list request. This value is returned in the next_marker field of previous responses when results are truncated."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Get Distribution",
-          "message": "Get Distribution"
+          "source": "Get distribution",
+          "message": "Get distribution"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2Rpc3RyaWJ1dGlvbg.short_desc": {
           "source": "Retrieve detailed information about a specific distribution",
@@ -400,8 +400,8 @@
           "message": "Select the specific CloudFront distribution you want to get detailed information about. This will return the complete configuration and status of the distribution."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.display_name": {
-          "source": "Update Distribution Status",
-          "message": "Update Distribution Status"
+          "source": "Update distribution status",
+          "message": "Update distribution status"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.short_desc": {
           "source": "Enable or disable a CloudFront distribution",
@@ -424,8 +424,8 @@
           "message": "Select the CloudFront distribution whose status you want to change. The distribution must exist and be in a state that allows status changes."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.display_name": {
-          "source": "Enable Distribution",
-          "message": "Enable Distribution"
+          "source": "Enable distribution",
+          "message": "Enable distribution"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.dXBkYXRlX2Rpc3RyaWJ1dGlvbl9zdGF0dXM.option.ZW5hYmxlZA.short_desc": {
           "source": "Set to true to enable the distribution, false to disable it",
@@ -436,8 +436,8 @@
           "message": "Choose whether to enable or disable the distribution. Enabling allows the distribution to serve content, while disabling stops content delivery and billing. Status changes can take time to propagate."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.display_name": {
-          "source": "Invalidate Item",
-          "message": "Invalidate Item"
+          "source": "Invalidate item",
+          "message": "Invalidate item"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.short_desc": {
           "source": "Create an invalidation request to clear cached content",
@@ -460,8 +460,8 @@
           "message": "Select the CloudFront distribution where you want to invalidate cached content. The invalidation will apply to all edge locations for this distribution."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.display_name": {
-          "source": "Paths to Invalidate",
-          "message": "Paths to Invalidate"
+          "source": "Paths to invalidate",
+          "message": "Paths to invalidate"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.cGF0aHM.short_desc": {
           "source": "List of file paths to invalidate from the cache",
@@ -472,8 +472,8 @@
           "message": "Specify the paths of files you want to invalidate from the CloudFront cache. Use /* to invalidate all files, or specify individual file paths like /images/logo.png. Paths should start with /."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.display_name": {
-          "source": "Caller Reference",
-          "message": "Caller Reference"
+          "source": "Caller reference",
+          "message": "Caller reference"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.aW52YWxpZGF0ZV9pdGVt.option.Y2FsbGVyX3JlZmVyZW5jZQ.short_desc": {
           "source": "Unique identifier for this invalidation request",
@@ -484,8 +484,8 @@
           "message": "Optional unique identifier for this invalidation request. If not provided, a unique value will be generated automatically. This helps track and identify specific invalidation requests."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.display_name": {
-          "source": "List Invalidations",
-          "message": "List Invalidations"
+          "source": "List invalidations",
+          "message": "List invalidations"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.short_desc": {
           "source": "Retrieve a list of invalidations for a distribution",
@@ -508,8 +508,8 @@
           "message": "Select the CloudFront distribution whose invalidation history you want to retrieve. This will show all invalidation requests made for this distribution."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.display_name": {
-          "source": "Max Items",
-          "message": "Max Items"
+          "source": "Max items",
+          "message": "Max items"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bGlzdF9pbnZhbGlkYXRpb25z.option.bWF4X2l0ZW1z.short_desc": {
           "source": "Maximum number of invalidations to return",
@@ -532,8 +532,8 @@
           "message": "Use this marker to continue pagination from a previous list request. This value is returned in the next_marker field of previous responses when results are truncated."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "Get Invalidation",
-          "message": "Get Invalidation"
+          "source": "Get invalidation",
+          "message": "Get invalidation"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.Z2V0X2ludmFsaWRhdGlvbg.short_desc": {
           "source": "Retrieve details about a specific invalidation request",
@@ -568,8 +568,8 @@
           "message": "Select the specific invalidation request you want to get details about. This will show the complete information about the invalidation including its current status and affected paths."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "New Distribution",
-          "message": "New Distribution"
+          "source": "New distribution",
+          "message": "New distribution"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2Rpc3RyaWJ1dGlvbg.short_desc": {
           "source": "Triggers when a new CloudFront distribution is created",
@@ -580,8 +580,8 @@
           "message": "This trigger monitors for newly created CloudFront distributions in your AWS account. It will fire whenever a new distribution is detected, providing details about the distribution configuration and status."
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.display_name": {
-          "source": "New Invalidation",
-          "message": "New Invalidation"
+          "source": "New invalidation",
+          "message": "New invalidation"
         },
         "app.QW1hem9uQ2xvdWRGcm9udA.action.bmV3X2ludmFsaWRhdGlvbg.short_desc": {
           "source": "Triggers when a new invalidation is created for a distribution",

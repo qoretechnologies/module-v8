@@ -340,7 +340,7 @@
           "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
         },
         "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.display_name": {
-          "source": "Add Video to Playlist",
+          "source": "Add video to playlist",
           "message": "プレイリストに動画を追加"
         },
         "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.short_desc": {
@@ -388,7 +388,7 @@
           "message": "プレイリスト内で動画を挿入する位置（0始まりのインデックス、省略可能）。指定しない場合、動画は末尾に追加されます"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.display_name": {
-          "source": "Create Playlist",
+          "source": "Create playlist",
           "message": "再生リストの作成"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.short_desc": {
@@ -424,7 +424,7 @@
           "message": "再生リストのコンテンツや目的を説明するオプションの説明文"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
+          "source": "Privacy status",
           "message": "公開ステータス"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.short_desc": {
@@ -460,7 +460,7 @@
           "message": "プレイリストの分類や見つけやすさに役立つタグ/キーワードのオプションリスト"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.display_name": {
-          "source": "Default Language",
+          "source": "Default language",
           "message": "デフォルトの言語"
         },
         "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.short_desc": {
@@ -472,7 +472,7 @@
           "message": "再生リストのコンテンツのオプションのデフォルト言語コード（例: 英語の場合は「en」）"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.display_name": {
-          "source": "Search Videos",
+          "source": "Search videos",
           "message": "動画を検索"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.short_desc": {
@@ -484,7 +484,7 @@
           "message": "キーワード、再生時間、画質、アップロード日などのさまざまなフィルターを使用してYouTube動画を検索します"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.short_desc": {
@@ -496,7 +496,7 @@
           "message": "リクエストでは、論理演算子 NOT（-）および OR（|）を使用して動画を除外したり、複数の検索語句のいずれかに関連付けられている動画を検索したりすることもできます。たとえば、「boating」または「sailing」のいずれかに一致する動画を検索するには、q パラメーターの値を boating|sailing に設定します。同様に、「boating」または「sailing」のいずれかに一致し、「fishing」を含まない動画を検索するには、q パラメーターの値を boating|sailing -fishing に設定します。"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.short_desc": {
@@ -528,7 +528,7 @@
           "message": "再生回数"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.display_name": {
-          "source": "Published After",
+          "source": "Published after",
           "message": "指定日以降に公開"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.short_desc": {
@@ -540,7 +540,7 @@
           "message": "指定した日時（ISO 8601形式）以降に公開された動画のみを含めるフィルター"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.display_name": {
-          "source": "Published Before",
+          "source": "Published before",
           "message": "指定日以前に公開"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.short_desc": {
@@ -552,7 +552,7 @@
           "message": "指定した日時（ISO 8601形式）以前に公開された動画のみを含めるフィルター"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.display_name": {
-          "source": "Video Duration",
+          "source": "Video duration",
           "message": "動画の再生時間"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.short_desc": {
@@ -580,7 +580,7 @@
           "message": "長（20分超）"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.display_name": {
-          "source": "Video Definition",
+          "source": "Video definition",
           "message": "動画の画質"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.short_desc": {
@@ -604,7 +604,7 @@
           "message": "高画質"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.display_name": {
-          "source": "Video Dimension",
+          "source": "Video dimension",
           "message": "動画の次元"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.short_desc": {
@@ -628,7 +628,7 @@
           "message": "3D"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.display_name": {
-          "source": "Video Caption",
+          "source": "Video caption",
           "message": "動画の字幕"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.short_desc": {
@@ -652,7 +652,7 @@
           "message": "なし"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.display_name": {
-          "source": "Video License",
+          "source": "Video license",
           "message": "動画のライセンス"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.short_desc": {
@@ -676,7 +676,7 @@
           "message": "クリエイティブ・コモンズ"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.display_name": {
-          "source": "Safe Search",
+          "source": "Safe search",
           "message": "セーフサーチ"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.short_desc": {
@@ -700,7 +700,7 @@
           "message": "厳格"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.display_name": {
-          "source": "Region Code",
+          "source": "Region code",
           "message": "地域コード"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.short_desc": {
@@ -712,7 +712,7 @@
           "message": "検索結果を特定の地域に限定するための任意の2文字の国コード"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.display_name": {
-          "source": "Relevance Language",
+          "source": "Relevance language",
           "message": "関連言語"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.short_desc": {
@@ -724,7 +724,7 @@
           "message": "検索結果の関連度ランキングに使用する言語コード"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.display_name": {
-          "source": "Video Category",
+          "source": "Video category",
           "message": "動画カテゴリ"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.short_desc": {
@@ -736,7 +736,7 @@
           "message": "特定のYouTubeカテゴリで動画を絞り込むための任意のカテゴリID"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "最大件数"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
@@ -748,7 +748,7 @@
           "message": "取得する検索結果の最大件数（デフォルトは25）"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "ページトークン"
         },
         "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.short_desc": {
@@ -760,7 +760,7 @@
           "message": "特定の結果ページを取得するためのトークン（ページネーション用）"
         },
         "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.display_name": {
-          "source": "Get Channel ID from URL",
+          "source": "Get channel ID from URL",
           "message": "URLからチャンネルIDを取得"
         },
         "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.short_desc": {
@@ -784,7 +784,7 @@
           "message": "チャンネルURL、ハンドル（@username）、カスタムURL（/c/）、ユーザー名（/user/）、動画URLを含む有効なYouTube URL形式"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.display_name": {
-          "source": "Get Analytics Report",
+          "source": "Get analytics report",
           "message": "アナリティクスレポートを取得"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "視聴回数、総再生時間、エンゲージメントなどの指標を含む、指定した日付範囲内の特定のチャンネルのYouTubeアナリティクスデータを取得します"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.display_name": {
-          "source": "Start Date",
+          "source": "Start date",
           "message": "開始日"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.short_desc": {
@@ -808,7 +808,7 @@
           "message": "アナリティクスレポートの開始日（YYYY-MM-DD形式）"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.display_name": {
-          "source": "End Date",
+          "source": "End date",
           "message": "終了日"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.short_desc": {
@@ -944,7 +944,7 @@
           "message": "アナリティクスデータを取得するYouTubeチャンネルID"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "最大件数"
         },
         "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.short_desc": {
@@ -956,7 +956,7 @@
           "message": "レポートで返すデータポイントの最大数（デフォルトは10）"
         },
         "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.display_name": {
-          "source": "List Video Categories",
+          "source": "List video categories",
           "message": "動画カテゴリ一覧"
         },
         "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.short_desc": {
@@ -968,7 +968,7 @@
           "message": "動画に割り当て可能な利用可能なYouTube動画カテゴリのリストを取得します"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.display_name": {
-          "source": "List User Channels",
+          "source": "List user channels",
           "message": "ユーザーチャンネル一覧"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.short_desc": {
@@ -980,7 +980,7 @@
           "message": "認証されたユーザーのYouTubeチャンネルに関する情報（統計情報やブランディング設定を含む）を取得します"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "最大件数"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.short_desc": {
@@ -992,7 +992,7 @@
           "message": "返されるチャンネルの最大数（デフォルトは5）"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "次ページトークン"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -1004,7 +1004,7 @@
           "message": "結果の次のページを取得するためのトークン"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.display_name": {
-          "source": "List User Subscriptions",
+          "source": "List user subscriptions",
           "message": "ユーザー登録チャンネル一覧"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.short_desc": {
@@ -1016,7 +1016,7 @@
           "message": "認証されたユーザーが登録しているYouTubeチャンネルのページ分割されたリスト（チャンネルの詳細やサムネイルを含む）を取得します"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "最大件数"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.short_desc": {
@@ -1028,7 +1028,7 @@
           "message": "レスポンスで返される登録チャンネル項目の最大数（1〜50、デフォルトは25）"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "次ページトークン"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -1040,7 +1040,7 @@
           "message": "結果セットの次のページを取得するためにpageTokenパラメーターの値として使用できるトークン"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.display_name": {
-          "source": "List Video Comments",
+          "source": "List video comments",
           "message": "動画コメント一覧"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.short_desc": {
@@ -1064,7 +1064,7 @@
           "message": "コメントを取得するYouTube動画の一意の識別子"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "並べ替え順序"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "関連度"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.display_name": {
-          "source": "Search Terms",
+          "source": "Search terms",
           "message": "検索語句"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "特定のキーワードを含むコメントを絞り込むためのオプションの検索語句"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.display_name": {
-          "source": "Text Format",
+          "source": "Text format",
           "message": "テキスト形式"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "プレーンテキスト"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "最大件数"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "返されるコメントスレッドの最大数（デフォルトは20）"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "ページトークン"
         },
         "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "コメントの特定のページを取得するためのトークン"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.display_name": {
-          "source": "List User Videos",
+          "source": "List user videos",
           "message": "ユーザー動画一覧"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "認証されたユーザーが自身のYouTubeチャンネルにアップロードした動画のリストを取得します"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
-          "source": "Maximum Results",
+          "source": "Maximum results",
           "message": "最大件数"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "返される動画の最大数（デフォルトは10）"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
-          "source": "Next Page Token",
+          "source": "Next page token",
           "message": "次ページトークン"
         },
         "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "次のページの動画を取得するためのトークン"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
-          "source": "Create or Reply to Comment",
+          "source": "Create or reply to comment",
           "message": "コメントの作成または返信"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
@@ -1188,7 +1188,7 @@
           "message": "YouTube動画上の既存のコメントに返信を投稿するか、新しいコメントを作成します"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.display_name": {
-          "source": "Parent Comment ID",
+          "source": "Parent comment ID",
           "message": "親コメントID"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.short_desc": {
@@ -1200,7 +1200,7 @@
           "message": "返信先のコメントまたはコメントスレッドの一意識別子"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.display_name": {
-          "source": "Reply Text",
+          "source": "Reply text",
           "message": "返信テキスト"
         },
         "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.short_desc": {
@@ -1212,7 +1212,7 @@
           "message": "コメントへの返信のテキスト内容"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.display_name": {
-          "source": "Update Video Details",
+          "source": "Update video details",
           "message": "動画詳細の更新"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.short_desc": {
@@ -1260,7 +1260,7 @@
           "message": "動画のオプションの新しいカテゴリ（数値カテゴリID）"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
+          "source": "Privacy status",
           "message": "公開ステータス"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.short_desc": {
@@ -1296,7 +1296,7 @@
           "message": "動画のオプションの新しい説明（現在の説明を保持する場合は空のままにします）"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.display_name": {
-          "source": "Made for Kids",
+          "source": "Made for kids",
           "message": "子ども向け"
         },
         "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.short_desc": {
@@ -1320,7 +1320,7 @@
           "message": "動画のカテゴリ分類に役立つタグ/キーワードのオプションリスト"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.display_name": {
-          "source": "Upload Video",
+          "source": "Upload video",
           "message": "動画のアップロード"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.short_desc": {
@@ -1344,7 +1344,7 @@
           "message": "アップロードする動画のタイトル/名前"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.display_name": {
-          "source": "Video File",
+          "source": "Video file",
           "message": "動画ファイル"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.short_desc": {
@@ -1488,7 +1488,7 @@
           "message": "動画のYouTubeカテゴリ（数値カテゴリID）"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.display_name": {
-          "source": "Privacy Status",
+          "source": "Privacy status",
           "message": "公開ステータス"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.short_desc": {
@@ -1524,7 +1524,7 @@
           "message": "動画の内容を説明するオプションの説明テキスト"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.display_name": {
-          "source": "Made for Kids",
+          "source": "Made for kids",
           "message": "子ども向け"
         },
         "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.short_desc": {
@@ -1548,7 +1548,7 @@
           "message": "動画を分類し見つけやすくするためのタグ/キーワードのオプションリスト"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.display_name": {
-          "source": "New Video by Search",
+          "source": "New video by search",
           "message": "検索による新しい動画"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.short_desc": {
@@ -1560,7 +1560,7 @@
           "message": "特定のクエリに対するYouTube検索結果を監視し、検索語句に一致する新しい動画が見つかったときにトリガーします。"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.display_name": {
-          "source": "Search Query",
+          "source": "Search query",
           "message": "検索クエリ"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.short_desc": {
@@ -1572,7 +1572,7 @@
           "message": "リクエストでは、論理演算子 NOT（-）および OR（|）を使用して動画を除外したり、複数の検索語句のいずれかに関連付けられている動画を検索したりすることもできます。たとえば、「boating」または「sailing」のいずれかに一致する動画を検索するには、q パラメーターの値を boating|sailing に設定します。同様に、「boating」または「sailing」のいずれかに一致し、「fishing」を含まない動画を検索するには、q パラメーターの値を boating|sailing -fishing に設定します。"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.display_name": {
-          "source": "New Video Comment",
+          "source": "New video comment",
           "message": "動画の新しいコメント"
         },
         "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.short_desc": {
@@ -1596,7 +1596,7 @@
           "message": "新しいコメントを監視するYouTube動画を選択します"
         },
         "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.display_name": {
-          "source": "New Channel Video",
+          "source": "New channel video",
           "message": "チャンネルの新しい動画"
         },
         "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.short_desc": {
@@ -1632,7 +1632,7 @@
           "message": "新しい動画のアップロードを監視するYouTubeチャンネルの完全なURLを入力します"
         },
         "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.display_name": {
-          "source": "New Playlist Video",
+          "source": "New playlist video",
           "message": "再生リストの新しい動画"
         },
         "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.short_desc": {
@@ -1656,7 +1656,7 @@
           "message": "新しい動画の追加を監視するYouTube再生リストIDを入力します"
         },
         "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.display_name": {
-          "source": "New Livestream",
+          "source": "New livestream",
           "message": "新しいライブ配信"
         },
         "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.short_desc": {

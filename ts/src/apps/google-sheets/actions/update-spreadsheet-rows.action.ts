@@ -47,7 +47,7 @@ const additionalOptions = {
             type: 'integer',
             required: true,
             preselected: true,
-            display_name: 'Row Index',
+            display_name: 'Row index',
             short_desc: 'The index of the row to update (starting from 2, as row 1 is headers)',
           },
         },

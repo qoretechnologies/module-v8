@@ -340,7 +340,7 @@
           "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Anomaly Score",
+          "source": "Create anomaly score",
           "message": "이상 점수 생성"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -352,7 +352,7 @@
           "message": "학습된 이상 감지기를 입력 데이터에 적용하여 이상 점수를 생성합니다. 이는 데이터 세트에서 비정상적인 패턴이나 이상치를 식별하는 데 도움이 됩니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "이상 감지기"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -364,7 +364,7 @@
           "message": "입력 데이터에 대한 이상 점수를 생성하는 데 사용할 학습된 이상 감지기 모델을 선택합니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "입력 데이터"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -424,7 +424,7 @@
           "message": "더 나은 워크플로 관리를 위해 이 이상 점수를 관련 리소스와 함께 정리할 수 있는 선택적 프로젝트입니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.display_name": {
-          "source": "Create Batch Anomaly Score",
+          "source": "Create batch anomaly score",
           "message": "배치 이상 점수 생성"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.short_desc": {
@@ -436,7 +436,7 @@
           "message": "데이터 세트에 이상 탐지기를 적용하여 여러 데이터 포인트에 대한 이상 점수를 한 번에 생성합니다. 이는 대량의 데이터를 처리하는 데 효율적입니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
-          "source": "Anomaly Detector",
+          "source": "Anomaly detector",
           "message": "이상 감지기"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
@@ -508,7 +508,7 @@
           "message": "더 나은 워크플로 관리를 위해 이 배치 이상 점수를 관련 리소스와 함께 정리할 수 있는 선택적 프로젝트입니다."
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.display_name": {
-          "source": "List Anomaly Detectors",
+          "source": "List anomaly detectors",
           "message": "이상 탐지기 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.short_desc": {
@@ -1228,7 +1228,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.display_name": {
-          "source": "List Datasets",
+          "source": "List datasets",
           "message": "데이터세트 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.short_desc": {
@@ -1820,7 +1820,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.display_name": {
-          "source": "List Models",
+          "source": "List models",
           "message": "모델 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9tb2RlbHM.short_desc": {
@@ -2844,7 +2844,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.display_name": {
-          "source": "List Projects",
+          "source": "List projects",
           "message": "프로젝트 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.short_desc": {
@@ -3060,7 +3060,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.display_name": {
-          "source": "List Sources",
+          "source": "List sources",
           "message": "소스 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.short_desc": {
@@ -3876,7 +3876,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.display_name": {
-          "source": "List Clusters",
+          "source": "List clusters",
           "message": "클러스터 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.short_desc": {
@@ -4628,7 +4628,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.display_name": {
-          "source": "Create Centroid",
+          "source": "Create centroid",
           "message": "센트로이드 생성"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.short_desc": {
@@ -4640,7 +4640,7 @@
           "message": "학습된 클러스터 모델을 사용하여 제공된 입력 데이터에 가장 가까운 클러스터 센트로이드를 결정합니다. 이는 새로운 데이터 포인트를 기존 클러스터로 분류하는 데 도움이 됩니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.display_name": {
-          "source": "Cluster Model",
+          "source": "Cluster model",
           "message": "클러스터 모델"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.short_desc": {
@@ -4652,7 +4652,7 @@
           "message": "입력 데이터에 가장 가까운 센트로이드를 찾는 데 사용할 학습된 클러스터 모델을 선택합니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "입력 데이터"
         },
         "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -4712,7 +4712,7 @@
           "message": "더 나은 워크플로 관리를 위해 이 센트로이드 계산을 관련 리소스와 함께 정리할 수 있는 선택적 프로젝트입니다."
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.display_name": {
-          "source": "List Ensembles",
+          "source": "List ensembles",
           "message": "앙상블 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.short_desc": {
@@ -4888,7 +4888,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.display_name": {
-          "source": "List Deep Networks",
+          "source": "List deep networks",
           "message": "딥 네트워크 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.short_desc": {
@@ -5064,7 +5064,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.display_name": {
-          "source": "List Topic Models",
+          "source": "List topic models",
           "message": "토픽 모델 목록 조회"
         },
         "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.short_desc": {
@@ -5240,7 +5240,7 @@
           "message": "내림차순"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.display_name": {
-          "source": "Create Prediction",
+          "source": "Create prediction",
           "message": "예측 생성"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.short_desc": {
@@ -5276,7 +5276,7 @@
           "message": "입력 데이터에 대한 예측을 생성하는 데 사용할 학습된 앙상블을 선택합니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.display_name": {
-          "source": "Deep Network",
+          "source": "Deep network",
           "message": "딥 네트워크"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.short_desc": {
@@ -5288,7 +5288,7 @@
           "message": "입력 데이터에 대한 예측을 생성하는 데 사용할 학습된 딥 네트워크를 선택합니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "입력 데이터"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5348,7 +5348,7 @@
           "message": "더 나은 워크플로 관리를 위해 이 예측을 관련 리소스와 함께 정리할 수 있는 선택적 프로젝트입니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.display_name": {
-          "source": "Create Topic Distribution",
+          "source": "Create topic distribution",
           "message": "토픽 분포 생성"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.short_desc": {
@@ -5360,7 +5360,7 @@
           "message": "학습된 토픽 모델을 사용하여 텍스트 데이터의 토픽 분포를 생성합니다. 이는 텍스트에 존재하는 주요 토픽과 상대적 중요도를 이해하는 데 도움이 됩니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.display_name": {
-          "source": "Topic Model",
+          "source": "Topic model",
           "message": "토픽 모델"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.short_desc": {
@@ -5372,7 +5372,7 @@
           "message": "입력 텍스트 데이터에 대한 토픽 분포를 생성하는 데 사용할 학습된 토픽 모델을 선택합니다."
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.display_name": {
-          "source": "Input Data",
+          "source": "Input data",
           "message": "입력 데이터"
         },
         "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.short_desc": {
@@ -5432,7 +5432,7 @@
           "message": "더 나은 워크플로 관리를 위해 관련 리소스와 함께 이 토픽 분포를 구성할 수 있는 선택적 프로젝트입니다."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.display_name": {
-          "source": "New Resource",
+          "source": "New resource",
           "message": "새 리소스"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.short_desc": {
@@ -5444,7 +5444,7 @@
           "message": "BigML 계정에서 모델, 데이터셋, 클러스터 및 기타 머신러닝 리소스 등 새로 생성된 리소스를 모니터링합니다. 이 트리거를 사용하면 특정 유형의 리소스가 생성될 때 워크플로를 자동화할 수 있습니다."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.display_name": {
-          "source": "Resource Type",
+          "source": "Resource type",
           "message": "리소스 유형"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.short_desc": {
@@ -5480,7 +5480,7 @@
           "message": "토픽 모델"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.display_name": {
-          "source": "Name Filter",
+          "source": "Name filter",
           "message": "이름 필터"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.short_desc": {
@@ -5492,7 +5492,7 @@
           "message": "이 텍스트가 이름에 포함된 리소스에 대해서만 트리거하는 선택적 필터입니다. 선택한 유형의 모든 리소스를 모니터링하려면 비워 두세요."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.display_name": {
-          "source": "Project Filter",
+          "source": "Project filter",
           "message": "프로젝트 필터"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.short_desc": {
@@ -5504,7 +5504,7 @@
           "message": "특정 프로젝트 내에서 생성된 리소스에 대해서만 트리거하는 선택적 필터입니다. 모든 프로젝트의 리소스를 모니터링하려면 비워 두세요."
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.display_name": {
-          "source": "Tags Filter",
+          "source": "Tags filter",
           "message": "태그 필터"
         },
         "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.short_desc": {

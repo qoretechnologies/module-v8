@@ -221,7 +221,7 @@ const createPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       page_name: {
         type: 'string',
-        display_name: 'Page Name',
+        display_name: 'Page name',
         short_desc: 'The name of the page',
       },
       post_details: {
@@ -239,7 +239,7 @@ const createPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
             status_type: { type: 'string' },
           },
         },
-        display_name: 'Post Details',
+        display_name: 'Post details',
         short_desc: 'Detailed information about the created post',
       },
       post_url: {
@@ -249,22 +249,22 @@ const createPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       is_published: {
         type: 'bool',
-        display_name: 'Is Published',
+        display_name: 'Is published',
         short_desc: 'Whether the post is currently published',
       },
       created_at: {
         type: 'string',
-        display_name: 'Created At',
+        display_name: 'Created at',
         short_desc: 'When the post was created',
       },
       scheduled_publish_time: {
         type: 'string',
-        display_name: 'Scheduled Publish Time',
+        display_name: 'Scheduled publish time',
         short_desc: 'When the post is scheduled to be published (if applicable)',
       },
       generated_at: {
         type: 'string',
-        display_name: 'Generated At',
+        display_name: 'Generated at',
         short_desc: 'When this response was generated',
       },
     },

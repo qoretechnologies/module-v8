@@ -30,7 +30,7 @@ Your OpenRouter API key starting with \`sk-or-\`. This key authenticates all req
   OpenRouter: {
     actions: {
       list_models: {
-        displayName: 'List Models',
+        displayName: 'List models',
         shortDesc: 'Retrieve available AI models from OpenRouter',
         longDesc:
           'Fetches a comprehensive list of all AI models available through OpenRouter, including model metadata such as pricing, capabilities, context length, supported parameters, and provider information.',
@@ -44,7 +44,7 @@ Your OpenRouter API key starting with \`sk-or-\`. This key authenticates all req
         },
       },
       send_prompt: {
-        displayName: 'Send Prompt',
+        displayName: 'Send prompt',
         shortDesc: 'Send a text prompt for completion',
         longDesc:
           'Sends a single text prompt to an AI model for completion. This is ideal for simple text generation tasks, creative writing, or when you need a direct response to a single input.',
@@ -68,7 +68,7 @@ Your OpenRouter API key starting with \`sk-or-\`. This key authenticates all req
               'Controls the randomness of the output. Lower values (0.0-0.3) make responses more focused and deterministic, while higher values (0.7-1.0) make them more creative and varied.',
           },
           max_tokens: {
-            displayName: 'Max Tokens',
+            displayName: 'Max tokens',
             shortDesc: 'Maximum number of tokens to generate',
             longDesc:
               'Sets the maximum number of tokens (roughly words) the model should generate in its response. Higher values allow for longer responses but may increase costs.',
@@ -94,7 +94,7 @@ Your OpenRouter API key starting with \`sk-or-\`. This key authenticates all req
         },
       },
       chat_completion: {
-        displayName: 'Chat Completion',
+        displayName: 'Chat completion',
         shortDesc: 'Generate chat responses from conversation messages',
         longDesc:
           'Processes a conversation history with multiple messages and roles (system, user, assistant) to generate contextual responses. Perfect for building chatbots, conversational AI, or multi-turn interactions.',
@@ -136,7 +136,7 @@ Your OpenRouter API key starting with \`sk-or-\`. This key authenticates all req
               'Controls the randomness of the output. Lower values (0.0-0.3) make responses more focused and deterministic, while higher values (0.7-1.0) make them more creative and varied.',
           },
           max_tokens: {
-            displayName: 'Max Tokens',
+            displayName: 'Max tokens',
             shortDesc: 'Maximum number of tokens to generate',
             longDesc:
               'Sets the maximum number of tokens (roughly words) the model should generate in its response. Higher values allow for longer responses but may increase costs.',

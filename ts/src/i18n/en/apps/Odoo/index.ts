@@ -51,7 +51,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     // Locales for partner actions
 
     create_partner: {
-      displayName: 'Create Partner',
+      displayName: 'Create partner',
       shortDesc: 'Create a new partner (contact or company) in Odoo',
       longDesc:
         'Creates a new partner record in Odoo with comprehensive contact information, address details, business information, and relationship data. Partners can be individuals or companies and serve as customers, vendors, or both.',
@@ -62,13 +62,13 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: 'The name of the partner (individual or company name).',
         },
         is_company: {
-          displayName: 'Is Company',
+          displayName: 'Is company',
           shortDesc: 'Whether this partner is a company',
           longDesc:
             'Set to true if this partner represents a company/organization, false for individual contacts.',
         },
         contact_info: {
-          displayName: 'Contact Information',
+          displayName: 'Contact information',
           shortDesc: 'Contact details for the partner',
           longDesc: 'Contact information including email, phone, website, job function and title.',
           type: {
@@ -89,7 +89,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'Website URL for the partner or company.',
               },
               function: {
-                displayName: 'Job Function',
+                displayName: 'Job function',
                 shortDesc: 'Job title or function',
                 longDesc: 'Job title or function of the contact person.',
               },
@@ -102,7 +102,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         address_info: {
-          displayName: 'Address Information',
+          displayName: 'Address information',
           shortDesc: 'Address details for the partner',
           longDesc:
             'Complete address information including street, city, state, country, and postal code.',
@@ -124,7 +124,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'City or locality name.',
               },
               zip: {
-                displayName: 'ZIP Code',
+                displayName: 'ZIP code',
                 shortDesc: 'Postal code',
                 longDesc: 'ZIP or postal code.',
               },
@@ -142,14 +142,14 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         business_info: {
-          displayName: 'Business Information',
+          displayName: 'Business information',
           shortDesc: 'Business-related details',
           longDesc:
             'Business information including VAT number, reference code, and industry classification.',
           type: {
             fields: {
               vat: {
-                displayName: 'VAT Number',
+                displayName: 'VAT number',
                 shortDesc: 'Tax identification number',
                 longDesc: 'VAT or tax identification number for the partner.',
               },
@@ -167,18 +167,18 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         relationship_info: {
-          displayName: 'Relationship Information',
+          displayName: 'Relationship information',
           shortDesc: 'Relationship and assignment details',
           longDesc: 'Information about relationships to other partners and user assignments.',
           type: {
             fields: {
               parent_id: {
-                displayName: 'Parent Company',
+                displayName: 'Parent company',
                 shortDesc: 'Parent company or organization',
                 longDesc: 'Parent company or organization this partner belongs to.',
               },
               user_id: {
-                displayName: 'Assigned User',
+                displayName: 'Assigned user',
                 shortDesc: 'User responsible for this partner',
                 longDesc: 'Odoo user responsible for managing this partner.',
               },
@@ -196,7 +196,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: 'Set to false to archive the partner without deleting it.',
         },
         comment: {
-          displayName: 'Internal Notes',
+          displayName: 'Internal notes',
           shortDesc: 'Internal notes about the partner',
           longDesc: 'Internal notes or comments about the partner.',
         },
@@ -211,7 +211,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: 'Timezone where the partner is located.',
         },
         image_1920: {
-          displayName: 'Profile Image',
+          displayName: 'Profile image',
           shortDesc: 'Partner profile image',
           longDesc: 'Profile image for the partner (base64 encoded).',
         },
@@ -219,7 +219,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     get_partner: {
-      displayName: 'Get Partner',
+      displayName: 'Get partner',
       shortDesc: 'Retrieve a single partner record from Odoo',
       longDesc:
         'Fetches detailed information about a specific partner from Odoo. Allows selecting which fields to retrieve for customized data requirements.',
@@ -230,7 +230,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: 'The unique identifier of the partner record to fetch from Odoo.',
         },
         fields: {
-          displayName: 'Fields to Retrieve',
+          displayName: 'Fields to retrieve',
           shortDesc: 'Partner fields to include in response',
           longDesc:
             'List of specific partner fields to retrieve. If not specified, returns basic partner information including ID, name, email, phone, and company status.',
@@ -239,7 +239,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     delete_partner: {
-      displayName: 'Delete Partner',
+      displayName: 'Delete partner',
       shortDesc: 'Delete a partner record from Odoo',
       longDesc:
         'Permanently deletes a partner record from Odoo. This action cannot be undone. Consider archiving (setting active to false) instead if you need to preserve the record.',
@@ -252,7 +252,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
       },
     },
     create_lead: {
-      displayName: 'Create Lead',
+      displayName: 'Create lead',
       shortDesc: 'Create a new lead or opportunity in Odoo CRM',
       longDesc:
         'Creates a new lead or opportunity record in Odoo CRM with comprehensive contact, sales, and marketing information. Supports grouping related fields for better organization.',
@@ -264,17 +264,17 @@ Either your Odoo password or a generated API key. API keys are recommended for b
             'The main title or name that identifies this lead or opportunity. This is a required field that will be displayed in lead lists and reports.',
         },
         contact_name: {
-          displayName: 'Contact Name',
+          displayName: 'Contact name',
           shortDesc: 'Name of the contact person',
           longDesc: 'The full name of the primary contact person associated with this lead.',
         },
         partner_name: {
-          displayName: 'Company Name',
+          displayName: 'Company name',
           shortDesc: 'Name of the customer company',
           longDesc: 'The name of the company or organization that this lead represents.',
         },
         contact_info: {
-          displayName: 'Contact Information',
+          displayName: 'Contact information',
           shortDesc: 'Contact details for the lead',
           longDesc:
             'Complete contact information including email addresses, phone numbers, job position, and website details.',
@@ -296,12 +296,12 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'The main phone number for contacting this lead.',
               },
               mobile: {
-                displayName: 'Phone Number',
+                displayName: 'Phone number',
                 shortDesc: 'Mobile phone number',
                 longDesc: 'Mobile or cell phone number for the contact.',
               },
               function: {
-                displayName: 'Job Position',
+                displayName: 'Job position',
                 shortDesc: 'Job title or position of the contact',
                 longDesc:
                   'The job title, role, or position of the contact person within their organization.',
@@ -315,7 +315,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         address_info: {
-          displayName: 'Address Information',
+          displayName: 'Address information',
           shortDesc: 'Address details for the lead',
           longDesc:
             'Complete address information including street address, city, state, country, and postal code.',
@@ -358,7 +358,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         sales_info: {
-          displayName: 'Sales Information',
+          displayName: 'Sales information',
           shortDesc: 'Sales-related details for the lead',
           longDesc:
             'Sales management information including assigned salesperson, team, stage, priority, and expected closing details.',
@@ -370,7 +370,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'The ID of the user who is assigned as the salesperson for this lead.',
               },
               team_id: {
-                displayName: 'Sales Team',
+                displayName: 'Sales team',
                 shortDesc: 'ID of the sales team',
                 longDesc: 'The ID of the sales team responsible for this lead.',
               },
@@ -391,7 +391,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                   'The estimated probability of closing this lead successfully, expressed as a percentage from 0 to 100.',
               },
               date_deadline: {
-                displayName: 'Expected Closing',
+                displayName: 'Expected closing',
                 shortDesc: 'Expected closing date',
                 longDesc:
                   'The expected date when this lead or opportunity is anticipated to close.',
@@ -400,7 +400,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         marketing_info: {
-          displayName: 'Marketing Information',
+          displayName: 'Marketing information',
           shortDesc: 'Marketing and source tracking information',
           longDesc:
             'Marketing campaign and lead source tracking information to understand how this lead was generated and acquired.',
@@ -431,20 +431,20 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         activity_info: {
-          displayName: 'Activity Information',
+          displayName: 'Activity information',
           shortDesc: 'Next activity planning information',
           longDesc:
             'Information about the next planned activity or follow-up action for this lead.',
           type: {
             fields: {
               activity_summary: {
-                displayName: 'Next Activity Summary',
+                displayName: 'Next activity summary',
                 shortDesc: 'Summary of the next planned activity',
                 longDesc:
                   'A brief description or summary of the next activity planned for this lead.',
               },
               activity_type_id: {
-                displayName: 'Next Activity Type',
+                displayName: 'Next activity type',
                 shortDesc: 'ID of the activity type (Email, Call, Meeting, etc.)',
                 longDesc:
                   'The ID of the type of activity planned next, such as Email, Call, Meeting, or Document review.',
@@ -465,7 +465,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
             'Internal notes and comments about this lead. This information is for internal use and not visible to the customer.',
         },
         color: {
-          displayName: 'Color Index',
+          displayName: 'Color index',
           shortDesc: 'Color index for UI display (0-11)',
           longDesc:
             'A color index (0-11) used for visual identification in the user interface. This helps with quick visual organization of leads.',
@@ -501,7 +501,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
             'Specifies whether this record should be treated as a lead (early stage) or opportunity (qualified prospect).',
         },
         recurring_plan: {
-          displayName: 'Recurring Plan',
+          displayName: 'Recurring plan',
           shortDesc: 'ID of recurring plan if applicable',
           longDesc:
             'The ID of a recurring plan if this lead is associated with a subscription or recurring service.',
@@ -512,12 +512,12 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: 'An external identifier from a reveal service or lead intelligence platform.',
         },
         lead_mining_request_id: {
-          displayName: 'Lead Mining Request',
+          displayName: 'Lead mining request',
           shortDesc: 'ID of lead mining request',
           longDesc: 'The ID of the lead mining request that generated this lead, if applicable.',
         },
         enrichment_done: {
-          displayName: 'Enrichment Done',
+          displayName: 'Enrichment done',
           shortDesc: 'Whether lead enrichment has been completed',
           longDesc:
             'Indicates whether automated lead enrichment (data enhancement) has been completed for this lead.',
@@ -528,14 +528,14 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: "The number of email bounces recorded for this lead's email address.",
         },
         lost_reason: {
-          displayName: 'Lost Reason',
+          displayName: 'Lost reason',
           shortDesc: 'ID of lost reason if lead was lost',
           longDesc: 'The ID of the reason why this lead was marked as lost, if applicable.',
         },
       },
     },
     get_lead: {
-      displayName: 'Get Lead',
+      displayName: 'Get lead',
       shortDesc: 'Retrieve a specific lead by ID with customizable fields.',
       longDesc:
         'Fetches detailed information about a specific lead from Odoo CRM. Allows you to specify which fields to retrieve, with common fields like ID, name, email, contact name, and partner name selected by default.',
@@ -555,7 +555,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     list_companies: {
-      displayName: 'List Companies',
+      displayName: 'List companies',
       shortDesc: 'List companies with filtering, sorting, and pagination options.',
       longDesc:
         'Retrieves a list of companies from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns company information including display name, email, phone, and website.',
@@ -609,7 +609,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                   longDesc: 'The field name to apply the filter condition to.',
                 },
                 searchType: {
-                  displayName: 'Search Type',
+                  displayName: 'Search type',
                   shortDesc: 'Type of search operation',
                   longDesc: 'The type of comparison to perform - equals or contains.',
                 },
@@ -626,7 +626,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     list_leads: {
-      displayName: 'List Leads',
+      displayName: 'List leads',
       shortDesc: 'List leads with filtering, sorting, and pagination options.',
       longDesc:
         'Retrieves a list of leads from Odoo CRM with support for filtering by field values, sorting by specific fields, and pagination. Returns lead information including ID, name, email, contact name, and partner name.',
@@ -680,7 +680,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                   longDesc: 'The field name to apply the filter condition to.',
                 },
                 searchType: {
-                  displayName: 'Search Type',
+                  displayName: 'Search type',
                   shortDesc: 'Type of search operation',
                   longDesc: 'The type of comparison to perform - equals or contains.',
                 },
@@ -697,7 +697,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     list_partners: {
-      displayName: 'List Partners',
+      displayName: 'List partners',
       shortDesc: 'List partners with filtering, sorting, and pagination options.',
       longDesc:
         'Retrieves a list of partners from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns partner information including ID, display name, and email.',
@@ -751,7 +751,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                   longDesc: 'The field name to apply the filter condition to.',
                 },
                 searchType: {
-                  displayName: 'Search Type',
+                  displayName: 'Search type',
                   shortDesc: 'Type of search operation',
                   longDesc: 'The type of comparison to perform - equals or contains.',
                 },
@@ -768,7 +768,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     update_lead: {
-      displayName: 'Update Lead',
+      displayName: 'Update lead',
       shortDesc: 'Update an existing lead with new information.',
       longDesc:
         'Updates an existing lead in Odoo CRM with new information. Supports updating contact information, address details, sales information, marketing data, and activity details. All fields are optional except the lead ID.',
@@ -784,17 +784,17 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: 'The title or subject of the lead.',
         },
         contact_name: {
-          displayName: 'Contact Name',
+          displayName: 'Contact name',
           shortDesc: 'Name of the contact person',
           longDesc: 'The name of the primary contact person for this lead.',
         },
         partner_name: {
-          displayName: 'Partner Name',
+          displayName: 'Partner name',
           shortDesc: 'Name of the partner/company',
           longDesc: 'The name of the partner or company associated with this lead.',
         },
         contact_info: {
-          displayName: 'Contact Information',
+          displayName: 'Contact information',
           shortDesc: 'Contact details for the lead',
           longDesc: 'Email addresses, phone number, job function, and website information.',
           type: {
@@ -805,7 +805,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'The primary email address of the contact.',
               },
               email_cc: {
-                displayName: 'CC Email',
+                displayName: 'CC email',
                 shortDesc: 'CC email addresses',
                 longDesc: 'Additional email addresses to include in communications.',
               },
@@ -815,7 +815,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'The phone number of the contact.',
               },
               function: {
-                displayName: 'Job Function',
+                displayName: 'Job function',
                 shortDesc: 'Job title or function',
                 longDesc: 'The job title or function of the contact person.',
               },
@@ -828,7 +828,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         address_info: {
-          displayName: 'Address Information',
+          displayName: 'Address information',
           shortDesc: 'Address details for the lead',
           longDesc: 'Street address, city, postal code, country, and state information.',
           type: {
@@ -849,7 +849,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'The city of the contact address.',
               },
               zip: {
-                displayName: 'ZIP Code',
+                displayName: 'ZIP code',
                 shortDesc: 'Postal/ZIP code',
                 longDesc: 'The postal or ZIP code of the contact address.',
               },
@@ -867,7 +867,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         sales_info: {
-          displayName: 'Sales Information',
+          displayName: 'Sales information',
           shortDesc: 'Sales-related details for the lead',
           longDesc:
             'Salesperson assignment, team, stage, priority, probability, and deadline information.',
@@ -879,7 +879,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'The salesperson assigned to this lead.',
               },
               team_id: {
-                displayName: 'Sales Team',
+                displayName: 'Sales team',
                 shortDesc: 'Assigned sales team',
                 longDesc: 'The sales team responsible for this lead.',
               },
@@ -907,7 +907,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         marketing_info: {
-          displayName: 'Marketing Information',
+          displayName: 'Marketing information',
           shortDesc: 'Marketing campaign and source details',
           longDesc:
             'Information about the marketing campaign, medium, source, and referral that generated this lead.',
@@ -929,7 +929,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
                 longDesc: 'The specific source that generated this lead.',
               },
               referred: {
-                displayName: 'Referred By',
+                displayName: 'Referred by',
                 shortDesc: 'Referral source',
                 longDesc: 'Information about who or what referred this lead.',
               },
@@ -937,18 +937,18 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           },
         },
         activity_info: {
-          displayName: 'Activity Information',
+          displayName: 'Activity information',
           shortDesc: 'Next activity details',
           longDesc: 'Information about the next planned activity for this lead.',
           type: {
             fields: {
               activity_summary: {
-                displayName: 'Activity Summary',
+                displayName: 'Activity summary',
                 shortDesc: 'Summary of next activity',
                 longDesc: 'A brief summary of the next planned activity.',
               },
               activity_type_id: {
-                displayName: 'Activity Type',
+                displayName: 'Activity type',
                 shortDesc: 'Type of next activity',
                 longDesc: 'The type of the next planned activity (call, meeting, email, etc.).',
               },
@@ -991,12 +991,12 @@ Either your Odoo password or a generated API key. API keys are recommended for b
           longDesc: 'Whether this record is a lead or has been converted to an opportunity.',
         },
         email_bounce: {
-          displayName: 'Email Bounce Count',
+          displayName: 'Email bounce count',
           shortDesc: 'Number of email bounces',
           longDesc: 'The number of times emails to this contact have bounced.',
         },
         lost_reason: {
-          displayName: 'Lost Reason',
+          displayName: 'Lost reason',
           shortDesc: 'Reason for losing the lead',
           longDesc: 'The reason why this lead was marked as lost.',
         },
@@ -1009,7 +1009,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     delete_lead: {
-      displayName: 'Delete Lead',
+      displayName: 'Delete lead',
       shortDesc: 'Delete a lead from Odoo CRM.',
       longDesc:
         'Permanently deletes a lead record from Odoo CRM. This action cannot be undone. Consider archiving the lead instead by setting it as inactive.',
@@ -1024,7 +1024,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
   },
   triggers: {
     new_lead: {
-      displayName: 'New Lead',
+      displayName: 'New lead',
       shortDesc: 'Triggers when a new lead is created in Odoo',
       longDesc:
         'Monitors Odoo for newly created leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.',
@@ -1036,7 +1036,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
             'Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.',
         },
         team_id: {
-          displayName: 'Sales Team',
+          displayName: 'Sales team',
           shortDesc: 'Filter by sales team',
           longDesc:
             'Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.',
@@ -1054,7 +1054,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
             'Only trigger for leads in the specified stage. Leave empty to monitor all stages.',
         },
         lead_type: {
-          displayName: 'Lead Type',
+          displayName: 'Lead type',
           shortDesc: 'Type of records to monitor',
           longDesc: 'Choose whether to monitor leads, opportunities, or both types of records.',
         },
@@ -1068,7 +1068,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
     },
 
     updated_lead: {
-      displayName: 'Updated Lead',
+      displayName: 'Updated lead',
       shortDesc: 'Triggers when an existing lead is updated in Odoo',
       longDesc:
         'Monitors Odoo for updates to existing leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.',
@@ -1080,7 +1080,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
             'Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.',
         },
         team_id: {
-          displayName: 'Sales Team',
+          displayName: 'Sales team',
           shortDesc: 'Filter by sales team',
           longDesc:
             'Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.',
@@ -1098,7 +1098,7 @@ Either your Odoo password or a generated API key. API keys are recommended for b
             'Only trigger for leads in the specified stage. Leave empty to monitor all stages.',
         },
         lead_type: {
-          displayName: 'Lead Type',
+          displayName: 'Lead type',
           shortDesc: 'Type of records to monitor',
           longDesc: 'Choose whether to monitor leads, opportunities, or both types of records.',
         },
@@ -1111,13 +1111,13 @@ Either your Odoo password or a generated API key. API keys are recommended for b
       },
     },
     new_company: {
-      displayName: 'New Company',
+      displayName: 'New company',
       shortDesc: 'Triggers when a new company is created in Odoo',
       longDesc:
         'Monitors Odoo for newly created company records in the res.company model. This trigger fires whenever a new company entity is added to your Odoo system, providing company configuration details including address, currency, and organizational information.',
     },
     new_partner: {
-      displayName: 'New Partner',
+      displayName: 'New partner',
       shortDesc: 'Triggers when a new partner is created in Odoo',
       longDesc:
         'Monitors Odoo for newly created partner records in the res.partner model. This trigger fires whenever a new partner entity is added to your Odoo system, providing partner configuration details including address, contact information, and organizational information.',

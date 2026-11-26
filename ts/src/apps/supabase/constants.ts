@@ -33,7 +33,7 @@ export const SUPABASE_CONN_OPTIONS = {
   },
   token: {
     type: 'string',
-    display_name: 'API Key',
+    display_name: 'API key',
     short_desc: 'Project API key from the project settings',
     desc: `To get the api key, go to Project Settings > API Keys > service_role 'secret'`,
   },

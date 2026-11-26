@@ -14,7 +14,7 @@ export const NETSUITE_CONN_OPTIONS = {
     type: 'string',
   },
   oauth2_token_url: {
-    display_name: 'OAuth2 Token URL',
+    display_name: 'OAuth2 token URL',
     short_desc: 'The custom OAuth2 token URL',
     desc: 'The OAuth2 token URL',
     type: 'string',

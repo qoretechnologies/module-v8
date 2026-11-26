@@ -14,7 +14,7 @@ export const TELEGRAM_APP_LOGO =
 
 export const TELEGRAM_CONN_OPTIONS = {
   token: {
-    display_name: 'Bot Token',
+    display_name: 'Bot token',
     short_desc: 'Token for an existing or newly created bot',
     desc:
       `To create a new bot:\n` +

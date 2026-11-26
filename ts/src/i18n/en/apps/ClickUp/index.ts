@@ -8,7 +8,7 @@ const ClickUpAppEn = {
   actions: {
     list_lists: {
       groups: ['Lists'],
-      displayName: 'List Lists',
+      displayName: 'List lists',
       shortDesc: 'List ClickUp lists within a folder',
       longDesc:
         'Retrieve all lists contained within a specific ClickUp folder with optional archived filtering',
@@ -29,7 +29,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp folder to retrieve lists from',
         },
         archived: {
-          displayName: 'Include Archived',
+          displayName: 'Include archived',
           shortDesc: 'Include archived lists',
           longDesc: 'Whether to include archived lists in the results',
         },
@@ -37,7 +37,7 @@ const ClickUpAppEn = {
     },
     get_folder: {
       groups: ['Folders'],
-      displayName: 'Get Folder',
+      displayName: 'Get folder',
       shortDesc: 'Retrieve ClickUp folder details',
       longDesc:
         'Fetch comprehensive information about a specific ClickUp folder including contained lists and statuses',
@@ -61,7 +61,7 @@ const ClickUpAppEn = {
     },
     get_lists: {
       groups: ['Lists'],
-      displayName: 'Get List',
+      displayName: 'Get list',
       shortDesc: 'Retrieve ClickUp list details',
       longDesc:
         'Fetch comprehensive information about a specific ClickUp list including status configurations and metadata',
@@ -90,7 +90,7 @@ const ClickUpAppEn = {
     },
     list_folders: {
       groups: ['Folders'],
-      displayName: 'List Folders',
+      displayName: 'List folders',
       shortDesc: 'List ClickUp folders within a space',
       longDesc:
         'Retrieve all folders contained within a specific ClickUp space with optional archived filtering',
@@ -106,7 +106,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp space to retrieve folders from',
         },
         archived: {
-          displayName: 'Include Archived',
+          displayName: 'Include archived',
           shortDesc: 'Include archived folders',
           longDesc: 'Whether to include archived folders in the results',
         },
@@ -114,7 +114,7 @@ const ClickUpAppEn = {
     },
     create_task_comment: {
       groups: ['Tasks'],
-      displayName: 'Add Task Comment',
+      displayName: 'Add task comment',
       shortDesc: 'Add a comment to a ClickUp task',
       longDesc:
         'Create a new comment on a specific ClickUp task with optional assignee and group assignee notifications',
@@ -145,12 +145,12 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp task to add the comment to',
         },
         comment_text: {
-          displayName: 'Comment Text',
+          displayName: 'Comment text',
           shortDesc: 'Content of the comment',
           longDesc: 'The text content of the comment to be added to the task',
         },
         notify_all: {
-          displayName: 'Notify All',
+          displayName: 'Notify all',
           shortDesc: 'Notify all task members',
           longDesc: 'Whether to notify all task members about the new comment',
         },
@@ -160,7 +160,7 @@ const ClickUpAppEn = {
           longDesc: 'User to assign the comment to',
         },
         group_assignee: {
-          displayName: 'Group Assignee',
+          displayName: 'Group assignee',
           shortDesc: 'Group to assign comment to',
           longDesc: 'Group to assign the comment to',
         },
@@ -168,7 +168,7 @@ const ClickUpAppEn = {
     },
     create_document: {
       groups: ['Documents'],
-      displayName: 'Create Document',
+      displayName: 'Create document',
       shortDesc: 'Create a new ClickUp document',
       longDesc:
         'Create a new document in ClickUp with customizable name, parent location, and visibility settings',
@@ -179,12 +179,12 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp workspace where the document will be created',
         },
         name: {
-          displayName: 'Document Name',
+          displayName: 'Document name',
           shortDesc: 'Name of the document',
           longDesc: 'The name/title for the new document',
         },
         parent: {
-          displayName: 'Parent Location',
+          displayName: 'Parent location',
           shortDesc: 'Parent container',
           longDesc:
             'The parent container (space, folder, list, etc.) where the document will be placed',
@@ -196,7 +196,7 @@ const ClickUpAppEn = {
                 longDesc: 'The unique identifier of the parent container',
               },
               type: {
-                displayName: 'Parent Type',
+                displayName: 'Parent type',
                 shortDesc: 'Type of parent container',
                 longDesc:
                   'The type of parent container (4=Space, 5=Folder, 6=List, 7=Everything, 12=Workspace)',
@@ -210,7 +210,7 @@ const ClickUpAppEn = {
           longDesc: 'Whether the document should be public or private',
         },
         create_page: {
-          displayName: 'Create Page',
+          displayName: 'Create page',
           shortDesc: 'Create initial page',
           longDesc: 'Whether to create an initial page within the document',
         },
@@ -218,7 +218,7 @@ const ClickUpAppEn = {
     },
     create_document_page: {
       groups: ['Documents'],
-      displayName: 'Create Document Page',
+      displayName: 'Create document page',
       shortDesc: 'Create a page within a ClickUp document',
       longDesc:
         'Add a new page to an existing ClickUp document with content and formatting options',
@@ -234,7 +234,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp document to add the page to',
         },
         name: {
-          displayName: 'Page Name',
+          displayName: 'Page name',
           shortDesc: 'Name of the page',
           longDesc: 'The title/name for the new page',
         },
@@ -249,7 +249,7 @@ const ClickUpAppEn = {
           longDesc: 'An optional subtitle for the page',
         },
         content_format: {
-          displayName: 'Content Format',
+          displayName: 'Content format',
           shortDesc: 'Format of the content',
           longDesc: 'The format of the page content (Markdown or Plain Text)',
         },
@@ -257,7 +257,7 @@ const ClickUpAppEn = {
     },
     create_folder: {
       groups: ['Folders'],
-      displayName: 'Create Folder',
+      displayName: 'Create folder',
       shortDesc: 'Create a new ClickUp folder',
       longDesc: 'Create a new folder within a ClickUp space to organize lists and tasks',
       options: {
@@ -272,7 +272,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp space where the folder will be created',
         },
         name: {
-          displayName: 'Folder Name',
+          displayName: 'Folder name',
           shortDesc: 'Name of the folder',
           longDesc: 'The name for the new folder',
         },
@@ -280,7 +280,7 @@ const ClickUpAppEn = {
     },
     create_list: {
       groups: ['Lists'],
-      displayName: 'Create List',
+      displayName: 'Create list',
       shortDesc: 'Create a new ClickUp list',
       longDesc:
         'Create a new list within a ClickUp folder with optional content, assignee, and due date',
@@ -301,7 +301,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp folder where the list will be created',
         },
         name: {
-          displayName: 'List Name',
+          displayName: 'List name',
           shortDesc: 'Name of the list',
           longDesc: 'The name for the new list',
         },
@@ -321,12 +321,12 @@ const ClickUpAppEn = {
           longDesc: 'Priority level for the list',
         },
         due_date: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'List due date',
           longDesc: 'Due date for the list',
         },
         markdown_content: {
-          displayName: 'Markdown Content',
+          displayName: 'Markdown content',
           shortDesc: 'Markdown description',
           longDesc: 'Description content in Markdown format',
         },
@@ -334,7 +334,7 @@ const ClickUpAppEn = {
     },
     create_task: {
       groups: ['Tasks'],
-      displayName: 'Create Task',
+      displayName: 'Create task',
       shortDesc: 'Create a new ClickUp task',
       longDesc:
         'Create a new task in ClickUp with comprehensive options for assignees, dates, priority, and custom fields',
@@ -360,7 +360,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp list where the task will be created',
         },
         name: {
-          displayName: 'Task Name',
+          displayName: 'Task name',
           shortDesc: 'Name of the task',
           longDesc: 'The title/name for the new task',
         },
@@ -380,7 +380,7 @@ const ClickUpAppEn = {
           longDesc: 'Whether to create the task in an archived state',
         },
         group_assignees: {
-          displayName: 'Group Assignees',
+          displayName: 'Group assignees',
           shortDesc: 'Group assignees',
           longDesc: 'Groups to assign the task to',
         },
@@ -395,17 +395,17 @@ const ClickUpAppEn = {
           longDesc: 'Priority level for the task',
         },
         due_date: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'Task due date',
           longDesc: 'When the task is due',
         },
         start_date: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'Task start date',
           longDesc: 'When work on the task should begin',
         },
         time_estimate: {
-          displayName: 'Time Estimate',
+          displayName: 'Time estimate',
           shortDesc: 'Estimated time',
           longDesc: 'Estimated time required to complete the task (in minutes)',
         },
@@ -415,32 +415,32 @@ const ClickUpAppEn = {
           longDesc: 'Point value assigned to the task',
         },
         notify_all: {
-          displayName: 'Notify All',
+          displayName: 'Notify all',
           shortDesc: 'Notify team members',
           longDesc: 'Whether to notify all relevant team members about the new task',
         },
         parent: {
-          displayName: 'Parent Task',
+          displayName: 'Parent task',
           shortDesc: 'Parent task',
           longDesc: 'Parent task to create this as a subtask',
         },
         markdown_content: {
-          displayName: 'Markdown Content',
+          displayName: 'Markdown content',
           shortDesc: 'Markdown description',
           longDesc: 'Task description in Markdown format',
         },
         links_to: {
-          displayName: 'Links To',
+          displayName: 'Links to',
           shortDesc: 'Linked task',
           longDesc: 'Task to create a link relationship with',
         },
         check_required_custom_fields: {
-          displayName: 'Check Required Custom Fields',
+          displayName: 'Check required custom fields',
           shortDesc: 'Validate custom fields',
           longDesc: 'Whether to validate that all required custom fields are provided',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc: 'Values for custom fields defined in the workspace',
           type: {
@@ -452,7 +452,7 @@ const ClickUpAppEn = {
                   longDesc: 'The unique identifier of the custom field',
                 },
                 value: {
-                  displayName: 'Field Value',
+                  displayName: 'Field value',
                   shortDesc: 'Custom field value',
                   longDesc: 'The value to set for this custom field',
                 },
@@ -461,7 +461,7 @@ const ClickUpAppEn = {
           },
         },
         custom_item_id: {
-          displayName: 'Custom Item ID',
+          displayName: 'Custom item ID',
           shortDesc: 'Task type ID',
           longDesc: 'Custom task type identifier',
         },
@@ -469,7 +469,7 @@ const ClickUpAppEn = {
     },
     delete_task: {
       groups: ['Tasks'],
-      displayName: 'Delete Task',
+      displayName: 'Delete task',
       shortDesc: 'Delete a ClickUp task',
       longDesc: 'Permanently delete a specific ClickUp task from your workspace',
       options: {
@@ -502,7 +502,7 @@ const ClickUpAppEn = {
     },
     get_document: {
       groups: ['Documents'],
-      displayName: 'Get Document',
+      displayName: 'Get document',
       shortDesc: 'Retrieve a ClickUp document',
       longDesc: 'Fetch details and content of a specific ClickUp document',
       options: {
@@ -520,7 +520,7 @@ const ClickUpAppEn = {
     },
     get_task: {
       groups: ['Tasks'],
-      displayName: 'Get Task',
+      displayName: 'Get task',
       shortDesc: 'Retrieve a ClickUp task',
       longDesc:
         'Fetch comprehensive details of a specific ClickUp task including custom fields and attachments',
@@ -551,12 +551,12 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp task to retrieve',
         },
         include_markdown_description: {
-          displayName: 'Include Markdown Description',
+          displayName: 'Include markdown description',
           shortDesc: 'Include markdown format',
           longDesc: 'Whether to include the task description in Markdown format',
         },
         subtasks: {
-          displayName: 'Include Subtasks',
+          displayName: 'Include subtasks',
           shortDesc: 'Include subtasks',
           longDesc: 'Whether to include subtasks in the response',
         },
@@ -564,7 +564,7 @@ const ClickUpAppEn = {
     },
     get_workspace: {
       groups: ['Workspaces'],
-      displayName: 'Get Workspace',
+      displayName: 'Get workspace',
       shortDesc: 'Retrieve ClickUp workspace details',
       longDesc:
         'Fetch comprehensive information about a ClickUp workspace including members and roles',
@@ -587,7 +587,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp workspace to list channels from',
         },
         description_format: {
-          displayName: 'Description Format',
+          displayName: 'Description format',
           shortDesc: 'Format for descriptions',
           longDesc: 'The format to return channel descriptions in',
         },
@@ -602,17 +602,17 @@ const ClickUpAppEn = {
           longDesc: 'Maximum number of channels to return',
         },
         is_follower: {
-          displayName: 'Is Follower',
+          displayName: 'Is follower',
           shortDesc: 'Filter by follower status',
           longDesc: 'Whether to filter channels by follower status',
         },
         include_hidden: {
-          displayName: 'Include Hidden',
+          displayName: 'Include hidden',
           shortDesc: 'Include hidden channels',
           longDesc: 'Whether to include hidden channels in the results',
         },
         room_types: {
-          displayName: 'Room Types',
+          displayName: 'Room types',
           shortDesc: 'Channel types to include',
           longDesc: 'Types of channels to include in the results',
         },
@@ -620,7 +620,7 @@ const ClickUpAppEn = {
     },
     list_custom_fields: {
       groups: ['Workspaces'],
-      displayName: 'List Custom Fields',
+      displayName: 'List custom fields',
       shortDesc: 'List ClickUp custom fields',
       longDesc: 'Retrieve all custom fields defined in a ClickUp workspace',
       options: {
@@ -633,7 +633,7 @@ const ClickUpAppEn = {
     },
     list_documents: {
       groups: ['Documents'],
-      displayName: 'List Documents',
+      displayName: 'List documents',
       shortDesc: 'List ClickUp documents',
       longDesc:
         'Retrieve a list of documents in a ClickUp workspace with filtering and pagination options',
@@ -664,7 +664,7 @@ const ClickUpAppEn = {
           longDesc: 'Maximum number of documents to return',
         },
         next_cursor: {
-          displayName: 'Next Cursor',
+          displayName: 'Next cursor',
           shortDesc: 'Pagination cursor',
           longDesc: 'Cursor for fetching the next page of results',
         },
@@ -674,7 +674,7 @@ const ClickUpAppEn = {
           longDesc: 'ID of the parent container to filter documents by',
         },
         parent_type: {
-          displayName: 'Parent Type',
+          displayName: 'Parent type',
           shortDesc: 'Parent container type',
           longDesc: 'Type of parent container to filter documents by',
         },
@@ -682,7 +682,7 @@ const ClickUpAppEn = {
     },
     list_groups: {
       groups: ['Groups'],
-      displayName: 'List Groups',
+      displayName: 'List groups',
       shortDesc: 'List ClickUp groups',
       longDesc: 'Retrieve groups from a ClickUp workspace with optional filtering',
       options: {
@@ -700,7 +700,7 @@ const ClickUpAppEn = {
     },
     list_tasks: {
       groups: ['Tasks'],
-      displayName: 'List Tasks',
+      displayName: 'List tasks',
       shortDesc: 'List ClickUp tasks',
       longDesc:
         'Retrieve tasks from a ClickUp list with comprehensive filtering and sorting options',
@@ -731,7 +731,7 @@ const ClickUpAppEn = {
           longDesc: 'Whether to include archived tasks',
         },
         include_markdown_description: {
-          displayName: 'Include Markdown Description',
+          displayName: 'Include markdown description',
           shortDesc: 'Include markdown format',
           longDesc: 'Whether to include task descriptions in Markdown format',
         },
@@ -741,7 +741,7 @@ const ClickUpAppEn = {
           longDesc: 'Page number for pagination',
         },
         order_by: {
-          displayName: 'Order By',
+          displayName: 'Order by',
           shortDesc: 'Sort field',
           longDesc: 'Field to sort tasks by',
         },
@@ -751,12 +751,12 @@ const ClickUpAppEn = {
           longDesc: 'Whether to reverse the sort order',
         },
         subtasks: {
-          displayName: 'Include Subtasks',
+          displayName: 'Include subtasks',
           shortDesc: 'Include subtasks',
           longDesc: 'Whether to include subtasks in the results',
         },
         include_closed: {
-          displayName: 'Include Closed',
+          displayName: 'Include closed',
           shortDesc: 'Include closed tasks',
           longDesc: 'Whether to include closed/completed tasks',
         },
@@ -769,13 +769,13 @@ const ClickUpAppEn = {
     },
     list_workspaces: {
       groups: ['Workspaces'],
-      displayName: 'List Workspaces',
+      displayName: 'List workspaces',
       shortDesc: 'List ClickUp workspaces',
       longDesc: 'Retrieve all ClickUp workspaces accessible to the authenticated user',
     },
     send_channel_message: {
       groups: ['Channels'],
-      displayName: 'Send Channel Message',
+      displayName: 'Send channel message',
       shortDesc: 'Send a message to a ClickUp channel',
       longDesc:
         'Send a message or post to a ClickUp chat channel with optional assignees and followers',
@@ -796,12 +796,12 @@ const ClickUpAppEn = {
           longDesc: 'User to assign the message to',
         },
         group_assignee: {
-          displayName: 'Group Assignee',
+          displayName: 'Group assignee',
           shortDesc: 'Group assignee',
           longDesc: 'Group to assign the message to',
         },
         type: {
-          displayName: 'Message Type',
+          displayName: 'Message type',
           shortDesc: 'Type of message',
           longDesc: 'Whether to send as a message or post',
         },
@@ -816,7 +816,7 @@ const ClickUpAppEn = {
           longDesc: 'Users to add as followers of the message',
         },
         content_format: {
-          displayName: 'Content Format',
+          displayName: 'Content format',
           shortDesc: 'Message format',
           longDesc: 'The format of the message content',
         },
@@ -824,7 +824,7 @@ const ClickUpAppEn = {
     },
     update_task: {
       groups: ['Tasks'],
-      displayName: 'Update Task',
+      displayName: 'Update task',
       shortDesc: 'Update a ClickUp task',
       longDesc:
         'Update an existing ClickUp task with new information, assignees, dates, and custom fields',
@@ -855,7 +855,7 @@ const ClickUpAppEn = {
           longDesc: 'The ClickUp task to update',
         },
         name: {
-          displayName: 'Task Name',
+          displayName: 'Task name',
           shortDesc: 'New task name',
           longDesc: 'Updated name/title for the task',
         },
@@ -875,7 +875,7 @@ const ClickUpAppEn = {
           longDesc: 'Whether to archive the task',
         },
         group_assignees: {
-          displayName: 'Group Assignees',
+          displayName: 'Group assignees',
           shortDesc: 'Group assignees',
           longDesc: 'Groups to assign the task to (will be added to existing group assignees)',
         },
@@ -885,17 +885,17 @@ const ClickUpAppEn = {
           longDesc: 'Updated priority level for the task',
         },
         due_date: {
-          displayName: 'Due Date',
+          displayName: 'Due date',
           shortDesc: 'New due date',
           longDesc: 'Updated due date for the task',
         },
         start_date: {
-          displayName: 'Start Date',
+          displayName: 'Start date',
           shortDesc: 'New start date',
           longDesc: 'Updated start date for the task',
         },
         time_estimate: {
-          displayName: 'Time Estimate',
+          displayName: 'Time estimate',
           shortDesc: 'Updated time estimate',
           longDesc: 'Updated estimated time required to complete the task (in minutes)',
         },
@@ -905,32 +905,32 @@ const ClickUpAppEn = {
           longDesc: 'Updated point value for the task',
         },
         notify_all: {
-          displayName: 'Notify All',
+          displayName: 'Notify all',
           shortDesc: 'Notify team members',
           longDesc: 'Whether to notify all relevant team members about the task update',
         },
         parent: {
-          displayName: 'Parent Task',
+          displayName: 'Parent task',
           shortDesc: 'Parent task',
           longDesc: 'Updated parent task to make this a subtask',
         },
         markdown_content: {
-          displayName: 'Markdown Content',
+          displayName: 'Markdown content',
           shortDesc: 'Markdown description',
           longDesc: 'Updated task description in Markdown format',
         },
         links_to: {
-          displayName: 'Links To',
+          displayName: 'Links to',
           shortDesc: 'Linked task',
           longDesc: 'Task to create or update a link relationship with',
         },
         check_required_custom_fields: {
-          displayName: 'Check Required Custom Fields',
+          displayName: 'Check required custom fields',
           shortDesc: 'Validate custom fields',
           longDesc: 'Whether to validate that all required custom fields are provided',
         },
         custom_fields: {
-          displayName: 'Custom Fields',
+          displayName: 'Custom fields',
           shortDesc: 'Custom field values',
           longDesc: 'Updated values for custom fields',
           type: {
@@ -942,7 +942,7 @@ const ClickUpAppEn = {
                   longDesc: 'The unique identifier of the custom field',
                 },
                 value: {
-                  displayName: 'Field Value',
+                  displayName: 'Field value',
                   shortDesc: 'Custom field value',
                   longDesc: 'The updated value for this custom field',
                 },
@@ -951,7 +951,7 @@ const ClickUpAppEn = {
           },
         },
         custom_item_id: {
-          displayName: 'Custom Item ID',
+          displayName: 'Custom item ID',
           shortDesc: 'Task type ID',
           longDesc: 'Updated custom task type identifier',
         },
@@ -960,7 +960,7 @@ const ClickUpAppEn = {
   },
   triggers: {
     new_folder: {
-      displayName: 'New Folder',
+      displayName: 'New folder',
       shortDesc: 'Triggers when a new folder is created',
       longDesc:
         'Webhook trigger that fires when a new folder is created in the specified ClickUp workspace',
@@ -973,7 +973,7 @@ const ClickUpAppEn = {
       },
     },
     new_list: {
-      displayName: 'New List',
+      displayName: 'New list',
       shortDesc: 'Triggers when a new list is created',
       longDesc:
         'Webhook trigger that fires when a new list is created in the specified ClickUp workspace',
@@ -986,7 +986,7 @@ const ClickUpAppEn = {
       },
     },
     new_task: {
-      displayName: 'New Task',
+      displayName: 'New task',
       shortDesc: 'Triggers when a new task is created',
       longDesc:
         'Webhook trigger that fires when a new task is created in the specified ClickUp workspace',
@@ -999,7 +999,7 @@ const ClickUpAppEn = {
       },
     },
     new_task_comment: {
-      displayName: 'New Task Comment',
+      displayName: 'New task comment',
       shortDesc: 'Triggers when a comment is added to a task',
       longDesc:
         'Webhook trigger that fires when a new comment is posted to a task, with optional filtering by space, folder, list, or specific task',
@@ -1032,7 +1032,7 @@ const ClickUpAppEn = {
       },
     },
     task_time_tracked_updated: {
-      displayName: 'Task Time Tracked Updated',
+      displayName: 'Task time tracked updated',
       shortDesc: 'Triggers when time tracking is updated on a task',
       longDesc:
         'Webhook trigger that fires when time tracking information is added, updated, or modified on any task in the specified workspace',
@@ -1045,7 +1045,7 @@ const ClickUpAppEn = {
       },
     },
     task_updated: {
-      displayName: 'Task Updated',
+      displayName: 'Task updated',
       shortDesc: 'Triggers when a task is updated',
       longDesc:
         'Webhook trigger that fires when any task is modified or updated in the specified ClickUp workspace, including changes to assignees, status, custom fields, and other task properties',
@@ -1060,7 +1060,7 @@ const ClickUpAppEn = {
   },
   searchOptions: {
     orderBy: {
-      displayName: 'Order By',
+      displayName: 'Order by',
       shortDesc: 'Sort results by a specific field',
       longDesc: 'Define the field and direction to sort search results',
       type: {
@@ -1096,47 +1096,47 @@ const ClickUpAppEn = {
       longDesc: 'Matches records where the field equals the specified value',
     },
     '!=': {
-      displayName: 'Not Equals',
+      displayName: 'Not equals',
       shortDesc: 'Field does not equal value',
       longDesc: 'Matches records where the field does not equal the specified value',
     },
     '>': {
-      displayName: 'Greater Than',
+      displayName: 'Greater than',
       shortDesc: 'Field is greater than value',
       longDesc: 'Matches records where the field value is greater than the specified value',
     },
     '>=': {
-      displayName: 'Greater Than or Equal',
+      displayName: 'Greater than or equal',
       shortDesc: 'Field is greater than or equal to value',
       longDesc: 'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
-      displayName: 'Less Than',
+      displayName: 'Less than',
       shortDesc: 'Field is less than value',
       longDesc: 'Matches records where the field value is less than the specified value',
     },
     '<=': {
-      displayName: 'Less Than or Equal',
+      displayName: 'Less than or equal',
       shortDesc: 'Field is less than or equal to value',
       longDesc: 'Matches records where the field value is less than or equal to the specified value',
     },
     'is-set': {
-      displayName: 'Is Set',
+      displayName: 'Is set',
       shortDesc: 'Field has a value',
       longDesc: 'Matches records where the field has a value (is not empty)',
     },
     'is-not-set': {
-      displayName: 'Is Not Set',
+      displayName: 'Is not set',
       shortDesc: 'Field has no value',
       longDesc: 'Matches records where the field has no value (is empty)',
     },
     'any-of': {
-      displayName: 'Any Of',
+      displayName: 'Any of',
       shortDesc: 'Field contains any of the specified values',
       longDesc: 'Matches records where the field contains at least one of the specified values',
     },
     'all-of': {
-      displayName: 'All Of',
+      displayName: 'All of',
       shortDesc: 'Field contains all of the specified values',
       longDesc: 'Matches records where the field contains all of the specified values',
     },

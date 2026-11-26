@@ -484,7 +484,7 @@
           "message": "Název tabulky"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
-          "source": "Create Record",
+          "source": "Create record",
           "message": "Vytvořit záznam"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
@@ -508,7 +508,7 @@
           "message": "Vyberte cílový modul Zoho CRM (například Leads, Contacts, Deals, Accounts, Products, Vendors nebo vlastní moduly), ve kterém chcete vytvořit nový záznam. Seznam dostupných modulů a jejich názvů v API získáte pomocí Modules API."
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Record Properties",
+          "source": "Record properties",
           "message": "Vlastnosti záznamu"
         },
         "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -520,7 +520,7 @@
           "message": "Zadejte hodnoty polí pro nový záznam jako páry klíč-hodnota, kde klíče jsou názvy polí v rozhraní API. Dostupná pole a jejich typy se dynamicky načítají na základě vybraného modulu. Povinná pole musí být zahrnuta a hodnoty polí musí odpovídat očekávaným datovým typům (text, number, date, picklist, lookup atd.)."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
-          "source": "List Records",
+          "source": "List records",
           "message": "Seznam záznamů"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
@@ -544,7 +544,7 @@
           "message": "Vyberte modul Zoho CRM (například Zájemci, Kontakty, Obchody, Účty nebo vlastní moduly), ze kterého chcete načíst záznamy. Modul musí podporovat operace API a uživatel musí mít oprávnění ke čtení."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
-          "source": "Fields to Return",
+          "source": "Fields to return",
           "message": "Pole k vrácení"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
@@ -556,7 +556,7 @@
           "message": "Vyberte názvy polí v API, které chcete načíst pro každý záznam. Můžete zahrnout maximálně 50 názvů polí v API. K získání seznamu dostupných polí použijte rozhraní Fields Metadata API. Ve výchozím nastavení se vrací pouze pole ID. Podle potřeby přidejte pole jako Last_Name, Email, Created_Time nebo vlastní názvy polí."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
-          "source": "Records Per Page",
+          "source": "Records per page",
           "message": "Záznamů na stránku"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
@@ -568,7 +568,7 @@
           "message": "Určete, kolik záznamů se má vrátit v jednom požadavku API. Platné hodnoty jsou 1 až 200. Výchozí hodnota je 20. Tento parametr použijte společně s page_token pro stránkování rozsáhlých sad výsledků."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
-          "source": "Page Token",
+          "source": "Page token",
           "message": "Token stránky"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
@@ -592,7 +592,7 @@
           "message": "Volitelný seznam konkrétních ID záznamů k načtení. Pokud je zadán, vrátí se pouze záznamy s těmito ID. To je užitečné pro načtení konkrétní sady záznamů místo procházení všech záznamů."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
-          "source": "Sort Configuration",
+          "source": "Sort configuration",
           "message": "Konfigurace řazení"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
@@ -604,7 +604,7 @@
           "message": "Určete, jak mají být záznamy v odpovědi seřazeny. Můžete řadit podle polí jako id, Created_Time nebo Modified_Time, a to buď vzestupně (od nejstarších), nebo sestupně (od nejnovějších)."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.display_name": {
-          "source": "Sort Order",
+          "source": "Sort order",
           "message": "Pořadí řazení"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.b3JkZXI.short_desc": {
@@ -624,7 +624,7 @@
           "message": "Sestupně"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.display_name": {
-          "source": "Sort By Field",
+          "source": "Sort by field",
           "message": "Pole pro řazení"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.field.c29ydF9ieQ.short_desc": {
@@ -648,7 +648,7 @@
           "message": "Čas úpravy"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
-          "source": "List Modules",
+          "source": "List modules",
           "message": "Zobrazit moduly"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
@@ -660,7 +660,7 @@
           "message": "Načte metadata pro všechny moduly ve vaší organizaci Zoho CRM, včetně standardních modulů (Zájemci, Kontakty, Obchody, Účty atd.) i vlastních modulů. Vrací podrobné informace včetně oprávnění k modulům, názvů v API, zobrazovaných popisků a možností, jako je například to, zda lze modul vytvářet, upravovat, mazat nebo zda podporuje funkce jako globální vyhledávání a rychlé vytvoření."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
-          "source": "Module Status Filter",
+          "source": "Module status filter",
           "message": "Filtr stavu modulu"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
@@ -688,7 +688,7 @@
           "message": "Viditelné"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
-          "source": "List Module Fields",
+          "source": "List module fields",
           "message": "Zobrazit pole modulu"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
@@ -712,7 +712,7 @@
           "message": "Vyberte modul Zoho CRM, jehož metadata polí chcete načíst. API vrací podrobné informace o všech polích včetně standardních polí (definovaných systémem) a vlastních polí (definovaných uživatelem) v modulu."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
-          "source": "Update Record",
+          "source": "Update record",
           "message": "Aktualizovat záznam"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
@@ -748,7 +748,7 @@
           "message": "Zadejte nebo vyberte jedinečné ID záznamu, který chcete aktualizovat. ID záznamů lze získat pomocí Get Records API nebo z webhookových oznámení. Záznam musí v zadaném modulu existovat."
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
-          "source": "Updated Properties",
+          "source": "Updated properties",
           "message": "Aktualizované vlastnosti"
         },
         "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
@@ -760,7 +760,7 @@
           "message": "Zadejte hodnoty polí, které chcete aktualizovat, jako dvojice klíč-hodnota, kde klíče jsou názvy polí v API. Zahrňte pouze pole, která chcete změnit; nezadaná pole si zachovají své aktuální hodnoty. Hodnoty polí musí odpovídat očekávaným datovým typům a validačním pravidlům."
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
-          "source": "Delete Record",
+          "source": "Delete record",
           "message": "Smazat záznam"
         },
         "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
@@ -796,7 +796,7 @@
           "message": "Zadejte nebo vyberte jedinečné ID záznamu, který chcete smazat. ID záznamů lze načíst pomocí Get Records API. Pokus o smazání záznamu, který již byl smazán, způsobí chybu."
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
-          "source": "Get Record",
+          "source": "Get record",
           "message": "Získat záznam"
         },
         "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
@@ -832,7 +832,7 @@
           "message": "Zadejte nebo vyberte jedinečné ID záznamu, který chcete načíst. ID záznamů lze získat z rozhraní Get Records API, z výsledků vyhledávání nebo z oznámení webhooků. Záznam musí v zadaném modulu existovat."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
-          "source": "List Users",
+          "source": "List users",
           "message": "Seznam uživatelů"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
@@ -844,7 +844,7 @@
           "message": "Načte seznam uživatelů ve vaší organizaci Zoho CRM s podporou stránkování a filtrování podle typu uživatele. Vrací podrobné informace o uživateli včetně jména, e-mailu, role, profilu, časového pásma, místního nastavení, preferencí přizpůsobení a stavu účtu. K filtrování uživatelů podle jejich profilu a stavu použijte parametr type."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
-          "source": "Users Per Page",
+          "source": "Users per page",
           "message": "Uživatelů na stránku"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
@@ -856,7 +856,7 @@
           "message": "Určete, kolik uživatelů se má vrátit v jednom požadavku API. Platné hodnoty jsou 1 až 200. Výchozí hodnota je 20. Tento parametr použijte spolu s parametrem page k procházení velkých sad výsledků."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
-          "source": "Page Number",
+          "source": "Page number",
           "message": "Číslo stránky"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
@@ -868,7 +868,7 @@
           "message": "Určete, kterou stránku výsledků chcete načíst, přičemž první stránka začíná od 1. Tento parametr použijte spolu s per_page k procházení více stránek s uživatelskými daty."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
-          "source": "User Type Filter",
+          "source": "User type filter",
           "message": "Filtr typu uživatele"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
@@ -960,7 +960,7 @@
           "message": "Načte aktuálně přihlášeného uživatele CRM."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
-          "source": "List Tags",
+          "source": "List tags",
           "message": "Seznam štítků"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
@@ -984,7 +984,7 @@
           "message": "Vyberte modul Zoho CRM (například Zájemci, Kontakty, Obchody nebo vlastní moduly), jehož štítky chcete načíst. Každý modul si udržuje vlastní sadu štítků."
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
-          "source": "My Tags Only",
+          "source": "My tags only",
           "message": "Pouze moje štítky"
         },
         "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
@@ -996,7 +996,7 @@
           "message": "Při nastavení na true se vrátí pouze štítky vytvořené aktuálním uživatelem. Při nastavení na false nebo pokud není zadáno, vrátí se všechny štítky v modulu bez ohledu na to, kdo je vytvořil."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
-          "source": "Add Tags to Records",
+          "source": "Add tags to records",
           "message": "Přidat štítky k záznamům"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
@@ -1020,7 +1020,7 @@
           "message": "Vyberte modul Zoho CRM (například Leads, Contacts, Deals, Accounts nebo vlastní moduly), který obsahuje záznamy, jež chcete označit štítkem. Štítky jsou specifické pro daný modul a před přidáním k záznamům již musí v modulu existovat."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
-          "source": "Tags to Add",
+          "source": "Tags to add",
           "message": "Štítky k přidání"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
@@ -1032,7 +1032,7 @@
           "message": "Určete štítky, které chcete přidat k záznamům. Každý štítek by měl obsahovat ID a název. Pokud jsou zadány obě hodnoty, má ID štítku přednost před názvem. Volitelně můžete zahrnout color_code (hexadecimální hodnota). K načtení dostupných štítků a jejich ID použijte akci List Tags."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.display_name": {
-          "source": "Color Code",
+          "source": "Color code",
           "message": "Barva kódu"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.Y29sb3JfY29kZQ.short_desc": {
@@ -1056,7 +1056,7 @@
           "message": "Jedinečný identifikátor existujícího štítku v modulu. Tento identifikátor má přednost před polem název. Použijte akci Seznam štítků k získání ID štítků. Štítek musí být již v modulu přítomen."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.display_name": {
-          "source": "Tag Name",
+          "source": "Tag name",
           "message": "Název štítku"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.field.bmFtZQ.short_desc": {
@@ -1080,7 +1080,7 @@
           "message": "Seznam jedinečných ID záznamů, ke kterým chcete přidat štítky. Na jedno volání rozhraní API můžete zadat maximálně 500 ID záznamů. K získání platných ID záznamů použijte rozhraní Get Records API nebo vyhledávací API."
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
-          "source": "Overwrite Existing Tags",
+          "source": "Overwrite existing tags",
           "message": "Přepsat stávající štítky"
         },
         "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
@@ -1092,7 +1092,7 @@
           "message": "Pokud je nastaveno na true, nahradí všechny stávající štítky u určených záznamů novými štítky. Pokud je nastaveno na false (výchozí), přidá nové štítky a zachová stávající. Tuto možnost používejte opatrně, protože nastavení na true odstraní všechny aktuální štítky."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
-          "source": "New Record",
+          "source": "New record",
           "message": "Nový záznam"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
@@ -1116,7 +1116,7 @@
           "message": "Vyberte modul Zoho CRM (například Leads, Contacts, Deals, Accounts nebo vlastní moduly), ve kterém chcete sledovat nově vytvořené záznamy. Použijte název API modulu vrácený z Modules Metadata API."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
-          "source": "Phone Filter",
+          "source": "Phone filter",
           "message": "Filtr telefonu"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
@@ -1128,7 +1128,7 @@
           "message": "Volitelné telefonní číslo, které se má hledat v záznamech. Pokud je zadáno, událost vyvolají pouze záznamy obsahující toto telefonní číslo. K nalezení odpovídajících záznamů se používá vyhledávací API Zoho CRM."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
-          "source": "Email Filter",
+          "source": "Email filter",
           "message": "Filtr e-mailu"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
@@ -1140,7 +1140,7 @@
           "message": "Volitelná e-mailová adresa, která se má hledat v záznamech. Pokud je zadána, událost vyvolají pouze záznamy obsahující tuto e-mailovou adresu. K nalezení odpovídajících záznamů se používá vyhledávací API Zoho CRM."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
-          "source": "Keyword Search",
+          "source": "Keyword search",
           "message": "Vyhledávání podle klíčového slova"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
@@ -1152,7 +1152,7 @@
           "message": "Volitelné klíčové slovo pro vyhledávání ve všech prohledávatelných polích v záznamech. Pokud je zadáno, událost vyvolají pouze záznamy obsahující toto klíčové slovo. K provedení komplexního textového vyhledávání se používá vyhledávací API Zoho CRM."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
-          "source": "Field Filters",
+          "source": "Field filters",
           "message": "Filtry polí"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
@@ -1164,7 +1164,7 @@
           "message": "Volitelný seznam dvojic pole-hodnota pro vytvoření vyhledávacích kritérií. Pokud je zadán, událost vyvolají pouze záznamy, kde VŠECHNA zadaná pole odpovídají svým hodnotám. Pro každé porovnání polí se používá operátor „equals“."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.display_name": {
-          "source": "Field Name",
+          "source": "Field name",
           "message": "Název pole"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.ZmllbGQ.short_desc": {
@@ -1176,7 +1176,7 @@
           "message": "Zadejte nebo vyberte název API pole z modulu. Dostupné názvy polí můžete získat pomocí rozhraní API pro metadata polí. Pole musí být vyhledávatelné, aby bylo možné jej použít pro filtrování."
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.display_name": {
-          "source": "Field Value",
+          "source": "Field value",
           "message": "Hodnota pole"
         },
         "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.field.dmFsdWU.short_desc": {
