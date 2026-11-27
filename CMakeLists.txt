@@ -26,7 +26,7 @@ if (UNIX AND NOT APPLE)
     set(LINUX TRUE)
 endif()
 
-find_package(Qore 2.0 REQUIRED)
+find_package(Qore 3.0 REQUIRED)
 
 set(QORE_DOXYGEN_MODULES DataProvider ConnectionProvider)
 option(QORE_V8_STRICT_DOCS "Fail V8 documentation builds on warnings" OFF)

@@ -1,0 +1,56 @@
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%requires qore >= 3.0
+%requires TypeScriptActionInterface
+
+%new-style
+%strict-args
+%require-types
+%enable-all-warnings
+
+#! A library module whose objects call TypeScriptActionInterface with the paths that their caller gives
+/** A host that creates an object of this module and gives it to restricted code lends it: its methods run with the
+    file system lent, so the declared FILESYSTEM domain of the methods that it calls does not refuse the borrower, and
+    TypeScriptActionInterface decides with SandboxManager::isLentToRestricted()
+*/
+module CallerFileAccessRegistrar {
+    version = "1.0";
+    desc = "test helper: calls TypeScriptActionInterface with the paths of its caller";
+    author = "Qore Technologies, s.r.o.";
+    url = "https://github.com/qoretechnologies/module-v8";
+    license = "MIT";
+}
+
+public namespace CallerFileAccessRegistrar {
+public class Registrar {
+    *list<string> register(string dir, data fdata) {
+        return TypeScriptActionInterface::registerDynamicAppsFromJavaScript(dir, fdata);
+    }
+
+    int pending(string dir) {
+        return TypeScriptActionInterface::registerPendingAppsFromIndex(dir);
+    }
+
+    bool init(string app, string dir) {
+        return TypeScriptActionInterface::initApp(app, False, dir);
+    }
+
+    deregister(string app) {
+        TypeScriptActionInterface::deregisterDynamicApp(app);
+    }
+
+    setBaseDir(string dir) {
+        TypeScriptActionInterface::setAppBaseDir(dir);
+    }
+
+    registerApp(hash<auto> app, JavaScriptProgramPool pool) {
+        TypeScriptActionInterface::registerApp(app, pool);
+    }
+
+    schema(string loc) {
+        TypeScriptActionInterface::getRestSchema("x", loc);
+    }
+}
+}
