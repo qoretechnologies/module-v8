@@ -238,11 +238,38 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       builtins of Node.js that tenants do not get; one that a function requires (when it runs, after the seal) makes
       the app unavailable if its shared code reaches it, and otherwise each action whose own code reaches it;
       @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports both
+
+    @section typescriptactioninterface_caller_paths Paths Given by Restricted Callers
+
+    The code of this module runs with its own %Program's options, so it decides with the restrictions of the code that
+    calls it before it uses a directory that that code gives: if that code is restricted from the \c FILESYSTEM
+    functional domain (for example with \c PO_NO_FILESYSTEM), the call is refused before anything is read or written.
+    - @ref TypeScriptActionInterface::TypeScriptActionInterface::registerDynamicAppsFromJavaScript()
+      "registerDynamicAppsFromJavaScript()", which writes the app's files below \c base_dir, and
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::registerPendingAppsFromIndex()
+      "registerPendingAppsFromIndex()", which reads the map of the app directories next to \c apps_dir, declare the
+      \c FILESYSTEM functional domain (\c INVALID-FUNCTION-ACCESS for a restricted caller)
+    - these methods and @ref TypeScriptActionInterface::TypeScriptActionInterface::initApp() "initApp()" with a
+      \c dynamic_path raise \c PERMISSION-DENIED when they are called for the code that a host-created object was
+      lent to and that code is restricted (see @ref Qore::SandboxManager::isLentToRestricted()
+      "SandboxManager::isLentToRestricted()")
+
+    The module's own code loads a dynamic app on demand from the directory that the host configured for it, also for a
+    caller restricted from the file system.  The file-system policy of a sandbox that governs the calling code applies
+    when a file is opened; sandboxed code cannot call these methods (\c SANDBOX-REGISTRATION-ERROR).
 */
 
 /** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes
 
     @section typescriptactioninterfaceupcoming Upcoming release
+    - the directories given to
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::registerDynamicAppsFromJavaScript()
+      "registerDynamicAppsFromJavaScript()",
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::registerPendingAppsFromIndex()
+      "registerPendingAppsFromIndex()" and
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::initApp() "initApp()" are refused before they are
+      used if the calling code is restricted from the file system; see @ref typescriptactioninterface_caller_paths
+      (<a href="https://github.com/qoretechnologies/module-v8/issues/290">issue 290</a>)
     - @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner": the API and record actions of the apps
       for tenants that a sandbox governs, in restricted programs of their own, with plain data, the network only through
       the tenant's sandbox, and time, memory and concurrency limits; see @ref typescriptactioninterface_tenants

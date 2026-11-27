@@ -1,0 +1,235 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright (C) 2026 Qore Technologies, s.r.o.
+# SPDX-License-Identifier: MIT
+
+%modern
+
+%prepend-module-path "${SCRIPT_DIR}/../qlib"
+%prepend-module-path "${SCRIPT_DIR}/caller-file-access"
+
+%requires QUnit
+%requires Util
+%requires FsUtil
+%requires TypeScriptActionInterface
+%requires CallerFileAccessRegistrar
+
+%exec-class CallerFileAccessTest
+
+#! Tests that the directories that restricted callers give TypeScriptActionInterface are refused (module-v8#290)
+/** The code of the module runs with its own Program's options, so registerDynamicAppsFromJavaScript(), which writes
+    the app's files below the directory that the caller gives, registerPendingAppsFromIndex(), which reads the map of
+    the app directories next to it, and initApp() with a dynamic app directory, which reads the app's source from it,
+    would use the file system for code restricted from it: a Program with PO_NO_FILESYSTEM is refused before anything
+    is read or written, directly (the first two declare the FILESYSTEM domain: INVALID-FUNCTION-ACCESS) and through a
+    host-created object of a library module that calls them, whose methods run with the file system lent
+    (PERMISSION-DENIED); sandboxed code is refused as process-wide registrations are (SANDBOX-REGISTRATION-ERROR).
+    Unrestricted code uses the directories, and initApp() without a directory works for restricted code.
+*/
+class CallerFileAccessTest inherits QUnit::Test {
+    private {
+        const Modes = {"ast": EM_AST, "ir": EM_IR, "jit": EM_JIT, "tiered": EM_TIERED};
+
+        #! the codes of the refusals
+        const Refusals = ("PERMISSION-DENIED", "INVALID-FUNCTION-ACCESS", "SANDBOX-REGISTRATION-ERROR");
+
+        #! the name of an app that is not registered
+        const NoApp = "CallerFileAccessNoSuchApp";
+
+        const Source = "%modern
+%requires TypeScriptActionInterface
+%requires CallerFileAccessRegistrar
+
+# runs the given use and returns \"ok\" or the error
+string sub run(code c) {
+    try {
+        c();
+        return \"ok\";
+    } catch (hash<ExceptionInfo> ex) {
+        return ex.err;
+    }
+}
+
+# calls the host's call reference to the method
+string sub call(code c, ...) {
+    *list<auto> args = argv;
+    return run(sub () { call_function_args(c, args); });
+}
+
+string sub lent_register(Registrar r, string dir, data fdata) {
+    return run(sub () { r.register(dir, fdata); });
+}
+
+string sub lent_pending(Registrar r, string dir) {
+    return run(sub () { r.pending(dir); });
+}
+
+string sub lent_init(Registrar r, string app, string dir) {
+    return run(sub () { r.init(app, dir); });
+}
+
+string sub init(string app, *string dir) {
+    return run(sub () { TypeScriptActionInterface::initApp(app, False, dir); });
+}
+";
+
+        #! the code that calls the methods directly
+        const DirectSource = "%modern
+%requires TypeScriptActionInterface
+sub register(string dir) { TypeScriptActionInterface::registerDynamicAppsFromJavaScript(dir, \"x\"); }
+";
+    }
+
+    private {
+        #! the test directory
+        string dir;
+        #! the custom apps directory given to registerDynamicAppsFromJavaScript()
+        string apps;
+        #! the directory given to registerPendingAppsFromIndex(), whose parent holds a map that cannot be parsed
+        string pending;
+        #! the directory of a dynamic app given to initApp()
+        string dynamic;
+    }
+
+    constructor() : QUnit::Test("CallerFileAccess", "1.0", \ARGV) {
+        foreach string mode in (keys Modes) {
+            string m = mode;
+            addTestCase("restricted callers, " + m, sub () { testRestricted(m); });
+            addTestCase("lent objects, " + m, sub () { testLent(m); });
+            addTestCase("calls without paths, " + m, sub () { testNoPaths(m); });
+        }
+        addTestCase("direct calls are refused when parsed", \testParse());
+        addTestCase("unrestricted callers use the directories", \testUnrestricted());
+        set_return_value(main());
+    }
+
+    globalSetUp() {
+        dir = make_tmp_dir("v8-caller-file-access-");
+        apps = dir + "/apps";
+        mkdir(apps);
+        # registerPendingAppsFromIndex() reads the map next to the directory: one that cannot be parsed shows that it
+        # was read
+        mkdir(dir + "/index");
+        pending = dir + "/index/apps";
+        mkdir(pending);
+        writeFile(dir + "/index/ts-app-dirs.yaml", "{ not yaml: [\n");
+        dynamic = dir + "/dynamic";
+        mkdir(dynamic);
+        writeFile(dynamic + "/index.js", "throw new Error('caller-file-access test app');\n");
+    }
+
+    globalTearDown() {
+        if (dir) {
+            remove_tree(dir);
+        }
+    }
+
+    #! the directories of restricted callers are refused before they are used
+    private testRestricted(string mode) {
+        foreach string kind in ("nofs", "sandbox") {
+            Program p = getProgram(kind, mode);
+            string exp = kind == "nofs" ? "INVALID-FUNCTION-ACCESS" : "SANDBOX-REGISTRATION-ERROR";
+            string desc = sprintf("%s %s", kind, mode);
+            assertEq(exp, p.callFunction("call", \TypeScriptActionInterface::registerDynamicAppsFromJavaScript(),
+                apps, "x"), "registerDynamicAppsFromJavaScript " + desc);
+            assertEq(exp, p.callFunction("call", \TypeScriptActionInterface::registerPendingAppsFromIndex(),
+                pending), "registerPendingAppsFromIndex " + desc);
+            assertEq(kind == "nofs" ? "PERMISSION-DENIED" : exp, p.callFunction("init", NoApp, dynamic),
+                "initApp " + desc);
+            # any value that is set is checked
+            assertEq(kind == "nofs" ? "PERMISSION-DENIED" : exp, p.callFunction("init", NoApp, ""),
+                "initApp with an empty directory " + desc);
+            checkUnchanged(desc);
+        }
+    }
+
+    #! the directories of the restricted code that a host-created object was lent to are refused
+    private testLent(string mode) {
+        Registrar r();
+        Program p = getProgram("nofs", mode);
+        string desc = "nofs lent " + mode;
+        assertEq("PERMISSION-DENIED", p.callFunction("lent_register", r, apps, "x"),
+            "registerDynamicAppsFromJavaScript " + desc);
+        assertEq("PERMISSION-DENIED", p.callFunction("lent_pending", r, pending),
+            "registerPendingAppsFromIndex " + desc);
+        assertEq("PERMISSION-DENIED", p.callFunction("lent_init", r, NoApp, dynamic), "initApp " + desc);
+        # sandboxed code is refused process-wide registrations, also through a lent object
+        p = getProgram("sandbox", mode);
+        desc = "sandbox lent " + mode;
+        assertEq("SANDBOX-REGISTRATION-ERROR", p.callFunction("lent_register", r, apps, "x"),
+            "registerDynamicAppsFromJavaScript " + desc);
+        assertEq("SANDBOX-REGISTRATION-ERROR", p.callFunction("lent_pending", r, pending),
+            "registerPendingAppsFromIndex " + desc);
+        checkUnchanged(desc);
+    }
+
+    #! initApp() without a directory is not refused for code restricted from the file system
+    private testNoPaths(string mode) {
+        string err = getProgram("nofs", mode).callFunction("init", NoApp);
+        assertFalse(inlist(err, Refusals), "initApp without a directory nofs " + mode + ": " + err);
+        assertEq("APP-ERROR", err, "initApp without a directory nofs " + mode);
+    }
+
+    #! code restricted from the file system cannot be parsed with a direct call
+    private testParse() {
+        Program p(PO_NEW_STYLE | PO_NO_FILESYSTEM);
+        assertThrows("PARSE-EXCEPTION", "FILESYSTEM", \p.parse(), (DirectSource, "direct"));
+    }
+
+    #! unrestricted callers use the directories
+    private testUnrestricted() {
+        # the map next to the directory is read: it cannot be parsed
+        string err;
+        try {
+            TypeScriptActionInterface::registerPendingAppsFromIndex(pending);
+            err = "ok";
+        } catch (hash<ExceptionInfo> ex) {
+            err = ex.err;
+        }
+        assertFalse(inlist(err, Refusals), "registerPendingAppsFromIndex unrestricted: " + err);
+        assertNeq("ok", err, "the map was read");
+        # the app's source is read from the dynamic app directory (and fails), or there is no master catalogue
+        err = getProgram("unrestricted", "ast").callFunction("init", NoApp, dynamic);
+        assertFalse(inlist(err, Refusals), "initApp unrestricted: " + err);
+        err = getProgram("unrestricted", "ast").callFunction("call",
+            \TypeScriptActionInterface::registerDynamicAppsFromJavaScript(), apps, "x");
+        assertFalse(inlist(err, Refusals), "registerDynamicAppsFromJavaScript unrestricted: " + err);
+    }
+
+    #! checks that nothing was written
+    private checkUnchanged(string desc) {
+        Dir d();
+        d.chdir(apps);
+        assertEq((), d.list() ?? (), "nothing written: " + desc);
+    }
+
+    private static writeFile(string path, string data) {
+        File f();
+        f.open2(path, O_CREAT | O_WRONLY | O_TRUNC);
+        f.write(data);
+        f.close();
+    }
+
+    #! returns a Program of the given kind
+    private Program getProgram(string kind, string mode) {
+        Program p;
+        switch (kind) {
+            case "nofs":
+                p = new Program(PO_NEW_STYLE | PO_NO_FILESYSTEM);
+                break;
+            case "sandbox": {
+                SandboxManager sm();
+                sm.setFilesystemDefaultPolicy(False);
+                p = new Program(PO_NEW_STYLE);
+                p.setSandboxManager(sm);
+                break;
+            }
+            default:
+                p = new Program(PO_NEW_STYLE);
+                break;
+        }
+        p.setExecMode(Modes{mode});
+        p.parse(Source, kind);
+        return p;
+    }
+}

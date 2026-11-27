@@ -533,7 +533,35 @@ TypeScriptActionInterface::setCallTimeout(1h);
     }
 
     #! Register one or more dynamic apps from a JavaScript file
-    static *list<string> registerDynamicAppsFromJavaScript(string base_dir, data fdata, *bool replace) [dom=PROCESS_CONTROL] {
+    /** The JavaScript source is written to a new directory below \a base_dir, which is renamed after the app that it
+        registers.
+
+        @param base_dir the custom apps directory, which the app's files are written to
+        @param fdata the JavaScript source of the app
+        @param replace if @ref True, an app of the same name is replaced
+
+        @return the names of the apps registered
+
+        @throw PERMISSION-DENIED the calling code, or the code that a host-created object whose method calls this
+        method was lent to, is restricted from the \c FILESYSTEM functional domain (see
+        @ref typescriptactioninterface_caller_paths)
+        @throw SANDBOX-REGISTRATION-ERROR the caller is sandboxed or acts for sandboxed code
+    */
+    static *list<string> registerDynamicAppsFromJavaScript(string base_dir, data fdata, *bool replace)
+            [dom=PROCESS_CONTROL,FILESYSTEM] {
+        # the directory is the caller's input, also for the code that a host-created object was lent to: refused
+        # before anything is written if that code is restricted (issue #290)
+        TypeScriptActionInterface::checkCallerPath("base_dir", base_dir);
+        return TypeScriptActionInterface::registerDynamicAppsFromJavaScriptIntern(base_dir, fdata, replace);
+    }
+
+    #! Registers dynamic apps from a JavaScript file in a directory that the module's own code chose
+    /** The module loads a dynamic app on demand from the directory that the host configured for it
+        (getDynamicAppPath()), also for a caller restricted from the file system; a caller restricted from the
+        \c PROCESS_CONTROL functional domain is refused as by registerDynamicAppsFromJavaScript()
+    */
+    private:internal static *list<string> registerDynamicAppsFromJavaScriptIntern(string base_dir, data fdata,
+            *bool replace) [dom=PROCESS_CONTROL] {
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("register dynamic apps in the TypeScript action interface");
         *list<string> rv = TypeScriptActionInterfacePriv::processDynamicJavaScriptAppFile(base_dir, fdata, replace);
@@ -975,8 +1003,15 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         @return the number of apps registered pending (0 if the map is missing/empty,
         e.g. before the index has ever been built — the caller then falls back to a
         full load)
+
+        @throw PERMISSION-DENIED the calling code, or the code that a host-created object whose method calls this
+        method was lent to, is restricted from the \c FILESYSTEM functional domain (see
+        @ref typescriptactioninterface_caller_paths)
     */
-    static int registerPendingAppsFromIndex(string apps_dir) [dom=PROCESS_CONTROL] {
+    static int registerPendingAppsFromIndex(string apps_dir) [dom=PROCESS_CONTROL,FILESYSTEM] {
+        # the directory is the caller's input, also for the code that a host-created object was lent to: refused
+        # before anything is read if that code is restricted (issue #290)
+        TypeScriptActionInterface::checkCallerPath("apps_dir", apps_dir);
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("register the pending apps of the TypeScript action interface");
         return TypeScriptActionInterface::registerPendingAppsFromIndexUnchecked(apps_dir);
@@ -1397,6 +1432,25 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
     }
 
+    #! Refuses a file-system path given by the calling code if that code is restricted from the file system
+    /** The code of this module runs with its own %Program's options, so a path that the calling code gives is refused
+        before it is used if that code is restricted from the \c FILESYSTEM functional domain (for example with
+        \c PO_NO_FILESYSTEM), also when a host-created object whose method calls this module was lent to that code
+        (see @ref Qore::SandboxManager::isLentToRestricted() "SandboxManager::isLentToRestricted()" and
+        @ref typescriptactioninterface_caller_paths)
+
+        @param arg the name of the argument, for the error message
+        @param path the path; any value that is set is checked, also an empty string
+
+        @throw PERMISSION-DENIED the calling code is restricted from the \c FILESYSTEM functional domain
+    */
+    private:internal static checkCallerPath(string arg, auto path) {
+        if (exists path && SandboxManager::isLentToRestricted(DOM_FILESYSTEM)) {
+            throw "PERMISSION-DENIED", sprintf("the %y argument cannot be used: the calling code is restricted from the "
+                "FILESYSTEM functional domain", arg);
+        }
+    }
+
     #! Checks that a dynamic app's name can be used as the name of its directory
     /** A dynamic app's files are stored in a directory named after the app below the custom apps directory, so the
         name must be a single path component.  It may contain only the characters that the action catalogue accepts
@@ -1758,8 +1812,14 @@ TypeScriptActionInterface::registerDiscoveryInventory((
 
         @throw SANDBOX-REGISTRATION-ERROR the calling code is sandboxed or acts for sandboxed code: the app is
         registered in the process-wide registries; the module initializes an app on demand for every caller
+        @throw PERMISSION-DENIED \a dynamic_path is given and the calling code, or the code that a host-created object
+        whose method calls this method was lent to, is restricted from the \c FILESYSTEM functional domain (see
+        @ref typescriptactioninterface_caller_paths)
     */
     static bool initApp(string app, *bool do_actions, *string dynamic_path) [dom=PROCESS_CONTROL] {
+        # the directory is the caller's input, also for the code that a host-created object was lent to: refused
+        # before anything is read or written if that code is restricted (issue #290)
+        TypeScriptActionInterface::checkCallerPath("dynamic_path", dynamic_path);
         # process-wide (qoretechnologies/qore#7185)
         TsaiProcessState::checkHostScope("initialize an app of the TypeScript action interface");
         return TypeScriptActionInterface::initAppUnchecked(app, do_actions, dynamic_path);
@@ -1890,7 +1950,7 @@ TypeScriptActionInterface::registerDiscoveryInventory((
             if (is_readable(fname)) {
                 TSAI::debug("Loading dynamic app %y from path %y", app, fname);
                 # try to load the dynamic app from the given path
-                if (*list<string> apps = TypeScriptActionInterface::registerDynamicAppsFromJavaScript(
+                if (*list<string> apps = TypeScriptActionInterface::registerDynamicAppsFromJavaScriptIntern(
                     dynamic_path, File::readTextFile(fname))) {
                     return TypeScriptActionInterface::initAppIntern(app, do_actions);
                 }
