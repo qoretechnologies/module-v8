@@ -508,7 +508,7 @@
           "message": "對特定現有目標的 URL 發出 DELETE 請求即可將其刪除。\n\n傳回空白資料記錄。"
         },
         "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.display_name": {
-          "source": "Goal Gid",
+          "source": "Goal gid",
           "message": "Goal Gid"
         },
         "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.short_desc": {
@@ -520,7 +520,7 @@
           "message": "URI 路徑變數 \"goal_gid\""
         },
         "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -544,7 +544,7 @@
           "message": "傳回單一目標的完整目標記錄。"
         },
         "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.display_name": {
-          "source": "Goal Gid",
+          "source": "Goal gid",
           "message": "Goal Gid"
         },
         "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.short_desc": {
@@ -556,7 +556,7 @@
           "message": "URI 路徑變數 \"goal_gid\""
         },
         "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -568,7 +568,7 @@
           "message": "提供「美化 (pretty)」輸出。\n以「美化」格式提供回應。就 JSON 而言，這意味著進行適當的換行和縮排以提高可讀性。這會花費額外時間並增加回應大小，因此建議僅在偵錯期間使用。"
         },
         "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -700,7 +700,7 @@
           "message": "對特定現有區段的 URL 發出 DELETE 請求即可將其刪除。\n\n請注意，區段必須為空白才能刪除。\n\n無法刪除最後剩餘的區段。\n\n傳回空白資料區塊。"
         },
         "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.display_name": {
-          "source": "Section Gid",
+          "source": "Section gid",
           "message": "Section Gid"
         },
         "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.short_desc": {
@@ -712,7 +712,7 @@
           "message": "URI 路徑變數 \"section_gid\""
         },
         "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -736,7 +736,7 @@
           "message": "傳回單一區段的完整記錄。"
         },
         "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.display_name": {
-          "source": "Section Gid",
+          "source": "Section gid",
           "message": "Section Gid"
         },
         "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.short_desc": {
@@ -748,7 +748,7 @@
           "message": "URI 路徑變數 \"section_gid\""
         },
         "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -760,7 +760,7 @@
           "message": "提供「美化 (pretty)」輸出。\n以「美化」格式提供回應。就 JSON 而言，這意味著進行適當的換行和縮排以提高可讀性。這會花費額外時間並增加回應大小，因此建議僅在偵錯期間使用。"
         },
         "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -796,7 +796,7 @@
           "message": "*僅限看板檢視*：傳回指定區段中所有任務的精簡區段記錄。"
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.display_name": {
-          "source": "Section Gid",
+          "source": "Section gid",
           "message": "Section Gid"
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.short_desc": {
@@ -808,7 +808,7 @@
           "message": "URI 路徑變數 \"section_gid\""
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -844,7 +844,7 @@
           "message": "偏移權牌 (Offset token)。\n由 API 傳回至下一頁的偏移量。分頁請求將傳回偏移權牌，可用作下一次請求的輸入參數。如果未傳入偏移量，API 將傳回第一頁的結果。\n*注意：您只能傳入透過先前分頁請求傳回給您的偏移量。*"
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.display_name": {
-          "source": "Completed Since",
+          "source": "Completed since",
           "message": "完成時間晚於"
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.short_desc": {
@@ -856,7 +856,7 @@
           "message": "僅傳回未完成或自此時間以來已完成的任務。接受日期時間字串或關鍵字 *now*。\n"
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -880,7 +880,7 @@
           "message": "傳回經過篩選之標籤集合的精簡標籤記錄。請使用所提供的一或多個參數來篩選傳回的標籤。"
         },
         "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -928,7 +928,7 @@
           "message": "用來篩選標籤的工作區。"
         },
         "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1036,7 +1036,7 @@
           "message": "對特定現有任務的 URL 發出 DELETE 請求即可將其刪除。已刪除的任務會移至發出刪除請求使用者的「垃圾桶」。任務可以在 30 天內從垃圾桶中復原；之後將會從系統中完全移除。\n\n傳回空白資料記錄。"
         },
         "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.display_name": {
-          "source": "Task Gid",
+          "source": "Task gid",
           "message": "Task Gid"
         },
         "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.short_desc": {
@@ -1048,7 +1048,7 @@
           "message": "URI 路徑變數 \"task_gid\""
         },
         "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1072,7 +1072,7 @@
           "message": "傳回單一任務的完整任務記錄。"
         },
         "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.display_name": {
-          "source": "Task Gid",
+          "source": "Task gid",
           "message": "Task Gid"
         },
         "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.short_desc": {
@@ -1084,7 +1084,7 @@
           "message": "URI 路徑變數 \"task_gid\""
         },
         "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1096,7 +1096,7 @@
           "message": "提供「美化 (pretty)」輸出。\n以「美化」格式提供回應。就 JSON 而言，這意味著進行適當的換行和縮排以提高可讀性。這會花費額外時間並增加回應大小，因此建議僅在偵錯期間使用。"
         },
         "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1132,7 +1132,7 @@
           "message": "傳回任務之所有前置任務的精簡表示形式。"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.display_name": {
-          "source": "Task Gid",
+          "source": "Task gid",
           "message": "Task Gid"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.short_desc": {
@@ -1144,7 +1144,7 @@
           "message": "URI 路徑變數 \"task_gid\""
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1180,7 +1180,7 @@
           "message": "偏移權牌 (Offset token)。\n由 API 傳回至下一頁的偏移量。分頁請求將傳回偏移權牌，可用作下一次請求的輸入參數。如果未傳入偏移量，API 將傳回第一頁的結果。\n*注意：您只能傳入透過先前分頁請求傳回給您的偏移量。*"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1204,7 +1204,7 @@
           "message": "傳回任務之所有後續任務的精簡表示形式。"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.display_name": {
-          "source": "Task Gid",
+          "source": "Task gid",
           "message": "Task Gid"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.short_desc": {
@@ -1216,7 +1216,7 @@
           "message": "URI 路徑變數 \"task_gid\""
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1252,7 +1252,7 @@
           "message": "偏移權牌 (Offset token)。\n由 API 傳回至下一頁的偏移量。分頁請求將傳回偏移權牌，可用作下一次請求的輸入參數。如果未傳入偏移量，API 將傳回第一頁的結果。\n*注意：您只能傳入透過先前分頁請求傳回給您的偏移量。*"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1276,7 +1276,7 @@
           "message": "傳回任務中所有動態的精簡記錄。"
         },
         "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.display_name": {
-          "source": "Task Gid",
+          "source": "Task gid",
           "message": "Task Gid"
         },
         "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.short_desc": {
@@ -1288,7 +1288,7 @@
           "message": "URI 路徑變數 \"task_gid\""
         },
         "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1324,7 +1324,7 @@
           "message": "偏移權牌 (Offset token)。\n由 API 傳回至下一頁的偏移量。分頁請求將傳回偏移權牌，可用作下一次請求的輸入參數。如果未傳入偏移量，API 將傳回第一頁的結果。\n*注意：您只能傳入透過先前分頁請求傳回給您的偏移量。*"
         },
         "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1360,7 +1360,7 @@
           "message": "傳回任務之所有子任務的精簡表示法。"
         },
         "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.display_name": {
-          "source": "Task Gid",
+          "source": "Task gid",
           "message": "Task Gid"
         },
         "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.short_desc": {
@@ -1372,7 +1372,7 @@
           "message": "URI 路徑變數 \"task_gid\""
         },
         "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1408,7 +1408,7 @@
           "message": "偏移權牌 (Offset token)。\n由 API 傳回至下一頁的偏移量。分頁請求將傳回偏移權牌，可用作下一次請求的輸入參數。如果未傳入偏移量，API 將傳回第一頁的結果。\n*注意：您只能傳入透過先前分頁請求傳回給您的偏移量。*"
         },
         "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1444,7 +1444,7 @@
           "message": "傳回團隊中所有專案的精簡專案記錄。"
         },
         "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.display_name": {
-          "source": "Team Gid",
+          "source": "Team gid",
           "message": "團隊 Gid"
         },
         "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.short_desc": {
@@ -1456,7 +1456,7 @@
           "message": "URI 路徑變數 \"team_gid\""
         },
         "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1504,7 +1504,7 @@
           "message": "僅傳回其 `archived` 欄位值為此參數值的專案。"
         },
         "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1576,7 +1576,7 @@
           "message": "用來篩選使用者的團隊 ID。"
         },
         "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1612,7 +1612,7 @@
           "message": "偏移權牌 (Offset token)。\n由 API 傳回至下一頁的偏移量。分頁請求將傳回偏移權牌，可用作下一次請求的輸入參數。如果未傳入偏移量，API 將傳回第一頁的結果。\n*注意：您只能傳入透過先前分頁請求傳回給您的偏移量。*"
         },
         "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.short_desc": {
@@ -1648,7 +1648,7 @@
           "message": "傳回授權使用者可見之所有工作區的精簡記錄。"
         },
         "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.display_name": {
-          "source": "Opt Pretty",
+          "source": "Opt pretty",
           "message": "Opt Pretty"
         },
         "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.short_desc": {
@@ -1684,7 +1684,7 @@
           "message": "偏移權牌 (Offset token)。\n由 API 傳回至下一頁的偏移量。分頁請求將傳回偏移權牌，可用作下一次請求的輸入參數。如果未傳入偏移量，API 將傳回第一頁的結果。\n*注意：您只能傳入透過先前分頁請求傳回給您的偏移量。*"
         },
         "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.display_name": {
-          "source": "Opt Fields",
+          "source": "Opt fields",
           "message": "Opt Fields"
         },
         "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.short_desc": {
