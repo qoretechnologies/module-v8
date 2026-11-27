@@ -238,11 +238,55 @@ JavaScriptProgramProxy::setStartupTimeout(2m);
       builtins of Node.js that tenants do not get; one that a function requires (when it runs, after the seal) makes
       the app unavailable if its shared code reaches it, and otherwise each action whose own code reaches it;
       @ref TypeScriptActionInterface::TenantActionRunner::getActionInfo() "getActionInfo()" reports both
+
+    @section typescriptactioninterface_caller_paths Paths Given by Restricted Callers
+
+    The code of this module runs with its own %Program's options, so it decides with the restrictions of the code that
+    calls it before it uses a directory that that code gives: if that code is restricted from the \c FILESYSTEM
+    functional domain (for example with \c PO_NO_FILESYSTEM), the call is refused before anything is read or written.
+    - @ref TypeScriptActionInterface::TypeScriptActionInterface::registerDynamicAppsFromJavaScript()
+      "registerDynamicAppsFromJavaScript()", which writes the app's files below \c base_dir, and
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::registerPendingAppsFromIndex()
+      "registerPendingAppsFromIndex()", which reads the map of the app directories next to \c apps_dir, declare the
+      \c FILESYSTEM functional domain (\c INVALID-FUNCTION-ACCESS for a restricted caller)
+    - @ref TypeScriptActionInterface::TypeScriptActionInterface::deregisterDynamicApp() "deregisterDynamicApp()",
+      which removes the app's directory, declares the \c FILESYSTEM functional domain too
+    - these methods, @ref TypeScriptActionInterface::TypeScriptActionInterface::initApp() "initApp()" with a
+      \c dynamic_path and
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::setAppBaseDir() "setAppBaseDir()" with a directory
+      raise \c PERMISSION-DENIED when they are called for the code that a host-created object was lent to and that
+      code is restricted (see @ref Qore::SandboxManager::isLentToRestricted()
+      "SandboxManager::isLentToRestricted()"); \c setAppBaseDir() also for a restricted caller
+    - the \c registerApp() and \c registerExistingApp() methods refuse an app definition with a dynamic app
+      directory (\c info.path) or schema locations (\c openapi, \c swagger, \c openapi_schema_map and
+      \c swagger_schema_map), and @ref TypeScriptActionInterface::TypeScriptActionInterface::getRestSchema()
+      "getRestSchema()" a schema location, with \c PERMISSION-DENIED if the calling code is restricted from a
+      functional domain of the location's handler (\c FILESYSTEM for files); the module reads them when the app is
+      initialized, also for other callers, and a cached schema is not given for a location that the calling code
+      could not read
+
+    The module's own code loads a dynamic app on demand from the directory that the host configured for it, also for a
+    caller restricted from the file system.  The file-system policy of a sandbox that governs the calling code applies
+    when a file is opened; sandboxed code cannot call these methods (\c SANDBOX-REGISTRATION-ERROR).
+
+    @note The JavaScript programs of the v8 module reach files through Node.js, which no %Qore restriction controls
+    (see @ref v8sandboxing): code that may create programs (functional domains \c EMBEDDED_LOGIC and
+    \c UNCONTROLLED_API) can read and write files whatever its file-system restriction, so a host that restricts code
+    from the file system restricts it from \c EMBEDDED_LOGIC as well (\c PO_NO_EMBEDDED_LOGIC)
 */
 
 /** @page typescriptactioninterfacereleasenotes TypeScriptActionInterface Release Notes
 
     @section typescriptactioninterfaceupcoming Upcoming release
+    - the directories and locations that the calling code gives (to
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::registerDynamicAppsFromJavaScript()
+      "registerDynamicAppsFromJavaScript()",
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::registerPendingAppsFromIndex()
+      "registerPendingAppsFromIndex()", \c initApp(), \c setAppBaseDir(), \c getRestSchema() and in the app
+      definitions of \c registerApp() and \c registerExistingApp()) are refused before they are used if the calling
+      code is restricted from the file system, and so is \c deregisterDynamicApp(), which removes the app's
+      directory; see @ref typescriptactioninterface_caller_paths
+      (<a href="https://github.com/qoretechnologies/module-v8/issues/290">issue 290</a>)
     - @ref TypeScriptActionInterface::TenantActionRunner "TenantActionRunner": the API and record actions of the apps
       for tenants that a sandbox governs, in restricted programs of their own, with plain data, the network only through
       the tenant's sandbox, and time, memory and concurrency limits; see @ref typescriptactioninterface_tenants

@@ -5,6 +5,12 @@
     @tableofcontents
 
     @section v8_2_2 v8 Module Version 2.2
+    - security: the directories that the calling code gives to
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::registerDynamicAppsFromJavaScript()
+      "TypeScriptActionInterface::registerDynamicAppsFromJavaScript()", \c registerPendingAppsFromIndex() and
+      \c initApp() are refused before they are used if that code is restricted from the file system; see
+      @ref typescriptactioninterface_caller_paths
+      (<a href="https://github.com/qoretechnologies/module-v8/issues/290">issue 290</a>)
     - security: with a %Qore library that has isolation domains, reading, stopping or inspecting a tenant's event
       sources and actions (\c TenantActionRunner::pollEvents(), \c stopEvents() and \c getActionInfo()) is refused
       to sandboxed code whose isolation domain is another tenant's, as running them already was; an event source's
