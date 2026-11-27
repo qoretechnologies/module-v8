@@ -68,6 +68,11 @@ string sub lent_init(Registrar r, string app, string dir) {
     return run(sub () { r.init(app, dir); });
 }
 
+string sub lent_call(Registrar r, string method, ...) {
+    *list<auto> args = argv;
+    return run(sub () { call_object_method_args(r, method, args); });
+}
+
 string sub init(string app, *string dir) {
     return run(sub () { TypeScriptActionInterface::initApp(app, False, dir); });
 }
@@ -98,6 +103,8 @@ sub register(string dir) { TypeScriptActionInterface::registerDynamicAppsFromJav
             addTestCase("lent objects, " + m, sub () { testLent(m); });
             addTestCase("calls without paths, " + m, sub () { testNoPaths(m); });
         }
+        addTestCase("other paths and locations, " + "ast", sub () { testOther("ast"); });
+        addTestCase("other paths and locations, " + "jit", sub () { testOther("jit"); });
         addTestCase("direct calls are refused when parsed", \testParse());
         addTestCase("unrestricted callers use the directories", \testUnrestricted());
         set_return_value(main());
@@ -161,6 +168,44 @@ sub register(string dir) { TypeScriptActionInterface::registerDynamicAppsFromJav
         assertEq("SANDBOX-REGISTRATION-ERROR", p.callFunction("lent_pending", r, pending),
             "registerPendingAppsFromIndex " + desc);
         checkUnchanged(desc);
+    }
+
+    #! the other paths and locations that the calling code gives: app definitions, the app base directory, schema
+    #! locations and the removal of a dynamic app's directory
+    private testOther(string mode) {
+        JavaScriptProgramPool pool("1;", dir + "/pool.js", sub (auto p) {});
+        Registrar r();
+        Program p = getProgram("nofs", mode);
+        list<hash<auto>> defs = (
+            {"name": "CallerFileAccessDyn", "dynamic": True, "info": {"path": apps}},
+            {"name": "CallerFileAccessSchema", "openapi": dir + "/schema.yaml"},
+            {"name": "CallerFileAccessSchema", "swagger": "file://" + dir + "/schema.yaml"},
+            {"name": "CallerFileAccessSchema", "openapi_schema_map": {"a": {"openapi": dir + "/schema.yaml"}}},
+        );
+        foreach hash<auto> app in (defs) {
+            string desc = sprintf("%y %s", keys app, mode);
+            assertEq("PERMISSION-DENIED", p.callFunction("call", \TypeScriptActionInterface::registerApp(), app,
+                pool), "registerApp " + desc);
+            assertEq("PERMISSION-DENIED", p.callFunction("lent_call", r, "registerApp", app, pool),
+                "lent registerApp " + desc);
+        }
+        assertEq("PERMISSION-DENIED", p.callFunction("call", \TypeScriptActionInterface::setAppBaseDir(), "/"),
+            "setAppBaseDir " + mode);
+        assertEq("PERMISSION-DENIED", p.callFunction("lent_call", r, "setBaseDir", "/"), "lent setAppBaseDir " + mode);
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("call", \TypeScriptActionInterface::deregisterDynamicApp(),
+            "CallerFileAccessDyn"), "deregisterDynamicApp " + mode);
+        assertEq("PERMISSION-DENIED", p.callFunction("lent_call", r, "deregister", "CallerFileAccessDyn"),
+            "lent deregisterDynamicApp " + mode);
+        foreach string loc in (dir + "/schema.yaml", "file://" + dir + "/schema.yaml") {
+            assertEq("PERMISSION-DENIED", p.callFunction("call", \TypeScriptActionInterface::getRestSchema(), "x",
+                loc), "getRestSchema " + loc + " " + mode);
+            assertEq("PERMISSION-DENIED", p.callFunction("lent_call", r, "schema", loc),
+                "lent getRestSchema " + loc + " " + mode);
+        }
+        # a network location for code restricted only from the file system: not refused by the module
+        string err = p.callFunction("call", \TypeScriptActionInterface::getRestSchema(), "x", "http://127.0.0.1:1/x");
+        assertFalse(inlist(err, Refusals), "getRestSchema http " + mode + ": " + err);
+        checkUnchanged("other " + mode);
     }
 
     #! initApp() without a directory is not refused for code restricted from the file system

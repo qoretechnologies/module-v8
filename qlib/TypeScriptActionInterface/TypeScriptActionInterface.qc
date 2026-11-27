@@ -570,7 +570,17 @@ TypeScriptActionInterface::setCallTimeout(1h);
     }
 
     #! Deregister a dynamic app given the app name
-    static deregisterDynamicApp(string name) [dom=PROCESS_CONTROL] {
+    /** The app's directory is removed
+
+        @throw PERMISSION-DENIED the code that a host-created object whose method calls this method was lent to is
+        restricted from the \c FILESYSTEM functional domain (see @ref typescriptactioninterface_caller_paths)
+    */
+    static deregisterDynamicApp(string name) [dom=PROCESS_CONTROL,FILESYSTEM] {
+        # the app's directory is removed for the caller (issue #290)
+        if (SandboxManager::isLentToRestricted(DOM_FILESYSTEM)) {
+            throw "PERMISSION-DENIED", "a dynamic app cannot be deregistered, as its directory is removed: the "
+                "calling code is restricted from the FILESYSTEM functional domain";
+        }
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("deregister a dynamic app of the TypeScript action interface");
         TypeScriptActionInterface::deregisterDynamicAppIntern(name);
@@ -963,6 +973,9 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         current working directory of the process
     */
     static setAppBaseDir(*string dir) [dom=PROCESS_CONTROL] {
+        # the directory is the caller's input: the module resolves the paths of the apps registered later against it
+        # (issue #290)
+        TypeScriptActionInterface::checkCallerPath("dir", dir);
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("set the app base directory of the TypeScript action interface");
         TypeScriptActionInterface::setAppBaseDirUnchecked(dir);
@@ -1322,6 +1335,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     static registerApp(JavaScriptObject app) [dom=PROCESS_CONTROL] {
+        # the paths and locations of the app are the caller's input (issue #290)
+        if (SandboxManager::isLentToRestricted(DOM_FILESYSTEM | DOM_NETWORK)) {
+            TypeScriptActionInterface::checkCallerAppPaths(app.toData());
+        }
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("register an app in the TypeScript action interface");
         TypeScriptActionInterface::registerAppUnchecked(app);
@@ -1359,6 +1376,10 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     static registerExistingApp(JavaScriptObject app) [dom=PROCESS_CONTROL] {
+        # the paths and locations of the app are the caller's input (issue #290)
+        if (SandboxManager::isLentToRestricted(DOM_FILESYSTEM | DOM_NETWORK)) {
+            TypeScriptActionInterface::checkCallerAppPaths(app.toData());
+        }
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("register an existing app in the TypeScript action interface");
         TypeScriptActionInterface::registerExistingAppUnchecked(app);
@@ -1451,6 +1472,90 @@ TypeScriptActionInterface::registerDiscoveryInventory((
         }
     }
 
+    #! Refuses a location given by the calling code if that code is restricted from a functional domain of its handler
+    /** As checkCallerPath(), with the functional domains that the handler of the location's scheme uses (see
+        @ref FileLocationHandler::AbstractFileLocationHandler::getCallerDomains()
+        "AbstractFileLocationHandler::getCallerDomains()"); the handler of \c conn locations has no domains of its
+        own and gives the options of the location to another handler, so they are refused if the calling code is
+        restricted from the file system or the network
+
+        @param arg the name of the argument, for the error message
+        @param location the location; no check is made if it is not set
+
+        @throw LOCATION-ERROR the options of the location cannot be parsed
+        @throw PERMISSION-DENIED the calling code is restricted from a functional domain of the location's handler
+    */
+    private:internal static checkCallerLocation(string arg, auto location) {
+        if (!exists location || !SandboxManager::isLentToRestricted(DOM_FILESYSTEM | DOM_NETWORK)) {
+            return;
+        }
+        string loc = location;
+        string scheme = (loc =~ x/^(\w+):\/\//)[0] ?? "file";
+        AbstractFileLocationHandler handler;
+        try {
+            handler = FileLocationHandler::getHandler(scheme);
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err == "SCHEME-ERROR") {
+                # an unknown scheme is refused when the location is used
+                return;
+            }
+            rethrow;
+        }
+        # the options at the end of the location, as FileLocationHandler takes them
+        *hash<auto> opts;
+        *string opt_str = (loc =~ x/((?:{).*(?:}))$/)[0];
+        if (opt_str) {
+            auto v = parse_to_qore_value(opt_str);
+            if (v.typeCode() == NT_HASH) {
+                opts = v;
+            } else if (v.strp()) {
+                opts = {v: True};
+            } else {
+                throw "LOCATION-ERROR", sprintf("the options of the location in the %y argument cannot be parsed",
+                    arg);
+            }
+        }
+        int dom = handler.getCallerDomains(scheme, opts);
+        if ((dom && SandboxManager::isLentToRestricted(dom))
+            || (!dom && opts && (scheme == "conn" || scheme == "connection"))) {
+            throw "PERMISSION-DENIED", sprintf("the %y argument cannot be used: the calling code is restricted from a "
+                "functional domain of the handler of %y locations", arg, scheme);
+        }
+    }
+
+    #! Refuses the paths and locations of an app definition given by the calling code if that code is restricted
+    /** The directory of a dynamic app (\c info.path, which deregisterDynamicApp() removes) and the locations of its
+        schemas (\c openapi, \c swagger and those of \c openapi_schema_map and \c swagger_schema_map), which the
+        module reads when the app is initialized, also for other callers
+
+        @throw LOCATION-ERROR the options of a location cannot be parsed
+        @throw PERMISSION-DENIED the calling code is restricted from the \c FILESYSTEM functional domain or from a
+        functional domain of a location's handler
+    */
+    private:internal static checkCallerAppPaths(hash<auto> app) {
+        if (!SandboxManager::isLentToRestricted(DOM_FILESYSTEM | DOM_NETWORK)) {
+            return;
+        }
+        TypeScriptActionInterface::checkCallerPath("info.path",
+            app.info.typeCode() == NT_HASH ? app.info.path : NOTHING);
+        foreach string key in ("openapi", "swagger") {
+            TypeScriptActionInterface::checkCallerLocation(key, app{key});
+        }
+        foreach string key in ("openapi_schema_map", "swagger_schema_map") {
+            if (app{key}.typeCode() != NT_HASH) {
+                continue;
+            }
+            foreach hash<auto> i in (app{key}.pairIterator()) {
+                if (i.value.typeCode() == NT_HASH) {
+                    foreach string k in ("openapi", "swagger") {
+                        TypeScriptActionInterface::checkCallerLocation(sprintf("%s.%s.%s", key, i.key, k),
+                            i.value{k});
+                    }
+                }
+            }
+        }
+    }
+
     #! Checks that a dynamic app's name can be used as the name of its directory
     /** A dynamic app's files are stored in a directory named after the app below the custom apps directory, so the
         name must be a single path component.  It may contain only the characters that the action catalogue accepts
@@ -1468,6 +1573,8 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     static registerApp(hash<auto> app, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
+        # the paths and locations of the app are the caller's input (issue #290)
+        TypeScriptActionInterface::checkCallerAppPaths(app);
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("register an app in the TypeScript action interface");
         TypeScriptActionInterface::registerAppUnchecked(app, pool);
@@ -1717,6 +1824,8 @@ TypeScriptActionInterface::registerDiscoveryInventory((
     }
 
     static registerExistingApp(hash<auto> app, JavaScriptProgramPool pool) [dom=PROCESS_CONTROL] {
+        # the paths and locations of the app are the caller's input (issue #290)
+        TypeScriptActionInterface::checkCallerAppPaths(app);
         # process-wide (qoretechnologies/qore#6749)
         TsaiProcessState::checkHostScope("register an existing app in the TypeScript action interface");
         TypeScriptActionInterface::registerExistingAppUnchecked(app, pool);
@@ -2498,6 +2607,8 @@ AbstractRestSchemaValidator schema = TypeScriptActionInterface::getRestSchema("M
     */
     static AbstractRestSchemaValidator getRestSchema(string appname, string schema_loc, *hash<auto> schema_opts,
             *list<auto> paths, *hash<auto> type_overrides) [dom=PROCESS_CONTROL] {
+        # the location is the caller's input, also when the schema is in the cache (issue #290)
+        TypeScriptActionInterface::checkCallerLocation("schema_loc", schema_loc);
         # host files and the process-wide cache (qoretechnologies/qore#7185)
         TsaiProcessState::checkHostScope("load a REST schema for the TypeScript action interface");
         return TypeScriptActionInterface::getRestSchemaUnchecked(appname, schema_loc, schema_opts, paths,

@@ -36,5 +36,21 @@ public class Registrar {
     bool init(string app, string dir) {
         return TypeScriptActionInterface::initApp(app, False, dir);
     }
+
+    deregister(string app) {
+        TypeScriptActionInterface::deregisterDynamicApp(app);
+    }
+
+    setBaseDir(string dir) {
+        TypeScriptActionInterface::setAppBaseDir(dir);
+    }
+
+    registerApp(hash<auto> app, JavaScriptProgramPool pool) {
+        TypeScriptActionInterface::registerApp(app, pool);
+    }
+
+    schema(string loc) {
+        TypeScriptActionInterface::getRestSchema("x", loc);
+    }
 }
 }
