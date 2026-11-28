@@ -49,12 +49,19 @@ string sub callHost(code c) { return attempt(c); }
         set_return_value(main());
     }
 
-    private Program tenant(*bool allow_uncontrolled) {
+    private Program tenant(*bool allow_uncontrolled, *bool keep_restrictions) {
         Program p(PO_NEW_STYLE | PO_NO_CHILD_PO_RESTRICTIONS);
         p.parse(TenantSource, "tenant");
         SandboxManager sm();
         if (allow_uncontrolled) {
             sm.setUncontrolledApiPolicy(True);
+            # the v8 runtime does not apply a sandbox's file-system and network policies, so a sandbox that allows
+            # uncontrolled APIs but restricts either refuses the module's APIs (qore#7832 step 1): a host that trusts
+            # the tenant with JavaScript opens both
+            if (!keep_restrictions) {
+                sm.setFilesystemDefaultPolicy(True);
+                sm.setNetworkDefaultPolicy(True);
+            }
         }
         p.setSandboxManager(sm);
         return p;
@@ -90,5 +97,10 @@ string sub callHost(code c) { return attempt(c); }
         Program p = tenant(True);
         assertEq("ran", p.callFunction("createJs"));
         assertEq("ran", p.callFunction("createTs"));
+        # a sandbox that allows uncontrolled APIs but keeps a new manager's file-system and network restrictions
+        # (qore#7832 step 1)
+        p = tenant(True, True);
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("createJs"));
+        assertEq("INVALID-FUNCTION-ACCESS", p.callFunction("createTs"));
     }
 }

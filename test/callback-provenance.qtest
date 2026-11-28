@@ -31,15 +31,15 @@ class ProvenanceTest inherits QUnit::Test {
         sm.setUncontrolledApiPolicy(True);
         sandbox.setSandboxManager(sm);
         code trusted = runtime.getGlobal().make(reader).toData();
-        code restricted = sandbox.callFunction("make", runtime, reader);
         assertEq("allowed", trusted());
-        assertEq("FILESYSTEM-ACCESS-DENIED", restricted());
+        # the v8 runtime does not apply the sandbox's file-system policy, so a sandbox that restricts the file system
+        # refuses the runtime to its code, also when it allows uncontrolled APIs: no callback can be created under that
+        # policy (qore#7832 step 1)
+        assertThrows("INVALID-FUNCTION-ACCESS", \sandbox.callFunction(), ("make", runtime, reader));
         Queue results();
         ThreadPool pool(1);
         on_exit pool.stopWait();
-        pool.submit(sub () { results.push(restricted()); });
-        assertEq("FILESYSTEM-ACCESS-DENIED", results.get(10s));
         pool.submit(sub () { results.push(trusted()); });
-        assertEq("allowed", results.get(10s), "worker reuse restores the previous context");
+        assertEq("allowed", results.get(10s), "a worker runs the trusted callback");
     }
 }
